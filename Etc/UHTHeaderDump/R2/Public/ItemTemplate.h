@@ -7,6 +7,8 @@
 #include "EAnvilCharacterStance.h"
 #include "EAnvilDamageType.h"
 #include "EAnvilFoodType.h"
+#include "EAnvilItemDurabilityType.h"
+#include "EAnvilItemPayloadType.h"
 #include "EAnvilItemType.h"
 #include "EAnvilToolType.h"
 #include "Templates/SubclassOf.h"
@@ -30,6 +32,12 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilItemType SecondaryType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EAnvilItemDurabilityType ItemDurabilityType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EAnvilItemPayloadType ItemPayloadType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEntityTemplate> PickupEntity;
@@ -62,10 +70,19 @@ public:
     float DurabilityLossPerUse;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float DurabilityLossPerSec;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bRearmAfterConsumption;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StockPileWithdrawalValue;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UItemTemplate> HeatedItem;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UItemTemplate> CooledItem;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bRanged;

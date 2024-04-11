@@ -28,16 +28,21 @@ enum class EAnvilArmourType {
 
 enum class EAnvilBuildLocationType {
     Everywhere = 0,
-    Stable = 1,
-    Deployed = 2,
-    Marketplace = 3,
-    Shore = 4,
-    OnFoundation = 5,
-    NotOnFoundation = 6,
-    UnderFoundationCeiling = 7,
-    Static = 8,
-    Count = 9,
-    EAnvilBuildLocationType_MAX = 10,
+    Foundation = 1,
+    Landscape = 2,
+    LargeRock = 3,
+    Foundation_Landscape = 4,
+    Foundation_LargeRock = 5,
+    Landscape_LargeRock = 6,
+    Marketplace = 7,
+    Shore = 8,
+    UnderFoundationCeiling = 9,
+    _EndDirectBuildable = 10,
+    Deployed = 11,
+    Stable = 12,
+    Static = 13,
+    Count = 14,
+    EAnvilBuildLocationType_MAX = 15,
 };
 
 enum class EAnvilBuildStructureType {
@@ -45,7 +50,8 @@ enum class EAnvilBuildStructureType {
     Foundations = 1,
     Modular = 2,
     FoundationModular = 3,
-    EAnvilBuildStructureType_MAX = 4,
+    MonolithicModular = 4,
+    EAnvilBuildStructureType_MAX = 5,
 };
 
 enum class EAnvilCharacterStance {
@@ -61,7 +67,7 @@ enum class EAnvilCharacterStance {
     EAnvilCharacterStance_MAX = 9,
 };
 
-enum EAnvilCollisionChannel {
+enum class EAnvilCollisionChannel {
     AnvilCollisionChannelStatic = 0,
     AnvilCollisionChannelDynamic = 1,
     AnvilCollisionChannelPlayer = 2,
@@ -79,7 +85,7 @@ enum EAnvilCollisionChannel {
     AnvilCollisionChannelVehicle = 14,
     AnvilCollisionChannelMeshVisibility = 15,
     AnvilCollisionChannelShield = 16,
-    AnvilCollisionChannel_REMOVED_ = 17,
+    AnvilCollisionChannelLargeRock = 17,
     AnvilCollisionChannelWater = 18,
     AnvilCollisionChannelAnimal = 19,
     AnvilCollisionChannelMarketArea = 20,
@@ -200,7 +206,10 @@ enum class EAnvilInputEventType {
     Reload = 34,
     RetractLadder = 35,
     Climb = 36,
-    EAnvilInputEventType_MAX = 37,
+    QuenchItems = 37,
+    HitConverterNextOutput = 38,
+    HitConverterPreviousOutput = 39,
+    EAnvilInputEventType_MAX = 40,
 };
 
 enum class EAnvilInputResponseType {
@@ -211,6 +220,20 @@ enum class EAnvilInputResponseType {
     StructureUpgradeFailed = 4,
     ToggleBuildMenu = 5,
     EAnvilInputResponseType_MAX = 6,
+};
+
+enum class EAnvilItemDurabilityType {
+    None = 0,
+    Default = 1,
+    Heat = 2,
+    EAnvilItemDurabilityType_MAX = 3,
+};
+
+enum class EAnvilItemPayloadType {
+    None = 0,
+    Quality = 1,
+    HitConversionProgress = 2,
+    EAnvilItemPayloadType_MAX = 3,
 };
 
 enum class EAnvilItemType {
@@ -238,10 +261,11 @@ enum class EAnvilItemType {
     LiquidStorage = 21,
     WeaponStorage = 22,
     BaseStockpile = 23,
-    NumTypes = 24,
-    LeftHand = 25,
-    RightHand = 26,
-    EAnvilItemType_MAX = 27,
+    Quenchable = 24,
+    NumTypes = 25,
+    LeftHand = 26,
+    RightHand = 27,
+    EAnvilItemType_MAX = 28,
 };
 
 enum class EAnvilMapPostType {
@@ -297,6 +321,13 @@ enum class EAnvilPlayerInputMode {
     MouseSelect = 4,
     NumTypes = 5,
     EAnvilPlayerInputMode_MAX = 6,
+};
+
+enum class EAnvilPowerUnitType {
+    Pipe = 0,
+    Source = 1,
+    Sink = 2,
+    EAnvilPowerUnitType_MAX = 3,
 };
 
 enum class EAnvilProfileNameCheckType {
@@ -372,7 +403,11 @@ enum class EAnvilSnappingChannelType {
     RoadSide = 3,
     Platform = 4,
     Foundation = 5,
-    EAnvilSnappingChannelType_MAX = 6,
+    WaterIn = 6,
+    WaterOut = 7,
+    PowerIn = 8,
+    PowerOut = 9,
+    EAnvilSnappingChannelType_MAX = 10,
 };
 
 enum class EAnvilSpawnType {
@@ -469,8 +504,9 @@ enum class EAnvilStatusMessageType {
     BedClaimCleared = 82,
     BedNotUnderCeiling = 83,
     HorseNotHungry = 84,
-    NumTypes = 85,
-    EAnvilStatusMessageType_MAX = 86,
+    PvpIsNerfed = 85,
+    NumTypes = 86,
+    EAnvilStatusMessageType_MAX = 87,
 };
 
 enum class EAnvilStimulusType {
@@ -551,6 +587,15 @@ enum EEntitySerializationType {
     SerializationTypeAnimal = 6,
     SerializationTypeVehicle = 7,
     EEntitySerializationType_MAX = 8,
+};
+
+enum class EItemQualityType {
+    None = 0,
+    Low = 1,
+    Medium = 2,
+    High = 3,
+    NumTypes = 4,
+    EItemQualityType_MAX = 5,
 };
 
 enum class EPledgedOnlineStatus {

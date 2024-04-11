@@ -128,7 +128,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__HouseT2_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.15"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.16"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__HouseT2_C:HealthComp'",
@@ -136,11 +136,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__HouseT2_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.13"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__HouseT2_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.14"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.15"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__HouseT2_C:DestroyableComp'",
@@ -160,7 +160,7 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__HouseT2_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.14"
       },
       "CodeNameString": "HouseT2",
       "CodeName": 764980172,
@@ -173,15 +173,19 @@
         },
         {
           "ObjectName": "UpgradeProxyComponent'Default__HouseT2_C:UpgradeProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.16"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.17"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__HouseT2_C:InventoryProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.10"
         },
         {
-          "ObjectName": "PlayerSpawnerProxyComponent'Default__HouseT2_C:PlayerSpawnerProxyComponent_0'",
+          "ObjectName": "InventoryProxyComponent'Default__HouseT2_C:InventoryProxyComponent_2'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.11"
+        },
+        {
+          "ObjectName": "PlayerSpawnerProxyComponent'Default__HouseT2_C:PlayerSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.12"
         },
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__HouseT2_C:BoxCollisionProxyComponent_1'",
@@ -202,7 +206,10 @@
     "Type": "HousingProxyComponent",
     "Name": "HousingProxyComponent_0",
     "Outer": "Default__HouseT2_C",
-    "Class": "UScriptClass'HousingProxyComponent'"
+    "Class": "UScriptClass'HousingProxyComponent'",
+    "Properties": {
+      "PlayerCapacity": 2
+    }
   },
   {
     "Type": "InventoryProxyComponent",
@@ -212,11 +219,32 @@
     "Properties": {
       "Slots": [
         {
-          "ProxyRepeat": 6,
+          "ProxyRepeat": 4,
           "bOr": false,
           "HeldItem": null,
           "Count": 0,
-          "StackLimit": 30,
+          "StackLimit": 1,
+          "bHoldsLarge": true,
+          "SlotType": "EAnvilItemType::BaseStockpile",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_2",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 4,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1,
           "bHoldsLarge": true,
           "SlotType": "EAnvilItemType::All",
           "DedicatedItemType": null,

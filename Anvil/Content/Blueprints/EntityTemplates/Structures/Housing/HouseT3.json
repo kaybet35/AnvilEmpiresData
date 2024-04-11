@@ -128,7 +128,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__HouseT3_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT3.15"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT3.17"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__HouseT3_C:HealthComp'",
@@ -136,11 +136,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__HouseT3_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT3.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT3.14"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__HouseT3_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT3.14"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT3.16"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__HouseT3_C:DestroyableComp'",
@@ -160,7 +160,7 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__HouseT3_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT3.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT3.15"
       },
       "CodeNameString": "HouseT3",
       "CodeName": 1653931613,
@@ -176,8 +176,16 @@
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT3.10"
         },
         {
-          "ObjectName": "PlayerSpawnerProxyComponent'Default__HouseT3_C:PlayerSpawnerProxyComponent_0'",
+          "ObjectName": "InventoryProxyComponent'Default__HouseT3_C:InventoryProxyComponent_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT3.12"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__HouseT3_C:InventoryProxyComponent_3'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT3.11"
+        },
+        {
+          "ObjectName": "PlayerSpawnerProxyComponent'Default__HouseT3_C:PlayerSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT3.13"
         },
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__HouseT3_C:BoxCollisionProxyComponent_1'",
@@ -198,7 +206,10 @@
     "Type": "HousingProxyComponent",
     "Name": "HousingProxyComponent_0",
     "Outer": "Default__HouseT3_C",
-    "Class": "UScriptClass'HousingProxyComponent'"
+    "Class": "UScriptClass'HousingProxyComponent'",
+    "Properties": {
+      "PlayerCapacity": 3
+    }
   },
   {
     "Type": "InventoryProxyComponent",
@@ -208,11 +219,53 @@
     "Properties": {
       "Slots": [
         {
-          "ProxyRepeat": 9,
+          "ProxyRepeat": 6,
           "bOr": false,
           "HeldItem": null,
           "Count": 0,
-          "StackLimit": 30,
+          "StackLimit": 1,
+          "bHoldsLarge": true,
+          "SlotType": "EAnvilItemType::BaseStockpile",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_3",
+    "Outer": "Default__HouseT3_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 6,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1,
+          "bHoldsLarge": true,
+          "SlotType": "EAnvilItemType::All",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_4",
+    "Outer": "Default__HouseT3_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 6,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1,
           "bHoldsLarge": true,
           "SlotType": "EAnvilItemType::All",
           "DedicatedItemType": null,

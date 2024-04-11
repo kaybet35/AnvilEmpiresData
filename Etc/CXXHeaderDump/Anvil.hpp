@@ -12,6 +12,10 @@ struct FAnvilAssetManager
 
 }; // Size: 0x1A8
 
+struct FAnvilDataTableManager
+{
+}; // Size: 0x1
+
 struct FAnvilMovieCharacterState
 {
     class AAnvilMovieCharacter* MovieCharacter;                                       // 0x0000 (size: 0x8)
@@ -40,6 +44,10 @@ struct FAnvilOptionsManager
     class UAnvilOptionsSave* OptionsSave;                                             // 0x0058 (size: 0x8)
 
 }; // Size: 0x1A0
+
+struct FAnvilPropertyUtil
+{
+}; // Size: 0x1
 
 struct FArmourTypeMeshes
 {
@@ -85,7 +93,7 @@ struct FClientConnectionRequest
 {
     uint64 OnlineId;                                                                  // 0x0000 (size: 0x8)
     uint64 ProtocolId;                                                                // 0x0008 (size: 0x8)
-    FString ServerAddress;                                                            // 0x0010 (size: 0x10)
+    FString TargetServerName;                                                         // 0x0010 (size: 0x10)
     uint8 SelectedFactionId;                                                          // 0x0020 (size: 0x1)
     uint8 QueueTypeToJoin;                                                            // 0x0021 (size: 0x1)
 
@@ -96,10 +104,11 @@ struct FConnectToServerResponse
     EClientConnectToServerResponseType ResponseType;                                  // 0x0000 (size: 0x1)
     uint8 SelectedFactionId;                                                          // 0x0001 (size: 0x1)
     FString ConnectTokenBase64;                                                       // 0x0008 (size: 0x10)
-    FString ServerAddressToJoin;                                                      // 0x0018 (size: 0x10)
-    int32 QueuePosition;                                                              // 0x0028 (size: 0x4)
+    FString ServerNameToJoin;                                                         // 0x0018 (size: 0x10)
+    FString ServerAddressToJoin;                                                      // 0x0028 (size: 0x10)
+    int32 QueuePosition;                                                              // 0x0038 (size: 0x4)
 
-}; // Size: 0x30
+}; // Size: 0x40
 
 struct FContextfulPlacementStatus
 {
@@ -122,6 +131,14 @@ struct FDayNightKeyFrame
     float WhiteBalanceTint;                                                           // 0x006C (size: 0x4)
 
 }; // Size: 0x70
+
+struct FDecayData : public FTableRowBase
+{
+    bool bEnabled;                                                                    // 0x0008 (size: 0x1)
+    float StartDelayHours;                                                            // 0x000C (size: 0x4)
+    float DecayTimeHours;                                                             // 0x0010 (size: 0x4)
+
+}; // Size: 0x18
 
 struct FDeleteProfileResponse
 {
@@ -146,6 +163,18 @@ struct FFactionLockResponse
 struct FGraphData
 {
 }; // Size: 0x804
+
+struct FHealthData : public FTableRowBase
+{
+    float MaxHealth;                                                                  // 0x0008 (size: 0x4)
+
+}; // Size: 0x10
+
+struct FItemData : public FTableRowBase
+{
+    uint8 Damage;                                                                     // 0x0008 (size: 0x1)
+
+}; // Size: 0x10
 
 struct FMapIconInstanceProperty
 {
@@ -176,9 +205,28 @@ struct FMapIconTypeProperty
 struct FQueueStatusResponse
 {
     QueueStatusType QueueStatus;                                                      // 0x0000 (size: 0x1)
-    int32 QueuePosition;                                                              // 0x0004 (size: 0x4)
+    FString QueuedServerName;                                                         // 0x0008 (size: 0x10)
+    int32 QueuePosition;                                                              // 0x0018 (size: 0x4)
 
-}; // Size: 0x8
+}; // Size: 0x20
+
+struct FServerListEntry
+{
+    FString ServerName;                                                               // 0x0000 (size: 0x10)
+    FString ServerAddress;                                                            // 0x0010 (size: 0x10)
+    TArray<bool> FactionCapacityArray;                                                // 0x0020 (size: 0x10)
+
+}; // Size: 0x30
+
+struct FServerListResponse
+{
+    TArray<FServerListEntry> ServerList;                                              // 0x0000 (size: 0x10)
+
+}; // Size: 0x10
+
+struct FServerRegion
+{
+}; // Size: 0x160
 
 struct FVoiceLoginInfo
 {
@@ -336,6 +384,13 @@ class AProxyPawn : public ADefaultPawn
     void AutoMove(FString Arg, bool bIsSprint);
 }; // Size: 0x3B0
 
+class AServerPartition : public AActor
+{
+    class UServerPartitionComponent* ServerPartitionComponent;                        // 0x0290 (size: 0x8)
+    class USceneComponent* SceneComponent;                                            // 0x0298 (size: 0x8)
+
+}; // Size: 0x2A0
+
 class AUIGlobals : public AInfo
 {
     TSubclassOf<class UUserWidget> TooltipClass;                                      // 0x0290 (size: 0x8)
@@ -476,6 +531,18 @@ class AVisGate : public AVisStructure
     class USkeletalMeshComponent* Mesh;                                               // 0x0488 (size: 0x8)
 
 }; // Size: 0x490
+
+class AVisHeatingStructure : public AVisStructure
+{
+    class UHeatingDataComponent* HeatingDataComponent;                                // 0x04B0 (size: 0x8)
+
+}; // Size: 0x4B8
+
+class AVisHitConverterStructure : public AVisStructure
+{
+    class UHitConverterDataComponent* HitConverterDataComponent;                      // 0x0480 (size: 0x8)
+
+}; // Size: 0x488
 
 class AVisHouse : public AVisStructure
 {
@@ -835,6 +902,7 @@ class UAnvilGameInstance : public UGameInstance
     float GetNightTimeNormalized();
     bool GetIsNight();
     void GetDayCurrentSeconds(int32& OutSeconds);
+    void DumpProperties(FString OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter);
 }; // Size: 0x1648
 
 class UAnvilKeyEntryWidget : public UUserWidget
@@ -1239,12 +1307,52 @@ class UHeaderContainer : public UUserWidget
 
 }; // Size: 0x2C8
 
+class UHeatingWindow : public UStructureWindow
+{
+    class UInventoryWidget* ItemsItemGrid;                                            // 0x02D8 (size: 0x8)
+    class UInventoryWidget* FuelInputItemGrid;                                        // 0x02E0 (size: 0x8)
+    class UInventoryWidget* FuelOutputItemGrid;                                       // 0x02E8 (size: 0x8)
+    class UTextBlock* FuelDurationText;                                               // 0x02F0 (size: 0x8)
+
+    ESlateVisibility GetFuelDurationTextVisibility();
+    FText GetFuelDurationText();
+}; // Size: 0x2F8
+
 class UHelpScreen : public UAnvilScreen
 {
     class UButton* HelpImageButton;                                                   // 0x0288 (size: 0x8)
 
     void OnHelpImageButtonClicked();
 }; // Size: 0x290
+
+class UHitConversionWindow : public UStructureWindow
+{
+    class UImage* CurrentSelectedOutputImage;                                         // 0x02D8 (size: 0x8)
+    class UButton* OutputPreviousButton;                                              // 0x02E0 (size: 0x8)
+    class UButton* OutputNextButton;                                                  // 0x02E8 (size: 0x8)
+
+    void OutputPreviousButtonClicked();
+    void OutputNextButtonClicked();
+}; // Size: 0x2F0
+
+class UHousePlayerInventoryListItem : public UUserWidget
+{
+    class UTextBlock* PlayerNameText;                                                 // 0x0278 (size: 0x8)
+    class UInventoryWidget* InventoryWidget;                                          // 0x0280 (size: 0x8)
+
+}; // Size: 0x298
+
+class UHousePlayerInventoryWidgetBox : public UScrollBox
+{
+    TSubclassOf<class UHousePlayerInventoryListItem> PlayerInventoryListItemType;     // 0x0C98 (size: 0x8)
+
+}; // Size: 0xCA0
+
+class UHouseWindow : public UStructureWindow
+{
+    class UHousePlayerInventoryWidgetBox* PlayerInventoriesBox;                       // 0x02D8 (size: 0x8)
+
+}; // Size: 0x2E0
 
 class UInteractionIconWidget : public UUserWidget
 {
@@ -1275,8 +1383,11 @@ class UInventoryItemWidget : public UGridItemWidget
     class UProgressBar* DurabilityBar;                                                // 0x0390 (size: 0x8)
     class UImage* SubtypeIconRelic;                                                   // 0x0398 (size: 0x8)
     class UImage* OverEncumberedImage;                                                // 0x03A0 (size: 0x8)
+    class UProgressBar* HitConversionProgressBar;                                     // 0x03A8 (size: 0x8)
+    class UImage* QualityIconImage;                                                   // 0x03B0 (size: 0x8)
+    TMap<class EItemQualityType, class UTexture2D*> QualityIconTextures;              // 0x03B8 (size: 0x50)
 
-}; // Size: 0x3B0
+}; // Size: 0x410
 
 class UInventoryWidget : public UGridPanelWidget
 {
@@ -1518,12 +1629,18 @@ class UPledgedPlayerListItem : public UUserWidget
     void OnVoteChecked(bool bIsChecked);
 }; // Size: 0x350
 
+class UQuenchingWindow : public UStructureWindow
+{
+    class UButton* QuenchButton;                                                      // 0x02D8 (size: 0x8)
+
+    void OnQuenchButtonClicked();
+}; // Size: 0x2E0
+
 class URefineryProducibleItemWidget : public UGridItemWidget
 {
     class UTextBlock* OutputCount;                                                    // 0x02F0 (size: 0x8)
     class UPanelWidget* OutputCountContainer;                                         // 0x02F8 (size: 0x8)
 
-    bool IsRefiningEnabled();
 }; // Size: 0x300
 
 class URefineryProducibleListWidget : public UGridPanelWidget
@@ -1595,6 +1712,42 @@ class UScorchEffectComponent : public UNiagaraComponent
     float ScorchThreshold;                                                            // 0x07D0 (size: 0x4)
 
 }; // Size: 0x7E0
+
+class UServerListEntryView : public UObject
+{
+    FServerListEntry ServerListEntry;                                                 // 0x0028 (size: 0x30)
+
+}; // Size: 0x58
+
+class UServerListEntryWidget : public UUserWidget
+{
+    class UButton* ServerListEntryButton;                                             // 0x0280 (size: 0x8)
+    class UTextBlock* ServerNameTextBlock;                                            // 0x0288 (size: 0x8)
+    class UTextBlock* AranicPopulationTextBlock;                                      // 0x0290 (size: 0x8)
+    class UTextBlock* MirrishPopulationTextBlock;                                     // 0x0298 (size: 0x8)
+    class UTextBlock* NovanPopulationTextBlock;                                       // 0x02A0 (size: 0x8)
+    FSlateColor PopulationOpenColour;                                                 // 0x02A8 (size: 0x14)
+    FSlateColor PopulationFullColour;                                                 // 0x02BC (size: 0x14)
+    TMap<class FString, class FString> ServerDisplayNames;                            // 0x02D0 (size: 0x50)
+
+    void OnServerEntryClicked();
+}; // Size: 0x320
+
+class UServerPartitionComponent : public UActorComponent
+{
+    bool bVisualizeCookedRegion;                                                      // 0x00A0 (size: 0x1)
+    FVector Extents;                                                                  // 0x00A8 (size: 0x18)
+    int32 ServerRegionCountX;                                                         // 0x00C0 (size: 0x4)
+    int32 ServerRegionCountY;                                                         // 0x00C4 (size: 0x4)
+    float TransitionRegionSize;                                                       // 0x00C8 (size: 0x4)
+
+}; // Size: 0xD0
+
+class UServerSelectScreen : public UAnvilScreen
+{
+    class UListView* ServerList;                                                      // 0x0288 (size: 0x8)
+
+}; // Size: 0x290
 
 class UStatusWidget : public UUserWidget
 {

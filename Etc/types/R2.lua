@@ -4,6 +4,13 @@
 AAnvilPrefab = {}
 
 
+---@class AAnvilRockActor : AAnvilPrefab
+---@field ArrowComponent UArrowComponent
+---@field RockMeshComponent UStaticMeshComponent
+AAnvilRockActor = {}
+
+
+
 ---@class AAnvilTreeActor : AActor
 ---@field EntityTemplate TSubclassOf<UEntityTemplate>
 ---@field ArrowComponent UArrowComponent
@@ -90,6 +97,27 @@ FGridItem = {}
 
 
 
+---@class FHeatingFuel
+---@field FuelItem TSubclassOf<UItemTemplate>
+---@field BurnDurationSec float
+FHeatingFuel = {}
+
+
+
+---@class FHitConverterOutput
+---@field OutputItemTemplate TSubclassOf<UItemTemplate>
+---@field OutputItemCodeName int32
+---@field NumHitsToConvert uint32
+FHitConverterOutput = {}
+
+
+
+---@class FHousePledgedPlayerIdArray
+---@field PlayerArray TArray<int64>
+FHousePledgedPlayerIdArray = {}
+
+
+
 ---@class FInventoryItem
 ---@field Base FGridItem
 ---@field DedicatedItem FGridItem
@@ -97,6 +125,7 @@ FGridItem = {}
 ---@field SlotType EAnvilItemType
 ---@field Durability float
 ---@field bIsRelic boolean
+---@field Payload uint8
 ---@field StackLimit int32
 ---@field bIsDisabled boolean
 ---@field bTooEncumberedToEquip boolean
@@ -233,8 +262,9 @@ UAIStimulusProxyComponent = {}
 ---@field bBlockSnapping boolean
 ---@field bNoOverlap boolean
 ---@field bSnappingRequired boolean
----@field AugmentTargets TArray<TSubclassOf<UEntityTemplate>>
----@field AugmentationOffset FVector
+---@field bSnapHeight boolean
+---@field bOverrideAngleOverlapMin boolean
+---@field OverridedAngleOverlapMin float
 UAdvancedSnappingProxyComponent = {}
 
 
@@ -486,6 +516,7 @@ UConstructionFacilityProxyComponent = {}
 ---@class UCookingDataComponent : UDataComponent
 ---@field FuelExpiryTimestampAgeSec int32
 ---@field bIsFueled boolean
+---@field bCanCookWithExistingOutputs boolean
 ---@field CookCompleteTimestampAgeSec int32
 ---@field bIsFoodBurning boolean
 UCookingDataComponent = {}
@@ -496,6 +527,7 @@ UCookingDataComponent = {}
 ---@field FuelList TArray<FCookingFuel>
 ---@field RecipeList TArray<FCookingRecipe>
 ---@field FoodBurnDurationSec float
+---@field bCanCookWithExistingOutputs boolean
 UCookingProxyComponent = {}
 
 
@@ -648,6 +680,34 @@ UHealthProxyComponent = {}
 
 
 
+---@class UHeatingDataComponent : UDataComponent
+---@field FuelExpiryTimestampAgeSec int32
+---@field bIsFueled boolean
+UHeatingDataComponent = {}
+
+
+
+---@class UHeatingProxyComponent : UProxyComponent
+---@field FuelList TArray<FHeatingFuel>
+UHeatingProxyComponent = {}
+
+
+
+---@class UHitConverterDataComponent : UDataComponent
+---@field CurrentSelectedOutputIndex uint8
+---@field ConverterOutputList TArray<FHitConverterOutput>
+UHitConverterDataComponent = {}
+
+
+
+---@class UHitConverterProxyComponent : UProxyComponent
+---@field InputItemName TSubclassOf<UItemTemplate>
+---@field ConverterOutputList TArray<FHitConverterOutput>
+---@field RequiredTool EAnvilToolType
+UHitConverterProxyComponent = {}
+
+
+
 ---@class UHorseAttachableDataComponent : UDataComponent
 ---@field AttachedEntityType int32
 ---@field DetachedEntityType int32
@@ -666,13 +726,15 @@ UHorseAttachableProxyComponent = {}
 
 ---@class UHousingDataComponent : UDataComponent
 ---@field IsForCampsOnly uint8
----@field PledgedPlayerId int64
+---@field PlayerCapacity uint8
+---@field PledgedPlayerIds FHousePledgedPlayerIdArray
 UHousingDataComponent = {}
 
 
 
 ---@class UHousingProxyComponent : UProxyComponent
 ---@field IsForCampsOnly uint8
+---@field PlayerCapacity uint8
 UHousingProxyComponent = {}
 
 
@@ -717,6 +779,8 @@ UInventoryProxyComponent = {}
 ---@field CodeName int32
 ---@field ItemType EAnvilItemType
 ---@field SecondaryType EAnvilItemType
+---@field ItemDurabilityType EAnvilItemDurabilityType
+---@field ItemPayloadType EAnvilItemPayloadType
 ---@field PickupEntity TSubclassOf<UEntityTemplate>
 ---@field ItemDestroyedEffect TSubclassOf<UEntityTemplate>
 ---@field ItemInvokedEffect TSubclassOf<UEntityTemplate>
@@ -727,8 +791,11 @@ UInventoryProxyComponent = {}
 ---@field Encumberance uint8
 ---@field ArmedDurabilityLossPerSec float
 ---@field DurabilityLossPerUse float
+---@field DurabilityLossPerSec float
 ---@field bRearmAfterConsumption boolean
 ---@field StockPileWithdrawalValue float
+---@field HeatedItem TSubclassOf<UItemTemplate>
+---@field CooledItem TSubclassOf<UItemTemplate>
 ---@field bRanged boolean
 ---@field Damage uint8
 ---@field DamageOffset FVector
@@ -1018,6 +1085,24 @@ UPlayerSpawnerProxyComponent = {}
 UPlayerUnstuckProxyComponent = {}
 
 
+---@class UPowerUnitDataComponent : UDataComponent
+---@field Pressure float
+---@field Direction int32
+---@field FlowDirection int32
+UPowerUnitDataComponent = {}
+
+
+
+---@class UPowerUnitProxyComponent : UProxyComponent
+---@field Type EAnvilPowerUnitType
+---@field PressureMax float
+---@field FlatResistance float
+---@field ResistanceSlopeModifier float
+---@field Direction int32
+UPowerUnitProxyComponent = {}
+
+
+
 ---@class UProjectileMovementProxyComponent : UProxyComponent
 ---@field PickupEntity TSubclassOf<UEntityTemplate>
 ---@field PickupSpawnRate float
@@ -1055,6 +1140,12 @@ UProxyEntitySpawnerProxyComponent = {}
 
 
 
+---@class UQuenchingProxyComponent : UProxyComponent
+---@field QuenchingResource TSubclassOf<UItemTemplate>
+UQuenchingProxyComponent = {}
+
+
+
 ---@class URareResourceAreaMarkerProxyComponent : UProxyComponent
 ---@field RareResourceAreaType EAnvilRareResourceAreaType
 ---@field AreaRadius float
@@ -1070,7 +1161,6 @@ URareResourceAreaMarkerProxyComponent = {}
 ---@field TotalProductionTimeLeft float
 ---@field bInventoryFull boolean
 ---@field Priority uint8
----@field ProducibleItemResearchState TArray<boolean>
 URefineResourceDataComponent = {}
 
 
@@ -1233,6 +1323,7 @@ USeekerProxyComponent = {}
 ---@field AimYaw float
 ---@field AimPitch float
 ---@field LastIncomingAttackAngle float
+---@field bIsMeshHidden boolean
 USimPlayerDataComponent = {}
 
 
@@ -1279,6 +1370,7 @@ USnapPointProxyComponent = {}
 ---@field MidPieceTransforms TArray<FTransform>
 ---@field End FVector
 ---@field SegmentLength float
+---@field Slope float
 USplineDataComponent = {}
 
 
@@ -1288,6 +1380,8 @@ USplineDataComponent = {}
 ---@field MaxSegmentLength float
 ---@field MinSplineLength float
 ---@field MaxSplineLength float
+---@field SlopeMax float
+---@field FlatSlope float
 ---@field bScaleCost boolean
 ---@field bBridgeMode boolean
 ---@field BridgeStartOffSet FVector

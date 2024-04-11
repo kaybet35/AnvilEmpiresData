@@ -34,7 +34,8 @@ enum class EAnvilScreenType {
     Admin = 7,
     Help = 8,
     FactionSelect = 9,
-    EAnvilScreenType_MAX = 10,
+    ServerSelect = 10,
+    EAnvilScreenType_MAX = 11,
 };
 
 enum class EAnvilSpringArmMode {
@@ -126,8 +127,12 @@ enum class EHUDWindowType {
     RepairStation = 13,
     RelicTechCenter = 14,
     Cooking = 15,
-    Count = 16,
-    EHUDWindowType_MAX = 17,
+    Heating = 16,
+    HitConversion = 17,
+    Quenching = 18,
+    Housing = 19,
+    Count = 20,
+    EHUDWindowType_MAX = 21,
 };
 
 enum class EIncomingAttackDirection {

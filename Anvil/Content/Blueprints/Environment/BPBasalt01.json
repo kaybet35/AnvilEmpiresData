@@ -1,0 +1,121 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPBasalt01_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPBasalt01_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPBasalt01_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/BPBasalt01.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AnvilRockActor'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPBasalt01_C'Default__BPBasalt01_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/Environment/BPBasalt01.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPBasalt01_C",
+    "Name": "Default__BPBasalt01_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/Environment/BPBasalt01.BPBasalt01_C'",
+    "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPBasalt01_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/BPBasalt01.0"
+      },
+      "RockMeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BPBasalt01_C:RockMeshComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/BPBasalt01.6"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPBasalt01_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/BPBasalt01.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPBasalt01_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPBasalt01_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/BPBasalt01.3"
+      },
+      "VariableGuid": "E3E09E61-48069849-3F67B896-EAA7991D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPBasalt01_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPBasalt01_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/BPBasalt01.4"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "RockMeshComponent",
+    "Outer": "Default__BPBasalt01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'cliff_01'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/Cliffs/cliff_01.2"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPBasalt01_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/BPBasalt01.0"
+      }
+    }
+  }
+]

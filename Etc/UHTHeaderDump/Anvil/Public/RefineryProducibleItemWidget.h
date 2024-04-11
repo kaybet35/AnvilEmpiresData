@@ -20,9 +20,5 @@ protected:
 public:
     URefineryProducibleItemWidget();
 
-protected:
-    UFUNCTION(BlueprintCallable)
-    bool IsRefiningEnabled();
-    
 };
 

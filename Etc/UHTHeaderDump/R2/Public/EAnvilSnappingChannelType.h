@@ -10,5 +10,9 @@ enum class EAnvilSnappingChannelType : uint8 {
     RoadSide,
     Platform,
     Foundation,
+    WaterIn,
+    WaterOut,
+    PowerIn,
+    PowerOut,
 };
 

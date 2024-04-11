@@ -28,4 +28,7 @@ bool UAnvilGameInstance::GetIsNight() const {
 void UAnvilGameInstance::GetDayCurrentSeconds(int32& OutSeconds) const {
 }
 
+void UAnvilGameInstance::DumpProperties(const FString& OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter) {
+}
+
 

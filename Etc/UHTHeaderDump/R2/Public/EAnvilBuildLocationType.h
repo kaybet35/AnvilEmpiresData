@@ -5,13 +5,18 @@
 UENUM(BlueprintType)
 enum class EAnvilBuildLocationType : uint8 {
     Everywhere,
-    Stable,
-    Deployed,
+    Foundation,
+    Landscape,
+    LargeRock,
+    Foundation_Landscape,
+    Foundation_LargeRock,
+    Landscape_LargeRock,
     Marketplace,
     Shore,
-    OnFoundation,
-    NotOnFoundation,
     UnderFoundationCeiling,
+    _EndDirectBuildable,
+    Deployed,
+    Stable,
     Static,
     Count,
 };

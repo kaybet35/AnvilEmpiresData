@@ -5,9 +5,10 @@
     "Class": "UScriptClass'MaterialInstanceConstant'",
     "Properties": {
       "Parent": {
-        "ObjectName": "Material'MA_GroundPlants'",
-        "ObjectPath": "Anvil/Content/Materials/Environment/Foliage/GroundCover/groundPlantMaterials/MA_GroundPlants.0"
+        "ObjectName": "MaterialInstanceConstant'ground_01_01_Mat'",
+        "ObjectPath": "Anvil/Content/Materials/Environment/Foliage/GroundCover/groundPlantMaterials/GroundFoilageMaterials/ground_01_01_Mat.0"
       },
+      "bHasStaticPermutationResource": true,
       "ScalarParameterValues": [
         {
           "ParameterInfo": {
@@ -16,7 +17,7 @@
             "Index": -1
           },
           "ParameterValue": 0.7,
-          "ExpressionGUID": "90E30469-470AA416-D99A76AA-B3F1353F"
+          "ExpressionGUID": "5641D850-43DF7308-5A5AE99A-621D8FC6"
         },
         {
           "ParameterInfo": {
@@ -25,7 +26,7 @@
             "Index": -1
           },
           "ParameterValue": 0.6,
-          "ExpressionGUID": "B67FF3AC-40BD15B6-1D216888-C1CB52EF"
+          "ExpressionGUID": "6F636CD1-4189DC30-3DDD9DAA-EC5721B9"
         },
         {
           "ParameterInfo": {
@@ -47,6 +48,24 @@
         },
         {
           "ParameterInfo": {
+            "Name": "WindWeight",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.1,
+          "ExpressionGUID": "8EFFC4C1-46F31A00-CFE175A8-14933C33"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "WindPower",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.2,
+          "ExpressionGUID": "2A96E2E8-4E83E280-05536294-FC5B77AB"
+        },
+        {
+          "ParameterInfo": {
             "Name": "RefractionDepthBias",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
@@ -64,12 +83,12 @@
           },
           "ParameterValue": {
             "R": 1.0,
-            "G": 0.4329036,
-            "B": 0.27232295,
+            "G": 0.432904,
+            "B": 0.272323,
             "A": 0.0,
             "Hex": "FFB08E"
           },
-          "ExpressionGUID": "9AB8920F-490F5B91-938427B7-615600A8"
+          "ExpressionGUID": "81BE7EC1-4A57CFE3-A11427B1-BDB99A07"
         }
       ],
       "TextureParameterValues": [
@@ -114,7 +133,7 @@
         "TwoSided": true,
         "BlendMode": "EBlendMode::BLEND_Masked",
         "ShadingModel": "EMaterialShadingModel::MSM_TwoSidedFoliage",
-        "OpacityMaskClipValue": 0.05
+        "OpacityMaskClipValue": 0.3333
       }
     },
     "CachedData": {

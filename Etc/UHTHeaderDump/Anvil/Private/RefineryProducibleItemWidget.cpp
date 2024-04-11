@@ -5,8 +5,4 @@ URefineryProducibleItemWidget::URefineryProducibleItemWidget() {
     this->OutputCountContainer = NULL;
 }
 
-bool URefineryProducibleItemWidget::IsRefiningEnabled() {
-    return false;
-}
-
 

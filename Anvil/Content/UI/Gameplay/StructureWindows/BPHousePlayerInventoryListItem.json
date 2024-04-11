@@ -1,0 +1,285 @@
+[
+  {
+    "Type": "BPHousePlayerInventoryListItem_C",
+    "Name": "Default__BPHousePlayerInventoryListItem_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.BPHousePlayerInventoryListItem_C'",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_169",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPHousePlayerInventoryListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.4"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPHousePlayerInventoryListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.3"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPHousePlayerInventoryListItem_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.11"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_24",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPHousePlayerInventoryListItem_C:WidgetTree.HorizontalBox_24.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_169",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 4.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPHousePlayerInventoryListItem_C:WidgetTree.HorizontalBox_169'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.1"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPHousePlayerInventoryListItem_C:WidgetTree.PlayerNameText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.8"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_169",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPHousePlayerInventoryListItem_C:WidgetTree.HorizontalBox_169'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.1"
+      },
+      "Content": {
+        "ObjectName": "Image'BPHousePlayerInventoryListItem_C:WidgetTree.HouseOccupantIcon'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.6"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_24",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPHousePlayerInventoryListItem_C:WidgetTree.HorizontalBox_24'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.2"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'BPHousePlayerInventoryListItem_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.9"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "HouseOccupantIcon",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 24.0,
+          "Y": 24.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'HouseOccupantIcon'",
+          "ObjectPath": "Anvil/Content/Textures/UI/HouseOccupantIcon.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPHousePlayerInventoryListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.4"
+      }
+    }
+  },
+  {
+    "Type": "InventoryWidget",
+    "Name": "InventoryWidget",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'InventoryWidget'",
+    "Properties": {
+      "PreferredDimension": {
+        "X": 6,
+        "Y": 1
+      },
+      "ItemSlotWidgetType": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'BPInventoryItemWidget_C'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.32"
+      },
+      "SlotPadding": {
+        "Left": 4.0,
+        "Top": 4.0,
+        "Right": 4.0,
+        "Bottom": 4.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPHousePlayerInventoryListItem_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.10"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "PlayerNameText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "UMG",
+        "Key": "TextBlockDefaultValue",
+        "SourceString": "Text Block",
+        "LocalizedString": "Text Block"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 14
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPHousePlayerInventoryListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.3"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'BPHousePlayerInventoryListItem_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.11"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPHousePlayerInventoryListItem_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPHousePlayerInventoryListItem_C:WidgetTree.HorizontalBox_24.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.5"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPHousePlayerInventoryListItem_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.9"
+      },
+      "Content": {
+        "ObjectName": "InventoryWidget'BPHousePlayerInventoryListItem_C:WidgetTree.InventoryWidget'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.7"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPHousePlayerInventoryListItem_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.9"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPHousePlayerInventoryListItem_C:WidgetTree.HorizontalBox_169'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.1"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPHousePlayerInventoryListItem_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPHousePlayerInventoryListItem_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.13"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'HousePlayerInventoryListItem'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "HouseOccupantIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPHousePlayerInventoryListItem_C'Default__BPHousePlayerInventoryListItem_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPHousePlayerInventoryListItem_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "HorizontalBox'BPHousePlayerInventoryListItem_C:WidgetTree.HorizontalBox_24'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryListItem.2"
+      }
+    }
+  }
+]

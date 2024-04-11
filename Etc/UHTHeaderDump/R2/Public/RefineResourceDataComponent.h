@@ -28,9 +28,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 Priority;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<bool> ProducibleItemResearchState;
-    
     URefineResourceDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };

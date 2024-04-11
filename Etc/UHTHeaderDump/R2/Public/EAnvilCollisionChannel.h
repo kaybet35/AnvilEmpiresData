@@ -3,7 +3,7 @@
 #include "EAnvilCollisionChannel.generated.h"
 
 UENUM(BlueprintType)
-enum EAnvilCollisionChannel {
+enum class EAnvilCollisionChannel : uint8 {
     AnvilCollisionChannelStatic,
     AnvilCollisionChannelDynamic,
     AnvilCollisionChannelPlayer,
@@ -21,7 +21,7 @@ enum EAnvilCollisionChannel {
     AnvilCollisionChannelVehicle,
     AnvilCollisionChannelMeshVisibility,
     AnvilCollisionChannelShield,
-    AnvilCollisionChannel_REMOVED_,
+    AnvilCollisionChannelLargeRock,
     AnvilCollisionChannelWater,
     AnvilCollisionChannelAnimal,
     AnvilCollisionChannelMarketArea,

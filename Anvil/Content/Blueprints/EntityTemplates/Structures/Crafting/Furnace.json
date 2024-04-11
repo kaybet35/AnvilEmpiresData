@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "Furnace_C'Default__Furnace_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.5"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.6"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -34,6 +34,133 @@
     "Template": {
       "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "CookingProxyComponent",
+    "Name": "CookingProxyComponent_0",
+    "Outer": "Default__Furnace_C",
+    "Class": "UScriptClass'CookingProxyComponent'",
+    "Properties": {
+      "FuelList": [
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+          },
+          "BurnDurationSec": 180.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
+          },
+          "BurnDurationSec": 60.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+          },
+          "BurnDurationSec": 60.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceBranchesRaw_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranchesRaw.0"
+          },
+          "BurnDurationSec": 20.0
+        }
+      ],
+      "RecipeList": [
+        {
+          "InputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceIronFragments_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceIronFragments.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 3
+            }
+          ],
+          "OutputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "CookDurationSec": 60.0
+        },
+        {
+          "InputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceSilverOre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceSilverOre.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "OutputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "CookDurationSec": 60.0
+        },
+        {
+          "InputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 0
+            },
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedClay_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedClay.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 0
+            },
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedCoal_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedCoal.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 0
+            }
+          ],
+          "OutputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedSteel_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedSteel.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 0
+            }
+          ],
+          "CookDurationSec": 60.0
+        }
+      ],
+      "FoodBurnDurationSec": 0.0,
+      "bCanCookWithExistingOutputs": true
     }
   },
   {
@@ -86,27 +213,27 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__Furnace_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.15"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__Furnace_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.7"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__Furnace_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.12"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__Furnace_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.14"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__Furnace_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.4"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__Furnace_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.5"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__Furnace_C:BoxCollisionProxyComponent_0'",
@@ -114,25 +241,36 @@
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__Furnace_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.3"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__Furnace_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.13"
       },
       "CodeNameString": "Furnace",
       "CodeName": 826653602,
       "bShowOnMap": true,
-      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
-          "ObjectName": "RefineResourceProxyComponent'Default__Furnace_C:RefineResourceProxyComponent_0'",
+          "ObjectName": "CookingProxyComponent'Default__Furnace_C:CookingProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.2"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Furnace_C:InventoryProxyComponent_4'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.8"
         },
         {
-          "ObjectName": "InventoryProxyComponent'Default__Furnace_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.7"
+          "ObjectName": "InventoryProxyComponent'Default__Furnace_C:InventoryProxyComponent_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.11"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Furnace_C:InventoryProxyComponent_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.10"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Furnace_C:InventoryProxyComponent_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.9"
         }
       ],
       "VisActorClass": {
@@ -156,108 +294,38 @@
   },
   {
     "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_0",
+    "Name": "InventoryProxyComponent_4",
     "Outer": "Default__Furnace_C",
-    "Class": "UScriptClass'InventoryProxyComponent'"
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "bForceStackable": true
+    }
   },
   {
-    "Type": "RefineResourceProxyComponent",
-    "Name": "RefineResourceProxyComponent_0",
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_5",
     "Outer": "Default__Furnace_C",
-    "Class": "UScriptClass'RefineResourceProxyComponent'",
+    "Class": "UScriptClass'InventoryProxyComponent'",
     "Properties": {
-      "ProducableItemList": [
-        {
-          "ProducedItem": {
-            "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
-          },
-          "ProducedItemCost": [
-            {
-              "CostItem": {
-                "ObjectName": "BlueprintGeneratedClass'ResourceIronFragments_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceIronFragments.0"
-              },
-              "ItemCodeName": 0,
-              "Count": 3,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
-            }
-          ],
-          "ProductionTime": 60.0,
-          "OutputCount": 1,
-          "OutputMax": 1000,
-          "PrivateXpReward": 15,
-          "PublicXpReward": 25,
-          "bRequiresResearch": false,
-          "bCrateProducedItems": false
-        },
-        {
-          "ProducedItem": {
-            "ObjectName": "BlueprintGeneratedClass'ProcessedSteel_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedSteel.0"
-          },
-          "ProducedItemCost": [
-            {
-              "CostItem": {
-                "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
-              },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
-            },
-            {
-              "CostItem": {
-                "ObjectName": "BlueprintGeneratedClass'ProcessedCoal_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedCoal.0"
-              },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
-            },
-            {
-              "CostItem": {
-                "ObjectName": "BlueprintGeneratedClass'ProcessedClay_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedClay.0"
-              },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
-            }
-          ],
-          "ProductionTime": 90.0,
-          "OutputCount": 1,
-          "OutputMax": 1000,
-          "PrivateXpReward": 15,
-          "PublicXpReward": 25,
-          "bRequiresResearch": false,
-          "bCrateProducedItems": false
-        },
-        {
-          "ProducedItem": {
-            "ObjectName": "BlueprintGeneratedClass'Silver_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
-          },
-          "ProducedItemCost": [
-            {
-              "CostItem": {
-                "ObjectName": "BlueprintGeneratedClass'ResourceSilverOre_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceSilverOre.0"
-              },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
-            }
-          ],
-          "ProductionTime": 60.0,
-          "OutputCount": 1,
-          "OutputMax": 1000,
-          "PrivateXpReward": 15,
-          "PublicXpReward": 25,
-          "bRequiresResearch": false,
-          "bCrateProducedItems": false
-        }
-      ]
+      "bForceStackable": true
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_6",
+    "Outer": "Default__Furnace_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "bForceStackable": true
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_7",
+    "Outer": "Default__Furnace_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "bForceStackable": true
     }
   },
   {

@@ -2,6 +2,7 @@
 
 UCookingProxyComponent::UCookingProxyComponent() {
     this->FoodBurnDurationSec = 60.00f;
+    this->bCanCookWithExistingOutputs = false;
 }
 
 

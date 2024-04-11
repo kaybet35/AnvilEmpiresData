@@ -3,6 +3,6 @@
 
 class UBurningOil_C : public UItemTemplate
 {
-}; // Size: 0x218
+}; // Size: 0x230
 
 #endif

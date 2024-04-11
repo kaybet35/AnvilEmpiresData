@@ -11,6 +11,9 @@ public:
     QueueStatusType QueueStatus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FString QueuedServerName;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 QueuePosition;
     
     ANVIL_API FQueueStatusResponse();

@@ -5,27 +5,28 @@
     "Class": "UScriptClass'MaterialInstanceConstant'",
     "Properties": {
       "Parent": {
-        "ObjectName": "Material'MA_GroundPlants'",
-        "ObjectPath": "Anvil/Content/Materials/Environment/Foliage/GroundCover/groundPlantMaterials/MA_GroundPlants.0"
+        "ObjectName": "Material'FoliageMaster'",
+        "ObjectPath": "Anvil/Content/Materials/Environment/Foliage/FoliageMaster.0"
       },
+      "bHasStaticPermutationResource": true,
       "ScalarParameterValues": [
         {
           "ParameterInfo": {
-            "Name": "Bending Height",
+            "Name": "Snow Coverage",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 60.0,
-          "ExpressionGUID": "EE62915C-4FA05DD9-EB741582-02D17D27"
+          "ParameterValue": 0.088,
+          "ExpressionGUID": "DCDD22FC-470EDE0B-D96C92A3-A502B2B4"
         },
         {
           "ParameterInfo": {
-            "Name": "Bending Strength 1",
+            "Name": "Snow Hardness",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 2.0,
-          "ExpressionGUID": "7A22C3A0-4FD1F482-4A182B8D-117F3473"
+          "ParameterValue": 5.841722,
+          "ExpressionGUID": "E965643C-4FEEE261-3C7B7ABA-F502E929"
         },
         {
           "ParameterInfo": {
@@ -45,59 +46,96 @@
             "Index": -1
           },
           "ParameterValue": {
-            "R": 1.0,
-            "G": 0.574678,
-            "B": 0.454242,
+            "R": 0.692708,
+            "G": 0.347408,
+            "B": 0.409794,
             "A": 0.0,
-            "Hex": "FFC8B4"
+            "Hex": "D99FAC"
           },
-          "ExpressionGUID": "9AB8920F-490F5B91-938427B7-615600A8"
+          "ExpressionGUID": "81BE7EC1-4A57CFE3-A11427B1-BDB99A07"
         }
       ],
       "TextureParameterValues": [
         {
           "ParameterInfo": {
-            "Name": "Position and Index Texture",
+            "Name": "N",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           "ParameterValue": {
-            "ObjectName": "Texture2D'ground_01_01_PIV'",
-            "ObjectPath": "Anvil/Content/Textures/Environment/Foliage/GroundCover/PivPainterTextures/ground_01_01_PIV.0"
+            "ObjectName": "Texture2D'Foilage_Ground_Main_N'",
+            "ObjectPath": "Anvil/Content/Textures/Environment/Foliage/GroundCover/MasterTextures/Foilage_Ground_Main_N.0"
           },
-          "ExpressionGUID": "523531A9-48D6403D-932070BF-479F2930"
+          "ExpressionGUID": "4DEE228E-4E01D9CB-61301B94-173389A1"
         },
         {
           "ParameterInfo": {
-            "Name": "WindTurbulenceVectorAndGustMagnitude",
+            "Name": "A",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           "ParameterValue": {
-            "ObjectName": "Texture2D'WindTurblenceVectorAndGustMagnitude'",
-            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/WindTurblenceVectorAndGustMagnitude.0"
+            "ObjectName": "Texture2D'Foilage_Ground_Main_A'",
+            "ObjectPath": "Anvil/Content/Textures/Environment/Foliage/GroundCover/MasterTextures/Foilage_Ground_Main_A.0"
           },
-          "ExpressionGUID": "8F3C7CA5-40FD3525-1F4BADB6-C24CD8DB"
+          "ExpressionGUID": "0A5E34FD-48957176-586186A5-6F6D8065"
         },
         {
           "ParameterInfo": {
-            "Name": "X-Vector And X-Extent Texture",
+            "Name": "Alpha",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           "ParameterValue": {
-            "ObjectName": "Texture2D'ground_01_01_VEC'",
-            "ObjectPath": "Anvil/Content/Textures/Environment/Foliage/GroundCover/PivPainterTextures/ground_01_01_VEC.0"
+            "ObjectName": "Texture2D'Foilage_Ground_Main_O'",
+            "ObjectPath": "Anvil/Content/Textures/Environment/Foliage/GroundCover/MasterTextures/Foilage_Ground_Main_O.0"
           },
-          "ExpressionGUID": "1716C863-472404A1-400E97A6-A1F7D363"
+          "ExpressionGUID": "5512C3F1-47751D47-D232038E-2A0A26BC"
         }
       ],
       "BasePropertyOverrides": {
         "TwoSided": true,
         "BlendMode": "EBlendMode::BLEND_Masked",
         "ShadingModel": "EMaterialShadingModel::MSM_TwoSidedFoliage",
-        "OpacityMaskClipValue": 0.05
-      }
+        "OpacityMaskClipValue": 0.3333
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "Foilage_Ground_Main_A"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "Foilage_Ground_Main_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "Foilage_Ground_Main_O"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "RainDropMap"
+        },
+        {
+          "SamplingScale": 2.0,
+          "UVChannelIndex": 0,
+          "TextureName": "Snow_A"
+        },
+        {
+          "SamplingScale": 2.0,
+          "UVChannelIndex": 0,
+          "TextureName": "Snow_M"
+        },
+        {
+          "SamplingScale": 2.0,
+          "UVChannelIndex": 0,
+          "TextureName": "Snow_N"
+        }
+      ]
     },
     "CachedData": {
       "ParentLayerIndexRemap": []

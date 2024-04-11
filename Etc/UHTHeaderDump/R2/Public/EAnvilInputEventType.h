@@ -41,5 +41,8 @@ enum class EAnvilInputEventType : uint8 {
     Reload,
     RetractLadder,
     Climb,
+    QuenchItems,
+    HitConverterNextOutput,
+    HitConverterPreviousOutput,
 };
 

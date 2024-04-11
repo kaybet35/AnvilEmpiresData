@@ -155,6 +155,13 @@ function AProxyPawn:AutoMoveOff() end
 function AProxyPawn:AutoMove(Arg, bIsSprint) end
 
 
+---@class AServerPartition : AActor
+---@field ServerPartitionComponent UServerPartitionComponent
+---@field SceneComponent USceneComponent
+AServerPartition = {}
+
+
+
 ---@class AUIGlobals : AInfo
 ---@field TooltipClass TSubclassOf<UUserWidget>
 AUIGlobals = {}
@@ -293,6 +300,18 @@ AVisFishingIndicator = {}
 ---@field GateDataComponent UGateDataComponent
 ---@field Mesh USkeletalMeshComponent
 AVisGate = {}
+
+
+
+---@class AVisHeatingStructure : AVisStructure
+---@field HeatingDataComponent UHeatingDataComponent
+AVisHeatingStructure = {}
+
+
+
+---@class AVisHitConverterStructure : AVisStructure
+---@field HitConverterDataComponent UHitConverterDataComponent
+AVisHitConverterStructure = {}
 
 
 
@@ -547,6 +566,10 @@ FAnvilAssetManager = {}
 
 
 
+---@class FAnvilDataTableManager
+FAnvilDataTableManager = {}
+
+
 ---@class FAnvilMovieCharacterState
 ---@field MovieCharacter AAnvilMovieCharacter
 ---@field MovieVehicle AVisVehicle
@@ -574,6 +597,10 @@ FAnvilMovieItemAssignment = {}
 ---@field OptionsSave UAnvilOptionsSave
 FAnvilOptionsManager = {}
 
+
+
+---@class FAnvilPropertyUtil
+FAnvilPropertyUtil = {}
 
 
 ---@class FArmourTypeMeshes
@@ -619,7 +646,7 @@ FClientConfigManager = {}
 ---@class FClientConnectionRequest
 ---@field OnlineId uint64
 ---@field ProtocolId uint64
----@field ServerAddress FString
+---@field TargetServerName FString
 ---@field SelectedFactionId uint8
 ---@field QueueTypeToJoin uint8
 FClientConnectionRequest = {}
@@ -630,6 +657,7 @@ FClientConnectionRequest = {}
 ---@field ResponseType EClientConnectToServerResponseType
 ---@field SelectedFactionId uint8
 ---@field ConnectTokenBase64 FString
+---@field ServerNameToJoin FString
 ---@field ServerAddressToJoin FString
 ---@field QueuePosition int32
 FConnectToServerResponse = {}
@@ -658,6 +686,14 @@ FDayNightKeyFrame = {}
 
 
 
+---@class FDecayData : FTableRowBase
+---@field bEnabled boolean
+---@field StartDelayHours float
+---@field DecayTimeHours float
+FDecayData = {}
+
+
+
 ---@class FDeleteProfileResponse
 ---@field bDeletedProfile boolean
 ---@field LockedFactionId uint8
@@ -680,6 +716,18 @@ FFactionLockResponse = {}
 
 ---@class FGraphData
 FGraphData = {}
+
+
+---@class FHealthData : FTableRowBase
+---@field MaxHealth float
+FHealthData = {}
+
+
+
+---@class FItemData : FTableRowBase
+---@field Damage uint8
+FItemData = {}
+
 
 
 ---@class FMapIconInstanceProperty
@@ -710,9 +758,28 @@ FMapIconTypeProperty = {}
 
 ---@class FQueueStatusResponse
 ---@field QueueStatus QueueStatusType
+---@field QueuedServerName FString
 ---@field QueuePosition int32
 FQueueStatusResponse = {}
 
+
+
+---@class FServerListEntry
+---@field ServerName FString
+---@field ServerAddress FString
+---@field FactionCapacityArray TArray<boolean>
+FServerListEntry = {}
+
+
+
+---@class FServerListResponse
+---@field ServerList TArray<FServerListEntry>
+FServerListResponse = {}
+
+
+
+---@class FServerRegion
+FServerRegion = {}
 
 
 ---@class FVoiceLoginInfo
@@ -875,6 +942,10 @@ function UAnvilGameInstance:GetNightTimeNormalized() end
 function UAnvilGameInstance:GetIsNight() end
 ---@param OutSeconds int32
 function UAnvilGameInstance:GetDayCurrentSeconds(OutSeconds) end
+---@param OutputFileName FString
+---@param Type UClass
+---@param PropertyNameFilter TArray<FString>
+function UAnvilGameInstance:DumpProperties(OutputFileName, Type, PropertyNameFilter) end
 
 
 ---@class UAnvilKeyEntryWidget : UUserWidget
@@ -1318,11 +1389,53 @@ UHeaderContainer = {}
 
 
 
+---@class UHeatingWindow : UStructureWindow
+---@field ItemsItemGrid UInventoryWidget
+---@field FuelInputItemGrid UInventoryWidget
+---@field FuelOutputItemGrid UInventoryWidget
+---@field FuelDurationText UTextBlock
+UHeatingWindow = {}
+
+---@return ESlateVisibility
+function UHeatingWindow:GetFuelDurationTextVisibility() end
+---@return FText
+function UHeatingWindow:GetFuelDurationText() end
+
+
 ---@class UHelpScreen : UAnvilScreen
 ---@field HelpImageButton UButton
 UHelpScreen = {}
 
 function UHelpScreen:OnHelpImageButtonClicked() end
+
+
+---@class UHitConversionWindow : UStructureWindow
+---@field CurrentSelectedOutputImage UImage
+---@field OutputPreviousButton UButton
+---@field OutputNextButton UButton
+UHitConversionWindow = {}
+
+function UHitConversionWindow:OutputPreviousButtonClicked() end
+function UHitConversionWindow:OutputNextButtonClicked() end
+
+
+---@class UHousePlayerInventoryListItem : UUserWidget
+---@field PlayerNameText UTextBlock
+---@field InventoryWidget UInventoryWidget
+UHousePlayerInventoryListItem = {}
+
+
+
+---@class UHousePlayerInventoryWidgetBox : UScrollBox
+---@field PlayerInventoryListItemType TSubclassOf<UHousePlayerInventoryListItem>
+UHousePlayerInventoryWidgetBox = {}
+
+
+
+---@class UHouseWindow : UStructureWindow
+---@field PlayerInventoriesBox UHousePlayerInventoryWidgetBox
+UHouseWindow = {}
+
 
 
 ---@class UInteractionIconWidget : UUserWidget
@@ -1353,6 +1466,9 @@ UInventoryContainerWidget = {}
 ---@field DurabilityBar UProgressBar
 ---@field SubtypeIconRelic UImage
 ---@field OverEncumberedImage UImage
+---@field HitConversionProgressBar UProgressBar
+---@field QualityIconImage UImage
+---@field QualityIconTextures TMap<EItemQualityType, UTexture2D>
 UInventoryItemWidget = {}
 
 
@@ -1616,13 +1732,18 @@ UPledgedPlayerListItem = {}
 function UPledgedPlayerListItem:OnVoteChecked(bIsChecked) end
 
 
+---@class UQuenchingWindow : UStructureWindow
+---@field QuenchButton UButton
+UQuenchingWindow = {}
+
+function UQuenchingWindow:OnQuenchButtonClicked() end
+
+
 ---@class URefineryProducibleItemWidget : UGridItemWidget
 ---@field OutputCount UTextBlock
 ---@field OutputCountContainer UPanelWidget
 URefineryProducibleItemWidget = {}
 
----@return boolean
-function URefineryProducibleItemWidget:IsRefiningEnabled() end
 
 
 ---@class URefineryProducibleListWidget : UGridPanelWidget
@@ -1696,6 +1817,42 @@ UResourceWidget = {}
 ---@class UScorchEffectComponent : UNiagaraComponent
 ---@field ScorchThreshold float
 UScorchEffectComponent = {}
+
+
+
+---@class UServerListEntryView : UObject
+---@field ServerListEntry FServerListEntry
+UServerListEntryView = {}
+
+
+
+---@class UServerListEntryWidget : UUserWidget
+---@field ServerListEntryButton UButton
+---@field ServerNameTextBlock UTextBlock
+---@field AranicPopulationTextBlock UTextBlock
+---@field MirrishPopulationTextBlock UTextBlock
+---@field NovanPopulationTextBlock UTextBlock
+---@field PopulationOpenColour FSlateColor
+---@field PopulationFullColour FSlateColor
+---@field ServerDisplayNames TMap<FString, FString>
+UServerListEntryWidget = {}
+
+function UServerListEntryWidget:OnServerEntryClicked() end
+
+
+---@class UServerPartitionComponent : UActorComponent
+---@field bVisualizeCookedRegion boolean
+---@field Extents FVector
+---@field ServerRegionCountX int32
+---@field ServerRegionCountY int32
+---@field TransitionRegionSize float
+UServerPartitionComponent = {}
+
+
+
+---@class UServerSelectScreen : UAnvilScreen
+---@field ServerList UListView
+UServerSelectScreen = {}
 
 
 

@@ -5,6 +5,8 @@ USplineProxyComponent::USplineProxyComponent() {
     this->MaxSegmentLength = 500.00f;
     this->MinSplineLength = 150.00f;
     this->MaxSplineLength = 2000.00f;
+    this->SlopeMax = 1.00f;
+    this->FlatSlope = 0.10f;
     this->bScaleCost = false;
     this->bBridgeMode = false;
     this->MidPiece = NULL;

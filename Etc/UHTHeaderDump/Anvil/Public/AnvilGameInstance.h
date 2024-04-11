@@ -71,5 +71,9 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetDayCurrentSeconds(int32& OutSeconds) const;
     
+private:
+    UFUNCTION(BlueprintCallable, Exec)
+    void DumpProperties(const FString& OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter);
+    
 };
 

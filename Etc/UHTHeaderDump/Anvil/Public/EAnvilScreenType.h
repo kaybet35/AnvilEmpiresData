@@ -14,5 +14,6 @@ enum class EAnvilScreenType : uint8 {
     Admin,
     Help,
     FactionSelect,
+    ServerSelect,
 };
 

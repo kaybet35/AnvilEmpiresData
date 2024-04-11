@@ -2,7 +2,7 @@
 
 UHousingDataComponent::UHousingDataComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->IsForCampsOnly = 0;
-    this->PledgedPlayerId = 0;
+    this->PlayerCapacity = 0;
 }
 
 

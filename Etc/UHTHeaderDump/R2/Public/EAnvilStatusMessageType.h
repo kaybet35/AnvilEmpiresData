@@ -89,6 +89,7 @@ enum class EAnvilStatusMessageType : uint8 {
     BedClaimCleared,
     BedNotUnderCeiling,
     HorseNotHungry,
+    PvpIsNerfed,
     NumTypes,
 };
 

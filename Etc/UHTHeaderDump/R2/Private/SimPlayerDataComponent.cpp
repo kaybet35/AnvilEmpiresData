@@ -30,6 +30,7 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->AimYaw = 0.00f;
     this->AimPitch = 0.00f;
     this->LastIncomingAttackAngle = 0.00f;
+    this->bIsMeshHidden = false;
 }
 
 

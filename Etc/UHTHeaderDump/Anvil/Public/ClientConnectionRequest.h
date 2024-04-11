@@ -13,7 +13,7 @@ public:
     uint64 ProtocolId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FString ServerAddress;
+    FString TargetServerName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 SelectedFactionId;

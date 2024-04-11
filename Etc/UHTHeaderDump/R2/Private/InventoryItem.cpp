@@ -5,6 +5,7 @@ FInventoryItem::FInventoryItem() {
     this->SlotType = EAnvilItemType::None;
     this->Durability = 0.00f;
     this->bIsRelic = false;
+    this->Payload = 0;
     this->StackLimit = 0;
     this->bIsDisabled = false;
     this->bTooEncumberedToEquip = false;

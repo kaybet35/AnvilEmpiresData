@@ -20,6 +20,10 @@ enum class EHUDWindowType : uint8 {
     RepairStation,
     RelicTechCenter,
     Cooking,
+    Heating,
+    HitConversion,
+    Quenching,
+    Housing,
     Count,
 };
 

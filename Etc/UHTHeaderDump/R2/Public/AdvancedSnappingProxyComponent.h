@@ -1,11 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "ProxyComponent.h"
-#include "Templates/SubclassOf.h"
 #include "AdvancedSnappingProxyComponent.generated.h"
-
-class UEntityTemplate;
 
 UCLASS(Blueprintable, EditInlineNew)
 class R2_API UAdvancedSnappingProxyComponent : public UProxyComponent {
@@ -21,10 +17,13 @@ public:
     bool bSnappingRequired;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<TSubclassOf<UEntityTemplate>> AugmentTargets;
+    bool bSnapHeight;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FVector AugmentationOffset;
+    bool bOverrideAngleOverlapMin;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float OverridedAngleOverlapMin;
     
     UAdvancedSnappingProxyComponent();
 

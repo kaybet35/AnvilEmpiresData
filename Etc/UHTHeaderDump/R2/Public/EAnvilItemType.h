@@ -28,6 +28,7 @@ enum class EAnvilItemType : uint8 {
     LiquidStorage,
     WeaponStorage,
     BaseStockpile,
+    Quenchable,
     NumTypes,
     LeftHand,
     RightHand,

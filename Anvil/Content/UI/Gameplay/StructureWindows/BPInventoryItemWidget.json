@@ -55,7 +55,7 @@
       },
       "Content": {
         "ObjectName": "SizeBox'BPInventoryItemWidget_C:WidgetTree.SizeBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.17"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.21"
       }
     }
   },
@@ -110,6 +110,26 @@
           "EAnvilItemType::RightHand": {
             "ObjectName": "Texture2D'IconBackgroundHandsRight'",
             "ObjectPath": "Anvil/Content/Textures/UI/Inventory/IconBackgroundHandsRight.0"
+          }
+        }
+      ],
+      "QualityIconTextures": [
+        {
+          "EItemQualityType::Low": {
+            "ObjectName": "Texture2D'ItemQualityLow'",
+            "ObjectPath": "Anvil/Content/Textures/UI/ItemQualityLow.0"
+          }
+        },
+        {
+          "EItemQualityType::Medium": {
+            "ObjectName": "Texture2D'ItemQualityMedium'",
+            "ObjectPath": "Anvil/Content/Textures/UI/ItemQualityMedium.0"
+          }
+        },
+        {
+          "EItemQualityType::High": {
+            "ObjectName": "Texture2D'ItemQualityHigh'",
+            "ObjectPath": "Anvil/Content/Textures/UI/ItemQualityHigh.0"
           }
         }
       ],
@@ -219,7 +239,7 @@
       ],
       "Slot": {
         "ObjectName": "SizeBoxSlot'BPInventoryItemWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.20"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.26"
       }
     }
   },
@@ -243,7 +263,7 @@
       },
       "Content": {
         "ObjectName": "Overlay'BPInventoryItemWidget_C:WidgetTree.Overlay_57'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.10"
       }
     }
   },
@@ -255,7 +275,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.11"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.12"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -279,9 +299,27 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.12"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.13"
       },
       "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "QualityIconImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'ItemQualityHigh'",
+          "ObjectPath": "Anvil/Content/Textures/UI/ItemQualityHigh.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPInventoryItemWidget_C:WidgetTree.SizeBox_2.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.30"
+      }
     }
   },
   {
@@ -302,7 +340,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.13"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.14"
       }
     }
   },
@@ -320,7 +358,7 @@
       },
       "Slot": {
         "ObjectName": "SizeBoxSlot'BPInventoryItemWidget_C:WidgetTree.SizeBox_148.SizeBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.21"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.28"
       }
     }
   },
@@ -333,27 +371,35 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.11"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.12"
         },
         {
           "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_3'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.13"
-        },
-        {
-          "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.10"
-        },
-        {
-          "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_5'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.15"
-        },
-        {
-          "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_4'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.14"
         },
         {
+          "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.11"
+        },
+        {
+          "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_5'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.16"
+        },
+        {
+          "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_7'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.18"
+        },
+        {
+          "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.15"
+        },
+        {
+          "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_6'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.17"
+        },
+        {
           "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.12"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.13"
         }
       ],
       "Slot": {
@@ -377,11 +423,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
       "Parent": {
         "ObjectName": "Overlay'BPInventoryItemWidget_C:WidgetTree.Overlay_57'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.10"
       },
       "Content": {
         "ObjectName": "TextBlock'BPInventoryItemWidget_C:WidgetTree.ItemQuantityText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.23"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.31"
       }
     }
   },
@@ -395,7 +441,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'BPInventoryItemWidget_C:WidgetTree.Overlay_57'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.10"
       },
       "Content": {
         "ObjectName": "Image'BPInventoryItemWidget_C:WidgetTree.ItemImage'",
@@ -413,7 +459,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'BPInventoryItemWidget_C:WidgetTree.Overlay_57'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.10"
       },
       "Content": {
         "ObjectName": "Image'BPInventoryItemWidget_C:WidgetTree.OverencumberedImage'",
@@ -431,11 +477,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "Overlay'BPInventoryItemWidget_C:WidgetTree.Overlay_57'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.10"
       },
       "Content": {
         "ObjectName": "Image'BPInventoryItemWidget_C:WidgetTree.SubItemImage'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.7"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.8"
       }
     }
   },
@@ -452,11 +498,11 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
       "Parent": {
         "ObjectName": "Overlay'BPInventoryItemWidget_C:WidgetTree.Overlay_57'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.10"
       },
       "Content": {
         "ObjectName": "SizeBox'BPInventoryItemWidget_C:WidgetTree.SizeBox_148'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.18"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.23"
       }
     }
   },
@@ -475,11 +521,54 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'BPInventoryItemWidget_C:WidgetTree.Overlay_57'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.10"
       },
       "Content": {
         "ObjectName": "SizeBox'BPInventoryItemWidget_C:WidgetTree.SizeBox_187'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.19"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.24"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_6",
+    "Outer": "Overlay_57",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Padding": {
+        "Top": 4.0,
+        "Right": 2.0
+      },
+      "Parent": {
+        "ObjectName": "Overlay'BPInventoryItemWidget_C:WidgetTree.Overlay_57'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.10"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPInventoryItemWidget_C:WidgetTree.SizeBox_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.25"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_7",
+    "Outer": "Overlay_57",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 6.0,
+        "Top": 1.0,
+        "Right": 1.0,
+        "Bottom": 1.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'BPInventoryItemWidget_C:WidgetTree.Overlay_57'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.10"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPInventoryItemWidget_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.22"
       }
     }
   },
@@ -547,7 +636,83 @@
       },
       "Slot": {
         "ObjectName": "SizeBoxSlot'BPInventoryItemWidget_C:WidgetTree.SizeBox_187.SizeBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.22"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.29"
+      },
+      "bIsVariable": false
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "HitConversionProgressBar",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'ProgressBar'",
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.042311,
+              "G": 0.015996,
+              "B": 0.000607,
+              "A": 1.0,
+              "Hex": "FF3A2202"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          }
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.828125,
+              "G": 0.825207,
+              "B": 0.78068,
+              "A": 1.0,
+              "Hex": "FFEBEBE5"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          }
+        },
+        "MarqueeImage": {
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          }
+        }
+      },
+      "Percent": 1.0,
+      "BarFillType": "EProgressBarFillType::BottomToTop",
+      "BorderPadding": {
+        "X": 1.5,
+        "Y": 1.5
+      },
+      "FillColorAndOpacity": {
+        "R": 0.107526,
+        "G": 0.138255,
+        "B": 0.2125,
+        "A": 1.0,
+        "Hex": "FF5C687F"
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPInventoryItemWidget_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.27"
       },
       "bIsVariable": false
     }
@@ -565,7 +730,7 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'BPInventoryItemWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.20"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.26"
         }
       ],
       "Slot": {
@@ -573,6 +738,26 @@
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.1"
       },
       "bIsVariable": true
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 6.0,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPInventoryItemWidget_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.27"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_7'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.18"
+      }
     }
   },
   {
@@ -588,12 +773,12 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'BPInventoryItemWidget_C:WidgetTree.SizeBox_148.SizeBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.21"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.28"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.14"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.15"
       }
     }
   },
@@ -608,12 +793,34 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'BPInventoryItemWidget_C:WidgetTree.SizeBox_187.SizeBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.22"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.29"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_5'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.15"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.16"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_2",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 32.0,
+      "HeightOverride": 32.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPInventoryItemWidget_C:WidgetTree.SizeBox_2.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.30"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_6'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.17"
       }
     }
   },
@@ -625,11 +832,28 @@
     "Properties": {
       "Parent": {
         "ObjectName": "SizeBox'BPInventoryItemWidget_C:WidgetTree.SizeBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.17"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.21"
       },
       "Content": {
         "ObjectName": "Button'BPInventoryItemWidget_C:WidgetTree.Button'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.3"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_1",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'BPInventoryItemWidget_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.22"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'BPInventoryItemWidget_C:WidgetTree.HitConversionProgressBar'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.20"
       }
     }
   },
@@ -641,11 +865,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "SizeBox'BPInventoryItemWidget_C:WidgetTree.SizeBox_148'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.18"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.23"
       },
       "Content": {
         "ObjectName": "Image'BPInventoryItemWidget_C:WidgetTree.SubtypeIconRelic'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.8"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.9"
       }
     }
   },
@@ -658,11 +882,27 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "Parent": {
         "ObjectName": "SizeBox'BPInventoryItemWidget_C:WidgetTree.SizeBox_187'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.19"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.24"
       },
       "Content": {
         "ObjectName": "ProgressBar'BPInventoryItemWidget_C:WidgetTree.DurabilityBar'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.16"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.19"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_2",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPInventoryItemWidget_C:WidgetTree.SizeBox_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.25"
+      },
+      "Content": {
+        "ObjectName": "Image'BPInventoryItemWidget_C:WidgetTree.QualityIconImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.7"
       }
     }
   },
@@ -692,7 +932,7 @@
       "Justification": "ETextJustify::Right",
       "Slot": {
         "ObjectName": "OverlaySlot'BPInventoryItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.10"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.11"
       },
       "bIsVariable": true
     }
@@ -704,7 +944,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPInventoryItemWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.25"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.33"
       },
       "bClassRequiresNativeTick": true
     },

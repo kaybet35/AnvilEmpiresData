@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "DataComponent.h"
+#include "HousePledgedPlayerIdArray.h"
 #include "HousingDataComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -10,8 +11,11 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 IsForCampsOnly;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    int64 PledgedPlayerId;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 PlayerCapacity;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FHousePledgedPlayerIdArray PledgedPlayerIds;
     
     UHousingDataComponent(const FObjectInitializer& ObjectInitializer);
 

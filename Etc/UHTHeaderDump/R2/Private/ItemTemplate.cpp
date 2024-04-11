@@ -4,6 +4,8 @@ UItemTemplate::UItemTemplate() {
     this->CodeName = 0;
     this->ItemType = EAnvilItemType::Normal;
     this->SecondaryType = EAnvilItemType::None;
+    this->ItemDurabilityType = EAnvilItemDurabilityType::None;
+    this->ItemPayloadType = EAnvilItemPayloadType::None;
     this->PickupEntity = NULL;
     this->ItemDestroyedEffect = NULL;
     this->ItemInvokedEffect = NULL;
@@ -14,8 +16,11 @@ UItemTemplate::UItemTemplate() {
     this->Encumberance = 0;
     this->ArmedDurabilityLossPerSec = 0.00f;
     this->DurabilityLossPerUse = 0.00f;
+    this->DurabilityLossPerSec = 0.00f;
     this->bRearmAfterConsumption = false;
     this->StockPileWithdrawalValue = 1.00f;
+    this->HeatedItem = NULL;
+    this->CooledItem = NULL;
     this->bRanged = false;
     this->Damage = 0;
     this->DamageRadius = 0.00f;

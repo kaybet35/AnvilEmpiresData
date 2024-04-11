@@ -5,28 +5,19 @@
     "Class": "UScriptClass'MaterialInstanceConstant'",
     "Properties": {
       "Parent": {
-        "ObjectName": "MaterialInstanceConstant'ScotchPineBranch'",
-        "ObjectPath": "Anvil/Content/Materials/Environment/Foliage/ScotchPineBranch.0"
+        "ObjectName": "Material'FoliageMaster'",
+        "ObjectPath": "Anvil/Content/Materials/Environment/Foliage/FoliageMaster.0"
       },
       "bHasStaticPermutationResource": true,
       "ScalarParameterValues": [
-        {
-          "ParameterInfo": {
-            "Name": "WindPower",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 0.1,
-          "ExpressionGUID": "E1638B03-4CC8A8D0-3370EB99-08CE561D"
-        },
         {
           "ParameterInfo": {
             "Name": "WindWeight",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 0.1,
-          "ExpressionGUID": "63C5347B-4E382DEC-E2CF0DA9-FC24650F"
+          "ParameterValue": 0.3,
+          "ExpressionGUID": "8EFFC4C1-46F31A00-CFE175A8-14933C33"
         },
         {
           "ParameterInfo": {
@@ -34,35 +25,17 @@
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 0.1,
-          "ExpressionGUID": "2ED7CACA-44AE8820-64B5D9B7-6CE2C877"
+          "ParameterValue": 0.2,
+          "ExpressionGUID": "C7A68C1F-443E8F0E-25DD93B7-CB57BD5C"
         },
         {
           "ParameterInfo": {
-            "Name": "Gradient Falloff",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 0.9,
-          "ExpressionGUID": "397F8A19-4F75E0B6-8FEA55BE-732E614C"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "Gradient Location",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": -0.5,
-          "ExpressionGUID": "20C48526-41020422-B7611CB1-7196A5BB"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "Spec",
+            "Name": "WindPower",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           "ParameterValue": 0.15,
-          "ExpressionGUID": "0C35B89F-4B627B36-4ED3B392-13565C46"
+          "ExpressionGUID": "2A96E2E8-4E83E280-05536294-FC5B77AB"
         },
         {
           "ParameterInfo": {
@@ -77,31 +50,7 @@
       "TextureParameterValues": [
         {
           "ParameterInfo": {
-            "Name": "Albedo",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": {
-            "ObjectName": "Texture2D'PineBranchA'",
-            "ObjectPath": "Anvil/Content/Textures/Environment/Foliage/PineBranchA.0"
-          },
-          "ExpressionGUID": "E5855F07-478F7A30-CEE8EEA6-E59CA01E"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "Materiality",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": {
-            "ObjectName": "Texture2D'PineBranchM'",
-            "ObjectPath": "Anvil/Content/Textures/Environment/Foliage/PineBranchM.0"
-          },
-          "ExpressionGUID": "A39F0B1A-48537283-282D41BF-1FAC4140"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "Normal",
+            "Name": "N",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
@@ -109,21 +58,39 @@
             "ObjectName": "Texture2D'PineBranchN'",
             "ObjectPath": "Anvil/Content/Textures/Environment/Foliage/PineBranchN.0"
           },
-          "ExpressionGUID": "187E7A50-407402B3-C69DE69F-09571E99"
+          "ExpressionGUID": "4DEE228E-4E01D9CB-61301B94-173389A1"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "A",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'PineBranchA'",
+            "ObjectPath": "Anvil/Content/Textures/Environment/Foliage/PineBranchA.0"
+          },
+          "ExpressionGUID": "0A5E34FD-48957176-586186A5-6F6D8065"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "MA",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'PineBranchM'",
+            "ObjectPath": "Anvil/Content/Textures/Environment/Foliage/PineBranchM.0"
+          },
+          "ExpressionGUID": "F285DDEB-41827916-F471A89B-25B8102A"
         }
       ],
       "BasePropertyOverrides": {
         "TwoSided": true,
         "BlendMode": "EBlendMode::BLEND_Masked",
+        "ShadingModel": "EMaterialShadingModel::MSM_TwoSidedFoliage",
         "OpacityMaskClipValue": 0.3333
-      },
-      "TextureStreamingData": [
-        {
-          "SamplingScale": 1.0,
-          "UVChannelIndex": 0,
-          "TextureName": "Grunge_Mask"
-        }
-      ]
+      }
     },
     "CachedData": {
       "ParentLayerIndexRemap": []

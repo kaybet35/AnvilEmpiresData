@@ -3,6 +3,6 @@
 
 class UBPInventoryItemWidget_C : public UInventoryItemWidget
 {
-}; // Size: 0x3B0
+}; // Size: 0x410
 
 #endif

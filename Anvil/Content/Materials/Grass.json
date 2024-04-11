@@ -5,20 +5,11 @@
     "Class": "UScriptClass'MaterialInstanceConstant'",
     "Properties": {
       "Parent": {
-        "ObjectName": "Material'FoliageA'",
-        "ObjectPath": "Anvil/Content/Materials/FoliageA.0"
+        "ObjectName": "Material'FoliageMaster'",
+        "ObjectPath": "Anvil/Content/Materials/Environment/Foliage/FoliageMaster.0"
       },
       "bHasStaticPermutationResource": true,
       "ScalarParameterValues": [
-        {
-          "ParameterInfo": {
-            "Name": "WindPower",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 1.0,
-          "ExpressionGUID": "E1638B03-4CC8A8D0-3370EB99-08CE561D"
-        },
         {
           "ParameterInfo": {
             "Name": "WindWeight",
@@ -26,7 +17,7 @@
             "Index": -1
           },
           "ParameterValue": 0.25,
-          "ExpressionGUID": "63C5347B-4E382DEC-E2CF0DA9-FC24650F"
+          "ExpressionGUID": "8EFFC4C1-46F31A00-CFE175A8-14933C33"
         },
         {
           "ParameterInfo": {
@@ -35,16 +26,16 @@
             "Index": -1
           },
           "ParameterValue": 0.1,
-          "ExpressionGUID": "2ED7CACA-44AE8820-64B5D9B7-6CE2C877"
+          "ExpressionGUID": "C7A68C1F-443E8F0E-25DD93B7-CB57BD5C"
         },
         {
           "ParameterInfo": {
-            "Name": "Spec",
+            "Name": "WindPower",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 0.3,
-          "ExpressionGUID": "0C35B89F-4B627B36-4ED3B392-13565C46"
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "2A96E2E8-4E83E280-05536294-FC5B77AB"
         },
         {
           "ParameterInfo": {
@@ -59,48 +50,39 @@
       "VectorParameterValues": [
         {
           "ParameterInfo": {
-            "Name": "Initial Per Instance Variation Colour",
+            "Name": "Tint",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           "ParameterValue": {
-            "R": 0.97113,
+            "R": 1.0,
             "G": 1.0,
-            "B": 0.953125,
-            "A": 1.0,
-            "Hex": "FFFCFFFA"
+            "B": 1.0,
+            "A": 0.0,
+            "Hex": "FFFFFF"
           },
-          "ExpressionGUID": "F8658357-41952AD6-547C36A1-85337918"
+          "ExpressionGUID": "81BE7EC1-4A57CFE3-A11427B1-BDB99A07"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Tree Colour Variation",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.850641,
+            "G": 0.859375,
+            "B": 0.819092,
+            "A": 1.0,
+            "Hex": "FFEEEFEA"
+          },
+          "ExpressionGUID": "5F2036E0-48B6936E-6F758782-B404AC66"
         }
       ],
       "TextureParameterValues": [
         {
           "ParameterInfo": {
-            "Name": "Albedo",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": {
-            "ObjectName": "Texture2D'Grass_Blades_A'",
-            "ObjectPath": "Anvil/Content/KiteDemo/Environments/Foliage/Grass/FieldGrass/Grass_Blades_A.0"
-          },
-          "ExpressionGUID": "E5855F07-478F7A30-CEE8EEA6-E59CA01E"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "Materiality",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": {
-            "ObjectName": "Texture2D'Grass_Blades_M'",
-            "ObjectPath": "Anvil/Content/KiteDemo/Environments/Foliage/Grass/FieldGrass/Grass_Blades_M.0"
-          },
-          "ExpressionGUID": "A39F0B1A-48537283-282D41BF-1FAC4140"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "Normal",
+            "Name": "N",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
@@ -108,7 +90,43 @@
             "ObjectName": "Texture2D'Grass_Blades_N'",
             "ObjectPath": "Anvil/Content/KiteDemo/Environments/Foliage/Grass/FieldGrass/Grass_Blades_N.0"
           },
-          "ExpressionGUID": "187E7A50-407402B3-C69DE69F-09571E99"
+          "ExpressionGUID": "4DEE228E-4E01D9CB-61301B94-173389A1"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "A",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'Grass_Blades_A'",
+            "ObjectPath": "Anvil/Content/KiteDemo/Environments/Foliage/Grass/FieldGrass/Grass_Blades_A.0"
+          },
+          "ExpressionGUID": "0A5E34FD-48957176-586186A5-6F6D8065"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Alpha",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'Grass_Blades_M'",
+            "ObjectPath": "Anvil/Content/KiteDemo/Environments/Foliage/Grass/FieldGrass/Grass_Blades_M.0"
+          },
+          "ExpressionGUID": "5512C3F1-47751D47-D232038E-2A0A26BC"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "MA",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'Grass_Blades_M'",
+            "ObjectPath": "Anvil/Content/KiteDemo/Environments/Foliage/Grass/FieldGrass/Grass_Blades_M.0"
+          },
+          "ExpressionGUID": "F285DDEB-41827916-F471A89B-25B8102A"
         }
       ],
       "BasePropertyOverrides": {
@@ -116,6 +134,7 @@
         "TwoSided": true,
         "DitheredLODTransition": true,
         "BlendMode": "EBlendMode::BLEND_Masked",
+        "ShadingModel": "EMaterialShadingModel::MSM_TwoSidedFoliage",
         "OpacityMaskClipValue": 0.3333
       }
     },

@@ -12,12 +12,85 @@
       "ScalarParameterValues": [
         {
           "ParameterInfo": {
+            "Name": "Brightness",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.4,
+          "ExpressionGUID": "5641D850-43DF7308-5A5AE99A-621D8FC6"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Roughness",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.7,
+          "ExpressionGUID": "93165907-44C5168E-99C1D180-610E663C"
+        },
+        {
+          "ParameterInfo": {
             "Name": "RefractionDepthBias",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           "ParameterValue": 0.0,
           "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "VectorParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Tint",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.505208,
+            "G": 0.412936,
+            "B": 0.121906,
+            "A": 0.0,
+            "Hex": "BDAC62"
+          },
+          "ExpressionGUID": "81BE7EC1-4A57CFE3-A11427B1-BDB99A07"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "N",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'Reed_bark_normal'",
+            "ObjectPath": "Anvil/Content/Textures/Environment/Foliage/Reeds/MasterTextures/Reed_bark_normal.0"
+          },
+          "ExpressionGUID": "4DEE228E-4E01D9CB-61301B94-173389A1"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "A",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'Reed_leafs_albedo'",
+            "ObjectPath": "Anvil/Content/Textures/Environment/Foliage/Reeds/MasterTextures/Reed_leafs_albedo.0"
+          },
+          "ExpressionGUID": "0A5E34FD-48957176-586186A5-6F6D8065"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Alpha",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'Reeds_Masks'",
+            "ObjectPath": "Anvil/Content/Textures/Environment/Foliage/Reeds/MasterTextures/Reeds_Masks.0"
+          },
+          "ExpressionGUID": "5512C3F1-47751D47-D232038E-2A0A26BC"
         }
       ],
       "BasePropertyOverrides": {
@@ -30,7 +103,12 @@
         {
           "SamplingScale": 1.0,
           "UVChannelIndex": 0,
-          "TextureName": "Reed_bark_normal"
+          "TextureName": "AverageNoises01"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "RainDropMap"
         }
       ]
     },
