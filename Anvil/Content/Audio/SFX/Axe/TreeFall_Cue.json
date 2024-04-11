@@ -1,0 +1,57 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "TreeFall_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'TreeFall_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Axe/TreeFall_Cue.1"
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "Duration": 5.23034,
+      "MaxDistance": 9000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "TreeFall_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.8,
+      "PitchMax": 1.2,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'TreeFall_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Axe/TreeFall_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "TreeFall_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Axe/TreeFall.TreeFall",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'TreeFall'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Axe/TreeFall.0"
+    }
+  }
+]

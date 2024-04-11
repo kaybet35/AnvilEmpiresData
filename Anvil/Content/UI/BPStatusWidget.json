@@ -1,0 +1,234 @@
+[
+  {
+    "Type": "BPStatusWidget_C",
+    "Name": "Default__BPStatusWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPStatusWidget.BPStatusWidget_C'",
+    "Properties": {
+      "HappyIconTexture": {
+        "ObjectName": "Texture2D'HappyInfluenceIcon'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Status/HappyInfluenceIcon.0"
+      },
+      "UnhappyIconTexture": {
+        "ObjectName": "Texture2D'UnhappyInfluenceIcon'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Status/UnhappyInfluenceIcon.0"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPStatusWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/BPStatusWidget.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Outer": "CanvasPanel_0",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPStatusWidget_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/BPStatusWidget.1"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPStatusWidget_C:WidgetTree.HorizontalBox_67'",
+        "ObjectPath": "Anvil/Content/UI/BPStatusWidget.3"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_67",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPStatusWidget_C:WidgetTree.HorizontalBox_67.HorizontalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/BPStatusWidget.5"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPStatusWidget_C:WidgetTree.HorizontalBox_67.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPStatusWidget.4"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPStatusWidget_C:WidgetTree.HorizontalBox_67.HorizontalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/BPStatusWidget.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPStatusWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/BPStatusWidget.2"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_67",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPStatusWidget_C:WidgetTree.HorizontalBox_67'",
+        "ObjectPath": "Anvil/Content/UI/BPStatusWidget.3"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPStatusWidget_C:WidgetTree.Spacer_72'",
+        "ObjectPath": "Anvil/Content/UI/BPStatusWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "HorizontalBox_67",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPStatusWidget_C:WidgetTree.HorizontalBox_67'",
+        "ObjectPath": "Anvil/Content/UI/BPStatusWidget.3"
+      },
+      "Content": {
+        "ObjectName": "Image'BPStatusWidget_C:WidgetTree.StatusIcon'",
+        "ObjectPath": "Anvil/Content/UI/BPStatusWidget.7"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Outer": "HorizontalBox_67",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 6.0,
+        "Top": 1.0,
+        "Right": 6.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPStatusWidget_C:WidgetTree.HorizontalBox_67'",
+        "ObjectPath": "Anvil/Content/UI/BPStatusWidget.3"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPStatusWidget_C:WidgetTree.StatusText'",
+        "ObjectPath": "Anvil/Content/UI/BPStatusWidget.9"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "StatusIcon",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 24.0,
+          "Y": 24.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPStatusWidget_C:WidgetTree.HorizontalBox_67.HorizontalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/BPStatusWidget.5"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_72",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 4.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPStatusWidget_C:WidgetTree.HorizontalBox_67.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/BPStatusWidget.4"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "StatusText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "688FBBA542784E7B66CDCB82695560F9",
+        "SourceString": "0/0",
+        "LocalizedString": "0/0"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 12
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPStatusWidget_C:WidgetTree.HorizontalBox_67.HorizontalBoxSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/BPStatusWidget.6"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPStatusWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPStatusWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/BPStatusWidget.11"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'StatusWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPStatusWidget_C'Default__BPStatusWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/BPStatusWidget.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPStatusWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPStatusWidget_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/BPStatusWidget.1"
+      }
+    }
+  }
+]

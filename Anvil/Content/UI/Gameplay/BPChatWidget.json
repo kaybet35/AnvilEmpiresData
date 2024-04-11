@@ -1,0 +1,1116 @@
+[
+  {
+    "Type": "Border",
+    "Name": "ChatHistoryBorder",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "Padding": {
+        "Top": 4.0,
+        "Right": 0.0,
+        "Bottom": 4.0
+      },
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.012983,
+            "G": 0.011612,
+            "B": 0.011612,
+            "A": 0.8,
+            "Hex": "CC1E1C1C"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPChatWidget_C:WidgetTree.ChatHistoryBorder.BorderSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.1"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'BPChatWidget_C:WidgetTree.Overlay_96.OverlaySlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.15"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_1",
+    "Outer": "ChatHistoryBorder",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "Padding": {
+        "Top": 4.0,
+        "Right": 0.0,
+        "Bottom": 4.0
+      },
+      "Parent": {
+        "ObjectName": "Border'BPChatWidget_C:WidgetTree.ChatHistoryBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.0"
+      },
+      "Content": {
+        "ObjectName": "ListView'BPChatWidget_C:WidgetTree.ChatHistoryListView'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.13"
+      }
+    }
+  },
+  {
+    "Type": "BPChatWidget_C",
+    "Name": "Default__BPChatWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPChatWidget.BPChatWidget_C'",
+    "Properties": {
+      "ChatHeight": 250.0,
+      "ChatMinimizedHeight": 90.0,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "MaximizeButton",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Button'",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 16.0,
+            "Y": 16.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 1.0,
+              "Hex": "FFFFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'IconChatMaximize'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/IconChatMaximize.0"
+          }
+        },
+        "Hovered": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 16.0,
+            "Y": 16.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'IconChatMaximize'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/IconChatMaximize.0"
+          }
+        },
+        "Pressed": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 16.0,
+            "Y": 16.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'IconChatMaximize'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/IconChatMaximize.0"
+          }
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 16.0,
+            "Y": 16.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'IconChatMaximize'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/IconChatMaximize.0"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPChatWidget_C:WidgetTree.HorizontalBox_141.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.12"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "MinimizeButton",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Button'",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 16.0,
+            "Y": 16.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 1.0,
+              "Hex": "FFFFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'IconChatMinimize'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/IconChatMinimize.0"
+          }
+        },
+        "Hovered": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 16.0,
+            "Y": 16.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'IconChatMinimize'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/IconChatMinimize.0"
+          }
+        },
+        "Pressed": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 16.0,
+            "Y": 16.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'IconChatMinimize'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/IconChatMinimize.0"
+          }
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 16.0,
+            "Y": 16.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'IconChatMinimize'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/IconChatMinimize.0"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPChatWidget_C:WidgetTree.HorizontalBox_141.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.11"
+      }
+    }
+  },
+  {
+    "Type": "ComboBoxString",
+    "Name": "ChatEntryDropdown",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'ComboBoxString'",
+    "Properties": {
+      "WidgetStyle": {
+        "ComboButtonStyle": {
+          "ButtonStyle": {
+            "Normal": {
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "ImageSize": {
+                "X": 64.0,
+                "Y": 64.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 0.262251,
+                  "G": 0.250158,
+                  "B": 0.223228,
+                  "A": 1.0,
+                  "Hex": "FF8C8982"
+                }
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FlatBG'",
+                "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+              }
+            },
+            "Hovered": {
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "ImageSize": {
+                "X": 64.0,
+                "Y": 64.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 0.730461,
+                  "G": 0.491021,
+                  "B": 0.124772,
+                  "A": 1.0,
+                  "Hex": "FFDEBA63"
+                }
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FlatBG'",
+                "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+              }
+            },
+            "Pressed": {
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "ImageSize": {
+                "X": 64.0,
+                "Y": 64.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 0.046665,
+                  "G": 0.042311,
+                  "B": 0.035601,
+                  "A": 1.0,
+                  "Hex": "FF3D3A35"
+                }
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FlatBG'",
+                "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+              }
+            },
+            "Disabled": {
+              "DrawAs": "ESlateBrushDrawType::Image"
+            },
+            "NormalPadding": {
+              "Left": 5.0,
+              "Top": 0.0,
+              "Right": 5.0,
+              "Bottom": 0.0
+            },
+            "PressedPadding": {
+              "Left": 5.0,
+              "Top": 0.0,
+              "Right": 5.0,
+              "Bottom": 0.0
+            }
+          }
+        },
+        "ContentPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "ItemStyle": {
+        "SelectorFocusedBrush": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.533277,
+              "G": 0.417885,
+              "B": 0.242281,
+              "A": 1.0,
+              "Hex": "FFC1AD87"
+            }
+          }
+        },
+        "ActiveHoveredBrush": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.533277,
+              "G": 0.417885,
+              "B": 0.242281,
+              "A": 1.0,
+              "Hex": "FFC1AD87"
+            }
+          }
+        },
+        "ActiveBrush": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.730461,
+              "G": 0.491021,
+              "B": 0.124772,
+              "A": 1.0,
+              "Hex": "FFDEBA63"
+            }
+          }
+        },
+        "InactiveHoveredBrush": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.166667,
+              "G": 0.166667,
+              "B": 0.166667,
+              "A": 1.0,
+              "Hex": "FF717171"
+            }
+          }
+        },
+        "InactiveBrush": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.114583,
+              "G": 0.114583,
+              "B": 0.114583,
+              "A": 1.0,
+              "Hex": "FF5F5F5F"
+            }
+          }
+        },
+        "TextColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFFFF"
+          }
+        },
+        "SelectedTextColor": {
+          "SpecifiedColor": {
+            "R": 0.768151,
+            "G": 0.651406,
+            "B": 0.396755,
+            "A": 1.0,
+            "Hex": "FFE3D3A9"
+          }
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 12
+      },
+      "ForegroundColor": {
+        "SpecifiedColor": {
+          "R": 0.921582,
+          "G": 0.83077,
+          "B": 0.715694,
+          "A": 1.0,
+          "Hex": "FFF6EBDC"
+        }
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPChatWidget_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.23"
+      }
+    }
+  },
+  {
+    "Type": "EditableTextBox",
+    "Name": "ChatEntryTextField",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'EditableTextBox'",
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImageNormal": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.025187,
+              "G": 0.023153,
+              "B": 0.021219,
+              "A": 1.0,
+              "Hex": "FF2C2A28"
+            }
+          }
+        },
+        "BackgroundImageHovered": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.046665,
+              "G": 0.042311,
+              "B": 0.035601,
+              "A": 1.0,
+              "Hex": "FF3D3A35"
+            }
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/TextBox.png"
+        },
+        "BackgroundImageFocused": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.140625,
+              "G": 0.127504,
+              "B": 0.107284,
+              "A": 1.0,
+              "Hex": "FF69645C"
+            }
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/TextBox.png"
+        },
+        "TextStyle": {
+          "Font": {
+            "FontObject": null,
+            "Size": 10
+          }
+        },
+        "ForegroundColor": {
+          "SpecifiedColor": {
+            "R": 0.752942,
+            "G": 0.679543,
+            "B": 0.584079,
+            "A": 1.0,
+            "Hex": "FFE1D7C9"
+          },
+          "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+        },
+        "ScrollBarStyle": {
+          "NormalThumbImage": {
+            "ImageSize": {
+              "X": 64.0,
+              "Y": 64.0
+            },
+            "ResourceObject": {
+              "ObjectName": "Texture2D'FlatBG'",
+              "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+            }
+          },
+          "HoveredThumbImage": {
+            "ImageSize": {
+              "X": 64.0,
+              "Y": 64.0
+            },
+            "ResourceObject": {
+              "ObjectName": "Texture2D'FlatBG'",
+              "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+            }
+          },
+          "DraggedThumbImage": {
+            "ImageSize": {
+              "X": 64.0,
+              "Y": 64.0
+            },
+            "ResourceObject": {
+              "ObjectName": "Texture2D'FlatBG'",
+              "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+            }
+          }
+        }
+      },
+      "AllowContextMenu": false,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPChatWidget_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.10"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_104",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPChatWidget_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.9"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPChatWidget_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPChatWidget_C:WidgetTree.ChatEntrySizeBox.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.20"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_141",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPChatWidget_C:WidgetTree.HorizontalBox_141.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.11"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPChatWidget_C:WidgetTree.HorizontalBox_141.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.12"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPChatWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_7'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.27"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_104",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Size": {
+        "Value": 0.2
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPChatWidget_C:WidgetTree.HorizontalBox_104'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.7"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPChatWidget_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.19"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_104",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPChatWidget_C:WidgetTree.HorizontalBox_104'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.7"
+      },
+      "Content": {
+        "ObjectName": "EditableTextBox'BPChatWidget_C:WidgetTree.ChatEntryTextField'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.6"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_141",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPChatWidget_C:WidgetTree.HorizontalBox_141'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.8"
+      },
+      "Content": {
+        "ObjectName": "Button'BPChatWidget_C:WidgetTree.MinimizeButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.4"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_141",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPChatWidget_C:WidgetTree.HorizontalBox_141'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.8"
+      },
+      "Content": {
+        "ObjectName": "Button'BPChatWidget_C:WidgetTree.MaximizeButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.3"
+      }
+    }
+  },
+  {
+    "Type": "ListView",
+    "Name": "ChatHistoryListView",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'ListView'",
+    "Properties": {
+      "ScrollBarStyle": {
+        "HorizontalBackgroundImage": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 8.0,
+            "Y": 8.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.0,
+              "G": 0.0,
+              "B": 0.0,
+              "A": 1.0,
+              "Hex": "FF000000"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          }
+        },
+        "VerticalBackgroundImage": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 8.0,
+            "Y": 8.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.0,
+              "G": 0.0,
+              "B": 0.0,
+              "A": 1.0,
+              "Hex": "FF000000"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          }
+        },
+        "VerticalTopSlotImage": {
+          "ImageType": "ESlateBrushImageType::NoImage",
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.0,
+              "G": 0.0,
+              "B": 0.0,
+              "A": 1.0,
+              "Hex": "FF000000"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          },
+          "ResourceName": "None"
+        },
+        "HorizontalTopSlotImage": {
+          "ImageType": "ESlateBrushImageType::NoImage",
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.0,
+              "G": 0.0,
+              "B": 0.0,
+              "A": 1.0,
+              "Hex": "FF000000"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          },
+          "ResourceName": "None"
+        },
+        "VerticalBottomSlotImage": {
+          "ImageType": "ESlateBrushImageType::NoImage",
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.0,
+              "G": 0.0,
+              "B": 0.0,
+              "A": 1.0,
+              "Hex": "FF000000"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          },
+          "ResourceName": "None"
+        },
+        "HorizontalBottomSlotImage": {
+          "ImageType": "ESlateBrushImageType::NoImage",
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.0,
+              "G": 0.0,
+              "B": 0.0,
+              "A": 1.0,
+              "Hex": "FF000000"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          },
+          "ResourceName": "None"
+        },
+        "NormalThumbImage": {
+          "ImageSize": {
+            "X": 8.0,
+            "Y": 8.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          }
+        },
+        "HoveredThumbImage": {
+          "ImageSize": {
+            "X": 8.0,
+            "Y": 8.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.947307,
+              "G": 0.623961,
+              "B": 0.171441,
+              "A": 1.0,
+              "Hex": "FFF9CF73"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          }
+        },
+        "DraggedThumbImage": {
+          "ImageSize": {
+            "X": 9.0,
+            "Y": 9.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.262251,
+              "G": 0.250158,
+              "B": 0.223228,
+              "A": 1.0,
+              "Hex": "FF8C8982"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          }
+        },
+        "Thickness": 0.0
+      },
+      "ConsumeMouseWheel": "EConsumeMouseWheel::Always",
+      "EntrySpacing": 1.0,
+      "EntryWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'BPChatEntryWidget_C'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatEntryWidget.2"
+      },
+      "bEnableScrollAnimation": true,
+      "Slot": {
+        "ObjectName": "BorderSlot'BPChatWidget_C:WidgetTree.ChatHistoryBorder.BorderSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.1"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_96",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'BPChatWidget_C:WidgetTree.Overlay_96.OverlaySlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPChatWidget_C:WidgetTree.ChatHistorySizeBox.SizeBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.21"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Outer": "Overlay_96",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'BPChatWidget_C:WidgetTree.Overlay_96'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.14"
+      },
+      "Content": {
+        "ObjectName": "Border'BPChatWidget_C:WidgetTree.ChatHistoryBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.0"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "ChatEntrySizeBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "HeightOverride": 30.0,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPChatWidget_C:WidgetTree.ChatEntrySizeBox.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.20"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPChatWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.26"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "ChatHistorySizeBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 25.747072,
+      "HeightOverride": 30.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPChatWidget_C:WidgetTree.ChatHistorySizeBox.SizeBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.21"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPChatWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.25"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 500.0,
+      "HeightOverride": 100.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPChatWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.22"
+        }
+      ],
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 90.0,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPChatWidget_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.23"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPChatWidget_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.9"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "ChatEntrySizeBox",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPChatWidget_C:WidgetTree.ChatEntrySizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.16"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPChatWidget_C:WidgetTree.HorizontalBox_104'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.7"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_2",
+    "Outer": "ChatHistorySizeBox",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPChatWidget_C:WidgetTree.ChatHistorySizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.17"
+      },
+      "Content": {
+        "ObjectName": "Overlay'BPChatWidget_C:WidgetTree.Overlay_96'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.14"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPChatWidget_C:WidgetTree.SizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.18"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'BPChatWidget_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.24"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_1",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPChatWidget_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.19"
+      },
+      "Content": {
+        "ObjectName": "ComboBoxString'BPChatWidget_C:WidgetTree.ChatEntryDropdown'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.5"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'BPChatWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_7'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.27"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPChatWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.25"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPChatWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.26"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPChatWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.22"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'BPChatWidget_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.24"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPChatWidget_C:WidgetTree.ChatHistorySizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.17"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPChatWidget_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.24"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPChatWidget_C:WidgetTree.ChatEntrySizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.16"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_7",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Bottom": 4.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPChatWidget_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.24"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPChatWidget_C:WidgetTree.HorizontalBox_141'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPChatWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPChatWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.29"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ChatWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ChatEntrySizeBox",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SizeBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ChatHistorySizeBox",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SizeBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPChatWidget_C'Default__BPChatWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPChatWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox'BPChatWidget_C:WidgetTree.SizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatWidget.18"
+      }
+    }
+  }
+]

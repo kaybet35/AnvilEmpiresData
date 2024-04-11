@@ -1,0 +1,140 @@
+[
+  {
+    "Type": "BPBeaconTowerPlayerInfo_C",
+    "Name": "Default__BPBeaconTowerPlayerInfo_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.BPBeaconTowerPlayerInfo_C'",
+    "Properties": {
+      "FriendlyColour": {
+        "SpecifiedColor": {
+          "R": 0.111932,
+          "G": 0.337164,
+          "B": 0.045186,
+          "A": 1.0,
+          "Hex": "FF5E9D3C"
+        }
+      },
+      "EnemyColour": {
+        "SpecifiedColor": {
+          "R": 0.266356,
+          "G": 0.006995,
+          "B": 0.006995,
+          "A": 1.0,
+          "Hex": "FF8D1414"
+        }
+      },
+      "InstanceProperty": {
+        "AltIcons": [
+          {
+            "ObjectName": "Texture2D'MapBeaconAranic'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Map/MapBeaconAranic.0"
+          },
+          {
+            "ObjectName": "Texture2D'MapBeaconMirrish'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Map/MapBeaconMirrish.0"
+          },
+          {
+            "ObjectName": "Texture2D'MapBeaconNovan'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Map/MapBeaconNovan.0"
+          }
+        ],
+        "MapActorType": "EMapIconType::BeaconTowerPlayerInfo"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "IconBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 256.0,
+          "Y": 256.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'BPBeaconTowerPlayerInfo_C:WidgetTree.ScaleBox_42.ScaleBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.3"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_42",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'ScaleBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'BPBeaconTowerPlayerInfo_C:WidgetTree.ScaleBox_42.ScaleBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.3"
+        }
+      ],
+      "RenderTransformPivot": {
+        "X": 0.0,
+        "Y": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "ScaleBox_42",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'BPBeaconTowerPlayerInfo_C:WidgetTree.ScaleBox_42'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.2"
+      },
+      "Content": {
+        "ObjectName": "Image'BPBeaconTowerPlayerInfo_C:WidgetTree.IconBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.1"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPBeaconTowerPlayerInfo_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPBeaconTowerPlayerInfo_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.5"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BeaconTowerPlayerInfoMapIcon'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPBeaconTowerPlayerInfo_C'Default__BPBeaconTowerPlayerInfo_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPBeaconTowerPlayerInfo_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "ScaleBox'BPBeaconTowerPlayerInfo_C:WidgetTree.ScaleBox_42'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.2"
+      }
+    }
+  }
+]

@@ -1,0 +1,99 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "WildWheat_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WildWheat_C'Default__WildWheat_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/WildWheat.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__WildWheat_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 75.0,
+        "Z": 50.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeWood",
+      "CollisionMask": 16
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__WildWheat_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "HitPoints": 1,
+      "RequiredTool": "EAnvilToolType::Hands",
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'WildWheatHusk_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/WildWheatHusk.0"
+      },
+      "bSnapHuskEntityToGround": false,
+      "LootTable": [
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'WheatSeed_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WheatSeed.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 1,
+            "bIsRelic": false
+          },
+          "NormalizedChanceToDrop": 1.0,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
+        }
+      ]
+    }
+  },
+  {
+    "Type": "WildWheat_C",
+    "Name": "Default__WildWheat_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/WildWheat.WildWheat_C'",
+    "Properties": {
+      "CodeNameString": "WildWheat",
+      "CodeName": -1876233523,
+      "Components": [
+        {
+          "ObjectName": "ResourceProxyComponent'Default__WildWheat_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/WildWheat.2"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__WildWheat_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/WildWheat.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisWildWheat_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisWildWheat.1"
+      }
+    }
+  }
+]

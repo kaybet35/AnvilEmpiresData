@@ -1,0 +1,16 @@
+#ifndef UE4SS_SDK_BPVisFaunaSpawner_HPP
+#define UE4SS_SDK_BPVisFaunaSpawner_HPP
+
+class ABPVisFaunaSpawner_C : public AVisActor
+{
+    class USkeletalMeshComponent* SkeletalMesh1;                                      // 0x03F0 (size: 0x8)
+    class UStaticMeshComponent* referenceMesh3;                                       // 0x03F8 (size: 0x8)
+    class UStaticMeshComponent* referenceMesh;                                        // 0x0400 (size: 0x8)
+    class UStaticMeshComponent* referenceMesh4;                                       // 0x0408 (size: 0x8)
+    class UStaticMeshComponent* referenceMesh1;                                       // 0x0410 (size: 0x8)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0418 (size: 0x8)
+    class USceneComponent* DefaultSceneRoot;                                          // 0x0420 (size: 0x8)
+
+}; // Size: 0x428
+
+#endif

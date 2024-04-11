@@ -1,0 +1,69 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "ResourceStone_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ResourceStone_C'Default__ResourceStone_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceStone.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ResourceStone_C",
+    "Name": "Default__ResourceStone_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceStone.ResourceStone_C'",
+    "Properties": {
+      "CodeNameString": "ResourceStone",
+      "CodeName": 476184923,
+      "ItemType": "EAnvilItemType::PrimaryTool",
+      "SecondaryType": "EAnvilItemType::Resource",
+      "PickupEntity": {
+        "ObjectName": "BlueprintGeneratedClass'StonePickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/StonePickup.0"
+      },
+      "bLarge": true,
+      "bRanged": true,
+      "FireOffset": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "AmmoType": {
+        "ObjectName": "BlueprintGeneratedClass'ResourceStone_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceStone.0"
+      },
+      "ProjectileEntity": {
+        "ObjectName": "BlueprintGeneratedClass'StoneProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/StoneProjectile.0"
+      },
+      "bStaggersWielder": true,
+      "StanceOverride": [
+        {
+          "EAnvilCharacterStance::InHoarding": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceStone_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceStone.0"
+          }
+        }
+      ],
+      "RangedActivity": {
+        "State": "EAnvilSimActivityState::LaunchingProjectile",
+        "Delay": 0.1,
+        "Duration": 1.1
+      }
+    }
+  }
+]

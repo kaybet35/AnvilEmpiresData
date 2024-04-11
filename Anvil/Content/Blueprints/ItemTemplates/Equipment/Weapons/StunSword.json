@@ -1,0 +1,78 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "StunSword_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "StunSword_C'Default__StunSword_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/StunSword.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "StunSword_C",
+    "Name": "Default__StunSword_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/StunSword.StunSword_C'",
+    "Properties": {
+      "CodeNameString": "StunSword",
+      "CodeName": -257321927,
+      "ItemType": "EAnvilItemType::PrimaryTool",
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "ItemHitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectSwordImpact_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectSwordImpact.0"
+      },
+      "Encumberance": 40,
+      "DurabilityLossPerUse": 2.0,
+      "Damage": 35,
+      "DamageOffset": {
+        "X": 100.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "DamageRadius": 125.0,
+      "bStaggersWielder": true,
+      "DamageType": "EAnvilDamageType::EAnvilDamageType_MAX",
+      "StanceOverride": [
+        {
+          "EAnvilCharacterStance::OnHorse": {
+            "ObjectName": "BlueprintGeneratedClass'MountedSword_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/MountedSword.0"
+          }
+        }
+      ],
+      "AimMovementSpeedModifier": 0.45,
+      "AimRotationSpeedModifier": 4.0,
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 0.4,
+        "Duration": 1.1,
+        "RotationSpeedModifier": 4.0,
+        "StaminaCost": 16.0
+      },
+      "RangedActivity": {
+        "bRepeatable": false
+      },
+      "bAllowCameraPan": false,
+      "StunChance": 1.0,
+      "StunDuration": 4.0,
+      "StunThrowDistance": 400.0
+    }
+  }
+]

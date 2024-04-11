@@ -1,0 +1,165 @@
+[
+  {
+    "Type": "AnimalAIProxyComponent",
+    "Name": "AnimalAIProxyComponent_0",
+    "Outer": "Default__Rabbit_C",
+    "Class": "UScriptClass'AnimalAIProxyComponent'",
+    "Properties": {
+      "FastSpeed": 300.0
+    }
+  },
+  {
+    "Type": "AnimalScavengeProxyComponent",
+    "Name": "AnimalScavengeProxyComponent_0",
+    "Outer": "Default__Rabbit_C",
+    "Class": "UScriptClass'AnimalScavengeProxyComponent'",
+    "Properties": {
+      "SearchRange": 2000.0,
+      "TargetTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'CabbagePlant_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/CabbagePlant.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'WheatPlant_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/WheatPlant.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'CabbageField_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/CabbageField.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'WheatField_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WheatField.0"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Rabbit_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Rabbit_C'Default__Rabbit_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Rabbit.6"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__Rabbit_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 15.0,
+        "Y": 0.0,
+        "Z": 20.0
+      },
+      "Extents": {
+        "X": 90.0,
+        "Y": 24.0,
+        "Z": 55.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 8256
+    }
+  },
+  {
+    "Type": "CapsuleCollisionProxyComponent",
+    "Name": "CapsuleCollisionProxyComponent_0",
+    "Outer": "Default__Rabbit_C",
+    "Class": "UScriptClass'CapsuleCollisionProxyComponent'",
+    "Properties": {
+      "Radius": 30.0,
+      "HalfHeight": 72.0,
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 524288
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_1",
+    "Outer": "Default__Rabbit_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "MaxHealth": 10.0,
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectPlayer_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
+      },
+      "TargetType": "EAnvilDamageTargetType::Infantry"
+    }
+  },
+  {
+    "Type": "Rabbit_C",
+    "Name": "Default__Rabbit_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Animals/Rabbit.Rabbit_C'",
+    "Properties": {
+      "CodeNameString": "Rabbit",
+      "CodeName": -26469987,
+      "bStatic": false,
+      "SerializationType": "EEntitySerializationType::EEntitySerializationType_MAX",
+      "Components": [
+        {
+          "ObjectName": "HealthProxyComponent'Default__Rabbit_C:HealthProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Rabbit.5"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__Rabbit_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Rabbit.7"
+        },
+        {
+          "ObjectName": "AnimalAIProxyComponent'Default__Rabbit_C:AnimalAIProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Rabbit.0"
+        },
+        {
+          "ObjectName": "CapsuleCollisionProxyComponent'Default__Rabbit_C:CapsuleCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Rabbit.4"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__Rabbit_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Rabbit.3"
+        },
+        {
+          "ObjectName": "AnimalScavengeProxyComponent'Default__Rabbit_C:AnimalScavengeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Rabbit.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisRabbit_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.2"
+      }
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__Rabbit_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "DroppedResourceAmount": 1,
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'MeatSmallPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/MeatSmallPickup.0"
+      },
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'RabbitHusk_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/RabbitHusk.0"
+      }
+    }
+  }
+]

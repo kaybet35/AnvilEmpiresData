@@ -1,0 +1,91 @@
+[
+  {
+    "Type": "AIStimulusProxyComponent",
+    "Name": "AIStimulusProxyComponent_0",
+    "Outer": "Default__SpearRelicPickup_C",
+    "Class": "UScriptClass'AIStimulusProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilStimulusType::VisualThreat"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SpearRelicPickup_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SpearRelicPickup_C'Default__SpearRelicPickup_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/SpearRelicPickup.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__SpearRelicPickup_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 200.0,
+        "Y": 50.0,
+        "Z": 50.0
+      },
+      "CollisionMask": 32
+    }
+  },
+  {
+    "Type": "PickupProxyComponent",
+    "Name": "PickupProxyComponent_0",
+    "Outer": "Default__SpearRelicPickup_C",
+    "Class": "UScriptClass'PickupProxyComponent'",
+    "Properties": {
+      "Item": {
+        "ItemType": {
+          "ObjectName": "BlueprintGeneratedClass'SpearRelic_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SpearRelic.0"
+        },
+        "Count": 1,
+        "bIsRelic": true
+      }
+    }
+  },
+  {
+    "Type": "SpearRelicPickup_C",
+    "Name": "Default__SpearRelicPickup_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Items/SpearRelicPickup.SpearRelicPickup_C'",
+    "Properties": {
+      "CodeNameString": "SpearRelicPickup",
+      "CodeName": 1261449396,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__SpearRelicPickup_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/SpearRelicPickup.2"
+        },
+        {
+          "ObjectName": "PickupProxyComponent'Default__SpearRelicPickup_C:PickupProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/SpearRelicPickup.3"
+        },
+        {
+          "ObjectName": "AIStimulusProxyComponent'Default__SpearRelicPickup_C:AIStimulusProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/SpearRelicPickup.0"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisSpearRelicProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.1"
+      }
+    }
+  }
+]

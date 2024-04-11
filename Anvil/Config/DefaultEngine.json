@@ -1,0 +1,208 @@
+
+
+[/Script/EngineSettings.GameMapsSettings]
+GameDefaultMap=/Game/Maps/MainMenu.MainMenu
+GlobalDefaultGameMode=/Game/Blueprints/BPGameplayGameMode.BPGameplayGameMode_C
+EditorStartupMap=/Game/Maps/Sandbox.Sandbox
+GameInstanceClass=/Game/Blueprints/BPGameInstance.BPGameInstance_C
+
+[/Script/HardwareTargeting.HardwareTargetingSettings]
+TargetedHardwareClass=Desktop
+AppliedTargetedHardwareClass=Desktop
+DefaultGraphicsPerformance=Maximum
+AppliedDefaultGraphicsPerformance=Maximum
+
+[/Script/Engine.Engine]
++ActiveGameNameRedirects=(OldGameName="TP_Blank",NewGameName="/Script/Anvil")
++ActiveGameNameRedirects=(OldGameName="/Script/TP_Blank",NewGameName="/Script/Anvil")
++ActiveClassRedirects=(OldClassName="TP_BlankGameModeBase",NewClassName="AnvilGameModeBase")
+
+[OnlineSubsystem]
+DefaultPlatformService=Steam
+PollingIntervalInMs=20
+
+[OnlineSubsystemSteam]
+bEnabled=true
+SteamDevAppId=2383950
+
+[/Script/Engine.NetworkSettings]
+n.VerifyPeer=false
+
+[/Script/Engine.RendererSettings]
+r.AllowStaticLighting=False
+r.ForwardShading=False
+r.DefaultFeature.AutoExposure=False
+r.UsePreExposure=False
+r.DefaultFeature.LightUnits=1
+r.DefaultFeature.LensFlare=True
+r.DefaultFeature.AntiAliasing=2
+r.SSGI.Enable=True
+r.CustomDepth=3
+r.Tonemapper.Sharpen=1
+r.SupportSkyAtmosphere=True
+r.SupportSkyAtmosphereAffectsHeightFog=True
+r.DynamicGlobalIlluminationMethod=2
+
+[/Script/LuminRuntimeSettings.LuminRuntimeSettings]
+IconModelPath=(Path="")
+IconPortalPath=(Path="")
+
+[StaticMeshLODSettings]
+SampleLOD=(NumLODs=4,LODPercentTriangles=50,PixelError=10,Name=LOCTEXT("SampleLod","Sample LOD"))
+AnvilPropLOD=(NumLODs=2,MaxNumStreamedLODs=0,bSupportLODStreaming=0,LODPercentTriangles=50,PixelError=10,Name=LOCTEXT("AnvilPropLOD","Anvil Prop"))
+
+[/Script/HoudiniEngineRuntime.HoudiniRuntimeSettings]
+HoudiniExecutable=HRSHE_HoudiniCore
+MarshallingLandscapesForceMinMaxValues=True
+
+[/Script/Engine.PhysicsSettings]
+PhysicErrorCorrection=(PingExtrapolation=0.100000,PingLimit=100.000000,ErrorPerLinearDifference=1.000000,ErrorPerAngularDifference=1.000000,MaxRestoredStateError=1.000000,MaxLinearHardSnapDistance=400.000000,PositionLerp=0.000000,AngleLerp=0.400000,LinearVelocityCoefficient=100.000000,AngularVelocityCoefficient=10.000000,ErrorAccumulationSeconds=0.500000,ErrorAccumulationDistanceSq=15.000000,ErrorAccumulationSimilarity=100.000000)
+DefaultDegreesOfFreedom=Full3D
+bSuppressFaceRemapTable=False
+bSupportUVFromHitResults=False
+bDisableActiveActors=False
+bDisableKinematicStaticPairs=False
+bDisableKinematicKinematicPairs=False
+bDisableCCD=False
+bEnableEnhancedDeterminism=False
+AnimPhysicsMinDeltaTime=0.000000
+bSimulateAnimPhysicsAfterReset=False
+MaxPhysicsDeltaTime=0.033333
+bSubstepping=False
+bSubsteppingAsync=False
+MaxSubstepDeltaTime=0.016667
+MaxSubsteps=6
+SyncSceneSmoothingFactor=0.000000
+InitialAverageFrameRate=0.016667
+PhysXTreeRebuildRate=10
++PhysicalSurfaces=(Type=SurfaceType1,Name="Flesh")
++PhysicalSurfaces=(Type=SurfaceType2,Name="Grass")
++PhysicalSurfaces=(Type=SurfaceType3,Name="Wood")
++PhysicalSurfaces=(Type=SurfaceType4,Name="Stone")
++PhysicalSurfaces=(Type=SurfaceType5,Name="Leather")
++PhysicalSurfaces=(Type=SurfaceType6,Name="Iron")
++PhysicalSurfaces=(Type=SurfaceType7,Name="Shield")
++PhysicalSurfaces=(Type=SurfaceType8,Name="ShieldBreak")
++PhysicalSurfaces=(Type=SurfaceType9,Name="Dirt")
++PhysicalSurfaces=(Type=SurfaceType10,Name="Forest")
++PhysicalSurfaces=(Type=SurfaceType11,Name="Rock")
++PhysicalSurfaces=(Type=SurfaceType12,Name="Lake")
++PhysicalSurfaces=(Type=SurfaceType13,Name="Gravel")
++PhysicalSurfaces=(Type=SurfaceType14,Name="Rare")
++PhysicalSurfaces=(Type=SurfaceType15,Name="Road")
++PhysicalSurfaces=(Type=SurfaceType16,Name="Sand")
+DefaultBroadphaseSettings=(bUseMBPOnClient=False,bUseMBPOnServer=False,bUseMBPOuterBounds=False,MBPBounds=(Min=(X=0.000000,Y=0.000000,Z=0.000000),Max=(X=0.000000,Y=0.000000,Z=0.000000),IsValid=0),MBPOuterBounds=(Min=(X=0.000000,Y=0.000000,Z=0.000000),Max=(X=0.000000,Y=0.000000,Z=0.000000),IsValid=0),MBPNumSubdivs=2)
+MinDeltaVelocityForHitEvents=0.000000
+ChaosSettings=(DefaultThreadingModel=TaskGraph,DedicatedThreadTickMode=VariableCappedWithTarget,DedicatedThreadBufferMode=Double)
+
+[/Script/NavigationSystem.RecastNavMesh]
+AgentRadius=100.000000
+AgentMaxSlope=35.000000
+RuntimeGeneration=DynamicModifiersOnly
+
+[/Script/WaterEditor.WaterEditorSettings]
+TextureGroupForGeneratedTextures=TEXTUREGROUP_World
+MaxWaterVelocityAndHeightTextureSize=2048
+LandscapeMaterialParameterCollection=/Landmass/Landscape/BlueprintBrushes/MPC/MPC_Landscape.MPC_Landscape
+WaterBodyRiverDefaults=(BrushDefaults=(CurveSettings=(bUseCurveChannel=True,ElevationCurveAsset=CurveFloat'"/Water/Curves/FloatCurve.FloatCurve"',ChannelEdgeOffset=-100.000000,ChannelDepth=256.000000,CurveRampWidth=512.000000),HeightmapSettings=(BlendMode=AlphaBlend,bInvertShape=False,FalloffSettings=(FalloffMode=Angle,FalloffAngle=29.245321,FalloffWidth=1302.594727,EdgeOffset=32.272240,ZOffset=0.000000),Effects=(Blurring=(bBlurShape=True,Radius=2),CurlNoise=(Curl1Amount=0.000000,Curl2Amount=0.000000,Curl1Tiling=16.000000,Curl2Tiling=3.000000),Displacement=(DisplacementHeight=0.000000,DisplacementTiling=0.000000,Texture=None,Midpoint=-128.000000,Channel=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),WeightmapInfluence=0.000000),SmoothBlending=(InnerSmoothDistance=0.000000,OuterSmoothDistance=0.000000),Terracing=(TerraceAlpha=0.000000,TerraceSpacing=256.000000,TerraceSmoothness=0.000000,MaskLength=0.000000,MaskStartOffset=0.000000)),Priority=0),LayerWeightmapSettings=(("I", ()))),RiverToOceanTransitionMaterial=/Game/FX/Water/Materials/WaterRiverToOceanTransition.WaterRiverToOceanTransition,RiverToLakeTransitionMaterial=/Game/FX/Water/Materials/WaterRiverToLakeTransition.WaterRiverToLakeTransition,SplineDefaults=(DefaultDepth=150.000000,DefaultWidth=2048.000000,DefaultVelocity=128.000000,DefaultAudioIntensity=1.000000),WaterMaterial=/Game/FX/Water/Materials/WaterRiver.WaterRiver,UnderwaterPostProcessMaterial=/Water/Materials/PostProcessing/M_UnderWater_PostProcess_Volume.M_UnderWater_PostProcess_Volume)
+WaterBodyLakeDefaults=(BrushDefaults=(CurveSettings=(bUseCurveChannel=True,ElevationCurveAsset=CurveFloat'"/Water/Curves/FloatCurve.FloatCurve"',ChannelEdgeOffset=0.000000,ChannelDepth=500.000000,CurveRampWidth=1185.038452),HeightmapSettings=(BlendMode=AlphaBlend,bInvertShape=False,FalloffSettings=(FalloffMode=Width,FalloffAngle=29.245321,FalloffWidth=1006.229065,EdgeOffset=0.000000,ZOffset=50.000000),Effects=(Blurring=(bBlurShape=True,Radius=3),CurlNoise=(Curl1Amount=0.100000,Curl2Amount=0.060000,Curl1Tiling=16.000000,Curl2Tiling=4.000000),Displacement=(DisplacementHeight=0.000000,DisplacementTiling=0.000000,Texture=None,Midpoint=-128.000000,Channel=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),WeightmapInfluence=0.000000),SmoothBlending=(InnerSmoothDistance=0.000000,OuterSmoothDistance=0.000000),Terracing=(TerraceAlpha=0.000000,TerraceSpacing=256.000000,TerraceSmoothness=0.000000,MaskLength=0.000000,MaskStartOffset=0.000000)),Priority=0),LayerWeightmapSettings=(("I", ()))),WaterWaves=WaterWavesAssetReference'"/Script/WaterEditor.Default__WaterEditorSettings:DefaultLakeWaterWaves"',SplineDefaults=(DefaultDepth=150.000000,DefaultWidth=2048.000000,DefaultVelocity=128.000000,DefaultAudioIntensity=1.000000),WaterMaterial=/Game/FX/Water/Materials/WaterLake.WaterLake,UnderwaterPostProcessMaterial=/Water/Materials/PostProcessing/M_UnderWater_PostProcess_Volume.M_UnderWater_PostProcess_Volume)
+WaterBodyOceanDefaults=(BrushDefaults=(CurveSettings=(bUseCurveChannel=True,ElevationCurveAsset=CurveFloat'"/Water/Curves/FloatCurve.FloatCurve"',ChannelEdgeOffset=-500.000000,ChannelDepth=2000.000000,CurveRampWidth=3792.495850),HeightmapSettings=(BlendMode=AlphaBlend,bInvertShape=False,FalloffSettings=(FalloffMode=Angle,FalloffAngle=30.854460,FalloffWidth=1498.347412,EdgeOffset=451.176270,ZOffset=43.881039),Effects=(Blurring=(bBlurShape=True,Radius=2),CurlNoise=(Curl1Amount=0.104761,Curl2Amount=0.476190,Curl1Tiling=32.000000,Curl2Tiling=2.000000),Displacement=(DisplacementHeight=0.000000,DisplacementTiling=0.000000,Texture=None,Midpoint=-128.000000,Channel=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),WeightmapInfluence=0.000000),SmoothBlending=(InnerSmoothDistance=1376.491821,OuterSmoothDistance=0.966091),Terracing=(TerraceAlpha=0.000000,TerraceSpacing=256.000000,TerraceSmoothness=0.000000,MaskLength=0.000000,MaskStartOffset=0.000000)),Priority=0),LayerWeightmapSettings=(("K", (FalloffWidth=342.546600,ModulationTexture=Texture2D'"/Game/Blueprints/FogSheet/Textures/Noise/TilingNoise512.TilingNoise512"',TextureTiling=256.000000,TextureInfluence=1.461168,Midpoint=1.589326)))),WaterWaves=WaterWavesAssetReference'"/Script/WaterEditor.Default__WaterEditorSettings:DefaultOceanWaterWaves"',SplineDefaults=(DefaultDepth=150.000000,DefaultWidth=2048.000000,DefaultVelocity=128.000000,DefaultAudioIntensity=1.000000),WaterMaterial=/Game/FX/Water/Materials/WaterOcean.WaterOcean,UnderwaterPostProcessMaterial=/Water/Materials/PostProcessing/M_UnderWater_PostProcess_Volume.M_UnderWater_PostProcess_Volume)
+WaterBodyCustomDefaults=(WaterMesh=/Water/Meshes/S_WaterPlane_256.S_WaterPlane_256,SplineDefaults=(DefaultDepth=150.000000,DefaultWidth=2048.000000,DefaultVelocity=128.000000,DefaultAudioIntensity=1.000000),WaterMaterial=/Water/Materials/WaterSurface/Water_Material_CustomMesh.Water_Material_CustomMesh,UnderwaterPostProcessMaterial=/Water/Materials/PostProcessing/M_UnderWater_PostProcess_Volume.M_UnderWater_PostProcess_Volume)
+WaterBodyIslandDefaults=(BrushDefaults=(CurveSettings=(bUseCurveChannel=True,ElevationCurveAsset=CurveFloat'"/Water/Curves/FloatCurve_WaterBodyIsland.FloatCurve_WaterBodyIsland"',ChannelEdgeOffset=0.000000,ChannelDepth=0.000000,CurveRampWidth=1024.000000),HeightmapSettings=(BlendMode=AlphaBlend,bInvertShape=False,FalloffSettings=(FalloffMode=Angle,FalloffAngle=45.000000,FalloffWidth=1024.000000,EdgeOffset=0.000000,ZOffset=0.000000),Effects=(Blurring=(bBlurShape=True,Radius=2),CurlNoise=(Curl1Amount=0.000000,Curl2Amount=0.000000,Curl1Tiling=16.000000,Curl2Tiling=3.000000),Displacement=(DisplacementHeight=0.000000,DisplacementTiling=0.000000,Texture=None,Midpoint=-128.000000,Channel=(R=0.000000,G=0.000000,B=0.000000,A=1.000000),WeightmapInfluence=0.000000),SmoothBlending=(InnerSmoothDistance=0.000000,OuterSmoothDistance=0.000000),Terracing=(TerraceAlpha=0.000000,TerraceSpacing=256.000000,TerraceSmoothness=0.000000,MaskLength=0.000000,MaskStartOffset=0.000000)),Priority=0),LayerWeightmapSettings=()))
+WaterManagerClassPath=/Script/WaterEditor.WaterBrushManager
+DefaultBrushAngleFalloffMaterial=/Water/Materials/Brushes/MeshBrush_Angle.MeshBrush_Angle
+DefaultBrushIslandFalloffMaterial=/Water/Materials/Brushes/MeshBrush_Island.MeshBrush_Island
+DefaultBrushWidthFalloffMaterial=/Water/Materials/Brushes/MeshBrush_Width.MeshBrush_Width
+DefaultBrushWeightmapMaterial=/Water/Materials/Brushes/MeshBrush_Weightmap.MeshBrush_Weightmap
+DefaultCacheDistanceFieldCacheMaterial=/Landmass/Landscape/BlueprintBrushes/Materials/CacheDistanceField.CacheDistanceField
+DefaultCompositeWaterBodyTextureMaterial=/Water/Materials/Brushes/CompositeWaterBodyTexture.CompositeWaterBodyTexture
+DefaultFinalizeVelocityHeightMaterial=/Water/Materials/Brushes/FinalizeWaterTexture.FinalizeWaterTexture
+DefaultJumpFloodStepMaterial=/Landmass/DistanceFields/Materials/JumpFloodStep.JumpFloodStep
+DefaultBlurEdgesMaterial=/Landmass/DistanceFields/Materials/BlurEdges.BlurEdges
+DefaultFindEdgesMaterial=/Landmass/DistanceFields/Materials/DetectEdges.DetectEdges
+DefaultDrawCanvasMaterial=/Water/Materials/Brushes/CanvasDrawing.CanvasDrawing
+DefaultRenderRiverSplineDepthsMaterial=/Landmass/Landscape/BlueprintBrushes/Materials/RenderSplineDepths.RenderSplineDepths
+
+[/Script/Engine.UserInterfaceSettings]
+RenderFocusRule=NavigationOnly
+HardwareCursors=((Default, (CursorPath="Slate/MouseCursor")),(Crosshairs, (CursorPath="Slate/MouseCursorAiming",HotSpot=(X=0.500000,Y=0.500000))))
+SoftwareCursors=()
+ApplicationScale=1.000000
+UIScaleRule=ShortestSide
+CustomScalingRuleClass=None
+UIScaleCurve=(EditorCurveData=(Keys=((Time=480.000000,Value=0.444000),(Time=720.000000,Value=0.666000),(Time=1080.000000,Value=1.000000),(Time=8640.000000,Value=8.000000)),DefaultValue=340282346638528859811704183484516925440.000000,PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant),ExternalCurve=None)
+bAllowHighDPIInGameMode=False
+DesignScreenSize=(X=1920,Y=1080)
+bLoadWidgetsOnDedicatedServer=True
+
+[/Script/Engine.CollisionProfile]
+-Profiles=(Name="NoCollision",CollisionEnabled=NoCollision,ObjectTypeName="WorldStatic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore)),HelpMessage="No collision",bCanModify=False)
+-Profiles=(Name="BlockAll",CollisionEnabled=QueryAndPhysics,ObjectTypeName="WorldStatic",CustomResponses=,HelpMessage="WorldStatic object that blocks all actors by default. All new custom channels will use its own default response. ",bCanModify=False)
+-Profiles=(Name="OverlapAll",CollisionEnabled=QueryOnly,ObjectTypeName="WorldStatic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldStatic object that overlaps all actors by default. All new custom channels will use its own default response. ",bCanModify=False)
+-Profiles=(Name="BlockAllDynamic",CollisionEnabled=QueryAndPhysics,ObjectTypeName="WorldDynamic",CustomResponses=,HelpMessage="WorldDynamic object that blocks all actors by default. All new custom channels will use its own default response. ",bCanModify=False)
+-Profiles=(Name="OverlapAllDynamic",CollisionEnabled=QueryOnly,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldDynamic object that overlaps all actors by default. All new custom channels will use its own default response. ",bCanModify=False)
+-Profiles=(Name="IgnoreOnlyPawn",CollisionEnabled=QueryOnly,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that ignores Pawn and Vehicle. All other channels will be set to default.",bCanModify=False)
+-Profiles=(Name="OverlapOnlyPawn",CollisionEnabled=QueryOnly,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Pawn",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that overlaps Pawn, Camera, and Vehicle. All other channels will be set to default. ",bCanModify=False)
+-Profiles=(Name="Pawn",CollisionEnabled=QueryAndPhysics,ObjectTypeName="Pawn",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="Pawn object. Can be used for capsule of any playerable character or AI. ",bCanModify=False)
+-Profiles=(Name="Spectator",CollisionEnabled=QueryOnly,ObjectTypeName="Pawn",CustomResponses=((Channel="WorldStatic",Response=ECR_Block),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore)),HelpMessage="Pawn object that ignores all other actors except WorldStatic.",bCanModify=False)
+-Profiles=(Name="CharacterMesh",CollisionEnabled=QueryOnly,ObjectTypeName="Pawn",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore)),HelpMessage="Pawn object that is used for Character Mesh. All other channels will be set to default.",bCanModify=False)
+-Profiles=(Name="PhysicsActor",CollisionEnabled=QueryAndPhysics,ObjectTypeName="PhysicsBody",CustomResponses=,HelpMessage="Simulating actors",bCanModify=False)
+-Profiles=(Name="Destructible",CollisionEnabled=QueryAndPhysics,ObjectTypeName="Destructible",CustomResponses=,HelpMessage="Destructible actors",bCanModify=False)
+-Profiles=(Name="InvisibleWall",CollisionEnabled=QueryAndPhysics,ObjectTypeName="WorldStatic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="WorldStatic object that is invisible.",bCanModify=False)
+-Profiles=(Name="InvisibleWallDynamic",CollisionEnabled=QueryAndPhysics,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that is invisible.",bCanModify=False)
+-Profiles=(Name="Trigger",CollisionEnabled=QueryOnly,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldDynamic object that is used for trigger. All other channels will be set to default.",bCanModify=False)
+-Profiles=(Name="Ragdoll",CollisionEnabled=QueryAndPhysics,ObjectTypeName="PhysicsBody",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore)),HelpMessage="Simulating Skeletal Mesh Component. All other channels will be set to default.",bCanModify=False)
+-Profiles=(Name="Vehicle",CollisionEnabled=QueryAndPhysics,ObjectTypeName="Vehicle",CustomResponses=,HelpMessage="Vehicle object that blocks Vehicle, WorldStatic, and WorldDynamic. All other channels will be set to default.",bCanModify=False)
+-Profiles=(Name="UI",CollisionEnabled=QueryOnly,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Block),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldStatic object that overlaps all actors by default. All new custom channels will use its own default response. ",bCanModify=False)
++Profiles=(Name="NoCollision",CollisionEnabled=NoCollision,bCanModify=False,ObjectTypeName="WorldStatic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore)),HelpMessage="No collision")
++Profiles=(Name="BlockAll",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="WorldStatic",CustomResponses=,HelpMessage="WorldStatic object that blocks all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="OverlapAll",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldStatic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldStatic object that overlaps all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="BlockAllDynamic",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=,HelpMessage="WorldDynamic object that blocks all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="OverlapAllDynamic",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldDynamic object that overlaps all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="IgnoreOnlyPawn",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that ignores Pawn and Vehicle. All other channels will be set to default.")
++Profiles=(Name="OverlapOnlyPawn",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Pawn",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that overlaps Pawn, Camera, and Vehicle. All other channels will be set to default. ")
++Profiles=(Name="Pawn",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="Pawn",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="Pawn object. Can be used for capsule of any playerable character or AI. ")
++Profiles=(Name="Spectator",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="Pawn",CustomResponses=((Channel="WorldStatic"),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore)),HelpMessage="Pawn object that ignores all other actors except WorldStatic.")
++Profiles=(Name="CharacterMesh",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="Pawn",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore)),HelpMessage="Pawn object that is used for Character Mesh. All other channels will be set to default.")
++Profiles=(Name="PhysicsActor",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="PhysicsBody",CustomResponses=,HelpMessage="Simulating actors")
++Profiles=(Name="Destructible",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="Destructible",CustomResponses=,HelpMessage="Destructible actors")
++Profiles=(Name="InvisibleWall",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="WorldStatic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="WorldStatic object that is invisible.")
++Profiles=(Name="InvisibleWallDynamic",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that is invisible.")
++Profiles=(Name="Trigger",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldDynamic object that is used for trigger. All other channels will be set to default.")
++Profiles=(Name="Ragdoll",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="PhysicsBody",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore)),HelpMessage="Simulating Skeletal Mesh Component. All other channels will be set to default.")
++Profiles=(Name="Vehicle",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="Vehicle",CustomResponses=,HelpMessage="Vehicle object that blocks Vehicle, WorldStatic, and WorldDynamic. All other channels will be set to default.")
++Profiles=(Name="UI",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility"),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldStatic object that overlaps all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="WaterBodyCollision",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="",CustomResponses=((Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="Default Water Collision Profile (Created by Water Plugin)")
+-ProfileRedirects=(OldName="BlockingVolume",NewName="InvisibleWall")
+-ProfileRedirects=(OldName="InterpActor",NewName="IgnoreOnlyPawn")
+-ProfileRedirects=(OldName="StaticMeshComponent",NewName="BlockAllDynamic")
+-ProfileRedirects=(OldName="SkeletalMeshActor",NewName="PhysicsActor")
+-ProfileRedirects=(OldName="InvisibleActor",NewName="InvisibleWallDynamic")
++ProfileRedirects=(OldName="BlockingVolume",NewName="InvisibleWall")
++ProfileRedirects=(OldName="InterpActor",NewName="IgnoreOnlyPawn")
++ProfileRedirects=(OldName="StaticMeshComponent",NewName="BlockAllDynamic")
++ProfileRedirects=(OldName="SkeletalMeshActor",NewName="PhysicsActor")
++ProfileRedirects=(OldName="InvisibleActor",NewName="InvisibleWallDynamic")
+-CollisionChannelRedirects=(OldName="Static",NewName="WorldStatic")
+-CollisionChannelRedirects=(OldName="Dynamic",NewName="WorldDynamic")
+-CollisionChannelRedirects=(OldName="VehicleMovement",NewName="Vehicle")
+-CollisionChannelRedirects=(OldName="PawnMovement",NewName="Pawn")
++CollisionChannelRedirects=(OldName="Static",NewName="WorldStatic")
++CollisionChannelRedirects=(OldName="Dynamic",NewName="WorldDynamic")
++CollisionChannelRedirects=(OldName="VehicleMovement",NewName="Vehicle")
++CollisionChannelRedirects=(OldName="PawnMovement",NewName="Pawn")
+
+[/Script/AndroidFileServerEditor.AndroidFileServerRuntimeSettings]
+bEnablePlugin=True
+bAllowNetworkConnection=True
+SecurityToken=A99B714440C4E6D2F04FB1B49BA0552E
+bIncludeInShipping=False
+bAllowExternalStartInShipping=False
+bCompileAFSProject=False
+bUseCompression=False
+bLogFiles=False
+bReportStats=False
+ConnectionType=USBOnly
+bUseManualIPAddress=False
+ManualIPAddress=
+

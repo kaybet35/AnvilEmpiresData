@@ -1,0 +1,243 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "RockMine_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "RockMine_C'Default__RockMine_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMine.10"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__RockMine_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__RockMine_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    },
+    "Properties": {
+      "bEnabled": false
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableComp",
+    "Outer": "Default__RockMine_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Template": {
+      "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__RockMine_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'RockMine_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/RockMine.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthComp",
+    "Outer": "Default__RockMine_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
+    },
+    "Properties": {
+      "MaxHealth": 2400.0
+    }
+  },
+  {
+    "Type": "MeshCollisionProxyComponent",
+    "Name": "MeshCollisionProxyComponent_0",
+    "Outer": "Default__RockMine_C",
+    "Class": "UScriptClass'MeshCollisionProxyComponent'",
+    "Properties": {
+      "PhysicsAssetName": {
+        "ObjectName": "StaticMesh'RockMine'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/RockMine.2"
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeStone",
+      "CollisionMask": 16785410
+    }
+  },
+  {
+    "Type": "MineProxyComponent",
+    "Name": "MineProxyComponent_0",
+    "Outer": "Default__RockMine_C",
+    "Class": "UScriptClass'MineProxyComponent'",
+    "Properties": {
+      "InitialReserveCapacity": 75,
+      "MiningRatePerUpdate": 50,
+      "MiningUpdateTime": 600.0
+    }
+  },
+  {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairComp",
+    "Outer": "Default__RockMine_C",
+    "Class": "UScriptClass'RepairProxyComponent'",
+    "Template": {
+      "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_0",
+    "Outer": "Default__RockMine_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'StonePile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StonePile.0"
+      },
+      "SpawnRadius": 1200.0,
+      "SpawnInterval": 30.0,
+      "SpawnQuantity": 5,
+      "MaxSpawn": 5,
+      "ResourceReserveInitial": 25,
+      "MinDistanceBetweenSpawns": 150.0
+    }
+  },
+  {
+    "Type": "RockMine_C",
+    "Name": "Default__RockMine_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMine.RockMine_C'",
+    "Template": {
+      "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
+    },
+    "Properties": {
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__RockMine_C:TeamComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMine.13"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__RockMine_C:HealthComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMine.5"
+      },
+      "RepairComp": {
+        "ObjectName": "RepairProxyComponent'Default__RockMine_C:RepairComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMine.8"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__RockMine_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMine.12"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__RockMine_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMine.3"
+      },
+      "MeshCollisionComp": {
+        "ObjectName": "MeshCollisionProxyComponent'Default__RockMine_C:MeshCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMine.6"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__RockMine_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMine.4"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__RockMine_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMine.1"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__RockMine_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMine.2"
+      },
+      "ScorchComp": null,
+      "CodeNameString": "RockMine",
+      "CodeName": -902729019,
+      "bShowOnMap": true,
+      "GenerateMeshCollisionMask": 8194,
+      "Components": [
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__RockMine_C:ResourceSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMine.9"
+        },
+        {
+          "ObjectName": "MineProxyComponent'Default__RockMine_C:MineProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMine.7"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisRockMine_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Mines/BPVisRockMine.1"
+      }
+    }
+  },
+  {
+    "Type": "ScorchProxyComponent",
+    "Name": "ScorchProxyComponent_0",
+    "Outer": "Default__RockMine_C",
+    "Class": "UScriptClass'ScorchProxyComponent'",
+    "Template": {
+      "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__RockMine_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamComp",
+    "Outer": "Default__RockMine_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    },
+    "Properties": {
+      "Accessibility": "EAnvilAccessibilityType::AllCanUse"
+    }
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SpawnPointMirrish_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SpawnPointMirrish_C'Default__SpawnPointMirrish_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/SpawnPointMirrish.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "PlayerSpawnerProxyComponent",
+    "Name": "PlayerSpawnerProxyComponent_0",
+    "Outer": "Default__SpawnPointMirrish_C",
+    "Class": "UScriptClass'PlayerSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 250.0
+      },
+      "SpawnRadius": 15000.0,
+      "Faction": "EAnvilFactionId::Mirrish"
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_6",
+    "Outer": "Default__SpawnPointMirrish_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'SpawnerStarterArea_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.0"
+      },
+      "SpawnRadius": 500.0,
+      "SpawnInterval": 60.0,
+      "SpawnQuantity": 1,
+      "MaxSpawn": 1,
+      "ResourceReserveInitial": 1
+    }
+  },
+  {
+    "Type": "SpawnPointMirrish_C",
+    "Name": "Default__SpawnPointMirrish_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/SpawnPointMirrish.SpawnPointMirrish_C'",
+    "Properties": {
+      "CodeNameString": "SpawnPointMirrish",
+      "CodeName": -1219656773,
+      "RelevancyPolicy": "EEntityRelevancyPolicy::AlwaysRelevant",
+      "bShowOnMap": true,
+      "Components": [
+        {
+          "ObjectName": "PlayerSpawnerProxyComponent'Default__SpawnPointMirrish_C:PlayerSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/SpawnPointMirrish.1"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnPointMirrish_C:ResourceSpawnerProxyComponent_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/SpawnPointMirrish.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisSpawnPointMirrish_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.1"
+      }
+    }
+  }
+]

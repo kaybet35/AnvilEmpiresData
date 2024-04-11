@@ -1,0 +1,94 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisFishingPole_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'VisItem'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisFishingPole_C'Default__BPVisFishingPole_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisItems/Tools/BPVisFishingPole.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisFishingPole_C",
+    "Name": "Default__BPVisFishingPole_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisItems/Tools/BPVisFishingPole.BPVisFishingPole_C'",
+    "Properties": {
+      "CodeNameString": "FishingPole",
+      "CodeName": -1683642304,
+      "NameText": {
+        "Namespace": "",
+        "Key": "38AD9D7A474D2577C1C7BEB064AC3997",
+        "SourceString": "Fishing Pole",
+        "LocalizedString": "Fishing Pole"
+      },
+      "DescriptionText": {
+        "Namespace": "",
+        "Key": "ADD39DAB47E2290E478C618BD14CBF56",
+        "SourceString": "A simple fishing rod that can be used near water at locations where fish is abundant",
+        "LocalizedString": "A simple fishing rod that can be used near water at locations where fish is abundant"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'IconFishingPole'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Items/IconFishingPole.0"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMesh'FishingPole_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/FishingPole_SK.0"
+      },
+      "GripType": "EEquippedItemGripType::Spear",
+      "MeshRotation": {
+        "Pitch": 90.0,
+        "Yaw": 0.0,
+        "Roll": -90.0
+      },
+      "ActivityStateMontageMap": [
+        {
+          "EAnvilSimActivityState::FishingWaiting": {
+            "ObjectName": "AnimMontage'fishing_startAndIdle_montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/fishing_startAndIdle_montage.0"
+          }
+        },
+        {
+          "EAnvilSimActivityState::FishingSuccess": {
+            "ObjectName": "AnimMontage'fishing_success_montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/fishing_success_montage.0"
+          }
+        },
+        {
+          "EAnvilSimActivityState::FishingFailed": {
+            "ObjectName": "AnimMontage'fishing_failure_montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/fishing_failure_montage.0"
+          }
+        },
+        {
+          "EAnvilSimActivityState::FishingHooked": {
+            "ObjectName": "AnimMontage'fishing_hooked_montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/fishing_hooked_montage.0"
+          }
+        }
+      ],
+      "TransferSoundCue": {
+        "ObjectName": "SoundCue'UITransferBow02_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/UI/Transfer/UITransferBow02_Cue.0"
+      },
+      "ArmingSoundCue": {
+        "ObjectName": "SoundCue'GenericToolArming_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Hammer/GenericToolArming_Cue.0"
+      }
+    }
+  }
+]

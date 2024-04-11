@@ -1,0 +1,77 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "ResourceWater_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ResourceWater_C'Default__ResourceWater_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWater.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ResourceWater_C",
+    "Name": "Default__ResourceWater_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWater.ResourceWater_C'",
+    "Properties": {
+      "CodeNameString": "ResourceWater",
+      "CodeName": -1031439787,
+      "ItemType": "EAnvilItemType::PrimaryTool",
+      "SecondaryType": "EAnvilItemType::LiquidStorage",
+      "PickupEntity": {
+        "ObjectName": "BlueprintGeneratedClass'WaterPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/WaterPickup.0"
+      },
+      "bLarge": true,
+      "bRearmAfterConsumption": true,
+      "bRanged": true,
+      "Damage": 100,
+      "DamageOffset": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "DamageRadius": 75.0,
+      "AmmoType": {
+        "ObjectName": "BlueprintGeneratedClass'ResourceWater_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWater.0"
+      },
+      "ProjectileEntity": {
+        "ObjectName": "BlueprintGeneratedClass'WaterProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/WaterProjectile.0"
+      },
+      "AimMovementSpeedModifier": 0.5,
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Farming",
+        "Delay": 0.7,
+        "Duration": 1.1,
+        "MovementSpeedModifier": 0.0,
+        "RotationSpeedModifier": 0.0,
+        "bRepeatable": false,
+        "StaminaCost": 0.0,
+        "AimedStaminaCost": 0.0
+      },
+      "RangedActivity": {
+        "State": "EAnvilSimActivityState::LaunchingProjectile",
+        "Delay": 0.8,
+        "Duration": 1.1,
+        "bRepeatable": false,
+        "StaminaCost": 15.0,
+        "AimedStaminaCost": 5.0
+      }
+    }
+  }
+]

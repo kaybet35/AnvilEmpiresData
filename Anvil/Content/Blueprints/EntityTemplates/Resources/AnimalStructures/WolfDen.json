@@ -1,0 +1,341 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "WolfDen_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WolfDen_C'Default__WolfDen_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/WolfDen.13"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__WolfDen_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__WolfDen_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableComp",
+    "Outer": "Default__WolfDen_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Template": {
+      "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__WolfDen_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'WolfDenFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/FootprintAssets/WolfDenFootprint.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthComp",
+    "Outer": "Default__WolfDen_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
+    },
+    "Properties": {
+      "MaxHealth": 30.0
+    }
+  },
+  {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairComp",
+    "Outer": "Default__WolfDen_C",
+    "Class": "UScriptClass'RepairProxyComponent'",
+    "Template": {
+      "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_2",
+    "Outer": "Default__WolfDen_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "bInventoryTransferToPlayer": false,
+      "LootTable": [
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'ResourceStoneFragments_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceStoneFragments.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 9,
+            "bIsRelic": false
+          },
+          "NormalizedChanceToDrop": 1.0,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
+        },
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'CombatAxeRelic_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/CombatAxeRelic.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 1,
+            "bIsRelic": true
+          },
+          "NormalizedChanceToDrop": 0.5,
+          "MinDurability": 10.0,
+          "MaxDurability": 30.0
+        },
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'CombatAxeRelic_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/CombatAxeRelic.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 1,
+            "bIsRelic": true
+          },
+          "NormalizedChanceToDrop": 0.1,
+          "MinDurability": 10.0,
+          "MaxDurability": 30.0
+        },
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'SwordRelic_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SwordRelic.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 1,
+            "bIsRelic": true
+          },
+          "NormalizedChanceToDrop": 0.4,
+          "MinDurability": 10.0,
+          "MaxDurability": 30.0
+        },
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'SwordRelic_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SwordRelic.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 1,
+            "bIsRelic": true
+          },
+          "NormalizedChanceToDrop": 0.1,
+          "MinDurability": 10.0,
+          "MaxDurability": 30.0
+        },
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'SpearRelic_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SpearRelic.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 1,
+            "bIsRelic": true
+          },
+          "NormalizedChanceToDrop": 0.4,
+          "MinDurability": 10.0,
+          "MaxDurability": 30.0
+        },
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'SpearRelic_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SpearRelic.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 1,
+            "bIsRelic": true
+          },
+          "NormalizedChanceToDrop": 0.1,
+          "MinDurability": 10.0,
+          "MaxDurability": 30.0
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_0",
+    "Outer": "Default__WolfDen_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'SpawnerWolfDen_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerWolfDen.0"
+      },
+      "SpawnRadius": 250.0,
+      "SpawnInterval": 60.0,
+      "SpawnQuantity": 1,
+      "MaxSpawn": 1,
+      "ResourceReserveInitial": 1,
+      "MinDistanceBetweenSpawns": 2500.0
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_1",
+    "Outer": "Default__WolfDen_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'Wolf_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Wolf.3"
+      },
+      "SpawnOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 300.0
+      },
+      "SpawnRadius": 1000.0,
+      "MinimumSpawnRadius": 400.0,
+      "SpawnInterval": 300.0,
+      "SpawnQuantity": 3,
+      "MaxSpawn": 3,
+      "ResourceReserveInitial": 6,
+      "ReserveReplenishTimeSecs": 3600,
+      "MinDistanceBetweenSpawns": 250.0,
+      "bTrackSpawnedEntity": true,
+      "bDontSpawnNearPlayers": true,
+      "CompatibleSurfaceTypes": 26116
+    }
+  },
+  {
+    "Type": "ScorchProxyComponent",
+    "Name": "ScorchProxyComponent_0",
+    "Outer": "Default__WolfDen_C",
+    "Class": "UScriptClass'ScorchProxyComponent'",
+    "Template": {
+      "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__WolfDen_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamComp",
+    "Outer": "Default__WolfDen_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    }
+  },
+  {
+    "Type": "WolfDen_C",
+    "Name": "Default__WolfDen_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/WolfDen.WolfDen_C'",
+    "Template": {
+      "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
+    },
+    "Properties": {
+      "TeamComp": null,
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__WolfDen_C:HealthComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/WolfDen.5"
+      },
+      "RepairComp": null,
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__WolfDen_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/WolfDen.11"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__WolfDen_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/WolfDen.3"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__WolfDen_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/WolfDen.4"
+      },
+      "UseBoxComp": null,
+      "DecayComp": null,
+      "ScorchComp": null,
+      "CodeNameString": "WolfDen",
+      "CodeName": -1409740165,
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "GenerateMeshCollisionMask": 8194,
+      "Components": [
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__WolfDen_C:ResourceSpawnerProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/WolfDen.9"
+        },
+        {
+          "ObjectName": "DestroyableProxyComponent'Default__WolfDen_C:DestroyableComp'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/WolfDen.3"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__WolfDen_C:ResourceProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/WolfDen.7"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__WolfDen_C:ResourceSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/WolfDen.8"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisAnimalDenWolf_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisAnimalDenWolf.1"
+      }
+    }
+  }
+]

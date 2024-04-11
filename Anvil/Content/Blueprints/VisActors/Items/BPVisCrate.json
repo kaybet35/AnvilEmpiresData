@@ -1,0 +1,153 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisCrate_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisCrate_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisCrate_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisPickupItem'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisCrate_C'Default__BPVisCrate_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisCrate_C",
+    "Name": "Default__BPVisCrate_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.BPVisCrate_C'",
+    "Properties": {
+      "PickupDataComponent": {
+        "ObjectName": "PickupDataComponent'Default__BPVisCrate_C:PickupDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.3"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisCrate_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.7"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCrate_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.0"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "26B567DE40BE85E19811D8BB8A616416",
+        "SourceString": "Crate",
+        "LocalizedString": "Crate"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCrate_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.0"
+      }
+    }
+  },
+  {
+    "Type": "PickupDataComponent",
+    "Name": "PickupDataComponent",
+    "Outer": "Default__BPVisCrate_C",
+    "Class": "UScriptClass'PickupDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisCrate_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisCrate_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.4"
+      },
+      "VariableGuid": "682F0F80-4FB2C272-38F38F8A-912D4110",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisCrate_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisCrate_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.5"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisCrate_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'RefinedBarrel'",
+        "ObjectPath": "Anvil/Content/Meshes/Resources/RefinedBarrel.2"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCrate_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.0"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
+  }
+]

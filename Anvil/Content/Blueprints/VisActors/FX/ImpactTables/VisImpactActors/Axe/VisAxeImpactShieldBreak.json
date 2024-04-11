@@ -1,0 +1,212 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__VisAxeImpactShieldBreak_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AudioComponent",
+    "Outer": "Default__VisAxeImpactShieldBreak_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'ShieldGuardBreak_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Shield/ShieldGuardBreak_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisAxeImpactShieldBreak_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.0"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Audio_GEN_VARIABLE",
+    "Outer": "VisAxeImpactShieldBreak_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'WoodShield1HAxeBlock_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/WoodShield1HAxeBlock_Cue.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "VisAxeImpactShieldBreak_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'VisAxeImpactShieldBreak_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisEffect'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Audio",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "VisAxeImpactShieldBreak_C'Default__VisAxeImpactShieldBreak_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.11"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "LifetimeDataComponent",
+    "Name": "LifetimeDataComponent",
+    "Outer": "Default__VisAxeImpactShieldBreak_C",
+    "Class": "UScriptClass'LifetimeDataComponent'"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraComponent",
+    "Outer": "Default__VisAxeImpactShieldBreak_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'CombatShieldAxe01Break'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/CombatShieldAxe01Break.29"
+      },
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisAxeImpactShieldBreak_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "VisAxeImpactShieldBreak_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'VisAxeImpactShieldBreak_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.6"
+      },
+      "VariableGuid": "C4FDCDE5-4ADE44EE-E85C76AF-FE4BA41B",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'VisAxeImpactShieldBreak_C:Audio_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.2"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "76FC223A-467B13D2-8A74CCB2-59071714",
+      "InternalVariableName": "Audio"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "VisAxeImpactShieldBreak_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'VisAxeImpactShieldBreak_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'VisAxeImpactShieldBreak_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.8"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'VisAxeImpactShieldBreak_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.7"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__VisAxeImpactShieldBreak_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisAxeImpactShieldBreak_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.0"
+      }
+    }
+  },
+  {
+    "Type": "VisAxeImpactShieldBreak_C",
+    "Name": "Default__VisAxeImpactShieldBreak_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.VisAxeImpactShieldBreak_C'",
+    "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__VisAxeImpactShieldBreak_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.0"
+      },
+      "AudioComponent": {
+        "ObjectName": "AudioComponent'Default__VisAxeImpactShieldBreak_C:AudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.1"
+      },
+      "NiagaraComponent": {
+        "ObjectName": "NiagaraComponent'Default__VisAxeImpactShieldBreak_C:NiagaraComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.5"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__VisAxeImpactShieldBreak_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.10"
+      },
+      "LifetimeDataComponent": {
+        "ObjectName": "LifetimeDataComponent'Default__VisAxeImpactShieldBreak_C:LifetimeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.4"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__VisAxeImpactShieldBreak_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/Axe/VisAxeImpactShieldBreak.0"
+      }
+    }
+  }
+]

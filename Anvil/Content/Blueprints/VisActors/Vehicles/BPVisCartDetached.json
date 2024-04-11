@@ -1,0 +1,360 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisCartDetached_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "MovementAudioComponent",
+    "Outer": "Default__BPVisCartDetached_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCartDetached_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisCartDetached_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisCartDetached_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.11"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisCart'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisMultiItemStockpile",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisMultiItemStockpileComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisCartDetached_C'Default__BPVisCartDetached_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisCartDetached_C",
+    "Name": "Default__BPVisCartDetached_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.BPVisCartDetached_C'",
+    "Properties": {
+      "HungerDataComponent": {
+        "ObjectName": "HungerDataComponent'Default__BPVisCartDetached_C:HungerDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.6"
+      },
+      "StaminaDataComponent": {
+        "ObjectName": "StaminaDataComponent'Default__BPVisCartDetached_C:StaminaDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.15"
+      },
+      "SeatSocketName": "S_Seat",
+      "HorseMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisCartDetached_C:HorseMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.13"
+      },
+      "SaddleMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisCartDetached_C:SaddleMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.14"
+      },
+      "CartMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisCartDetached_C:CartMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.12"
+      },
+      "VehicleMovementDataComponent": {
+        "ObjectName": "VehicleMovementDataComponent'Default__BPVisCartDetached_C:VehicleMovementDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.16"
+      },
+      "MoveLoopAudioComponent": {
+        "ObjectName": "AudioComponent'Default__BPVisCartDetached_C:MovementAudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.1"
+      },
+      "MoveLoopParticleSystem": {
+        "ObjectName": "NiagaraComponent'Default__BPVisCartDetached_C:MovementParticleSystem'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.7"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisCartDetached_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.5"
+      },
+      "ArrowComponent": null,
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "A647D9FB402B6D42142147B8FC974967",
+        "SourceString": "Resource Wagon",
+        "LocalizedString": "Resource Wagon"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "705E4BAA4B6E6ADDECC6929FEFBA9B9F",
+        "SourceString": "A horse and cart used to transport large heavy items",
+        "LocalizedString": "A horse and cart used to transport large heavy items"
+      },
+      "UseWindowType": "EHUDWindowType::InventoryStructure",
+      "AdditionalActionButtons": [
+        "EActionButtonType::AttachToHorse"
+      ],
+      "PositionSmoothSpeed": 4.0,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCartDetached_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.0"
+      }
+    }
+  },
+  {
+    "Type": "CollisionVisualizerComponent",
+    "Name": "BoxVisualizer",
+    "Outer": "VisMultiItemStockpile_GEN_VARIABLE",
+    "Class": "UScriptClass'CollisionVisualizerComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 75.0,
+        "Y": 185.0,
+        "Z": 75.0
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 75.0
+      }
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisCartDetached_C",
+    "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "HungerDataComponent",
+    "Name": "HungerDataComponent",
+    "Outer": "Default__BPVisCartDetached_C",
+    "Class": "UScriptClass'HungerDataComponent'"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "MovementParticleSystem",
+    "Outer": "Default__BPVisCartDetached_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCartDetached_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisCartDetached_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisCartDetached_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.8"
+      },
+      "VariableGuid": "3AF1F426-4342E6CB-2EE9D19D-60F4F2D1",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisMultiItemStockpileComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisMultiItemStockpileComponent'BPVisCartDetached_C:VisMultiItemStockpile_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.17"
+      },
+      "AttachToName": "S_CartContainer",
+      "ParentComponentOrVariableName": "CartMesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "C44AD25A-4B9A6D88-A9510AB9-7504DF37",
+      "InternalVariableName": "VisMultiItemStockpile"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisCartDetached_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisCartDetached_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisCartDetached_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisCartDetached_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.9"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CartMesh",
+    "Outer": "Default__BPVisCartDetached_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Cart_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Cart_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Cart_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Cart_SK.0"
+      },
+      "LeaderPoseComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisCartDetached_C:HorseMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.13"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCartDetached_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.0"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "HorseMesh",
+    "Outer": "Default__BPVisCartDetached_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Horse_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_ABP.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Horse_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Horse_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Horse_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Horse_SK.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCartDetached_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.0"
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SaddleMesh",
+    "Outer": "Default__BPVisCartDetached_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Saddle_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Saddle_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK.0"
+      },
+      "LeaderPoseComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisCartDetached_C:HorseMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.13"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCartDetached_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.0"
+      },
+      "bVisible": false,
+      "bHiddenInGame": true
+    }
+  },
+  {
+    "Type": "StaminaDataComponent",
+    "Name": "StaminaDataComponent",
+    "Outer": "Default__BPVisCartDetached_C",
+    "Class": "UScriptClass'StaminaDataComponent'"
+  },
+  {
+    "Type": "VehicleMovementDataComponent",
+    "Name": "VehicleMovementDataComponent",
+    "Outer": "Default__BPVisCartDetached_C",
+    "Class": "UScriptClass'VehicleMovementDataComponent'"
+  },
+  {
+    "Type": "VisMultiItemStockpileComponent",
+    "Name": "VisMultiItemStockpile_GEN_VARIABLE",
+    "Outer": "BPVisCartDetached_C",
+    "Class": "UScriptClass'VisMultiItemStockpileComponent'",
+    "Properties": {
+      "TestItem": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisItemStone_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisItems/Resources/BPVisItemStone.0"
+      },
+      "StockpileExtents": {
+        "X": 75.0,
+        "Y": 185.0,
+        "Z": 100.0
+      },
+      "LevelHeight": 30.0,
+      "bDefaultRotate": false,
+      "BoxVisualizer": {
+        "ObjectName": "CollisionVisualizerComponent'BPVisCartDetached_C:VisMultiItemStockpile_GEN_VARIABLE.BoxVisualizer'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCartDetached.4"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -96.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      }
+    }
+  }
+]

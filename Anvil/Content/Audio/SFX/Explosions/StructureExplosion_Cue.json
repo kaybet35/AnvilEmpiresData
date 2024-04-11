@@ -1,0 +1,59 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "StructureExplosion_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'StructureExplosion_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Explosions/StructureExplosion_Cue.1"
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Explosions'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.1"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'ExplosionConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/ExplosionConcurrency.0"
+        }
+      ],
+      "Duration": 1.7340417,
+      "MaxDistance": 9000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "StructureExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'StructureExplosion_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Explosions/StructureExplosion_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "StructureExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Explosions/StructureExplosionBasic01.StructureExplosionBasic01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'StructureExplosionBasic01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Explosions/StructureExplosionBasic01.0"
+    }
+  }
+]

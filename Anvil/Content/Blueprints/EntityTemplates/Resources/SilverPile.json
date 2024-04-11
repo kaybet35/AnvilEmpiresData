@@ -1,0 +1,88 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SilverPile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SilverPile_C'Default__SilverPile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/SilverPile.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__SilverPile_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 75.0,
+        "Z": 50.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeStone",
+      "CollisionMask": 8210
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__SilverPile_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "HitPoints": 18,
+      "RequiredTool": "EAnvilToolType::Pickaxe",
+      "bInventoryTransferToPlayer": false,
+      "DroppedResourceAmount": 3,
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'SilverOrePickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/SilverOrePickup.0"
+      },
+      "DestructionEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectRockBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectRockBreak.0"
+      }
+    }
+  },
+  {
+    "Type": "SilverPile_C",
+    "Name": "Default__SilverPile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/SilverPile.SilverPile_C'",
+    "Properties": {
+      "CodeNameString": "SilverPile",
+      "CodeName": -2024269773,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__SilverPile_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/SilverPile.1"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__SilverPile_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/SilverPile.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisSilverPile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisSilverPile.0"
+      }
+    }
+  }
+]

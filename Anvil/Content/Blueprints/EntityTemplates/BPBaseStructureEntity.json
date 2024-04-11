@@ -1,0 +1,150 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPBaseStructureEntity_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'BaseStructureEntity'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__BPBaseStructureEntity_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "ExtendFootprint": true,
+      "Extents": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 8
+    }
+  },
+  {
+    "Type": "BPBaseStructureEntity_C",
+    "Name": "Default__BPBaseStructureEntity_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.BPBaseStructureEntity_C'",
+    "Properties": {
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
+      },
+      "RepairComp": {
+        "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+      },
+      "ScorchComp": {
+        "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
+      },
+      "CodeNameString": "BaseStructureEntity",
+      "CodeName": -896034441,
+      "GenerateMeshCollisionMask": 16785410
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__BPBaseStructureEntity_C",
+    "Class": "UScriptClass'DecayProxyComponent'"
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableComp",
+    "Outer": "Default__BPBaseStructureEntity_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Properties": {
+      "DestructionEffectEntity": {
+        "ObjectName": "BlueprintGeneratedClass'EffectStructureDestroy_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectStructureDestroy.0"
+      }
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__BPBaseStructureEntity_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Properties": {
+      "bAddToNavMesh": true,
+      "CollisionMask": 256
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthComp",
+    "Outer": "Default__BPBaseStructureEntity_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "TargetType": "EAnvilDamageTargetType::Structure"
+    }
+  },
+  {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairComp",
+    "Outer": "Default__BPBaseStructureEntity_C",
+    "Class": "UScriptClass'RepairProxyComponent'"
+  },
+  {
+    "Type": "ScorchProxyComponent",
+    "Name": "ScorchProxyComponent_0",
+    "Outer": "Default__BPBaseStructureEntity_C",
+    "Class": "UScriptClass'ScorchProxyComponent'"
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__BPBaseStructureEntity_C",
+    "Class": "UScriptClass'StructureProxyComponent'"
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamComp",
+    "Outer": "Default__BPBaseStructureEntity_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Properties": {
+      "Accessibility": "EAnvilAccessibilityType::ResidentsOnly"
+    }
+  }
+]

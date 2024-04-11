@@ -1,0 +1,5 @@
+#include "GameplayTagContainerNetSerializerSerializationHelper.h"
+
+FGameplayTagContainerNetSerializerSerializationHelper::FGameplayTagContainerNetSerializerSerializationHelper() {
+}
+

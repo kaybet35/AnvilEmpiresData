@@ -1,0 +1,198 @@
+[
+  {
+    "Type": "BPBeaconTowerMapIcon_C",
+    "Name": "Default__BPBeaconTowerMapIcon_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerMapIcon.BPBeaconTowerMapIcon_C'",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_36",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPBeaconTowerMapIcon_C:WidgetTree.CanvasPanel_36.CanvasPanelSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerMapIcon.2"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPBeaconTowerMapIcon_C:WidgetTree.CanvasPanel_36.CanvasPanelSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerMapIcon.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Outer": "CanvasPanel_36",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPBeaconTowerMapIcon_C:WidgetTree.CanvasPanel_36'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerMapIcon.1"
+      },
+      "Content": {
+        "ObjectName": "Image'BPBeaconTowerMapIcon_C:WidgetTree.DetectionRangeCirle'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerMapIcon.4"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Outer": "CanvasPanel_36",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Bottom": 100.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPBeaconTowerMapIcon_C:WidgetTree.CanvasPanel_36'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerMapIcon.1"
+      },
+      "Content": {
+        "ObjectName": "Image'BPBeaconTowerMapIcon_C:WidgetTree.IconBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerMapIcon.5"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "DetectionRangeCirle",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 315.0,
+          "Y": 315.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'BeaconTowerRangeIndicator'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Map/BeaconTowerRangeIndicator.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.15,
+        "Hex": "26FFFFFF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPBeaconTowerMapIcon_C:WidgetTree.CanvasPanel_36.CanvasPanelSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerMapIcon.2"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "IconBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 256.0,
+          "Y": 256.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPBeaconTowerMapIcon_C:WidgetTree.CanvasPanel_36.CanvasPanelSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerMapIcon.3"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPBeaconTowerMapIcon_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPBeaconTowerMapIcon_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerMapIcon.7"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BeaconTowerMapIcon'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DetectionRangeCirle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPBeaconTowerMapIcon_C'Default__BPBeaconTowerMapIcon_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerMapIcon.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPBeaconTowerMapIcon_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPBeaconTowerMapIcon_C:WidgetTree.CanvasPanel_36'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerMapIcon.1"
+      }
+    }
+  }
+]

@@ -1,0 +1,89 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Spear_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Spear_C'Default__Spear_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Spear.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Spear_C",
+    "Name": "Default__Spear_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Spear.Spear_C'",
+    "Properties": {
+      "CodeNameString": "Spear",
+      "CodeName": -9432988,
+      "ItemType": "EAnvilItemType::PrimaryTool",
+      "SecondaryType": "EAnvilItemType::WeaponStorage",
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "ItemHitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectSpearImpact_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectSpearImpact.0"
+      },
+      "bTwoHanded": true,
+      "Encumberance": 50,
+      "DurabilityLossPerUse": 2.0,
+      "bRearmAfterConsumption": true,
+      "bRanged": true,
+      "Damage": 20,
+      "DamageOffset": {
+        "X": 80.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "DamageRadius": 128.0,
+      "FireOffset": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "AmmoType": {
+        "ObjectName": "BlueprintGeneratedClass'Spear_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Spear.0"
+      },
+      "ProjectileEntity": {
+        "ObjectName": "BlueprintGeneratedClass'SpearProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/SpearProjectile.0"
+      },
+      "bStaggersWielder": true,
+      "DamageType": "EAnvilDamageType::Piercing",
+      "AimMovementSpeedModifier": 0.5,
+      "AimRotationSpeedModifier": 3.5,
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 0.5,
+        "Duration": 1.1,
+        "RotationSpeedModifier": 3.5
+      },
+      "RangedActivity": {
+        "State": "EAnvilSimActivityState::LaunchingProjectile",
+        "Delay": 0.7,
+        "Duration": 1.1,
+        "bRepeatable": false
+      },
+      "BuildActivity": {
+        "bRepeatable": false
+      },
+      "MaxEncumbranceforAction": 0.5
+    }
+  }
+]

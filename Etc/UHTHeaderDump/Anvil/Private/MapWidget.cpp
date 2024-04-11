@@ -1,0 +1,29 @@
+#include "MapWidget.h"
+
+UMapWidget::UMapWidget() : UUserWidget(FObjectInitializer::Get()) {
+    this->MapSheet = NULL;
+    this->ZoomSpeed = 0.00f;
+    this->ZoomMax = 0.00f;
+    this->ZoomAnimationTime = 0.00f;
+    this->MapImageBox = NULL;
+    this->FogOfWarMask = NULL;
+    this->FogOfWarRadius = 5;
+    this->DeploymentInstructionOrSpawnTimerBorder = NULL;
+    this->DeploymentInstructionOrSpawnTimerText = NULL;
+    this->ObjectiveBorder = NULL;
+}
+
+ESlateVisibility UMapWidget::GetRespawnTimerVisibility() {
+    return ESlateVisibility::Visible;
+}
+
+FText UMapWidget::GetRespawnTimerText() {
+    return FText::GetEmpty();
+}
+
+ESlateVisibility UMapWidget::GetObjectiveBorderVisibility() {
+    return ESlateVisibility::Visible;
+}
+
+
+

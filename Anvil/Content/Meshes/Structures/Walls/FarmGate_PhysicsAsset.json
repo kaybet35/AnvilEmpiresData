@@ -1,0 +1,389 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "FarmGate_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'FarmGate_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/FarmGate_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'FarmGate_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/FarmGate_PhysicsAsset.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'FarmGate_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/FarmGate_PhysicsAsset.1"
+        }
+      ],
+      "SolverSettings": {
+        "CullDistance": 1.0,
+        "bUseLinearJointSolver": false
+      },
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "FarmGate_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "door",
+        "ConstraintBone1": "door",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 130.2684,
+          "Y": -87.34473,
+          "Z": 2.0903193E-14
+        },
+        "PriAxis2": {
+          "X": -1.1920929E-07,
+          "Y": 1.0,
+          "Z": -8.7422784E-08
+        },
+        "SecAxis2": {
+          "X": -1.0,
+          "Y": -1.1920929E-07,
+          "Z": -1.5099582E-07
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "FarmGate_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ],
+        "ConvexElems": [
+          {
+            "VertexData": [
+              {
+                "X": -14.066566,
+                "Y": -82.45949,
+                "Z": -106.8174
+              },
+              {
+                "X": 11.315659,
+                "Y": -82.45949,
+                "Z": -106.8174
+              },
+              {
+                "X": -14.066566,
+                "Y": -111.51546,
+                "Z": -106.8174
+              },
+              {
+                "X": 11.315659,
+                "Y": -111.51546,
+                "Z": -106.8174
+              },
+              {
+                "X": -14.066566,
+                "Y": -82.45949,
+                "Z": 360.19644
+              },
+              {
+                "X": 11.315659,
+                "Y": -82.45949,
+                "Z": 360.19644
+              },
+              {
+                "X": -14.066566,
+                "Y": -111.51545,
+                "Z": 360.19644
+              },
+              {
+                "X": 11.315659,
+                "Y": -111.51545,
+                "Z": 360.19644
+              }
+            ],
+            "IndexData": [
+              5,
+              4,
+              6,
+              0,
+              1,
+              3,
+              2,
+              0,
+              3,
+              0,
+              4,
+              1,
+              2,
+              4,
+              0,
+              6,
+              2,
+              3,
+              6,
+              4,
+              2,
+              7,
+              5,
+              6,
+              5,
+              1,
+              4,
+              5,
+              3,
+              1,
+              7,
+              3,
+              5,
+              7,
+              6,
+              3
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -14.066566,
+                "Y": -111.51546,
+                "Z": -106.8174
+              },
+              "Max": {
+                "X": 11.315659,
+                "Y": -82.45949,
+                "Z": 360.19644
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": -1.9742652E-13,
+                "Y": 0.70709985,
+                "Z": 3.2806765E-14,
+                "W": -0.70711285,
+                "IsNormalized": true,
+                "Size": 0.9999994,
+                "SizeSquared": 0.9999988
+              },
+              "Translation": {
+                "X": 176.2665,
+                "Y": -2.402586,
+                "Z": -0.0024550532
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          },
+          {
+            "VertexData": [
+              {
+                "X": -14.066566,
+                "Y": 116.92447,
+                "Z": -106.8174
+              },
+              {
+                "X": 11.315659,
+                "Y": 116.92447,
+                "Z": -106.8174
+              },
+              {
+                "X": -14.066566,
+                "Y": 87.8685,
+                "Z": -106.8174
+              },
+              {
+                "X": 11.315659,
+                "Y": 87.8685,
+                "Z": -106.8174
+              },
+              {
+                "X": -14.066566,
+                "Y": 116.92447,
+                "Z": 360.19644
+              },
+              {
+                "X": 11.315659,
+                "Y": 116.92447,
+                "Z": 360.19644
+              },
+              {
+                "X": -14.066566,
+                "Y": 87.86851,
+                "Z": 360.19644
+              },
+              {
+                "X": 11.315659,
+                "Y": 87.86851,
+                "Z": 360.19644
+              }
+            ],
+            "IndexData": [
+              5,
+              4,
+              6,
+              0,
+              1,
+              3,
+              2,
+              0,
+              3,
+              0,
+              4,
+              1,
+              2,
+              4,
+              0,
+              6,
+              2,
+              3,
+              6,
+              4,
+              2,
+              7,
+              5,
+              6,
+              5,
+              1,
+              4,
+              5,
+              3,
+              1,
+              7,
+              3,
+              5,
+              7,
+              6,
+              3
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -14.066566,
+                "Y": 87.8685,
+                "Z": -106.8174
+              },
+              "Max": {
+                "X": 11.315659,
+                "Y": 116.92447,
+                "Z": 360.19644
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": -1.9742652E-13,
+                "Y": 0.70709985,
+                "Z": 3.2806765E-14,
+                "W": -0.70711285,
+                "IsNormalized": true,
+                "Size": 0.9999994,
+                "SizeSquared": 0.9999988
+              },
+              "Translation": {
+                "X": 176.2665,
+                "Y": -5.6364307,
+                "Z": -0.0019628175
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "27B0841B426BFDB5E29AB1889B8EB6ED",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 1928,
+        "SizeOnDisk": 1928,
+        "OffsetInFile": "0x1C21"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "FarmGate_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "door",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "C1C22ED2424FCFE4077D21893B816907"
+  }
+]

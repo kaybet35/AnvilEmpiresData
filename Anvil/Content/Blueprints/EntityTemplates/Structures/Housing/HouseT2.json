@@ -1,0 +1,308 @@
+[
+  {
+    "Type": "AIStimulusProxyComponent",
+    "Name": "AIStimulusProxyComponent_0",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'AIStimulusProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilStimulusType::SettlementLocation"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "HouseT2_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HouseT2_C'Default__HouseT2_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.8"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_1",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": -145.88806,
+        "Z": -100.0
+      },
+      "Extents": {
+        "X": 200.0,
+        "Y": 200.0,
+        "Z": 200.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeWood",
+      "CollisionMask": 2
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    },
+    "Properties": {
+      "DecayTimeHours": 48.0
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableComp",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Template": {
+      "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'House_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/House.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthComp",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
+    },
+    "Properties": {
+      "MaxHealth": 360.0
+    }
+  },
+  {
+    "Type": "HouseT2_C",
+    "Name": "Default__HouseT2_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.HouseT2_C'",
+    "Template": {
+      "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
+    },
+    "Properties": {
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__HouseT2_C:TeamComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.15"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__HouseT2_C:HealthComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.7"
+      },
+      "RepairComp": {
+        "ObjectName": "RepairProxyComponent'Default__HouseT2_C:RepairComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.12"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__HouseT2_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.14"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__HouseT2_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.5"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__HouseT2_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.6"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__HouseT2_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.2"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__HouseT2_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.4"
+      },
+      "ScorchComp": {
+        "ObjectName": "ScorchProxyComponent'Default__HouseT2_C:ScorchProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.13"
+      },
+      "CodeNameString": "HouseT2",
+      "CodeName": 764980172,
+      "bShowOnMap": true,
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "Components": [
+        {
+          "ObjectName": "HousingProxyComponent'Default__HouseT2_C:HousingProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.9"
+        },
+        {
+          "ObjectName": "UpgradeProxyComponent'Default__HouseT2_C:UpgradeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.16"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__HouseT2_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.10"
+        },
+        {
+          "ObjectName": "PlayerSpawnerProxyComponent'Default__HouseT2_C:PlayerSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.11"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__HouseT2_C:BoxCollisionProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.3"
+        },
+        {
+          "ObjectName": "AIStimulusProxyComponent'Default__HouseT2_C:AIStimulusProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT2.0"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisHouseT2_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseT2.2"
+      }
+    }
+  },
+  {
+    "Type": "HousingProxyComponent",
+    "Name": "HousingProxyComponent_0",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'HousingProxyComponent'"
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 6,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bHoldsLarge": true,
+          "SlotType": "EAnvilItemType::All",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PlayerSpawnerProxyComponent",
+    "Name": "PlayerSpawnerProxyComponent_0",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'PlayerSpawnerProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilSpawnType::House",
+      "SpawnOffset": {
+        "X": 0.0,
+        "Y": 630.0,
+        "Z": 250.0
+      },
+      "SpawnExtents": {
+        "X": 250.0,
+        "Y": 250.0,
+        "Z": 250.0
+      }
+    }
+  },
+  {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairComp",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'RepairProxyComponent'",
+    "Template": {
+      "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+    },
+    "Properties": {
+      "TotalRepairCost": 12
+    }
+  },
+  {
+    "Type": "ScorchProxyComponent",
+    "Name": "ScorchProxyComponent_0",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'ScorchProxyComponent'",
+    "Template": {
+      "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamComp",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    },
+    "Properties": {
+      "Accessibility": "EAnvilAccessibilityType::FriendlyOnly"
+    }
+  },
+  {
+    "Type": "UpgradeProxyComponent",
+    "Name": "UpgradeProxyComponent_0",
+    "Outer": "Default__HouseT2_C",
+    "Class": "UScriptClass'UpgradeProxyComponent'",
+    "Properties": {
+      "UpgradeTarget": {
+        "ObjectName": "BlueprintGeneratedClass'HouseT3_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseT3.1"
+      },
+      "TierPrerequisite": 3,
+      "ProcessedWoodRequirement": 20,
+      "ProcessedStoneRequirement": 15
+    }
+  }
+]

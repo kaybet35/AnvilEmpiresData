@@ -1,0 +1,224 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisSmallBoatHusk_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AudioComponent",
+    "Outer": "Default__BPVisSmallBoatHusk_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'WoodExplosion_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Explosions/WoodExplosion_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSmallBoatHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisSmallBoatHusk_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisSmallBoatHusk_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisEffect'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisSmallBoatHusk_C'Default__BPVisSmallBoatHusk_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisSmallBoatHusk_C",
+    "Name": "Default__BPVisSmallBoatHusk_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.BPVisSmallBoatHusk_C'",
+    "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSmallBoatHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.0"
+      },
+      "AudioComponent": {
+        "ObjectName": "AudioComponent'Default__BPVisSmallBoatHusk_C:AudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.1"
+      },
+      "NiagaraComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisSmallBoatHusk_C:NiagaraComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.5"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisSmallBoatHusk_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.10"
+      },
+      "LifetimeDataComponent": {
+        "ObjectName": "LifetimeDataComponent'Default__BPVisSmallBoatHusk_C:LifetimeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.4"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "1DFCCC10445DA50116535CAE77305B63",
+        "SourceString": "Horse Husk",
+        "LocalizedString": "Horse Husk"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSmallBoatHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.0"
+      }
+    }
+  },
+  {
+    "Type": "LifetimeDataComponent",
+    "Name": "LifetimeDataComponent",
+    "Outer": "Default__BPVisSmallBoatHusk_C",
+    "Class": "UScriptClass'LifetimeDataComponent'"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraComponent",
+    "Outer": "Default__BPVisSmallBoatHusk_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'VehicleDeathBasic'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/VehicleDeathBasic.22"
+      },
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSmallBoatHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisSmallBoatHusk_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisSmallBoatHusk_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.6"
+      },
+      "VariableGuid": "31941839-4A6D3BB3-2ECDEAAA-ED429A62",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisSmallBoatHusk_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.11"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FEC22AE8-4FF91782-BFCA758E-B1FAF0A0",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisSmallBoatHusk_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoatHusk_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoatHusk_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.8"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisSmallBoatHusk_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.7"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisSmallBoatHusk_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSmallBoatHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/Husks/BPVisSmallBoatHusk.0"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BPVisSmallBoatHusk_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BoatSmallDestroyed'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmallDestroyed.2"
+      },
+      "bReceivesDecals": false,
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  }
+]

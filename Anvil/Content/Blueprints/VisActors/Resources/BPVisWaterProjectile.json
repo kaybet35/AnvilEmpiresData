@@ -1,0 +1,332 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisWaterProjectile_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Audio_GEN_VARIABLE",
+    "Outer": "BPVisWaterProjectile_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'WaterBucketShot_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketShot_Cue.0"
+      },
+      "RelativeLocation": {
+        "X": 26.927147,
+        "Y": 0.0,
+        "Z": 74.455475
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisWaterProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisWaterProjectile_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.12"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisPickupItem'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Audio",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ParticleSystem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Trail",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisWaterProjectile_C'Default__BPVisWaterProjectile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisWaterProjectile_C",
+    "Name": "Default__BPVisWaterProjectile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.BPVisWaterProjectile_C'",
+    "Properties": {
+      "PickupDataComponent": {
+        "ObjectName": "PickupDataComponent'Default__BPVisWaterProjectile_C:PickupDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.6"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisWaterProjectile_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.13"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWaterProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.0"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "4F3F400144102F027509AB8DA8F525B6",
+        "SourceString": "Bucket of Water",
+        "LocalizedString": "Bucket of Water"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWaterProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.0"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem_GEN_VARIABLE",
+    "Outer": "BPVisWaterProjectile_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'WaterProjectileTrail'",
+        "ObjectPath": "Anvil/Content/FX/WaterProjectileTrail.13"
+      },
+      "RelativeLocation": {
+        "X": 30.807325,
+        "Y": 0.0004262988,
+        "Z": 80.0
+      },
+      "RelativeRotation": {
+        "Pitch": 1.4E-05,
+        "Yaw": -90.000046,
+        "Roll": 90.00001
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "Trail_GEN_VARIABLE",
+    "Outer": "BPVisWaterProjectile_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'WaterTrail'",
+        "ObjectPath": "Anvil/Content/FX/WaterTrail.42"
+      },
+      "RelativeLocation": {
+        "X": 54.671055,
+        "Y": 0.0004036077,
+        "Z": 79.999985
+      },
+      "RelativeRotation": {
+        "Pitch": 1.3660378E-05,
+        "Yaw": -90.000046,
+        "Roll": 90.00001
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "PickupDataComponent",
+    "Name": "PickupDataComponent",
+    "Outer": "Default__BPVisWaterProjectile_C",
+    "Class": "UScriptClass'PickupDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisWaterProjectile_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisWaterProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.7"
+      },
+      "VariableGuid": "4B342544-4EA92D18-4AA0DC97-5DF196EC",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BPVisWaterProjectile_C:Trail_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.5"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "0244DA18-4E3875A6-BF0F9DBB-12B0F011",
+      "InternalVariableName": "Trail"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BPVisWaterProjectile_C:ParticleSystem_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.4"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "61FA0324-4A91BEF0-93A9A195-1468D908",
+      "InternalVariableName": "ParticleSystem"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'BPVisWaterProjectile_C:Audio_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.1"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "043B82B2-4A16D47D-23380FAA-2B317589",
+      "InternalVariableName": "Audio"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisWaterProjectile_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWaterProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterProjectile_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWaterProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterProjectile_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisWaterProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.8"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisWaterProjectile_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BloodBall'",
+        "ObjectPath": "Anvil/Content/FX/Mesh/DeadHarvest/BloodBall.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWaterProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.0"
+      },
+      "RelativeLocation": {
+        "X": -5.4782157,
+        "Y": 0.0009154464,
+        "Z": 80.0
+      },
+      "RelativeRotation": {
+        "Pitch": 7E-06,
+        "Yaw": -90.00006,
+        "Roll": 90.00002
+      },
+      "RelativeScale3D": {
+        "X": 0.7,
+        "Y": 0.7,
+        "Z": 0.746845
+      }
+    }
+  }
+]

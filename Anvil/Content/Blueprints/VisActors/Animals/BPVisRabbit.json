@@ -1,0 +1,228 @@
+[
+  {
+    "Type": "AnimalAIDataComponent",
+    "Name": "AnimalAIDataComponent",
+    "Outer": "Default__BPVisRabbit_C",
+    "Class": "UScriptClass'AnimalAIDataComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Idle_GEN_VARIABLE",
+    "Outer": "BPVisRabbit_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'RabbitIdle_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Rabbit/RabbitIdle_Cue.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisRabbit_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisRabbit_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisAnimal'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Idle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisRabbit_C'Default__BPVisRabbit_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisRabbit_C",
+    "Name": "Default__BPVisRabbit_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.BPVisRabbit_C'",
+    "Properties": {
+      "AnimalAIDataComponent": {
+        "ObjectName": "AnimalAIDataComponent'Default__BPVisRabbit_C:AnimalAIDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.0"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisRabbit_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.5"
+      },
+      "Capsule": {
+        "ObjectName": "CapsuleComponent'Default__BPVisRabbit_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.4"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisRabbit_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.10"
+      },
+      "CurrentStateMontageMap": [
+        {
+          "EAnvilAnimalState::Trapped": {
+            "ObjectName": "AnimMontage'Rabbit_trapped_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Rabbit/Rabbit_trapped_Montage.0"
+          }
+        }
+      ],
+      "MapIconProperty": {
+        "Icon": {
+          "ObjectName": "Texture2D'MapIconRabbit'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Map/MapIconRabbit.0"
+        }
+      },
+      "bNightVisibility": true,
+      "PositionSmoothSpeed": 8.0,
+      "RotationSmoothSpeed": 4.0,
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BPVisRabbit_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.4"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule",
+    "Outer": "Default__BPVisRabbit_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Properties": {
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisRabbit_C",
+    "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisRabbit_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisRabbit_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.6"
+      },
+      "VariableGuid": "3E54C5D5-496A4F9E-FB20E6B3-7981E36D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'BPVisRabbit_C:Idle_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.1"
+      },
+      "ParentComponentOrVariableName": "Capsule",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "283E8E38-4628C0B7-DD91CCAD-F960B58B",
+      "InternalVariableName": "Idle"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisRabbit_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisRabbit_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisRabbit_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.8"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisRabbit_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.7"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisRabbit_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Rabbit_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Rabbit/Rabbit_ABP.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Rabbit'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/SK_Rabbit.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SK_Rabbit'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/SK_Rabbit.0"
+      },
+      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPVisRabbit_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRabbit.4"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -120.0
+      },
+      "RelativeScale3D": {
+        "X": 1.2,
+        "Y": 1.2,
+        "Z": 1.2
+      }
+    }
+  }
+]

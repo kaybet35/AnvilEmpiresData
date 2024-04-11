@@ -1,0 +1,71 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SpawnerCrab_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SpawnerCrab_C'Default__SpawnerCrab_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Spawner/SpawnerCrab.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_0",
+    "Outer": "Default__SpawnerCrab_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'Crab_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Crab.1"
+      },
+      "SpawnOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 150.0
+      },
+      "SpawnRadius": 250.0,
+      "SpawnInterval": 1.0,
+      "SpawnQuantity": 1,
+      "MaxSpawn": 50,
+      "GlobalMaxSpawn": 100,
+      "ResourceReserveInitial": 5,
+      "ReserveReplenishTimeSecs": 20,
+      "MinDistanceBetweenSpawns": 200.0,
+      "bDontSpawnInSettlements": true,
+      "bDontSpawnNearPlayers": true
+    }
+  },
+  {
+    "Type": "SpawnerCrab_C",
+    "Name": "Default__SpawnerCrab_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Animals/Spawner/SpawnerCrab.SpawnerCrab_C'",
+    "Properties": {
+      "CodeNameString": "SpawnerCrab",
+      "CodeName": 547861919,
+      "Components": [
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerCrab_C:ResourceSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Spawner/SpawnerCrab.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisCrabSpawner_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisCrabSpawner.0"
+      }
+    }
+  }
+]

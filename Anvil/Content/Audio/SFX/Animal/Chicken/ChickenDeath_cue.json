@@ -1,0 +1,128 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ChickenDeath_cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'ChickenDeath_cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenDeath_cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'VoiceConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/VoiceConcurrency.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 128,
+        "VolumeScale": 0.5
+      },
+      "Duration": 1.4583334,
+      "MaxDistance": 10250.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Voice'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Voice.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ChickenDeath_cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.0,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'ChickenDeath_cue:SoundNodeRandom_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenDeath_cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "ChickenDeath_cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ChickenDeath_cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenDeath_cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ChickenDeath_cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenDeath_cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ChickenDeath_cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenDeath_cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ChickenDeath_cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Chicken/ChickenDeath03.ChickenDeath03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ChickenDeath03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenDeath03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "ChickenDeath_cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Chicken/ChickenDeath01.ChickenDeath01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ChickenDeath01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenDeath01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "ChickenDeath_cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Chicken/ChickenDeath02.ChickenDeath02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ChickenDeath02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenDeath02.0"
+    }
+  }
+]

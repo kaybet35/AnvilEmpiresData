@@ -1,0 +1,679 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'Saddle_SK_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.10"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Saddle_SK_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.11"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Saddle_SK_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.12"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Saddle_SK_PhysicsAsset:SkeletalBodySetup_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.13"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Saddle_SK_PhysicsAsset:SkeletalBodySetup_4'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.14"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Saddle_SK_PhysicsAsset:SkeletalBodySetup_5'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.15"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Saddle_SK_PhysicsAsset:SkeletalBodySetup_6'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.16"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Saddle_SK_PhysicsAsset:SkeletalBodySetup_7'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.17"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Saddle_SK_PhysicsAsset:SkeletalBodySetup_8'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.18"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Saddle_SK_PhysicsAsset:SkeletalBodySetup_9'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.19"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Saddle_SK_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Saddle_SK_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Saddle_SK_PhysicsAsset:PhysicsConstraintTemplate_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.3"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Saddle_SK_PhysicsAsset:PhysicsConstraintTemplate_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Saddle_SK_PhysicsAsset:PhysicsConstraintTemplate_4'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.5"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Saddle_SK_PhysicsAsset:PhysicsConstraintTemplate_5'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.6"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Saddle_SK_PhysicsAsset:PhysicsConstraintTemplate_6'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.7"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Saddle_SK_PhysicsAsset:PhysicsConstraintTemplate_7'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.8"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Saddle_SK_PhysicsAsset:PhysicsConstraintTemplate_8'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK_PhysicsAsset.9"
+        }
+      ],
+      "SolverSettings": {
+        "CullDistance": 1.0,
+        "bUseLinearJointSolver": false
+      },
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "spine1",
+        "ConstraintBone1": "spine1",
+        "ConstraintBone2": "pelvis",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 36.641796,
+          "Z": -5.4278145
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "spine2",
+        "ConstraintBone1": "spine2",
+        "ConstraintBone2": "spine1",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 42.914093,
+          "Z": -3.0132396
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_2",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "chest",
+        "ConstraintBone1": "chest",
+        "ConstraintBone2": "spine2",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 37.44789,
+          "Z": 5.591759
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_3",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "neck1",
+        "ConstraintBone1": "neck1",
+        "ConstraintBone2": "chest",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 23.154034,
+          "Z": 25.547556
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_4",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "neck2",
+        "ConstraintBone1": "neck2",
+        "ConstraintBone2": "neck1",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 5.3285356,
+          "Z": 38.522778
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_5",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "head",
+        "ConstraintBone1": "head",
+        "ConstraintBone2": "neck2",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 22.949581,
+          "Z": 13.5531
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_6",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "tail3",
+        "ConstraintBone1": "tail3",
+        "ConstraintBone2": "pelvis",
+        "Pos2": {
+          "X": 0.0,
+          "Y": -67.40639,
+          "Z": -14.922195
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_7",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "backLeg_L_upper_Femur",
+        "ConstraintBone1": "backLeg_L_upper_Femur",
+        "ConstraintBone2": "pelvis",
+        "Pos2": {
+          "X": 19.606552,
+          "Y": -34.308243,
+          "Z": -14.809708
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_8",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "backLeg_R_upper_Femur",
+        "ConstraintBone1": "backLeg_R_upper_Femur",
+        "ConstraintBone2": "pelvis",
+        "Pos2": {
+          "X": -19.606552,
+          "Y": -34.308243,
+          "Z": -14.809708
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -3.4123993,
+              "Y": 1.6443062,
+              "Z": 10.537474
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 93.57785,
+              "Roll": -89.39797
+            },
+            "Radius": 38.119118,
+            "Length": 42.534996,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "pelvis",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "ED07EDA84524D51FF874CD9C239056DC"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 1.341032,
+              "Y": 14.996214,
+              "Z": 5.2826567
+            },
+            "Rotation": {
+              "Pitch": -6.830189E-06,
+              "Yaw": -81.44494,
+              "Roll": -83.81347
+            },
+            "Radius": 28.596262,
+            "Length": 35.281773,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "spine1",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "5EE847E547F82D903787B78DD5F9313B"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.48981667,
+              "Y": -9.668175,
+              "Z": -13.410547
+            },
+            "Rotation": {
+              "Pitch": 8.2788105,
+              "Yaw": -89.99999,
+              "Roll": -1.7284937
+            },
+            "Radius": 35.631012,
+            "Length": 64.49519,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "spine2",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "12D95FFD44FBCC27C6966EA4F06ECDD3"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_3",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.36404693,
+              "Y": 26.785273,
+              "Z": -1.3969345
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.8170656,
+              "Roll": -72.74223
+            },
+            "Radius": 39.267223,
+            "Length": 43.413193,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "chest",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "1480420E489CC91BADCE398521BE7328"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_4",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 1.5258789E-05,
+              "Y": -28.61559,
+              "Z": 17.472853
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.999985,
+              "Roll": -90.0
+            },
+            "Radius": 5.3891897,
+            "Length": 21.671837,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "neck1",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "09C3B678440C4B04049ADEBB54BA4C93"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_5",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.11847973,
+              "Y": 18.955341,
+              "Z": 16.572767
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.87611,
+              "Roll": -89.27152
+            },
+            "Radius": 11.43098,
+            "Length": 18.514114,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "neck2",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "529D1EBC4312FD096D5F1E9899366157"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_6",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.00014591217,
+              "Y": 23.69281,
+              "Z": -26.011017
+            },
+            "Rotation": {
+              "Pitch": -33.884285,
+              "Yaw": -90.0,
+              "Roll": 0.0013246285
+            },
+            "Radius": 28.611347,
+            "Length": 50.38893,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "head",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "0CBBC4E04B7A260777A5DD994E5E9497"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_7",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.48508263,
+              "Y": 5.790494,
+              "Z": -18.8332
+            },
+            "Rotation": {
+              "Pitch": -6.830189E-06,
+              "Yaw": 92.74018,
+              "Roll": -88.11843
+            },
+            "Radius": 3.9182892,
+            "Length": 23.069134,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "tail3",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "F95697D340F560F677585D8CF498B24B"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_8",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 16.852531,
+              "Y": -3.4659624,
+              "Z": -3.1397634
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 168.73088,
+              "Roll": -51.78046
+            },
+            "Radius": 18.119144,
+            "Length": 24.611647,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "backLeg_L_upper_Femur",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "5787EE9E4DD7E0CB9FCE06AA63879808"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_9",
+    "Outer": "Saddle_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -12.352477,
+              "Y": -1.6043549,
+              "Z": -3.96029
+            },
+            "Rotation": {
+              "Pitch": 39.204273,
+              "Yaw": -90.0,
+              "Roll": -3.0219018
+            },
+            "Radius": 18.650976,
+            "Length": 29.864199,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "backLeg_R_upper_Femur",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "636AC2B3443FC3B91E8B5686ED9052D3"
+  }
+]

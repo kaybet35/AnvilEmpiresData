@@ -1,0 +1,103 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisShield_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'VisItem'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisShield_C'Default__BPVisShield_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisItems/Weapons/BPVisShield.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisShield_C",
+    "Name": "Default__BPVisShield_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisItems/Weapons/BPVisShield.BPVisShield_C'",
+    "Properties": {
+      "CodeNameString": "Shield",
+      "CodeName": 500406504,
+      "NameText": {
+        "Namespace": "",
+        "Key": "B92C2E4B4CE9042856A0D49A77A28912",
+        "SourceString": "Shield",
+        "LocalizedString": "Shield"
+      },
+      "DescriptionText": {
+        "Namespace": "",
+        "Key": "0D113449403B8D0E298187BBC4A52D61",
+        "SourceString": "Defensive Item. Holding RMB will put you in a guard stance.",
+        "LocalizedString": "Defensive Item. Holding RMB will put you in a guard stance."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'IconShield'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Items/IconShield.0"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMesh'ShieldMirrish'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/ShieldMirrish.0"
+      },
+      "FactionMeshOverrides": [
+        {
+          "EAnvilFactionId::Aranic": {
+            "ObjectName": "SkeletalMesh'ShieldAranic'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/ShieldAranic.0"
+          }
+        },
+        {
+          "EAnvilFactionId::Mirrish": {
+            "ObjectName": "SkeletalMesh'ShieldMirrish'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/ShieldMirrish.0"
+          }
+        },
+        {
+          "EAnvilFactionId::Novan": {
+            "ObjectName": "SkeletalMesh'ShieldNovan'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/ShieldNovan.0"
+          }
+        }
+      ],
+      "GripType": "EEquippedItemGripType::Shield",
+      "MeshRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": -90.0
+      },
+      "UnarmedMeshLocation": "EUnarmedItemMeshLocation::Back2",
+      "UnarmedMeshRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": -90.0
+      },
+      "AnimationIndex": 3,
+      "ActivityStateMontageMap": [
+        {
+          "EAnvilSimActivityState::Attacking": {
+            "ObjectName": "AnimMontage'Sword_Melee'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Sword_Melee.0"
+          }
+        }
+      ],
+      "TransferSoundCue": {
+        "ObjectName": "SoundCue'UITransferGeneric03_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/UI/Transfer/UITransferGeneric03_Cue.0"
+      },
+      "ArmingSoundCue": {
+        "ObjectName": "SoundCue'ShieldArming_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/ShieldArming_Cue.0"
+      }
+    }
+  }
+]

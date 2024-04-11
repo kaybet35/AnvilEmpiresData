@@ -1,0 +1,165 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "WoodShield1HAxeBlock_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'WoodShield1HAxeBlock_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/WoodShield1HAxeBlock_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Weapons'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.7"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'FoleyConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/FoleyConcurrency.0"
+        }
+      ],
+      "Duration": 0.7,
+      "MaxDistance": 9000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "WoodShield1HAxeBlock_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'WoodShield1HAxeBlock_Cue:SoundNodeRandom_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/WoodShield1HAxeBlock_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "WoodShield1HAxeBlock_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WoodShield1HAxeBlock_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/WoodShield1HAxeBlock_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WoodShield1HAxeBlock_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/WoodShield1HAxeBlock_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WoodShield1HAxeBlock_Cue:SoundNodeWavePlayer_5'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/WoodShield1HAxeBlock_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WoodShield1HAxeBlock_Cue:SoundNodeWavePlayer_6'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/WoodShield1HAxeBlock_Cue.6"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WoodShield1HAxeBlock_Cue:SoundNodeWavePlayer_7'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/WoodShield1HAxeBlock_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "WoodShield1HAxeBlock_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Shield/New/WoodShield1HAxeBlock01.WoodShield1HAxeBlock01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WoodShield1HAxeBlock01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/WoodShield1HAxeBlock01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "WoodShield1HAxeBlock_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Shield/New/WoodShield1HAxeBlock02.WoodShield1HAxeBlock02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WoodShield1HAxeBlock02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/WoodShield1HAxeBlock02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "WoodShield1HAxeBlock_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Shield/New/WoodShield1HAxeBlock03.WoodShield1HAxeBlock03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WoodShield1HAxeBlock03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/WoodShield1HAxeBlock03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "WoodShield1HAxeBlock_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Shield/New/WoodShield1HAxeBlock04.WoodShield1HAxeBlock04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WoodShield1HAxeBlock04'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/WoodShield1HAxeBlock04.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "WoodShield1HAxeBlock_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Shield/New/WoodShield1HAxeBlock05.WoodShield1HAxeBlock05",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WoodShield1HAxeBlock05'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/WoodShield1HAxeBlock05.0"
+    }
+  }
+]

@@ -1,0 +1,266 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisResourceFeathers_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisResourceFeathers_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisResourceFeathers_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisPickupItem'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisResourceFeathers_C'Default__BPVisResourceFeathers_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisResourceFeathers_C",
+    "Name": "Default__BPVisResourceFeathers_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.BPVisResourceFeathers_C'",
+    "Properties": {
+      "PickupDataComponent": {
+        "ObjectName": "PickupDataComponent'Default__BPVisResourceFeathers_C:PickupDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.3"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisResourceFeathers_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.11"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisResourceFeathers_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.0"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisResourceFeathers_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.0"
+      }
+    }
+  },
+  {
+    "Type": "PickupDataComponent",
+    "Name": "PickupDataComponent",
+    "Outer": "Default__BPVisResourceFeathers_C",
+    "Class": "UScriptClass'PickupDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisResourceFeathers_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisResourceFeathers_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.4"
+      },
+      "VariableGuid": "2D36A754-4AC18DB8-7069A09F-12CBC54C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisResourceFeathers_C:Mesh1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.9"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "CBFB56C3-4BE2304B-EFCDD382-684D9B65",
+      "InternalVariableName": "Mesh1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisResourceFeathers_C:Mesh2_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.10"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FAB2CBFA-4FF4A2B5-F495BC8B-E35ADF25",
+      "InternalVariableName": "Mesh2"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisResourceFeathers_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisResourceFeathers_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.6"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisResourceFeathers_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisResourceFeathers_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.6"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisResourceFeathers_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisResourceFeathers_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.5"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh1_GEN_VARIABLE",
+    "Outer": "BPVisResourceFeathers_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Feather02'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Particles/Feather02.2"
+      },
+      "RelativeLocation": {
+        "X": -13.252859,
+        "Y": -3.8146973E-06,
+        "Z": 2.0789227
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -30.000092,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 2.0,
+        "Z": 2.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh2_GEN_VARIABLE",
+    "Outer": "BPVisResourceFeathers_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Feather03'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Particles/Feather03.2"
+      },
+      "RelativeLocation": {
+        "X": 4.461977,
+        "Y": 8.588552,
+        "Z": 2.0789227
+      },
+      "RelativeRotation": {
+        "Pitch": -10.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 2.0,
+        "Z": 2.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisResourceFeathers_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Feather01'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Particles/Feather01.2"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisResourceFeathers_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -3.8146973E-06,
+        "Z": 2.0789227
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 2.0,
+        "Z": 2.0
+      }
+    }
+  }
+]

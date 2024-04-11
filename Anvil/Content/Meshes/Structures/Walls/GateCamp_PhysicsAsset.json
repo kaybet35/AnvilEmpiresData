@@ -1,0 +1,461 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "GateCamp_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'GateCamp_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/GateCamp_PhysicsAsset.3"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'GateCamp_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/GateCamp_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'GateCamp_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/GateCamp_PhysicsAsset.5"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'GateCamp_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/GateCamp_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'GateCamp_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/GateCamp_PhysicsAsset.2"
+        }
+      ],
+      "SolverSettings": {
+        "CullDistance": 1.0,
+        "bUseLinearJointSolver": false
+      },
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "GateCamp_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "DoorLeft",
+        "ConstraintBone1": "DoorLeft",
+        "ConstraintBone2": "root",
+        "PriAxis2": {
+          "X": 1.0,
+          "Y": -7.34684E-40,
+          "Z": 0.0
+        },
+        "SecAxis2": {
+          "X": 7.34684E-40,
+          "Y": 1.0,
+          "Z": 7.1054265E-15
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "GateCamp_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "DoorRight",
+        "ConstraintBone1": "DoorRight",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": -9.090355E-11,
+          "Y": -0.00011324687,
+          "Z": 750.00006
+        },
+        "PriAxis2": {
+          "X": 1.0,
+          "Y": -7.34684E-40,
+          "Z": 0.0
+        },
+        "SecAxis2": {
+          "X": 7.34684E-40,
+          "Y": 1.0,
+          "Z": 7.1054265E-15
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "GateCamp_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "Radius": 1.0,
+            "Length": 1.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ],
+        "ConvexElems": [
+          {
+            "VertexData": [
+              {
+                "X": -20.726938,
+                "Y": -731.07385,
+                "Z": -204.35918
+              },
+              {
+                "X": -20.72695,
+                "Y": -803.23303,
+                "Z": -204.35915
+              },
+              {
+                "X": -20.726902,
+                "Y": -731.07385,
+                "Z": 430.91986
+              },
+              {
+                "X": -20.726912,
+                "Y": -803.23303,
+                "Z": 430.91983
+              },
+              {
+                "X": 17.125244,
+                "Y": -731.07385,
+                "Z": -204.35918
+              },
+              {
+                "X": 17.125235,
+                "Y": -803.2331,
+                "Z": -204.35915
+              },
+              {
+                "X": 17.12528,
+                "Y": -731.07385,
+                "Z": 430.91983
+              },
+              {
+                "X": 17.125273,
+                "Y": -803.2331,
+                "Z": 430.9198
+              }
+            ],
+            "IndexData": [
+              7,
+              3,
+              5,
+              0,
+              4,
+              5,
+              1,
+              0,
+              5,
+              0,
+              2,
+              4,
+              1,
+              2,
+              0,
+              3,
+              1,
+              5,
+              3,
+              2,
+              1,
+              7,
+              2,
+              3,
+              6,
+              4,
+              2,
+              7,
+              6,
+              2,
+              7,
+              4,
+              6,
+              7,
+              5,
+              4
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -20.72695,
+                "Y": -803.2331,
+                "Z": -204.35918
+              },
+              "Max": {
+                "X": 17.12528,
+                "Y": -731.07385,
+                "Z": 430.91986
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": -0.50000006,
+                "Y": 0.5,
+                "Z": -0.5000038,
+                "W": 0.49999622,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0000001
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          },
+          {
+            "VertexData": [
+              {
+                "X": -20.726938,
+                "Y": 56.70034,
+                "Z": -204.35918
+              },
+              {
+                "X": -20.72695,
+                "Y": -15.458884,
+                "Z": -204.35915
+              },
+              {
+                "X": -20.726902,
+                "Y": 56.70034,
+                "Z": 430.91986
+              },
+              {
+                "X": -20.726912,
+                "Y": -15.458884,
+                "Z": 430.91983
+              },
+              {
+                "X": 17.125244,
+                "Y": 56.70034,
+                "Z": -204.35918
+              },
+              {
+                "X": 17.125235,
+                "Y": -15.458885,
+                "Z": -204.35915
+              },
+              {
+                "X": 17.12528,
+                "Y": 56.70034,
+                "Z": 430.91983
+              },
+              {
+                "X": 17.125273,
+                "Y": -15.458885,
+                "Z": 430.9198
+              }
+            ],
+            "IndexData": [
+              3,
+              2,
+              1,
+              0,
+              5,
+              1,
+              0,
+              1,
+              2,
+              4,
+              5,
+              0,
+              7,
+              3,
+              5,
+              3,
+              1,
+              5,
+              7,
+              2,
+              3,
+              4,
+              7,
+              5,
+              6,
+              4,
+              2,
+              4,
+              0,
+              2,
+              6,
+              7,
+              4,
+              6,
+              2,
+              7
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -20.72695,
+                "Y": -15.458885,
+                "Z": -204.35918
+              },
+              "Max": {
+                "X": 17.12528,
+                "Y": 56.70034,
+                "Z": 430.91986
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.49999997,
+                "Y": 0.5000002,
+                "Z": 0.500004,
+                "W": 0.49999616,
+                "IsNormalized": true,
+                "Size": 1.0000001,
+                "SizeSquared": 1.0000002
+              },
+              "Translation": {
+                "X": 1.9073486E-06,
+                "Y": 0.00049972534,
+                "Z": -36.459984
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "0A8CC763478F23D757D8559F77E5D2FE",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 1928,
+        "SizeOnDisk": 1928,
+        "OffsetInFile": "0x1F20"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "GateCamp_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "Radius": 1.0,
+            "Length": 1.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "DoorLeft",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "2270C91749EE2AD7812890A1D14CAAA7"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "GateCamp_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "Radius": 1.0,
+            "Length": 1.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "DoorRight",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "24240183433CD0EFF717A2A81B500AB8"
+  }
+]

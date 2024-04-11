@@ -1,0 +1,95 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "ManurePickup_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ManurePickup_C'Default__ManurePickup_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/ManurePickup.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__ManurePickup_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 25.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 25.0,
+        "Z": 75.0
+      },
+      "CollisionMask": 32
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__ManurePickup_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 900.0
+    }
+  },
+  {
+    "Type": "ManurePickup_C",
+    "Name": "Default__ManurePickup_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/ItemPickups/ManurePickup.ManurePickup_C'",
+    "Properties": {
+      "CodeNameString": "ManurePickup",
+      "CodeName": -240272117,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__ManurePickup_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/ManurePickup.1"
+        },
+        {
+          "ObjectName": "PickupProxyComponent'Default__ManurePickup_C:PickupProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/ManurePickup.4"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__ManurePickup_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/ManurePickup.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisManurePile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.2"
+      }
+    }
+  },
+  {
+    "Type": "PickupProxyComponent",
+    "Name": "PickupProxyComponent_0",
+    "Outer": "Default__ManurePickup_C",
+    "Class": "UScriptClass'PickupProxyComponent'",
+    "Properties": {
+      "Item": {
+        "ItemType": {
+          "ObjectName": "BlueprintGeneratedClass'ResourceManure_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceManure.0"
+        },
+        "Count": 1
+      }
+    }
+  }
+]

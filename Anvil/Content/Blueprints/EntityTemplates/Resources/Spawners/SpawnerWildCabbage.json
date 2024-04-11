@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SpawnerWildCabbage_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SpawnerWildCabbage_C'Default__SpawnerWildCabbage_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerWildCabbage.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_0",
+    "Outer": "Default__SpawnerWildCabbage_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'WildCabbage_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/WildCabbage.0"
+      },
+      "SpawnRadius": 2000.0,
+      "SpawnInterval": 1800.0,
+      "SpawnQuantity": 15,
+      "MaxSpawn": 15,
+      "ResourceReserveInitial": 15,
+      "ReserveReplenishTimeSecs": 3600,
+      "MinDistanceBetweenSpawns": 150.0,
+      "bDontSpawnInSettlements": true,
+      "CompatibleSurfaceTypes": 516
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_1",
+    "Outer": "Default__SpawnerWildCabbage_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'RareAreaCabbage_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/RareResourceAreas/RareAreaCabbage.0"
+      },
+      "SpawnRadius": 500.0,
+      "SpawnInterval": 1800.0,
+      "SpawnQuantity": 1,
+      "MaxSpawn": 1,
+      "ResourceReserveInitial": 1
+    }
+  },
+  {
+    "Type": "SpawnerWildCabbage_C",
+    "Name": "Default__SpawnerWildCabbage_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerWildCabbage.SpawnerWildCabbage_C'",
+    "Properties": {
+      "CodeNameString": "SpawnerWildCabbage",
+      "CodeName": -983055879,
+      "bShowOnMap": true,
+      "Components": [
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerWildCabbage_C:ResourceSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerWildCabbage.1"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerWildCabbage_C:ResourceSpawnerProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerWildCabbage.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisSpawnerWildCabbage_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Spawners/BPVisSpawnerWildCabbage.0"
+      }
+    }
+  }
+]

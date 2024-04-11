@@ -1,0 +1,123 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "WildBoarDeath_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'WildBoarDeath_Cue:SoundNodeModulator_1'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/WildBoar/WildBoarDeath_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'VoiceConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/VoiceConcurrency.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 128,
+        "VolumeScale": 0.5
+      },
+      "Duration": 1.3671458,
+      "MaxDistance": 10250.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Voice'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Voice.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "WildBoarDeath_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'WildBoarDeath_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/WildBoar/WildBoarDeath_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "WildBoarDeath_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WildBoarDeath_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/WildBoar/WildBoarDeath_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WildBoarDeath_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/WildBoar/WildBoarDeath_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WildBoarDeath_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/WildBoar/WildBoarDeath_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "WildBoarDeath_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/WildBoar/BoarDeath01.BoarDeath01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BoarDeath01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/WildBoar/BoarDeath01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "WildBoarDeath_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/WildBoar/BoarDeath02.BoarDeath02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BoarDeath02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/WildBoar/BoarDeath02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "WildBoarDeath_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/WildBoar/BoarDeath03.BoarDeath03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BoarDeath03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/WildBoar/BoarDeath03.0"
+    }
+  }
+]

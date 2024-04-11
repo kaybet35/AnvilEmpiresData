@@ -1,0 +1,277 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisFarmAreaBuildSite_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisFarmAreaBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisFarmAreaBuildSite_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisBuildSite'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisFarmAreaBuildSite_C'Default__BPVisFarmAreaBuildSite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisFarmAreaBuildSite_C",
+    "Name": "Default__BPVisFarmAreaBuildSite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.BPVisFarmAreaBuildSite_C'",
+    "Properties": {
+      "VisBuildGhostComponent": {
+        "ObjectName": "VisBuildGhostComponent'Default__BPVisFarmAreaBuildSite_C:VisBuildGhostComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.12"
+      },
+      "BuildSiteDataComponent": {
+        "ObjectName": "BuildSiteDataComponent'Default__BPVisFarmAreaBuildSite_C:BuildSiteDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.3"
+      },
+      "StructureDataComponent": {
+        "ObjectName": "StructureDataComponent'Default__BPVisFarmAreaBuildSite_C:StructureDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.11"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'IconFarm'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconFarm.0"
+      },
+      "Category": "EBuildSiteCategory::Industry",
+      "Order": 1,
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFarmAreaBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.0"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisFarmAreaBuildSite_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.10"
+      },
+      "BuildCollisionDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisFarmAreaBuildSite_C:BuildCollisionDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.4"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "983F24A14B7AFB54C9F5718ED986C6B3",
+        "SourceString": "Tilled Field",
+        "LocalizedString": "Tilled Field"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "E4232E844C82879732AEDB9104BA7AEF",
+        "SourceString": "A plot of farmland for growing Wheat and Cabbage. Requires a Hoe. Add water from a Well to grow crops.",
+        "LocalizedString": "A plot of farmland for growing Wheat and Cabbage. Requires a Hoe. Add water from a Well to grow crops."
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFarmAreaBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "BuildSiteDataComponent",
+    "Name": "BuildSiteDataComponent",
+    "Outer": "Default__BPVisFarmAreaBuildSite_C",
+    "Class": "UScriptClass'BuildSiteDataComponent'",
+    "Properties": {
+      "BuiltStructureEntity": 1220569688,
+      "TierPrerequisite": 1,
+      "ResourceBranchesRequirement": 10
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "BuildCollisionDecalComponent",
+    "Outer": "Default__BPVisFarmAreaBuildSite_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "SortOrder": 3,
+      "DecalSize": {
+        "X": 128.0,
+        "Y": 320.0,
+        "Z": 260.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFarmAreaBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisFarmAreaBuildSite_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisFarmAreaBuildSite_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.5"
+      },
+      "VariableGuid": "84D9CE0D-4C3F9128-2D38C485-AE331E58",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisFarmAreaBuildSite_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.9"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "DBAB2D93-4068EA20-A63C238C-E35D3014",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisFarmAreaBuildSite_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisFarmAreaBuildSite_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisFarmAreaBuildSite_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisFarmAreaBuildSite_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BPVisFarmAreaBuildSite_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BuildArrow'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/BuildArrow.2"
+      },
+      "bReceivesDecals": false,
+      "RelativeLocation": {
+        "X": -350.0,
+        "Y": 0.0,
+        "Z": -20.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.00026,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.6,
+        "Y": 0.6,
+        "Z": 0.6
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisFarmAreaBuildSite_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FarmArea'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/FarmArea.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'Ghost'",
+          "ObjectPath": "Anvil/Content/Materials/Ghost.0"
+        },
+        {
+          "ObjectName": "Material'Ghost'",
+          "ObjectPath": "Anvil/Content/Materials/Ghost.0"
+        }
+      ],
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFarmAreaBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisFarmAreaBuildSite.0"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.7,
+        "Y": 0.7,
+        "Z": 0.7
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "StructureDataComponent",
+    "Name": "StructureDataComponent",
+    "Outer": "Default__BPVisFarmAreaBuildSite_C",
+    "Class": "UScriptClass'StructureDataComponent'"
+  },
+  {
+    "Type": "VisBuildGhostComponent",
+    "Name": "VisBuildGhostComponent",
+    "Outer": "Default__BPVisFarmAreaBuildSite_C",
+    "Class": "UScriptClass'VisBuildGhostComponent'"
+  }
+]

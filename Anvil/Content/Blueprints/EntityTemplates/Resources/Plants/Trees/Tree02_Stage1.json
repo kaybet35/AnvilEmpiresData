@@ -1,0 +1,105 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Tree02_Stage1_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Tree02_Stage1_C'Default__Tree02_Stage1_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree02_Stage1.5"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CapsuleCollisionProxyComponent",
+    "Name": "CapsuleCollisionProxyComponent_0",
+    "Outer": "Default__Tree02_Stage1_C",
+    "Class": "UScriptClass'CapsuleCollisionProxyComponent'",
+    "Properties": {
+      "Radius": 20.0,
+      "HalfHeight": 100.0,
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeWood",
+      "CollisionMask": 64
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__Tree02_Stage1_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'TreeFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/TreeFootprint.0"
+      },
+      "CollisionMask": 256
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_0",
+    "Outer": "Default__Tree02_Stage1_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "MaxHealth": 1.0
+    }
+  },
+  {
+    "Type": "PlantGrowthProxyComponent",
+    "Name": "PlantGrowthProxyComponent_0",
+    "Outer": "Default__Tree02_Stage1_C",
+    "Class": "UScriptClass'PlantGrowthProxyComponent'",
+    "Properties": {
+      "MaturePlant": {
+        "ObjectName": "BlueprintGeneratedClass'Tree02_Stage2_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree02_Stage2.0"
+      },
+      "StageTime": 7200.0,
+      "GrowthStage": 1,
+      "bCanGrow": true
+    }
+  },
+  {
+    "Type": "Tree02_Stage1_C",
+    "Name": "Default__Tree02_Stage1_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree02_Stage1.Tree02_Stage1_C'",
+    "Properties": {
+      "CodeNameString": "Tree02_Stage1",
+      "CodeName": -1593017774,
+      "Components": [
+        {
+          "ObjectName": "FootprintCollisionProxyComponent'Default__Tree02_Stage1_C:FootprintCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree02_Stage1.2"
+        },
+        {
+          "ObjectName": "PlantGrowthProxyComponent'Default__Tree02_Stage1_C:PlantGrowthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree02_Stage1.4"
+        },
+        {
+          "ObjectName": "HealthProxyComponent'Default__Tree02_Stage1_C:HealthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree02_Stage1.3"
+        },
+        {
+          "ObjectName": "CapsuleCollisionProxyComponent'Default__Tree02_Stage1_C:CapsuleCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree02_Stage1.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisTree02_Stage1_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree02_Stage1.1"
+      }
+    }
+  }
+]

@@ -1,0 +1,371 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisManurePile_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "DiseaseFlies_Cue_GEN_VARIABLE",
+    "Outer": "BPVisManurePile_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'DiseaseFlies_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/DiseaseFlies_Cue.0"
+      },
+      "RelativeScale3D": {
+        "X": 1.25,
+        "Y": 1.25,
+        "Z": 1.25
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisManurePile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisManurePile_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.14"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisPickupItem'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DiseaseFlies_Cue",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Flies",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Decal",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GrassRemovalVolume",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'GrassRemovalVolumeComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisManurePile_C'Default__BPVisManurePile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisManurePile_C",
+    "Name": "Default__BPVisManurePile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.BPVisManurePile_C'",
+    "Properties": {
+      "PickupDataComponent": {
+        "ObjectName": "PickupDataComponent'Default__BPVisManurePile_C:PickupDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.7"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisManurePile_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.16"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisManurePile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.0"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "5ACCEF124D18344AB1AABD96761B2227",
+        "SourceString": "Animal Shite",
+        "LocalizedString": "Animal Shite"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisManurePile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.0"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Outer": "BPVisManurePile_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'Decal_BuildArea'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/Decal_BuildArea.0"
+      },
+      "DecalSize": {
+        "X": 132.8125,
+        "Y": 85.0,
+        "Z": 85.0
+      },
+      "RelativeRotation": {
+        "Pitch": -89.99999,
+        "Yaw": 365.05115,
+        "Roll": -5.0511475
+      }
+    }
+  },
+  {
+    "Type": "GrassRemovalVolumeComponent",
+    "Name": "GrassRemovalVolume_GEN_VARIABLE",
+    "Outer": "BPVisManurePile_C",
+    "Class": "UScriptClass'GrassRemovalVolumeComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 36.0,
+        "Y": 36.0,
+        "Z": 64.0
+      },
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'BPVisManurePile_C:GrassRemovalVolume_GEN_VARIABLE.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.15"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Flies_GEN_VARIABLE",
+    "Outer": "BPVisManurePile_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'Flies'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/Flies.16"
+      },
+      "OverrideParameters": {},
+      "RelativeScale3D": {
+        "X": 1.25,
+        "Y": 1.25,
+        "Z": 1.25
+      }
+    }
+  },
+  {
+    "Type": "PickupDataComponent",
+    "Name": "PickupDataComponent",
+    "Outer": "Default__BPVisManurePile_C",
+    "Class": "UScriptClass'PickupDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisManurePile_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisManurePile_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.8"
+      },
+      "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisManurePile_C:Flies_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.6"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "EDDCBF0F-4506BFEB-5D5C45BC-17E4C451",
+      "InternalVariableName": "Flies"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'GrassRemovalVolumeComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GrassRemovalVolumeComponent'BPVisManurePile_C:GrassRemovalVolume_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.5"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "26DC0FF0-49F569A1-3C524D8E-E1E3DAD3",
+      "InternalVariableName": "GrassRemovalVolume"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'BPVisManurePile_C:DiseaseFlies_Cue_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.1"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6A39046A-465A990C-69C2CA8E-F8F6D9A8",
+      "InternalVariableName": "DiseaseFlies_Cue"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPVisManurePile_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.4"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "2AE65AC7-4D51A6B8-01770A8D-81138717",
+      "InternalVariableName": "Decal"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisManurePile_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.9"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "GrassRemovalVolume_GEN_VARIABLE",
+    "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisManurePile_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'ManurePile'",
+        "ObjectPath": "Anvil/Content/Meshes/Resources/ManurePile.2"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisManurePile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.0"
+      },
+      "RelativeScale3D": {
+        "X": 0.8,
+        "Y": 0.8,
+        "Z": 0.8
+      }
+    }
+  }
+]

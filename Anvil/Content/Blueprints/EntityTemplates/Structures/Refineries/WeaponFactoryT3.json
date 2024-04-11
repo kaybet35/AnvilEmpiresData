@@ -1,0 +1,571 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "WeaponFactoryT3_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WeaponFactoryT3_C'Default__WeaponFactoryT3_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WeaponFactoryT3.12"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__WeaponFactoryT3_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__WeaponFactoryT3_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    },
+    "Properties": {
+      "DecayTimeHours": 72.0
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableComp",
+    "Outer": "Default__WeaponFactoryT3_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Template": {
+      "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__WeaponFactoryT3_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'WeaponFactory_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/WeaponFactory.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthComp",
+    "Outer": "Default__WeaponFactoryT3_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
+    },
+    "Properties": {
+      "MaxHealth": 840.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__WeaponFactoryT3_C",
+    "Class": "UScriptClass'InventoryProxyComponent'"
+  },
+  {
+    "Type": "RefineResourceProxyComponent",
+    "Name": "RefineResourceProxyComponent_0",
+    "Outer": "Default__WeaponFactoryT3_C",
+    "Class": "UScriptClass'RefineResourceProxyComponent'",
+    "Properties": {
+      "ProducableItemList": [
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Knife_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Knife.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 5,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 15.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Spear_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Spear.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 10,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'ShortBow_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/ShortBow.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 10,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Arrows_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Arrows.1"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 5,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            },
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFeathers_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFeathers.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 1,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 2,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Sword_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Sword.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 20,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'CombatAxe_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/CombatAxe.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 10,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            },
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 2,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'ScorpionArrows_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ScorpionArrows.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 10,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            },
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFeathers_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFeathers.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 2,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'SwordSteel_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SwordSteel.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 10,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            },
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedSteel_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedSteel.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 2,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'SwordRelic_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SwordRelic.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 10,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            },
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedSteel_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedSteel.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 2,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            },
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 30,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": true,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'CombatAxeRelic_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/CombatAxeRelic.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 10,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            },
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 2,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            },
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 30,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": true,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'SpearRelic_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SpearRelic.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 10,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            },
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 5,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            },
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 15,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": true,
+          "bCrateProducedItems": false
+        }
+      ],
+      "bCrateProducedItems": true
+    }
+  },
+  {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairComp",
+    "Outer": "Default__WeaponFactoryT3_C",
+    "Class": "UScriptClass'RepairProxyComponent'",
+    "Template": {
+      "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+    },
+    "Properties": {
+      "TotalRepairCost": 20
+    }
+  },
+  {
+    "Type": "ScorchProxyComponent",
+    "Name": "ScorchProxyComponent_0",
+    "Outer": "Default__WeaponFactoryT3_C",
+    "Class": "UScriptClass'ScorchProxyComponent'",
+    "Template": {
+      "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__WeaponFactoryT3_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamComp",
+    "Outer": "Default__WeaponFactoryT3_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    }
+  },
+  {
+    "Type": "WeaponFactoryT3_C",
+    "Name": "Default__WeaponFactoryT3_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WeaponFactoryT3.WeaponFactoryT3_C'",
+    "Template": {
+      "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
+    },
+    "Properties": {
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__WeaponFactoryT3_C:TeamComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WeaponFactoryT3.11"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__WeaponFactoryT3_C:HealthComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WeaponFactoryT3.5"
+      },
+      "RepairComp": {
+        "ObjectName": "RepairProxyComponent'Default__WeaponFactoryT3_C:RepairComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WeaponFactoryT3.8"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__WeaponFactoryT3_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WeaponFactoryT3.10"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__WeaponFactoryT3_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WeaponFactoryT3.3"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__WeaponFactoryT3_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WeaponFactoryT3.4"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__WeaponFactoryT3_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WeaponFactoryT3.1"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__WeaponFactoryT3_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WeaponFactoryT3.2"
+      },
+      "ScorchComp": {
+        "ObjectName": "ScorchProxyComponent'Default__WeaponFactoryT3_C:ScorchProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WeaponFactoryT3.9"
+      },
+      "CodeNameString": "WeaponFactoryT3",
+      "CodeName": -1298762608,
+      "bShowOnMap": true,
+      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "Components": [
+        {
+          "ObjectName": "RefineResourceProxyComponent'Default__WeaponFactoryT3_C:RefineResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WeaponFactoryT3.7"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__WeaponFactoryT3_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WeaponFactoryT3.6"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisWeaponFactoryT3_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWeaponFactoryT3.2"
+      }
+    }
+  }
+]

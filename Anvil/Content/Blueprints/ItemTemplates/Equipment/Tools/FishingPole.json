@@ -1,0 +1,69 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "FishingPole_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FishingPole_C'Default__FishingPole_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/FishingPole.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "FishingPole_C",
+    "Name": "Default__FishingPole_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/FishingPole.FishingPole_C'",
+    "Properties": {
+      "CodeNameString": "FishingPole",
+      "CodeName": -1683642304,
+      "ItemType": "EAnvilItemType::PrimaryTool",
+      "SecondaryType": "EAnvilItemType::WeaponStorage",
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "ItemHitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectHand_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectHand.0"
+      },
+      "bTwoHanded": true,
+      "Encumberance": 10,
+      "DurabilityLossPerUse": 1.0,
+      "DamageOffset": {
+        "X": 2500.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "DamageRadius": 100.0,
+      "ToolType": "EAnvilToolType::FishingPole",
+      "DefaultActivity": {
+        "bRepeatable": false
+      },
+      "RangedActivity": {
+        "bRepeatable": false
+      },
+      "GatherActivity": {
+        "State": "EAnvilSimActivityState::FishingWaiting",
+        "Delay": 0.6,
+        "Duration": 1.6,
+        "MovementSpeedModifier": 0.0,
+        "bRepeatable": false,
+        "bRequireAim": true
+      },
+      "bAllowCameraPan": false
+    }
+  }
+]

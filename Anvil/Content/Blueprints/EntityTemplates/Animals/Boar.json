@@ -1,0 +1,191 @@
+[
+  {
+    "Type": "AnimalAIProxyComponent",
+    "Name": "AnimalAIProxyComponent_0",
+    "Outer": "Default__Boar_C",
+    "Class": "UScriptClass'AnimalAIProxyComponent'",
+    "Properties": {
+      "VisionRange": 800.0,
+      "SlowSpeed": 150.0,
+      "FastSpeed": 500.0,
+      "TrapTime": 120.0,
+      "bHoming": true,
+      "HomingDistance": 1000.0
+    }
+  },
+  {
+    "Type": "AnimalAttackProxyComponent",
+    "Name": "AnimalAttackProxyComponent_0",
+    "Outer": "Default__Boar_C",
+    "Class": "UScriptClass'AnimalAttackProxyComponent'",
+    "Properties": {
+      "AttackTargetTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'Player_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Horse_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.1"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'OfflineCharacter_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Cart_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.1"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Caravan_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Caravan.1"
+        }
+      ],
+      "OnRoadVisionRange": 300.0,
+      "ChaseDuration": 3.0,
+      "AttackOffset": {
+        "X": 150.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "AttackFrequency": 1.0,
+      "MinNumAttacks": 2,
+      "MaxNumAttacks": 6,
+      "AttackDamage": 20
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Boar_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Boar_C'Default__Boar_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Boar_C",
+    "Name": "Default__Boar_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.Boar_C'",
+    "Properties": {
+      "CodeNameString": "Boar",
+      "CodeName": 1636627972,
+      "bStatic": false,
+      "SerializationType": "EEntitySerializationType::EEntitySerializationType_MAX",
+      "Components": [
+        {
+          "ObjectName": "HealthProxyComponent'Default__Boar_C:HealthProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.6"
+        },
+        {
+          "ObjectName": "AnimalAIProxyComponent'Default__Boar_C:AnimalAIProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.0"
+        },
+        {
+          "ObjectName": "CapsuleCollisionProxyComponent'Default__Boar_C:CapsuleCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.5"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__Boar_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.4"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__Boar_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.7"
+        },
+        {
+          "ObjectName": "AnimalAttackProxyComponent'Default__Boar_C:AnimalAttackProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisBoar_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.2"
+      }
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__Boar_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -5.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 35.0,
+        "Z": 50.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 8256
+    }
+  },
+  {
+    "Type": "CapsuleCollisionProxyComponent",
+    "Name": "CapsuleCollisionProxyComponent_0",
+    "Outer": "Default__Boar_C",
+    "Class": "UScriptClass'CapsuleCollisionProxyComponent'",
+    "Properties": {
+      "Radius": 75.0,
+      "HalfHeight": 72.0,
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 524288
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_1",
+    "Outer": "Default__Boar_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "MaxHealth": 45.0,
+      "AutoRegenRate": 3.0,
+      "AutoRegenStartDelay": 600.0,
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectPlayer_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
+      },
+      "TargetType": "EAnvilDamageTargetType::Infantry"
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__Boar_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "DroppedResourceAmount": 1,
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'MeatBoarPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/MeatBoarPickup.0"
+      },
+      "DroppedSecondaryResourceAmount": 1,
+      "DroppedSecondaryResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'LeatherPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/LeatherPickup.0"
+      },
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'BoarHusk_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/BoarHusk.0"
+      }
+    }
+  }
+]

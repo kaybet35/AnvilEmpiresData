@@ -1,0 +1,95 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "FeathersPickup_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FeathersPickup_C'Default__FeathersPickup_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/FeathersPickup.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__FeathersPickup_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 25.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 25.0,
+        "Z": 75.0
+      },
+      "CollisionMask": 32
+    }
+  },
+  {
+    "Type": "FeathersPickup_C",
+    "Name": "Default__FeathersPickup_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/ItemPickups/FeathersPickup.FeathersPickup_C'",
+    "Properties": {
+      "CodeNameString": "ResourceFeathersPickup",
+      "CodeName": 1162708242,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__FeathersPickup_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/FeathersPickup.1"
+        },
+        {
+          "ObjectName": "PickupProxyComponent'Default__FeathersPickup_C:PickupProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/FeathersPickup.4"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__FeathersPickup_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/FeathersPickup.3"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisResourceFeathers_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceFeathers.1"
+      }
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__FeathersPickup_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 450.0
+    }
+  },
+  {
+    "Type": "PickupProxyComponent",
+    "Name": "PickupProxyComponent_0",
+    "Outer": "Default__FeathersPickup_C",
+    "Class": "UScriptClass'PickupProxyComponent'",
+    "Properties": {
+      "Item": {
+        "ItemType": {
+          "ObjectName": "BlueprintGeneratedClass'ResourceFeathers_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFeathers.0"
+        },
+        "Count": 1
+      }
+    }
+  }
+]

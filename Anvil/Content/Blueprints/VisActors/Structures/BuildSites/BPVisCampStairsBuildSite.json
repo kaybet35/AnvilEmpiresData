@@ -1,0 +1,257 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisCampStairsBuildSite_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisCampStairsBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisCampStairsBuildSite_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisBuildSite'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisCampStairsBuildSite_C'Default__BPVisCampStairsBuildSite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisCampStairsBuildSite_C",
+    "Name": "Default__BPVisCampStairsBuildSite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.BPVisCampStairsBuildSite_C'",
+    "Properties": {
+      "VisBuildGhostComponent": {
+        "ObjectName": "VisBuildGhostComponent'Default__BPVisCampStairsBuildSite_C:VisBuildGhostComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.12"
+      },
+      "BuildSiteDataComponent": {
+        "ObjectName": "BuildSiteDataComponent'Default__BPVisCampStairsBuildSite_C:BuildSiteDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.3"
+      },
+      "StructureDataComponent": {
+        "ObjectName": "StructureDataComponent'Default__BPVisCampStairsBuildSite_C:StructureDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.11"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'IconCampStair'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconCampStair.0"
+      },
+      "Category": "EBuildSiteCategory::Camp",
+      "Order": 1,
+      "bDisabled": true,
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCampStairsBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.0"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisCampStairsBuildSite_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.10"
+      },
+      "BuildCollisionDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisCampStairsBuildSite_C:BuildCollisionDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.4"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "58D29B5C4FEF42B845994EA6EFDBB4BD",
+        "SourceString": "Camp Stairs",
+        "LocalizedString": "Camp Stairs"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "871035334E76DA9C4BF9F492844B0B25",
+        "SourceString": "Allows players access to Platforms and Towers. Can be snapped to walls.",
+        "LocalizedString": "Allows players access to Platforms and Towers. Can be snapped to walls."
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCampStairsBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "BuildSiteDataComponent",
+    "Name": "BuildSiteDataComponent",
+    "Outer": "Default__BPVisCampStairsBuildSite_C",
+    "Class": "UScriptClass'BuildSiteDataComponent'",
+    "Properties": {
+      "BuiltStructureEntity": 1364274856,
+      "bRequiresCamp": true,
+      "ResourceBranchesRequirement": 4
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "BuildCollisionDecalComponent",
+    "Outer": "Default__BPVisCampStairsBuildSite_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCampStairsBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisCampStairsBuildSite_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisCampStairsBuildSite_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.5"
+      },
+      "VariableGuid": "6276D78A-422ECBE5-CE477688-51EC12DC",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisCampStairsBuildSite_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.9"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A1918791-45475633-324BCE84-915BF4FF",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisCampStairsBuildSite_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisCampStairsBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisCampStairsBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisCampStairsBuildSite_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BPVisCampStairsBuildSite_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BuildArrow'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/BuildArrow.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'Ghost'",
+          "ObjectPath": "Anvil/Content/Materials/Ghost.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -200.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisCampStairsBuildSite_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'CampStairs01'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/CampStairs01.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'Ghost'",
+          "ObjectPath": "Anvil/Content/Materials/Ghost.0"
+        }
+      ],
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCampStairsBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampStairsBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "StructureDataComponent",
+    "Name": "StructureDataComponent",
+    "Outer": "Default__BPVisCampStairsBuildSite_C",
+    "Class": "UScriptClass'StructureDataComponent'"
+  },
+  {
+    "Type": "VisBuildGhostComponent",
+    "Name": "VisBuildGhostComponent",
+    "Outer": "Default__BPVisCampStairsBuildSite_C",
+    "Class": "UScriptClass'VisBuildGhostComponent'"
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "Type": "AnimalAIProxyComponent",
+    "Name": "AnimalAIProxyComponent_0",
+    "Outer": "Default__Deer_C",
+    "Class": "UScriptClass'AnimalAIProxyComponent'",
+    "Properties": {
+      "SlowSpeed": 150.0,
+      "FastSpeed": 1024.0
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Deer_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Deer_C'Default__Deer_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Deer.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__Deer_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 15.0,
+        "Y": 0.0,
+        "Z": 20.0
+      },
+      "Extents": {
+        "X": 90.0,
+        "Y": 24.0,
+        "Z": 55.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 8256
+    }
+  },
+  {
+    "Type": "CapsuleCollisionProxyComponent",
+    "Name": "CapsuleCollisionProxyComponent_0",
+    "Outer": "Default__Deer_C",
+    "Class": "UScriptClass'CapsuleCollisionProxyComponent'",
+    "Properties": {
+      "Radius": 30.0,
+      "HalfHeight": 72.0,
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 524288
+    }
+  },
+  {
+    "Type": "Deer_C",
+    "Name": "Default__Deer_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Animals/Deer.Deer_C'",
+    "Properties": {
+      "CodeNameString": "Deer",
+      "CodeName": -1474415218,
+      "bStatic": false,
+      "SerializationType": "EEntitySerializationType::EEntitySerializationType_MAX",
+      "Components": [
+        {
+          "ObjectName": "HealthProxyComponent'Default__Deer_C:HealthProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Deer.5"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__Deer_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Deer.6"
+        },
+        {
+          "ObjectName": "AnimalAIProxyComponent'Default__Deer_C:AnimalAIProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Deer.0"
+        },
+        {
+          "ObjectName": "CapsuleCollisionProxyComponent'Default__Deer_C:CapsuleCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Deer.3"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__Deer_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Deer.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisDeer_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeer.2"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_1",
+    "Outer": "Default__Deer_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "MaxHealth": 30.0,
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectPlayer_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
+      },
+      "TargetType": "EAnvilDamageTargetType::Infantry"
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__Deer_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "DroppedResourceAmount": 1,
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'MeatPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/MeatPickup.0"
+      },
+      "DroppedSecondaryResourceAmount": 1,
+      "DroppedSecondaryResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'LeatherPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/LeatherPickup.0"
+      },
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'DeerHusk_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/DeerHusk.0"
+      }
+    }
+  }
+]

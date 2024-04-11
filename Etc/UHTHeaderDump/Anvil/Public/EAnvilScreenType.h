@@ -1,0 +1,18 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "EAnvilScreenType.generated.h"
+
+UENUM(BlueprintType)
+enum class EAnvilScreenType : uint8 {
+    None,
+    Opening,
+    Connect,
+    Gameplay,
+    Pause,
+    Options,
+    Count,
+    Admin,
+    Help,
+    FactionSelect,
+};
+

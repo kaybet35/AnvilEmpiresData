@@ -1,0 +1,126 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Tree03_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Tree03_C'Default__Tree03_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__Tree03_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 600.0
+      },
+      "Extents": {
+        "X": 35.0,
+        "Y": 35.0,
+        "Z": 600.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeWood",
+      "CollisionMask": 8210
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__Tree03_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'TreeFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/TreeFootprint.0"
+      },
+      "CollisionMask": 256
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__Tree03_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilResourceType::ChoppedTree",
+      "HitPoints": 15,
+      "RequiredTool": "EAnvilToolType::Axe",
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'Wood03Pickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/Wood03Pickup.0"
+      },
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'Tree03Fall_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03Fall.0"
+      },
+      "DestructionEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectTreeFall03_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectTreeFall03.0"
+      },
+      "XpReward": 20,
+      "LootTable": [
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'Tree03Seed_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Tree03Seed.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 1,
+            "bIsRelic": false
+          },
+          "NormalizedChanceToDrop": 1.0,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Tree03_C",
+    "Name": "Default__Tree03_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03.Tree03_C'",
+    "Properties": {
+      "CodeNameString": "Tree03",
+      "CodeName": -1836216145,
+      "bUseScale": true,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__Tree03_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03.1"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__Tree03_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03.3"
+        },
+        {
+          "ObjectName": "FootprintCollisionProxyComponent'Default__Tree03_C:FootprintCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisTree03_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03.1"
+      }
+    }
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ScorpionArrowWoodShieldImpact_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'ScorpionArrowWoodShieldImpact_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Scorpion/ScorpionArrowWoodShieldImpact_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Weapons'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.7"
+      },
+      "Duration": 0.66804165,
+      "MaxDistance": 9000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ScorpionArrowWoodShieldImpact_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.8,
+      "PitchMax": 1.2,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'ScorpionArrowWoodShieldImpact_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Scorpion/ScorpionArrowWoodShieldImpact_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "ScorpionArrowWoodShieldImpact_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ScorpionArrowWoodShieldImpact_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Scorpion/ScorpionArrowWoodShieldImpact_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ScorpionArrowWoodShieldImpact_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Scorpion/ScorpionArrowWoodShieldImpact_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ScorpionArrowWoodShieldImpact_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Scorpion/ScorpionArrowWoodShieldImpact_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ScorpionArrowWoodShieldImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/Scorpion/ScorpionArrowWoodShieldImpact03.ScorpionArrowWoodShieldImpact03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ScorpionArrowWoodShieldImpact03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Scorpion/ScorpionArrowWoodShieldImpact03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "ScorpionArrowWoodShieldImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/Scorpion/ScorpionArrowWoodShieldImpact01.ScorpionArrowWoodShieldImpact01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ScorpionArrowWoodShieldImpact01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Scorpion/ScorpionArrowWoodShieldImpact01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "ScorpionArrowWoodShieldImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/Scorpion/ScorpionArrowWoodShieldImpact02.ScorpionArrowWoodShieldImpact02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ScorpionArrowWoodShieldImpact02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Scorpion/ScorpionArrowWoodShieldImpact02.0"
+    }
+  }
+]

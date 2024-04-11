@@ -1,0 +1,106 @@
+[
+  {
+    "Type": "AimOffsetBlendSpace1D",
+    "Name": "Horse_TurnInPlace",
+    "Class": "UScriptClass'AimOffsetBlendSpace1D'",
+    "Properties": {
+      "bContainsRotationOffsetMeshSpaceSamples": true,
+      "InterpolationParam": {
+        "InterpolationTime": 0.15,
+        "InterpolationType": "EFilterInterpolationType::BSIT_Average"
+      },
+      "bTargetWeightInterpolationEaseInOut": false,
+      "AnimLength": 2.0,
+      "bInterpolateUsingGrid": true,
+      "SampleData": [
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'Horse_Anim_turnLeft'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_turnLeft.0"
+          },
+          "SampleValue": {
+            "X": -90.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'Horse_Anim_still'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_still.0"
+          },
+          "SampleValue": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'Horse_Anim_turnRight'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_turnRight.0"
+          },
+          "SampleValue": {
+            "X": 90.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        }
+      ],
+      "GridSamples": [
+        {
+          "Indices": 1,
+          "Indices": 0,
+          "Indices": -1,
+          "Weights": 0.0,
+          "Weights": 1.0,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 1,
+          "Indices": 0,
+          "Indices": -1,
+          "Weights": 0.5,
+          "Weights": 0.5,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 1,
+          "Indices": 0,
+          "Indices": -1,
+          "Weights": 1.0,
+          "Weights": 0.0,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 2,
+          "Indices": 1,
+          "Indices": -1,
+          "Weights": 0.5,
+          "Weights": 0.5,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 2,
+          "Indices": 1,
+          "Indices": -1,
+          "Weights": 1.0,
+          "Weights": 0.0,
+          "Weights": 0.0
+        }
+      ],
+      "BlendParameters": {
+        "DisplayName": "yaw",
+        "Min": -90.0,
+        "Max": 90.0
+      },
+      "Skeleton": {
+        "ObjectName": "Skeleton'Horse_SK_Skeleton'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Horse_SK_Skeleton.6"
+      }
+    }
+  }
+]

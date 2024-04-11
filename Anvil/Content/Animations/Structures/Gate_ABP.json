@@ -1,0 +1,974 @@
+[
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "Gate_ABP_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "openToClose",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "entryState",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 7,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "open",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 8,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "close",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'GateT1_Skeleton'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/GateT1_Skeleton.0"
+      },
+      "AnimNodeData": [
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Gate_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            0,
+            13
+          ],
+          "NodeIndex": 0,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Gate_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295
+          ],
+          "NodeIndex": 1,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Gate_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295
+          ],
+          "NodeIndex": 2,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Gate_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295
+          ],
+          "NodeIndex": 3,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Gate_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            13,
+            12,
+            11,
+            10,
+            4294967295,
+            9,
+            1,
+            7,
+            4294967295,
+            9,
+            10,
+            10
+          ],
+          "NodeIndex": 4,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Gate_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            2,
+            13,
+            3
+          ],
+          "NodeIndex": 5,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Gate_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            13,
+            12,
+            11,
+            10,
+            4294967295,
+            9,
+            9,
+            7,
+            4294967295,
+            8,
+            10,
+            10
+          ],
+          "NodeIndex": 6,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Gate_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4,
+            13,
+            5
+          ],
+          "NodeIndex": 7,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Gate_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            13,
+            12,
+            11,
+            10,
+            4294967295,
+            9,
+            8,
+            7,
+            4294967295,
+            8,
+            6,
+            10
+          ],
+          "NodeIndex": 8,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Gate_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            14,
+            13,
+            15
+          ],
+          "NodeIndex": 9,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Gate_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 10,
+          "Flags": "EAnimNodeDataFlags::None"
+        }
+      ],
+      "NodeTypeMap": [
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_StateMachine'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "StateMachineIndexInClass": 3
+              },
+              {
+                "MaxTransitionsPerFrame": 4
+              },
+              {
+                "MaxTransitionsRequests": 5
+              },
+              {
+                "bSkipFirstUpdateTransition": 6
+              },
+              {
+                "bReinitializeOnBecomingRelevant": 7
+              },
+              {
+                "bCreateNotifyMetaData": 8
+              },
+              {
+                "bAllowConduitEntryStates": 9
+              }
+            ],
+            "NumProperties": 10
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_Base'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_StateResult'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "Result": 3
+              },
+              {
+                "Name": 4
+              },
+              {
+                "Group": 5
+              },
+              {
+                "StateIndex": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_Root'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "Result": 3
+              },
+              {
+                "Name": 4
+              },
+              {
+                "Group": 5
+              }
+            ],
+            "NumProperties": 6
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_SequencePlayer'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "GroupIndex": 3
+              },
+              {
+                "GroupScope": 4
+              },
+              {
+                "BlendWeight": 5
+              },
+              {
+                "InternalTimeAccumulator": 6
+              },
+              {
+                "PlayRateScaleBiasClampState": 7
+              },
+              {
+                "GroupName": 8
+              },
+              {
+                "GroupRole": 9
+              },
+              {
+                "Method": 10
+              },
+              {
+                "bIgnoreForRelevancyTest": 11
+              },
+              {
+                "Sequence": 12
+              },
+              {
+                "PlayRateBasis": 13
+              },
+              {
+                "PlayRate": 14
+              },
+              {
+                "PlayRateScaleBiasClampConstants": 15
+              },
+              {
+                "PlayRateScaleBiasClamp": 16
+              },
+              {
+                "StartPosition": 17
+              },
+              {
+                "bLoopAnimation": 18
+              },
+              {
+                "bStartFromMatchingPose": 19
+              }
+            ],
+            "NumProperties": 20
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_SequencePlayerBase'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "GroupIndex": 3
+              },
+              {
+                "GroupScope": 4
+              },
+              {
+                "BlendWeight": 5
+              },
+              {
+                "InternalTimeAccumulator": 6
+              },
+              {
+                "PlayRateScaleBiasClampState": 7
+              }
+            ],
+            "NumProperties": 8
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerBase'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "GroupIndex": 3
+              },
+              {
+                "GroupScope": 4
+              },
+              {
+                "BlendWeight": 5
+              },
+              {
+                "InternalTimeAccumulator": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerRelevancyBase'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_TransitionResult'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "bCanEnterTransition": 3
+              }
+            ],
+            "NumProperties": 4
+          }
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'Gate_ABP_C:ExecuteUbergraph_Gate_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisGateAnimInstance'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'Gate_ABP_C:AnimGraph'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.1"
+      },
+      {
+        "ObjectName": "Function'Gate_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Gate_ABP_AnimGraphNode_TransitionResult_E2A593404BFB8159E895C083FB434904'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.2"
+      },
+      {
+        "ObjectName": "Function'Gate_ABP_C:ExecuteUbergraph_Gate_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Gate_ABP": {
+        "ObjectName": "Function'Gate_ABP_C:ExecuteUbergraph_Gate_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.3"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Gate_ABP_AnimGraphNode_TransitionResult_E2A593404BFB8159E895C083FB434904": {
+        "ObjectName": "Function'Gate_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Gate_ABP_AnimGraphNode_TransitionResult_E2A593404BFB8159E895C083FB434904'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.2"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'Gate_ABP_C:AnimGraph'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.1"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Gate_ABP_C'Default__Gate_ABP_C'",
+      "ObjectPath": "Anvil/Content/Animations/Structures/Gate_ABP.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "Gate_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraph",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PoseLink'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Gate_ABP_AnimGraphNode_TransitionResult_E2A593404BFB8159E895C083FB434904",
+    "Outer": "Gate_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Gate_ABP",
+    "Outer": "Gate_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Gate_ABP_C",
+    "Name": "Default__Gate_ABP_C",
+    "Class": "AnimBlueprintGeneratedClass'Anvil/Content/Animations/Structures/Gate_ABP.Gate_ABP_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimBlueprintExtension_PropertyAccess": {},
+      "AnimBlueprintExtension_Base": {},
+      "AnimGraphNode_Root": {
+        "Result": {
+          "LinkID": 10
+        }
+      },
+      "AnimGraphNode_TransitionResult_2": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_2": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'GateCamp_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/GateCamp_Anim.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2": {
+        "Result": {
+          "LinkID": 4
+        }
+      },
+      "AnimGraphNode_SequencePlayer_1": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'GateCamp_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/GateCamp_Anim.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1": {
+        "Result": {
+          "LinkID": 6
+        }
+      },
+      "AnimGraphNode_SequencePlayer": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'GateCamp_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/GateCamp_Anim.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult": {
+        "Result": {
+          "LinkID": 8
+        }
+      },
+      "AnimGraphNode_StateMachine": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      }
+    }
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedConstantData",
+    "Outer": "Gate_ABP_C",
+    "Class": "UScriptClass'ScriptStruct'"
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedMutableData",
+    "Outer": "Gate_ABP_C",
+    "Class": "UScriptClass'ScriptStruct'"
+  }
+]

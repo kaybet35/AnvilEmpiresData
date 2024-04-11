@@ -1,0 +1,265 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "BatteringRam_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'BatteringRam_SK_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BatteringRam_SK_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'BatteringRam_SK_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BatteringRam_SK_PhysicsAsset.5"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'BatteringRam_SK_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BatteringRam_SK_PhysicsAsset.6"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'BatteringRam_SK_PhysicsAsset:SkeletalBodySetup_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BatteringRam_SK_PhysicsAsset.7"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'BatteringRam_SK_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BatteringRam_SK_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'BatteringRam_SK_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BatteringRam_SK_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'BatteringRam_SK_PhysicsAsset:PhysicsConstraintTemplate_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BatteringRam_SK_PhysicsAsset.3"
+        }
+      ],
+      "SolverSettings": {
+        "CullDistance": 1.0,
+        "bUseLinearJointSolver": false
+      },
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "BatteringRam_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "wheel_R",
+        "ConstraintBone1": "wheel_R",
+        "ConstraintBone2": "axle_pivot",
+        "Pos2": {
+          "X": -98.69,
+          "Y": 0.0,
+          "Z": 15.2346945
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "BatteringRam_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "wheel_L",
+        "ConstraintBone1": "wheel_L",
+        "ConstraintBone2": "axle_pivot",
+        "Pos2": {
+          "X": 98.689964,
+          "Y": 0.0,
+          "Z": 15.2346945
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_2",
+    "Outer": "BatteringRam_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "tilt_pivot",
+        "ConstraintBone1": "tilt_pivot",
+        "ConstraintBone2": "axle_pivot",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 15.2346945
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "BatteringRam_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.02838707,
+              "Z": 15.234692
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 90.0,
+              "Roll": -90.0
+            },
+            "Radius": 27.784416,
+            "Length": 117.200645,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "axle_pivot",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "C018EEE4455D2BEE2F2B72B68C21ABE3"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "BatteringRam_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 4.7056923,
+              "Y": 0.028346062,
+              "Z": -0.001476977
+            },
+            "Rotation": {
+              "Pitch": 1.3730183,
+              "Yaw": -90.0,
+              "Roll": -0.09516955
+            },
+            "Radius": 90.37182,
+            "Length": 90.38105,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "wheel_R",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "CB7A13E04B6C30E50E0E089AD4DF5332"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "BatteringRam_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -4.705653,
+              "Y": 0.028346539,
+              "Z": -0.0014846362
+            },
+            "Rotation": {
+              "Pitch": 1.3730114,
+              "Yaw": -90.00001,
+              "Roll": 0.095169924
+            },
+            "Radius": 90.37182,
+            "Length": 90.38105,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "wheel_L",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "5853050948E50FE3339E9A8751F86D1C"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_3",
+    "Outer": "BatteringRam_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -2.9654263E-06,
+              "Y": -147.53694,
+              "Z": 45.448715
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -1.1516192E-06,
+              "Roll": -87.95633
+            },
+            "Radius": 112.911255,
+            "Length": 401.5364,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "tilt_pivot",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "BFC121D846C11FBFF3D67F9A69A79CCB"
+  }
+]

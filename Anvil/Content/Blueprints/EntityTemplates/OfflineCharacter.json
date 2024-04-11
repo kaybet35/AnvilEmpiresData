@@ -1,0 +1,211 @@
+[
+  {
+    "Type": "AIStimulusProxyComponent",
+    "Name": "AIStimulusProxyComponent_0",
+    "Outer": "Default__OfflineCharacter_C",
+    "Class": "UScriptClass'AIStimulusProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilStimulusType::VisualThreat",
+      "bAgroTarget": true
+    }
+  },
+  {
+    "Type": "ArmorProxyComponent",
+    "Name": "ArmorProxyComponent_0",
+    "Outer": "Default__OfflineCharacter_C",
+    "Class": "UScriptClass'ArmorProxyComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "OfflineCharacter_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "OfflineCharacter_C'Default__OfflineCharacter_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.8"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CapsuleCollisionProxyComponent",
+    "Name": "CapsuleCollisionProxyComponent_0",
+    "Outer": "Default__OfflineCharacter_C",
+    "Class": "UScriptClass'CapsuleCollisionProxyComponent'",
+    "Properties": {
+      "Radius": 30.0,
+      "HalfHeight": 60.0,
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 4
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_0",
+    "Outer": "Default__OfflineCharacter_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectPlayer_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
+      },
+      "TargetType": "EAnvilDamageTargetType::Infantry"
+    }
+  },
+  {
+    "Type": "HungerProxyComponent",
+    "Name": "HungerProxyComponent_0",
+    "Outer": "Default__OfflineCharacter_C",
+    "Class": "UScriptClass'HungerProxyComponent'"
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__OfflineCharacter_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1,
+          "bHoldsLarge": false,
+          "SlotType": "EAnvilItemType::Head",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        },
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1,
+          "bHoldsLarge": false,
+          "SlotType": "EAnvilItemType::PrimaryTool",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        },
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1,
+          "bHoldsLarge": false,
+          "SlotType": "EAnvilItemType::Body",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        },
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1,
+          "bHoldsLarge": false,
+          "SlotType": "EAnvilItemType::SecondaryTool",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        },
+        {
+          "ProxyRepeat": 9,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bHoldsLarge": false,
+          "SlotType": "EAnvilItemType::All",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        }
+      ],
+      "NormalizedSpoilageFactor": 1.0
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__OfflineCharacter_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 600.0,
+      "DropResourceOnDeath": true
+    }
+  },
+  {
+    "Type": "OfflineCharacter_C",
+    "Name": "Default__OfflineCharacter_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.OfflineCharacter_C'",
+    "Properties": {
+      "CodeNameString": "OfflineCharacter",
+      "CodeName": -1627560973,
+      "Components": [
+        {
+          "ObjectName": "OfflineCharacterProxyComponent'Default__OfflineCharacter_C:OfflineCharacterProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.9"
+        },
+        {
+          "ObjectName": "HealthProxyComponent'Default__OfflineCharacter_C:HealthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.4"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__OfflineCharacter_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.6"
+        },
+        {
+          "ObjectName": "ArmorProxyComponent'Default__OfflineCharacter_C:ArmorProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.1"
+        },
+        {
+          "ObjectName": "CapsuleCollisionProxyComponent'Default__OfflineCharacter_C:CapsuleCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.3"
+        },
+        {
+          "ObjectName": "AIStimulusProxyComponent'Default__OfflineCharacter_C:AIStimulusProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.0"
+        },
+        {
+          "ObjectName": "TeamProxyComponent'Default__OfflineCharacter_C:TeamProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.10"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__OfflineCharacter_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.7"
+        },
+        {
+          "ObjectName": "HungerProxyComponent'Default__OfflineCharacter_C:HungerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.5"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisOfflineCharacter_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisOfflineCharacter.1"
+      }
+    }
+  },
+  {
+    "Type": "OfflineCharacterProxyComponent",
+    "Name": "OfflineCharacterProxyComponent_0",
+    "Outer": "Default__OfflineCharacter_C",
+    "Class": "UScriptClass'OfflineCharacterProxyComponent'"
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamProxyComponent_0",
+    "Outer": "Default__OfflineCharacter_C",
+    "Class": "UScriptClass'TeamProxyComponent'"
+  }
+]

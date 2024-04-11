@@ -1,0 +1,45 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "EAnvilInputEventType.generated.h"
+
+UENUM(BlueprintType)
+enum class EAnvilInputEventType : uint8 {
+    None,
+    PawnInteract,
+    PawnInventory,
+    PawnAction,
+    PawnCancel,
+    RotateStructureStart,
+    AimStart,
+    ResetMouseMode,
+    EquipPrimary,
+    EquipSecondary,
+    Upgrade,
+    ToggleBuildMenu,
+    SecondaryInteract,
+    ClaimHouse,
+    GotoSleep,
+    PledgeAsMilitia,
+    ReturnToPledgedTown,
+    DismantleByOfficial,
+    RestrictedModeOn,
+    RestrictedModeOff,
+    IncreaseRefineryPriority,
+    DecreaseRefineryPriority,
+    MouseRotationMovement,
+    MouseWheelMovement,
+    Mount,
+    WithdrawSilver,
+    MarketShopDataRequest,
+    RepairStationRepairRequest,
+    TryAttachToHorse,
+    TryDetachFromHorse,
+    MouseSelect,
+    DisableSnapping,
+    Unstuck,
+    SetTownName,
+    Reload,
+    RetractLadder,
+    Climb,
+};
+

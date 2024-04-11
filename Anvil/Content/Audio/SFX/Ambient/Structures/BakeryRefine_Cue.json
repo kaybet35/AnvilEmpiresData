@@ -1,0 +1,61 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "BakeryRefine_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'BakeryRefine_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Structures/BakeryRefine_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'AmbientConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/AmbientConcurrency.0"
+        }
+      ],
+      "Duration": 10000.0,
+      "MaxDistance": 8100.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'StructureAmbient'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/StructureAmbient.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "BakeryRefine_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'BakeryRefine_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Structures/BakeryRefine_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "BakeryRefine_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Ambient/Structures/BakeryRefine.BakeryRefine",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BakeryRefine'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Structures/BakeryRefine.0"
+    }
+  }
+]

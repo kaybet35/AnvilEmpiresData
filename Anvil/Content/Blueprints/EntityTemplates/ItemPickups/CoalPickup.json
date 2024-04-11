@@ -1,0 +1,95 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CoalPickup_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CoalPickup_C'Default__CoalPickup_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/CoalPickup.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__CoalPickup_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 25.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 25.0,
+        "Z": 75.0
+      },
+      "CollisionMask": 32
+    }
+  },
+  {
+    "Type": "CoalPickup_C",
+    "Name": "Default__CoalPickup_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/ItemPickups/CoalPickup.CoalPickup_C'",
+    "Properties": {
+      "CodeNameString": "CoalPickup",
+      "CodeName": 2085222015,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__CoalPickup_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/CoalPickup.1"
+        },
+        {
+          "ObjectName": "PickupProxyComponent'Default__CoalPickup_C:PickupProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/CoalPickup.4"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__CoalPickup_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/CoalPickup.3"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisCoal_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.1"
+      }
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__CoalPickup_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 900.0
+    }
+  },
+  {
+    "Type": "PickupProxyComponent",
+    "Name": "PickupProxyComponent_0",
+    "Outer": "Default__CoalPickup_C",
+    "Class": "UScriptClass'PickupProxyComponent'",
+    "Properties": {
+      "Item": {
+        "ItemType": {
+          "ObjectName": "BlueprintGeneratedClass'ResourceCoal_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceCoal.0"
+        },
+        "Count": 1
+      }
+    }
+  }
+]

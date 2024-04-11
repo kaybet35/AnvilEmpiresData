@@ -1,0 +1,108 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Rivers",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeRandom'Rivers:SoundNodeRandom_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/Rivers.1"
+      },
+      "VolumeMultiplier": 0.66,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'A-B'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX_Master/A-B.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'AmbientConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/AmbientConcurrency.0"
+        }
+      ],
+      "Duration": 10000.0,
+      "MaxDistance": 12500.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'AmbientRiver'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/AmbientRiver.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "Rivers",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Rivers:SoundNodeWavePlayer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/Rivers.2"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Rivers:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/Rivers.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Rivers:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/Rivers.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "Rivers",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Ambient/Water/River01.River01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'River01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/River01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Rivers",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Ambient/Water/River02.River02",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'River02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/River02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "Rivers",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Ambient/Water/River03.River03",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'River03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/River03.0"
+    }
+  }
+]

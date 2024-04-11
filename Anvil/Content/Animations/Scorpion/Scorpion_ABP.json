@@ -1,0 +1,1654 @@
+[
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "Scorpion_ABP_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "reload to fire",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "notPrimed",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Priming",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Primed",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Firing",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 7,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                8
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 3,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'Scorpion_SK_Skeleton'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_Skeleton.1"
+      },
+      "GraphAssetPlayerInformation": [
+        {
+          "AnimGraph": {
+            "PlayerNodeIndices": [
+              14,
+              15
+            ]
+          }
+        }
+      ],
+      "AnimNodeData": [
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295,
+            0,
+            14
+          ],
+          "NodeIndex": 0,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            14,
+            13,
+            12,
+            11,
+            2147483648,
+            9,
+            10,
+            7,
+            7,
+            9,
+            4294967295
+          ],
+          "NodeIndex": 1,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            14,
+            13,
+            12,
+            11,
+            2147483649,
+            9,
+            10,
+            7,
+            7,
+            9,
+            4294967295
+          ],
+          "NodeIndex": 2,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 3,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295
+          ],
+          "NodeIndex": 4,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295
+          ],
+          "NodeIndex": 5,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295
+          ],
+          "NodeIndex": 6,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295
+          ],
+          "NodeIndex": 7,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            14,
+            13,
+            12,
+            11,
+            4294967295,
+            10,
+            10,
+            8,
+            4294967295,
+            9,
+            11,
+            11
+          ],
+          "NodeIndex": 8,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295,
+            1,
+            14,
+            2
+          ],
+          "NodeIndex": 9,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            14,
+            13,
+            12,
+            11,
+            4294967295,
+            10,
+            9,
+            8,
+            4294967295,
+            9,
+            7,
+            11
+          ],
+          "NodeIndex": 10,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295,
+            3,
+            14,
+            4
+          ],
+          "NodeIndex": 11,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            14,
+            13,
+            12,
+            11,
+            4294967295,
+            10,
+            10,
+            8,
+            4294967295,
+            9,
+            11,
+            11
+          ],
+          "NodeIndex": 12,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295,
+            5,
+            14,
+            6
+          ],
+          "NodeIndex": 13,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            14,
+            13,
+            12,
+            11,
+            4294967295,
+            10,
+            9,
+            8,
+            4294967295,
+            9,
+            7,
+            11
+          ],
+          "NodeIndex": 14,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295,
+            15,
+            14,
+            16
+          ],
+          "NodeIndex": 15,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 16,
+          "Flags": "EAnimNodeDataFlags::None"
+        }
+      ],
+      "NodeTypeMap": [
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_StateMachine'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "StateMachineIndexInClass": 3
+              },
+              {
+                "MaxTransitionsPerFrame": 4
+              },
+              {
+                "MaxTransitionsRequests": 5
+              },
+              {
+                "bSkipFirstUpdateTransition": 6
+              },
+              {
+                "bReinitializeOnBecomingRelevant": 7
+              },
+              {
+                "bCreateNotifyMetaData": 8
+              },
+              {
+                "bAllowConduitEntryStates": 9
+              }
+            ],
+            "NumProperties": 10
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_Base'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_StateResult'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "Result": 3
+              },
+              {
+                "Name": 4
+              },
+              {
+                "Group": 5
+              },
+              {
+                "StateIndex": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_Root'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "Result": 3
+              },
+              {
+                "Name": 4
+              },
+              {
+                "Group": 5
+              }
+            ],
+            "NumProperties": 6
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_SequencePlayer'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "GroupIndex": 3
+              },
+              {
+                "GroupScope": 4
+              },
+              {
+                "BlendWeight": 5
+              },
+              {
+                "InternalTimeAccumulator": 6
+              },
+              {
+                "PlayRateScaleBiasClampState": 7
+              },
+              {
+                "GroupName": 8
+              },
+              {
+                "GroupRole": 9
+              },
+              {
+                "Method": 10
+              },
+              {
+                "bIgnoreForRelevancyTest": 11
+              },
+              {
+                "Sequence": 12
+              },
+              {
+                "PlayRateBasis": 13
+              },
+              {
+                "PlayRate": 14
+              },
+              {
+                "PlayRateScaleBiasClampConstants": 15
+              },
+              {
+                "PlayRateScaleBiasClamp": 16
+              },
+              {
+                "StartPosition": 17
+              },
+              {
+                "bLoopAnimation": 18
+              },
+              {
+                "bStartFromMatchingPose": 19
+              }
+            ],
+            "NumProperties": 20
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_SequencePlayerBase'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "GroupIndex": 3
+              },
+              {
+                "GroupScope": 4
+              },
+              {
+                "BlendWeight": 5
+              },
+              {
+                "InternalTimeAccumulator": 6
+              },
+              {
+                "PlayRateScaleBiasClampState": 7
+              }
+            ],
+            "NumProperties": 8
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerBase'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "GroupIndex": 3
+              },
+              {
+                "GroupScope": 4
+              },
+              {
+                "BlendWeight": 5
+              },
+              {
+                "InternalTimeAccumulator": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerRelevancyBase'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_TransitionResult'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "bCanEnterTransition": 3
+              }
+            ],
+            "NumProperties": 4
+          }
+        },
+        {
+          "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_LayeredBoneBlend'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "BasePose": 3
+              },
+              {
+                "BlendPoses": 4
+              },
+              {
+                "BlendMode": 5
+              },
+              {
+                "BlendMasks": 6
+              },
+              {
+                "LayerSetup": 7
+              },
+              {
+                "BlendWeights": 8
+              },
+              {
+                "bMeshSpaceRotationBlend": 9
+              },
+              {
+                "bMeshSpaceScaleBlend": 10
+              },
+              {
+                "CurveBlendOption": 11
+              },
+              {
+                "bBlendRootMotionBasedOnRootBone": 12
+              },
+              {
+                "LODThreshold": 13
+              },
+              {
+                "PerBoneBlendWeights": 14
+              },
+              {
+                "SkeletonGuid": 15
+              },
+              {
+                "VirtualBoneGuid": 16
+              }
+            ],
+            "NumProperties": 17
+          }
+        },
+        {
+          "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendSpacePlayer'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "GroupIndex": 3
+              },
+              {
+                "GroupScope": 4
+              },
+              {
+                "BlendWeight": 5
+              },
+              {
+                "InternalTimeAccumulator": 6
+              },
+              {
+                "PreviousBlendSpace": 7
+              },
+              {
+                "GroupName": 8
+              },
+              {
+                "GroupRole": 9
+              },
+              {
+                "Method": 10
+              },
+              {
+                "bIgnoreForRelevancyTest": 11
+              },
+              {
+                "X": 12
+              },
+              {
+                "Y": 13
+              },
+              {
+                "PlayRate": 14
+              },
+              {
+                "bLoop": 15
+              },
+              {
+                "bResetPlayTimeWhenBlendSpaceChanges": 16
+              },
+              {
+                "StartPosition": 17
+              },
+              {
+                "BlendSpace": 18
+              }
+            ],
+            "NumProperties": 19
+          }
+        },
+        {
+          "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendSpacePlayerBase'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "GroupIndex": 3
+              },
+              {
+                "GroupScope": 4
+              },
+              {
+                "BlendWeight": 5
+              },
+              {
+                "InternalTimeAccumulator": 6
+              },
+              {
+                "PreviousBlendSpace": 7
+              }
+            ],
+            "NumProperties": 8
+          }
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'Scorpion_ABP_C:ExecuteUbergraph_Scorpion_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisMobileWeaponAnimInstance'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'Scorpion_ABP_C:AnimGraph'",
+        "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.1"
+      },
+      {
+        "ObjectName": "Function'Scorpion_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Scorpion_ABP_AnimGraphNode_TransitionResult_1E6CB4DE4C2C7BE8D42C24937DB6CCB2'",
+        "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.2"
+      },
+      {
+        "ObjectName": "Function'Scorpion_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Scorpion_ABP_AnimGraphNode_TransitionResult_6FC3A5D44143AE87B440488D4ADA407D'",
+        "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.3"
+      },
+      {
+        "ObjectName": "Function'Scorpion_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Scorpion_ABP_AnimGraphNode_TransitionResult_C3A8D2BF4559BFD97AD0AAB479A73EF4'",
+        "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.4"
+      },
+      {
+        "ObjectName": "Function'Scorpion_ABP_C:ExecuteUbergraph_Scorpion_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__AnimBlueprintMutables",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Scorpion_ABP_C:AnimBlueprintGeneratedMutableData'",
+          "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.8"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_BlendSpacePlayer_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 280,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_BlendSpacePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 280,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_LayeredBoneBlend",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 352,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Scorpion_ABP": {
+        "ObjectName": "Function'Scorpion_ABP_C:ExecuteUbergraph_Scorpion_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Scorpion_ABP_AnimGraphNode_TransitionResult_C3A8D2BF4559BFD97AD0AAB479A73EF4": {
+        "ObjectName": "Function'Scorpion_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Scorpion_ABP_AnimGraphNode_TransitionResult_C3A8D2BF4559BFD97AD0AAB479A73EF4'",
+        "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.4"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Scorpion_ABP_AnimGraphNode_TransitionResult_6FC3A5D44143AE87B440488D4ADA407D": {
+        "ObjectName": "Function'Scorpion_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Scorpion_ABP_AnimGraphNode_TransitionResult_6FC3A5D44143AE87B440488D4ADA407D'",
+        "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.3"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Scorpion_ABP_AnimGraphNode_TransitionResult_1E6CB4DE4C2C7BE8D42C24937DB6CCB2": {
+        "ObjectName": "Function'Scorpion_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Scorpion_ABP_AnimGraphNode_TransitionResult_1E6CB4DE4C2C7BE8D42C24937DB6CCB2'",
+        "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.2"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'Scorpion_ABP_C:AnimGraph'",
+        "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.1"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Scorpion_ABP_C'Default__Scorpion_ABP_C'",
+      "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.6"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "Scorpion_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraph",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PoseLink'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Scorpion_ABP_AnimGraphNode_TransitionResult_1E6CB4DE4C2C7BE8D42C24937DB6CCB2",
+    "Outer": "Scorpion_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Scorpion_ABP_AnimGraphNode_TransitionResult_6FC3A5D44143AE87B440488D4ADA407D",
+    "Outer": "Scorpion_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Scorpion_ABP_AnimGraphNode_TransitionResult_C3A8D2BF4559BFD97AD0AAB479A73EF4",
+    "Outer": "Scorpion_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Scorpion_ABP",
+    "Outer": "Scorpion_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Scorpion_ABP_C",
+    "Name": "Default__Scorpion_ABP_C",
+    "Class": "AnimBlueprintGeneratedClass'Anvil/Content/Animations/Scorpion/Scorpion_ABP.Scorpion_ABP_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "__AnimBlueprintMutables": {
+        "__FloatProperty": 0.0,
+        "__FloatProperty_0": 0.0
+      },
+      "AnimBlueprintExtension_PropertyAccess": {},
+      "AnimBlueprintExtension_Base": {},
+      "AnimGraphNode_Root": {
+        "Result": {
+          "LinkID": 3
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer_1": {
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'Scorpion_AO_horizontal'",
+          "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_AO_horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer": {
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'Scorpion_AO_vertical'",
+          "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_AO_vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend": {
+        "BasePose": {
+          "LinkID": 1
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 2
+          },
+          {
+            "LinkID": 16
+          }
+        ],
+        "BlendMode": "ELayeredBoneBlendMode::BranchFilter",
+        "BlendMasks": [],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "vertical_pivot",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "arm_R",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "arm_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "launcher_root",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "reloader",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "trigger",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::Override",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "F0389FF5-48BC9732-A067DE98-04EB4154",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_TransitionResult_3": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_2": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_3": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Scorpion_shooting_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_shooting_Anim.1"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3": {
+        "Result": {
+          "LinkID": 8
+        }
+      },
+      "AnimGraphNode_SequencePlayer_2": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Scorpion_shooting_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_shooting_Anim.1"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2": {
+        "Result": {
+          "LinkID": 10
+        }
+      },
+      "AnimGraphNode_SequencePlayer_1": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Scorpion_reload_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_reload_Anim.1"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1": {
+        "Result": {
+          "LinkID": 12
+        }
+      },
+      "AnimGraphNode_SequencePlayer": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Scorpion_reload_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_reload_Anim.1"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult": {
+        "Result": {
+          "LinkID": 14
+        }
+      },
+      "AnimGraphNode_StateMachine": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      }
+    }
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedConstantData",
+    "Outer": "Scorpion_ABP_C",
+    "Class": "UScriptClass'ScriptStruct'"
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedMutableData",
+    "Outer": "Scorpion_ABP_C",
+    "Class": "UScriptClass'ScriptStruct'"
+  }
+]

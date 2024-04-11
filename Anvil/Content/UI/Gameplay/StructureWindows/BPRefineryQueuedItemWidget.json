@@ -1,0 +1,494 @@
+[
+  {
+    "Type": "Border",
+    "Name": "ItemBorder",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "Background": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.7,
+            "G": 0.7,
+            "B": 0.7,
+            "A": 1.0,
+            "Hex": "FFDADADA"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'IconBackground'",
+          "ObjectPath": "Anvil/Content/Textures/UI/IconBackground.0"
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPRefineryQueuedItemWidget_C:WidgetTree.ItemBorder.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.1"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPRefineryQueuedItemWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.16"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "ItemBorder",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Border'BPRefineryQueuedItemWidget_C:WidgetTree.ItemBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.0"
+      },
+      "Content": {
+        "ObjectName": "Overlay'BPRefineryQueuedItemWidget_C:WidgetTree.Overlay_57'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.12"
+      }
+    }
+  },
+  {
+    "Type": "BPRefineryQueuedItemWidget_C",
+    "Name": "Default__BPRefineryQueuedItemWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.BPRefineryQueuedItemWidget_C'",
+    "Properties": {
+      "ItemBorderBrush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'IconBackground'",
+          "ObjectPath": "Anvil/Content/Textures/UI/IconBackground.0"
+        }
+      },
+      "ItemBorderOtherPlayerBrush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'IconBackgroundDesat'",
+          "ObjectPath": "Anvil/Content/Textures/UI/IconBackgroundDesat.0"
+        }
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "CancelButton",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Button'",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.7,
+              "G": 0.7,
+              "B": 0.7,
+              "A": 1.0,
+              "Hex": "FFDADADA"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'ActionButtons_Cancel'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Cancel.0"
+          }
+        },
+        "Hovered": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'ActionButtons_Cancel'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Cancel.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "Pressed": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.333,
+              "G": 0.333,
+              "B": 0.333,
+              "A": 1.0,
+              "Hex": "FF9C9C9C"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'ActionButtons_Cancel'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Cancel.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 82.0,
+            "Y": 82.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.1,
+              "G": 0.1,
+              "B": 0.1,
+              "A": 1.0,
+              "Hex": "FF595959"
+            }
+          }
+        }
+      },
+      "IsFocusable": false,
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPRefineryQueuedItemWidget_C:WidgetTree.SizeBox_1.SizeBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.17"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPRefineryQueuedItemWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.7"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPRefineryQueuedItemWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.6"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPRefineryQueuedItemWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_0",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -10.0,
+          "Top": -10.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPRefineryQueuedItemWidget_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.4"
+      },
+      "Content": {
+        "ObjectName": "Image'BPRefineryQueuedItemWidget_C:WidgetTree.PrivateIcon'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.11"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Outer": "CanvasPanel_0",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 50.0,
+          "Top": 50.0,
+          "Right": 30.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPRefineryQueuedItemWidget_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.4"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPRefineryQueuedItemWidget_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Outer": "CanvasPanel_0",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPRefineryQueuedItemWidget_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.4"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPRefineryQueuedItemWidget_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPRefineryQueuedItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPRefineryQueuedItemWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.7"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_0",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPRefineryQueuedItemWidget_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.8"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPRefineryQueuedItemWidget_C:WidgetTree.SizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.14"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "ItemImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "OverlaySlot'BPRefineryQueuedItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.13"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "PrivateIcon",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'IconPrivate'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Actions/IconPrivate.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPRefineryQueuedItemWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.5"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_57",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'BPRefineryQueuedItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot'BPRefineryQueuedItemWidget_C:WidgetTree.ItemBorder.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.1"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_57",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 5.0,
+        "Top": 5.0,
+        "Right": 5.0,
+        "Bottom": 5.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'BPRefineryQueuedItemWidget_C:WidgetTree.Overlay_57'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.12"
+      },
+      "Content": {
+        "ObjectName": "Image'BPRefineryQueuedItemWidget_C:WidgetTree.ItemImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.10"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 100.0,
+      "HeightOverride": 100.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPRefineryQueuedItemWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPRefineryQueuedItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.9"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 20.0,
+      "HeightOverride": 20.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPRefineryQueuedItemWidget_C:WidgetTree.SizeBox_1.SizeBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPRefineryQueuedItemWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.6"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPRefineryQueuedItemWidget_C:WidgetTree.SizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.14"
+      },
+      "Content": {
+        "ObjectName": "Border'BPRefineryQueuedItemWidget_C:WidgetTree.ItemBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.0"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Outer": "SizeBox_1",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPRefineryQueuedItemWidget_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.15"
+      },
+      "Content": {
+        "ObjectName": "Button'BPRefineryQueuedItemWidget_C:WidgetTree.CancelButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.3"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPRefineryQueuedItemWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPRefineryQueuedItemWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.19"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'RefineryQueuedItemWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SizeBox_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SizeBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPRefineryQueuedItemWidget_C'Default__BPRefineryQueuedItemWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPRefineryQueuedItemWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPRefineryQueuedItemWidget_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPRefineryQueuedItemWidget.4"
+      }
+    }
+  }
+]

@@ -1,0 +1,333 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "FirepitT1_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FirepitT1_C'Default__FirepitT1_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.5"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__FirepitT1_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "CookingProxyComponent",
+    "Name": "CookingProxyComponent_0",
+    "Outer": "Default__FirepitT1_C",
+    "Class": "UScriptClass'CookingProxyComponent'",
+    "Properties": {
+      "FuelList": [
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+          },
+          "BurnDurationSec": 180.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
+          },
+          "BurnDurationSec": 60.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+          },
+          "BurnDurationSec": 60.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceBranchesRaw_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranchesRaw.0"
+          },
+          "BurnDurationSec": 20.0
+        }
+      ],
+      "RecipeList": [
+        {
+          "InputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceBerries_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBerries.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "OutputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'BerryRations_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/BerryRations.1"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "CookDurationSec": 30.0
+        },
+        {
+          "InputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceMeatSmall_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceMeatSmall.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "OutputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'SmallMeatRations_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/SmallMeatRations.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "CookDurationSec": 30.0
+        }
+      ]
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__FirepitT1_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    },
+    "Properties": {
+      "StartDelayHours": 8.0
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableComp",
+    "Outer": "Default__FirepitT1_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Template": {
+      "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+    }
+  },
+  {
+    "Type": "FirepitT1_C",
+    "Name": "Default__FirepitT1_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.FirepitT1_C'",
+    "Template": {
+      "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
+    },
+    "Properties": {
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__FirepitT1_C:TeamComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.15"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__FirepitT1_C:HealthComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.7"
+      },
+      "RepairComp": {
+        "ObjectName": "RepairProxyComponent'Default__FirepitT1_C:RepairComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.12"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__FirepitT1_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.14"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__FirepitT1_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.4"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__FirepitT1_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.6"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__FirepitT1_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.1"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__FirepitT1_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.3"
+      },
+      "ScorchComp": null,
+      "CodeNameString": "FirepitT1",
+      "CodeName": -2079673763,
+      "bShowOnMap": true,
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "Components": [
+        {
+          "ObjectName": "CookingProxyComponent'Default__FirepitT1_C:CookingProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.2"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__FirepitT1_C:InventoryProxyComponent_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.8"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__FirepitT1_C:InventoryProxyComponent_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.11"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__FirepitT1_C:InventoryProxyComponent_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.10"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__FirepitT1_C:InventoryProxyComponent_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FirepitT1.9"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisFirepitT1_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFirepitT1.2"
+      }
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__FirepitT1_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'Firepit_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Firepit.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthComp",
+    "Outer": "Default__FirepitT1_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
+    },
+    "Properties": {
+      "MaxHealth": 20.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_4",
+    "Outer": "Default__FirepitT1_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "bForceStackable": true
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_5",
+    "Outer": "Default__FirepitT1_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "bForceStackable": true
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_6",
+    "Outer": "Default__FirepitT1_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "bForceStackable": true
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_7",
+    "Outer": "Default__FirepitT1_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "bForceStackable": true
+    }
+  },
+  {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairComp",
+    "Outer": "Default__FirepitT1_C",
+    "Class": "UScriptClass'RepairProxyComponent'",
+    "Template": {
+      "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+    },
+    "Properties": {
+      "TotalRepairCost": 2
+    }
+  },
+  {
+    "Type": "ScorchProxyComponent",
+    "Name": "ScorchProxyComponent_0",
+    "Outer": "Default__FirepitT1_C",
+    "Class": "UScriptClass'ScorchProxyComponent'",
+    "Template": {
+      "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__FirepitT1_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamComp",
+    "Outer": "Default__FirepitT1_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    },
+    "Properties": {
+      "Accessibility": "EAnvilAccessibilityType::AllCanUse"
+    }
+  }
+]

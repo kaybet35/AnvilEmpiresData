@@ -1,0 +1,2921 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "RefineSound_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'WoodCutterRefine_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Structures/WoodCutterRefine_Cue.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 600.0
+      },
+      "ComponentTags": [
+        "Refining"
+      ]
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisWoodRefineryT3_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.60"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisRefinery'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh15",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh16",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisTeamMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisTeamMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh14",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh13",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScorchEffect10",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ScorchEffectComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh12",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh11",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh8",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh10",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh9",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScorchEffect5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ScorchEffectComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScorchEffect1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ScorchEffectComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScorchEffect9",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ScorchEffectComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScorchEffect7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ScorchEffectComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScorchEffect8",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ScorchEffectComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScorchEffect6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ScorchEffectComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScorchEffect2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ScorchEffectComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScorchEffect4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ScorchEffectComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScorchEffect3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ScorchEffectComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fire",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RefineSound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Populate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Refine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisWoodRefineryT3_C'Default__BPVisWoodRefineryT3_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisWoodRefineryT3_C",
+    "Name": "Default__BPVisWoodRefineryT3_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.BPVisWoodRefineryT3_C'",
+    "Properties": {
+      "RefineResourceDataComponent": {
+        "ObjectName": "RefineResourceDataComponent'Default__BPVisWoodRefineryT3_C:RefineResourceDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.9"
+      },
+      "ScaffoldingComponent": {
+        "ObjectName": "VisScaffoldingComponent'Default__BPVisWoodRefineryT3_C:ScaffoldingComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.65"
+      },
+      "UpgradeDataComponent": {
+        "ObjectName": "UpgradeDataComponent'Default__BPVisWoodRefineryT3_C:UpgradeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.64"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisWoodRefineryT3_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.6"
+      },
+      "TeamDataComponent": {
+        "ObjectName": "TeamDataComponent'Default__BPVisWoodRefineryT3_C:TeamDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.63"
+      },
+      "StructureDataComponent": {
+        "ObjectName": "StructureDataComponent'Default__BPVisWoodRefineryT3_C:StructureDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.62"
+      },
+      "ScorchDataComponent": {
+        "ObjectName": "ScorchDataComponent'Default__BPVisWoodRefineryT3_C:ScorchDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.14"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWoodRefineryT3_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.0"
+      },
+      "UseVolumeDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisWoodRefineryT3_C:UseVolumeDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.4"
+      },
+      "GrassRemovalVolume": {
+        "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisWoodRefineryT3_C:GrassRemovalVolume'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.5"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "73DA8F244A03E9F9CC04D0959362EFF8",
+        "SourceString": "Saw Mill",
+        "LocalizedString": "Saw Mill"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "2D319C5E40B869E97A6ACC8AEEF939DE",
+        "SourceString": "Increase health and improves production speed.",
+        "LocalizedString": "Increase health and improves production speed."
+      },
+      "MapIconProperty": {
+        "Icon": {
+          "ObjectName": "Texture2D'IconLumberMill'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconLumberMill.0"
+        },
+        "MapActorType": "EMapIconType::MediumStructure"
+      },
+      "UseWindowType": "EHUDWindowType::Refinery",
+      "UseDisclaimerText": {
+        "Namespace": "",
+        "Key": "CCE7DA1E4028D77EB3FC6693BB1506E8",
+        "SourceString": "Forestry and wood refinement gameplay are currently using simplified, temporary mechanics. They will be replaced with completely new systems and activites in future Pre-Alpha builds.",
+        "LocalizedString": "Forestry and wood refinement gameplay are currently using simplified, temporary mechanics. They will be replaced with completely new systems and activites in future Pre-Alpha builds."
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWoodRefineryT3_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.0"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "UseVolumeDecalComponent",
+    "Outer": "Default__BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWoodRefineryT3_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.0"
+      }
+    }
+  },
+  {
+    "Type": "GrassRemovalVolumeComponent",
+    "Name": "GrassRemovalVolume",
+    "Outer": "Default__BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'GrassRemovalVolumeComponent'",
+    "Properties": {
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'Default__BPVisWoodRefineryT3_C:GrassRemovalVolume.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.61"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWoodRefineryT3_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara1_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SmallFire'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SmallFire.42"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": 10.770599,
+        "Y": -9.638428,
+        "Z": 36.411842
+      },
+      "ComponentTags": [
+        "Refining"
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SmallFire'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SmallFire.42"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": -372.5947,
+        "Y": 408.99655,
+        "Z": 42.47144
+      },
+      "ComponentTags": [
+        "Refining"
+      ]
+    }
+  },
+  {
+    "Type": "RefineResourceDataComponent",
+    "Name": "RefineResourceDataComponent",
+    "Outer": "Default__BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'RefineResourceDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Fire_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Populate_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Refine_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "ScorchDataComponent",
+    "Name": "ScorchDataComponent",
+    "Outer": "Default__BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'ScorchDataComponent'"
+  },
+  {
+    "Type": "ScorchEffectComponent",
+    "Name": "ScorchEffect10_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'ScorchEffectComponent'",
+    "Properties": {
+      "ScorchThreshold": 0.5,
+      "Asset": {
+        "ObjectName": "NiagaraSystem'StructureFire01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/StructureFire01.40"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": 635.74194,
+        "Y": 443.03354,
+        "Z": 11.482803
+      },
+      "bVisible": false,
+      "ComponentTags": [
+        "refining"
+      ]
+    }
+  },
+  {
+    "Type": "ScorchEffectComponent",
+    "Name": "ScorchEffect1_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'ScorchEffectComponent'",
+    "Properties": {
+      "ScorchThreshold": 0.15,
+      "Asset": {
+        "ObjectName": "NiagaraSystem'StructureFire03'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/StructureFire03.22"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": -169.01422,
+        "Y": 229.96637,
+        "Z": 418.77545
+      },
+      "RelativeRotation": {
+        "Pitch": 40.000015,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "ScorchEffectComponent",
+    "Name": "ScorchEffect2_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'ScorchEffectComponent'",
+    "Properties": {
+      "ScorchThreshold": 0.25,
+      "Asset": {
+        "ObjectName": "NiagaraSystem'StructureFire03'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/StructureFire03.22"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": -89.42808,
+        "Y": -39.70463,
+        "Z": 49.16749
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "ScorchEffectComponent",
+    "Name": "ScorchEffect3_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'ScorchEffectComponent'",
+    "Properties": {
+      "ScorchThreshold": 0.4,
+      "Asset": {
+        "ObjectName": "NiagaraSystem'StructureFire02'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/StructureFire02.30"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": 105.26574,
+        "Y": -103.63703,
+        "Z": 604.97064
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.00012,
+        "Roll": 0.0
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "ScorchEffectComponent",
+    "Name": "ScorchEffect4_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'ScorchEffectComponent'",
+    "Properties": {
+      "ScorchThreshold": 0.55,
+      "Asset": {
+        "ObjectName": "NiagaraSystem'StructureFire01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/StructureFire01.40"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": -315.29858,
+        "Y": -160.65005,
+        "Z": 277.73004
+      },
+      "RelativeRotation": {
+        "Pitch": 40.00001,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "ScorchEffectComponent",
+    "Name": "ScorchEffect5_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'ScorchEffectComponent'",
+    "Properties": {
+      "ScorchThreshold": 0.75,
+      "Asset": {
+        "ObjectName": "NiagaraSystem'StructureFire02'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/StructureFire02.30"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": 268.2768,
+        "Y": -315.81915,
+        "Z": -0.76626587
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -91.19131,
+        "Roll": 0.0
+      },
+      "bVisible": false,
+      "ComponentTags": [
+        "refining"
+      ]
+    }
+  },
+  {
+    "Type": "ScorchEffectComponent",
+    "Name": "ScorchEffect6_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'ScorchEffectComponent'",
+    "Properties": {
+      "ScorchThreshold": 0.75,
+      "Asset": {
+        "ObjectName": "NiagaraSystem'StructureFire01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/StructureFire01.40"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": 271.92255,
+        "Y": 178.67485,
+        "Z": 510.01352
+      },
+      "RelativeRotation": {
+        "Pitch": -40.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "ScorchEffectComponent",
+    "Name": "ScorchEffect7_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'ScorchEffectComponent'",
+    "Properties": {
+      "ScorchThreshold": 0.75,
+      "Asset": {
+        "ObjectName": "NiagaraSystem'Fireball01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/Fireball01.25"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": 376.64352,
+        "Y": 398.25726,
+        "Z": 25.17131
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "ScorchEffectComponent",
+    "Name": "ScorchEffect8_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'ScorchEffectComponent'",
+    "Properties": {
+      "ScorchThreshold": 0.85,
+      "Asset": {
+        "ObjectName": "NiagaraSystem'StructureFire02'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/StructureFire02.30"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": 135.13457,
+        "Y": 341.75586,
+        "Z": 615.18646
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -180.00018,
+        "Roll": 0.0
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "ScorchEffectComponent",
+    "Name": "ScorchEffect9_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'ScorchEffectComponent'",
+    "Properties": {
+      "ScorchThreshold": 0.95,
+      "Asset": {
+        "ObjectName": "NiagaraSystem'Fireball01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/Fireball01.25"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": 406.47787,
+        "Y": -328.2509,
+        "Z": 408.87772
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisWoodRefineryT3_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.10"
+      },
+      "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ScorchEffectComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ScorchEffectComponent'BPVisWoodRefineryT3_C:ScorchEffect3_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.18"
+      },
+      "VariableGuid": "97267E6B-4858432B-2B2BE4A5-E9E12603",
+      "InternalVariableName": "ScorchEffect3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ScorchEffectComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ScorchEffectComponent'BPVisWoodRefineryT3_C:ScorchEffect4_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.19"
+      },
+      "VariableGuid": "47E44021-418E6F54-DD7481B7-B512A272",
+      "InternalVariableName": "ScorchEffect4"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ScorchEffectComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ScorchEffectComponent'BPVisWoodRefineryT3_C:ScorchEffect2_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.17"
+      },
+      "VariableGuid": "AE6FCFE4-461B26B4-982B0ABD-745C4946",
+      "InternalVariableName": "ScorchEffect2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ScorchEffectComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ScorchEffectComponent'BPVisWoodRefineryT3_C:ScorchEffect6_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.21"
+      },
+      "VariableGuid": "37273BBC-4CB95F98-39AFF483-DA316620",
+      "InternalVariableName": "ScorchEffect6"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_14",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ScorchEffectComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ScorchEffectComponent'BPVisWoodRefineryT3_C:ScorchEffect8_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.23"
+      },
+      "VariableGuid": "D2116444-479AAA23-9C882A9E-5F84B70E",
+      "InternalVariableName": "ScorchEffect8"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_15",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ScorchEffectComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ScorchEffectComponent'BPVisWoodRefineryT3_C:ScorchEffect7_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.22"
+      },
+      "VariableGuid": "A2A5CB1C-4F7165D6-7A2A7497-0052639B",
+      "InternalVariableName": "ScorchEffect7"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_16",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ScorchEffectComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ScorchEffectComponent'BPVisWoodRefineryT3_C:ScorchEffect9_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.24"
+      },
+      "VariableGuid": "17F26C17-45A8D511-A249AEAB-B8FA7146",
+      "InternalVariableName": "ScorchEffect9"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_17",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ScorchEffectComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ScorchEffectComponent'BPVisWoodRefineryT3_C:ScorchEffect1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.16"
+      },
+      "VariableGuid": "8F594684-4EF01AF4-3C3DCC9F-8C8B0895",
+      "InternalVariableName": "ScorchEffect1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_19",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.82"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6D42B23D-456CBF6C-E2C3F38D-AE913661",
+      "InternalVariableName": "VisStaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_20",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh3_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.75"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.38"
+        }
+      ],
+      "VariableGuid": "763FE354-4BDF4F1E-59383E83-3873C242",
+      "InternalVariableName": "VisStaticMesh3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_21",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ScorchEffectComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ScorchEffectComponent'BPVisWoodRefineryT3_C:ScorchEffect5_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.20"
+      },
+      "VariableGuid": "2FB04D99-4CECC1CA-3EA2E1B3-D0E52593",
+      "InternalVariableName": "ScorchEffect5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_22",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh9_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.81"
+      },
+      "VariableGuid": "467FCFBB-43C3F47F-427234A1-7B482E62",
+      "InternalVariableName": "VisStaticMesh9"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_23",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh6_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.78"
+      },
+      "VariableGuid": "EF27D771-436A3AA3-AC9B08BA-2D252516",
+      "InternalVariableName": "VisStaticMesh6"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_26",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh4_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.76"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "16628B89-4F51BEB2-E2E7EFA3-F30B8484",
+      "InternalVariableName": "VisStaticMesh4"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_27",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh5_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.77"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "DBCC3E33-41CFC21D-944BF2B9-437AF815",
+      "InternalVariableName": "VisStaticMesh5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_28",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.73"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_29'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_30'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_31'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.44"
+        }
+      ],
+      "VariableGuid": "408CBFA8-43D61A2B-C3C58A8B-63274571",
+      "InternalVariableName": "VisStaticMesh1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_29",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh2_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.74"
+      },
+      "VariableGuid": "01D4C6EC-409BDB98-8A37918A-992DCA0B",
+      "InternalVariableName": "VisStaticMesh2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_30",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh10_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.66"
+      },
+      "VariableGuid": "F8494F33-4E511943-7EC8FD9B-34839510",
+      "InternalVariableName": "VisStaticMesh10"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_31",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh8_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.80"
+      },
+      "VariableGuid": "20E45A56-46BB0413-119F0EB8-72E1102A",
+      "InternalVariableName": "VisStaticMesh8"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_32",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh7_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.79"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "820F0C15-4253399C-084AEAAC-F6E08DBB",
+      "InternalVariableName": "VisStaticMesh7"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_33",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh11_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.67"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "63B797D3-4BEF72DB-F822759B-1A2A88B2",
+      "InternalVariableName": "VisStaticMesh11"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_34",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh12_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.68"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_35'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_36'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_37'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.50"
+        }
+      ],
+      "VariableGuid": "418A31D2-4FFCFB5A-898F1F94-4228EF97",
+      "InternalVariableName": "VisStaticMesh12"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_35",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ScorchEffectComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ScorchEffectComponent'BPVisWoodRefineryT3_C:ScorchEffect10_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.15"
+      },
+      "VariableGuid": "7AC69697-45F1B75D-0A850A94-7BFB9E64",
+      "InternalVariableName": "ScorchEffect10"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_36",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh13_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.69"
+      },
+      "VariableGuid": "96B45A71-45043DCA-6F227791-AD1411F2",
+      "InternalVariableName": "VisStaticMesh13"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_37",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisWoodRefineryT3_C:Niagara1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.7"
+      },
+      "VariableGuid": "63668CD7-4A6AEC15-F482B4B8-70516EAD",
+      "InternalVariableName": "Niagara1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_38",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh14_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.70"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "7B6F11CC-4F418F5B-3011F5BE-BC6894B4",
+      "InternalVariableName": "VisStaticMesh14"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_39",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisTeamMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisTeamMeshComponent'BPVisWoodRefineryT3_C:VisTeamMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.83"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "0560C05F-408F8F72-46C9B08C-96473791",
+      "InternalVariableName": "VisTeamMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisWoodRefineryT3_C:Refine_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.13"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.58"
+        }
+      ],
+      "VariableGuid": "B904C855-4B0C3CC4-2AF7E8B7-0153DC2A",
+      "InternalVariableName": "Refine"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_40",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh16_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.72"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6640299D-4FE71D10-15B4F38F-F22AB595",
+      "InternalVariableName": "VisStaticMesh16"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_41",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodRefineryT3_C:VisStaticMesh15_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.71"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "832845FB-49B61983-A62E2D92-E530E8D0",
+      "InternalVariableName": "VisStaticMesh15"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisWoodRefineryT3_C:Populate_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.12"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "14289F70-4E0DA893-374286A5-18600475",
+      "InternalVariableName": "Populate"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'BPVisWoodRefineryT3_C:RefineSound_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.1"
+      },
+      "VariableGuid": "C2EA082D-49A84F84-726919A2-EC5D7AEE",
+      "InternalVariableName": "RefineSound"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisWoodRefineryT3_C:Niagara_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.8"
+      },
+      "VariableGuid": "CBA89992-4615D19D-A0AD0495-EB622357",
+      "InternalVariableName": "Niagara"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisWoodRefineryT3_C:Fire_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.11"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.33"
+        }
+      ],
+      "VariableGuid": "4264ECCB-4D8ECF98-5C2F73BC-B947499C",
+      "InternalVariableName": "Fire"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.59"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_27'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_28'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_32'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_33'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.46"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_34'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.47"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_38'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_39'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_40'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.54"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_41'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.55"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.58"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.59"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.38"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_27'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_28'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_29'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_30'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_31'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_32'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_33'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.46"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_34'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.47"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_35'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_36'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_37'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_38'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_39'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_40'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.54"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_41'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.55"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisWoodRefineryT3_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.25"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "GrassRemovalVolume",
+    "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "StructureDataComponent",
+    "Name": "StructureDataComponent",
+    "Outer": "Default__BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'StructureDataComponent'"
+  },
+  {
+    "Type": "TeamDataComponent",
+    "Name": "TeamDataComponent",
+    "Outer": "Default__BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'TeamDataComponent'"
+  },
+  {
+    "Type": "UpgradeDataComponent",
+    "Name": "UpgradeDataComponent",
+    "Outer": "Default__BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'UpgradeDataComponent'"
+  },
+  {
+    "Type": "VisScaffoldingComponent",
+    "Name": "ScaffoldingComponent",
+    "Outer": "Default__BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisScaffoldingComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWoodRefineryT3_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisWoodRefineryT3.0"
+      }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh10_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Wood01Pile01'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Wood01Pile01.2"
+      },
+      "RelativeLocation": {
+        "X": 1.2E-05,
+        "Y": -160.07664,
+        "Z": 35.361526
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -180.00009,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "refining",
+        "Structure",
+        "ProjectToLandscape"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh11_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Barrels03'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Barrels03.2"
+      },
+      "RelativeLocation": {
+        "X": -198.00491,
+        "Y": -80.82578,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -0.000266,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "ProjectToLandscape"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh12_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Firepit01'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Firepit01.2"
+      },
+      "RelativeLocation": {
+        "X": -316.10083,
+        "Y": 375.61703,
+        "Z": -6.1E-05
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -89.99994,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "ProjectToLandscape",
+        "DynamicMaterial"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh13_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FireWood02'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/FireWood02.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 22.511993
+      },
+      "ComponentTags": [
+        "refining",
+        "Structure"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh14_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Saw02'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Saw02.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeLocation": {
+        "X": 414.25714,
+        "Y": 93.021095,
+        "Z": 269.90527
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -269.99997,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "refining",
+        "Structure"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh15_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Saw01'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Saw01.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeLocation": {
+        "X": 407.6847,
+        "Y": 52.38204,
+        "Z": 233.76219
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.00002,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "refining",
+        "Structure"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh16_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Axe01'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Axe01.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeLocation": {
+        "X": 405.00766,
+        "Y": 319.79462,
+        "Z": 2E-06
+      },
+      "RelativeRotation": {
+        "Pitch": 1.4E-05,
+        "Yaw": 5.5E-05,
+        "Roll": 10.000243
+      },
+      "ComponentTags": [
+        "refining",
+        "Structure",
+        "ProjectToLandscape"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh1_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'WoodPile04'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/WoodPile04.2"
+      },
+      "RelativeLocation": {
+        "X": 265.8855,
+        "Y": -104.342896,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.000114,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "ProjectToLandscape"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh2_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'WoodPile04'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/WoodPile04.2"
+      },
+      "RelativeLocation": {
+        "X": 0.000131,
+        "Y": -156.71797,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -180.00006,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "ProjectToLandscape"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh3_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SawHorse01'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/SawHorse01.2"
+      },
+      "RelativeLocation": {
+        "X": 129.64815,
+        "Y": 403.95596,
+        "Z": 0.000793
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "ProjectToLandscape"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh4_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SharpeningWheel01'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/SharpeningWheel01.2"
+      },
+      "RelativeLocation": {
+        "X": -81.44697,
+        "Y": 391.48416,
+        "Z": -0.000122
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 30.000103,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "ProjectToLandscape"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh5_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'WoodPile03'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/WoodPile03.2"
+      },
+      "RelativeLocation": {
+        "X": -229.3183,
+        "Y": 148.92676,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.00038,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "ProjectToLandscape"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh6_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'ResourceWood01'",
+        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceWood01.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeLocation": {
+        "X": 94.22753,
+        "Y": 4.388261,
+        "Z": 47.01467
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 6.3E-05,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "refining",
+        "Structure"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh7_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Barrels05'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Barrels05.2"
+      },
+      "RelativeLocation": {
+        "X": -221.82729,
+        "Y": -226.314,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -0.000266,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "ProjectToLandscape"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh8_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Wood01Pile01'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Wood01Pile01.2"
+      },
+      "RelativeLocation": {
+        "X": 6E-06,
+        "Y": 12.432341,
+        "Z": 35.361526
+      },
+      "ComponentTags": [
+        "refining",
+        "Structure",
+        "ProjectToLandscape"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh9_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'ResourceWood01'",
+        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceWood01.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeLocation": {
+        "X": -98.0201,
+        "Y": 4.387909,
+        "Z": 47.01458
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 6.3E-05,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "refining",
+        "Structure"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'WoodRefineryT3'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/WoodRefineryT3.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "ProjectToLandscape"
+      ]
+    }
+  },
+  {
+    "Type": "VisTeamMeshComponent",
+    "Name": "VisTeamMesh_GEN_VARIABLE",
+    "Outer": "BPVisWoodRefineryT3_C",
+    "Class": "UScriptClass'VisTeamMeshComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 243.20963,
+        "Y": 379.8881,
+        "Z": 422.82156
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -179.99995,
+        "Roll": 0.0
+      }
+    }
+  }
+]

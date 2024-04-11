@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "ScorpionArrowProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ScorpionArrowProjectile_C'Default__ScorpionArrowProjectile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/ScorpionArrowProjectile.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ProjectileMovementProxyComponent",
+    "Name": "ProjectileMovementProxyComponent_0",
+    "Outer": "Default__ScorpionArrowProjectile_C",
+    "Class": "UScriptClass'ProjectileMovementProxyComponent'",
+    "Properties": {
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectScorpionImpact_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectScorpionImpact.0"
+      },
+      "Speed": 9000.0,
+      "MaxRange": 1000.0,
+      "DamageAmount": 500,
+      "DamageType": "EAnvilDamageType::Missile",
+      "Radius": 10.0,
+      "HeadingTolerance": 5.0,
+      "NozzlePitchMin": -22.5,
+      "NozzlePitchMax": 22.5,
+      "RotationSpeed": 30.0
+    }
+  },
+  {
+    "Type": "ScorpionArrowProjectile_C",
+    "Name": "Default__ScorpionArrowProjectile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Items/ScorpionArrowProjectile.ScorpionArrowProjectile_C'",
+    "Properties": {
+      "CodeNameString": "ScorpionArrowProjectile",
+      "CodeName": -590842081,
+      "bStatic": false,
+      "bSkipPersist": true,
+      "Components": [
+        {
+          "ObjectName": "ProjectileMovementProxyComponent'Default__ScorpionArrowProjectile_C:ProjectileMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/ScorpionArrowProjectile.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisArrowProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisArrowProjectile.2"
+      }
+    }
+  }
+]

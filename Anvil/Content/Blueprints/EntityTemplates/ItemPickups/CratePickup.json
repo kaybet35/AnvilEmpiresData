@@ -1,0 +1,82 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CratePickup_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CratePickup_C'Default__CratePickup_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/CratePickup.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__CratePickup_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 25.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 25.0,
+        "Z": 75.0
+      },
+      "CollisionMask": 32
+    }
+  },
+  {
+    "Type": "CratePickup_C",
+    "Name": "Default__CratePickup_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/ItemPickups/CratePickup.CratePickup_C'",
+    "Properties": {
+      "CodeNameString": "CratePickup",
+      "CodeName": -157873791,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__CratePickup_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/CratePickup.1"
+        },
+        {
+          "ObjectName": "PickupProxyComponent'Default__CratePickup_C:PickupProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/CratePickup.3"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisCrate_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.1"
+      }
+    }
+  },
+  {
+    "Type": "PickupProxyComponent",
+    "Name": "PickupProxyComponent_0",
+    "Outer": "Default__CratePickup_C",
+    "Class": "UScriptClass'PickupProxyComponent'",
+    "Properties": {
+      "Item": {
+        "ItemType": {
+          "ObjectName": "BlueprintGeneratedClass'Crate_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Crate.0"
+        },
+        "Count": 1
+      }
+    }
+  }
+]

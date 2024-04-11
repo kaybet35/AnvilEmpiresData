@@ -1,0 +1,113 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "RockMineUnbuilt_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "RockMineUnbuilt_C'Default__RockMineUnbuilt_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMineUnbuilt.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_2",
+    "Outer": "Default__RockMineUnbuilt_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "ExtendFootprint": true,
+      "Extents": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 8
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__RockMineUnbuilt_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'RockMine_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/RockMine.0"
+      },
+      "bAddToNavMesh": true,
+      "CollisionMask": 256
+    }
+  },
+  {
+    "Type": "MeshCollisionProxyComponent",
+    "Name": "MeshCollisionProxyComponent_0",
+    "Outer": "Default__RockMineUnbuilt_C",
+    "Class": "UScriptClass'MeshCollisionProxyComponent'",
+    "Properties": {
+      "PhysicsAssetName": {
+        "ObjectName": "StaticMesh'RockMineBuildSite'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/RockMineBuildSite.2"
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeStone",
+      "CollisionMask": 16785410
+    }
+  },
+  {
+    "Type": "RockMineUnbuilt_C",
+    "Name": "Default__RockMineUnbuilt_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMineUnbuilt.RockMineUnbuilt_C'",
+    "Properties": {
+      "CodeNameString": "RockMineUnbuilt",
+      "CodeName": -989992381,
+      "bShowOnMap": true,
+      "Components": [
+        {
+          "ObjectName": "MeshCollisionProxyComponent'Default__RockMineUnbuilt_C:MeshCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMineUnbuilt.3"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__RockMineUnbuilt_C:BoxCollisionProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMineUnbuilt.1"
+        },
+        {
+          "ObjectName": "UpgradeProxyComponent'Default__RockMineUnbuilt_C:UpgradeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMineUnbuilt.5"
+        },
+        {
+          "ObjectName": "FootprintCollisionProxyComponent'Default__RockMineUnbuilt_C:FootprintCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMineUnbuilt.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisRockMineUnbuilt_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Mines/BPVisRockMineUnbuilt.1"
+      }
+    }
+  },
+  {
+    "Type": "UpgradeProxyComponent",
+    "Name": "UpgradeProxyComponent_0",
+    "Outer": "Default__RockMineUnbuilt_C",
+    "Class": "UScriptClass'UpgradeProxyComponent'",
+    "Properties": {
+      "UpgradeTarget": {
+        "ObjectName": "BlueprintGeneratedClass'RockMine_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMine.0"
+      },
+      "ProcessedWoodRequirement": 20
+    }
+  }
+]

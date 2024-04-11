@@ -1,0 +1,113 @@
+[
+  {
+    "Type": "BerryBush_C",
+    "Name": "Default__BerryBush_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/BerryBush.BerryBush_C'",
+    "Properties": {
+      "CodeNameString": "BerryBush",
+      "CodeName": 1845359156,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__BerryBush_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/BerryBush.2"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__BerryBush_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/BerryBush.3"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisBerryBush_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisBerryBush.1"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BerryBush_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BerryBush_C'Default__BerryBush_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/BerryBush.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__BerryBush_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 75.0,
+        "Z": 50.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeWood",
+      "CollisionMask": 16
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__BerryBush_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "HitPoints": 1,
+      "RequiredTool": "EAnvilToolType::Hands",
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'BerryBushHusk_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/BerryBushHusk.1"
+      },
+      "bSnapHuskEntityToGround": false,
+      "LootTable": [
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'ResourceBerries_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBerries.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 1,
+            "bIsRelic": false
+          },
+          "NormalizedChanceToDrop": 1.0,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
+        },
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 2,
+            "bIsRelic": false
+          },
+          "NormalizedChanceToDrop": 1.0,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
+        }
+      ]
+    }
+  }
+]

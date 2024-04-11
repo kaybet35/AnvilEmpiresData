@@ -1,0 +1,19 @@
+#include "ResourceProxyComponent.h"
+
+UResourceProxyComponent::UResourceProxyComponent() {
+    this->Type = EAnvilResourceType::Default;
+    this->HitPoints = 0;
+    this->RequiredTool = EAnvilToolType::None;
+    this->bInventoryTransferToPlayer = true;
+    this->DroppedResourceAmount = 0;
+    this->DroppedResourceEntity = NULL;
+    this->bScatterSecondaryResource = false;
+    this->DroppedSecondaryResourceAmount = 0;
+    this->DroppedSecondaryResourceEntity = NULL;
+    this->HuskEntity = NULL;
+    this->bSnapHuskEntityToGround = true;
+    this->DestructionEffect = NULL;
+    this->XpReward = 10;
+}
+
+

@@ -1,0 +1,71 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "StoneProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "StoneProjectile_C'Default__StoneProjectile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/StoneProjectile.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ProjectileMovementProxyComponent",
+    "Name": "ProjectileMovementProxyComponent_0",
+    "Outer": "Default__StoneProjectile_C",
+    "Class": "UScriptClass'ProjectileMovementProxyComponent'",
+    "Properties": {
+      "PickupEntity": {
+        "ObjectName": "BlueprintGeneratedClass'StonePickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/StonePickup.0"
+      },
+      "PickupSpawnRate": 0.1,
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectRam_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectRam.0"
+      },
+      "Speed": 200.0,
+      "MaxRange": 1000.0,
+      "DamageAmount": 150,
+      "DamageType": "EAnvilDamageType::Missile",
+      "Radius": 50.0,
+      "HeadingTolerance": 45.0,
+      "NozzleYawDelta": 80.0,
+      "DislodgeRate": 0.5
+    }
+  },
+  {
+    "Type": "StoneProjectile_C",
+    "Name": "Default__StoneProjectile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Items/StoneProjectile.StoneProjectile_C'",
+    "Properties": {
+      "CodeNameString": "StoneProjectile",
+      "CodeName": -175780192,
+      "bStatic": false,
+      "bSkipPersist": true,
+      "Components": [
+        {
+          "ObjectName": "ProjectileMovementProxyComponent'Default__StoneProjectile_C:ProjectileMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/StoneProjectile.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisStoneProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.2"
+      }
+    }
+  }
+]

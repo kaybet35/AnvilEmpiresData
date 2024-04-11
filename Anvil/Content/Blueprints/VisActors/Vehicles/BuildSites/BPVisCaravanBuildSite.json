@@ -1,0 +1,272 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisCaravanBuildSite_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisCaravanBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisCaravanBuildSite_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisBuildSite'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Caravan",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisCaravanBuildSite_C'Default__BPVisCaravanBuildSite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisCaravanBuildSite_C",
+    "Name": "Default__BPVisCaravanBuildSite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.BPVisCaravanBuildSite_C'",
+    "Properties": {
+      "VisBuildGhostComponent": {
+        "ObjectName": "VisBuildGhostComponent'Default__BPVisCaravanBuildSite_C:VisBuildGhostComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.12"
+      },
+      "BuildSiteDataComponent": {
+        "ObjectName": "BuildSiteDataComponent'Default__BPVisCaravanBuildSite_C:BuildSiteDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.3"
+      },
+      "StructureDataComponent": {
+        "ObjectName": "StructureDataComponent'Default__BPVisCaravanBuildSite_C:StructureDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.11"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'CaravanIcon'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Vehicles/CaravanIcon.0"
+      },
+      "Order": 90,
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCaravanBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.0"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisCaravanBuildSite_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.10"
+      },
+      "BuildCollisionDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisCaravanBuildSite_C:BuildCollisionDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.4"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "C496201144169800CF42E2866F5F2E01",
+        "SourceString": "Caravan",
+        "LocalizedString": "Caravan"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "4905527743DB177729F0969D9B8525BD",
+        "SourceString": "Carries equipment needed to setup a Camp. Camps can be used as foward operating bases.",
+        "LocalizedString": "Carries equipment needed to setup a Camp. Camps can be used as foward operating bases."
+      },
+      "DescriptionFooter": {
+        "Namespace": "",
+        "Key": "3C27A2C7415EEFEA394197BC11CC7536",
+        "SourceString": "Deploys into a Camp structure",
+        "LocalizedString": "Deploys into a Camp structure"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCaravanBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "BuildSiteDataComponent",
+    "Name": "BuildSiteDataComponent",
+    "Outer": "Default__BPVisCaravanBuildSite_C",
+    "Class": "UScriptClass'BuildSiteDataComponent'",
+    "Properties": {
+      "BuiltStructureEntity": 1587319785,
+      "TierPrerequisite": 2,
+      "ProcessedWoodRequirement": 40
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "BuildCollisionDecalComponent",
+    "Outer": "Default__BPVisCaravanBuildSite_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCaravanBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisCaravanBuildSite_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisCaravanBuildSite_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.5"
+      },
+      "VariableGuid": "09D4486C-4F0371B9-0EE668A3-65A445A7",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisCaravanBuildSite_C:Caravan_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.9"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "33D9E9E5-4B25CC1A-E07A22BF-22A5B8C9",
+      "InternalVariableName": "Caravan"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisCaravanBuildSite_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisCaravanBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisCaravanBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisCaravanBuildSite_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Caravan_GEN_VARIABLE",
+    "Outer": "BPVisCaravanBuildSite_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Caravan'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/Caravan.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'Ghost'",
+          "ObjectPath": "Anvil/Content/Materials/Ghost.0"
+        }
+      ],
+      "bReceivesDecals": false,
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisCaravanBuildSite_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Saddle'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/Saddle.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'Ghost'",
+          "ObjectPath": "Anvil/Content/Materials/Ghost.0"
+        },
+        {
+          "ObjectName": "Material'Ghost'",
+          "ObjectPath": "Anvil/Content/Materials/Ghost.0"
+        },
+        {
+          "ObjectName": "Material'Ghost'",
+          "ObjectPath": "Anvil/Content/Materials/Ghost.0"
+        }
+      ],
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCaravanBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisCaravanBuildSite.0"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "bVisible": false,
+      "bHiddenInGame": true
+    }
+  },
+  {
+    "Type": "StructureDataComponent",
+    "Name": "StructureDataComponent",
+    "Outer": "Default__BPVisCaravanBuildSite_C",
+    "Class": "UScriptClass'StructureDataComponent'"
+  },
+  {
+    "Type": "VisBuildGhostComponent",
+    "Name": "VisBuildGhostComponent",
+    "Outer": "Default__BPVisCaravanBuildSite_C",
+    "Class": "UScriptClass'VisBuildGhostComponent'"
+  }
+]

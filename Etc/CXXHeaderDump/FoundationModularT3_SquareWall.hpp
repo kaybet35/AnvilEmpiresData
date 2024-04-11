@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_FoundationModularT3_SquareWall_HPP
+#define UE4SS_SDK_FoundationModularT3_SquareWall_HPP
+
+class UFoundationModularT3_SquareWall_C : public UBPBaseFoundationModularEntity_C
+{
+}; // Size: 0xD8
+
+#endif

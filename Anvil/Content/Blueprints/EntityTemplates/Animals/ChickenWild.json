@@ -1,0 +1,175 @@
+[
+  {
+    "Type": "AIStimulusProxyComponent",
+    "Name": "AIStimulusProxyComponent_0",
+    "Outer": "Default__ChickenWild_C",
+    "Class": "UScriptClass'AIStimulusProxyComponent'",
+    "Properties": {
+      "bAgroTarget": true
+    }
+  },
+  {
+    "Type": "AnimalAIProxyComponent",
+    "Name": "AnimalAIProxyComponent_0",
+    "Outer": "Default__ChickenWild_C",
+    "Class": "UScriptClass'AnimalAIProxyComponent'",
+    "Properties": {
+      "FastSpeed": 400.0,
+      "HomingDistance": 300.0
+    }
+  },
+  {
+    "Type": "AnimalTameProxyComponent",
+    "Name": "AnimalTameProxyComponent_0",
+    "Outer": "Default__ChickenWild_C",
+    "Class": "UScriptClass'AnimalTameProxyComponent'",
+    "Properties": {
+      "FeedingNum": 2,
+      "TamingFood": {
+        "ObjectName": "BlueprintGeneratedClass'ProcessedAnimalFeed_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedAnimalFeed.0"
+      },
+      "TamedEntity": {
+        "ObjectName": "BlueprintGeneratedClass'Chicken_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Chicken.3"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "ChickenWild_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ChickenWild_C'Default__ChickenWild_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.6"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__ChickenWild_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 15.0,
+        "Y": 0.0,
+        "Z": 20.0
+      },
+      "Extents": {
+        "X": 90.0,
+        "Y": 24.0,
+        "Z": 55.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 8256
+    }
+  },
+  {
+    "Type": "CapsuleCollisionProxyComponent",
+    "Name": "CapsuleCollisionProxyComponent_0",
+    "Outer": "Default__ChickenWild_C",
+    "Class": "UScriptClass'CapsuleCollisionProxyComponent'",
+    "Properties": {
+      "Radius": 30.0,
+      "HalfHeight": 72.0,
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 524288
+    }
+  },
+  {
+    "Type": "ChickenWild_C",
+    "Name": "Default__ChickenWild_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.ChickenWild_C'",
+    "Properties": {
+      "CodeNameString": "ChickenWild",
+      "CodeName": -2145352453,
+      "bStatic": false,
+      "SerializationType": "EEntitySerializationType::EEntitySerializationType_MAX",
+      "Components": [
+        {
+          "ObjectName": "HealthProxyComponent'Default__ChickenWild_C:HealthProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.7"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__ChickenWild_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.8"
+        },
+        {
+          "ObjectName": "AnimalAIProxyComponent'Default__ChickenWild_C:AnimalAIProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.1"
+        },
+        {
+          "ObjectName": "CapsuleCollisionProxyComponent'Default__ChickenWild_C:CapsuleCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.5"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__ChickenWild_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.4"
+        },
+        {
+          "ObjectName": "AnimalTameProxyComponent'Default__ChickenWild_C:AnimalTameProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.2"
+        },
+        {
+          "ObjectName": "AIStimulusProxyComponent'Default__ChickenWild_C:AIStimulusProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.0"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisChicken_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.2"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_1",
+    "Outer": "Default__ChickenWild_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "MaxHealth": 10.0,
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectPlayer_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
+      },
+      "TargetType": "EAnvilDamageTargetType::Infantry"
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__ChickenWild_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "DroppedResourceAmount": 1,
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'FeathersPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/FeathersPickup.0"
+      },
+      "bScatterSecondaryResource": true,
+      "DroppedSecondaryResourceAmount": 1,
+      "DroppedSecondaryResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'MeatSmallPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/MeatSmallPickup.0"
+      },
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'ChickenHusk_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/ChickenHusk.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,561 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'Scorpion_SK_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.8"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Scorpion_SK_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.9"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Scorpion_SK_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.10"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Scorpion_SK_PhysicsAsset:SkeletalBodySetup_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.11"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Scorpion_SK_PhysicsAsset:SkeletalBodySetup_4'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.12"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Scorpion_SK_PhysicsAsset:SkeletalBodySetup_5'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.13"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Scorpion_SK_PhysicsAsset:SkeletalBodySetup_6'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.14"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Scorpion_SK_PhysicsAsset:SkeletalBodySetup_7'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.15"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Scorpion_SK_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Scorpion_SK_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Scorpion_SK_PhysicsAsset:PhysicsConstraintTemplate_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.3"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Scorpion_SK_PhysicsAsset:PhysicsConstraintTemplate_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Scorpion_SK_PhysicsAsset:PhysicsConstraintTemplate_4'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.5"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Scorpion_SK_PhysicsAsset:PhysicsConstraintTemplate_5'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.6"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Scorpion_SK_PhysicsAsset:PhysicsConstraintTemplate_6'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Scorpion_SK_PhysicsAsset.7"
+        }
+      ],
+      "SolverSettings": {
+        "CullDistance": 1.0,
+        "bUseLinearJointSolver": false
+      },
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "horizontal_pivot",
+        "ConstraintBone1": "horizontal_pivot",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 108.556786
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "vertical_pivot",
+        "ConstraintBone1": "vertical_pivot",
+        "ConstraintBone2": "horizontal_pivot",
+        "Pos2": {
+          "X": 0.0,
+          "Y": -0.69635177,
+          "Z": 19.080145
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_2",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "arm_R",
+        "ConstraintBone1": "arm_R",
+        "ConstraintBone2": "vertical_pivot",
+        "Pos2": {
+          "X": -33.61586,
+          "Y": 31.224873,
+          "Z": 7.439611
+        },
+        "PriAxis2": {
+          "X": 0.7986355,
+          "Y": -0.60181504,
+          "Z": 0.0
+        },
+        "SecAxis2": {
+          "X": 0.60181504,
+          "Y": 0.7986355,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_3",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "arm_L",
+        "ConstraintBone1": "arm_L",
+        "ConstraintBone2": "vertical_pivot",
+        "Pos2": {
+          "X": 33.61586,
+          "Y": 31.224873,
+          "Z": 7.439611
+        },
+        "PriAxis2": {
+          "X": 0.7986355,
+          "Y": 0.60181504,
+          "Z": 0.0
+        },
+        "SecAxis2": {
+          "X": -0.60181504,
+          "Y": 0.7986355,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_4",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "launcher_root",
+        "ConstraintBone1": "launcher_root",
+        "ConstraintBone2": "vertical_pivot",
+        "Pos2": {
+          "X": 0.0,
+          "Y": -25.754505,
+          "Z": 11.062932
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_5",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "reloader",
+        "ConstraintBone1": "reloader",
+        "ConstraintBone2": "vertical_pivot",
+        "Pos2": {
+          "X": 26.45247,
+          "Y": -122.83777,
+          "Z": 2.4313812
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_6",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "trigger",
+        "ConstraintBone1": "trigger",
+        "ConstraintBone2": "vertical_pivot",
+        "Pos2": {
+          "X": -26.641989,
+          "Y": -122.83777,
+          "Z": 2.4313812
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.025866434,
+              "Y": -46.046196,
+              "Z": 31.551056
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 179.96727,
+              "Roll": -72.724525
+            },
+            "Radius": 66.93831,
+            "Length": 94.29808,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "2F17684342962EFFA8297093F2E56BA2"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.034175396,
+              "Y": -0.69815445,
+              "Z": 14.546416
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 89.809784,
+              "Roll": -89.58226
+            },
+            "Radius": 17.696743,
+            "Length": 19.886644,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "horizontal_pivot",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "D1013F654F347687660BDEB8A99C91C7"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.1885466,
+              "Y": -30.861225,
+              "Z": 0.3820572
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -179.826,
+              "Roll": -82.08189
+            },
+            "Radius": 57.032154,
+            "Length": 108.66974,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "vertical_pivot",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "521136554669951CA3B73B98F4FCDFB4"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_3",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.63194513,
+              "Y": -22.162054,
+              "Z": -0.23015022
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -179.48163,
+              "Roll": -85.01685
+            },
+            "Radius": 7.691485,
+            "Length": 34.123814,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "arm_R",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "7F4C934249B77EFE2B160FA92E5BBD2D"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_4",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.6212147,
+              "Y": -22.162298,
+              "Z": -0.34353447
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 179.45314,
+              "Roll": -85.01648
+            },
+            "Radius": 7.577673,
+            "Length": 34.11399,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "arm_L",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "8DF86A364E0DE7EBBE49B8B543EF6CCA"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_5",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.037569046,
+              "Y": 9.216446,
+              "Z": 4.364699
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -90.33439,
+              "Roll": -89.711426
+            },
+            "Radius": 14.064273,
+            "Length": 36.819805,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "launcher_root",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "29B7DE514FED4313962AD0AD7D9E1B40"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_6",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -15.991058,
+              "Y": -0.028126717,
+              "Z": -0.5876999
+            },
+            "Rotation": {
+              "Pitch": 6.830189E-06,
+              "Yaw": 88.50299,
+              "Roll": -178.24149
+            },
+            "Radius": 34.33432,
+            "Length": 34.33943,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "reloader",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "3508D573408945628BB24C84A4BD62B0"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_7",
+    "Outer": "Scorpion_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 2.795141,
+              "Y": 0.08095193,
+              "Z": 20.828808
+            },
+            "Rotation": {
+              "Pitch": 0.2226983,
+              "Yaw": -90.0,
+              "Roll": 0.06956211
+            },
+            "Radius": 8.046736,
+            "Length": 29.111862,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "trigger",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "DE2240F5412B25D3C0AA3DAC120EBEB9"
+  }
+]

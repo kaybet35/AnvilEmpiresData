@@ -1,0 +1,144 @@
+[
+  {
+    "Type": "BillboardComponent",
+    "Name": "Billboard_GEN_VARIABLE",
+    "Outer": "MinorLocationMarker_C",
+    "Class": "UScriptClass'BillboardComponent'",
+    "Properties": {
+      "Sprite": {
+        "ObjectName": "Texture2D'MapIconPlayer'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Map/MapIconPlayer.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "MinorLocationMarker_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'MinorLocationMarker_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/MinorLocationMarker.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'MapMarkerActor'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Billboard",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BillboardComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "MinorLocationMarker_C'Default__MinorLocationMarker_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/MinorLocationMarker.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "MapMarkerComponent",
+    "Name": "MapMarker",
+    "Outer": "Default__MinorLocationMarker_C",
+    "Class": "UScriptClass'MapMarkerComponent'",
+    "Properties": {
+      "MapIconProperty": {
+        "MapActorType": "EMapIconType::MinorLocation"
+      }
+    }
+  },
+  {
+    "Type": "MinorLocationMarker_C",
+    "Name": "Default__MinorLocationMarker_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/MinorLocationMarker.MinorLocationMarker_C'",
+    "Properties": {
+      "Marker": {
+        "ObjectName": "MapMarkerComponent'Default__MinorLocationMarker_C:MapMarker'",
+        "ObjectPath": "Anvil/Content/Blueprints/MinorLocationMarker.2"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "MinorLocationMarker_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'MinorLocationMarker_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/MinorLocationMarker.4"
+      },
+      "VariableGuid": "527B91B4-4A11D8DF-841984B6-2588FE61",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BillboardComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BillboardComponent'MinorLocationMarker_C:Billboard_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/MinorLocationMarker.0"
+      },
+      "VariableGuid": "D33CD54B-408D09DF-E66147A6-79AF4328",
+      "InternalVariableName": "Billboard"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "MinorLocationMarker_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'MinorLocationMarker_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/MinorLocationMarker.6"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'MinorLocationMarker_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/MinorLocationMarker.6"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'MinorLocationMarker_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/MinorLocationMarker.5"
+      }
+    }
+  }
+]

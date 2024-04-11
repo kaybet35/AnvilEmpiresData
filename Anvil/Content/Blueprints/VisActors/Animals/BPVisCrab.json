@@ -1,0 +1,177 @@
+[
+  {
+    "Type": "AnimalAIDataComponent",
+    "Name": "AnimalAIDataComponent",
+    "Outer": "Default__BPVisCrab_C",
+    "Class": "UScriptClass'AnimalAIDataComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisCrab_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisCrab_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisCrab.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisAnimal'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisCrab_C'Default__BPVisCrab_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisCrab.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisCrab_C",
+    "Name": "Default__BPVisCrab_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Animals/BPVisCrab.BPVisCrab_C'",
+    "Properties": {
+      "AnimalAIDataComponent": {
+        "ObjectName": "AnimalAIDataComponent'Default__BPVisCrab_C:AnimalAIDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisCrab.0"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisCrab_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisCrab.4"
+      },
+      "Capsule": {
+        "ObjectName": "CapsuleComponent'Default__BPVisCrab_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisCrab.3"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisCrab_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisCrab.8"
+      },
+      "CurrentStateMontageMap": [
+        {
+          "EAnvilAnimalState::Trapped": {
+            "ObjectName": "AnimMontage'CrabTrappedMontage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Crab/CrabTrappedMontage.0"
+          }
+        }
+      ],
+      "MapIconProperty": {
+        "Icon": {
+          "ObjectName": "Texture2D'IconRabbit'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Items/IconRabbit.0"
+        }
+      },
+      "bNightVisibility": true,
+      "PositionSmoothSpeed": 8.0,
+      "RotationSmoothSpeed": 4.0,
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BPVisCrab_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisCrab.3"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule",
+    "Outer": "Default__BPVisCrab_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Properties": {
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisCrab_C",
+    "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisCrab_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisCrab_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisCrab.5"
+      },
+      "VariableGuid": "90A79A14-452C59A4-730B32AD-811C92BE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisCrab_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisCrab_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisCrab.6"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisCrab_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Crab_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Crab/Crab_ABP.0"
+      },
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'anim_Crab_Idle'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Crab/anim_Crab_Idle.0"
+        }
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Crab'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/SK_Crab.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SK_Crab'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/SK_Crab.0"
+      },
+      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPVisCrab_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisCrab.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -6.1035156E-05,
+        "Z": -120.0
+      },
+      "RelativeScale3D": {
+        "X": 0.85,
+        "Y": 0.85,
+        "Z": 0.85
+      }
+    }
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "Type": "AnimalAIProxyComponent",
+    "Name": "AnimalAIProxyComponent_0",
+    "Outer": "Default__BearElite_C",
+    "Class": "UScriptClass'AnimalAIProxyComponent'",
+    "Properties": {
+      "VisionRange": 1200.0,
+      "VisionAngle": 270.0,
+      "SlowSpeed": 150.0,
+      "FastSpeed": 600.0,
+      "TrapTime": 30.0,
+      "bHoming": true,
+      "HomingDistance": 1000.0
+    }
+  },
+  {
+    "Type": "AnimalAttackProxyComponent",
+    "Name": "AnimalAttackProxyComponent_0",
+    "Outer": "Default__BearElite_C",
+    "Class": "UScriptClass'AnimalAttackProxyComponent'",
+    "Properties": {
+      "AttackTargetTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'Player_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Horse_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.1"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'OfflineCharacter_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Cart_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.1"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Caravan_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Caravan.1"
+        }
+      ],
+      "OnRoadVisionRange": 300.0,
+      "ChaseDuration": 10.0,
+      "AttackOffset": {
+        "X": 150.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "MinNumAttacks": 5,
+      "MaxNumAttacks": 10,
+      "AttackDamage": 50
+    }
+  },
+  {
+    "Type": "BearElite_C",
+    "Name": "Default__BearElite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.BearElite_C'",
+    "Properties": {
+      "CodeNameString": "BearElite",
+      "CodeName": -598960929,
+      "bStatic": false,
+      "SerializationType": "EEntitySerializationType::EEntitySerializationType_MAX",
+      "Components": [
+        {
+          "ObjectName": "HealthProxyComponent'Default__BearElite_C:HealthProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.6"
+        },
+        {
+          "ObjectName": "AnimalAIProxyComponent'Default__BearElite_C:AnimalAIProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.0"
+        },
+        {
+          "ObjectName": "CapsuleCollisionProxyComponent'Default__BearElite_C:CapsuleCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.5"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__BearElite_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.4"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__BearElite_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.7"
+        },
+        {
+          "ObjectName": "AnimalAttackProxyComponent'Default__BearElite_C:AnimalAttackProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisBearElite_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBearElite.2"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BearElite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BearElite_C'Default__BearElite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__BearElite_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -5.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 35.0,
+        "Z": 50.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 8256
+    }
+  },
+  {
+    "Type": "CapsuleCollisionProxyComponent",
+    "Name": "CapsuleCollisionProxyComponent_0",
+    "Outer": "Default__BearElite_C",
+    "Class": "UScriptClass'CapsuleCollisionProxyComponent'",
+    "Properties": {
+      "Radius": 100.0,
+      "HalfHeight": 100.0,
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 524288
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_1",
+    "Outer": "Default__BearElite_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "MaxHealth": 2000.0,
+      "AutoRegenRate": 10.0,
+      "AutoRegenStartDelay": 600.0,
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectPlayer_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
+      },
+      "TargetType": "EAnvilDamageTargetType::Infantry"
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__BearElite_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "DroppedResourceAmount": 6,
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'MeatSmallPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/MeatSmallPickup.0"
+      },
+      "DroppedSecondaryResourceAmount": 2,
+      "DroppedSecondaryResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'ThickLeatherPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/ThickLeatherPickup.0"
+      },
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'BearEliteHusk_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/BearEliteHusk.1"
+      }
+    }
+  }
+]

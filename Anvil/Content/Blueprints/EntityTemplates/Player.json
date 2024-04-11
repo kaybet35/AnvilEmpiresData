@@ -1,0 +1,244 @@
+[
+  {
+    "Type": "AIStimulusProxyComponent",
+    "Name": "AIStimulusProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'AIStimulusProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilStimulusType::VisualThreat",
+      "bAgroTarget": true
+    }
+  },
+  {
+    "Type": "ArmorProxyComponent",
+    "Name": "ArmorProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'ArmorProxyComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Player_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Player_C'Default__Player_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.8"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CapsuleCollisionProxyComponent",
+    "Name": "CapsuleCollisionProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'CapsuleCollisionProxyComponent'",
+    "Properties": {
+      "Radius": 30.0,
+      "HalfHeight": 60.0,
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 4
+    }
+  },
+  {
+    "Type": "HandsProxyComponent",
+    "Name": "HandsProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'HandsProxyComponent'"
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectPlayer_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
+      },
+      "TargetType": "EAnvilDamageTargetType::Infantry",
+      "VisualBloodAmountRecoveryRate": 0.0017
+    }
+  },
+  {
+    "Type": "HungerProxyComponent",
+    "Name": "HungerProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'HungerProxyComponent'"
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1,
+          "bHoldsLarge": false,
+          "SlotType": "EAnvilItemType::Head",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        },
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1,
+          "bHoldsLarge": false,
+          "SlotType": "EAnvilItemType::PrimaryTool",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        },
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1,
+          "bHoldsLarge": false,
+          "SlotType": "EAnvilItemType::Body",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        },
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1,
+          "bHoldsLarge": false,
+          "SlotType": "EAnvilItemType::SecondaryTool",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        },
+        {
+          "ProxyRepeat": 9,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bHoldsLarge": false,
+          "SlotType": "EAnvilItemType::All",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        }
+      ],
+      "NormalizedSpoilageFactor": 1.0
+    }
+  },
+  {
+    "Type": "Player_C",
+    "Name": "Default__Player_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Player.Player_C'",
+    "Properties": {
+      "CodeNameString": "Player",
+      "CodeName": 50782484,
+      "bStatic": false,
+      "bSkipPersist": true,
+      "SerializationType": "EEntitySerializationType::SerializationTypePlayer",
+      "Components": [
+        {
+          "ObjectName": "SimPlayerProxyComponent'Default__Player_C:SimPlayerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.11"
+        },
+        {
+          "ObjectName": "HealthProxyComponent'Default__Player_C:HealthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.5"
+        },
+        {
+          "ObjectName": "HandsProxyComponent'Default__Player_C:HandsProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.4"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Player_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.7"
+        },
+        {
+          "ObjectName": "ArmorProxyComponent'Default__Player_C:ArmorProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.1"
+        },
+        {
+          "ObjectName": "CapsuleCollisionProxyComponent'Default__Player_C:CapsuleCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.3"
+        },
+        {
+          "ObjectName": "PlayerInputProxyComponent'Default__Player_C:PlayerInputProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.9"
+        },
+        {
+          "ObjectName": "AIStimulusProxyComponent'Default__Player_C:AIStimulusProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.0"
+        },
+        {
+          "ObjectName": "PlayerUnstuckProxyComponent'Default__Player_C:PlayerUnstuckProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.10"
+        },
+        {
+          "ObjectName": "HungerProxyComponent'Default__Player_C:HungerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.6"
+        },
+        {
+          "ObjectName": "StaminaProxyComponent'Default__Player_C:StaminaProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.12"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BpVisPlayer_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisPlayer.3"
+      }
+    }
+  },
+  {
+    "Type": "PlayerInputProxyComponent",
+    "Name": "PlayerInputProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'PlayerInputProxyComponent'",
+    "Properties": {
+      "CameraPanDeadzoneRadius": 10.0,
+      "CameraPanMaxDistance": 3000.0,
+      "CameraPanLerpAlphaPerSecond": 0.95
+    }
+  },
+  {
+    "Type": "PlayerUnstuckProxyComponent",
+    "Name": "PlayerUnstuckProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'PlayerUnstuckProxyComponent'"
+  },
+  {
+    "Type": "SimPlayerProxyComponent",
+    "Name": "SimPlayerProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'SimPlayerProxyComponent'",
+    "Properties": {
+      "StaggerDuration": 5.5,
+      "StaggerAmount": 0.35,
+      "CrouchedHalfHeight": 40.0,
+      "MaxVelocity": 525.0,
+      "MaxSprintVelocity": 1050.0,
+      "BreakDeceleration": 2500.0
+    }
+  },
+  {
+    "Type": "StaminaProxyComponent",
+    "Name": "StaminaProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'StaminaProxyComponent'"
+  }
+]

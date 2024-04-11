@@ -1,0 +1,216 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisTree03_Stage2Stump_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisTree03_Stage2Stump_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2Stump.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisActor'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Decal",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ResourceStump",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisTree03_Stage2Stump_C'Default__BPVisTree03_Stage2Stump_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2Stump.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisTree03_Stage2Stump_C",
+    "Name": "Default__BPVisTree03_Stage2Stump_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2Stump.BPVisTree03_Stage2Stump_C'"
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Outer": "BPVisTree03_Stage2Stump_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'TreeDirtPatch'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/TreeDirtPatch.0"
+      },
+      "DecalSize": {
+        "X": 64.0,
+        "Y": 150.0,
+        "Z": 150.0
+      },
+      "RelativeLocation": {
+        "X": -0.000164,
+        "Y": -0.000381,
+        "Z": -40.73282
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisTree03_Stage2Stump_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisTree03_Stage2Stump_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2Stump.3"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisTree03_Stage2Stump_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2Stump.5"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTree03_Stage2Stump_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2Stump.6"
+        }
+      ],
+      "VariableGuid": "7E436E71-4604BC33-0D966584-C2726CA5",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisTree03_Stage2Stump_C:ResourceStump_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2Stump.8"
+      },
+      "VariableGuid": "ED2330F5-4904F086-C1F16AAB-604617FE",
+      "InternalVariableName": "ResourceStump"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPVisTree03_Stage2Stump_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2Stump.2"
+      },
+      "VariableGuid": "29045C60-43D2AF39-45AF878D-BBAE79A2",
+      "InternalVariableName": "Decal"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisTree03_Stage2Stump_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisTree03_Stage2Stump_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2Stump.4"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisTree03_Stage2Stump_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2Stump.4"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTree03_Stage2Stump_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2Stump.5"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTree03_Stage2Stump_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2Stump.6"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisTree03_Stage2Stump_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2Stump.4"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "ResourceStump_GEN_VARIABLE",
+    "Outer": "BPVisTree03_Stage2Stump_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Beech02Stage02Stump'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Trees/Beech02Stage02Stump.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "bReceivesDecals": false
+    }
+  }
+]

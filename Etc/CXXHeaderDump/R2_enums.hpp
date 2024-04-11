@@ -1,0 +1,573 @@
+enum class EAnvilAccessibilityType {
+    FriendlyOnly = 0,
+    ResidentsOnly = 1,
+    EnemyCanPlunder = 2,
+    AllCanUse = 3,
+    NumTypes = 4,
+    EAnvilAccessibilityType_MAX = 5,
+};
+
+enum class EAnvilAnimalState {
+    Idle = 0,
+    Walking = 1,
+    Running = 2,
+    Scavenging = 3,
+    ChasingTarget = 4,
+    Attacking = 5,
+    Trapped = 6,
+    EAnvilAnimalState_MAX = 7,
+};
+
+enum class EAnvilArmourType {
+    None = 0,
+    Leather = 1,
+    Iron = 2,
+    NumTypes = 3,
+    EAnvilArmourType_MAX = 4,
+};
+
+enum class EAnvilBuildLocationType {
+    Everywhere = 0,
+    Stable = 1,
+    Deployed = 2,
+    Marketplace = 3,
+    Shore = 4,
+    OnFoundation = 5,
+    NotOnFoundation = 6,
+    UnderFoundationCeiling = 7,
+    Static = 8,
+    Count = 9,
+    EAnvilBuildLocationType_MAX = 10,
+};
+
+enum class EAnvilBuildStructureType {
+    Monolithic = 0,
+    Foundations = 1,
+    Modular = 2,
+    FoundationModular = 3,
+    EAnvilBuildStructureType_MAX = 4,
+};
+
+enum class EAnvilCharacterStance {
+    Standing = 0,
+    Sitting = 1,
+    OnBatteringRam = 2,
+    OnHorse = 3,
+    OnScorpion = 4,
+    OnLadder = 5,
+    InHoarding = 6,
+    HoldingLadderFront = 7,
+    HoldingLadderRear = 8,
+    EAnvilCharacterStance_MAX = 9,
+};
+
+enum EAnvilCollisionChannel {
+    AnvilCollisionChannelStatic = 0,
+    AnvilCollisionChannelDynamic = 1,
+    AnvilCollisionChannelPlayer = 2,
+    AnvilCollisionChannelUseVolume = 3,
+    AnvilCollisionChannelResource = 4,
+    AnvilCollisionChannelPickup = 5,
+    AnvilCollisionChannelAction = 6,
+    AnvilCollisionChannelRoadVolume = 7,
+    AnvilCollisionChannelBuildVolume = 8,
+    AnvilCollisionChannelGateVolume = 9,
+    AnvilCollisionChannelWallProtection = 10,
+    AnvilCollisionChannelWorldBorder = 11,
+    AnvilCollisionChannelLandscape = 12,
+    AnvilCollisionChannelProjectile = 13,
+    AnvilCollisionChannelVehicle = 14,
+    AnvilCollisionChannelMeshVisibility = 15,
+    AnvilCollisionChannelShield = 16,
+    AnvilCollisionChannel_REMOVED_ = 17,
+    AnvilCollisionChannelWater = 18,
+    AnvilCollisionChannelAnimal = 19,
+    AnvilCollisionChannelMarketArea = 20,
+    AnvilCollisionChannelFoundation = 21,
+    AnvilCollisionChannelSnapping = 22,
+    AnvilCollisionChannelFire = 23,
+    AnvilCollisionChannelMouseInteraction = 24,
+    EAnvilCollisionChannel_MAX = 25,
+};
+
+enum class EAnvilDamageTargetType {
+    Default = 0,
+    Infantry = 1,
+    Horse = 2,
+    Structure = 3,
+    Fire = 4,
+    NumTypes = 5,
+    EAnvilDamageTargetType_MAX = 6,
+};
+
+enum class EAnvilDamageType {
+    Default = 0,
+    Slashing = 1,
+    Piercing = 2,
+    Missile = 3,
+    Siege = 4,
+    Water = 5,
+    Bleed = 6,
+    Decay = 7,
+    Admin = 8,
+    NumTypes = 9,
+    EAnvilDamageType_MAX = 10,
+};
+
+enum class EAnvilDismantleStatus {
+    Success = 0,
+    CannotBeDismantled = 1,
+    NoPermission = 2,
+    OverTimeLimit = 3,
+    EnemiesNearby = 4,
+    EAnvilDismantleStatus_MAX = 5,
+};
+
+enum class EAnvilFactionId {
+    None = 0,
+    Aranic = 1,
+    Mirrish = 2,
+    Novan = 3,
+    NumTypes = 4,
+    EAnvilFactionId_MAX = 5,
+};
+
+enum class EAnvilFieldState {
+    GrowthStage_1 = 0,
+    GrowthStage_2 = 1,
+    GrowthStage_3 = 2,
+    ReadyToHarvest = 3,
+    EAnvilFieldState_MAX = 4,
+};
+
+enum class EAnvilFoodType {
+    None = 0,
+    Berries = 1,
+    Fish = 2,
+    Produce = 3,
+    Wheat = 4,
+    MeatDeer = 5,
+    MeatBoar = 6,
+    MeatCommon = 7,
+    NumTypes = 8,
+    EAnvilFoodType_MAX = 9,
+};
+
+enum class EAnvilGateState {
+    Closed = 0,
+    Opening = 1,
+    Open = 2,
+    Closing = 3,
+    NumTypes = 4,
+    EAnvilGateState_MAX = 5,
+};
+
+enum class EAnvilInputEventType {
+    None = 0,
+    PawnInteract = 1,
+    PawnInventory = 2,
+    PawnAction = 3,
+    PawnCancel = 4,
+    RotateStructureStart = 5,
+    AimStart = 6,
+    ResetMouseMode = 7,
+    EquipPrimary = 8,
+    EquipSecondary = 9,
+    Upgrade = 10,
+    ToggleBuildMenu = 11,
+    SecondaryInteract = 12,
+    ClaimHouse = 13,
+    GotoSleep = 14,
+    PledgeAsMilitia = 15,
+    ReturnToPledgedTown = 16,
+    DismantleByOfficial = 17,
+    RestrictedModeOn = 18,
+    RestrictedModeOff = 19,
+    IncreaseRefineryPriority = 20,
+    DecreaseRefineryPriority = 21,
+    MouseRotationMovement = 22,
+    MouseWheelMovement = 23,
+    Mount = 24,
+    WithdrawSilver = 25,
+    MarketShopDataRequest = 26,
+    RepairStationRepairRequest = 27,
+    TryAttachToHorse = 28,
+    TryDetachFromHorse = 29,
+    MouseSelect = 30,
+    DisableSnapping = 31,
+    Unstuck = 32,
+    SetTownName = 33,
+    Reload = 34,
+    RetractLadder = 35,
+    Climb = 36,
+    EAnvilInputEventType_MAX = 37,
+};
+
+enum class EAnvilInputResponseType {
+    None = 0,
+    ToggleStructureUI = 1,
+    TogglePlayerInventory = 2,
+    CancelUI = 3,
+    StructureUpgradeFailed = 4,
+    ToggleBuildMenu = 5,
+    EAnvilInputResponseType_MAX = 6,
+};
+
+enum class EAnvilItemType {
+    None = 0,
+    Normal = 1,
+    Head = 2,
+    Body = 3,
+    PrimaryTool = 4,
+    SecondaryTool = 5,
+    Crate = 6,
+    Resource = 7,
+    StorableFoodT1 = 8,
+    StorableFoodT2 = 9,
+    StorableFoodT3 = 10,
+    All = 11,
+    Tool = 12,
+    Armor = 13,
+    LargeResource = 14,
+    NotResource = 15,
+    FoodStorageT1 = 16,
+    FoodStorageT2 = 17,
+    FoodStorageT3 = 18,
+    MeatIngredientsStorage = 19,
+    IngredientsStorage = 20,
+    LiquidStorage = 21,
+    WeaponStorage = 22,
+    BaseStockpile = 23,
+    NumTypes = 24,
+    LeftHand = 25,
+    RightHand = 26,
+    EAnvilItemType_MAX = 27,
+};
+
+enum class EAnvilMapPostType {
+    DefendLocation = 0,
+    AttackLocation = 1,
+    EnemiesLocation = 2,
+    FortifyLocation = 3,
+    NeedHelp = 4,
+    NeedSupplies = 5,
+    LookHere = 6,
+    Count = 7,
+    EAnvilMapPostType_MAX = 8,
+};
+
+enum class EAnvilPhysicalSurfaceType {
+    SurfaceTypeDefault = 0,
+    SurfaceTypeFlesh = 1,
+    SurfaceTypeGrass = 2,
+    SurfaceTypeWood = 3,
+    SurfaceTypeStone = 4,
+    SurfaceTypeLeather = 5,
+    SurfaceTypeIron = 6,
+    SurfaceTypeShield = 7,
+    SurfaceTypeShieldBreak = 8,
+    SurfaceTypeDirt = 9,
+    SurfaceTypeForest = 10,
+    SurfaceTypeRock = 11,
+    SurfaceTypeLake = 12,
+    SurfaceTypeGravel = 13,
+    SurfaceTypeRare = 14,
+    SurfaceTypeRoad = 15,
+    SurfaceTypeSand = 16,
+    SurfaceTypeNumTypes = 17,
+    EAnvilPhysicalSurfaceType_MAX = 18,
+};
+
+enum class EAnvilPlayerAimMeshType {
+    None = 0,
+    Ranged = 1,
+    Melee = 2,
+    FishingInvalid = 3,
+    FishingValid = 4,
+    FishingReady = 5,
+    NumTypes = 6,
+    EAnvilPlayerAimMeshType_MAX = 7,
+};
+
+enum class EAnvilPlayerInputMode {
+    Default = 0,
+    Building = 1,
+    RotatingStructure = 2,
+    Aiming = 3,
+    MouseSelect = 4,
+    NumTypes = 5,
+    EAnvilPlayerInputMode_MAX = 6,
+};
+
+enum class EAnvilProfileNameCheckType {
+    Valid = 0,
+    TooShort = 1,
+    TooLong = 2,
+    InvalidChar = 3,
+    AlreadyTaken = 4,
+    EAnvilProfileNameCheckType_MAX = 5,
+};
+
+enum class EAnvilRareResourceAreaType {
+    None = 0,
+    FoodArea_Deer = 1,
+    FoodArea_Boar = 2,
+    FoodArea_Wheat = 3,
+    FoodArea_Cabbage = 4,
+    FoodArea_Coal = 5,
+    FoodArea_Clay = 6,
+    Num = 7,
+    EAnvilRareResourceAreaType_MAX = 8,
+};
+
+enum class EAnvilResourceType {
+    Default = 0,
+    ChoppedTree = 1,
+    EAnvilResourceType_MAX = 2,
+};
+
+enum class EAnvilScorchState {
+    None = 0,
+    OnFire = 1,
+    OnFireGrowing = 2,
+    Cooling = 3,
+    EAnvilScorchState_MAX = 4,
+};
+
+enum class EAnvilSimActivityState {
+    None = 0,
+    Idle = 1,
+    Attacking = 2,
+    BayonetAttack = 3,
+    LaunchingProjectile = 4,
+    Equipping = 5,
+    Carrying = 6,
+    Vaulting = 7,
+    ClimbingLow = 8,
+    ClimbingMedium = 9,
+    ClimbingHigh = 10,
+    Reloading = 11,
+    FiringCannon = 12,
+    UsingHandTool = 13,
+    BuildingWithHandTool = 14,
+    Plundering = 15,
+    HorseRiding = 16,
+    Eating = 17,
+    Feeding = 18,
+    Farming = 19,
+    FishingWaiting = 20,
+    FishingHooked = 21,
+    FishingSuccess = 22,
+    FishingFailed = 23,
+    StunnedOnGround = 24,
+    StunnedGettingUp = 25,
+    NumStates = 26,
+    EAnvilSimActivityState_MAX = 27,
+};
+
+enum class EAnvilSnappingChannelType {
+    General = 0,
+    Wall = 1,
+    Road = 2,
+    RoadSide = 3,
+    Platform = 4,
+    Foundation = 5,
+    EAnvilSnappingChannelType_MAX = 6,
+};
+
+enum class EAnvilSpawnType {
+    Starter = 0,
+    House = 1,
+    Tent = 2,
+    Bed = 3,
+    EAnvilSpawnType_MAX = 4,
+};
+
+enum class EAnvilStatusMessageType {
+    None = 0,
+    Success = 1,
+    WrongTool = 2,
+    HouseClaimed = 3,
+    TentClaimed = 4,
+    HouseAlreadyClaimed = 5,
+    CannotReinforceAtPledgedTown = 6,
+    NoRoomToDeployAtBed = 7,
+    TownPledgeLimitReached = 8,
+    SleepSuccess = 9,
+    TooSoonToSleep = 10,
+    PlunderFailTooPoor = 11,
+    PlunderFailTooSoon = 12,
+    PlunderFailObstructed = 13,
+    Plundering = 14,
+    OnlyCitizensAllowedToVote = 15,
+    CanOnlyVoteForNobles = 16,
+    MustBeOfficialToDoThat = 17,
+    MustBePledged = 18,
+    ItemTransfer_Error = 19,
+    ItemTransfer_StaminaNotEnough = 20,
+    ItemTransfer_CannotAccept = 21,
+    ItemTransfer_InventoryFull = 22,
+    ItemTransfer_NotAtMaxDurability = 23,
+    ItemTransfer_HouseNotYours = 24,
+    ItemTransfer_WithdrawalRestricted = 25,
+    Vehicle_MountBlocked = 26,
+    Vehicle_ExitBlocked = 27,
+    BuildSiteObstructed = 28,
+    GatheringResource = 29,
+    NoRepairNeeded = 30,
+    RepairOtherTeam = 31,
+    RepairMaterialsRequired = 32,
+    RepairOnFire = 33,
+    Repairing = 34,
+    TooEncumberedForActivity = 35,
+    TooEncumberedToArm = 36,
+    TooEncumberedItemDisarmed = 37,
+    NotEnoughStamina = 38,
+    WrongStance = 39,
+    MissingResource = 40,
+    MissingHorse = 41,
+    VehicleMustBeEmpty = 42,
+    VehicleInventoryMustBeEmpty = 43,
+    QueueIsFull = 44,
+    NotEnoughPayment = 45,
+    TownNotInRareResourceArea = 46,
+    TownTooClose = 47,
+    WeaponIneffective = 48,
+    MarketNotOwner = 49,
+    MarketInvalidItem = 50,
+    TooSoonToEat = 51,
+    FishingStart = 52,
+    FishingHooked = 53,
+    FishingCancel = 54,
+    FishingSuccess = 55,
+    FishingFail = 56,
+    ItemNotRepairable = 57,
+    ItemRepairComplete = 58,
+    CannotRepairRelicItem = 59,
+    RelicTechItemNotRelic = 60,
+    RelicTechSubmitted = 61,
+    RelicTechResearchComplete = 62,
+    AccessDeniedBelongsToEnemy = 63,
+    AccessDeniedMustBePledged = 64,
+    AccessDeniedTooFarToInteract = 65,
+    DismantleNoPermission = 66,
+    GateIsBreached = 67,
+    EnemiesNearby = 68,
+    UnstuckStarting = 69,
+    UnstuckTimeRemaining = 70,
+    UnstuckCancelledMovement = 71,
+    UnstuckCancelledEnemyNearby = 72,
+    UnstuckCancelledTooSoon = 73,
+    UnstuckCancelledVehiclePassenger = 74,
+    UnstuckAttemptFailed = 75,
+    LadderTooManyPlayers = 76,
+    LadderNoSpaceToRetract = 77,
+    DrowningNotification = 78,
+    BedClaimed = 79,
+    BedAlreadyClaimed = 80,
+    BedMustHaveHouseOrTentAtTown = 81,
+    BedClaimCleared = 82,
+    BedNotUnderCeiling = 83,
+    HorseNotHungry = 84,
+    NumTypes = 85,
+    EAnvilStatusMessageType_MAX = 86,
+};
+
+enum class EAnvilStimulusType {
+    None = 0,
+    VisualThreat = 1,
+    AuditoryThreat = 2,
+    DestroyableObstacle = 3,
+    FeedingLocation = 4,
+    SettlementLocation = 5,
+    NumTypes = 6,
+    EAnvilStimulusType_MAX = 7,
+};
+
+enum class EAnvilToolType {
+    None = 0,
+    Hands = 1,
+    Hammer = 2,
+    Axe = 3,
+    Hoe = 4,
+    Scythe = 5,
+    Pickaxe = 6,
+    FishingPole = 7,
+    WeakAxe = 8,
+    WeakPickAxe = 9,
+    NumTypes = 10,
+    EAnvilToolType_MAX = 11,
+};
+
+enum class EAnvilUsePromptType {
+    None = 0,
+    PickupItem = 1,
+    Plunder = 2,
+    UseEntity = 4,
+    DropLargeItem = 8,
+    Mount = 16,
+    Repair = 32,
+    Gate = 64,
+    Feed = 128,
+    EAnvilUsePromptType_MAX = 129,
+};
+
+enum class EAnvilVehicleInputState {
+    Idle = 0,
+    Push = 1,
+    Pull = 2,
+    Charge = 3,
+    StrafeLeft = 4,
+    StrafeRight = 5,
+    EAnvilVehicleInputState_MAX = 6,
+};
+
+enum class EChatType {
+    WORLD = 0,
+    LOCAL = 1,
+    TEAM = 2,
+    TOWN = 3,
+    ADMIN = 4,
+    ALERT = 5,
+    COMMAND_LIST = 6,
+    PLAYER_LIST = 7,
+    EChatType_MAX = 8,
+};
+
+enum class EEntityRelevancyPolicy {
+    DistanceBased = 0,
+    AlwaysRelevant = 1,
+    AlwaysRelevantToFriendlyOnly = 2,
+    AlwaysRelevantToFriendlyOrDistanceBased = 3,
+    OwnerOnly = 4,
+    EEntityRelevancyPolicy_MAX = 5,
+};
+
+enum EEntitySerializationType {
+    SerializationTypeDefault = 0,
+    SerializationTypePlayer = 1,
+    SerializationTypeController = 2,
+    SerializationTypeRefinery = 3,
+    SerializationTypeAnimal = 6,
+    SerializationTypeVehicle = 7,
+    EEntitySerializationType_MAX = 8,
+};
+
+enum class EPledgedOnlineStatus {
+    Online = 0,
+    Offline = 1,
+    Deployed = 2,
+    Num = 3,
+    EPledgedOnlineStatus_MAX = 4,
+};
+
+enum class EPledgedPlayerStatus {
+    NONE = 0,
+    COMMONER = 1,
+    CITIZEN = 2,
+    NOBLE = 3,
+    OFFICIAL = 4,
+    FOUNDER = 5,
+    EPledgedPlayerStatus_MAX = 6,
+};
+

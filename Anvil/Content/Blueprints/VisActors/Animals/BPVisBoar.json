@@ -1,0 +1,232 @@
+[
+  {
+    "Type": "AnimalAIDataComponent",
+    "Name": "AnimalAIDataComponent",
+    "Outer": "Default__BPVisBoar_C",
+    "Class": "UScriptClass'AnimalAIDataComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Idle_GEN_VARIABLE",
+    "Outer": "BPVisBoar_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'WildBoarIdle_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/WildBoar/WildBoarIdle_Cue.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisBoar_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisBoar_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisAnimal'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Idle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisBoar_C'Default__BPVisBoar_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisBoar_C",
+    "Name": "Default__BPVisBoar_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.BPVisBoar_C'",
+    "Properties": {
+      "AnimalAIDataComponent": {
+        "ObjectName": "AnimalAIDataComponent'Default__BPVisBoar_C:AnimalAIDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.0"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisBoar_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.5"
+      },
+      "Capsule": {
+        "ObjectName": "CapsuleComponent'Default__BPVisBoar_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.4"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisBoar_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.10"
+      },
+      "CurrentStateMontageMap": [
+        {
+          "EAnvilAnimalState::EAnvilAnimalState_MAX": {
+            "ObjectName": "AnimMontage'Wolf_trapped_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Wolf_trapped_Montage.0"
+          }
+        }
+      ],
+      "TelegraphSoundQueue": {
+        "ObjectName": "SoundCue'WildBoarTelegraph_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/WildBoar/WildBoarTelegraph_Cue.0"
+      },
+      "bNightVisibility": true,
+      "PositionSmoothSpeed": 8.0,
+      "RotationSmoothSpeed": 4.0,
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BPVisBoar_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.4"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule",
+    "Outer": "Default__BPVisBoar_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Properties": {
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisBoar_C",
+    "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisBoar_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisBoar_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.6"
+      },
+      "VariableGuid": "90A79A14-452C59A4-730B32AD-811C92BE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'BPVisBoar_C:Idle_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.1"
+      },
+      "ParentComponentOrVariableName": "Capsule",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "C72955BB-4E92CBEE-C08A2BBD-EA085D0A",
+      "InternalVariableName": "Idle"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisBoar_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisBoar_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisBoar_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.8"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisBoar_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.7"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisBoar_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Boar_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Boar_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Boar_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Boar_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Boar_SK.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'Boar'",
+          "ObjectPath": "Anvil/Content/Materials/Animals/Boar.0"
+        }
+      ],
+      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPVisBoar_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoar.4"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -150.0
+      },
+      "RelativeScale3D": {
+        "X": 0.8,
+        "Y": 0.8,
+        "Z": 0.8
+      }
+    }
+  }
+]

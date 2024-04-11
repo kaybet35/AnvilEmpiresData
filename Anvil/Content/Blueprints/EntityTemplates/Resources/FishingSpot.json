@@ -1,0 +1,132 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "FishingSpot_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FishingSpot_C'Default__FishingSpot_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/FishingSpot.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__FishingSpot_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 16
+    }
+  },
+  {
+    "Type": "FishingSpot_C",
+    "Name": "Default__FishingSpot_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/FishingSpot.FishingSpot_C'",
+    "Properties": {
+      "CodeNameString": "FishingSpot",
+      "CodeName": 1491401614,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__FishingSpot_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/FishingSpot.1"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__FishingSpot_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/FishingSpot.6"
+        },
+        {
+          "ObjectName": "FishResourceProxyComponent'Default__FishingSpot_C:FishResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/FishingSpot.3"
+        },
+        {
+          "ObjectName": "FishResourceProxyComponent'Default__FishingSpot_C:FishResourceProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/FishingSpot.4"
+        },
+        {
+          "ObjectName": "FishResourceProxyComponent'Default__FishingSpot_C:FishResourceProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/FishingSpot.5"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisFishingSpot_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisFishingSpot.0"
+      }
+    }
+  },
+  {
+    "Type": "FishResourceProxyComponent",
+    "Name": "FishResourceProxyComponent_0",
+    "Outer": "Default__FishingSpot_C",
+    "Class": "UScriptClass'FishResourceProxyComponent'",
+    "Properties": {
+      "ProbabilityWeight": 86.0,
+      "FishingTimeMin": 4.0,
+      "FishingTimeMax": 10.0,
+      "ReelWindowTime": 3.0,
+      "FishType": {
+        "ObjectName": "BlueprintGeneratedClass'ResourceFishR1_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFishR1.0"
+      }
+    }
+  },
+  {
+    "Type": "FishResourceProxyComponent",
+    "Name": "FishResourceProxyComponent_1",
+    "Outer": "Default__FishingSpot_C",
+    "Class": "UScriptClass'FishResourceProxyComponent'",
+    "Properties": {
+      "ProbabilityWeight": 10.0,
+      "FishingTimeMin": 5.0,
+      "FishingTimeMax": 15.0,
+      "ReelWindowTime": 2.0,
+      "FishType": {
+        "ObjectName": "BlueprintGeneratedClass'ResourceFishR2_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFishR2.0"
+      }
+    }
+  },
+  {
+    "Type": "FishResourceProxyComponent",
+    "Name": "FishResourceProxyComponent_2",
+    "Outer": "Default__FishingSpot_C",
+    "Class": "UScriptClass'FishResourceProxyComponent'",
+    "Properties": {
+      "ProbabilityWeight": 4.0,
+      "FishingTimeMin": 10.0,
+      "FishingTimeMax": 20.0,
+      "ReelWindowTime": 1.0,
+      "FishType": {
+        "ObjectName": "BlueprintGeneratedClass'ResourceFishR3_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFishR3.0"
+      }
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__FishingSpot_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "RequiredTool": "EAnvilToolType::FishingPole",
+      "DroppedResourceAmount": 1
+    }
+  }
+]

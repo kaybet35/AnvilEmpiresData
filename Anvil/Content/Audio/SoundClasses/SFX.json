@@ -1,0 +1,158 @@
+[
+  {
+    "Type": "SoundClass",
+    "Name": "Ambient",
+    "Class": "UScriptClass'SoundClass'",
+    "Properties": {
+      "ChildClasses": [
+        {
+          "ObjectName": "SoundClass'A-B'",
+          "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX_Master/A-B.0"
+        },
+        {
+          "ObjectName": "SoundClass'A-M'",
+          "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX_Master/A-M.0"
+        },
+        {
+          "ObjectName": "SoundClass'A-F'",
+          "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX_Master/A-F.0"
+        }
+      ],
+      "ParentClass": {
+        "ObjectName": "SoundClass'SFX'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.6"
+      }
+    }
+  },
+  {
+    "Type": "SoundClass",
+    "Name": "Explosions",
+    "Class": "UScriptClass'SoundClass'",
+    "Properties": {
+      "ParentClass": {
+        "ObjectName": "SoundClass'SFX'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.6"
+      }
+    }
+  },
+  {
+    "Type": "SoundClass",
+    "Name": "Foley",
+    "Class": "UScriptClass'SoundClass'",
+    "Properties": {
+      "ParentClass": {
+        "ObjectName": "SoundClass'SFX'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.6"
+      }
+    }
+  },
+  {
+    "Type": "SoundClass",
+    "Name": "Impact",
+    "Class": "UScriptClass'SoundClass'",
+    "Properties": {
+      "ParentClass": {
+        "ObjectName": "SoundClass'SFX'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.6"
+      }
+    }
+  },
+  {
+    "Type": "SoundClass",
+    "Name": "Master",
+    "Class": "UScriptClass'SoundClass'",
+    "Properties": {
+      "ChildClasses": [
+        {
+          "ObjectName": "SoundClass'SFX'",
+          "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.6"
+        },
+        {
+          "ObjectName": "SoundClass'Music'",
+          "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.5"
+        },
+        {
+          "ObjectName": "SoundClass'Voice'",
+          "ObjectPath": "Anvil/Content/Audio/SoundClasses/Voice.0"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundClass",
+    "Name": "Music",
+    "Class": "UScriptClass'SoundClass'",
+    "Properties": {
+      "Properties": {
+        "Volume": 0.75,
+        "bIsMusic": true,
+        "bReverb": false
+      },
+      "ParentClass": {
+        "ObjectName": "SoundClass'Master'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.4"
+      }
+    }
+  },
+  {
+    "Type": "SoundClass",
+    "Name": "SFX",
+    "Class": "UScriptClass'SoundClass'",
+    "Properties": {
+      "Properties": {
+        "Volume": 1.5
+      },
+      "ChildClasses": [
+        {
+          "ObjectName": "SoundClass'Explosions'",
+          "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.1"
+        },
+        {
+          "ObjectName": "SoundClass'Foley'",
+          "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+        },
+        {
+          "ObjectName": "SoundClass'Impact'",
+          "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.3"
+        },
+        {
+          "ObjectName": "SoundClass'Weapons'",
+          "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.7"
+        },
+        {
+          "ObjectName": "SoundClass'Ambient'",
+          "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.0"
+        },
+        {
+          "ObjectName": "SoundClass'UI'",
+          "ObjectPath": "Anvil/Content/Audio/SoundClasses/UI.0"
+        }
+      ],
+      "ParentClass": {
+        "ObjectName": "SoundClass'Master'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.4"
+      }
+    }
+  },
+  {
+    "Type": "SoundClass",
+    "Name": "Weapons",
+    "Class": "UScriptClass'SoundClass'",
+    "Properties": {
+      "PassiveSoundMixModifiers": [
+        {
+          "SoundMix": {
+            "ObjectName": "SoundMix'Ducking'",
+            "ObjectPath": "Anvil/Content/Audio/Ducking.0"
+          },
+          "MinVolumeThreshold": 0.0,
+          "MaxVolumeThreshold": 10.0
+        }
+      ],
+      "ParentClass": {
+        "ObjectName": "SoundClass'SFX'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.6"
+      }
+    }
+  }
+]

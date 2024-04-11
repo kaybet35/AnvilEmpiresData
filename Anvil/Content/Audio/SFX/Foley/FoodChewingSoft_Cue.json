@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "FoodChewingSoft_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'FoodChewingSoft_Cue:SoundNodeModulator_2'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Foley/FoodChewingSoft_Cue.1"
+      },
+      "VolumeMultiplier": 2.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "FalloffDistance": 2500.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'ConcurrencyDefault'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/ConcurrencyDefault.0"
+        }
+      ],
+      "Duration": 2.126125,
+      "MaxDistance": 7900.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Foley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "FoodChewingSoft_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMax": 1.1,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'FoodChewingSoft_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Foley/FoodChewingSoft_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "FoodChewingSoft_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Foley/FoodChewingSoft.FoodChewingSoft",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'FoodChewingSoft'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Foley/FoodChewingSoft.0"
+    }
+  }
+]

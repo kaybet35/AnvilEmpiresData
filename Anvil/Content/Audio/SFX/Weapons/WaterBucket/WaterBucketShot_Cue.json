@@ -1,0 +1,135 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "WaterBucketShot_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'WaterBucketShot_Cue:SoundNodeModulator_10'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketShot_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "LPFRadiusMin": 2000.0,
+        "LPFFrequencyAtMin": 2400.0,
+        "LPFFrequencyAtMax": 10000.0,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 100.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 11000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Weapons'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.7"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'FoleyConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/FoleyConcurrency.0"
+        }
+      ],
+      "Duration": 1.1339583,
+      "MaxDistance": 6000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'ProjectileFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/ProjectileFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_10",
+    "Outer": "WaterBucketShot_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'WaterBucketShot_Cue:SoundNodeRandom_4'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketShot_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_4",
+    "Outer": "WaterBucketShot_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WaterBucketShot_Cue:SoundNodeWavePlayer_6'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketShot_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WaterBucketShot_Cue:SoundNodeWavePlayer_7'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketShot_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WaterBucketShot_Cue:SoundNodeWavePlayer_8'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketShot_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "WaterBucketShot_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/WaterBucket/WaterBucketThrow01.WaterBucketThrow01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WaterBucketThrow01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketThrow01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "WaterBucketShot_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/WaterBucket/WaterBucketThrow02.WaterBucketThrow02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WaterBucketThrow02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketThrow02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "WaterBucketShot_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/WaterBucket/WaterBucketThrow03.WaterBucketThrow03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WaterBucketThrow03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketThrow03.0"
+    }
+  }
+]

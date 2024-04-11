@@ -1,0 +1,657 @@
+[
+  {
+    "Type": "BPPledgedPlayerListItemWidget_C",
+    "Name": "Default__BPPledgedPlayerListItemWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.BPPledgedPlayerListItemWidget_C'",
+    "Properties": {
+      "OnlineStatusIconMap": [
+        {
+          "EPledgedOnlineStatus::Deployed": {
+            "ObjectName": "Texture2D'TownhallStatusDeployedIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Status/TownhallStatusDeployedIcon.0"
+          }
+        },
+        {
+          "EPledgedOnlineStatus::Offline": {
+            "ObjectName": "Texture2D'TownhallStatusOfflineIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Status/TownhallStatusOfflineIcon.0"
+          }
+        }
+      ],
+      "OnlineStatusColorMap": [
+        {
+          "EPledgedOnlineStatus::Online": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 1.0,
+              "Hex": "FFFFFFFF"
+            },
+            "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+          }
+        },
+        {
+          "EPledgedOnlineStatus::Offline": {
+            "SpecifiedColor": {
+              "R": 0.5,
+              "G": 0.5,
+              "B": 0.5,
+              "A": 1.0,
+              "Hex": "FFBCBCBC"
+            },
+            "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+          }
+        }
+      ],
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "Button",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Button'",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "Margin": {
+            "Left": 0.2,
+            "Top": 0.2,
+            "Right": 0.2,
+            "Bottom": 0.2
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.132868,
+              "G": 0.130136,
+              "B": 0.104616,
+              "A": 0.0,
+              "Hex": "66655B"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'127grey'",
+            "ObjectPath": "Engine/Content/ArtTools/RenderToTexture/Textures/127grey.0"
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "Margin": {
+            "Left": 0.2,
+            "Top": 0.2,
+            "Right": 0.2,
+            "Bottom": 0.2
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.223958,
+              "G": 0.220574,
+              "B": 0.188965,
+              "A": 1.0,
+              "Hex": "FF828178"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'127grey'",
+            "ObjectPath": "Engine/Content/ArtTools/RenderToTexture/Textures/127grey.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "Margin": {
+            "Left": 0.2,
+            "Top": 0.2,
+            "Right": 0.2,
+            "Bottom": 0.2
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.09375,
+              "G": 0.091822,
+              "B": 0.073816,
+              "A": 0.031,
+              "Hex": "0756554D"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'127grey'",
+            "ObjectPath": "Engine/Content/ArtTools/RenderToTexture/Textures/127grey.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::Box",
+          "ImageType": "ESlateBrushImageType::FullColor",
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "Margin": {
+            "Left": 0.2,
+            "Top": 0.2,
+            "Right": 0.2,
+            "Bottom": 0.2
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.5,
+              "G": 0.5,
+              "B": 0.5,
+              "A": 0.021,
+              "Hex": "05BCBCBC"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'127grey'",
+            "ObjectPath": "Engine/Content/ArtTools/RenderToTexture/Textures/127grey.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.CanvasPanel_34.CanvasPanelSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.4"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_34",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.CanvasPanel_34.CanvasPanelSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.4"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.CanvasPanel_34.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_34",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 465.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPPledgedPlayerListItemWidget_C:WidgetTree.CanvasPanel_34'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.2"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Outer": "CanvasPanel_34",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 477.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPPledgedPlayerListItemWidget_C:WidgetTree.CanvasPanel_34'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.2"
+      },
+      "Content": {
+        "ObjectName": "Button'BPPledgedPlayerListItemWidget_C:WidgetTree.Button'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.1"
+      }
+    }
+  },
+  {
+    "Type": "CheckBox",
+    "Name": "VoteButton",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CheckBox'",
+    "Properties": {
+      "WidgetStyle": {
+        "UncheckedImage": {
+          "ImageSize": {
+            "X": 18.0,
+            "Y": 18.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.802083,
+              "G": 0.802083,
+              "B": 0.802083,
+              "A": 1.0,
+              "Hex": "FFE8E8E8"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'RadioButtonFull'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/RadioButtonFull.0"
+          }
+        },
+        "UncheckedHoveredImage": {
+          "ImageSize": {
+            "X": 18.0,
+            "Y": 18.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'RadioButtonFull'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/RadioButtonFull.0"
+          }
+        },
+        "UncheckedPressedImage": {
+          "ImageSize": {
+            "X": 18.0,
+            "Y": 18.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.109375,
+              "G": 0.109375,
+              "B": 0.109375,
+              "A": 1.0,
+              "Hex": "FF5D5D5D"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'RadioButtonFull'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/RadioButtonFull.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/CheckBox.png"
+        },
+        "CheckedImage": {
+          "ImageSize": {
+            "X": 18.0,
+            "Y": 18.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'RadioButtonEmpty'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/RadioButtonEmpty.0"
+          }
+        },
+        "CheckedHoveredImage": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 1.0,
+              "Hex": "FFFFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'RadioButtonEmpty'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/RadioButtonEmpty.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/CheckBox.png"
+        },
+        "CheckedPressedImage": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.109375,
+              "G": 0.109375,
+              "B": 0.109375,
+              "A": 1.0,
+              "Hex": "FF5D5D5D"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'RadioButtonEmpty'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/RadioButtonEmpty.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/CheckBox.png"
+        },
+        "UndeterminedImage": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.770833,
+              "G": 0.770833,
+              "B": 0.770833,
+              "A": 1.0,
+              "Hex": "FFE4E4E4"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'RadioButtonFull'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/RadioButtonFull.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/CheckBox_Checked_Hovered.png"
+        },
+        "UndeterminedHoveredImage": {
+          "ResourceObject": {
+            "ObjectName": "Texture2D'RadioButtonFull'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/RadioButtonFull.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/CheckBox_Checked_Hovered.png"
+        },
+        "UndeterminedPressedImage": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.234375,
+              "G": 0.234375,
+              "B": 0.234375,
+              "A": 1.0,
+              "Hex": "FF858585"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'RadioButtonFull'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/RadioButtonFull.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/CheckBox_Checked_Hovered.png"
+        },
+        "Padding": {
+          "Left": 0.0
+        }
+      },
+      "IsFocusable": false,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.9"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.11"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.7"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.10"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.8"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.CanvasPanel_34.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.3"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_0",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Padding": {
+        "Left": 4.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.6"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPPledgedPlayerListItemWidget_C:WidgetTree.PlayerNameText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.14"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_0",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.6"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPPledgedPlayerListItemWidget_C:WidgetTree.PlayerStatusText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.15"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_0",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.6"
+      },
+      "Content": {
+        "ObjectName": "CheckBox'BPPledgedPlayerListItemWidget_C:WidgetTree.VoteButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.5"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "HorizontalBox_0",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.6"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPPledgedPlayerListItemWidget_C:WidgetTree.Spacer_129'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.13"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Outer": "HorizontalBox_0",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.6"
+      },
+      "Content": {
+        "ObjectName": "Image'BPPledgedPlayerListItemWidget_C:WidgetTree.OnlineStatusIcon'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.12"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "OnlineStatusIcon",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 22.0,
+          "Y": 22.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'TownhallStatusDeployedIcon'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Status/TownhallStatusDeployedIcon.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_5'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.11"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_129",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 20.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.10"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "PlayerNameText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "25C8CC2E45D7DDB0AB8A1A919B7E6CEC",
+        "SourceString": "Player Name",
+        "LocalizedString": "Player Name"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 14
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.7"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "PlayerStatusText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "8559FE9745B477AB4144189146E3886F",
+        "SourceString": "Status",
+        "LocalizedString": "Status"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 14
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPPledgedPlayerListItemWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPPledgedPlayerListItemWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.17"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'PledgedPlayerListItem'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Button",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPPledgedPlayerListItemWidget_C'Default__BPPledgedPlayerListItemWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPPledgedPlayerListItemWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPPledgedPlayerListItemWidget_C:WidgetTree.CanvasPanel_34'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.2"
+      }
+    }
+  }
+]

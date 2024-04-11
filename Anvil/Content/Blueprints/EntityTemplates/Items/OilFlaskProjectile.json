@@ -1,0 +1,64 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "OilFlaskProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "OilFlaskProjectile_C'Default__OilFlaskProjectile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/OilFlaskProjectile.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "OilFlaskProjectile_C",
+    "Name": "Default__OilFlaskProjectile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Items/OilFlaskProjectile.OilFlaskProjectile_C'",
+    "Properties": {
+      "CodeNameString": "OilFlaskProjectile",
+      "CodeName": 849067382,
+      "bStatic": false,
+      "bSkipPersist": true,
+      "Components": [
+        {
+          "ObjectName": "ProjectileMovementProxyComponent'Default__OilFlaskProjectile_C:ProjectileMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/OilFlaskProjectile.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisOilFlaskProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.1"
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementProxyComponent",
+    "Name": "ProjectileMovementProxyComponent_0",
+    "Outer": "Default__OilFlaskProjectile_C",
+    "Class": "UScriptClass'ProjectileMovementProxyComponent'",
+    "Properties": {
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectOilFlask_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectOilFlask.0"
+      },
+      "Speed": 1150.0,
+      "DamageAmount": 30,
+      "DamageType": "EAnvilDamageType::Siege",
+      "Radius": 10.0,
+      "HeadingTolerance": 45.0,
+      "ScorchAmount": 0.2
+    }
+  }
+]

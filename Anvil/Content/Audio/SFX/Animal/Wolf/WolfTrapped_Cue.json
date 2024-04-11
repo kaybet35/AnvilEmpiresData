@@ -1,0 +1,145 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "WolfTrapped_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeDelay'WolfTrapped_Cue:SoundNodeDelay_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Wolf/WolfTrapped_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "bHasDelayNode": true,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'VoiceConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/VoiceConcurrency.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 128,
+        "VolumeScale": 0.5
+      },
+      "Duration": 66.18531,
+      "MaxDistance": 10250.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Voice'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Voice.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "WolfTrapped_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 15.0,
+      "DelayMax": 65.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'WolfTrapped_Cue:SoundNodeModulator_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Wolf/WolfTrapped_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "WolfTrapped_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "VolumeMin": 0.8,
+      "VolumeMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'WolfTrapped_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Wolf/WolfTrapped_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "WolfTrapped_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        0.5,
+        0.5,
+        0.5,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WolfTrapped_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Wolf/WolfTrapped_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WolfTrapped_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Wolf/WolfTrapped_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WolfTrapped_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Wolf/WolfTrapped_Cue.6"
+        },
+        null
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "WolfTrapped_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Wolf/WolfTrapped01.WolfTrapped01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WolfTrapped01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Wolf/WolfTrapped01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "WolfTrapped_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Wolf/WolfTrapped02.WolfTrapped02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WolfTrapped02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Wolf/WolfTrapped02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "WolfTrapped_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Wolf/WolfTrapped03.WolfTrapped03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WolfTrapped03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Wolf/WolfTrapped03.0"
+    }
+  }
+]

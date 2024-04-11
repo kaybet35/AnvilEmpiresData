@@ -1,0 +1,103 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "ItemStash_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ItemStash_C'Default__ItemStash_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/ItemStash.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__ItemStash_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 50.0
+      },
+      "Extents": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 50.0
+      },
+      "CollisionMask": 16777480
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__ItemStash_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 9,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 10,
+          "bHoldsLarge": true,
+          "SlotType": "EAnvilItemType::All",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        }
+      ],
+      "NormalizedSpoilageFactor": 1.0,
+      "LifespanWhenEmpty": 10.0
+    }
+  },
+  {
+    "Type": "ItemStash_C",
+    "Name": "Default__ItemStash_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/misc/ItemStash.ItemStash_C'",
+    "Properties": {
+      "CodeNameString": "ItemStash",
+      "CodeName": 1967360852,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__ItemStash_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/ItemStash.1"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__ItemStash_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/ItemStash.2"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__ItemStash_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/ItemStash.4"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisItemStash_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.0"
+      }
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__ItemStash_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 450.0
+    }
+  }
+]

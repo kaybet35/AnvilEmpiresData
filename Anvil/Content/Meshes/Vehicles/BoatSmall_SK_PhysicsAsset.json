@@ -1,0 +1,532 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "BoatSmall_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'BoatSmall_SK_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK_PhysicsAsset.7"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'BoatSmall_SK_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK_PhysicsAsset.8"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'BoatSmall_SK_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK_PhysicsAsset.9"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'BoatSmall_SK_PhysicsAsset:SkeletalBodySetup_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK_PhysicsAsset.10"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'BoatSmall_SK_PhysicsAsset:SkeletalBodySetup_4'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK_PhysicsAsset.11"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'BoatSmall_SK_PhysicsAsset:SkeletalBodySetup_5'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK_PhysicsAsset.12"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'BoatSmall_SK_PhysicsAsset:SkeletalBodySetup_6'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK_PhysicsAsset.13"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'BoatSmall_SK_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'BoatSmall_SK_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'BoatSmall_SK_PhysicsAsset:PhysicsConstraintTemplate_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK_PhysicsAsset.3"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'BoatSmall_SK_PhysicsAsset:PhysicsConstraintTemplate_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'BoatSmall_SK_PhysicsAsset:PhysicsConstraintTemplate_4'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK_PhysicsAsset.5"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'BoatSmall_SK_PhysicsAsset:PhysicsConstraintTemplate_5'",
+          "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK_PhysicsAsset.6"
+        }
+      ],
+      "SolverSettings": {
+        "CullDistance": 1.0,
+        "bUseLinearJointSolver": false
+      },
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "BoatSmall_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "oar_front_L",
+        "ConstraintBone1": "oar_front_L",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 135.17079,
+          "Y": -93.710846,
+          "Z": 189.31204
+        },
+        "PriAxis2": {
+          "X": 0.8003334,
+          "Y": 0.5995552,
+          "Z": 0.0
+        },
+        "SecAxis2": {
+          "X": -0.5995552,
+          "Y": 0.8003334,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "BoatSmall_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "oar_front_R",
+        "ConstraintBone1": "oar_front_R",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": -128.85446,
+          "Y": -93.710846,
+          "Z": 189.31204
+        },
+        "PriAxis2": {
+          "X": -0.7892004,
+          "Y": 0.61413556,
+          "Z": 0.0
+        },
+        "SecAxis2": {
+          "X": -0.61413556,
+          "Y": -0.7892004,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_2",
+    "Outer": "BoatSmall_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "oar_mid_L",
+        "ConstraintBone1": "oar_mid_L",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 135.17079,
+          "Y": -93.710846,
+          "Z": 8.333303
+        },
+        "PriAxis2": {
+          "X": 0.8003334,
+          "Y": 0.5995552,
+          "Z": 0.0
+        },
+        "SecAxis2": {
+          "X": -0.5995552,
+          "Y": 0.8003334,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_3",
+    "Outer": "BoatSmall_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "oar_mid_R",
+        "ConstraintBone1": "oar_mid_R",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": -128.85446,
+          "Y": -93.710846,
+          "Z": 8.333303
+        },
+        "PriAxis2": {
+          "X": -0.7892004,
+          "Y": 0.61413556,
+          "Z": 0.0
+        },
+        "SecAxis2": {
+          "X": -0.61413556,
+          "Y": -0.7892004,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_4",
+    "Outer": "BoatSmall_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "oar_back_L",
+        "ConstraintBone1": "oar_back_L",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 135.17079,
+          "Y": -93.710846,
+          "Z": -169.946
+        },
+        "PriAxis2": {
+          "X": 0.8003334,
+          "Y": 0.5995552,
+          "Z": 0.0
+        },
+        "SecAxis2": {
+          "X": -0.5995552,
+          "Y": 0.8003334,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_5",
+    "Outer": "BoatSmall_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "oar_back_R",
+        "ConstraintBone1": "oar_back_R",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": -128.85446,
+          "Y": -93.710846,
+          "Z": -169.946
+        },
+        "PriAxis2": {
+          "X": -0.7892004,
+          "Y": 0.61413556,
+          "Z": 0.0
+        },
+        "SecAxis2": {
+          "X": -0.61413556,
+          "Y": -0.7892004,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "BoatSmall_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.0012893677,
+              "Y": -64.199356,
+              "Z": -2.2152874
+            },
+            "Rotation": {
+              "Pitch": 0.2199799,
+              "Yaw": -90.00001,
+              "Roll": -0.03510488
+            },
+            "Radius": 113.998276,
+            "Length": 451.4549,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "413DF1F0456DBB52A3F2FABAAA78D907"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "BoatSmall_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 56.153576,
+              "Y": 0.17333794,
+              "Z": -0.15353775
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 90.219185,
+              "Roll": -90.0
+            },
+            "Radius": 19.806782,
+            "Length": 200.45073,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "oar_front_L",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "4E8BEFD04825D81CEB38008DF945A542"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "BoatSmall_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 56.14126,
+              "Y": 0.8520317,
+              "Z": -0.15853882
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 90.831894,
+              "Roll": -89.99998
+            },
+            "Radius": 19.806782,
+            "Length": 200.45073,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "oar_front_R",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "1600F15F4C20663C34D4E59066FF47EF"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_3",
+    "Outer": "BoatSmall_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 56.153564,
+              "Y": 0.17331123,
+              "Z": 0.13807297
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.78081,
+              "Roll": -90.0
+            },
+            "Radius": 19.80677,
+            "Length": 200.45073,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "oar_mid_L",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "898BAD504CFF07D2250D1ABDC3C7D4C4"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_4",
+    "Outer": "BoatSmall_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 56.14125,
+              "Y": 0.8520527,
+              "Z": 0.13304138
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 90.83191,
+              "Roll": -89.99999
+            },
+            "Radius": 19.80677,
+            "Length": 200.45076,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "oar_mid_R",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "CD58F7074767FC22E8E7339ADD5BE104"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_5",
+    "Outer": "BoatSmall_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 56.153545,
+              "Y": 0.17330933,
+              "Z": -0.013683319
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 90.219185,
+              "Roll": -90.0
+            },
+            "Radius": 19.806778,
+            "Length": 200.45071,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "oar_back_L",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "120EAB60499E54AB27927DB97BD65B02"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_6",
+    "Outer": "BoatSmall_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 56.141228,
+              "Y": 0.8520756,
+              "Z": -0.018722534
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 90.831894,
+              "Roll": -89.99998
+            },
+            "Radius": 19.80677,
+            "Length": 200.45073,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "oar_back_R",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "E36CDC214AFF3905488701B40E6F6797"
+  }
+]

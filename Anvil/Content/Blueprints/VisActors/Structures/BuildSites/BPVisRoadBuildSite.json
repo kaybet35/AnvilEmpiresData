@@ -1,0 +1,228 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisRoadBuildSite_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisRoadBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisRoadBuildSite_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisSplineBuildSite'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisRoadBuildSite_C'Default__BPVisRoadBuildSite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisRoadBuildSite_C",
+    "Name": "Default__BPVisRoadBuildSite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.BPVisRoadBuildSite_C'",
+    "Properties": {
+      "SplineComponent": {
+        "ObjectName": "VisSplineComponent'Default__BPVisRoadBuildSite_C:SplineComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.13"
+      },
+      "VisBuildGhostComponent": {
+        "ObjectName": "VisBuildGhostComponent'Default__BPVisRoadBuildSite_C:VisBuildGhostComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.12"
+      },
+      "BuildSiteDataComponent": {
+        "ObjectName": "BuildSiteDataComponent'Default__BPVisRoadBuildSite_C:BuildSiteDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.3"
+      },
+      "StructureDataComponent": {
+        "ObjectName": "StructureDataComponent'Default__BPVisRoadBuildSite_C:StructureDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.11"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'IconRoad'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconRoad.0"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisRoadBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.0"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisRoadBuildSite_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.10"
+      },
+      "BuildCollisionDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisRoadBuildSite_C:BuildCollisionDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.4"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "12060A6E474DB01341849F96F45F4276",
+        "SourceString": "Dirt Path",
+        "LocalizedString": "Dirt Path"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "E5F4A80340E651AEA10C6C8191C560DD",
+        "SourceString": "Routes that speed up travel on foot or by vehicle. Can be built outside of the buildable area. ",
+        "LocalizedString": "Routes that speed up travel on foot or by vehicle. Can be built outside of the buildable area. "
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisRoadBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "BuildSiteDataComponent",
+    "Name": "BuildSiteDataComponent",
+    "Outer": "Default__BPVisRoadBuildSite_C",
+    "Class": "UScriptClass'BuildSiteDataComponent'",
+    "Properties": {
+      "BuiltStructureEntity": -603329799,
+      "bRequiresTownHall": true,
+      "ResourceBranchesRequirement": 3
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "BuildCollisionDecalComponent",
+    "Outer": "Default__BPVisRoadBuildSite_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": null,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisRoadBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "GroundDecalComponent",
+    "Outer": "SplineComponent",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalSize": {
+        "X": 128.0,
+        "Y": 0.0,
+        "Z": 256.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisRoadBuildSite_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisRoadBuildSite_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.6"
+      },
+      "VariableGuid": "74E9360B-430B7CEB-5E8062B1-3D8BAF27",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisRoadBuildSite_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisRoadBuildSite_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.7"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "SplineComponent",
+    "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisRoadBuildSite_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisRoadBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "StructureDataComponent",
+    "Name": "StructureDataComponent",
+    "Outer": "Default__BPVisRoadBuildSite_C",
+    "Class": "UScriptClass'StructureDataComponent'"
+  },
+  {
+    "Type": "VisBuildGhostComponent",
+    "Name": "VisBuildGhostComponent",
+    "Outer": "Default__BPVisRoadBuildSite_C",
+    "Class": "UScriptClass'VisBuildGhostComponent'"
+  },
+  {
+    "Type": "VisSplineComponent",
+    "Name": "SplineComponent",
+    "Outer": "Default__BPVisRoadBuildSite_C",
+    "Class": "UScriptClass'VisSplineComponent'",
+    "Properties": {
+      "GroundDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisRoadBuildSite_C:SplineComponent.GroundDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.5"
+      },
+      "DecalMaterial": {
+        "ObjectName": "Material'DecalBuildSite'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/DecalBuildSite.0"
+      },
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'Default__BPVisRoadBuildSite_C:SplineComponent.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.9"
+      },
+      "EndPieces": [
+        null,
+        null
+      ],
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisRoadBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisRoadBuildSite.0"
+      }
+    }
+  }
+]

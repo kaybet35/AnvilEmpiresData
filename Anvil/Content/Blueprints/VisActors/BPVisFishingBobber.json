@@ -1,0 +1,168 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisFishingBobber_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisFishingBobber_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisFishingBobber_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFishingBobber.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisFishingBobber'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisFishingBobber_C'Default__BPVisFishingBobber_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFishingBobber.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisFishingBobber_C",
+    "Name": "Default__BPVisFishingBobber_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/BPVisFishingBobber.BPVisFishingBobber_C'",
+    "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFishingBobber_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFishingBobber.0"
+      },
+      "MeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisFishingBobber_C:MeshComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFishingBobber.7"
+      },
+      "LineComponent": {
+        "ObjectName": "CableComponent'Default__BPVisFishingBobber_C:LineComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFishingBobber.3"
+      },
+      "IdleCurve": {
+        "ObjectName": "CurveVector'FishingBobberIdleAnimCurve'",
+        "ObjectPath": "Anvil/Content/Animations/Curves/FishingBobberIdleAnimCurve.0"
+      },
+      "HookedCurve": {
+        "ObjectName": "CurveVector'FishingBobberHookedAnimCurve'",
+        "ObjectPath": "Anvil/Content/Animations/Curves/FishingBobberHookedAnimCurve.0"
+      },
+      "CastOffsetZ": 300.0,
+      "CastDelay": 0.4,
+      "CastSpeed": 2000.0,
+      "SlackLineLengthFactor": 1.0,
+      "TightLineLengthFactor": 0.02,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFishingBobber_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFishingBobber.0"
+      }
+    }
+  },
+  {
+    "Type": "CableComponent",
+    "Name": "LineComponent",
+    "Outer": "Default__BPVisFishingBobber_C",
+    "Class": "UScriptClass'CableComponent'",
+    "Properties": {
+      "EndLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "CableLength": 500.0,
+      "NumSegments": 20,
+      "SolverIterations": 16,
+      "bEnableStiffness": true,
+      "bSkipCableUpdateWhenNotVisible": true,
+      "CableForce": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -12000.0
+      },
+      "CableWidth": 3.5,
+      "NumSides": 6,
+      "TileMaterial": 20.0,
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'Rope'",
+          "ObjectPath": "Anvil/Content/Materials/Props/Rope.0"
+        }
+      ],
+      "AttachParent": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisFishingBobber_C:MeshComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFishingBobber.7"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 16.620941
+      },
+      "bVisible": true
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisFishingBobber_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisFishingBobber_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFishingBobber.4"
+      },
+      "VariableGuid": "1AC087AB-4BCDC336-1186779E-550BCA27",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisFishingBobber_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisFishingBobber_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFishingBobber.5"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "MeshComponent",
+    "Outer": "Default__BPVisFishingBobber_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FishingBob'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/FishingBob.2"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFishingBobber_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFishingBobber.0"
+      },
+      "bVisible": true
+    }
+  }
+]

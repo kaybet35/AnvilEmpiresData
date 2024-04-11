@@ -1,0 +1,504 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "Arrow_GEN_VARIABLE",
+    "Outer": "BPVisSmallBoat_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisSmallBoat_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Idle_GEN_VARIABLE",
+    "Outer": "BPVisSmallBoat_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'SplashIdle_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Fishing/SplashIdle_Cue.0"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "MovementAudioComponent",
+    "Outer": "Default__BPVisSmallBoat_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundWave'SmallBoatLoop'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Boat/SmallBoatLoop.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSmallBoat_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.1"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisSmallBoat_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisSmallBoat_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.18"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisVehicle'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "WaterStatic",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CullVolume",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ResourceFishR1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'InstancedStaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SkeletalMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Idle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Arrow",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ArrowComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisSmallBoat_C'Default__BPVisSmallBoat_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.5"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisSmallBoat_C",
+    "Name": "Default__BPVisSmallBoat_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.BPVisSmallBoat_C'",
+    "Properties": {
+      "VehicleMovementDataComponent": {
+        "ObjectName": "VehicleMovementDataComponent'Default__BPVisSmallBoat_C:VehicleMovementDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.21"
+      },
+      "MoveLoopAudioComponent": {
+        "ObjectName": "AudioComponent'Default__BPVisSmallBoat_C:MovementAudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.3"
+      },
+      "MoveLoopParticleSystem": {
+        "ObjectName": "NiagaraComponent'Default__BPVisSmallBoat_C:MovementParticleSystem'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.9"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisSmallBoat_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.6"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSmallBoat_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.1"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "E1A9686C419E0C501D50F9819EC15C12",
+        "SourceString": "Small Boat",
+        "LocalizedString": "Small Boat"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "DBD48E5A45797C090CDC529506CBF28E",
+        "SourceString": "Built in water and used to traverse lakes and rivers",
+        "LocalizedString": "Built in water and used to traverse lakes and rivers"
+      },
+      "UseWindowType": "EHUDWindowType::InventoryStructure",
+      "PositionSmoothSpeed": 4.0,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSmallBoat_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.1"
+      }
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisSmallBoat_C",
+    "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "InstancedStaticMeshComponent",
+    "Name": "ResourceFishR1_GEN_VARIABLE",
+    "Outer": "BPVisSmallBoat_C",
+    "Class": "UScriptClass'InstancedStaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Trout'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Trout.2"
+      },
+      "bReceivesDecals": false,
+      "bHasPerInstanceHitProxies": true,
+      "RelativeLocation": {
+        "X": 4.093094,
+        "Y": 4.6E-05,
+        "Z": 0.0
+      },
+      "bHiddenInGame": true
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "WaterStatic_GEN_VARIABLE",
+    "Outer": "BPVisSmallBoat_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'WaterStatic'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/WaterStatic.8"
+      },
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "MovementParticleSystem",
+    "Outer": "Default__BPVisSmallBoat_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'WaterTrail'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/WaterTrail.12"
+      },
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSmallBoat_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.1"
+      },
+      "RelativeLocation": {
+        "X": 2.5836143,
+        "Y": 3.8384846E-06,
+        "Z": 1.7053026E-13
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisSmallBoat_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisSmallBoat_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.10"
+      },
+      "VariableGuid": "690B95D8-416343C9-7F4AE48C-9E824020",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'BPVisSmallBoat_C:Idle_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.2"
+      },
+      "VariableGuid": "578E9957-4EDC1B5D-6197139E-45F0DDFB",
+      "InternalVariableName": "Idle"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ArrowComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ArrowComponent'BPVisSmallBoat_C:Arrow_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.0"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.14"
+        }
+      ],
+      "VariableGuid": "2FEB4BB8-460E61C6-A39CB281-84749DB1",
+      "InternalVariableName": "Arrow"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisSmallBoat_C:SkeletalMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.19"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.16"
+        }
+      ],
+      "VariableGuid": "1F604717-4FA9A0F3-7D6A6694-B64C675A",
+      "InternalVariableName": "SkeletalMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisSmallBoat_C:CullVolume_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.20"
+      },
+      "VariableGuid": "C786FF73-4D803441-0A7FD6B5-A1D936DA",
+      "InternalVariableName": "CullVolume"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisSmallBoat_C:WaterStatic_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.8"
+      },
+      "VariableGuid": "D325D4D8-45AC5C06-5E9CBEB9-924B73A0",
+      "InternalVariableName": "WaterStatic"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'InstancedStaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "InstancedStaticMeshComponent'BPVisSmallBoat_C:ResourceFishR1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.7"
+      },
+      "VariableGuid": "D8CF5BBE-4A26DB3F-57EAABA9-93DA8309",
+      "InternalVariableName": "ResourceFishR1"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisSmallBoat_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.16"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.11"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMesh_GEN_VARIABLE",
+    "Outer": "BPVisSmallBoat_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'BoatSmall_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'BoatSmall_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK.0"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "CullVolume_GEN_VARIABLE",
+    "Outer": "BPVisSmallBoat_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BoatSmallCull'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmallCull.2"
+      },
+      "bVisibleInReflectionCaptures": false,
+      "bVisibleInRealTimeSkyCaptures": false,
+      "bVisibleInRayTracing": false,
+      "bRenderInMainPass": false,
+      "bRenderInDepthPass": false,
+      "bReceivesDecals": false,
+      "bUseAsOccluder": false,
+      "CastShadow": false,
+      "bRenderCustomDepth": true,
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "VehicleMovementDataComponent",
+    "Name": "VehicleMovementDataComponent",
+    "Outer": "Default__BPVisSmallBoat_C",
+    "Class": "UScriptClass'VehicleMovementDataComponent'"
+  }
+]

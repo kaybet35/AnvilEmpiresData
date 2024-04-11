@@ -1,0 +1,82 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SpawnPointAranic_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SpawnPointAranic_C'Default__SpawnPointAranic_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/SpawnPointAranic.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "PlayerSpawnerProxyComponent",
+    "Name": "PlayerSpawnerProxyComponent_0",
+    "Outer": "Default__SpawnPointAranic_C",
+    "Class": "UScriptClass'PlayerSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 250.0
+      },
+      "SpawnRadius": 15000.0,
+      "Faction": "EAnvilFactionId::Aranic"
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_6",
+    "Outer": "Default__SpawnPointAranic_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'SpawnerStarterArea_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.0"
+      },
+      "SpawnRadius": 500.0,
+      "SpawnInterval": 60.0,
+      "SpawnQuantity": 1,
+      "MaxSpawn": 1,
+      "ResourceReserveInitial": 1
+    }
+  },
+  {
+    "Type": "SpawnPointAranic_C",
+    "Name": "Default__SpawnPointAranic_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/SpawnPointAranic.SpawnPointAranic_C'",
+    "Properties": {
+      "CodeNameString": "SpawnPointAranic",
+      "CodeName": -1333095726,
+      "RelevancyPolicy": "EEntityRelevancyPolicy::AlwaysRelevant",
+      "bShowOnMap": true,
+      "Components": [
+        {
+          "ObjectName": "PlayerSpawnerProxyComponent'Default__SpawnPointAranic_C:PlayerSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/SpawnPointAranic.1"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnPointAranic_C:ResourceSpawnerProxyComponent_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/SpawnPointAranic.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisSpawnPointAranic_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointAranic.0"
+      }
+    }
+  }
+]

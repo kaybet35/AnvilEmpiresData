@@ -1,0 +1,157 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ChickenIdle_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeLooping'ChickenIdle_Cue:SoundNodeLooping_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenIdle_Cue.2"
+      },
+      "VolumeMultiplier": 0.5,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "bHasDelayNode": true,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'VoiceConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/VoiceConcurrency.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 128,
+        "VolumeScale": 0.5
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 10250.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Voice'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Voice.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "ChickenIdle_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 10.0,
+      "DelayMax": 45.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'ChickenIdle_Cue:SoundNodeModulator_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenIdle_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "ChickenIdle_Cue",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'ChickenIdle_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenIdle_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ChickenIdle_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "VolumeMin": 0.8,
+      "VolumeMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'ChickenIdle_Cue:SoundNodeRandom_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenIdle_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "ChickenIdle_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ChickenIdle_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenIdle_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ChickenIdle_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenIdle_Cue.6"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ChickenIdle_Cue:SoundNodeWavePlayer_8'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenIdle_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ChickenIdle_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Chicken/ChickenIdle01.ChickenIdle01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ChickenIdle01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenIdle01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "ChickenIdle_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Chicken/ChickenIdle02.ChickenIdle02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ChickenIdle02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenIdle02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "ChickenIdle_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Chicken/ChickenIdle03.ChickenIdle03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ChickenIdle03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenIdle03.0"
+    }
+  }
+]

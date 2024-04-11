@@ -1,0 +1,641 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Campfire_Cue_GEN_VARIABLE",
+    "Outer": "BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Campfire_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Fire/Campfire_Cue.0"
+      },
+      "RelativeLocation": {
+        "X": -1.2712021,
+        "Y": 0.00050354004,
+        "Z": 308.0549
+      },
+      "ComponentTags": [
+        "Active1"
+      ]
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Smoke Cue_GEN_VARIABLE",
+    "Outer": "BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Torch_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Fire/Torch_Cue.0"
+      },
+      "RelativeLocation": {
+        "X": -2.5424042,
+        "Y": 0.00045776367,
+        "Z": 374.69296
+      },
+      "ComponentTags": [
+        "Active2"
+      ]
+    }
+  },
+  {
+    "Type": "BeaconTowerDataComponent",
+    "Name": "BeaconTowerDataComponent",
+    "Outer": "Default__BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'BeaconTowerDataComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisBeaconTowerT1_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.19"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisBeaconTower'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Campfire_Cue",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Smoke Cue",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Smoke1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LargeFire",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisBeaconTowerT1_C'Default__BPVisBeaconTowerT1_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.5"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisBeaconTowerT1_C",
+    "Name": "Default__BPVisBeaconTowerT1_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.BPVisBeaconTowerT1_C'",
+    "Properties": {
+      "BeaconTowerDataComponent": {
+        "ObjectName": "BeaconTowerDataComponent'Default__BPVisBeaconTowerT1_C:BeaconTowerDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.3"
+      },
+      "ScaffoldingComponent": {
+        "ObjectName": "VisScaffoldingComponent'Default__BPVisBeaconTowerT1_C:ScaffoldingComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.24"
+      },
+      "StructureIcon": {
+        "ObjectName": "Texture2D'IconBeaconTower'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconBeaconTower.0"
+      },
+      "BuildSiteOrder": 1,
+      "UpgradeDataComponent": {
+        "ObjectName": "UpgradeDataComponent'Default__BPVisBeaconTowerT1_C:UpgradeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.23"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisBeaconTowerT1_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.8"
+      },
+      "TeamDataComponent": {
+        "ObjectName": "TeamDataComponent'Default__BPVisBeaconTowerT1_C:TeamDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.22"
+      },
+      "StructureDataComponent": {
+        "ObjectName": "StructureDataComponent'Default__BPVisBeaconTowerT1_C:StructureDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.21"
+      },
+      "ScorchDataComponent": {
+        "ObjectName": "ScorchDataComponent'Default__BPVisBeaconTowerT1_C:ScorchDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.12"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisBeaconTowerT1_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.0"
+      },
+      "UseVolumeDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisBeaconTowerT1_C:UseVolumeDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.6"
+      },
+      "GrassRemovalVolume": {
+        "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisBeaconTowerT1_C:GrassRemovalVolume'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.7"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "98A4F85A4A98E0CA31764898A0FF051B",
+        "SourceString": "Beacon Tower",
+        "LocalizedString": "Beacon Tower"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "CADE6381485E82A6532210BE974AAFD6",
+        "SourceString": "A player detecting structure",
+        "LocalizedString": "A player detecting structure"
+      },
+      "DescriptionFooter": {
+        "Namespace": "",
+        "Key": "EB3C40B2496A6D3BCDD685BDC2927ED4",
+        "SourceString": "Must be built within proximity of eachother and/or the gathering pit less the \"connection\" be broken.",
+        "LocalizedString": "Must be built within proximity of eachother and/or the gathering pit less the \"connection\" be broken."
+      },
+      "MapIconProperty": {
+        "Icon": {
+          "ObjectName": "Texture2D'IconBeaconTower'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconBeaconTower.0"
+        },
+        "MapActorType": "EMapIconType::BeaconTower"
+      },
+      "UseWindowType": "EHUDWindowType::InventoryStructure",
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisBeaconTowerT1_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.0"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "UseVolumeDecalComponent",
+    "Outer": "Default__BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalSize": {
+        "X": 256.0,
+        "Y": 128.0,
+        "Z": 128.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisBeaconTowerT1_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.0"
+      }
+    }
+  },
+  {
+    "Type": "GrassRemovalVolumeComponent",
+    "Name": "GrassRemovalVolume",
+    "Outer": "Default__BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'GrassRemovalVolumeComponent'",
+    "Properties": {
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'Default__BPVisBeaconTowerT1_C:GrassRemovalVolume.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.20"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisBeaconTowerT1_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "LargeFire_GEN_VARIABLE",
+    "Outer": "BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'LargeFire'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/LargeFire.36"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": 1.2712021,
+        "Y": -1.5258789E-05,
+        "Z": 291.9451
+      },
+      "bVisible": false,
+      "ComponentTags": [
+        "Active1"
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Smoke1_GEN_VARIABLE",
+    "Outer": "BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'LargeSmoke'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/LargeSmoke.27"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": 2.5424042,
+        "Y": 3.0517578E-05,
+        "Z": 105.30704
+      },
+      "bVisible": false,
+      "ComponentTags": [
+        "Active2"
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "ScorchDataComponent",
+    "Name": "ScorchDataComponent",
+    "Outer": "Default__BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'ScorchDataComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisBeaconTowerT1_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.11"
+      },
+      "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisBeaconTowerT1_C:VisStaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.25"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.18"
+        }
+      ],
+      "VariableGuid": "557BA3C8-426F3916-EE5D1B80-75CF96BF",
+      "InternalVariableName": "VisStaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisBeaconTowerT1_C:LargeFire_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.9"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.16"
+        }
+      ],
+      "VariableGuid": "090FB245-4FB69BB4-0257E2B5-349572BB",
+      "InternalVariableName": "LargeFire"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'BPVisBeaconTowerT1_C:Campfire_Cue_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.1"
+      },
+      "VariableGuid": "83F0700B-4F3DBD06-E1155195-DF5F1BC7",
+      "InternalVariableName": "Campfire_Cue"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'BPVisBeaconTowerT1_C:Smoke Cue_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.2"
+      },
+      "VariableGuid": "6D389E39-43E5FF4D-63481096-CD8D3DA5",
+      "InternalVariableName": "Smoke Cue"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisBeaconTowerT1_C:Smoke1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.10"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.17"
+        }
+      ],
+      "VariableGuid": "3E10F42A-4153F6AE-5955C490-4C75B6AD",
+      "InternalVariableName": "Smoke1"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.14"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.16"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.13"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "GrassRemovalVolume",
+    "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "StructureDataComponent",
+    "Name": "StructureDataComponent",
+    "Outer": "Default__BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'StructureDataComponent'"
+  },
+  {
+    "Type": "TeamDataComponent",
+    "Name": "TeamDataComponent",
+    "Outer": "Default__BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'TeamDataComponent'"
+  },
+  {
+    "Type": "UpgradeDataComponent",
+    "Name": "UpgradeDataComponent",
+    "Outer": "Default__BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'UpgradeDataComponent'"
+  },
+  {
+    "Type": "VisScaffoldingComponent",
+    "Name": "ScaffoldingComponent",
+    "Outer": "Default__BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'VisScaffoldingComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisBeaconTowerT1_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.0"
+      }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh_GEN_VARIABLE",
+    "Outer": "BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BeaconTowerT1'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/BeaconTowerT1.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "ProjectToLandscape"
+      ]
+    }
+  }
+]

@@ -1,0 +1,494 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'WaterProjectileTrail:ParticleModuleRequired_0'",
+        "ObjectPath": "Anvil/Content/FX/WaterProjectileTrail.6"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'WaterProjectileTrail:ParticleModuleLifetime_0'",
+          "ObjectPath": "Anvil/Content/FX/WaterProjectileTrail.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'WaterProjectileTrail:ParticleModuleSize_0'",
+          "ObjectPath": "Anvil/Content/FX/WaterProjectileTrail.7"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'WaterProjectileTrail:ParticleModuleColor_0'",
+          "ObjectPath": "Anvil/Content/FX/WaterProjectileTrail.3"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'WaterProjectileTrail:ParticleModuleSizeMultiplyLife_0'",
+          "ObjectPath": "Anvil/Content/FX/WaterProjectileTrail.8"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity'WaterProjectileTrail:ParticleModuleVelocity_0'",
+          "ObjectPath": "Anvil/Content/FX/WaterProjectileTrail.11"
+        },
+        {
+          "ObjectName": "ParticleModuleParameterDynamic'WaterProjectileTrail:ParticleModuleParameterDynamic_0'",
+          "ObjectPath": "Anvil/Content/FX/WaterProjectileTrail.5"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataRibbon'WaterProjectileTrail:ParticleModuleTypeDataRibbon_1'",
+        "ObjectPath": "Anvil/Content/FX/WaterProjectileTrail.10"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'WaterProjectileTrail:ParticleModuleSpawn_0'",
+        "ObjectPath": "Anvil/Content/FX/WaterProjectileTrail.9"
+      },
+      "PeakActiveParticles": 1032
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_0",
+    "Outer": "WaterProjectileTrail",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.29367,
+        "MaxValue": 0.5625,
+        "MinValueVec": {
+          "X": 0.29367,
+          "Y": 0.471054,
+          "Z": 0.5625
+        },
+        "MaxValueVec": {
+          "X": 0.29367,
+          "Y": 0.471054,
+          "Z": 0.5625
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.29367,
+            0.471054,
+            0.5625
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "WaterProjectileTrail",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.5,
+        "MaxValue": 1.5,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.5
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleParameterDynamic",
+    "Name": "ParticleModuleParameterDynamic_0",
+    "Outer": "WaterProjectileTrail",
+    "Class": "UScriptClass'ParticleModuleParameterDynamic'",
+    "Properties": {
+      "DynamicParams": [
+        {
+          "ParamName": "Decay",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EEmitterDynamicParameterValue::EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 3.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 6.9999995,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0,
+                0.1662293,
+                0.5948008,
+                1.1807777,
+                1.8192227,
+                2.4051995,
+                2.8337708,
+                3.0
+              ],
+              "Op": 1,
+              "EntryCount": 8,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "Param2",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EEmitterDynamicParameterValue::EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "Param3",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EEmitterDynamicParameterValue::EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "Param4",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EEmitterDynamicParameterValue::EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        }
+      ],
+      "UpdateFlags": 15,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "WaterProjectileTrail",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant'WaterTrail'",
+        "ObjectPath": "Anvil/Content/FX/Materials/WaterTrail.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'WaterProjectileTrail:ParticleModuleRequired_0.RequiredDistributionSpawnRate'",
+          "ObjectPath": "Anvil/Content/FX/WaterProjectileTrail.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "WaterProjectileTrail",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 120.0,
+        "MaxValue": 120.0,
+        "MinValueVec": {
+          "X": 120.0,
+          "Y": 120.0,
+          "Z": 120.0
+        },
+        "MaxValueVec": {
+          "X": 120.0,
+          "Y": 120.0,
+          "Z": 120.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            120.0,
+            120.0,
+            120.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_0",
+    "Outer": "WaterProjectileTrail",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 1.0,
+        "MaxValue": 1.2,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.2,
+          "Y": 1.2,
+          "Z": 1.2
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 1.6666666,
+          "TimeBias": 0.4,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            1.2,
+            1.2,
+            1.2
+          ],
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "WaterProjectileTrail",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "MinValue": 20.0,
+        "MaxValue": 20.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            20.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'WaterProjectileTrail:ParticleModuleSpawn_0.BurstScaleDistribution'",
+          "ObjectPath": "Anvil/Content/FX/WaterProjectileTrail.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataRibbon",
+    "Name": "ParticleModuleTypeDataRibbon_1",
+    "Outer": "WaterProjectileTrail",
+    "Class": "UScriptClass'ParticleModuleTypeDataRibbon'",
+    "Properties": {
+      "MaxParticleInTrailCount": 1000,
+      "bDeadTrailsOnDeactivate": false,
+      "bDeadTrailsOnSourceLoss": false,
+      "bClipSourceSegement": false,
+      "bTangentRecalculationEveryFrame": true,
+      "bSpawnInitialParticle": true,
+      "TilingDistance": 350.0,
+      "DistanceTessellationStepSize": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "WaterProjectileTrail",
+    "Class": "UScriptClass'ParticleModuleVelocity'",
+    "Properties": {
+      "StartVelocity": {
+        "MaxValue": 300.0,
+        "MinValueVec": {
+          "X": 300.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 300.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            300.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bEnabled": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "WaterProjectileTrail",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'WaterProjectileTrail:ParticleSpriteEmitter_0.ParticleLODLevel_0'",
+          "ObjectPath": "Anvil/Content/FX/WaterProjectileTrail.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "WaterProjectileTrail",
+    "Class": "UScriptClass'ParticleSystem'",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter'WaterProjectileTrail:ParticleSpriteEmitter_0'",
+          "ObjectPath": "Anvil/Content/FX/WaterProjectileTrail.12"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

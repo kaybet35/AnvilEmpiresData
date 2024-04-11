@@ -1,0 +1,79 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CombatAxeRelic_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CombatAxeRelic_C'Default__CombatAxeRelic_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/CombatAxeRelic.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CombatAxeRelic_C",
+    "Name": "Default__CombatAxeRelic_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/CombatAxeRelic.CombatAxeRelic_C'",
+    "Properties": {
+      "CodeNameString": "CombatAxeRelic",
+      "CodeName": -804697640,
+      "ItemType": "EAnvilItemType::PrimaryTool",
+      "SecondaryType": "EAnvilItemType::WeaponStorage",
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "ItemHitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'Effect2HAxeImpact_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/Effect2HAxeImpact.0"
+      },
+      "bTwoHanded": true,
+      "Encumberance": 5,
+      "DurabilityLossPerUse": 0.5,
+      "Damage": 40,
+      "DamageOffset": {
+        "X": 80.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "DamageRadius": 125.0,
+      "GuardMeterReductionMultiplier": 3.0,
+      "bStaggersWielder": true,
+      "DamageType": "EAnvilDamageType::Slashing",
+      "ToolType": "EAnvilToolType::Axe",
+      "AimMovementSpeedModifier": 0.5,
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 0.2,
+        "Duration": 1.1,
+        "StaminaCost": 10.0
+      },
+      "RangedActivity": {
+        "bRepeatable": false
+      },
+      "GatherActivity": {
+        "State": "EAnvilSimActivityState::UsingHandTool",
+        "Delay": 0.2,
+        "Duration": 1.1,
+        "MovementSpeedModifier": 0.0,
+        "RotationSpeedModifier": 0.0,
+        "StaminaCost": 3.0,
+        "AimedStaminaCost": 3.0
+      },
+      "bAllowCameraPan": false,
+      "ShieldDurabilityLossMultiplier": 10.0
+    }
+  }
+]

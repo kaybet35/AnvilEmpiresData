@@ -1,0 +1,98 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "WoodExplosion_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'WoodExplosion_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Explosions/WoodExplosion_Cue.1"
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Explosions'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.1"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'ExplosionConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/ExplosionConcurrency.0"
+        }
+      ],
+      "Duration": 2.2007084,
+      "MaxDistance": 9000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "WoodExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'WoodExplosion_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Explosions/WoodExplosion_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "WoodExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WoodExplosion_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Explosions/WoodExplosion_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WoodExplosion_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Explosions/WoodExplosion_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "WoodExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Explosions/WoodDestroy01.WoodDestroy01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WoodDestroy01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Explosions/WoodDestroy01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "WoodExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Explosions/WoodDestroy02.WoodDestroy02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WoodDestroy02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Explosions/WoodDestroy02.0"
+    }
+  }
+]

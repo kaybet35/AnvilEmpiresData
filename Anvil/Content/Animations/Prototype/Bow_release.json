@@ -1,0 +1,188 @@
+[
+  {
+    "Type": "AnimMontage",
+    "Name": "Bow_release",
+    "Class": "UScriptClass'AnimMontage'",
+    "Properties": {
+      "BlendIn": {
+        "BlendTime": 0.1
+      },
+      "BlendOut": {
+        "BlendTime": 0.2
+      },
+      "CompositeSections": [
+        {
+          "SectionName": "Default",
+          "NextSectionName": "loop",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Bow_release'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_release.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.46666667,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Bow_attack_shoot'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_attack_shoot.0"
+          }
+        },
+        {
+          "SectionName": "end",
+          "NextSectionName": "None",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Bow_release'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_release.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.46666667,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Bow_attack_shoot'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_attack_shoot.0"
+          }
+        }
+      ],
+      "SlotAnimTracks": [
+        {
+          "SlotName": "UpperBodyExclusiveSlot",
+          "AnimTrack": {
+            "AnimSegments": [
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'Bow_attack_shoot'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_attack_shoot.0"
+                },
+                "StartPos": 0.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 0.46666667,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              }
+            ]
+          }
+        }
+      ],
+      "Notifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0001,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'Bow_release:AnimNotify_PlaySound_0'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_release.1"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Bow_release'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_release.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.46666667,
+          "LinkValue": 0.02457058,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Bow_attack_shoot'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_attack_shoot.0"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "ProjectileRelease",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.17166679,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Bow_release'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_release.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.46666667,
+          "LinkValue": 0.033456758,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Bow_attack_shoot'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_attack_shoot.0"
+          }
+        }
+      ],
+      "SequenceLength": 0.46666667,
+      "Skeleton": {
+        "ObjectName": "Skeleton'PrototypeChar_Skeleton'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/PrototypeChar_Skeleton.6"
+      }
+    },
+    "SkeletonGuid": "F597442D-46D412D3-CA2395A2-A90680CA"
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_0",
+    "Outer": "Bow_release",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'ArrowLoose_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/BowArrow/ArrowLoose_Cue.0"
+      },
+      "bFollow": true,
+      "AttachName": "hand_l"
+    }
+  }
+]

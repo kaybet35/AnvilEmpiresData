@@ -1,0 +1,109 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ChickenWalk_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'ChickenWalk_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenWalk_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'FoleyConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/FoleyConcurrency.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 128,
+        "VolumeScale": 0.5
+      },
+      "Duration": 0.91125,
+      "MaxDistance": 7800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'AnimalFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/AnimalFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ChickenWalk_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.8,
+      "PitchMax": 1.2,
+      "VolumeMin": 0.8,
+      "VolumeMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'ChickenWalk_Cue:SoundNodeRandom_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenWalk_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "ChickenWalk_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        0.1,
+        0.1,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ChickenWalk_Cue:SoundNodeWavePlayer_7'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenWalk_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ChickenWalk_Cue:SoundNodeWavePlayer_8'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenWalk_Cue.4"
+        },
+        null
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "ChickenWalk_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Chicken/ChickenFlutter02.ChickenFlutter02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ChickenFlutter02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenFlutter02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "ChickenWalk_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Chicken/ChickenFlutter01.ChickenFlutter01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ChickenFlutter01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenFlutter01.0"
+    }
+  }
+]

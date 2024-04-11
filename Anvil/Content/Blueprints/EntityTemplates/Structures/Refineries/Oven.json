@@ -1,0 +1,556 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Oven_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Oven_C'Default__Oven_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.11"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "CookingProxyComponent",
+    "Name": "CookingProxyComponent_0",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'CookingProxyComponent'",
+    "Properties": {
+      "FuelList": [
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+          },
+          "BurnDurationSec": 180.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
+          },
+          "BurnDurationSec": 60.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+          },
+          "BurnDurationSec": 60.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceBranchesRaw_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranchesRaw.0"
+          },
+          "BurnDurationSec": 20.0
+        }
+      ],
+      "RecipeList": [
+        {
+          "InputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWheat_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWheat.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 2
+            },
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceWater_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWater.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "OutputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'FoodBread_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodBread.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "CookDurationSec": 90.0
+        },
+        {
+          "InputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWheat_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWheat.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 2
+            },
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceMeat_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceMeat.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 2
+            },
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'FoodProduce_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodProduce.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 2
+            }
+          ],
+          "OutputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'FoodPie_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodPie.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "CookDurationSec": 120.0
+        },
+        {
+          "InputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWheat_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWheat.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 2
+            },
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceMeatBoar_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceMeatBoar.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 2
+            },
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'FoodProduce_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodProduce.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 2
+            }
+          ],
+          "OutputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'FoodPie_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodPie.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "CookDurationSec": 120.0
+        },
+        {
+          "InputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFishR1_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFishR1.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "OutputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'FoodFish_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodFish.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "CookDurationSec": 60.0
+        },
+        {
+          "InputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFishR2_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFishR2.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "OutputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'FoodFish_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodFish.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 2
+            }
+          ],
+          "CookDurationSec": 60.0
+        },
+        {
+          "InputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFishR3_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFishR3.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "OutputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'FoodFish_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodFish.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 3
+            }
+          ],
+          "CookDurationSec": 60.0
+        },
+        {
+          "InputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceEggChicken_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceEggChicken.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 2
+            }
+          ],
+          "OutputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'FoodOmelette_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodOmelette.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "CookDurationSec": 30.0
+        },
+        {
+          "InputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'FoodBread_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodBread.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            },
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceEggChicken_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceEggChicken.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "OutputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'FoodFrenchToast_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodFrenchToast.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "CookDurationSec": 45.0
+        },
+        {
+          "InputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceEggChicken_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceEggChicken.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 2
+            },
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWheat_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWheat.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            },
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceCabbage_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceCabbage.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "OutputItems": [
+            {
+              "ItemType": {
+                "ObjectName": "BlueprintGeneratedClass'FoodQuiche_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodQuiche.0"
+              },
+              "ItemCodeName": 0,
+              "Quantity": 1
+            }
+          ],
+          "CookDurationSec": 90.0
+        }
+      ],
+      "FoodBurnDurationSec": 120.0
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    },
+    "Properties": {
+      "DecayTimeHours": 48.0
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableComp",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Template": {
+      "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'OvenFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/OvenFootprint.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthComp",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_4",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "bForceStackable": true
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_5",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "bForceStackable": true
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_6",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "bForceStackable": true
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_7",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "bForceStackable": true
+    }
+  },
+  {
+    "Type": "Oven_C",
+    "Name": "Default__Oven_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.Oven_C'",
+    "Template": {
+      "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
+    },
+    "Properties": {
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__Oven_C:TeamComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.15"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__Oven_C:HealthComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.6"
+      },
+      "RepairComp": {
+        "ObjectName": "RepairProxyComponent'Default__Oven_C:RepairComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.12"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__Oven_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.14"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__Oven_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.4"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__Oven_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.5"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__Oven_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.1"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__Oven_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.3"
+      },
+      "ScorchComp": {
+        "ObjectName": "ScorchProxyComponent'Default__Oven_C:ScorchProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.13"
+      },
+      "CodeNameString": "Oven",
+      "CodeName": -1736242491,
+      "bShowOnMap": true,
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "Components": [
+        {
+          "ObjectName": "CookingProxyComponent'Default__Oven_C:CookingProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.2"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Oven_C:InventoryProxyComponent_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.7"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Oven_C:InventoryProxyComponent_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.10"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Oven_C:InventoryProxyComponent_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.9"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Oven_C:InventoryProxyComponent_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.8"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisOven_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisOven.2"
+      }
+    }
+  },
+  {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairComp",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'RepairProxyComponent'",
+    "Template": {
+      "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+    },
+    "Properties": {
+      "TotalRepairCost": 5
+    }
+  },
+  {
+    "Type": "ScorchProxyComponent",
+    "Name": "ScorchProxyComponent_0",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'ScorchProxyComponent'",
+    "Template": {
+      "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamComp",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    }
+  }
+]

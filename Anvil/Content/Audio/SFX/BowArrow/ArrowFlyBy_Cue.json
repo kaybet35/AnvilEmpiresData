@@ -1,0 +1,120 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ArrowFlyBy_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'ArrowFlyBy_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/BowArrow/ArrowFlyBy_Cue.1"
+      },
+      "VolumeMultiplier": 0.6,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Weapons'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.7"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'ConcurrencyDefault'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/ConcurrencyDefault.0"
+        }
+      ],
+      "Duration": 1.3652917,
+      "MaxDistance": 6000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'ProjectileFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/ProjectileFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ArrowFlyBy_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'ArrowFlyBy_Cue:SoundNodeRandom_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/BowArrow/ArrowFlyBy_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Outer": "ArrowFlyBy_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ArrowFlyBy_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/BowArrow/ArrowFlyBy_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ArrowFlyBy_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/BowArrow/ArrowFlyBy_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ArrowFlyBy_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/BowArrow/ArrowFlyBy_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "ArrowFlyBy_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/BowArrow/BowArrowFlyby01.BowArrowFlyby01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BowArrowFlyby01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/BowArrow/BowArrowFlyby01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "ArrowFlyBy_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/BowArrow/BowArrowFlyby02.BowArrowFlyby02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BowArrowFlyby02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/BowArrow/BowArrowFlyby02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "ArrowFlyBy_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/BowArrow/BowArrowFlyby03.BowArrowFlyby03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BowArrowFlyby03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/BowArrow/BowArrowFlyby03.0"
+    }
+  }
+]

@@ -1,0 +1,156 @@
+[
+  {
+    "Type": "BPInteractionIconWidget_C",
+    "Name": "Default__BPInteractionIconWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPInteractionIconWidget.BPInteractionIconWidget_C'",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "BG",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Tech_BG'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Actions/Tech_BG.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'BPInteractionIconWidget_C:WidgetTree.Overlay_24.OverlaySlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPInteractionIconWidget.4"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "IconBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'BPInteractionIconWidget_C:WidgetTree.Overlay_24.OverlaySlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPInteractionIconWidget.5"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_24",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'BPInteractionIconWidget_C:WidgetTree.Overlay_24.OverlaySlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPInteractionIconWidget.4"
+        },
+        {
+          "ObjectName": "OverlaySlot'BPInteractionIconWidget_C:WidgetTree.Overlay_24.OverlaySlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPInteractionIconWidget.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "Overlay_24",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'BPInteractionIconWidget_C:WidgetTree.Overlay_24'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPInteractionIconWidget.3"
+      },
+      "Content": {
+        "ObjectName": "Image'BPInteractionIconWidget_C:WidgetTree.BG'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPInteractionIconWidget.1"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_24",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'BPInteractionIconWidget_C:WidgetTree.Overlay_24'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPInteractionIconWidget.3"
+      },
+      "Content": {
+        "ObjectName": "Image'BPInteractionIconWidget_C:WidgetTree.IconBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPInteractionIconWidget.2"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPInteractionIconWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPInteractionIconWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPInteractionIconWidget.7"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'InteractionIconWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BG",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPInteractionIconWidget_C'Default__BPInteractionIconWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPInteractionIconWidget.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPInteractionIconWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'BPInteractionIconWidget_C:WidgetTree.Overlay_24'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPInteractionIconWidget.3"
+      }
+    }
+  }
+]

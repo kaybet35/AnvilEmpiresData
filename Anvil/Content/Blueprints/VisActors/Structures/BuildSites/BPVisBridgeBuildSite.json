@@ -1,0 +1,314 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisBridgeBuildSite_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisBridgeBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisBridgeBuildSite_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisSplineBuildSite'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisBridgeBuildSite_C'Default__BPVisBridgeBuildSite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisBridgeBuildSite_C",
+    "Name": "Default__BPVisBridgeBuildSite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.BPVisBridgeBuildSite_C'",
+    "Properties": {
+      "SplineComponent": {
+        "ObjectName": "VisSplineComponent'Default__BPVisBridgeBuildSite_C:SplineComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.13"
+      },
+      "VisBuildGhostComponent": {
+        "ObjectName": "VisBuildGhostComponent'Default__BPVisBridgeBuildSite_C:VisBuildGhostComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.12"
+      },
+      "BuildSiteDataComponent": {
+        "ObjectName": "BuildSiteDataComponent'Default__BPVisBridgeBuildSite_C:BuildSiteDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.3"
+      },
+      "StructureDataComponent": {
+        "ObjectName": "StructureDataComponent'Default__BPVisBridgeBuildSite_C:StructureDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.11"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'IconWallPlatform'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconWallPlatform.0"
+      },
+      "Order": 7,
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisBridgeBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.0"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisBridgeBuildSite_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.10"
+      },
+      "BuildCollisionDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisBridgeBuildSite_C:BuildCollisionDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.4"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "8128161C44ABFFEE2E2C7492A375A6D3",
+        "SourceString": "Bridge",
+        "LocalizedString": "Bridge"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "528D30364D988376B0F68EBF44CB508F",
+        "SourceString": "A narrow passageway that can bridge small gaps",
+        "LocalizedString": "A narrow passageway that can bridge small gaps"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisBridgeBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "BuildSiteDataComponent",
+    "Name": "BuildSiteDataComponent",
+    "Outer": "Default__BPVisBridgeBuildSite_C",
+    "Class": "UScriptClass'BuildSiteDataComponent'",
+    "Properties": {
+      "BuiltStructureEntity": 277980218,
+      "TierPrerequisite": 2,
+      "ProcessedWoodRequirement": 25
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "BuildCollisionDecalComponent",
+    "Outer": "Default__BPVisBridgeBuildSite_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisBridgeBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "GroundDecalComponent",
+    "Outer": "SplineComponent",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalSize": {
+        "X": 128.0,
+        "Y": 800.0,
+        "Z": 256.0
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 800.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisBridgeBuildSite_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisBridgeBuildSite_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.6"
+      },
+      "VariableGuid": "81C71026-4EC7E402-B814B2B3-B1C5AA2F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisBridgeBuildSite_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisBridgeBuildSite_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.7"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "SplineComponent",
+    "Class": "UScriptClass'SplineDataComponent'",
+    "Properties": {
+      "MidPieceTransforms": [
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 670.0,
+            "Z": 150.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 930.0,
+            "Z": 150.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        }
+      ],
+      "End": {
+        "X": 0.0,
+        "Y": 1600.0,
+        "Z": 0.0
+      },
+      "SegmentLength": 1600.0
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisBridgeBuildSite_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisBridgeBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "StructureDataComponent",
+    "Name": "StructureDataComponent",
+    "Outer": "Default__BPVisBridgeBuildSite_C",
+    "Class": "UScriptClass'StructureDataComponent'"
+  },
+  {
+    "Type": "VisBuildGhostComponent",
+    "Name": "VisBuildGhostComponent",
+    "Outer": "Default__BPVisBridgeBuildSite_C",
+    "Class": "UScriptClass'VisBuildGhostComponent'"
+  },
+  {
+    "Type": "VisSplineComponent",
+    "Name": "SplineComponent",
+    "Outer": "Default__BPVisBridgeBuildSite_C",
+    "Class": "UScriptClass'VisSplineComponent'",
+    "Properties": {
+      "GroundDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisBridgeBuildSite_C:SplineComponent.GroundDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.5"
+      },
+      "PreviewPieceLength": 300.0,
+      "PreviewEndLocation": {
+        "X": 0.0,
+        "Y": 1600.0,
+        "Z": 0.0
+      },
+      "PreviewBridgeStartOffSet": {
+        "X": 0.0,
+        "Y": 520.0,
+        "Z": 150.0
+      },
+      "DecalMaterial": {
+        "ObjectName": "Material'DecalBuildSite'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/DecalBuildSite.0"
+      },
+      "MaterialOverride": {
+        "ObjectName": "Material'Ghost'",
+        "ObjectPath": "Anvil/Content/Materials/Ghost.0"
+      },
+      "EndPieceMesh": {
+        "ObjectName": "StaticMesh'BridgeEndT1_SM'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Fort/BridgeEndT1_SM.2"
+      },
+      "MidPieceMeshes": [
+        {
+          "ObjectName": "StaticMesh'BridgePieceT2_SM'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Fort/BridgePieceT2_SM.2"
+        }
+      ],
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'Default__BPVisBridgeBuildSite_C:SplineComponent.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.9"
+      },
+      "MidPieces": [
+        null,
+        null
+      ],
+      "EndPieces": [
+        null,
+        null
+      ],
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisBridgeBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisBridgeBuildSite.0"
+      }
+    }
+  }
+]

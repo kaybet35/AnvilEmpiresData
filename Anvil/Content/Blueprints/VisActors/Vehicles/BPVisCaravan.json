@@ -1,0 +1,270 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisCaravan_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "MovementAudioComponent",
+    "Outer": "Default__BPVisCaravan_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCaravan_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisCaravan_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisCaravan_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisCart'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisCaravan_C'Default__BPVisCaravan_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisCaravan_C",
+    "Name": "Default__BPVisCaravan_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.BPVisCaravan_C'",
+    "Properties": {
+      "HungerDataComponent": {
+        "ObjectName": "HungerDataComponent'Default__BPVisCaravan_C:HungerDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.5"
+      },
+      "StaminaDataComponent": {
+        "ObjectName": "StaminaDataComponent'Default__BPVisCaravan_C:StaminaDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.13"
+      },
+      "SeatSocketName": "S_Seat",
+      "HorseMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisCaravan_C:HorseMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.11"
+      },
+      "SaddleMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisCaravan_C:SaddleMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.12"
+      },
+      "CartMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisCaravan_C:CartMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.10"
+      },
+      "VehicleMovementDataComponent": {
+        "ObjectName": "VehicleMovementDataComponent'Default__BPVisCaravan_C:VehicleMovementDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.14"
+      },
+      "MoveLoopAudioComponent": {
+        "ObjectName": "AudioComponent'Default__BPVisCaravan_C:MovementAudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.1"
+      },
+      "MoveLoopParticleSystem": {
+        "ObjectName": "NiagaraComponent'Default__BPVisCaravan_C:MovementParticleSystem'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.6"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisCaravan_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.4"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCaravan_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.0"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "DB1978B8436E6B0AB773AE962519A884",
+        "SourceString": "Caravan",
+        "LocalizedString": "Caravan"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "84CC5C9E45BB4D9C164608AF64E95E52",
+        "SourceString": "Carries equipment needed to setup a Camp. Camps can be used as foward operating bases.",
+        "LocalizedString": "Carries equipment needed to setup a Camp. Camps can be used as foward operating bases."
+      },
+      "DescriptionFooter": {
+        "Namespace": "",
+        "Key": "04DE045B4404B81E24E58FB95D1D9010",
+        "SourceString": "Deploys into a Camp structure",
+        "LocalizedString": "Deploys into a Camp structure"
+      },
+      "UseWindowType": "EHUDWindowType::InventoryStructure",
+      "AdditionalActionButtons": [
+        "EActionButtonType::DeployCamp",
+        "EActionButtonType::DetachFromHorse"
+      ],
+      "PositionSmoothSpeed": 4.0,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCaravan_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisCaravan_C",
+    "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "HungerDataComponent",
+    "Name": "HungerDataComponent",
+    "Outer": "Default__BPVisCaravan_C",
+    "Class": "UScriptClass'HungerDataComponent'"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "MovementParticleSystem",
+    "Outer": "Default__BPVisCaravan_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCaravan_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisCaravan_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisCaravan_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.7"
+      },
+      "VariableGuid": "38687822-4436412C-95AE6194-9A9237C7",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisCaravan_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisCaravan_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CartMesh",
+    "Outer": "Default__BPVisCaravan_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Caravan_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Caravan_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Caravan_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Caravan_SK.0"
+      },
+      "LeaderPoseComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisCaravan_C:HorseMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.11"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCaravan_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.0"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "HorseMesh",
+    "Outer": "Default__BPVisCaravan_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Horse_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_ABP.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Horse_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Horse_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Horse_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Horse_SK.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCaravan_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.0"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SaddleMesh",
+    "Outer": "Default__BPVisCaravan_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Saddle_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Saddle_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK.0"
+      },
+      "LeaderPoseComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisCaravan_C:HorseMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.11"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCaravan_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.0"
+      }
+    }
+  },
+  {
+    "Type": "StaminaDataComponent",
+    "Name": "StaminaDataComponent",
+    "Outer": "Default__BPVisCaravan_C",
+    "Class": "UScriptClass'StaminaDataComponent'"
+  },
+  {
+    "Type": "VehicleMovementDataComponent",
+    "Name": "VehicleMovementDataComponent",
+    "Outer": "Default__BPVisCaravan_C",
+    "Class": "UScriptClass'VehicleMovementDataComponent'"
+  }
+]

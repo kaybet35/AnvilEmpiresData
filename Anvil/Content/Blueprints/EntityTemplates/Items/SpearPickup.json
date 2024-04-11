@@ -1,0 +1,90 @@
+[
+  {
+    "Type": "AIStimulusProxyComponent",
+    "Name": "AIStimulusProxyComponent_0",
+    "Outer": "Default__SpearPickup_C",
+    "Class": "UScriptClass'AIStimulusProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilStimulusType::VisualThreat"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SpearPickup_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SpearPickup_C'Default__SpearPickup_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/SpearPickup.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__SpearPickup_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 200.0,
+        "Y": 50.0,
+        "Z": 50.0
+      },
+      "CollisionMask": 32
+    }
+  },
+  {
+    "Type": "PickupProxyComponent",
+    "Name": "PickupProxyComponent_0",
+    "Outer": "Default__SpearPickup_C",
+    "Class": "UScriptClass'PickupProxyComponent'",
+    "Properties": {
+      "Item": {
+        "ItemType": {
+          "ObjectName": "BlueprintGeneratedClass'Spear_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Spear.0"
+        },
+        "Count": 1
+      }
+    }
+  },
+  {
+    "Type": "SpearPickup_C",
+    "Name": "Default__SpearPickup_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Items/SpearPickup.SpearPickup_C'",
+    "Properties": {
+      "CodeNameString": "SpearPickup",
+      "CodeName": -318175610,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__SpearPickup_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/SpearPickup.2"
+        },
+        {
+          "ObjectName": "PickupProxyComponent'Default__SpearPickup_C:PickupProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/SpearPickup.3"
+        },
+        {
+          "ObjectName": "AIStimulusProxyComponent'Default__SpearPickup_C:AIStimulusProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/SpearPickup.0"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisSpearProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearProjectile.1"
+      }
+    }
+  }
+]

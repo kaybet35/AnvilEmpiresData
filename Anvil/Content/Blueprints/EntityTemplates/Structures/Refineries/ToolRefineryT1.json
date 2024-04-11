@@ -1,0 +1,402 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "ToolRefineryT1_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ToolRefineryT1_C'Default__ToolRefineryT1_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT1.12"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__ToolRefineryT1_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__ToolRefineryT1_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableComp",
+    "Outer": "Default__ToolRefineryT1_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Template": {
+      "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__ToolRefineryT1_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'ToolRefineryFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/ToolRefineryFootprint.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthComp",
+    "Outer": "Default__ToolRefineryT1_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
+    },
+    "Properties": {
+      "MaxHealth": 160.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__ToolRefineryT1_C",
+    "Class": "UScriptClass'InventoryProxyComponent'"
+  },
+  {
+    "Type": "RefineResourceProxyComponent",
+    "Name": "RefineResourceProxyComponent_0",
+    "Outer": "Default__ToolRefineryT1_C",
+    "Class": "UScriptClass'RefineResourceProxyComponent'",
+    "Properties": {
+      "ProducableItemList": [
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'AxeWeak_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/AxeWeak.1"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 3,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            },
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 2,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'PickaxeWeak_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/PickaxeWeak.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 3,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            },
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 5,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Hammer_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Hammer.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 3,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Torch_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Torch.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 10,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            },
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 3,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": true
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Hoe_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Hoe.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 3,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Scythe_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Scythe.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 3,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        }
+      ]
+    }
+  },
+  {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairComp",
+    "Outer": "Default__ToolRefineryT1_C",
+    "Class": "UScriptClass'RepairProxyComponent'",
+    "Template": {
+      "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+    },
+    "Properties": {
+      "TotalRepairCost": 5
+    }
+  },
+  {
+    "Type": "ScorchProxyComponent",
+    "Name": "ScorchProxyComponent_0",
+    "Outer": "Default__ToolRefineryT1_C",
+    "Class": "UScriptClass'ScorchProxyComponent'",
+    "Template": {
+      "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__ToolRefineryT1_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamComp",
+    "Outer": "Default__ToolRefineryT1_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    }
+  },
+  {
+    "Type": "ToolRefineryT1_C",
+    "Name": "Default__ToolRefineryT1_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT1.ToolRefineryT1_C'",
+    "Template": {
+      "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
+    },
+    "Properties": {
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__ToolRefineryT1_C:TeamComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT1.11"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__ToolRefineryT1_C:HealthComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT1.5"
+      },
+      "RepairComp": {
+        "ObjectName": "RepairProxyComponent'Default__ToolRefineryT1_C:RepairComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT1.8"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__ToolRefineryT1_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT1.10"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__ToolRefineryT1_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT1.3"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__ToolRefineryT1_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT1.4"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__ToolRefineryT1_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT1.1"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__ToolRefineryT1_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT1.2"
+      },
+      "ScorchComp": {
+        "ObjectName": "ScorchProxyComponent'Default__ToolRefineryT1_C:ScorchProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT1.9"
+      },
+      "CodeNameString": "WorkshopT1",
+      "CodeName": -750227223,
+      "bShowOnMap": true,
+      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "Components": [
+        {
+          "ObjectName": "RefineResourceProxyComponent'Default__ToolRefineryT1_C:RefineResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT1.7"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__ToolRefineryT1_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT1.6"
+        },
+        {
+          "ObjectName": "UpgradeProxyComponent'Default__ToolRefineryT1_C:UpgradeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT1.13"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisToolRefineryT1_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisToolRefineryT1.2"
+      }
+    }
+  },
+  {
+    "Type": "UpgradeProxyComponent",
+    "Name": "UpgradeProxyComponent_0",
+    "Outer": "Default__ToolRefineryT1_C",
+    "Class": "UScriptClass'UpgradeProxyComponent'",
+    "Properties": {
+      "UpgradeTarget": {
+        "ObjectName": "BlueprintGeneratedClass'ToolRefineryT2_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ToolRefineryT2.0"
+      },
+      "TierPrerequisite": 2,
+      "ProcessedWoodRequirement": 15
+    }
+  }
+]

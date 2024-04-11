@@ -1,0 +1,92 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "DeployedTrapBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DeployedTrapBuildSite_C'Default__DeployedTrapBuildSite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/DeployedTrapBuildSite.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BuildSiteProxyComponent",
+    "Name": "BuildSiteProxyComponent_0",
+    "Outer": "Default__DeployedTrapBuildSite_C",
+    "Class": "UScriptClass'BuildSiteProxyComponent'",
+    "Properties": {
+      "BuiltStructureEntity": {
+        "ObjectName": "BlueprintGeneratedClass'DeployedTrap_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/DeployedTrap.0"
+      },
+      "RequiredLocationType": "EAnvilBuildLocationType::Deployed",
+      "bBuildableNearEnemies": true,
+      "RequiredDeployable": {
+        "ObjectName": "BlueprintGeneratedClass'TrapItem_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/TrapItem.0"
+      }
+    }
+  },
+  {
+    "Type": "DeployedTrapBuildSite_C",
+    "Name": "Default__DeployedTrapBuildSite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/DeployedTrapBuildSite.DeployedTrapBuildSite_C'",
+    "Properties": {
+      "CodeNameString": "DeployedTrapBuildSite",
+      "CodeName": -287157717,
+      "Components": [
+        {
+          "ObjectName": "BuildSiteProxyComponent'Default__DeployedTrapBuildSite_C:BuildSiteProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/DeployedTrapBuildSite.1"
+        },
+        {
+          "ObjectName": "FootprintCollisionProxyComponent'Default__DeployedTrapBuildSite_C:FootprintCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/DeployedTrapBuildSite.3"
+        },
+        {
+          "ObjectName": "HealthProxyComponent'Default__DeployedTrapBuildSite_C:HealthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/DeployedTrapBuildSite.4"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisDeployedTrapBuildSite_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisDeployedTrapBuildSite.1"
+      }
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__DeployedTrapBuildSite_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'TrapFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TrapFootprint.0"
+      },
+      "CollisionMask": 8450
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_0",
+    "Outer": "Default__DeployedTrapBuildSite_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "MaxHealth": 10.0
+    }
+  }
+]

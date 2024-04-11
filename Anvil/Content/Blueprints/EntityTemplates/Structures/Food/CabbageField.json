@@ -1,0 +1,85 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CabbageField_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CabbageField_C'Default__CabbageField_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/CabbageField.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__CabbageField_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "Extents": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 16
+    }
+  },
+  {
+    "Type": "CabbageField_C",
+    "Name": "Default__CabbageField_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Food/CabbageField.CabbageField_C'",
+    "Properties": {
+      "CodeNameString": "CabbageField",
+      "CodeName": 1394996355,
+      "Components": [
+        {
+          "ObjectName": "PlantGrowthProxyComponent'Default__CabbageField_C:PlantGrowthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/CabbageField.3"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__CabbageField_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/CabbageField.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisCabbageField_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisCabbageField.1"
+      }
+    }
+  },
+  {
+    "Type": "PlantGrowthProxyComponent",
+    "Name": "PlantGrowthProxyComponent_0",
+    "Outer": "Default__CabbageField_C",
+    "Class": "UScriptClass'PlantGrowthProxyComponent'",
+    "Properties": {
+      "MaturePlant": {
+        "ObjectName": "BlueprintGeneratedClass'CabbagePlant_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/CabbagePlant.0"
+      },
+      "RequiredSeedType": {
+        "ObjectName": "BlueprintGeneratedClass'CabbageSeed_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/CabbageSeed.0"
+      },
+      "StageTime": 1800.0,
+      "GrowthStage": 3
+    }
+  }
+]

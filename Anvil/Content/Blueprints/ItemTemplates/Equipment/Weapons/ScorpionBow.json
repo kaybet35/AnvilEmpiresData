@@ -1,0 +1,79 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "ScorpionBow_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ScorpionBow_C'Default__ScorpionBow_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/ScorpionBow.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ScorpionBow_C",
+    "Name": "Default__ScorpionBow_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/ScorpionBow.ScorpionBow_C'",
+    "Properties": {
+      "CodeNameString": "ScorpionBow",
+      "CodeName": -100561726,
+      "ItemType": "EAnvilItemType::PrimaryTool",
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "ItemInvokedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectScorpionShot_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectScorpionShot.0"
+      },
+      "bLarge": true,
+      "Encumberance": 255,
+      "bRanged": true,
+      "DamageOffset": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "AmmoType": {
+        "ObjectName": "BlueprintGeneratedClass'ScorpionArrows_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ScorpionArrows.0"
+      },
+      "ProjectileEntity": {
+        "ObjectName": "BlueprintGeneratedClass'ScorpionArrowProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/ScorpionArrowProjectile.0"
+      },
+      "bStaggersWielder": true,
+      "RequiredStance": "EAnvilCharacterStance::OnScorpion",
+      "AimMovementSpeedModifier": 0.5,
+      "AimRotationSpeedModifier": 2.5,
+      "DefaultActivity": {
+        "Delay": 0.7,
+        "Duration": 1.1
+      },
+      "RangedActivity": {
+        "State": "EAnvilSimActivityState::LaunchingProjectile",
+        "Delay": 0.1,
+        "Duration": 1.1,
+        "bRepeatable": false,
+        "StaminaCost": 15.0,
+        "AimedStaminaCost": 5.0
+      },
+      "BuildActivity": {
+        "bRepeatable": false
+      },
+      "bAllowCameraPan": false
+    }
+  }
+]

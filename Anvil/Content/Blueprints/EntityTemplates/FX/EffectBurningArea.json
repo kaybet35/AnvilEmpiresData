@@ -1,0 +1,113 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "EffectBurningArea_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "EffectBurningArea_C'Default__EffectBurningArea_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectBurningArea.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__EffectBurningArea_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 8388608
+    }
+  },
+  {
+    "Type": "EffectBurningArea_C",
+    "Name": "Default__EffectBurningArea_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/FX/EffectBurningArea.EffectBurningArea_C'",
+    "Properties": {
+      "CodeNameString": "EffectBurningArea",
+      "CodeName": 1468686455,
+      "Components": [
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__EffectBurningArea_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectBurningArea.4"
+        },
+        {
+          "ObjectName": "PassiveDamageProxyComponent'Default__EffectBurningArea_C:PassiveDamageProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectBurningArea.5"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__EffectBurningArea_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectBurningArea.1"
+        },
+        {
+          "ObjectName": "HealthProxyComponent'Default__EffectBurningArea_C:HealthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectBurningArea.3"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'VisEffectBurningArea_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectBurningArea.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_0",
+    "Outer": "Default__EffectBurningArea_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "TargetType": "EAnvilDamageTargetType::Fire"
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__EffectBurningArea_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 60.0
+    }
+  },
+  {
+    "Type": "PassiveDamageProxyComponent",
+    "Name": "PassiveDamageProxyComponent_0",
+    "Outer": "Default__EffectBurningArea_C",
+    "Class": "UScriptClass'PassiveDamageProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 100.0
+      },
+      "Damage": 10.0,
+      "Frequency": 0.5
+    }
+  }
+]

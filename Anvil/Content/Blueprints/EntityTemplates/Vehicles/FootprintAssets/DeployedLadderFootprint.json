@@ -1,0 +1,147 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "DeployedLadderFootprint_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'DeployedLadderFootprint_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/FootprintAssets/DeployedLadderFootprint.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Footprint'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DeployedLadderFootprint_C'Default__DeployedLadderFootprint_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/FootprintAssets/DeployedLadderFootprint.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "DeployedLadderFootprint_C",
+    "Name": "Default__DeployedLadderFootprint_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Vehicles/FootprintAssets/DeployedLadderFootprint.DeployedLadderFootprint_C'",
+    "Properties": {
+      "bShowMesh": true,
+      "Position": {
+        "X": -10.0,
+        "Y": 3.8146973E-06,
+        "Z": 352.501
+      },
+      "Extents": {
+        "X": 10.001,
+        "Y": 50.001057,
+        "Z": 352.501
+      },
+      "StructureTiers": [
+        {
+          "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Vehicles/DeployedLadder.DeployedLadder_C'": true
+        },
+        {
+          "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/DeployedLadderBuildSite.DeployedLadderBuildSite_C'": true
+        }
+      ],
+      "FootprintSharedComponents": [
+        {
+          "Comp": {
+            "ObjectName": "LadderProxyComponent'Default__DeployedLadderFootprint_C:LadderProxyComponent_0'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/FootprintAssets/DeployedLadderFootprint.2"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": false
+        }
+      ]
+    }
+  },
+  {
+    "Type": "LadderProxyComponent",
+    "Name": "LadderProxyComponent_0",
+    "Outer": "Default__DeployedLadderFootprint_C",
+    "Class": "UScriptClass'LadderProxyComponent'",
+    "Properties": {
+      "PlayerOffset": 60.0,
+      "ExitXOffset": 80.0,
+      "ExitZOffset": 100.0,
+      "ExitZTolerance": 50.0,
+      "PitchMin": 20.0,
+      "PitchMax": 89.0,
+      "MaxVelocity": 150.0,
+      "AccelerationMultiplier": 1.0,
+      "PlayerFallDamage": 35.0,
+      "LadderFallDamage": 50.0
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "DeployedLadderFootprint_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'DeployedLadderFootprint_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/FootprintAssets/DeployedLadderFootprint.3"
+      },
+      "VariableGuid": "89EFE3FF-45B4B7C7-3B0D0C80-AC6102DA",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "DeployedLadderFootprint_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'DeployedLadderFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/FootprintAssets/DeployedLadderFootprint.4"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'DeployedLadderFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/FootprintAssets/DeployedLadderFootprint.4"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'DeployedLadderFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/FootprintAssets/DeployedLadderFootprint.4"
+      }
+    }
+  }
+]

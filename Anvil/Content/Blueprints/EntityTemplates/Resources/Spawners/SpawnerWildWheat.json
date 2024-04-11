@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SpawnerWildWheat_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SpawnerWildWheat_C'Default__SpawnerWildWheat_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerWildWheat.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_0",
+    "Outer": "Default__SpawnerWildWheat_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'WildWheat_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/WildWheat.0"
+      },
+      "SpawnRadius": 2000.0,
+      "SpawnInterval": 1800.0,
+      "SpawnQuantity": 15,
+      "MaxSpawn": 15,
+      "ResourceReserveInitial": 15,
+      "ReserveReplenishTimeSecs": 3600,
+      "MinDistanceBetweenSpawns": 150.0,
+      "bDontSpawnInSettlements": true,
+      "CompatibleSurfaceTypes": 516
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_1",
+    "Outer": "Default__SpawnerWildWheat_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'RareAreaWheat_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/RareResourceAreas/RareAreaWheat.0"
+      },
+      "SpawnRadius": 500.0,
+      "SpawnInterval": 1800.0,
+      "SpawnQuantity": 1,
+      "MaxSpawn": 1,
+      "ResourceReserveInitial": 1
+    }
+  },
+  {
+    "Type": "SpawnerWildWheat_C",
+    "Name": "Default__SpawnerWildWheat_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerWildWheat.SpawnerWildWheat_C'",
+    "Properties": {
+      "CodeNameString": "SpawnerWildWheat",
+      "CodeName": 474323536,
+      "bShowOnMap": true,
+      "Components": [
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerWildWheat_C:ResourceSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerWildWheat.1"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerWildWheat_C:ResourceSpawnerProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerWildWheat.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisSpawnerWildWheat_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Spawners/BPVisSpawnerWildWheat.0"
+      }
+    }
+  }
+]

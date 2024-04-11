@@ -1,0 +1,72 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BurningOilProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BurningOilProjectile_C'Default__BurningOilProjectile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/BurningOilProjectile.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BurningOilProjectile_C",
+    "Name": "Default__BurningOilProjectile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Items/BurningOilProjectile.BurningOilProjectile_C'",
+    "Properties": {
+      "CodeNameString": "BurningOilProjectile",
+      "CodeName": -1349287875,
+      "bStatic": false,
+      "bSkipPersist": true,
+      "Components": [
+        {
+          "ObjectName": "ProjectileMovementProxyComponent'Default__BurningOilProjectile_C:ProjectileMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/BurningOilProjectile.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisBurningOilprojectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.2"
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementProxyComponent",
+    "Name": "ProjectileMovementProxyComponent_0",
+    "Outer": "Default__BurningOilProjectile_C",
+    "Class": "UScriptClass'ProjectileMovementProxyComponent'",
+    "Properties": {
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectBurningOilProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectBurningOilProjectile.0"
+      },
+      "GroundPatch": {
+        "ObjectName": "BlueprintGeneratedClass'EffectBurningArea_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectBurningArea.0"
+      },
+      "Speed": 200.0,
+      "MaxRange": 1000.0,
+      "BleedDamagePerSec": 10.0,
+      "BleedTime": 5.0,
+      "DamageAmount": 150,
+      "DamageType": "EAnvilDamageType::Missile",
+      "Radius": 50.0,
+      "HeadingTolerance": 45.0,
+      "NozzleYawDelta": 80.0,
+      "DislodgeRate": 0.5
+    }
+  }
+]

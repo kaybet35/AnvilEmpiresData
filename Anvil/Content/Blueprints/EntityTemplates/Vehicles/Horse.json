@@ -1,0 +1,241 @@
+[
+  {
+    "Type": "AIStimulusProxyComponent",
+    "Name": "AIStimulusProxyComponent_0",
+    "Outer": "Default__Horse_C",
+    "Class": "UScriptClass'AIStimulusProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilStimulusType::VisualThreat",
+      "bAgroTarget": true
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Horse_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Horse_C'Default__Horse_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.7"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__Horse_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 150.0
+      },
+      "Extents": {
+        "X": 150.0,
+        "Y": 45.0,
+        "Z": 150.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 16801856
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_1",
+    "Outer": "Default__Horse_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "ExtendFootprint": true,
+      "Extents": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 8
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableProxyComponent_0",
+    "Outer": "Default__Horse_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Properties": {
+      "DestructionEffectEntity": {
+        "ObjectName": "BlueprintGeneratedClass'HorseHusk_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Husks/HorseHusk.0"
+      }
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__Horse_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'HorseFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/FootprintAssets/HorseFootprint.0"
+      },
+      "CollisionMask": 256
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_0",
+    "Outer": "Default__Horse_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "MaxHealth": 80.0,
+      "TargetType": "EAnvilDamageTargetType::Horse"
+    }
+  },
+  {
+    "Type": "Horse_C",
+    "Name": "Default__Horse_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.Horse_C'",
+    "Properties": {
+      "CodeNameString": "Horse",
+      "CodeName": 1789093919,
+      "bStatic": false,
+      "SerializationType": "EEntitySerializationType::7",
+      "Components": [
+        {
+          "ObjectName": "VehicleMovementProxyComponent'Default__Horse_C:VehicleMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.11"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__Horse_C:VehicleSeatProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.12"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Horse_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.9"
+        },
+        {
+          "ObjectName": "HealthProxyComponent'Default__Horse_C:HealthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.6"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__Horse_C:BoxCollisionProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.3"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__Horse_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.2"
+        },
+        {
+          "ObjectName": "DestroyableProxyComponent'Default__Horse_C:DestroyableProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.4"
+        },
+        {
+          "ObjectName": "FootprintCollisionProxyComponent'Default__Horse_C:FootprintCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.5"
+        },
+        {
+          "ObjectName": "AIStimulusProxyComponent'Default__Horse_C:AIStimulusProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.0"
+        },
+        {
+          "ObjectName": "HungerProxyComponent'Default__Horse_C:HungerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.8"
+        },
+        {
+          "ObjectName": "StaminaProxyComponent'Default__Horse_C:StaminaProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.10"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisHorse_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.3"
+      }
+    }
+  },
+  {
+    "Type": "HungerProxyComponent",
+    "Name": "HungerProxyComponent_0",
+    "Outer": "Default__Horse_C",
+    "Class": "UScriptClass'HungerProxyComponent'"
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__Horse_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 10,
+          "bHoldsLarge": true,
+          "SlotType": "EAnvilItemType::All",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        }
+      ],
+      "NormalizedSpoilageFactor": 1.0
+    }
+  },
+  {
+    "Type": "StaminaProxyComponent",
+    "Name": "StaminaProxyComponent_0",
+    "Outer": "Default__Horse_C",
+    "Class": "UScriptClass'StaminaProxyComponent'"
+  },
+  {
+    "Type": "VehicleMovementProxyComponent",
+    "Name": "VehicleMovementProxyComponent_0",
+    "Outer": "Default__Horse_C",
+    "Class": "UScriptClass'VehicleMovementProxyComponent'",
+    "Properties": {
+      "Acceleration": 9000.0,
+      "MaxVelocity": 550.0,
+      "RotationalSpeed": 50.0,
+      "SprintFactor": 2.0,
+      "SprintRotationalSpeedFactor": 0.5,
+      "SprintStaminaDrain": 5.0,
+      "CollisionEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectLeatherArmourGlancing_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectLeatherArmourGlancing.0"
+      },
+      "RammingDamage": 20.0,
+      "RammingVelocityFactor": 0.8
+    }
+  },
+  {
+    "Type": "VehicleSeatProxyComponent",
+    "Name": "VehicleSeatProxyComponent_0",
+    "Outer": "Default__Horse_C",
+    "Class": "UScriptClass'VehicleSeatProxyComponent'",
+    "Properties": {
+      "MountedStance": "EAnvilCharacterStance::OnHorse",
+      "PlayerOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 250.0
+      },
+      "PlayerExitOffset": {
+        "X": 0.0,
+        "Y": 150.0,
+        "Z": 100.0
+      },
+      "bIsDriver": true,
+      "MountedAttackDamageMultiplier": 2.0
+    }
+  }
+]

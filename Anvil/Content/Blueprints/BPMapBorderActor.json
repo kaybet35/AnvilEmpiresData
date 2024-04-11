@@ -1,0 +1,173 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPMapBorderActor_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPMapBorderActor_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPMapBorderActor.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'MapBorderActor'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPMapBorderActor_C'Default__BPMapBorderActor_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/BPMapBorderActor.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPMapBorderActor_C",
+    "Name": "Default__BPMapBorderActor_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/BPMapBorderActor.BPMapBorderActor_C'",
+    "Properties": {
+      "BoxVisualizer": {
+        "ObjectName": "StaticMeshComponent'Default__BPMapBorderActor_C:BoxVisualizer'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPMapBorderActor.7"
+      },
+      "CameraComponent": {
+        "ObjectName": "CameraComponent'Default__BPMapBorderActor_C:CameraComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPMapBorderActor.2"
+      },
+      "SceneComponent": {
+        "ObjectName": "SceneComponent'Default__BPMapBorderActor_C:SceneComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPMapBorderActor.4"
+      },
+      "bCanBeDamaged": false,
+      "bCanBeInCluster": true,
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BPMapBorderActor_C:SceneComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPMapBorderActor.4"
+      }
+    }
+  },
+  {
+    "Type": "CameraComponent",
+    "Name": "CameraComponent",
+    "Outer": "Default__BPMapBorderActor_C",
+    "Class": "UScriptClass'CameraComponent'",
+    "Properties": {
+      "OrthoWidth": 0.0,
+      "OrthoFarClipPlane": 2962994.0,
+      "ProjectionMode": "ECameraProjectionMode::Orthographic",
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BPMapBorderActor_C:SceneComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPMapBorderActor.4"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100000.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPMapBorderActor_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent",
+    "Outer": "Default__BPMapBorderActor_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPMapBorderActor_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPMapBorderActor.3"
+      },
+      "VariableGuid": "743F3F2C-43E6B7BA-BFA092BF-A3B04EC7",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPMapBorderActor_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPMapBorderActor_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPMapBorderActor.5"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "BoxVisualizer",
+    "Outer": "Default__BPMapBorderActor_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Cube'",
+        "ObjectPath": "Engine/Content/BasicShapes/Cube.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'MeleeAimMesh'",
+          "ObjectPath": "Anvil/Content/Materials/MeleeAimMesh.0"
+        }
+      ],
+      "bNeverDistanceCull": true,
+      "bGenerateOverlapEvents": false,
+      "bAllowCullDistanceVolume": false,
+      "bOwnerNoSee": true,
+      "CastShadow": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BPMapBorderActor_C:SceneComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPMapBorderActor.4"
+      },
+      "RelativeScale3D": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "bHiddenInGame": true
+    }
+  }
+]

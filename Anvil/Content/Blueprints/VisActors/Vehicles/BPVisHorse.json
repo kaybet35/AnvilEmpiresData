@@ -1,0 +1,325 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisHorse_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Idle_GEN_VARIABLE",
+    "Outer": "BPVisHorse_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'HorseIdle_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Horse/HorseIdle_Cue.0"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "MovementAudioComponent",
+    "Outer": "Default__BPVisHorse_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisHorse_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisHorse_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.11"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisCart'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Idle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisHorse_C'Default__BPVisHorse_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisHorse_C",
+    "Name": "Default__BPVisHorse_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.BPVisHorse_C'",
+    "Properties": {
+      "HungerDataComponent": {
+        "ObjectName": "HungerDataComponent'Default__BPVisHorse_C:HungerDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.6"
+      },
+      "StaminaDataComponent": {
+        "ObjectName": "StaminaDataComponent'Default__BPVisHorse_C:StaminaDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.15"
+      },
+      "SeatSocketName": "S_Seat",
+      "HorseMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisHorse_C:HorseMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.13"
+      },
+      "SaddleMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisHorse_C:SaddleMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.14"
+      },
+      "CartMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisHorse_C:CartMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.12"
+      },
+      "VehicleMovementDataComponent": {
+        "ObjectName": "VehicleMovementDataComponent'Default__BPVisHorse_C:VehicleMovementDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.16"
+      },
+      "MoveLoopAudioComponent": {
+        "ObjectName": "AudioComponent'Default__BPVisHorse_C:MovementAudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.2"
+      },
+      "MoveLoopParticleSystem": {
+        "ObjectName": "NiagaraComponent'Default__BPVisHorse_C:MovementParticleSystem'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.7"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisHorse_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.5"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.0"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "4CD2996841D820070E33998F578C1869",
+        "SourceString": "Horse",
+        "LocalizedString": "Horse"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "A605C1DA433E02E5618B94885BE45998",
+        "SourceString": "Horses are a way for players to cross large distances faster & plunder",
+        "LocalizedString": "Horses are a way for players to cross large distances faster & plunder"
+      },
+      "UseWindowType": "EHUDWindowType::InventoryStructure",
+      "PositionSmoothSpeed": 4.0,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisHorse_C",
+    "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "HungerDataComponent",
+    "Name": "HungerDataComponent",
+    "Outer": "Default__BPVisHorse_C",
+    "Class": "UScriptClass'HungerDataComponent'"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "MovementParticleSystem",
+    "Outer": "Default__BPVisHorse_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisHorse_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisHorse_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.8"
+      },
+      "VariableGuid": "690B95D8-416343C9-7F4AE48C-9E824020",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'BPVisHorse_C:Idle_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.1"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "578E9957-4EDC1B5D-6197139E-45F0DDFB",
+      "InternalVariableName": "Idle"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisHorse_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisHorse_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisHorse_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisHorse_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.9"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CartMesh",
+    "Outer": "Default__BPVisHorse_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "LeaderPoseComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisHorse_C:HorseMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.13"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -25.0
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "HorseMesh",
+    "Outer": "Default__BPVisHorse_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Horse_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_ABP.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Horse_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Horse_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Horse_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Horse_SK.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -25.0
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SaddleMesh",
+    "Outer": "Default__BPVisHorse_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Saddle_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Saddle_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK.0"
+      },
+      "LeaderPoseComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisHorse_C:HorseMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.13"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHorse.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -25.0
+      }
+    }
+  },
+  {
+    "Type": "StaminaDataComponent",
+    "Name": "StaminaDataComponent",
+    "Outer": "Default__BPVisHorse_C",
+    "Class": "UScriptClass'StaminaDataComponent'"
+  },
+  {
+    "Type": "VehicleMovementDataComponent",
+    "Name": "VehicleMovementDataComponent",
+    "Outer": "Default__BPVisHorse_C",
+    "Class": "UScriptClass'VehicleMovementDataComponent'"
+  }
+]

@@ -1,0 +1,145 @@
+[
+  {
+    "Type": "BillboardComponent",
+    "Name": "Billboard_GEN_VARIABLE",
+    "Outer": "MajorLocationMarker_C",
+    "Class": "UScriptClass'BillboardComponent'",
+    "Properties": {
+      "Sprite": {
+        "ObjectName": "Texture2D'IconTownMarker'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconTownMarker.0"
+      },
+      "ScreenSize": 256.0
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "MajorLocationMarker_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'MajorLocationMarker_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/MajorLocationMarker.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'MapMarkerActor'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Billboard",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BillboardComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "MajorLocationMarker_C'Default__MajorLocationMarker_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/MajorLocationMarker.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "MajorLocationMarker_C",
+    "Name": "Default__MajorLocationMarker_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/MajorLocationMarker.MajorLocationMarker_C'",
+    "Properties": {
+      "Marker": {
+        "ObjectName": "MapMarkerComponent'Default__MajorLocationMarker_C:MapMarker'",
+        "ObjectPath": "Anvil/Content/Blueprints/MajorLocationMarker.3"
+      }
+    }
+  },
+  {
+    "Type": "MapMarkerComponent",
+    "Name": "MapMarker",
+    "Outer": "Default__MajorLocationMarker_C",
+    "Class": "UScriptClass'MapMarkerComponent'",
+    "Properties": {
+      "MapIconProperty": {
+        "MapActorType": "EMapIconType::MajorLocation"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "MajorLocationMarker_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'MajorLocationMarker_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/MajorLocationMarker.4"
+      },
+      "VariableGuid": "34B43B28-41678A13-7FAF39A9-4B99366B",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BillboardComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BillboardComponent'MajorLocationMarker_C:Billboard_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/MajorLocationMarker.0"
+      },
+      "VariableGuid": "5194C441-4B42932A-A2901984-B03587CB",
+      "InternalVariableName": "Billboard"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "MajorLocationMarker_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'MajorLocationMarker_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/MajorLocationMarker.6"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'MajorLocationMarker_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/MajorLocationMarker.6"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'MajorLocationMarker_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/MajorLocationMarker.5"
+      }
+    }
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "WaterProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WaterProjectile_C'Default__WaterProjectile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/WaterProjectile.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ProjectileMovementProxyComponent",
+    "Name": "ProjectileMovementProxyComponent_0",
+    "Outer": "Default__WaterProjectile_C",
+    "Class": "UScriptClass'ProjectileMovementProxyComponent'",
+    "Properties": {
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectWaterProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectWaterProjectile.0"
+      },
+      "Speed": 1000.0,
+      "MaxRange": 1000.0,
+      "DamageAmount": 100,
+      "DamageType": "EAnvilDamageType::Water",
+      "Radius": 20.0,
+      "HeadingTolerance": 45.0,
+      "ScorchAmount": -0.5
+    }
+  },
+  {
+    "Type": "WaterProjectile_C",
+    "Name": "Default__WaterProjectile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Items/WaterProjectile.WaterProjectile_C'",
+    "Properties": {
+      "CodeNameString": "WaterProjectile",
+      "CodeName": 1297621778,
+      "bStatic": false,
+      "bSkipPersist": true,
+      "Components": [
+        {
+          "ObjectName": "ProjectileMovementProxyComponent'Default__WaterProjectile_C:ProjectileMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/WaterProjectile.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisWaterProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.2"
+      }
+    }
+  }
+]

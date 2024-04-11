@@ -1,0 +1,126 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Tree03_Stage2_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Tree03_Stage2_C'Default__Tree03_Stage2_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03_Stage2.5"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__Tree03_Stage2_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 600.0
+      },
+      "Extents": {
+        "X": 35.0,
+        "Y": 35.0,
+        "Z": 600.0
+      },
+      "CollisionMask": 8210
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__Tree03_Stage2_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'TreeFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/TreeFootprint.0"
+      },
+      "CollisionMask": 256
+    }
+  },
+  {
+    "Type": "PlantGrowthProxyComponent",
+    "Name": "PlantGrowthProxyComponent_0",
+    "Outer": "Default__Tree03_Stage2_C",
+    "Class": "UScriptClass'PlantGrowthProxyComponent'",
+    "Properties": {
+      "MaturePlant": {
+        "ObjectName": "BlueprintGeneratedClass'Tree03_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03.0"
+      },
+      "StageTime": 7200.0,
+      "GrowthStage": 1,
+      "bCanGrow": true
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__Tree03_Stage2_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilResourceType::ChoppedTree",
+      "HitPoints": 5,
+      "RequiredTool": "EAnvilToolType::Axe",
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'Wood03Pickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/Wood03Pickup.0"
+      },
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'Tree03_Stage2Fall_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03_Stage2Fall.0"
+      },
+      "DestructionEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectTreeFall03_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectTreeFall03.0"
+      }
+    }
+  },
+  {
+    "Type": "Tree03_Stage2_C",
+    "Name": "Default__Tree03_Stage2_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03_Stage2.Tree03_Stage2_C'",
+    "Properties": {
+      "CodeNameString": "Tree03_Stage2",
+      "CodeName": 1066026617,
+      "Components": [
+        {
+          "ObjectName": "FootprintCollisionProxyComponent'Default__Tree03_Stage2_C:FootprintCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03_Stage2.2"
+        },
+        {
+          "ObjectName": "PlantGrowthProxyComponent'Default__Tree03_Stage2_C:PlantGrowthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03_Stage2.3"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__Tree03_Stage2_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03_Stage2.1"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__Tree03_Stage2_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03_Stage2.4"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisTree03_Stage2_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2.1"
+      }
+    }
+  }
+]

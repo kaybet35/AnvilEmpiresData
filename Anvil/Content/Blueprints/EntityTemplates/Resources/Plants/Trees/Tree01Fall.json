@@ -1,0 +1,93 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Tree01Fall_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Tree01Fall_C'Default__Tree01Fall_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree01Fall.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CapsuleCollisionProxyComponent",
+    "Name": "CapsuleCollisionProxyComponent_0",
+    "Outer": "Default__Tree01Fall_C",
+    "Class": "UScriptClass'CapsuleCollisionProxyComponent'",
+    "Properties": {
+      "Radius": 20.0,
+      "HalfHeight": 100.0,
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeWood",
+      "CollisionMask": 8194
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__Tree01Fall_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 1.5,
+      "DropResourceOnDeath": true
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__Tree01Fall_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilResourceType::ChoppedTree",
+      "DroppedResourceAmount": 2,
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'Wood01Pickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/Wood01Pickup.0"
+      },
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'Tree01Stump_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree01Stump.0"
+      }
+    }
+  },
+  {
+    "Type": "Tree01Fall_C",
+    "Name": "Default__Tree01Fall_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree01Fall.Tree01Fall_C'",
+    "Properties": {
+      "CodeNameString": "Tree01Fall",
+      "CodeName": 752255857,
+      "bUseScale": true,
+      "Components": [
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__Tree01Fall_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree01Fall.2"
+        },
+        {
+          "ObjectName": "CapsuleCollisionProxyComponent'Default__Tree01Fall_C:CapsuleCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree01Fall.1"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__Tree01Fall_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree01Fall.3"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisTree01Fall_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree01Fall.0"
+      }
+    }
+  }
+]

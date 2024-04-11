@@ -1,0 +1,1475 @@
+[
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "Bear_ABP_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "HitEffect State",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "entry",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 4,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "HitEffect",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 5,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                3
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "States",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "movement",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 9,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                10
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Attack",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 11,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                12
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'Bear_SK_Skeleton'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Bear_SK_Skeleton.0"
+      },
+      "AnimNodeData": [
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295,
+            0,
+            12
+          ],
+          "NodeIndex": 0,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295
+          ],
+          "NodeIndex": 1,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295
+          ],
+          "NodeIndex": 2,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            12,
+            9,
+            8,
+            7,
+            4294967295,
+            6,
+            6,
+            5,
+            4294967295,
+            4,
+            2,
+            7
+          ],
+          "NodeIndex": 3,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295,
+            1,
+            12,
+            11
+          ],
+          "NodeIndex": 4,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            12,
+            9,
+            8,
+            7,
+            2147483648,
+            4,
+            6,
+            2,
+            2,
+            4,
+            4294967295
+          ],
+          "NodeIndex": 5,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295,
+            3,
+            12,
+            14
+          ],
+          "NodeIndex": 6,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 7,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 8,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 9,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295
+          ],
+          "NodeIndex": 10,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295
+          ],
+          "NodeIndex": 11,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            12,
+            9,
+            8,
+            7,
+            4294967295,
+            6,
+            6,
+            5,
+            4294967295,
+            4,
+            7,
+            7
+          ],
+          "NodeIndex": 12,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295,
+            10,
+            12,
+            11
+          ],
+          "NodeIndex": 13,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295,
+            13,
+            12,
+            14
+          ],
+          "NodeIndex": 14,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            15,
+            15,
+            15,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 15,
+          "Flags": "EAnimNodeDataFlags::None"
+        }
+      ],
+      "NodeTypeMap": [
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_StateMachine'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "StateMachineIndexInClass": 3
+              },
+              {
+                "MaxTransitionsPerFrame": 4
+              },
+              {
+                "MaxTransitionsRequests": 5
+              },
+              {
+                "bSkipFirstUpdateTransition": 6
+              },
+              {
+                "bReinitializeOnBecomingRelevant": 7
+              },
+              {
+                "bCreateNotifyMetaData": 8
+              },
+              {
+                "bAllowConduitEntryStates": 9
+              }
+            ],
+            "NumProperties": 10
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_Base'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_StateResult'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "Result": 3
+              },
+              {
+                "Name": 4
+              },
+              {
+                "Group": 5
+              },
+              {
+                "StateIndex": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_Root'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "Result": 3
+              },
+              {
+                "Name": 4
+              },
+              {
+                "Group": 5
+              }
+            ],
+            "NumProperties": 6
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_SequencePlayer'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "GroupIndex": 3
+              },
+              {
+                "GroupScope": 4
+              },
+              {
+                "BlendWeight": 5
+              },
+              {
+                "InternalTimeAccumulator": 6
+              },
+              {
+                "PlayRateScaleBiasClampState": 7
+              },
+              {
+                "GroupName": 8
+              },
+              {
+                "GroupRole": 9
+              },
+              {
+                "Method": 10
+              },
+              {
+                "bIgnoreForRelevancyTest": 11
+              },
+              {
+                "Sequence": 12
+              },
+              {
+                "PlayRateBasis": 13
+              },
+              {
+                "PlayRate": 14
+              },
+              {
+                "PlayRateScaleBiasClampConstants": 15
+              },
+              {
+                "PlayRateScaleBiasClamp": 16
+              },
+              {
+                "StartPosition": 17
+              },
+              {
+                "bLoopAnimation": 18
+              },
+              {
+                "bStartFromMatchingPose": 19
+              }
+            ],
+            "NumProperties": 20
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_SequencePlayerBase'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "GroupIndex": 3
+              },
+              {
+                "GroupScope": 4
+              },
+              {
+                "BlendWeight": 5
+              },
+              {
+                "InternalTimeAccumulator": 6
+              },
+              {
+                "PlayRateScaleBiasClampState": 7
+              }
+            ],
+            "NumProperties": 8
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerBase'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "GroupIndex": 3
+              },
+              {
+                "GroupScope": 4
+              },
+              {
+                "BlendWeight": 5
+              },
+              {
+                "InternalTimeAccumulator": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerRelevancyBase'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_TransitionResult'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "bCanEnterTransition": 3
+              }
+            ],
+            "NumProperties": 4
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_ApplyMeshSpaceAdditive'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "Base": 3
+              },
+              {
+                "Additive": 4
+              },
+              {
+                "AlphaInputType": 5
+              },
+              {
+                "Alpha": 6
+              },
+              {
+                "bAlphaBoolEnabled": 7
+              },
+              {
+                "AlphaBoolBlend": 8
+              },
+              {
+                "AlphaCurveName": 9
+              },
+              {
+                "AlphaScaleBias": 10
+              },
+              {
+                "AlphaScaleBiasClamp": 11
+              },
+              {
+                "LODThreshold": 12
+              }
+            ],
+            "NumProperties": 13
+          }
+        },
+        {
+          "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_Slot'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "Source": 3
+              },
+              {
+                "SlotName": 4
+              },
+              {
+                "bAlwaysUpdateSourcePose": 5
+              }
+            ],
+            "NumProperties": 6
+          }
+        },
+        {
+          "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendSpacePlayer'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "GroupIndex": 3
+              },
+              {
+                "GroupScope": 4
+              },
+              {
+                "BlendWeight": 5
+              },
+              {
+                "InternalTimeAccumulator": 6
+              },
+              {
+                "PreviousBlendSpace": 7
+              },
+              {
+                "GroupName": 8
+              },
+              {
+                "GroupRole": 9
+              },
+              {
+                "Method": 10
+              },
+              {
+                "bIgnoreForRelevancyTest": 11
+              },
+              {
+                "X": 12
+              },
+              {
+                "Y": 13
+              },
+              {
+                "PlayRate": 14
+              },
+              {
+                "bLoop": 15
+              },
+              {
+                "bResetPlayTimeWhenBlendSpaceChanges": 16
+              },
+              {
+                "StartPosition": 17
+              },
+              {
+                "BlendSpace": 18
+              }
+            ],
+            "NumProperties": 19
+          }
+        },
+        {
+          "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendSpacePlayerBase'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "GroupIndex": 3
+              },
+              {
+                "GroupScope": 4
+              },
+              {
+                "BlendWeight": 5
+              },
+              {
+                "InternalTimeAccumulator": 6
+              },
+              {
+                "PreviousBlendSpace": 7
+              }
+            ],
+            "NumProperties": 8
+          }
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'Bear_ABP_C:ExecuteUbergraph_Bear_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisAnimalAnimInstance'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'Bear_ABP_C:AnimGraph'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.2"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_325243A244EDF7369EB46DAA59F2C4E6'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.3"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_93F4687A42CAE16CE9E76A9D9879ECB9'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.4"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D29FF04F42426B638FCFED8B8118E326'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.5"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:ExecuteUbergraph_Bear_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.6"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__AnimBlueprintMutables",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Bear_ABP_C:AnimBlueprintGeneratedMutableData'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.8"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_BlendSpacePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 280,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 208,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Slot'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_ApplyMeshSpaceAdditive",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 352,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_ApplyMeshSpaceAdditive'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "isDead",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Bear_ABP": {
+        "ObjectName": "Function'Bear_ABP_C:ExecuteUbergraph_Bear_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.6"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D29FF04F42426B638FCFED8B8118E326": {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D29FF04F42426B638FCFED8B8118E326'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_93F4687A42CAE16CE9E76A9D9879ECB9": {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_93F4687A42CAE16CE9E76A9D9879ECB9'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.4"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_325243A244EDF7369EB46DAA59F2C4E6": {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_325243A244EDF7369EB46DAA59F2C4E6'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.3"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'Bear_ABP_C:AnimGraph'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.2"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Bear_ABP_C'Default__Bear_ABP_C'",
+      "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Bear_ABP_C",
+    "Name": "Default__Bear_ABP_C",
+    "Class": "AnimBlueprintGeneratedClass'Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.Bear_ABP_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "__AnimBlueprintMutables": {
+        "__FloatProperty": 0.0
+      },
+      "AnimBlueprintExtension_PropertyAccess": {},
+      "AnimBlueprintExtension_Base": {},
+      "AnimGraphNode_Root": {
+        "Result": {
+          "LinkID": 9
+        }
+      },
+      "AnimGraphNode_TransitionResult_3": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_2": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_1": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'bear_attack'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/bear_attack.1"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3": {
+        "Result": {
+          "LinkID": 3
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer": {
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'Bear_movement_BS'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_movement_BS.0"
+        },
+        "PreviousBlendSpace": null,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2": {
+        "Result": {
+          "LinkID": 5
+        }
+      },
+      "AnimGraphNode_StateMachine_1": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "AnimGraphNode_Slot": {
+        "Source": {
+          "LinkID": 7
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_ApplyMeshSpaceAdditive": {
+        "Base": {
+          "LinkID": 8
+        },
+        "Additive": {
+          "LinkID": 15
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "Alpha": 1.0,
+        "bAlphaBoolEnabled": true,
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "LODThreshold": -1
+      },
+      "AnimGraphNode_TransitionResult_1": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'bear_HitEffect'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/bear_HitEffect.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1": {
+        "Result": {
+          "LinkID": 12
+        }
+      },
+      "AnimGraphNode_StateResult": {
+        "Result": {
+          "LinkID": -1
+        }
+      },
+      "AnimGraphNode_StateMachine": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "Bear_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraph",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PoseLink'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_325243A244EDF7369EB46DAA59F2C4E6",
+    "Outer": "Bear_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_93F4687A42CAE16CE9E76A9D9879ECB9",
+    "Outer": "Bear_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D29FF04F42426B638FCFED8B8118E326",
+    "Outer": "Bear_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Bear_ABP",
+    "Outer": "Bear_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedConstantData",
+    "Outer": "Bear_ABP_C",
+    "Class": "UScriptClass'ScriptStruct'"
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedMutableData",
+    "Outer": "Bear_ABP_C",
+    "Class": "UScriptClass'ScriptStruct'"
+  }
+]

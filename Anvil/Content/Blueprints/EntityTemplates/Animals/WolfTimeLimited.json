@@ -1,0 +1,206 @@
+[
+  {
+    "Type": "AnimalAIProxyComponent",
+    "Name": "AnimalAIProxyComponent_0",
+    "Outer": "Default__WolfTimeLimited_C",
+    "Class": "UScriptClass'AnimalAIProxyComponent'",
+    "Properties": {
+      "VisionAngle": 270.0,
+      "SlowSpeed": 150.0,
+      "FastSpeed": 600.0,
+      "TrapTime": 180.0,
+      "bHoming": true,
+      "HomingDistance": 1000.0
+    }
+  },
+  {
+    "Type": "AnimalAttackProxyComponent",
+    "Name": "AnimalAttackProxyComponent_0",
+    "Outer": "Default__WolfTimeLimited_C",
+    "Class": "UScriptClass'AnimalAttackProxyComponent'",
+    "Properties": {
+      "AttackTargetTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'Player_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Horse_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.1"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'OfflineCharacter_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Cart_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.1"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Caravan_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Caravan.1"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Chicken_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Chicken.3"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'ChickenWild_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.3"
+        }
+      ],
+      "OnRoadVisionRange": 300.0,
+      "ChaseDuration": 6.0,
+      "AttackOffset": {
+        "X": 150.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "MinNumAttacks": 2,
+      "MaxNumAttacks": 6,
+      "AttackDamage": 20
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "WolfTimeLimited_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WolfTimeLimited_C'Default__WolfTimeLimited_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfTimeLimited.8"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__WolfTimeLimited_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -5.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 35.0,
+        "Z": 50.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 8256
+    }
+  },
+  {
+    "Type": "CapsuleCollisionProxyComponent",
+    "Name": "CapsuleCollisionProxyComponent_0",
+    "Outer": "Default__WolfTimeLimited_C",
+    "Class": "UScriptClass'CapsuleCollisionProxyComponent'",
+    "Properties": {
+      "Radius": 75.0,
+      "HalfHeight": 72.0,
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 524288
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_1",
+    "Outer": "Default__WolfTimeLimited_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "MaxHealth": 125.0,
+      "AutoRegenRate": 3.0,
+      "AutoRegenStartDelay": 600.0,
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectPlayer_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
+      },
+      "TargetType": "EAnvilDamageTargetType::Infantry"
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__WolfTimeLimited_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 900.0
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__WolfTimeLimited_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "DroppedResourceAmount": 1,
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'MeatSmallPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/MeatSmallPickup.0"
+      },
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'WolfHusk_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/WolfHusk.0"
+      }
+    }
+  },
+  {
+    "Type": "WolfTimeLimited_C",
+    "Name": "Default__WolfTimeLimited_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Animals/WolfTimeLimited.WolfTimeLimited_C'",
+    "Properties": {
+      "CodeNameString": "WolfTimelimited",
+      "CodeName": 2072597763,
+      "bStatic": false,
+      "SerializationType": "EEntitySerializationType::EEntitySerializationType_MAX",
+      "Components": [
+        {
+          "ObjectName": "HealthProxyComponent'Default__WolfTimeLimited_C:HealthProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfTimeLimited.5"
+        },
+        {
+          "ObjectName": "AnimalAIProxyComponent'Default__WolfTimeLimited_C:AnimalAIProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfTimeLimited.0"
+        },
+        {
+          "ObjectName": "CapsuleCollisionProxyComponent'Default__WolfTimeLimited_C:CapsuleCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfTimeLimited.4"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__WolfTimeLimited_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfTimeLimited.3"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__WolfTimeLimited_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfTimeLimited.7"
+        },
+        {
+          "ObjectName": "AnimalAttackProxyComponent'Default__WolfTimeLimited_C:AnimalAttackProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfTimeLimited.1"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__WolfTimeLimited_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfTimeLimited.6"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisWolf_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolf.1"
+      }
+    }
+  }
+]

@@ -1,0 +1,30 @@
+#include "HUDNameWidget.h"
+
+UHUDNameWidget::UHUDNameWidget() : UUserWidget(FObjectInitializer::Get()) {
+    this->TargetVisActor = NULL;
+    this->NameText = NULL;
+    this->LocalChatText = NULL;
+    this->LocalChatTextLimit = 45;
+}
+
+ESlateVisibility UHUDNameWidget::GetWidgetVisibility() {
+    return ESlateVisibility::Visible;
+}
+
+ESlateVisibility UHUDNameWidget::GetPlayerNameVisibility() {
+    return ESlateVisibility::Visible;
+}
+
+FText UHUDNameWidget::GetPlayerNameText() {
+    return FText::GetEmpty();
+}
+
+FSlateColor UHUDNameWidget::GetPlayerNameColour() {
+    return FSlateColor{};
+}
+
+ESlateVisibility UHUDNameWidget::GetLocalChatTextVisibility() {
+    return ESlateVisibility::Visible;
+}
+
+

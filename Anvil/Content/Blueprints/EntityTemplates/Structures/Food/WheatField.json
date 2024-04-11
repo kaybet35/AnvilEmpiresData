@@ -1,0 +1,86 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "WheatField_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WheatField_C'Default__WheatField_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WheatField.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__WheatField_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "Extents": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 16
+    }
+  },
+  {
+    "Type": "PlantGrowthProxyComponent",
+    "Name": "PlantGrowthProxyComponent_0",
+    "Outer": "Default__WheatField_C",
+    "Class": "UScriptClass'PlantGrowthProxyComponent'",
+    "Properties": {
+      "MaturePlant": {
+        "ObjectName": "BlueprintGeneratedClass'WheatPlant_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/WheatPlant.0"
+      },
+      "RequiredSeedType": {
+        "ObjectName": "BlueprintGeneratedClass'WheatSeed_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WheatSeed.0"
+      },
+      "StageTime": 1800.0,
+      "GrowthStage": 3
+    }
+  },
+  {
+    "Type": "WheatField_C",
+    "Name": "Default__WheatField_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WheatField.WheatField_C'",
+    "Properties": {
+      "CodeNameString": "WheatField",
+      "CodeName": -935459307,
+      "Components": [
+        {
+          "ObjectName": "PlantGrowthProxyComponent'Default__WheatField_C:PlantGrowthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WheatField.2"
+        },
+        null,
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__WheatField_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WheatField.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisWheatField_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWheatField.1"
+      }
+    }
+  }
+]

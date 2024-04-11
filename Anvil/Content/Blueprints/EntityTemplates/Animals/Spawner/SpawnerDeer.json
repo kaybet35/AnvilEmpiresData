@@ -1,0 +1,94 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SpawnerDeer_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SpawnerDeer_C'Default__SpawnerDeer_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Spawner/SpawnerDeer.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_1",
+    "Outer": "Default__SpawnerDeer_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'RareAreaDeer_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/RareResourceAreas/RareAreaDeer.0"
+      },
+      "SpawnRadius": 500.0,
+      "SpawnInterval": 1800.0,
+      "SpawnQuantity": 1,
+      "MaxSpawn": 1,
+      "ResourceReserveInitial": 1
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_2",
+    "Outer": "Default__SpawnerDeer_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'Deer_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Deer.1"
+      },
+      "SpawnOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 150.0
+      },
+      "SpawnRadius": 3000.0,
+      "SpawnInterval": 180.0,
+      "SpawnQuantity": 1,
+      "MaxSpawn": 8,
+      "GlobalMaxSpawn": 160,
+      "ResourceReserveInitial": 30,
+      "ReserveReplenishTimeSecs": 3600,
+      "MinDistanceBetweenSpawns": 500.0,
+      "bDontSpawnInSettlements": true,
+      "bDontSpawnNearPlayers": true,
+      "CompatibleSurfaceTypes": 9740
+    }
+  },
+  {
+    "Type": "SpawnerDeer_C",
+    "Name": "Default__SpawnerDeer_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Animals/Spawner/SpawnerDeer.SpawnerDeer_C'",
+    "Properties": {
+      "CodeNameString": "SpawnerDeer",
+      "CodeName": -158539409,
+      "bShowOnMap": true,
+      "Components": [
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerDeer_C:ResourceSpawnerProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Spawner/SpawnerDeer.2"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerDeer_C:ResourceSpawnerProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Spawner/SpawnerDeer.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisDeerSpawner_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerSpawner.0"
+      }
+    }
+  }
+]

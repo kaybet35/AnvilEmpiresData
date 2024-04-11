@@ -1,0 +1,200 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Handcart_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Handcart_C'Default__Handcart_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Handcart.5"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__Handcart_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 52.5,
+        "Y": 0.0,
+        "Z": 110.0
+      },
+      "Extents": {
+        "X": 155.0,
+        "Y": 75.0,
+        "Z": 110.0
+      },
+      "CollisionMask": 16801856
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_1",
+    "Outer": "Default__Handcart_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "ExtendFootprint": true,
+      "Extents": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 8
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableProxyComponent_0",
+    "Outer": "Default__Handcart_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Properties": {
+      "DestructionEffectEntity": {
+        "ObjectName": "BlueprintGeneratedClass'HandcartHusk_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Husks/HandcartHusk.0"
+      }
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__Handcart_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'HandcartFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/FootprintAssets/HandcartFootprint.0"
+      },
+      "CollisionMask": 256
+    }
+  },
+  {
+    "Type": "Handcart_C",
+    "Name": "Default__Handcart_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Vehicles/Handcart.Handcart_C'",
+    "Properties": {
+      "CodeNameString": "Handcart",
+      "CodeName": -632486419,
+      "bStatic": false,
+      "SerializationType": "EEntitySerializationType::7",
+      "Components": [
+        {
+          "ObjectName": "VehicleMovementProxyComponent'Default__Handcart_C:VehicleMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Handcart.8"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__Handcart_C:VehicleSeatProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Handcart.9"
+        },
+        {
+          "ObjectName": "HealthProxyComponent'Default__Handcart_C:HealthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Handcart.6"
+        },
+        {
+          "ObjectName": "DestroyableProxyComponent'Default__Handcart_C:DestroyableProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Handcart.3"
+        },
+        {
+          "ObjectName": "FootprintCollisionProxyComponent'Default__Handcart_C:FootprintCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Handcart.4"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Handcart_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Handcart.7"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__Handcart_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Handcart.1"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__Handcart_C:BoxCollisionProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Handcart.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisHandcart_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.3"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_0",
+    "Outer": "Default__Handcart_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "MaxHealth": 40.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__Handcart_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 4,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 10,
+          "bHoldsLarge": true,
+          "SlotType": "EAnvilItemType::Resource",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        }
+      ],
+      "NormalizedSpoilageFactor": 0.1
+    }
+  },
+  {
+    "Type": "VehicleMovementProxyComponent",
+    "Name": "VehicleMovementProxyComponent_0",
+    "Outer": "Default__Handcart_C",
+    "Class": "UScriptClass'VehicleMovementProxyComponent'",
+    "Properties": {
+      "Acceleration": 1000.0,
+      "MaxVelocity": 300.0,
+      "RotationalSpeed": 50.0,
+      "SprintFactor": 1.2,
+      "SprintStaminaDrain": 1.0,
+      "bYawInPlace": true,
+      "RammingDamage": 0.0,
+      "bDoAxleRaycasts": false
+    }
+  },
+  {
+    "Type": "VehicleSeatProxyComponent",
+    "Name": "VehicleSeatProxyComponent_1",
+    "Outer": "Default__Handcart_C",
+    "Class": "UScriptClass'VehicleSeatProxyComponent'",
+    "Properties": {
+      "MountedStance": "EAnvilCharacterStance::HoldingLadderFront",
+      "PlayerOffset": {
+        "X": 180.0,
+        "Y": 0.0,
+        "Z": 55.0
+      },
+      "PlayerExitOffset": {
+        "X": 230.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "bIsDriver": true
+    }
+  }
+]

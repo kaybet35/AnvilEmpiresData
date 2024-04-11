@@ -1,0 +1,95 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "LeatherPickup_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "LeatherPickup_C'Default__LeatherPickup_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/LeatherPickup.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__LeatherPickup_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 25.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 25.0,
+        "Z": 75.0
+      },
+      "CollisionMask": 32
+    }
+  },
+  {
+    "Type": "LeatherPickup_C",
+    "Name": "Default__LeatherPickup_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/ItemPickups/LeatherPickup.LeatherPickup_C'",
+    "Properties": {
+      "CodeNameString": "LeatherPickup",
+      "CodeName": -1025315148,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__LeatherPickup_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/LeatherPickup.1"
+        },
+        {
+          "ObjectName": "PickupProxyComponent'Default__LeatherPickup_C:PickupProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/LeatherPickup.4"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__LeatherPickup_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/LeatherPickup.3"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisLeather_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLeather.1"
+      }
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__LeatherPickup_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 600.0
+    }
+  },
+  {
+    "Type": "PickupProxyComponent",
+    "Name": "PickupProxyComponent_0",
+    "Outer": "Default__LeatherPickup_C",
+    "Class": "UScriptClass'PickupProxyComponent'",
+    "Properties": {
+      "Item": {
+        "ItemType": {
+          "ObjectName": "BlueprintGeneratedClass'ResourceLeather_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceLeather.0"
+        },
+        "Count": 1
+      }
+    }
+  }
+]

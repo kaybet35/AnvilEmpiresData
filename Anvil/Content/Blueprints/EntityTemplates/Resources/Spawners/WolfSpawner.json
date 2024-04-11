@@ -1,0 +1,98 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "WolfSpawner_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WolfSpawner_C'Default__WolfSpawner_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/WolfSpawner.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_0",
+    "Outer": "Default__WolfSpawner_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'Wolf_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Wolf.3"
+      },
+      "SpawnOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 300.0
+      },
+      "SpawnRadius": 1000.0,
+      "MinimumSpawnRadius": 400.0,
+      "SpawnInterval": 300.0,
+      "SpawnQuantity": 2,
+      "MaxSpawn": 2,
+      "ResourceReserveInitial": 2,
+      "MinDistanceBetweenSpawns": 250.0,
+      "bDontSpawnInSettlements": true,
+      "bDontSpawnNearPlayers": true,
+      "CompatibleSurfaceTypes": 26116
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_2",
+    "Outer": "Default__WolfSpawner_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'StoneFragmentsPile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.0"
+      },
+      "SpawnRadius": 2000.0,
+      "MinimumSpawnRadius": 500.0,
+      "SpawnInterval": 60.0,
+      "SpawnQuantity": 15,
+      "MaxSpawn": 15,
+      "ResourceReserveInitial": 15,
+      "ReserveReplenishTimeSecs": 3600,
+      "bDontSpawnInSettlements": true,
+      "bDontSpawnNearPlayers": true,
+      "CompatibleSurfaceTypes": 27152
+    }
+  },
+  {
+    "Type": "WolfSpawner_C",
+    "Name": "Default__WolfSpawner_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/WolfSpawner.WolfSpawner_C'",
+    "Properties": {
+      "CodeNameString": "WolfSpawner",
+      "CodeName": 316961553,
+      "bShowOnMap": true,
+      "Components": [
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__WolfSpawner_C:ResourceSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/WolfSpawner.1"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__WolfSpawner_C:ResourceSpawnerProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/WolfSpawner.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisStoneFragmentSpawner_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisStoneFragmentSpawner.0"
+      }
+    }
+  }
+]

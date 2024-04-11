@@ -1,0 +1,114 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "DeployedTrap_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DeployedTrap_C'Default__DeployedTrap_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/DeployedTrap.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__DeployedTrap_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 27.0,
+        "Z": 70.0
+      },
+      "Extents": {
+        "X": 70.0,
+        "Y": 110.0,
+        "Z": 70.0
+      },
+      "CollisionMask": 32
+    }
+  },
+  {
+    "Type": "DeployedTrap_C",
+    "Name": "Default__DeployedTrap_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/misc/DeployedTrap.DeployedTrap_C'",
+    "Properties": {
+      "CodeNameString": "DeployedTrap",
+      "CodeName": -652043480,
+      "Components": [
+        {
+          "ObjectName": "FootprintCollisionProxyComponent'Default__DeployedTrap_C:FootprintCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/DeployedTrap.3"
+        },
+        {
+          "ObjectName": "TrapProxyComponent'Default__DeployedTrap_C:TrapProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/DeployedTrap.5"
+        },
+        {
+          "ObjectName": "PickupProxyComponent'Default__DeployedTrap_C:PickupProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/DeployedTrap.4"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__DeployedTrap_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/DeployedTrap.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisDeployedTrap_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisDeployedTrap.1"
+      }
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__DeployedTrap_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'TrapFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TrapFootprint.0"
+      },
+      "CollisionMask": 256
+    }
+  },
+  {
+    "Type": "PickupProxyComponent",
+    "Name": "PickupProxyComponent_0",
+    "Outer": "Default__DeployedTrap_C",
+    "Class": "UScriptClass'PickupProxyComponent'",
+    "Properties": {
+      "Item": {
+        "ItemType": {
+          "ObjectName": "BlueprintGeneratedClass'TrapItem_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/TrapItem.0"
+        },
+        "Count": 1
+      }
+    }
+  },
+  {
+    "Type": "TrapProxyComponent",
+    "Name": "TrapProxyComponent_0",
+    "Outer": "Default__DeployedTrap_C",
+    "Class": "UScriptClass'TrapProxyComponent'",
+    "Properties": {
+      "PlayerTrapDurationSec": 30.0,
+      "AnimalBleedDamagePerSec": 0.2,
+      "NormalizedAnimalEscapeChance": 0.1
+    }
+  }
+]

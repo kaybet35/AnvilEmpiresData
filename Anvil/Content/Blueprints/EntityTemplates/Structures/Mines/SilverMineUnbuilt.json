@@ -1,0 +1,158 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SilverMineUnbuilt_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SilverMineUnbuilt_C'Default__SilverMineUnbuilt_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/SilverMineUnbuilt.6"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_2",
+    "Outer": "Default__SilverMineUnbuilt_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "ExtendFootprint": true,
+      "Extents": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 8
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__SilverMineUnbuilt_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'SilverMine_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/SilverMine.0"
+      },
+      "bAddToNavMesh": true,
+      "CollisionMask": 256
+    }
+  },
+  {
+    "Type": "MeshCollisionProxyComponent",
+    "Name": "MeshCollisionProxyComponent_0",
+    "Outer": "Default__SilverMineUnbuilt_C",
+    "Class": "UScriptClass'MeshCollisionProxyComponent'",
+    "Properties": {
+      "PhysicsAssetName": {
+        "ObjectName": "StaticMesh'SilverMine'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/SilverMine.2"
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeStone",
+      "CollisionMask": 16785410
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_0",
+    "Outer": "Default__SilverMineUnbuilt_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'SilverPile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/SilverPile.0"
+      },
+      "SpawnRadius": 1500.0,
+      "SpawnInterval": 60.0,
+      "MinDistanceBetweenSpawns": 150.0,
+      "bDontSpawnInSettlements": true
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_1",
+    "Outer": "Default__SilverMineUnbuilt_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'BearElite_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.3"
+      },
+      "SpawnRadius": 2000.0,
+      "MinimumSpawnRadius": 300.0,
+      "SpawnInterval": 120.0,
+      "SpawnQuantity": 2,
+      "MaxSpawn": 2,
+      "ResourceReserveInitial": 2,
+      "bDontSpawnInSettlements": true
+    }
+  },
+  {
+    "Type": "SilverMineUnbuilt_C",
+    "Name": "Default__SilverMineUnbuilt_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/SilverMineUnbuilt.SilverMineUnbuilt_C'",
+    "Properties": {
+      "CodeNameString": "SilverMineUnbuilt",
+      "CodeName": 1275696942,
+      "bShowOnMap": true,
+      "Components": [
+        {
+          "ObjectName": "MeshCollisionProxyComponent'Default__SilverMineUnbuilt_C:MeshCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/SilverMineUnbuilt.3"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__SilverMineUnbuilt_C:BoxCollisionProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/SilverMineUnbuilt.1"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SilverMineUnbuilt_C:ResourceSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/SilverMineUnbuilt.4"
+        },
+        {
+          "ObjectName": "UpgradeProxyComponent'Default__SilverMineUnbuilt_C:UpgradeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/SilverMineUnbuilt.7"
+        },
+        {
+          "ObjectName": "FootprintCollisionProxyComponent'Default__SilverMineUnbuilt_C:FootprintCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/SilverMineUnbuilt.2"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SilverMineUnbuilt_C:ResourceSpawnerProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/SilverMineUnbuilt.5"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisSilverMineUnbuilt_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Mines/BPVisSilverMineUnbuilt.1"
+      }
+    }
+  },
+  {
+    "Type": "UpgradeProxyComponent",
+    "Name": "UpgradeProxyComponent_0",
+    "Outer": "Default__SilverMineUnbuilt_C",
+    "Class": "UScriptClass'UpgradeProxyComponent'",
+    "Properties": {
+      "UpgradeTarget": {
+        "ObjectName": "BlueprintGeneratedClass'SilverMine_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/SilverMine.0"
+      },
+      "ProcessedWoodRequirement": 20,
+      "ProcessedStoneRequirement": 20,
+      "ProcessedIronRequirement": 20
+    }
+  }
+]

@@ -1,0 +1,206 @@
+[
+  {
+    "Type": "BlendSpace1D",
+    "Name": "wolf_movement_BS",
+    "Class": "UScriptClass'BlendSpace1D'",
+    "Properties": {
+      "InterpolationParam": {
+        "InterpolationTime": 0.1,
+        "InterpolationType": "EFilterInterpolationType::BSIT_Average"
+      },
+      "bTargetWeightInterpolationEaseInOut": false,
+      "AnimLength": 1.0,
+      "bInterpolateUsingGrid": true,
+      "SampleData": [
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'wolf_idle_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/wolf_idle_anim.0"
+          },
+          "SampleValue": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'wolf_walk_speed135_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/wolf_walk_speed135_anim.0"
+          },
+          "SampleValue": {
+            "X": 66.666664,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 0.5
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'wolf_walk_speed135_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/wolf_walk_speed135_anim.0"
+          },
+          "SampleValue": {
+            "X": 133.33333,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'wolf_walk_speed135_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/wolf_walk_speed135_anim.0"
+          },
+          "SampleValue": {
+            "X": 333.3333,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 2.5
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'wolf_run_speed400_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/wolf_run_speed400_anim.0"
+          },
+          "SampleValue": {
+            "X": 400.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'wolf_run_speed400_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/wolf_run_speed400_anim.0"
+          },
+          "SampleValue": {
+            "X": 800.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 2.0
+        }
+      ],
+      "GridSamples": [
+        {
+          "Indices": 1,
+          "Indices": 0,
+          "Indices": -1,
+          "Weights": 0.0,
+          "Weights": 1.0,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 1,
+          "Indices": 0,
+          "Indices": -1,
+          "Weights": 1.0,
+          "Weights": 0.0,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 2,
+          "Indices": 1,
+          "Indices": -1,
+          "Weights": 1.0,
+          "Weights": 0.0,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 3,
+          "Indices": 2,
+          "Indices": -1,
+          "Weights": 0.33333337,
+          "Weights": 0.6666666,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 3,
+          "Indices": 2,
+          "Indices": -1,
+          "Weights": 0.6666667,
+          "Weights": 0.3333333,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 3,
+          "Indices": 2,
+          "Indices": -1,
+          "Weights": 1.0,
+          "Weights": 0.0,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 4,
+          "Indices": 3,
+          "Indices": -1,
+          "Weights": 1.0,
+          "Weights": 0.0,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 5,
+          "Indices": 4,
+          "Indices": -1,
+          "Weights": 0.16666664,
+          "Weights": 0.8333334,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 5,
+          "Indices": 4,
+          "Indices": -1,
+          "Weights": 0.33333328,
+          "Weights": 0.66666675,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 5,
+          "Indices": 4,
+          "Indices": -1,
+          "Weights": 0.5,
+          "Weights": 0.5,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 5,
+          "Indices": 4,
+          "Indices": -1,
+          "Weights": 0.66666657,
+          "Weights": 0.33333343,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 5,
+          "Indices": 4,
+          "Indices": -1,
+          "Weights": 0.83333325,
+          "Weights": 0.16666675,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 5,
+          "Indices": 4,
+          "Indices": -1,
+          "Weights": 1.0,
+          "Weights": 0.0,
+          "Weights": 0.0
+        }
+      ],
+      "BlendParameters": {
+        "DisplayName": "Speed",
+        "Max": 800.0,
+        "GridNum": 12
+      },
+      "Skeleton": {
+        "ObjectName": "Skeleton'Wolf_SK_Skeleton'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Wolf_SK_Skeleton.0"
+      }
+    },
+    "SkeletonGuid": "09DCC9AB-44323AC1-ECC9CB9A-42AC40DD"
+  }
+]

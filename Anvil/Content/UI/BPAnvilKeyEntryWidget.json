@@ -1,0 +1,544 @@
+[
+  {
+    "Type": "Border",
+    "Name": "EntryBorder",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Padding": {
+        "Left": 10.0,
+        "Top": 0.0,
+        "Right": 50.0,
+        "Bottom": 0.0
+      },
+      "BrushColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.2,
+        "Hex": "33000000"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPAnvilKeyEntryWidget_C:WidgetTree.EntryBorder.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.1"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPAnvilKeyEntryWidget_C:WidgetTree.EntryHorizontalBox.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.10"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "EntryBorder",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 10.0,
+        "Top": 0.0,
+        "Right": 50.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Border'BPAnvilKeyEntryWidget_C:WidgetTree.EntryBorder'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.0"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPAnvilKeyEntryWidget_C:WidgetTree.LabelTextBox'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.14"
+      }
+    }
+  },
+  {
+    "Type": "BPAnvilKeyEntryWidget_C",
+    "Name": "Default__BPAnvilKeyEntryWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPAnvilKeyEntryWidget.BPAnvilKeyEntryWidget_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "LabelText": {
+        "Namespace": "",
+        "Key": "43539245475ADF07AE32CCBA91CE57FF",
+        "SourceString": "Entry Label",
+        "LocalizedString": "Entry Label"
+      },
+      "LabelFontSize": 16,
+      "EntryProportion": 0.55,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPAnvilKeyEntryWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_0",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPAnvilKeyEntryWidget_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.3"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPAnvilKeyEntryWidget_C:WidgetTree.SizeBox'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.12"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Outer": "BPAnvilKeyEntryWidget_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPAnvilKeyEntryWidget",
+    "Outer": "BPAnvilKeyEntryWidget_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Outer": "BPAnvilKeyEntryWidget_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'UserWidget:PreConstruct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "EntryHorizontalBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPAnvilKeyEntryWidget_C:WidgetTree.EntryHorizontalBox.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.10"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPAnvilKeyEntryWidget_C:WidgetTree.EntryHorizontalBox.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPAnvilKeyEntryWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.13"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "EntryHorizontalBox",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Size": {
+        "Value": 0.4,
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Padding": {
+        "Right": 10.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPAnvilKeyEntryWidget_C:WidgetTree.EntryHorizontalBox'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.8"
+      },
+      "Content": {
+        "ObjectName": "InputKeySelector'BPAnvilKeyEntryWidget_C:WidgetTree.InputSelector'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.11"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "EntryHorizontalBox",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Size": {
+        "Value": 0.8,
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Padding": {
+        "Left": 5.0,
+        "Right": 10.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPAnvilKeyEntryWidget_C:WidgetTree.EntryHorizontalBox'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.8"
+      },
+      "Content": {
+        "ObjectName": "Border'BPAnvilKeyEntryWidget_C:WidgetTree.EntryBorder'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.0"
+      }
+    }
+  },
+  {
+    "Type": "InputKeySelector",
+    "Name": "InputSelector",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'InputKeySelector'",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.114583,
+              "G": 0.098549,
+              "B": 0.085341,
+              "A": 1.0,
+              "Hex": "FF5F5852"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          }
+        },
+        "Hovered": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.730461,
+              "G": 0.491021,
+              "B": 0.124772,
+              "A": 1.0,
+              "Hex": "FFDEBA63"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          }
+        },
+        "Pressed": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.046665,
+              "G": 0.042311,
+              "B": 0.035601,
+              "A": 1.0,
+              "Hex": "FF3D3A35"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          }
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "NormalForeground": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF000000"
+          }
+        },
+        "HoveredForeground": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF000000"
+          }
+        },
+        "PressedForeground": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF000000"
+          }
+        }
+      },
+      "TextStyle": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font'Renner-Book_Font'",
+            "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+          },
+          "TypefaceFontName": "Default",
+          "Size": 16
+        }
+      },
+      "NoKeySpecifiedText": {
+        "Namespace": "",
+        "Key": "1B05494F4E55828B7D9B5597AC62A89F",
+        "SourceString": "...",
+        "LocalizedString": "..."
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPAnvilKeyEntryWidget_C:WidgetTree.EntryHorizontalBox.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.9"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 300.0,
+      "HeightOverride": 50.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPAnvilKeyEntryWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPAnvilKeyEntryWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.4"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPAnvilKeyEntryWidget_C:WidgetTree.SizeBox'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.12"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPAnvilKeyEntryWidget_C:WidgetTree.EntryHorizontalBox'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "LabelTextBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "UMG",
+        "Key": "TextBlockDefaultValue",
+        "SourceString": "Text Block",
+        "LocalizedString": "Text Block"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.730461,
+          "G": 0.658375,
+          "B": 0.564712,
+          "A": 1.0,
+          "Hex": "FFDED4C6"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 20
+      },
+      "Slot": {
+        "ObjectName": "BorderSlot'BPAnvilKeyEntryWidget_C:WidgetTree.EntryBorder.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.1"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPAnvilKeyEntryWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPAnvilKeyEntryWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.16"
+      },
+      "bClassRequiresNativeTick": true,
+      "UberGraphFunction": {
+        "ObjectName": "Function'BPAnvilKeyEntryWidget_C:ExecuteUbergraph_BPAnvilKeyEntryWidget'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AnvilKeyEntryWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BPAnvilKeyEntryWidget_C:PreConstruct'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.7"
+      },
+      {
+        "ObjectName": "Function'BPAnvilKeyEntryWidget_C:Construct'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.5"
+      },
+      {
+        "ObjectName": "Function'BPAnvilKeyEntryWidget_C:ExecuteUbergraph_BPAnvilKeyEntryWidget'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.6"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BPAnvilKeyEntryWidget": {
+        "ObjectName": "Function'BPAnvilKeyEntryWidget_C:ExecuteUbergraph_BPAnvilKeyEntryWidget'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.6"
+      },
+      "Construct": {
+        "ObjectName": "Function'BPAnvilKeyEntryWidget_C:Construct'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.5"
+      },
+      "PreConstruct": {
+        "ObjectName": "Function'BPAnvilKeyEntryWidget_C:PreConstruct'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.7"
+      }
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPAnvilKeyEntryWidget_C'Default__BPAnvilKeyEntryWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPAnvilKeyEntryWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPAnvilKeyEntryWidget_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilKeyEntryWidget.3"
+      }
+    }
+  }
+]

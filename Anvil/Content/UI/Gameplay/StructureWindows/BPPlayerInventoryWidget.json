@@ -1,0 +1,232 @@
+[
+  {
+    "Type": "BPAnvilPanel_C",
+    "Name": "BPAnvilPanel",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPAnvilPanel.BPAnvilPanel_C'",
+    "Template": {
+      "ObjectName": "BPAnvilPanel_C'Default__BPAnvilPanel_C'",
+      "ObjectPath": "Anvil/Content/UI/BPAnvilPanel.0"
+    },
+    "Properties": {
+      "NamedSlotBindings": [
+        {
+          "Name": "AnvilPanelSlot0",
+          "Content": {
+            "ObjectName": "BPHeaderContainer_C'BPPlayerInventoryWidget_C:WidgetTree.Header'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.1"
+          }
+        },
+        {
+          "Name": "AnvilPanelSlot1",
+          "Content": {
+            "ObjectName": "BPMainAreaContainer_C'BPPlayerInventoryWidget_C:WidgetTree.BPMainAreaContainer'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.2"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BPHeaderContainer_C",
+    "Name": "Header",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPHeaderContainer.BPHeaderContainer_C'",
+    "Template": {
+      "ObjectName": "BPHeaderContainer_C'Default__BPHeaderContainer_C'",
+      "ObjectPath": "Anvil/Content/UI/BPHeaderContainer.2"
+    },
+    "Properties": {
+      "HeaderText": {
+        "Namespace": "",
+        "Key": "59C20BD84CAC78759F130F9DFC9AB3CE",
+        "SourceString": "Player",
+        "LocalizedString": "Player"
+      },
+      "bHeaderWidthOverride": false,
+      "HeaderWidth": 257.0,
+      "Padding": {
+        "Top": -10.0
+      }
+    }
+  },
+  {
+    "Type": "BPMainAreaContainer_C",
+    "Name": "BPMainAreaContainer",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPMainAreaContainer.BPMainAreaContainer_C'",
+    "Template": {
+      "ObjectName": "BPMainAreaContainer_C'Default__BPMainAreaContainer_C'",
+      "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.2"
+    },
+    "Properties": {
+      "WidthOverride": 257.0,
+      "HeightOverride": 425.0,
+      "MinDesiredWidth": 257.0,
+      "bOverride_MinDesiredWidth": true,
+      "NamedSlotBindings": [
+        {
+          "Name": "MainAreaSlot0",
+          "Content": {
+            "ObjectName": "ScrollBox'BPPlayerInventoryWidget_C:WidgetTree.ScrollBox_35'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.5"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BPPlayerInventoryWidget_C",
+    "Name": "Default__BPPlayerInventoryWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.BPPlayerInventoryWidget_C'",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "InventoryWidget",
+    "Name": "PlayerInventory",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'InventoryWidget'",
+    "Properties": {
+      "bIsPlayerInventory": true,
+      "ItemSlotWidgetType": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'BPInventoryItemWidget_C'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryItemWidget.24"
+      },
+      "SlotPadding": {
+        "Left": 4.0,
+        "Top": 4.0,
+        "Right": 4.0,
+        "Bottom": 4.0
+      },
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'BPPlayerInventoryWidget_C:WidgetTree.ScrollBox_35.ScrollBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.6"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBox",
+    "Name": "ScrollBox_35",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'ScrollBox'",
+    "Properties": {
+      "WidgetBarStyle": {
+        "VerticalTopSlotImage": {
+          "ImageSize": {
+            "X": 4.0,
+            "Y": 4.0
+          }
+        },
+        "VerticalBottomSlotImage": {
+          "ImageSize": {
+            "X": 2.0,
+            "Y": 2.0
+          }
+        }
+      },
+      "ScrollbarThickness": {
+        "X": 1.0,
+        "Y": 1.0
+      },
+      "ScrollbarPadding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Slots": [
+        {
+          "ObjectName": "ScrollBoxSlot'BPPlayerInventoryWidget_C:WidgetTree.ScrollBox_35.ScrollBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_0",
+    "Outer": "ScrollBox_35",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "ScrollBox'BPPlayerInventoryWidget_C:WidgetTree.ScrollBox_35'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.5"
+      },
+      "Content": {
+        "ObjectName": "InventoryWidget'BPPlayerInventoryWidget_C:WidgetTree.PlayerInventory'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.4"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPPlayerInventoryWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPPlayerInventoryWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.8"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'PlayerInventoryWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPAnvilPanel",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPAnvilPanel_C'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilPanel.37"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPMainAreaContainer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPMainAreaContainer_C'",
+          "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.20"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPPlayerInventoryWidget_C'Default__BPPlayerInventoryWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPPlayerInventoryWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "BPAnvilPanel_C'BPPlayerInventoryWidget_C:WidgetTree.BPAnvilPanel'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,399 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPAnvilMovieCharacter_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPAnvilMovieCharacter_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AnvilMovieCharacter'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Widget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetComponent'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPAnvilMovieCharacter_C'Default__BPAnvilMovieCharacter_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPAnvilMovieCharacter_C",
+    "Name": "Default__BPAnvilMovieCharacter_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.BPAnvilMovieCharacter_C'",
+    "Properties": {
+      "SimPlayerDataComponent": {
+        "ObjectName": "SimPlayerDataComponent'Default__BPAnvilMovieCharacter_C:SimPlayerDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.7"
+      },
+      "ItemMeshComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPAnvilMovieCharacter_C:ItemMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.10"
+      },
+      "ItemSecondaryMeshComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPAnvilMovieCharacter_C:ItemSecondaryMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.11"
+      },
+      "UnarmedItemMeshComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPAnvilMovieCharacter_C:UnarmedItemMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.13"
+      },
+      "UnarmedItemSecondaryMeshComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPAnvilMovieCharacter_C:UnarmedItemSecondaryMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.14"
+      },
+      "Capsule": {
+        "ObjectName": "CapsuleComponent'Default__BPAnvilMovieCharacter_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.2"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPAnvilMovieCharacter_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.12"
+      },
+      "Head": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPAnvilMovieCharacter_C:Head'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.9"
+      },
+      "PlayerVisualsComponent": {
+        "ObjectName": "VisPlayerVisualsComponent'Default__BPAnvilMovieCharacter_C:PlayerVisualsComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.15"
+      },
+      "TorchVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPAnvilMovieCharacter_C:TorchVFXComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.3"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BPAnvilMovieCharacter_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.2"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule",
+    "Outer": "Default__BPAnvilMovieCharacter_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Properties": {
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "TorchVFXComponent",
+    "Outer": "Default__BPAnvilMovieCharacter_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'TorchFire2'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/TorchFire2.38"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPAnvilMovieCharacter_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.12"
+      },
+      "RelativeLocation": {
+        "X": -0.0,
+        "Y": 70.0,
+        "Z": -5E-06
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 6E-06,
+        "Roll": -89.999954
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPAnvilMovieCharacter_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPAnvilMovieCharacter_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.4"
+      },
+      "VariableGuid": "2370C4B3-4E1F98AD-A1B72BBE-E77CF2A6",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'WidgetComponent'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "WidgetComponent'BPAnvilMovieCharacter_C:Widget_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.16"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "8E5A7940-46DA0B65-C3F05D96-AE08815F",
+      "InternalVariableName": "Widget"
+    }
+  },
+  {
+    "Type": "SimPlayerDataComponent",
+    "Name": "SimPlayerDataComponent",
+    "Outer": "Default__BPAnvilMovieCharacter_C",
+    "Class": "UScriptClass'SimPlayerDataComponent'"
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPAnvilMovieCharacter_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPAnvilMovieCharacter_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.6"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPAnvilMovieCharacter_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.6"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPAnvilMovieCharacter_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.5"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Head",
+    "Outer": "Default__BPAnvilMovieCharacter_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'HelmetDefaultMirrish_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Character/HelmetDefaultMirrish_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'HelmetDefaultMirrish_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Character/HelmetDefaultMirrish_SK.0"
+      },
+      "LeaderPoseComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPAnvilMovieCharacter_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.12"
+      },
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPAnvilMovieCharacter_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.12"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "ItemMesh",
+    "Outer": "Default__BPAnvilMovieCharacter_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPAnvilMovieCharacter_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.12"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "ItemSecondaryMesh",
+    "Outer": "Default__BPAnvilMovieCharacter_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPAnvilMovieCharacter_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.12"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPAnvilMovieCharacter_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_PrototypeChar_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/ABP_PrototypeChar.1"
+      },
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'CarryingTorchLeftHand'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/CarryingTorchLeftHand.0"
+        },
+        "bSavedPlaying": false
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'ArmourDefaultMirrish_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Character/ArmourDefaultMirrish_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'ArmourDefaultMirrish_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Character/ArmourDefaultMirrish_SK.0"
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPAnvilMovieCharacter_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -97.0
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "UnarmedItemMesh",
+    "Outer": "Default__BPAnvilMovieCharacter_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPAnvilMovieCharacter_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.12"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "UnarmedItemSecondaryMesh",
+    "Outer": "Default__BPAnvilMovieCharacter_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPAnvilMovieCharacter_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPAnvilMovieCharacter.12"
+      }
+    }
+  },
+  {
+    "Type": "VisPlayerVisualsComponent",
+    "Name": "PlayerVisualsComponent",
+    "Outer": "Default__BPAnvilMovieCharacter_C",
+    "Class": "UScriptClass'VisPlayerVisualsComponent'"
+  },
+  {
+    "Type": "WidgetComponent",
+    "Name": "Widget_GEN_VARIABLE",
+    "Outer": "BPAnvilMovieCharacter_C",
+    "Class": "UScriptClass'WidgetComponent'",
+    "Properties": {
+      "Space": "EWidgetSpace::Screen",
+      "WidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'BPAnvilMovieCharacterNameWidget_C'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilMovieCharacterNameWidget.2"
+      },
+      "DrawSize": {
+        "X": 200,
+        "Y": 200
+      },
+      "Pivot": {
+        "X": 0.5,
+        "Y": 0.0
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 220.0
+      }
+    }
+  }
+]

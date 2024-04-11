@@ -1,0 +1,35 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "EAnvilSimActivityState.generated.h"
+
+UENUM(BlueprintType)
+enum class EAnvilSimActivityState : uint8 {
+    None,
+    Idle,
+    Attacking,
+    BayonetAttack,
+    LaunchingProjectile,
+    Equipping,
+    Carrying,
+    Vaulting,
+    ClimbingLow,
+    ClimbingMedium,
+    ClimbingHigh,
+    Reloading,
+    FiringCannon,
+    UsingHandTool,
+    BuildingWithHandTool,
+    Plundering,
+    HorseRiding,
+    Eating,
+    Feeding,
+    Farming,
+    FishingWaiting,
+    FishingHooked,
+    FishingSuccess,
+    FishingFailed,
+    StunnedOnGround,
+    StunnedGettingUp,
+    NumStates,
+};
+

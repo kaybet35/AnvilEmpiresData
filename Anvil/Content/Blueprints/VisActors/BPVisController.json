@@ -1,0 +1,206 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisController_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisController_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisController.8"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BPVisController_C:ExecuteUbergraph_BPVisController'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisController.2"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisController'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BPVisController_C:ReceiveTick'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisController.3"
+      },
+      {
+        "ObjectName": "Function'BPVisController_C:ExecuteUbergraph_BPVisController'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisController.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BPVisController": {
+        "ObjectName": "Function'BPVisController_C:ExecuteUbergraph_BPVisController'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisController.2"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BPVisController_C:ReceiveTick'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisController.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisController_C'Default__BPVisController_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisController.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisController_C",
+    "Name": "Default__BPVisController_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/BPVisController.BPVisController_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "PlayerControllerDataComponent": {
+        "ObjectName": "PlayerControllerDataComponent'Default__BPVisController_C:PlayerControllerDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisController.5"
+      },
+      "DeathMarker": {
+        "ObjectName": "MapMarkerComponent'Default__BPVisController_C:DeathMarker'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisController.4"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPVisController",
+    "Outer": "BPVisController_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BPVisController_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "MapMarkerComponent",
+    "Name": "DeathMarker",
+    "Outer": "Default__BPVisController_C",
+    "Class": "UScriptClass'MapMarkerComponent'",
+    "Properties": {
+      "MapIconProperty": {
+        "Icon": {
+          "ObjectName": "Texture2D'MapIconDeathMarker'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Map/MapIconDeathMarker.0"
+        },
+        "MapActorType": "EMapIconType::DeathMarker"
+      }
+    }
+  },
+  {
+    "Type": "PlayerControllerDataComponent",
+    "Name": "PlayerControllerDataComponent",
+    "Outer": "Default__BPVisController_C",
+    "Class": "UScriptClass'PlayerControllerDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisController_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisController_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisController.6"
+      },
+      "VariableGuid": "DF91DB46-4C87410B-2742EF8B-84D8E2BE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisController_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisController_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisController.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisController_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisController.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisController_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisController.7"
+      }
+    }
+  }
+]

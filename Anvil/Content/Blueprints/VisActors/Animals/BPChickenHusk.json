@@ -1,0 +1,321 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPChickenHusk_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AudioComponent",
+    "Outer": "Default__BPChickenHusk_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'ChickenDeath_cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Chicken/ChickenDeath_cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPChickenHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.0"
+      },
+      "RelativeLocation": {
+        "X": 1.4169935E-06,
+        "Y": 1.7053026E-13,
+        "Z": 136.5359
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPChickenHusk_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPChickenHusk_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.12"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisEffect'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Decal1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Decal",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPChickenHusk_C'Default__BPChickenHusk_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPChickenHusk_C",
+    "Name": "Default__BPChickenHusk_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.BPChickenHusk_C'",
+    "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPChickenHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.0"
+      },
+      "AudioComponent": {
+        "ObjectName": "AudioComponent'Default__BPChickenHusk_C:AudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.1"
+      },
+      "NiagaraComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPChickenHusk_C:NiagaraComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.7"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPChickenHusk_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.13"
+      },
+      "LifetimeDataComponent": {
+        "ObjectName": "LifetimeDataComponent'Default__BPChickenHusk_C:LifetimeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.6"
+      },
+      "bNightVisibility": true,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPChickenHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.0"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal1_GEN_VARIABLE",
+    "Outer": "BPChickenHusk_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'DecalFeathers'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/DecalFeathers.0"
+      },
+      "DecalSize": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 100.0
+      },
+      "RelativeLocation": {
+        "X": -6.1035156E-05,
+        "Y": 0.0,
+        "Z": 12.51453
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 97.19976,
+        "Roll": 45.0
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Outer": "BPChickenHusk_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "Material'BloodDecal'",
+        "ObjectPath": "Anvil/Content/FX/Materials/BloodDecal.0"
+      },
+      "DecalSize": {
+        "X": 80.0,
+        "Y": 80.0,
+        "Z": 80.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "LifetimeDataComponent",
+    "Name": "LifetimeDataComponent",
+    "Outer": "Default__BPChickenHusk_C",
+    "Class": "UScriptClass'LifetimeDataComponent'"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraComponent",
+    "Outer": "Default__BPChickenHusk_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'Feathers01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/Feathers01.15"
+      },
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPChickenHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPChickenHusk_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPChickenHusk_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.8"
+      },
+      "VariableGuid": "3E54C5D5-496A4F9E-FB20E6B3-7981E36D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPChickenHusk_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.5"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "29048DDE-45825DB5-B5A122A8-790E8760",
+      "InternalVariableName": "Decal"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPChickenHusk_C:Decal1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.4"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "7696C7B2-4C199DA9-28BAC8B6-1685E439",
+      "InternalVariableName": "Decal1"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPChickenHusk_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPChickenHusk_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPChickenHusk_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPChickenHusk_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPChickenHusk_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPChickenHusk_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.9"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPChickenHusk_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'DeerA_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/DeerA_ABP.0"
+      },
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'Anim_ChickenDeath'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Chicken/Anim_ChickenDeath.0"
+        },
+        "bSavedLooping": false,
+        "SavedPosition": 0.35
+      },
+      "AnimationMode": "EAnimationMode::AnimationSingleNode",
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Chicken'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/SK_Chicken.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SK_Chicken'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/SK_Chicken.0"
+      },
+      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPChickenHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.0"
+      },
+      "RelativeScale3D": {
+        "X": 0.85,
+        "Y": 0.85,
+        "Z": 0.85
+      }
+    }
+  }
+]

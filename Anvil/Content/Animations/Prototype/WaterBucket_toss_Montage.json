@@ -1,0 +1,178 @@
+[
+  {
+    "Type": "AnimMontage",
+    "Name": "WaterBucket_toss_Montage",
+    "Class": "UScriptClass'AnimMontage'",
+    "Properties": {
+      "CompositeSections": [
+        {
+          "SectionName": "Default",
+          "NextSectionName": "None",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'WaterBucket_toss_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/WaterBucket_toss_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.7,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'WaterBucket_toss_01'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/WaterBucket_toss_01.0"
+          }
+        }
+      ],
+      "SlotAnimTracks": [
+        {
+          "SlotName": "UpperBodySlot",
+          "AnimTrack": {
+            "AnimSegments": [
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'WaterBucket_toss_01'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/WaterBucket_toss_01.0"
+                },
+                "StartPos": 0.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 1.7,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              }
+            ]
+          }
+        }
+      ],
+      "Notifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0001,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlayNiagaraEffect",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlayNiagaraEffect'WaterBucket_toss_Montage:AnimNotify_PlayNiagaraEffect_0'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/WaterBucket_toss_Montage.1"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'WaterBucket_toss_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/WaterBucket_toss_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.7,
+          "LinkValue": 0.57359016,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'WaterBucket_toss_01'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/WaterBucket_toss_01.0"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'WaterBucket_toss_Montage:AnimNotify_PlaySound_0'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/WaterBucket_toss_Montage.2"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'WaterBucket_toss_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/WaterBucket_toss_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.7,
+          "LinkValue": 0.57608664,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'WaterBucket_toss_01'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/WaterBucket_toss_01.0"
+          }
+        }
+      ],
+      "SequenceLength": 1.7,
+      "Skeleton": {
+        "ObjectName": "Skeleton'PrototypeChar_Skeleton'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/PrototypeChar_Skeleton.6"
+      }
+    },
+    "SkeletonGuid": "F597442D-46D412D3-CA2395A2-A90680CA"
+  },
+  {
+    "Type": "AnimNotify_PlayNiagaraEffect",
+    "Name": "AnimNotify_PlayNiagaraEffect_0",
+    "Outer": "WaterBucket_toss_Montage",
+    "Class": "UScriptClass'AnimNotify_PlayNiagaraEffect'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'WaterPlants'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/WaterPlants.8"
+      },
+      "SocketName": "S_Bucket"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_0",
+    "Outer": "WaterBucket_toss_Montage",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'WaterBucketImpact_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketImpact_Cue.0"
+      },
+      "bFollow": true,
+      "AttachName": "S_Bucket"
+    }
+  }
+]

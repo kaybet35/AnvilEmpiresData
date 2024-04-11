@@ -1,0 +1,85 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Torch_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Torch_C'Default__Torch_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Torch.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Torch_C",
+    "Name": "Default__Torch_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Torch.Torch_C'",
+    "Properties": {
+      "CodeNameString": "Torch",
+      "CodeName": -941991092,
+      "ItemType": "EAnvilItemType::SecondaryTool",
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "ItemInvokedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectTorchSwing_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectTorchSwing.0"
+      },
+      "Encumberance": 5,
+      "ArmedDurabilityLossPerSec": 0.2,
+      "bRearmAfterConsumption": true,
+      "bRanged": true,
+      "Damage": 1,
+      "DamageOffset": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "DamageRadius": 64.0,
+      "AmmoType": {
+        "ObjectName": "BlueprintGeneratedClass'Torch_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Torch.0"
+      },
+      "ProjectileEntity": {
+        "ObjectName": "BlueprintGeneratedClass'TorchProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/TorchProjectile.0"
+      },
+      "StanceOverride": [
+        {
+          "EAnvilCharacterStance::OnHorse": {
+            "ObjectName": "BlueprintGeneratedClass'Torch_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Torch.0"
+          }
+        }
+      ],
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 0.5,
+        "Duration": 1.1
+      },
+      "RangedActivity": {
+        "State": "EAnvilSimActivityState::LaunchingProjectile",
+        "Delay": 0.4,
+        "Duration": 1.1,
+        "bRepeatable": false
+      },
+      "BuildActivity": {
+        "bRepeatable": false
+      },
+      "NightShroudLightRadius": 2000.0
+    }
+  }
+]

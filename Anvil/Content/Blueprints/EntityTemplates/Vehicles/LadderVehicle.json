@@ -1,0 +1,143 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "LadderVehicle_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "LadderVehicle_C'Default__LadderVehicle_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/LadderVehicle.6"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__LadderVehicle_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "ExtendFootprint": true,
+      "Extents": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 8
+    }
+  },
+  {
+    "Type": "DeployProxyComponent",
+    "Name": "DeployProxyComponent_0",
+    "Outer": "Default__LadderVehicle_C",
+    "Class": "UScriptClass'DeployProxyComponent'",
+    "Properties": {
+      "bCopyHealthPercentage": true,
+      "DeployedBuildSite": {
+        "ObjectName": "BlueprintGeneratedClass'DeployedLadderBuildSite_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/DeployedLadderBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableProxyComponent_0",
+    "Outer": "Default__LadderVehicle_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Properties": {
+      "DestructionEffectEntity": {
+        "ObjectName": "BlueprintGeneratedClass'EffectStructureDestroy_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectStructureDestroy.0"
+      }
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__LadderVehicle_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'LadderVehicleFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/FootprintAssets/LadderVehicleFootprint.0"
+      },
+      "CollisionMask": 16777472
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_0",
+    "Outer": "Default__LadderVehicle_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "TargetType": "EAnvilDamageTargetType::Horse"
+    }
+  },
+  {
+    "Type": "LadderVehicle_C",
+    "Name": "Default__LadderVehicle_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Vehicles/LadderVehicle.LadderVehicle_C'",
+    "Properties": {
+      "CodeNameString": "LadderVehicle",
+      "CodeName": 1283135308,
+      "bStatic": false,
+      "SerializationType": "EEntitySerializationType::7",
+      "Components": [
+        {
+          "ObjectName": "VehicleMovementProxyComponent'Default__LadderVehicle_C:VehicleMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/LadderVehicle.7"
+        },
+        {
+          "ObjectName": "HealthProxyComponent'Default__LadderVehicle_C:HealthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/LadderVehicle.5"
+        },
+        {
+          "ObjectName": "DestroyableProxyComponent'Default__LadderVehicle_C:DestroyableProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/LadderVehicle.3"
+        },
+        {
+          "ObjectName": "FootprintCollisionProxyComponent'Default__LadderVehicle_C:FootprintCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/LadderVehicle.4"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__LadderVehicle_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/LadderVehicle.1"
+        },
+        {
+          "ObjectName": "DeployProxyComponent'Default__LadderVehicle_C:DeployProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/LadderVehicle.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisLadderVehicle_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.3"
+      }
+    }
+  },
+  {
+    "Type": "VehicleMovementProxyComponent",
+    "Name": "VehicleMovementProxyComponent_0",
+    "Outer": "Default__LadderVehicle_C",
+    "Class": "UScriptClass'VehicleMovementProxyComponent'",
+    "Properties": {
+      "Acceleration": 300.0,
+      "MaxVelocity": 300.0,
+      "RotationalSpeed": 10.0,
+      "bGroupVehicle": true,
+      "bYawInPlace": true,
+      "bLadderMovement": true,
+      "RammingDamage": 0.0
+    }
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "DoorClose_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'DoorClose_Cue:SoundNodeModulator_2'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Foley/DoorClose_Cue.1"
+      },
+      "VolumeMultiplier": 0.8,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "FalloffDistance": 2500.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Impact'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.3"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'ConcurrencyDefault'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/ConcurrencyDefault.0"
+        }
+      ],
+      "Duration": 1.1797084,
+      "MaxDistance": 7900.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Foley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "DoorClose_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMax": 1.1,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'DoorClose_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Foley/DoorClose_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "DoorClose_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Foley/DoorClose.DoorClose",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'DoorClose'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Foley/DoorClose.0"
+    }
+  }
+]

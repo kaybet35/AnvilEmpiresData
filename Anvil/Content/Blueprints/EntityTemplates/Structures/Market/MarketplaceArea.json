@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "MarketplaceArea_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "MarketplaceArea_C'Default__MarketplaceArea_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__MarketplaceArea_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 800.0,
+        "Y": 800.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 1048576
+    }
+  },
+  {
+    "Type": "MarketplaceArea_C",
+    "Name": "Default__MarketplaceArea_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.MarketplaceArea_C'",
+    "Properties": {
+      "CodeNameString": "MarketplaceArea",
+      "CodeName": -984598746,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__MarketplaceArea_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.1"
+        },
+        {
+          "ObjectName": "ProxyEntitySpawnerProxyComponent'Default__MarketplaceArea_C:ProxyEntitySpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.3"
+        },
+        {
+          "ObjectName": "TeamProxyComponent'Default__MarketplaceArea_C:TeamProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.4"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisMarketplaceArea_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceArea.1"
+      }
+    }
+  },
+  {
+    "Type": "ProxyEntitySpawnerProxyComponent",
+    "Name": "ProxyEntitySpawnerProxyComponent_0",
+    "Outer": "Default__MarketplaceArea_C",
+    "Class": "UScriptClass'ProxyEntitySpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedEntity": {
+        "ObjectName": "BlueprintGeneratedClass'MarketAreaMapIconProxy_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketAreaMapIconProxy.0"
+      }
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamProxyComponent_0",
+    "Outer": "Default__MarketplaceArea_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Properties": {
+      "Accessibility": "EAnvilAccessibilityType::AllCanUse"
+    }
+  }
+]

@@ -1,0 +1,75 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Scythe_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Scythe_C'Default__Scythe_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Scythe.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Scythe_C",
+    "Name": "Default__Scythe_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Scythe.Scythe_C'",
+    "Properties": {
+      "CodeNameString": "Scythe",
+      "CodeName": -270924890,
+      "ItemType": "EAnvilItemType::PrimaryTool",
+      "SecondaryType": "EAnvilItemType::WeaponStorage",
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "ItemHitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectHand_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectHand.0"
+      },
+      "bTwoHanded": true,
+      "Encumberance": 10,
+      "DurabilityLossPerUse": 1.0,
+      "Damage": 20,
+      "DamageOffset": {
+        "X": 75.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "DamageRadius": 75.0,
+      "DamageType": "EAnvilDamageType::Slashing",
+      "ToolType": "EAnvilToolType::Scythe",
+      "AimMovementSpeedModifier": 0.5,
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 0.6,
+        "Duration": 1.0,
+        "MovementSpeedModifier": 0.5,
+        "StaminaCost": 30.0
+      },
+      "RangedActivity": {
+        "bRepeatable": false
+      },
+      "GatherActivity": {
+        "State": "EAnvilSimActivityState::UsingHandTool",
+        "Delay": 0.6,
+        "Duration": 1.0,
+        "MovementSpeedModifier": 0.0,
+        "RotationSpeedModifier": 0.0,
+        "StaminaCost": 10.0
+      }
+    }
+  }
+]

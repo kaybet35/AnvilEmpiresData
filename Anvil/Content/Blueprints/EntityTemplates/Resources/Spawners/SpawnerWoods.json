@@ -1,0 +1,66 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SpawnerWoods_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SpawnerWoods_C'Default__SpawnerWoods_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerWoods.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_3",
+    "Outer": "Default__SpawnerWoods_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'Tree01_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree01.0"
+      },
+      "SpawnRadius": 3000.0,
+      "SpawnInterval": 3600.0,
+      "SpawnQuantity": 20,
+      "MaxSpawn": 20,
+      "ResourceReserveInitial": 30,
+      "ReserveReplenishTimeSecs": 3600,
+      "MinDistanceBetweenSpawns": 200.0,
+      "bDontSpawnInSettlements": true,
+      "CompatibleSurfaceTypes": 16900
+    }
+  },
+  {
+    "Type": "SpawnerWoods_C",
+    "Name": "Default__SpawnerWoods_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerWoods.SpawnerWoods_C'",
+    "Properties": {
+      "CodeNameString": "SpawnerTree",
+      "CodeName": -963090850,
+      "bShowOnMap": true,
+      "Components": [
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerWoods_C:ResourceSpawnerProxyComponent_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerWoods.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisSpawnerTree_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Spawners/BPVisSpawnerTree.0"
+      }
+    }
+  }
+]

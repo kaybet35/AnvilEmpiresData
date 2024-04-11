@@ -1,0 +1,548 @@
+[
+  {
+    "Type": "AnimNotify_PlayNiagaraEffect",
+    "Name": "AnimNotify_PlayNiagaraEffect_0",
+    "Outer": "Horse_Anim_gallop",
+    "Class": "UScriptClass'AnimNotify_PlayNiagaraEffect'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'DustKick01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/DustKick01.8"
+      },
+      "SocketName": "backLeg_R_foot"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlayNiagaraEffect",
+    "Name": "AnimNotify_PlayNiagaraEffect_1",
+    "Outer": "Horse_Anim_gallop",
+    "Class": "UScriptClass'AnimNotify_PlayNiagaraEffect'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'DustKick01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/DustKick01.8"
+      },
+      "SocketName": "frontLeg_R_foot"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlayNiagaraEffect",
+    "Name": "AnimNotify_PlayNiagaraEffect_2",
+    "Outer": "Horse_Anim_gallop",
+    "Class": "UScriptClass'AnimNotify_PlayNiagaraEffect'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'DustKick01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/DustKick01.8"
+      },
+      "SocketName": "backLeg_L_foot"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlayNiagaraEffect",
+    "Name": "AnimNotify_PlayNiagaraEffect_3",
+    "Outer": "Horse_Anim_gallop",
+    "Class": "UScriptClass'AnimNotify_PlayNiagaraEffect'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'DustKick01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/DustKick01.8"
+      },
+      "SocketName": "frontLeg_R_foot"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_0",
+    "Outer": "Horse_Anim_gallop",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'HorseSteps'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Horse/HorseSteps.0"
+      },
+      "bFollow": true,
+      "AttachName": "chest"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_1",
+    "Outer": "Horse_Anim_gallop",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'HorseSteps'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Horse/HorseSteps.0"
+      },
+      "bFollow": true,
+      "AttachName": "chest"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_2",
+    "Outer": "Horse_Anim_gallop",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'HorseSteps'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Horse/HorseSteps.0"
+      },
+      "bFollow": true,
+      "AttachName": "chest"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_3",
+    "Outer": "Horse_Anim_gallop",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'HorseSteps'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Horse/HorseSteps.0"
+      },
+      "bFollow": true,
+      "AttachName": "chest"
+    }
+  },
+  {
+    "Type": "AnimSequence",
+    "Name": "Horse_Anim_gallop",
+    "Class": "UScriptClass'AnimSequence'",
+    "Properties": {
+      "BoneCompressionSettings": {
+        "ObjectName": "AnimBoneCompressionSettings'DefaultAnimBoneCompressionSettings'",
+        "ObjectPath": "Engine/Content/Animation/DefaultAnimBoneCompressionSettings.0"
+      },
+      "CurveCompressionSettings": {
+        "ObjectName": "AnimCurveCompressionSettings'DefaultAnimCurveCompressionSettings'",
+        "ObjectPath": "Engine/Content/Animation/DefaultAnimCurveCompressionSettings.1"
+      },
+      "TargetFrameRate": {
+        "Numerator": 30
+      },
+      "Notifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlayNiagaraEffect",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlayNiagaraEffect'Horse_Anim_gallop:AnimNotify_PlayNiagaraEffect_1'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.1"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.13188937,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 2,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.13188937,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Horse_Anim_gallop'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.8"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'Horse_Anim_gallop:AnimNotify_PlaySound_1'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.5"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.40262362,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.40262362,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Horse_Anim_gallop'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.8"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'Horse_Anim_gallop:AnimNotify_PlaySound_2'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.6"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.5699066,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.5699066,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Horse_Anim_gallop'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.8"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'Horse_Anim_gallop:AnimNotify_PlaySound_0'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.4"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.6095262,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.6095262,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Horse_Anim_gallop'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.8"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlayNiagaraEffect",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlayNiagaraEffect'Horse_Anim_gallop:AnimNotify_PlayNiagaraEffect_0'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.0"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.6733579,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 3,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.6733579,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Horse_Anim_gallop'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.8"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'Horse_Anim_gallop:AnimNotify_PlaySound_3'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.7"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.89566815,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.89566815,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Horse_Anim_gallop'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.8"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlayNiagaraEffect",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlayNiagaraEffect'Horse_Anim_gallop:AnimNotify_PlayNiagaraEffect_2'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.2"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.9088747,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 2,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.9088747,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Horse_Anim_gallop'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.8"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlayNiagaraEffect",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlayNiagaraEffect'Horse_Anim_gallop:AnimNotify_PlayNiagaraEffect_3'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.3"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.988114,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 3,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.988114,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Horse_Anim_gallop'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.8"
+          }
+        }
+      ],
+      "SequenceLength": 1.0,
+      "Skeleton": {
+        "ObjectName": "Skeleton'Horse_SK_Skeleton'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Horse_SK_Skeleton.6"
+      }
+    },
+    "SkeletonGuid": "DEF7D201-4FAB980E-661DF0A7-2D8A26FA",
+    "CompressedTrackToSkeletonMapTable": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "CompressedCurveData": {
+      "FloatCurves": []
+    },
+    "CompressedDataStructure": {
+      "CompressedNumberOfFrames": 31,
+      "KeyEncodingFormat": "AKF_PerTrackCompression",
+      "TranslationCompressionFormat": "ACF_Identity",
+      "RotationCompressionFormat": "ACF_Identity",
+      "ScaleCompressionFormat": "ACF_Identity"
+    },
+    "BoneCompressionCodec": {
+      "ObjectName": "AnimCompress_PerTrackCompression'DefaultAnimBoneCompressionSettings:AnimCompress_PerTrackCompression_0'",
+      "ObjectPath": "Engine/Content/Animation/DefaultAnimBoneCompressionSettings"
+    },
+    "CurveCompressionCodec": {
+      "ObjectName": "AnimCurveCompressionCodec_CompressedRichCurve'DefaultAnimCurveCompressionSettings:CurveCompressionCodec'",
+      "ObjectPath": "Engine/Content/Animation/DefaultAnimCurveCompressionSettings"
+    },
+    "CompressedRawDataSize": 37048
+  }
+]

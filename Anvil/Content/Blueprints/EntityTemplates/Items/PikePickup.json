@@ -1,0 +1,77 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "PikePickup_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "PikePickup_C'Default__PikePickup_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/PikePickup.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__PikePickup_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 200.0,
+        "Y": 50.0,
+        "Z": 50.0
+      },
+      "CollisionMask": 32
+    }
+  },
+  {
+    "Type": "PickupProxyComponent",
+    "Name": "PickupProxyComponent_0",
+    "Outer": "Default__PikePickup_C",
+    "Class": "UScriptClass'PickupProxyComponent'",
+    "Properties": {
+      "Item": {
+        "ItemType": {
+          "ObjectName": "BlueprintGeneratedClass'Spear_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Spear.0"
+        },
+        "Count": 1
+      }
+    }
+  },
+  {
+    "Type": "PikePickup_C",
+    "Name": "Default__PikePickup_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Items/PikePickup.PikePickup_C'",
+    "Properties": {
+      "CodeNameString": "PikePickup",
+      "CodeName": 1072814051,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__PikePickup_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/PikePickup.1"
+        },
+        {
+          "ObjectName": "PickupProxyComponent'Default__PikePickup_C:PickupProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/PikePickup.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisPike_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.1"
+      }
+    }
+  }
+]

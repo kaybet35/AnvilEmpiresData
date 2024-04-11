@@ -1,0 +1,355 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__VisHitEffectBurningOilProjectile_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AudioComponent",
+    "Outer": "Default__VisHitEffectBurningOilProjectile_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'OilFlaskImpact_cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/OilFlask/OilFlaskImpact_cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectBurningOilProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "VisHitEffectBurningOilProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'VisHitEffectBurningOilProjectile_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'VisHitEffectBurningOilProjectile_C:ExecuteUbergraph_VisHitEffectBurningOilProjectile'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisEffect'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'VisHitEffectBurningOilProjectile_C:ReceiveBeginPlay'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.5"
+      },
+      {
+        "ObjectName": "Function'VisHitEffectBurningOilProjectile_C:ExecuteUbergraph_VisHitEffectBurningOilProjectile'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Impact",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Decal",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_VisHitEffectBurningOilProjectile": {
+        "ObjectName": "Function'VisHitEffectBurningOilProjectile_C:ExecuteUbergraph_VisHitEffectBurningOilProjectile'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.4"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'VisHitEffectBurningOilProjectile_C:ReceiveBeginPlay'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "VisHitEffectBurningOilProjectile_C'Default__VisHitEffectBurningOilProjectile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.15"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Outer": "VisHitEffectBurningOilProjectile_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'WaterDecal'",
+        "ObjectPath": "Anvil/Content/FX/Materials/WaterDecal.0"
+      },
+      "FadeStartDelay": 5.0,
+      "FadeDuration": 15.0,
+      "FadeInDuration": 1.0,
+      "DecalSize": {
+        "X": 256.0,
+        "Y": 256.0,
+        "Z": 256.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.114928,
+        "Y": 0.6993052,
+        "Z": 0.69930506
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_VisHitEffectBurningOilProjectile",
+    "Outer": "VisHitEffectBurningOilProjectile_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetFadeStartDelay_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetFadeDuration_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "VisHitEffectBurningOilProjectile_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "LifetimeDataComponent",
+    "Name": "LifetimeDataComponent",
+    "Outer": "Default__VisHitEffectBurningOilProjectile_C",
+    "Class": "UScriptClass'LifetimeDataComponent'"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraComponent",
+    "Outer": "Default__VisHitEffectBurningOilProjectile_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectBurningOilProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.0"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "Impact_GEN_VARIABLE",
+    "Outer": "VisHitEffectBurningOilProjectile_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'BurningOilImpact'",
+        "ObjectPath": "Anvil/Content/FX/BurningOilImpact.40"
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "VisHitEffectBurningOilProjectile_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'VisHitEffectBurningOilProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.9"
+      },
+      "VariableGuid": "C786ADAD-4DAE2F7F-488EED81-7A3FD352",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'VisHitEffectBurningOilProjectile_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.3"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "2FEABF5C-4DE8333F-4B5457BE-7C9D9DFF",
+      "InternalVariableName": "Decal"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'VisHitEffectBurningOilProjectile_C:Impact_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.8"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "D8FA80FB-414987C1-A3B2D0B9-3D1F4A5C",
+      "InternalVariableName": "Impact"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "VisHitEffectBurningOilProjectile_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'VisHitEffectBurningOilProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.11"
+        },
+        {
+          "ObjectName": "SCS_Node'VisHitEffectBurningOilProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'VisHitEffectBurningOilProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.11"
+        },
+        {
+          "ObjectName": "SCS_Node'VisHitEffectBurningOilProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'VisHitEffectBurningOilProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__VisHitEffectBurningOilProjectile_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectBurningOilProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.0"
+      }
+    }
+  },
+  {
+    "Type": "VisHitEffectBurningOilProjectile_C",
+    "Name": "Default__VisHitEffectBurningOilProjectile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.VisHitEffectBurningOilProjectile_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectBurningOilProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.0"
+      },
+      "AudioComponent": {
+        "ObjectName": "AudioComponent'Default__VisHitEffectBurningOilProjectile_C:AudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.1"
+      },
+      "NiagaraComponent": {
+        "ObjectName": "NiagaraComponent'Default__VisHitEffectBurningOilProjectile_C:NiagaraComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.7"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__VisHitEffectBurningOilProjectile_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.14"
+      },
+      "LifetimeDataComponent": {
+        "ObjectName": "LifetimeDataComponent'Default__VisHitEffectBurningOilProjectile_C:LifetimeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.6"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectBurningOilProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectBurningOilProjectile.0"
+      }
+    }
+  }
+]

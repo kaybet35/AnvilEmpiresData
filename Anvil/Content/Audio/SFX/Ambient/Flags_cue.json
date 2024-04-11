@@ -1,0 +1,77 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Flags_cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeDelay'Flags_cue:SoundNodeDelay_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Flags_cue.1"
+      },
+      "VolumeMultiplier": 0.3,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'A-B'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX_Master/A-B.0"
+      },
+      "bHasDelayNode": true,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'AmbientConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/AmbientConcurrency.0"
+        }
+      ],
+      "Duration": 10025.0,
+      "MaxDistance": 3800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'AmbientPositional'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/AmbientPositional.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "Flags_cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMax": 25.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'Flags_cue:SoundNodeModulator_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Flags_cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Flags_cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Flags_cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Flags_cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "Flags_cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Ambient/FlagFlap.FlagFlap",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'FlagFlap'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/FlagFlap.0"
+    }
+  }
+]

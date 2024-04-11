@@ -1,0 +1,145 @@
+[
+  {
+    "Type": "BPChatEntryWidget_C",
+    "Name": "Default__BPChatEntryWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPChatEntryWidget.BPChatEntryWidget_C'",
+    "Properties": {
+      "ModeNameMap": [
+        {
+          "EChatType::ALERT": {
+            "Namespace": "Anvil",
+            "Key": "ChatAlert",
+            "SourceString": "Alert",
+            "LocalizedString": "Alert"
+          }
+        },
+        {
+          "EChatType::ADMIN": {
+            "Namespace": "Anvil",
+            "Key": "ChatAdmin",
+            "SourceString": "Admin",
+            "LocalizedString": "Admin"
+          }
+        },
+        {
+          "EChatType::TOWN": {
+            "Namespace": "Anvil",
+            "Key": "ChatTown",
+            "SourceString": "Town",
+            "LocalizedString": "Town"
+          }
+        },
+        {
+          "EChatType::TEAM": {
+            "Namespace": "Anvil",
+            "Key": "ChatTeam",
+            "SourceString": "Alliance",
+            "LocalizedString": "Alliance"
+          }
+        },
+        {
+          "EChatType::LOCAL": {
+            "Namespace": "Anvil",
+            "Key": "ChatLocal",
+            "SourceString": "Local",
+            "LocalizedString": "Local"
+          }
+        },
+        {
+          "EChatType::WORLD": {
+            "Namespace": "Anvil",
+            "Key": "ChatWorld",
+            "SourceString": "World",
+            "LocalizedString": "World"
+          }
+        }
+      ],
+      "ModeSwitchKeywordMap": [
+        {
+          "/w": "EChatType::WORLD"
+        },
+        {
+          "/a": "EChatType::ADMIN"
+        },
+        {
+          "/l": "EChatType::LOCAL"
+        },
+        {
+          "/t": "EChatType::TEAM"
+        },
+        {
+          "/s": "EChatType::TOWN"
+        }
+      ],
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "RichTextBlock",
+    "Name": "ChatTextField",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'RichTextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "573559884AFBF5E7F06D4E9F61BA2352",
+        "SourceString": "<Chat.Channel.ChatTeam>[{1}]{2}]:</><Chat.Text.ChatAlert>{3}</>",
+        "LocalizedString": "<Chat.Channel.ChatTeam>[{1}]{2}]:</><Chat.Text.ChatAlert>{3}</>"
+      },
+      "TextStyleSet": {
+        "ObjectName": "DataTable'AnvilRichTextStyleData'",
+        "ObjectPath": "Anvil/Content/UI/AnvilRichTextStyleData.0"
+      },
+      "DecoratorClasses": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'AnvilRichTextDecorator_C'",
+          "ObjectPath": "Anvil/Content/UI/AnvilRichTextDecorator.1"
+        }
+      ],
+      "AutoWrapText": true
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPChatEntryWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPChatEntryWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatEntryWidget.3"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ChatEntryWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPChatEntryWidget_C'Default__BPChatEntryWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatEntryWidget.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPChatEntryWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "RichTextBlock'BPChatEntryWidget_C:WidgetTree.ChatTextField'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPChatEntryWidget.1"
+      }
+    }
+  }
+]

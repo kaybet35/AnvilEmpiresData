@@ -1,0 +1,245 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisDeerHusk_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AudioComponent",
+    "Outer": "Default__BPVisDeerHusk_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'DeerDeath_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/DeerDeath_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisDeerHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.0"
+      },
+      "RelativeLocation": {
+        "X": 8.5148497E-07,
+        "Y": -1.1368684E-13,
+        "Z": 266.86575
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisDeerHusk_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisDeerHusk_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.10"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisEffect'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Decal",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisDeerHusk_C'Default__BPVisDeerHusk_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisDeerHusk_C",
+    "Name": "Default__BPVisDeerHusk_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.BPVisDeerHusk_C'",
+    "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisDeerHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.0"
+      },
+      "AudioComponent": {
+        "ObjectName": "AudioComponent'Default__BPVisDeerHusk_C:AudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.1"
+      },
+      "NiagaraComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisDeerHusk_C:NiagaraComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.6"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisDeerHusk_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.11"
+      },
+      "LifetimeDataComponent": {
+        "ObjectName": "LifetimeDataComponent'Default__BPVisDeerHusk_C:LifetimeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.5"
+      },
+      "bNightVisibility": true,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisDeerHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.0"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Outer": "BPVisDeerHusk_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "Material'BloodDecal'",
+        "ObjectPath": "Anvil/Content/FX/Materials/BloodDecal.0"
+      },
+      "DecalSize": {
+        "X": 256.0,
+        "Y": 256.0,
+        "Z": 256.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "LifetimeDataComponent",
+    "Name": "LifetimeDataComponent",
+    "Outer": "Default__BPVisDeerHusk_C",
+    "Class": "UScriptClass'LifetimeDataComponent'"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraComponent",
+    "Outer": "Default__BPVisDeerHusk_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisDeerHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisDeerHusk_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisDeerHusk_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.7"
+      },
+      "VariableGuid": "3E54C5D5-496A4F9E-FB20E6B3-7981E36D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPVisDeerHusk_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.4"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "C82F33A7-4E036E72-44CA5FA8-8CBCB02B",
+      "InternalVariableName": "Decal"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisDeerHusk_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisDeerHusk_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.9"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisDeerHusk_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.9"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisDeerHusk_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisDeerHusk_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'DeerA_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/DeerA_ABP.0"
+      },
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'DeerA_death_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/DeerA_death_Anim.0"
+        },
+        "bSavedLooping": false
+      },
+      "AnimationMode": "EAnimationMode::AnimationSingleNode",
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'DeerA_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/DeerA_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'DeerA_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/DeerA_SK.0"
+      },
+      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisDeerHusk_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDeerHusk.0"
+      }
+    }
+  }
+]

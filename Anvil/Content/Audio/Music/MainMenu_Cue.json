@@ -1,0 +1,37 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "MainMenu_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeWavePlayer'MainMenu_Cue:SoundNodeWavePlayer_1'",
+        "ObjectPath": "Anvil/Content/Audio/Music/MainMenu_Cue.1"
+      },
+      "VolumeMultiplier": 0.25,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Music'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.5"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 2097152.0
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "MainMenu_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Music/AnvilMainMenu.AnvilMainMenu",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'AnvilMainMenu'",
+      "ObjectPath": "Anvil/Content/Audio/Music/AnvilMainMenu.0"
+    }
+  }
+]

@@ -1,0 +1,1433 @@
+[
+  {
+    "Type": "Border",
+    "Name": "DeploymentInstructionOrSpawnTimerBorder",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "BrushColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.33,
+        "Hex": "54000000"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPMapWidget_C:WidgetTree.DeploymentInstructionOrSpawnTimerBorder.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.2"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_6'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.15"
+      }
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "ObjectiveBorder",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "BrushColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.33,
+        "Hex": "54000000"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPMapWidget_C:WidgetTree.ObjectiveBorder.BorderSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.3"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.11"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "DeploymentInstructionOrSpawnTimerBorder",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Border'BPMapWidget_C:WidgetTree.DeploymentInstructionOrSpawnTimerBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.0"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPMapWidget_C:WidgetTree.DeploymentInstructionOrSpawnTimerText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.25"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_1",
+    "Outer": "ObjectiveBorder",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Border'BPMapWidget_C:WidgetTree.ObjectiveBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.1"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.CanvasPanel_61'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.5"
+      }
+    }
+  },
+  {
+    "Type": "BPMapWidget_C",
+    "Name": "Default__BPMapWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPMapWidget.BPMapWidget_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "IconTemplates": [
+        {
+          "EMapIconType::Player": {
+            "bRotationFixed": false,
+            "bPositionFixed": false,
+            "BaseSize": 15.0,
+            "BaseSizeZoomFactor": 1.0,
+            "FontSize": 20.0,
+            "FontSizeZoomFactor": 1.0,
+            "ZOrder": 100,
+            "MinDisplayScale": 1.0,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": 0.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPGenericIcon_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPGenericIcon.4"
+            }
+          }
+        },
+        {
+          "EMapIconType::Spawner": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "BaseSize": 30.0,
+            "BaseSizeZoomFactor": 1.0,
+            "FontSize": 20.0,
+            "FontSizeZoomFactor": 1.0,
+            "ZOrder": 3,
+            "MinDisplayScale": 1.25,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": 5000.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPGenericIcon_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPGenericIcon.4"
+            }
+          }
+        },
+        {
+          "EMapIconType::MediumStructure": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "BaseSize": 10.0,
+            "BaseSizeZoomFactor": 2.0,
+            "FontSize": 20.0,
+            "FontSizeZoomFactor": 1.0,
+            "ZOrder": 0,
+            "MinDisplayScale": 2.0,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": 5000.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPGenericIcon_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPGenericIcon.4"
+            }
+          }
+        },
+        {
+          "EMapIconType::TownCenter": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "BaseSize": 15.0,
+            "BaseSizeZoomFactor": 0.5,
+            "FontSize": 20.0,
+            "FontSizeZoomFactor": 1.0,
+            "ZOrder": 90,
+            "MinDisplayScale": 1.0,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": 5000.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPTownCenterButtonIcon_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPTownCenterButtonIcon.26"
+            }
+          }
+        },
+        {
+          "EMapIconType::MinorLocation": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "BaseSize": 10.0,
+            "BaseSizeZoomFactor": 1.0,
+            "FontSize": 12.0,
+            "FontSizeZoomFactor": 1.5,
+            "ZOrder": 2,
+            "MinDisplayScale": 1.0,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": 0.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPGenericLocation_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPGenericLocation.6"
+            }
+          }
+        },
+        {
+          "EMapIconType::MajorLocation": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "BaseSize": 10.0,
+            "BaseSizeZoomFactor": 1.0,
+            "FontSize": 14.0,
+            "FontSizeZoomFactor": 2.0,
+            "ZOrder": 2,
+            "MinDisplayScale": 1.0,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": 0.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPGenericLocation_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPGenericLocation.6"
+            }
+          }
+        },
+        {
+          "EMapIconType::MinorStructure": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "BaseSize": 20.0,
+            "BaseSizeZoomFactor": 2.0,
+            "FontSize": 20.0,
+            "FontSizeZoomFactor": 1.0,
+            "ZOrder": 0,
+            "MinDisplayScale": 3.0,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": 5000.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPGenericIcon_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPGenericIcon.4"
+            }
+          }
+        },
+        {
+          "EMapIconType::MajorStructure": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "BaseSize": 30.0,
+            "BaseSizeZoomFactor": 2.0,
+            "FontSize": 20.0,
+            "FontSizeZoomFactor": 1.0,
+            "ZOrder": 2,
+            "MinDisplayScale": 2.0,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": 5000.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPGenericIcon_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPGenericIcon.4"
+            }
+          }
+        },
+        {
+          "EMapIconType::CampTownCenter": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "BaseSize": 10.0,
+            "BaseSizeZoomFactor": 2.0,
+            "FontSize": 20.0,
+            "FontSizeZoomFactor": 1.0,
+            "ZOrder": 90,
+            "MinDisplayScale": 1.0,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": 5000.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPTownCenterButtonIcon_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPTownCenterButtonIcon.26"
+            }
+          }
+        },
+        {
+          "EMapIconType::MarketShop": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "BaseSize": 6.0,
+            "BaseSizeZoomFactor": 1.1,
+            "FontSize": 20.0,
+            "FontSizeZoomFactor": 1.0,
+            "ZOrder": 0,
+            "MinDisplayScale": 6.0,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": 0.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPMarketShopMapIcon_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPMarketShopMapIcon.4"
+            }
+          }
+        },
+        {
+          "EMapIconType::Mine": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "BaseSize": 30.0,
+            "BaseSizeZoomFactor": 1.0,
+            "FontSize": 20.0,
+            "FontSizeZoomFactor": 1.0,
+            "ZOrder": 3,
+            "MinDisplayScale": 1.0,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": 5000.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPGenericIcon_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPGenericIcon.4"
+            }
+          }
+        },
+        {
+          "EMapIconType::DeathMarker": {
+            "bRotationFixed": true,
+            "bPositionFixed": true,
+            "BaseSize": 50.0,
+            "BaseSizeZoomFactor": 1.5,
+            "FontSize": 20.0,
+            "FontSizeZoomFactor": 1.0,
+            "ZOrder": 90,
+            "MinDisplayScale": 1.0,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": -1.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPDeathMarkerMapIcon_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeathMarkerMapIcon.4"
+            }
+          }
+        },
+        {
+          "EMapIconType::WildSpawnPoint": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "BaseSize": 10.0,
+            "BaseSizeZoomFactor": 1.0,
+            "FontSize": 20.0,
+            "FontSizeZoomFactor": 1.0,
+            "ZOrder": 90,
+            "MinDisplayScale": 1.0,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": 0.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPWildSpawnPointMapIcon_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPWildSpawnPointMapIcon.8"
+            }
+          }
+        },
+        {
+          "EMapIconType::MapPost": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "BaseSize": 20.0,
+            "BaseSizeZoomFactor": 1.0,
+            "FontSize": 10.0,
+            "FontSizeZoomFactor": 0.0,
+            "ZOrder": 5,
+            "MinDisplayScale": 0.0,
+            "MaxDisplayScale": 100.0,
+            "UpdateRange": 0.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPMapPostMapIcon_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPMapPostMapIcon.14"
+            }
+          }
+        },
+        {
+          "EMapIconType::BeaconTowerPlayerInfo": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "BaseSize": 5.0,
+            "BaseSizeZoomFactor": 1.0,
+            "FontSize": 20.0,
+            "FontSizeZoomFactor": 1.0,
+            "ZOrder": 90,
+            "MinDisplayScale": 0.0,
+            "MaxDisplayScale": 100.0,
+            "UpdateRange": -1.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPBeaconTowerPlayerInfo_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.4"
+            }
+          }
+        },
+        {
+          "EMapIconType::BeaconTower": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "BaseSize": 30.0,
+            "BaseSizeZoomFactor": 1.0,
+            "FontSize": 20.0,
+            "FontSizeZoomFactor": 1.0,
+            "ZOrder": 3,
+            "MinDisplayScale": 1.0,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": 5000.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPBeaconTowerMapIcon_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerMapIcon.6"
+            }
+          }
+        }
+      ],
+      "EnemyIconColour": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 0.559401,
+          "B": 0.541667,
+          "A": 1.0,
+          "Hex": "FFFFC5C3"
+        }
+      },
+      "ZoomSpeed": 0.25,
+      "ZoomMax": 10.0,
+      "ZoomAnimationTime": 0.1,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_61",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.CanvasPanel_61.CanvasPanelSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.9"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.CanvasPanel_61.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.CanvasPanel_61.CanvasPanelSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot'BPMapWidget_C:WidgetTree.ObjectiveBorder.BorderSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.3"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "MapContainer",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.13"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.15"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "MapSheet",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapSheet.CanvasPanelSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_5'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.14"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_61",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -8.94109
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.CanvasPanel_61'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.5"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPMapWidget_C:WidgetTree.ObjectiveText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.27"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Outer": "CanvasPanel_61",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -29.418858
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.CanvasPanel_61'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.5"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPMapWidget_C:WidgetTree.ObjectiveHeaderText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.26"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Outer": "CanvasPanel_61",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 13.689883
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.CanvasPanel_61'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.5"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPMapWidget_C:WidgetTree.TimeOfDayText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.28"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "MapContainer",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 59.109386,
+          "Right": 300.0,
+          "Bottom": 80.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapContainer'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.6"
+      },
+      "Content": {
+        "ObjectName": "Border'BPMapWidget_C:WidgetTree.ObjectiveBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.1"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Outer": "MapContainer",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": -100,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapContainer'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.6"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'BPMapWidget_C:WidgetTree.ScaleBox_100'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.23"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Outer": "MapContainer",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 100,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapContainer'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.6"
+      },
+      "Content": {
+        "ObjectName": "Image'BPMapWidget_C:WidgetTree.frame'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.21"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Outer": "MapContainer",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1000.0,
+          "Bottom": 1000.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapContainer'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.6"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapSheet'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.7"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Outer": "MapContainer",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 59.761402,
+          "Right": 280.0,
+          "Bottom": 40.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapContainer'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.6"
+      },
+      "Content": {
+        "ObjectName": "Border'BPMapWidget_C:WidgetTree.DeploymentInstructionOrSpawnTimerBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.0"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Outer": "MapSheet",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapSheet'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.7"
+      },
+      "Content": {
+        "ObjectName": "Image'BPMapWidget_C:WidgetTree.MapImageBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.22"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnMapImageSet",
+    "Outer": "BPMapWidget_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'MapWidget:BP_OnMapImageSet'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "MapImage",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPMapWidget",
+    "Outer": "BPMapWidget_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_MapImage",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'GameInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsAnvil_Game_Instance",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AnvilGameInstance'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetTimeOfDay_OutHours",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetTimeOfDay_OutMinutes",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetTimeOfDay_OutSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_IntToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_FormatArgumentData",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "Struct": {
+          "ObjectName": "ScriptStruct'FormatArgumentData'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "Int64Property",
+        "Name": "CallFunc_Conv_IntToInt64_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsMaterial_Interface",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_FormatArgumentData_1",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "Struct": {
+          "ObjectName": "ScriptStruct'FormatArgumentData'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 80,
+          "Struct": {
+            "ObjectName": "ScriptStruct'FormatArgumentData'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Format_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SlateBrush",
+        "Flags": "RF_Public",
+        "ElementSize": 224,
+        "Struct": {
+          "ObjectName": "ScriptStruct'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Tick",
+    "Outer": "BPMapWidget_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'UserWidget:Tick'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Image",
+    "Name": "background",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 4096.0,
+          "Y": 4096.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'AnvilMapBG'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Map/AnvilMapBG.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'BPMapWidget_C:WidgetTree.ScaleBox_100.ScaleBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.24"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "frame",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "DrawAs": "ESlateBrushDrawType::Border",
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'MapBorder'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Map/MapBorder.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.13"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "MapImageBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 4096.0,
+          "Y": 4096.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Material'Map'",
+          "ObjectPath": "Anvil/Content/Materials/UI/Map.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapSheet.CanvasPanelSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.16"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_100",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'ScaleBox'",
+    "Properties": {
+      "Stretch": "EStretch::ScaleToFill",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'BPMapWidget_C:WidgetTree.ScaleBox_100.ScaleBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.12"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "ScaleBox_100",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'BPMapWidget_C:WidgetTree.ScaleBox_100'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.23"
+      },
+      "Content": {
+        "ObjectName": "Image'BPMapWidget_C:WidgetTree.background'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.20"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "DeploymentInstructionOrSpawnTimerText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "6D5D6D064FC1336A3E17BBA87055BE91",
+        "SourceString": "Deployment available in 5s",
+        "LocalizedString": "Deployment available in 5s"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.9,
+          "G": 0.9,
+          "B": 0.9,
+          "A": 1.0,
+          "Hex": "FFF4F4F4"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 16
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "BorderSlot'BPMapWidget_C:WidgetTree.DeploymentInstructionOrSpawnTimerBorder.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.2"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "ObjectiveHeaderText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "6D49C56F4378113D37D8FF8B6CF3AEA2",
+        "SourceString": "Objective",
+        "LocalizedString": "Objective"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.9,
+          "G": 0.9,
+          "B": 0.9,
+          "A": 1.0,
+          "Hex": "FFF4F4F4"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 14
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.CanvasPanel_61.CanvasPanelSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.9"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "ObjectiveText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "A8294F154E1FA9593ACDA88F493E085A",
+        "SourceString": "Destroy all enemy Settlements",
+        "LocalizedString": "Destroy all enemy Settlements"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.9,
+          "G": 0.9,
+          "B": 0.9,
+          "A": 1.0,
+          "Hex": "FFF4F4F4"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 12
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.CanvasPanel_61.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.8"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TimeOfDayText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "9554AE4A4B97078FC01CE086F022958D",
+        "SourceString": "12:00",
+        "LocalizedString": "12:00"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.9,
+          "G": 0.9,
+          "B": 0.9,
+          "A": 1.0,
+          "Hex": "FFF4F4F4"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 10
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.CanvasPanel_61.CanvasPanelSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.10"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPMapWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPMapWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.30"
+      },
+      "bClassRequiresNativeTick": true,
+      "UberGraphFunction": {
+        "ObjectName": "Function'BPMapWidget_C:ExecuteUbergraph_BPMapWidget'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.18"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'MapWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BPMapWidget_C:Tick'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.19"
+      },
+      {
+        "ObjectName": "Function'BPMapWidget_C:BP_OnMapImageSet'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.17"
+      },
+      {
+        "ObjectName": "Function'BPMapWidget_C:ExecuteUbergraph_BPMapWidget'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.18"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "frame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ObjectiveHeaderText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ObjectiveText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TimeOfDayText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DynamicMaterialInstance",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BPMapWidget": {
+        "ObjectName": "Function'BPMapWidget_C:ExecuteUbergraph_BPMapWidget'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.18"
+      },
+      "BP_OnMapImageSet": {
+        "ObjectName": "Function'BPMapWidget_C:BP_OnMapImageSet'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.17"
+      },
+      "Tick": {
+        "ObjectName": "Function'BPMapWidget_C:Tick'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.19"
+      }
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPMapWidget_C'Default__BPMapWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPMapWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapContainer'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.6"
+      }
+    }
+  }
+]

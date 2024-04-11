@@ -1,0 +1,120 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "OceanBeach_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeLooping'OceanBeach_Cue:SoundNodeLooping_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/OceanBeach_Cue.1"
+      },
+      "VolumeMultiplier": 0.66,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'A-B'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX_Master/A-B.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'AmbientConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/AmbientConcurrency.0"
+        }
+      ],
+      "Duration": 10000.0,
+      "MaxDistance": 12500.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'AmbientRiver'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/AmbientRiver.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "OceanBeach_Cue",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'OceanBeach_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/OceanBeach_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "OceanBeach_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'OceanBeach_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/OceanBeach_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'OceanBeach_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/OceanBeach_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'OceanBeach_Cue:SoundNodeWavePlayer_5'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/OceanBeach_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "OceanBeach_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Ambient/Water/OceanBeach03.OceanBeach03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'OceanBeach03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/OceanBeach03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "OceanBeach_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Ambient/Water/OceanBeach01.OceanBeach01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'OceanBeach01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/OceanBeach01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "OceanBeach_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Ambient/Water/OceanBeach02.OceanBeach02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'OceanBeach02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Water/OceanBeach02.0"
+    }
+  }
+]

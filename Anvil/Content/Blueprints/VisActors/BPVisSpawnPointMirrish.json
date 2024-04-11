@@ -1,0 +1,243 @@
+[
+  {
+    "Type": "BillboardComponent",
+    "Name": "Billboard_GEN_VARIABLE",
+    "Outer": "BPVisSpawnPointMirrish_C",
+    "Class": "UScriptClass'BillboardComponent'",
+    "Properties": {
+      "Sprite": {
+        "ObjectName": "Texture2D'MirrishFactionIcon'",
+        "ObjectPath": "Anvil/Content/Textures/UI/MirrishFactionIcon.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 970.0
+      },
+      "RelativeScale3D": {
+        "X": 30.0,
+        "Y": 29.999998,
+        "Z": 29.999998
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisSpawnPointMirrish_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisSpawnPointMirrish_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisSpawnPoint'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Billboard",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BillboardComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Cube",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisSpawnPointMirrish_C'Default__BPVisSpawnPointMirrish_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisSpawnPointMirrish_C",
+    "Name": "Default__BPVisSpawnPointMirrish_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.BPVisSpawnPointMirrish_C'",
+    "Properties": {
+      "PlayerSpawnerDataComponent": {
+        "ObjectName": "PlayerSpawnerDataComponent'Default__BPVisSpawnPointMirrish_C:PlayerSpawnerProxyComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.3"
+      },
+      "MapIconProperty": {
+        "Icon": {
+          "ObjectName": "Texture2D'MapIconSpawnPoint'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Map/MapIconSpawnPoint.0"
+        },
+        "MapModeIconOverrides": [
+          {
+            "EMapMode::Spawn": {
+              "ObjectName": "Texture2D'MapIconSpawnPoint'",
+              "ObjectPath": "Anvil/Content/Textures/UI/Map/MapIconSpawnPoint.0"
+            }
+          }
+        ],
+        "MapActorType": "EMapIconType::WildSpawnPoint"
+      }
+    }
+  },
+  {
+    "Type": "PlayerSpawnerDataComponent",
+    "Name": "PlayerSpawnerProxyComponent",
+    "Outer": "Default__BPVisSpawnPointMirrish_C",
+    "Class": "UScriptClass'PlayerSpawnerDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisSpawnPointMirrish_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisSpawnPointMirrish_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.4"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSpawnPointMirrish_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.6"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSpawnPointMirrish_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.7"
+        }
+      ],
+      "VariableGuid": "3EF7D283-48345C39-EB4EB691-943731E4",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisSpawnPointMirrish_C:Cube_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.9"
+      },
+      "VariableGuid": "43F3C0E6-496437FA-B29A6DA7-AF1FA859",
+      "InternalVariableName": "Cube"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BillboardComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BillboardComponent'BPVisSpawnPointMirrish_C:Billboard_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.0"
+      },
+      "VariableGuid": "489B17EA-4580B335-D8F410B6-B7E21CE8",
+      "InternalVariableName": "Billboard"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisSpawnPointMirrish_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSpawnPointMirrish_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.5"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSpawnPointMirrish_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.5"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSpawnPointMirrish_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.6"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSpawnPointMirrish_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisSpawnPointMirrish_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointMirrish.5"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Cube_GEN_VARIABLE",
+    "Outer": "BPVisSpawnPointMirrish_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'TownHallFlagMirrish'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/TownHallFlagMirrish.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -452.6454
+      },
+      "bHiddenInGame": true
+    }
+  }
+]

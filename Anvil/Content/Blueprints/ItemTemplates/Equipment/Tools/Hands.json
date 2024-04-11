@@ -1,0 +1,81 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Hands_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Hands_C'Default__Hands_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Hands.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Hands_C",
+    "Name": "Default__Hands_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Hands.Hands_C'",
+    "Properties": {
+      "CodeNameString": "Hands",
+      "CodeName": 58991124,
+      "ItemType": "EAnvilItemType::PrimaryTool",
+      "ItemInvokedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectHandSwing_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectHandSwing.0"
+      },
+      "ItemHitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectHand_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectHand.0"
+      },
+      "Damage": 5,
+      "DamageOffset": {
+        "X": 55.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "DamageRadius": 60.0,
+      "bStaggersWielder": true,
+      "ToolType": "EAnvilToolType::Hands",
+      "AimMovementSpeedModifier": 0.6,
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 0.2,
+        "Duration": 1.0,
+        "StaminaCost": 15.0
+      },
+      "RangedActivity": {
+        "bRepeatable": false,
+        "StaminaCost": 10.0
+      },
+      "BuildActivity": {
+        "State": "EAnvilSimActivityState::BuildingWithHandTool",
+        "Delay": 1.0,
+        "Duration": 1.0,
+        "MovementSpeedModifier": 0.0,
+        "RotationSpeedModifier": 0.0,
+        "StaminaCost": 1.0,
+        "AimedStaminaCost": 1.0
+      },
+      "GatherActivity": {
+        "State": "EAnvilSimActivityState::UsingHandTool",
+        "Delay": 1.25,
+        "Duration": 1.5,
+        "MovementSpeedModifier": 0.0,
+        "RotationSpeedModifier": 0.0,
+        "StaminaCost": 4.0,
+        "AimedStaminaCost": 4.0
+      }
+    }
+  }
+]

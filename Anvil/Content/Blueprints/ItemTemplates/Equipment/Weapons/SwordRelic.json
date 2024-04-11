@@ -1,0 +1,76 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SwordRelic_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SwordRelic_C'Default__SwordRelic_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SwordRelic.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "SwordRelic_C",
+    "Name": "Default__SwordRelic_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SwordRelic.SwordRelic_C'",
+    "Properties": {
+      "CodeNameString": "SwordRelic",
+      "CodeName": -466421736,
+      "ItemType": "EAnvilItemType::PrimaryTool",
+      "SecondaryType": "EAnvilItemType::WeaponStorage",
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "ItemHitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectSwordImpact_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectSwordImpact.0"
+      },
+      "Encumberance": 40,
+      "DurabilityLossPerUse": 2.0,
+      "Damage": 60,
+      "DamageOffset": {
+        "X": 100.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "DamageRadius": 125.0,
+      "bStaggersWielder": true,
+      "DamageType": "EAnvilDamageType::Slashing",
+      "StanceOverride": [
+        {
+          "EAnvilCharacterStance::OnHorse": {
+            "ObjectName": "BlueprintGeneratedClass'MountedSwordRelic_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/MountedSwordRelic.0"
+          }
+        }
+      ],
+      "AimMovementSpeedModifier": 0.45,
+      "AimRotationSpeedModifier": 4.0,
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 0.4,
+        "Duration": 1.1,
+        "RotationSpeedModifier": 4.0,
+        "StaminaCost": 16.0
+      },
+      "RangedActivity": {
+        "bRepeatable": false
+      },
+      "bAllowCameraPan": false
+    }
+  }
+]

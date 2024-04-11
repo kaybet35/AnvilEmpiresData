@@ -1,0 +1,124 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "WaterBucketImpact_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'WaterBucketImpact_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketImpact_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Impact'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.3"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'ExplosionConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/ExplosionConcurrency.0"
+        }
+      ],
+      "Duration": 1.7533958,
+      "MaxDistance": 6000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'ProjectileFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/ProjectileFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "WaterBucketImpact_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.7,
+      "VolumeMax": 1.3,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'WaterBucketImpact_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketImpact_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "WaterBucketImpact_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WaterBucketImpact_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketImpact_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WaterBucketImpact_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketImpact_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WaterBucketImpact_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketImpact_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "WaterBucketImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/WaterBucket/WaterBucketImpact01.WaterBucketImpact01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WaterBucketImpact01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketImpact01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "WaterBucketImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/WaterBucket/WaterBucketImpact02.WaterBucketImpact02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WaterBucketImpact02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketImpact02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "WaterBucketImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/WaterBucket/WaterBucketImpact03.WaterBucketImpact03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WaterBucketImpact03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketImpact03.0"
+    }
+  }
+]

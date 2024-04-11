@@ -1,0 +1,122 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPProxyPawn_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPProxyPawn_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPProxyPawn.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ProxyPawn'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPProxyPawn_C'Default__BPProxyPawn_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/BPProxyPawn.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPProxyPawn_C",
+    "Name": "Default__BPProxyPawn_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/BPProxyPawn.BPProxyPawn_C'",
+    "Properties": {
+      "MovementComponent": {
+        "ObjectName": "FloatingPawnMovement'Default__BPProxyPawn_C:MovementComponent0'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPProxyPawn.2"
+      },
+      "CollisionComponent": {
+        "ObjectName": "SphereComponent'Default__BPProxyPawn_C:CollisionComponent0'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPProxyPawn.6"
+      },
+      "MeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BPProxyPawn_C:MeshComponent0'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPProxyPawn.7"
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BPProxyPawn_C:CollisionComponent0'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPProxyPawn.6"
+      }
+    }
+  },
+  {
+    "Type": "FloatingPawnMovement",
+    "Name": "MovementComponent0",
+    "Outer": "Default__BPProxyPawn_C",
+    "Class": "UScriptClass'FloatingPawnMovement'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPProxyPawn_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPProxyPawn_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPProxyPawn.3"
+      },
+      "VariableGuid": "B5D481A1-4C516CE7-C3143E96-B270B58F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPProxyPawn_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPProxyPawn_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPProxyPawn.4"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "CollisionComponent0",
+    "Outer": "Default__BPProxyPawn_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Properties": {
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "MeshComponent0",
+    "Outer": "Default__BPProxyPawn_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": null,
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPProxyPawn_C:CollisionComponent0'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPProxyPawn.6"
+      }
+    }
+  }
+]

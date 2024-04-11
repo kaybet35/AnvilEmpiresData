@@ -1,0 +1,412 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Merchant_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Merchant_C'Default__Merchant_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.7"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__Merchant_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__Merchant_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    },
+    "Properties": {
+      "bEnabled": false
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableComp",
+    "Outer": "Default__Merchant_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Template": {
+      "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__Merchant_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'MerchantFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/MerchantFootprint.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthComp",
+    "Outer": "Default__Merchant_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
+    },
+    "Properties": {
+      "MaxHealth": 3000.0,
+      "AutoRegenRate": 5.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__Merchant_C",
+    "Class": "UScriptClass'InventoryProxyComponent'"
+  },
+  {
+    "Type": "Merchant_C",
+    "Name": "Default__Merchant_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.Merchant_C'",
+    "Template": {
+      "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
+    },
+    "Properties": {
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__Merchant_C:TeamComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.12"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__Merchant_C:HealthComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.5"
+      },
+      "RepairComp": {
+        "ObjectName": "RepairProxyComponent'Default__Merchant_C:RepairComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.9"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__Merchant_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.11"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__Merchant_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.3"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__Merchant_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.4"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__Merchant_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.1"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__Merchant_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.2"
+      },
+      "ScorchComp": {
+        "ObjectName": "ScorchProxyComponent'Default__Merchant_C:ScorchProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.10"
+      },
+      "CodeNameString": "Merchant",
+      "CodeName": 712958894,
+      "bShowOnMap": true,
+      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "Components": [
+        {
+          "ObjectName": "RefineResourceProxyComponent'Default__Merchant_C:RefineResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.8"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Merchant_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.6"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisMerchant_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisMerchant.1"
+      }
+    }
+  },
+  {
+    "Type": "RefineResourceProxyComponent",
+    "Name": "RefineResourceProxyComponent_0",
+    "Outer": "Default__Merchant_C",
+    "Class": "UScriptClass'RefineResourceProxyComponent'",
+    "Properties": {
+      "ProducableItemList": [
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 5,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 1.0,
+          "OutputCount": 10,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'ProcessedStone_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedStone.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 25,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 1.0,
+          "OutputCount": 10,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 50,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 1.0,
+          "OutputCount": 10,
+          "OutputMax": 1000,
+          "PrivateXpReward": 15,
+          "PublicXpReward": 25,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'FoodBread_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodBread.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 1,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 1.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 0,
+          "PublicXpReward": 0,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'FoodProduce_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodProduce.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 1,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 1.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 0,
+          "PublicXpReward": 0,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'FoodMeat_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodMeat.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 1,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 1.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 0,
+          "PublicXpReward": 0,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'FoodMeatBoar_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodMeatBoar.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 1,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 1.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 0,
+          "PublicXpReward": 0,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+          },
+          "ProducedItemCost": [
+            {
+              "CostItem": {
+                "ObjectName": "BlueprintGeneratedClass'FoodFish_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodFish.0"
+              },
+              "ItemCodeName": 0,
+              "Count": 1,
+              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+            }
+          ],
+          "ProductionTime": 1.0,
+          "OutputCount": 1,
+          "OutputMax": 1000,
+          "PrivateXpReward": 0,
+          "PublicXpReward": 0,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        }
+      ]
+    }
+  },
+  {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairComp",
+    "Outer": "Default__Merchant_C",
+    "Class": "UScriptClass'RepairProxyComponent'",
+    "Template": {
+      "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+    },
+    "Properties": {
+      "TotalRepairCost": 108
+    }
+  },
+  {
+    "Type": "ScorchProxyComponent",
+    "Name": "ScorchProxyComponent_0",
+    "Outer": "Default__Merchant_C",
+    "Class": "UScriptClass'ScorchProxyComponent'",
+    "Template": {
+      "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__Merchant_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamComp",
+    "Outer": "Default__Merchant_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    },
+    "Properties": {
+      "Accessibility": "EAnvilAccessibilityType::AllCanUse"
+    }
+  }
+]

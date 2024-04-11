@@ -1,0 +1,49 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "WaterRiverToLakeTransition",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "MaterialInstanceConstant'WaterRiver'",
+        "ObjectPath": "Anvil/Content/FX/Water/Materials/WaterRiver.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "BlendMode": "EBlendMode::BLEND_Translucent",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 0.046875,
+          "UVChannelIndex": 0,
+          "TextureName": "LowResBlurredNoise"
+        },
+        {
+          "SamplingScale": 0.15625,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Water_TilingNormal_With_Height_02_Softened"
+        },
+        {
+          "SamplingScale": 0.078125,
+          "UVChannelIndex": 0,
+          "TextureName": "water_n"
+        }
+      ]
+    },
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

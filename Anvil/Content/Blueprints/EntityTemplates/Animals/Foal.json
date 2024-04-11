@@ -1,0 +1,154 @@
+[
+  {
+    "Type": "AnimalAIProxyComponent",
+    "Name": "AnimalAIProxyComponent_0",
+    "Outer": "Default__Foal_C",
+    "Class": "UScriptClass'AnimalAIProxyComponent'",
+    "Properties": {
+      "SlowSpeed": 150.0,
+      "FastSpeed": 500.0,
+      "HomingDistance": 300.0
+    }
+  },
+  {
+    "Type": "AnimalTameProxyComponent",
+    "Name": "AnimalTameProxyComponent_0",
+    "Outer": "Default__Foal_C",
+    "Class": "UScriptClass'AnimalTameProxyComponent'",
+    "Properties": {
+      "FeedingNum": 12,
+      "FeedingFreqSeconds": 15.0,
+      "TamingFood": {
+        "ObjectName": "BlueprintGeneratedClass'ProcessedAnimalFeedHorse_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedAnimalFeedHorse.0"
+      },
+      "TamedEntity": {
+        "ObjectName": "BlueprintGeneratedClass'Horse_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.1"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Foal_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Foal_C'Default__Foal_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.5"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__Foal_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 15.0,
+        "Y": 0.0,
+        "Z": 20.0
+      },
+      "Extents": {
+        "X": 90.0,
+        "Y": 24.0,
+        "Z": 55.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 8256
+    }
+  },
+  {
+    "Type": "CapsuleCollisionProxyComponent",
+    "Name": "CapsuleCollisionProxyComponent_0",
+    "Outer": "Default__Foal_C",
+    "Class": "UScriptClass'CapsuleCollisionProxyComponent'",
+    "Properties": {
+      "Radius": 40.0,
+      "HalfHeight": 72.0,
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 524288
+    }
+  },
+  {
+    "Type": "Foal_C",
+    "Name": "Default__Foal_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.Foal_C'",
+    "Properties": {
+      "CodeNameString": "Foal",
+      "CodeName": 1422544353,
+      "bStatic": false,
+      "SerializationType": "EEntitySerializationType::EEntitySerializationType_MAX",
+      "Components": [
+        {
+          "ObjectName": "HealthProxyComponent'Default__Foal_C:HealthProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.6"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__Foal_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.7"
+        },
+        {
+          "ObjectName": "AnimalAIProxyComponent'Default__Foal_C:AnimalAIProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.0"
+        },
+        {
+          "ObjectName": "CapsuleCollisionProxyComponent'Default__Foal_C:CapsuleCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.4"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__Foal_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.3"
+        },
+        {
+          "ObjectName": "AnimalTameProxyComponent'Default__Foal_C:AnimalTameProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisFoal_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisFoal.2"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_1",
+    "Outer": "Default__Foal_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "MaxHealth": 30.0,
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectPlayer_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
+      },
+      "TargetType": "EAnvilDamageTargetType::Infantry"
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__Foal_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'FoalHusk_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/FoalHusk.0"
+      },
+      "XpReward": 2
+    }
+  }
+]
