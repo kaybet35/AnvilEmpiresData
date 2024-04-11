@@ -979,7 +979,8 @@ UPlayerControllerProxyComponent = {}
 ---@field AimArcCollisionDistance float
 ---@field CurrentUsableEntityId int64
 ---@field CurrentMountableEntityId int64
----@field UsePromptBits EAnvilUsePromptType
+---@field CurrentCollectableResourceType int32
+---@field UsePrompt int32
 ---@field VehicleInput EAnvilVehicleInputState
 ---@field CurrentBuildGhostEntityId int64
 ---@field CameraCurrentPosition FVector

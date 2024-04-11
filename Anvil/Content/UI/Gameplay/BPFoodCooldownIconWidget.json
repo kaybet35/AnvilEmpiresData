@@ -1,5 +1,66 @@
 [
   {
+    "Type": "Border",
+    "Name": "Border_93",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.0,
+            "Hex": "FFFFFF"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPFoodCooldownIconWidget_C:WidgetTree.Border_93.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.1"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPFoodCooldownIconWidget_C:WidgetTree.CanvasPanel_20.CanvasPanelSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.4"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_93",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border'BPFoodCooldownIconWidget_C:WidgetTree.Border_93'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.0"
+      },
+      "Content": {
+        "ObjectName": "Image'BPFoodCooldownIconWidget_C:WidgetTree.FoodIconImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.6"
+      }
+    }
+  },
+  {
     "Type": "BPFoodCooldownIconWidget_C",
     "Name": "Default__BPFoodCooldownIconWidget_C",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.BPFoodCooldownIconWidget_C'",
@@ -16,31 +77,57 @@
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "CanvasPanelSlot'BPFoodCooldownIconWidget_C:WidgetTree.CanvasPanel_20.CanvasPanelSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.2"
+          "ObjectName": "CanvasPanelSlot'BPFoodCooldownIconWidget_C:WidgetTree.CanvasPanel_20.CanvasPanelSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.4"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPFoodCooldownIconWidget_C:WidgetTree.CanvasPanel_20.CanvasPanelSlot_8'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.5"
         }
       ]
     }
   },
   {
     "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_0",
+    "Name": "CanvasPanelSlot_1",
     "Outer": "CanvasPanel_20",
     "Class": "UScriptClass'CanvasPanelSlot'",
     "Properties": {
       "LayoutData": {
         "Offsets": {
-          "Right": 32.0,
-          "Bottom": 32.0
+          "Right": 24.0,
+          "Bottom": 24.0
         }
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPFoodCooldownIconWidget_C:WidgetTree.CanvasPanel_20'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.1"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.3"
       },
       "Content": {
-        "ObjectName": "SizeBox'BPFoodCooldownIconWidget_C:WidgetTree.SizeBox_39'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.4"
+        "ObjectName": "Border'BPFoodCooldownIconWidget_C:WidgetTree.Border_93'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.0"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_8",
+    "Outer": "CanvasPanel_20",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 24.0,
+          "Bottom": 24.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPFoodCooldownIconWidget_C:WidgetTree.CanvasPanel_20'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.3"
+      },
+      "Content": {
+        "ObjectName": "Image'BPFoodCooldownIconWidget_C:WidgetTree.Image_121'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.7"
       }
     }
   },
@@ -61,44 +148,31 @@
         }
       },
       "Slot": {
-        "ObjectName": "SizeBoxSlot'BPFoodCooldownIconWidget_C:WidgetTree.SizeBox_39.SizeBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.5"
+        "ObjectName": "BorderSlot'BPFoodCooldownIconWidget_C:WidgetTree.Border_93.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.1"
       }
     }
   },
   {
-    "Type": "SizeBox",
-    "Name": "SizeBox_39",
+    "Type": "Image",
+    "Name": "Image_121",
     "Outer": "WidgetTree",
-    "Class": "UScriptClass'SizeBox'",
+    "Class": "UScriptClass'Image'",
     "Properties": {
-      "WidthOverride": 32.0,
-      "HeightOverride": 32.0,
-      "Slots": [
-        {
-          "ObjectName": "SizeBoxSlot'BPFoodCooldownIconWidget_C:WidgetTree.SizeBox_39.SizeBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.5"
+      "Brush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.266356,
+            "G": 0.006995,
+            "B": 0.006995,
+            "A": 0.3,
+            "Hex": "4C8D1414"
+          }
         }
-      ],
-      "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPFoodCooldownIconWidget_C:WidgetTree.CanvasPanel_20.CanvasPanelSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.2"
-      }
-    }
-  },
-  {
-    "Type": "SizeBoxSlot",
-    "Name": "SizeBoxSlot_0",
-    "Outer": "SizeBox_39",
-    "Class": "UScriptClass'SizeBoxSlot'",
-    "Properties": {
-      "Parent": {
-        "ObjectName": "SizeBox'BPFoodCooldownIconWidget_C:WidgetTree.SizeBox_39'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.4"
       },
-      "Content": {
-        "ObjectName": "Image'BPFoodCooldownIconWidget_C:WidgetTree.FoodIconImage'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.3"
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPFoodCooldownIconWidget_C:WidgetTree.CanvasPanel_20.CanvasPanelSlot_8'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.5"
       }
     }
   },
@@ -109,7 +183,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPFoodCooldownIconWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.7"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.9"
       },
       "bClassRequiresNativeTick": true
     },
@@ -117,6 +191,19 @@
       "ObjectName": "Class'FoodCooldownIconWidget'",
       "ObjectPath": "/Script/Anvil"
     },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_121",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
     "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -126,7 +213,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPFoodCooldownIconWidget_C'Default__BPFoodCooldownIconWidget_C'",
-      "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.0"
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.2"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -140,7 +227,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "CanvasPanel'BPFoodCooldownIconWidget_C:WidgetTree.CanvasPanel_20'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.1"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownIconWidget.3"
       }
     }
   }

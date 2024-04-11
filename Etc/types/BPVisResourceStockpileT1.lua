@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisResourceStockpileT1_C : AVisStructure
+---@field ResourceChickenEgg UInstancedStaticMeshComponent
 ---@field ResourceFibre UInstancedStaticMeshComponent
 ---@field ResourceFeathers UInstancedStaticMeshComponent
 ---@field ProcessedCoal UInstancedStaticMeshComponent

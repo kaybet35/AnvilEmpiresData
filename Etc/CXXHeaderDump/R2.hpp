@@ -980,12 +980,13 @@ class UPlayerInputDataComponent : public UDataComponent
     float AimArcCollisionDistance;                                                    // 0x0228 (size: 0x4)
     int64 CurrentUsableEntityId;                                                      // 0x0248 (size: 0x8)
     int64 CurrentMountableEntityId;                                                   // 0x0268 (size: 0x8)
-    EAnvilUsePromptType UsePromptBits;                                                // 0x0288 (size: 0x1)
-    EAnvilVehicleInputState VehicleInput;                                             // 0x02A8 (size: 0x1)
-    int64 CurrentBuildGhostEntityId;                                                  // 0x02C8 (size: 0x8)
-    FVector CameraCurrentPosition;                                                    // 0x02E8 (size: 0x18)
+    int32 CurrentCollectableResourceType;                                             // 0x0288 (size: 0x4)
+    int32 UsePrompt;                                                                  // 0x02A8 (size: 0x4)
+    EAnvilVehicleInputState VehicleInput;                                             // 0x02C8 (size: 0x1)
+    int64 CurrentBuildGhostEntityId;                                                  // 0x02E8 (size: 0x8)
+    FVector CameraCurrentPosition;                                                    // 0x0308 (size: 0x18)
 
-}; // Size: 0x318
+}; // Size: 0x338
 
 class UPlayerInputProxyComponent : public UProxyComponent
 {

@@ -3,6 +3,8 @@
 
 class UBPFoodCooldownIconWidget_C : public UFoodCooldownIconWidget
 {
-}; // Size: 0x288
+    class UImage* Image_121;                                                          // 0x0288 (size: 0x8)
+
+}; // Size: 0x290
 
 #endif

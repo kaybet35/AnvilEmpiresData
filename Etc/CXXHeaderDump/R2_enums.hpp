@@ -500,16 +500,16 @@ enum class EAnvilToolType {
 };
 
 enum class EAnvilUsePromptType {
-    None = 0,
-    PickupItem = 1,
-    Plunder = 2,
-    UseEntity = 4,
-    DropLargeItem = 8,
-    Mount = 16,
-    Repair = 32,
-    Gate = 64,
-    Feed = 128,
-    EAnvilUsePromptType_MAX = 129,
+    PickupItem = 0,
+    Plunder = 1,
+    UseEntity = 2,
+    DropLargeItem = 3,
+    Mount = 4,
+    Repair = 5,
+    Gate = 6,
+    Feed = 7,
+    Gathering = 8,
+    EAnvilUsePromptType_MAX = 9,
 };
 
 enum class EAnvilVehicleInputState {

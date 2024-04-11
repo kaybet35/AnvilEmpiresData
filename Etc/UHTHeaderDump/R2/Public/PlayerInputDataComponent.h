@@ -4,7 +4,6 @@
 #include "DataComponent.h"
 #include "EAnvilPlayerAimMeshType.h"
 #include "EAnvilPlayerInputMode.h"
-#include "EAnvilUsePromptType.h"
 #include "EAnvilVehicleInputState.h"
 #include "PlayerInputDataComponent.generated.h"
 
@@ -52,7 +51,10 @@ public:
     int64 CurrentMountableEntityId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EAnvilUsePromptType UsePromptBits;
+    int32 CurrentCollectableResourceType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 UsePrompt;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilVehicleInputState VehicleInput;

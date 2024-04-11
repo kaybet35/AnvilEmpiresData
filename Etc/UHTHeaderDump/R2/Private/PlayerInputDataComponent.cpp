@@ -10,7 +10,8 @@ UPlayerInputDataComponent::UPlayerInputDataComponent(const FObjectInitializer& O
     this->AimArcCollisionDistance = 0.00f;
     this->CurrentUsableEntityId = 0;
     this->CurrentMountableEntityId = 0;
-    this->UsePromptBits = EAnvilUsePromptType::None;
+    this->CurrentCollectableResourceType = 0;
+    this->UsePrompt = 0;
     this->VehicleInput = EAnvilVehicleInputState::Idle;
     this->CurrentBuildGhostEntityId = 0;
 }
