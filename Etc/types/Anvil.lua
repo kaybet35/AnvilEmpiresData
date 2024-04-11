@@ -607,6 +607,7 @@ FCameraRotateState = {}
 ---@class FClientConfig
 ---@field Ip FString
 ---@field AnvilServiceHttpUrl FString
+---@field Announcement FString
 FClientConfig = {}
 
 
@@ -1503,6 +1504,7 @@ function UMarketShopWindow:GetSilverAmountText() end
 ---@field CL UTextBlock
 ---@field RoadmapPopupButton UButton
 ---@field DisclaimerWidget UDisclaimerWidget
+---@field AnnouncementText UTextBlock
 UOpeningScreen = {}
 
 function UOpeningScreen:OnRoadmapClicked() end
@@ -1510,6 +1512,8 @@ function UOpeningScreen:OnRoadmapButtonClicked() end
 function UOpeningScreen:OnPlayButtonClicked() end
 function UOpeningScreen:OnOptionsButtonClicked() end
 function UOpeningScreen:OnExitButtonClicked() end
+---@return FText
+function UOpeningScreen:GetAnnouncementText() end
 
 
 ---@class UOptionsMenuAudioWidget : UUserWidget
@@ -1570,6 +1574,7 @@ function UOptionsScreen:OnBackButtonClicked() end
 ---@field CodeOfConductButton UAnvilButtonWidget
 ---@field LogOffButton UAnvilButtonWidget
 ---@field ExitButton UAnvilButtonWidget
+---@field DiscordSignUpButton UButton
 UPauseScreen = {}
 
 function UPauseScreen:OnOptionsButtonClicked() end
@@ -1577,6 +1582,7 @@ function UPauseScreen:OnLogOffButtonClicked() end
 function UPauseScreen:OnHelpButtonClicked() end
 function UPauseScreen:OnExitButtonConfirmed() end
 function UPauseScreen:OnExitButtonClicked() end
+function UPauseScreen:OnDiscordSignUpButtonClicked() end
 function UPauseScreen:OnContinueButtonClicked() end
 function UPauseScreen:OnCodeOfConductButtonClicked() end
 

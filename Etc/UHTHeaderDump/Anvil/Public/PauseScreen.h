@@ -4,6 +4,7 @@
 #include "PauseScreen.generated.h"
 
 class UAnvilButtonWidget;
+class UButton;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UPauseScreen : public UAnvilScreen {
@@ -28,6 +29,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAnvilButtonWidget* ExitButton;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UButton* DiscordSignUpButton;
+    
 public:
     UPauseScreen();
 
@@ -46,6 +50,9 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void OnExitButtonClicked();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnDiscordSignUpButtonClicked();
     
     UFUNCTION(BlueprintCallable)
     void OnContinueButtonClicked();

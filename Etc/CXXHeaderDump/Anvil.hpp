@@ -73,12 +73,13 @@ struct FClientConfig
 {
     FString Ip;                                                                       // 0x0000 (size: 0x10)
     FString AnvilServiceHttpUrl;                                                      // 0x0010 (size: 0x10)
+    FString Announcement;                                                             // 0x0020 (size: 0x10)
 
-}; // Size: 0x20
+}; // Size: 0x30
 
 struct FClientConfigManager
 {
-}; // Size: 0x30
+}; // Size: 0x40
 
 struct FClientConnectionRequest
 {
@@ -826,7 +827,7 @@ class UAnvilGameInstance : public UGameInstance
     TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x05C8 (size: 0x8)
     TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x05D0 (size: 0x10)
     TArray<class AVisActor*> VisActorList;                                            // 0x05E0 (size: 0x10)
-    FClientConfigManager ClientConfigManager;                                         // 0x05F0 (size: 0x30)
+    FClientConfigManager ClientConfigManager;                                         // 0x05F0 (size: 0x40)
 
     void GetVisActors(TArray<class AVisActor*>& OutVisActorList);
     void GetVersion(int32& OutMajor, int32& OutMinor, int32& OutPatch, int32& OutCL);
@@ -834,7 +835,7 @@ class UAnvilGameInstance : public UGameInstance
     float GetNightTimeNormalized();
     bool GetIsNight();
     void GetDayCurrentSeconds(int32& OutSeconds);
-}; // Size: 0x1638
+}; // Size: 0x1648
 
 class UAnvilKeyEntryWidget : public UUserWidget
 {
@@ -1413,13 +1414,15 @@ class UOpeningScreen : public UAnvilScreen
     class UTextBlock* CL;                                                             // 0x02B0 (size: 0x8)
     class UButton* RoadmapPopupButton;                                                // 0x02B8 (size: 0x8)
     class UDisclaimerWidget* DisclaimerWidget;                                        // 0x02C0 (size: 0x8)
+    class UTextBlock* AnnouncementText;                                               // 0x02C8 (size: 0x8)
 
     void OnRoadmapClicked();
     void OnRoadmapButtonClicked();
     void OnPlayButtonClicked();
     void OnOptionsButtonClicked();
     void OnExitButtonClicked();
-}; // Size: 0x2C8
+    FText GetAnnouncementText();
+}; // Size: 0x2D0
 
 class UOptionsMenuAudioWidget : public UUserWidget
 {
@@ -1477,15 +1480,17 @@ class UPauseScreen : public UAnvilScreen
     class UAnvilButtonWidget* CodeOfConductButton;                                    // 0x02A0 (size: 0x8)
     class UAnvilButtonWidget* LogOffButton;                                           // 0x02A8 (size: 0x8)
     class UAnvilButtonWidget* ExitButton;                                             // 0x02B0 (size: 0x8)
+    class UButton* DiscordSignUpButton;                                               // 0x02B8 (size: 0x8)
 
     void OnOptionsButtonClicked();
     void OnLogOffButtonClicked();
     void OnHelpButtonClicked();
     void OnExitButtonConfirmed();
     void OnExitButtonClicked();
+    void OnDiscordSignUpButtonClicked();
     void OnContinueButtonClicked();
     void OnCodeOfConductButtonClicked();
-}; // Size: 0x2B8
+}; // Size: 0x2C0
 
 class UPlayerInventoryWidget : public UUserWidget
 {

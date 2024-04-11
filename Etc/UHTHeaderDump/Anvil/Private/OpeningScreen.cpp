@@ -9,6 +9,7 @@ UOpeningScreen::UOpeningScreen() {
     this->CL = NULL;
     this->RoadmapPopupButton = NULL;
     this->DisclaimerWidget = NULL;
+    this->AnnouncementText = NULL;
 }
 
 void UOpeningScreen::OnRoadmapClicked() {
@@ -24,6 +25,10 @@ void UOpeningScreen::OnOptionsButtonClicked() {
 }
 
 void UOpeningScreen::OnExitButtonClicked() {
+}
+
+FText UOpeningScreen::GetAnnouncementText() {
+    return FText::GetEmpty();
 }
 
 

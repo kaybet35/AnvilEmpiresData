@@ -1,5 +1,54 @@
 [
   {
+    "Type": "Border",
+    "Name": "Border_164",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.8,
+            "Hex": "CC000000"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPOpeningScreen_C:WidgetTree.Border_164.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.1"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.16"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_164",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Border'BPOpeningScreen_C:WidgetTree.Border_164'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.0"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPOpeningScreen_C:WidgetTree.AnnouncementText'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.41"
+      }
+    }
+  },
+  {
     "Type": "BPAnvilButtonWidget_C",
     "Name": "ExitButton",
     "Outer": "WidgetTree",
@@ -19,7 +68,7 @@
       "ButtonHeight": 80.0,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.37"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.49"
       }
     }
   },
@@ -43,7 +92,7 @@
       "ButtonHeight": 80.0,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.36"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.48"
       }
     }
   },
@@ -68,7 +117,7 @@
       "ButtonHeight": 80.0,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.35"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.47"
       }
     }
   },
@@ -92,7 +141,7 @@
       "ButtonHeight": 80.0,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_7'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.41"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.53"
       }
     }
   },
@@ -108,7 +157,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.11"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.13"
       },
       "Visibility": "ESlateVisibility::Collapsed"
     }
@@ -118,6 +167,7 @@
     "Name": "Default__BPOpeningScreen_C",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPOpeningScreen.BPOpeningScreen_C'",
     "Properties": {
+      "UberGraphFrame": {},
       "bOverrideBackground": true,
       "Background": {
         "ObjectName": "Texture2D'AnvilBG'",
@@ -143,12 +193,12 @@
       "Slots": [
         {
           "ObjectName": "ButtonSlot'BPOpeningScreen_C:WidgetTree.RoadmapPopUpButton.ButtonSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.7"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.9"
         }
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.10"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.12"
       }
     }
   },
@@ -166,11 +216,11 @@
       },
       "Parent": {
         "ObjectName": "Button'BPOpeningScreen_C:WidgetTree.RoadmapPopUpButton'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.6"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.8"
       },
       "Content": {
         "ObjectName": "Overlay'BPOpeningScreen_C:WidgetTree.Overlay_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.22"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.33"
       }
     }
   },
@@ -183,27 +233,31 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_8'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.14"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.17"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_9'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.15"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.18"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.12"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.14"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.13"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.15"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.10"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.12"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.11"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.13"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.16"
         }
       ]
     }
@@ -217,16 +271,16 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.RoadmapPopUpCanvas.CanvasPanelSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.16"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.19"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.RoadmapPopUpCanvas.CanvasPanelSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.17"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.20"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'BPOpeningScreen_C:WidgetTree.Overlay_0.OverlaySlot_3'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.24"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.35"
       }
     }
   },
@@ -250,11 +304,11 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPOpeningScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.8"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.10"
       },
       "Content": {
         "ObjectName": "Button'BPOpeningScreen_C:WidgetTree.RoadmapPopUpButton'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.6"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.8"
       }
     }
   },
@@ -278,11 +332,11 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPOpeningScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.8"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.10"
       },
       "Content": {
         "ObjectName": "BPDisclaimerWidget_C'BPOpeningScreen_C:WidgetTree.DisclaimerWidget'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.4"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.6"
       }
     }
   },
@@ -315,11 +369,11 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPOpeningScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.8"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.10"
       },
       "Content": {
         "ObjectName": "VerticalBox'BPOpeningScreen_C:WidgetTree.VerticalBox_55'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.34"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.46"
       }
     }
   },
@@ -350,11 +404,39 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPOpeningScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.8"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.10"
       },
       "Content": {
         "ObjectName": "TextBlock'BPOpeningScreen_C:WidgetTree.TextBlock_140'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.31"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.43"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Outer": "CanvasPanel_0",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 60.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPOpeningScreen_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.10"
+      },
+      "Content": {
+        "ObjectName": "Border'BPOpeningScreen_C:WidgetTree.Border_164'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.0"
       }
     }
   },
@@ -388,11 +470,11 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPOpeningScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.8"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.10"
       },
       "Content": {
         "ObjectName": "VerticalBox'BPOpeningScreen_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.33"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.45"
       }
     }
   },
@@ -426,11 +508,11 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPOpeningScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.8"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.10"
       },
       "Content": {
         "ObjectName": "Image'BPOpeningScreen_C:WidgetTree.Image_50'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.18"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.23"
       }
     }
   },
@@ -462,11 +544,11 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPOpeningScreen_C:WidgetTree.RoadmapPopUpCanvas'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.9"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.11"
       },
       "Content": {
         "ObjectName": "ScrollBox'BPOpeningScreen_C:WidgetTree.ScrollBox_341'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.25"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.36"
       }
     }
   },
@@ -479,13 +561,50 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPOpeningScreen_C:WidgetTree.RoadmapPopUpCanvas'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.9"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.11"
       },
       "Content": {
         "ObjectName": "Image'BPOpeningScreen_C:WidgetTree.RoadmapCloseImage'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.20"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.25"
       }
     }
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Outer": "BPOpeningScreen_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPOpeningScreen",
+    "Outer": "BPOpeningScreen_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
   },
   {
     "Type": "Image",
@@ -505,7 +624,7 @@
       },
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_9'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.15"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.18"
       },
       "RenderTransform": {
         "Scale": {
@@ -530,7 +649,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'BPOpeningScreen_C:WidgetTree.Overlay_0.OverlaySlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.23"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.34"
       }
     }
   },
@@ -548,7 +667,7 @@
       },
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.RoadmapPopUpCanvas.CanvasPanelSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.17"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.20"
       }
     }
   },
@@ -570,7 +689,442 @@
       },
       "Slot": {
         "ObjectName": "ScrollBoxSlot'BPOpeningScreen_C:WidgetTree.ScrollBox_341.ScrollBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.26"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.37"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "AnnouncementTextAnimation",
+    "Outer": "AnnouncementTextAnimation_INST",
+    "Class": "UScriptClass'MovieScene'",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "5456E73D-4D00F8E8-A947F49F-82669E4B",
+          "Name": "AnnouncementText",
+          "ParentGuid": "00000000-00000000-00000000-00000000",
+          "SpawnableObjectBindingID": {
+            "Guid": "00000000-00000000-00000000-00000000",
+            "SequenceID": 0,
+            "ResolveParentIndex": -1
+          }
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "5456E73D-4D00F8E8-A947F49F-82669E4B",
+          "BindingName": "AnnouncementText",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneColorTrack'BPOpeningScreen_C:AnnouncementTextAnimation_INST.AnnouncementTextAnimation.MovieSceneColorTrack_0'",
+              "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.31"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 120001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "C3C10F35-4BB125DE-803496A5-CDD315BA"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneColorSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneColorSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'"
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Outer": "MovieSceneColorTrack_0",
+    "Class": "UScriptClass'MovieSceneColorSection'",
+    "Properties": {
+      "RedCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.855208,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "GreenCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.855208,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "BlueCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.855208,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "AlphaCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 60000
+          },
+          {
+            "Value": 120000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 0.5,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'BPOpeningScreen_C:AnnouncementTextAnimation_INST.AnnouncementTextAnimation.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseInFunction'",
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.28"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'BPOpeningScreen_C:AnnouncementTextAnimation_INST.AnnouncementTextAnimation.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseOutFunction'",
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.29"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 120000
+            }
+          }
+        }
+      },
+      "Signature": "15C238C0-4039AD51-390EF9B7-17CE0131"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_0",
+    "Outer": "AnnouncementTextAnimation",
+    "Class": "UScriptClass'MovieSceneColorTrack'",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection'BPOpeningScreen_C:AnnouncementTextAnimation_INST.AnnouncementTextAnimation.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.30"
+        }
+      ],
+      "EvaluationFieldGuid": "377A42CE-4C97AA36-9D8CFB9A-AD2CBBAE",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'BPOpeningScreen_C:AnnouncementTextAnimation_INST.AnnouncementTextAnimation.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+              "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.30"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 120000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "377A42CE-4C97AA36-9D8CFB9A-AD2CBBAE"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "AnnouncementTextAnimation_INST",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 120000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneColorSection'BPOpeningScreen_C:AnnouncementTextAnimation_INST.AnnouncementTextAnimation.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+                "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.30"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "5456E73D-4D00F8E8-A947F49F-82669E4B"
+          }
+        ]
+      },
+      "DeterminismFences": [
+        {
+          "FrameNumber": {
+            "Value": 120000
+          },
+          "SubFrame": 0.0
+        }
+      ],
+      "CompiledSignature": "217553CA-4CC4A84E-A555C286-BC23A393",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
       }
     }
   },
@@ -583,16 +1137,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'BPOpeningScreen_C:WidgetTree.Overlay_0.OverlaySlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.23"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.34"
         },
         {
           "ObjectName": "OverlaySlot'BPOpeningScreen_C:WidgetTree.Overlay_0.OverlaySlot_3'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.24"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.35"
         }
       ],
       "Slot": {
         "ObjectName": "ButtonSlot'BPOpeningScreen_C:WidgetTree.RoadmapPopUpButton.ButtonSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.7"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.9"
       }
     }
   },
@@ -606,11 +1160,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'BPOpeningScreen_C:WidgetTree.Overlay_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.22"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.33"
       },
       "Content": {
         "ObjectName": "Image'BPOpeningScreen_C:WidgetTree.RoadmapBackground'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.19"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.24"
       }
     }
   },
@@ -622,11 +1176,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "Overlay'BPOpeningScreen_C:WidgetTree.Overlay_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.22"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.33"
       },
       "Content": {
         "ObjectName": "CanvasPanel'BPOpeningScreen_C:WidgetTree.RoadmapPopUpCanvas'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.9"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.11"
       }
     }
   },
@@ -639,12 +1193,12 @@
       "Slots": [
         {
           "ObjectName": "ScrollBoxSlot'BPOpeningScreen_C:WidgetTree.ScrollBox_341.ScrollBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.26"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.37"
         }
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.RoadmapPopUpCanvas.CanvasPanelSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.16"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.19"
       }
     }
   },
@@ -658,11 +1212,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "ScrollBox'BPOpeningScreen_C:WidgetTree.ScrollBox_341'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.25"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.36"
       },
       "Content": {
         "ObjectName": "Image'BPOpeningScreen_C:WidgetTree.RoadmapImage'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.21"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.26"
       }
     }
   },
@@ -678,7 +1232,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_6'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.40"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.52"
       }
     }
   },
@@ -694,7 +1248,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.39"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.51"
       }
     }
   },
@@ -710,7 +1264,42 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.38"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.50"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "AnnouncementText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "3073959D4CB14BD0C0EC48B8CB1D1CD6",
+        "SourceString": "Announcement Text",
+        "LocalizedString": "Announcement Text"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.855208,
+          "G": 0.855208,
+          "B": 0.855208,
+          "A": 1.0,
+          "Hex": "FFEEEEEE"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default"
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "BorderSlot'BPOpeningScreen_C:WidgetTree.Border_164.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.1"
       }
     }
   },
@@ -748,7 +1337,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_55.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.43"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.55"
       },
       "bIsVariable": true
     }
@@ -785,7 +1374,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.13"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.15"
       }
     }
   },
@@ -823,7 +1412,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_55.VerticalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.42"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.54"
       },
       "bIsVariable": true
     }
@@ -837,36 +1426,36 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.35"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.47"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.38"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.50"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.36"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.48"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.39"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.51"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_7'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.41"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.53"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_6'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.40"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.52"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.37"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.49"
         }
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_8'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.14"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.17"
       }
     }
   },
@@ -879,16 +1468,16 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_55.VerticalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.42"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.54"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPOpeningScreen_C:WidgetTree.VerticalBox_55.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.43"
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.55"
         }
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.12"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.14"
       }
     }
   },
@@ -901,11 +1490,11 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
       "Parent": {
         "ObjectName": "VerticalBox'BPOpeningScreen_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.33"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.45"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPOpeningScreen_C:WidgetTree.PlayButton'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.2"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.4"
       }
     }
   },
@@ -918,11 +1507,11 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPOpeningScreen_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.33"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.45"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPOpeningScreen_C:WidgetTree.OptionsButton'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.1"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.3"
       }
     }
   },
@@ -935,11 +1524,11 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPOpeningScreen_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.33"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.45"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPOpeningScreen_C:WidgetTree.ExitButton'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.0"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.2"
       }
     }
   },
@@ -951,11 +1540,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPOpeningScreen_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.33"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.45"
       },
       "Content": {
         "ObjectName": "Spacer'BPOpeningScreen_C:WidgetTree.Spacer_95'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.29"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.40"
       }
     }
   },
@@ -967,11 +1556,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPOpeningScreen_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.33"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.45"
       },
       "Content": {
         "ObjectName": "Spacer'BPOpeningScreen_C:WidgetTree.Spacer_171'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.28"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.39"
       }
     }
   },
@@ -983,11 +1572,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPOpeningScreen_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.33"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.45"
       },
       "Content": {
         "ObjectName": "Spacer'BPOpeningScreen_C:WidgetTree.Spacer'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.27"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.38"
       }
     }
   },
@@ -1000,11 +1589,11 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPOpeningScreen_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.33"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.45"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPOpeningScreen_C:WidgetTree.RoadmapButton'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.3"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.5"
       }
     }
   },
@@ -1018,11 +1607,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPOpeningScreen_C:WidgetTree.VerticalBox_55'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.34"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.46"
       },
       "Content": {
         "ObjectName": "TextBlock'BPOpeningScreen_C:WidgetTree.Version'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.32"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.44"
       }
     }
   },
@@ -1036,12 +1625,38 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPOpeningScreen_C:WidgetTree.VerticalBox_55'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.34"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.46"
       },
       "Content": {
         "ObjectName": "TextBlock'BPOpeningScreen_C:WidgetTree.CL'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.30"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.42"
       }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "AnnouncementTextAnimation_INST",
+    "Outer": "BPOpeningScreen_C",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'BPOpeningScreen_C:AnnouncementTextAnimation_INST.AnnouncementTextAnimation'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.27"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "AnnouncementText",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "5456E73D-4D00F8E8-A947F49F-82669E4B",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "AnnouncementTextAnimation",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'BPOpeningScreen_C:AnnouncementTextAnimation_INST.CompiledData'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.32"
+      },
+      "Signature": "217553CA-4CC4A84E-A555C286-BC23A393"
     }
   },
   {
@@ -1051,15 +1666,57 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPOpeningScreen_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.45"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.58"
       },
-      "bClassRequiresNativeTick": true
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'BPOpeningScreen_C:AnnouncementTextAnimation_INST'",
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.56"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'BPOpeningScreen_C:ExecuteUbergraph_BPOpeningScreen'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.22"
+      }
     },
     "SuperStruct": {
       "ObjectName": "Class'OpeningScreen'",
       "ObjectPath": "/Script/Anvil"
     },
+    "Children": [
+      {
+        "ObjectName": "Function'BPOpeningScreen_C:Construct'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.21"
+      },
+      {
+        "ObjectName": "Function'BPOpeningScreen_C:ExecuteUbergraph_BPOpeningScreen'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.22"
+      }
+    ],
     "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AnnouncementTextAnimation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "Image_50",
@@ -1105,6 +1762,16 @@
         }
       }
     ],
+    "FuncMap": {
+      "ExecuteUbergraph_BPOpeningScreen": {
+        "ObjectName": "Function'BPOpeningScreen_C:ExecuteUbergraph_BPOpeningScreen'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.22"
+      },
+      "Construct": {
+        "ObjectName": "Function'BPOpeningScreen_C:Construct'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.21"
+      }
+    },
     "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -1114,7 +1781,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPOpeningScreen_C'Default__BPOpeningScreen_C'",
-      "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.5"
+      "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.7"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -1128,7 +1795,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "CanvasPanel'BPOpeningScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.8"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.10"
       }
     }
   }

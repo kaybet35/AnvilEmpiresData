@@ -36,6 +36,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDisclaimerWidget* DisclaimerWidget;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* AnnouncementText;
+    
     UOpeningScreen();
 
 protected:
@@ -53,6 +56,9 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void OnExitButtonClicked();
+    
+    UFUNCTION(BlueprintCallable)
+    FText GetAnnouncementText();
     
 };
 
