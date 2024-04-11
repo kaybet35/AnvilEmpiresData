@@ -1,0 +1,82 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "HammerFlint_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HammerFlint_C'Default__HammerFlint_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/HammerFlint.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "HammerFlint_C",
+    "Name": "Default__HammerFlint_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/HammerFlint.HammerFlint_C'",
+    "Properties": {
+      "CodeNameString": "HammerFlint",
+      "CodeName": 236616622,
+      "ItemType": "EAnvilItemType::PrimaryTool",
+      "SecondaryType": "EAnvilItemType::WeaponStorage",
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "ItemInvokedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectHammerSwing_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectHammerSwing.0"
+      },
+      "ItemHitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectHammerImpact_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectHammerImpact.0"
+      },
+      "bTwoHanded": true,
+      "Encumberance": 10,
+      "DurabilityLossPerUse": 2.0,
+      "DamageOffset": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "DamageRadius": 64.0,
+      "ToolType": "EAnvilToolType::Hammer",
+      "AimMovementSpeedModifier": 0.5,
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 0.1,
+        "Duration": 1.1,
+        "StaminaCost": 10.0,
+        "AimedStaminaCost": 7.5
+      },
+      "RangedActivity": {
+        "bRepeatable": false
+      },
+      "BuildActivity": {
+        "State": "EAnvilSimActivityState::BuildingWithHandTool",
+        "Delay": 0.1,
+        "Duration": 1.1,
+        "MovementSpeedModifier": 0.0,
+        "RotationSpeedModifier": 0.0,
+        "StaminaCost": 1.0,
+        "AimedStaminaCost": 1.0
+      },
+      "GatherActivity": {
+        "StaminaCost": 5.0,
+        "AimedStaminaCost": 5.0
+      }
+    }
+  }
+]

@@ -1,0 +1,459 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisCanalBuildSite_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisCanalBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisCanalBuildSite_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisSplineBuildSite'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisCanalBuildSite_C'Default__BPVisCanalBuildSite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisCanalBuildSite_C",
+    "Name": "Default__BPVisCanalBuildSite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.BPVisCanalBuildSite_C'",
+    "Properties": {
+      "SplineComponent": {
+        "ObjectName": "VisSplineComponent'Default__BPVisCanalBuildSite_C:SplineComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.13"
+      },
+      "VisBuildGhostComponent": {
+        "ObjectName": "VisBuildGhostComponent'Default__BPVisCanalBuildSite_C:VisBuildGhostComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.12"
+      },
+      "BuildSiteDataComponent": {
+        "ObjectName": "BuildSiteDataComponent'Default__BPVisCanalBuildSite_C:BuildSiteDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.3"
+      },
+      "StructureDataComponent": {
+        "ObjectName": "StructureDataComponent'Default__BPVisCanalBuildSite_C:StructureDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.11"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'IconIndustryCanal100Straight'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconIndustryCanal100Straight.0"
+      },
+      "Category": "EBuildSiteCategory::Water",
+      "Order": 8,
+      "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCanalBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.0"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisCanalBuildSite_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.10"
+      },
+      "BuildCollisionDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisCanalBuildSite_C:BuildCollisionDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.4"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "DB756D844C83197BB181FEB2D2F69060",
+        "SourceString": "Canal",
+        "LocalizedString": "Canal"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCanalBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "BuildSiteDataComponent",
+    "Name": "BuildSiteDataComponent",
+    "Outer": "Default__BPVisCanalBuildSite_C",
+    "Class": "UScriptClass'BuildSiteDataComponent'",
+    "Properties": {
+      "BuiltStructureEntity": 541642178,
+      "TierPrerequisite": 2,
+      "ProcessedWoodRequirement": 25
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "BuildCollisionDecalComponent",
+    "Outer": "Default__BPVisCanalBuildSite_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCanalBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "GroundDecalComponent",
+    "Outer": "SplineComponent",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalSize": {
+        "X": 128.0,
+        "Y": 250.0,
+        "Z": 256.0
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 250.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisCanalBuildSite_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisCanalBuildSite_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.6"
+      },
+      "VariableGuid": "F4E453DD-497510FA-84707FA6-B86FBBFA",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisCanalBuildSite_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisCanalBuildSite_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.7"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "SplineComponent",
+    "Class": "UScriptClass'SplineDataComponent'",
+    "Properties": {
+      "MidPieceTransforms": [
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 125.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 250.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 500.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 750.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1000.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1250.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1500.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1750.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1875.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        }
+      ],
+      "End": {
+        "X": 0.0,
+        "Y": 2000.0,
+        "Z": 0.0
+      },
+      "SegmentLength": 2000.0
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisCanalBuildSite_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCanalBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "StructureDataComponent",
+    "Name": "StructureDataComponent",
+    "Outer": "Default__BPVisCanalBuildSite_C",
+    "Class": "UScriptClass'StructureDataComponent'"
+  },
+  {
+    "Type": "VisBuildGhostComponent",
+    "Name": "VisBuildGhostComponent",
+    "Outer": "Default__BPVisCanalBuildSite_C",
+    "Class": "UScriptClass'VisBuildGhostComponent'"
+  },
+  {
+    "Type": "VisSplineComponent",
+    "Name": "SplineComponent",
+    "Outer": "Default__BPVisCanalBuildSite_C",
+    "Class": "UScriptClass'VisSplineComponent'",
+    "Properties": {
+      "GroundDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisCanalBuildSite_C:SplineComponent.GroundDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.5"
+      },
+      "PreviewPieceLength": 250.0,
+      "PreviewEndLocation": {
+        "X": 0.0,
+        "Y": 2000.0,
+        "Z": 0.0
+      },
+      "DecalMaterial": {
+        "ObjectName": "Material'DecalBuildSite'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/DecalBuildSite.0"
+      },
+      "MaterialOverride": {
+        "ObjectName": "Material'Ghost'",
+        "ObjectPath": "Anvil/Content/Materials/Ghost.0"
+      },
+      "EndPieceMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_Balljoint'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Balljoint.2"
+      },
+      "MidPieceMeshes": [
+        {
+          "ObjectName": "StaticMesh'IndustryCanal_Straight'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Straight.2"
+        }
+      ],
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'Default__BPVisCanalBuildSite_C:SplineComponent.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.9"
+      },
+      "MidPieces": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "EndPieces": [
+        null,
+        null
+      ],
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCanalBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.0"
+      }
+    }
+  }
+]

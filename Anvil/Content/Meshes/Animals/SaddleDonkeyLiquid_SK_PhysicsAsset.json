@@ -1,0 +1,133 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SaddleDonkeyLiquid_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'SaddleDonkeyLiquid_SK_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Animals/SaddleDonkeyLiquid_SK_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SaddleDonkeyLiquid_SK_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Animals/SaddleDonkeyLiquid_SK_PhysicsAsset.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SaddleDonkeyLiquid_SK_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Animals/SaddleDonkeyLiquid_SK_PhysicsAsset.1"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "SaddleDonkeyLiquid_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "spine2",
+        "ConstraintBone1": "spine2",
+        "ConstraintBone2": "spine1",
+        "Pos2": {
+          "X": 35.215305,
+          "Y": 6.930801E-12,
+          "Z": -8.992182E-06
+        },
+        "PriAxis2": {
+          "X": 0.9935982,
+          "Y": 4.3170992E-08,
+          "Z": 0.11297146
+        },
+        "SecAxis2": {
+          "X": -8.0746034E-08,
+          "Y": 1.0,
+          "Z": 3.2803084E-07
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SaddleDonkeyLiquid_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 12.047681,
+              "Y": 1.5634061,
+              "Z": 53.144806
+            },
+            "Rotation": {
+              "Pitch": -1.0599095E-08,
+              "Yaw": -0.00021694071,
+              "Roll": -90.8068
+            },
+            "Radius": 30.0,
+            "Length": 40.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "spine1",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "810F918046733A3D6C97B9B5CA81D606"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "SaddleDonkeyLiquid_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -29.378748,
+              "Y": -1.0207687E-05,
+              "Z": -8.409941
+            },
+            "Rotation": {
+              "Pitch": -81.085724,
+              "Yaw": 179.99905,
+              "Roll": -4.3847103E-18
+            },
+            "Radius": 40.0,
+            "Length": 45.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "spine2",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "9C3AF2824D110F50118A74A414552188"
+  }
+]

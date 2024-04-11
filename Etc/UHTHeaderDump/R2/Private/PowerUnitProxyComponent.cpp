@@ -2,10 +2,12 @@
 
 UPowerUnitProxyComponent::UPowerUnitProxyComponent() {
     this->Type = EAnvilPowerUnitType::Pipe;
-    this->PressureMax = 0.00f;
+    this->AllowedDirection = 1;
+    this->CurrentMax = 0.00f;
     this->FlatResistance = 0.00f;
     this->ResistanceSlopeModifier = 0.00f;
-    this->Direction = 1;
+    this->InnerWidth = 0.00f;
+    this->Outerwidth = 0.00f;
 }
 
 

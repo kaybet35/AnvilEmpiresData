@@ -1,0 +1,291 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_TripHammer_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'SK_TripHammer_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_TripHammer_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_TripHammer_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_TripHammer_PhysicsAsset.5"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_TripHammer_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_TripHammer_PhysicsAsset.6"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_TripHammer_PhysicsAsset:SkeletalBodySetup_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_TripHammer_PhysicsAsset.7"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_TripHammer_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_TripHammer_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_TripHammer_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_TripHammer_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_TripHammer_PhysicsAsset:PhysicsConstraintTemplate_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_TripHammer_PhysicsAsset.3"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "SK_TripHammer_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "ConsumerInputGear",
+        "ConstraintBone1": "ConsumerInputGear",
+        "ConstraintBone2": "Root",
+        "Pos2": {
+          "X": 149.99998,
+          "Y": -50.029156,
+          "Z": 100.0
+        },
+        "PriAxis2": {
+          "X": 1.6858739E-07,
+          "Y": 3.6845967E-15,
+          "Z": 1.0
+        },
+        "SecAxis2": {
+          "X": 3.1391644E-07,
+          "Y": 1.0,
+          "Z": -5.6606954E-14
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "SK_TripHammer_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "TripHammerDriver",
+        "ConstraintBone1": "TripHammerDriver",
+        "ConstraintBone2": "ConsumerInputGear",
+        "Pos2": {
+          "X": -233.27573,
+          "Y": 4.5634846E-05,
+          "Z": -1.9964877E-05
+        },
+        "PriAxis2": {
+          "X": 1.0,
+          "Y": 2.775057E-23,
+          "Z": -0.0
+        },
+        "SecAxis2": {
+          "X": -2.775057E-23,
+          "Y": 1.0,
+          "Z": -2.646978E-23
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_2",
+    "Outer": "SK_TripHammer_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "TripHammer1",
+        "ConstraintBone1": "TripHammer1",
+        "ConstraintBone2": "Root",
+        "Pos2": {
+          "X": 97.416885,
+          "Y": 16.602661,
+          "Z": 27.600458
+        },
+        "PriAxis2": {
+          "X": -1.1324275E-14,
+          "Y": 1.0,
+          "Z": 1.5099575E-07
+        },
+        "SecAxis2": {
+          "X": -1.0,
+          "Y": 1.1435297E-14,
+          "Z": -1.5099586E-07
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_TripHammer_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 98.247795,
+              "Y": 33.814854,
+              "Z": -52.447002
+            },
+            "Rotation": {
+              "Pitch": -13.984072,
+              "Yaw": -90.0,
+              "Roll": 8.030522
+            },
+            "Radius": 143.49207,
+            "Length": 335.44995,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "Root",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "18C8C52E40C6442507DB9CB346528306"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SK_TripHammer_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 3.4325132,
+              "Y": -1.359791E-05,
+              "Z": 0.33202556
+            },
+            "Rotation": {
+              "Pitch": -4.6893644,
+              "Yaw": -90.0,
+              "Roll": -0.014030084
+            },
+            "Radius": 44.631207,
+            "Length": 44.632084,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "ConsumerInputGear",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "7F75D2644B3D9D1C149A359339C005AF"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "SK_TripHammer_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 187.24669,
+              "Y": -0.61813545,
+              "Z": -0.4752623
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.977585,
+              "Roll": -89.972595
+            },
+            "Radius": 115.363716,
+            "Length": 187.69502,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "TripHammerDriver",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "F790CBCC4465510BD0D13699C0233F78"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_3",
+    "Outer": "SK_TripHammer_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 48.50739,
+              "Y": -12.711571,
+              "Z": -156.78064
+            },
+            "Rotation": {
+              "Pitch": 8.955117,
+              "Yaw": -90.0,
+              "Roll": 0.11627517
+            },
+            "Radius": 62.994156,
+            "Length": 211.09868,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "TripHammer1",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "575574EB40CF34DD21E47BB54BE51D44"
+  }
+]

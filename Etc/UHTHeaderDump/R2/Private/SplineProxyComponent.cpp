@@ -8,7 +8,9 @@ USplineProxyComponent::USplineProxyComponent() {
     this->SlopeMax = 1.00f;
     this->FlatSlope = 0.10f;
     this->bScaleCost = false;
+    this->bPlatformMode = false;
     this->bBridgeMode = false;
+    this->bDisallowSnappingAtMiddle = false;
     this->MidPiece = NULL;
     this->EndPiece = NULL;
     this->SnappingChannel = EAnvilSnappingChannelType::General;

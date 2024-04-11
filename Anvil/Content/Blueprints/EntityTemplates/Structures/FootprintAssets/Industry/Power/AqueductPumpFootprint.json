@@ -5,7 +5,6 @@
     "Outer": "Default__AqueductPumpFootprint_C",
     "Class": "UScriptClass'AdvancedSnappingProxyComponent'",
     "Properties": {
-      "bSnapHeight": true,
       "bOverrideAngleOverlapMin": true,
       "OverridedAngleOverlapMin": 85.0
     }
@@ -45,8 +44,17 @@
         },
         {
           "Comp": {
-            "ObjectName": "SnapPointProxyComponent'Default__AqueductPumpFootprint_C:SnapPointProxyComponent_1'",
+            "ObjectName": "SnapPointProxyComponent'Default__AqueductPumpFootprint_C:SnapPointProxyComponent_0'",
             "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Power/AqueductPumpFootprint.6"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": false
+        },
+        {
+          "Comp": {
+            "ObjectName": "SnapPointProxyComponent'Default__AqueductPumpFootprint_C:SnapPointProxyComponent_1'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Power/AqueductPumpFootprint.7"
           },
           "bHighlight": false,
           "bHide": false,
@@ -147,7 +155,7 @@
   },
   {
     "Type": "SnapPointProxyComponent",
-    "Name": "SnapPointProxyComponent_1",
+    "Name": "SnapPointProxyComponent_0",
     "Outer": "Default__AqueductPumpFootprint_C",
     "Class": "UScriptClass'SnapPointProxyComponent'",
     "Properties": {
@@ -166,7 +174,32 @@
         "Y": 30.0,
         "Z": 450.0
       },
-      "SnappingChannel": "EAnvilSnappingChannelType::WaterOut",
+      "SnappingChannel": "EAnvilSnappingChannelType::WaterEnd",
+      "bPointOnLine": true
+    }
+  },
+  {
+    "Type": "SnapPointProxyComponent",
+    "Name": "SnapPointProxyComponent_1",
+    "Outer": "Default__AqueductPumpFootprint_C",
+    "Class": "UScriptClass'SnapPointProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": -150.0,
+        "Z": 450.0
+      },
+      "Rotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "Extents": {
+        "X": 30.0,
+        "Y": 30.0,
+        "Z": 450.0
+      },
+      "SnappingChannel": "EAnvilSnappingChannelType::NaturalWaterRequired",
       "bPointOnLine": true
     }
   }

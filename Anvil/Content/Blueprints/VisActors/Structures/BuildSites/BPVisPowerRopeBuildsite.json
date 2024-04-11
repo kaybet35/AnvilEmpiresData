@@ -1,0 +1,734 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisPowerRopeBuildsite_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisPowerRopeBuildsite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisPowerRopeBuildsite_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisSplineBuildSite'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisPowerRopeBuildsite_C'Default__BPVisPowerRopeBuildsite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisPowerRopeBuildsite_C",
+    "Name": "Default__BPVisPowerRopeBuildsite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.BPVisPowerRopeBuildsite_C'",
+    "Properties": {
+      "SplineComponent": {
+        "ObjectName": "VisSplineComponent'Default__BPVisPowerRopeBuildsite_C:SplineComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.13"
+      },
+      "VisBuildGhostComponent": {
+        "ObjectName": "VisBuildGhostComponent'Default__BPVisPowerRopeBuildsite_C:VisBuildGhostComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.12"
+      },
+      "BuildSiteDataComponent": {
+        "ObjectName": "BuildSiteDataComponent'Default__BPVisPowerRopeBuildsite_C:BuildSiteDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.3"
+      },
+      "StructureDataComponent": {
+        "ObjectName": "StructureDataComponent'Default__BPVisPowerRopeBuildsite_C:StructureDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.11"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'IconFibre'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Items/IconFibre.0"
+      },
+      "Category": "EBuildSiteCategory::Smithing",
+      "Order": 8,
+      "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisPowerRopeBuildsite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.0"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisPowerRopeBuildsite_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.10"
+      },
+      "BuildCollisionDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisPowerRopeBuildsite_C:BuildCollisionDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.4"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "12602A8B414D43C5F361EE96B1E023F9",
+        "SourceString": "Power Connector Rope",
+        "LocalizedString": "Power Connector Rope"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "DE5131DB4E82A6879934679F36674B42",
+        "SourceString": "TODO",
+        "LocalizedString": "TODO"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisPowerRopeBuildsite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.0"
+      }
+    }
+  },
+  {
+    "Type": "BuildSiteDataComponent",
+    "Name": "BuildSiteDataComponent",
+    "Outer": "Default__BPVisPowerRopeBuildsite_C",
+    "Class": "UScriptClass'BuildSiteDataComponent'",
+    "Properties": {
+      "BuiltStructureEntity": -1967044750,
+      "TierPrerequisite": 2,
+      "ProcessedWoodRequirement": 25
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "BuildCollisionDecalComponent",
+    "Outer": "Default__BPVisPowerRopeBuildsite_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisPowerRopeBuildsite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.0"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "GroundDecalComponent",
+    "Outer": "SplineComponent",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalSize": {
+        "X": 128.0,
+        "Y": 250.0,
+        "Z": 256.0
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 250.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisPowerRopeBuildsite_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisPowerRopeBuildsite_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.6"
+      },
+      "VariableGuid": "F4E453DD-497510FA-84707FA6-B86FBBFA",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisPowerRopeBuildsite_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisPowerRopeBuildsite_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.7"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "SplineComponent",
+    "Class": "UScriptClass'SplineDataComponent'",
+    "Properties": {
+      "MidPieceTransforms": [
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 50.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 100.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 200.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 300.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 400.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 500.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 600.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 700.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 800.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 900.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1000.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1100.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1200.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1300.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1400.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1500.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1600.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1700.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1800.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1900.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 1950.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        }
+      ],
+      "End": {
+        "X": 0.0,
+        "Y": 2000.0,
+        "Z": 0.0
+      },
+      "SegmentLength": 2000.0
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisPowerRopeBuildsite_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisPowerRopeBuildsite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.0"
+      }
+    }
+  },
+  {
+    "Type": "StructureDataComponent",
+    "Name": "StructureDataComponent",
+    "Outer": "Default__BPVisPowerRopeBuildsite_C",
+    "Class": "UScriptClass'StructureDataComponent'"
+  },
+  {
+    "Type": "VisBuildGhostComponent",
+    "Name": "VisBuildGhostComponent",
+    "Outer": "Default__BPVisPowerRopeBuildsite_C",
+    "Class": "UScriptClass'VisBuildGhostComponent'"
+  },
+  {
+    "Type": "VisSplineComponent",
+    "Name": "SplineComponent",
+    "Outer": "Default__BPVisPowerRopeBuildsite_C",
+    "Class": "UScriptClass'VisSplineComponent'",
+    "Properties": {
+      "GroundDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisPowerRopeBuildsite_C:SplineComponent.GroundDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.5"
+      },
+      "PreviewPieceLength": 100.0,
+      "PreviewEndLocation": {
+        "X": 0.0,
+        "Y": 2000.0,
+        "Z": 0.0
+      },
+      "DecalMaterial": {
+        "ObjectName": "Material'DecalBuildSite'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/DecalBuildSite.0"
+      },
+      "MaterialOverride": {
+        "ObjectName": "Material'Ghost'",
+        "ObjectPath": "Anvil/Content/Materials/Ghost.0"
+      },
+      "EndPieceMesh": {
+        "ObjectName": "StaticMesh'IndustrySplineConnectorEnd'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/IndustrySplineConnectorEnd.2"
+      },
+      "MidPieceMeshes": [
+        {
+          "ObjectName": "StaticMesh'IndustrySplineConnectorMiddle'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/IndustrySplineConnectorMiddle.2"
+        }
+      ],
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'Default__BPVisPowerRopeBuildsite_C:SplineComponent.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.9"
+      },
+      "MidPieces": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "EndPieces": [
+        null,
+        null
+      ],
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisPowerRopeBuildsite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      }
+    }
+  }
+]

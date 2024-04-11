@@ -1,0 +1,291 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_Bellow_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'SK_Bellow_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Bellow_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_Bellow_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Bellow_PhysicsAsset.5"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_Bellow_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Bellow_PhysicsAsset.6"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_Bellow_PhysicsAsset:SkeletalBodySetup_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Bellow_PhysicsAsset.7"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_Bellow_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Bellow_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_Bellow_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Bellow_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_Bellow_PhysicsAsset:PhysicsConstraintTemplate_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Bellow_PhysicsAsset.3"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "SK_Bellow_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "BellowBottom",
+        "ConstraintBone1": "BellowBottom",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": -0.7207685,
+          "Y": -58.795753,
+          "Z": 94.15358
+        },
+        "PriAxis2": {
+          "X": 0.9999733,
+          "Y": 0.007207683,
+          "Z": 0.0011901668
+        },
+        "SecAxis2": {
+          "X": -0.007207683,
+          "Y": 0.9468891,
+          "Z": 0.3214796
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "SK_Bellow_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "BellowTop",
+        "ConstraintBone1": "BellowTop",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": -0.7207685,
+          "Y": -61.441784,
+          "Z": 116.90808
+        },
+        "PriAxis2": {
+          "X": 0.9999736,
+          "Y": 0.0072076847,
+          "Z": -0.0009340435
+        },
+        "SecAxis2": {
+          "X": -0.0072076847,
+          "Y": 0.96694165,
+          "Z": -0.2548959
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_2",
+    "Outer": "SK_Bellow_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "Handle",
+        "ConstraintBone1": "Handle",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": -4.4476267E-14,
+          "Y": -112.695206,
+          "Z": 194.45895
+        },
+        "PriAxis2": {
+          "X": 0.9999484,
+          "Y": 0.0071652015,
+          "Z": 0.007207378
+        },
+        "SecAxis2": {
+          "X": 0.0072076833,
+          "Y": -0.9999567,
+          "Z": -0.0058856197
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_Bellow_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -3.8785872,
+              "Y": -59.256767,
+              "Z": 108.42105
+            },
+            "Rotation": {
+              "Pitch": -9.318032E-18,
+              "Yaw": -0.06459743,
+              "Roll": -154.96622
+            },
+            "Radius": 121.44938,
+            "Length": 125.6657,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "F1558CD74B0EC7CC9078F38DC89EAAF4"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SK_Bellow_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 1.0073847,
+              "Y": -77.49531,
+              "Z": 7.76788
+            },
+            "Rotation": {
+              "Pitch": -1.5902774E-15,
+              "Yaw": 13.860668,
+              "Roll": -79.67015
+            },
+            "Radius": 43.4404,
+            "Length": 46.224274,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "BellowBottom",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "6C0FAC4F4C903B6DF9F121B23FFE4D50"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "SK_Bellow_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.007788982,
+              "Y": -65.8041,
+              "Z": -21.453955
+            },
+            "Rotation": {
+              "Pitch": 6.3611094E-15,
+              "Yaw": -90.45535,
+              "Roll": -89.96668
+            },
+            "Radius": 35.934433,
+            "Length": 41.7234,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "BellowTop",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "D0BF89E741BAA43D0DAED893D3BE9743"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_3",
+    "Outer": "SK_Bellow_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.21677744,
+              "Y": -47.706703,
+              "Z": 6.9077296
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.5736266,
+              "Roll": -88.550385
+            },
+            "Radius": 16.28725,
+            "Length": 118.17905,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "Handle",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "B21384E348FB8881E134698AF86CB790"
+  }
+]

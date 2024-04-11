@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SpearFlintProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SpearFlintProjectile_C'Default__SpearFlintProjectile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/SpearFlintProjectile.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ProjectileMovementProxyComponent",
+    "Name": "ProjectileMovementProxyComponent_0",
+    "Outer": "Default__SpearFlintProjectile_C",
+    "Class": "UScriptClass'ProjectileMovementProxyComponent'",
+    "Properties": {
+      "PickupEntity": {
+        "ObjectName": "BlueprintGeneratedClass'SpearFlintPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/SpearFlintPickup.1"
+      },
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectSpearImpact_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectSpearImpact.0"
+      },
+      "Speed": 2000.0,
+      "DamageAmount": 30,
+      "DamageType": "EAnvilDamageType::Missile",
+      "Radius": 10.0,
+      "HeadingTolerance": 45.0
+    }
+  },
+  {
+    "Type": "SpearFlintProjectile_C",
+    "Name": "Default__SpearFlintProjectile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Items/SpearFlintProjectile.SpearFlintProjectile_C'",
+    "Properties": {
+      "CodeNameString": "SpearFlintProjectile",
+      "CodeName": 165766894,
+      "bStatic": false,
+      "bSkipPersist": true,
+      "Components": [
+        {
+          "ObjectName": "ProjectileMovementProxyComponent'Default__SpearFlintProjectile_C:ProjectileMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/SpearFlintProjectile.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisSpearFlintProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.1"
+      }
+    }
+  }
+]

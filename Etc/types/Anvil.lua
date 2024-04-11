@@ -215,7 +215,7 @@ AVisBeaconTower = {}
 ---@field Icon UTexture2D
 ---@field Category EBuildSiteCategory
 ---@field Order int32
----@field bDisabled boolean
+---@field BuildSiteVisibility EBuildSiteVisibility
 ---@field ArrowComponent UArrowComponent
 ---@field Mesh UStaticMeshComponent
 ---@field BuildCollisionDecalComponent UDecalComponent
@@ -245,6 +245,12 @@ AVisController = {}
 ---@class AVisCookingStructure : AVisStructure
 ---@field CookingDataComponent UCookingDataComponent
 AVisCookingStructure = {}
+
+
+
+---@class AVisCraftingStructure : AVisStructure
+---@field CraftingDataComponent UCraftingDataComponent
+AVisCraftingStructure = {}
 
 
 
@@ -504,7 +510,7 @@ AVisStaticTorch = {}
 ---@field StructureIcon UTexture2D
 ---@field BuildSiteCategory EBuildSiteCategory
 ---@field BuildSiteOrder int32
----@field bBuildSiteDisabled boolean
+---@field BuildSiteVisibility EBuildSiteVisibility
 ---@field UpgradeDataComponent UUpgradeDataComponent
 ---@field HealthDataComponent UHealthDataComponent
 ---@field TeamDataComponent UTeamDataComponent
@@ -884,6 +890,7 @@ function UAnvilClientVoiceClient:Reconnect() end
 ---@class UAnvilDialogBox : UUserWidget
 ---@field HeaderText UTextBlock
 ---@field BodyText UTextBlock
+---@field Throbber UThrobber
 ---@field ComboBox UComboBoxString
 ---@field LeftButton UAnvilButtonWidget
 ---@field RightButton UAnvilButtonWidget
@@ -915,6 +922,8 @@ function UAnvilDropdownEntryWidget:OnOptionSelected(SelectedItem, SelectionType)
 ---@class UAnvilGameInstance : UGameInstance
 ---@field MapWidget UMapWidget
 ---@field HUDWidget UHUDWidget
+---@field TravelAddress FString
+---@field ConnectTokenBuffer TArray<uint8>
 ---@field CharacterSave UAnvilCharacterSave
 ---@field AnvilClientVoiceClient UAnvilClientVoiceClient
 ---@field AssetManager FAnvilAssetManager
@@ -922,6 +931,7 @@ function UAnvilDropdownEntryWidget:OnOptionSelected(SelectedItem, SelectionType)
 ---@field UIGlobalsClass TSubclassOf<AUIGlobals>
 ---@field DirtyLandscapeProxies TArray<ALandscapeProxy>
 ---@field VisActorList TArray<AVisActor>
+---@field TravelVisActorList TArray<AVisActor>
 ---@field ClientConfigManager FClientConfigManager
 UAnvilGameInstance = {}
 
@@ -1145,6 +1155,20 @@ function UCookingWindow:GetFuelDurationText() end
 function UCookingWindow:GetCookingDurationTextVisibility() end
 ---@return FText
 function UCookingWindow:GetCookingDurationText() end
+
+
+---@class UCraftingRecipeListWidget : UGridPanelWidget
+UCraftingRecipeListWidget = {}
+
+
+---@class UCraftingRecipeWidget : UGridItemWidget
+UCraftingRecipeWidget = {}
+
+
+---@class UCraftingWindow : UStructureWindow
+---@field CraftingRecipeListWidget UCraftingRecipeListWidget
+UCraftingWindow = {}
+
 
 
 ---@class UDeathMarketMapIcon : UMapIcon
@@ -1683,6 +1707,13 @@ UOptionsScreen = {}
 function UOptionsScreen:OnBackButtonClicked() end
 
 
+---@class UPackingWindow : UStructureWindow
+---@field PackButton UButton
+UPackingWindow = {}
+
+function UPackingWindow:OnPackButtonClicked() end
+
+
 ---@class UPauseScreen : UAnvilScreen
 ---@field ResumeButton UAnvilButtonWidget
 ---@field OptionsButton UAnvilButtonWidget
@@ -1852,8 +1883,15 @@ UServerPartitionComponent = {}
 
 ---@class UServerSelectScreen : UAnvilScreen
 ---@field ServerList UListView
+---@field RefreshButton UAnvilButtonWidget
+---@field Throbber UThrobber
 UServerSelectScreen = {}
 
+function UServerSelectScreen:OnRefreshButtonClicked() end
+---@return boolean
+function UServerSelectScreen:IsRefreshButtonEnabled() end
+---@return ESlateVisibility
+function UServerSelectScreen:GetThrobberVisibility() end
 
 
 ---@class UStatusWidget : UUserWidget
@@ -1959,6 +1997,21 @@ UVisAnimalAnimInstance = {}
 
 
 
+---@class UVisBalljointComponent : USceneComponent
+---@field GroundDecalComponent UDecalComponent
+---@field BalljointMesh UStaticMeshComponent
+---@field BalljointBaseMesh UStaticMeshComponent
+---@field LeftTrimMesh UVisStaticMeshComponent
+---@field RightTrimMesh UVisStaticMeshComponent
+---@field bIsStart boolean
+---@field PowerUnitDataComponent UPowerUnitDataComponent
+---@field BalljointMaterial UMaterialInstanceDynamic
+---@field LeftTrimMaterial UMaterialInstanceDynamic
+---@field RightTrimMaterial UMaterialInstanceDynamic
+UVisBalljointComponent = {}
+
+
+
 ---@class UVisBatteringRamAnimInstance : UAnimInstance
 ---@field NativeSpeed float
 ---@field RotationalSpeedYaw float
@@ -1973,6 +2026,19 @@ UVisBatteringRamAnimInstance = {}
 ---@field BuildCollisionDecalComponent UDecalComponent
 UVisBuildGhostComponent = {}
 
+
+
+---@class UVisCanalWaterControllerComponent : USceneComponent
+---@field ShiftDelta float
+---@field PowerUnitDataComponent UPowerUnitDataComponent
+---@field SplineDataComponent USplineDataComponent
+---@field WaterMaterials TArray<UMaterialInstanceDynamic>
+---@field SplineWaterMesh UStaticMeshComponent
+---@field SplineWaterMaterial UMaterialInstanceDynamic
+UVisCanalWaterControllerComponent = {}
+
+function UVisCanalWaterControllerComponent:OnSplineUpdate() end
+function UVisCanalWaterControllerComponent:OnCurrentUpdate() end
 
 
 ---@class UVisFoundationDecorMesh : UStaticMeshComponent

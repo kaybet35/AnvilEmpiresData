@@ -6,6 +6,7 @@
 class UAnvilButtonWidget;
 class UComboBoxString;
 class UTextBlock;
+class UThrobber;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UAnvilDialogBox : public UUserWidget {
@@ -17,6 +18,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* BodyText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UThrobber* Throbber;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UComboBoxString* ComboBox;

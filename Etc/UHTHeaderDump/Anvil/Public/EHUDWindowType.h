@@ -24,6 +24,8 @@ enum class EHUDWindowType : uint8 {
     HitConversion,
     Quenching,
     Housing,
+    Crafting,
+    Packing,
     Count,
 };
 

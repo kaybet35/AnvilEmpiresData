@@ -9,6 +9,8 @@ enum class EBuildSiteCategory : uint8 {
     Defenses,
     Foundations,
     Industry,
+    Water,
+    Smithing,
     NumTypes,
 };
 

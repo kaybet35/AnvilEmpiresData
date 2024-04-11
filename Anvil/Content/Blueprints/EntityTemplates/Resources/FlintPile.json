@@ -1,0 +1,94 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "FlintPile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FlintPile_C'Default__FlintPile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/FlintPile.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__FlintPile_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 50.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeRock",
+      "CollisionMask": 16
+    }
+  },
+  {
+    "Type": "FlintPile_C",
+    "Name": "Default__FlintPile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/FlintPile.FlintPile_C'",
+    "Properties": {
+      "CodeNameString": "FlintPile",
+      "CodeName": 1447435290,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__FlintPile_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/FlintPile.1"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__FlintPile_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/FlintPile.3"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisFlint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.1"
+      }
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__FlintPile_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "HitPoints": 1,
+      "RequiredTool": "EAnvilToolType::Hands",
+      "LootTable": [
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'ResourceFlint_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFlint.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 1,
+            "bIsRelic": false
+          },
+          "NormalizedChanceToDrop": 1.0,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
+        }
+      ]
+    }
+  }
+]

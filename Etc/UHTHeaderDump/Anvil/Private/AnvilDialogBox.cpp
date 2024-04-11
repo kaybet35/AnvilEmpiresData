@@ -3,6 +3,7 @@
 UAnvilDialogBox::UAnvilDialogBox() : UUserWidget(FObjectInitializer::Get()) {
     this->HeaderText = NULL;
     this->BodyText = NULL;
+    this->Throbber = NULL;
     this->ComboBox = NULL;
     this->LeftButton = NULL;
     this->RightButton = NULL;

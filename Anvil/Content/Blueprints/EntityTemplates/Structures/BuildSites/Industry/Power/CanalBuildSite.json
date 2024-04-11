@@ -1,0 +1,194 @@
+[
+  {
+    "Type": "AdvancedSnappingProxyComponent",
+    "Name": "AdvancedSnappingProxyComponent_0",
+    "Outer": "Default__CanalBuildSite_C",
+    "Class": "UScriptClass'AdvancedSnappingProxyComponent'",
+    "Properties": {
+      "bOverrideAngleOverlapMin": true,
+      "OverridedAngleOverlapMin": 60.0
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CanalBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseBuildSiteEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseBuildSiteEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CanalBuildSite_C'Default__CanalBuildSite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Industry/Power/CanalBuildSite.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__CanalBuildSite_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseBuildSiteEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.1"
+    }
+  },
+  {
+    "Type": "BuildSiteProxyComponent",
+    "Name": "BuildSiteProxyComponent_0",
+    "Outer": "Default__CanalBuildSite_C",
+    "Class": "UScriptClass'BuildSiteProxyComponent'",
+    "Template": {
+      "ObjectName": "BuildSiteProxyComponent'Default__BPBaseBuildSiteEntity_C:BuildSiteProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.3"
+    },
+    "Properties": {
+      "BuiltStructureEntity": {
+        "ObjectName": "BlueprintGeneratedClass'Canal_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/Canal.1"
+      },
+      "RequiredLocationType": "EAnvilBuildLocationType::Everywhere",
+      "RequiredTool": "EAnvilToolType::Hammer",
+      "bBuildableOverRoads": true,
+      "TierPrerequisite": 2,
+      "ProcessedWoodRequirement": 25
+    }
+  },
+  {
+    "Type": "CanalBuildSite_C",
+    "Name": "Default__CanalBuildSite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Industry/Power/CanalBuildSite.CanalBuildSite_C'",
+    "Template": {
+      "ObjectName": "BPBaseBuildSiteEntity_C'Default__BPBaseBuildSiteEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.2"
+    },
+    "Properties": {
+      "BuildSiteComp": {
+        "ObjectName": "BuildSiteProxyComponent'Default__CanalBuildSite_C:BuildSiteProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Industry/Power/CanalBuildSite.3"
+      },
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__CanalBuildSite_C:TeamProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Industry/Power/CanalBuildSite.10"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__CanalBuildSite_C:HealthProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Industry/Power/CanalBuildSite.7"
+      },
+      "FootprintComp": null,
+      "UseBoxComp": null,
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__CanalBuildSite_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Industry/Power/CanalBuildSite.5"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__CanalBuildSite_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Industry/Power/CanalBuildSite.9"
+      },
+      "CodeNameString": "CanalBuildSite",
+      "CodeName": 1650109907,
+      "Components": [
+        {
+          "ObjectName": "SplineProxyComponent'Default__CanalBuildSite_C:SplineProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Industry/Power/CanalBuildSite.8"
+        },
+        {
+          "ObjectName": "AdvancedSnappingProxyComponent'Default__CanalBuildSite_C:AdvancedSnappingProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Industry/Power/CanalBuildSite.0"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisCanalBuildSite_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCanalBuildSite.1"
+      }
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__CanalBuildSite_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseBuildSiteEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.4"
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__CanalBuildSite_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseBuildSiteEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.5"
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_0",
+    "Outer": "Default__CanalBuildSite_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseBuildSiteEntity_C:HealthProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.6"
+    }
+  },
+  {
+    "Type": "SplineProxyComponent",
+    "Name": "SplineProxyComponent_0",
+    "Outer": "Default__CanalBuildSite_C",
+    "Class": "UScriptClass'SplineProxyComponent'",
+    "Properties": {
+      "MaxSegmentLength": 10000.0,
+      "MaxSplineLength": 6000.0,
+      "bScaleCost": true,
+      "bPlatformMode": true,
+      "bDisallowSnappingAtMiddle": true,
+      "MidPiece": {
+        "ObjectName": "BlueprintGeneratedClass'CanalMidPieceBuildSite_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Walls/misc/CanalMidPieceBuildSite.0"
+      },
+      "EndPiece": {
+        "ObjectName": "BlueprintGeneratedClass'CanalEndPieceBuildSite_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Walls/misc/CanalEndPieceBuildSite.0"
+      },
+      "SnappingChannel": "EAnvilSnappingChannelType::CanalStart"
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__CanalBuildSite_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseBuildSiteEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.7"
+    },
+    "Properties": {
+      "StructureType": "EAnvilBuildStructureType::MonolithicModular"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamProxyComponent_0",
+    "Outer": "Default__CanalBuildSite_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseBuildSiteEntity_C:TeamProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.8"
+    }
+  }
+]

@@ -35,14 +35,15 @@ enum class EAnvilBuildLocationType {
     Foundation_LargeRock = 5,
     Landscape_LargeRock = 6,
     Marketplace = 7,
-    Shore = 8,
-    UnderFoundationCeiling = 9,
-    _EndDirectBuildable = 10,
-    Deployed = 11,
-    Stable = 12,
-    Static = 13,
-    Count = 14,
-    EAnvilBuildLocationType_MAX = 15,
+    Industry = 8,
+    Shore = 9,
+    UnderFoundationCeiling = 10,
+    _EndDirectBuildable = 11,
+    Deployed = 12,
+    Stable = 13,
+    Static = 14,
+    Count = 15,
+    EAnvilBuildLocationType_MAX = 16,
 };
 
 enum class EAnvilBuildStructureType {
@@ -93,7 +94,8 @@ enum class EAnvilCollisionChannel {
     AnvilCollisionChannelSnapping = 22,
     AnvilCollisionChannelFire = 23,
     AnvilCollisionChannelMouseInteraction = 24,
-    EAnvilCollisionChannel_MAX = 25,
+    AnvilCollisionChannelIndustry = 25,
+    EAnvilCollisionChannel_MAX = 26,
 };
 
 enum class EAnvilDamageTargetType {
@@ -209,7 +211,8 @@ enum class EAnvilInputEventType {
     QuenchItems = 37,
     HitConverterNextOutput = 38,
     HitConverterPreviousOutput = 39,
-    EAnvilInputEventType_MAX = 40,
+    PackItems = 40,
+    EAnvilInputEventType_MAX = 41,
 };
 
 enum class EAnvilInputResponseType {
@@ -300,6 +303,63 @@ enum class EAnvilPhysicalSurfaceType {
     SurfaceTypeSand = 16,
     SurfaceTypeNumTypes = 17,
     EAnvilPhysicalSurfaceType_MAX = 18,
+};
+
+enum class EAnvilPlacementInfoFlag {
+    ContextNone = 0,
+    InRichSoil = 1,
+    BeaconTowerLink = 2,
+    BeaconTowerTownHallLink = 3,
+    RareFoodArea_Begin = 4,
+    InRareFoodArea_Deer = 5,
+    InRareFoodArea_Boar = 6,
+    InRareFoodArea_Wheat = 7,
+    InRareFoodArea_Cabbage = 8,
+    InRareFoodArea_Coal = 9,
+    InRareFoodArea_Clay = 10,
+    InRareFoodArea_None = 11,
+    RareFoodArea_End = 12,
+    ContextEnd = 13,
+    EAnvilPlacementInfoFlag_MAX = 14,
+};
+
+enum class EAnvilPlacementStatus {
+    Valid = 0,
+    UnknownError = 1,
+    Obstructed = 2,
+    InvalidFoundation = 3,
+    InvalidSurface = 4,
+    TooCloseToTownHall = 5,
+    TooCloseToCamp = 6,
+    TooCloseToTownMarker = 7,
+    TooFarFromTownHallOrCamp = 8,
+    TooFarFromTownHall = 9,
+    TooFarFromCamp = 10,
+    RequiredHigherTierTH = 11,
+    TooLong = 12,
+    TooShort = 13,
+    TooHigh = 14,
+    TooLow = 15,
+    NotEnoughGold = 16,
+    TooCloseToEnemy = 17,
+    TooCloseToOtherWell = 18,
+    TooFarFromPlayer = 19,
+    NotAtCorrectBuildLocationType = 20,
+    RequiresDeployable = 21,
+    RequiresMarketplace = 22,
+    RequiresIndustry = 23,
+    TooCloseTogether = 24,
+    RequiresMoreTownXp = 25,
+    TooCloseToWildSpawn = 26,
+    TooCloseToWater = 27,
+    VehicleMustBeEmpty = 28,
+    RequiresFoundationCeiling = 29,
+    RequiresValidSupport = 30,
+    RequiresFoundation = 31,
+    RequiresLandscape = 32,
+    RequiresWater = 33,
+    NotAtFullHealth = 34,
+    EAnvilPlacementStatus_MAX = 35,
 };
 
 enum class EAnvilPlayerAimMeshType {
@@ -403,11 +463,15 @@ enum class EAnvilSnappingChannelType {
     RoadSide = 3,
     Platform = 4,
     Foundation = 5,
-    WaterIn = 6,
-    WaterOut = 7,
-    PowerIn = 8,
-    PowerOut = 9,
-    EAnvilSnappingChannelType_MAX = 10,
+    WaterStart = 6,
+    WaterEnd = 7,
+    CanalStart = 8,
+    CanalEnd = 9,
+    PowerStart = 10,
+    PowerEnd = 11,
+    NaturalWaterRequired = 12,
+    NaturalWaterOptional = 13,
+    EAnvilSnappingChannelType_MAX = 14,
 };
 
 enum class EAnvilSpawnType {
@@ -505,8 +569,11 @@ enum class EAnvilStatusMessageType {
     BedNotUnderCeiling = 83,
     HorseNotHungry = 84,
     PvpIsNerfed = 85,
-    NumTypes = 86,
-    EAnvilStatusMessageType_MAX = 87,
+    NoItemsForPacking = 86,
+    TooManyOrFewItemsForPacking = 87,
+    NoContainerForPacking = 88,
+    NumTypes = 89,
+    EAnvilStatusMessageType_MAX = 90,
 };
 
 enum class EAnvilStimulusType {

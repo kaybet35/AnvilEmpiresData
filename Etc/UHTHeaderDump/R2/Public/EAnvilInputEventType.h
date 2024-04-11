@@ -44,5 +44,6 @@ enum class EAnvilInputEventType : uint8 {
     QuenchItems,
     HitConverterNextOutput,
     HitConverterPreviousOutput,
+    PackItems,
 };
 

@@ -16,7 +16,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "SpawnerBerryAndBranch_C'Default__SpawnerBerryAndBranch_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerBerryAndBranch.3"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerBerryAndBranch.4"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -65,6 +65,28 @@
     }
   },
   {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_2",
+    "Outer": "Default__SpawnerBerryAndBranch_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'FlintPile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/FlintPile.0"
+      },
+      "SpawnRadius": 1000.0,
+      "SpawnInterval": 120.0,
+      "SpawnQuantity": 3,
+      "MaxSpawn": 3,
+      "ResourceReserveInitial": 3,
+      "ReserveReplenishTimeSecs": 1800,
+      "MinDistanceBetweenSpawns": 50.0,
+      "bDontSpawnInSettlements": true,
+      "bDontSpawnNearPlayers": true,
+      "CompatibleSurfaceTypes": 1028
+    }
+  },
+  {
     "Type": "SpawnerBerryAndBranch_C",
     "Name": "Default__SpawnerBerryAndBranch_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerBerryAndBranch.SpawnerBerryAndBranch_C'",
@@ -79,6 +101,10 @@
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerBerryAndBranch_C:ResourceSpawnerProxyComponent_1'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerBerryAndBranch.2"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerBerryAndBranch_C:ResourceSpawnerProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerBerryAndBranch.3"
         }
       ],
       "VisActorClass": {

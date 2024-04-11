@@ -87,7 +87,7 @@ struct FClientConfig
 
 struct FClientConfigManager
 {
-}; // Size: 0x40
+}; // Size: 0x48
 
 struct FClientConnectionRequest
 {
@@ -334,7 +334,7 @@ class AMainMenuGameMode : public AAnvilGameModeBase
 
 class AMainMenuPlayerController : public AAnvilPlayerController
 {
-}; // Size: 0x880
+}; // Size: 0x888
 
 class AMapBorderActor : public ACameraActor
 {
@@ -445,7 +445,7 @@ class AVisBuildSite : public AVisActor
     class UTexture2D* Icon;                                                           // 0x0408 (size: 0x8)
     EBuildSiteCategory Category;                                                      // 0x0410 (size: 0x1)
     int32 Order;                                                                      // 0x0414 (size: 0x4)
-    bool bDisabled;                                                                   // 0x0418 (size: 0x1)
+    EBuildSiteVisibility BuildSiteVisibility;                                         // 0x0418 (size: 0x1)
     class UArrowComponent* ArrowComponent;                                            // 0x0420 (size: 0x8)
     class UStaticMeshComponent* Mesh;                                                 // 0x0428 (size: 0x8)
     class UDecalComponent* BuildCollisionDecalComponent;                              // 0x0430 (size: 0x8)
@@ -476,6 +476,12 @@ class AVisCookingStructure : public AVisStructure
     class UCookingDataComponent* CookingDataComponent;                                // 0x04C8 (size: 0x8)
 
 }; // Size: 0x4D0
+
+class AVisCraftingStructure : public AVisStructure
+{
+    class UCraftingDataComponent* CraftingDataComponent;                              // 0x0480 (size: 0x8)
+
+}; // Size: 0x488
 
 class AVisEffect : public AVisActor
 {
@@ -725,7 +731,7 @@ class AVisStructure : public AVisActor
     class UTexture2D* StructureIcon;                                                  // 0x03F8 (size: 0x8)
     EBuildSiteCategory BuildSiteCategory;                                             // 0x0400 (size: 0x1)
     int32 BuildSiteOrder;                                                             // 0x0404 (size: 0x4)
-    bool bBuildSiteDisabled;                                                          // 0x0408 (size: 0x1)
+    EBuildSiteVisibility BuildSiteVisibility;                                         // 0x0408 (size: 0x1)
     class UUpgradeDataComponent* UpgradeDataComponent;                                // 0x0410 (size: 0x8)
     class UHealthDataComponent* HealthDataComponent;                                  // 0x0418 (size: 0x8)
     class UTeamDataComponent* TeamDataComponent;                                      // 0x0420 (size: 0x8)
@@ -858,13 +864,14 @@ class UAnvilDialogBox : public UUserWidget
 {
     class UTextBlock* HeaderText;                                                     // 0x0278 (size: 0x8)
     class UTextBlock* BodyText;                                                       // 0x0280 (size: 0x8)
-    class UComboBoxString* ComboBox;                                                  // 0x0288 (size: 0x8)
-    class UAnvilButtonWidget* LeftButton;                                             // 0x0290 (size: 0x8)
-    class UAnvilButtonWidget* RightButton;                                            // 0x0298 (size: 0x8)
+    class UThrobber* Throbber;                                                        // 0x0288 (size: 0x8)
+    class UComboBoxString* ComboBox;                                                  // 0x0290 (size: 0x8)
+    class UAnvilButtonWidget* LeftButton;                                             // 0x0298 (size: 0x8)
+    class UAnvilButtonWidget* RightButton;                                            // 0x02A0 (size: 0x8)
 
     void OnRightButtonClicked();
     void OnLeftButtonClicked();
-}; // Size: 0x2C0
+}; // Size: 0x2C8
 
 class UAnvilDropdownEntryWidget : public UUserWidget
 {
@@ -887,14 +894,17 @@ class UAnvilGameInstance : public UGameInstance
 {
     class UMapWidget* MapWidget;                                                      // 0x0230 (size: 0x8)
     class UHUDWidget* HUDWidget;                                                      // 0x0238 (size: 0x8)
-    class UAnvilCharacterSave* CharacterSave;                                         // 0x0270 (size: 0x8)
-    class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x0278 (size: 0x8)
-    FAnvilAssetManager AssetManager;                                                  // 0x0280 (size: 0x1A8)
-    FAnvilOptionsManager OptionsManager;                                              // 0x0428 (size: 0x1A0)
-    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x05C8 (size: 0x8)
-    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x05D0 (size: 0x10)
-    TArray<class AVisActor*> VisActorList;                                            // 0x05E0 (size: 0x10)
-    FClientConfigManager ClientConfigManager;                                         // 0x05F0 (size: 0x40)
+    FString TravelAddress;                                                            // 0x0270 (size: 0x10)
+    TArray<uint8> ConnectTokenBuffer;                                                 // 0x0280 (size: 0x10)
+    class UAnvilCharacterSave* CharacterSave;                                         // 0x0290 (size: 0x8)
+    class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x0298 (size: 0x8)
+    FAnvilAssetManager AssetManager;                                                  // 0x02A0 (size: 0x1A8)
+    FAnvilOptionsManager OptionsManager;                                              // 0x0448 (size: 0x1A0)
+    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x05E8 (size: 0x8)
+    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x05F0 (size: 0x10)
+    TArray<class AVisActor*> VisActorList;                                            // 0x0600 (size: 0x10)
+    TArray<class AVisActor*> TravelVisActorList;                                      // 0x0610 (size: 0x10)
+    FClientConfigManager ClientConfigManager;                                         // 0x0620 (size: 0x48)
 
     void GetVisActors(TArray<class AVisActor*>& OutVisActorList);
     void GetVersion(int32& OutMajor, int32& OutMinor, int32& OutPatch, int32& OutCL);
@@ -903,7 +913,7 @@ class UAnvilGameInstance : public UGameInstance
     bool GetIsNight();
     void GetDayCurrentSeconds(int32& OutSeconds);
     void DumpProperties(FString OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter);
-}; // Size: 0x1648
+}; // Size: 0x1680
 
 class UAnvilKeyEntryWidget : public UUserWidget
 {
@@ -1086,6 +1096,20 @@ class UCookingWindow : public UStructureWindow
     ESlateVisibility GetCookingDurationTextVisibility();
     FText GetCookingDurationText();
 }; // Size: 0x308
+
+class UCraftingRecipeListWidget : public UGridPanelWidget
+{
+}; // Size: 0x1A8
+
+class UCraftingRecipeWidget : public UGridItemWidget
+{
+}; // Size: 0x2F0
+
+class UCraftingWindow : public UStructureWindow
+{
+    class UCraftingRecipeListWidget* CraftingRecipeListWidget;                        // 0x02D8 (size: 0x8)
+
+}; // Size: 0x2E0
 
 class UDeathMarketMapIcon : public UMapIcon
 {
@@ -1583,6 +1607,13 @@ class UOptionsScreen : public UAnvilScreen
     void OnBackButtonClicked();
 }; // Size: 0x2A0
 
+class UPackingWindow : public UStructureWindow
+{
+    class UButton* PackButton;                                                        // 0x02D8 (size: 0x8)
+
+    void OnPackButtonClicked();
+}; // Size: 0x2E0
+
 class UPauseScreen : public UAnvilScreen
 {
     class UAnvilButtonWidget* ResumeButton;                                           // 0x0288 (size: 0x8)
@@ -1746,8 +1777,13 @@ class UServerPartitionComponent : public UActorComponent
 class UServerSelectScreen : public UAnvilScreen
 {
     class UListView* ServerList;                                                      // 0x0288 (size: 0x8)
+    class UAnvilButtonWidget* RefreshButton;                                          // 0x0290 (size: 0x8)
+    class UThrobber* Throbber;                                                        // 0x0298 (size: 0x8)
 
-}; // Size: 0x290
+    void OnRefreshButtonClicked();
+    bool IsRefreshButtonEnabled();
+    ESlateVisibility GetThrobberVisibility();
+}; // Size: 0x2A8
 
 class UStatusWidget : public UUserWidget
 {
@@ -1849,6 +1885,21 @@ class UVisAnimalAnimInstance : public UAnimInstance
 
 }; // Size: 0x350
 
+class UVisBalljointComponent : public USceneComponent
+{
+    class UDecalComponent* GroundDecalComponent;                                      // 0x02A0 (size: 0x8)
+    class UStaticMeshComponent* BalljointMesh;                                        // 0x02A8 (size: 0x8)
+    class UStaticMeshComponent* BalljointBaseMesh;                                    // 0x02B0 (size: 0x8)
+    class UVisStaticMeshComponent* LeftTrimMesh;                                      // 0x02B8 (size: 0x8)
+    class UVisStaticMeshComponent* RightTrimMesh;                                     // 0x02C0 (size: 0x8)
+    bool bIsStart;                                                                    // 0x02C8 (size: 0x1)
+    class UPowerUnitDataComponent* PowerUnitDataComponent;                            // 0x02D0 (size: 0x8)
+    class UMaterialInstanceDynamic* BalljointMaterial;                                // 0x02D8 (size: 0x8)
+    class UMaterialInstanceDynamic* LeftTrimMaterial;                                 // 0x02E0 (size: 0x8)
+    class UMaterialInstanceDynamic* RightTrimMaterial;                                // 0x02E8 (size: 0x8)
+
+}; // Size: 0x2F0
+
 class UVisBatteringRamAnimInstance : public UAnimInstance
 {
     float NativeSpeed;                                                                // 0x0348 (size: 0x4)
@@ -1864,6 +1915,19 @@ class UVisBuildGhostComponent : public UActorComponent
     class UDecalComponent* BuildCollisionDecalComponent;                              // 0x00D0 (size: 0x8)
 
 }; // Size: 0xD8
+
+class UVisCanalWaterControllerComponent : public USceneComponent
+{
+    float ShiftDelta;                                                                 // 0x02A0 (size: 0x4)
+    class UPowerUnitDataComponent* PowerUnitDataComponent;                            // 0x02A8 (size: 0x8)
+    class USplineDataComponent* SplineDataComponent;                                  // 0x02B0 (size: 0x8)
+    TArray<class UMaterialInstanceDynamic*> WaterMaterials;                           // 0x02B8 (size: 0x10)
+    class UStaticMeshComponent* SplineWaterMesh;                                      // 0x02C8 (size: 0x8)
+    class UMaterialInstanceDynamic* SplineWaterMaterial;                              // 0x02D0 (size: 0x8)
+
+    void OnSplineUpdate();
+    void OnCurrentUpdate();
+}; // Size: 0x2F0
 
 class UVisFoundationDecorMesh : public UStaticMeshComponent
 {

@@ -55,8 +55,27 @@ EBuildSiteCategory = {
     Defenses = 2,
     Foundations = 3,
     Industry = 4,
-    NumTypes = 5,
-    EBuildSiteCategory_MAX = 6,
+    Water = 5,
+    Smithing = 6,
+    NumTypes = 7,
+    EBuildSiteCategory_MAX = 8,
+}
+
+---@enum EBuildSiteVisibility
+EBuildSiteVisibility = {
+    AlwaysVisible = 0,
+    PlayInEditorOnly = 1,
+    Never = 2,
+    NumTypes = 3,
+    EBuildSiteVisibility_MAX = 4,
+}
+
+---@enum EClientConfigDownloadTaskState
+EClientConfigDownloadTaskState = {
+    NotStarted = 0,
+    Completed = 1,
+    InProgress = 2,
+    EClientConfigDownloadTaskState_MAX = 3,
 }
 
 ---@enum EClientConnectToServerResponseType
@@ -141,8 +160,10 @@ EHUDWindowType = {
     HitConversion = 17,
     Quenching = 18,
     Housing = 19,
-    Count = 20,
-    EHUDWindowType_MAX = 21,
+    Crafting = 20,
+    Packing = 21,
+    Count = 22,
+    EHUDWindowType_MAX = 23,
 }
 
 ---@enum EIncomingAttackDirection
@@ -206,63 +227,6 @@ ENotificationSlot = {
     Primary = 0,
     Secondary = 1,
     ENotificationSlot_MAX = 2,
-}
-
----@enum EPlacementInfoFlag
-EPlacementInfoFlag = {
-    ContextNone = 0,
-    InRichSoil = 1,
-    BeaconTowerLink = 2,
-    BeaconTowerTownHallLink = 3,
-    RareFoodArea_Begin = 4,
-    InRareFoodArea_Deer = 5,
-    InRareFoodArea_Boar = 6,
-    InRareFoodArea_Wheat = 7,
-    InRareFoodArea_Cabbage = 8,
-    InRareFoodArea_Coal = 9,
-    InRareFoodArea_Clay = 10,
-    InRareFoodArea_None = 11,
-    RareFoodArea_End = 12,
-    ContextEnd = 13,
-    EPlacementInfoFlag_MAX = 14,
-}
-
----@enum EPlacementStatus
-EPlacementStatus = {
-    Valid = 0,
-    UnknownError = 1,
-    Obstructed = 2,
-    InvalidFoundation = 3,
-    InvalidSurface = 4,
-    TooCloseToTownHall = 5,
-    TooCloseToCamp = 6,
-    TooCloseToTownMarker = 7,
-    TooFarFromTownHallOrCamp = 8,
-    TooFarFromTownHall = 9,
-    TooFarFromCamp = 10,
-    RequiredHigherTierTH = 11,
-    TooLong = 12,
-    TooShort = 13,
-    TooHigh = 14,
-    TooLow = 15,
-    NotEnoughGold = 16,
-    TooCloseToEnemy = 17,
-    TooCloseToOtherWell = 18,
-    TooFarFromPlayer = 19,
-    NotAtCorrectBuildLocationType = 20,
-    RequiresDeployable = 21,
-    RequiresMarketplace = 22,
-    TooCloseTogether = 23,
-    RequiresMoreTownXp = 24,
-    TooCloseToWildSpawn = 25,
-    TooCloseToWater = 26,
-    VehicleMustBeEmpty = 27,
-    RequiresFoundationCeiling = 28,
-    RequiresValidSupport = 29,
-    RequiresFoundation = 30,
-    RequiresLandscape = 31,
-    NotAtFullHealth = 32,
-    EPlacementStatus_MAX = 33,
 }
 
 ---@enum EQueueType

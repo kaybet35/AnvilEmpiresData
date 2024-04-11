@@ -12,6 +12,7 @@ enum class EAnvilBuildLocationType : uint8 {
     Foundation_LargeRock,
     Landscape_LargeRock,
     Marketplace,
+    Industry,
     Shore,
     UnderFoundationCeiling,
     _EndDirectBuildable,

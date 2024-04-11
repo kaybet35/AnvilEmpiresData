@@ -1,0 +1,212 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_Connector_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'SK_Connector_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Connector_PhysicsAsset.3"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_Connector_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Connector_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_Connector_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Connector_PhysicsAsset.5"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_Connector_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Connector_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_Connector_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Connector_PhysicsAsset.2"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "SK_Connector_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "ConnectorNode_1",
+        "ConstraintBone1": "ConnectorNode_1",
+        "ConstraintBone2": "Root",
+        "Pos2": {
+          "X": 150.0218,
+          "Y": -0.007297137,
+          "Z": 61.55275
+        },
+        "PriAxis2": {
+          "X": 3.330669E-16,
+          "Y": 0.0,
+          "Z": 1.0
+        },
+        "SecAxis2": {
+          "X": 3.139165E-07,
+          "Y": 1.0,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "SK_Connector_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "ConnectorNode_0",
+        "ConstraintBone1": "ConnectorNode_0",
+        "ConstraintBone2": "Root",
+        "Pos2": {
+          "X": 150.0218,
+          "Y": -0.007296417,
+          "Z": 121.92349
+        },
+        "PriAxis2": {
+          "X": 3.330669E-16,
+          "Y": 0.0,
+          "Z": 1.0
+        },
+        "SecAxis2": {
+          "X": 3.139165E-07,
+          "Y": 1.0,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_Connector_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 76.857796,
+              "Y": -0.11657651,
+              "Z": 20.67235
+            },
+            "Rotation": {
+              "Pitch": -6.3611094E-15,
+              "Yaw": 89.942024,
+              "Roll": -52.511406
+            },
+            "Radius": 122.19409,
+            "Length": 177.48814,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "Root",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "0BEFE52440262046013EFD9A7D3D3B1E"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SK_Connector_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 12.792734,
+              "Y": 0.0072631836,
+              "Z": 0.003951241
+            },
+            "Rotation": {
+              "Pitch": -0.00021532203,
+              "Yaw": -90.0,
+              "Roll": -1.22322635E-05
+            },
+            "Radius": 50.500786,
+            "Length": 50.50079,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "ConnectorNode_1",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "57948D5B421DD9B96307D39517B3E5D6"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "SK_Connector_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 14.076901,
+              "Y": 0.007253647,
+              "Z": 0.003924184
+            },
+            "Rotation": {
+              "Pitch": -0.00018997314,
+              "Yaw": -90.0,
+              "Roll": -1.774539E-05
+            },
+            "Radius": 50.500786,
+            "Length": 50.500797,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "ConnectorNode_0",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "2AA18DF44154BAC2170F65A79E8C52CE"
+  }
+]

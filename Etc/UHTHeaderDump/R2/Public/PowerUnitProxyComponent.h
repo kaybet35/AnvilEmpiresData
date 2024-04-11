@@ -12,7 +12,10 @@ public:
     EAnvilPowerUnitType Type;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float PressureMax;
+    int32 AllowedDirection;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float CurrentMax;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FlatResistance;
@@ -21,7 +24,10 @@ public:
     float ResistanceSlopeModifier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 Direction;
+    float InnerWidth;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float Outerwidth;
     
     UPowerUnitProxyComponent();
 

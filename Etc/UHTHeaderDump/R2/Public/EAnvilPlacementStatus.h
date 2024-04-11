@@ -1,0 +1,43 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "EAnvilPlacementStatus.generated.h"
+
+UENUM(BlueprintType)
+enum class EAnvilPlacementStatus : uint8 {
+    Valid,
+    UnknownError,
+    Obstructed,
+    InvalidFoundation,
+    InvalidSurface,
+    TooCloseToTownHall,
+    TooCloseToCamp,
+    TooCloseToTownMarker,
+    TooFarFromTownHallOrCamp,
+    TooFarFromTownHall,
+    TooFarFromCamp,
+    RequiredHigherTierTH,
+    TooLong,
+    TooShort,
+    TooHigh,
+    TooLow,
+    NotEnoughGold,
+    TooCloseToEnemy,
+    TooCloseToOtherWell,
+    TooFarFromPlayer,
+    NotAtCorrectBuildLocationType,
+    RequiresDeployable,
+    RequiresMarketplace,
+    RequiresIndustry,
+    TooCloseTogether,
+    RequiresMoreTownXp,
+    TooCloseToWildSpawn,
+    TooCloseToWater,
+    VehicleMustBeEmpty,
+    RequiresFoundationCeiling,
+    RequiresValidSupport,
+    RequiresFoundation,
+    RequiresLandscape,
+    RequiresWater,
+    NotAtFullHealth,
+};
+

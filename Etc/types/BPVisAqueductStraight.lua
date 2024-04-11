@@ -1,8 +1,12 @@
 ---@meta
 
 ---@class ABPVisAqueductStraight_C : AVisStructure
----@field VisStaticMesh2 UVisStaticMeshComponent
----@field VisStaticMesh1 UVisStaticMeshComponent
+---@field EndMesh UStaticMeshComponent
+---@field StartMesh UStaticMeshComponent
+---@field MidMesh UStaticMeshComponent
+---@field VisCanalWaterController UVisCanalWaterControllerComponent
+---@field VisBalljointEnd UVisBalljointComponent
+---@field VisBalljointStart UVisBalljointComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ABPVisAqueductStraight_C = {}
 

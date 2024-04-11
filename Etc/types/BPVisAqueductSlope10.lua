@@ -1,8 +1,12 @@
 ---@meta
 
 ---@class ABPVisAqueductSlope10_C : AVisStructure
----@field VisStaticMesh2 UVisStaticMeshComponent
----@field VisStaticMesh1 UVisStaticMeshComponent
+---@field EndMesh UStaticMeshComponent
+---@field MidMesh UStaticMeshComponent
+---@field StartMesh UStaticMeshComponent
+---@field VisCanalWaterController UVisCanalWaterControllerComponent
+---@field VisBalljointEnd UVisBalljointComponent
+---@field VisBalljointStart UVisBalljointComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ABPVisAqueductSlope10_C = {}
 

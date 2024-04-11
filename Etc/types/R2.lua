@@ -81,6 +81,16 @@ FCookingRecipe = {}
 
 
 
+---@class FCraftingRecipe
+---@field RecipeIngredients TArray<FItemCost>
+---@field CraftedItemTemplate TSubclassOf<UItemTemplate>
+---@field CraftedItemCodeName int32
+---@field QualityIngredientTemplate TSubclassOf<UItemTemplate>
+---@field QualityIngredientCodeName int32
+FCraftingRecipe = {}
+
+
+
 ---@class FFootprintSharedCompEntry
 ---@field Comp UProxyComponent
 ---@field bHighlight boolean
@@ -251,6 +261,15 @@ FRefineryQueueItem = {}
 FTechItem = {}
 
 
+---@class FVisvarPowerConnection
+---@field RelativeAngle float
+---@field InnerWidth float
+---@field Outerwidth float
+---@field ID uint64
+FVisvarPowerConnection = {}
+
+
+
 ---@class UAIStimulusProxyComponent : UProxyComponent
 ---@field Type EAnvilStimulusType
 ---@field bAgroTarget boolean
@@ -262,7 +281,6 @@ UAIStimulusProxyComponent = {}
 ---@field bBlockSnapping boolean
 ---@field bNoOverlap boolean
 ---@field bSnappingRequired boolean
----@field bSnapHeight boolean
 ---@field bOverrideAngleOverlapMin boolean
 ---@field OverridedAngleOverlapMin float
 UAdvancedSnappingProxyComponent = {}
@@ -529,6 +547,18 @@ UCookingDataComponent = {}
 ---@field FoodBurnDurationSec float
 ---@field bCanCookWithExistingOutputs boolean
 UCookingProxyComponent = {}
+
+
+
+---@class UCraftingDataComponent : UDataComponent
+---@field RecipeList TArray<FCraftingRecipe>
+UCraftingDataComponent = {}
+
+
+
+---@class UCraftingProxyComponent : UProxyComponent
+---@field RecipeList TArray<FCraftingRecipe>
+UCraftingProxyComponent = {}
 
 
 
@@ -979,6 +1009,12 @@ UOfflineCharacterDataComponent = {}
 UOfflineCharacterProxyComponent = {}
 
 
+---@class UPackingProxyComponent : UProxyComponent
+---@field PackingResource TSubclassOf<UItemTemplate>
+UPackingProxyComponent = {}
+
+
+
 ---@class UPassiveDamageProxyComponent : UProxyComponent
 ---@field Position FVector
 ---@field Rotation FRotator
@@ -1086,19 +1122,20 @@ UPlayerUnstuckProxyComponent = {}
 
 
 ---@class UPowerUnitDataComponent : UDataComponent
----@field Pressure float
----@field Direction int32
----@field FlowDirection int32
+---@field PercentageCurrent float
+---@field VisVarUpdateHook int32
 UPowerUnitDataComponent = {}
 
 
 
 ---@class UPowerUnitProxyComponent : UProxyComponent
 ---@field Type EAnvilPowerUnitType
----@field PressureMax float
+---@field AllowedDirection int32
+---@field CurrentMax float
 ---@field FlatResistance float
 ---@field ResistanceSlopeModifier float
----@field Direction int32
+---@field InnerWidth float
+---@field Outerwidth float
 UPowerUnitProxyComponent = {}
 
 
@@ -1383,8 +1420,10 @@ USplineDataComponent = {}
 ---@field SlopeMax float
 ---@field FlatSlope float
 ---@field bScaleCost boolean
+---@field bPlatformMode boolean
 ---@field bBridgeMode boolean
----@field BridgeStartOffSet FVector
+---@field bDisallowSnappingAtMiddle boolean
+---@field PlatformStartOffset FVector
 ---@field MidPiece TSubclassOf<UEntityTemplate>
 ---@field EndPiece TSubclassOf<UEntityTemplate>
 ---@field SnappingChannel EAnvilSnappingChannelType

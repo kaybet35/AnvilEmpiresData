@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EBuildSiteCategory.h"
+#include "EBuildSiteVisibility.h"
 #include "VisActor.h"
 #include "VisStructure.generated.h"
 
@@ -35,7 +36,7 @@ public:
     int32 BuildSiteOrder;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bBuildSiteDisabled;
+    EBuildSiteVisibility BuildSiteVisibility;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UUpgradeDataComponent* UpgradeDataComponent;

@@ -133,15 +133,21 @@
           }
         },
         {
-          "EBuildSiteCategory::NumTypes": {
-            "ObjectName": "Texture2D'FilterIconsCivic'",
-            "ObjectPath": "Anvil/Content/Textures/UI/Actions/FilterIconsCivic.0"
-          }
-        },
-        {
           "EBuildSiteCategory::Foundations": {
             "ObjectName": "Texture2D'FilterIconsFoundations'",
             "ObjectPath": "Anvil/Content/Textures/UI/Actions/FilterIconsFoundations.0"
+          }
+        },
+        {
+          "EBuildSiteCategory::Water": {
+            "ObjectName": "Texture2D'LivingConditionsWater'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Status/LivingConditionsWater.0"
+          }
+        },
+        {
+          "EBuildSiteCategory::Smithing": {
+            "ObjectName": "Texture2D'FilterIconBlacksmith'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/FilterIconBlacksmith.0"
           }
         },
         {
@@ -193,10 +199,12 @@
       "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.2"
     },
     "Properties": {
-      "MinDesiredWidth": 600.0,
+      "WidthOverride": 652.0,
+      "MinDesiredWidth": 652.0,
       "MinDesiredHeight": 256.0,
       "MaxDesiredWidth": 600.0,
       "MaxDesiredHeight": 280.0,
+      "bOverride_WidthOverride": true,
       "bOverride_MinDesiredHeight": true,
       "bOverride_MaxDesiredHeight": true,
       "NamedSlotBindings": [
@@ -232,7 +240,9 @@
     "Properties": {
       "LayoutData": {
         "Offsets": {
-          "Top": 500.0
+          "Top": 500.0,
+          "Right": 652.0,
+          "Bottom": 300.0
         },
         "Anchors": {
           "Minimum": {
@@ -249,7 +259,6 @@
           "Y": 1.0
         }
       },
-      "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPBuildMenuWindow_C:WidgetTree.CanvasPanel_0'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuWindow.7"
@@ -399,6 +408,7 @@
     "Outer": "WidgetTree",
     "Class": "UScriptClass'SizeBox'",
     "Properties": {
+      "WidthOverride": 652.0,
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'BPBuildMenuWindow_C:WidgetTree.SizeBox_74.SizeBoxSlot_1'",
@@ -413,8 +423,6 @@
     "Outer": "SizeBox",
     "Class": "UScriptClass'SizeBoxSlot'",
     "Properties": {
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
-      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "SizeBox'BPBuildMenuWindow_C:WidgetTree.SizeBox'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuWindow.15"
@@ -431,6 +439,8 @@
     "Outer": "SizeBox_74",
     "Class": "UScriptClass'SizeBoxSlot'",
     "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "SizeBox'BPBuildMenuWindow_C:WidgetTree.SizeBox_74'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuWindow.16"

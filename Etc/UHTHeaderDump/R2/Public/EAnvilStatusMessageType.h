@@ -90,6 +90,9 @@ enum class EAnvilStatusMessageType : uint8 {
     BedNotUnderCeiling,
     HorseNotHungry,
     PvpIsNerfed,
+    NoItemsForPacking,
+    TooManyOrFewItemsForPacking,
+    NoContainerForPacking,
     NumTypes,
 };
 

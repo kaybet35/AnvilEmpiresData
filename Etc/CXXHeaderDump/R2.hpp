@@ -39,6 +39,16 @@ struct FCookingRecipe
 
 }; // Size: 0x28
 
+struct FCraftingRecipe
+{
+    TArray<FItemCost> RecipeIngredients;                                              // 0x0000 (size: 0x10)
+    TSubclassOf<class UItemTemplate> CraftedItemTemplate;                             // 0x0010 (size: 0x8)
+    int32 CraftedItemCodeName;                                                        // 0x0018 (size: 0x4)
+    TSubclassOf<class UItemTemplate> QualityIngredientTemplate;                       // 0x0020 (size: 0x8)
+    int32 QualityIngredientCodeName;                                                  // 0x0028 (size: 0x4)
+
+}; // Size: 0x30
+
 struct FFootprintSharedCompEntry
 {
     class UProxyComponent* Comp;                                                      // 0x0000 (size: 0x8)
@@ -209,6 +219,15 @@ struct FTechItem
 {
 }; // Size: 0x8
 
+struct FVisvarPowerConnection
+{
+    float RelativeAngle;                                                              // 0x0000 (size: 0x4)
+    float InnerWidth;                                                                 // 0x0004 (size: 0x4)
+    float Outerwidth;                                                                 // 0x0008 (size: 0x4)
+    uint64 ID;                                                                        // 0x0010 (size: 0x8)
+
+}; // Size: 0x18
+
 class AAnvilPrefab : public AActor
 {
 }; // Size: 0x290
@@ -266,11 +285,10 @@ class UAdvancedSnappingProxyComponent : public UProxyComponent
     bool bBlockSnapping;                                                              // 0x0028 (size: 0x1)
     bool bNoOverlap;                                                                  // 0x0029 (size: 0x1)
     bool bSnappingRequired;                                                           // 0x002A (size: 0x1)
-    bool bSnapHeight;                                                                 // 0x002B (size: 0x1)
-    bool bOverrideAngleOverlapMin;                                                    // 0x002C (size: 0x1)
-    float OverridedAngleOverlapMin;                                                   // 0x0030 (size: 0x4)
+    bool bOverrideAngleOverlapMin;                                                    // 0x002B (size: 0x1)
+    float OverridedAngleOverlapMin;                                                   // 0x002C (size: 0x4)
 
-}; // Size: 0x38
+}; // Size: 0x30
 
 class UAnimalAIDataComponent : public UDataComponent
 {
@@ -534,6 +552,18 @@ class UCookingProxyComponent : public UProxyComponent
     bool bCanCookWithExistingOutputs;                                                 // 0x004C (size: 0x1)
 
 }; // Size: 0x50
+
+class UCraftingDataComponent : public UDataComponent
+{
+    TArray<FCraftingRecipe> RecipeList;                                               // 0x00A8 (size: 0x10)
+
+}; // Size: 0xB8
+
+class UCraftingProxyComponent : public UProxyComponent
+{
+    TArray<FCraftingRecipe> RecipeList;                                               // 0x0028 (size: 0x10)
+
+}; // Size: 0x38
 
 class UDataComponent : public UActorComponent
 {
@@ -979,6 +1009,12 @@ class UOfflineCharacterProxyComponent : public UProxyComponent
 {
 }; // Size: 0x28
 
+class UPackingProxyComponent : public UProxyComponent
+{
+    TSubclassOf<class UItemTemplate> PackingResource;                                 // 0x0028 (size: 0x8)
+
+}; // Size: 0x30
+
 class UPassiveDamageProxyComponent : public UProxyComponent
 {
     FVector Position;                                                                 // 0x0028 (size: 0x18)
@@ -1087,21 +1123,22 @@ class UPlayerUnstuckProxyComponent : public UProxyComponent
 
 class UPowerUnitDataComponent : public UDataComponent
 {
-    float Pressure;                                                                   // 0x00A8 (size: 0x4)
-    int32 Direction;                                                                  // 0x00C8 (size: 0x4)
-    int32 FlowDirection;                                                              // 0x00E8 (size: 0x4)
+    float PercentageCurrent;                                                          // 0x00A8 (size: 0x4)
+    int32 VisVarUpdateHook;                                                           // 0x00C8 (size: 0x4)
 
-}; // Size: 0x108
+}; // Size: 0xE8
 
 class UPowerUnitProxyComponent : public UProxyComponent
 {
     EAnvilPowerUnitType Type;                                                         // 0x0028 (size: 0x1)
-    float PressureMax;                                                                // 0x002C (size: 0x4)
-    float FlatResistance;                                                             // 0x0030 (size: 0x4)
-    float ResistanceSlopeModifier;                                                    // 0x0034 (size: 0x4)
-    int32 Direction;                                                                  // 0x0038 (size: 0x4)
+    int32 AllowedDirection;                                                           // 0x002C (size: 0x4)
+    float CurrentMax;                                                                 // 0x0030 (size: 0x4)
+    float FlatResistance;                                                             // 0x0034 (size: 0x4)
+    float ResistanceSlopeModifier;                                                    // 0x0038 (size: 0x4)
+    float InnerWidth;                                                                 // 0x003C (size: 0x4)
+    float Outerwidth;                                                                 // 0x0040 (size: 0x4)
 
-}; // Size: 0x40
+}; // Size: 0x48
 
 class UProjectileMovementProxyComponent : public UProxyComponent
 {
@@ -1384,8 +1421,10 @@ class USplineProxyComponent : public UProxyComponent
     float SlopeMax;                                                                   // 0x0038 (size: 0x4)
     float FlatSlope;                                                                  // 0x003C (size: 0x4)
     bool bScaleCost;                                                                  // 0x0040 (size: 0x1)
-    bool bBridgeMode;                                                                 // 0x0041 (size: 0x1)
-    FVector BridgeStartOffSet;                                                        // 0x0048 (size: 0x18)
+    bool bPlatformMode;                                                               // 0x0041 (size: 0x1)
+    bool bBridgeMode;                                                                 // 0x0042 (size: 0x1)
+    bool bDisallowSnappingAtMiddle;                                                   // 0x0043 (size: 0x1)
+    FVector PlatformStartOffset;                                                      // 0x0048 (size: 0x18)
     TSubclassOf<class UEntityTemplate> MidPiece;                                      // 0x0060 (size: 0x8)
     TSubclassOf<class UEntityTemplate> EndPiece;                                      // 0x0068 (size: 0x8)
     EAnvilSnappingChannelType SnappingChannel;                                        // 0x0070 (size: 0x1)
