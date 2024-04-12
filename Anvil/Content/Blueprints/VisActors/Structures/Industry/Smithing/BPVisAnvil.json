@@ -1,5 +1,11 @@
 [
   {
+    "Type": "AnvilDataComponent",
+    "Name": "AnvilDataComponent",
+    "Outer": "Default__BPVisAnvil_C",
+    "Class": "UScriptClass'AnvilDataComponent'"
+  },
+  {
     "Type": "ArrowComponent",
     "Name": "ArrowComponent",
     "Outer": "Default__BPVisAnvil_C",
@@ -16,7 +22,7 @@
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisHitConverterStructure'",
+      "ObjectName": "Class'VisAnvilStructure'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
@@ -41,7 +47,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisAnvil_C'Default__BPVisAnvil_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.2"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.3"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -52,9 +58,9 @@
     "Name": "Default__BPVisAnvil_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.BPVisAnvil_C'",
     "Properties": {
-      "HitConverterDataComponent": {
-        "ObjectName": "HitConverterDataComponent'Default__BPVisAnvil_C:HitConverterDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.6"
+      "AnvilDataComponent": {
+        "ObjectName": "AnvilDataComponent'Default__BPVisAnvil_C:AnvilDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.0"
       },
       "ConvertedItemMeshComponent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisAnvil_C:ConvertedItemMeshComponent'",
@@ -137,7 +143,7 @@
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisAnvil_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.6"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisAnvil_C:TeamDataComponent'",
@@ -153,15 +159,15 @@
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisAnvil_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.0"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.1"
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisAnvil_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.4"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisAnvil_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.5"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -181,11 +187,11 @@
         "SourceString": "Must be built in Workshop areas.",
         "LocalizedString": "Must be built in Workshop areas."
       },
-      "UseWindowType": "EHUDWindowType::HitConversion",
+      "UseWindowType": "EHUDWindowType::Anvil",
       "bUseForceCameraZoom": true,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisAnvil_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.0"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.1"
       }
     }
   },
@@ -197,7 +203,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisAnvil_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.0"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.1"
       }
     }
   },
@@ -213,7 +219,7 @@
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisAnvil_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.0"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.1"
       }
     }
   },
@@ -222,12 +228,6 @@
     "Name": "HealthDataComponent",
     "Outer": "Default__BPVisAnvil_C",
     "Class": "UScriptClass'HealthDataComponent'"
-  },
-  {
-    "Type": "HitConverterDataComponent",
-    "Name": "HitConverterDataComponent",
-    "Outer": "Default__BPVisAnvil_C",
-    "Class": "UScriptClass'HitConverterDataComponent'"
   },
   {
     "Type": "SceneComponent",
@@ -243,7 +243,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisAnvil_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.0"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.1"
       },
       "RelativeLocation": {
         "X": -5.0,
@@ -336,7 +336,7 @@
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisAnvil_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.0"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.1"
       },
       "RelativeLocation": {
         "X": -6.864958,
@@ -382,7 +382,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisAnvil_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.0"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.1"
       }
     }
   },

@@ -17,12 +17,14 @@ enum class EAnvilSnappingChannelType : uint8 {
     CanalSideStart,
     PowerStart,
     PowerEnd,
-    PowerConvertedHitStart,
-    PowerConvertedHitEnd,
+    PowerConvertedAnvilStart,
+    PowerConvertedAnvilEnd,
     PowerConvertedHeatStart,
     PowerConvertedHeatEnd,
     DebugPowerSource,
     NaturalWaterRequired,
     NaturalWaterOptional,
+    PowerConvertedWoodChoppingStationStart,
+    PowerConvertedWoodChoppingStationEnd,
 };
 

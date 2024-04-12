@@ -23,6 +23,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bHighlight;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsCapsule;
+    
     UCollisionVisualizerComponent(const FObjectInitializer& ObjectInitializer);
 
 };

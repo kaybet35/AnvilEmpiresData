@@ -52,6 +52,15 @@ FAcceptedFood = {}
 
 
 
+---@class FAnvilOutput
+---@field OutputCodeName TSubclassOf<UItemTemplate>
+---@field OutputCodeNameVisVar int32
+---@field NumHitsToConvert int32
+---@field TargetHeat float
+FAnvilOutput = {}
+
+
+
 ---@class FAnvilSimActivity
 ---@field State EAnvilSimActivityState
 ---@field Delay float
@@ -91,6 +100,12 @@ FCraftingRecipe = {}
 
 
 
+---@class FFamilyMemberData
+---@field PlayerId int64
+FFamilyMemberData = {}
+
+
+
 ---@class FFootprintSharedCompEntry
 ---@field Comp UProxyComponent
 ---@field bHighlight boolean
@@ -114,11 +129,21 @@ FHeatingFuel = {}
 
 
 
+---@class FHitConverterInput
+---@field InputCodeName TSubclassOf<UItemTemplate>
+---@field InputCodeNameVisVar int32
+---@field OutputStackSize int32
+---@field OutputStackSizeVisVar int32
+---@field NumHitsToConvert int32
+FHitConverterInput = {}
+
+
+
 ---@class FHitConverterOutput
----@field OutputItemTemplate TSubclassOf<UItemTemplate>
----@field OutputItemCodeName int32
----@field NumHitsToConvert uint32
----@field TargetHeat float
+---@field OutputCodeName TSubclassOf<UItemTemplate>
+---@field OutputCodeNameVisVar int32
+---@field InputList TArray<FHitConverterInput>
+---@field InputListVisVar TArray<FHitConverterInput>
 FHitConverterOutput = {}
 
 
@@ -362,6 +387,23 @@ UAnimalTameProxyComponent = {}
 
 
 
+---@class UAnvilDataComponent : UDataComponent
+---@field InputItemName int32
+---@field CurrentSelectedOutputIndex uint8
+---@field OutputList TArray<FAnvilOutput>
+---@field HitCounter float
+UAnvilDataComponent = {}
+
+
+
+---@class UAnvilProxyComponent : UProxyComponent
+---@field InputItemName TSubclassOf<UItemTemplate>
+---@field OutputList TArray<FAnvilOutput>
+---@field RequiredTool EAnvilToolType
+UAnvilProxyComponent = {}
+
+
+
 ---@class UArmorDataComponent : UDataComponent
 ---@field HeadArmourType EAnvilArmourType
 ---@field BodyArmourType EAnvilArmourType
@@ -527,6 +569,7 @@ UCollisionProxyComponent = {}
 ---@field Extents FVector
 ---@field Color FLinearColor
 ---@field bHighlight boolean
+---@field bIsCapsule boolean
 UCollisionVisualizerComponent = {}
 
 
@@ -627,6 +670,20 @@ function UEntityTemplate:GetProxyComponent(EntityType, ComponentType) end
 
 ---@class UEquipmentProxyComponent : UProxyComponent
 UEquipmentProxyComponent = {}
+
+
+---@class UFamilyAreaMarkerDataComponent : UDataComponent
+---@field FamilyId int32
+---@field AllowPublicPledging boolean
+---@field FamilyMembers TArray<FFamilyMemberData>
+---@field VisVarMaxNumFamilyMembers int32
+---@field VisVarRestrictedBoxExtent float
+UFamilyAreaMarkerDataComponent = {}
+
+
+
+---@class UFamilyAreaMarkerProxyComponent : UProxyComponent
+UFamilyAreaMarkerProxyComponent = {}
 
 
 ---@class UFarmDataComponent : UDataComponent
@@ -734,18 +791,15 @@ UHeatingProxyComponent = {}
 
 
 ---@class UHitConverterDataComponent : UDataComponent
----@field InputItemName int32
 ---@field CurrentSelectedOutputIndex uint8
----@field ConverterOutputList TArray<FHitConverterOutput>
+---@field OutputList TArray<FHitConverterOutput>
 ---@field HitCounter float
 UHitConverterDataComponent = {}
 
 
 
 ---@class UHitConverterProxyComponent : UProxyComponent
----@field ConversionType EAnvilHitConversionType
----@field InputItemName TSubclassOf<UItemTemplate>
----@field ConverterOutputList TArray<FHitConverterOutput>
+---@field OutputList TArray<FHitConverterOutput>
 ---@field RequiredTool EAnvilToolType
 UHitConverterProxyComponent = {}
 
@@ -1132,6 +1186,22 @@ UPlayerSpawnerProxyComponent = {}
 
 ---@class UPlayerUnstuckProxyComponent : UProxyComponent
 UPlayerUnstuckProxyComponent = {}
+
+
+---@class UPowerMillDataComponent : UDataComponent
+---@field Rotation float
+UPowerMillDataComponent = {}
+
+
+
+---@class UPowerMillProxyComponent : UProxyComponent
+---@field PosOffset FVector
+---@field ExitOffset FVector
+---@field ExitZTolerance float
+---@field MaxRotationSpeed float
+---@field RotationAcceleration float
+UPowerMillProxyComponent = {}
+
 
 
 ---@class UPowerToActionConverterProxyComponent : UProxyComponent
@@ -1676,6 +1746,12 @@ UVehicleMovementProxyComponent = {}
 ---@field AnimationIndex int32
 ---@field MountedAttackDamageMultiplier float
 UVehicleSeatProxyComponent = {}
+
+
+
+---@class UWellDataComponent : UDataComponent
+---@field TotalLevel float
+UWellDataComponent = {}
 
 
 

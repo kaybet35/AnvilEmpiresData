@@ -7,6 +7,7 @@ class UMaterialInstanceDynamic;
 class UPowerUnitDataComponent;
 class USplineDataComponent;
 class UStaticMeshComponent;
+class UWellDataComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ANVIL_API UVisCanalWaterControllerComponent : public USceneComponent {
@@ -18,11 +19,17 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ShiftMin;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsWell;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPowerUnitDataComponent* PowerUnitDataComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USplineDataComponent* SplineDataComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UWellDataComponent* WellDataComponent;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

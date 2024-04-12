@@ -44,6 +44,9 @@ enum class EAnvilInputEventType : uint8 {
     QuenchItems,
     HitConverterNextOutput,
     HitConverterPreviousOutput,
+    AnvilNextOutput,
+    AnvilPreviousOutput,
     PackItems,
+    ToggleFamilyAreaPledgeRestriction,
 };
 

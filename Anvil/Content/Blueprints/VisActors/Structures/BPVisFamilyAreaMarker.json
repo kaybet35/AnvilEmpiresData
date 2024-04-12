@@ -1,0 +1,595 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Audio_GEN_VARIABLE",
+    "Outer": "BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Flags_cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Flags_cue.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 600.0
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.20"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BPVisFamilyAreaMarker_C:ExecuteUbergraph_BPVisFamilyAreaMarker'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisFamilyMarkerArea'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BPVisFamilyAreaMarker_C:ReceiveTick'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.9"
+      },
+      {
+        "ObjectName": "Function'BPVisFamilyAreaMarker_C:ReceiveBeginPlay'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.8"
+      },
+      {
+        "ObjectName": "Function'BPVisFamilyAreaMarker_C:ExecuteUbergraph_BPVisFamilyAreaMarker'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.7"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FamilyArea",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GrassRemovalFamilyArea",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'GrassRemovalVolumeComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Audio",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "RangeMarkerVisibility",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BPVisFamilyAreaMarker": {
+        "ObjectName": "Function'BPVisFamilyAreaMarker_C:ExecuteUbergraph_BPVisFamilyAreaMarker'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.7"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BPVisFamilyAreaMarker_C:ReceiveBeginPlay'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.8"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BPVisFamilyAreaMarker_C:ReceiveTick'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.9"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisFamilyAreaMarker_C'Default__BPVisFamilyAreaMarker_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisFamilyAreaMarker_C",
+    "Name": "Default__BPVisFamilyAreaMarker_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.BPVisFamilyAreaMarker_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "FamilyAreaMarkerDataComponent": {
+        "ObjectName": "FamilyAreaMarkerDataComponent'Default__BPVisFamilyAreaMarker_C:FamilyAreaMarkerDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.6"
+      },
+      "ScaffoldingComponent": {
+        "ObjectName": "VisScaffoldingComponent'Default__BPVisFamilyAreaMarker_C:ScaffoldingComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.26"
+      },
+      "StructureIcon": {
+        "ObjectName": "Texture2D'IconFamilyAreaMarker'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconFamilyAreaMarker.0"
+      },
+      "UpgradeDataComponent": {
+        "ObjectName": "UpgradeDataComponent'Default__BPVisFamilyAreaMarker_C:UpgradeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.25"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisFamilyAreaMarker_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.12"
+      },
+      "TeamDataComponent": {
+        "ObjectName": "TeamDataComponent'Default__BPVisFamilyAreaMarker_C:TeamDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.24"
+      },
+      "StructureDataComponent": {
+        "ObjectName": "StructureDataComponent'Default__BPVisFamilyAreaMarker_C:StructureDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.23"
+      },
+      "ScorchDataComponent": {
+        "ObjectName": "ScorchDataComponent'Default__BPVisFamilyAreaMarker_C:ScorchDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.14"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFamilyAreaMarker_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.0"
+      },
+      "UseVolumeDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisFamilyAreaMarker_C:UseVolumeDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.5"
+      },
+      "GrassRemovalVolume": {
+        "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisFamilyAreaMarker_C:GrassRemovalVolume'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.11"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "22D3F0734DCAB0A3C480138967634040",
+        "SourceString": "Family Area Marker",
+        "LocalizedString": "Family Area Marker"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "EA51845342EE9B7D1BF7B8B629164C79",
+        "SourceString": "Segment off an area of a Settlement for a Family. Structures built inside a Family Area can only be used by designated Family members.",
+        "LocalizedString": "Segment off an area of a Settlement for a Family. Structures built inside a Family Area can only be used by designated Family members."
+      },
+      "DescriptionFooter": {
+        "Namespace": "",
+        "Key": "548F13574B9FCCEE590D2CBE938F8779",
+        "SourceString": "IMPORTANT: This feature is highly experimental and my contain severe bugs or side effects.",
+        "LocalizedString": "IMPORTANT: This feature is highly experimental and my contain severe bugs or side effects."
+      },
+      "MapIconProperty": {
+        "Icon": {
+          "ObjectName": "Texture2D'IconFamilyAreaMarker'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconFamilyAreaMarker.0"
+        },
+        "MapActorType": "EMapIconType::MediumStructure"
+      },
+      "UseWindowType": "EHUDWindowType::FamilyAreaMarker",
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFamilyAreaMarker_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.0"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "FamilyArea_GEN_VARIABLE",
+    "Outer": "BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'Decal_BuildArea'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/Decal_BuildArea.0"
+      },
+      "DecalSize": {
+        "X": 500.0,
+        "Y": 1500.0,
+        "Z": 1500.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "UseVolumeDecalComponent",
+    "Outer": "Default__BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalSize": {
+        "X": 150.0,
+        "Y": 150.0,
+        "Z": 256.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFamilyAreaMarker_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.0"
+      }
+    }
+  },
+  {
+    "Type": "FamilyAreaMarkerDataComponent",
+    "Name": "FamilyAreaMarkerDataComponent",
+    "Outer": "Default__BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'FamilyAreaMarkerDataComponent'"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPVisFamilyAreaMarker",
+    "Outer": "BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GrassRemovalVolumeComponent",
+    "Name": "GrassRemovalFamilyArea_GEN_VARIABLE",
+    "Outer": "BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'GrassRemovalVolumeComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 1500.0,
+        "Y": 1500.0,
+        "Z": 500.0
+      },
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'BPVisFamilyAreaMarker_C:GrassRemovalFamilyArea_GEN_VARIABLE.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.21"
+      }
+    }
+  },
+  {
+    "Type": "GrassRemovalVolumeComponent",
+    "Name": "GrassRemovalVolume",
+    "Outer": "Default__BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'GrassRemovalVolumeComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 1500.0,
+        "Y": 1500.0,
+        "Z": 500.0
+      },
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'Default__BPVisFamilyAreaMarker_C:GrassRemovalVolume.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.22"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFamilyAreaMarker_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "ScorchDataComponent",
+    "Name": "ScorchDataComponent",
+    "Outer": "Default__BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'ScorchDataComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisFamilyAreaMarker_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.13"
+      },
+      "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPVisFamilyAreaMarker_C:FamilyArea_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.4"
+      },
+      "VariableGuid": "73A7848D-4811F089-566C4681-1F6741A6",
+      "InternalVariableName": "FamilyArea"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'GrassRemovalVolumeComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GrassRemovalVolumeComponent'BPVisFamilyAreaMarker_C:GrassRemovalFamilyArea_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.10"
+      },
+      "VariableGuid": "496A1BA5-412D4CEC-54850394-B711F1AE",
+      "InternalVariableName": "GrassRemovalFamilyArea"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'BPVisFamilyAreaMarker_C:Audio_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.1"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "DBEC6432-435CA0ED-E704149F-41BFD744",
+      "InternalVariableName": "Audio"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisFamilyAreaMarker_C:VisStaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.27"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.16"
+        }
+      ],
+      "VariableGuid": "E2B9CCA2-43707E7C-24C9DA99-8637FB9A",
+      "InternalVariableName": "VisStaticMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.19"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.16"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.15"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "GrassRemovalFamilyArea_GEN_VARIABLE",
+    "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "GrassRemovalVolume",
+    "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "StructureDataComponent",
+    "Name": "StructureDataComponent",
+    "Outer": "Default__BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'StructureDataComponent'"
+  },
+  {
+    "Type": "TeamDataComponent",
+    "Name": "TeamDataComponent",
+    "Outer": "Default__BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'TeamDataComponent'"
+  },
+  {
+    "Type": "UpgradeDataComponent",
+    "Name": "UpgradeDataComponent",
+    "Outer": "Default__BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'UpgradeDataComponent'"
+  },
+  {
+    "Type": "VisScaffoldingComponent",
+    "Name": "ScaffoldingComponent",
+    "Outer": "Default__BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'VisScaffoldingComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFamilyAreaMarker_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.0"
+      }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh_GEN_VARIABLE",
+    "Outer": "BPVisFamilyAreaMarker_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FamilyAreaMarker'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/FamilyAreaMarker.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "ProjectToLandscape"
+      ]
+    }
+  }
+]

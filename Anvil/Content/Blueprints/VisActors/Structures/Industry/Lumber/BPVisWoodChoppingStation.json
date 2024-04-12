@@ -12,11 +12,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisWoodChoppingStation_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.12"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisStructure'",
+      "ObjectName": "Class'VisHitConverterStructure'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
@@ -52,18 +52,137 @@
     "Name": "Default__BPVisWoodChoppingStation_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.BPVisWoodChoppingStation_C'",
     "Properties": {
+      "HitConverterDataComponent": {
+        "ObjectName": "HitConverterDataComponent'Default__BPVisWoodChoppingStation_C:HitConverterDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.6"
+      },
+      "ConvertedItemMeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisWoodChoppingStation_C:ConvertedItemMeshComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.14"
+      },
+      "ItemMeshInfoMap": [
+        {
+          "ResourceWood01": {
+            "Meshes": [
+              {
+                "ObjectName": "StaticMesh'IndustryWoodSaw_State01'",
+                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State01.2"
+              },
+              {
+                "ObjectName": "StaticMesh'IndustryWoodSaw_State02'",
+                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State02.2"
+              },
+              {
+                "ObjectName": "StaticMesh'IndustryWoodSaw_State03'",
+                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State03.2"
+              }
+            ],
+            "MaterialOverrides": [
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        {
+          "ResourceWood02": {
+            "Meshes": [
+              {
+                "ObjectName": "StaticMesh'IndustryWoodSaw_State01'",
+                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State01.2"
+              },
+              {
+                "ObjectName": "StaticMesh'IndustryWoodSaw_State02'",
+                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State02.2"
+              },
+              {
+                "ObjectName": "StaticMesh'IndustryWoodSaw_State03'",
+                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State03.2"
+              }
+            ],
+            "MaterialOverrides": [
+              null,
+              null,
+              {
+                "ObjectName": "MaterialInstanceConstant'ScotsPineBark'",
+                "ObjectPath": "Anvil/Content/Materials/Resources/ScotsPineBark.0"
+              }
+            ]
+          }
+        },
+        {
+          "ResourceWood03": {
+            "Meshes": [
+              {
+                "ObjectName": "StaticMesh'IndustryWoodSaw_State01'",
+                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State01.2"
+              },
+              {
+                "ObjectName": "StaticMesh'IndustryWoodSaw_State02'",
+                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State02.2"
+              },
+              {
+                "ObjectName": "StaticMesh'IndustryWoodSaw_State03'",
+                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State03.2"
+              }
+            ],
+            "MaterialOverrides": [
+              null,
+              null,
+              {
+                "ObjectName": "MaterialInstanceConstant'BeechBark'",
+                "ObjectPath": "Anvil/Content/Materials/Resources/BeechBark.0"
+              }
+            ]
+          }
+        },
+        {
+          "ProcessedWood": {
+            "Meshes": [
+              {
+                "ObjectName": "StaticMesh'ResourceStockpileProcessedWood'",
+                "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileProcessedWood.2"
+              }
+            ],
+            "MaterialOverrides": []
+          }
+        },
+        {
+          "ResourceBranches": {
+            "Meshes": [
+              {
+                "ObjectName": "StaticMesh'ResourceStockpileResourceBranches'",
+                "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileResourceBranches.2"
+              }
+            ],
+            "MaterialOverrides": []
+          }
+        }
+      ],
+      "HitVFXLocation": {
+        "ObjectName": "SceneComponent'Default__BPVisWoodChoppingStation_C:HitVFXLocation'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.8"
+      },
+      "HitSuccessVFX": {
+        "ObjectName": "NiagaraSystem'SawdustBurst03'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SawdustBurst03.17"
+      },
+      "HitSuccessSoundCue": {
+        "ObjectName": "SoundCue'AxeTreeCut_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Axe/AxeTreeCut_Cue.0"
+      },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisWoodChoppingStation_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.18"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconWoodChoppingStation'",
         "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconWoodChoppingStation.0"
       },
-      "BuildSiteCategory": "EBuildSiteCategory::Smithing",
+      "BuildSiteCategory": "EBuildSiteCategory::Lumber",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisWoodChoppingStation_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.17"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisWoodChoppingStation_C:HealthDataComponent'",
@@ -71,15 +190,15 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisWoodChoppingStation_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.16"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisWoodChoppingStation_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.15"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisWoodChoppingStation_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.9"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisWoodChoppingStation_C:ArrowComponent'",
@@ -139,7 +258,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisWoodChoppingStation_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.13"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisWoodChoppingStation_C:ArrowComponent'",
@@ -154,10 +273,33 @@
     "Class": "UScriptClass'HealthDataComponent'"
   },
   {
+    "Type": "HitConverterDataComponent",
+    "Name": "HitConverterDataComponent",
+    "Outer": "Default__BPVisWoodChoppingStation_C",
+    "Class": "UScriptClass'HitConverterDataComponent'"
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPVisWoodChoppingStation_C",
     "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "HitVFXLocation",
+    "Outer": "Default__BPVisWoodChoppingStation_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWoodChoppingStation_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      }
+    }
   },
   {
     "Type": "ScorchDataComponent",
@@ -177,7 +319,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisWoodChoppingStation_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.7"
       },
       "VariableGuid": "D82C2CC7-4AB252F5-8E1ED9A8-F54408F4",
       "InternalVariableName": "DefaultSceneRoot"
@@ -195,7 +337,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWoodChoppingStation_C:AnvilMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.19"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -212,18 +354,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWoodChoppingStation_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.11"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWoodChoppingStation_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.11"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisWoodChoppingStation_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.10"
       }
     }
   },
@@ -232,6 +374,32 @@
     "Name": "SplineDataComponent",
     "Outer": "GrassRemovalVolume",
     "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "ConvertedItemMeshComponent",
+    "Outer": "Default__BPVisWoodChoppingStation_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryWoodSaw_State01'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State01.2"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWoodChoppingStation_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 82.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
   },
   {
     "Type": "StructureDataComponent",

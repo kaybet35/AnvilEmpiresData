@@ -57,7 +57,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__Canal_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/Canal.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/Canal.14"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__Canal_C:HealthComp'",
@@ -65,11 +65,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__Canal_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/Canal.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/Canal.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__Canal_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/Canal.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/Canal.13"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__Canal_C:DestroyableComp'",
@@ -83,7 +83,7 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__Canal_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/Canal.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/Canal.11"
       },
       "CodeNameString": "Canal",
       "CodeName": 541642178,
@@ -91,7 +91,7 @@
       "Components": [
         {
           "ObjectName": "SplineProxyComponent'Default__Canal_C:SplineProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/Canal.11"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/Canal.12"
         },
         {
           "ObjectName": "AdvancedSnappingProxyComponent'Default__Canal_C:AdvancedSnappingProxyComponent_0'",
@@ -100,6 +100,10 @@
         {
           "ObjectName": "PowerUnitProxyComponent'Default__Canal_C:PowerUnitProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/Canal.8"
+        },
+        {
+          "ObjectName": "PowerUnitProxyComponent'Default__Canal_C:PowerUnitProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/Canal.9"
         }
       ],
       "VisActorClass": {
@@ -116,6 +120,9 @@
     "Template": {
       "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    },
+    "Properties": {
+      "DecayTimeHours": 48.0
     }
   },
   {
@@ -151,6 +158,20 @@
   {
     "Type": "PowerUnitProxyComponent",
     "Name": "PowerUnitProxyComponent_0",
+    "Outer": "Default__Canal_C",
+    "Class": "UScriptClass'PowerUnitProxyComponent'",
+    "Properties": {
+      "AllowedDirection": 2,
+      "CurrentMax": 50.0,
+      "FlatResistance": 0.5,
+      "ResistanceSlopeModifier": -4.5,
+      "InnerWidth": 25.0,
+      "OuterWidth": 75.0
+    }
+  },
+  {
+    "Type": "PowerUnitProxyComponent",
+    "Name": "PowerUnitProxyComponent_1",
     "Outer": "Default__Canal_C",
     "Class": "UScriptClass'PowerUnitProxyComponent'",
     "Properties": {

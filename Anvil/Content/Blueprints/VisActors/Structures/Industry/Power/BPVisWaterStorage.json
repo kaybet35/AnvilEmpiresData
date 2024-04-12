@@ -1,0 +1,1376 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisWaterStorage_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisWaterStorage_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.30"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisStructure'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LandscapeCullBalljointMid1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WaterNode",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StartStraightMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PoolWater",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PoolWaterLevel",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisCanalWaterControllerComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CanalWaterLevel",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisCanalWaterControllerComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LandscapeCullBalljointMid",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AngleBase",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BalljointTrim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AngleTrimRight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AngleTrimLeft",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BalljointBase",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LandscapeCullBalljointStart",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AdapterStart",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisBalljointStart",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisBalljointComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pool",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisWaterStorage_C'Default__BPVisWaterStorage_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisWaterStorage_C",
+    "Name": "Default__BPVisWaterStorage_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.BPVisWaterStorage_C'",
+    "Properties": {
+      "ScaffoldingComponent": {
+        "ObjectName": "VisScaffoldingComponent'Default__BPVisWaterStorage_C:ScaffoldingComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.47"
+      },
+      "StructureIcon": {
+        "ObjectName": "Texture2D'IconIndustryCanalStorage'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconIndustryCanalStorage.0"
+      },
+      "BuildSiteCategory": "EBuildSiteCategory::Water",
+      "UpgradeDataComponent": {
+        "ObjectName": "UpgradeDataComponent'Default__BPVisWaterStorage_C:UpgradeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.43"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisWaterStorage_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.5"
+      },
+      "TeamDataComponent": {
+        "ObjectName": "TeamDataComponent'Default__BPVisWaterStorage_C:TeamDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.42"
+      },
+      "StructureDataComponent": {
+        "ObjectName": "StructureDataComponent'Default__BPVisWaterStorage_C:StructureDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.41"
+      },
+      "ScorchDataComponent": {
+        "ObjectName": "ScorchDataComponent'Default__BPVisWaterStorage_C:ScorchDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.11"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWaterStorage_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.0"
+      },
+      "UseVolumeDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisWaterStorage_C:UseVolumeDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.3"
+      },
+      "GrassRemovalVolume": {
+        "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisWaterStorage_C:GrassRemovalVolume'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.4"
+      },
+      "GeneratedScorchEffects": 6,
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "887D08454E195FD15BE721A593AE6492",
+        "SourceString": "Canal Storage",
+        "LocalizedString": "Canal Storage"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "5174FA264571A802E4497AB599C61D31",
+        "SourceString": "A shallow well used for gathering Water",
+        "LocalizedString": "A shallow well used for gathering Water"
+      },
+      "MapIconProperty": {
+        "Icon": {
+          "ObjectName": "Texture2D'IconIndustryCanalStorage'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconIndustryCanalStorage.0"
+        },
+        "MapActorType": "EMapIconType::MinorStructure"
+      },
+      "UseWindowType": "EHUDWindowType::InventoryStructure",
+      "UseDisclaimerText": {
+        "Namespace": "",
+        "Key": "A8D9A62D498AB5934BFFCE9721878AE6",
+        "SourceString": "Water supply gameplay is currently using using simplified, temporary mechanics. It will be replaced with a completely new system in future Pre-Alpha builds.",
+        "LocalizedString": "Water supply gameplay is currently using using simplified, temporary mechanics. It will be replaced with a completely new system in future Pre-Alpha builds."
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWaterStorage_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.0"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "UseVolumeDecalComponent",
+    "Outer": "Default__BPVisWaterStorage_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWaterStorage_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.0"
+      }
+    }
+  },
+  {
+    "Type": "GrassRemovalVolumeComponent",
+    "Name": "GrassRemovalVolume",
+    "Outer": "Default__BPVisWaterStorage_C",
+    "Class": "UScriptClass'GrassRemovalVolumeComponent'",
+    "Properties": {
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'Default__BPVisWaterStorage_C:GrassRemovalVolume.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.33"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWaterStorage_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisWaterStorage_C",
+    "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "PowerUnitDataComponent",
+    "Name": "PowerUnitDataComponent",
+    "Outer": "CanalWaterLevel_GEN_VARIABLE",
+    "Class": "UScriptClass'PowerUnitDataComponent'"
+  },
+  {
+    "Type": "PowerUnitDataComponent",
+    "Name": "PowerUnitDataComponent",
+    "Outer": "PoolWaterLevel_GEN_VARIABLE",
+    "Class": "UScriptClass'PowerUnitDataComponent'"
+  },
+  {
+    "Type": "PowerUnitDataComponent",
+    "Name": "PowerUnitDataComponent",
+    "Outer": "VisBalljointStart_GEN_VARIABLE",
+    "Class": "UScriptClass'PowerUnitDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Base_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "ScorchDataComponent",
+    "Name": "ScorchDataComponent",
+    "Outer": "Default__BPVisWaterStorage_C",
+    "Class": "UScriptClass'ScorchDataComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisWaterStorage_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.10"
+      },
+      "VariableGuid": "F7C000FE-4589380F-8EE52E9C-353C24BE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisWaterStorage_C:LandscapeCullBalljointMid_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.36"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "BAE06996-4577D0E0-E6105F9C-46EBFCAE",
+      "InternalVariableName": "LandscapeCullBalljointMid"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisWaterStorage_C:LandscapeCullBalljointMid1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.35"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "1E0084AE-4D745E9A-ADA2538A-D403FEC3",
+      "InternalVariableName": "LandscapeCullBalljointMid1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_14",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisBalljointComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisBalljointComponent'BPVisWaterStorage_C:VisBalljointStart_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.44"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_32'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_33'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_34'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.24"
+        }
+      ],
+      "VariableGuid": "B34D9805-4C37276C-D4E2D6BD-5E692650",
+      "InternalVariableName": "VisBalljointStart"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_19",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisWaterStorage_C:AdapterStart_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.34"
+      },
+      "VariableGuid": "56BA81D9-4E55690C-C730B48A-CF867D17",
+      "InternalVariableName": "AdapterStart"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisCanalWaterControllerComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisCanalWaterControllerComponent'BPVisWaterStorage_C:CanalWaterLevel_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.45"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.28"
+        }
+      ],
+      "VariableGuid": "3FE3CC42-4C4D93F5-A218D3A5-E08B67F4",
+      "InternalVariableName": "CanalWaterLevel"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_20",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisWaterStorage_C:LandscapeCullBalljointStart_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.37"
+      },
+      "VariableGuid": "08D22A30-4FD8F761-6F2FAAA8-E530EE2D",
+      "InternalVariableName": "LandscapeCullBalljointStart"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_22",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWaterStorage_C:BalljointBase_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.51"
+      },
+      "VariableGuid": "E48544EF-40A56604-5E5CEDBF-094B0378",
+      "InternalVariableName": "BalljointBase"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_23",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWaterStorage_C:AngleTrimLeft_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.49"
+      },
+      "VariableGuid": "2839533E-4E3B9858-FDBC6290-815D1C53",
+      "InternalVariableName": "AngleTrimLeft"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisWaterStorage_C:Base_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.9"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FD4129D8-43669392-45B60AB7-EB90CD27",
+      "InternalVariableName": "Base"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_32",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWaterStorage_C:AngleTrimRight_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.50"
+      },
+      "VariableGuid": "3011F876-477D63C5-420069A9-9887B4B2",
+      "InternalVariableName": "AngleTrimRight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_33",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWaterStorage_C:BalljointTrim_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.52"
+      },
+      "VariableGuid": "3EB18542-4B4963F6-A7DDF4A5-FE6CFB08",
+      "InternalVariableName": "BalljointTrim"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_34",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWaterStorage_C:AngleBase_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.48"
+      },
+      "VariableGuid": "E8CDC75B-4C831065-92B886B1-4073E740",
+      "InternalVariableName": "AngleBase"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisCanalWaterControllerComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisCanalWaterControllerComponent'BPVisWaterStorage_C:PoolWaterLevel_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.46"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.26"
+        }
+      ],
+      "VariableGuid": "B709160C-49801DBC-D03EB298-C529FB88",
+      "InternalVariableName": "PoolWaterLevel"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisWaterStorage_C:PoolWater_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.38"
+      },
+      "VariableGuid": "48D2AE51-45A9650A-D03D9C91-FDC14280",
+      "InternalVariableName": "PoolWater"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisWaterStorage_C:StartStraightMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.39"
+      },
+      "VariableGuid": "B354DC7F-40048FF7-B048FB9F-E747E334",
+      "InternalVariableName": "StartStraightMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisWaterStorage_C:WaterNode_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.40"
+      },
+      "VariableGuid": "B9517A4C-43CFD408-7527FCB7-248AF554",
+      "InternalVariableName": "WaterNode"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWaterStorage_C:Pool_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.53"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6C910561-44CD0F1A-612B2D93-83D078A7",
+      "InternalVariableName": "Pool"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.14"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_32'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_33'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_34'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisWaterStorage_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.12"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "CanalWaterLevel_GEN_VARIABLE",
+    "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "PoolWaterLevel_GEN_VARIABLE",
+    "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "GrassRemovalVolume",
+    "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "AdapterStart_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_AqueductConnection'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_AqueductConnection.2"
+      },
+      "bReceivesDecals": false,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 125.0,
+        "Z": 100.0
+      },
+      "bVisible": false,
+      "ComponentTags": [
+        "Adapter"
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "LandscapeCullBalljointMid1_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Cube'",
+        "ObjectPath": "Engine/Content/BasicShapes/Cube.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'RVT_LandscapeCullMaterial'",
+          "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCullMaterial.0"
+        }
+      ],
+      "bVisibleInReflectionCaptures": false,
+      "bVisibleInRealTimeSkyCaptures": false,
+      "bVisibleInRayTracing": false,
+      "bReceivesDecals": false,
+      "bUseAsOccluder": false,
+      "bRenderCustomDepth": true,
+      "RuntimeVirtualTextures": [
+        {
+          "ObjectName": "RuntimeVirtualTexture'RVT_LandscapeCull'",
+          "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCull.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -210.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 2.0,
+        "Z": 2.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "LandscapeCullBalljointMid_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Cube'",
+        "ObjectPath": "Engine/Content/BasicShapes/Cube.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'RVT_LandscapeCullMaterial'",
+          "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCullMaterial.0"
+        }
+      ],
+      "bVisibleInReflectionCaptures": false,
+      "bVisibleInRealTimeSkyCaptures": false,
+      "bVisibleInRayTracing": false,
+      "bReceivesDecals": false,
+      "bUseAsOccluder": false,
+      "bRenderCustomDepth": true,
+      "RuntimeVirtualTextures": [
+        {
+          "ObjectName": "RuntimeVirtualTexture'RVT_LandscapeCull'",
+          "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCull.0"
+        }
+      ],
+      "RelativeScale3D": {
+        "X": 3.0,
+        "Y": 3.0,
+        "Z": 2.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "LandscapeCullBalljointStart_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Cylinder'",
+        "ObjectPath": "Engine/Content/BasicShapes/Cylinder.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'RVT_LandscapeCullMaterial'",
+          "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCullMaterial.0"
+        }
+      ],
+      "bGenerateOverlapEvents": false,
+      "bVisibleInReflectionCaptures": false,
+      "bVisibleInRealTimeSkyCaptures": false,
+      "bVisibleInRayTracing": false,
+      "bReceivesDecals": false,
+      "bUseAsOccluder": false,
+      "bRenderCustomDepth": true,
+      "RuntimeVirtualTextures": [
+        {
+          "ObjectName": "RuntimeVirtualTexture'RVT_LandscapeCull'",
+          "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCull.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeScale3D": {
+        "X": 2.5,
+        "Y": 2.5,
+        "Z": 2.5
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "PoolWater_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_StorageWater'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_StorageWater.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'WaterCanalFlat'",
+          "ObjectPath": "Anvil/Content/Materials/WaterCanalFlat.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -15.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StartStraightMesh_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_Straight_WaterPlane'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Straight_WaterPlane.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'WaterCanalBase'",
+          "ObjectPath": "Anvil/Content/Materials/WaterCanalBase.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -215.0,
+        "Y": -2.4424907E-14,
+        "Z": 25.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": -0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.9,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "WaterNode_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_Balljoint_WaterPlane'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Balljoint_WaterPlane.2"
+      },
+      "RelativeLocation": {
+        "X": -310.0,
+        "Y": 0.0,
+        "Z": 25.0
+      }
+    }
+  },
+  {
+    "Type": "StructureDataComponent",
+    "Name": "StructureDataComponent",
+    "Outer": "Default__BPVisWaterStorage_C",
+    "Class": "UScriptClass'StructureDataComponent'"
+  },
+  {
+    "Type": "TeamDataComponent",
+    "Name": "TeamDataComponent",
+    "Outer": "Default__BPVisWaterStorage_C",
+    "Class": "UScriptClass'TeamDataComponent'"
+  },
+  {
+    "Type": "UpgradeDataComponent",
+    "Name": "UpgradeDataComponent",
+    "Outer": "Default__BPVisWaterStorage_C",
+    "Class": "UScriptClass'UpgradeDataComponent'"
+  },
+  {
+    "Type": "VisBalljointComponent",
+    "Name": "VisBalljointStart_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'VisBalljointComponent'",
+    "Properties": {
+      "bIsStart": true,
+      "PowerUnitDataComponent": {
+        "ObjectName": "PowerUnitDataComponent'BPVisWaterStorage_C:VisBalljointStart_GEN_VARIABLE.PowerUnitDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.8"
+      },
+      "RelativeLocation": {
+        "X": -310.0,
+        "Y": 1.3322676E-14,
+        "Z": -75.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "VisCanalWaterControllerComponent",
+    "Name": "CanalWaterLevel_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'VisCanalWaterControllerComponent'",
+    "Properties": {
+      "ShiftDelta": 45.0,
+      "PowerUnitDataComponent": {
+        "ObjectName": "PowerUnitDataComponent'BPVisWaterStorage_C:CanalWaterLevel_GEN_VARIABLE.PowerUnitDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.6"
+      },
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'BPVisWaterStorage_C:CanalWaterLevel_GEN_VARIABLE.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.31"
+      },
+      "WellDataComponent": {
+        "ObjectName": "WellDataComponent'BPVisWaterStorage_C:CanalWaterLevel_GEN_VARIABLE.WellDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.54"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -2.0
+      }
+    }
+  },
+  {
+    "Type": "VisCanalWaterControllerComponent",
+    "Name": "PoolWaterLevel_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'VisCanalWaterControllerComponent'",
+    "Properties": {
+      "ShiftDelta": 80.0,
+      "bIsWell": true,
+      "PowerUnitDataComponent": {
+        "ObjectName": "PowerUnitDataComponent'BPVisWaterStorage_C:PoolWaterLevel_GEN_VARIABLE.PowerUnitDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.7"
+      },
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'BPVisWaterStorage_C:PoolWaterLevel_GEN_VARIABLE.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.32"
+      },
+      "WellDataComponent": {
+        "ObjectName": "WellDataComponent'BPVisWaterStorage_C:PoolWaterLevel_GEN_VARIABLE.WellDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.55"
+      }
+    }
+  },
+  {
+    "Type": "VisScaffoldingComponent",
+    "Name": "ScaffoldingComponent",
+    "Outer": "Default__BPVisWaterStorage_C",
+    "Class": "UScriptClass'VisScaffoldingComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisWaterStorage_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisWaterStorage.0"
+      }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "AngleBase_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_AngleConnector'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_AngleConnector.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 75.0,
+        "Z": 0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "AngleTrimLeft_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_AngleConnectorTrimRight'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_AngleConnectorTrimRight.2"
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -1.2722219E-14,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "LeftTrim"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "AngleTrimRight_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_AngleConnectorTrimLeft'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_AngleConnectorTrimLeft.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "RightTrim"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "BalljointBase_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_Balljoint'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Balljoint.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.1
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -1.2722219E-14,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "BalljointBase"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "BalljointTrim_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_BalljointTrim'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_BalljointTrim.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -0.1
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "BalljointTrim"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "Pool_GEN_VARIABLE",
+    "Outer": "BPVisWaterStorage_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_Storage'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Storage.2"
+      },
+      "OverrideMaterials": [
+        null,
+        null,
+        {
+          "ObjectName": "MaterialInstanceConstant'WaterCanalBase'",
+          "ObjectPath": "Anvil/Content/Materials/WaterCanalBase.0"
+        }
+      ],
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  },
+  {
+    "Type": "WellDataComponent",
+    "Name": "WellDataComponent",
+    "Outer": "CanalWaterLevel_GEN_VARIABLE",
+    "Class": "UScriptClass'WellDataComponent'"
+  },
+  {
+    "Type": "WellDataComponent",
+    "Name": "WellDataComponent",
+    "Outer": "PoolWaterLevel_GEN_VARIABLE",
+    "Class": "UScriptClass'WellDataComponent'"
+  }
+]

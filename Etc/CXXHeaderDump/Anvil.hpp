@@ -73,6 +73,10 @@ struct FBuildSiteList
 
 }; // Size: 0x10
 
+struct FCachedCameraState
+{
+}; // Size: 0xC
+
 struct FCameraRotateState
 {
 }; // Size: 0x18
@@ -170,6 +174,13 @@ struct FHealthData : public FTableRowBase
     float MaxHealth;                                                                  // 0x0008 (size: 0x4)
 
 }; // Size: 0x10
+
+struct FHitConverterItemMeshInfo
+{
+    TArray<class UStaticMesh*> Meshes;                                                // 0x0000 (size: 0x10)
+    TArray<class UMaterialInterface*> MaterialOverrides;                              // 0x0010 (size: 0x10)
+
+}; // Size: 0x20
 
 struct FItemData : public FTableRowBase
 {
@@ -433,6 +444,21 @@ class AVisAnimal : public AVisActor
 
 }; // Size: 0x470
 
+class AVisAnvilStructure : public AVisStructure
+{
+    class UAnvilDataComponent* AnvilDataComponent;                                    // 0x0480 (size: 0x8)
+    class USkeletalMeshComponent* ConvertedItemMeshComponent;                         // 0x0488 (size: 0x8)
+    TMap<class FString, class USkeletalMesh*> ConvertedItemMeshMap;                   // 0x0490 (size: 0x50)
+    class UMaterial* ConvertedItemMeshMaterialOverride;                               // 0x04E0 (size: 0x8)
+    class USceneComponent* HitVFXLocation;                                            // 0x04E8 (size: 0x8)
+    class UNiagaraSystem* HitSuccessVFX;                                              // 0x04F0 (size: 0x8)
+    class UNiagaraSystem* HitFailVFX;                                                 // 0x04F8 (size: 0x8)
+    class USoundCue* HitSuccessSoundCue;                                              // 0x0500 (size: 0x8)
+    class USoundCue* HitFailSoundCue;                                                 // 0x0508 (size: 0x8)
+
+    void OnHitCounterChanged(const float& Old, const float& New);
+}; // Size: 0x518
+
 class AVisBeaconTower : public AVisStructure
 {
     class UBeaconTowerDataComponent* BeaconTowerDataComponent;                        // 0x0480 (size: 0x8)
@@ -496,6 +522,12 @@ class AVisEffect : public AVisActor
 
 }; // Size: 0x420
 
+class AVisFamilyMarkerArea : public AVisStructure
+{
+    class UFamilyAreaMarkerDataComponent* FamilyAreaMarkerDataComponent;              // 0x0480 (size: 0x8)
+
+}; // Size: 0x488
+
 class AVisFarm : public AVisStructure
 {
     class UDecalComponent* FarmDecalComponent;                                        // 0x0480 (size: 0x8)
@@ -549,17 +581,16 @@ class AVisHeatingStructure : public AVisStructure
 class AVisHitConverterStructure : public AVisStructure
 {
     class UHitConverterDataComponent* HitConverterDataComponent;                      // 0x0480 (size: 0x8)
-    class USkeletalMeshComponent* ConvertedItemMeshComponent;                         // 0x0488 (size: 0x8)
-    TMap<class FString, class USkeletalMesh*> ConvertedItemMeshMap;                   // 0x0490 (size: 0x50)
-    class UMaterial* ConvertedItemMeshMaterialOverride;                               // 0x04E0 (size: 0x8)
-    class USceneComponent* HitVFXLocation;                                            // 0x04E8 (size: 0x8)
-    class UNiagaraSystem* HitSuccessVFX;                                              // 0x04F0 (size: 0x8)
-    class UNiagaraSystem* HitFailVFX;                                                 // 0x04F8 (size: 0x8)
-    class USoundCue* HitSuccessSoundCue;                                              // 0x0500 (size: 0x8)
-    class USoundCue* HitFailSoundCue;                                                 // 0x0508 (size: 0x8)
+    class UStaticMeshComponent* ConvertedItemMeshComponent;                           // 0x0488 (size: 0x8)
+    TMap<class FString, class FHitConverterItemMeshInfo> ItemMeshInfoMap;             // 0x0490 (size: 0x50)
+    class USceneComponent* HitVFXLocation;                                            // 0x04E0 (size: 0x8)
+    class UNiagaraSystem* HitSuccessVFX;                                              // 0x04E8 (size: 0x8)
+    class UNiagaraSystem* HitFailVFX;                                                 // 0x04F0 (size: 0x8)
+    class USoundCue* HitSuccessSoundCue;                                              // 0x04F8 (size: 0x8)
+    class USoundCue* HitFailSoundCue;                                                 // 0x0500 (size: 0x8)
 
     void OnHitConverterCounterChanged(const float& Old, const float& New);
-}; // Size: 0x518
+}; // Size: 0x510
 
 class AVisHouse : public AVisStructure
 {
@@ -679,6 +710,14 @@ class AVisPlayer : public AVisActor
     void BP_OnHeldItemChanged();
     FVector AnimGetVelocity();
 }; // Size: 0x5F0
+
+class AVisPowerMill : public AVisStructure
+{
+    class UPowerMillDataComponent* PowerMillDataComponent;                            // 0x0480 (size: 0x8)
+    class USkeletalMeshComponent* SKMesh;                                             // 0x0488 (size: 0x8)
+    class UVisPowerUnitAnimInstance* AnimInst;                                        // 0x0490 (size: 0x8)
+
+}; // Size: 0x4C8
 
 class AVisRefinery : public AVisStructure
 {
@@ -924,7 +963,7 @@ class UAnvilGameInstance : public UGameInstance
     bool GetIsNight();
     void GetDayCurrentSeconds(int32& OutSeconds);
     void DumpProperties(FString OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter);
-}; // Size: 0x1690
+}; // Size: 0x1698
 
 class UAnvilKeyEntryWidget : public UUserWidget
 {
@@ -1012,6 +1051,17 @@ class UAnvilSliderWidget : public UUserWidget
 
     void NativeOnSliderChanged(const float Value);
 }; // Size: 0x2D8
+
+class UAnvilWindow : public UStructureWindow
+{
+    class UImage* CurrentSelectedOutputImage;                                         // 0x02D8 (size: 0x8)
+    class UButton* OutputPreviousButton;                                              // 0x02E0 (size: 0x8)
+    class UButton* OutputNextButton;                                                  // 0x02E8 (size: 0x8)
+
+    void OutputPreviousButtonClicked();
+    void OutputNextButtonClicked();
+    void OnCurrentSelectedOutputIndexChanged(const uint8& Old, const uint8& New);
+}; // Size: 0x2F0
 
 class UBeaconTowerMapIcon : public UMapIcon
 {
@@ -1174,6 +1224,19 @@ class UFactionSelectScreen : public UAnvilScreen
     ESlateVisibility FactionMirrishAtCapacityVisibility();
     ESlateVisibility FactionAranicAtCapacityVisibility();
 }; // Size: 0x308
+
+class UFamilyAreaMarkerWindow : public UStructureWindow
+{
+    class UScrollBox* FamilyMembersScrollBox;                                         // 0x02D8 (size: 0x8)
+    TSubclassOf<class UFamilyMemberListItemWidget> FamilyMemberListItemWidgetType;    // 0x02E0 (size: 0x8)
+
+}; // Size: 0x2E8
+
+class UFamilyMemberListItemWidget : public UUserWidget
+{
+    class UTextBlock* PlayerNameText;                                                 // 0x0278 (size: 0x8)
+
+}; // Size: 0x288
 
 class UFoodCooldownIconWidget : public UUserWidget
 {
@@ -1642,17 +1705,15 @@ class UPauseScreen : public UAnvilScreen
     class UAnvilButtonWidget* CodeOfConductButton;                                    // 0x02A8 (size: 0x8)
     class UAnvilButtonWidget* LogOffButton;                                           // 0x02B0 (size: 0x8)
     class UAnvilButtonWidget* ExitButton;                                             // 0x02B8 (size: 0x8)
-    class UButton* DiscordSignUpButton;                                               // 0x02C0 (size: 0x8)
 
     void OnOptionsButtonClicked();
     void OnLogOffButtonClicked();
     void OnHelpButtonClicked();
     void OnExitButtonConfirmed();
     void OnExitButtonClicked();
-    void OnDiscordSignUpButtonClicked();
     void OnContinueButtonClicked();
     void OnCodeOfConductButtonClicked();
-}; // Size: 0x2C8
+}; // Size: 0x2C0
 
 class UPlayerInventoryWidget : public UUserWidget
 {
@@ -1937,15 +1998,17 @@ class UVisCanalWaterControllerComponent : public USceneComponent
 {
     float ShiftDelta;                                                                 // 0x02A0 (size: 0x4)
     float ShiftMin;                                                                   // 0x02A4 (size: 0x4)
-    class UPowerUnitDataComponent* PowerUnitDataComponent;                            // 0x02A8 (size: 0x8)
-    class USplineDataComponent* SplineDataComponent;                                  // 0x02B0 (size: 0x8)
-    TArray<class UMaterialInstanceDynamic*> WaterMaterials;                           // 0x02B8 (size: 0x10)
-    class UStaticMeshComponent* SplineWaterMesh;                                      // 0x02C8 (size: 0x8)
-    class UMaterialInstanceDynamic* SplineWaterMaterial;                              // 0x02D0 (size: 0x8)
+    bool bIsWell;                                                                     // 0x02A8 (size: 0x1)
+    class UPowerUnitDataComponent* PowerUnitDataComponent;                            // 0x02B0 (size: 0x8)
+    class USplineDataComponent* SplineDataComponent;                                  // 0x02B8 (size: 0x8)
+    class UWellDataComponent* WellDataComponent;                                      // 0x02C0 (size: 0x8)
+    TArray<class UMaterialInstanceDynamic*> WaterMaterials;                           // 0x02C8 (size: 0x10)
+    class UStaticMeshComponent* SplineWaterMesh;                                      // 0x02D8 (size: 0x8)
+    class UMaterialInstanceDynamic* SplineWaterMaterial;                              // 0x02E0 (size: 0x8)
 
     void OnSplineUpdate();
     void OnCurrentUpdate();
-}; // Size: 0x310
+}; // Size: 0x320
 
 class UVisFoundationDecorMesh : public UStaticMeshComponent
 {
@@ -2052,9 +2115,10 @@ class UVisPlayerVisualsComponent : public UActorComponent
 
 class UVisPowerUnitAnimInstance : public UAnimInstance
 {
-    float PercentageCurrent;                                                          // 0x0348 (size: 0x4)
-    float InFlowDirection;                                                            // 0x034C (size: 0x4)
-    float InFlowHeight;                                                               // 0x0350 (size: 0x4)
+    float InputValue;                                                                 // 0x0348 (size: 0x4)
+    float PercentageCurrent;                                                          // 0x034C (size: 0x4)
+    float InFlowDirection;                                                            // 0x0350 (size: 0x4)
+    float InFlowHeight;                                                               // 0x0354 (size: 0x4)
     class UPowerUnitDataComponent* PowerUnitDataComponent;                            // 0x0358 (size: 0x8)
 
 }; // Size: 0x360

@@ -7,7 +7,6 @@ UPauseScreen::UPauseScreen() {
     this->CodeOfConductButton = NULL;
     this->LogOffButton = NULL;
     this->ExitButton = NULL;
-    this->DiscordSignUpButton = NULL;
 }
 
 void UPauseScreen::OnOptionsButtonClicked() {
@@ -23,9 +22,6 @@ void UPauseScreen::OnExitButtonConfirmed() {
 }
 
 void UPauseScreen::OnExitButtonClicked() {
-}
-
-void UPauseScreen::OnDiscordSignUpButtonClicked() {
 }
 
 void UPauseScreen::OnContinueButtonClicked() {

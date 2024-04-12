@@ -39,6 +39,7 @@ enum class EAnvilPlacementStatus : uint8 {
     RequiresLandscape,
     RequiresWater,
     RequiresSnappping,
+    YouMustBelongToFamily,
     NotAtFullHealth,
 };
 

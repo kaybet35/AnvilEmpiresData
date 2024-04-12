@@ -4,20 +4,134 @@
     "Name": "FoundationSquareDoor_ABP_C",
     "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
     "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "open to close",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "entry [closed]",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 7,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "opening",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 8,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "closing",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
       "TargetSkeleton": {
         "ObjectName": "Skeleton'SK_SquareDoor_Skeleton'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/SK_SquareDoor_Skeleton.0"
       },
-      "GraphAssetPlayerInformation": [
-        {
-          "AnimGraph": {
-            "PlayerNodeIndices": [
-              0,
-              1
-            ]
-          }
-        }
-      ],
       "AnimNodeData": [
         {
           "AnimClassInterface": {
@@ -25,12 +139,12 @@
             "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_ABP.0"
           },
           "Entries": [
-            6,
-            6,
-            6,
+            14,
+            14,
+            14,
             4294967295,
             0,
-            13
+            11
           ],
           "NodeIndex": 0,
           "Flags": "EAnimNodeDataFlags::None"
@@ -41,17 +155,10 @@
             "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_ABP.0"
           },
           "Entries": [
-            6,
-            6,
-            6,
-            4294967295,
-            5,
-            4,
-            3,
-            10,
-            2,
-            1,
-            2147483648
+            14,
+            14,
+            14,
+            4294967295
           ],
           "NodeIndex": 1,
           "Flags": "EAnimNodeDataFlags::None"
@@ -62,26 +169,10 @@
             "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_ABP.0"
           },
           "Entries": [
-            6,
-            6,
-            6,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            13,
-            12,
-            11,
-            10,
-            4294967295,
-            9,
-            9,
-            8,
-            4294967295,
-            7,
-            10,
-            10
+            14,
+            14,
+            14,
+            4294967295
           ],
           "NodeIndex": 2,
           "Flags": "EAnimNodeDataFlags::None"
@@ -92,32 +183,283 @@
             "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_ABP.0"
           },
           "Entries": [
-            6,
-            6,
-            6,
+            14,
+            14,
+            14,
+            4294967295
+          ],
+          "NodeIndex": 3,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FoundationSquareDoor_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_ABP.0"
+          },
+          "Entries": [
+            14,
+            14,
+            14,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
-            13,
-            12,
             11,
             10,
-            4294967295,
-            9,
             9,
             8,
             4294967295,
             7,
-            10,
-            10
+            7,
+            5,
+            4294967295,
+            6,
+            8,
+            8
           ],
-          "NodeIndex": 3,
+          "NodeIndex": 4,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FoundationSquareDoor_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_ABP.0"
+          },
+          "Entries": [
+            14,
+            14,
+            14,
+            4294967295,
+            1,
+            11,
+            2
+          ],
+          "NodeIndex": 5,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FoundationSquareDoor_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_ABP.0"
+          },
+          "Entries": [
+            14,
+            14,
+            14,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            11,
+            10,
+            9,
+            8,
+            4294967295,
+            7,
+            7,
+            5,
+            4294967295,
+            6,
+            8,
+            8
+          ],
+          "NodeIndex": 6,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FoundationSquareDoor_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_ABP.0"
+          },
+          "Entries": [
+            14,
+            14,
+            14,
+            4294967295,
+            3,
+            11,
+            4
+          ],
+          "NodeIndex": 7,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FoundationSquareDoor_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_ABP.0"
+          },
+          "Entries": [
+            14,
+            14,
+            14,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            11,
+            10,
+            9,
+            8,
+            4294967295,
+            7,
+            6,
+            5,
+            4294967295,
+            6,
+            8,
+            8
+          ],
+          "NodeIndex": 8,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FoundationSquareDoor_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_ABP.0"
+          },
+          "Entries": [
+            14,
+            14,
+            14,
+            4294967295,
+            12,
+            11,
+            13
+          ],
+          "NodeIndex": 9,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FoundationSquareDoor_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_ABP.0"
+          },
+          "Entries": [
+            14,
+            14,
+            14,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 10,
           "Flags": "EAnimNodeDataFlags::None"
         }
       ],
       "NodeTypeMap": [
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_StateMachine'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "StateMachineIndexInClass": 3
+              },
+              {
+                "MaxTransitionsPerFrame": 4
+              },
+              {
+                "MaxTransitionsRequests": 5
+              },
+              {
+                "bSkipFirstUpdateTransition": 6
+              },
+              {
+                "bReinitializeOnBecomingRelevant": 7
+              },
+              {
+                "bCreateNotifyMetaData": 8
+              },
+              {
+                "bAllowConduitEntryStates": 9
+              }
+            ],
+            "NumProperties": 10
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_Base'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_StateResult'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "Result": 3
+              },
+              {
+                "Name": 4
+              },
+              {
+                "Group": 5
+              },
+              {
+                "StateIndex": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "ScriptStruct'/Script/Engine.AnimNode_Root'": {
+            "NameToIndexMap": [
+              {
+                "InitialUpdateFunction": 0
+              },
+              {
+                "BecomeRelevantFunction": 1
+              },
+              {
+                "UpdateFunction": 2
+              },
+              {
+                "Result": 3
+              },
+              {
+                "Name": 4
+              },
+              {
+                "Group": 5
+              }
+            ],
+            "NumProperties": 6
+          }
+        },
         {
           "ScriptStruct'/Script/Engine.AnimNode_SequencePlayer'": {
             "NameToIndexMap": [
@@ -261,23 +603,7 @@
           }
         },
         {
-          "ScriptStruct'/Script/Engine.AnimNode_Base'": {
-            "NameToIndexMap": [
-              {
-                "InitialUpdateFunction": 0
-              },
-              {
-                "BecomeRelevantFunction": 1
-              },
-              {
-                "UpdateFunction": 2
-              }
-            ],
-            "NumProperties": 3
-          }
-        },
-        {
-          "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendListByBool'": {
+          "ScriptStruct'/Script/Engine.AnimNode_TransitionResult'": {
             "NameToIndexMap": [
               {
                 "InitialUpdateFunction": 0
@@ -289,93 +615,10 @@
                 "UpdateFunction": 2
               },
               {
-                "BlendPose": 3
-              },
-              {
-                "BlendTime": 4
-              },
-              {
-                "TransitionType": 5
-              },
-              {
-                "BlendType": 6
-              },
-              {
-                "bResetChildOnActivation": 7
-              },
-              {
-                "CustomBlendCurve": 8
-              },
-              {
-                "BlendProfile": 9
-              },
-              {
-                "bActiveValue": 10
+                "bCanEnterTransition": 3
               }
             ],
-            "NumProperties": 11
-          }
-        },
-        {
-          "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendListBase'": {
-            "NameToIndexMap": [
-              {
-                "InitialUpdateFunction": 0
-              },
-              {
-                "BecomeRelevantFunction": 1
-              },
-              {
-                "UpdateFunction": 2
-              },
-              {
-                "BlendPose": 3
-              },
-              {
-                "BlendTime": 4
-              },
-              {
-                "TransitionType": 5
-              },
-              {
-                "BlendType": 6
-              },
-              {
-                "bResetChildOnActivation": 7
-              },
-              {
-                "CustomBlendCurve": 8
-              },
-              {
-                "BlendProfile": 9
-              }
-            ],
-            "NumProperties": 10
-          }
-        },
-        {
-          "ScriptStruct'/Script/Engine.AnimNode_Root'": {
-            "NameToIndexMap": [
-              {
-                "InitialUpdateFunction": 0
-              },
-              {
-                "BecomeRelevantFunction": 1
-              },
-              {
-                "UpdateFunction": 2
-              },
-              {
-                "Result": 3
-              },
-              {
-                "Name": 4
-              },
-              {
-                "Group": 5
-              }
-            ],
-            "NumProperties": 6
+            "NumProperties": 4
           }
         }
       ],
@@ -412,16 +655,6 @@
       },
       {
         "Type": "StructProperty",
-        "Name": "__AnimBlueprintMutables",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 2,
-        "Struct": {
-          "ObjectName": "ScriptStruct'FoundationSquareDoor_ABP_C:AnimBlueprintGeneratedMutableData'",
-          "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_ABP.5"
-        }
-      },
-      {
-        "Type": "StructProperty",
         "Name": "AnimBlueprintExtension_PropertyAccess",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -452,11 +685,51 @@
       },
       {
         "Type": "StructProperty",
-        "Name": "AnimGraphNode_BlendListByBool",
+        "Name": "AnimGraphNode_TransitionResult_2",
         "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 240,
+        "ElementSize": 160,
         "Struct": {
-          "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
           "ObjectPath": "/Script/AnimGraphRuntime"
         }
       },
@@ -472,11 +745,41 @@
       },
       {
         "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
         "Name": "AnimGraphNode_SequencePlayer",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 328,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
           "ObjectPath": "/Script/Engine"
         }
       }
@@ -512,43 +815,72 @@
     "Class": "AnimBlueprintGeneratedClass'Anvil/Content/Animations/Structures/FoundationSquareDoor_ABP.FoundationSquareDoor_ABP_C'",
     "Properties": {
       "UberGraphFrame": {},
-      "__AnimBlueprintMutables": {
-        "__FloatProperty": 0.0
-      },
       "AnimBlueprintExtension_PropertyAccess": {},
       "AnimBlueprintExtension_Base": {},
       "AnimGraphNode_Root": {
         "Result": {
-          "LinkID": 1
+          "LinkID": 10
         }
       },
-      "AnimGraphNode_BlendListByBool": {
-        "BlendPose": [
-          {
-            "LinkID": 2
-          },
-          {
-            "LinkID": 3
-          }
-        ]
+      "AnimGraphNode_TransitionResult_2": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_2": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'FoundationSquareDoor_closing_anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_closing_anim.1"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2": {
+        "Result": {
+          "LinkID": 4
+        }
       },
       "AnimGraphNode_SequencePlayer_1": {
         "Sequence": {
-          "ObjectName": "AnimSequence'SquareDoor_Open_Anim'",
-          "ObjectPath": "Anvil/Content/Animations/Structures/SquareDoor_Open_Anim.1"
+          "ObjectName": "AnimSequence'FoundationSquareDoor_opening_anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_opening_anim.1"
         },
         "PlayRateScaleBiasClampState": {},
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
       },
+      "AnimGraphNode_StateResult_1": {
+        "Result": {
+          "LinkID": 6
+        }
+      },
       "AnimGraphNode_SequencePlayer": {
         "Sequence": {
-          "ObjectName": "AnimSequence'SquareDoor_Closed_Anim'",
-          "ObjectPath": "Anvil/Content/Animations/Structures/SquareDoor_Closed_Anim.1"
+          "ObjectName": "AnimSequence'FoundationSquareDoor_opening_anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/FoundationSquareDoor_opening_anim.1"
         },
         "PlayRateScaleBiasClampState": {},
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult": {
+        "Result": {
+          "LinkID": 8
+        }
+      },
+      "AnimGraphNode_StateMachine": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
       }
     }
   },

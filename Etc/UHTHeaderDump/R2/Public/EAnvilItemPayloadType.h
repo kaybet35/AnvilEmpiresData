@@ -6,6 +6,6 @@ UENUM(BlueprintType)
 enum class EAnvilItemPayloadType : uint8 {
     None,
     Quality,
-    HitConversionProgress,
+    ConversionProgress,
 };
 

@@ -1,0 +1,133 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "IndustryAqueduct_WaterPump_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'IndustryAqueduct_WaterPump_SK_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_WaterPump_SK_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'IndustryAqueduct_WaterPump_SK_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_WaterPump_SK_PhysicsAsset.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'IndustryAqueduct_WaterPump_SK_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_WaterPump_SK_PhysicsAsset.1"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "IndustryAqueduct_WaterPump_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "WaterPumpWheel",
+        "ConstraintBone1": "WaterPumpWheel",
+        "ConstraintBone2": "Root",
+        "Pos2": {
+          "X": 531.3279,
+          "Y": 593.2379,
+          "Z": 166.70624
+        },
+        "PriAxis2": {
+          "X": -1.1324275E-14,
+          "Y": 1.0,
+          "Z": 1.5099575E-07
+        },
+        "SecAxis2": {
+          "X": -1.0,
+          "Y": 1.1435297E-14,
+          "Z": -1.5099586E-07
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "IndustryAqueduct_WaterPump_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 256.4714,
+              "Y": 177.33107,
+              "Z": 196.52109
+            },
+            "Rotation": {
+              "Pitch": 3.1805547E-15,
+              "Yaw": -109.13465,
+              "Roll": -85.19535
+            },
+            "Radius": 580.91345,
+            "Length": 724.7638,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "Root",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "E1C883944A5A17F89703348EDDBAC5AD"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "IndustryAqueduct_WaterPump_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -107.22893,
+              "Y": 15.536119,
+              "Z": -1.7650982
+            },
+            "Rotation": {
+              "Pitch": 84.96853,
+              "Yaw": 90.12945,
+              "Roll": -179.87105
+            },
+            "Radius": 565.4719,
+            "Length": 566.5031,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "WaterPumpWheel",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "B69217944181E14F74EBDCBFFF89AFC3"
+  }
+]

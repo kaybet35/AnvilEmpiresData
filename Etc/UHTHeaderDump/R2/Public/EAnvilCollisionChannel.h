@@ -31,5 +31,6 @@ enum class EAnvilCollisionChannel : uint8 {
     AnvilCollisionChannelMouseInteraction,
     AnvilCollisionChannelIndustry,
     AnvilCollisionChannelBorderRegion,
+    AnvilCollisionChannelFamilyArea,
 };
 

@@ -7,6 +7,7 @@ enum class EAnvilAccessibilityTestResult : uint8 {
     CanUse,
     AccessDeniedBelongsToEnemy,
     AccessDeniedMustBePledged,
+    AccessDeniedMustBeInFamily,
     Error,
 };
 

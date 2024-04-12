@@ -70,6 +70,7 @@ enum class EAnvilStatusMessageType : uint8 {
     RelicTechResearchIncomplete,
     AccessDeniedBelongsToEnemy,
     AccessDeniedMustBePledged,
+    AccessDeniedMustBeInFamily,
     AccessDeniedTooFarToInteract,
     DismantleNoPermission,
     GateIsBreached,

@@ -9,6 +9,9 @@ UCLASS(Blueprintable, NonTransient)
 class ANVIL_API UVisPowerUnitAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float InputValue;
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PercentageCurrent;

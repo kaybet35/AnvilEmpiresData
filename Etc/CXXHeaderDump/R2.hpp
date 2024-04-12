@@ -10,6 +10,15 @@ struct FAcceptedFood
 
 }; // Size: 0x10
 
+struct FAnvilOutput
+{
+    TSubclassOf<class UItemTemplate> OutputCodeName;                                  // 0x0000 (size: 0x8)
+    int32 OutputCodeNameVisVar;                                                       // 0x0008 (size: 0x4)
+    int32 NumHitsToConvert;                                                           // 0x000C (size: 0x4)
+    float TargetHeat;                                                                 // 0x0010 (size: 0x4)
+
+}; // Size: 0x18
+
 struct FAnvilSimActivity
 {
     EAnvilSimActivityState State;                                                     // 0x0000 (size: 0x1)
@@ -49,6 +58,12 @@ struct FCraftingRecipe
 
 }; // Size: 0x30
 
+struct FFamilyMemberData
+{
+    int64 PlayerId;                                                                   // 0x0000 (size: 0x8)
+
+}; // Size: 0x8
+
 struct FFootprintSharedCompEntry
 {
     class UProxyComponent* Comp;                                                      // 0x0000 (size: 0x8)
@@ -72,14 +87,24 @@ struct FHeatingFuel
 
 }; // Size: 0x10
 
-struct FHitConverterOutput
+struct FHitConverterInput
 {
-    TSubclassOf<class UItemTemplate> OutputItemTemplate;                              // 0x0000 (size: 0x8)
-    int32 OutputItemCodeName;                                                         // 0x0008 (size: 0x4)
-    uint32 NumHitsToConvert;                                                          // 0x000C (size: 0x4)
-    float TargetHeat;                                                                 // 0x0010 (size: 0x4)
+    TSubclassOf<class UItemTemplate> InputCodeName;                                   // 0x0000 (size: 0x8)
+    int32 InputCodeNameVisVar;                                                        // 0x0008 (size: 0x4)
+    int32 OutputStackSize;                                                            // 0x000C (size: 0x4)
+    int32 OutputStackSizeVisVar;                                                      // 0x0010 (size: 0x4)
+    int32 NumHitsToConvert;                                                           // 0x0014 (size: 0x4)
 
 }; // Size: 0x18
+
+struct FHitConverterOutput
+{
+    TSubclassOf<class UItemTemplate> OutputCodeName;                                  // 0x0000 (size: 0x8)
+    int32 OutputCodeNameVisVar;                                                       // 0x0008 (size: 0x4)
+    TArray<FHitConverterInput> InputList;                                             // 0x0010 (size: 0x10)
+    TArray<FHitConverterInput> InputListVisVar;                                       // 0x0020 (size: 0x10)
+
+}; // Size: 0x30
 
 struct FHousePledgedPlayerIdArray
 {
@@ -365,6 +390,23 @@ class UAnimalTameProxyComponent : public UProxyComponent
 
 }; // Size: 0x40
 
+class UAnvilDataComponent : public UDataComponent
+{
+    int32 InputItemName;                                                              // 0x00A8 (size: 0x4)
+    uint8 CurrentSelectedOutputIndex;                                                 // 0x00C8 (size: 0x1)
+    TArray<FAnvilOutput> OutputList;                                                  // 0x00E8 (size: 0x10)
+    float HitCounter;                                                                 // 0x00F8 (size: 0x4)
+
+}; // Size: 0x118
+
+class UAnvilProxyComponent : public UProxyComponent
+{
+    TSubclassOf<class UItemTemplate> InputItemName;                                   // 0x0028 (size: 0x8)
+    TArray<FAnvilOutput> OutputList;                                                  // 0x0030 (size: 0x10)
+    EAnvilToolType RequiredTool;                                                      // 0x0040 (size: 0x1)
+
+}; // Size: 0x48
+
 class UArmorDataComponent : public UDataComponent
 {
     EAnvilArmourType HeadArmourType;                                                  // 0x00A8 (size: 0x1)
@@ -531,6 +573,7 @@ class UCollisionVisualizerComponent : public UPrimitiveComponent
     FVector Extents;                                                                  // 0x0540 (size: 0x18)
     FLinearColor Color;                                                               // 0x0558 (size: 0x10)
     bool bHighlight;                                                                  // 0x0568 (size: 0x1)
+    bool bIsCapsule;                                                                  // 0x0569 (size: 0x1)
 
 }; // Size: 0x570
 
@@ -626,6 +669,20 @@ class UEntityTemplate : public UObject
 }; // Size: 0x80
 
 class UEquipmentProxyComponent : public UProxyComponent
+{
+}; // Size: 0x28
+
+class UFamilyAreaMarkerDataComponent : public UDataComponent
+{
+    int32 FamilyId;                                                                   // 0x00A8 (size: 0x4)
+    bool AllowPublicPledging;                                                         // 0x00C8 (size: 0x1)
+    TArray<FFamilyMemberData> FamilyMembers;                                          // 0x00E8 (size: 0x10)
+    int32 VisVarMaxNumFamilyMembers;                                                  // 0x00F8 (size: 0x4)
+    float VisVarRestrictedBoxExtent;                                                  // 0x0118 (size: 0x4)
+
+}; // Size: 0x138
+
+class UFamilyAreaMarkerProxyComponent : public UProxyComponent
 {
 }; // Size: 0x28
 
@@ -735,21 +792,18 @@ class UHeatingProxyComponent : public UProxyComponent
 
 class UHitConverterDataComponent : public UDataComponent
 {
-    int32 InputItemName;                                                              // 0x00A8 (size: 0x4)
-    uint8 CurrentSelectedOutputIndex;                                                 // 0x00C8 (size: 0x1)
-    TArray<FHitConverterOutput> ConverterOutputList;                                  // 0x00E8 (size: 0x10)
-    float HitCounter;                                                                 // 0x00F8 (size: 0x4)
+    uint8 CurrentSelectedOutputIndex;                                                 // 0x00A8 (size: 0x1)
+    TArray<FHitConverterOutput> OutputList;                                           // 0x00C8 (size: 0x10)
+    float HitCounter;                                                                 // 0x00D8 (size: 0x4)
 
-}; // Size: 0x118
+}; // Size: 0xF8
 
 class UHitConverterProxyComponent : public UProxyComponent
 {
-    EAnvilHitConversionType ConversionType;                                           // 0x0028 (size: 0x1)
-    TSubclassOf<class UItemTemplate> InputItemName;                                   // 0x0030 (size: 0x8)
-    TArray<FHitConverterOutput> ConverterOutputList;                                  // 0x0038 (size: 0x10)
-    EAnvilToolType RequiredTool;                                                      // 0x0048 (size: 0x1)
+    TArray<FHitConverterOutput> OutputList;                                           // 0x0028 (size: 0x10)
+    EAnvilToolType RequiredTool;                                                      // 0x0038 (size: 0x1)
 
-}; // Size: 0x50
+}; // Size: 0x40
 
 class UHorseAttachableDataComponent : public UDataComponent
 {
@@ -1133,6 +1187,22 @@ class UPlayerSpawnerProxyComponent : public UProxyComponent
 class UPlayerUnstuckProxyComponent : public UProxyComponent
 {
 }; // Size: 0x28
+
+class UPowerMillDataComponent : public UDataComponent
+{
+    float Rotation;                                                                   // 0x00A8 (size: 0x4)
+
+}; // Size: 0xC8
+
+class UPowerMillProxyComponent : public UProxyComponent
+{
+    FVector PosOffset;                                                                // 0x0028 (size: 0x18)
+    FVector ExitOffset;                                                               // 0x0040 (size: 0x18)
+    float ExitZTolerance;                                                             // 0x0058 (size: 0x4)
+    float MaxRotationSpeed;                                                           // 0x005C (size: 0x4)
+    float RotationAcceleration;                                                       // 0x0060 (size: 0x4)
+
+}; // Size: 0x68
 
 class UPowerToActionConverterProxyComponent : public UProxyComponent
 {
@@ -1678,6 +1748,12 @@ class UVehicleSeatProxyComponent : public UProxyComponent
     float MountedAttackDamageMultiplier;                                              // 0x006C (size: 0x4)
 
 }; // Size: 0x70
+
+class UWellDataComponent : public UDataComponent
+{
+    float TotalLevel;                                                                 // 0x00A8 (size: 0x4)
+
+}; // Size: 0xC8
 
 class UWellProxyComponent : public UProxyComponent
 {

@@ -14,7 +14,7 @@
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__Anvil_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.7"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__Anvil_C:RepairComp'",
@@ -26,19 +26,19 @@
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__Anvil_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.5"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__Anvil_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.6"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__Anvil_C:BoxCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.3"
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__Anvil_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.4"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__Anvil_C:ScorchProxyComponent_0'",
@@ -53,8 +53,8 @@
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.8"
         },
         {
-          "ObjectName": "HitConverterProxyComponent'Default__Anvil_C:HitConverterProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.7"
+          "ObjectName": "AnvilProxyComponent'Default__Anvil_C:AnvilProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.1"
         },
         {
           "ObjectName": "PowerToActionConverterProxyComponent'Default__Anvil_C:PowerToActionConverterProxyComponent_0'",
@@ -67,8 +67,59 @@
       ],
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisAnvil_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.1"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.2"
       }
+    }
+  },
+  {
+    "Type": "AnvilProxyComponent",
+    "Name": "AnvilProxyComponent_0",
+    "Outer": "Default__Anvil_C",
+    "Class": "UScriptClass'AnvilProxyComponent'",
+    "Properties": {
+      "InputItemName": {
+        "ObjectName": "BlueprintGeneratedClass'ProcessedIronHeated_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIronHeated.0"
+      },
+      "OutputList": [
+        {
+          "OutputCodeName": {
+            "ObjectName": "BlueprintGeneratedClass'BladeTool_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTool.1"
+          },
+          "OutputCodeNameVisVar": 0,
+          "NumHitsToConvert": 10,
+          "TargetHeat": 50.0
+        },
+        {
+          "OutputCodeName": {
+            "ObjectName": "BlueprintGeneratedClass'BladeSword_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeSword.1"
+          },
+          "OutputCodeNameVisVar": 0,
+          "NumHitsToConvert": 20,
+          "TargetHeat": 75.0
+        },
+        {
+          "OutputCodeName": {
+            "ObjectName": "BlueprintGeneratedClass'BladeAxe_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeAxe.1"
+          },
+          "OutputCodeNameVisVar": 0,
+          "NumHitsToConvert": 15,
+          "TargetHeat": 55.0
+        },
+        {
+          "OutputCodeName": {
+            "ObjectName": "BlueprintGeneratedClass'BladeTip_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTip.1"
+          },
+          "OutputCodeNameVisVar": 0,
+          "NumHitsToConvert": 15,
+          "TargetHeat": 35.0
+        }
+      ],
+      "RequiredTool": "EAnvilToolType::Hammer"
     }
   },
   {
@@ -161,58 +212,6 @@
     }
   },
   {
-    "Type": "HitConverterProxyComponent",
-    "Name": "HitConverterProxyComponent_0",
-    "Outer": "Default__Anvil_C",
-    "Class": "UScriptClass'HitConverterProxyComponent'",
-    "Properties": {
-      "ConversionType": "EAnvilHitConversionType::ConvertUnderlyingItemOnFirstHit",
-      "InputItemName": {
-        "ObjectName": "BlueprintGeneratedClass'ProcessedIronHeated_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIronHeated.0"
-      },
-      "ConverterOutputList": [
-        {
-          "OutputItemTemplate": {
-            "ObjectName": "BlueprintGeneratedClass'BladeTool_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTool.1"
-          },
-          "OutputItemCodeName": 0,
-          "NumHitsToConvert": 10,
-          "TargetHeat": 50.0
-        },
-        {
-          "OutputItemTemplate": {
-            "ObjectName": "BlueprintGeneratedClass'BladeSword_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeSword.1"
-          },
-          "OutputItemCodeName": 0,
-          "NumHitsToConvert": 20,
-          "TargetHeat": 75.0
-        },
-        {
-          "OutputItemTemplate": {
-            "ObjectName": "BlueprintGeneratedClass'BladeAxe_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeAxe.1"
-          },
-          "OutputItemCodeName": 0,
-          "NumHitsToConvert": 15,
-          "TargetHeat": 55.0
-        },
-        {
-          "OutputItemTemplate": {
-            "ObjectName": "BlueprintGeneratedClass'BladeTip_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTip.1"
-          },
-          "OutputItemCodeName": 0,
-          "NumHitsToConvert": 15,
-          "TargetHeat": 35.0
-        }
-      ],
-      "RequiredTool": "EAnvilToolType::Hammer"
-    }
-  },
-  {
     "Type": "InventoryProxyComponent",
     "Name": "InventoryProxyComponent_0",
     "Outer": "Default__Anvil_C",
@@ -239,6 +238,7 @@
     "Outer": "Default__Anvil_C",
     "Class": "UScriptClass'PowerToActionConverterProxyComponent'",
     "Properties": {
+      "ConversionType": "EAnvilConvertedActionType::AnvilAction",
       "PowerDrainPerAction": 1.0
     }
   },

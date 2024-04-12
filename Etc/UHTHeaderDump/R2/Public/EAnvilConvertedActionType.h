@@ -5,6 +5,7 @@
 UENUM(BlueprintType)
 enum class EAnvilConvertedActionType : uint8 {
     HitAction,
+    AnvilAction,
     HeatBoost,
     NumTypes,
 };

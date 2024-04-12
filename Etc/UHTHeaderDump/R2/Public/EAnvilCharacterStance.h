@@ -10,6 +10,7 @@ enum class EAnvilCharacterStance : uint8 {
     OnHorse,
     OnScorpion,
     OnLadder,
+    OnPowerMill,
     InHoarding,
     HoldingLadderFront,
     HoldingLadderRear,

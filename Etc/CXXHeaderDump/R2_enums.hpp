@@ -2,8 +2,9 @@ enum class EAnvilAccessibilityTestResult {
     CanUse = 0,
     AccessDeniedBelongsToEnemy = 1,
     AccessDeniedMustBePledged = 2,
-    Error = 3,
-    EAnvilAccessibilityTestResult_MAX = 4,
+    AccessDeniedMustBeInFamily = 3,
+    Error = 4,
+    EAnvilAccessibilityTestResult_MAX = 5,
 };
 
 enum class EAnvilAccessibilityType {
@@ -70,10 +71,11 @@ enum class EAnvilCharacterStance {
     OnHorse = 3,
     OnScorpion = 4,
     OnLadder = 5,
-    InHoarding = 6,
-    HoldingLadderFront = 7,
-    HoldingLadderRear = 8,
-    EAnvilCharacterStance_MAX = 9,
+    OnPowerMill = 6,
+    InHoarding = 7,
+    HoldingLadderFront = 8,
+    HoldingLadderRear = 9,
+    EAnvilCharacterStance_MAX = 10,
 };
 
 enum class EAnvilCollisionChannel {
@@ -104,14 +106,16 @@ enum class EAnvilCollisionChannel {
     AnvilCollisionChannelMouseInteraction = 24,
     AnvilCollisionChannelIndustry = 25,
     AnvilCollisionChannelBorderRegion = 26,
-    EAnvilCollisionChannel_MAX = 27,
+    AnvilCollisionChannelFamilyArea = 27,
+    EAnvilCollisionChannel_MAX = 28,
 };
 
 enum class EAnvilConvertedActionType {
     HitAction = 0,
-    HeatBoost = 1,
-    NumTypes = 2,
-    EAnvilConvertedActionType_MAX = 3,
+    AnvilAction = 1,
+    HeatBoost = 2,
+    NumTypes = 3,
+    EAnvilConvertedActionType_MAX = 4,
 };
 
 enum class EAnvilDamageTargetType {
@@ -177,13 +181,6 @@ enum class EAnvilGateState {
     EAnvilGateState_MAX = 4,
 };
 
-enum class EAnvilHitConversionType {
-    ConvertItemAtMaxProgress = 0,
-    ConvertUnderlyingItemOnFirstHit = 1,
-    NumTypes = 2,
-    EAnvilHitConversionType_MAX = 3,
-};
-
 enum class EAnvilInputEventType {
     None = 0,
     PawnInteract = 1,
@@ -225,8 +222,11 @@ enum class EAnvilInputEventType {
     QuenchItems = 37,
     HitConverterNextOutput = 38,
     HitConverterPreviousOutput = 39,
-    PackItems = 40,
-    EAnvilInputEventType_MAX = 41,
+    AnvilNextOutput = 40,
+    AnvilPreviousOutput = 41,
+    PackItems = 42,
+    ToggleFamilyAreaPledgeRestriction = 43,
+    EAnvilInputEventType_MAX = 44,
 };
 
 enum class EAnvilInputResponseType {
@@ -249,7 +249,7 @@ enum class EAnvilItemDurabilityType {
 enum class EAnvilItemPayloadType {
     None = 0,
     Quality = 1,
-    HitConversionProgress = 2,
+    ConversionProgress = 2,
     EAnvilItemPayloadType_MAX = 3,
 };
 
@@ -373,8 +373,9 @@ enum class EAnvilPlacementStatus {
     RequiresLandscape = 32,
     RequiresWater = 33,
     RequiresSnappping = 34,
-    NotAtFullHealth = 35,
-    EAnvilPlacementStatus_MAX = 36,
+    YouMustBelongToFamily = 35,
+    NotAtFullHealth = 36,
+    EAnvilPlacementStatus_MAX = 37,
 };
 
 enum class EAnvilPlayerAimMeshType {
@@ -402,7 +403,8 @@ enum class EAnvilPowerUnitType {
     Pipe = 0,
     Source = 1,
     Sink = 2,
-    EAnvilPowerUnitType_MAX = 3,
+    Extern = 3,
+    EAnvilPowerUnitType_MAX = 4,
 };
 
 enum class EAnvilProfileNameCheckType {
@@ -485,14 +487,16 @@ enum class EAnvilSnappingChannelType {
     CanalSideStart = 10,
     PowerStart = 11,
     PowerEnd = 12,
-    PowerConvertedHitStart = 13,
-    PowerConvertedHitEnd = 14,
+    PowerConvertedAnvilStart = 13,
+    PowerConvertedAnvilEnd = 14,
     PowerConvertedHeatStart = 15,
     PowerConvertedHeatEnd = 16,
     DebugPowerSource = 17,
     NaturalWaterRequired = 18,
     NaturalWaterOptional = 19,
-    EAnvilSnappingChannelType_MAX = 20,
+    PowerConvertedWoodChoppingStationStart = 20,
+    PowerConvertedWoodChoppingStationEnd = 21,
+    EAnvilSnappingChannelType_MAX = 22,
 };
 
 enum class EAnvilSpawnType {
@@ -570,33 +574,34 @@ enum class EAnvilStatusMessageType {
     RelicTechResearchIncomplete = 63,
     AccessDeniedBelongsToEnemy = 64,
     AccessDeniedMustBePledged = 65,
-    AccessDeniedTooFarToInteract = 66,
-    DismantleNoPermission = 67,
-    GateIsBreached = 68,
-    EnemiesNearby = 69,
-    UnstuckStarting = 70,
-    UnstuckTimeRemaining = 71,
-    UnstuckCancelledMovement = 72,
-    UnstuckCancelledEnemyNearby = 73,
-    UnstuckCancelledTooSoon = 74,
-    UnstuckCancelledVehiclePassenger = 75,
-    UnstuckAttemptFailed = 76,
-    LadderTooManyPlayers = 77,
-    LadderNoSpaceToRetract = 78,
-    DrowningNotification = 79,
-    BedClaimed = 80,
-    BedAlreadyClaimed = 81,
-    BedMustHaveHouseOrTentAtTown = 82,
-    BedClaimCleared = 83,
-    BedNotUnderCeiling = 84,
-    HorseNotHungry = 85,
-    PvpIsNerfed = 86,
-    NoItemsForPacking = 87,
-    TooManyOrFewItemsForPacking = 88,
-    NoContainerForPacking = 89,
-    NotAllowedInBorderZone = 90,
-    NumTypes = 91,
-    EAnvilStatusMessageType_MAX = 92,
+    AccessDeniedMustBeInFamily = 66,
+    AccessDeniedTooFarToInteract = 67,
+    DismantleNoPermission = 68,
+    GateIsBreached = 69,
+    EnemiesNearby = 70,
+    UnstuckStarting = 71,
+    UnstuckTimeRemaining = 72,
+    UnstuckCancelledMovement = 73,
+    UnstuckCancelledEnemyNearby = 74,
+    UnstuckCancelledTooSoon = 75,
+    UnstuckCancelledVehiclePassenger = 76,
+    UnstuckAttemptFailed = 77,
+    LadderTooManyPlayers = 78,
+    LadderNoSpaceToRetract = 79,
+    DrowningNotification = 80,
+    BedClaimed = 81,
+    BedAlreadyClaimed = 82,
+    BedMustHaveHouseOrTentAtTown = 83,
+    BedClaimCleared = 84,
+    BedNotUnderCeiling = 85,
+    HorseNotHungry = 86,
+    PvpIsNerfed = 87,
+    NoItemsForPacking = 88,
+    TooManyOrFewItemsForPacking = 89,
+    NoContainerForPacking = 90,
+    NotAllowedInBorderZone = 91,
+    NumTypes = 92,
+    EAnvilStatusMessageType_MAX = 93,
 };
 
 enum class EAnvilStimulusType {

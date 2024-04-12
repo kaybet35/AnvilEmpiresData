@@ -11,6 +11,11 @@ enum class EBuildSiteCategory : uint8 {
     Industry,
     Water,
     Smithing,
+    Cooking,
+    Vehicles,
+    Farming,
+    Lumber,
+    Stone,
     NumTypes,
 };
 

@@ -21,7 +21,10 @@ EActionButtonType = {
     SetTownName = 18,
     PushLadder = 19,
     RetractLadder = 20,
-    EActionButtonType_MAX = 21,
+    FamilyPledgeRestrictedOn = 21,
+    FamilyPledgeRestrictedOff = 22,
+    ClaimFamilyArea = 23,
+    EActionButtonType_MAX = 24,
 }
 
 ---@enum EAnvilScreenType
@@ -57,8 +60,13 @@ EBuildSiteCategory = {
     Industry = 4,
     Water = 5,
     Smithing = 6,
-    NumTypes = 7,
-    EBuildSiteCategory_MAX = 8,
+    Cooking = 7,
+    Vehicles = 8,
+    Farming = 9,
+    Lumber = 10,
+    Stone = 11,
+    NumTypes = 12,
+    EBuildSiteCategory_MAX = 13,
 }
 
 ---@enum EBuildSiteVisibility
@@ -162,8 +170,10 @@ EHUDWindowType = {
     Housing = 19,
     Crafting = 20,
     Packing = 21,
-    Count = 22,
-    EHUDWindowType_MAX = 23,
+    Anvil = 22,
+    FamilyAreaMarker = 23,
+    Count = 24,
+    EHUDWindowType_MAX = 25,
 }
 
 ---@enum EIncomingAttackDirection

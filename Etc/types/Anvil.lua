@@ -203,6 +203,23 @@ AVisAnimal = {}
 
 
 
+---@class AVisAnvilStructure : AVisStructure
+---@field AnvilDataComponent UAnvilDataComponent
+---@field ConvertedItemMeshComponent USkeletalMeshComponent
+---@field ConvertedItemMeshMap TMap<FString, USkeletalMesh>
+---@field ConvertedItemMeshMaterialOverride UMaterial
+---@field HitVFXLocation USceneComponent
+---@field HitSuccessVFX UNiagaraSystem
+---@field HitFailVFX UNiagaraSystem
+---@field HitSuccessSoundCue USoundCue
+---@field HitFailSoundCue USoundCue
+AVisAnvilStructure = {}
+
+---@param Old float
+---@param New float
+function AVisAnvilStructure:OnHitCounterChanged(Old, New) end
+
+
 ---@class AVisBeaconTower : AVisStructure
 ---@field BeaconTowerDataComponent UBeaconTowerDataComponent
 AVisBeaconTower = {}
@@ -266,6 +283,12 @@ AVisEffect = {}
 
 
 
+---@class AVisFamilyMarkerArea : AVisStructure
+---@field FamilyAreaMarkerDataComponent UFamilyAreaMarkerDataComponent
+AVisFamilyMarkerArea = {}
+
+
+
 ---@class AVisFarm : AVisStructure
 ---@field FarmDecalComponent UDecalComponent
 ---@field FertilizeDecalComponent UDecalComponent
@@ -318,9 +341,8 @@ AVisHeatingStructure = {}
 
 ---@class AVisHitConverterStructure : AVisStructure
 ---@field HitConverterDataComponent UHitConverterDataComponent
----@field ConvertedItemMeshComponent USkeletalMeshComponent
----@field ConvertedItemMeshMap TMap<FString, USkeletalMesh>
----@field ConvertedItemMeshMaterialOverride UMaterial
+---@field ConvertedItemMeshComponent UStaticMeshComponent
+---@field ItemMeshInfoMap TMap<FString, FHitConverterItemMeshInfo>
 ---@field HitVFXLocation USceneComponent
 ---@field HitSuccessVFX UNiagaraSystem
 ---@field HitFailVFX UNiagaraSystem
@@ -459,6 +481,14 @@ function AVisPlayer:BP_UpdateNightShroudMaterials(NightTimeNormalized) end
 function AVisPlayer:BP_OnHeldItemChanged() end
 ---@return FVector
 function AVisPlayer:AnimGetVelocity() end
+
+
+---@class AVisPowerMill : AVisStructure
+---@field PowerMillDataComponent UPowerMillDataComponent
+---@field SKMesh USkeletalMeshComponent
+---@field AnimInst UVisPowerUnitAnimInstance
+AVisPowerMill = {}
+
 
 
 ---@class AVisRefinery : AVisStructure
@@ -645,6 +675,10 @@ FBuildSiteList = {}
 
 
 
+---@class FCachedCameraState
+FCachedCameraState = {}
+
+
 ---@class FCameraRotateState
 FCameraRotateState = {}
 
@@ -740,6 +774,13 @@ FGraphData = {}
 ---@class FHealthData : FTableRowBase
 ---@field MaxHealth float
 FHealthData = {}
+
+
+
+---@class FHitConverterItemMeshInfo
+---@field Meshes TArray<UStaticMesh>
+---@field MaterialOverrides TArray<UMaterialInterface>
+FHitConverterItemMeshInfo = {}
 
 
 
@@ -1061,6 +1102,19 @@ UAnvilSliderWidget = {}
 function UAnvilSliderWidget:NativeOnSliderChanged(Value) end
 
 
+---@class UAnvilWindow : UStructureWindow
+---@field CurrentSelectedOutputImage UImage
+---@field OutputPreviousButton UButton
+---@field OutputNextButton UButton
+UAnvilWindow = {}
+
+function UAnvilWindow:OutputPreviousButtonClicked() end
+function UAnvilWindow:OutputNextButtonClicked() end
+---@param Old uint8
+---@param New uint8
+function UAnvilWindow:OnCurrentSelectedOutputIndexChanged(Old, New) end
+
+
 ---@class UBeaconTowerMapIcon : UMapIcon
 ---@field IconSlot UCanvasPanelSlot
 UBeaconTowerMapIcon = {}
@@ -1248,6 +1302,19 @@ function UFactionSelectScreen:FactionNovanAtCapacityVisibility() end
 function UFactionSelectScreen:FactionMirrishAtCapacityVisibility() end
 ---@return ESlateVisibility
 function UFactionSelectScreen:FactionAranicAtCapacityVisibility() end
+
+
+---@class UFamilyAreaMarkerWindow : UStructureWindow
+---@field FamilyMembersScrollBox UScrollBox
+---@field FamilyMemberListItemWidgetType TSubclassOf<UFamilyMemberListItemWidget>
+UFamilyAreaMarkerWindow = {}
+
+
+
+---@class UFamilyMemberListItemWidget : UUserWidget
+---@field PlayerNameText UTextBlock
+UFamilyMemberListItemWidget = {}
+
 
 
 ---@class UFoodCooldownIconWidget : UUserWidget
@@ -1746,7 +1813,6 @@ function UPackingWindow:OnPackButtonClicked() end
 ---@field CodeOfConductButton UAnvilButtonWidget
 ---@field LogOffButton UAnvilButtonWidget
 ---@field ExitButton UAnvilButtonWidget
----@field DiscordSignUpButton UButton
 UPauseScreen = {}
 
 function UPauseScreen:OnOptionsButtonClicked() end
@@ -1754,7 +1820,6 @@ function UPauseScreen:OnLogOffButtonClicked() end
 function UPauseScreen:OnHelpButtonClicked() end
 function UPauseScreen:OnExitButtonConfirmed() end
 function UPauseScreen:OnExitButtonClicked() end
-function UPauseScreen:OnDiscordSignUpButtonClicked() end
 function UPauseScreen:OnContinueButtonClicked() end
 function UPauseScreen:OnCodeOfConductButtonClicked() end
 
@@ -2053,8 +2118,10 @@ UVisBuildGhostComponent = {}
 ---@class UVisCanalWaterControllerComponent : USceneComponent
 ---@field ShiftDelta float
 ---@field ShiftMin float
+---@field bIsWell boolean
 ---@field PowerUnitDataComponent UPowerUnitDataComponent
 ---@field SplineDataComponent USplineDataComponent
+---@field WellDataComponent UWellDataComponent
 ---@field WaterMaterials TArray<UMaterialInstanceDynamic>
 ---@field SplineWaterMesh UStaticMeshComponent
 ---@field SplineWaterMaterial UMaterialInstanceDynamic
@@ -2168,6 +2235,7 @@ UVisPlayerVisualsComponent = {}
 
 
 ---@class UVisPowerUnitAnimInstance : UAnimInstance
+---@field InputValue float
 ---@field PercentageCurrent float
 ---@field InFlowDirection float
 ---@field InFlowHeight float

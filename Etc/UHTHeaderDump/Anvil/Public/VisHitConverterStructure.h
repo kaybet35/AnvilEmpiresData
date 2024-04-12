@@ -1,15 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "HitConverterItemMeshInfo.h"
 #include "VisStructure.h"
 #include "VisHitConverterStructure.generated.h"
 
 class UHitConverterDataComponent;
-class UMaterial;
 class UNiagaraSystem;
 class USceneComponent;
-class USkeletalMesh;
-class USkeletalMeshComponent;
 class USoundCue;
+class UStaticMeshComponent;
 
 UCLASS(Blueprintable)
 class ANVIL_API AVisHitConverterStructure : public AVisStructure {
@@ -20,13 +19,10 @@ public:
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    USkeletalMeshComponent* ConvertedItemMeshComponent;
+    UStaticMeshComponent* ConvertedItemMeshComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<FString, USkeletalMesh*> ConvertedItemMeshMap;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UMaterial* ConvertedItemMeshMaterialOverride;
+    TMap<FString, FHitConverterItemMeshInfo> ItemMeshInfoMap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* HitVFXLocation;
