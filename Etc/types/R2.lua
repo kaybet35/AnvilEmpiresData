@@ -814,6 +814,9 @@ UHorseAttachableDataComponent = {}
 
 
 ---@class UHorseAttachableProxyComponent : UProxyComponent
+---@field SlotOffset FVector
+---@field AngleTolerance float
+---@field DistanceTolerance float
 ---@field AttachedEntityType TSubclassOf<UEntityTemplate>
 ---@field DetachedEntityType TSubclassOf<UEntityTemplate>
 ---@field HorseEntityType TSubclassOf<UEntityTemplate>
@@ -1705,6 +1708,7 @@ UUpgradeProxyComponent = {}
 ---@field RotationalSpeedYaw float
 ---@field FrontAxleCastHit FVector
 ---@field RearAxleCastHit FVector
+---@field AttachedTargetId int64
 ---@field SeatOccupancyBits uint8
 UVehicleMovementDataComponent = {}
 

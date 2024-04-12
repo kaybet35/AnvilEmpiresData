@@ -208,8 +208,8 @@ enum class EAnvilInputEventType {
     WithdrawSilver = 25,
     MarketShopDataRequest = 26,
     RepairStationRepairRequest = 27,
-    TryAttachToHorse = 28,
-    TryDetachFromHorse = 29,
+    AttachAnimal = 28,
+    DetachAnimal = 29,
     MouseSelect = 30,
     DisableSnapping = 31,
     Unstuck = 32,
@@ -600,8 +600,9 @@ enum class EAnvilStatusMessageType {
     TooManyOrFewItemsForPacking = 89,
     NoContainerForPacking = 90,
     NotAllowedInBorderZone = 91,
-    NumTypes = 92,
-    EAnvilStatusMessageType_MAX = 93,
+    SlotOccupied = 92,
+    NumTypes = 93,
+    EAnvilStatusMessageType_MAX = 94,
 };
 
 enum class EAnvilStimulusType {

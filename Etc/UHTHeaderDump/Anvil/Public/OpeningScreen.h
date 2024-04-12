@@ -26,10 +26,10 @@ public:
     UAnvilButtonWidget* RoadmapButton;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* Version;
+    UTextBlock* VersionText;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* CL;
+    UTextBlock* CLText;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UButton* RoadmapPopupButton;
@@ -46,9 +46,15 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UButton* DiscordRoleButton;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UButton* DevModeButton;
+    
     UOpeningScreen();
 
 protected:
+    UFUNCTION(BlueprintCallable)
+    void UpdateVersionText();
+    
     UFUNCTION(BlueprintCallable)
     void ReenableDiscordRoleButton();
     
@@ -69,6 +75,9 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void OnDiscordRoleButtonClicked();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnDevModeButtonClicked();
     
     UFUNCTION(BlueprintCallable)
     bool IsDiscordRoleButtonEnabled();

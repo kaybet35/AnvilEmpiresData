@@ -1734,15 +1734,17 @@ function UNextTestWidget:OnDiscordButtonClicked() end
 ---@field ExitButton UAnvilButtonWidget
 ---@field OptionsButton UAnvilButtonWidget
 ---@field RoadmapButton UAnvilButtonWidget
----@field Version UTextBlock
----@field CL UTextBlock
+---@field VersionText UTextBlock
+---@field CLText UTextBlock
 ---@field RoadmapPopupButton UButton
 ---@field NextTestWidget UNextTestWidget
 ---@field DisclaimerWidget UDisclaimerWidget
 ---@field AnnouncementText UTextBlock
 ---@field DiscordRoleButton UButton
+---@field DevModeButton UButton
 UOpeningScreen = {}
 
+function UOpeningScreen:UpdateVersionText() end
 function UOpeningScreen:ReenableDiscordRoleButton() end
 function UOpeningScreen:OnRoadmapClicked() end
 function UOpeningScreen:OnRoadmapButtonClicked() end
@@ -1750,6 +1752,7 @@ function UOpeningScreen:OnPlayButtonClicked() end
 function UOpeningScreen:OnOptionsButtonClicked() end
 function UOpeningScreen:OnExitButtonClicked() end
 function UOpeningScreen:OnDiscordRoleButtonClicked() end
+function UOpeningScreen:OnDevModeButtonClicked() end
 ---@return boolean
 function UOpeningScreen:IsDiscordRoleButtonEnabled() end
 ---@return FText

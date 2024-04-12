@@ -958,7 +958,7 @@ class UAnvilGameInstance : public UGameInstance
     bool GetIsNight();
     void GetDayCurrentSeconds(int32& OutSeconds);
     void DumpProperties(FString OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter);
-}; // Size: 0x1668
+}; // Size: 0x1670
 
 class UAnvilKeyEntryWidget : public UUserWidget
 {
@@ -1631,14 +1631,16 @@ class UOpeningScreen : public UAnvilScreen
     class UAnvilButtonWidget* ExitButton;                                             // 0x0298 (size: 0x8)
     class UAnvilButtonWidget* OptionsButton;                                          // 0x02A0 (size: 0x8)
     class UAnvilButtonWidget* RoadmapButton;                                          // 0x02A8 (size: 0x8)
-    class UTextBlock* Version;                                                        // 0x02B0 (size: 0x8)
-    class UTextBlock* CL;                                                             // 0x02B8 (size: 0x8)
+    class UTextBlock* VersionText;                                                    // 0x02B0 (size: 0x8)
+    class UTextBlock* CLText;                                                         // 0x02B8 (size: 0x8)
     class UButton* RoadmapPopupButton;                                                // 0x02C0 (size: 0x8)
     class UNextTestWidget* NextTestWidget;                                            // 0x02C8 (size: 0x8)
     class UDisclaimerWidget* DisclaimerWidget;                                        // 0x02D0 (size: 0x8)
     class UTextBlock* AnnouncementText;                                               // 0x02D8 (size: 0x8)
     class UButton* DiscordRoleButton;                                                 // 0x02E0 (size: 0x8)
+    class UButton* DevModeButton;                                                     // 0x02E8 (size: 0x8)
 
+    void UpdateVersionText();
     void ReenableDiscordRoleButton();
     void OnRoadmapClicked();
     void OnRoadmapButtonClicked();
@@ -1646,9 +1648,10 @@ class UOpeningScreen : public UAnvilScreen
     void OnOptionsButtonClicked();
     void OnExitButtonClicked();
     void OnDiscordRoleButtonClicked();
+    void OnDevModeButtonClicked();
     bool IsDiscordRoleButtonEnabled();
     FText GetAnnouncementText();
-}; // Size: 0x2F0
+}; // Size: 0x300
 
 class UOptionsMenuAudioWidget : public UUserWidget
 {

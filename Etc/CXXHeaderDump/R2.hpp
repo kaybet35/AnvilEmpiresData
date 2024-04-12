@@ -815,11 +815,14 @@ class UHorseAttachableDataComponent : public UDataComponent
 
 class UHorseAttachableProxyComponent : public UProxyComponent
 {
-    TSubclassOf<class UEntityTemplate> AttachedEntityType;                            // 0x0028 (size: 0x8)
-    TSubclassOf<class UEntityTemplate> DetachedEntityType;                            // 0x0030 (size: 0x8)
-    TSubclassOf<class UEntityTemplate> HorseEntityType;                               // 0x0038 (size: 0x8)
+    FVector SlotOffset;                                                               // 0x0028 (size: 0x18)
+    float AngleTolerance;                                                             // 0x0040 (size: 0x4)
+    float DistanceTolerance;                                                          // 0x0044 (size: 0x4)
+    TSubclassOf<class UEntityTemplate> AttachedEntityType;                            // 0x0048 (size: 0x8)
+    TSubclassOf<class UEntityTemplate> DetachedEntityType;                            // 0x0050 (size: 0x8)
+    TSubclassOf<class UEntityTemplate> HorseEntityType;                               // 0x0058 (size: 0x8)
 
-}; // Size: 0x40
+}; // Size: 0x60
 
 class UHousingDataComponent : public UDataComponent
 {
@@ -1706,9 +1709,10 @@ class UVehicleMovementDataComponent : public UDataComponent
     float RotationalSpeedYaw;                                                         // 0x00D8 (size: 0x4)
     FVector FrontAxleCastHit;                                                         // 0x00F8 (size: 0x18)
     FVector RearAxleCastHit;                                                          // 0x0128 (size: 0x18)
-    uint8 SeatOccupancyBits;                                                          // 0x0158 (size: 0x1)
+    int64 AttachedTargetId;                                                           // 0x0158 (size: 0x8)
+    uint8 SeatOccupancyBits;                                                          // 0x0178 (size: 0x1)
 
-}; // Size: 0x178
+}; // Size: 0x198
 
 class UVehicleMovementProxyComponent : public UProxyComponent
 {

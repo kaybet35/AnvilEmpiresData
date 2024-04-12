@@ -96,6 +96,7 @@ enum class EAnvilStatusMessageType : uint8 {
     TooManyOrFewItemsForPacking,
     NoContainerForPacking,
     NotAllowedInBorderZone,
+    SlotOccupied,
     NumTypes,
 };
 
