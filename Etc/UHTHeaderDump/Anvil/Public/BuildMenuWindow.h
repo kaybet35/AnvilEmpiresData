@@ -1,6 +1,5 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilBuildLocationType -FallbackName=EAnvilBuildLocationType
 #include "EBuildSiteCategory.h"
 #include "HUDWindow.h"
 #include "Templates/SubclassOf.h"
@@ -29,7 +28,7 @@ protected:
     TMap<EBuildSiteCategory, UTexture2D*> TabButtonIcons;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<EAnvilBuildLocationType> BuildLocations;
+    int32 BuildLocation;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

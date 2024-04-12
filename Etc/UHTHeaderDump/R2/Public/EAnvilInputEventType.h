@@ -48,5 +48,7 @@ enum class EAnvilInputEventType : uint8 {
     AnvilPreviousOutput,
     PackItems,
     ToggleFamilyAreaPledgeRestriction,
+    StartPowerMill,
+    StopPowerMill,
 };
 

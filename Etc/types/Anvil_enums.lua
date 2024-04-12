@@ -24,7 +24,9 @@ EActionButtonType = {
     FamilyPledgeRestrictedOn = 21,
     FamilyPledgeRestrictedOff = 22,
     ClaimFamilyArea = 23,
-    EActionButtonType_MAX = 24,
+    StartPowerMill = 24,
+    StopPowerMill = 25,
+    EActionButtonType_MAX = 26,
 }
 
 ---@enum EAnvilScreenType

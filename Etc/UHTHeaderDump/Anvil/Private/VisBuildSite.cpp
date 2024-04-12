@@ -17,6 +17,7 @@ AVisBuildSite::AVisBuildSite(const FObjectInitializer& ObjectInitializer) : Supe
     this->Category = EBuildSiteCategory::Settlement;
     this->Order = 0;
     this->BuildSiteVisibility = EBuildSiteVisibility::AlwaysVisible;
+    this->BuildSiteCDO = NULL;
     this->ArrowComponent = (UArrowComponent*)RootComponent;
     this->Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
     this->BuildCollisionDecalComponent = CreateDefaultSubobject<UDecalComponent>(TEXT("BuildCollisionDecalComponent"));

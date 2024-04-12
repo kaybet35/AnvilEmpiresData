@@ -506,7 +506,7 @@ UBuildSiteDataComponent = {}
 
 ---@class UBuildSiteProxyComponent : UProxyComponent
 ---@field BuiltStructureEntity TSubclassOf<UEntityTemplate>
----@field RequiredLocationType EAnvilBuildLocationType
+---@field BuildLocation int32
 ---@field CompatibleSurfaceTypes int32
 ---@field RequiredTool EAnvilToolType
 ---@field bRequiresTownHall boolean
@@ -1189,6 +1189,7 @@ UPlayerUnstuckProxyComponent = {}
 
 
 ---@class UPowerMillDataComponent : UDataComponent
+---@field bAnimalActive boolean
 ---@field Rotation float
 UPowerMillDataComponent = {}
 
@@ -1574,7 +1575,6 @@ UStructureProtectionProxyComponent = {}
 ---@field bCannotBeDismantled boolean
 ---@field bRequireSupport boolean
 ---@field StructureType EAnvilBuildStructureType
----@field BuiltLocation EAnvilBuildLocationType
 UStructureProxyComponent = {}
 
 

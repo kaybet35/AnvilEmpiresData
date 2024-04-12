@@ -8,6 +8,7 @@ UOpeningScreen::UOpeningScreen() {
     this->Version = NULL;
     this->CL = NULL;
     this->RoadmapPopupButton = NULL;
+    this->NextTestWidget = NULL;
     this->DisclaimerWidget = NULL;
     this->AnnouncementText = NULL;
     this->DiscordRoleButton = NULL;

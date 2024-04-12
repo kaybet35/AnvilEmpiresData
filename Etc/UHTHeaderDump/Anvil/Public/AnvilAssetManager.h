@@ -1,9 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilBuildLocationType -FallbackName=EAnvilBuildLocationType
-#include "BuildSiteList.h"
 #include "AnvilAssetManager.generated.h"
 
+class AVisBuildSite;
 class UObjectLibrary;
 
 USTRUCT(BlueprintType)
@@ -21,7 +20,7 @@ private:
     UObjectLibrary* VisItemObjectLibrary;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<EAnvilBuildLocationType, FBuildSiteList> BuildSitesPerLocationMap;
+    TArray<AVisBuildSite*> BuildSiteList;
     
 public:
     FAnvilAssetManager();

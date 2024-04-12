@@ -36,23 +36,21 @@ enum class EAnvilArmourType {
 };
 
 enum class EAnvilBuildLocationType {
-    Everywhere = 0,
-    Foundation = 1,
-    Landscape = 2,
-    LargeRock = 3,
-    Foundation_Landscape = 4,
-    Foundation_LargeRock = 5,
-    Landscape_LargeRock = 6,
-    Marketplace = 7,
-    Industry = 8,
-    Shore = 9,
-    UnderFoundationCeiling = 10,
-    _EndDirectBuildable = 11,
-    Deployed = 12,
-    Stable = 13,
-    Static = 14,
-    Count = 15,
-    EAnvilBuildLocationType_MAX = 16,
+    Foundation = 0,
+    Landscape = 1,
+    LargeRock = 2,
+    Water = 3,
+    _BeginRequirements = 4,
+    Marketplace = 5,
+    Industry = 6,
+    Shore = 7,
+    UnderFoundationCeiling = 8,
+    _BeingNotDirectBuildable = 9,
+    Deployed = 10,
+    Stable = 11,
+    Static = 12,
+    _Count = 13,
+    EAnvilBuildLocationType_MAX = 14,
 };
 
 enum class EAnvilBuildStructureType {
@@ -226,7 +224,9 @@ enum class EAnvilInputEventType {
     AnvilPreviousOutput = 41,
     PackItems = 42,
     ToggleFamilyAreaPledgeRestriction = 43,
-    EAnvilInputEventType_MAX = 44,
+    StartPowerMill = 44,
+    StopPowerMill = 45,
+    EAnvilInputEventType_MAX = 46,
 };
 
 enum class EAnvilInputResponseType {

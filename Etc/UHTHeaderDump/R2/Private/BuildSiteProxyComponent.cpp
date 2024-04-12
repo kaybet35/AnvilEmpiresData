@@ -2,7 +2,7 @@
 
 UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->BuiltStructureEntity = NULL;
-    this->RequiredLocationType = EAnvilBuildLocationType::Everywhere;
+    this->BuildLocation = 0;
     this->CompatibleSurfaceTypes = 0;
     this->RequiredTool = EAnvilToolType::None;
     this->bRequiresTownHall = false;

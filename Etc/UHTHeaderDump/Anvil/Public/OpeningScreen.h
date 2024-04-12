@@ -6,6 +6,7 @@
 class UAnvilButtonWidget;
 class UButton;
 class UDisclaimerWidget;
+class UNextTestWidget;
 class UTextBlock;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -32,6 +33,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UButton* RoadmapPopupButton;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UNextTestWidget* NextTestWidget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDisclaimerWidget* DisclaimerWidget;

@@ -3,6 +3,6 @@
 
 class ABPVisWellT2BuildSite_C : public AVisBuildSite
 {
-}; // Size: 0x460
+}; // Size: 0x468
 
 #endif

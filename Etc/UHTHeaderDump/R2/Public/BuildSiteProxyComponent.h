@@ -1,6 +1,5 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EAnvilBuildLocationType.h"
 #include "EAnvilToolType.h"
 #include "ProxyComponent.h"
 #include "Templates/SubclassOf.h"
@@ -17,7 +16,7 @@ public:
     TSubclassOf<UEntityTemplate> BuiltStructureEntity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EAnvilBuildLocationType RequiredLocationType;
+    int32 BuildLocation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CompatibleSurfaceTypes;

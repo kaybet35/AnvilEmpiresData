@@ -18,7 +18,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisAnvil_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.14"
       }
     },
     "SuperStruct": {
@@ -26,6 +26,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Smoke",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "AnvilMesh",
@@ -64,7 +75,7 @@
       },
       "ConvertedItemMeshComponent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisAnvil_C:ConvertedItemMeshComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.15"
       },
       "ConvertedItemMeshMap": [
         {
@@ -104,25 +115,21 @@
           }
         }
       ],
-      "ConvertedItemMeshMaterialOverride": {
-        "ObjectName": "Material'HeatedItem'",
-        "ObjectPath": "Anvil/Content/FX/Materials/HeatedItem.0"
-      },
       "HitVFXLocation": {
         "ObjectName": "SceneComponent'Default__BPVisAnvil_C:HitVFXLocation'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.9"
       },
       "HitSuccessVFX": {
         "ObjectName": "NiagaraSystem'ForgeImpact'",
-        "ObjectPath": "Anvil/Content/FX/Niagara/ForgeImpact.28"
+        "ObjectPath": "Anvil/Content/FX/Niagara/ForgeImpact.30"
       },
       "HitFailVFX": {
         "ObjectName": "NiagaraSystem'ArmourIronImpact2'",
         "ObjectPath": "Anvil/Content/FX/Niagara/ArmourIronImpact2.54"
       },
       "HitSuccessSoundCue": {
-        "ObjectName": "SoundCue'Axe2HAIronImpact_Cue'",
-        "ObjectPath": "Anvil/Content/Audio/SFX/Axe2H/Axe2HAIronImpact_Cue.0"
+        "ObjectName": "SoundCue'HammerAnvilImpact_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HammerAnvilImpact_Cue.0"
       },
       "HitFailSoundCue": {
         "ObjectName": "SoundCue'Axe1HLeatherImpact_Cue'",
@@ -130,7 +137,7 @@
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisAnvil_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.20"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconIndustryAnvil'",
@@ -139,7 +146,7 @@
       "BuildSiteCategory": "EBuildSiteCategory::Smithing",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisAnvil_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.19"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisAnvil_C:HealthDataComponent'",
@@ -147,15 +154,15 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisAnvil_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.18"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisAnvil_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.17"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisAnvil_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.10"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisAnvil_C:ArrowComponent'",
@@ -215,7 +222,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisAnvil_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.16"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisAnvil_C:ArrowComponent'",
@@ -228,6 +235,25 @@
     "Name": "HealthDataComponent",
     "Outer": "Default__BPVisAnvil_C",
     "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Smoke_GEN_VARIABLE",
+    "Outer": "BPVisAnvil_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'IngotSmoke'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/IngotSmoke.9"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": -6.859118,
+        "Y": 1.4210855E-14,
+        "Z": 112.74252
+      },
+      "bVisible": false
+    }
   },
   {
     "Type": "SceneComponent",
@@ -270,7 +296,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisAnvil_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.8"
       },
       "VariableGuid": "D82C2CC7-4AB252F5-8E1ED9A8-F54408F4",
       "InternalVariableName": "DefaultSceneRoot"
@@ -288,12 +314,36 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisAnvil_C:AnvilMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.21"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisAnvil_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.13"
+        }
+      ],
       "VariableGuid": "078D6C4F-4D0617D7-5AAE87BF-CC443993",
       "InternalVariableName": "AnvilMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisAnvil_C:Smoke_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.7"
+      },
+      "VariableGuid": "984D682E-478BCA9C-609A7A8B-6054E82E",
+      "InternalVariableName": "Smoke"
     }
   },
   {
@@ -305,18 +355,22 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisAnvil_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.12"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisAnvil_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAnvil_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.13"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisAnvil_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.11"
       }
     }
   },

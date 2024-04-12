@@ -1,7 +1,7 @@
 #include "ConstructionFacilityProxyComponent.h"
 
 UConstructionFacilityProxyComponent::UConstructionFacilityProxyComponent() {
-    this->LocationType = EAnvilBuildLocationType::Everywhere;
+    this->LocationType = EAnvilBuildLocationType::Stable;
 }
 
 

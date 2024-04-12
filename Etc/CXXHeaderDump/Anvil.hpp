@@ -8,9 +8,9 @@ struct FAnvilAssetManager
     class UObjectLibrary* EntityTemplateObjectLibrary;                                // 0x0000 (size: 0x8)
     class UObjectLibrary* ItemTemplateObjectLibrary;                                  // 0x0008 (size: 0x8)
     class UObjectLibrary* VisItemObjectLibrary;                                       // 0x0010 (size: 0x8)
-    TMap<class EAnvilBuildLocationType, class FBuildSiteList> BuildSitesPerLocationMap; // 0x0158 (size: 0x50)
+    TArray<class AVisBuildSite*> BuildSiteList;                                       // 0x0018 (size: 0x10)
 
-}; // Size: 0x1A8
+}; // Size: 0x168
 
 struct FAnvilDataTableManager
 {
@@ -67,12 +67,6 @@ struct FAutoMoveState
 {
 }; // Size: 0xC
 
-struct FBuildSiteList
-{
-    TArray<class AVisBuildSite*> List;                                                // 0x0000 (size: 0x10)
-
-}; // Size: 0x10
-
 struct FCachedCameraState
 {
 }; // Size: 0xC
@@ -87,12 +81,13 @@ struct FClientConfig
     FString AnvilServiceHttpUrl;                                                      // 0x0010 (size: 0x10)
     FString DiscordRoleServerUrl;                                                     // 0x0020 (size: 0x10)
     FString Announcement;                                                             // 0x0030 (size: 0x10)
+    FString NextTestUnixTimestamp;                                                    // 0x0040 (size: 0x10)
 
-}; // Size: 0x40
+}; // Size: 0x50
 
 struct FClientConfigManager
 {
-}; // Size: 0x58
+}; // Size: 0x68
 
 struct FClientConnectionRequest
 {
@@ -346,7 +341,7 @@ class AMainMenuGameMode : public AAnvilGameModeBase
 
 class AMainMenuPlayerController : public AAnvilPlayerController
 {
-}; // Size: 0x888
+}; // Size: 0x880
 
 class AMapBorderActor : public ACameraActor
 {
@@ -449,15 +444,14 @@ class AVisAnvilStructure : public AVisStructure
     class UAnvilDataComponent* AnvilDataComponent;                                    // 0x0480 (size: 0x8)
     class USkeletalMeshComponent* ConvertedItemMeshComponent;                         // 0x0488 (size: 0x8)
     TMap<class FString, class USkeletalMesh*> ConvertedItemMeshMap;                   // 0x0490 (size: 0x50)
-    class UMaterial* ConvertedItemMeshMaterialOverride;                               // 0x04E0 (size: 0x8)
-    class USceneComponent* HitVFXLocation;                                            // 0x04E8 (size: 0x8)
-    class UNiagaraSystem* HitSuccessVFX;                                              // 0x04F0 (size: 0x8)
-    class UNiagaraSystem* HitFailVFX;                                                 // 0x04F8 (size: 0x8)
-    class USoundCue* HitSuccessSoundCue;                                              // 0x0500 (size: 0x8)
-    class USoundCue* HitFailSoundCue;                                                 // 0x0508 (size: 0x8)
+    class USceneComponent* HitVFXLocation;                                            // 0x04E0 (size: 0x8)
+    class UNiagaraSystem* HitSuccessVFX;                                              // 0x04E8 (size: 0x8)
+    class UNiagaraSystem* HitFailVFX;                                                 // 0x04F0 (size: 0x8)
+    class USoundCue* HitSuccessSoundCue;                                              // 0x04F8 (size: 0x8)
+    class USoundCue* HitFailSoundCue;                                                 // 0x0500 (size: 0x8)
 
     void OnHitCounterChanged(const float& Old, const float& New);
-}; // Size: 0x518
+}; // Size: 0x510
 
 class AVisBeaconTower : public AVisStructure
 {
@@ -474,12 +468,13 @@ class AVisBuildSite : public AVisActor
     EBuildSiteCategory Category;                                                      // 0x0410 (size: 0x1)
     int32 Order;                                                                      // 0x0414 (size: 0x4)
     EBuildSiteVisibility BuildSiteVisibility;                                         // 0x0418 (size: 0x1)
-    class UArrowComponent* ArrowComponent;                                            // 0x0420 (size: 0x8)
-    class UStaticMeshComponent* Mesh;                                                 // 0x0428 (size: 0x8)
-    class UDecalComponent* BuildCollisionDecalComponent;                              // 0x0430 (size: 0x8)
-    class UMaterialInterface* BuildSiteMaterial;                                      // 0x0438 (size: 0x8)
+    class UBuildSiteProxyComponent* BuildSiteCDO;                                     // 0x0420 (size: 0x8)
+    class UArrowComponent* ArrowComponent;                                            // 0x0428 (size: 0x8)
+    class UStaticMeshComponent* Mesh;                                                 // 0x0430 (size: 0x8)
+    class UDecalComponent* BuildCollisionDecalComponent;                              // 0x0438 (size: 0x8)
+    class UMaterialInterface* BuildSiteMaterial;                                      // 0x0440 (size: 0x8)
 
-}; // Size: 0x460
+}; // Size: 0x468
 
 class AVisCart : public AVisVehicle
 {
@@ -765,9 +760,9 @@ class AVisSpline : public AVisStructure
 
 class AVisSplineBuildSite : public AVisBuildSite
 {
-    class UVisSplineComponent* SplineComponent;                                       // 0x0460 (size: 0x8)
+    class UVisSplineComponent* SplineComponent;                                       // 0x0468 (size: 0x8)
 
-}; // Size: 0x468
+}; // Size: 0x470
 
 class AVisStaticTorch : public AVisStructure
 {
@@ -948,13 +943,13 @@ class UAnvilGameInstance : public UGameInstance
     TArray<uint8> ConnectTokenBuffer;                                                 // 0x0280 (size: 0x10)
     class UAnvilCharacterSave* CharacterSave;                                         // 0x0290 (size: 0x8)
     class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x0298 (size: 0x8)
-    FAnvilAssetManager AssetManager;                                                  // 0x02A0 (size: 0x1A8)
-    FAnvilOptionsManager OptionsManager;                                              // 0x0448 (size: 0x1A0)
-    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x05E8 (size: 0x8)
-    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x05F0 (size: 0x10)
-    TArray<class AVisActor*> VisActorList;                                            // 0x0600 (size: 0x10)
-    TArray<class AVisActor*> TravelVisActorList;                                      // 0x0610 (size: 0x10)
-    FClientConfigManager ClientConfigManager;                                         // 0x0620 (size: 0x58)
+    FAnvilAssetManager AssetManager;                                                  // 0x02A0 (size: 0x168)
+    FAnvilOptionsManager OptionsManager;                                              // 0x0408 (size: 0x1A0)
+    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x05A8 (size: 0x8)
+    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x05B0 (size: 0x10)
+    TArray<class AVisActor*> VisActorList;                                            // 0x05C0 (size: 0x10)
+    TArray<class AVisActor*> TravelVisActorList;                                      // 0x05D0 (size: 0x10)
+    FClientConfigManager ClientConfigManager;                                         // 0x05E0 (size: 0x68)
 
     void GetVisActors(TArray<class AVisActor*>& OutVisActorList);
     void GetVersion(int32& OutMajor, int32& OutMinor, int32& OutPatch, int32& OutCL);
@@ -963,7 +958,7 @@ class UAnvilGameInstance : public UGameInstance
     bool GetIsNight();
     void GetDayCurrentSeconds(int32& OutSeconds);
     void DumpProperties(FString OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter);
-}; // Size: 0x1698
+}; // Size: 0x1668
 
 class UAnvilKeyEntryWidget : public UUserWidget
 {
@@ -1092,10 +1087,10 @@ class UBuildMenuWindow : public UHUDWindow
     class UGridPanelWidget* StructureButtonGrid;                                      // 0x02B8 (size: 0x8)
     TSubclassOf<class UBuildMenuTabButton> TabButtonClass;                            // 0x02C0 (size: 0x8)
     TMap<class EBuildSiteCategory, class UTexture2D*> TabButtonIcons;                 // 0x02C8 (size: 0x50)
-    TArray<EAnvilBuildLocationType> BuildLocations;                                   // 0x0318 (size: 0x10)
-    class UBuildMenuTabButton* CurrentTabButton;                                      // 0x0328 (size: 0x8)
+    int32 BuildLocation;                                                              // 0x0318 (size: 0x4)
+    class UBuildMenuTabButton* CurrentTabButton;                                      // 0x0320 (size: 0x8)
 
-}; // Size: 0x338
+}; // Size: 0x330
 
 class UChatEntryWidget : public UUserWidget
 {
@@ -1618,6 +1613,18 @@ class UMarketShopWindow : public UStructureWindow
     FText GetSilverAmountText();
 }; // Size: 0x2E8
 
+class UNextTestWidget : public UUserWidget
+{
+    class UTextBlock* NextTestText;                                                   // 0x0278 (size: 0x8)
+    class UTextBlock* CountdownText;                                                  // 0x0280 (size: 0x8)
+    class UAnvilButtonWidget* ReturnButton;                                           // 0x0288 (size: 0x8)
+    class UAnvilButtonWidget* DiscordButton;                                          // 0x0290 (size: 0x8)
+
+    void UpdateText();
+    void OnReturnButtonClicked();
+    void OnDiscordButtonClicked();
+}; // Size: 0x2A0
+
 class UOpeningScreen : public UAnvilScreen
 {
     class UAnvilButtonWidget* PlayButton;                                             // 0x0290 (size: 0x8)
@@ -1627,9 +1634,10 @@ class UOpeningScreen : public UAnvilScreen
     class UTextBlock* Version;                                                        // 0x02B0 (size: 0x8)
     class UTextBlock* CL;                                                             // 0x02B8 (size: 0x8)
     class UButton* RoadmapPopupButton;                                                // 0x02C0 (size: 0x8)
-    class UDisclaimerWidget* DisclaimerWidget;                                        // 0x02C8 (size: 0x8)
-    class UTextBlock* AnnouncementText;                                               // 0x02D0 (size: 0x8)
-    class UButton* DiscordRoleButton;                                                 // 0x02D8 (size: 0x8)
+    class UNextTestWidget* NextTestWidget;                                            // 0x02C8 (size: 0x8)
+    class UDisclaimerWidget* DisclaimerWidget;                                        // 0x02D0 (size: 0x8)
+    class UTextBlock* AnnouncementText;                                               // 0x02D8 (size: 0x8)
+    class UButton* DiscordRoleButton;                                                 // 0x02E0 (size: 0x8)
 
     void ReenableDiscordRoleButton();
     void OnRoadmapClicked();
@@ -1640,7 +1648,7 @@ class UOpeningScreen : public UAnvilScreen
     void OnDiscordRoleButtonClicked();
     bool IsDiscordRoleButtonEnabled();
     FText GetAnnouncementText();
-}; // Size: 0x2E8
+}; // Size: 0x2F0
 
 class UOptionsMenuAudioWidget : public UUserWidget
 {

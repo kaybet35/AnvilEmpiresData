@@ -8,6 +8,9 @@ class R2_API UPowerMillDataComponent : public UDataComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bAnimalActive;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Rotation;
     
     UPowerMillDataComponent(const FObjectInitializer& ObjectInitializer);

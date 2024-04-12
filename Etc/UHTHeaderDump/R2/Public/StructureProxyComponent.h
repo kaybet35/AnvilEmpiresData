@@ -1,6 +1,5 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EAnvilBuildLocationType.h"
 #include "EAnvilBuildStructureType.h"
 #include "ProxyComponent.h"
 #include "StructureProxyComponent.generated.h"
@@ -17,9 +16,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilBuildStructureType StructureType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EAnvilBuildLocationType BuiltLocation;
     
     UStructureProxyComponent();
 

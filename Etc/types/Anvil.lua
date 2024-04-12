@@ -207,7 +207,6 @@ AVisAnimal = {}
 ---@field AnvilDataComponent UAnvilDataComponent
 ---@field ConvertedItemMeshComponent USkeletalMeshComponent
 ---@field ConvertedItemMeshMap TMap<FString, USkeletalMesh>
----@field ConvertedItemMeshMaterialOverride UMaterial
 ---@field HitVFXLocation USceneComponent
 ---@field HitSuccessVFX UNiagaraSystem
 ---@field HitFailVFX UNiagaraSystem
@@ -234,6 +233,7 @@ AVisBeaconTower = {}
 ---@field Category EBuildSiteCategory
 ---@field Order int32
 ---@field BuildSiteVisibility EBuildSiteVisibility
+---@field BuildSiteCDO UBuildSiteProxyComponent
 ---@field ArrowComponent UArrowComponent
 ---@field Mesh UStaticMeshComponent
 ---@field BuildCollisionDecalComponent UDecalComponent
@@ -609,7 +609,7 @@ AvisLadder = {}
 ---@field EntityTemplateObjectLibrary UObjectLibrary
 ---@field ItemTemplateObjectLibrary UObjectLibrary
 ---@field VisItemObjectLibrary UObjectLibrary
----@field BuildSitesPerLocationMap TMap<EAnvilBuildLocationType, FBuildSiteList>
+---@field BuildSiteList TArray<AVisBuildSite>
 FAnvilAssetManager = {}
 
 
@@ -669,12 +669,6 @@ FAudioVolumeClass = {}
 FAutoMoveState = {}
 
 
----@class FBuildSiteList
----@field List TArray<AVisBuildSite>
-FBuildSiteList = {}
-
-
-
 ---@class FCachedCameraState
 FCachedCameraState = {}
 
@@ -688,6 +682,7 @@ FCameraRotateState = {}
 ---@field AnvilServiceHttpUrl FString
 ---@field DiscordRoleServerUrl FString
 ---@field Announcement FString
+---@field NextTestUnixTimestamp FString
 FClientConfig = {}
 
 
@@ -1144,7 +1139,7 @@ UBuildMenuTabButton = {}
 ---@field StructureButtonGrid UGridPanelWidget
 ---@field TabButtonClass TSubclassOf<UBuildMenuTabButton>
 ---@field TabButtonIcons TMap<EBuildSiteCategory, UTexture2D>
----@field BuildLocations TArray<EAnvilBuildLocationType>
+---@field BuildLocation int32
 ---@field CurrentTabButton UBuildMenuTabButton
 UBuildMenuWindow = {}
 
@@ -1722,6 +1717,18 @@ function UMarketShopWindow:GetSilverAmountVisibility() end
 function UMarketShopWindow:GetSilverAmountText() end
 
 
+---@class UNextTestWidget : UUserWidget
+---@field NextTestText UTextBlock
+---@field CountdownText UTextBlock
+---@field ReturnButton UAnvilButtonWidget
+---@field DiscordButton UAnvilButtonWidget
+UNextTestWidget = {}
+
+function UNextTestWidget:UpdateText() end
+function UNextTestWidget:OnReturnButtonClicked() end
+function UNextTestWidget:OnDiscordButtonClicked() end
+
+
 ---@class UOpeningScreen : UAnvilScreen
 ---@field PlayButton UAnvilButtonWidget
 ---@field ExitButton UAnvilButtonWidget
@@ -1730,6 +1737,7 @@ function UMarketShopWindow:GetSilverAmountText() end
 ---@field Version UTextBlock
 ---@field CL UTextBlock
 ---@field RoadmapPopupButton UButton
+---@field NextTestWidget UNextTestWidget
 ---@field DisclaimerWidget UDisclaimerWidget
 ---@field AnnouncementText UTextBlock
 ---@field DiscordRoleButton UButton

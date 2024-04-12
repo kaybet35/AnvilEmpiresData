@@ -4,7 +4,6 @@
 #include "VisAnvilStructure.generated.h"
 
 class UAnvilDataComponent;
-class UMaterial;
 class UNiagaraSystem;
 class USceneComponent;
 class USkeletalMesh;
@@ -24,9 +23,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FString, USkeletalMesh*> ConvertedItemMeshMap;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UMaterial* ConvertedItemMeshMaterialOverride;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* HitVFXLocation;

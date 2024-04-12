@@ -19,6 +19,8 @@
 ---@field BPRetractLadderActionButton UBPRetractLadderActionButton_C
 ---@field BPReturnToPledgedTownActionButton UBPReturnToPledgedTownActionButton_C
 ---@field BPSetTownNameActionButton UBPSetTownNameActionButton_C
+---@field BPStartPowerMillActionButton UBPStartPowerMillActionButton_C
+---@field BPStopPowerMillActionButton UBPStopPowerMillActionButton_C
 ---@field BPUpgradeActionButton UBPUpgradeActionButton_C
 ---@field BPWithdrawSilverActionButton UBPWithdrawSilverActionButton_C
 UBPActionStrip_C = {}

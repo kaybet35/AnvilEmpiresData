@@ -21,9 +21,11 @@ class UBPActionStrip_C : public UActionStrip
     class UBPRetractLadderActionButton_C* BPRetractLadderActionButton;                // 0x02F8 (size: 0x8)
     class UBPReturnToPledgedTownActionButton_C* BPReturnToPledgedTownActionButton;    // 0x0300 (size: 0x8)
     class UBPSetTownNameActionButton_C* BPSetTownNameActionButton;                    // 0x0308 (size: 0x8)
-    class UBPUpgradeActionButton_C* BPUpgradeActionButton;                            // 0x0310 (size: 0x8)
-    class UBPWithdrawSilverActionButton_C* BPWithdrawSilverActionButton;              // 0x0318 (size: 0x8)
+    class UBPStartPowerMillActionButton_C* BPStartPowerMillActionButton;              // 0x0310 (size: 0x8)
+    class UBPStopPowerMillActionButton_C* BPStopPowerMillActionButton;                // 0x0318 (size: 0x8)
+    class UBPUpgradeActionButton_C* BPUpgradeActionButton;                            // 0x0320 (size: 0x8)
+    class UBPWithdrawSilverActionButton_C* BPWithdrawSilverActionButton;              // 0x0328 (size: 0x8)
 
-}; // Size: 0x320
+}; // Size: 0x330
 
 #endif

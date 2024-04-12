@@ -510,7 +510,7 @@ class UBuildSiteDataComponent : public UDataComponent
 class UBuildSiteProxyComponent : public UProxyComponent
 {
     TSubclassOf<class UEntityTemplate> BuiltStructureEntity;                          // 0x0028 (size: 0x8)
-    EAnvilBuildLocationType RequiredLocationType;                                     // 0x0030 (size: 0x1)
+    int32 BuildLocation;                                                              // 0x0030 (size: 0x4)
     int32 CompatibleSurfaceTypes;                                                     // 0x0034 (size: 0x4)
     EAnvilToolType RequiredTool;                                                      // 0x0038 (size: 0x1)
     bool bRequiresTownHall;                                                           // 0x0039 (size: 0x1)
@@ -1190,9 +1190,10 @@ class UPlayerUnstuckProxyComponent : public UProxyComponent
 
 class UPowerMillDataComponent : public UDataComponent
 {
-    float Rotation;                                                                   // 0x00A8 (size: 0x4)
+    bool bAnimalActive;                                                               // 0x00A8 (size: 0x1)
+    float Rotation;                                                                   // 0x00C8 (size: 0x4)
 
-}; // Size: 0xC8
+}; // Size: 0xE8
 
 class UPowerMillProxyComponent : public UProxyComponent
 {
@@ -1575,7 +1576,6 @@ class UStructureProxyComponent : public UProxyComponent
     bool bCannotBeDismantled;                                                         // 0x0028 (size: 0x1)
     bool bRequireSupport;                                                             // 0x0029 (size: 0x1)
     EAnvilBuildStructureType StructureType;                                           // 0x002A (size: 0x1)
-    EAnvilBuildLocationType BuiltLocation;                                            // 0x002B (size: 0x1)
 
 }; // Size: 0x30
 

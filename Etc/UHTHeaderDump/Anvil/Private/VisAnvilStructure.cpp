@@ -6,14 +6,13 @@
 AVisAnvilStructure::AVisAnvilStructure(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->AnvilDataComponent = CreateDefaultSubobject<UAnvilDataComponent>(TEXT("AnvilDataComponent"));
     this->ConvertedItemMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ConvertedItemMeshComponent"));
-    this->ConvertedItemMeshMaterialOverride = NULL;
     this->HitVFXLocation = CreateDefaultSubobject<USceneComponent>(TEXT("HitVFXLocation"));
     this->HitSuccessVFX = NULL;
     this->HitFailVFX = NULL;
     this->HitSuccessSoundCue = NULL;
     this->HitFailSoundCue = NULL;
-    this->HitVFXLocation->SetupAttachment(RootComponent);
     this->ConvertedItemMeshComponent->SetupAttachment(RootComponent);
+    this->HitVFXLocation->SetupAttachment(RootComponent);
 }
 
 void AVisAnvilStructure::OnHitCounterChanged(const float& Old, const float& New) {

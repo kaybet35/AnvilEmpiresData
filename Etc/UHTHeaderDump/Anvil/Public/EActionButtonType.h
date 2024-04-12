@@ -28,5 +28,7 @@ enum class EActionButtonType : uint8 {
     FamilyPledgeRestrictedOn,
     FamilyPledgeRestrictedOff,
     ClaimFamilyArea,
+    StartPowerMill,
+    StopPowerMill,
 };
 
