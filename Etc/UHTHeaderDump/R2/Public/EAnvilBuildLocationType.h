@@ -8,15 +8,14 @@ enum class EAnvilBuildLocationType : uint8 {
     Landscape,
     LargeRock,
     Water,
-    _BeginRequirements,
+    _Unused,
     Marketplace,
     Industry,
     Shore,
     UnderFoundationCeiling,
-    _BeingNotDirectBuildable,
+    AdditionalCollisionAllowWater,
     Deployed,
     Stable,
     Static,
-    _Count,
 };
 

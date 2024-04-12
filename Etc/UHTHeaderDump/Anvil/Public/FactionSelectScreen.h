@@ -6,6 +6,8 @@
 
 class UAnvilButtonWidget;
 class UButton;
+class UCheckBox;
+class UHorizontalBox;
 class UTextBlock;
 class UThrobber;
 
@@ -38,6 +40,12 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UThrobber* DownloadingThrobber;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCheckBox* ServerBrowserCheckBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UHorizontalBox* ServerBrowserHorizontalBox;
+    
 public:
     UFactionSelectScreen();
 
@@ -68,6 +76,9 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetThrobberVisibility();
+    
+    UFUNCTION(BlueprintCallable)
+    ESlateVisibility GetServerBrowserCheckBoxVisibility();
     
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetDeleteProfileButtonVisibility();

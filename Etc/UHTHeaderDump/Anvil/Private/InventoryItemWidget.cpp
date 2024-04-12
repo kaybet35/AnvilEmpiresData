@@ -7,6 +7,7 @@ UInventoryItemWidget::UInventoryItemWidget() {
     this->DurabilityBar = NULL;
     this->SubtypeIconRelic = NULL;
     this->OverEncumberedImage = NULL;
+    this->PublicIconImage = NULL;
     this->HitConversionProgressBar = NULL;
     this->QualityIconImage = NULL;
 }

@@ -8,7 +8,5 @@ enum EEntitySerializationType {
     SerializationTypePlayer,
     SerializationTypeController,
     SerializationTypeRefinery,
-    SerializationTypeAnimal = 6,
-    SerializationTypeVehicle,
 };
 

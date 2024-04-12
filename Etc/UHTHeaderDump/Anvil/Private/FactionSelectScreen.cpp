@@ -9,6 +9,8 @@ UFactionSelectScreen::UFactionSelectScreen() {
     this->FactionMirrishAtCapacityText = NULL;
     this->FactionNovanAtCapacityText = NULL;
     this->DownloadingThrobber = NULL;
+    this->ServerBrowserCheckBox = NULL;
+    this->ServerBrowserHorizontalBox = NULL;
 }
 
 void UFactionSelectScreen::OnFactionNovanButtonClicked() {
@@ -40,6 +42,10 @@ bool UFactionSelectScreen::IsDeleteProfileButtonEnabled() {
 }
 
 ESlateVisibility UFactionSelectScreen::GetThrobberVisibility() {
+    return ESlateVisibility::Visible;
+}
+
+ESlateVisibility UFactionSelectScreen::GetServerBrowserCheckBoxVisibility() {
     return ESlateVisibility::Visible;
 }
 

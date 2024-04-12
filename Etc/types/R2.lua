@@ -160,7 +160,7 @@ FHousePledgedPlayerIdArray = {}
 ---@field Count int32
 ---@field SlotType EAnvilItemType
 ---@field Durability float
----@field bIsRelic boolean
+---@field ItemFlags uint8
 ---@field Payload uint8
 ---@field StackLimit int32
 ---@field bIsDisabled boolean
@@ -182,7 +182,7 @@ FItemCost = {}
 ---@field ItemType TSubclassOf<UItemTemplate>
 ---@field ItemCodeName int32
 ---@field Count int32
----@field bIsRelic boolean
+---@field ItemFlags uint8
 FItemCount = {}
 
 
@@ -415,6 +415,16 @@ UArmorDataComponent = {}
 UArmorProxyComponent = {}
 
 
+---@class UBarnProxyComponent : UProxyComponent
+---@field ParentType TSubclassOf<UEntityTemplate>
+---@field ChildType TSubclassOf<UEntityTemplate>
+---@field FoodType TSubclassOf<UItemTemplate>
+---@field BreedingHoursMin uint8
+---@field BreedingHoursMax uint8
+UBarnProxyComponent = {}
+
+
+
 ---@class UBaseBuildSiteEntity : UEntityTemplate
 ---@field BuildSiteComp UBuildSiteProxyComponent
 ---@field TeamComp UTeamProxyComponent
@@ -518,6 +528,7 @@ UBuildSiteDataComponent = {}
 ---@field bBuildableInEnemyTerritory boolean
 ---@field bBuildableNearEnemies boolean
 ---@field bAllowRapidBuild boolean
+---@field DontMigrateFootprintToBuiltEntity boolean
 ---@field TierPrerequisite uint8
 ---@field RequiredDeployable TSubclassOf<UItemTemplate>
 ---@field MaxHeightShift float
@@ -641,6 +652,30 @@ UDestroyableProxyComponent = {}
 
 ---@class UEditorSpawnerProxyComponent : UProxyComponent
 UEditorSpawnerProxyComponent = {}
+
+
+---@class UEntityAttachableDataComponent : UDataComponent
+---@field AttachedNewEntityType int32
+---@field DetachedNewEntityType int32
+---@field TargetEntityType int32
+UEntityAttachableDataComponent = {}
+
+
+
+---@class UEntityAttachableProxyComponent : UProxyComponent
+---@field SlotId uint8
+---@field SlotOffset FVector
+---@field DetachLocation FVector
+---@field SlotYaw float
+---@field DetachYaw float
+---@field AngleTolerance float
+---@field DistanceTolerance float
+---@field DetachMaxZDelta float
+---@field AttachedNewEntityType TSubclassOf<UEntityTemplate>
+---@field DetachedNewEntityType TSubclassOf<UEntityTemplate>
+---@field TargetEntityTypes TArray<TSubclassOf<UEntityTemplate>>
+UEntityAttachableProxyComponent = {}
+
 
 
 ---@class UEntityTemplate : UObject
@@ -827,6 +862,7 @@ UHorseAttachableProxyComponent = {}
 ---@class UHousingDataComponent : UDataComponent
 ---@field IsForCampsOnly uint8
 ---@field PlayerCapacity uint8
+---@field AllowPublicPledging boolean
 ---@field PledgedPlayerIds FHousePledgedPlayerIdArray
 UHousingDataComponent = {}
 
@@ -940,6 +976,7 @@ UInventoryProxyComponent = {}
 ---@field HealthLimitRestored float
 ---@field StaminaLimitRestored float
 ---@field QuantityPerCrate uint16
+---@field TownCurrencyValue uint16
 ---@field StunChance float
 ---@field StunDuration float
 ---@field StunThrowDistance float
@@ -1020,6 +1057,7 @@ UMarketShopProxyComponent = {}
 ---@field Position FVector
 ---@field Rotation FRotator
 ---@field ProjectToLandscape uint8
+---@field SkipFootprintValidation uint8
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
 ---@field StepAngle float
@@ -1708,7 +1746,6 @@ UUpgradeProxyComponent = {}
 ---@field RotationalSpeedYaw float
 ---@field FrontAxleCastHit FVector
 ---@field RearAxleCastHit FVector
----@field AttachedTargetId int64
 ---@field SeatOccupancyBits uint8
 UVehicleMovementDataComponent = {}
 

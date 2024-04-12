@@ -72,7 +72,7 @@
       "ObjectPath": "Anvil/Content/UI/BPFooterContainer.2"
     },
     "Properties": {
-      "FooterWidth": 520.0,
+      "FooterWidth": 770.0,
       "NamedSlotBindings": [
         {
           "Name": "FooterSlot0",
@@ -133,12 +133,6 @@
     "Template": {
       "ObjectName": "BPHousePlayerInventoryWidgetBox_C'Default__BPHousePlayerInventoryWidgetBox_C'",
       "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHousePlayerInventoryWidgetBox.1"
-    },
-    "Properties": {
-      "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPHouseWindow_C:WidgetTree.HorizontalBox_62.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.26"
-      }
     }
   },
   {
@@ -162,14 +156,14 @@
     },
     "Properties": {
       "WidthOverride": 310.19034,
-      "MinDesiredWidth": 520.0,
+      "MinDesiredWidth": 770.0,
       "bOverride_MinDesiredWidth": true,
       "NamedSlotBindings": [
         {
           "Name": "MainAreaSlot0",
           "Content": {
-            "ObjectName": "HorizontalBox'BPHouseWindow_C:WidgetTree.HorizontalBox_62'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.20"
+            "ObjectName": "BPHousePlayerInventoryWidgetBox_C'BPHouseWindow_C:WidgetTree.PlayerInventoriesBox'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.5"
           }
         }
       ]
@@ -307,13 +301,13 @@
       "ObjectPath": "Anvil/Content/UI/BPSubHeaderContainer.2"
     },
     "Properties": {
-      "SubHeaderWidth": 520.0,
+      "SubHeaderWidth": 770.0,
       "NamedSlotBindings": [
         {
           "Name": "SubHeaderSlot0",
           "Content": {
             "ObjectName": "HorizontalBox'BPHouseWindow_C:WidgetTree.HorizontalBox_3'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.19"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.20"
           }
         }
       ]
@@ -345,7 +339,7 @@
     "Properties": {
       "LayoutData": {
         "Offsets": {
-          "Left": -140.0,
+          "Left": -340.0,
           "Top": 200.0
         },
         "Anchors": {
@@ -382,8 +376,9 @@
     "Properties": {
       "LayoutData": {
         "Offsets": {
+          "Left": -200.0,
           "Top": 200.0,
-          "Right": 520.0,
+          "Right": 770.0,
           "Bottom": 40.0
         },
         "Anchors": {
@@ -404,6 +399,173 @@
       "Content": {
         "ObjectName": "BPAnvilPanel_C'BPHouseWindow_C:WidgetTree.StructurePanel'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.1"
+      }
+    }
+  },
+  {
+    "Type": "CheckBox",
+    "Name": "HouseAreaRestrictedCheckBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CheckBox'",
+    "Properties": {
+      "WidgetStyle": {
+        "UncheckedImage": {
+          "ImageSize": {
+            "X": 96.0,
+            "Y": 32.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.802083,
+              "G": 0.802083,
+              "B": 0.802083,
+              "A": 1.0,
+              "Hex": "FFE8E8E8"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'buttonPublicOrder'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/buttonPublicOrder.0"
+          }
+        },
+        "UncheckedHoveredImage": {
+          "ImageSize": {
+            "X": 96.0,
+            "Y": 32.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'buttonPublicOrder'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/buttonPublicOrder.0"
+          }
+        },
+        "UncheckedPressedImage": {
+          "ImageSize": {
+            "X": 96.0,
+            "Y": 32.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.109375,
+              "G": 0.109375,
+              "B": 0.109375,
+              "A": 1.0,
+              "Hex": "FF5D5D5D"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'buttonPublicOrder'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/buttonPublicOrder.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/CheckBox.png"
+        },
+        "CheckedImage": {
+          "ImageSize": {
+            "X": 96.0,
+            "Y": 32.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'buttonPrivateOrder'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/buttonPrivateOrder.0"
+          }
+        },
+        "CheckedHoveredImage": {
+          "ImageSize": {
+            "X": 96.0,
+            "Y": 32.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 1.0,
+              "Hex": "FFFFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'buttonPrivateOrder'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/buttonPrivateOrder.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/CheckBox.png"
+        },
+        "CheckedPressedImage": {
+          "ImageSize": {
+            "X": 96.0,
+            "Y": 32.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.109375,
+              "G": 0.109375,
+              "B": 0.109375,
+              "A": 1.0,
+              "Hex": "FF5D5D5D"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'buttonPrivateOrder'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/buttonPrivateOrder.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/CheckBox.png"
+        },
+        "UndeterminedImage": {
+          "ImageSize": {
+            "X": 96.0,
+            "Y": 32.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.770833,
+              "G": 0.770833,
+              "B": 0.770833,
+              "A": 1.0,
+              "Hex": "FFE4E4E4"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'buttonPublicOrder'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/buttonPublicOrder.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/CheckBox_Checked_Hovered.png"
+        },
+        "UndeterminedHoveredImage": {
+          "ImageSize": {
+            "X": 96.0,
+            "Y": 32.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'buttonPublicOrder'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/buttonPublicOrder.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/CheckBox_Checked_Hovered.png"
+        },
+        "UndeterminedPressedImage": {
+          "ImageSize": {
+            "X": 96.0,
+            "Y": 32.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.234375,
+              "G": 0.234375,
+              "B": 0.234375,
+              "A": 1.0,
+              "Hex": "FF858585"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'buttonPublicOrder'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/buttonPublicOrder.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/CheckBox_Checked_Hovered.png"
+        },
+        "Padding": {
+          "Left": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPHouseWindow_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_5'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.26"
       }
     }
   },
@@ -449,19 +611,13 @@
         {
           "ObjectName": "HorizontalBoxSlot'BPHouseWindow_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_2'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.23"
-        }
-      ]
-    }
-  },
-  {
-    "Type": "HorizontalBox",
-    "Name": "HorizontalBox_62",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'HorizontalBox'",
-    "Properties": {
-      "Slots": [
+        },
         {
-          "ObjectName": "HorizontalBoxSlot'BPHouseWindow_C:WidgetTree.HorizontalBox_62.HorizontalBoxSlot_0'",
+          "ObjectName": "HorizontalBoxSlot'BPHouseWindow_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.27"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPHouseWindow_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_5'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.26"
         }
       ]
@@ -477,7 +633,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPHouseWindow_C:WidgetTree.HorizontalBox_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.19"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.20"
       },
       "Content": {
         "ObjectName": "BPStatusWidget_C'BPHouseWindow_C:WidgetTree.StaminaStatus'",
@@ -495,7 +651,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPHouseWindow_C:WidgetTree.HorizontalBox_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.19"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.20"
       },
       "Content": {
         "ObjectName": "BPStatusWidget_C'BPHouseWindow_C:WidgetTree.HealthStatus'",
@@ -513,7 +669,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPHouseWindow_C:WidgetTree.HorizontalBox_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.19"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.20"
       },
       "Content": {
         "ObjectName": "BPStatusWidget_C'BPHouseWindow_C:WidgetTree.DecayStatus'",
@@ -531,7 +687,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPHouseWindow_C:WidgetTree.HorizontalBox_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.19"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.20"
       },
       "Content": {
         "ObjectName": "BPStatusWidget_C'BPHouseWindow_C:WidgetTree.HungerStatus'",
@@ -549,7 +705,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPHouseWindow_C:WidgetTree.HorizontalBox_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.19"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.20"
       },
       "Content": {
         "ObjectName": "BPStatusWidget_C'BPHouseWindow_C:WidgetTree.HeartStatus'",
@@ -559,20 +715,49 @@
   },
   {
     "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_0",
-    "Outer": "HorizontalBox_62",
+    "Name": "HorizontalBoxSlot_5",
+    "Outer": "HorizontalBox_3",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Properties": {
-      "Size": {
-        "SizeRule": "ESlateSizeRule::Fill"
-      },
       "Parent": {
-        "ObjectName": "HorizontalBox'BPHouseWindow_C:WidgetTree.HorizontalBox_62'",
+        "ObjectName": "HorizontalBox'BPHouseWindow_C:WidgetTree.HorizontalBox_3'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.20"
       },
       "Content": {
-        "ObjectName": "BPHousePlayerInventoryWidgetBox_C'BPHouseWindow_C:WidgetTree.PlayerInventoriesBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.5"
+        "ObjectName": "CheckBox'BPHouseWindow_C:WidgetTree.HouseAreaRestrictedCheckBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.18"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Outer": "HorizontalBox_3",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPHouseWindow_C:WidgetTree.HorizontalBox_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.20"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPHouseWindow_C:WidgetTree.Spacer_68'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.28"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_68",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 480.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPHouseWindow_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_6'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.27"
       }
     }
   },
@@ -583,12 +768,12 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPHouseWindow_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.28"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.30"
       },
       "bClassRequiresNativeTick": true,
       "UberGraphFunction": {
         "ObjectName": "Function'BPHouseWindow_C:ExecuteUbergraph_BPHouseWindow'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.18"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.19"
       }
     },
     "SuperStruct": {
@@ -598,7 +783,7 @@
     "Children": [
       {
         "ObjectName": "Function'BPHouseWindow_C:ExecuteUbergraph_BPHouseWindow'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.18"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.19"
       }
     ],
     "ChildProperties": [
@@ -683,7 +868,7 @@
     "FuncMap": {
       "ExecuteUbergraph_BPHouseWindow": {
         "ObjectName": "Function'BPHouseWindow_C:ExecuteUbergraph_BPHouseWindow'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.18"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHouseWindow.19"
       }
     },
     "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",

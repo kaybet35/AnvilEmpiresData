@@ -1,0 +1,402 @@
+[
+  {
+    "Type": "BPNewMapWidget_C",
+    "Name": "Default__BPNewMapWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPNewMapWidget.BPNewMapWidget_C'",
+    "Properties": {
+      "MapItemWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'BPMapIemWidget_C'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPMapIemWidget.8"
+      },
+      "ZoomSpeed": 0.25,
+      "ZoomMax": 10.0,
+      "ZoomAnimationTime": 0.1,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_15",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPNewMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.4"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPNewMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.5"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPNewMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.6"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPNewMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "MapImageCanvas",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPNewMapWidget_C:WidgetTree.MapImageCanvas.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPNewMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "MapItemCanvas",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPNewMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_5'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.7"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Outer": "CanvasPanel_15",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPNewMapWidget_C:WidgetTree.CanvasPanel_15'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.1"
+      },
+      "Content": {
+        "ObjectName": "Image'BPNewMapWidget_C:WidgetTree.MapFrame'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.10"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Outer": "CanvasPanel_15",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": -100,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPNewMapWidget_C:WidgetTree.CanvasPanel_15'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.1"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'BPNewMapWidget_C:WidgetTree.ScaleBox_49'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Outer": "CanvasPanel_15",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1000.0,
+          "Bottom": 1000.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPNewMapWidget_C:WidgetTree.CanvasPanel_15'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.1"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'BPNewMapWidget_C:WidgetTree.MapImageCanvas'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.2"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Outer": "CanvasPanel_15",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1000.0,
+          "Bottom": 1000.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPNewMapWidget_C:WidgetTree.CanvasPanel_15'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.1"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'BPNewMapWidget_C:WidgetTree.MapItemCanvas'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.3"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "MapImageCanvas",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPNewMapWidget_C:WidgetTree.MapImageCanvas'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.2"
+      },
+      "Content": {
+        "ObjectName": "Image'BPNewMapWidget_C:WidgetTree.MapImage'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.11"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "MapBackground",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 4096.0,
+          "Y": 4096.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'AnvilMapBG'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Map/AnvilMapBG.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'BPNewMapWidget_C:WidgetTree.ScaleBox_49.ScaleBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.13"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "MapFrame",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'MapBorder'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Map/MapBorder.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPNewMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.4"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "MapImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 3840.0,
+          "Y": 3748.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Material'Map'",
+          "ObjectPath": "Anvil/Content/Materials/UI/Map.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPNewMapWidget_C:WidgetTree.MapImageCanvas.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_49",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'ScaleBox'",
+    "Properties": {
+      "Stretch": "EStretch::ScaleToFill",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'BPNewMapWidget_C:WidgetTree.ScaleBox_49.ScaleBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPNewMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.5"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "ScaleBox_49",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'BPNewMapWidget_C:WidgetTree.ScaleBox_49'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.12"
+      },
+      "Content": {
+        "ObjectName": "Image'BPNewMapWidget_C:WidgetTree.MapBackground'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.9"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPNewMapWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPNewMapWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.15"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'NewMapWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "MapBackground",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MapFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPNewMapWidget_C'Default__BPNewMapWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPNewMapWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPNewMapWidget_C:WidgetTree.CanvasPanel_15'",
+        "ObjectPath": "Anvil/Content/UI/BPNewMapWidget.1"
+      }
+    }
+  }
+]

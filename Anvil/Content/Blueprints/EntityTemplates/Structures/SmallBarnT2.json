@@ -1,0 +1,514 @@
+[
+  {
+    "Type": "BarnProxyComponent",
+    "Name": "BarnProxyComponent_0",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'BarnProxyComponent'",
+    "Properties": {
+      "ParentType": {
+        "ObjectName": "BlueprintGeneratedClass'Horse_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.2"
+      },
+      "ChildType": {
+        "ObjectName": "BlueprintGeneratedClass'Foal_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.2"
+      },
+      "FoodType": {
+        "ObjectName": "BlueprintGeneratedClass'ProcessedAnimalFeedHorse_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedAnimalFeedHorse.0"
+      },
+      "BreedingHoursMin": 1,
+      "BreedingHoursMax": 4
+    }
+  },
+  {
+    "Type": "BarnProxyComponent",
+    "Name": "BarnProxyComponent_1",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'BarnProxyComponent'",
+    "Properties": {
+      "ParentType": {
+        "ObjectName": "BlueprintGeneratedClass'Donkey_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.2"
+      },
+      "ChildType": {
+        "ObjectName": "BlueprintGeneratedClass'DonkeyFoal_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/DonkeyFoal.2"
+      },
+      "FoodType": {
+        "ObjectName": "BlueprintGeneratedClass'ProcessedAnimalFeedHorse_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedAnimalFeedHorse.0"
+      },
+      "BreedingHoursMin": 2,
+      "BreedingHoursMax": 5
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SmallBarnT2_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SmallBarnT2_C'Default__SmallBarnT2_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.17"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    },
+    "Properties": {
+      "DecayTimeHours": 48.0
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableComp",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Template": {
+      "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+    }
+  },
+  {
+    "Type": "EntityAttachableProxyComponent",
+    "Name": "EntityAttachableProxyComponent_0",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'EntityAttachableProxyComponent'",
+    "Properties": {
+      "SlotOffset": {
+        "X": -150.0,
+        "Y": 50.0,
+        "Z": 0.0
+      },
+      "DetachLocation": {
+        "X": -150.0,
+        "Y": 400.0,
+        "Z": 0.0
+      },
+      "SlotYaw": 90.0,
+      "AngleTolerance": 360.0,
+      "DistanceTolerance": 200.0,
+      "TargetEntityTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'Horse_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Donkey_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EntityAttachableProxyComponent",
+    "Name": "EntityAttachableProxyComponent_1",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'EntityAttachableProxyComponent'",
+    "Properties": {
+      "SlotId": 1,
+      "SlotOffset": {
+        "X": 0.0,
+        "Y": 50.0,
+        "Z": 0.0
+      },
+      "DetachLocation": {
+        "X": 0.0,
+        "Y": 400.0,
+        "Z": 0.0
+      },
+      "SlotYaw": 90.0,
+      "AngleTolerance": 360.0,
+      "DistanceTolerance": 200.0,
+      "TargetEntityTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'Horse_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Donkey_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EntityAttachableProxyComponent",
+    "Name": "EntityAttachableProxyComponent_2",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'EntityAttachableProxyComponent'",
+    "Properties": {
+      "SlotId": 2,
+      "SlotOffset": {
+        "X": 150.0,
+        "Y": 50.0,
+        "Z": 0.0
+      },
+      "DetachLocation": {
+        "X": 150.0,
+        "Y": 400.0,
+        "Z": 0.0
+      },
+      "SlotYaw": 90.0,
+      "AngleTolerance": 360.0,
+      "DistanceTolerance": 200.0,
+      "TargetEntityTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'Horse_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Donkey_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EntityAttachableProxyComponent",
+    "Name": "EntityAttachableProxyComponent_3",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'EntityAttachableProxyComponent'",
+    "Properties": {
+      "SlotId": 2,
+      "SlotOffset": {
+        "X": 150.0,
+        "Y": 50.0,
+        "Z": 112.0
+      },
+      "DetachLocation": {
+        "X": 150.0,
+        "Y": 400.0,
+        "Z": 112.0
+      },
+      "SlotYaw": 90.0,
+      "AngleTolerance": 360.0,
+      "DistanceTolerance": 200.0,
+      "TargetEntityTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'Foal_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'DonkeyFoal_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/DonkeyFoal.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EntityAttachableProxyComponent",
+    "Name": "EntityAttachableProxyComponent_4",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'EntityAttachableProxyComponent'",
+    "Properties": {
+      "SlotId": 1,
+      "SlotOffset": {
+        "X": 0.0,
+        "Y": 50.0,
+        "Z": 112.0
+      },
+      "DetachLocation": {
+        "X": 0.0,
+        "Y": 400.0,
+        "Z": 112.0
+      },
+      "SlotYaw": 90.0,
+      "AngleTolerance": 360.0,
+      "DistanceTolerance": 200.0,
+      "TargetEntityTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'Foal_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'DonkeyFoal_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/DonkeyFoal.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EntityAttachableProxyComponent",
+    "Name": "EntityAttachableProxyComponent_5",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'EntityAttachableProxyComponent'",
+    "Properties": {
+      "SlotOffset": {
+        "X": -150.0,
+        "Y": 50.0,
+        "Z": 112.0
+      },
+      "DetachLocation": {
+        "X": -150.0,
+        "Y": 400.0,
+        "Z": 112.0
+      },
+      "SlotYaw": 90.0,
+      "AngleTolerance": 360.0,
+      "DistanceTolerance": 200.0,
+      "TargetEntityTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'Foal_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'DonkeyFoal_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/DonkeyFoal.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'SmallBarnFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/SmallBarnFootprint.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthComp",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 200,
+          "bHoldsLarge": true,
+          "SlotType": "EAnvilItemType::All",
+          "DedicatedItemType": {
+            "ObjectName": "BlueprintGeneratedClass'ProcessedAnimalFeedHorse_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedAnimalFeedHorse.0"
+          },
+          "DedicatedUnderlyingItemType": null
+        },
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 20,
+          "bHoldsLarge": true,
+          "SlotType": "EAnvilItemType::All",
+          "DedicatedItemType": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceWater_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWater.0"
+          },
+          "DedicatedUnderlyingItemType": null
+        },
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 200,
+          "bHoldsLarge": false,
+          "SlotType": "EAnvilItemType::All",
+          "DedicatedItemType": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceManure_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceManure.0"
+          },
+          "DedicatedUnderlyingItemType": null
+        }
+      ],
+      "bForceStackable": true,
+      "NormalizedSpoilageFactor": 0.1
+    }
+  },
+  {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairComp",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'RepairProxyComponent'",
+    "Template": {
+      "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+    },
+    "Properties": {
+      "TotalRepairCost": 6
+    }
+  },
+  {
+    "Type": "ScorchProxyComponent",
+    "Name": "ScorchProxyComponent_0",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'ScorchProxyComponent'",
+    "Template": {
+      "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
+    }
+  },
+  {
+    "Type": "SmallBarnT2_C",
+    "Name": "Default__SmallBarnT2_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.SmallBarnT2_C'",
+    "Template": {
+      "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
+    },
+    "Properties": {
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__SmallBarnT2_C:TeamComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.19"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__SmallBarnT2_C:HealthComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.13"
+      },
+      "RepairComp": {
+        "ObjectName": "RepairProxyComponent'Default__SmallBarnT2_C:RepairComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.15"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__SmallBarnT2_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.18"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__SmallBarnT2_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.5"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__SmallBarnT2_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.12"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__SmallBarnT2_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.3"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__SmallBarnT2_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.4"
+      },
+      "ScorchComp": {
+        "ObjectName": "ScorchProxyComponent'Default__SmallBarnT2_C:ScorchProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.16"
+      },
+      "CodeNameString": "SmallBarnT2",
+      "CodeName": 1677667164,
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "Components": [
+        {
+          "ObjectName": "InventoryProxyComponent'Default__SmallBarnT2_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.14"
+        },
+        {
+          "ObjectName": "EntityAttachableProxyComponent'Default__SmallBarnT2_C:EntityAttachableProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.6"
+        },
+        {
+          "ObjectName": "EntityAttachableProxyComponent'Default__SmallBarnT2_C:EntityAttachableProxyComponent_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.11"
+        },
+        {
+          "ObjectName": "EntityAttachableProxyComponent'Default__SmallBarnT2_C:EntityAttachableProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.7"
+        },
+        {
+          "ObjectName": "EntityAttachableProxyComponent'Default__SmallBarnT2_C:EntityAttachableProxyComponent_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.10"
+        },
+        {
+          "ObjectName": "EntityAttachableProxyComponent'Default__SmallBarnT2_C:EntityAttachableProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.8"
+        },
+        {
+          "ObjectName": "EntityAttachableProxyComponent'Default__SmallBarnT2_C:EntityAttachableProxyComponent_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.9"
+        },
+        {
+          "ObjectName": "BarnProxyComponent'Default__SmallBarnT2_C:BarnProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.0"
+        },
+        {
+          "ObjectName": "BarnProxyComponent'Default__SmallBarnT2_C:BarnProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/SmallBarnT2.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisSmallBarnT2_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.1"
+      }
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamComp",
+    "Outer": "Default__SmallBarnT2_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    },
+    "Properties": {
+      "Accessibility": "EAnvilAccessibilityType::FriendlyOnly"
+    }
+  }
+]

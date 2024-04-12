@@ -98,15 +98,16 @@ AMainMenuPlayerController = {}
 
 
 ---@class AMapBorderActor : ACameraActor
----@field WorldSize FVector2D
----@field WorldOrigin FVector2D
----@field CapturePadding FVector2D
----@field MapImage UTexture2D
----@field MapTreeLayerImage UTexture2D
 ---@field bPreCapture boolean
 ---@field bCapture boolean
 ---@field BoxVisualizer UStaticMeshComponent
 AMapBorderActor = {}
+
+
+
+---@class AMapList : AInfo
+---@field MapDatabase TMap<FName, FMapData>
+AMapList = {}
 
 
 
@@ -781,7 +782,18 @@ FHitConverterItemMeshInfo = {}
 
 ---@class FItemData : FTableRowBase
 ---@field Damage uint8
+---@field TownCurrencyValue uint16
 FItemData = {}
+
+
+
+---@class FMapData
+---@field WorldSize FVector2D
+---@field WorldOrigin FVector2D
+---@field CapturePadding FVector2D
+---@field MapImage UTexture2D
+---@field MapTreeLayerImage UTexture2D
+FMapData = {}
 
 
 
@@ -811,6 +823,14 @@ FMapIconTypeProperty = {}
 
 
 
+---@class FMapItem
+---@field CodeName uint32
+---@field FactionId uint8
+---@field WorldPos FVector
+FMapItem = {}
+
+
+
 ---@class FQueueStatusResponse
 ---@field QueueStatus QueueStatusType
 ---@field QueuedServerName FString
@@ -822,7 +842,9 @@ FQueueStatusResponse = {}
 ---@class FServerListEntry
 ---@field ServerName FString
 ---@field ServerAddress FString
+---@field MapName FString
 ---@field FactionCapacityArray TArray<boolean>
+---@field MapItemList TArray<FMapItem>
 FServerListEntry = {}
 
 
@@ -1242,6 +1264,21 @@ UDeathMarketMapIcon = {}
 function UDeathMarketMapIcon:OnLastDeathLocationChanged(OldVal, NewVal) end
 
 
+---@class UDeploymentScreen : UAnvilScreen
+---@field MapWidget UNewMapWidget
+---@field Throbber UThrobber
+---@field LogoutButton UAnvilButtonWidget
+---@field RefreshButton UAnvilButtonWidget
+UDeploymentScreen = {}
+
+function UDeploymentScreen:OnRefreshButtonClicked() end
+function UDeploymentScreen:OnLogoutButtonClicked() end
+---@return boolean
+function UDeploymentScreen:IsRefreshButtonEnabled() end
+---@return ESlateVisibility
+function UDeploymentScreen:GetThrobberVisibility() end
+
+
 ---@class UDisclaimerWidget : UUserWidget
 ---@field DisclaimerCheckBox1 UCheckBox
 ---@field DisclaimerCheckBox2 UCheckBox
@@ -1273,6 +1310,8 @@ UEntityActorRootComponent = {}
 ---@field FactionMirrishAtCapacityText UTextBlock
 ---@field FactionNovanAtCapacityText UTextBlock
 ---@field DownloadingThrobber UThrobber
+---@field ServerBrowserCheckBox UCheckBox
+---@field ServerBrowserHorizontalBox UHorizontalBox
 UFactionSelectScreen = {}
 
 function UFactionSelectScreen:OnFactionNovanButtonClicked() end
@@ -1289,6 +1328,8 @@ function UFactionSelectScreen:IsFactionAranicButtonEnabled() end
 function UFactionSelectScreen:IsDeleteProfileButtonEnabled() end
 ---@return ESlateVisibility
 function UFactionSelectScreen:GetThrobberVisibility() end
+---@return ESlateVisibility
+function UFactionSelectScreen:GetServerBrowserCheckBoxVisibility() end
 ---@return ESlateVisibility
 function UFactionSelectScreen:GetDeleteProfileButtonVisibility() end
 ---@return ESlateVisibility
@@ -1540,8 +1581,15 @@ UHousePlayerInventoryWidgetBox = {}
 
 ---@class UHouseWindow : UStructureWindow
 ---@field PlayerInventoriesBox UHousePlayerInventoryWidgetBox
+---@field HouseAreaRestrictedCheckBox UCheckBox
 UHouseWindow = {}
 
+---@param bIsChecked boolean
+function UHouseWindow:OnHouseAreaRestrictedChecked(bIsChecked) end
+---@return ESlateVisibility
+function UHouseWindow:GetHouseAreaRestrictedVisibility() end
+---@return ECheckBoxState
+function UHouseWindow:GetHouseAreaRestrictedCheckedState() end
 
 
 ---@class UInteractionIconWidget : UUserWidget
@@ -1572,6 +1620,7 @@ UInventoryContainerWidget = {}
 ---@field DurabilityBar UProgressBar
 ---@field SubtypeIconRelic UImage
 ---@field OverEncumberedImage UImage
+---@field PublicIconImage UImage
 ---@field HitConversionProgressBar UProgressBar
 ---@field QualityIconImage UImage
 ---@field QualityIconTextures TMap<EItemQualityType, UTexture2D>
@@ -1619,6 +1668,18 @@ UMapIcon = {}
 function UMapIcon:IsIconEnabled() end
 ---@return ESlateVisibility
 function UMapIcon:GetIconVisibility() end
+
+
+---@class UMapItemWidget : UUserWidget
+---@field MapItemButton UButton
+---@field MapItemImage UImage
+---@field ParentMapWidget UNewMapWidget
+---@field ParentSlot UCanvasPanelSlot
+UMapItemWidget = {}
+
+function UMapItemWidget:OnMapItemClicked() end
+---@return ESlateVisibility
+function UMapItemWidget:GetItemVisibility() end
 
 
 ---@class UMapMarkerComponent : UActorComponent
@@ -1715,6 +1776,20 @@ UMarketShopWindow = {}
 function UMarketShopWindow:GetSilverAmountVisibility() end
 ---@return FText
 function UMarketShopWindow:GetSilverAmountText() end
+
+
+---@class UNewMapWidget : UUserWidget
+---@field MapItemWidgetClass TSubclassOf<UMapItemWidget>
+---@field ZoomSpeed float
+---@field ZoomMax float
+---@field ZoomAnimationTime float
+---@field MapImage UImage
+---@field MapImageCanvas UCanvasPanel
+---@field MapImageCanvasSlot UCanvasPanelSlot
+---@field MapItemCanvas UCanvasPanel
+---@field MapItemCanvasSlot UCanvasPanelSlot
+UNewMapWidget = {}
+
 
 
 ---@class UNextTestWidget : UUserWidget
@@ -2071,11 +2146,24 @@ function UTownCenterMapIcon:GetNumHousesText() end
 ---@field TechFooterContainer UFooterContainer
 ---@field TechProgress UProgressBar
 ---@field RareResourceStatus UStatusWidget
+---@field ReserveInventoryHeaderContainer UHeaderContainer
+---@field ReserveInventorySubHeaderContainer UUserWidget
+---@field ReserveInventoryMainAreaContainer UUserWidget
+---@field ReserveInventoryContainerWidget UInventoryContainerWidget
+---@field PublicInventoryCheckBox UCheckBox
+---@field PublicInventorySubmitImage UImage
+---@field ReserveInventoryCheckBox UCheckBox
 ---@field TownNames1 TArray<FText>
 ---@field TownNames2 TArray<FText>
 ---@field TownNames3 TArray<FText>
 UTownCenterWindow = {}
 
+---@param bIsChecked boolean
+function UTownCenterWindow:OnReserveInventoryChecked(bIsChecked) end
+---@param bIsChecked boolean
+function UTownCenterWindow:OnPublicInventoryChecked(bIsChecked) end
+---@return ESlateVisibility
+function UTownCenterWindow:GetPublicInventoryCheckBoxVisibility() end
 
 
 ---@class UTownStatusWidget : UUserWidget

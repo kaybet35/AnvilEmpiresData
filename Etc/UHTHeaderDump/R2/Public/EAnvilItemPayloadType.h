@@ -7,5 +7,6 @@ enum class EAnvilItemPayloadType : uint8 {
     None,
     Quality,
     ConversionProgress,
+    TownHash,
 };
 

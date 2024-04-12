@@ -1,6 +1,18 @@
 ---@meta
 
 ---@class ABPVisHouseT3_C : AVisHouse
+---@field HouseAreaFenceCollision UVisStaticMeshComponent
+---@field HouseAreaFence9 UVisStaticMeshComponent
+---@field HouseAreaDecal UDecalComponent
+---@field HouseAreaGrassRemoval UGrassRemovalVolumeComponent
+---@field HouseAreaFence2 UVisStaticMeshComponent
+---@field HouseAreaFence1 UVisStaticMeshComponent
+---@field HouseAreaFence3 UVisStaticMeshComponent
+---@field HouseAreaFence4 UVisStaticMeshComponent
+---@field HouseAreaFence8 UVisStaticMeshComponent
+---@field HouseAreaFence7 UVisStaticMeshComponent
+---@field HouseAreaFence5 UVisStaticMeshComponent
+---@field HouseAreaFence6 UVisStaticMeshComponent
 ---@field OwnerFlagMesh UStaticMeshComponent
 ---@field VisTeamMesh UVisTeamMeshComponent
 ---@field VisStaticMesh2 UVisStaticMeshComponent

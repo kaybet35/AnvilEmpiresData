@@ -41,5 +41,7 @@ enum class EAnvilPlacementStatus : uint8 {
     RequiresSnappping,
     YouMustBelongToFamily,
     NotAtFullHealth,
+    CantBuildBorderRegion,
+    MustBePledgedToHouse,
 };
 

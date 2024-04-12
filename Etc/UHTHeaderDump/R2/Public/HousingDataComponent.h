@@ -15,6 +15,9 @@ public:
     uint8 PlayerCapacity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool AllowPublicPledging;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHousePledgedPlayerIdArray PledgedPlayerIds;
     
     UHousingDataComponent(const FObjectInitializer& ObjectInitializer);

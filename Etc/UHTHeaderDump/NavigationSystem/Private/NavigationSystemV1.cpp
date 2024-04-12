@@ -4,7 +4,7 @@
 UNavigationSystemV1::UNavigationSystemV1() {
     this->MainNavData = NULL;
     this->AbstractNavData = NULL;
-    this->bAutoCreateNavigationData = true;
+    this->bAutoCreateNavigationData = false;
     this->bSpawnNavDataInNavBoundsLevel = false;
     this->bAllowClientSideNavigation = false;
     this->bShouldDiscardSubLevelNavData = true;

@@ -1,10 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
 #include "StructureWindow.h"
 #include "TownCenterWindow.generated.h"
 
+class UCheckBox;
 class UFooterContainer;
 class UHeaderContainer;
+class UImage;
+class UInventoryContainerWidget;
 class UPledgedPlayerBox;
 class UProgressBar;
 class UStatusWidget;
@@ -43,6 +47,27 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStatusWidget* RareResourceStatus;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UHeaderContainer* ReserveInventoryHeaderContainer;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UUserWidget* ReserveInventorySubHeaderContainer;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UUserWidget* ReserveInventoryMainAreaContainer;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UInventoryContainerWidget* ReserveInventoryContainerWidget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCheckBox* PublicInventoryCheckBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UImage* PublicInventorySubmitImage;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCheckBox* ReserveInventoryCheckBox;
+    
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FText> TownNames1;
@@ -55,5 +80,15 @@ public:
     
     UTownCenterWindow();
 
+private:
+    UFUNCTION(BlueprintCallable)
+    void OnReserveInventoryChecked(bool bIsChecked);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnPublicInventoryChecked(bool bIsChecked);
+    
+    UFUNCTION(BlueprintCallable)
+    ESlateVisibility GetPublicInventoryCheckBoxVisibility();
+    
 };
 

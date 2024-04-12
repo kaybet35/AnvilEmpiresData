@@ -216,6 +216,9 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 QuantityPerCrate;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint16 TownCurrencyValue;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StunChance;
     

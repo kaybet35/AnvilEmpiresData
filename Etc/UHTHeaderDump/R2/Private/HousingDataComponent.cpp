@@ -3,6 +3,7 @@
 UHousingDataComponent::UHousingDataComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->IsForCampsOnly = 0;
     this->PlayerCapacity = 0;
+    this->AllowPublicPledging = false;
 }
 
 

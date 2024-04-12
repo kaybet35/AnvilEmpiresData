@@ -10,6 +10,12 @@
     }
   },
   {
+    "Type": "AnimalAIProxyComponent",
+    "Name": "AnimalAIProxyComponent_0",
+    "Outer": "Default__Donkey_C",
+    "Class": "UScriptClass'AnimalAIProxyComponent'"
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "Donkey_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
@@ -26,7 +32,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "Donkey_C'Default__Donkey_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.5"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.6"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -87,39 +93,38 @@
       "CodeNameString": "Donkey",
       "CodeName": 2059163958,
       "bStatic": false,
-      "SerializationType": "EEntitySerializationType::7",
       "Components": [
         {
           "ObjectName": "VehicleMovementProxyComponent'Default__Donkey_C:VehicleMovementProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.11"
-        },
-        {
-          "ObjectName": "VehicleSeatProxyComponent'Default__Donkey_C:VehicleSeatProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.12"
         },
         {
+          "ObjectName": "VehicleSeatProxyComponent'Default__Donkey_C:VehicleSeatProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.13"
+        },
+        {
           "ObjectName": "InventoryProxyComponent'Default__Donkey_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.10"
         },
         {
           "ObjectName": "HealthProxyComponent'Default__Donkey_C:HealthProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.8"
         },
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__Donkey_C:BoxCollisionProxyComponent_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.3"
-        },
-        {
-          "ObjectName": "BoxCollisionProxyComponent'Default__Donkey_C:BoxCollisionProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.2"
-        },
-        {
-          "ObjectName": "DestroyableProxyComponent'Default__Donkey_C:DestroyableProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.4"
         },
         {
+          "ObjectName": "BoxCollisionProxyComponent'Default__Donkey_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.3"
+        },
+        {
+          "ObjectName": "DestroyableProxyComponent'Default__Donkey_C:DestroyableProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.5"
+        },
+        {
           "ObjectName": "FootprintCollisionProxyComponent'Default__Donkey_C:FootprintCollisionProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.6"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.7"
         },
         {
           "ObjectName": "AIStimulusProxyComponent'Default__Donkey_C:AIStimulusProxyComponent_0'",
@@ -127,11 +132,15 @@
         },
         {
           "ObjectName": "HungerProxyComponent'Default__Donkey_C:HungerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.9"
         },
         {
           "ObjectName": "StaminaProxyComponent'Default__Donkey_C:StaminaProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.10"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.11"
+        },
+        {
+          "ObjectName": "AnimalAIProxyComponent'Default__Donkey_C:AnimalAIProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.1"
         }
       ],
       "VisActorClass": {
@@ -167,7 +176,10 @@
     "Type": "HungerProxyComponent",
     "Name": "HungerProxyComponent_0",
     "Outer": "Default__Donkey_C",
-    "Class": "UScriptClass'HungerProxyComponent'"
+    "Class": "UScriptClass'HungerProxyComponent'",
+    "Properties": {
+      "HungerPerTick": 1.5
+    }
   },
   {
     "Type": "InventoryProxyComponent",
@@ -195,7 +207,11 @@
     "Type": "StaminaProxyComponent",
     "Name": "StaminaProxyComponent_0",
     "Outer": "Default__Donkey_C",
-    "Class": "UScriptClass'StaminaProxyComponent'"
+    "Class": "UScriptClass'StaminaProxyComponent'",
+    "Properties": {
+      "StaminaRegenCD": 5.0,
+      "StaminaRegenSpeed": 30.0
+    }
   },
   {
     "Type": "VehicleMovementProxyComponent",
@@ -203,10 +219,10 @@
     "Outer": "Default__Donkey_C",
     "Class": "UScriptClass'VehicleMovementProxyComponent'",
     "Properties": {
-      "Acceleration": 9000.0,
-      "MaxVelocity": 550.0,
+      "Acceleration": 6000.0,
+      "MaxVelocity": 455.0,
       "RotationalSpeed": 50.0,
-      "SprintFactor": 2.0,
+      "SprintFactor": 1.5,
       "SprintRotationalSpeedFactor": 0.5,
       "SprintStaminaDrain": 5.0,
       "CollisionEffect": {

@@ -115,7 +115,6 @@
       "CodeNameString": "Cart",
       "CodeName": 1795145968,
       "bStatic": false,
-      "SerializationType": "EEntitySerializationType::7",
       "Components": [
         {
           "ObjectName": "VehicleMovementProxyComponent'Default__Cart_C:VehicleMovementProxyComponent_0'",
@@ -131,7 +130,7 @@
         },
         {
           "ObjectName": "HealthProxyComponent'Default__Cart_C:HealthProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.10"
         },
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__Cart_C:BoxCollisionProxyComponent_0'",
@@ -155,15 +154,15 @@
         },
         {
           "ObjectName": "FootprintCollisionProxyComponent'Default__Cart_C:FootprintCollisionProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.9"
         },
         {
           "ObjectName": "AIStimulusProxyComponent'Default__Cart_C:AIStimulusProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.0"
         },
         {
-          "ObjectName": "HorseAttachableProxyComponent'Default__Cart_C:HorseAttachableProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.10"
+          "ObjectName": "EntityAttachableProxyComponent'Default__Cart_C:EntityAttachableProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.8"
         },
         {
           "ObjectName": "HungerProxyComponent'Default__Cart_C:HungerProxyComponent_0'",
@@ -193,6 +192,34 @@
     }
   },
   {
+    "Type": "EntityAttachableProxyComponent",
+    "Name": "EntityAttachableProxyComponent_0",
+    "Outer": "Default__Cart_C",
+    "Class": "UScriptClass'EntityAttachableProxyComponent'",
+    "Properties": {
+      "SlotOffset": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "DetachLocation": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "DetachedNewEntityType": {
+        "ObjectName": "BlueprintGeneratedClass'CartDetached_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/CartDetached.0"
+      },
+      "TargetEntityTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'Horse_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.2"
+        }
+      ]
+    }
+  },
+  {
     "Type": "FootprintCollisionProxyComponent",
     "Name": "FootprintCollisionProxyComponent_0",
     "Outer": "Default__Cart_C",
@@ -213,27 +240,6 @@
     "Properties": {
       "MaxHealth": 80.0,
       "TargetType": "EAnvilDamageTargetType::Horse"
-    }
-  },
-  {
-    "Type": "HorseAttachableProxyComponent",
-    "Name": "HorseAttachableProxyComponent_0",
-    "Outer": "Default__Cart_C",
-    "Class": "UScriptClass'HorseAttachableProxyComponent'",
-    "Properties": {
-      "SlotOffset": {
-        "X": 50.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "DetachedEntityType": {
-        "ObjectName": "BlueprintGeneratedClass'CartDetached_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/CartDetached.0"
-      },
-      "HorseEntityType": {
-        "ObjectName": "BlueprintGeneratedClass'Horse_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.1"
-      }
     }
   },
   {

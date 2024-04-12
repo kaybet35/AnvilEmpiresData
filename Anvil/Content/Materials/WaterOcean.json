@@ -1,0 +1,48 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "WaterOcean",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Material'WaterMaster'",
+        "ObjectPath": "Anvil/Content/Materials/WaterMaster.0"
+      },
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "ShadingModel": "EMaterialShadingModel::MSM_SingleLayerWater",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 0.03125,
+          "UVChannelIndex": 0,
+          "TextureName": "AverageNoises01"
+        },
+        {
+          "SamplingScale": 0.0625,
+          "UVChannelIndex": 0,
+          "TextureName": "NewWaterN"
+        },
+        {
+          "SamplingScale": 0.03125,
+          "UVChannelIndex": 0,
+          "TextureName": "water_n"
+        }
+      ]
+    },
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

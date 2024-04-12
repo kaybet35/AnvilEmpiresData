@@ -15,5 +15,6 @@ enum class EAnvilScreenType : uint8 {
     Help,
     FactionSelect,
     ServerSelect,
+    DeploymentMap,
 };
 

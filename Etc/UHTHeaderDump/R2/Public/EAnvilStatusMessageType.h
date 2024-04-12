@@ -30,6 +30,9 @@ enum class EAnvilStatusMessageType : uint8 {
     ItemTransfer_NotAtMaxDurability,
     ItemTransfer_HouseNotYours,
     ItemTransfer_WithdrawalRestricted,
+    ItemTransfer_NotEnoughTownCurrency,
+    ItemTransfer_NotPublic,
+    ItemTransfer_InvalidTownCurrency,
     Vehicle_MountBlocked,
     Vehicle_ExitBlocked,
     BuildSiteObstructed,
@@ -71,6 +74,7 @@ enum class EAnvilStatusMessageType : uint8 {
     AccessDeniedBelongsToEnemy,
     AccessDeniedMustBePledged,
     AccessDeniedMustBeInFamily,
+    AccessDeniedMustBeInHouse,
     AccessDeniedTooFarToInteract,
     DismantleNoPermission,
     GateIsBreached,
@@ -97,6 +101,7 @@ enum class EAnvilStatusMessageType : uint8 {
     NoContainerForPacking,
     NotAllowedInBorderZone,
     SlotOccupied,
+    CannotTravelWithPassengers,
     NumTypes,
 };
 

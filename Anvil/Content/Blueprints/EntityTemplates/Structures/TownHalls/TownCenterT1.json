@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "TownCenterT1_C'Default__TownCenterT1_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.12"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.13"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -111,6 +111,31 @@
     }
   },
   {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__TownCenterT1_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 24,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1000,
+          "bHoldsLarge": true,
+          "SlotType": "EAnvilItemType::All",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        }
+      ],
+      "bUnpackCrates": true,
+      "bForceStackable": true,
+      "bEnforceWithdrawalStamina": true,
+      "bOnlyAllowMaxDurabilityItems": true
+    }
+  },
+  {
     "Type": "RepairProxyComponent",
     "Name": "RepairComp",
     "Outer": "Default__TownCenterT1_C",
@@ -190,7 +215,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__TownCenterT1_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.12"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__TownCenterT1_C:HealthComp'",
@@ -198,11 +223,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__TownCenterT1_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.8"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__TownCenterT1_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.11"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__TownCenterT1_C:DestroyableComp'",
@@ -219,7 +244,7 @@
       "DecayComp": null,
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__TownCenterT1_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.10"
       },
       "CodeNameString": "TownCenterT1",
       "CodeName": 1004746590,
@@ -229,19 +254,23 @@
       "Components": [
         {
           "ObjectName": "TownHallProxyComponent'Default__TownCenterT1_C:TownHallProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.13"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.14"
         },
         {
           "ObjectName": "UpgradeProxyComponent'Default__TownCenterT1_C:UpgradeProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.14"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.15"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__TownCenterT1_C:InventoryProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.6"
         },
         {
+          "ObjectName": "InventoryProxyComponent'Default__TownCenterT1_C:InventoryProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.7"
+        },
+        {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__TownCenterT1_C:ResourceSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT1.9"
         }
       ],
       "VisActorClass": {

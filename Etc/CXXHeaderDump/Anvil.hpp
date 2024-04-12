@@ -180,8 +180,19 @@ struct FHitConverterItemMeshInfo
 struct FItemData : public FTableRowBase
 {
     uint8 Damage;                                                                     // 0x0008 (size: 0x1)
+    uint16 TownCurrencyValue;                                                         // 0x000A (size: 0x2)
 
 }; // Size: 0x10
+
+struct FMapData
+{
+    FVector2D WorldSize;                                                              // 0x0000 (size: 0x10)
+    FVector2D WorldOrigin;                                                            // 0x0010 (size: 0x10)
+    FVector2D CapturePadding;                                                         // 0x0020 (size: 0x10)
+    class UTexture2D* MapImage;                                                       // 0x0030 (size: 0x8)
+    class UTexture2D* MapTreeLayerImage;                                              // 0x0038 (size: 0x8)
+
+}; // Size: 0x40
 
 struct FMapIconInstanceProperty
 {
@@ -209,6 +220,14 @@ struct FMapIconTypeProperty
 
 }; // Size: 0x30
 
+struct FMapItem
+{
+    uint32 CodeName;                                                                  // 0x0000 (size: 0x4)
+    uint8 FactionId;                                                                  // 0x0004 (size: 0x1)
+    FVector WorldPos;                                                                 // 0x0008 (size: 0x18)
+
+}; // Size: 0x20
+
 struct FQueueStatusResponse
 {
     QueueStatusType QueueStatus;                                                      // 0x0000 (size: 0x1)
@@ -221,9 +240,11 @@ struct FServerListEntry
 {
     FString ServerName;                                                               // 0x0000 (size: 0x10)
     FString ServerAddress;                                                            // 0x0010 (size: 0x10)
-    TArray<bool> FactionCapacityArray;                                                // 0x0020 (size: 0x10)
+    FString MapName;                                                                  // 0x0020 (size: 0x10)
+    TArray<bool> FactionCapacityArray;                                                // 0x0030 (size: 0x10)
+    TArray<FMapItem> MapItemList;                                                     // 0x0040 (size: 0x10)
 
-}; // Size: 0x30
+}; // Size: 0x50
 
 struct FServerListResponse
 {
@@ -345,16 +366,17 @@ class AMainMenuPlayerController : public AAnvilPlayerController
 
 class AMapBorderActor : public ACameraActor
 {
-    FVector2D WorldSize;                                                              // 0x09A0 (size: 0x10)
-    FVector2D WorldOrigin;                                                            // 0x09B0 (size: 0x10)
-    FVector2D CapturePadding;                                                         // 0x09C0 (size: 0x10)
-    class UTexture2D* MapImage;                                                       // 0x09D0 (size: 0x8)
-    class UTexture2D* MapTreeLayerImage;                                              // 0x09D8 (size: 0x8)
-    bool bPreCapture;                                                                 // 0x09E0 (size: 0x1)
-    bool bCapture;                                                                    // 0x09E1 (size: 0x1)
-    class UStaticMeshComponent* BoxVisualizer;                                        // 0x09E8 (size: 0x8)
+    bool bPreCapture;                                                                 // 0x09A0 (size: 0x1)
+    bool bCapture;                                                                    // 0x09A1 (size: 0x1)
+    class UStaticMeshComponent* BoxVisualizer;                                        // 0x09A8 (size: 0x8)
 
-}; // Size: 0x9F0
+}; // Size: 0x9B0
+
+class AMapList : public AInfo
+{
+    TMap<class FName, class FMapData> MapDatabase;                                    // 0x0290 (size: 0x50)
+
+}; // Size: 0x2E0
 
 class AMapMarkerActor : public AActor
 {
@@ -451,7 +473,7 @@ class AVisAnvilStructure : public AVisStructure
     class USoundCue* HitFailSoundCue;                                                 // 0x0500 (size: 0x8)
 
     void OnHitCounterChanged(const float& Old, const float& New);
-}; // Size: 0x510
+}; // Size: 0x518
 
 class AVisBeaconTower : public AVisStructure
 {
@@ -1174,6 +1196,19 @@ class UDeathMarketMapIcon : public UMapIcon
     void OnLastDeathLocationChanged(const FVector& OldVal, const FVector& NewVal);
 }; // Size: 0x388
 
+class UDeploymentScreen : public UAnvilScreen
+{
+    class UNewMapWidget* MapWidget;                                                   // 0x0290 (size: 0x8)
+    class UThrobber* Throbber;                                                        // 0x0298 (size: 0x8)
+    class UAnvilButtonWidget* LogoutButton;                                           // 0x02A0 (size: 0x8)
+    class UAnvilButtonWidget* RefreshButton;                                          // 0x02A8 (size: 0x8)
+
+    void OnRefreshButtonClicked();
+    void OnLogoutButtonClicked();
+    bool IsRefreshButtonEnabled();
+    ESlateVisibility GetThrobberVisibility();
+}; // Size: 0x2E0
+
 class UDisclaimerWidget : public UUserWidget
 {
     class UCheckBox* DisclaimerCheckBox1;                                             // 0x0278 (size: 0x8)
@@ -1204,6 +1239,8 @@ class UFactionSelectScreen : public UAnvilScreen
     class UTextBlock* FactionMirrishAtCapacityText;                                   // 0x02B8 (size: 0x8)
     class UTextBlock* FactionNovanAtCapacityText;                                     // 0x02C0 (size: 0x8)
     class UThrobber* DownloadingThrobber;                                             // 0x02C8 (size: 0x8)
+    class UCheckBox* ServerBrowserCheckBox;                                           // 0x02D0 (size: 0x8)
+    class UHorizontalBox* ServerBrowserHorizontalBox;                                 // 0x02D8 (size: 0x8)
 
     void OnFactionNovanButtonClicked();
     void OnFactionMirrishButtonClicked();
@@ -1214,11 +1251,12 @@ class UFactionSelectScreen : public UAnvilScreen
     bool IsFactionAranicButtonEnabled();
     bool IsDeleteProfileButtonEnabled();
     ESlateVisibility GetThrobberVisibility();
+    ESlateVisibility GetServerBrowserCheckBoxVisibility();
     ESlateVisibility GetDeleteProfileButtonVisibility();
     ESlateVisibility FactionNovanAtCapacityVisibility();
     ESlateVisibility FactionMirrishAtCapacityVisibility();
     ESlateVisibility FactionAranicAtCapacityVisibility();
-}; // Size: 0x308
+}; // Size: 0x318
 
 class UFamilyAreaMarkerWindow : public UStructureWindow
 {
@@ -1449,8 +1487,12 @@ class UHousePlayerInventoryWidgetBox : public UScrollBox
 class UHouseWindow : public UStructureWindow
 {
     class UHousePlayerInventoryWidgetBox* PlayerInventoriesBox;                       // 0x02D8 (size: 0x8)
+    class UCheckBox* HouseAreaRestrictedCheckBox;                                     // 0x02E0 (size: 0x8)
 
-}; // Size: 0x2E0
+    void OnHouseAreaRestrictedChecked(bool bIsChecked);
+    ESlateVisibility GetHouseAreaRestrictedVisibility();
+    ECheckBoxState GetHouseAreaRestrictedCheckedState();
+}; // Size: 0x2E8
 
 class UInteractionIconWidget : public UUserWidget
 {
@@ -1481,11 +1523,12 @@ class UInventoryItemWidget : public UGridItemWidget
     class UProgressBar* DurabilityBar;                                                // 0x0390 (size: 0x8)
     class UImage* SubtypeIconRelic;                                                   // 0x0398 (size: 0x8)
     class UImage* OverEncumberedImage;                                                // 0x03A0 (size: 0x8)
-    class UProgressBar* HitConversionProgressBar;                                     // 0x03A8 (size: 0x8)
-    class UImage* QualityIconImage;                                                   // 0x03B0 (size: 0x8)
-    TMap<class EItemQualityType, class UTexture2D*> QualityIconTextures;              // 0x03B8 (size: 0x50)
+    class UImage* PublicIconImage;                                                    // 0x03A8 (size: 0x8)
+    class UProgressBar* HitConversionProgressBar;                                     // 0x03B0 (size: 0x8)
+    class UImage* QualityIconImage;                                                   // 0x03B8 (size: 0x8)
+    TMap<class EItemQualityType, class UTexture2D*> QualityIconTextures;              // 0x03C0 (size: 0x50)
 
-}; // Size: 0x410
+}; // Size: 0x418
 
 class UInventoryWidget : public UGridPanelWidget
 {
@@ -1526,6 +1569,17 @@ class UMapIcon : public UUserWidget
     bool IsIconEnabled();
     ESlateVisibility GetIconVisibility();
 }; // Size: 0x388
+
+class UMapItemWidget : public UUserWidget
+{
+    class UButton* MapItemButton;                                                     // 0x0278 (size: 0x8)
+    class UImage* MapItemImage;                                                       // 0x0280 (size: 0x8)
+    class UNewMapWidget* ParentMapWidget;                                             // 0x0288 (size: 0x8)
+    class UCanvasPanelSlot* ParentSlot;                                               // 0x0290 (size: 0x8)
+
+    void OnMapItemClicked();
+    ESlateVisibility GetItemVisibility();
+}; // Size: 0x2C8
 
 class UMapMarkerComponent : public UActorComponent
 {
@@ -1612,6 +1666,20 @@ class UMarketShopWindow : public UStructureWindow
     ESlateVisibility GetSilverAmountVisibility();
     FText GetSilverAmountText();
 }; // Size: 0x2E8
+
+class UNewMapWidget : public UUserWidget
+{
+    TSubclassOf<class UMapItemWidget> MapItemWidgetClass;                             // 0x0278 (size: 0x8)
+    float ZoomSpeed;                                                                  // 0x0280 (size: 0x4)
+    float ZoomMax;                                                                    // 0x0284 (size: 0x4)
+    float ZoomAnimationTime;                                                          // 0x0288 (size: 0x4)
+    class UImage* MapImage;                                                           // 0x0290 (size: 0x8)
+    class UCanvasPanel* MapImageCanvas;                                               // 0x0298 (size: 0x8)
+    class UCanvasPanelSlot* MapImageCanvasSlot;                                       // 0x02A0 (size: 0x8)
+    class UCanvasPanel* MapItemCanvas;                                                // 0x02A8 (size: 0x8)
+    class UCanvasPanelSlot* MapItemCanvasSlot;                                        // 0x02B0 (size: 0x8)
+
+}; // Size: 0x2F8
 
 class UNextTestWidget : public UUserWidget
 {
@@ -1838,9 +1906,9 @@ class UScorchEffectComponent : public UNiagaraComponent
 
 class UServerListEntryView : public UObject
 {
-    FServerListEntry ServerListEntry;                                                 // 0x0028 (size: 0x30)
+    FServerListEntry ServerListEntry;                                                 // 0x0028 (size: 0x50)
 
-}; // Size: 0x58
+}; // Size: 0x78
 
 class UServerListEntryWidget : public UUserWidget
 {
@@ -1951,11 +2019,21 @@ class UTownCenterWindow : public UStructureWindow
     class UFooterContainer* TechFooterContainer;                                      // 0x0308 (size: 0x8)
     class UProgressBar* TechProgress;                                                 // 0x0310 (size: 0x8)
     class UStatusWidget* RareResourceStatus;                                          // 0x0318 (size: 0x8)
-    TArray<FText> TownNames1;                                                         // 0x0320 (size: 0x10)
-    TArray<FText> TownNames2;                                                         // 0x0330 (size: 0x10)
-    TArray<FText> TownNames3;                                                         // 0x0340 (size: 0x10)
+    class UHeaderContainer* ReserveInventoryHeaderContainer;                          // 0x0320 (size: 0x8)
+    class UUserWidget* ReserveInventorySubHeaderContainer;                            // 0x0328 (size: 0x8)
+    class UUserWidget* ReserveInventoryMainAreaContainer;                             // 0x0330 (size: 0x8)
+    class UInventoryContainerWidget* ReserveInventoryContainerWidget;                 // 0x0338 (size: 0x8)
+    class UCheckBox* PublicInventoryCheckBox;                                         // 0x0340 (size: 0x8)
+    class UImage* PublicInventorySubmitImage;                                         // 0x0348 (size: 0x8)
+    class UCheckBox* ReserveInventoryCheckBox;                                        // 0x0350 (size: 0x8)
+    TArray<FText> TownNames1;                                                         // 0x0358 (size: 0x10)
+    TArray<FText> TownNames2;                                                         // 0x0368 (size: 0x10)
+    TArray<FText> TownNames3;                                                         // 0x0378 (size: 0x10)
 
-}; // Size: 0x350
+    void OnReserveInventoryChecked(bool bIsChecked);
+    void OnPublicInventoryChecked(bool bIsChecked);
+    ESlateVisibility GetPublicInventoryCheckBoxVisibility();
+}; // Size: 0x388
 
 class UTownStatusWidget : public UUserWidget
 {

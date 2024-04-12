@@ -40,7 +40,8 @@ enum class EAnvilScreenType {
     Help = 8,
     FactionSelect = 9,
     ServerSelect = 10,
-    EAnvilScreenType_MAX = 11,
+    DeploymentMap = 11,
+    EAnvilScreenType_MAX = 12,
 };
 
 enum class EAnvilSpringArmMode {
@@ -250,6 +251,12 @@ enum class ESimpleTooltip {
     Stamina = 15,
     AnimalHealth = 16,
     ESimpleTooltip_MAX = 17,
+};
+
+enum class ETownCenterInventorySelection {
+    Public = 0,
+    Reserve = 1,
+    ETownCenterInventorySelection_MAX = 2,
 };
 
 enum class EUnarmedItemMeshLocation {

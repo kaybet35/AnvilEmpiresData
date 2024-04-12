@@ -87,11 +87,11 @@
       "Components": [
         {
           "ObjectName": "InventoryProxyComponent'Default__CaravanDetached_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/CaravanDetached.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/CaravanDetached.10"
         },
         {
           "ObjectName": "HealthProxyComponent'Default__CaravanDetached_C:HealthProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/CaravanDetached.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/CaravanDetached.8"
         },
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__CaravanDetached_C:BoxCollisionProxyComponent_0'",
@@ -111,11 +111,15 @@
         },
         {
           "ObjectName": "FootprintCollisionProxyComponent'Default__CaravanDetached_C:FootprintCollisionProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/CaravanDetached.6"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/CaravanDetached.7"
         },
         {
           "ObjectName": "HorseAttachableProxyComponent'Default__CaravanDetached_C:HorseAttachableProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/CaravanDetached.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/CaravanDetached.9"
+        },
+        {
+          "ObjectName": "EntityAttachableProxyComponent'Default__CaravanDetached_C:EntityAttachableProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/CaravanDetached.6"
         }
       ],
       "VisActorClass": {
@@ -134,6 +138,34 @@
         "ObjectName": "BlueprintGeneratedClass'CaravanHusk_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Husks/CaravanHusk.0"
       }
+    }
+  },
+  {
+    "Type": "EntityAttachableProxyComponent",
+    "Name": "EntityAttachableProxyComponent_0",
+    "Outer": "Default__CaravanDetached_C",
+    "Class": "UScriptClass'EntityAttachableProxyComponent'",
+    "Properties": {
+      "SlotOffset": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "DetachLocation": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "AttachedNewEntityType": {
+        "ObjectName": "BlueprintGeneratedClass'Caravan_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Caravan.1"
+      },
+      "TargetEntityTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'Horse_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.2"
+        }
+      ]
     }
   },
   {
@@ -176,7 +208,7 @@
       },
       "HorseEntityType": {
         "ObjectName": "BlueprintGeneratedClass'Horse_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.1"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.2"
       }
     }
   },

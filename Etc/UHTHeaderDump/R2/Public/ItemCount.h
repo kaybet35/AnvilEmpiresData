@@ -19,7 +19,7 @@ public:
     int32 Count;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bIsRelic;
+    uint8 ItemFlags;
     
     R2_API FItemCount();
 };

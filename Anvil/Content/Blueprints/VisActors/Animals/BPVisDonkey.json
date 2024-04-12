@@ -120,14 +120,14 @@
       "VisDisplayName": {
         "Namespace": "",
         "Key": "C466D6C4410ECB6C660B02B2EFE37573",
-        "SourceString": "Horse",
-        "LocalizedString": "Horse"
+        "SourceString": "Donkey",
+        "LocalizedString": "Donkey"
       },
       "Description": {
         "Namespace": "",
         "Key": "7EFB87DF44ED0A8671FC0FA89F6B9B15",
-        "SourceString": "Horses are a way for players to cross large distances faster & plunder",
-        "LocalizedString": "Horses are a way for players to cross large distances faster & plunder"
+        "SourceString": "Donkeys are good work animals and provide a way for players to cross short distances ",
+        "LocalizedString": "Donkeys are good work animals and provide a way for players to cross short distances "
       },
       "UseWindowType": "EHUDWindowType::InventoryStructure",
       "AdditionalActionButtons": [
@@ -262,7 +262,10 @@
     "Outer": "Default__BPVisDonkey_C",
     "Class": "UScriptClass'SkeletalMeshComponent'",
     "Properties": {
-      "AnimationMode": "EAnimationMode::AnimationSingleNode",
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Donkey_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_ABP.0"
+      },
       "SkeletalMesh": {
         "ObjectName": "SkeletalMesh'Donkey_SK'",
         "ObjectPath": "Anvil/Content/Meshes/Animals/Donkey_SK.0"
@@ -308,7 +311,8 @@
         "X": 0.0,
         "Y": 0.0,
         "Z": -25.0
-      }
+      },
+      "bVisible": false
     }
   },
   {
