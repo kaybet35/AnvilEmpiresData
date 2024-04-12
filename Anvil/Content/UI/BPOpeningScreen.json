@@ -50,28 +50,6 @@
   },
   {
     "Type": "BPAnvilButtonWidget_C",
-    "Name": "DiscordRoleButton",
-    "Outer": "WidgetTree",
-    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPAnvilButtonWidget.BPAnvilButtonWidget_C'",
-    "Template": {
-      "ObjectName": "BPAnvilButtonWidget_C'Default__BPAnvilButtonWidget_C'",
-      "ObjectPath": "Anvil/Content/UI/BPAnvilButtonWidget.0"
-    },
-    "Properties": {
-      "LabelText": {
-        "Namespace": "",
-        "Key": "2583A647498F488BEF8BE99E8530AF75",
-        "SourceString": "Discord Role",
-        "LocalizedString": "Discord Role"
-      },
-      "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_6'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.18"
-      }
-    }
-  },
-  {
-    "Type": "BPAnvilButtonWidget_C",
     "Name": "ExitButton",
     "Outer": "WidgetTree",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPAnvilButtonWidget.BPAnvilButtonWidget_C'",
@@ -201,6 +179,88 @@
   },
   {
     "Type": "Button",
+    "Name": "DiscordRoleButton",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Button'",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 390.0,
+            "Y": 75.0
+          },
+          "OutlineSettings": {
+            "Width": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'DiscordRole'",
+            "ObjectPath": "Anvil/Content/Textures/UI/DiscordRole.0"
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 390.0,
+            "Y": 75.0
+          },
+          "OutlineSettings": {
+            "Color": {
+              "SpecifiedColor": {
+                "R": 0.695111,
+                "G": 0.695111,
+                "B": 0.695111,
+                "A": 1.0,
+                "Hex": "FFDADADA"
+              }
+            },
+            "Width": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'DiscordRole'",
+            "ObjectPath": "Anvil/Content/Textures/UI/DiscordRole.0"
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 390.0,
+            "Y": 75.0
+          },
+          "OutlineSettings": {
+            "Color": {
+              "SpecifiedColor": {
+                "R": 0.695111,
+                "G": 0.695111,
+                "B": 0.695111,
+                "A": 1.0,
+                "Hex": "FFDADADA"
+              }
+            },
+            "Width": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'DiscordRole'",
+            "ObjectPath": "Anvil/Content/Textures/UI/DiscordRole.0"
+          }
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 390.0,
+            "Y": 75.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'DiscordRole'",
+            "ObjectPath": "Anvil/Content/Textures/UI/DiscordRole.0"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_6'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.18"
+      }
+    }
+  },
+  {
+    "Type": "Button",
     "Name": "RoadmapPopUpButton",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'Button'",
@@ -270,6 +330,10 @@
           "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.16"
         },
         {
+          "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.18"
+        },
+        {
           "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
           "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.13"
         },
@@ -280,10 +344,6 @@
         {
           "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
           "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.17"
-        },
-        {
-          "ObjectName": "CanvasPanelSlot'BPOpeningScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_6'",
-          "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.18"
         }
       ]
     }
@@ -362,7 +422,7 @@
       },
       "Content": {
         "ObjectName": "BPDisclaimerWidget_C'BPOpeningScreen_C:WidgetTree.DisclaimerWidget'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.7"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.6"
       }
     }
   },
@@ -474,19 +534,29 @@
     "Properties": {
       "LayoutData": {
         "Offsets": {
-          "Left": 1580.0,
-          "Top": 1000.0,
-          "Right": 200.0,
-          "Bottom": 50.0
+          "Left": -500.03415,
+          "Top": -933.6271,
+          "Right": 124.08311
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
         }
       },
+      "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPOpeningScreen_C:WidgetTree.CanvasPanel_0'",
         "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.11"
       },
       "Content": {
-        "ObjectName": "BPAnvilButtonWidget_C'BPOpeningScreen_C:WidgetTree.DiscordRoleButton'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.2"
+        "ObjectName": "Button'BPOpeningScreen_C:WidgetTree.DiscordRoleButton'",
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.8"
       }
     }
   },
@@ -1544,7 +1614,7 @@
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPOpeningScreen_C:WidgetTree.PlayButton'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.5"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.4"
       }
     }
   },
@@ -1561,7 +1631,7 @@
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPOpeningScreen_C:WidgetTree.OptionsButton'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.4"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.3"
       }
     }
   },
@@ -1578,7 +1648,7 @@
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPOpeningScreen_C:WidgetTree.ExitButton'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.3"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.2"
       }
     }
   },
@@ -1643,7 +1713,7 @@
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPOpeningScreen_C:WidgetTree.RoadmapButton'",
-        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.6"
+        "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.5"
       }
     }
   },
@@ -1831,7 +1901,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPOpeningScreen_C'Default__BPOpeningScreen_C'",
-      "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.8"
+      "ObjectPath": "Anvil/Content/UI/BPOpeningScreen.7"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"

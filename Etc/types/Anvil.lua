@@ -158,6 +158,7 @@ function AProxyPawn:AutoMove(Arg, bIsSprint) end
 ---@class AServerPartition : AActor
 ---@field ServerPartitionComponent UServerPartitionComponent
 ---@field SceneComponent USceneComponent
+---@field NavMeshBlockers TArray<UBoxComponent>
 AServerPartition = {}
 
 
@@ -1664,9 +1665,10 @@ function UMarketShopWindow:GetSilverAmountText() end
 ---@field RoadmapPopupButton UButton
 ---@field DisclaimerWidget UDisclaimerWidget
 ---@field AnnouncementText UTextBlock
----@field DiscordRoleButton UAnvilButtonWidget
+---@field DiscordRoleButton UButton
 UOpeningScreen = {}
 
+function UOpeningScreen:ReenableDiscordRoleButton() end
 function UOpeningScreen:OnRoadmapClicked() end
 function UOpeningScreen:OnRoadmapButtonClicked() end
 function UOpeningScreen:OnPlayButtonClicked() end
@@ -2050,6 +2052,7 @@ UVisBuildGhostComponent = {}
 
 ---@class UVisCanalWaterControllerComponent : USceneComponent
 ---@field ShiftDelta float
+---@field ShiftMin float
 ---@field PowerUnitDataComponent UPowerUnitDataComponent
 ---@field SplineDataComponent USplineDataComponent
 ---@field WaterMaterials TArray<UMaterialInstanceDynamic>

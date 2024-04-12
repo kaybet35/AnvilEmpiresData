@@ -33,13 +33,13 @@
         "CollisionProfileName": "BlockAll"
       }
     },
-    "BodySetupGuid": "6F3E4D3D45A0C5400DB2768241313EE3",
+    "BodySetupGuid": "9A278444421D4DA5808C60A296966C1B",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 11370,
-        "SizeOnDisk": 11370,
-        "OffsetInFile": "0x9C39"
+        "ElementCount": 30650,
+        "SizeOnDisk": 30650,
+        "OffsetInFile": "0x17987"
       }
     }
   },
@@ -53,7 +53,7 @@
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 361,
         "SizeOnDisk": 361,
-        "OffsetInFile": "0xC8E5"
+        "OffsetInFile": "0x1F183"
       }
     }
   },
@@ -105,7 +105,7 @@
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 202.53673,
+            "LocalUVDensities": 250.57927,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0
@@ -121,7 +121,7 @@
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 29.545183,
+            "LocalUVDensities": 25.717388,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0
@@ -145,15 +145,15 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant'FoundationTrim'",
-            "ObjectPath": "Anvil/Content/Materials/Structures/FoundationTrim.0"
+            "ObjectName": "MaterialInstanceConstant'MetalTrim01'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/MetalTrim01.0"
           },
           "MaterialSlotName": "FoundationTrim_001",
-          "ImportedMaterialSlotName": "FoundationTrim_001",
+          "ImportedMaterialSlotName": "MetalTrim",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 29.594864,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0
@@ -176,7 +176,7 @@
           }
         }
       ],
-      "LightmapUVDensity": 190.93475,
+      "LightmapUVDensity": 208.50594,
       "LightMapResolution": 64,
       "ExtendedBounds": {
         "Origin": {
@@ -200,7 +200,7 @@
       "ObjectName": "NavCollision'IndustryWoodChoppingStation:NavCollision_1'",
       "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/IndustryWoodChoppingStation.1"
     },
-    "LightingGuid": "A6B030EB-45F918B0-68EADD8F-C1AF74CA",
+    "LightingGuid": "963FDB9B-423DC55B-E4F7A0A0-EA4B95C8",
     "RenderData": {
       "LODs": [
         {
@@ -226,16 +226,27 @@
               "bCastShadow": true,
               "bForceOpaque": false,
               "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 5,
+              "FirstIndex": 612,
+              "NumTriangles": 336,
+              "MinVertexIndex": 372,
+              "MaxVertexIndex": 1091,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
             }
           ],
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 372
+            "NumVertices": 1092
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 372,
+            "NumVertices": 1092,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
@@ -279,14 +290,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": -105.0,
+                    "X": -60.0,
                     "Y": 0.18170166,
                     "Z": 38.47831
                   },
                   "Extent": {
                     "X": 95.0,
                     "Y": 79.526764,
-                    "Z": 20.0
+                    "Z": 65.0
                   }
                 },
                 "LODLevel": 0,
@@ -310,14 +321,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": 105.0,
+                    "X": 5.0,
                     "Y": 0.18170166,
                     "Z": 38.47831
                   },
                   "Extent": {
                     "X": 95.0,
                     "Y": 79.526764,
-                    "Z": 20.0
+                    "Z": 120.0
                   }
                 },
                 "LODLevel": 0,
@@ -453,11 +464,11 @@
         {
           "Sections": [
             {
-              "MaterialIndex": 3,
+              "MaterialIndex": 5,
               "FirstIndex": 0,
-              "NumTriangles": 19,
+              "NumTriangles": 52,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 56,
+              "MaxVertexIndex": 103,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -465,24 +476,35 @@
             },
             {
               "MaterialIndex": 2,
-              "FirstIndex": 57,
-              "NumTriangles": 83,
-              "MinVertexIndex": 57,
-              "MaxVertexIndex": 241,
+              "FirstIndex": 156,
+              "NumTriangles": 128,
+              "MinVertexIndex": 104,
+              "MaxVertexIndex": 347,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 5,
+              "FirstIndex": 540,
+              "NumTriangles": 90,
+              "MinVertexIndex": 348,
+              "MaxVertexIndex": 557,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
               "bVisibleInRayTracing": true
             }
           ],
-          "MaxDeviation": 615.51117,
+          "MaxDeviation": 43.945198,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 242
+            "NumVertices": 558
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 242,
+            "NumVertices": 558,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
@@ -499,7 +521,7 @@
           "BulkDataFlags": "BULKDATA_None",
           "ElementCount": 0,
           "SizeOnDisk": 0,
-          "OffsetInFile": "0x123FF"
+          "OffsetInFile": "0x2DD69"
         },
         "ImposterAtlas": [],
         "HierarchyNodes": [],
@@ -533,7 +555,7 @@
       "bLODsShareStaticLighting": true,
       "ScreenSize": [
         2.0,
-        0.0047064293,
+        0.06372559,
         0.0,
         0.0,
         0.0,

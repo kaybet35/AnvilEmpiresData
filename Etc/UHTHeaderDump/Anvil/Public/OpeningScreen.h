@@ -40,11 +40,14 @@ public:
     UTextBlock* AnnouncementText;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UAnvilButtonWidget* DiscordRoleButton;
+    UButton* DiscordRoleButton;
     
     UOpeningScreen();
 
 protected:
+    UFUNCTION(BlueprintCallable)
+    void ReenableDiscordRoleButton();
+    
     UFUNCTION(BlueprintCallable)
     void OnRoadmapClicked();
     

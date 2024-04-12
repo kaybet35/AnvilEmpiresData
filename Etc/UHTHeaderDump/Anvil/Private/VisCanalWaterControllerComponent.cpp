@@ -4,6 +4,7 @@
 
 UVisCanalWaterControllerComponent::UVisCanalWaterControllerComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ShiftDelta = 0.00f;
+    this->ShiftMin = 2.00f;
     this->PowerUnitDataComponent = CreateDefaultSubobject<UPowerUnitDataComponent>(TEXT("PowerUnitDataComponent"));
     this->SplineDataComponent = CreateDefaultSubobject<USplineDataComponent>(TEXT("SplineDataComponent"));
     this->SplineWaterMesh = NULL;

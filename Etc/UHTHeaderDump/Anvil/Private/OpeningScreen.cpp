@@ -13,6 +13,9 @@ UOpeningScreen::UOpeningScreen() {
     this->DiscordRoleButton = NULL;
 }
 
+void UOpeningScreen::ReenableDiscordRoleButton() {
+}
+
 void UOpeningScreen::OnRoadmapClicked() {
 }
 

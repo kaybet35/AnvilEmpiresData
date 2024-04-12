@@ -389,8 +389,9 @@ class AServerPartition : public AActor
 {
     class UServerPartitionComponent* ServerPartitionComponent;                        // 0x0290 (size: 0x8)
     class USceneComponent* SceneComponent;                                            // 0x0298 (size: 0x8)
+    TArray<class UBoxComponent*> NavMeshBlockers;                                     // 0x02A0 (size: 0x10)
 
-}; // Size: 0x2A0
+}; // Size: 0x2B0
 
 class AUIGlobals : public AInfo
 {
@@ -1565,8 +1566,9 @@ class UOpeningScreen : public UAnvilScreen
     class UButton* RoadmapPopupButton;                                                // 0x02C0 (size: 0x8)
     class UDisclaimerWidget* DisclaimerWidget;                                        // 0x02C8 (size: 0x8)
     class UTextBlock* AnnouncementText;                                               // 0x02D0 (size: 0x8)
-    class UAnvilButtonWidget* DiscordRoleButton;                                      // 0x02D8 (size: 0x8)
+    class UButton* DiscordRoleButton;                                                 // 0x02D8 (size: 0x8)
 
+    void ReenableDiscordRoleButton();
     void OnRoadmapClicked();
     void OnRoadmapButtonClicked();
     void OnPlayButtonClicked();
@@ -1934,6 +1936,7 @@ class UVisBuildGhostComponent : public UActorComponent
 class UVisCanalWaterControllerComponent : public USceneComponent
 {
     float ShiftDelta;                                                                 // 0x02A0 (size: 0x4)
+    float ShiftMin;                                                                   // 0x02A4 (size: 0x4)
     class UPowerUnitDataComponent* PowerUnitDataComponent;                            // 0x02A8 (size: 0x8)
     class USplineDataComponent* SplineDataComponent;                                  // 0x02B0 (size: 0x8)
     TArray<class UMaterialInstanceDynamic*> WaterMaterials;                           // 0x02B8 (size: 0x10)

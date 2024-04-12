@@ -3,6 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
 #include "ServerPartition.generated.h"
 
+class UBoxComponent;
 class USceneComponent;
 class UServerPartitionComponent;
 
@@ -16,6 +17,9 @@ public:
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* SceneComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UBoxComponent*> NavMeshBlockers;
     
 public:
     AServerPartition(const FObjectInitializer& ObjectInitializer);
