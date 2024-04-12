@@ -2,8 +2,9 @@
 
 ---@class ABPVisTripHammer_C : AVisStructure
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field PowerUnitData UPowerUnitDataComponent
 ---@field SkeletalMesh USkeletalMeshComponent
+---@field VisStaticMesh UVisStaticMeshComponent
+---@field PowerUnitData UPowerUnitDataComponent
 ABPVisTripHammer_C = {}
 
 ---@param DeltaSeconds float

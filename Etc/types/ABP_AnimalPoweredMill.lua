@@ -1,7 +1,8 @@
 ---@meta
 
 ---@class FAnimBlueprintGeneratedConstantData : FAnimBlueprintConstantData
----@field __NameProperty_39 FName
+---@field __NameProperty_38 FName
+---@field __FloatProperty_39 float
 ---@field __FloatProperty_40 float
 ---@field __BoolProperty_41 boolean
 ---@field __FloatProperty_42 float

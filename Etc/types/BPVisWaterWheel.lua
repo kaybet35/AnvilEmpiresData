@@ -3,7 +3,6 @@
 ---@class ABPVisWaterWheel_C : AVisStructure
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field PowerUnitData UPowerUnitDataComponent
----@field ConnectorShaft USkeletalMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field SkeletalMesh USkeletalMeshComponent
 ABPVisWaterWheel_C = {}

@@ -104,7 +104,7 @@
       ],
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisCanal_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCanal.1"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.1"
       }
     }
   },
@@ -146,9 +146,6 @@
     "Template": {
       "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
-    },
-    "Properties": {
-      "MaxHealth": 65.0
     }
   },
   {
@@ -157,12 +154,12 @@
     "Outer": "Default__Canal_C",
     "Class": "UScriptClass'PowerUnitProxyComponent'",
     "Properties": {
-      "AllowedDirection": 0,
+      "AllowedDirection": 2,
       "CurrentMax": 50.0,
-      "FlatResistance": 3.0,
+      "FlatResistance": 2.0,
       "ResistanceSlopeModifier": -2.0,
       "InnerWidth": 25.0,
-      "Outerwidth": 75.0
+      "OuterWidth": 75.0
     }
   },
   {
@@ -191,9 +188,15 @@
     "Outer": "Default__Canal_C",
     "Class": "UScriptClass'SplineProxyComponent'",
     "Properties": {
+      "MinSplineLength": 300.0,
       "bScaleCost": true,
       "bPlatformMode": true,
-      "bDisallowSnappingAtMiddle": true,
+      "PlatformStartOffset": {
+        "X": 0.0,
+        "Y": 150.0,
+        "Z": 25.0
+      },
+      "MidPieceZOffset": -25.0,
       "MidPiece": {
         "ObjectName": "BlueprintGeneratedClass'CanalMidPieceT1_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Walls/misc/CanalMidPieceT1.0"

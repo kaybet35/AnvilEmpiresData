@@ -233,8 +233,8 @@
               },
               "Translation": {
                 "X": 0.0,
-                "Y": 0.0,
-                "Z": 0.0
+                "Y": -25.373512,
+                "Z": -1.4604925E-06
               },
               "Scale3D": {
                 "X": 1.0,
@@ -353,8 +353,8 @@
               },
               "Translation": {
                 "X": 0.0,
-                "Y": 0.0,
-                "Z": 0.0
+                "Y": -24.958132,
+                "Z": 5.441394E-07
               },
               "Scale3D": {
                 "X": 1.0,
@@ -494,19 +494,19 @@
         "CollisionProfileName": "BlockAll"
       }
     },
-    "BodySetupGuid": "AA0F9AB6497ED4CB41BA7586935B59D3",
+    "BodySetupGuid": "F508B8C2486479D8EA480E845C1275BE",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 13842,
-        "SizeOnDisk": 13842,
-        "OffsetInFile": "0x94D7"
+        "ElementCount": 263070,
+        "SizeOnDisk": 263070,
+        "OffsetInFile": "0x9C333"
       }
     }
   },
   {
     "Type": "NavCollision",
-    "Name": "NavCollision_2",
+    "Name": "NavCollision_1",
     "Outer": "IndustryAqueduct_WaterPump",
     "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
@@ -514,7 +514,7 @@
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1381,
         "SizeOnDisk": 1381,
-        "OffsetInFile": "0xCB2B"
+        "OffsetInFile": "0xDC713"
       }
     }
   },
@@ -526,35 +526,51 @@
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant'AncentWellWall'",
-            "ObjectPath": "Anvil/Content/Materials/Props/AncentWellWall.0"
+            "ObjectName": "MaterialInstanceConstant'AqueductStoneTile01'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/AqueductStoneTile01.0"
           },
           "MaterialSlotName": "Aqueduct",
           "ImportedMaterialSlotName": "Aqueduct",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 298.70126,
+            "LocalUVDensities": 821.4698,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'AqueductStoneTile02'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/AqueductStoneTile02.0"
+          },
+          "MaterialSlotName": "Waterway",
+          "ImportedMaterialSlotName": "Waterway",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 769.3495,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0
           }
         }
       ],
-      "LightmapUVDensity": 298.70126,
+      "LightmapUVDensity": 816.0793,
       "LightMapResolution": 64,
       "ExtendedBounds": {
         "Origin": {
-          "X": 0.0,
-          "Y": 0.0,
-          "Z": 450.0
+          "X": 6.866455E-05,
+          "Y": -0.5851364,
+          "Z": 451.03195
         },
         "BoxExtent": {
-          "X": 150.0,
-          "Y": 225.00003,
-          "Z": 450.0
+          "X": 164.67477,
+          "Y": 238.97894,
+          "Z": 451.06473
         },
-        "SphereRadius": 525.0000238069473
+        "SphereRadius": 531.6283651037833
       }
     },
     "BodySetup": {
@@ -562,10 +578,10 @@
       "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_WaterPump.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision'IndustryAqueduct_WaterPump:NavCollision_2'",
+      "ObjectName": "NavCollision'IndustryAqueduct_WaterPump:NavCollision_1'",
       "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_WaterPump.1"
     },
-    "LightingGuid": "55F6F650-49A9D698-21F98B85-92625B8E",
+    "LightingGuid": "119FE9DB-40319514-6EBEA7B9-0E4099B7",
     "RenderData": {
       "LODs": [
         {
@@ -573,9 +589,20 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 198,
+              "NumTriangles": 4586,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 199,
+              "MaxVertexIndex": 3116,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 13758,
+              "NumTriangles": 664,
+              "MinVertexIndex": 3117,
+              "MaxVertexIndex": 3945,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -585,30 +612,30 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 200
+            "NumVertices": 3946
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 200,
+            "NumVertices": 3946,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
+            "Stride": 4,
+            "NumVertices": 3946
           },
           "CardRepresentationData": {
             "Bounds": {
               "Min": {
-                "X": -151.0,
-                "Y": -226.00003,
-                "Z": -1.0
+                "X": -165.67471,
+                "Y": -240.56409,
+                "Z": -1.0327759
               },
               "Max": {
-                "X": 151.0,
-                "Y": 226.00003,
-                "Z": 901.0
+                "X": 165.67484,
+                "Y": 239.3938,
+                "Z": 903.0967
               },
               "IsValid": 1
             },
@@ -633,14 +660,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": -136.875,
-                    "Y": 0.0,
-                    "Z": 450.0
+                    "X": -137.28189,
+                    "Y": -0.58514404,
+                    "Z": 451.03195
                   },
                   "Extent": {
-                    "X": 225.5,
-                    "Y": 451.0,
-                    "Z": 24.125
+                    "X": 239.97894,
+                    "Y": 452.06473,
+                    "Z": 38.39281
                   }
                 },
                 "LODLevel": 0,
@@ -664,14 +691,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": 136.875,
-                    "Y": 0.0,
-                    "Z": 450.0
+                    "X": 137.28204,
+                    "Y": -0.58514404,
+                    "Z": 451.03195
                   },
                   "Extent": {
-                    "X": 225.5,
-                    "Y": 451.0,
-                    "Z": 24.125
+                    "X": 239.97894,
+                    "Y": 452.06473,
+                    "Z": 38.392803
                   }
                 },
                 "LODLevel": 0,
@@ -695,14 +722,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": 0.0,
-                    "Y": -209.60939,
-                    "Z": 450.0
+                    "X": 6.1035156E-05,
+                    "Y": -210.33675,
+                    "Z": 451.03195
                   },
                   "Extent": {
-                    "X": 151.0,
-                    "Y": 451.0,
-                    "Z": 26.39064
+                    "X": 165.67477,
+                    "Y": 452.06473,
+                    "Z": 40.22733
                   }
                 },
                 "LODLevel": 0,
@@ -726,14 +753,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": 0.0,
-                    "Y": 0.0,
-                    "Z": 450.0
+                    "X": 6.1035156E-05,
+                    "Y": 25.515167,
+                    "Z": 451.03195
                   },
                   "Extent": {
-                    "X": 151.0,
-                    "Y": 451.0,
-                    "Z": 236.00003
+                    "X": 165.67477,
+                    "Y": 452.06473,
+                    "Z": 223.87863
                   }
                 },
                 "LODLevel": 0,
@@ -757,14 +784,14 @@
                     "Z": -1.0
                   },
                   "Origin": {
-                    "X": 0.0,
-                    "Y": 0.0,
-                    "Z": 15.140625
+                    "X": 6.1035156E-05,
+                    "Y": -0.58514404,
+                    "Z": 15.157759
                   },
                   "Extent": {
-                    "X": 151.0,
-                    "Y": 225.5,
-                    "Z": 26.140625
+                    "X": 165.67477,
+                    "Y": 239.97894,
+                    "Z": 26.190535
                   }
                 },
                 "LODLevel": 0,
@@ -788,14 +815,14 @@
                     "Z": 1.0
                   },
                   "Origin": {
-                    "X": 0.0,
-                    "Y": 0.0,
-                    "Z": 842.5781
+                    "X": 6.1035156E-05,
+                    "Y": -0.58514404,
+                    "Z": 561.9846
                   },
                   "Extent": {
-                    "X": 151.0,
-                    "Y": 225.5,
-                    "Z": 68.421875
+                    "X": 165.67477,
+                    "Y": 239.97894,
+                    "Z": 351.11206
                   }
                 },
                 "LODLevel": 0,
@@ -809,30 +836,41 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 96,
+              "NumTriangles": 2239,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 120,
+              "MaxVertexIndex": 1735,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 6717,
+              "NumTriangles": 385,
+              "MinVertexIndex": 1736,
+              "MaxVertexIndex": 2396,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
               "bVisibleInRayTracing": true
             }
           ],
-          "MaxDeviation": 0.0010693383,
+          "MaxDeviation": 1.6127601,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 121
+            "NumVertices": 2397
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 121,
+            "NumVertices": 2397,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
+            "Stride": 4,
+            "NumVertices": 2397
           }
         }
       ],
@@ -842,7 +880,7 @@
           "BulkDataFlags": "BULKDATA_None",
           "ElementCount": 0,
           "SizeOnDisk": 0,
-          "OffsetInFile": "0x10CA1"
+          "OffsetInFile": "0x13676B"
         },
         "ImposterAtlas": [],
         "HierarchyNodes": [],
@@ -862,21 +900,21 @@
       },
       "Bounds": {
         "Origin": {
-          "X": 0.0,
-          "Y": 0.0,
-          "Z": 450.0
+          "X": 6.866455E-05,
+          "Y": -0.5851364,
+          "Z": 451.03195
         },
         "BoxExtent": {
-          "X": 150.0,
-          "Y": 225.00003,
-          "Z": 450.0
+          "X": 164.67477,
+          "Y": 238.97894,
+          "Z": 451.06473
         },
-        "SphereRadius": 525.0
+        "SphereRadius": 531.6284
       },
       "bLODsShareStaticLighting": true,
       "ScreenSize": [
         2.0,
-        1.77743,
+        1.3768119,
         0.0,
         0.0,
         0.0,

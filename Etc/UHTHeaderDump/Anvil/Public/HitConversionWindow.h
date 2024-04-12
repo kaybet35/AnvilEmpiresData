@@ -30,5 +30,8 @@ private:
     UFUNCTION(BlueprintCallable)
     void OutputNextButtonClicked();
     
+    UFUNCTION(BlueprintCallable)
+    void OnCurrentSelectedOutputIndexChanged(const uint8& Old, const uint8& New);
+    
 };
 

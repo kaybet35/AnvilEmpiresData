@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisAqueductSlope10_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.27"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,116 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "RightTrim1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LeftTrim1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BalljointTrim1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BalljointBase1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisBalljointStart",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisBalljointComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RightTrim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BalljointBase",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BalljointTrim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LeftTrim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisBalljointEnd",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisBalljointComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "EndMesh",
@@ -66,28 +176,6 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "VisBalljointEnd",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisBalljointComponent'",
-          "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "VisBalljointStart",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisBalljointComponent'",
-          "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "VisStaticMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -120,17 +208,16 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisAqueductSlope10_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.35"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.39"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconIndustryAqueduct10Slope'",
         "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconIndustryAqueduct10Slope.0"
       },
       "BuildSiteCategory": "EBuildSiteCategory::Water",
-      "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisAqueductSlope10_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.31"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.35"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisAqueductSlope10_C:HealthDataComponent'",
@@ -138,11 +225,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisAqueductSlope10_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.30"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.34"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisAqueductSlope10_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.29"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.33"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisAqueductSlope10_C:ScorchDataComponent'",
@@ -193,7 +280,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisAqueductSlope10_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.29"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisAqueductSlope10_C:ArrowComponent'",
@@ -266,13 +353,159 @@
         "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "VisBalljointComponent'BPVisAqueductSlope10_C:VisBalljointStart_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.33"
+        "ObjectName": "VisBalljointComponent'BPVisAqueductSlope10_C:VisBalljointEnd_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.36"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
-      "VariableGuid": "6497E641-471A0D39-24D26F9A-A00C0233",
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.13"
+        }
+      ],
+      "VariableGuid": "AA79E225-45ED4179-A452429F-00372994",
+      "InternalVariableName": "VisBalljointEnd"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisAqueductSlope10_C:RightTrim_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.47"
+      },
+      "VariableGuid": "DE82D037-48F8C985-DE0C088B-A4CBD56A",
+      "InternalVariableName": "RightTrim"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisBalljointComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisBalljointComponent'BPVisAqueductSlope10_C:VisBalljointStart_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.37"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.18"
+        }
+      ],
+      "VariableGuid": "C293D7C5-49FE0C0D-F157EE87-F4330EC0",
       "InternalVariableName": "VisBalljointStart"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisAqueductSlope10_C:BalljointBase1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.40"
+      },
+      "VariableGuid": "0A994630-47662E2C-90452AAF-B60AEE2E",
+      "InternalVariableName": "BalljointBase1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisAqueductSlope10_C:BalljointTrim1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.42"
+      },
+      "VariableGuid": "4C31EBD6-47C7B2DF-8B78DC99-1C6DDAEC",
+      "InternalVariableName": "BalljointTrim1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_14",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisAqueductSlope10_C:LeftTrim1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.44"
+      },
+      "VariableGuid": "E78AC46A-41A7242D-7AB9C7BB-7ED468EA",
+      "InternalVariableName": "LeftTrim1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_15",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisAqueductSlope10_C:RightTrim1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.46"
+      },
+      "VariableGuid": "454D1673-425E33ED-A8E3998C-6B8F2C93",
+      "InternalVariableName": "RightTrim1"
     }
   },
   {
@@ -287,12 +520,30 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisAqueductSlope10_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.42"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.48"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "4AD526A6-4723BCBC-83390695-154B23DF",
       "InternalVariableName": "VisStaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisAqueductSlope10_C:LeftTrim_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.45"
+      },
+      "VariableGuid": "A39768FB-4C74BFBB-431DE1A7-0869DD1B",
+      "InternalVariableName": "LeftTrim"
     }
   },
   {
@@ -307,22 +558,22 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisCanalWaterControllerComponent'BPVisAqueductSlope10_C:VisCanalWaterController_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.34"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.38"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.16"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.23"
         },
         {
           "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.17"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.24"
         },
         {
           "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.18"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.25"
         }
       ],
       "VariableGuid": "80857723-46455692-583D10B0-9DA07D82",
@@ -336,17 +587,15 @@
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'VisBalljointComponent'",
+        "ObjectName": "Class'VisStaticMeshComponent'",
         "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "VisBalljointComponent'BPVisAqueductSlope10_C:VisBalljointEnd_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.32"
+        "ObjectName": "VisStaticMeshComponent'BPVisAqueductSlope10_C:BalljointTrim_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.43"
       },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "6EDE1A71-4B27A902-3A5B7898-745325BE",
-      "InternalVariableName": "VisBalljointEnd"
+      "VariableGuid": "5EBED027-40C533D4-CA0B66A0-09508AA6",
+      "InternalVariableName": "BalljointTrim"
     }
   },
   {
@@ -361,7 +610,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisAqueductSlope10_C:StartMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.32"
       },
       "VariableGuid": "99B64010-4DC9DE43-1B9A748A-7A0D7A37",
       "InternalVariableName": "StartMesh"
@@ -379,7 +628,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisAqueductSlope10_C:MidMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.31"
       },
       "VariableGuid": "BA861D6E-4DEB3AC2-559E8B9E-9F3858F8",
       "InternalVariableName": "MidMesh"
@@ -397,10 +646,28 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisAqueductSlope10_C:EndMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.30"
       },
       "VariableGuid": "3064DF09-450FC388-218B3DAC-F4098B5C",
       "InternalVariableName": "EndMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisAqueductSlope10_C:BalljointBase_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.41"
+      },
+      "VariableGuid": "D61ACF79-4953D352-87D594A0-E13EFEFC",
+      "InternalVariableName": "BalljointBase"
     }
   },
   {
@@ -412,48 +679,80 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.21"
         },
         {
           "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.12"
         },
         {
-          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.15"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.14"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.25"
         },
         {
           "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.12"
         },
         {
-          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.15"
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.20"
         },
         {
-          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.14"
         },
         {
-          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_13'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.16"
         },
         {
-          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_14'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.17"
         },
         {
-          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectName": "SCS_Node'BPVisAqueductSlope10_C:SimpleConstructionScript_0.SCS_Node_15'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.18"
         }
       ],
@@ -537,74 +836,6 @@
     }
   },
   {
-    "Type": "StaticMeshComponent",
-    "Name": "BalljointBaseMesh",
-    "Outer": "VisBalljointEnd_GEN_VARIABLE",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'IndustryAqueduct_Balljoint'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_Balljoint.2"
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 1.0
-      }
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "BalljointMesh",
-    "Outer": "VisBalljointEnd_GEN_VARIABLE",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'IndustryAqueduct_BalljointTrim'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_BalljointTrim.2"
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -1.0
-      }
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "BalljointBaseMesh",
-    "Outer": "VisBalljointStart_GEN_VARIABLE",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'IndustryAqueduct_Balljoint'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_Balljoint.2"
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 1.0
-      }
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "BalljointMesh",
-    "Outer": "VisBalljointStart_GEN_VARIABLE",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'IndustryAqueduct_BalljointTrim'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_BalljointTrim.2"
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -1.0
-      }
-    }
-  },
-  {
     "Type": "StructureDataComponent",
     "Name": "StructureDataComponent",
     "Outer": "Default__BPVisAqueductSlope10_C",
@@ -628,35 +859,19 @@
     "Outer": "BPVisAqueductSlope10_C",
     "Class": "UScriptClass'VisBalljointComponent'",
     "Properties": {
-      "BalljointMesh": {
-        "ObjectName": "StaticMeshComponent'BPVisAqueductSlope10_C:VisBalljointEnd_GEN_VARIABLE.BalljointMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.26"
-      },
-      "BalljointBaseMesh": {
-        "ObjectName": "StaticMeshComponent'BPVisAqueductSlope10_C:VisBalljointEnd_GEN_VARIABLE.BalljointBaseMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.25"
-      },
-      "LeftTrimMesh": {
-        "ObjectName": "VisStaticMeshComponent'BPVisAqueductSlope10_C:VisBalljointEnd_GEN_VARIABLE.VisStaticMeshComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.38"
-      },
-      "RightTrimMesh": {
-        "ObjectName": "VisStaticMeshComponent'BPVisAqueductSlope10_C:VisBalljointEnd_GEN_VARIABLE.LeftTrimMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.36"
-      },
       "PowerUnitDataComponent": {
         "ObjectName": "PowerUnitDataComponent'BPVisAqueductSlope10_C:VisBalljointEnd_GEN_VARIABLE.PowerUnitDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.6"
       },
       "RelativeLocation": {
-        "X": 0.0,
+        "X": 2.8166876E-14,
         "Y": 450.0,
         "Z": 0.0
       },
       "RelativeRotation": {
         "Pitch": 0.0,
         "Yaw": 180.0,
-        "Roll": 0.0
+        "Roll": -0.0
       }
     }
   },
@@ -666,22 +881,6 @@
     "Outer": "BPVisAqueductSlope10_C",
     "Class": "UScriptClass'VisBalljointComponent'",
     "Properties": {
-      "BalljointMesh": {
-        "ObjectName": "StaticMeshComponent'BPVisAqueductSlope10_C:VisBalljointStart_GEN_VARIABLE.BalljointMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.28"
-      },
-      "BalljointBaseMesh": {
-        "ObjectName": "StaticMeshComponent'BPVisAqueductSlope10_C:VisBalljointStart_GEN_VARIABLE.BalljointBaseMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.27"
-      },
-      "LeftTrimMesh": {
-        "ObjectName": "VisStaticMeshComponent'BPVisAqueductSlope10_C:VisBalljointStart_GEN_VARIABLE.VisStaticMeshComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.41"
-      },
-      "RightTrimMesh": {
-        "ObjectName": "VisStaticMeshComponent'BPVisAqueductSlope10_C:VisBalljointStart_GEN_VARIABLE.LeftTrimMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.39"
-      },
       "bIsStart": true,
       "PowerUnitDataComponent": {
         "ObjectName": "PowerUnitDataComponent'BPVisAqueductSlope10_C:VisBalljointStart_GEN_VARIABLE.PowerUnitDataComponent'",
@@ -707,7 +906,7 @@
       },
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'BPVisAqueductSlope10_C:VisCanalWaterController_GEN_VARIABLE.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductSlope10.28"
       }
     }
   },
@@ -725,8 +924,144 @@
   },
   {
     "Type": "VisStaticMeshComponent",
-    "Name": "LeftTrimMesh",
-    "Outer": "VisBalljointEnd_GEN_VARIABLE",
+    "Name": "BalljointBase1_GEN_VARIABLE",
+    "Outer": "BPVisAqueductSlope10_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryAqueduct_Balljoint'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_Balljoint.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "BalljointBase"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "BalljointBase_GEN_VARIABLE",
+    "Outer": "BPVisAqueductSlope10_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryAqueduct_Balljoint'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_Balljoint.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "BalljointBase"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "BalljointTrim1_GEN_VARIABLE",
+    "Outer": "BPVisAqueductSlope10_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryAqueduct_BalljointTrim'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_BalljointTrim.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -1.0
+      },
+      "ComponentTags": [
+        "BalljointTrim",
+        "Structure"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "BalljointTrim_GEN_VARIABLE",
+    "Outer": "BPVisAqueductSlope10_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryAqueduct_BalljointTrim'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_BalljointTrim.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -1.0
+      },
+      "ComponentTags": [
+        "BalljointTrim",
+        "Structure"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "LeftTrim1_GEN_VARIABLE",
+    "Outer": "BPVisAqueductSlope10_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryAqueduct_Trim'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_Trim.2"
+      },
+      "RelativeLocation": {
+        "X": -125.0,
+        "Y": -0.0,
+        "Z": 0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "LeftTrim"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "LeftTrim_GEN_VARIABLE",
+    "Outer": "BPVisAqueductSlope10_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryAqueduct_Trim'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_Trim.2"
+      },
+      "RelativeLocation": {
+        "X": -125.0,
+        "Y": -0.0,
+        "Z": 0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "LeftTrim"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "RightTrim1_GEN_VARIABLE",
+    "Outer": "BPVisAqueductSlope10_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
     "Properties": {
       "VisMeshProfile": "EVisMeshProfile::StructureCollision",
@@ -741,42 +1076,15 @@
       },
       "ComponentTags": [
         "Structure",
-        "Collision"
+        "Collision",
+        "RightTrim"
       ]
     }
   },
   {
     "Type": "VisStaticMeshComponent",
-    "Name": "RightTrimMesh",
-    "Outer": "VisBalljointEnd_GEN_VARIABLE",
-    "Class": "UScriptClass'VisStaticMeshComponent'"
-  },
-  {
-    "Type": "VisStaticMeshComponent",
-    "Name": "VisStaticMeshComponent_0",
-    "Outer": "VisBalljointEnd_GEN_VARIABLE",
-    "Class": "UScriptClass'VisStaticMeshComponent'",
-    "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'IndustryAqueduct_Trim'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_Trim.2"
-      },
-      "RelativeLocation": {
-        "X": -125.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "ComponentTags": [
-        "Structure",
-        "Collision"
-      ]
-    }
-  },
-  {
-    "Type": "VisStaticMeshComponent",
-    "Name": "LeftTrimMesh",
-    "Outer": "VisBalljointStart_GEN_VARIABLE",
+    "Name": "RightTrim_GEN_VARIABLE",
+    "Outer": "BPVisAqueductSlope10_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
     "Properties": {
       "VisMeshProfile": "EVisMeshProfile::StructureCollision",
@@ -791,35 +1099,8 @@
       },
       "ComponentTags": [
         "Structure",
-        "Collision"
-      ]
-    }
-  },
-  {
-    "Type": "VisStaticMeshComponent",
-    "Name": "RightTrimMesh",
-    "Outer": "VisBalljointStart_GEN_VARIABLE",
-    "Class": "UScriptClass'VisStaticMeshComponent'"
-  },
-  {
-    "Type": "VisStaticMeshComponent",
-    "Name": "VisStaticMeshComponent_0",
-    "Outer": "VisBalljointStart_GEN_VARIABLE",
-    "Class": "UScriptClass'VisStaticMeshComponent'",
-    "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'IndustryAqueduct_Trim'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_Trim.2"
-      },
-      "RelativeLocation": {
-        "X": -125.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "ComponentTags": [
-        "Structure",
-        "Collision"
+        "Collision",
+        "RightTrim"
       ]
     }
   },

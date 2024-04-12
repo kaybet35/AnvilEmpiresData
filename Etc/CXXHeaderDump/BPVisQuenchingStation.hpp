@@ -3,9 +3,10 @@
 
 class ABPVisQuenchingStation_C : public AVisStructure
 {
-    class UStaticMeshComponent* WaterPlane;                                           // 0x0480 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0488 (size: 0x8)
+    class UInstancedStaticMeshComponent* ResourceWater;                               // 0x0480 (size: 0x8)
+    class UVisStockpileComponent* VisStockpile;                                       // 0x0488 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0490 (size: 0x8)
 
-}; // Size: 0x490
+}; // Size: 0x498
 
 #endif

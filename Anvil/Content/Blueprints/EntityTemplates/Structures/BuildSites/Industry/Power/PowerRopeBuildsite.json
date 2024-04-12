@@ -5,9 +5,9 @@
     "Outer": "Default__PowerRopeBuildsite_C",
     "Class": "UScriptClass'AdvancedSnappingProxyComponent'",
     "Properties": {
-      "bSnappingRequired": true,
       "bOverrideAngleOverlapMin": true,
-      "OverridedAngleOverlapMin": 1.0
+      "OverridedAngleOverlapMin": 1.0,
+      "NumSnappingRequired": 2
     }
   },
   {
@@ -61,11 +61,11 @@
         "ObjectName": "BlueprintGeneratedClass'PowerRope_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/PowerRope.1"
       },
-      "RequiredLocationType": "EAnvilBuildLocationType::Everywhere",
-      "RequiredTool": "EAnvilToolType::Hammer",
-      "bBuildableOverRoads": true,
+      "RequiredLocationType": "EAnvilBuildLocationType::Industry",
+      "RequiredTool": "EAnvilToolType::Hands",
+      "bRequiresTownHall": true,
       "TierPrerequisite": 2,
-      "ProcessedWoodRequirement": 25
+      "ResourceFibreRequirement": 3
     }
   },
   {
@@ -154,9 +154,14 @@
     "Class": "UScriptClass'SplineProxyComponent'",
     "Properties": {
       "MaxSegmentLength": 10000.0,
-      "MaxSplineLength": 6000.0,
+      "MaxSplineLength": 500.0,
       "bPlatformMode": true,
-      "bDisallowSnappingAtMiddle": true,
+      "bBridgeMode": true,
+      "PlatformStartOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
       "MidPiece": {
         "ObjectName": "BlueprintGeneratedClass'PowerRopeMidPieceBuildsite_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Walls/misc/PowerRopeMidPieceBuildsite.0"

@@ -10,7 +10,7 @@ USplineProxyComponent::USplineProxyComponent() {
     this->bScaleCost = false;
     this->bPlatformMode = false;
     this->bBridgeMode = false;
-    this->bDisallowSnappingAtMiddle = false;
+    this->MidPieceZOffset = 0.00f;
     this->MidPiece = NULL;
     this->EndPiece = NULL;
     this->SnappingChannel = EAnvilSnappingChannelType::General;

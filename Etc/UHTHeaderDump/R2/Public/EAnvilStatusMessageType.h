@@ -67,6 +67,7 @@ enum class EAnvilStatusMessageType : uint8 {
     RelicTechItemNotRelic,
     RelicTechSubmitted,
     RelicTechResearchComplete,
+    RelicTechResearchIncomplete,
     AccessDeniedBelongsToEnemy,
     AccessDeniedMustBePledged,
     AccessDeniedTooFarToInteract,
@@ -93,6 +94,7 @@ enum class EAnvilStatusMessageType : uint8 {
     NoItemsForPacking,
     TooManyOrFewItemsForPacking,
     NoContainerForPacking,
+    NotAllowedInBorderZone,
     NumTypes,
 };
 

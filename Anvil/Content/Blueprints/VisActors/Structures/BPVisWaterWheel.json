@@ -15,7 +15,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisWaterWheel_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.15"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BPVisWaterWheel_C:ExecuteUbergraph_BPVisWaterWheel'",
@@ -57,17 +57,6 @@
         "PropertyClass": {
           "ObjectName": "Class'PowerUnitDataComponent'",
           "ObjectPath": "/Script/R2"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ConnectorShaft",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'SkeletalMeshComponent'",
-          "ObjectPath": "/Script/Engine"
         }
       },
       {
@@ -126,17 +115,16 @@
       "UberGraphFrame": {},
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisWaterWheel_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.21"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconIndustryWaterwheel'",
         "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconIndustryWaterwheel.0"
       },
       "BuildSiteCategory": "EBuildSiteCategory::Water",
-      "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisWaterWheel_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.20"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisWaterWheel_C:HealthDataComponent'",
@@ -144,11 +132,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisWaterWheel_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.19"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisWaterWheel_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.18"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisWaterWheel_C:ScorchDataComponent'",
@@ -170,8 +158,20 @@
       "VisDisplayName": {
         "Namespace": "",
         "Key": "2140FB99447C5C1A9213FDA42820DAC7",
-        "SourceString": "Gate",
-        "LocalizedString": "Gate"
+        "SourceString": "Water Wheel",
+        "LocalizedString": "Water Wheel"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "261FE1104F1AFBDA956DFEB80A54EE04",
+        "SourceString": "Used to generate power to drive other equipment. Must be attached to a Canal or River to function.",
+        "LocalizedString": "Used to generate power to drive other equipment. Must be attached to a Canal or River to function."
+      },
+      "DescriptionFooter": {
+        "Namespace": "",
+        "Key": "D43FB64E4F78A4C97E739B9793E27682",
+        "SourceString": "Must be built in Workshop areas",
+        "LocalizedString": "Must be built in Workshop areas"
       },
       "UseWindowType": "EHUDWindowType::GenericStructure",
       "RootComponent": {
@@ -247,7 +247,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisWaterWheel_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.17"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisWaterWheel_C:ArrowComponent'",
@@ -309,7 +309,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisWaterWheel_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.16"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -329,32 +329,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWaterWheel_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.22"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "4C1C3CCF-42662CDC-444A228F-9AA3F8EC",
       "InternalVariableName": "VisStaticMesh"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_3",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'SkeletalMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "SkeletalMeshComponent'BPVisWaterWheel_C:ConnectorShaft_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.17"
-      },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "3B95E01D-42380745-686D6998-833830EC",
-      "InternalVariableName": "ConnectorShaft"
     }
   },
   {
@@ -391,12 +371,8 @@
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.14"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.14"
         }
       ],
       "AllNodes": [
@@ -409,12 +385,8 @@
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.14"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.14"
         }
       ],
       "DefaultSceneRootNode": {
@@ -425,53 +397,21 @@
   },
   {
     "Type": "SkeletalMeshComponent",
-    "Name": "ConnectorShaft_GEN_VARIABLE",
-    "Outer": "BPVisWaterWheel_C",
-    "Class": "UScriptClass'SkeletalMeshComponent'",
-    "Properties": {
-      "AnimationData": {
-        "AnimToPlay": {
-          "ObjectName": "AnimSequence'ANIM_Connector_Operational'",
-          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/ANIM_Connector_Operational.0"
-        }
-      },
-      "AnimationMode": "EAnimationMode::AnimationSingleNode",
-      "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'SK_Connector'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Connector.0"
-      },
-      "SkinnedAsset": {
-        "ObjectName": "SkeletalMesh'SK_Connector'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Connector.0"
-      },
-      "bReceivesDecals": false,
-      "RelativeLocation": {
-        "X": -230.0,
-        "Y": 0.0,
-        "Z": 0.0
-      }
-    }
-  },
-  {
-    "Type": "SkeletalMeshComponent",
     "Name": "SkeletalMesh_GEN_VARIABLE",
     "Outer": "BPVisWaterWheel_C",
     "Class": "UScriptClass'SkeletalMeshComponent'",
     "Properties": {
-      "AnimationData": {
-        "AnimToPlay": {
-          "ObjectName": "AnimSequence'ANIM_WaterWheel_Operational'",
-          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/ANIM_WaterWheel_Operational.0"
-        }
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'WaterWheel_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/WaterWheel_ABP.0"
       },
-      "AnimationMode": "EAnimationMode::AnimationSingleNode",
       "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'SK_WaterWheel'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_WaterWheel.0"
+        "ObjectName": "SkeletalMesh'WaterWheel_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/WaterWheel_SK.0"
       },
       "SkinnedAsset": {
-        "ObjectName": "SkeletalMesh'SK_WaterWheel'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_WaterWheel.0"
+        "ObjectName": "SkeletalMesh'WaterWheel_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/WaterWheel_SK.0"
       },
       "bReceivesDecals": false
     }
@@ -522,6 +462,11 @@
       "StaticMesh": {
         "ObjectName": "StaticMesh'SM_WaterWheel'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/WaterWheel/SM_WaterWheel.2"
+      },
+      "RelativeLocation": {
+        "X": -134.49416,
+        "Y": 5.684342E-13,
+        "Z": -3.523768E-07
       },
       "bVisible": false,
       "bHiddenInGame": true,

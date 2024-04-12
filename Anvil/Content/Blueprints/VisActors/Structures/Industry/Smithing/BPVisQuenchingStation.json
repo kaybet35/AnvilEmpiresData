@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisQuenchingStation_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.13"
       }
     },
     "SuperStruct": {
@@ -22,13 +22,24 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "WaterPlane",
+        "Name": "ResourceWater",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectName": "Class'InstancedStaticMeshComponent'",
           "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStockpile",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStockpileComponent'",
+          "ObjectPath": "/Script/Anvil"
         }
       },
       {
@@ -65,17 +76,16 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisQuenchingStation_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.18"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconIndustryQuenchingBucket'",
         "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconIndustryQuenchingBucket.0"
       },
       "BuildSiteCategory": "EBuildSiteCategory::Smithing",
-      "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisQuenchingStation_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.17"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisQuenchingStation_C:HealthDataComponent'",
@@ -83,15 +93,15 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisQuenchingStation_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.16"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisQuenchingStation_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.15"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisQuenchingStation_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.8"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisQuenchingStation_C:ArrowComponent'",
@@ -114,14 +124,14 @@
       "Description": {
         "Namespace": "",
         "Key": "6A785BDE495F33A37E9F60812AC063D6",
-        "SourceString": "TODO",
-        "LocalizedString": "TODO"
+        "SourceString": "A large bucket used to quench ingots, converting them into a usable blade. Higher quality blades can be achieved by quenching at sharpness and optimal heat level for the type.",
+        "LocalizedString": "A large bucket used to quench ingots, converting them into a usable blade. Higher quality blades can be achieved by quenching at sharpness and optimal heat level for the type."
       },
       "DescriptionFooter": {
         "Namespace": "",
         "Key": "E124A22A4BC531FCEF56159A74B47A93",
-        "SourceString": "Can be built in Workshop areas.",
-        "LocalizedString": "Can be built in Workshop areas."
+        "SourceString": "Must be built in Workshop areas",
+        "LocalizedString": "Must be built in Workshop areas"
       },
       "UseWindowType": "EHUDWindowType::Quenching",
       "RootComponent": {
@@ -150,7 +160,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisQuenchingStation_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.14"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisQuenchingStation_C:ArrowComponent'",
@@ -163,6 +173,24 @@
     "Name": "HealthDataComponent",
     "Outer": "Default__BPVisQuenchingStation_C",
     "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "InstancedStaticMeshComponent",
+    "Name": "ResourceWater_GEN_VARIABLE",
+    "Outer": "BPVisQuenchingStation_C",
+    "Class": "UScriptClass'InstancedStaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'QuenchingStationWater'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/QuenchingStationWater.2"
+      },
+      "bReceivesDecals": false,
+      "bHasPerInstanceHitProxies": true,
+      "bHiddenInGame": true,
+      "ComponentTags": [
+        "ExcludeFromVisActorTemplate"
+      ]
+    }
   },
   {
     "Type": "SceneComponent",
@@ -188,7 +216,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisQuenchingStation_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.7"
       },
       "VariableGuid": "D82C2CC7-4AB252F5-8E1ED9A8-F54408F4",
       "InternalVariableName": "DefaultSceneRoot"
@@ -206,32 +234,60 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisQuenchingStation_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.19"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisQuenchingStation_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.11"
+        }
+      ],
       "VariableGuid": "078D6C4F-4D0617D7-5AAE87BF-CC443993",
       "InternalVariableName": "VisStaticMesh"
     }
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_2",
+    "Name": "SCS_Node_5",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectName": "Class'VisStockpileComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStockpileComponent'BPVisQuenchingStation_C:VisStockpile_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.20"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisQuenchingStation_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.12"
+        }
+      ],
+      "VariableGuid": "B8CFA193-457A288A-06B1D3B0-11B05852",
+      "InternalVariableName": "VisStockpile"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'InstancedStaticMeshComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisQuenchingStation_C:WaterPlane_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.13"
+        "ObjectName": "InstancedStaticMeshComponent'BPVisQuenchingStation_C:ResourceWater_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.6"
       },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "6001E0A4-441997C6-4981298D-A9DC201C",
-      "InternalVariableName": "WaterPlane"
+      "VariableGuid": "0770CF61-489DCF69-C14535B3-0C747A51",
+      "InternalVariableName": "ResourceWater"
     }
   },
   {
@@ -243,26 +299,26 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisQuenchingStation_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.9"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisQuenchingStation_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.10"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisQuenchingStation_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.10"
         },
         {
-          "ObjectName": "SCS_Node'BPVisQuenchingStation_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.10"
+          "ObjectName": "SCS_Node'BPVisQuenchingStation_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisQuenchingStation_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.12"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisQuenchingStation_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisQuenchingStation.9"
       }
     }
   },
@@ -271,39 +327,6 @@
     "Name": "SplineDataComponent",
     "Outer": "GrassRemovalVolume",
     "Class": "UScriptClass'SplineDataComponent'"
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "WaterPlane_GEN_VARIABLE",
-    "Outer": "BPVisQuenchingStation_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'EditorPlane'",
-        "ObjectPath": "Engine/Content/EditorMeshes/EditorPlane.2"
-      },
-      "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'WaterTrough'",
-          "ObjectPath": "Anvil/Content/FX/Water/Materials/WaterTrough.0"
-        }
-      ],
-      "RelativeLocation": {
-        "X": 3.271924,
-        "Y": -3.136914,
-        "Z": 45.02272
-      },
-      "RelativeRotation": {
-        "Pitch": -90.0,
-        "Yaw": -0.000219,
-        "Roll": 179.99983
-      },
-      "RelativeScale3D": {
-        "X": 1.0,
-        "Y": 0.36243,
-        "Z": 0.711682
-      }
-    }
   },
   {
     "Type": "StructureDataComponent",
@@ -346,10 +369,21 @@
         "ObjectName": "StaticMesh'QuenchingStation'",
         "ObjectPath": "Anvil/Content/Meshes/Props/QuenchingStation.2"
       },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0090954
+      },
       "ComponentTags": [
         "Structure",
         "Collision"
       ]
     }
+  },
+  {
+    "Type": "VisStockpileComponent",
+    "Name": "VisStockpile_GEN_VARIABLE",
+    "Outer": "BPVisQuenchingStation_C",
+    "Class": "UScriptClass'VisStockpileComponent'"
   }
 ]

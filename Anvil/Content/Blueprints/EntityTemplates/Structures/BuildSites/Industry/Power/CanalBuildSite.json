@@ -62,9 +62,11 @@
       },
       "RequiredLocationType": "EAnvilBuildLocationType::Everywhere",
       "RequiredTool": "EAnvilToolType::Hammer",
+      "bRequiresTownHall": true,
       "bBuildableOverRoads": true,
       "TierPrerequisite": 2,
-      "ProcessedWoodRequirement": 25
+      "ProcessedWoodRequirement": 3,
+      "ProcessedStoneRequirement": 1
     }
   },
   {
@@ -156,7 +158,12 @@
       "MaxSplineLength": 6000.0,
       "bScaleCost": true,
       "bPlatformMode": true,
-      "bDisallowSnappingAtMiddle": true,
+      "PlatformStartOffset": {
+        "X": 0.0,
+        "Y": 150.0,
+        "Z": 25.0
+      },
+      "MidPieceZOffset": -25.0,
       "MidPiece": {
         "ObjectName": "BlueprintGeneratedClass'CanalMidPieceBuildSite_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Walls/misc/CanalMidPieceBuildSite.0"

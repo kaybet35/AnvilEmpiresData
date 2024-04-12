@@ -11,9 +11,6 @@ public:
     float ActiveSecondsPerUnitFuel;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float MinDistanceBetweenTorches;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float NightShroudRadius;
     
     UStaticTorchProxyComponent();

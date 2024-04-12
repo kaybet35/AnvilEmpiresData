@@ -12,4 +12,7 @@ void UHitConversionWindow::OutputPreviousButtonClicked() {
 void UHitConversionWindow::OutputNextButtonClicked() {
 }
 
+void UHitConversionWindow::OnCurrentSelectedOutputIndexChanged(const uint8& Old, const uint8& New) {
+}
+
 

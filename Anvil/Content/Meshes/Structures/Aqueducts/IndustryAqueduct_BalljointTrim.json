@@ -10,19 +10,19 @@
         "CollisionProfileName": "BlockAll"
       }
     },
-    "BodySetupGuid": "A57EA3C64D20F4E2076FE3943BD9937D",
+    "BodySetupGuid": "C1BF395943EF4E447790C29992F95E6E",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 115498,
-        "SizeOnDisk": 115498,
-        "OffsetInFile": "0x40757"
+        "ElementCount": 53522,
+        "SizeOnDisk": 53522,
+        "OffsetInFile": "0x1FCD7"
       }
     }
   },
   {
     "Type": "NavCollision",
-    "Name": "NavCollision_2",
+    "Name": "NavCollision_1",
     "Outer": "IndustryAqueduct_BalljointTrim",
     "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
@@ -30,7 +30,7 @@
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
-        "OffsetInFile": "0x5CAC3"
+        "OffsetInFile": "0x2CE2B"
       }
     }
   },
@@ -42,35 +42,51 @@
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "Material'BallJointTest'",
-            "ObjectPath": "Anvil/Content/FX/Materials/BallJointTest.0"
+            "ObjectName": "MaterialInstanceConstant'AqueductStoneTile01_BalljointTrim'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/AqueductStoneTile01_BalljointTrim.0"
           },
           "MaterialSlotName": "Aqueduct",
           "ImportedMaterialSlotName": "Aqueduct",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 305.83813,
+            "LocalUVDensities": 536.8382,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'AqueductStoneTile02_BalljointTrim'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/AqueductStoneTile02_BalljointTrim.0"
+          },
+          "MaterialSlotName": "Waterway",
+          "ImportedMaterialSlotName": "Waterway",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 554.4687,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0
           }
         }
       ],
-      "LightmapUVDensity": 305.83813,
+      "LightmapUVDensity": 541.84467,
       "LightMapResolution": 64,
       "ExtendedBounds": {
         "Origin": {
           "X": 0.0,
-          "Y": -74.64392,
-          "Z": 849.99963
+          "Y": -75.01141,
+          "Z": 849.661
         },
         "BoxExtent": {
-          "X": 150.0,
-          "Y": 74.64395,
-          "Z": 50.000366
+          "X": 150.02284,
+          "Y": 75.01143,
+          "Z": 50.33896
         },
-        "SphereRadius": 174.8478095251624
+        "SphereRadius": 175.1215943488717
       }
     },
     "BodySetup": {
@@ -78,10 +94,10 @@
       "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_BalljointTrim.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision'IndustryAqueduct_BalljointTrim:NavCollision_2'",
+      "ObjectName": "NavCollision'IndustryAqueduct_BalljointTrim:NavCollision_1'",
       "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_BalljointTrim.1"
     },
-    "LightingGuid": "34C2C4B4-42F8B9AE-A3A9A2AC-58416B1F",
+    "LightingGuid": "97AA78E9-4DDABEBC-D1E06DB9-028B2B37",
     "RenderData": {
       "LODs": [
         {
@@ -89,9 +105,20 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 2368,
+              "NumTriangles": 696,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 1529,
+              "MaxVertexIndex": 443,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 2088,
+              "NumTriangles": 384,
+              "MinVertexIndex": 63,
+              "MaxVertexIndex": 740,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -101,29 +128,29 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 1530
+            "NumVertices": 741
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 1530,
+            "NumVertices": 741,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
+            "Stride": 4,
+            "NumVertices": 741
           },
           "CardRepresentationData": {
             "Bounds": {
               "Min": {
-                "X": -151.0,
-                "Y": -150.28787,
-                "Z": 798.99927
+                "X": -151.02284,
+                "Y": -151.02284,
+                "Z": 798.322
               },
               "Max": {
-                "X": 151.0,
-                "Y": 1.0000305,
+                "X": 151.02284,
+                "Y": 1.0000153,
                 "Z": 901.0
               },
               "IsValid": 1
@@ -149,45 +176,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": -90.0,
-                    "Y": -74.64392,
-                    "Z": 849.99963
+                    "X": -85.0,
+                    "Y": -75.01141,
+                    "Z": 849.661
                   },
                   "Extent": {
                     "X": 75.0,
                     "Y": 50.0,
-                    "Z": 65.0
-                  }
-                },
-                "LODLevel": 0,
-                "AxisAlignedDirectionIndex": 0
-              },
-              {
-                "OBB": {
-                  "AxisX": {
-                    "X": 0.0,
-                    "Y": 1.0,
-                    "Z": 0.0
-                  },
-                  "AxisY": {
-                    "X": 0.0,
-                    "Y": 0.0,
-                    "Z": 1.0
-                  },
-                  "AxisZ": {
-                    "X": -1.0,
-                    "Y": 0.0,
-                    "Z": 0.0
-                  },
-                  "Origin": {
-                    "X": 60.0,
-                    "Y": -49.64392,
-                    "Z": 849.99963
-                  },
-                  "Extent": {
-                    "X": 50.0,
-                    "Y": 50.0,
-                    "Z": 45.0
+                    "Z": 70.0
                   }
                 },
                 "LODLevel": 0,
@@ -211,45 +207,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": 90.0,
-                    "Y": -74.64392,
-                    "Z": 849.99963
+                    "X": 85.0,
+                    "Y": -75.01141,
+                    "Z": 849.661
                   },
                   "Extent": {
                     "X": 75.0,
                     "Y": 50.0,
-                    "Z": 65.0
-                  }
-                },
-                "LODLevel": 0,
-                "AxisAlignedDirectionIndex": 1
-              },
-              {
-                "OBB": {
-                  "AxisX": {
-                    "X": 0.0,
-                    "Y": 1.0,
-                    "Z": 0.0
-                  },
-                  "AxisY": {
-                    "X": 0.0,
-                    "Y": 0.0,
-                    "Z": 1.0
-                  },
-                  "AxisZ": {
-                    "X": 1.0,
-                    "Y": 0.0,
-                    "Z": 0.0
-                  },
-                  "Origin": {
-                    "X": -60.0,
-                    "Y": -49.64392,
-                    "Z": 849.99963
-                  },
-                  "Extent": {
-                    "X": 50.0,
-                    "Y": 50.0,
-                    "Z": 45.0
+                    "Z": 70.0
                   }
                 },
                 "LODLevel": 0,
@@ -274,13 +239,13 @@
                   },
                   "Origin": {
                     "X": 0.0,
-                    "Y": -94.64392,
-                    "Z": 849.99963
+                    "Y": -85.01141,
+                    "Z": 849.661
                   },
                   "Extent": {
                     "X": 150.0,
                     "Y": 50.0,
-                    "Z": 60.0
+                    "Z": 70.0
                   }
                 },
                 "LODLevel": 0,
@@ -305,13 +270,13 @@
                   },
                   "Origin": {
                     "X": 0.0,
-                    "Y": -49.64392,
-                    "Z": 849.99963
+                    "Y": -75.01141,
+                    "Z": 849.661
                   },
                   "Extent": {
                     "X": 150.0,
                     "Y": 50.0,
-                    "Z": 55.0
+                    "Z": 80.0
                   }
                 },
                 "LODLevel": 0,
@@ -336,8 +301,8 @@
                   },
                   "Origin": {
                     "X": 0.0,
-                    "Y": -74.64392,
-                    "Z": 804.99963
+                    "Y": -75.01141,
+                    "Z": 894.661
                   },
                   "Extent": {
                     "X": 150.0,
@@ -367,8 +332,8 @@
                   },
                   "Origin": {
                     "X": 0.0,
-                    "Y": -74.64392,
-                    "Z": 894.99963
+                    "Y": -75.01141,
+                    "Z": 894.661
                   },
                   "Extent": {
                     "X": 150.0,
@@ -387,30 +352,41 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 1184,
+              "NumTriangles": 240,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 915,
+              "MaxVertexIndex": 185,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 720,
+              "NumTriangles": 300,
+              "MinVertexIndex": 12,
+              "MaxVertexIndex": 426,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
               "bVisibleInRayTracing": true
             }
           ],
-          "MaxDeviation": 0.015898604,
+          "MaxDeviation": 0.3412766,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 916
+            "NumVertices": 427
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 916,
+            "NumVertices": 427,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
+            "Stride": 4,
+            "NumVertices": 427
           }
         }
       ],
@@ -420,7 +396,7 @@
           "BulkDataFlags": "BULKDATA_None",
           "ElementCount": 0,
           "SizeOnDisk": 0,
-          "OffsetInFile": "0x7FF91"
+          "OffsetInFile": "0x3E8DF"
         },
         "ImposterAtlas": [],
         "HierarchyNodes": [],
@@ -441,20 +417,20 @@
       "Bounds": {
         "Origin": {
           "X": 0.0,
-          "Y": -74.64392,
-          "Z": 849.99963
+          "Y": -75.01141,
+          "Z": 849.661
         },
         "BoxExtent": {
-          "X": 150.0,
-          "Y": 74.64395,
-          "Z": 50.000366
+          "X": 150.02284,
+          "Y": 75.01143,
+          "Z": 50.33896
         },
-        "SphereRadius": 174.84781
+        "SphereRadius": 175.1216
       },
       "bLODsShareStaticLighting": true,
       "ScreenSize": [
         2.0,
-        1.7623937,
+        1.4975998,
         0.0,
         0.0,
         0.0,

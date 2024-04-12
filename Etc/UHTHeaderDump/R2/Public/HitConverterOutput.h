@@ -18,6 +18,9 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 NumHitsToConvert;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float TargetHeat;
+    
     R2_API FHitConverterOutput();
 };
 

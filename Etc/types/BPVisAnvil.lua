@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ABPVisAnvil_C : AVisHitConverterStructure
----@field VisStaticMesh UVisStaticMeshComponent
+---@field AnvilMesh UVisStaticMeshComponent
 ABPVisAnvil_C = {}
 
 

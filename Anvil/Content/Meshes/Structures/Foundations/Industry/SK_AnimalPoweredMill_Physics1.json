@@ -1,0 +1,286 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_AnimalPoweredMill_Physics1",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'SK_AnimalPoweredMill_Physics1:SkeletalBodySetup_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_AnimalPoweredMill_Physics1.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_AnimalPoweredMill_Physics1:SkeletalBodySetup_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_AnimalPoweredMill_Physics1.5"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_AnimalPoweredMill_Physics1:SkeletalBodySetup_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_AnimalPoweredMill_Physics1.6"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_AnimalPoweredMill_Physics1:SkeletalBodySetup_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_AnimalPoweredMill_Physics1.7"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_AnimalPoweredMill_Physics1:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_AnimalPoweredMill_Physics1.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_AnimalPoweredMill_Physics1:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_AnimalPoweredMill_Physics1.2"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_AnimalPoweredMill_Physics1:PhysicsConstraintTemplate_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_AnimalPoweredMill_Physics1.3"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "SK_AnimalPoweredMill_Physics1",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "MainAxle",
+        "ConstraintBone1": "MainAxle",
+        "ConstraintBone2": "root",
+        "PriAxis2": {
+          "X": 2.3841858E-07,
+          "Y": 0.0,
+          "Z": -1.0
+        },
+        "SecAxis2": {
+          "X": -1.0,
+          "Y": 0.0,
+          "Z": -2.3841858E-07
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "SK_AnimalPoweredMill_Physics1",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "SecondaryAxle",
+        "ConstraintBone1": "SecondaryAxle",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 260.1104,
+          "Y": -0.5447271,
+          "Z": 29.763021
+        },
+        "PriAxis2": {
+          "X": 1.6858739E-07,
+          "Y": 2.994713E-22,
+          "Z": -1.0
+        },
+        "SecAxis2": {
+          "X": 7.105428E-15,
+          "Y": 1.0,
+          "Z": 1.497357E-21
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_2",
+    "Outer": "SK_AnimalPoweredMill_Physics1",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "OutputAxle",
+        "ConstraintBone1": "OutputAxle",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 294.96106,
+          "Y": 0.006185059,
+          "Z": 106.90619
+        },
+        "PriAxis2": {
+          "X": 1.6858739E-07,
+          "Y": 0.0,
+          "Z": -1.0
+        },
+        "SecAxis2": {
+          "X": -1.4210855E-14,
+          "Y": 1.0,
+          "Z": -2.395771E-21
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_AnimalPoweredMill_Physics1",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -1.2394457E-06,
+              "Y": 0.0,
+              "Z": -9.280042
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": -0.0
+            },
+            "Radius": 235.56085,
+            "Length": 5.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "2752CD6249BDBF272DFB848189FE8ABB"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SK_AnimalPoweredMill_Physics1",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -131.42552,
+              "Y": 3.7031114E-07,
+              "Z": 1.5607307E-14
+            },
+            "Rotation": {
+              "Pitch": 90.0,
+              "Yaw": 8.5792225E-21,
+              "Roll": 8.5792225E-21
+            },
+            "Radius": 132.07355,
+            "Length": 142.69853,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "MainAxle",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "A4E28FE94763D8A379AFD29F847E12CE"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "SK_AnimalPoweredMill_Physics1",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 7.028061E-08,
+              "Y": -4.8245327E-13,
+              "Z": -19.899206
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": -0.0
+            },
+            "Radius": 25.70226,
+            "Length": 25.708824,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "SecondaryAxle",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "3B1DD65741F4B4A50B90AC819677CBBB"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_3",
+    "Outer": "SK_AnimalPoweredMill_Physics1",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 99.653435,
+              "Y": 1.0089911E-12,
+              "Z": 1.240569E-07
+            },
+            "Rotation": {
+              "Pitch": 90.0,
+              "Yaw": -7.06225E-31,
+              "Roll": 1.6405252E-30
+            },
+            "Radius": 49.822414,
+            "Length": 150.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "OutputAxle",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "F25A427B44D6ACAAC69D768BE4F10703"
+  }
+]

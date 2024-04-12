@@ -41,10 +41,10 @@ public:
     bool bBridgeMode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bDisallowSnappingAtMiddle;
+    FVector PlatformStartOffset;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FVector PlatformStartOffset;
+    float MidPieceZOffset;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEntityTemplate> MidPiece;

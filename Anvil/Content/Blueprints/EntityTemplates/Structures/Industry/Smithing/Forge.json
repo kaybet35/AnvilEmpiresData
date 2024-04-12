@@ -71,7 +71,7 @@
     "Properties": {
       "Box": {
         "ObjectName": "BlueprintGeneratedClass'ForgeFootprint_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Smithing/ForgeFootprint.0"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Smithing/ForgeFootprint.1"
       }
     }
   },
@@ -86,7 +86,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__Forge_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Forge.14"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Forge.16"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__Forge_C:HealthComp'",
@@ -94,11 +94,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__Forge_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Forge.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Forge.13"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__Forge_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Forge.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Forge.15"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__Forge_C:DestroyableComp'",
@@ -118,7 +118,7 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__Forge_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Forge.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Forge.14"
       },
       "CodeNameString": "Forge",
       "CodeName": -287010701,
@@ -140,11 +140,19 @@
         {
           "ObjectName": "InventoryProxyComponent'Default__Forge_C:InventoryProxyComponent_5'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Forge.9"
+        },
+        {
+          "ObjectName": "PowerToActionConverterProxyComponent'Default__Forge_C:PowerToActionConverterProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Forge.11"
+        },
+        {
+          "ObjectName": "PowerUnitProxyComponent'Default__Forge_C:PowerUnitProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Forge.12"
         }
       ],
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisForge_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisForge.1"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisForge.2"
       }
     }
   },
@@ -174,8 +182,37 @@
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
           },
           "BurnDurationSec": 180.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
+          },
+          "BurnDurationSec": 60.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+          },
+          "BurnDurationSec": 60.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceBranchesRaw_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranchesRaw.0"
+          },
+          "BurnDurationSec": 20.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceCoal_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceCoal.0"
+          },
+          "BurnDurationSec": 1080.0
         }
-      ]
+      ],
+      "NumItems": 3
     }
   },
   {
@@ -203,6 +240,26 @@
     "Class": "UScriptClass'InventoryProxyComponent'",
     "Properties": {
       "bForceStackable": true
+    }
+  },
+  {
+    "Type": "PowerToActionConverterProxyComponent",
+    "Name": "PowerToActionConverterProxyComponent_0",
+    "Outer": "Default__Forge_C",
+    "Class": "UScriptClass'PowerToActionConverterProxyComponent'",
+    "Properties": {
+      "ConversionType": "EAnvilConvertedActionType::HeatBoost",
+      "PowerDrainPerAction": 1.0
+    }
+  },
+  {
+    "Type": "PowerUnitProxyComponent",
+    "Name": "PowerUnitProxyComponent_0",
+    "Outer": "Default__Forge_C",
+    "Class": "UScriptClass'PowerUnitProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilPowerUnitType::Sink",
+      "CurrentMax": 2.0
     }
   },
   {

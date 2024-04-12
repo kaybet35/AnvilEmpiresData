@@ -16,6 +16,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UStaticMesh* DefaultItemMesh;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool ShowUnderlyingItem;
+    
 public:
     UVisSingleItemStockpileComponent(const FObjectInitializer& ObjectInitializer);
 

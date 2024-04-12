@@ -3,7 +3,10 @@
     "Type": "ArrowComponent",
     "Name": "ArrowComponent",
     "Outer": "Default__BPVisPowerRope_C",
-    "Class": "UScriptClass'ArrowComponent'"
+    "Class": "UScriptClass'ArrowComponent'",
+    "Properties": {
+      "bReceivesDecals": false
+    }
   },
   {
     "Type": "BlueprintGeneratedClass",
@@ -52,8 +55,8 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisPowerRope.18"
       },
       "StructureIcon": {
-        "ObjectName": "Texture2D'IconFibre'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Items/IconFibre.0"
+        "ObjectName": "Texture2D'IconRope'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Items/IconRope.0"
       },
       "BuildSiteCategory": "EBuildSiteCategory::Industry",
       "UpgradeDataComponent": {
@@ -92,14 +95,14 @@
       "VisDisplayName": {
         "Namespace": "",
         "Key": "70BF86884497D3935C1BDEA3EBC72ED6",
-        "SourceString": "Power Connector Rope",
-        "LocalizedString": "Power Connector Rope"
+        "SourceString": "Power Connection Rope",
+        "LocalizedString": "Power Connection Rope"
       },
       "Description": {
         "Namespace": "",
         "Key": "E16E382A487075BA09912F8FEE3B456F",
-        "SourceString": "TODO connect power",
-        "LocalizedString": "TODO connect power"
+        "SourceString": "Transfers power between structures.",
+        "LocalizedString": "Transfers power between structures."
       },
       "UseWindowType": "EHUDWindowType::GenericStructure",
       "RootComponent": {
@@ -425,10 +428,6 @@
         "Y": 500.0,
         "Z": 0.0
       },
-      "DecalMaterial": {
-        "ObjectName": "MaterialInstanceConstant'Decal_BuildArea'",
-        "ObjectPath": "Anvil/Content/Materials/Decals/Decal_BuildArea.0"
-      },
       "EndPieceMesh": {
         "ObjectName": "StaticMesh'IndustrySplineConnectorEnd'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/IndustrySplineConnectorEnd.2"
@@ -458,11 +457,6 @@
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisPowerRope_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisPowerRope.0"
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 100.0
       }
     }
   },

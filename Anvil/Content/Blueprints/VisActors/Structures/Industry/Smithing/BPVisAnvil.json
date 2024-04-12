@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisAnvil_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.12"
       }
     },
     "SuperStruct": {
@@ -22,7 +22,7 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "VisStaticMesh",
+        "Name": "AnvilMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -56,19 +56,84 @@
         "ObjectName": "HitConverterDataComponent'Default__BPVisAnvil_C:HitConverterDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.6"
       },
+      "ConvertedItemMeshComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisAnvil_C:ConvertedItemMeshComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.13"
+      },
+      "ConvertedItemMeshMap": [
+        {
+          "BladeSword": {
+            "ObjectName": "SkeletalMesh'BladeSword_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/BladeSword_SK.1"
+          }
+        },
+        {
+          "BladeTool": {
+            "ObjectName": "SkeletalMesh'BladeTool_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/BladeTool_SK.1"
+          }
+        },
+        {
+          "BladeAxe": {
+            "ObjectName": "SkeletalMesh'BladeAxe_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/BladeAxe_SK.1"
+          }
+        },
+        {
+          "BladeTip": {
+            "ObjectName": "SkeletalMesh'BladeTip_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/BladeTip_SK.1"
+          }
+        },
+        {
+          "ProcessedIronHeated": {
+            "ObjectName": "SkeletalMesh'BladeSword_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/BladeSword_SK.1"
+          }
+        },
+        {
+          "ProcessedIron": {
+            "ObjectName": "SkeletalMesh'BladeSword_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/BladeSword_SK.1"
+          }
+        }
+      ],
+      "ConvertedItemMeshMaterialOverride": {
+        "ObjectName": "Material'HeatedItem'",
+        "ObjectPath": "Anvil/Content/FX/Materials/HeatedItem.0"
+      },
+      "HitVFXLocation": {
+        "ObjectName": "SceneComponent'Default__BPVisAnvil_C:HitVFXLocation'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.8"
+      },
+      "HitSuccessVFX": {
+        "ObjectName": "NiagaraSystem'ForgeImpact'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/ForgeImpact.28"
+      },
+      "HitFailVFX": {
+        "ObjectName": "NiagaraSystem'ArmourIronImpact2'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/ArmourIronImpact2.54"
+      },
+      "HitSuccessSoundCue": {
+        "ObjectName": "SoundCue'Axe2HAIronImpact_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Axe2H/Axe2HAIronImpact_Cue.0"
+      },
+      "HitFailSoundCue": {
+        "ObjectName": "SoundCue'Axe1HLeatherImpact_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Axe/Axe1HLeatherImpact_Cue.0"
+      },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisAnvil_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.18"
       },
       "StructureIcon": {
-        "ObjectName": "Texture2D'IconIndustryAnvilSmall'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconIndustryAnvilSmall.0"
+        "ObjectName": "Texture2D'IconIndustryAnvil'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconIndustryAnvil.0"
       },
       "BuildSiteCategory": "EBuildSiteCategory::Smithing",
-      "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisAnvil_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.17"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisAnvil_C:HealthDataComponent'",
@@ -76,15 +141,15 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisAnvil_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.16"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisAnvil_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.15"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisAnvil_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.9"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisAnvil_C:ArrowComponent'",
@@ -107,16 +172,17 @@
       "Description": {
         "Namespace": "",
         "Key": "055D960F4EF83BFA4C06B6A6C9D668E1",
-        "SourceString": "TODO",
-        "LocalizedString": "TODO"
+        "SourceString": "A metalworking tool used to shape metal ingots into blades.",
+        "LocalizedString": "A metalworking tool used to shape metal ingots into blades."
       },
       "DescriptionFooter": {
         "Namespace": "",
         "Key": "ACAB54C24C8D4B68521A2ABA875DD145",
-        "SourceString": "Can be built in Workshop areas.",
-        "LocalizedString": "Can be built in Workshop areas."
+        "SourceString": "Must be built in Workshop areas.",
+        "LocalizedString": "Must be built in Workshop areas."
       },
       "UseWindowType": "EHUDWindowType::HitConversion",
+      "bUseForceCameraZoom": true,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisAnvil_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.0"
@@ -143,7 +209,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisAnvil_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.14"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisAnvil_C:ArrowComponent'",
@@ -168,6 +234,23 @@
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPVisAnvil_C",
     "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "HitVFXLocation",
+    "Outer": "Default__BPVisAnvil_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisAnvil_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.0"
+      },
+      "RelativeLocation": {
+        "X": -5.0,
+        "Y": 0.0,
+        "Z": 107.0
+      }
+    }
   },
   {
     "Type": "ScorchDataComponent",
@@ -204,13 +287,13 @@
         "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisAnvil_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.17"
+        "ObjectName": "VisStaticMeshComponent'BPVisAnvil_C:AnvilMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.19"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "078D6C4F-4D0617D7-5AAE87BF-CC443993",
-      "InternalVariableName": "VisStaticMesh"
+      "InternalVariableName": "AnvilMesh"
     }
   },
   {
@@ -222,18 +305,48 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisAnvil_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.11"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisAnvil_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.11"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisAnvil_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "ConvertedItemMeshComponent",
+    "Outer": "Default__BPVisAnvil_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'BladeSword_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/BladeSword_SK.1"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'BladeSword_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/BladeSword_SK.1"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisAnvil_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvil.0"
+      },
+      "RelativeLocation": {
+        "X": -6.864958,
+        "Y": -0.8664887,
+        "Z": 110.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
       }
     }
   },
@@ -275,14 +388,14 @@
   },
   {
     "Type": "VisStaticMeshComponent",
-    "Name": "VisStaticMesh_GEN_VARIABLE",
+    "Name": "AnvilMesh_GEN_VARIABLE",
     "Outer": "BPVisAnvil_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
     "Properties": {
       "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscapeRotate",
       "StaticMesh": {
-        "ObjectName": "StaticMesh'Anvil02'",
-        "ObjectPath": "Anvil/Content/Meshes/Props/Anvil02.2"
+        "ObjectName": "StaticMesh'Anvil01'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Anvil01.2"
       },
       "ComponentTags": [
         "Structure",

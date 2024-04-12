@@ -222,19 +222,19 @@
         "CollisionProfileName": "BlockAll"
       }
     },
-    "BodySetupGuid": "18D5079643829D91A8201D94253F4972",
+    "BodySetupGuid": "DAD4E5804BFC806EAFF4D48029B879EB",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 54744,
-        "SizeOnDisk": 54744,
-        "OffsetInFile": "0x1F563"
+        "ElementCount": 140748,
+        "SizeOnDisk": 140748,
+        "OffsetInFile": "0x4DD27"
       }
     }
   },
   {
     "Type": "NavCollision",
-    "Name": "NavCollision_4",
+    "Name": "NavCollision_1",
     "Outer": "IndustryAqueduct_Balljoint",
     "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
@@ -242,7 +242,7 @@
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 745,
         "SizeOnDisk": 745,
-        "OffsetInFile": "0x2CB7D"
+        "OffsetInFile": "0x70335"
       }
     }
   },
@@ -254,35 +254,51 @@
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant'AncentWellWall'",
-            "ObjectPath": "Anvil/Content/Materials/Props/AncentWellWall.0"
+            "ObjectName": "MaterialInstanceConstant'AqueductStoneTile01'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/AqueductStoneTile01.0"
           },
           "MaterialSlotName": "Aqueduct",
           "ImportedMaterialSlotName": "Aqueduct",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 309.33026,
+            "LocalUVDensities": 764.9909,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'AqueductStoneTile02'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/AqueductStoneTile02.0"
+          },
+          "MaterialSlotName": "Waterway",
+          "ImportedMaterialSlotName": "Waterway",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 606.6686,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0
           }
         }
       ],
-      "LightmapUVDensity": 309.33026,
+      "LightmapUVDensity": 751.3275,
       "LightMapResolution": 64,
       "ExtendedBounds": {
         "Origin": {
           "X": 0.0,
           "Y": 0.0,
-          "Z": 249.99963
+          "Z": 250.00043
         },
         "BoxExtent": {
-          "X": 149.4303,
-          "Y": 149.4303,
+          "X": 163.85667,
+          "Y": 163.85666,
           "Z": 549.99963
         },
-        "SphereRadius": 569.9377272050208
+        "SphereRadius": 573.8886972176618
       }
     },
     "BodySetup": {
@@ -290,10 +306,10 @@
       "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_Balljoint.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision'IndustryAqueduct_Balljoint:NavCollision_4'",
+      "ObjectName": "NavCollision'IndustryAqueduct_Balljoint:NavCollision_1'",
       "ObjectPath": "Anvil/Content/Meshes/Structures/Aqueducts/IndustryAqueduct_Balljoint.1"
     },
-    "LightingGuid": "06A6F101-4431079F-14C7E2B7-BABD4316",
+    "LightingGuid": "57CE5FB8-4349B4B2-13A3D7B8-8015C701",
     "RenderData": {
       "LODs": [
         {
@@ -301,9 +317,20 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 1088,
+              "NumTriangles": 2176,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 709,
+              "MaxVertexIndex": 1220,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 6528,
+              "NumTriangles": 672,
+              "MinVertexIndex": 1221,
+              "MaxVertexIndex": 1573,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -313,30 +340,30 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 710
+            "NumVertices": 1574
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 710,
+            "NumVertices": 1574,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
+            "Stride": 4,
+            "NumVertices": 1574
           },
           "CardRepresentationData": {
             "Bounds": {
               "Min": {
-                "X": -150.4303,
-                "Y": -150.4303,
-                "Z": -301.0
+                "X": -164.85667,
+                "Y": -164.85666,
+                "Z": -300.9992
               },
               "Max": {
-                "X": 150.4303,
-                "Y": 150.4303,
-                "Z": 800.99927
+                "X": 164.85667,
+                "Y": 164.85666,
+                "Z": 801.00006
               },
               "IsValid": 1
             },
@@ -361,14 +388,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": -80.21515,
-                    "Y": -1.5258789E-05,
-                    "Z": 249.99963
+                    "X": -78.81896,
+                    "Y": 0.0,
+                    "Z": 250.00043
                   },
                   "Extent": {
-                    "X": 150.4303,
+                    "X": 164.85666,
                     "Y": 550.99963,
-                    "Z": 80.21515
+                    "Z": 96.03771
                   }
                 },
                 "LODLevel": 0,
@@ -392,14 +419,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": 80.21515,
-                    "Y": -1.5258789E-05,
-                    "Z": 249.99963
+                    "X": 78.81896,
+                    "Y": 0.0,
+                    "Z": 250.00043
                   },
                   "Extent": {
-                    "X": 150.4303,
+                    "X": 164.85666,
                     "Y": 550.99963,
-                    "Z": 80.21515
+                    "Z": 96.03771
                   }
                 },
                 "LODLevel": 0,
@@ -423,14 +450,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": -1.5258789E-05,
-                    "Y": -80.21515,
-                    "Z": 249.99963
+                    "X": 0.0,
+                    "Y": -78.818954,
+                    "Z": 250.00043
                   },
                   "Extent": {
-                    "X": 150.4303,
+                    "X": 164.85669,
                     "Y": 550.99963,
-                    "Z": 80.21515
+                    "Z": 96.037704
                   }
                 },
                 "LODLevel": 0,
@@ -454,14 +481,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": -1.5258789E-05,
-                    "Y": 80.21515,
-                    "Z": 249.99963
+                    "X": 0.0,
+                    "Y": 78.818954,
+                    "Z": 250.00043
                   },
                   "Extent": {
-                    "X": 150.4303,
+                    "X": 164.85669,
                     "Y": 550.99963,
-                    "Z": 80.21515
+                    "Z": 96.037704
                   }
                 },
                 "LODLevel": 0,
@@ -485,14 +512,14 @@
                     "Z": -1.0
                   },
                   "Origin": {
-                    "X": -1.5258789E-05,
-                    "Y": -1.5258789E-05,
-                    "Z": -280.1719
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 504.67212
                   },
                   "Extent": {
-                    "X": 150.4303,
-                    "Y": 150.4303,
-                    "Z": 30.828108
+                    "X": 164.85669,
+                    "Y": 164.85666,
+                    "Z": 306.32794
                   }
                 },
                 "LODLevel": 0,
@@ -516,14 +543,14 @@
                     "Z": 1.0
                   },
                   "Origin": {
-                    "X": -1.5258789E-05,
-                    "Y": -1.5258789E-05,
-                    "Z": 780.17114
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 504.67215
                   },
                   "Extent": {
-                    "X": 150.4303,
-                    "Y": 150.4303,
-                    "Z": 30.828108
+                    "X": 164.85669,
+                    "Y": 164.85666,
+                    "Z": 306.3279
                   }
                 },
                 "LODLevel": 0,
@@ -537,30 +564,41 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 544,
+              "NumTriangles": 1394,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 437,
+              "MaxVertexIndex": 823,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 4182,
+              "NumTriangles": 30,
+              "MinVertexIndex": 824,
+              "MaxVertexIndex": 855,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
               "bVisibleInRayTracing": true
             }
           ],
-          "MaxDeviation": 0.0077307755,
+          "MaxDeviation": 1.1494763,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 438
+            "NumVertices": 856
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 438,
+            "NumVertices": 856,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
+            "Stride": 4,
+            "NumVertices": 856
           }
         }
       ],
@@ -570,7 +608,7 @@
           "BulkDataFlags": "BULKDATA_None",
           "ElementCount": 0,
           "SizeOnDisk": 0,
-          "OffsetInFile": "0x3D56F"
+          "OffsetInFile": "0x9A365"
         },
         "ImposterAtlas": [],
         "HierarchyNodes": [],
@@ -592,19 +630,19 @@
         "Origin": {
           "X": 0.0,
           "Y": 0.0,
-          "Z": 249.99963
+          "Z": 250.00043
         },
         "BoxExtent": {
-          "X": 149.4303,
-          "Y": 149.4303,
+          "X": 163.85667,
+          "Y": 163.85666,
           "Z": 549.99963
         },
-        "SphereRadius": 569.93774
+        "SphereRadius": 573.88873
       },
       "bLODsShareStaticLighting": true,
       "ScreenSize": [
         2.0,
-        1.7754658,
+        1.4910687,
         0.0,
         0.0,
         0.0,

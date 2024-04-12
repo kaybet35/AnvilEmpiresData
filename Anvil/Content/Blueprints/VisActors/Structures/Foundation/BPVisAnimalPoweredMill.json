@@ -79,8 +79,8 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisAnimalPoweredMill.19"
       },
       "StructureIcon": {
-        "ObjectName": "Texture2D'IconFlourMill'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconFlourMill.0"
+        "ObjectName": "Texture2D'IconAnimalMill'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconAnimalMill.0"
       },
       "BuildSiteCategory": "EBuildSiteCategory::Industry",
       "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
@@ -321,6 +321,14 @@
         "ObjectName": "AnimBlueprintGeneratedClass'ABP_AnimalPoweredMill_C'",
         "ObjectPath": "Anvil/Content/Animations/Structures/Industry/ABP_AnimalPoweredMill.1"
       },
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'AnimalPoweredMill_627_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/AnimalPoweredMill_627_Anim.0"
+        },
+        "SavedPlayRate": 0.33
+      },
+      "AnimationMode": "EAnimationMode::AnimationSingleNode",
       "SkeletalMesh": {
         "ObjectName": "SkeletalMesh'SK_AnimalPoweredMill'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_AnimalPoweredMill.0"
@@ -328,7 +336,8 @@
       "SkinnedAsset": {
         "ObjectName": "SkeletalMesh'SK_AnimalPoweredMill'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_AnimalPoweredMill.0"
-      }
+      },
+      "bReceivesDecals": false
     }
   },
   {
@@ -373,7 +382,13 @@
     "Outer": "BPVisAnimalPoweredMill_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
     "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscapeRotate",
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'AnimalPoweredMill'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/AnimalPoweredMill.2"
+      },
+      "bVisible": false,
+      "bHiddenInGame": true,
       "ComponentTags": [
         "Structure",
         "Collision"

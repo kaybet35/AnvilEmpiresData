@@ -18,6 +18,7 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->RequiredDeployable = NULL;
     this->MaxHeightShift = 0.00f;
     this->AdditionalMaxHeightShift = 0.00f;
+    this->MinDistanceBetweenStructures = 0.00f;
     this->RoadMaterialRequirement = 0;
     this->ResourceBranchesRequirement = 0;
     this->ProcessedWoodRequirement = 0;

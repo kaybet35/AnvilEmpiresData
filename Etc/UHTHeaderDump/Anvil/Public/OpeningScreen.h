@@ -39,6 +39,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* AnnouncementText;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAnvilButtonWidget* DiscordRoleButton;
+    
     UOpeningScreen();
 
 protected:
@@ -56,6 +59,12 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void OnExitButtonClicked();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnDiscordRoleButtonClicked();
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsDiscordRoleButtonEnabled();
     
     UFUNCTION(BlueprintCallable)
     FText GetAnnouncementText();

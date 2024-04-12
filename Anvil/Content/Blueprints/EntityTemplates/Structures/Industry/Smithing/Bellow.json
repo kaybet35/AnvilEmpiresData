@@ -10,7 +10,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__Bellow_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Bellow.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Bellow.11"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__Bellow_C:HealthComp'",
@@ -18,11 +18,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__Bellow_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Bellow.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Bellow.8"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__Bellow_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Bellow.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Bellow.10"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__Bellow_C:DestroyableComp'",
@@ -42,7 +42,7 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__Bellow_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Bellow.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Bellow.9"
       },
       "CodeNameString": "Bellow",
       "CodeName": 1214339020,
@@ -50,11 +50,7 @@
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
-          "ObjectName": "InventoryProxyComponent'Default__Bellow_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Bellow.8"
-        },
-        {
-          "ObjectName": "HitConverterProxyComponent'Default__Bellow_C:HitConverterProxyComponent_0'",
+          "ObjectName": "PowerUnitProxyComponent'Default__Bellow_C:PowerUnitProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Bellow.7"
         }
       ],
@@ -136,7 +132,7 @@
     "Properties": {
       "Box": {
         "ObjectName": "BlueprintGeneratedClass'BellowFootprint_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Smithing/BellowFootprint.1"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Smithing/BellowFootprint.2"
       }
     }
   },
@@ -154,71 +150,12 @@
     }
   },
   {
-    "Type": "HitConverterProxyComponent",
-    "Name": "HitConverterProxyComponent_0",
+    "Type": "PowerUnitProxyComponent",
+    "Name": "PowerUnitProxyComponent_0",
     "Outer": "Default__Bellow_C",
-    "Class": "UScriptClass'HitConverterProxyComponent'",
+    "Class": "UScriptClass'PowerUnitProxyComponent'",
     "Properties": {
-      "InputItemName": {
-        "ObjectName": "BlueprintGeneratedClass'ProcessedIronHeated_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIronHeated.0"
-      },
-      "ConverterOutputList": [
-        {
-          "OutputItemTemplate": {
-            "ObjectName": "BlueprintGeneratedClass'BladeTool_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTool.1"
-          },
-          "OutputItemCodeName": 0,
-          "NumHitsToConvert": 3
-        },
-        {
-          "OutputItemTemplate": {
-            "ObjectName": "BlueprintGeneratedClass'BladeSword_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeSword.1"
-          },
-          "OutputItemCodeName": 0,
-          "NumHitsToConvert": 3
-        },
-        {
-          "OutputItemTemplate": {
-            "ObjectName": "BlueprintGeneratedClass'BladeAxe_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeAxe.1"
-          },
-          "OutputItemCodeName": 0,
-          "NumHitsToConvert": 3
-        },
-        {
-          "OutputItemTemplate": {
-            "ObjectName": "BlueprintGeneratedClass'BladeTip_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTip.1"
-          },
-          "OutputItemCodeName": 0,
-          "NumHitsToConvert": 3
-        }
-      ],
-      "RequiredTool": "EAnvilToolType::Hammer"
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_0",
-    "Outer": "Default__Bellow_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "Slots": [
-        {
-          "ProxyRepeat": 5,
-          "bOr": false,
-          "HeldItem": null,
-          "Count": 0,
-          "StackLimit": 1,
-          "bHoldsLarge": false,
-          "SlotType": "EAnvilItemType::Normal",
-          "DedicatedItemType": null,
-          "DedicatedUnderlyingItemType": null
-        }
-      ]
+      "CurrentMax": 10.0
     }
   },
   {
@@ -249,6 +186,9 @@
     "Template": {
       "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    },
+    "Properties": {
+      "BuiltLocation": "EAnvilBuildLocationType::Industry"
     }
   },
   {

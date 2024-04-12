@@ -12,14 +12,50 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisBellow_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.16"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BPVisBellow_C:ExecuteUbergraph_BPVisBellow'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.4"
       }
     },
     "SuperStruct": {
       "ObjectName": "Class'VisHeatingStructure'",
       "ObjectPath": "/Script/Anvil"
     },
+    "Children": [
+      {
+        "ObjectName": "Function'BPVisBellow_C:ReceiveTick'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.5"
+      },
+      {
+        "ObjectName": "Function'BPVisBellow_C:ExecuteUbergraph_BPVisBellow'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.4"
+      }
+    ],
     "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PowerUnitData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PowerUnitDataComponent'",
+          "ObjectPath": "/Script/R2"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "SkeletalMesh",
@@ -30,8 +66,29 @@
           "ObjectName": "Class'SkeletalMeshComponent'",
           "ObjectPath": "/Script/Engine"
         }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
       }
     ],
+    "FuncMap": {
+      "ExecuteUbergraph_BPVisBellow": {
+        "ObjectName": "Function'BPVisBellow_C:ExecuteUbergraph_BPVisBellow'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.4"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BPVisBellow_C:ReceiveTick'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.5"
+      }
+    },
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -52,40 +109,40 @@
     "Name": "Default__BPVisBellow_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.BPVisBellow_C'",
     "Properties": {
+      "UberGraphFrame": {},
       "HeatingDataComponent": {
         "ObjectName": "HeatingDataComponent'Default__BPVisBellow_C:HeatingDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.8"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisBellow_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.22"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconIndustryBellow'",
         "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconIndustryBellow.0"
       },
-      "BuildSiteCategory": "EBuildSiteCategory::Industry",
+      "BuildSiteCategory": "EBuildSiteCategory::Smithing",
       "BuildSiteOrder": 1,
-      "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisBellow_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.21"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisBellow_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.7"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisBellow_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.20"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisBellow_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.19"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisBellow_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.11"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisBellow_C:ArrowComponent'",
@@ -97,34 +154,34 @@
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisBellow_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.6"
       },
       "VisDisplayName": {
         "Namespace": "",
         "Key": "6CB65C534F287779F89864945E2150D3",
-        "SourceString": "Forge",
-        "LocalizedString": "Forge"
+        "SourceString": "Bellow",
+        "LocalizedString": "Bellow"
       },
       "Description": {
         "Namespace": "",
         "Key": "14604A9F4772DF34090EBB89B38787AE",
-        "SourceString": "TODO",
-        "LocalizedString": "TODO"
+        "SourceString": "Used to increase heat and accelerate the heating process when attached to a Forge.",
+        "LocalizedString": "Used to increase heat and accelerate the heating process when attached to a Forge."
       },
       "DescriptionFooter": {
         "Namespace": "",
         "Key": "77FB26454E08E9205487E8A7C21CE7A7",
-        "SourceString": "Can be built in Workshop areas.",
-        "LocalizedString": "Can be built in Workshop areas."
+        "SourceString": "Must be built in Workshop areas.",
+        "LocalizedString": "Must be built in Workshop areas."
       },
       "MapIconProperty": {
         "Icon": {
-          "ObjectName": "Texture2D'IconHearth'",
-          "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconHearth.0"
+          "ObjectName": "Texture2D'IconIndustryBellow'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconIndustryBellow.0"
         },
         "MapActorType": "EMapIconType::MediumStructure"
       },
-      "UseWindowType": "EHUDWindowType::Heating",
+      "UseWindowType": "EHUDWindowType::GenericStructure",
       "bUseForceCameraZoom": true,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisBellow_C:ArrowComponent'",
@@ -145,6 +202,48 @@
     }
   },
   {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPVisBellow",
+    "Outer": "BPVisBellow_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BPVisBellow_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
     "Type": "GrassRemovalVolumeComponent",
     "Name": "GrassRemovalVolume",
     "Outer": "Default__BPVisBellow_C",
@@ -152,7 +251,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisBellow_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.18"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisBellow_C:ArrowComponent'",
@@ -171,6 +270,12 @@
     "Name": "HeatingDataComponent",
     "Outer": "Default__BPVisBellow_C",
     "Class": "UScriptClass'HeatingDataComponent'"
+  },
+  {
+    "Type": "PowerUnitDataComponent",
+    "Name": "PowerUnitData_GEN_VARIABLE",
+    "Outer": "BPVisBellow_C",
+    "Class": "UScriptClass'PowerUnitDataComponent'"
   },
   {
     "Type": "SceneComponent",
@@ -196,7 +301,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisBellow_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.10"
       },
       "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -214,12 +319,54 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisBellow_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.17"
+      },
+      "VariableGuid": "4F0CC560-4767D92E-9DC504B2-F6A614E7",
+      "InternalVariableName": "SkeletalMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisBellow_C:VisStaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.23"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
-      "VariableGuid": "4F0CC560-4767D92E-9DC504B2-F6A614E7",
-      "InternalVariableName": "SkeletalMesh"
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisBellow_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.13"
+        }
+      ],
+      "VariableGuid": "B6B96C6F-43E0D446-7A80DBA5-BC113797",
+      "InternalVariableName": "VisStaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PowerUnitDataComponent'",
+        "ObjectPath": "/Script/R2"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PowerUnitDataComponent'BPVisBellow_C:PowerUnitData_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.9"
+      },
+      "VariableGuid": "27A98C5C-4939D3EA-3CE308AD-2D706AB5",
+      "InternalVariableName": "PowerUnitData"
     }
   },
   {
@@ -230,19 +377,31 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisBellow_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.10"
+          "ObjectName": "SCS_Node'BPVisBellow_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisBellow_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.15"
         }
       ],
       "AllNodes": [
         {
+          "ObjectName": "SCS_Node'BPVisBellow_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.14"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisBellow_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisBellow_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.15"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisBellow_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.12"
       }
     }
   },
@@ -253,17 +412,16 @@
     "Class": "UScriptClass'SkeletalMeshComponent'",
     "Properties": {
       "AnimClass": {
-        "ObjectName": "AnimBlueprintGeneratedClass'ABP_Bellow_C'",
-        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/ABP_Bellow.1"
+        "ObjectName": "AnimBlueprintGeneratedClass'Bellow_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/Bellow_ABP.0"
       },
       "AnimationData": {
         "AnimToPlay": {
-          "ObjectName": "AnimSequence'Bellow_Anim'",
-          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/Bellow_Anim.0"
+          "ObjectName": "AnimSequence'Bellow_Operational_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/Bellow_Operational_Anim.0"
         },
         "SavedPlayRate": 0.33
       },
-      "AnimationMode": "EAnimationMode::AnimationSingleNode",
       "SkeletalMesh": {
         "ObjectName": "SkeletalMesh'SK_Bellow'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Bellow.0"
@@ -271,7 +429,8 @@
       "SkinnedAsset": {
         "ObjectName": "SkeletalMesh'SK_Bellow'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_Bellow.0"
-      }
+      },
+      "bReceivesDecals": false
     }
   },
   {
@@ -308,6 +467,25 @@
         "ObjectName": "ArrowComponent'Default__BPVisBellow_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisBellow.0"
       }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh_GEN_VARIABLE",
+    "Outer": "BPVisBellow_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryBellow'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/IndustryBellow.2"
+      },
+      "bVisible": false,
+      "bHiddenInGame": true,
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
     }
   }
 ]

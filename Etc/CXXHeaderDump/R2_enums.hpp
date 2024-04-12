@@ -98,6 +98,13 @@ enum class EAnvilCollisionChannel {
     EAnvilCollisionChannel_MAX = 26,
 };
 
+enum class EAnvilConvertedActionType {
+    HitAction = 0,
+    HeatBoost = 1,
+    NumTypes = 2,
+    EAnvilConvertedActionType_MAX = 3,
+};
+
 enum class EAnvilDamageTargetType {
     Default = 0,
     Infantry = 1,
@@ -168,6 +175,13 @@ enum class EAnvilGateState {
     Closing = 3,
     NumTypes = 4,
     EAnvilGateState_MAX = 5,
+};
+
+enum class EAnvilHitConversionType {
+    ConvertItemAtMaxProgress = 0,
+    ConvertUnderlyingItemOnFirstHit = 1,
+    NumTypes = 2,
+    EAnvilHitConversionType_MAX = 3,
 };
 
 enum class EAnvilInputEventType {
@@ -358,8 +372,9 @@ enum class EAnvilPlacementStatus {
     RequiresFoundation = 31,
     RequiresLandscape = 32,
     RequiresWater = 33,
-    NotAtFullHealth = 34,
-    EAnvilPlacementStatus_MAX = 35,
+    RequiresSnappping = 34,
+    NotAtFullHealth = 35,
+    EAnvilPlacementStatus_MAX = 36,
 };
 
 enum class EAnvilPlayerAimMeshType {
@@ -467,11 +482,17 @@ enum class EAnvilSnappingChannelType {
     WaterEnd = 7,
     CanalStart = 8,
     CanalEnd = 9,
-    PowerStart = 10,
-    PowerEnd = 11,
-    NaturalWaterRequired = 12,
-    NaturalWaterOptional = 13,
-    EAnvilSnappingChannelType_MAX = 14,
+    CanalSideStart = 10,
+    PowerStart = 11,
+    PowerEnd = 12,
+    PowerConvertedHitStart = 13,
+    PowerConvertedHitEnd = 14,
+    PowerConvertedHeatStart = 15,
+    PowerConvertedHeatEnd = 16,
+    DebugPowerSource = 17,
+    NaturalWaterRequired = 18,
+    NaturalWaterOptional = 19,
+    EAnvilSnappingChannelType_MAX = 20,
 };
 
 enum class EAnvilSpawnType {
@@ -546,34 +567,36 @@ enum class EAnvilStatusMessageType {
     RelicTechItemNotRelic = 60,
     RelicTechSubmitted = 61,
     RelicTechResearchComplete = 62,
-    AccessDeniedBelongsToEnemy = 63,
-    AccessDeniedMustBePledged = 64,
-    AccessDeniedTooFarToInteract = 65,
-    DismantleNoPermission = 66,
-    GateIsBreached = 67,
-    EnemiesNearby = 68,
-    UnstuckStarting = 69,
-    UnstuckTimeRemaining = 70,
-    UnstuckCancelledMovement = 71,
-    UnstuckCancelledEnemyNearby = 72,
-    UnstuckCancelledTooSoon = 73,
-    UnstuckCancelledVehiclePassenger = 74,
-    UnstuckAttemptFailed = 75,
-    LadderTooManyPlayers = 76,
-    LadderNoSpaceToRetract = 77,
-    DrowningNotification = 78,
-    BedClaimed = 79,
-    BedAlreadyClaimed = 80,
-    BedMustHaveHouseOrTentAtTown = 81,
-    BedClaimCleared = 82,
-    BedNotUnderCeiling = 83,
-    HorseNotHungry = 84,
-    PvpIsNerfed = 85,
-    NoItemsForPacking = 86,
-    TooManyOrFewItemsForPacking = 87,
-    NoContainerForPacking = 88,
-    NumTypes = 89,
-    EAnvilStatusMessageType_MAX = 90,
+    RelicTechResearchIncomplete = 63,
+    AccessDeniedBelongsToEnemy = 64,
+    AccessDeniedMustBePledged = 65,
+    AccessDeniedTooFarToInteract = 66,
+    DismantleNoPermission = 67,
+    GateIsBreached = 68,
+    EnemiesNearby = 69,
+    UnstuckStarting = 70,
+    UnstuckTimeRemaining = 71,
+    UnstuckCancelledMovement = 72,
+    UnstuckCancelledEnemyNearby = 73,
+    UnstuckCancelledTooSoon = 74,
+    UnstuckCancelledVehiclePassenger = 75,
+    UnstuckAttemptFailed = 76,
+    LadderTooManyPlayers = 77,
+    LadderNoSpaceToRetract = 78,
+    DrowningNotification = 79,
+    BedClaimed = 80,
+    BedAlreadyClaimed = 81,
+    BedMustHaveHouseOrTentAtTown = 82,
+    BedClaimCleared = 83,
+    BedNotUnderCeiling = 84,
+    HorseNotHungry = 85,
+    PvpIsNerfed = 86,
+    NoItemsForPacking = 87,
+    TooManyOrFewItemsForPacking = 88,
+    NoContainerForPacking = 89,
+    NotAllowedInBorderZone = 90,
+    NumTypes = 91,
+    EAnvilStatusMessageType_MAX = 92,
 };
 
 enum class EAnvilStimulusType {

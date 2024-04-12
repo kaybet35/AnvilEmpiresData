@@ -13,7 +13,7 @@ public:
     float InnerWidth;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float Outerwidth;
+    float OuterWidth;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint64 ID;

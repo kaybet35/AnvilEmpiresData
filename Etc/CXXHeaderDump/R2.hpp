@@ -77,8 +77,9 @@ struct FHitConverterOutput
     TSubclassOf<class UItemTemplate> OutputItemTemplate;                              // 0x0000 (size: 0x8)
     int32 OutputItemCodeName;                                                         // 0x0008 (size: 0x4)
     uint32 NumHitsToConvert;                                                          // 0x000C (size: 0x4)
+    float TargetHeat;                                                                 // 0x0010 (size: 0x4)
 
-}; // Size: 0x10
+}; // Size: 0x18
 
 struct FHousePledgedPlayerIdArray
 {
@@ -219,11 +220,17 @@ struct FTechItem
 {
 }; // Size: 0x8
 
+struct FTestStruct
+{
+    int32 Num;                                                                        // 0x0000 (size: 0x4)
+
+}; // Size: 0x4
+
 struct FVisvarPowerConnection
 {
     float RelativeAngle;                                                              // 0x0000 (size: 0x4)
     float InnerWidth;                                                                 // 0x0004 (size: 0x4)
-    float Outerwidth;                                                                 // 0x0008 (size: 0x4)
+    float OuterWidth;                                                                 // 0x0008 (size: 0x4)
     uint64 ID;                                                                        // 0x0010 (size: 0x8)
 
 }; // Size: 0x18
@@ -284,11 +291,11 @@ class UAdvancedSnappingProxyComponent : public UProxyComponent
 {
     bool bBlockSnapping;                                                              // 0x0028 (size: 0x1)
     bool bNoOverlap;                                                                  // 0x0029 (size: 0x1)
-    bool bSnappingRequired;                                                           // 0x002A (size: 0x1)
-    bool bOverrideAngleOverlapMin;                                                    // 0x002B (size: 0x1)
+    bool bOverrideAngleOverlapMin;                                                    // 0x002A (size: 0x1)
     float OverridedAngleOverlapMin;                                                   // 0x002C (size: 0x4)
+    uint8 NumSnappingRequired;                                                        // 0x0030 (size: 0x1)
 
-}; // Size: 0x30
+}; // Size: 0x38
 
 class UAnimalAIDataComponent : public UDataComponent
 {
@@ -477,15 +484,16 @@ class UBuildSiteProxyComponent : public UProxyComponent
     TSubclassOf<class UItemTemplate> RequiredDeployable;                              // 0x0048 (size: 0x8)
     float MaxHeightShift;                                                             // 0x0050 (size: 0x4)
     float AdditionalMaxHeightShift;                                                   // 0x0054 (size: 0x4)
-    int32 RoadMaterialRequirement;                                                    // 0x0058 (size: 0x4)
-    int32 ResourceBranchesRequirement;                                                // 0x005C (size: 0x4)
-    int32 ProcessedWoodRequirement;                                                   // 0x0060 (size: 0x4)
-    int32 ProcessedStoneRequirement;                                                  // 0x0064 (size: 0x4)
-    int32 ProcessedIronRequirement;                                                   // 0x0068 (size: 0x4)
-    int32 ReinforcedWoodRequirement;                                                  // 0x006C (size: 0x4)
-    int32 ResourceFibreRequirement;                                                   // 0x0070 (size: 0x4)
-    int32 ResourceBranchesRawRequirement;                                             // 0x0074 (size: 0x4)
-    int32 XpReward;                                                                   // 0x0078 (size: 0x4)
+    float MinDistanceBetweenStructures;                                               // 0x0058 (size: 0x4)
+    int32 RoadMaterialRequirement;                                                    // 0x005C (size: 0x4)
+    int32 ResourceBranchesRequirement;                                                // 0x0060 (size: 0x4)
+    int32 ProcessedWoodRequirement;                                                   // 0x0064 (size: 0x4)
+    int32 ProcessedStoneRequirement;                                                  // 0x0068 (size: 0x4)
+    int32 ProcessedIronRequirement;                                                   // 0x006C (size: 0x4)
+    int32 ReinforcedWoodRequirement;                                                  // 0x0070 (size: 0x4)
+    int32 ResourceFibreRequirement;                                                   // 0x0074 (size: 0x4)
+    int32 ResourceBranchesRawRequirement;                                             // 0x0078 (size: 0x4)
+    int32 XpReward;                                                                   // 0x007C (size: 0x4)
 
 }; // Size: 0x80
 
@@ -714,29 +722,34 @@ class UHeatingDataComponent : public UDataComponent
 {
     int32 FuelExpiryTimestampAgeSec;                                                  // 0x00A8 (size: 0x4)
     bool bIsFueled;                                                                   // 0x00C8 (size: 0x1)
+    bool bIsBellowBoosted;                                                            // 0x00E8 (size: 0x1)
 
-}; // Size: 0xE8
+}; // Size: 0x108
 
 class UHeatingProxyComponent : public UProxyComponent
 {
     TArray<FHeatingFuel> FuelList;                                                    // 0x0028 (size: 0x10)
+    int32 NumItems;                                                                   // 0x0038 (size: 0x4)
 
-}; // Size: 0x38
+}; // Size: 0x40
 
 class UHitConverterDataComponent : public UDataComponent
 {
-    uint8 CurrentSelectedOutputIndex;                                                 // 0x00A8 (size: 0x1)
-    TArray<FHitConverterOutput> ConverterOutputList;                                  // 0x00C8 (size: 0x10)
+    int32 InputItemName;                                                              // 0x00A8 (size: 0x4)
+    uint8 CurrentSelectedOutputIndex;                                                 // 0x00C8 (size: 0x1)
+    TArray<FHitConverterOutput> ConverterOutputList;                                  // 0x00E8 (size: 0x10)
+    float HitCounter;                                                                 // 0x00F8 (size: 0x4)
 
-}; // Size: 0xD8
+}; // Size: 0x118
 
 class UHitConverterProxyComponent : public UProxyComponent
 {
-    TSubclassOf<class UItemTemplate> InputItemName;                                   // 0x0028 (size: 0x8)
-    TArray<FHitConverterOutput> ConverterOutputList;                                  // 0x0030 (size: 0x10)
-    EAnvilToolType RequiredTool;                                                      // 0x0040 (size: 0x1)
+    EAnvilHitConversionType ConversionType;                                           // 0x0028 (size: 0x1)
+    TSubclassOf<class UItemTemplate> InputItemName;                                   // 0x0030 (size: 0x8)
+    TArray<FHitConverterOutput> ConverterOutputList;                                  // 0x0038 (size: 0x10)
+    EAnvilToolType RequiredTool;                                                      // 0x0048 (size: 0x1)
 
-}; // Size: 0x48
+}; // Size: 0x50
 
 class UHorseAttachableDataComponent : public UDataComponent
 {
@@ -1121,22 +1134,32 @@ class UPlayerUnstuckProxyComponent : public UProxyComponent
 {
 }; // Size: 0x28
 
+class UPowerToActionConverterProxyComponent : public UProxyComponent
+{
+    EAnvilConvertedActionType ConversionType;                                         // 0x0028 (size: 0x1)
+    float PowerDrainPerAction;                                                        // 0x002C (size: 0x4)
+
+}; // Size: 0x30
+
 class UPowerUnitDataComponent : public UDataComponent
 {
     float PercentageCurrent;                                                          // 0x00A8 (size: 0x4)
     int32 VisVarUpdateHook;                                                           // 0x00C8 (size: 0x4)
+    float InFlowDirection;                                                            // 0x00E8 (size: 0x4)
+    float InFlowHeight;                                                               // 0x0108 (size: 0x4)
 
-}; // Size: 0xE8
+}; // Size: 0x128
 
 class UPowerUnitProxyComponent : public UProxyComponent
 {
     EAnvilPowerUnitType Type;                                                         // 0x0028 (size: 0x1)
     int32 AllowedDirection;                                                           // 0x002C (size: 0x4)
     float CurrentMax;                                                                 // 0x0030 (size: 0x4)
-    float FlatResistance;                                                             // 0x0034 (size: 0x4)
-    float ResistanceSlopeModifier;                                                    // 0x0038 (size: 0x4)
-    float InnerWidth;                                                                 // 0x003C (size: 0x4)
-    float Outerwidth;                                                                 // 0x0040 (size: 0x4)
+    float Level;                                                                      // 0x0034 (size: 0x4)
+    float FlatResistance;                                                             // 0x0038 (size: 0x4)
+    float ResistanceSlopeModifier;                                                    // 0x003C (size: 0x4)
+    float InnerWidth;                                                                 // 0x0040 (size: 0x4)
+    float OuterWidth;                                                                 // 0x0044 (size: 0x4)
 
 }; // Size: 0x48
 
@@ -1354,16 +1377,17 @@ class USimPlayerDataComponent : public UDataComponent
     bool bIsAdmin;                                                                    // 0x03C8 (size: 0x1)
     bool bDebugDraw;                                                                  // 0x03E8 (size: 0x1)
     bool bPriming;                                                                    // 0x0408 (size: 0x1)
-    float SecondsUntilFullDecay;                                                      // 0x0428 (size: 0x4)
-    float HeldItemLightSourceRadius;                                                  // 0x0448 (size: 0x4)
-    FNightShroudLightSourceData LightSourceData;                                      // 0x0468 (size: 0x10)
-    uint8 FoodTypesOnCooldownBits;                                                    // 0x0478 (size: 0x1)
-    float AimYaw;                                                                     // 0x0498 (size: 0x4)
-    float AimPitch;                                                                   // 0x04B8 (size: 0x4)
-    float LastIncomingAttackAngle;                                                    // 0x04D8 (size: 0x4)
-    bool bIsMeshHidden;                                                               // 0x04F8 (size: 0x1)
+    bool bInTravelZone;                                                               // 0x0428 (size: 0x1)
+    float SecondsUntilFullDecay;                                                      // 0x0448 (size: 0x4)
+    float HeldItemLightSourceRadius;                                                  // 0x0468 (size: 0x4)
+    FNightShroudLightSourceData LightSourceData;                                      // 0x0488 (size: 0x10)
+    uint8 FoodTypesOnCooldownBits;                                                    // 0x0498 (size: 0x1)
+    float AimYaw;                                                                     // 0x04B8 (size: 0x4)
+    float AimPitch;                                                                   // 0x04D8 (size: 0x4)
+    float LastIncomingAttackAngle;                                                    // 0x04F8 (size: 0x4)
+    bool bIsMeshHidden;                                                               // 0x0518 (size: 0x1)
 
-}; // Size: 0x518
+}; // Size: 0x538
 
 class USimPlayerProxyComponent : public UProxyComponent
 {
@@ -1423,16 +1447,16 @@ class USplineProxyComponent : public UProxyComponent
     bool bScaleCost;                                                                  // 0x0040 (size: 0x1)
     bool bPlatformMode;                                                               // 0x0041 (size: 0x1)
     bool bBridgeMode;                                                                 // 0x0042 (size: 0x1)
-    bool bDisallowSnappingAtMiddle;                                                   // 0x0043 (size: 0x1)
     FVector PlatformStartOffset;                                                      // 0x0048 (size: 0x18)
-    TSubclassOf<class UEntityTemplate> MidPiece;                                      // 0x0060 (size: 0x8)
-    TSubclassOf<class UEntityTemplate> EndPiece;                                      // 0x0068 (size: 0x8)
-    EAnvilSnappingChannelType SnappingChannel;                                        // 0x0070 (size: 0x1)
-    EAnvilPhysicalSurfaceType SurfaceType;                                            // 0x0071 (size: 0x1)
-    int32 CollisionMask;                                                              // 0x0074 (size: 0x4)
-    float StepAngle;                                                                  // 0x0078 (size: 0x4)
+    float MidPieceZOffset;                                                            // 0x0060 (size: 0x4)
+    TSubclassOf<class UEntityTemplate> MidPiece;                                      // 0x0068 (size: 0x8)
+    TSubclassOf<class UEntityTemplate> EndPiece;                                      // 0x0070 (size: 0x8)
+    EAnvilSnappingChannelType SnappingChannel;                                        // 0x0078 (size: 0x1)
+    EAnvilPhysicalSurfaceType SurfaceType;                                            // 0x0079 (size: 0x1)
+    int32 CollisionMask;                                                              // 0x007C (size: 0x4)
+    float StepAngle;                                                                  // 0x0080 (size: 0x4)
 
-}; // Size: 0x80
+}; // Size: 0x88
 
 class UStaminaDataComponent : public UDataComponent
 {
@@ -1457,10 +1481,9 @@ class UStaticTorchDataComponent : public UDataComponent
 class UStaticTorchProxyComponent : public UProxyComponent
 {
     float ActiveSecondsPerUnitFuel;                                                   // 0x0028 (size: 0x4)
-    float MinDistanceBetweenTorches;                                                  // 0x002C (size: 0x4)
-    float NightShroudRadius;                                                          // 0x0030 (size: 0x4)
+    float NightShroudRadius;                                                          // 0x002C (size: 0x4)
 
-}; // Size: 0x38
+}; // Size: 0x30
 
 class UStructureDataComponent : public UDataComponent
 {

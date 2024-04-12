@@ -1,0 +1,225 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "RopeConnector_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "RopeConnector_C'Default__RopeConnector_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/RopeConnector.9"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__RopeConnector_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__RopeConnector_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    },
+    "Properties": {
+      "DecayTimeHours": 48.0
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableComp",
+    "Outer": "Default__RopeConnector_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Template": {
+      "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__RopeConnector_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'RopeConnectorFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Power/RopeConnectorFootprint.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthComp",
+    "Outer": "Default__RopeConnector_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
+    },
+    "Properties": {
+      "MaxHealth": 50.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__RopeConnector_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 5,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1,
+          "bHoldsLarge": false,
+          "SlotType": "EAnvilItemType::Normal",
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PowerUnitProxyComponent",
+    "Name": "PowerUnitProxyComponent_0",
+    "Outer": "Default__RopeConnector_C",
+    "Class": "UScriptClass'PowerUnitProxyComponent'",
+    "Properties": {
+      "CurrentMax": 20.0
+    }
+  },
+  {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairComp",
+    "Outer": "Default__RopeConnector_C",
+    "Class": "UScriptClass'RepairProxyComponent'",
+    "Template": {
+      "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+    }
+  },
+  {
+    "Type": "RopeConnector_C",
+    "Name": "Default__RopeConnector_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/RopeConnector.RopeConnector_C'",
+    "Template": {
+      "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
+    },
+    "Properties": {
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__RopeConnector_C:TeamComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/RopeConnector.12"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__RopeConnector_C:HealthComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/RopeConnector.5"
+      },
+      "RepairComp": {
+        "ObjectName": "RepairProxyComponent'Default__RopeConnector_C:RepairComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/RopeConnector.8"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__RopeConnector_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/RopeConnector.11"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__RopeConnector_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/RopeConnector.3"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__RopeConnector_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/RopeConnector.4"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__RopeConnector_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/RopeConnector.1"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__RopeConnector_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/RopeConnector.2"
+      },
+      "ScorchComp": {
+        "ObjectName": "ScorchProxyComponent'Default__RopeConnector_C:ScorchProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/RopeConnector.10"
+      },
+      "CodeNameString": "RopeConnector",
+      "CodeName": -861895733,
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "Components": [
+        {
+          "ObjectName": "InventoryProxyComponent'Default__RopeConnector_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/RopeConnector.6"
+        },
+        {
+          "ObjectName": "PowerUnitProxyComponent'Default__RopeConnector_C:PowerUnitProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/RopeConnector.7"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisRopeConnector_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisRopeConnector.1"
+      }
+    }
+  },
+  {
+    "Type": "ScorchProxyComponent",
+    "Name": "ScorchProxyComponent_0",
+    "Outer": "Default__RopeConnector_C",
+    "Class": "UScriptClass'ScorchProxyComponent'",
+    "Template": {
+      "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__RopeConnector_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamComp",
+    "Outer": "Default__RopeConnector_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    }
+  }
+]

@@ -44,11 +44,9 @@
     "Properties": {
       "CodeNameString": "CanalEndPieceBuildSite",
       "CodeName": -1418633738,
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "GenerateMeshCollisionMask": 16785408,
       "Components": [
-        {
-          "ObjectName": "MeshCollisionProxyComponent'Default__CanalEndPieceBuildSite_C:MeshCollisionProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Walls/misc/CanalEndPieceBuildSite.4"
-        },
         {
           "ObjectName": "FootprintCollisionProxyComponent'Default__CanalEndPieceBuildSite_C:FootprintCollisionProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Walls/misc/CanalEndPieceBuildSite.3"
@@ -57,7 +55,15 @@
           "ObjectName": "BoxCollisionProxyComponent'Default__CanalEndPieceBuildSite_C:BoxCollisionProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Walls/misc/CanalEndPieceBuildSite.1"
         }
-      ]
+      ],
+      "VisActorClass": {
+        "ObjectName": "Class'VisBuildSite'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "VisActorTemplateClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisCanalEndPiece_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanalEndPiece.1"
+      }
     }
   },
   {
@@ -71,20 +77,6 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Power/CanalEndPieceFootprint.0"
       },
       "CollisionMask": 4194624
-    }
-  },
-  {
-    "Type": "MeshCollisionProxyComponent",
-    "Name": "MeshCollisionProxyComponent_0",
-    "Outer": "Default__CanalEndPieceBuildSite_C",
-    "Class": "UScriptClass'MeshCollisionProxyComponent'",
-    "Properties": {
-      "PhysicsAssetName": {
-        "ObjectName": "StaticMesh'IndustryCanal_Balljoint'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Balljoint.2"
-      },
-      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeWood",
-      "CollisionMask": 16785408
     }
   }
 ]

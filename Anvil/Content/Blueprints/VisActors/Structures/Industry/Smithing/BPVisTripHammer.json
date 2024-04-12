@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisTripHammer_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.15"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BPVisTripHammer_C:ExecuteUbergraph_BPVisTripHammer'",
@@ -47,17 +47,6 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "PowerUnitData",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'PowerUnitDataComponent'",
-          "ObjectPath": "/Script/R2"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "SkeletalMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -65,6 +54,28 @@
         "PropertyClass": {
           "ObjectName": "Class'SkeletalMeshComponent'",
           "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PowerUnitData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PowerUnitDataComponent'",
+          "ObjectPath": "/Script/R2"
         }
       }
     ],
@@ -101,17 +112,16 @@
       "UberGraphFrame": {},
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisTripHammer_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.21"
       },
       "StructureIcon": {
-        "ObjectName": "Texture2D'IconHammer'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Items/IconHammer.0"
+        "ObjectName": "Texture2D'IconTripHammer'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconTripHammer.0"
       },
       "BuildSiteCategory": "EBuildSiteCategory::Smithing",
-      "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisTripHammer_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.20"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisTripHammer_C:HealthDataComponent'",
@@ -119,11 +129,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisTripHammer_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.19"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisTripHammer_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.18"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisTripHammer_C:ScorchDataComponent'",
@@ -150,14 +160,14 @@
       "Description": {
         "Namespace": "",
         "Key": "E9E69CA1410F6755B14BCBAC9219EBF1",
-        "SourceString": "Automatically hammer",
-        "LocalizedString": "Automatically hammer"
+        "SourceString": "A powered hammer that is used to automatically apply force to connected Anvils or other structures.",
+        "LocalizedString": "A powered hammer that is used to automatically apply force to connected Anvils or other structures."
       },
       "DescriptionFooter": {
         "Namespace": "",
         "Key": "F96E7E8F44AEE43060D43FAF74958B1B",
-        "SourceString": "Can be built in Workshop areas.",
-        "LocalizedString": "Can be built in Workshop areas."
+        "SourceString": "Must be built in Workshop areas",
+        "LocalizedString": "Must be built in Workshop areas"
       },
       "UseWindowType": "EHUDWindowType::InventoryStructure",
       "bUseForceCameraZoom": true,
@@ -229,7 +239,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisTripHammer_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.17"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisTripHammer_C:ArrowComponent'",
@@ -309,12 +319,36 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisTripHammer_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.16"
+      },
+      "VariableGuid": "FBA6BDC7-4C376FD4-6664CF8F-65B44595",
+      "InternalVariableName": "SkeletalMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisTripHammer_C:VisStaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.22"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
-      "VariableGuid": "FBA6BDC7-4C376FD4-6664CF8F-65B44595",
-      "InternalVariableName": "SkeletalMesh"
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisTripHammer_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.13"
+        }
+      ],
+      "VariableGuid": "68AADD09-4104A40A-86B54693-DEEB3F25",
+      "InternalVariableName": "VisStaticMesh"
     }
   },
   {
@@ -325,22 +359,26 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisTripHammer_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.13"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisTripHammer_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTripHammer_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.14"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisTripHammer_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.13"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisTripHammer_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTripHammer_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTripHammer_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.13"
         }
       ],
       "DefaultSceneRootNode": {
@@ -355,20 +393,23 @@
     "Outer": "BPVisTripHammer_C",
     "Class": "UScriptClass'SkeletalMeshComponent'",
     "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'TripHammer_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/TripHammer_ABP.0"
+      },
       "AnimationData": {
         "AnimToPlay": {
-          "ObjectName": "AnimSequence'ANIM_TripHammer_Operational'",
-          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/ANIM_TripHammer_Operational.0"
+          "ObjectName": "AnimSequence'TripHammer_Operation_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/TripHammer_Operation_Anim.0"
         }
       },
-      "AnimationMode": "EAnimationMode::AnimationSingleNode",
       "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'SK_TripHammer'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_TripHammer.0"
+        "ObjectName": "SkeletalMesh'TripHammer_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/TripHammer_SK.0"
       },
       "SkinnedAsset": {
-        "ObjectName": "SkeletalMesh'SK_TripHammer'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_TripHammer.0"
+        "ObjectName": "SkeletalMesh'TripHammer_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/TripHammer_SK.0"
       },
       "bReceivesDecals": false
     }
@@ -407,6 +448,25 @@
         "ObjectName": "ArrowComponent'Default__BPVisTripHammer_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisTripHammer.0"
       }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh_GEN_VARIABLE",
+    "Outer": "BPVisTripHammer_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'TripHammer_SM'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/TripHammer_SM.2"
+      },
+      "bVisible": false,
+      "bHiddenInGame": true,
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
     }
   }
 ]

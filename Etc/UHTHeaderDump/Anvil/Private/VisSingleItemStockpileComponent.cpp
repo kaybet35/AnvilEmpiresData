@@ -4,6 +4,7 @@ UVisSingleItemStockpileComponent::UVisSingleItemStockpileComponent(const FObject
     this->bReceivesDecals = false;
     this->InventorySlotIndex = 0;
     this->DefaultItemMesh = NULL;
+    this->ShowUnderlyingItem = false;
 }
 
 

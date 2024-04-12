@@ -56,12 +56,11 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.11"
       },
       "Icon": {
-        "ObjectName": "Texture2D'IconFibre'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Items/IconFibre.0"
+        "ObjectName": "Texture2D'IconRope'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Items/IconRope.0"
       },
       "Category": "EBuildSiteCategory::Smithing",
       "Order": 8,
-      "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisPowerRopeBuildsite_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.0"
@@ -77,14 +76,20 @@
       "VisDisplayName": {
         "Namespace": "",
         "Key": "12602A8B414D43C5F361EE96B1E023F9",
-        "SourceString": "Power Connector Rope",
-        "LocalizedString": "Power Connector Rope"
+        "SourceString": "Power Connection Rope",
+        "LocalizedString": "Power Connection Rope"
       },
       "Description": {
         "Namespace": "",
         "Key": "DE5131DB4E82A6879934679F36674B42",
-        "SourceString": "TODO",
-        "LocalizedString": "TODO"
+        "SourceString": "Transfers power between structures.",
+        "LocalizedString": "Transfers power between structures."
+      },
+      "DescriptionFooter": {
+        "Namespace": "",
+        "Key": "39CA3C03483B81DB62A359A208CDCC7C",
+        "SourceString": "Must be built in Workshop areas.",
+        "LocalizedString": "Must be built in Workshop areas."
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisPowerRopeBuildsite_C:ArrowComponent'",
@@ -99,8 +104,9 @@
     "Class": "UScriptClass'BuildSiteDataComponent'",
     "Properties": {
       "BuiltStructureEntity": -1967044750,
+      "bRequiresTownHall": true,
       "TierPrerequisite": 2,
-      "ProcessedWoodRequirement": 25
+      "ResourceFibreRequirement": 3
     }
   },
   {
@@ -723,11 +729,6 @@
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisPowerRopeBuildsite_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPowerRopeBuildsite.0"
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 100.0
       }
     }
   }

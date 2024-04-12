@@ -5,9 +5,9 @@
     "Outer": "Default__PowerRope_C",
     "Class": "UScriptClass'AdvancedSnappingProxyComponent'",
     "Properties": {
-      "bSnappingRequired": true,
       "bOverrideAngleOverlapMin": true,
-      "OverridedAngleOverlapMin": 1.0
+      "OverridedAngleOverlapMin": 1.0,
+      "NumSnappingRequired": 2
     }
   },
   {
@@ -87,7 +87,7 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
     },
     "Properties": {
-      "MaxHealth": 65.0
+      "MaxHealth": 50.0
     }
   },
   {
@@ -159,11 +159,7 @@
     "Class": "UScriptClass'PowerUnitProxyComponent'",
     "Properties": {
       "AllowedDirection": 0,
-      "CurrentMax": 50.0,
-      "FlatResistance": 3.0,
-      "ResistanceSlopeModifier": -2.0,
-      "InnerWidth": 25.0,
-      "Outerwidth": 75.0
+      "CurrentMax": 25.0
     }
   },
   {
@@ -192,8 +188,14 @@
     "Outer": "Default__PowerRope_C",
     "Class": "UScriptClass'SplineProxyComponent'",
     "Properties": {
+      "MaxSplineLength": 500.0,
       "bPlatformMode": true,
-      "bDisallowSnappingAtMiddle": true,
+      "bBridgeMode": true,
+      "PlatformStartOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
       "MidPiece": {
         "ObjectName": "BlueprintGeneratedClass'PowerRopeMidPiece_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/PowerRopeMidPiece.0"

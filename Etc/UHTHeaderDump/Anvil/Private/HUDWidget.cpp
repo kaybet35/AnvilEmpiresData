@@ -5,6 +5,7 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->HUDCanvas = NULL;
     this->NameCanvas = NULL;
     this->StatsCanvas = NULL;
+    this->TravelIndicatorCanvas = NULL;
     this->HUDNameWidgetClass = NULL;
     this->HUDStatsWidgetClass = NULL;
     this->OpenedHUDWindow = NULL;
@@ -35,6 +36,8 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->MirrishLogo = NULL;
     this->NovanLogo = NULL;
     this->LocalChatDisplayTime = 3.00f;
+    this->InteractionProgressBar1 = NULL;
+    this->InteractionProgressBar2 = NULL;
 }
 
 

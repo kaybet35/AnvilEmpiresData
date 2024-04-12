@@ -72,7 +72,7 @@
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPHeatingWindow_C:WidgetTree.CanvasPanel_28.CanvasPanelSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.15"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.17"
       }
     }
   },
@@ -168,12 +168,14 @@
       "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.2"
     },
     "Properties": {
+      "WidthOverride": 480.0,
+      "bOverride_WidthOverride": true,
       "NamedSlotBindings": [
         {
           "Name": "MainAreaSlot0",
           "Content": {
-            "ObjectName": "HorizontalBox'BPHeatingWindow_C:WidgetTree.HorizontalBox_134'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.17"
+            "ObjectName": "CanvasPanel'BPHeatingWindow_C:WidgetTree.CanvasPanel_0'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.13"
           }
         }
       ]
@@ -194,7 +196,7 @@
           "Name": "MainAreaSlot0",
           "Content": {
             "ObjectName": "HorizontalBox'BPHeatingWindow_C:WidgetTree.HorizontalBox'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.16"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.18"
           }
         }
       ]
@@ -212,7 +214,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPHeatingWindow_C:WidgetTree.CanvasPanel_28.CanvasPanelSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.14"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.16"
       }
     }
   },
@@ -274,8 +276,22 @@
           "Name": "SubHeaderSlot0",
           "Content": {
             "ObjectName": "HorizontalBox'BPHeatingWindow_C:WidgetTree.HorizontalBox_90'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.18"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.20"
           }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPHeatingWindow_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.15"
         }
       ]
     }
@@ -289,13 +305,46 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPHeatingWindow_C:WidgetTree.CanvasPanel_28.CanvasPanelSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.14"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.16"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPHeatingWindow_C:WidgetTree.CanvasPanel_28.CanvasPanelSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.15"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.17"
         }
       ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Outer": "CanvasPanel_0",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPHeatingWindow_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.13"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPHeatingWindow_C:WidgetTree.HorizontalBox_134'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.19"
+      }
     }
   },
   {
@@ -323,7 +372,7 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPHeatingWindow_C:WidgetTree.CanvasPanel_28'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.13"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.14"
       },
       "Content": {
         "ObjectName": "BPPlayerInventoryWidget_C'BPHeatingWindow_C:WidgetTree.PlayerInventoryPanel'",
@@ -360,7 +409,7 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPHeatingWindow_C:WidgetTree.CanvasPanel_28'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.13"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.14"
       },
       "Content": {
         "ObjectName": "BPAnvilPanel_C'BPHeatingWindow_C:WidgetTree.BPAnvilPanel'",
@@ -377,23 +426,23 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.22"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.24"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.19"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.20"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_3'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.21"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_6'",
+          "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.22"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_3'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.23"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.25"
         }
       ]
     }
@@ -406,18 +455,14 @@
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.24"
-        },
-        {
           "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.25"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_5'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.26"
         }
-      ]
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPHeatingWindow_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.15"
+      }
     }
   },
   {
@@ -448,7 +493,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPHeatingWindow_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.16"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.18"
       },
       "Content": {
         "ObjectName": "InventoryWidget'BPHeatingWindow_C:WidgetTree.FuelInputItemGrid'",
@@ -470,7 +515,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPHeatingWindow_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.16"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.18"
       },
       "Content": {
         "ObjectName": "SizeBox'BPHeatingWindow_C:WidgetTree.SizeBox_0'",
@@ -488,7 +533,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPHeatingWindow_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.16"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.18"
       },
       "Content": {
         "ObjectName": "InventoryWidget'BPHeatingWindow_C:WidgetTree.FuelOutputItemGrid'",
@@ -504,11 +549,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPHeatingWindow_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.16"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.18"
       },
       "Content": {
         "ObjectName": "Spacer'BPHeatingWindow_C:WidgetTree.Spacer_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.40"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.39"
       }
     }
   },
@@ -520,27 +565,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPHeatingWindow_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.16"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.18"
       },
       "Content": {
         "ObjectName": "Spacer'BPHeatingWindow_C:WidgetTree.Spacer_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.41"
-      }
-    }
-  },
-  {
-    "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_1",
-    "Outer": "HorizontalBox_134",
-    "Class": "UScriptClass'HorizontalBoxSlot'",
-    "Properties": {
-      "Parent": {
-        "ObjectName": "HorizontalBox'BPHeatingWindow_C:WidgetTree.HorizontalBox_134'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.17"
-      },
-      "Content": {
-        "ObjectName": "Spacer'BPHeatingWindow_C:WidgetTree.Spacer'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.40"
       }
     }
   },
@@ -554,27 +583,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPHeatingWindow_C:WidgetTree.HorizontalBox_134'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.17"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.19"
       },
       "Content": {
         "ObjectName": "InventoryWidget'BPHeatingWindow_C:WidgetTree.ItemsItemGrid'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.32"
-      }
-    }
-  },
-  {
-    "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_5",
-    "Outer": "HorizontalBox_134",
-    "Class": "UScriptClass'HorizontalBoxSlot'",
-    "Properties": {
-      "Parent": {
-        "ObjectName": "HorizontalBox'BPHeatingWindow_C:WidgetTree.HorizontalBox_134'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.17"
-      },
-      "Content": {
-        "ObjectName": "Spacer'BPHeatingWindow_C:WidgetTree.Spacer_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.42"
       }
     }
   },
@@ -588,7 +601,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPHeatingWindow_C:WidgetTree.HorizontalBox_90'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.18"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.20"
       },
       "Content": {
         "ObjectName": "BPStatusWidget_C'BPHeatingWindow_C:WidgetTree.HealthStatus'",
@@ -606,7 +619,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPHeatingWindow_C:WidgetTree.HorizontalBox_90'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.18"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.20"
       },
       "Content": {
         "ObjectName": "BPStatusWidget_C'BPHeatingWindow_C:WidgetTree.DecayStatus'",
@@ -655,7 +668,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.19"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.21"
       }
     }
   },
@@ -682,7 +695,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.21"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.23"
       }
     }
   },
@@ -709,7 +722,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.25"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.26"
       }
     }
   },
@@ -731,7 +744,7 @@
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPHeatingWindow_C:WidgetTree.VerticalBox.VerticalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.45"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.43"
       }
     }
   },
@@ -751,7 +764,7 @@
       ],
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.20"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.22"
       }
     }
   },
@@ -771,7 +784,7 @@
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPHeatingWindow_C:WidgetTree.VerticalBox.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.46"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.44"
       }
     }
   },
@@ -803,7 +816,7 @@
       },
       "Content": {
         "ObjectName": "VerticalBox'BPHeatingWindow_C:WidgetTree.VerticalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.44"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.42"
       }
     }
   },
@@ -821,23 +834,7 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPHeatingWindow_C:WidgetTree.FuelDurationText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.43"
-      }
-    }
-  },
-  {
-    "Type": "Spacer",
-    "Name": "Spacer",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'Spacer'",
-    "Properties": {
-      "Size": {
-        "X": 23.0,
-        "Y": 1.0
-      },
-      "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.24"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.41"
       }
     }
   },
@@ -853,7 +850,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.22"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.24"
       }
     }
   },
@@ -869,23 +866,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_6'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.23"
-      }
-    }
-  },
-  {
-    "Type": "Spacer",
-    "Name": "Spacer_3",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'Spacer'",
-    "Properties": {
-      "Size": {
-        "X": 23.0,
-        "Y": 1.0
-      },
-      "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPHeatingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.26"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.25"
       }
     }
   },
@@ -924,11 +905,11 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPHeatingWindow_C:WidgetTree.VerticalBox.VerticalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.45"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.43"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPHeatingWindow_C:WidgetTree.VerticalBox.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.46"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.44"
         }
       ],
       "Slot": {
@@ -947,7 +928,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPHeatingWindow_C:WidgetTree.VerticalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.44"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.42"
       },
       "Content": {
         "ObjectName": "SizeBox'BPHeatingWindow_C:WidgetTree.SizeBox'",
@@ -965,7 +946,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPHeatingWindow_C:WidgetTree.VerticalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.44"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.42"
       },
       "Content": {
         "ObjectName": "SizeBox'BPHeatingWindow_C:WidgetTree.SizeBox_3'",
@@ -980,7 +961,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPHeatingWindow_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.48"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.46"
       },
       "bClassRequiresNativeTick": true
     },
@@ -1112,7 +1093,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "CanvasPanel'BPHeatingWindow_C:WidgetTree.CanvasPanel_28'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.13"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPHeatingWindow.14"
       }
     }
   }

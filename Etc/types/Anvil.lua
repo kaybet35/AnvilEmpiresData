@@ -317,8 +317,19 @@ AVisHeatingStructure = {}
 
 ---@class AVisHitConverterStructure : AVisStructure
 ---@field HitConverterDataComponent UHitConverterDataComponent
+---@field ConvertedItemMeshComponent USkeletalMeshComponent
+---@field ConvertedItemMeshMap TMap<FString, USkeletalMesh>
+---@field ConvertedItemMeshMaterialOverride UMaterial
+---@field HitVFXLocation USceneComponent
+---@field HitSuccessVFX UNiagaraSystem
+---@field HitFailVFX UNiagaraSystem
+---@field HitSuccessSoundCue USoundCue
+---@field HitFailSoundCue USoundCue
 AVisHitConverterStructure = {}
 
+---@param Old float
+---@param New float
+function AVisHitConverterStructure:OnHitConverterCounterChanged(Old, New) end
 
 
 ---@class AVisHouse : AVisStructure
@@ -640,6 +651,7 @@ FCameraRotateState = {}
 ---@class FClientConfig
 ---@field Ip FString
 ---@field AnvilServiceHttpUrl FString
+---@field DiscordRoleServerUrl FString
 ---@field Announcement FString
 FClientConfig = {}
 
@@ -1344,6 +1356,7 @@ UHUDStatsWidget = {}
 ---@field HUDCanvas UCanvasPanel
 ---@field NameCanvas UCanvasPanel
 ---@field StatsCanvas UCanvasPanel
+---@field TravelIndicatorCanvas UCanvasPanel
 ---@field HUDWindowWidgets TMap<EHUDWindowType, UHUDWindow>
 ---@field HUDNameWidgetClass TSubclassOf<UHUDNameWidget>
 ---@field HUDStatsWidgetClass TSubclassOf<UHUDStatsWidget>
@@ -1377,6 +1390,8 @@ UHUDStatsWidget = {}
 ---@field GuardStrengthEmptyIcon FSlateBrush
 ---@field GuardStrengthFillIcon FSlateBrush
 ---@field LocalChatDisplayTime float
+---@field InteractionProgressBar1 UProgressBar
+---@field InteractionProgressBar2 UProgressBar
 ---@field NewLocalMessages TArray<UChatMessage>
 UHUDWidget = {}
 
@@ -1441,6 +1456,9 @@ UHitConversionWindow = {}
 
 function UHitConversionWindow:OutputPreviousButtonClicked() end
 function UHitConversionWindow:OutputNextButtonClicked() end
+---@param Old uint8
+---@param New uint8
+function UHitConversionWindow:OnCurrentSelectedOutputIndexChanged(Old, New) end
 
 
 ---@class UHousePlayerInventoryListItem : UUserWidget
@@ -1645,6 +1663,7 @@ function UMarketShopWindow:GetSilverAmountText() end
 ---@field RoadmapPopupButton UButton
 ---@field DisclaimerWidget UDisclaimerWidget
 ---@field AnnouncementText UTextBlock
+---@field DiscordRoleButton UAnvilButtonWidget
 UOpeningScreen = {}
 
 function UOpeningScreen:OnRoadmapClicked() end
@@ -1652,6 +1671,9 @@ function UOpeningScreen:OnRoadmapButtonClicked() end
 function UOpeningScreen:OnPlayButtonClicked() end
 function UOpeningScreen:OnOptionsButtonClicked() end
 function UOpeningScreen:OnExitButtonClicked() end
+function UOpeningScreen:OnDiscordRoleButtonClicked() end
+---@return boolean
+function UOpeningScreen:IsDiscordRoleButtonEnabled() end
 ---@return FText
 function UOpeningScreen:GetAnnouncementText() end
 
@@ -1998,16 +2020,13 @@ UVisAnimalAnimInstance = {}
 
 
 ---@class UVisBalljointComponent : USceneComponent
----@field GroundDecalComponent UDecalComponent
----@field BalljointMesh UStaticMeshComponent
----@field BalljointBaseMesh UStaticMeshComponent
----@field LeftTrimMesh UVisStaticMeshComponent
----@field RightTrimMesh UVisStaticMeshComponent
 ---@field bIsStart boolean
 ---@field PowerUnitDataComponent UPowerUnitDataComponent
----@field BalljointMaterial UMaterialInstanceDynamic
----@field LeftTrimMaterial UMaterialInstanceDynamic
----@field RightTrimMaterial UMaterialInstanceDynamic
+---@field AdapterMesh UStaticMeshComponent
+---@field BalljointMesh UStaticMeshComponent
+---@field BalljointBaseMesh UStaticMeshComponent
+---@field LeftTrimMesh UStaticMeshComponent
+---@field RightTrimMesh UStaticMeshComponent
 UVisBalljointComponent = {}
 
 
@@ -2144,6 +2163,15 @@ UVisPlayerAnimInstance = {}
 UVisPlayerVisualsComponent = {}
 
 
+---@class UVisPowerUnitAnimInstance : UAnimInstance
+---@field PercentageCurrent float
+---@field InFlowDirection float
+---@field InFlowHeight float
+---@field PowerUnitDataComponent UPowerUnitDataComponent
+UVisPowerUnitAnimInstance = {}
+
+
+
 ---@class UVisScaffoldingComponent : USceneComponent
 ---@field Scaffolding1 UStaticMesh
 ---@field Scaffolding2 UStaticMesh
@@ -2156,6 +2184,7 @@ UVisScaffoldingComponent = {}
 ---@class UVisSingleItemStockpileComponent : UStaticMeshComponent
 ---@field InventorySlotIndex int32
 ---@field DefaultItemMesh UStaticMesh
+---@field ShowUnderlyingItem boolean
 UVisSingleItemStockpileComponent = {}
 
 

@@ -3,8 +3,8 @@
 
 class ABPVisAnvil_C : public AVisHitConverterStructure
 {
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0488 (size: 0x8)
+    class UVisStaticMeshComponent* AnvilMesh;                                         // 0x0518 (size: 0x8)
 
-}; // Size: 0x490
+}; // Size: 0x520
 
 #endif

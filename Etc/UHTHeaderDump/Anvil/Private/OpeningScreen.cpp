@@ -10,6 +10,7 @@ UOpeningScreen::UOpeningScreen() {
     this->RoadmapPopupButton = NULL;
     this->DisclaimerWidget = NULL;
     this->AnnouncementText = NULL;
+    this->DiscordRoleButton = NULL;
 }
 
 void UOpeningScreen::OnRoadmapClicked() {
@@ -25,6 +26,13 @@ void UOpeningScreen::OnOptionsButtonClicked() {
 }
 
 void UOpeningScreen::OnExitButtonClicked() {
+}
+
+void UOpeningScreen::OnDiscordRoleButtonClicked() {
+}
+
+bool UOpeningScreen::IsDiscordRoleButtonEnabled() {
+    return false;
 }
 
 FText UOpeningScreen::GetAnnouncementText() {

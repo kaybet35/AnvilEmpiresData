@@ -10,7 +10,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__Anvil_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.14"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__Anvil_C:HealthComp'",
@@ -18,11 +18,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__Anvil_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.11"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__Anvil_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.13"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__Anvil_C:DestroyableComp'",
@@ -42,7 +42,7 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__Anvil_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.12"
       },
       "CodeNameString": "Anvil",
       "CodeName": -1328079394,
@@ -55,6 +55,14 @@
         {
           "ObjectName": "HitConverterProxyComponent'Default__Anvil_C:HitConverterProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.7"
+        },
+        {
+          "ObjectName": "PowerToActionConverterProxyComponent'Default__Anvil_C:PowerToActionConverterProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.9"
+        },
+        {
+          "ObjectName": "PowerUnitProxyComponent'Default__Anvil_C:PowerUnitProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Smithing/Anvil.10"
         }
       ],
       "VisActorClass": {
@@ -158,6 +166,7 @@
     "Outer": "Default__Anvil_C",
     "Class": "UScriptClass'HitConverterProxyComponent'",
     "Properties": {
+      "ConversionType": "EAnvilHitConversionType::ConvertUnderlyingItemOnFirstHit",
       "InputItemName": {
         "ObjectName": "BlueprintGeneratedClass'ProcessedIronHeated_C'",
         "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIronHeated.0"
@@ -169,7 +178,8 @@
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTool.1"
           },
           "OutputItemCodeName": 0,
-          "NumHitsToConvert": 3
+          "NumHitsToConvert": 10,
+          "TargetHeat": 50.0
         },
         {
           "OutputItemTemplate": {
@@ -177,7 +187,8 @@
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeSword.1"
           },
           "OutputItemCodeName": 0,
-          "NumHitsToConvert": 3
+          "NumHitsToConvert": 20,
+          "TargetHeat": 75.0
         },
         {
           "OutputItemTemplate": {
@@ -185,7 +196,8 @@
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeAxe.1"
           },
           "OutputItemCodeName": 0,
-          "NumHitsToConvert": 3
+          "NumHitsToConvert": 15,
+          "TargetHeat": 55.0
         },
         {
           "OutputItemTemplate": {
@@ -193,7 +205,8 @@
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTip.1"
           },
           "OutputItemCodeName": 0,
-          "NumHitsToConvert": 3
+          "NumHitsToConvert": 15,
+          "TargetHeat": 35.0
         }
       ],
       "RequiredTool": "EAnvilToolType::Hammer"
@@ -207,7 +220,7 @@
     "Properties": {
       "Slots": [
         {
-          "ProxyRepeat": 5,
+          "ProxyRepeat": 1,
           "bOr": false,
           "HeldItem": null,
           "Count": 0,
@@ -218,6 +231,25 @@
           "DedicatedUnderlyingItemType": null
         }
       ]
+    }
+  },
+  {
+    "Type": "PowerToActionConverterProxyComponent",
+    "Name": "PowerToActionConverterProxyComponent_0",
+    "Outer": "Default__Anvil_C",
+    "Class": "UScriptClass'PowerToActionConverterProxyComponent'",
+    "Properties": {
+      "PowerDrainPerAction": 1.0
+    }
+  },
+  {
+    "Type": "PowerUnitProxyComponent",
+    "Name": "PowerUnitProxyComponent_0",
+    "Outer": "Default__Anvil_C",
+    "Class": "UScriptClass'PowerUnitProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilPowerUnitType::Sink",
+      "CurrentMax": 1.0
     }
   },
   {

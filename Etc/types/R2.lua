@@ -118,6 +118,7 @@ FHeatingFuel = {}
 ---@field OutputItemTemplate TSubclassOf<UItemTemplate>
 ---@field OutputItemCodeName int32
 ---@field NumHitsToConvert uint32
+---@field TargetHeat float
 FHitConverterOutput = {}
 
 
@@ -261,10 +262,16 @@ FRefineryQueueItem = {}
 FTechItem = {}
 
 
+---@class FTestStruct
+---@field Num int32
+FTestStruct = {}
+
+
+
 ---@class FVisvarPowerConnection
 ---@field RelativeAngle float
 ---@field InnerWidth float
----@field Outerwidth float
+---@field OuterWidth float
 ---@field ID uint64
 FVisvarPowerConnection = {}
 
@@ -280,9 +287,9 @@ UAIStimulusProxyComponent = {}
 ---@class UAdvancedSnappingProxyComponent : UProxyComponent
 ---@field bBlockSnapping boolean
 ---@field bNoOverlap boolean
----@field bSnappingRequired boolean
 ---@field bOverrideAngleOverlapMin boolean
 ---@field OverridedAngleOverlapMin float
+---@field NumSnappingRequired uint8
 UAdvancedSnappingProxyComponent = {}
 
 
@@ -473,6 +480,7 @@ UBuildSiteDataComponent = {}
 ---@field RequiredDeployable TSubclassOf<UItemTemplate>
 ---@field MaxHeightShift float
 ---@field AdditionalMaxHeightShift float
+---@field MinDistanceBetweenStructures float
 ---@field RoadMaterialRequirement int32
 ---@field ResourceBranchesRequirement int32
 ---@field ProcessedWoodRequirement int32
@@ -713,24 +721,29 @@ UHealthProxyComponent = {}
 ---@class UHeatingDataComponent : UDataComponent
 ---@field FuelExpiryTimestampAgeSec int32
 ---@field bIsFueled boolean
+---@field bIsBellowBoosted boolean
 UHeatingDataComponent = {}
 
 
 
 ---@class UHeatingProxyComponent : UProxyComponent
 ---@field FuelList TArray<FHeatingFuel>
+---@field NumItems int32
 UHeatingProxyComponent = {}
 
 
 
 ---@class UHitConverterDataComponent : UDataComponent
+---@field InputItemName int32
 ---@field CurrentSelectedOutputIndex uint8
 ---@field ConverterOutputList TArray<FHitConverterOutput>
+---@field HitCounter float
 UHitConverterDataComponent = {}
 
 
 
 ---@class UHitConverterProxyComponent : UProxyComponent
+---@field ConversionType EAnvilHitConversionType
 ---@field InputItemName TSubclassOf<UItemTemplate>
 ---@field ConverterOutputList TArray<FHitConverterOutput>
 ---@field RequiredTool EAnvilToolType
@@ -1121,9 +1134,18 @@ UPlayerSpawnerProxyComponent = {}
 UPlayerUnstuckProxyComponent = {}
 
 
+---@class UPowerToActionConverterProxyComponent : UProxyComponent
+---@field ConversionType EAnvilConvertedActionType
+---@field PowerDrainPerAction float
+UPowerToActionConverterProxyComponent = {}
+
+
+
 ---@class UPowerUnitDataComponent : UDataComponent
 ---@field PercentageCurrent float
 ---@field VisVarUpdateHook int32
+---@field InFlowDirection float
+---@field InFlowHeight float
 UPowerUnitDataComponent = {}
 
 
@@ -1132,10 +1154,11 @@ UPowerUnitDataComponent = {}
 ---@field Type EAnvilPowerUnitType
 ---@field AllowedDirection int32
 ---@field CurrentMax float
+---@field Level float
 ---@field FlatResistance float
 ---@field ResistanceSlopeModifier float
 ---@field InnerWidth float
----@field Outerwidth float
+---@field OuterWidth float
 UPowerUnitProxyComponent = {}
 
 
@@ -1353,6 +1376,7 @@ USeekerProxyComponent = {}
 ---@field bIsAdmin boolean
 ---@field bDebugDraw boolean
 ---@field bPriming boolean
+---@field bInTravelZone boolean
 ---@field SecondsUntilFullDecay float
 ---@field HeldItemLightSourceRadius float
 ---@field LightSourceData FNightShroudLightSourceData
@@ -1422,8 +1446,8 @@ USplineDataComponent = {}
 ---@field bScaleCost boolean
 ---@field bPlatformMode boolean
 ---@field bBridgeMode boolean
----@field bDisallowSnappingAtMiddle boolean
 ---@field PlatformStartOffset FVector
+---@field MidPieceZOffset float
 ---@field MidPiece TSubclassOf<UEntityTemplate>
 ---@field EndPiece TSubclassOf<UEntityTemplate>
 ---@field SnappingChannel EAnvilSnappingChannelType
@@ -1456,7 +1480,6 @@ UStaticTorchDataComponent = {}
 
 ---@class UStaticTorchProxyComponent : UProxyComponent
 ---@field ActiveSecondsPerUnitFuel float
----@field MinDistanceBetweenTorches float
 ---@field NightShroudRadius float
 UStaticTorchProxyComponent = {}
 

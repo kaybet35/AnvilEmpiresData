@@ -70,9 +70,10 @@
           "bSupportUniformlyDistributedSampling": false
         }
       ],
+      "bHasVertexColors": true,
       "PhysicsAsset": {
-        "ObjectName": "PhysicsAsset'SK_AnimalPoweredMill_Physics'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_AnimalPoweredMill_Physics.0"
+        "ObjectName": "PhysicsAsset'SK_AnimalPoweredMill_Physics1'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/SK_AnimalPoweredMill_Physics1.0"
       },
       "SamplingInfo": {
         "BuiltData": {
@@ -90,16 +91,16 @@
     },
     "ImportedBounds": {
       "Origin": {
-        "X": -71.5046,
-        "Y": -0.489357,
-        "Z": 213.45479
+        "X": 52.27839,
+        "Y": 2.3981247,
+        "Z": 53.023186
       },
       "BoxExtent": {
-        "X": 204.11047,
-        "Y": 102.57551,
-        "Z": 225.55446
+        "X": 291.4275,
+        "Y": 235.4285,
+        "Z": 269.07846
       },
-      "SphereRadius": 321.0259
+      "SphereRadius": 461.2589
     },
     "Materials": [
       {
@@ -107,8 +108,28 @@
         "ObjectPath": "Anvil/Content/Materials/Structures/FoundationTrim.0"
       },
       {
-        "ObjectName": "MaterialInstanceConstant'Rope'",
-        "ObjectPath": "Anvil/Content/Materials/Props/Rope.0"
+        "ObjectName": "MaterialInstanceConstant'RoadPathDecal'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/RoadPathDecal.0"
+      },
+      {
+        "ObjectName": "MaterialInstanceConstant'WoodEnd'",
+        "ObjectPath": "Anvil/Content/Materials/Resources/WoodEnd.0"
+      },
+      {
+        "ObjectName": "MaterialInstanceConstant'FoundationTrim'",
+        "ObjectPath": "Anvil/Content/Materials/Structures/FoundationTrim.0"
+      },
+      {
+        "ObjectName": "MaterialInstanceConstant'DrystoneRepeating'",
+        "ObjectPath": "Anvil/Content/Materials/Props/DrystoneRepeating.0"
+      },
+      {
+        "ObjectName": "MaterialInstanceConstant'DrystoneSeating'",
+        "ObjectPath": "Anvil/Content/Materials/Props/DrystoneSeating.0"
+      },
+      {
+        "ObjectName": "MaterialInstanceConstant'Road'",
+        "ObjectPath": "Anvil/Content/Materials/Environment/Road/Road.0"
       }
     ],
     "LODModels": [
@@ -117,7 +138,7 @@
           {
             "MaterialIndex": 0,
             "BaseIndex": 0,
-            "NumTriangles": 11660,
+            "NumTriangles": 13110,
             "bRecomputeTangent": false,
             "RecomputeTangentsVertexMaskChannel": "Alpha",
             "bCastShadow": true,
@@ -125,7 +146,7 @@
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
             "BaseVertexIndex": 0,
-            "NumVertices": 15405,
+            "NumVertices": 16168,
             "MaxBoneInfluences": 1,
             "bUse16BitBoneIndex": false,
             "CorrespondClothAssetIndex": -1,
@@ -136,16 +157,96 @@
           },
           {
             "MaterialIndex": 1,
-            "BaseIndex": 34980,
-            "NumTriangles": 1200,
+            "BaseIndex": 39330,
+            "NumTriangles": 120,
             "bRecomputeTangent": false,
             "RecomputeTangentsVertexMaskChannel": "Alpha",
             "bCastShadow": true,
             "bVisibleInRayTracing": true,
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
-            "BaseVertexIndex": 15405,
-            "NumVertices": 679,
+            "BaseVertexIndex": 16168,
+            "NumVertices": 122,
+            "MaxBoneInfluences": 1,
+            "bUse16BitBoneIndex": false,
+            "CorrespondClothAssetIndex": -1,
+            "bDisabled": false,
+            "GenerateUpToLodIndex": -1,
+            "OriginalDataSectionIndex": -1,
+            "ChunkedParentSectionIndex": -1
+          },
+          {
+            "MaterialIndex": 2,
+            "BaseIndex": 39690,
+            "NumTriangles": 24,
+            "bRecomputeTangent": false,
+            "RecomputeTangentsVertexMaskChannel": "Alpha",
+            "bCastShadow": true,
+            "bVisibleInRayTracing": true,
+            "bLegacyClothingSection": false,
+            "CorrespondClothSectionIndex": -1,
+            "BaseVertexIndex": 16290,
+            "NumVertices": 17,
+            "MaxBoneInfluences": 1,
+            "bUse16BitBoneIndex": false,
+            "CorrespondClothAssetIndex": -1,
+            "bDisabled": false,
+            "GenerateUpToLodIndex": -1,
+            "OriginalDataSectionIndex": -1,
+            "ChunkedParentSectionIndex": -1
+          },
+          {
+            "MaterialIndex": 4,
+            "BaseIndex": 39762,
+            "NumTriangles": 960,
+            "bRecomputeTangent": false,
+            "RecomputeTangentsVertexMaskChannel": "Alpha",
+            "bCastShadow": true,
+            "bVisibleInRayTracing": true,
+            "bLegacyClothingSection": false,
+            "CorrespondClothSectionIndex": -1,
+            "BaseVertexIndex": 16307,
+            "NumVertices": 1016,
+            "MaxBoneInfluences": 1,
+            "bUse16BitBoneIndex": false,
+            "CorrespondClothAssetIndex": -1,
+            "bDisabled": false,
+            "GenerateUpToLodIndex": -1,
+            "OriginalDataSectionIndex": -1,
+            "ChunkedParentSectionIndex": -1
+          },
+          {
+            "MaterialIndex": 5,
+            "BaseIndex": 42642,
+            "NumTriangles": 2116,
+            "bRecomputeTangent": false,
+            "RecomputeTangentsVertexMaskChannel": "Alpha",
+            "bCastShadow": true,
+            "bVisibleInRayTracing": true,
+            "bLegacyClothingSection": false,
+            "CorrespondClothSectionIndex": -1,
+            "BaseVertexIndex": 17323,
+            "NumVertices": 2214,
+            "MaxBoneInfluences": 1,
+            "bUse16BitBoneIndex": false,
+            "CorrespondClothAssetIndex": -1,
+            "bDisabled": false,
+            "GenerateUpToLodIndex": -1,
+            "OriginalDataSectionIndex": -1,
+            "ChunkedParentSectionIndex": -1
+          },
+          {
+            "MaterialIndex": 6,
+            "BaseIndex": 48990,
+            "NumTriangles": 120,
+            "bRecomputeTangent": false,
+            "RecomputeTangentsVertexMaskChannel": "Alpha",
+            "bCastShadow": true,
+            "bVisibleInRayTracing": true,
+            "bLegacyClothingSection": false,
+            "CorrespondClothSectionIndex": -1,
+            "BaseVertexIndex": 19537,
+            "NumVertices": 120,
             "MaxBoneInfluences": 1,
             "bUse16BitBoneIndex": false,
             "CorrespondClothAssetIndex": -1,
@@ -155,7 +256,7 @@
             "ChunkedParentSectionIndex": -1
           }
         ],
-        "NumVertices": 16084,
+        "NumVertices": 19657,
         "NumTexCoords": 3,
         "VertexBufferGPUSkin": {
           "NumTexCoords": 0,
