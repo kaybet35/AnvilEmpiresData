@@ -1031,7 +1031,7 @@ UAnvilPanel = {}
 ---@field DialogBox UAnvilDialogBox
 ---@field WatermarkCanvas UCanvasPanel
 ---@field WatermarkVersionText UTextBlock
----@field ScreenStack TArray<UAnvilScreen>
+---@field ScreenStack TArray<EAnvilScreenType>
 UAnvilRootWidget = {}
 
 
@@ -1039,6 +1039,7 @@ UAnvilRootWidget = {}
 ---@class UAnvilScreen : UUserWidget
 ---@field bOverrideBackground boolean
 ---@field Background UTexture2D
+---@field ParentSlot UCanvasPanelSlot
 UAnvilScreen = {}
 
 
@@ -2218,6 +2219,7 @@ UVisStaticMeshComponent = {}
 
 ---@class UVisStockpileComponent : UInstancedStaticMeshComponent
 ---@field CurrentInstancedMesh UInstancedStaticMeshComponent
+---@field ItemCodeNameInstancedMeshMap TMap<int32, UInstancedStaticMeshComponent>
 UVisStockpileComponent = {}
 
 

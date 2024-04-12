@@ -827,18 +827,18 @@ class UAdminPlayerListItemWidget : public UUserWidget
 
 class UAdminScreen : public UAnvilScreen
 {
-    class UListView* PlayerListView;                                                  // 0x0288 (size: 0x8)
-    class UAnvilButtonWidget* SortByNameButton;                                       // 0x0290 (size: 0x8)
-    class UAnvilButtonWidget* SortByDistanceButton;                                   // 0x0298 (size: 0x8)
-    class UAnvilButtonWidget* ReloadButton;                                           // 0x02A0 (size: 0x8)
-    class UEditableTextBox* SearchBox;                                                // 0x02A8 (size: 0x8)
-    TArray<class UAdminPlayerListItemData*> PlayerList;                               // 0x02B0 (size: 0x10)
+    class UListView* PlayerListView;                                                  // 0x0290 (size: 0x8)
+    class UAnvilButtonWidget* SortByNameButton;                                       // 0x0298 (size: 0x8)
+    class UAnvilButtonWidget* SortByDistanceButton;                                   // 0x02A0 (size: 0x8)
+    class UAnvilButtonWidget* ReloadButton;                                           // 0x02A8 (size: 0x8)
+    class UEditableTextBox* SearchBox;                                                // 0x02B0 (size: 0x8)
+    TArray<class UAdminPlayerListItemData*> PlayerList;                               // 0x02B8 (size: 0x10)
 
     void ReloadList();
     void OnSortByName();
     void OnSortByDistance();
     void OnSearch(const FText& Text, TEnumAsByte<ETextCommit::Type> Method);
-}; // Size: 0x2C0
+}; // Size: 0x2C8
 
 class UAnvilButtonWidget : public UUserWidget
 {
@@ -985,16 +985,17 @@ class UAnvilRootWidget : public UUserWidget
     class UAnvilDialogBox* DialogBox;                                                 // 0x02D8 (size: 0x8)
     class UCanvasPanel* WatermarkCanvas;                                              // 0x02E0 (size: 0x8)
     class UTextBlock* WatermarkVersionText;                                           // 0x02E8 (size: 0x8)
-    TArray<class UAnvilScreen*> ScreenStack;                                          // 0x02F0 (size: 0x10)
+    TArray<EAnvilScreenType> ScreenStack;                                             // 0x02F0 (size: 0x10)
 
-}; // Size: 0x300
+}; // Size: 0x308
 
 class UAnvilScreen : public UUserWidget
 {
     bool bOverrideBackground;                                                         // 0x0279 (size: 0x1)
     class UTexture2D* Background;                                                     // 0x0280 (size: 0x8)
+    class UCanvasPanelSlot* ParentSlot;                                               // 0x0288 (size: 0x8)
 
-}; // Size: 0x288
+}; // Size: 0x290
 
 class UAnvilSliderWidget : public UUserWidget
 {
@@ -1077,11 +1078,11 @@ class UChatWidget : public UUserWidget
 
 class UConnectScreen : public UAnvilScreen
 {
-    class UAnvilButtonWidget* BackButton;                                             // 0x0288 (size: 0x8)
-    class UAnvilButtonWidget* RefreshButton;                                          // 0x0290 (size: 0x8)
-    class UAnvilButtonWidget* ConnectButton;                                          // 0x0298 (size: 0x8)
-    class UThrobber* DownloadingThrobber;                                             // 0x02A0 (size: 0x8)
-    class UTextBlock* NameValidationMessageText;                                      // 0x02A8 (size: 0x8)
+    class UAnvilButtonWidget* BackButton;                                             // 0x0290 (size: 0x8)
+    class UAnvilButtonWidget* RefreshButton;                                          // 0x0298 (size: 0x8)
+    class UAnvilButtonWidget* ConnectButton;                                          // 0x02A0 (size: 0x8)
+    class UThrobber* DownloadingThrobber;                                             // 0x02A8 (size: 0x8)
+    class UTextBlock* NameValidationMessageText;                                      // 0x02B0 (size: 0x8)
 
     void OnRefreshButtonClicked();
     void OnConnectButtonClicked();
@@ -1090,7 +1091,7 @@ class UConnectScreen : public UAnvilScreen
     bool IsConnectButtonEnabled();
     bool IsBackButtonEnabled();
     ESlateVisibility GetThrobberVisibility();
-}; // Size: 0x2B0
+}; // Size: 0x2B8
 
 class UCookingWindow : public UStructureWindow
 {
@@ -1149,14 +1150,14 @@ class UEntityActorRootComponent : public USceneComponent
 
 class UFactionSelectScreen : public UAnvilScreen
 {
-    class UButton* FactionAranicButton;                                               // 0x0288 (size: 0x8)
-    class UButton* FactionMirrishButton;                                              // 0x0290 (size: 0x8)
-    class UButton* FactionNovanButton;                                                // 0x0298 (size: 0x8)
-    class UAnvilButtonWidget* DeleteProfileButton;                                    // 0x02A0 (size: 0x8)
-    class UTextBlock* FactionAranicAtCapacityText;                                    // 0x02A8 (size: 0x8)
-    class UTextBlock* FactionMirrishAtCapacityText;                                   // 0x02B0 (size: 0x8)
-    class UTextBlock* FactionNovanAtCapacityText;                                     // 0x02B8 (size: 0x8)
-    class UThrobber* DownloadingThrobber;                                             // 0x02C0 (size: 0x8)
+    class UButton* FactionAranicButton;                                               // 0x0290 (size: 0x8)
+    class UButton* FactionMirrishButton;                                              // 0x0298 (size: 0x8)
+    class UButton* FactionNovanButton;                                                // 0x02A0 (size: 0x8)
+    class UAnvilButtonWidget* DeleteProfileButton;                                    // 0x02A8 (size: 0x8)
+    class UTextBlock* FactionAranicAtCapacityText;                                    // 0x02B0 (size: 0x8)
+    class UTextBlock* FactionMirrishAtCapacityText;                                   // 0x02B8 (size: 0x8)
+    class UTextBlock* FactionNovanAtCapacityText;                                     // 0x02C0 (size: 0x8)
+    class UThrobber* DownloadingThrobber;                                             // 0x02C8 (size: 0x8)
 
     void OnFactionNovanButtonClicked();
     void OnFactionMirrishButtonClicked();
@@ -1171,7 +1172,7 @@ class UFactionSelectScreen : public UAnvilScreen
     ESlateVisibility FactionNovanAtCapacityVisibility();
     ESlateVisibility FactionMirrishAtCapacityVisibility();
     ESlateVisibility FactionAranicAtCapacityVisibility();
-}; // Size: 0x300
+}; // Size: 0x308
 
 class UFoodCooldownIconWidget : public UUserWidget
 {
@@ -1209,12 +1210,12 @@ class UGameplayOverlay : public UUserWidget
 
 class UGameplayScreen : public UAnvilScreen
 {
-    class UGameplayOverlay* GameplayOverlay;                                          // 0x0288 (size: 0x8)
-    class UHUDWidget* HUDWidget;                                                      // 0x0290 (size: 0x8)
-    class UMapWidget* MapWidget;                                                      // 0x0298 (size: 0x8)
-    class UWidgetSwitcher* ContentSwitcher;                                           // 0x02A0 (size: 0x8)
+    class UGameplayOverlay* GameplayOverlay;                                          // 0x0290 (size: 0x8)
+    class UHUDWidget* HUDWidget;                                                      // 0x0298 (size: 0x8)
+    class UMapWidget* MapWidget;                                                      // 0x02A0 (size: 0x8)
+    class UWidgetSwitcher* ContentSwitcher;                                           // 0x02A8 (size: 0x8)
 
-}; // Size: 0x2A8
+}; // Size: 0x2B0
 
 class UGrassRemovalVolumeComponent : public USceneComponent
 {
@@ -1357,10 +1358,10 @@ class UHeatingWindow : public UStructureWindow
 
 class UHelpScreen : public UAnvilScreen
 {
-    class UButton* HelpImageButton;                                                   // 0x0288 (size: 0x8)
+    class UButton* HelpImageButton;                                                   // 0x0290 (size: 0x8)
 
     void OnHelpImageButtonClicked();
-}; // Size: 0x290
+}; // Size: 0x298
 
 class UHitConversionWindow : public UStructureWindow
 {
@@ -1555,16 +1556,16 @@ class UMarketShopWindow : public UStructureWindow
 
 class UOpeningScreen : public UAnvilScreen
 {
-    class UAnvilButtonWidget* PlayButton;                                             // 0x0288 (size: 0x8)
-    class UAnvilButtonWidget* ExitButton;                                             // 0x0290 (size: 0x8)
-    class UAnvilButtonWidget* OptionsButton;                                          // 0x0298 (size: 0x8)
-    class UAnvilButtonWidget* RoadmapButton;                                          // 0x02A0 (size: 0x8)
-    class UTextBlock* Version;                                                        // 0x02A8 (size: 0x8)
-    class UTextBlock* CL;                                                             // 0x02B0 (size: 0x8)
-    class UButton* RoadmapPopupButton;                                                // 0x02B8 (size: 0x8)
-    class UDisclaimerWidget* DisclaimerWidget;                                        // 0x02C0 (size: 0x8)
-    class UTextBlock* AnnouncementText;                                               // 0x02C8 (size: 0x8)
-    class UAnvilButtonWidget* DiscordRoleButton;                                      // 0x02D0 (size: 0x8)
+    class UAnvilButtonWidget* PlayButton;                                             // 0x0290 (size: 0x8)
+    class UAnvilButtonWidget* ExitButton;                                             // 0x0298 (size: 0x8)
+    class UAnvilButtonWidget* OptionsButton;                                          // 0x02A0 (size: 0x8)
+    class UAnvilButtonWidget* RoadmapButton;                                          // 0x02A8 (size: 0x8)
+    class UTextBlock* Version;                                                        // 0x02B0 (size: 0x8)
+    class UTextBlock* CL;                                                             // 0x02B8 (size: 0x8)
+    class UButton* RoadmapPopupButton;                                                // 0x02C0 (size: 0x8)
+    class UDisclaimerWidget* DisclaimerWidget;                                        // 0x02C8 (size: 0x8)
+    class UTextBlock* AnnouncementText;                                               // 0x02D0 (size: 0x8)
+    class UAnvilButtonWidget* DiscordRoleButton;                                      // 0x02D8 (size: 0x8)
 
     void OnRoadmapClicked();
     void OnRoadmapButtonClicked();
@@ -1574,7 +1575,7 @@ class UOpeningScreen : public UAnvilScreen
     void OnDiscordRoleButtonClicked();
     bool IsDiscordRoleButtonEnabled();
     FText GetAnnouncementText();
-}; // Size: 0x2E0
+}; // Size: 0x2E8
 
 class UOptionsMenuAudioWidget : public UUserWidget
 {
@@ -1617,12 +1618,12 @@ class UOptionsMenuVideoWidget : public UUserWidget
 
 class UOptionsScreen : public UAnvilScreen
 {
-    class UAnvilButtonWidget* BackButton;                                             // 0x0288 (size: 0x8)
-    class UPanelWidget* ButtonsPanel;                                                 // 0x0290 (size: 0x8)
-    class UWidgetSwitcher* OptionsPanel;                                              // 0x0298 (size: 0x8)
+    class UAnvilButtonWidget* BackButton;                                             // 0x0290 (size: 0x8)
+    class UPanelWidget* ButtonsPanel;                                                 // 0x0298 (size: 0x8)
+    class UWidgetSwitcher* OptionsPanel;                                              // 0x02A0 (size: 0x8)
 
     void OnBackButtonClicked();
-}; // Size: 0x2A0
+}; // Size: 0x2A8
 
 class UPackingWindow : public UStructureWindow
 {
@@ -1633,13 +1634,13 @@ class UPackingWindow : public UStructureWindow
 
 class UPauseScreen : public UAnvilScreen
 {
-    class UAnvilButtonWidget* ResumeButton;                                           // 0x0288 (size: 0x8)
-    class UAnvilButtonWidget* OptionsButton;                                          // 0x0290 (size: 0x8)
-    class UAnvilButtonWidget* HelpButton;                                             // 0x0298 (size: 0x8)
-    class UAnvilButtonWidget* CodeOfConductButton;                                    // 0x02A0 (size: 0x8)
-    class UAnvilButtonWidget* LogOffButton;                                           // 0x02A8 (size: 0x8)
-    class UAnvilButtonWidget* ExitButton;                                             // 0x02B0 (size: 0x8)
-    class UButton* DiscordSignUpButton;                                               // 0x02B8 (size: 0x8)
+    class UAnvilButtonWidget* ResumeButton;                                           // 0x0290 (size: 0x8)
+    class UAnvilButtonWidget* OptionsButton;                                          // 0x0298 (size: 0x8)
+    class UAnvilButtonWidget* HelpButton;                                             // 0x02A0 (size: 0x8)
+    class UAnvilButtonWidget* CodeOfConductButton;                                    // 0x02A8 (size: 0x8)
+    class UAnvilButtonWidget* LogOffButton;                                           // 0x02B0 (size: 0x8)
+    class UAnvilButtonWidget* ExitButton;                                             // 0x02B8 (size: 0x8)
+    class UButton* DiscordSignUpButton;                                               // 0x02C0 (size: 0x8)
 
     void OnOptionsButtonClicked();
     void OnLogOffButtonClicked();
@@ -1649,7 +1650,7 @@ class UPauseScreen : public UAnvilScreen
     void OnDiscordSignUpButtonClicked();
     void OnContinueButtonClicked();
     void OnCodeOfConductButtonClicked();
-}; // Size: 0x2C0
+}; // Size: 0x2C8
 
 class UPlayerInventoryWidget : public UUserWidget
 {
@@ -1793,14 +1794,14 @@ class UServerPartitionComponent : public UActorComponent
 
 class UServerSelectScreen : public UAnvilScreen
 {
-    class UListView* ServerList;                                                      // 0x0288 (size: 0x8)
-    class UAnvilButtonWidget* RefreshButton;                                          // 0x0290 (size: 0x8)
-    class UThrobber* Throbber;                                                        // 0x0298 (size: 0x8)
+    class UListView* ServerList;                                                      // 0x0290 (size: 0x8)
+    class UAnvilButtonWidget* RefreshButton;                                          // 0x0298 (size: 0x8)
+    class UThrobber* Throbber;                                                        // 0x02A0 (size: 0x8)
 
     void OnRefreshButtonClicked();
     bool IsRefreshButtonEnabled();
     ESlateVisibility GetThrobberVisibility();
-}; // Size: 0x2A8
+}; // Size: 0x2B0
 
 class UStatusWidget : public UUserWidget
 {
@@ -2102,8 +2103,9 @@ class UVisStaticMeshComponent : public UStaticMeshComponent
 class UVisStockpileComponent : public UInstancedStaticMeshComponent
 {
     class UInstancedStaticMeshComponent* CurrentInstancedMesh;                        // 0x0738 (size: 0x8)
+    TMap<int32, UInstancedStaticMeshComponent*> ItemCodeNameInstancedMeshMap;         // 0x0740 (size: 0x50)
 
-}; // Size: 0x750
+}; // Size: 0x7A0
 
 class UVisTeamMeshComponent : public UStaticMeshComponent
 {

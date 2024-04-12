@@ -3,8 +3,8 @@
 
 class UBPHelpScreen_C : public UHelpScreen
 {
-    class UImage* Image_62;                                                           // 0x0290 (size: 0x8)
+    class UImage* Image_62;                                                           // 0x0298 (size: 0x8)
 
-}; // Size: 0x298
+}; // Size: 0x2A0
 
 #endif

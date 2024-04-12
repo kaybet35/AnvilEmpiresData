@@ -3,6 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
 #include "AnvilScreen.generated.h"
 
+class UCanvasPanelSlot;
 class UTexture2D;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -14,6 +15,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* Background;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCanvasPanelSlot* ParentSlot;
     
     UAnvilScreen();
 

@@ -8,6 +8,5 @@ enum class EAnvilGateState : uint8 {
     Opening,
     Open,
     Closing,
-    NumTypes,
 };
 

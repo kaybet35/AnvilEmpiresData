@@ -11,6 +11,9 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UInstancedStaticMeshComponent* CurrentInstancedMesh;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TMap<int32, UInstancedStaticMeshComponent*> ItemCodeNameInstancedMeshMap;
+    
 public:
     UVisStockpileComponent(const FObjectInitializer& ObjectInitializer);
 

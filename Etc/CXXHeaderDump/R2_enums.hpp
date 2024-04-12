@@ -1,3 +1,11 @@
+enum class EAnvilAccessibilityTestResult {
+    CanUse = 0,
+    AccessDeniedBelongsToEnemy = 1,
+    AccessDeniedMustBePledged = 2,
+    Error = 3,
+    EAnvilAccessibilityTestResult_MAX = 4,
+};
+
 enum class EAnvilAccessibilityType {
     FriendlyOnly = 0,
     ResidentsOnly = 1,
@@ -95,7 +103,8 @@ enum class EAnvilCollisionChannel {
     AnvilCollisionChannelFire = 23,
     AnvilCollisionChannelMouseInteraction = 24,
     AnvilCollisionChannelIndustry = 25,
-    EAnvilCollisionChannel_MAX = 26,
+    AnvilCollisionChannelBorderRegion = 26,
+    EAnvilCollisionChannel_MAX = 27,
 };
 
 enum class EAnvilConvertedActionType {
@@ -147,14 +156,6 @@ enum class EAnvilFactionId {
     EAnvilFactionId_MAX = 5,
 };
 
-enum class EAnvilFieldState {
-    GrowthStage_1 = 0,
-    GrowthStage_2 = 1,
-    GrowthStage_3 = 2,
-    ReadyToHarvest = 3,
-    EAnvilFieldState_MAX = 4,
-};
-
 enum class EAnvilFoodType {
     None = 0,
     Berries = 1,
@@ -173,8 +174,7 @@ enum class EAnvilGateState {
     Opening = 1,
     Open = 2,
     Closing = 3,
-    NumTypes = 4,
-    EAnvilGateState_MAX = 5,
+    EAnvilGateState_MAX = 4,
 };
 
 enum class EAnvilHitConversionType {
