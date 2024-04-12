@@ -8,8 +8,8 @@ AVisFarm::AVisFarm(const FObjectInitializer& ObjectInitializer) : Super(ObjectIn
     this->RoughnessStart = 0.20f;
     this->RoughnessEnd = 1.00f;
     this->FarmDataComponent = CreateDefaultSubobject<UFarmDataComponent>(TEXT("FarmDataComponent"));
-    this->FertilizeDecalComponent->SetupAttachment(RootComponent);
     this->FarmDecalComponent->SetupAttachment(RootComponent);
+    this->FertilizeDecalComponent->SetupAttachment(RootComponent);
 }
 
 
