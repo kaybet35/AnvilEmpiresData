@@ -1270,6 +1270,7 @@ function UDeathMarketMapIcon:OnLastDeathLocationChanged(OldVal, NewVal) end
 ---@field Throbber UThrobber
 ---@field LogoutButton UAnvilButtonWidget
 ---@field RefreshButton UAnvilButtonWidget
+---@field ConnectingText UTextBlock
 UDeploymentScreen = {}
 
 function UDeploymentScreen:OnRefreshButtonClicked() end
@@ -1278,6 +1279,8 @@ function UDeploymentScreen:OnLogoutButtonClicked() end
 function UDeploymentScreen:IsRefreshButtonEnabled() end
 ---@return ESlateVisibility
 function UDeploymentScreen:GetThrobberVisibility() end
+---@return ESlateVisibility
+function UDeploymentScreen:GetConnectingTextVisibility() end
 
 
 ---@class UDisclaimerWidget : UUserWidget

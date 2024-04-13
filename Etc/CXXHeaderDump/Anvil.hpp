@@ -1203,12 +1203,14 @@ class UDeploymentScreen : public UAnvilScreen
     class UThrobber* Throbber;                                                        // 0x0298 (size: 0x8)
     class UAnvilButtonWidget* LogoutButton;                                           // 0x02A0 (size: 0x8)
     class UAnvilButtonWidget* RefreshButton;                                          // 0x02A8 (size: 0x8)
+    class UTextBlock* ConnectingText;                                                 // 0x02B0 (size: 0x8)
 
     void OnRefreshButtonClicked();
     void OnLogoutButtonClicked();
     bool IsRefreshButtonEnabled();
     ESlateVisibility GetThrobberVisibility();
-}; // Size: 0x2E0
+    ESlateVisibility GetConnectingTextVisibility();
+}; // Size: 0x2E8
 
 class UDisclaimerWidget : public UUserWidget
 {

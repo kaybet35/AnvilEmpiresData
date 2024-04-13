@@ -6,6 +6,7 @@
 
 class UAnvilButtonWidget;
 class UNewMapWidget;
+class UTextBlock;
 class UThrobber;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -25,6 +26,9 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAnvilButtonWidget* RefreshButton;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* ConnectingText;
+    
 public:
     UDeploymentScreen();
 
@@ -40,6 +44,9 @@ private:
     
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetThrobberVisibility();
+    
+    UFUNCTION(BlueprintCallable)
+    ESlateVisibility GetConnectingTextVisibility();
     
 };
 

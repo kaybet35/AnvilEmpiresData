@@ -5,6 +5,7 @@ UDeploymentScreen::UDeploymentScreen() {
     this->Throbber = NULL;
     this->LogoutButton = NULL;
     this->RefreshButton = NULL;
+    this->ConnectingText = NULL;
 }
 
 void UDeploymentScreen::OnRefreshButtonClicked() {
@@ -18,6 +19,10 @@ bool UDeploymentScreen::IsRefreshButtonEnabled() {
 }
 
 ESlateVisibility UDeploymentScreen::GetThrobberVisibility() {
+    return ESlateVisibility::Visible;
+}
+
+ESlateVisibility UDeploymentScreen::GetConnectingTextVisibility() {
     return ESlateVisibility::Visible;
 }
 
