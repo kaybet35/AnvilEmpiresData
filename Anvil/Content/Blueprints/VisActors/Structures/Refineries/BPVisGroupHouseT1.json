@@ -6,33 +6,13 @@
     "Class": "UScriptClass'ArrowComponent'"
   },
   {
-    "Type": "AudioComponent",
-    "Name": "Audio_GEN_VARIABLE",
-    "Outer": "BPVisGroupHouseT1_C",
-    "Class": "UScriptClass'AudioComponent'",
-    "Properties": {
-      "Sound": {
-        "ObjectName": "SoundCue'TavernLoop_Cue'",
-        "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/TavernLoop_Cue.0"
-      },
-      "RelativeLocation": {
-        "X": 164.21027,
-        "Y": 0.0,
-        "Z": 600.0
-      },
-      "ComponentTags": [
-        "Populated"
-      ]
-    }
-  },
-  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BPVisGroupHouseT1_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisGroupHouseT1_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.45"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.44"
       }
     },
     "SuperStruct": {
@@ -40,6 +20,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "OwnerFlagMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "SpawnBoxMarker",
@@ -240,17 +231,6 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "Audio",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'AudioComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "Populated",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -270,7 +250,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisGroupHouseT1_C'Default__BPVisGroupHouseT1_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.4"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.3"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -318,11 +298,11 @@
     "Properties": {
       "HousingDataComponent": {
         "ObjectName": "HousingDataComponent'Default__BPVisGroupHouseT1_C:HousingDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.7"
       },
       "PlayerSpawnerDataComponent": {
         "ObjectName": "PlayerSpawnerDataComponent'Default__BPVisGroupHouseT1_C:PlayerSpawnerDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.9"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisGroupHouseT1_C:ScaffoldingComponent'",
@@ -339,7 +319,7 @@
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisGroupHouseT1_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.6"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisGroupHouseT1_C:TeamDataComponent'",
@@ -351,7 +331,7 @@
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisGroupHouseT1_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.13"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGroupHouseT1_C:ArrowComponent'",
@@ -359,24 +339,24 @@
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisGroupHouseT1_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.4"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisGroupHouseT1_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.5"
       },
       "GeneratedScorchEffects": 3,
       "VisDisplayName": {
         "Namespace": "",
         "Key": "997EFFC1463D5C946A93079534868FF0",
-        "SourceString": "Lodgings",
-        "LocalizedString": "Lodgings"
+        "SourceString": "Large House",
+        "LocalizedString": "Large House"
       },
       "Description": {
         "Namespace": "",
         "Key": "0E4DF95C4AA54423A37B74A09DC0732C",
-        "SourceString": "Provides housing for new migrants joining a settlement.",
-        "LocalizedString": "Provides housing for new migrants joining a settlement."
+        "SourceString": "Provides housing for large group of migrants joining a settlement.",
+        "LocalizedString": "Provides housing for large group of migrants joining a settlement."
       },
       "DescriptionFooter": {
         "Namespace": "",
@@ -418,7 +398,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisGroupHouseT1_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.46"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.45"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisGroupHouseT1_C:ArrowComponent'",
@@ -1162,7 +1142,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisGroupHouseT1_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.10"
       },
       "VariableGuid": "9EF0A628-42050495-5B1B11B7-1A645E26",
       "InternalVariableName": "DefaultSceneRoot"
@@ -1180,46 +1160,46 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisGroupHouseT1_C:Fire_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.11"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.41"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.40"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.28"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.27"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.29"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.28"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.30"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.29"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.31"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.30"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.32"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.31"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.33"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.32"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_18'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.34"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.33"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.35"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.34"
         }
       ],
       "VariableGuid": "D197F46B-4B9098C7-99C61A99-0123FB65",
@@ -1274,7 +1254,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisGroupHouseT1_C:ScorchEffect2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.15"
       },
       "VariableGuid": "6D6A4CEC-4F3CF423-5F386DA7-FB245D0D",
       "InternalVariableName": "ScorchEffect2"
@@ -1292,7 +1272,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisGroupHouseT1_C:ScorchEffect3_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.16"
       },
       "VariableGuid": "9E7EEDF6-4A7D5B40-C5CE4FB8-AAED80F0",
       "InternalVariableName": "ScorchEffect3"
@@ -1310,7 +1290,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisGroupHouseT1_C:ScorchEffect5_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.18"
       },
       "VariableGuid": "A3CDBF67-44F10A1C-AB4290B9-635FB137",
       "InternalVariableName": "ScorchEffect5"
@@ -1328,7 +1308,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisGroupHouseT1_C:ScorchEffect6_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.19"
       },
       "VariableGuid": "850AAA1E-4A316F99-1BEB8281-79F23ACD",
       "InternalVariableName": "ScorchEffect6"
@@ -1346,7 +1326,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisGroupHouseT1_C:ScorchEffect8_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.21"
       },
       "VariableGuid": "8C1E1694-40EF4AC1-55E66A98-1865E73B",
       "InternalVariableName": "ScorchEffect8"
@@ -1364,7 +1344,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisGroupHouseT1_C:ScorchEffect7_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.20"
       },
       "VariableGuid": "F54A649A-4F413C9E-52B5D49F-269B299B",
       "InternalVariableName": "ScorchEffect7"
@@ -1382,7 +1362,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisGroupHouseT1_C:ScorchEffect9_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.22"
       },
       "VariableGuid": "91B8E6AF-4E63211A-65ACC4A4-FBD8AEA7",
       "InternalVariableName": "ScorchEffect9"
@@ -1400,7 +1380,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisGroupHouseT1_C:ScorchEffect1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.14"
       },
       "VariableGuid": "DC4D7513-43BC288F-587C3EA2-C998C69E",
       "InternalVariableName": "ScorchEffect1"
@@ -1418,7 +1398,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisGroupHouseT1_C:SmokeStack_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.8"
       },
       "VariableGuid": "59804716-4825CCBC-6E4E1299-062596A8",
       "InternalVariableName": "SmokeStack"
@@ -1436,12 +1416,30 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BoxComponent'BPVisGroupHouseT1_C:SpawnBoxMarker_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.2"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "6C97BAF3-4881B397-4EABFB9D-6344D5EC",
       "InternalVariableName": "SpawnBoxMarker"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_21",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisGroupHouseT1_C:OwnerFlagMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.46"
+      },
+      "VariableGuid": "ABB80B0C-400348A1-DDB49889-23707639",
+      "InternalVariableName": "OwnerFlagMesh"
     }
   },
   {
@@ -1463,33 +1461,19 @@
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.26"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.25"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.27"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.37"
         }
       ],
       "VariableGuid": "9584E83F-45D4B89C-A834659E-03B45A94",
       "InternalVariableName": "VisStaticMesh"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_4",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'AudioComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "AudioComponent'BPVisGroupHouseT1_C:Audio_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.1"
-      },
-      "VariableGuid": "6EEFF3D2-4BB5A2D8-5B463BAB-D0F45ECD",
-      "InternalVariableName": "Audio"
     }
   },
   {
@@ -1504,18 +1488,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisGroupHouseT1_C:Populated_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.12"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.39"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.36"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.35"
         }
       ],
       "VariableGuid": "950FCD5A-410ECEAB-551206B6-ABF9863B",
@@ -1534,7 +1514,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisGroupHouseT1_C:ScorchEffect4_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.17"
       },
       "VariableGuid": "9DBDEF84-478AD585-F1CDD589-E82514C7",
       "InternalVariableName": "ScorchEffect4"
@@ -1609,7 +1589,7 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.40"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.39"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_3'",
@@ -1617,37 +1597,33 @@
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.42"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.41"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.43"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.42"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.44"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.43"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.25"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.24"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_20'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.37"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.36"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.40"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.39"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.36"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.35"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_3'",
@@ -1655,72 +1631,76 @@
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.42"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.43"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.44"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.41"
         },
         {
+          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.40"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.28"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.27"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.29"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.28"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.30"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.29"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.31"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.30"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.32"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.31"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.33"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.32"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_18'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.34"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.33"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.35"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.34"
         },
         {
           "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_21'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.37"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisGroupHouseT1_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisGroupHouseT1.23"
       }
     }
   },
@@ -1729,6 +1709,44 @@
     "Name": "SplineDataComponent",
     "Outer": "GrassRemovalVolume",
     "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "OwnerFlagMesh_GEN_VARIABLE",
+    "Outer": "BPVisGroupHouseT1_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FlagOwner'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/FlagOwner.2"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 128.76544,
+        "Y": 522.75037,
+        "Z": 433.4842
+      },
+      "ComponentTags": [
+        "HouseOwner"
+      ]
+    }
   },
   {
     "Type": "StructureDataComponent",
@@ -1887,9 +1905,9 @@
     "Class": "UScriptClass'VisTeamMeshComponent'",
     "Properties": {
       "RelativeLocation": {
-        "X": 125.125595,
-        "Y": 507.68164,
-        "Z": 476.93646
+        "X": 83.125595,
+        "Y": 518.68164,
+        "Z": 430.93646
       }
     }
   }

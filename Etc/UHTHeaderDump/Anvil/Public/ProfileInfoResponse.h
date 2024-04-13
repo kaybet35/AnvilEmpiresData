@@ -27,6 +27,12 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 PledgedMilitiaTownHallId;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FString OfflineCharacterServerName;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint32 SpawnTimeRemainingSec;
+    
     ANVIL_API FProfileInfoResponse();
 };
 

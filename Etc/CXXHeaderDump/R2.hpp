@@ -209,12 +209,10 @@ struct FProducableItem
     float ProductionTime;                                                             // 0x0018 (size: 0x4)
     uint8 OutputCount;                                                                // 0x001C (size: 0x1)
     uint32 OutputMax;                                                                 // 0x0020 (size: 0x4)
-    uint32 PrivateXpReward;                                                           // 0x0024 (size: 0x4)
-    uint32 PublicXpReward;                                                            // 0x0028 (size: 0x4)
-    bool bRequiresResearch;                                                           // 0x002C (size: 0x1)
-    bool bCrateProducedItems;                                                         // 0x002D (size: 0x1)
+    bool bRequiresResearch;                                                           // 0x0024 (size: 0x1)
+    bool bCrateProducedItems;                                                         // 0x0025 (size: 0x1)
 
-}; // Size: 0x30
+}; // Size: 0x28
 
 struct FRefineryProducibleItem
 {
@@ -315,8 +313,9 @@ class UAIStimulusProxyComponent : public UProxyComponent
 class UAdvancedSnappingProxyComponent : public UProxyComponent
 {
     bool bBlockSnapping;                                                              // 0x0028 (size: 0x1)
-    bool bNoOverlap;                                                                  // 0x0029 (size: 0x1)
-    bool bOverrideAngleOverlapMin;                                                    // 0x002A (size: 0x1)
+    bool bDisableMinSnapWhenNotSnapping;                                              // 0x0029 (size: 0x1)
+    bool bNoOverlap;                                                                  // 0x002A (size: 0x1)
+    bool bOverrideAngleOverlapMin;                                                    // 0x002B (size: 0x1)
     float OverridedAngleOverlapMin;                                                   // 0x002C (size: 0x4)
     uint8 NumSnappingRequired;                                                        // 0x0030 (size: 0x1)
 
@@ -547,7 +546,6 @@ class UBuildSiteProxyComponent : public UProxyComponent
     int32 ReinforcedWoodRequirement;                                                  // 0x0070 (size: 0x4)
     int32 ResourceFibreRequirement;                                                   // 0x0074 (size: 0x4)
     int32 ResourceBranchesRawRequirement;                                             // 0x0078 (size: 0x4)
-    int32 XpReward;                                                                   // 0x007C (size: 0x4)
 
 }; // Size: 0x80
 
@@ -714,8 +712,9 @@ class UFamilyAreaMarkerDataComponent : public UDataComponent
     TArray<FFamilyMemberData> FamilyMembers;                                          // 0x0108 (size: 0x10)
     int32 VisVarMaxNumFamilyMembers;                                                  // 0x0118 (size: 0x4)
     float VisVarRestrictedBoxExtent;                                                  // 0x0138 (size: 0x4)
+    int64 ParentFamilyArea;                                                           // 0x0158 (size: 0x8)
 
-}; // Size: 0x158
+}; // Size: 0x178
 
 class UFamilyAreaMarkerProxyComponent : public UProxyComponent
 {
@@ -848,17 +847,15 @@ class UHousingDataComponent : public UDataComponent
     bool AllowPublicPledging;                                                         // 0x00C8 (size: 0x1)
     bool IsForCampsOnly;                                                              // 0x00E8 (size: 0x1)
     bool IsGroupHouse;                                                                // 0x0108 (size: 0x1)
-    int32 PledgeTownCurrencyCost;                                                     // 0x0128 (size: 0x4)
-    FHousePledgedPlayerIdArray PledgedPlayerIds;                                      // 0x0148 (size: 0x10)
+    FHousePledgedPlayerIdArray PledgedPlayerIds;                                      // 0x0128 (size: 0x10)
 
-}; // Size: 0x158
+}; // Size: 0x138
 
 class UHousingProxyComponent : public UProxyComponent
 {
     uint8 PlayerCapacity;                                                             // 0x0028 (size: 0x1)
     bool IsForCampsOnly;                                                              // 0x0029 (size: 0x1)
     bool IsGroupHouse;                                                                // 0x002A (size: 0x1)
-    int32 PledgeTownCurrencyCost;                                                     // 0x002C (size: 0x4)
 
 }; // Size: 0x30
 
@@ -894,6 +891,7 @@ class UInventoryProxyComponent : public UProxyComponent
     float NormalizedSpoilageFactor;                                                   // 0x003C (size: 0x4)
     float LifespanWhenEmpty;                                                          // 0x0040 (size: 0x4)
     bool bAllowWithdrawal;                                                            // 0x0044 (size: 0x1)
+    bool bConvertItemsToPublic;                                                       // 0x0045 (size: 0x1)
 
 }; // Size: 0x48
 
@@ -1152,11 +1150,10 @@ class UPlayerControllerDataComponent : public UDataComponent
     int64 PledgedTownHallInfo;                                                        // 0x00A8 (size: 0x8)
     int64 PledgedMilitiaInfo;                                                         // 0x00C8 (size: 0x8)
     uint8 bShowRespawnScreen;                                                         // 0x00E8 (size: 0x1)
-    float CurrentSpawnTimer;                                                          // 0x0108 (size: 0x4)
-    uint8 bShowDeathMarker;                                                           // 0x0128 (size: 0x1)
-    FVector LastDeathLocation;                                                        // 0x0148 (size: 0x18)
+    uint8 bShowDeathMarker;                                                           // 0x0108 (size: 0x1)
+    FVector LastDeathLocation;                                                        // 0x0128 (size: 0x18)
 
-}; // Size: 0x178
+}; // Size: 0x158
 
 class UPlayerControllerProxyComponent : public UProxyComponent
 {
@@ -1349,7 +1346,6 @@ class URepTestProxyComponent : public UProxyComponent
 class URepairProxyComponent : public UProxyComponent
 {
     int32 TotalRepairCost;                                                            // 0x0028 (size: 0x4)
-    int32 XpReward;                                                                   // 0x002C (size: 0x4)
 
 }; // Size: 0x30
 
@@ -1377,10 +1373,9 @@ class UResourceProxyComponent : public UProxyComponent
     TSubclassOf<class UEntityTemplate> HuskEntity;                                    // 0x0048 (size: 0x8)
     bool bSnapHuskEntityToGround;                                                     // 0x0050 (size: 0x1)
     TSubclassOf<class UEntityTemplate> DestructionEffect;                             // 0x0058 (size: 0x8)
-    int32 XpReward;                                                                   // 0x0060 (size: 0x4)
-    TArray<FLootTableItem> LootTable;                                                 // 0x0068 (size: 0x10)
+    TArray<FLootTableItem> LootTable;                                                 // 0x0060 (size: 0x10)
 
-}; // Size: 0x78
+}; // Size: 0x70
 
 class UResourceSpawnerProxyComponent : public UProxyComponent
 {
@@ -1515,8 +1510,7 @@ class USnapPointProxyComponent : public UProxyComponent
     FVector Extents;                                                                  // 0x0060 (size: 0x18)
     EAnvilSnappingChannelType SnappingChannel;                                        // 0x0078 (size: 0x1)
     bool bPointOnLine;                                                                // 0x0079 (size: 0x1)
-    bool bNoOverlap;                                                                  // 0x007A (size: 0x1)
-    EAnvilPhysicalSurfaceType SurfaceType;                                            // 0x007B (size: 0x1)
+    EAnvilPhysicalSurfaceType SurfaceType;                                            // 0x007A (size: 0x1)
     int32 CollisionMask;                                                              // 0x007C (size: 0x4)
     float StepAngle;                                                                  // 0x0080 (size: 0x4)
 
@@ -1651,24 +1645,19 @@ class UTownHallDataComponent : public UDataComponent
     int32 NumTotalTents;                                                              // 0x01C8 (size: 0x4)
     int32 NumUnclaimedTents;                                                          // 0x01E8 (size: 0x4)
     int32 NumReinforcementSupplies;                                                   // 0x0208 (size: 0x4)
-    int32 CitizenXpRequirement;                                                       // 0x0228 (size: 0x4)
-    int32 NobleXpRequirement;                                                         // 0x0248 (size: 0x4)
-    int32 TownXp;                                                                     // 0x0268 (size: 0x4)
-    uint8 TownNameId;                                                                 // 0x0288 (size: 0x1)
-    uint8 TownNameOrdinal;                                                            // 0x02A8 (size: 0x1)
+    uint8 TownNameId;                                                                 // 0x0228 (size: 0x1)
+    uint8 TownNameOrdinal;                                                            // 0x0248 (size: 0x1)
 
-}; // Size: 0x2C8
+}; // Size: 0x268
 
 class UTownHallProxyComponent : public UProxyComponent
 {
     uint8 Tier;                                                                       // 0x0028 (size: 0x1)
     bool bIsSmallCamp;                                                                // 0x0029 (size: 0x1)
     bool bLocalReinforcementOnly;                                                     // 0x002A (size: 0x1)
-    int32 CitizenXpRequirement;                                                       // 0x002C (size: 0x4)
-    int32 NobleXpRequirement;                                                         // 0x0030 (size: 0x4)
-    float AbandonedStartTime;                                                         // 0x0034 (size: 0x4)
+    float AbandonedStartTime;                                                         // 0x002C (size: 0x4)
 
-}; // Size: 0x38
+}; // Size: 0x30
 
 class UTownMarkerProxyComponent : public UProxyComponent
 {
@@ -1720,10 +1709,8 @@ class UUpgradeProxyComponent : public UProxyComponent
     int32 ProcessedStoneRequirement;                                                  // 0x0044 (size: 0x4)
     int32 ProcessedIronRequirement;                                                   // 0x0048 (size: 0x4)
     int32 ReinforcedWoodRequirement;                                                  // 0x004C (size: 0x4)
-    int32 XpReward;                                                                   // 0x0050 (size: 0x4)
-    bool bRequiresTownTech;                                                           // 0x0054 (size: 0x1)
 
-}; // Size: 0x58
+}; // Size: 0x50
 
 class UVehicleMovementDataComponent : public UDataComponent
 {

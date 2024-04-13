@@ -93,9 +93,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ResourceBranchesRawRequirement;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 XpReward;
-    
     UBuildSiteProxyComponent();
 
 };

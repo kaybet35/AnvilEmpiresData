@@ -13,7 +13,6 @@ UResourceProxyComponent::UResourceProxyComponent() {
     this->HuskEntity = NULL;
     this->bSnapHuskEntityToGround = true;
     this->DestructionEffect = NULL;
-    this->XpReward = 10;
 }
 
 

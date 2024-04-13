@@ -22,6 +22,9 @@ protected:
     UTextBlock* PlayerStatusText;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* PlayerTownCurrencyText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCheckBox* VoteButton;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -32,6 +35,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EPledgedOnlineStatus, FSlateColor> OnlineStatusColorMap;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<EPledgedOnlineStatus, FSlateColor> OnlineStatusTownCurrencyColorMap;
     
 public:
     UPledgedPlayerListItem();

@@ -10,8 +10,6 @@ UUpgradeProxyComponent::UUpgradeProxyComponent() {
     this->ProcessedStoneRequirement = 0;
     this->ProcessedIronRequirement = 0;
     this->ReinforcedWoodRequirement = 0;
-    this->XpReward = 5;
-    this->bRequiresTownTech = false;
 }
 
 

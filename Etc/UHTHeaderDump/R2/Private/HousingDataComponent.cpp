@@ -5,7 +5,6 @@ UHousingDataComponent::UHousingDataComponent(const FObjectInitializer& ObjectIni
     this->AllowPublicPledging = false;
     this->IsForCampsOnly = false;
     this->IsGroupHouse = false;
-    this->PledgeTownCurrencyCost = 0;
 }
 
 

@@ -3,12 +3,8 @@
 UTownCenterWindow::UTownCenterWindow() {
     this->PledgedPlayerList = NULL;
     this->LocalPlayerStatus = NULL;
-    this->LocalPlayerStatusProgress = NULL;
     this->CivicPledgePanel = NULL;
-    this->TechHeaderContainer = NULL;
     this->PledgedHeader = NULL;
-    this->TechFooterContainer = NULL;
-    this->TechProgress = NULL;
     this->RareResourceStatus = NULL;
     this->ReserveInventoryHeaderContainer = NULL;
     this->ReserveInventorySubHeaderContainer = NULL;
@@ -17,12 +13,16 @@ UTownCenterWindow::UTownCenterWindow() {
     this->PublicInventoryCheckBox = NULL;
     this->PublicInventorySubmitImage = NULL;
     this->ReserveInventoryCheckBox = NULL;
+    this->IncreaseTownStatusButton = NULL;
 }
 
 void UTownCenterWindow::OnReserveInventoryChecked(bool bIsChecked) {
 }
 
 void UTownCenterWindow::OnPublicInventoryChecked(bool bIsChecked) {
+}
+
+void UTownCenterWindow::OnIncreaseTownStatusButtonClicked() {
 }
 
 ESlateVisibility UTownCenterWindow::GetPublicInventoryCheckBoxVisibility() {

@@ -25,6 +25,12 @@ public:
     AProxyPawn(const FObjectInitializer& ObjectInitializer);
 
     UFUNCTION(BlueprintCallable, Exec)
+    void StopBandwidthRecording();
+    
+    UFUNCTION(BlueprintCallable, Exec)
+    void StartBandwidthRecording();
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void SetDrawCollisions(bool bDrawCollisions);
     
     UFUNCTION(BlueprintCallable, Exec)

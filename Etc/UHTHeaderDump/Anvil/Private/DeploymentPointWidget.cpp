@@ -10,7 +10,6 @@ UDeploymentPointWidget::UDeploymentPointWidget() : UUserWidget(FObjectInitialize
     this->NumHousesStatus = NULL;
     this->NumTentsStatus = NULL;
     this->NumReinforcementSuppliesStatus = NULL;
-    this->ParentMapWidget = NULL;
     this->ParentSlot = NULL;
 }
 
@@ -43,6 +42,10 @@ FText UDeploymentPointWidget::GetNumTentsText() {
 
 FText UDeploymentPointWidget::GetNumReinforcementSuppliesText() {
     return FText::GetEmpty();
+}
+
+ESlateVisibility UDeploymentPointWidget::GetNumHousesVisibility() {
+    return ESlateVisibility::Visible;
 }
 
 FText UDeploymentPointWidget::GetNumHousesText() {

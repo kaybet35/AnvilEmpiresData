@@ -3,6 +3,6 @@
 
 class UBPGameplayScreen_C : public UGameplayScreen
 {
-}; // Size: 0x2B0
+}; // Size: 0x2B8
 
 #endif

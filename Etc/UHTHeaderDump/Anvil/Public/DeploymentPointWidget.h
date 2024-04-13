@@ -8,7 +8,6 @@ class UBorder;
 class UButton;
 class UCanvasPanelSlot;
 class UImage;
-class UNewMapWidget;
 class UStatusWidget;
 class UTextBlock;
 class UVerticalBox;
@@ -46,9 +45,6 @@ private:
     UStatusWidget* NumReinforcementSuppliesStatus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UNewMapWidget* ParentMapWidget;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCanvasPanelSlot* ParentSlot;
     
 public:
@@ -78,6 +74,9 @@ private:
     
     UFUNCTION(BlueprintCallable)
     FText GetNumReinforcementSuppliesText();
+    
+    UFUNCTION(BlueprintCallable)
+    ESlateVisibility GetNumHousesVisibility();
     
     UFUNCTION(BlueprintCallable)
     FText GetNumHousesText();

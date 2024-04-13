@@ -28,7 +28,6 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->ReinforcedWoodRequirement = 0;
     this->ResourceFibreRequirement = 0;
     this->ResourceBranchesRawRequirement = 0;
-    this->XpReward = 5;
 }
 
 

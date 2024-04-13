@@ -32,6 +32,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAllowWithdrawal;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bConvertItemsToPublic;
+    
     UInventoryProxyComponent();
 
 };

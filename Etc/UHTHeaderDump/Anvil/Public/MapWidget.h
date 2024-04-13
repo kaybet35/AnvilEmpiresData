@@ -5,11 +5,14 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
 #include "EMapIconType.h"
 #include "MapIconTypeProperty.h"
+#include "Templates/SubclassOf.h"
 #include "MapWidget.generated.h"
 
 class UAnvilButtonWidget;
 class UBorder;
 class UCanvasPanel;
+class UCanvasPanelSlot;
+class UDeploymentPointWidget;
 class UImage;
 class UMapIcon;
 class UTextBlock;
@@ -21,6 +24,9 @@ class ANVIL_API UMapWidget : public UUserWidget {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCanvasPanel* MapSheet;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCanvasPanel* TownHallIconCanvas;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EMapIconType, FMapIconTypeProperty> IconTemplates;
@@ -47,6 +53,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 FogOfWarRadius;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UDeploymentPointWidget> DeploymentPointWidgetClass;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBorder* DeploymentInstructionOrSpawnTimerBorder;
     
@@ -60,6 +69,12 @@ protected:
     UAnvilButtonWidget* LogoutButton;
     
 private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCanvasPanelSlot* MapSheetSlot;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCanvasPanelSlot* TownHallIconCanvasSlot;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UMapIcon*> DisplayedBeaconTowerPlayerInfos;
     

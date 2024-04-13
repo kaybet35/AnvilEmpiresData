@@ -17,12 +17,6 @@ public:
     bool bLocalReinforcementOnly;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 CitizenXpRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 NobleXpRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AbandonedStartTime;
     
     UTownHallProxyComponent();

@@ -16,6 +16,8 @@ enum class EAnvilBuildLocationType : uint8 {
     AdditionalCollisionAllowWater,
     Deployed,
     Stable,
+    FamilyArea,
     Static,
+    House,
 };
 

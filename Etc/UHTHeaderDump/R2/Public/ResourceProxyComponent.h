@@ -50,9 +50,6 @@ public:
     TSubclassOf<UEntityTemplate> DestructionEffect;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 XpReward;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FLootTableItem> LootTable;
     
     UResourceProxyComponent();

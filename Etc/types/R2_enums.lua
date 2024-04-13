@@ -53,8 +53,10 @@ EAnvilBuildLocationType = {
     AdditionalCollisionAllowWater = 9,
     Deployed = 10,
     Stable = 11,
-    Static = 12,
-    EAnvilBuildLocationType_MAX = 13,
+    FamilyArea = 12,
+    Static = 13,
+    House = 14,
+    EAnvilBuildLocationType_MAX = 15,
 }
 
 ---@enum EAnvilBuildStructureType
@@ -112,7 +114,8 @@ EAnvilCollisionChannel = {
     AnvilCollisionChannelIndustry = 25,
     AnvilCollisionChannelBorderRegion = 26,
     AnvilCollisionChannelFamilyArea = 27,
-    EAnvilCollisionChannel_MAX = 28,
+    AnvilCollisionChannelHouse = 28,
+    EAnvilCollisionChannel_MAX = 29,
 }
 
 ---@enum EAnvilConvertedActionType
@@ -241,7 +244,8 @@ EAnvilInputEventType = {
     ToggleFamilyAreaPledgeRestriction = 43,
     StartPowerMill = 44,
     StopPowerMill = 45,
-    EAnvilInputEventType_MAX = 46,
+    IncreaseTownStatus = 46,
+    EAnvilInputEventType_MAX = 47,
 }
 
 ---@enum EAnvilInputResponseType
@@ -401,22 +405,23 @@ EAnvilPlacementStatus = {
     RequiresDeployable = 21,
     RequiresMarketplace = 22,
     RequiresIndustry = 23,
-    TooCloseTogether = 24,
-    RequiresMoreTownXp = 25,
-    TooCloseToWildSpawn = 26,
-    TooCloseToWater = 27,
-    VehicleMustBeEmpty = 28,
-    RequiresFoundationCeiling = 29,
-    RequiresValidSupport = 30,
-    RequiresFoundation = 31,
-    RequiresLandscape = 32,
-    RequiresWater = 33,
-    RequiresSnappping = 34,
-    YouMustBelongToFamily = 35,
-    NotAtFullHealth = 36,
-    CantBuildBorderRegion = 37,
-    MustBePledgedToTown = 38,
-    EAnvilPlacementStatus_MAX = 39,
+    RequiresHouse = 24,
+    RequiresFamilyArea = 25,
+    TooCloseTogether = 26,
+    TooCloseToWildSpawn = 27,
+    TooCloseToWater = 28,
+    VehicleMustBeEmpty = 29,
+    RequiresFoundationCeiling = 30,
+    RequiresValidSupport = 31,
+    RequiresFoundation = 32,
+    RequiresLandscape = 33,
+    RequiresWater = 34,
+    RequiresSnappping = 35,
+    YouMustBelongToFamily = 36,
+    NotAtFullHealth = 37,
+    CantBuildBorderRegion = 38,
+    MustBePledgedToTown = 39,
+    EAnvilPlacementStatus_MAX = 40,
 }
 
 ---@enum EAnvilPlayerAimMeshType
@@ -546,7 +551,8 @@ EAnvilSnappingChannelType = {
     NaturalWaterOptional = 19,
     PowerConvertedWoodChoppingStationStart = 20,
     PowerConvertedWoodChoppingStationEnd = 21,
-    EAnvilSnappingChannelType_MAX = 22,
+    PropertyArea = 22,
+    EAnvilSnappingChannelType_MAX = 23,
 }
 
 ---@enum EAnvilSpawnType
@@ -658,8 +664,9 @@ EAnvilStatusMessageType = {
     InvalidTownCurrency = 95,
     NotEnoughTownCurrency = 96,
     TravelDestinationAtCapacity = 97,
-    NumTypes = 98,
-    EAnvilStatusMessageType_MAX = 99,
+    UnableToIncreaseStatusUsingLocalCoin = 98,
+    NumTypes = 99,
+    EAnvilStatusMessageType_MAX = 100,
 }
 
 ---@enum EAnvilStimulusType
@@ -745,7 +752,8 @@ EEntitySerializationType = {
     SerializationTypePlayer = 1,
     SerializationTypeController = 2,
     SerializationTypeRefinery = 3,
-    EEntitySerializationType_MAX = 4,
+    SerializationTypeFamilyArea = 4,
+    EEntitySerializationType_MAX = 5,
 }
 
 ---@enum EItemQualityType

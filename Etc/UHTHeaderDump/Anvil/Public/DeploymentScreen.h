@@ -24,26 +24,23 @@ private:
     UAnvilButtonWidget* LogoutButton;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UAnvilButtonWidget* RefreshButton;
+    UTextBlock* ConnectingText;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* ConnectingText;
+    UTextBlock* DeploymentInstructionOrSpawnTimerText;
     
 public:
     UDeploymentScreen();
 
 private:
     UFUNCTION(BlueprintCallable)
-    void OnRefreshButtonClicked();
-    
-    UFUNCTION(BlueprintCallable)
     void OnLogoutButtonClicked();
     
     UFUNCTION(BlueprintCallable)
-    bool IsRefreshButtonEnabled();
+    ESlateVisibility GetThrobberVisibility();
     
     UFUNCTION(BlueprintCallable)
-    ESlateVisibility GetThrobberVisibility();
+    FText GetDeploymentInstructionOrSpawnTimerText();
     
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetConnectingTextVisibility();

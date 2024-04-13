@@ -1,12 +1,22 @@
 [
   {
+    "Type": "AdvancedSnappingProxyComponent",
+    "Name": "AdvancedSnappingProxyComponent_0",
+    "Outer": "Default__FamilyAreaFootprint_C",
+    "Class": "UScriptClass'AdvancedSnappingProxyComponent'",
+    "Properties": {
+      "bBlockSnapping": true,
+      "bNoOverlap": true
+    }
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "FamilyAreaFootprint_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'FamilyAreaFootprint_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyAreaFootprint.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyAreaFootprint.5"
       }
     },
     "SuperStruct": {
@@ -35,7 +45,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "FamilyAreaFootprint_C'Default__FamilyAreaFootprint_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyAreaFootprint.1"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyAreaFootprint.2"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -49,16 +59,30 @@
       "Position": {
         "X": 0.0,
         "Y": 0.0,
-        "Z": 250.001
+        "Z": 500.0
       },
       "Extents": {
-        "X": 100.001,
-        "Y": 100.001,
-        "Z": 250.001
+        "X": 500.0,
+        "Y": 500.0,
+        "Z": 500.0
       },
       "StructureTiers": [
         {
           "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.FamilyArea_C'": true
+        },
+        {
+          "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyAreaBuildSite.FamilyAreaBuildSite_C'": false
+        }
+      ],
+      "FootprintSharedComponents": [
+        {
+          "Comp": {
+            "ObjectName": "AdvancedSnappingProxyComponent'Default__FamilyAreaFootprint_C:AdvancedSnappingProxyComponent_0'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyAreaFootprint.0"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": false
         }
       ]
     }
@@ -81,7 +105,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'FamilyAreaFootprint_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyAreaFootprint.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyAreaFootprint.3"
       },
       "VariableGuid": "7B6CC75A-460B45A4-4FED16B1-8DD7CAFF",
       "InternalVariableName": "DefaultSceneRoot"
@@ -96,18 +120,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'FamilyAreaFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyAreaFootprint.3"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyAreaFootprint.4"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'FamilyAreaFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyAreaFootprint.3"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyAreaFootprint.4"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'FamilyAreaFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyAreaFootprint.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyAreaFootprint.4"
       }
     }
   }

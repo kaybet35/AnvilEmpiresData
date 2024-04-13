@@ -26,6 +26,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VisVarRestrictedBoxExtent;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int64 ParentFamilyArea;
+    
     UFamilyAreaMarkerDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };

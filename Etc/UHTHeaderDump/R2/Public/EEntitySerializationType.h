@@ -8,5 +8,6 @@ enum EEntitySerializationType {
     SerializationTypePlayer,
     SerializationTypeController,
     SerializationTypeRefinery,
+    SerializationTypeFamilyArea,
 };
 

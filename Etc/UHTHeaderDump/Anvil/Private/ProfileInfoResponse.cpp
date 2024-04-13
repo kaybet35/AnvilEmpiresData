@@ -8,5 +8,6 @@ FProfileInfoResponse::FProfileInfoResponse() {
     this->PledgedTownHallTownHallId = 0;
     this->PledgedMilitiaMapHash = 0;
     this->PledgedMilitiaTownHallId = 0;
+    this->SpawnTimeRemainingSec = 0;
 }
 

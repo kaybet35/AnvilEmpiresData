@@ -6,6 +6,7 @@ UFamilyAreaMarkerDataComponent::UFamilyAreaMarkerDataComponent(const FObjectInit
     this->ClaimTownCurrencyCost = 0;
     this->VisVarMaxNumFamilyMembers = 0;
     this->VisVarRestrictedBoxExtent = 0.00f;
+    this->ParentFamilyArea = 0;
 }
 
 

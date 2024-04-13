@@ -13,9 +13,6 @@ UTownHallDataComponent::UTownHallDataComponent(const FObjectInitializer& ObjectI
     this->NumTotalTents = 0;
     this->NumUnclaimedTents = 0;
     this->NumReinforcementSupplies = 0;
-    this->CitizenXpRequirement = 0;
-    this->NobleXpRequirement = 0;
-    this->TownXp = 0;
     this->TownNameId = 0;
     this->TownNameOrdinal = 0;
 }

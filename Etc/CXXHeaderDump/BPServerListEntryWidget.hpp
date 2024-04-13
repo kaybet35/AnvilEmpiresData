@@ -3,6 +3,6 @@
 
 class UBPServerListEntryWidget_C : public UServerListEntryWidget
 {
-}; // Size: 0x320
+}; // Size: 0x308
 
 #endif

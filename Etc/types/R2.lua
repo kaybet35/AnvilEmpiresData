@@ -250,8 +250,6 @@ FPledgedPlayer = {}
 ---@field ProductionTime float
 ---@field OutputCount uint8
 ---@field OutputMax uint32
----@field PrivateXpReward uint32
----@field PublicXpReward uint32
 ---@field bRequiresResearch boolean
 ---@field bCrateProducedItems boolean
 FProducableItem = {}
@@ -311,6 +309,7 @@ UAIStimulusProxyComponent = {}
 
 ---@class UAdvancedSnappingProxyComponent : UProxyComponent
 ---@field bBlockSnapping boolean
+---@field bDisableMinSnapWhenNotSnapping boolean
 ---@field bNoOverlap boolean
 ---@field bOverrideAngleOverlapMin boolean
 ---@field OverridedAngleOverlapMin float
@@ -543,7 +542,6 @@ UBuildSiteDataComponent = {}
 ---@field ReinforcedWoodRequirement int32
 ---@field ResourceFibreRequirement int32
 ---@field ResourceBranchesRawRequirement int32
----@field XpReward int32
 UBuildSiteProxyComponent = {}
 
 
@@ -713,6 +711,7 @@ UEquipmentProxyComponent = {}
 ---@field FamilyMembers TArray<FFamilyMemberData>
 ---@field VisVarMaxNumFamilyMembers int32
 ---@field VisVarRestrictedBoxExtent float
+---@field ParentFamilyArea int64
 UFamilyAreaMarkerDataComponent = {}
 
 
@@ -847,7 +846,6 @@ UHitConverterProxyComponent = {}
 ---@field AllowPublicPledging boolean
 ---@field IsForCampsOnly boolean
 ---@field IsGroupHouse boolean
----@field PledgeTownCurrencyCost int32
 ---@field PledgedPlayerIds FHousePledgedPlayerIdArray
 UHousingDataComponent = {}
 
@@ -857,7 +855,6 @@ UHousingDataComponent = {}
 ---@field PlayerCapacity uint8
 ---@field IsForCampsOnly boolean
 ---@field IsGroupHouse boolean
----@field PledgeTownCurrencyCost int32
 UHousingProxyComponent = {}
 
 
@@ -893,6 +890,7 @@ UImpactSurfaceProxyComponent = {}
 ---@field NormalizedSpoilageFactor float
 ---@field LifespanWhenEmpty float
 ---@field bAllowWithdrawal boolean
+---@field bConvertItemsToPublic boolean
 UInventoryProxyComponent = {}
 
 
@@ -1151,7 +1149,6 @@ UPlantGrowthProxyComponent = {}
 ---@field PledgedTownHallInfo int64
 ---@field PledgedMilitiaInfo int64
 ---@field bShowRespawnScreen uint8
----@field CurrentSpawnTimer float
 ---@field bShowDeathMarker uint8
 ---@field LastDeathLocation FVector
 UPlayerControllerDataComponent = {}
@@ -1348,7 +1345,6 @@ URepTestProxyComponent = {}
 
 ---@class URepairProxyComponent : UProxyComponent
 ---@field TotalRepairCost int32
----@field XpReward int32
 URepairProxyComponent = {}
 
 
@@ -1376,7 +1372,6 @@ UResourceDataComponent = {}
 ---@field HuskEntity TSubclassOf<UEntityTemplate>
 ---@field bSnapHuskEntityToGround boolean
 ---@field DestructionEffect TSubclassOf<UEntityTemplate>
----@field XpReward int32
 ---@field LootTable TArray<FLootTableItem>
 UResourceProxyComponent = {}
 
@@ -1514,7 +1509,6 @@ USimPlayerProxyComponent = {}
 ---@field Extents FVector
 ---@field SnappingChannel EAnvilSnappingChannelType
 ---@field bPointOnLine boolean
----@field bNoOverlap boolean
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
 ---@field StepAngle float
@@ -1650,9 +1644,6 @@ UTechItemTemplate = {}
 ---@field NumTotalTents int32
 ---@field NumUnclaimedTents int32
 ---@field NumReinforcementSupplies int32
----@field CitizenXpRequirement int32
----@field NobleXpRequirement int32
----@field TownXp int32
 ---@field TownNameId uint8
 ---@field TownNameOrdinal uint8
 UTownHallDataComponent = {}
@@ -1663,8 +1654,6 @@ UTownHallDataComponent = {}
 ---@field Tier uint8
 ---@field bIsSmallCamp boolean
 ---@field bLocalReinforcementOnly boolean
----@field CitizenXpRequirement int32
----@field NobleXpRequirement int32
 ---@field AbandonedStartTime float
 UTownHallProxyComponent = {}
 
@@ -1719,8 +1708,6 @@ UUpgradeDataComponent = {}
 ---@field ProcessedStoneRequirement int32
 ---@field ProcessedIronRequirement int32
 ---@field ReinforcedWoodRequirement int32
----@field XpReward int32
----@field bRequiresTownTech boolean
 UUpgradeProxyComponent = {}
 
 

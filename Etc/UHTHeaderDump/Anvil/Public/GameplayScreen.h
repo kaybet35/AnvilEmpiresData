@@ -3,6 +3,7 @@
 #include "AnvilScreen.h"
 #include "GameplayScreen.generated.h"
 
+class UDeploymentScreen;
 class UGameplayOverlay;
 class UHUDWidget;
 class UMapWidget;
@@ -21,6 +22,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMapWidget* MapWidget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UDeploymentScreen* DeploymentScreen;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWidgetSwitcher* ContentSwitcher;

@@ -38,13 +38,13 @@
     "Properties": {
       "ExtendFootprint": false,
       "Position": {
-        "X": 525.0,
-        "Y": 525.0,
+        "X": 400.0,
+        "Y": 400.0,
         "Z": 0.0
       },
       "Extents": {
-        "X": 75.0,
-        "Y": 75.0,
+        "X": 50.0,
+        "Y": 50.0,
         "Z": 300.0
       }
     }
@@ -56,8 +56,8 @@
     "Class": "UScriptClass'BoxCollisionProxyComponent'",
     "Properties": {
       "Position": {
-        "X": 525.0,
-        "Y": 525.0,
+        "X": 400.0,
+        "Y": 400.0,
         "Z": 0.0
       },
       "Extents": {
@@ -65,7 +65,7 @@
         "Y": 25.0,
         "Z": 500.0
       },
-      "CollisionMask": 16785666
+      "CollisionMask": 16777216
     }
   },
   {
@@ -75,8 +75,8 @@
     "Class": "UScriptClass'BoxCollisionProxyComponent'",
     "Properties": {
       "Extents": {
-        "X": 600.0,
-        "Y": 600.0,
+        "X": 500.0,
+        "Y": 500.0,
         "Z": 1000.0
       },
       "CollisionMask": 134217728
@@ -131,7 +131,10 @@
         "ObjectName": "DestroyableProxyComponent'Default__FamilyArea_C:DestroyableComp'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.5"
       },
-      "FootprintComp": null,
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__FamilyArea_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.8"
+      },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__FamilyArea_C:BoxCollisionProxyComponent_0'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.1"
@@ -147,6 +150,7 @@
       "CodeNameString": "FamilyArea",
       "CodeName": 496860708,
       "bShowOnMap": true,
+      "SerializationType": "EEntitySerializationType::SerializationTypeFamilyArea",
       "GenerateMeshCollisionMask": 0,
       "Components": [
         {
@@ -185,6 +189,14 @@
     "Template": {
       "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'FamilyAreaFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyAreaFootprint.1"
+      },
+      "bAddToNavMesh": false,
+      "CollisionMask": 134217728
     }
   },
   {

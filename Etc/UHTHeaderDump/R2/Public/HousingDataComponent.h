@@ -21,9 +21,6 @@ public:
     bool IsGroupHouse;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 PledgeTownCurrencyCost;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHousePledgedPlayerIdArray PledgedPlayerIds;
     
     UHousingDataComponent(const FObjectInitializer& ObjectInitializer);

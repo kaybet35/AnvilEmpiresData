@@ -3,8 +3,9 @@
 
 class UBPPledgedPlayerListItemWidget_C : public UPledgedPlayerListItem
 {
-    class UButton* Button;                                                            // 0x0350 (size: 0x8)
+    class UButton* Button;                                                            // 0x03A8 (size: 0x8)
+    class UImage* PlayerTownCurrencyIcon;                                             // 0x03B0 (size: 0x8)
 
-}; // Size: 0x358
+}; // Size: 0x3B8
 
 #endif

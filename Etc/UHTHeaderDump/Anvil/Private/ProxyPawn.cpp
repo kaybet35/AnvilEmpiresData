@@ -8,6 +8,12 @@ AProxyPawn::AProxyPawn(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->MinCameraDistance = 2000.00f;
 }
 
+void AProxyPawn::StopBandwidthRecording() {
+}
+
+void AProxyPawn::StartBandwidthRecording() {
+}
+
 void AProxyPawn::SetDrawCollisions(bool bDrawCollisions) {
 }
 

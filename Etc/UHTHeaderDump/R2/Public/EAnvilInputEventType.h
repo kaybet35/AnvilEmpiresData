@@ -50,5 +50,6 @@ enum class EAnvilInputEventType : uint8 {
     ToggleFamilyAreaPledgeRestriction,
     StartPowerMill,
     StopPowerMill,
+    IncreaseTownStatus,
 };
 

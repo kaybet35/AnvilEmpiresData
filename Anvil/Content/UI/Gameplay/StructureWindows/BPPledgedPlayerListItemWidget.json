@@ -16,6 +16,12 @@
             "ObjectName": "Texture2D'TownhallStatusOfflineIcon'",
             "ObjectPath": "Anvil/Content/Textures/UI/Status/TownhallStatusOfflineIcon.0"
           }
+        },
+        {
+          "EPledgedOnlineStatus::Online": {
+            "ObjectName": "Texture2D'TownhallStatusOnlineIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Status/TownhallStatusOnlineIcon.0"
+          }
         }
       ],
       "OnlineStatusColorMap": [
@@ -39,6 +45,32 @@
               "B": 0.5,
               "A": 1.0,
               "Hex": "FFBCBCBC"
+            },
+            "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+          }
+        }
+      ],
+      "OnlineStatusTownCurrencyColorMap": [
+        {
+          "EPledgedOnlineStatus::Online": {
+            "SpecifiedColor": {
+              "R": 0.947307,
+              "G": 0.623961,
+              "B": 0.171441,
+              "A": 1.0,
+              "Hex": "FFF9CF73"
+            },
+            "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+          }
+        },
+        {
+          "EPledgedOnlineStatus::Offline": {
+            "SpecifiedColor": {
+              "R": 0.501082,
+              "G": 0.329223,
+              "B": 0.091106,
+              "A": 1.0,
+              "Hex": "FFBC9B55"
             },
             "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
           }
@@ -371,7 +403,7 @@
       "IsFocusable": false,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.10"
       }
     }
   },
@@ -384,7 +416,7 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_5'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.11"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.13"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
@@ -392,7 +424,23 @@
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.10"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.11"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_8'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.15"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_10'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.9"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_7'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.14"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.12"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
@@ -400,7 +448,7 @@
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.9"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.10"
         }
       ],
       "Slot": {
@@ -415,9 +463,6 @@
     "Outer": "HorizontalBox_0",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Properties": {
-      "Size": {
-        "SizeRule": "ESlateSizeRule::Fill"
-      },
       "Padding": {
         "Left": 4.0
       },
@@ -429,7 +474,7 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPPledgedPlayerListItemWidget_C:WidgetTree.PlayerNameText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.14"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.21"
       }
     }
   },
@@ -439,7 +484,7 @@
     "Outer": "HorizontalBox_0",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Properties": {
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0'",
@@ -447,7 +492,24 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPPledgedPlayerListItemWidget_C:WidgetTree.PlayerStatusText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.15"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.22"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_10",
+    "Outer": "HorizontalBox_0",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.6"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPPledgedPlayerListItemWidget_C:WidgetTree.Spacer_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.19"
       }
     }
   },
@@ -484,7 +546,24 @@
       },
       "Content": {
         "ObjectName": "Spacer'BPPledgedPlayerListItemWidget_C:WidgetTree.Spacer_129'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.13"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.20"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Outer": "HorizontalBox_0",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.6"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPPledgedPlayerListItemWidget_C:WidgetTree.Spacer'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.18"
       }
     }
   },
@@ -505,7 +584,46 @@
       },
       "Content": {
         "ObjectName": "Image'BPPledgedPlayerListItemWidget_C:WidgetTree.OnlineStatusIcon'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.12"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.16"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_7",
+    "Outer": "HorizontalBox_0",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.6"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPPledgedPlayerListItemWidget_C:WidgetTree.PlayerTownCurrencyText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.23"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_8",
+    "Outer": "HorizontalBox_0",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.6"
+      },
+      "Content": {
+        "ObjectName": "Image'BPPledgedPlayerListItemWidget_C:WidgetTree.PlayerTownCurrencyIcon'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.17"
       }
     }
   },
@@ -527,7 +645,61 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.11"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.13"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "PlayerTownCurrencyIcon",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 25.0,
+          "Y": 25.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'IconTownCurrencySmall'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Items/IconTownCurrencySmall.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_8'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.15"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 20.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.12"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 5.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_10'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.9"
       }
     }
   },
@@ -543,7 +715,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.10"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.11"
       }
     }
   },
@@ -567,6 +739,7 @@
         "TypefaceFontName": "Default",
         "Size": 14
       },
+      "MinDesiredWidth": 215.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.7"
@@ -593,9 +766,46 @@
         "TypefaceFontName": "Default",
         "Size": 14
       },
+      "Justification": "ETextJustify::Right",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "PlayerTownCurrencyText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "4CE4411F4CDF8A162747049F7AE18573",
+        "SourceString": "12345",
+        "LocalizedString": "12345"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.94902,
+          "G": 0.623529,
+          "B": 0.172549,
+          "A": 1.0,
+          "Hex": "FFFACF73"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 14
+      },
+      "MinDesiredWidth": 70.0,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_7'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.14"
       }
     }
   },
@@ -606,7 +816,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPPledgedPlayerListItemWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.17"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.25"
       },
       "bClassRequiresNativeTick": true
     },
@@ -623,6 +833,17 @@
         "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
         "PropertyClass": {
           "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerTownCurrencyIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
           "ObjectPath": "/Script/UMG"
         }
       }

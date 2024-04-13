@@ -4,13 +4,12 @@
 #include "StructureWindow.h"
 #include "TownCenterWindow.generated.h"
 
+class UButton;
 class UCheckBox;
-class UFooterContainer;
 class UHeaderContainer;
 class UImage;
 class UInventoryContainerWidget;
 class UPledgedPlayerBox;
-class UProgressBar;
 class UStatusWidget;
 class UTextBlock;
 class UUserWidget;
@@ -27,22 +26,10 @@ protected:
     UTextBlock* LocalPlayerStatus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UProgressBar* LocalPlayerStatusProgress;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UUserWidget* CivicPledgePanel;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UHeaderContainer* TechHeaderContainer;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UHeaderContainer* PledgedHeader;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UFooterContainer* TechFooterContainer;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UProgressBar* TechProgress;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStatusWidget* RareResourceStatus;
@@ -68,6 +55,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCheckBox* ReserveInventoryCheckBox;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UButton* IncreaseTownStatusButton;
+    
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FText> TownNames1;
@@ -86,6 +76,9 @@ private:
     
     UFUNCTION(BlueprintCallable)
     void OnPublicInventoryChecked(bool bIsChecked);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnIncreaseTownStatusButtonClicked();
     
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetPublicInventoryCheckBoxVisibility();

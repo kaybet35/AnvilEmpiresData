@@ -130,6 +130,8 @@ APlayerVisualsInfo = {}
 ---@field MinCameraDistance float
 AProxyPawn = {}
 
+function AProxyPawn:StopBandwidthRecording() end
+function AProxyPawn:StartBandwidthRecording() end
 ---@param bDrawCollisions boolean
 function AProxyPawn:SetDrawCollisions(bDrawCollisions) end
 ---@param Height float
@@ -840,6 +842,8 @@ FMapIconTypeProperty = {}
 ---@field PledgedTownHallTownHallId uint32
 ---@field PledgedMilitiaMapHash uint32
 ---@field PledgedMilitiaTownHallId uint32
+---@field OfflineCharacterServerName FString
+---@field SpawnTimeRemainingSec uint32
 FProfileInfoResponse = {}
 
 
@@ -856,7 +860,6 @@ FQueueStatusResponse = {}
 ---@field ServerName FString
 ---@field ServerAddress FString
 ---@field MapName FString
----@field FactionCapacities TArray<boolean>
 ---@field DeploymentPointList TArray<FDeploymentPointInfo>
 FServerListEntry = {}
 
@@ -864,6 +867,7 @@ FServerListEntry = {}
 
 ---@class FServerListResponse
 ---@field ServerList TArray<FServerListEntry>
+---@field DeploymentListVersion uint32
 FServerListResponse = {}
 
 
@@ -1300,7 +1304,6 @@ function UDeathMarketMapIcon:OnLastDeathLocationChanged(OldVal, NewVal) end
 ---@field NumHousesStatus UStatusWidget
 ---@field NumTentsStatus UStatusWidget
 ---@field NumReinforcementSuppliesStatus UStatusWidget
----@field ParentMapWidget UNewMapWidget
 ---@field ParentSlot UCanvasPanelSlot
 UDeploymentPointWidget = {}
 
@@ -1319,6 +1322,8 @@ function UDeploymentPointWidget:GetTownNameBorderVisibility() end
 function UDeploymentPointWidget:GetNumTentsText() end
 ---@return FText
 function UDeploymentPointWidget:GetNumReinforcementSuppliesText() end
+---@return ESlateVisibility
+function UDeploymentPointWidget:GetNumHousesVisibility() end
 ---@return FText
 function UDeploymentPointWidget:GetNumHousesText() end
 ---@return ESlateVisibility
@@ -1329,16 +1334,15 @@ function UDeploymentPointWidget:GetDeploymentPointVisibility() end
 ---@field MapWidget UNewMapWidget
 ---@field Throbber UThrobber
 ---@field LogoutButton UAnvilButtonWidget
----@field RefreshButton UAnvilButtonWidget
 ---@field ConnectingText UTextBlock
+---@field DeploymentInstructionOrSpawnTimerText UTextBlock
 UDeploymentScreen = {}
 
-function UDeploymentScreen:OnRefreshButtonClicked() end
 function UDeploymentScreen:OnLogoutButtonClicked() end
----@return boolean
-function UDeploymentScreen:IsRefreshButtonEnabled() end
 ---@return ESlateVisibility
 function UDeploymentScreen:GetThrobberVisibility() end
+---@return FText
+function UDeploymentScreen:GetDeploymentInstructionOrSpawnTimerText() end
 ---@return ESlateVisibility
 function UDeploymentScreen:GetConnectingTextVisibility() end
 
@@ -1454,6 +1458,7 @@ function UGameplayOverlay:GetHUDWidgetVisibility() end
 ---@field GameplayOverlay UGameplayOverlay
 ---@field HUDWidget UHUDWidget
 ---@field MapWidget UMapWidget
+---@field DeploymentScreen UDeploymentScreen
 ---@field ContentSwitcher UWidgetSwitcher
 UGameplayScreen = {}
 
@@ -1745,6 +1750,7 @@ UMapPostMapIcon = {}
 
 ---@class UMapWidget : UUserWidget
 ---@field MapSheet UCanvasPanel
+---@field TownHallIconCanvas UCanvasPanel
 ---@field IconTemplates TMap<EMapIconType, FMapIconTypeProperty>
 ---@field EnemyIconColour FSlateColor
 ---@field ZoomSpeed float
@@ -1753,10 +1759,13 @@ UMapPostMapIcon = {}
 ---@field MapImageBox UImage
 ---@field FogOfWarMask UTexture2D
 ---@field FogOfWarRadius int32
+---@field DeploymentPointWidgetClass TSubclassOf<UDeploymentPointWidget>
 ---@field DeploymentInstructionOrSpawnTimerBorder UBorder
 ---@field DeploymentInstructionOrSpawnTimerText UTextBlock
 ---@field ObjectiveBorder UBorder
 ---@field LogoutButton UAnvilButtonWidget
+---@field MapSheetSlot UCanvasPanelSlot
+---@field TownHallIconCanvasSlot UCanvasPanelSlot
 ---@field DisplayedBeaconTowerPlayerInfos TArray<UMapIcon>
 UMapWidget = {}
 
@@ -1984,10 +1993,12 @@ function UPledgedPlayerBox:OnVoteChecked(bIsChecked, PlayerId) end
 ---@class UPledgedPlayerListItem : UUserWidget
 ---@field PlayerNameText UTextBlock
 ---@field PlayerStatusText UTextBlock
+---@field PlayerTownCurrencyText UTextBlock
 ---@field VoteButton UCheckBox
 ---@field OnlineStatusIcon UImage
 ---@field OnlineStatusIconMap TMap<EPledgedOnlineStatus, UTexture2D>
 ---@field OnlineStatusColorMap TMap<EPledgedOnlineStatus, FSlateColor>
+---@field OnlineStatusTownCurrencyColorMap TMap<EPledgedOnlineStatus, FSlateColor>
 UPledgedPlayerListItem = {}
 
 ---@param bIsChecked boolean
@@ -2091,9 +2102,6 @@ UServerListEntryView = {}
 ---@class UServerListEntryWidget : UUserWidget
 ---@field ServerListEntryButton UButton
 ---@field ServerNameTextBlock UTextBlock
----@field AranicPopulationTextBlock UTextBlock
----@field MirrishPopulationTextBlock UTextBlock
----@field NovanPopulationTextBlock UTextBlock
 ---@field PopulationOpenColour FSlateColor
 ---@field PopulationFullColour FSlateColor
 ---@field ServerDisplayNames TMap<FString, FString>
@@ -2194,12 +2202,8 @@ function UTownCenterMapIcon:GetNumHousesText() end
 ---@class UTownCenterWindow : UStructureWindow
 ---@field PledgedPlayerList UPledgedPlayerBox
 ---@field LocalPlayerStatus UTextBlock
----@field LocalPlayerStatusProgress UProgressBar
 ---@field CivicPledgePanel UUserWidget
----@field TechHeaderContainer UHeaderContainer
 ---@field PledgedHeader UHeaderContainer
----@field TechFooterContainer UFooterContainer
----@field TechProgress UProgressBar
 ---@field RareResourceStatus UStatusWidget
 ---@field ReserveInventoryHeaderContainer UHeaderContainer
 ---@field ReserveInventorySubHeaderContainer UUserWidget
@@ -2208,6 +2212,7 @@ function UTownCenterMapIcon:GetNumHousesText() end
 ---@field PublicInventoryCheckBox UCheckBox
 ---@field PublicInventorySubmitImage UImage
 ---@field ReserveInventoryCheckBox UCheckBox
+---@field IncreaseTownStatusButton UButton
 ---@field TownNames1 TArray<FText>
 ---@field TownNames2 TArray<FText>
 ---@field TownNames3 TArray<FText>
@@ -2217,6 +2222,7 @@ UTownCenterWindow = {}
 function UTownCenterWindow:OnReserveInventoryChecked(bIsChecked) end
 ---@param bIsChecked boolean
 function UTownCenterWindow:OnPublicInventoryChecked(bIsChecked) end
+function UTownCenterWindow:OnIncreaseTownStatusButtonClicked() end
 ---@return ESlateVisibility
 function UTownCenterWindow:GetPublicInventoryCheckBoxVisibility() end
 
@@ -2253,12 +2259,8 @@ UVisBalljointComponent = {}
 
 
 
----@class UVisBatteringRamAnimInstance : UAnimInstance
----@field NativeSpeed float
----@field RotationalSpeedYaw float
----@field bIsOccupied boolean
+---@class UVisBatteringRamAnimInstance : UVisCartAnimInstance
 UVisBatteringRamAnimInstance = {}
-
 
 
 ---@class UVisBuildGhostComponent : UActorComponent
@@ -2285,6 +2287,15 @@ function UVisCanalWaterControllerComponent:OnSplineUpdate() end
 function UVisCanalWaterControllerComponent:OnCurrentUpdate() end
 
 
+---@class UVisCartAnimInstance : UAnimInstance
+---@field NativeSpeed float
+---@field NativeHorizontalMovement float
+---@field NativeVerticalMovement float
+---@field bIsOccupied boolean
+UVisCartAnimInstance = {}
+
+
+
 ---@class UVisFoundationDecorMesh : UStaticMeshComponent
 UVisFoundationDecorMesh = {}
 
@@ -2295,12 +2306,8 @@ UVisGateAnimInstance = {}
 
 
 
----@class UVisHorseAnimInstance : UAnimInstance
----@field NativeSpeed float
----@field NativeHorizontalMovement float
----@field NativeVerticalMovement float
+---@class UVisHorseAnimInstance : UVisCartAnimInstance
 UVisHorseAnimInstance = {}
-
 
 
 ---@class UVisItem : UObject

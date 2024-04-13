@@ -16,9 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsGroupHouse;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 PledgeTownCurrencyCost;
-    
     UHousingProxyComponent();
 
 };

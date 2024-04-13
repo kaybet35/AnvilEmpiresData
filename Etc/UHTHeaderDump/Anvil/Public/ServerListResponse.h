@@ -10,6 +10,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FServerListEntry> ServerList;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint32 DeploymentListVersion;
+    
     ANVIL_API FServerListResponse();
 };
 

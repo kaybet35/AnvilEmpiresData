@@ -47,19 +47,19 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__ClayMine_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__ClayMine_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.7"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__ClayMine_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.9"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__ClayMine_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__ClayMine_C:DestroyableComp'",
@@ -67,7 +67,7 @@
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__ClayMine_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.6"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__ClayMine_C:BoxCollisionProxyComponent_0'",
@@ -85,11 +85,15 @@
       "Components": [
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__ClayMine_C:ResourceSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.10"
         },
         {
           "ObjectName": "MineProxyComponent'Default__ClayMine_C:MineProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.8"
+        },
+        {
+          "ObjectName": "DestroyableProxyComponent'Default__ClayMine_C:DestroyableProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMine.5"
         }
       ],
       "VisActorClass": {
@@ -119,6 +123,18 @@
     "Template": {
       "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableProxyComponent_0",
+    "Outer": "Default__ClayMine_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Properties": {
+      "DestructionEffectEntity": {
+        "ObjectName": "BlueprintGeneratedClass'ClayMineUnbuilt_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMineUnbuilt.0"
+      }
     }
   },
   {

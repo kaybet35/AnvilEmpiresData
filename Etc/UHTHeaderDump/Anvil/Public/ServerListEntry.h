@@ -17,9 +17,6 @@ public:
     FString MapName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<bool> FactionCapacities;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FDeploymentPointInfo> DeploymentPointList;
     
     ANVIL_API FServerListEntry();

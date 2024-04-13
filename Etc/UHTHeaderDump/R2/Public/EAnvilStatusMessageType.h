@@ -102,6 +102,7 @@ enum class EAnvilStatusMessageType : uint8 {
     InvalidTownCurrency,
     NotEnoughTownCurrency,
     TravelDestinationAtCapacity,
+    UnableToIncreaseStatusUsingLocalCoin,
     NumTypes,
 };
 

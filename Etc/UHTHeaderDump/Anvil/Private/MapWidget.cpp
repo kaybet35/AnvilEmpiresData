@@ -2,16 +2,20 @@
 
 UMapWidget::UMapWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->MapSheet = NULL;
+    this->TownHallIconCanvas = NULL;
     this->ZoomSpeed = 0.00f;
     this->ZoomMax = 0.00f;
     this->ZoomAnimationTime = 0.00f;
     this->MapImageBox = NULL;
     this->FogOfWarMask = NULL;
     this->FogOfWarRadius = 5;
+    this->DeploymentPointWidgetClass = NULL;
     this->DeploymentInstructionOrSpawnTimerBorder = NULL;
     this->DeploymentInstructionOrSpawnTimerText = NULL;
     this->ObjectiveBorder = NULL;
     this->LogoutButton = NULL;
+    this->MapSheetSlot = NULL;
+    this->TownHallIconCanvasSlot = NULL;
 }
 
 void UMapWidget::OnLogoutButtonClicked() {

@@ -1,21 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimInstance -FallbackName=AnimInstance
+#include "VisCartAnimInstance.h"
 #include "VisHorseAnimInstance.generated.h"
 
 UCLASS(Blueprintable, NonTransient)
-class ANVIL_API UVisHorseAnimInstance : public UAnimInstance {
+class ANVIL_API UVisHorseAnimInstance : public UVisCartAnimInstance {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
-    float NativeSpeed;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
-    float NativeHorizontalMovement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
-    float NativeVerticalMovement;
-    
     UVisHorseAnimInstance();
 
 };

@@ -25,12 +25,6 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 OutputMax;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint32 PrivateXpReward;
-    
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint32 PublicXpReward;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bRequiresResearch;
     

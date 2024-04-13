@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisGroupHouseT1_C : AVisHouse
+---@field OwnerFlagMesh UStaticMeshComponent
 ---@field SpawnBoxMarker UBoxComponent
 ---@field ScorchEffect1 UScorchEffectComponent
 ---@field ScorchEffect9 UScorchEffectComponent
@@ -19,7 +20,6 @@
 ---@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field SmokeStack UNiagaraComponent
----@field Audio UAudioComponent
 ---@field Populated USceneComponent
 ABPVisGroupHouseT1_C = {}
 

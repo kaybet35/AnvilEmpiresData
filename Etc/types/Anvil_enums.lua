@@ -55,19 +55,20 @@ EAnvilSpringArmMode = {
 ---@enum EBuildSiteCategory
 EBuildSiteCategory = {
     Settlement = 0,
-    Camp = 1,
-    Defenses = 2,
-    Foundations = 3,
-    Industry = 4,
-    Water = 5,
-    Smithing = 6,
-    Cooking = 7,
-    Vehicles = 8,
-    Farming = 9,
-    Lumber = 10,
-    Stone = 11,
-    NumTypes = 12,
-    EBuildSiteCategory_MAX = 13,
+    Housing = 1,
+    Camp = 2,
+    Defenses = 3,
+    Foundations = 4,
+    Industry = 5,
+    Water = 6,
+    Smithing = 7,
+    Cooking = 8,
+    Vehicles = 9,
+    Farming = 10,
+    Lumber = 11,
+    Stone = 12,
+    NumTypes = 13,
+    EBuildSiteCategory_MAX = 14,
 }
 
 ---@enum EBuildSiteVisibility

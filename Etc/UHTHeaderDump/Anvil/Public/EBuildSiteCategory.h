@@ -5,6 +5,7 @@
 UENUM(BlueprintType)
 enum class EBuildSiteCategory : uint8 {
     Settlement,
+    Housing,
     Camp,
     Defenses,
     Foundations,
