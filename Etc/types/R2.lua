@@ -682,6 +682,7 @@ UEntityAttachableProxyComponent = {}
 ---@field bSkipPersist boolean
 ---@field bShowOnMap boolean
 ---@field bUseScale boolean
+---@field bObserver boolean
 ---@field SerializationType EEntitySerializationType
 ---@field bGenerateMeshCollisionsFromVisActor boolean
 ---@field GenerateMeshCollisionMask int32
@@ -706,12 +707,11 @@ UEquipmentProxyComponent = {}
 ---@field FamilyId int32
 ---@field AllowPublicPledging boolean
 ---@field Tier uint8
----@field ExtensionTier uint8
----@field ClaimTownCurrencyCost int32
 ---@field FamilyMembers TArray<FFamilyMemberData>
 ---@field VisVarMaxNumFamilyMembers int32
 ---@field VisVarRestrictedBoxExtent float
 ---@field ParentFamilyArea int64
+---@field AttachedFamilyArea int64
 ---@field IsFamilyAreaCore uint8
 ---@field NumChildAreas uint8
 UFamilyAreaMarkerDataComponent = {}
@@ -720,7 +720,6 @@ UFamilyAreaMarkerDataComponent = {}
 
 ---@class UFamilyAreaMarkerProxyComponent : UProxyComponent
 ---@field Tier uint8
----@field ClaimTownCurrencyCost int32
 ---@field IsFamilyAreaCore uint8
 UFamilyAreaMarkerProxyComponent = {}
 
@@ -966,7 +965,6 @@ UInventoryProxyComponent = {}
 ---@field HealthLimitRestored float
 ---@field StaminaLimitRestored float
 ---@field QuantityPerCrate uint16
----@field TownCurrencyValue uint16
 ---@field StunChance float
 ---@field StunDuration float
 ---@field StunThrowDistance float
@@ -982,7 +980,7 @@ UItemTemplate = {}
 ---@field PitchMin float
 ---@field PitchMax float
 ---@field MaxVelocity float
----@field AccelerationMultiplier float
+---@field Acceleration float
 ---@field PlayerFallDamage float
 ---@field LadderFallDamage float
 ULadderProxyComponent = {}
@@ -1582,6 +1580,7 @@ UStaticTorchProxyComponent = {}
 ---@class UStructureDataComponent : UDataComponent
 ---@field bRestrictedMode boolean
 ---@field bOnFoundation boolean
+---@field bInFamilyArea boolean
 ---@field StructureType EAnvilBuildStructureType
 ---@field BuilderId int64
 UStructureDataComponent = {}
@@ -1597,6 +1596,7 @@ UStructureProtectionProxyComponent = {}
 ---@class UStructureProxyComponent : UProxyComponent
 ---@field bCannotBeDismantled boolean
 ---@field bRequireSupport boolean
+---@field IgnoreMeshVisbilityChanges boolean
 ---@field StructureType EAnvilBuildStructureType
 UStructureProxyComponent = {}
 
@@ -1719,7 +1719,6 @@ UUpgradeProxyComponent = {}
 
 ---@class UVehicleMovementDataComponent : UDataComponent
 ---@field Velocity FVector
----@field RotationalSpeedYaw float
 ---@field FrontAxleCastHit FVector
 ---@field RearAxleCastHit FVector
 ---@field SeatOccupancyBits uint8

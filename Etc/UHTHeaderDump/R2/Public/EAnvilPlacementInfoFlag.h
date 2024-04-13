@@ -8,6 +8,7 @@ enum class EAnvilPlacementInfoFlag : uint8 {
     InRichSoil,
     BeaconTowerLink,
     BeaconTowerTownHallLink,
+    InFamilyArea,
     RareFoodArea_Begin,
     InRareFoodArea_Deer,
     InRareFoodArea_Boar,

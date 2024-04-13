@@ -686,8 +686,9 @@ class UEntityTemplate : public UObject
     bool bSkipPersist;                                                                // 0x0044 (size: 0x1)
     bool bShowOnMap;                                                                  // 0x0045 (size: 0x1)
     bool bUseScale;                                                                   // 0x0046 (size: 0x1)
-    TEnumAsByte<EEntitySerializationType> SerializationType;                          // 0x0047 (size: 0x1)
-    bool bGenerateMeshCollisionsFromVisActor;                                         // 0x0048 (size: 0x1)
+    bool bObserver;                                                                   // 0x0047 (size: 0x1)
+    TEnumAsByte<EEntitySerializationType> SerializationType;                          // 0x0048 (size: 0x1)
+    bool bGenerateMeshCollisionsFromVisActor;                                         // 0x0049 (size: 0x1)
     int32 GenerateMeshCollisionMask;                                                  // 0x004C (size: 0x4)
     float GenerateMeshCollisionStepAngle;                                             // 0x0050 (size: 0x4)
     TArray<class UProxyComponent*> Components;                                        // 0x0058 (size: 0x10)
@@ -707,24 +708,22 @@ class UFamilyAreaMarkerDataComponent : public UDataComponent
     int32 FamilyId;                                                                   // 0x00A8 (size: 0x4)
     bool AllowPublicPledging;                                                         // 0x00C8 (size: 0x1)
     uint8 Tier;                                                                       // 0x00E8 (size: 0x1)
-    uint8 ExtensionTier;                                                              // 0x0108 (size: 0x1)
-    int32 ClaimTownCurrencyCost;                                                      // 0x0128 (size: 0x4)
-    TArray<FFamilyMemberData> FamilyMembers;                                          // 0x0148 (size: 0x10)
-    int32 VisVarMaxNumFamilyMembers;                                                  // 0x0158 (size: 0x4)
-    float VisVarRestrictedBoxExtent;                                                  // 0x0178 (size: 0x4)
-    int64 ParentFamilyArea;                                                           // 0x0198 (size: 0x8)
-    uint8 IsFamilyAreaCore;                                                           // 0x01B8 (size: 0x1)
-    uint8 NumChildAreas;                                                              // 0x01D8 (size: 0x1)
+    TArray<FFamilyMemberData> FamilyMembers;                                          // 0x0108 (size: 0x10)
+    int32 VisVarMaxNumFamilyMembers;                                                  // 0x0118 (size: 0x4)
+    float VisVarRestrictedBoxExtent;                                                  // 0x0138 (size: 0x4)
+    int64 ParentFamilyArea;                                                           // 0x0158 (size: 0x8)
+    int64 AttachedFamilyArea;                                                         // 0x0178 (size: 0x8)
+    uint8 IsFamilyAreaCore;                                                           // 0x0198 (size: 0x1)
+    uint8 NumChildAreas;                                                              // 0x01B8 (size: 0x1)
 
-}; // Size: 0x1F8
+}; // Size: 0x1D8
 
 class UFamilyAreaMarkerProxyComponent : public UProxyComponent
 {
     uint8 Tier;                                                                       // 0x0028 (size: 0x1)
-    int32 ClaimTownCurrencyCost;                                                      // 0x002C (size: 0x4)
-    uint8 IsFamilyAreaCore;                                                           // 0x0030 (size: 0x1)
+    uint8 IsFamilyAreaCore;                                                           // 0x0029 (size: 0x1)
 
-}; // Size: 0x38
+}; // Size: 0x30
 
 class UFarmDataComponent : public UDataComponent
 {
@@ -967,7 +966,6 @@ class UItemTemplate : public UObject
     float HealthLimitRestored;                                                        // 0x0218 (size: 0x4)
     float StaminaLimitRestored;                                                       // 0x021C (size: 0x4)
     uint16 QuantityPerCrate;                                                          // 0x0220 (size: 0x2)
-    uint16 TownCurrencyValue;                                                         // 0x0222 (size: 0x2)
     float StunChance;                                                                 // 0x0224 (size: 0x4)
     float StunDuration;                                                               // 0x0228 (size: 0x4)
     float StunThrowDistance;                                                          // 0x022C (size: 0x4)
@@ -983,7 +981,7 @@ class ULadderProxyComponent : public UProxyComponent
     float PitchMin;                                                                   // 0x0038 (size: 0x4)
     float PitchMax;                                                                   // 0x003C (size: 0x4)
     float MaxVelocity;                                                                // 0x0040 (size: 0x4)
-    float AccelerationMultiplier;                                                     // 0x0044 (size: 0x4)
+    float Acceleration;                                                               // 0x0044 (size: 0x4)
     float PlayerFallDamage;                                                           // 0x0048 (size: 0x4)
     float LadderFallDamage;                                                           // 0x004C (size: 0x4)
 
@@ -1583,10 +1581,11 @@ class UStructureDataComponent : public UDataComponent
 {
     bool bRestrictedMode;                                                             // 0x00A8 (size: 0x1)
     bool bOnFoundation;                                                               // 0x00C8 (size: 0x1)
-    EAnvilBuildStructureType StructureType;                                           // 0x00E8 (size: 0x1)
-    int64 BuilderId;                                                                  // 0x0108 (size: 0x8)
+    bool bInFamilyArea;                                                               // 0x00E8 (size: 0x1)
+    EAnvilBuildStructureType StructureType;                                           // 0x0108 (size: 0x1)
+    int64 BuilderId;                                                                  // 0x0128 (size: 0x8)
 
-}; // Size: 0x128
+}; // Size: 0x148
 
 class UStructureProtectionProxyComponent : public UProxyComponent
 {
@@ -1598,7 +1597,8 @@ class UStructureProxyComponent : public UProxyComponent
 {
     bool bCannotBeDismantled;                                                         // 0x0028 (size: 0x1)
     bool bRequireSupport;                                                             // 0x0029 (size: 0x1)
-    EAnvilBuildStructureType StructureType;                                           // 0x002A (size: 0x1)
+    bool IgnoreMeshVisbilityChanges;                                                  // 0x002A (size: 0x1)
+    EAnvilBuildStructureType StructureType;                                           // 0x002B (size: 0x1)
 
 }; // Size: 0x30
 
@@ -1720,12 +1720,11 @@ class UUpgradeProxyComponent : public UProxyComponent
 class UVehicleMovementDataComponent : public UDataComponent
 {
     FVector Velocity;                                                                 // 0x00A8 (size: 0x18)
-    float RotationalSpeedYaw;                                                         // 0x00D8 (size: 0x4)
-    FVector FrontAxleCastHit;                                                         // 0x00F8 (size: 0x18)
-    FVector RearAxleCastHit;                                                          // 0x0128 (size: 0x18)
-    uint8 SeatOccupancyBits;                                                          // 0x0158 (size: 0x1)
+    FVector FrontAxleCastHit;                                                         // 0x00D8 (size: 0x18)
+    FVector RearAxleCastHit;                                                          // 0x0108 (size: 0x18)
+    uint8 SeatOccupancyBits;                                                          // 0x0138 (size: 0x1)
 
-}; // Size: 0x178
+}; // Size: 0x158
 
 class UVehicleMovementProxyComponent : public UProxyComponent
 {

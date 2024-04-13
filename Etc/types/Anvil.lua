@@ -617,6 +617,10 @@ AVisVehicle = {}
 AvisLadder = {}
 
 
+---@class FAlert
+FAlert = {}
+
+
 ---@class FAnvilAssetManager
 ---@field EntityTemplateObjectLibrary UObjectLibrary
 ---@field ItemTemplateObjectLibrary UObjectLibrary
@@ -690,11 +694,8 @@ FCameraRotateState = {}
 
 
 ---@class FClientConfig
----@field Ip FString
----@field AnvilServiceHttpUrl FString
 ---@field DiscordRoleServerUrl FString
----@field Announcement FString
----@field NextTestUnixTimestamp FString
+---@field AvailableShardList TArray<FShardConfig>
 FClientConfig = {}
 
 
@@ -798,7 +799,6 @@ FHitConverterItemMeshInfo = {}
 
 ---@class FItemData : FTableRowBase
 ---@field Damage uint8
----@field TownCurrencyValue uint16
 FItemData = {}
 
 
@@ -881,6 +881,17 @@ FServerListResponse = {}
 FServerRegion = {}
 
 
+---@class FShardConfig
+---@field ShardId int32
+---@field ShardName FString
+---@field bEnabled boolean
+---@field AnvilServiceHttpUrl FString
+---@field Announcement FString
+---@field NextTestUnixTimestamp FString
+FShardConfig = {}
+
+
+
 ---@class FTownHallDeploymentInfo
 ---@field TownHallId uint32
 ---@field TownNameOrdinal uint8
@@ -958,6 +969,30 @@ function UAdminScreen:OnSortByDistance() end
 ---@param Text FText
 ---@param Method ETextCommit::Type
 function UAdminScreen:OnSearch(Text, Method) end
+
+
+---@class UAlertWidget : UUserWidget
+---@field AlertTextBlock UTextBlock
+---@field AcceptButtonBox USizeBox
+---@field AcceptButton UButton
+---@field DeclineButtonBox USizeBox
+---@field DeclineButton UButton
+UAlertWidget = {}
+
+function UAlertWidget:OnDeclineClicked() end
+function UAlertWidget:OnAcceptClicked() end
+
+
+---@class UAlertsContainerWidget : UUserWidget
+---@field MaxNumVisibleAlerts int32
+---@field AlertWidgetClass TSubclassOf<UAlertWidget>
+---@field AlertsMaximizeButton UButton
+---@field AlertsMinimizeButton UButton
+---@field AlertsVerticalBox UVerticalBox
+UAlertsContainerWidget = {}
+
+function UAlertsContainerWidget:OnAlertsMinimizeClicked() end
+function UAlertsContainerWidget:OnAlertsMaximizeClicked() end
 
 
 ---@class UAnvilButtonWidget : UUserWidget
@@ -1102,6 +1137,7 @@ UAnvilMovieCharacterNameWidget = {}
 ---@field SavedVoiceInputDeviceName FString
 ---@field bShowPlayerName boolean
 ---@field AcceptedDisclaimerVersion int32
+---@field LastShardId int32
 UAnvilOptionsSave = {}
 
 
@@ -1126,6 +1162,7 @@ UAnvilPanel = {}
 ---@field DialogBox UAnvilDialogBox
 ---@field WatermarkCanvas UCanvasPanel
 ---@field WatermarkVersionText UTextBlock
+---@field AlertsContainerWidget UAlertsContainerWidget
 ---@field ScreenStack TArray<EAnvilScreenType>
 UAnvilRootWidget = {}
 
@@ -1374,6 +1411,14 @@ function UDisclaimerWidget:IsConfirmButtonEnabled() end
 function UDisclaimerWidget:IsAcceptTextBoxEnabled() end
 
 
+---@class UDismantleButtonWidget : UUserWidget
+---@field DismantleButton UButton
+---@field StructureName UTextBlock
+UDismantleButtonWidget = {}
+
+function UDismantleButtonWidget:OnClicked() end
+
+
 ---@class UEntityActorRootComponent : USceneComponent
 UEntityActorRootComponent = {}
 
@@ -1544,10 +1589,12 @@ UHUDStatsWidget = {}
 ---@field HUDCanvas UCanvasPanel
 ---@field NameCanvas UCanvasPanel
 ---@field StatsCanvas UCanvasPanel
+---@field DismantleButtonsCanvas UCanvasPanel
 ---@field TravelIndicatorCanvas UCanvasPanel
 ---@field HUDWindowWidgets TMap<EHUDWindowType, UHUDWindow>
 ---@field HUDNameWidgetClass TSubclassOf<UHUDNameWidget>
 ---@field HUDStatsWidgetClass TSubclassOf<UHUDStatsWidget>
+---@field DismantleButtonWidgetClass TSubclassOf<UDismantleButtonWidget>
 ---@field OpenedHUDWindow UHUDWindow
 ---@field Compass UImage
 ---@field CompassPlayerArrow UImage
@@ -1896,6 +1943,7 @@ function UNextTestWidget:OnDiscordButtonClicked() end
 ---@field AnnouncementText UTextBlock
 ---@field DiscordRoleButton UButton
 ---@field DevModeButton UButton
+---@field ShardDropdown UAnvilDropdownEntryWidget
 UOpeningScreen = {}
 
 function UOpeningScreen:UpdateVersionText() end
@@ -1909,6 +1957,8 @@ function UOpeningScreen:OnDiscordRoleButtonClicked() end
 function UOpeningScreen:OnDevModeButtonClicked() end
 ---@return boolean
 function UOpeningScreen:IsDiscordRoleButtonEnabled() end
+---@return ESlateVisibility
+function UOpeningScreen:GetShardDropDownVisibility() end
 ---@return FText
 function UOpeningScreen:GetAnnouncementText() end
 
@@ -2008,12 +2058,12 @@ function UPledgedPlayerBox:OnVoteChecked(bIsChecked, PlayerId) end
 ---@class UPledgedPlayerListItem : UUserWidget
 ---@field PlayerNameText UTextBlock
 ---@field PlayerStatusText UTextBlock
----@field PlayerTownCurrencyText UTextBlock
+---@field PlayerSilverText UTextBlock
 ---@field VoteButton UCheckBox
 ---@field OnlineStatusIcon UImage
 ---@field OnlineStatusIconMap TMap<EAnvilPledgedOnlineStatus, UTexture2D>
 ---@field OnlineStatusColorMap TMap<EAnvilPledgedOnlineStatus, FSlateColor>
----@field OnlineStatusTownCurrencyColorMap TMap<EAnvilPledgedOnlineStatus, FSlateColor>
+---@field OnlineStatusSilverColorMap TMap<EAnvilPledgedOnlineStatus, FSlateColor>
 UPledgedPlayerListItem = {}
 
 ---@param bIsChecked boolean
@@ -2221,25 +2271,16 @@ function UTownCenterMapIcon:GetNumHousesText() end
 ---@field PledgedHeader UHeaderContainer
 ---@field RareResourceStatus UStatusWidget
 ---@field ReserveInventoryHeaderContainer UHeaderContainer
----@field ReserveInventorySubHeaderContainer UUserWidget
 ---@field ReserveInventoryMainAreaContainer UUserWidget
 ---@field ReserveInventoryContainerWidget UInventoryContainerWidget
----@field PublicInventoryCheckBox UCheckBox
 ---@field PublicInventorySubmitImage UImage
----@field ReserveInventoryCheckBox UCheckBox
 ---@field IncreaseTownStatusButton UButton
 ---@field TownNames1 TArray<FText>
 ---@field TownNames2 TArray<FText>
 ---@field TownNames3 TArray<FText>
 UTownCenterWindow = {}
 
----@param bIsChecked boolean
-function UTownCenterWindow:OnReserveInventoryChecked(bIsChecked) end
----@param bIsChecked boolean
-function UTownCenterWindow:OnPublicInventoryChecked(bIsChecked) end
 function UTownCenterWindow:OnIncreaseTownStatusButtonClicked() end
----@return ESlateVisibility
-function UTownCenterWindow:GetPublicInventoryCheckBoxVisibility() end
 
 
 ---@class UTownStatusWidget : UUserWidget

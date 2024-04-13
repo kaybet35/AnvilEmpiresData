@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.27"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.28"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,39 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fire",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "ScorchEffect5",
@@ -88,17 +121,6 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "Fire",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'SceneComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "StaticMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -111,17 +133,6 @@
       {
         "Type": "ObjectProperty",
         "Name": "StaticMesh1",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Mesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -159,6 +170,10 @@
         "ObjectName": "VisScaffoldingComponent'Default__BPVisMarketplaceShopT1_C:ScaffoldingComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.35"
       },
+      "StructureIcon": {
+        "ObjectName": "Texture2D'IconMarketplaceShop'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconMarketplaceShop.0"
+      },
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisMarketplaceShopT1_C:UpgradeDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.34"
@@ -194,14 +209,14 @@
       "VisDisplayName": {
         "Namespace": "",
         "Key": "C8C763AD4ACB3B5B575EE097A0F76308",
-        "SourceString": "Marketplace Stall",
-        "LocalizedString": "Marketplace Stall"
+        "SourceString": "Marketplace Shop",
+        "LocalizedString": "Marketplace Shop"
       },
       "Description": {
         "Namespace": "",
         "Key": "A75218B5470A8352457EDFA7E85945F9",
-        "SourceString": "Sell your food for silver",
-        "LocalizedString": "Sell your food for silver"
+        "SourceString": "Sell items for Silver. Other players can view your stall contents from the map.",
+        "LocalizedString": "Sell items for Silver. Other players can view your stall contents from the map."
       },
       "UseWindowType": "EHUDWindowType::MarketShop",
       "RootComponent": {
@@ -230,7 +245,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisMarketplaceShopT1_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.28"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.29"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisMarketplaceShopT1_C:ArrowComponent'",
@@ -269,8 +284,8 @@
       },
       "RelativeRotation": {
         "Pitch": 0.0,
-        "Yaw": -180.00038,
-        "Roll": 0.0
+        "Yaw": 179.99962,
+        "Roll": -0.0
       }
     }
   },
@@ -734,32 +749,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisMarketplaceShopT1_C:Mesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.29"
-      },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.19"
-        }
-      ],
-      "VariableGuid": "71B933C3-4CB192D3-777CD185-D8E75C2A",
-      "InternalVariableName": "Mesh"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_10",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -778,6 +767,54 @@
   },
   {
     "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisMarketplaceShopT1_C:VisStaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.37"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.22"
+        }
+      ],
+      "VariableGuid": "19FAE35B-4A09DBE3-F2E5AEB1-DC935F2D",
+      "InternalVariableName": "VisStaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisMarketplaceShopT1_C:VisStaticMesh1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.36"
+      },
+      "VariableGuid": "91F44367-4B58BC95-2C6FC687-E3658207",
+      "InternalVariableName": "VisStaticMesh1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
     "Name": "SCS_Node_2",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -790,6 +827,8 @@
         "ObjectName": "StaticMeshComponent'BPVisMarketplaceShopT1_C:StaticMesh_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.31"
       },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
       "VariableGuid": "E2922308-486EB9F9-9DC6A2BD-795BFEC5",
       "InternalVariableName": "StaticMesh"
     }
@@ -828,32 +867,30 @@
         "ObjectName": "SceneComponent'BPVisMarketplaceShopT1_C:Fire_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.8"
       },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.22"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.23"
         },
         {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.24"
         },
         {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.25"
         },
         {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_8'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.26"
         },
         {
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.27"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.18"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.17"
         }
       ],
       "VariableGuid": "4DB6501B-49D44015-054651B8-CAAB2E65",
@@ -958,58 +995,62 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.17"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.20"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.21"
         },
         {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.21"
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.20"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.17"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.20"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.21"
         },
         {
           "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.19"
         },
         {
           "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.21"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.22"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.18"
         }
       ],
       "DefaultSceneRootNode": {
@@ -1023,26 +1064,6 @@
     "Name": "SplineDataComponent",
     "Outer": "GrassRemovalVolume",
     "Class": "UScriptClass'SplineDataComponent'"
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "Mesh_GEN_VARIABLE",
-    "Outer": "BPVisMarketplaceShopT1_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'MarketplaceShopT1'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/MarketplaceShopT1.2"
-      },
-      "bUseDefaultCollision": true,
-      "OverrideMaterials": [
-        null
-      ],
-      "bReceivesDecals": false,
-      "BodyInstance": {
-        "ObjectType": "ECollisionChannel::ECC_WorldStatic"
-      }
-    }
   },
   {
     "Type": "StaticMeshComponent",
@@ -1098,6 +1119,42 @@
         "ObjectName": "ArrowComponent'Default__BPVisMarketplaceShopT1_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.0"
       }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh1_GEN_VARIABLE",
+    "Outer": "BPVisMarketplaceShopT1_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'MarketplaceShopT1Props'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/MarketplaceShopT1Props.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "ProjectToLandscape"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh_GEN_VARIABLE",
+    "Outer": "BPVisMarketplaceShopT1_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'MarketplaceShopT1'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/MarketplaceShopT1.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "ProjectToLandscape"
+      ]
     }
   }
 ]

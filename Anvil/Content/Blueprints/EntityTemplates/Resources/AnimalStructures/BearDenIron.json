@@ -16,7 +16,7 @@
       "RepairComp": null,
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__BearDenIron_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDenIron.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDenIron.14"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__BearDenIron_C:DestroyableComp'",
@@ -36,11 +36,15 @@
       "Components": [
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__BearDenIron_C:ResourceSpawnerProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDenIron.11"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__BearDenIron_C:ResourceSpawnerProxyComponent_1'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDenIron.10"
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__BearDenIron_C:ResourceSpawnerProxyComponent_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDenIron.11"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDenIron.12"
         },
         {
           "ObjectName": "ResourceProxyComponent'Default__BearDenIron_C:ResourceProxyComponent_0'",
@@ -178,20 +182,6 @@
         {
           "ItemToDrop": {
             "ItemType": {
-              "ObjectName": "BlueprintGeneratedClass'SwordRelic_C'",
-              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SwordRelic.0"
-            },
-            "ItemCodeName": 0,
-            "Count": 1,
-            "ItemFlags": 1
-          },
-          "NormalizedChanceToDrop": 1.0,
-          "MinDurability": 10.0,
-          "MaxDurability": 30.0
-        },
-        {
-          "ItemToDrop": {
-            "ItemType": {
               "ObjectName": "BlueprintGeneratedClass'CombatAxeRelic_C'",
               "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/CombatAxeRelic.0"
             },
@@ -242,20 +232,6 @@
             "ItemFlags": 1
           },
           "NormalizedChanceToDrop": 0.2,
-          "MinDurability": 10.0,
-          "MaxDurability": 30.0
-        },
-        {
-          "ItemToDrop": {
-            "ItemType": {
-              "ObjectName": "BlueprintGeneratedClass'SpearRelic_C'",
-              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SpearRelic.0"
-            },
-            "ItemCodeName": 0,
-            "Count": 1,
-            "ItemFlags": 1
-          },
-          "NormalizedChanceToDrop": 0.75,
           "MinDurability": 10.0,
           "MaxDurability": 30.0
         },
@@ -286,6 +262,34 @@
           "NormalizedChanceToDrop": 0.15,
           "MinDurability": 10.0,
           "MaxDurability": 30.0
+        },
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 75,
+            "ItemFlags": 0
+          },
+          "NormalizedChanceToDrop": 1.0,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
+        },
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 25,
+            "ItemFlags": 0
+          },
+          "NormalizedChanceToDrop": 0.75,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
         }
       ]
     }
@@ -306,6 +310,28 @@
       "MaxSpawn": 1,
       "ResourceReserveInitial": 1,
       "MinDistanceBetweenSpawns": 2500.0
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_1",
+    "Outer": "Default__BearDenIron_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'Treasure_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Treasure.0"
+      },
+      "SpawnRadius": 3000.0,
+      "MinimumSpawnRadius": 400.0,
+      "SpawnInterval": 60.0,
+      "SpawnQuantity": 3,
+      "MaxSpawn": 3,
+      "ResourceReserveInitial": 3,
+      "ReserveReplenishTimeSecs": 1800,
+      "MinDistanceBetweenSpawns": 250.0,
+      "bTrackSpawnedEntity": true,
+      "CompatibleSurfaceTypes": 26116
     }
   },
   {

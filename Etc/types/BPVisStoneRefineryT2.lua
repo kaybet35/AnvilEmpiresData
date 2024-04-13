@@ -1,15 +1,11 @@
 ---@meta
 
 ---@class ABPVisStoneRefineryT2_C : AVisRefinery
----@field VisStaticMesh18 UVisStaticMeshComponent
 ---@field VisStaticMesh17 UVisStaticMeshComponent
----@field VisStaticMesh16 UVisStaticMeshComponent
----@field VisStaticMesh15 UVisStaticMeshComponent
----@field Niagara UNiagaraComponent
----@field VisStaticMesh14 UVisStaticMeshComponent
+---@field VisStaticMesh2 UVisStaticMeshComponent
 ---@field Populated USceneComponent
 ---@field Audio UAudioComponent
----@field VisStaticMesh13 UVisStaticMeshComponent
+---@field VisStaticMesh15 UVisStaticMeshComponent
 ---@field VisStaticMesh12 UVisStaticMeshComponent
 ---@field VisStaticMesh11 UVisStaticMeshComponent
 ---@field VisStaticMesh10 UVisStaticMeshComponent
@@ -20,7 +16,6 @@
 ---@field VisStaticMesh5 UVisStaticMeshComponent
 ---@field VisStaticMesh4 UVisStaticMeshComponent
 ---@field VisStaticMesh3 UVisStaticMeshComponent
----@field VisStaticMesh2 UVisStaticMeshComponent
 ---@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field VisTeamMesh UVisTeamMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent

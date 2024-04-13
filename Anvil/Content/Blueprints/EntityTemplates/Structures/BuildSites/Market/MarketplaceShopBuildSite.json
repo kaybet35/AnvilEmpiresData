@@ -34,19 +34,6 @@
     "Template": {
       "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseBuildSiteEntity_C:BoxCollisionProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.1"
-    },
-    "Properties": {
-      "ExtendFootprint": false,
-      "Position": {
-        "X": 0.0,
-        "Y": 70.0,
-        "Z": 0.0
-      },
-      "Extents": {
-        "X": 250.0,
-        "Y": 250.0,
-        "Z": 300.0
-      }
     }
   },
   {
@@ -63,10 +50,10 @@
         "ObjectName": "BlueprintGeneratedClass'MarketplaceShopT1_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceShopT1.0"
       },
-      "BuildLocation": 35,
+      "BuildLocation": 4098,
       "RequiredTool": "EAnvilToolType::Hands",
       "bRequiresTownHall": true,
-      "TierPrerequisite": 2,
+      "TierPrerequisite": 1,
       "ResourceBranchesRequirement": 10
     }
   },
@@ -121,15 +108,11 @@
       },
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__MarketplaceShopBuildSite_C:TeamProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Market/MarketplaceShopBuildSite.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Market/MarketplaceShopBuildSite.8"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__MarketplaceShopBuildSite_C:HealthProxyComponent_0'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Market/MarketplaceShopBuildSite.5"
-      },
-      "MeshCollisionComp": {
-        "ObjectName": "MeshCollisionProxyComponent'Default__MarketplaceShopBuildSite_C:MeshCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Market/MarketplaceShopBuildSite.7"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__MarketplaceShopBuildSite_C:FootprintCollisionProxyComponent_0'",
@@ -145,27 +128,19 @@
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__MarketplaceShopBuildSite_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Market/MarketplaceShopBuildSite.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Market/MarketplaceShopBuildSite.7"
       },
       "CodeNameString": "MarketplaceShopBuildSite",
       "CodeName": -1841686229,
+      "bGenerateMeshCollisionsFromVisActor": true,
       "VisActorClass": {
-        "ObjectName": "BlueprintGeneratedClass'BPVisMarketplaceShopBuildSite_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/Market/BPVisMarketplaceShopBuildSite.1"
-      }
-    }
-  },
-  {
-    "Type": "MeshCollisionProxyComponent",
-    "Name": "MeshCollisionProxyComponent_0",
-    "Outer": "Default__MarketplaceShopBuildSite_C",
-    "Class": "UScriptClass'MeshCollisionProxyComponent'",
-    "Properties": {
-      "PhysicsAssetName": {
-        "ObjectName": "StaticMesh'MarketplaceShopT1'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/MarketplaceShopT1.2"
+        "ObjectName": "Class'VisBuildSite'",
+        "ObjectPath": "/Script/Anvil"
       },
-      "CollisionMask": 16785408
+      "VisActorTemplateClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisMarketplaceShopT1_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.1"
+      }
     }
   },
   {

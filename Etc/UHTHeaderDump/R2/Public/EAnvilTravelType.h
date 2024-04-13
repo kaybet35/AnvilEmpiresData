@@ -8,5 +8,6 @@ enum class EAnvilTravelType : uint8 {
     BorderTravel,
     Reinforce,
     ReturnToPledgedTown,
+    Respawn,
 };
 

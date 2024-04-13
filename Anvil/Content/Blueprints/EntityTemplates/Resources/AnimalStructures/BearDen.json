@@ -16,7 +16,7 @@
       "RepairComp": null,
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__BearDen_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDen.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDen.14"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__BearDen_C:DestroyableComp'",
@@ -36,11 +36,15 @@
       "Components": [
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__BearDen_C:ResourceSpawnerProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDen.11"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__BearDen_C:ResourceSpawnerProxyComponent_1'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDen.10"
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__BearDen_C:ResourceSpawnerProxyComponent_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDen.11"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDen.12"
         },
         {
           "ObjectName": "ResourceProxyComponent'Default__BearDen_C:ResourceProxyComponent_0'",
@@ -206,20 +210,6 @@
         {
           "ItemToDrop": {
             "ItemType": {
-              "ObjectName": "BlueprintGeneratedClass'CombatAxeRelic_C'",
-              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/CombatAxeRelic.0"
-            },
-            "ItemCodeName": 0,
-            "Count": 1,
-            "ItemFlags": 1
-          },
-          "NormalizedChanceToDrop": 0.2,
-          "MinDurability": 10.0,
-          "MaxDurability": 30.0
-        },
-        {
-          "ItemToDrop": {
-            "ItemType": {
               "ObjectName": "BlueprintGeneratedClass'SwordRelic_C'",
               "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SwordRelic.0"
             },
@@ -272,6 +262,34 @@
           "NormalizedChanceToDrop": 0.15,
           "MinDurability": 10.0,
           "MaxDurability": 30.0
+        },
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 63,
+            "ItemFlags": 0
+          },
+          "NormalizedChanceToDrop": 1.0,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
+        },
+        {
+          "ItemToDrop": {
+            "ItemType": {
+              "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+            },
+            "ItemCodeName": 0,
+            "Count": 7,
+            "ItemFlags": 0
+          },
+          "NormalizedChanceToDrop": 0.5,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
         }
       ]
     }
@@ -292,6 +310,28 @@
       "MaxSpawn": 1,
       "ResourceReserveInitial": 1,
       "MinDistanceBetweenSpawns": 2500.0
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_1",
+    "Outer": "Default__BearDen_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'Treasure_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Treasure.0"
+      },
+      "SpawnRadius": 3000.0,
+      "MinimumSpawnRadius": 400.0,
+      "SpawnInterval": 60.0,
+      "SpawnQuantity": 2,
+      "MaxSpawn": 2,
+      "ResourceReserveInitial": 2,
+      "ReserveReplenishTimeSecs": 1800,
+      "MinDistanceBetweenSpawns": 250.0,
+      "bTrackSpawnedEntity": true,
+      "CompatibleSurfaceTypes": 26116
     }
   },
   {

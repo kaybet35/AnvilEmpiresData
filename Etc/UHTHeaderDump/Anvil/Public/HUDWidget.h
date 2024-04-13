@@ -9,6 +9,7 @@
 
 class UCanvasPanel;
 class UChatMessage;
+class UDismantleButtonWidget;
 class UHUDNameWidget;
 class UHUDStatsWidget;
 class UHUDWindow;
@@ -39,6 +40,9 @@ protected:
     UCanvasPanel* StatsCanvas;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCanvasPanel* DismantleButtonsCanvas;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCanvasPanel* TravelIndicatorCanvas;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -49,6 +53,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UHUDStatsWidget> HUDStatsWidgetClass;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UDismantleButtonWidget> DismantleButtonWidgetClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UHUDWindow* OpenedHUDWindow;

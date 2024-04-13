@@ -13,6 +13,7 @@ UOpeningScreen::UOpeningScreen() {
     this->AnnouncementText = NULL;
     this->DiscordRoleButton = NULL;
     this->DevModeButton = NULL;
+    this->ShardDropdown = NULL;
 }
 
 void UOpeningScreen::UpdateVersionText() {
@@ -44,6 +45,10 @@ void UOpeningScreen::OnDevModeButtonClicked() {
 
 bool UOpeningScreen::IsDiscordRoleButtonEnabled() {
     return false;
+}
+
+ESlateVisibility UOpeningScreen::GetShardDropDownVisibility() {
+    return ESlateVisibility::Visible;
 }
 
 FText UOpeningScreen::GetAnnouncementText() {

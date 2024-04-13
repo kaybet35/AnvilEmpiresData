@@ -8,7 +8,7 @@ ULadderProxyComponent::ULadderProxyComponent() {
     this->PitchMin = 0.00f;
     this->PitchMax = 0.00f;
     this->MaxVelocity = 0.00f;
-    this->AccelerationMultiplier = 0.00f;
+    this->Acceleration = 0.00f;
     this->PlayerFallDamage = 0.00f;
     this->LadderFallDamage = 0.00f;
 }

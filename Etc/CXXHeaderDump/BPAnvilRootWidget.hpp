@@ -3,8 +3,8 @@
 
 class UBPAnvilRootWidget_C : public UAnvilRootWidget
 {
-    class UImage* WatermarkBackground;                                                // 0x0308 (size: 0x8)
+    class UImage* WatermarkBackground;                                                // 0x0310 (size: 0x8)
 
-}; // Size: 0x310
+}; // Size: 0x318
 
 #endif

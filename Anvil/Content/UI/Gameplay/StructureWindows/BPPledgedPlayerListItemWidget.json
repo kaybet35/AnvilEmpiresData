@@ -50,15 +50,15 @@
           }
         }
       ],
-      "OnlineStatusTownCurrencyColorMap": [
+      "OnlineStatusSilverColorMap": [
         {
           "EAnvilPledgedOnlineStatus::Online": {
             "SpecifiedColor": {
-              "R": 0.947307,
-              "G": 0.623961,
-              "B": 0.171441,
+              "R": 0.94902,
+              "G": 0.623529,
+              "B": 0.172549,
               "A": 1.0,
-              "Hex": "FFF9CF73"
+              "Hex": "FFFACF73"
             },
             "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
           }
@@ -66,11 +66,11 @@
         {
           "EAnvilPledgedOnlineStatus::Offline": {
             "SpecifiedColor": {
-              "R": 0.501082,
-              "G": 0.329223,
-              "B": 0.091106,
+              "R": 0.307292,
+              "G": 0.201898,
+              "B": 0.055872,
               "A": 1.0,
-              "Hex": "FFBC9B55"
+              "Hex": "FF977C43"
             },
             "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
           }
@@ -499,7 +499,7 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPPledgedPlayerListItemWidget_C:WidgetTree.PlayerStatusText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.24"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.25"
       }
     }
   },
@@ -627,8 +627,8 @@
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.6"
       },
       "Content": {
-        "ObjectName": "TextBlock'BPPledgedPlayerListItemWidget_C:WidgetTree.PlayerTownCurrencyText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.25"
+        "ObjectName": "TextBlock'BPPledgedPlayerListItemWidget_C:WidgetTree.PlayerSilverText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.24"
       }
     }
   },
@@ -680,12 +680,12 @@
     "Properties": {
       "Brush": {
         "ImageSize": {
-          "X": 22.0,
-          "Y": 22.0
+          "X": 24.0,
+          "Y": 24.0
         },
         "ResourceObject": {
-          "ObjectName": "Texture2D'IconTownCurrencySmall'",
-          "ObjectPath": "Anvil/Content/Textures/UI/Items/IconTownCurrencySmall.0"
+          "ObjectName": "Texture2D'MapStoreSilverRefineryIcon'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Map/MapStoreSilverRefineryIcon.0"
         }
       },
       "Slot": {
@@ -787,34 +787,7 @@
   },
   {
     "Type": "TextBlock",
-    "Name": "PlayerStatusText",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'TextBlock'",
-    "Properties": {
-      "Text": {
-        "Namespace": "",
-        "Key": "8559FE9745B477AB4144189146E3886F",
-        "SourceString": "Status",
-        "LocalizedString": "Status"
-      },
-      "Font": {
-        "FontObject": {
-          "ObjectName": "Font'Renner-Book_Font'",
-          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
-        },
-        "TypefaceFontName": "Default",
-        "Size": 12
-      },
-      "Justification": "ETextJustify::Right",
-      "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.8"
-      }
-    }
-  },
-  {
-    "Type": "TextBlock",
-    "Name": "PlayerTownCurrencyText",
+    "Name": "PlayerSilverText",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'TextBlock'",
     "Properties": {
@@ -845,6 +818,33 @@
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_7'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.15"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "PlayerStatusText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "8559FE9745B477AB4144189146E3886F",
+        "SourceString": "Status",
+        "LocalizedString": "Status"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 12
+      },
+      "Justification": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPledgedPlayerListItemWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPledgedPlayerListItemWidget.8"
       }
     }
   },

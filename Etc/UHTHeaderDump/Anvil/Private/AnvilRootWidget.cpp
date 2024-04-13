@@ -6,6 +6,7 @@ UAnvilRootWidget::UAnvilRootWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->DialogBox = NULL;
     this->WatermarkCanvas = NULL;
     this->WatermarkVersionText = NULL;
+    this->AlertsContainerWidget = NULL;
 }
 
 

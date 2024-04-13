@@ -37,10 +37,15 @@
     },
     "Properties": {
       "ExtendFootprint": false,
+      "Position": {
+        "X": -325.0,
+        "Y": -325.0,
+        "Z": 0.0
+      },
       "Extents": {
-        "X": 500.0,
-        "Y": 500.0,
-        "Z": 600.0
+        "X": 200.0,
+        "Y": 200.0,
+        "Z": 750.0
       },
       "CollisionMask": 16777224
     }
@@ -59,7 +64,7 @@
       "Extents": {
         "X": 500.0,
         "Y": 500.0,
-        "Z": 500.0
+        "Z": 1000.0
       },
       "CollisionMask": 134217728
     }
@@ -131,8 +136,8 @@
       },
       "CodeNameString": "FamilyAreaCore",
       "CodeName": 729954145,
+      "RelevancyDistSqr": 625000000.0,
       "bShowOnMap": true,
-      "SerializationType": "EEntitySerializationType::SerializationTypeFamilyArea",
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
@@ -165,7 +170,6 @@
     "Class": "UScriptClass'FamilyAreaMarkerProxyComponent'",
     "Properties": {
       "Tier": 1,
-      "ClaimTownCurrencyCost": 500,
       "IsFamilyAreaCore": 1
     }
   },
@@ -214,10 +218,10 @@
           "Count": 0,
           "StackLimit": 10000,
           "bHoldsLarge": false,
-          "SlotType": "EAnvilItemType::TownCurrency",
+          "SlotType": "EAnvilItemType::Silver",
           "DedicatedItemType": {
-            "ObjectName": "BlueprintGeneratedClass'TownCurrency_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/TownCurrency.0"
+            "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
           },
           "DedicatedUnderlyingItemType": null
         },
@@ -266,6 +270,9 @@
     "Template": {
       "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    },
+    "Properties": {
+      "IgnoreMeshVisbilityChanges": true
     }
   },
   {

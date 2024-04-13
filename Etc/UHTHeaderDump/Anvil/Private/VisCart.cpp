@@ -11,9 +11,9 @@ AVisCart::AVisCart(const FObjectInitializer& ObjectInitializer) : Super(ObjectIn
     this->HorseMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("HorseMesh"));
     this->SaddleMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SaddleMesh"));
     this->CartMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("CartMesh"));
-    this->HorseMesh->SetupAttachment(RootComponent);
     this->SaddleMesh->SetupAttachment(RootComponent);
     this->CartMesh->SetupAttachment(RootComponent);
+    this->HorseMesh->SetupAttachment(RootComponent);
 }
 
 

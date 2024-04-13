@@ -29,7 +29,7 @@ public:
     float MaxVelocity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float AccelerationMultiplier;
+    float Acceleration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PlayerFallDamage;

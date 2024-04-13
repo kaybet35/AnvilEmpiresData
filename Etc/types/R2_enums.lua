@@ -304,7 +304,7 @@ EAnvilItemType = {
     StorableFoodT1 = 8,
     StorableFoodT2 = 9,
     StorableFoodT3 = 10,
-    TownCurrency = 11,
+    Silver = 11,
     All = 12,
     Tool = 13,
     Armor = 14,
@@ -367,17 +367,18 @@ EAnvilPlacementInfoFlag = {
     InRichSoil = 1,
     BeaconTowerLink = 2,
     BeaconTowerTownHallLink = 3,
-    RareFoodArea_Begin = 4,
-    InRareFoodArea_Deer = 5,
-    InRareFoodArea_Boar = 6,
-    InRareFoodArea_Wheat = 7,
-    InRareFoodArea_Cabbage = 8,
-    InRareFoodArea_Coal = 9,
-    InRareFoodArea_Clay = 10,
-    InRareFoodArea_None = 11,
-    RareFoodArea_End = 12,
-    ContextEnd = 13,
-    EAnvilPlacementInfoFlag_MAX = 14,
+    InFamilyArea = 4,
+    RareFoodArea_Begin = 5,
+    InRareFoodArea_Deer = 6,
+    InRareFoodArea_Boar = 7,
+    InRareFoodArea_Wheat = 8,
+    InRareFoodArea_Cabbage = 9,
+    InRareFoodArea_Coal = 10,
+    InRareFoodArea_Clay = 11,
+    InRareFoodArea_None = 12,
+    RareFoodArea_End = 13,
+    ContextEnd = 14,
+    EAnvilPlacementInfoFlag_MAX = 15,
 }
 
 ---@enum EAnvilPlacementStatus
@@ -684,14 +685,13 @@ EAnvilStatusMessageType = {
     NotAllowedInBorderZone = 91,
     SlotOccupied = 92,
     CannotTravelWithPassengers = 93,
-    InvalidTownCurrency = 94,
-    NotEnoughTownCurrency = 95,
-    TravelDestinationAtCapacity = 96,
-    UnableToIncreaseStatusUsingLocalCoin = 97,
-    TaxesAreOverdue = 98,
-    FamilyAreaClaimed = 99,
-    NumTypes = 100,
-    EAnvilStatusMessageType_MAX = 101,
+    NotEnoughSilver = 94,
+    TravelDestinationUnavailable = 95,
+    UnableToIncreaseStatusUsingSilver = 96,
+    TaxesAreOverdue = 97,
+    FamilyAreaClaimed = 98,
+    NumTypes = 99,
+    EAnvilStatusMessageType_MAX = 100,
 }
 
 ---@enum EAnvilStimulusType
@@ -728,7 +728,8 @@ EAnvilTravelType = {
     BorderTravel = 1,
     Reinforce = 2,
     ReturnToPledgedTown = 3,
-    EAnvilTravelType_MAX = 4,
+    Respawn = 4,
+    EAnvilTravelType_MAX = 5,
 }
 
 ---@enum EAnvilUsePromptType
@@ -786,8 +787,7 @@ EEntitySerializationType = {
     SerializationTypePlayer = 1,
     SerializationTypeController = 2,
     SerializationTypeRefinery = 3,
-    SerializationTypeFamilyArea = 4,
-    EEntitySerializationType_MAX = 5,
+    EEntitySerializationType_MAX = 4,
 }
 
 ---@enum EItemQualityType

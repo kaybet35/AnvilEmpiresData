@@ -58,7 +58,6 @@ UItemTemplate::UItemTemplate() {
     this->HealthLimitRestored = 0.00f;
     this->StaminaLimitRestored = 0.00f;
     this->QuantityPerCrate = 10;
-    this->TownCurrencyValue = 0;
     this->StunChance = 0.00f;
     this->StunDuration = 0.00f;
     this->StunThrowDistance = 0.00f;

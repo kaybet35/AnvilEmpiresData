@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "FamilyArea_C'Default__FamilyArea_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.6"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.5"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -46,26 +46,8 @@
         "X": 1.0,
         "Y": 1.0,
         "Z": 1.0
-      }
-    }
-  },
-  {
-    "Type": "BoxCollisionProxyComponent",
-    "Name": "BoxCollisionProxyComponent_1",
-    "Outer": "Default__FamilyArea_C",
-    "Class": "UScriptClass'BoxCollisionProxyComponent'",
-    "Properties": {
-      "Position": {
-        "X": 400.0,
-        "Y": 400.0,
-        "Z": 0.0
       },
-      "Extents": {
-        "X": 25.0,
-        "Y": 25.0,
-        "Z": 500.0
-      },
-      "CollisionMask": 16777216
+      "CollisionMask": 16777224
     }
   },
   {
@@ -113,27 +95,27 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__FamilyArea_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.12"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__FamilyArea_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.8"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__FamilyArea_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.9"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__FamilyArea_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.11"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__FamilyArea_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.4"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__FamilyArea_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.7"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__FamilyArea_C:BoxCollisionProxyComponent_0'",
@@ -141,29 +123,23 @@
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__FamilyArea_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.3"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__FamilyArea_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.10"
       },
       "CodeNameString": "FamilyArea",
       "CodeName": 496860708,
-      "bShowOnMap": true,
-      "SerializationType": "EEntitySerializationType::SerializationTypeFamilyArea",
       "GenerateMeshCollisionMask": 0,
       "Components": [
         {
-          "ObjectName": "BoxCollisionProxyComponent'Default__FamilyArea_C:BoxCollisionProxyComponent_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.2"
-        },
-        {
           "ObjectName": "FamilyAreaMarkerProxyComponent'Default__FamilyArea_C:FamilyAreaMarkerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.6"
         },
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__FamilyArea_C:BoxCollisionProxyComponent_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.3"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyArea.2"
         }
       ],
       "VisActorClass": {
@@ -176,10 +152,7 @@
     "Type": "FamilyAreaMarkerProxyComponent",
     "Name": "FamilyAreaMarkerProxyComponent_0",
     "Outer": "Default__FamilyArea_C",
-    "Class": "UScriptClass'FamilyAreaMarkerProxyComponent'",
-    "Properties": {
-      "ClaimTownCurrencyCost": 500
-    }
+    "Class": "UScriptClass'FamilyAreaMarkerProxyComponent'"
   },
   {
     "Type": "FootprintCollisionProxyComponent",
@@ -243,6 +216,9 @@
     "Template": {
       "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    },
+    "Properties": {
+      "IgnoreMeshVisbilityChanges": true
     }
   },
   {

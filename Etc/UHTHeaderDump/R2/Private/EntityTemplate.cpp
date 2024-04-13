@@ -8,6 +8,7 @@ UEntityTemplate::UEntityTemplate() {
     this->bSkipPersist = false;
     this->bShowOnMap = false;
     this->bUseScale = false;
+    this->bObserver = false;
     this->SerializationType = SerializationTypeDefault;
     this->bGenerateMeshCollisionsFromVisActor = false;
     this->GenerateMeshCollisionMask = 0;

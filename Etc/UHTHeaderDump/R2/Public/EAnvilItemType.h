@@ -15,7 +15,7 @@ enum class EAnvilItemType : uint8 {
     StorableFoodT1,
     StorableFoodT2,
     StorableFoodT3,
-    TownCurrency,
+    Silver,
     All,
     Tool,
     Armor,

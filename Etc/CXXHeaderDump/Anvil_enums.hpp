@@ -26,6 +26,12 @@ enum class EActionButtonType {
     EActionButtonType_MAX = 24,
 };
 
+enum class EAlertType {
+    General = 0,
+    QueueStatus = 1,
+    EAlertType_MAX = 2,
+};
+
 enum class EAnvilScreenType {
     None = 0,
     Opening = 1,
@@ -80,6 +86,15 @@ enum class EClientConfigDownloadTaskState {
     Completed = 1,
     InProgress = 2,
     EClientConfigDownloadTaskState_MAX = 3,
+};
+
+enum class EClientConfigURLType {
+    Live = 0,
+    Internal = 1,
+    DevBranch = 2,
+    Local = 3,
+    Iteration = 4,
+    EClientConfigURLType_MAX = 5,
 };
 
 enum class EClientConnectToServerResponseType {
@@ -234,9 +249,10 @@ enum class ENotificationSlot {
 enum class EQueueType {
     Unselected = 0,
     Regular = 1,
-    Admin = 2,
-    NumTypes = 3,
-    EQueueType_MAX = 4,
+    Travel = 2,
+    Admin = 3,
+    NumTypes = 4,
+    EQueueType_MAX = 5,
 };
 
 enum class ESimpleTooltip {
@@ -258,12 +274,6 @@ enum class ESimpleTooltip {
     Stamina = 15,
     AnimalHealth = 16,
     ESimpleTooltip_MAX = 17,
-};
-
-enum class ETownCenterInventorySelection {
-    Public = 0,
-    Reserve = 1,
-    ETownCenterInventorySelection_MAX = 2,
 };
 
 enum class EUnarmedItemMeshLocation {

@@ -5,9 +5,11 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->HUDCanvas = NULL;
     this->NameCanvas = NULL;
     this->StatsCanvas = NULL;
+    this->DismantleButtonsCanvas = NULL;
     this->TravelIndicatorCanvas = NULL;
     this->HUDNameWidgetClass = NULL;
     this->HUDStatsWidgetClass = NULL;
+    this->DismantleButtonWidgetClass = NULL;
     this->OpenedHUDWindow = NULL;
     this->Compass = NULL;
     this->CompassPlayerArrow = NULL;

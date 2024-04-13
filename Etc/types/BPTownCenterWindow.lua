@@ -10,7 +10,6 @@
 ---@field BPMainAreaContainer_126 UBPMainAreaContainer_C
 ---@field BPMainAreaContainer_275 UBPMainAreaContainer_C
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
----@field ReserveInventorySubmitImage UImage
 UBPTownCenterWindow_C = {}
 
 

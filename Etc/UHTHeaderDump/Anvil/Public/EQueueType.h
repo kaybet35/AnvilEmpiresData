@@ -6,6 +6,7 @@ UENUM(BlueprintType)
 enum class EQueueType : uint8 {
     Unselected,
     Regular,
+    Travel,
     Admin,
     NumTypes,
 };

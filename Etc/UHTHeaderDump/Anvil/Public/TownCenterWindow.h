@@ -1,11 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
 #include "StructureWindow.h"
 #include "TownCenterWindow.generated.h"
 
 class UButton;
-class UCheckBox;
 class UHeaderContainer;
 class UImage;
 class UInventoryContainerWidget;
@@ -38,22 +36,13 @@ protected:
     UHeaderContainer* ReserveInventoryHeaderContainer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UUserWidget* ReserveInventorySubHeaderContainer;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UUserWidget* ReserveInventoryMainAreaContainer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UInventoryContainerWidget* ReserveInventoryContainerWidget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UCheckBox* PublicInventoryCheckBox;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UImage* PublicInventorySubmitImage;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UCheckBox* ReserveInventoryCheckBox;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UButton* IncreaseTownStatusButton;
@@ -72,16 +61,7 @@ public:
 
 private:
     UFUNCTION(BlueprintCallable)
-    void OnReserveInventoryChecked(bool bIsChecked);
-    
-    UFUNCTION(BlueprintCallable)
-    void OnPublicInventoryChecked(bool bIsChecked);
-    
-    UFUNCTION(BlueprintCallable)
     void OnIncreaseTownStatusButtonClicked();
-    
-    UFUNCTION(BlueprintCallable)
-    ESlateVisibility GetPublicInventoryCheckBoxVisibility();
     
 };
 

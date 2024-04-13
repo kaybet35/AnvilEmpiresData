@@ -4,6 +4,7 @@
 #include "EAnvilScreenType.h"
 #include "AnvilRootWidget.generated.h"
 
+class UAlertsContainerWidget;
 class UAnvilDialogBox;
 class UAnvilScreen;
 class UCanvasPanel;
@@ -32,6 +33,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* WatermarkVersionText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAlertsContainerWidget* AlertsContainerWidget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<EAnvilScreenType> ScreenStack;

@@ -27,6 +27,13 @@ EActionButtonType = {
     EActionButtonType_MAX = 24,
 }
 
+---@enum EAlertType
+EAlertType = {
+    General = 0,
+    QueueStatus = 1,
+    EAlertType_MAX = 2,
+}
+
 ---@enum EAnvilScreenType
 EAnvilScreenType = {
     None = 0,
@@ -86,6 +93,16 @@ EClientConfigDownloadTaskState = {
     Completed = 1,
     InProgress = 2,
     EClientConfigDownloadTaskState_MAX = 3,
+}
+
+---@enum EClientConfigURLType
+EClientConfigURLType = {
+    Live = 0,
+    Internal = 1,
+    DevBranch = 2,
+    Local = 3,
+    Iteration = 4,
+    EClientConfigURLType_MAX = 5,
 }
 
 ---@enum EClientConnectToServerResponseType
@@ -254,9 +271,10 @@ ENotificationSlot = {
 EQueueType = {
     Unselected = 0,
     Regular = 1,
-    Admin = 2,
-    NumTypes = 3,
-    EQueueType_MAX = 4,
+    Travel = 2,
+    Admin = 3,
+    NumTypes = 4,
+    EQueueType_MAX = 5,
 }
 
 ---@enum ESimpleTooltip
@@ -279,13 +297,6 @@ ESimpleTooltip = {
     Stamina = 15,
     AnimalHealth = 16,
     ESimpleTooltip_MAX = 17,
-}
-
----@enum ETownCenterInventorySelection
-ETownCenterInventorySelection = {
-    Public = 0,
-    Reserve = 1,
-    ETownCenterInventorySelection_MAX = 2,
 }
 
 ---@enum EUnarmedItemMeshLocation

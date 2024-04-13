@@ -22,7 +22,7 @@ protected:
     UTextBlock* PlayerStatusText;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* PlayerTownCurrencyText;
+    UTextBlock* PlayerSilverText;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCheckBox* VoteButton;
@@ -37,7 +37,7 @@ protected:
     TMap<EAnvilPledgedOnlineStatus, FSlateColor> OnlineStatusColorMap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<EAnvilPledgedOnlineStatus, FSlateColor> OnlineStatusTownCurrencyColorMap;
+    TMap<EAnvilPledgedOnlineStatus, FSlateColor> OnlineStatusSilverColorMap;
     
 public:
     UPledgedPlayerListItem();

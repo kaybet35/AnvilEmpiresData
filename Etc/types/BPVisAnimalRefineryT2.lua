@@ -1,16 +1,15 @@
 ---@meta
 
 ---@class ABPVisAnimalRefineryT2_C : AVisRefinery
----@field VisStaticMesh3 UVisStaticMeshComponent
----@field VisStaticMesh4 UVisStaticMeshComponent
 ---@field VisStaticMesh11 UVisStaticMeshComponent
 ---@field VisStaticMesh10 UVisStaticMeshComponent
----@field Audio UAudioComponent
----@field Smoke UNiagaraComponent
----@field VisTeamMesh UVisTeamMeshComponent
----@field Niagara2 UNiagaraComponent
----@field VisStaticMesh9 UVisStaticMeshComponent
 ---@field Niagara1 UNiagaraComponent
+---@field Niagara2 UNiagaraComponent
+---@field VisStaticMesh3 UVisStaticMeshComponent
+---@field VisStaticMesh4 UVisStaticMeshComponent
+---@field Audio UAudioComponent
+---@field VisTeamMesh UVisTeamMeshComponent
+---@field VisStaticMesh9 UVisStaticMeshComponent
 ---@field VisStaticMesh8 UVisStaticMeshComponent
 ---@field VisStaticMesh7 UVisStaticMeshComponent
 ---@field VisStaticMesh6 UVisStaticMeshComponent

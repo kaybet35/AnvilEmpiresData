@@ -1,6 +1,15 @@
 ---@meta
 
 ---@class ABPVisArmourRefineryT2_C : AVisRefinery
+---@field ScorchEffect7 UScorchEffectComponent
+---@field ScorchEffect8 UScorchEffectComponent
+---@field ScorchEffect9 UScorchEffectComponent
+---@field ScorchEffect6 UScorchEffectComponent
+---@field ScorchEffect2 UScorchEffectComponent
+---@field ScorchEffect1 UScorchEffectComponent
+---@field ScorchEffect4 UScorchEffectComponent
+---@field ScorchEffect5 UScorchEffectComponent
+---@field ScorchEffect3 UScorchEffectComponent
 ---@field VisStaticMesh12 UVisStaticMeshComponent
 ---@field VisStaticMesh14 UVisStaticMeshComponent
 ---@field VisStaticMesh13 UVisStaticMeshComponent
@@ -18,15 +27,6 @@
 ---@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field VisTeamMesh UVisTeamMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
----@field ScorchEffect1 UScorchEffectComponent
----@field ScorchEffect9 UScorchEffectComponent
----@field ScorchEffect7 UScorchEffectComponent
----@field ScorchEffect8 UScorchEffectComponent
----@field ScorchEffect6 UScorchEffectComponent
----@field ScorchEffect4 UScorchEffectComponent
----@field ScorchEffect5 UScorchEffectComponent
----@field ScorchEffect3 UScorchEffectComponent
----@field ScorchEffect2 UScorchEffectComponent
 ---@field Fire USceneComponent
 ---@field Audio UAudioComponent
 ---@field Refining USceneComponent
