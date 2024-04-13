@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MapItem.h"
+#include "DeploymentPointInfo.h"
 #include "ServerListEntry.generated.h"
 
 USTRUCT(BlueprintType)
@@ -17,10 +17,10 @@ public:
     FString MapName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<bool> FactionCapacityArray;
+    TArray<bool> FactionCapacities;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FMapItem> MapItemList;
+    TArray<FDeploymentPointInfo> DeploymentPointList;
     
     ANVIL_API FServerListEntry();
 };

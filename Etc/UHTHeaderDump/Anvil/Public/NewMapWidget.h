@@ -6,8 +6,8 @@
 
 class UCanvasPanel;
 class UCanvasPanelSlot;
+class UDeploymentPointWidget;
 class UImage;
-class UMapItemWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UNewMapWidget : public UUserWidget {
@@ -15,7 +15,7 @@ class ANVIL_API UNewMapWidget : public UUserWidget {
 public:
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<UMapItemWidget> MapItemWidgetClass;
+    TSubclassOf<UDeploymentPointWidget> MapItemWidgetClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ZoomSpeed;

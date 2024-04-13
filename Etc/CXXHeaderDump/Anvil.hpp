@@ -143,15 +143,20 @@ struct FDecayData : public FTableRowBase
 struct FDeleteProfileResponse
 {
     bool bDeletedProfile;                                                             // 0x0000 (size: 0x1)
-    uint8 LockedFactionId;                                                            // 0x0001 (size: 0x1)
+    FProfileInfoResponse ProfileInfo;                                                 // 0x0008 (size: 0x20)
 
-}; // Size: 0x2
+}; // Size: 0x28
 
-struct FFactionCapacities
+struct FDeploymentPointInfo
 {
-    TArray<bool> CapacityArray;                                                       // 0x0000 (size: 0x10)
+    EDeploymentPointType Type;                                                        // 0x0000 (size: 0x1)
+    uint32 CodeName;                                                                  // 0x0004 (size: 0x4)
+    uint64 EntityId;                                                                  // 0x0008 (size: 0x8)
+    uint8 FactionId;                                                                  // 0x0010 (size: 0x1)
+    FVector WorldPos;                                                                 // 0x0018 (size: 0x18)
+    FTownHallDeploymentInfo TownHallDeploymentInfo;                                   // 0x0030 (size: 0x1C)
 
-}; // Size: 0x10
+}; // Size: 0x50
 
 struct FFactionLockResponse
 {
@@ -220,11 +225,15 @@ struct FMapIconTypeProperty
 
 }; // Size: 0x30
 
-struct FMapItem
+struct FProfileInfoResponse
 {
-    uint32 CodeName;                                                                  // 0x0000 (size: 0x4)
-    uint8 FactionId;                                                                  // 0x0004 (size: 0x1)
-    FVector WorldPos;                                                                 // 0x0008 (size: 0x18)
+    uint64 OnlineId;                                                                  // 0x0000 (size: 0x8)
+    uint8 LockedFactionId;                                                            // 0x0008 (size: 0x1)
+    bool bIsAdmin;                                                                    // 0x0009 (size: 0x1)
+    uint32 PledgedTownHallMapHash;                                                    // 0x000C (size: 0x4)
+    uint32 PledgedTownHallTownHallId;                                                 // 0x0010 (size: 0x4)
+    uint32 PledgedMilitiaMapHash;                                                     // 0x0014 (size: 0x4)
+    uint32 PledgedMilitiaTownHallId;                                                  // 0x0018 (size: 0x4)
 
 }; // Size: 0x20
 
@@ -241,8 +250,8 @@ struct FServerListEntry
     FString ServerName;                                                               // 0x0000 (size: 0x10)
     FString ServerAddress;                                                            // 0x0010 (size: 0x10)
     FString MapName;                                                                  // 0x0020 (size: 0x10)
-    TArray<bool> FactionCapacityArray;                                                // 0x0030 (size: 0x10)
-    TArray<FMapItem> MapItemList;                                                     // 0x0040 (size: 0x10)
+    TArray<bool> FactionCapacities;                                                   // 0x0030 (size: 0x10)
+    TArray<FDeploymentPointInfo> DeploymentPointList;                                 // 0x0040 (size: 0x10)
 
 }; // Size: 0x50
 
@@ -255,6 +264,19 @@ struct FServerListResponse
 struct FServerRegion
 {
 }; // Size: 0x160
+
+struct FTownHallDeploymentInfo
+{
+    uint32 TownHallId;                                                                // 0x0000 (size: 0x4)
+    uint8 TownNameOrdinal;                                                            // 0x0004 (size: 0x1)
+    uint8 TownNameId;                                                                 // 0x0005 (size: 0x1)
+    int32 NumTotalHouses;                                                             // 0x0008 (size: 0x4)
+    int32 NumUnclaimedHouses;                                                         // 0x000C (size: 0x4)
+    int32 NumTotalTents;                                                              // 0x0010 (size: 0x4)
+    int32 NumUnclaimedTents;                                                          // 0x0014 (size: 0x4)
+    int32 NumReinforcementSupplies;                                                   // 0x0018 (size: 0x4)
+
+}; // Size: 0x1C
 
 struct FVoiceLoginInfo
 {
@@ -332,7 +354,7 @@ class AAnvilPlayerController : public APlayerController
 {
     class UAnvilRootWidget* RootWidget;                                               // 0x0850 (size: 0x8)
 
-}; // Size: 0x880
+}; // Size: 0x8B0
 
 class ADayNightManager : public AActor
 {
@@ -354,7 +376,7 @@ class AGameplayGameMode : public AAnvilGameModeBase
 
 class AGameplayPlayerController : public AAnvilPlayerController
 {
-}; // Size: 0x888
+}; // Size: 0x8B8
 
 class AMainMenuGameMode : public AAnvilGameModeBase
 {
@@ -362,7 +384,7 @@ class AMainMenuGameMode : public AAnvilGameModeBase
 
 class AMainMenuPlayerController : public AAnvilPlayerController
 {
-}; // Size: 0x880
+}; // Size: 0x8B0
 
 class AMapBorderActor : public ACameraActor
 {
@@ -424,8 +446,11 @@ class AServerPartition : public AActor
 class AUIGlobals : public AInfo
 {
     TSubclassOf<class UUserWidget> TooltipClass;                                      // 0x0290 (size: 0x8)
+    TArray<FText> TownNames1;                                                         // 0x0298 (size: 0x10)
+    TArray<FText> TownNames2;                                                         // 0x02A8 (size: 0x10)
+    TArray<FText> TownNames3;                                                         // 0x02B8 (size: 0x10)
 
-}; // Size: 0x298
+}; // Size: 0x2C8
 
 class AVisActor : public AVisActorBase
 {
@@ -962,17 +987,17 @@ class UAnvilGameInstance : public UGameInstance
 {
     class UMapWidget* MapWidget;                                                      // 0x0230 (size: 0x8)
     class UHUDWidget* HUDWidget;                                                      // 0x0238 (size: 0x8)
-    FString TravelAddress;                                                            // 0x0270 (size: 0x10)
-    TArray<uint8> ConnectTokenBuffer;                                                 // 0x0280 (size: 0x10)
-    class UAnvilCharacterSave* CharacterSave;                                         // 0x0290 (size: 0x8)
-    class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x0298 (size: 0x8)
-    FAnvilAssetManager AssetManager;                                                  // 0x02A0 (size: 0x168)
-    FAnvilOptionsManager OptionsManager;                                              // 0x0408 (size: 0x1A0)
-    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x05A8 (size: 0x8)
-    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x05B0 (size: 0x10)
-    TArray<class AVisActor*> VisActorList;                                            // 0x05C0 (size: 0x10)
-    TArray<class AVisActor*> TravelVisActorList;                                      // 0x05D0 (size: 0x10)
-    FClientConfigManager ClientConfigManager;                                         // 0x05E0 (size: 0x68)
+    FString TravelAddress;                                                            // 0x0298 (size: 0x10)
+    TArray<uint8> ConnectTokenBuffer;                                                 // 0x02A8 (size: 0x10)
+    class UAnvilCharacterSave* CharacterSave;                                         // 0x02B8 (size: 0x8)
+    class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x02C0 (size: 0x8)
+    FAnvilAssetManager AssetManager;                                                  // 0x02C8 (size: 0x168)
+    FAnvilOptionsManager OptionsManager;                                              // 0x0430 (size: 0x1A0)
+    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x05D0 (size: 0x8)
+    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x05D8 (size: 0x10)
+    TArray<class AVisActor*> VisActorList;                                            // 0x05E8 (size: 0x10)
+    TArray<class AVisActor*> TravelVisActorList;                                      // 0x05F8 (size: 0x10)
+    FClientConfigManager ClientConfigManager;                                         // 0x0608 (size: 0x68)
 
     void GetVisActors(TArray<class AVisActor*>& OutVisActorList);
     void GetVersion(int32& OutMajor, int32& OutMinor, int32& OutPatch, int32& OutCL);
@@ -981,7 +1006,7 @@ class UAnvilGameInstance : public UGameInstance
     bool GetIsNight();
     void GetDayCurrentSeconds(int32& OutSeconds);
     void DumpProperties(FString OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter);
-}; // Size: 0x1670
+}; // Size: 0x1698
 
 class UAnvilKeyEntryWidget : public UUserWidget
 {
@@ -1197,6 +1222,32 @@ class UDeathMarketMapIcon : public UMapIcon
     void OnLastDeathLocationChanged(const FVector& OldVal, const FVector& NewVal);
 }; // Size: 0x388
 
+class UDeploymentPointWidget : public UUserWidget
+{
+    class UButton* MapItemButton;                                                     // 0x0278 (size: 0x8)
+    class UImage* MapItemImage;                                                       // 0x0280 (size: 0x8)
+    class UVerticalBox* TownStatusVerticalBox;                                        // 0x0288 (size: 0x8)
+    class UBorder* TownNameBorder;                                                    // 0x0290 (size: 0x8)
+    class UTextBlock* TownNameText;                                                   // 0x0298 (size: 0x8)
+    class UBorder* TownStatusBorder;                                                  // 0x02A0 (size: 0x8)
+    class UStatusWidget* NumHousesStatus;                                             // 0x02A8 (size: 0x8)
+    class UStatusWidget* NumTentsStatus;                                              // 0x02B0 (size: 0x8)
+    class UStatusWidget* NumReinforcementSuppliesStatus;                              // 0x02B8 (size: 0x8)
+    class UNewMapWidget* ParentMapWidget;                                             // 0x02C0 (size: 0x8)
+    class UCanvasPanelSlot* ParentSlot;                                               // 0x02C8 (size: 0x8)
+
+    void OnDeploymentPointClicked();
+    bool IsDeploymentPointEnabled();
+    ESlateVisibility GetTownStatusVerticalBoxVisibility();
+    ESlateVisibility GetTownStatusBorderVisibility();
+    FText GetTownNameText();
+    ESlateVisibility GetTownNameBorderVisibility();
+    FText GetNumTentsText();
+    FText GetNumReinforcementSuppliesText();
+    FText GetNumHousesText();
+    ESlateVisibility GetDeploymentPointVisibility();
+}; // Size: 0x338
+
 class UDeploymentScreen : public UAnvilScreen
 {
     class UNewMapWidget* MapWidget;                                                   // 0x0290 (size: 0x8)
@@ -1210,7 +1261,7 @@ class UDeploymentScreen : public UAnvilScreen
     bool IsRefreshButtonEnabled();
     ESlateVisibility GetThrobberVisibility();
     ESlateVisibility GetConnectingTextVisibility();
-}; // Size: 0x2E8
+}; // Size: 0x300
 
 class UDisclaimerWidget : public UUserWidget
 {
@@ -1238,12 +1289,9 @@ class UFactionSelectScreen : public UAnvilScreen
     class UButton* FactionMirrishButton;                                              // 0x0298 (size: 0x8)
     class UButton* FactionNovanButton;                                                // 0x02A0 (size: 0x8)
     class UAnvilButtonWidget* DeleteProfileButton;                                    // 0x02A8 (size: 0x8)
-    class UTextBlock* FactionAranicAtCapacityText;                                    // 0x02B0 (size: 0x8)
-    class UTextBlock* FactionMirrishAtCapacityText;                                   // 0x02B8 (size: 0x8)
-    class UTextBlock* FactionNovanAtCapacityText;                                     // 0x02C0 (size: 0x8)
-    class UThrobber* DownloadingThrobber;                                             // 0x02C8 (size: 0x8)
-    class UCheckBox* ServerBrowserCheckBox;                                           // 0x02D0 (size: 0x8)
-    class UHorizontalBox* ServerBrowserHorizontalBox;                                 // 0x02D8 (size: 0x8)
+    class UThrobber* DownloadingThrobber;                                             // 0x02B0 (size: 0x8)
+    class UCheckBox* ServerBrowserCheckBox;                                           // 0x02B8 (size: 0x8)
+    class UHorizontalBox* ServerBrowserHorizontalBox;                                 // 0x02C0 (size: 0x8)
 
     void OnFactionNovanButtonClicked();
     void OnFactionMirrishButtonClicked();
@@ -1256,10 +1304,7 @@ class UFactionSelectScreen : public UAnvilScreen
     ESlateVisibility GetThrobberVisibility();
     ESlateVisibility GetServerBrowserCheckBoxVisibility();
     ESlateVisibility GetDeleteProfileButtonVisibility();
-    ESlateVisibility FactionNovanAtCapacityVisibility();
-    ESlateVisibility FactionMirrishAtCapacityVisibility();
-    ESlateVisibility FactionAranicAtCapacityVisibility();
-}; // Size: 0x318
+}; // Size: 0x2C8
 
 class UFamilyAreaMarkerWindow : public UStructureWindow
 {
@@ -1578,17 +1623,6 @@ class UMapIcon : public UUserWidget
     ESlateVisibility GetIconVisibility();
 }; // Size: 0x388
 
-class UMapItemWidget : public UUserWidget
-{
-    class UButton* MapItemButton;                                                     // 0x0278 (size: 0x8)
-    class UImage* MapItemImage;                                                       // 0x0280 (size: 0x8)
-    class UNewMapWidget* ParentMapWidget;                                             // 0x0288 (size: 0x8)
-    class UCanvasPanelSlot* ParentSlot;                                               // 0x0290 (size: 0x8)
-
-    void OnMapItemClicked();
-    ESlateVisibility GetItemVisibility();
-}; // Size: 0x2C8
-
 class UMapMarkerComponent : public UActorComponent
 {
     FMapIconInstanceProperty MapIconProperty;                                         // 0x00A0 (size: 0x88)
@@ -1680,7 +1714,7 @@ class UMarketShopWindow : public UStructureWindow
 
 class UNewMapWidget : public UUserWidget
 {
-    TSubclassOf<class UMapItemWidget> MapItemWidgetClass;                             // 0x0278 (size: 0x8)
+    TSubclassOf<class UDeploymentPointWidget> MapItemWidgetClass;                     // 0x0278 (size: 0x8)
     float ZoomSpeed;                                                                  // 0x0280 (size: 0x4)
     float ZoomMax;                                                                    // 0x0284 (size: 0x4)
     float ZoomAnimationTime;                                                          // 0x0288 (size: 0x4)

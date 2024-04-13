@@ -107,6 +107,15 @@ EConnectionFailedReason = {
     EConnectionFailedReason_MAX = 4,
 }
 
+---@enum EDeploymentPointType
+EDeploymentPointType = {
+    WildSpawn = 0,
+    TownHall = 1,
+    LargeCamp = 2,
+    SmallCamp = 3,
+    EDeploymentPointType_MAX = 4,
+}
+
 ---@enum EEquippedItemGripType
 EEquippedItemGripType = {
     NoWeapon = 0,

@@ -5,6 +5,7 @@
 UENUM(BlueprintType)
 enum class EChatType : uint8 {
     WORLD,
+    WORLD_TEAM,
     LOCAL,
     TEAM,
     TOWN,

@@ -166,6 +166,9 @@ AServerPartition = {}
 
 ---@class AUIGlobals : AInfo
 ---@field TooltipClass TSubclassOf<UUserWidget>
+---@field TownNames1 TArray<FText>
+---@field TownNames2 TArray<FText>
+---@field TownNames3 TArray<FText>
 AUIGlobals = {}
 
 
@@ -746,14 +749,19 @@ FDecayData = {}
 
 ---@class FDeleteProfileResponse
 ---@field bDeletedProfile boolean
----@field LockedFactionId uint8
+---@field ProfileInfo FProfileInfoResponse
 FDeleteProfileResponse = {}
 
 
 
----@class FFactionCapacities
----@field CapacityArray TArray<boolean>
-FFactionCapacities = {}
+---@class FDeploymentPointInfo
+---@field Type EDeploymentPointType
+---@field CodeName uint32
+---@field EntityId uint64
+---@field FactionId uint8
+---@field WorldPos FVector
+---@field TownHallDeploymentInfo FTownHallDeploymentInfo
+FDeploymentPointInfo = {}
 
 
 
@@ -824,11 +832,15 @@ FMapIconTypeProperty = {}
 
 
 
----@class FMapItem
----@field CodeName uint32
----@field FactionId uint8
----@field WorldPos FVector
-FMapItem = {}
+---@class FProfileInfoResponse
+---@field OnlineId uint64
+---@field LockedFactionId uint8
+---@field bIsAdmin boolean
+---@field PledgedTownHallMapHash uint32
+---@field PledgedTownHallTownHallId uint32
+---@field PledgedMilitiaMapHash uint32
+---@field PledgedMilitiaTownHallId uint32
+FProfileInfoResponse = {}
 
 
 
@@ -844,8 +856,8 @@ FQueueStatusResponse = {}
 ---@field ServerName FString
 ---@field ServerAddress FString
 ---@field MapName FString
----@field FactionCapacityArray TArray<boolean>
----@field MapItemList TArray<FMapItem>
+---@field FactionCapacities TArray<boolean>
+---@field DeploymentPointList TArray<FDeploymentPointInfo>
 FServerListEntry = {}
 
 
@@ -858,6 +870,19 @@ FServerListResponse = {}
 
 ---@class FServerRegion
 FServerRegion = {}
+
+
+---@class FTownHallDeploymentInfo
+---@field TownHallId uint32
+---@field TownNameOrdinal uint8
+---@field TownNameId uint8
+---@field NumTotalHouses int32
+---@field NumUnclaimedHouses int32
+---@field NumTotalTents int32
+---@field NumUnclaimedTents int32
+---@field NumReinforcementSupplies int32
+FTownHallDeploymentInfo = {}
+
 
 
 ---@class FVoiceLoginInfo
@@ -1265,6 +1290,41 @@ UDeathMarketMapIcon = {}
 function UDeathMarketMapIcon:OnLastDeathLocationChanged(OldVal, NewVal) end
 
 
+---@class UDeploymentPointWidget : UUserWidget
+---@field MapItemButton UButton
+---@field MapItemImage UImage
+---@field TownStatusVerticalBox UVerticalBox
+---@field TownNameBorder UBorder
+---@field TownNameText UTextBlock
+---@field TownStatusBorder UBorder
+---@field NumHousesStatus UStatusWidget
+---@field NumTentsStatus UStatusWidget
+---@field NumReinforcementSuppliesStatus UStatusWidget
+---@field ParentMapWidget UNewMapWidget
+---@field ParentSlot UCanvasPanelSlot
+UDeploymentPointWidget = {}
+
+function UDeploymentPointWidget:OnDeploymentPointClicked() end
+---@return boolean
+function UDeploymentPointWidget:IsDeploymentPointEnabled() end
+---@return ESlateVisibility
+function UDeploymentPointWidget:GetTownStatusVerticalBoxVisibility() end
+---@return ESlateVisibility
+function UDeploymentPointWidget:GetTownStatusBorderVisibility() end
+---@return FText
+function UDeploymentPointWidget:GetTownNameText() end
+---@return ESlateVisibility
+function UDeploymentPointWidget:GetTownNameBorderVisibility() end
+---@return FText
+function UDeploymentPointWidget:GetNumTentsText() end
+---@return FText
+function UDeploymentPointWidget:GetNumReinforcementSuppliesText() end
+---@return FText
+function UDeploymentPointWidget:GetNumHousesText() end
+---@return ESlateVisibility
+function UDeploymentPointWidget:GetDeploymentPointVisibility() end
+
+
 ---@class UDeploymentScreen : UAnvilScreen
 ---@field MapWidget UNewMapWidget
 ---@field Throbber UThrobber
@@ -1310,9 +1370,6 @@ UEntityActorRootComponent = {}
 ---@field FactionMirrishButton UButton
 ---@field FactionNovanButton UButton
 ---@field DeleteProfileButton UAnvilButtonWidget
----@field FactionAranicAtCapacityText UTextBlock
----@field FactionMirrishAtCapacityText UTextBlock
----@field FactionNovanAtCapacityText UTextBlock
 ---@field DownloadingThrobber UThrobber
 ---@field ServerBrowserCheckBox UCheckBox
 ---@field ServerBrowserHorizontalBox UHorizontalBox
@@ -1336,12 +1393,6 @@ function UFactionSelectScreen:GetThrobberVisibility() end
 function UFactionSelectScreen:GetServerBrowserCheckBoxVisibility() end
 ---@return ESlateVisibility
 function UFactionSelectScreen:GetDeleteProfileButtonVisibility() end
----@return ESlateVisibility
-function UFactionSelectScreen:FactionNovanAtCapacityVisibility() end
----@return ESlateVisibility
-function UFactionSelectScreen:FactionMirrishAtCapacityVisibility() end
----@return ESlateVisibility
-function UFactionSelectScreen:FactionAranicAtCapacityVisibility() end
 
 
 ---@class UFamilyAreaMarkerWindow : UStructureWindow
@@ -1682,18 +1733,6 @@ function UMapIcon:IsIconEnabled() end
 function UMapIcon:GetIconVisibility() end
 
 
----@class UMapItemWidget : UUserWidget
----@field MapItemButton UButton
----@field MapItemImage UImage
----@field ParentMapWidget UNewMapWidget
----@field ParentSlot UCanvasPanelSlot
-UMapItemWidget = {}
-
-function UMapItemWidget:OnMapItemClicked() end
----@return ESlateVisibility
-function UMapItemWidget:GetItemVisibility() end
-
-
 ---@class UMapMarkerComponent : UActorComponent
 ---@field MapIconProperty FMapIconInstanceProperty
 UMapMarkerComponent = {}
@@ -1795,7 +1834,7 @@ function UMarketShopWindow:GetSilverAmountText() end
 
 
 ---@class UNewMapWidget : UUserWidget
----@field MapItemWidgetClass TSubclassOf<UMapItemWidget>
+---@field MapItemWidgetClass TSubclassOf<UDeploymentPointWidget>
 ---@field ZoomSpeed float
 ---@field ZoomMax float
 ---@field ZoomAnimationTime float

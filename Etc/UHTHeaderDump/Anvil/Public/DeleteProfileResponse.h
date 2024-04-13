@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ProfileInfoResponse.h"
 #include "DeleteProfileResponse.generated.h"
 
 USTRUCT(BlueprintType)
@@ -10,7 +11,7 @@ public:
     bool bDeletedProfile;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 LockedFactionId;
+    FProfileInfoResponse ProfileInfo;
     
     ANVIL_API FDeleteProfileResponse();
 };

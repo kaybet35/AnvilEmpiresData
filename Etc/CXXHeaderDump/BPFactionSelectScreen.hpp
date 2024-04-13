@@ -3,10 +3,10 @@
 
 class UBPFactionSelectScreen_C : public UFactionSelectScreen
 {
-    class UImage* BackgroundImage;                                                    // 0x0318 (size: 0x8)
-    class UImage* BlackBG;                                                            // 0x0320 (size: 0x8)
-    class UTextBlock* FactionAranicAtCapacityText_1;                                  // 0x0328 (size: 0x8)
+    class UImage* BackgroundImage;                                                    // 0x02C8 (size: 0x8)
+    class UImage* BlackBG;                                                            // 0x02D0 (size: 0x8)
+    class UTextBlock* FactionAranicAtCapacityText_1;                                  // 0x02D8 (size: 0x8)
 
-}; // Size: 0x330
+}; // Size: 0x2E0
 
 #endif

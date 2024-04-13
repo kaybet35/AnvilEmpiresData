@@ -198,7 +198,7 @@ FMovieSceneEvaluationFieldEntity = {}
 
 ---@class FMovieSceneEvaluationFieldEntityKey
 ---@field EntityOwner TWeakObjectPtr<UObject>
----@field EntityID uint32
+---@field EntityId uint32
 FMovieSceneEvaluationFieldEntityKey = {}
 
 

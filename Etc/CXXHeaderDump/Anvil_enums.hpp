@@ -99,6 +99,14 @@ enum class EConnectionFailedReason {
     EConnectionFailedReason_MAX = 4,
 };
 
+enum class EDeploymentPointType {
+    WildSpawn = 0,
+    TownHall = 1,
+    LargeCamp = 2,
+    SmallCamp = 3,
+    EDeploymentPointType_MAX = 4,
+};
+
 enum class EEquippedItemGripType {
     NoWeapon = 0,
     LargeItem = 1,

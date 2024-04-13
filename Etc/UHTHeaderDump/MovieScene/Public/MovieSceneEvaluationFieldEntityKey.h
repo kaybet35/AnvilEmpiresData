@@ -12,7 +12,7 @@ public:
     TWeakObjectPtr<UObject> EntityOwner;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint32 EntityID;
+    uint32 EntityId;
     
     MOVIESCENE_API FMovieSceneEvaluationFieldEntityKey();
 };

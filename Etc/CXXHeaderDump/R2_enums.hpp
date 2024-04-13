@@ -676,14 +676,15 @@ enum class EAnvilVehicleInputState {
 
 enum class EChatType {
     WORLD = 0,
-    LOCAL = 1,
-    TEAM = 2,
-    TOWN = 3,
-    ADMIN = 4,
-    ALERT = 5,
-    COMMAND_LIST = 6,
-    PLAYER_LIST = 7,
-    EChatType_MAX = 8,
+    WORLD_TEAM = 1,
+    LOCAL = 2,
+    TEAM = 3,
+    TOWN = 4,
+    ADMIN = 5,
+    ALERT = 6,
+    COMMAND_LIST = 7,
+    PLAYER_LIST = 8,
+    EChatType_MAX = 9,
 };
 
 enum class EEntityRelevancyPolicy {

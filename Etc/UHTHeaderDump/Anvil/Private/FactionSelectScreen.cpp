@@ -5,9 +5,6 @@ UFactionSelectScreen::UFactionSelectScreen() {
     this->FactionMirrishButton = NULL;
     this->FactionNovanButton = NULL;
     this->DeleteProfileButton = NULL;
-    this->FactionAranicAtCapacityText = NULL;
-    this->FactionMirrishAtCapacityText = NULL;
-    this->FactionNovanAtCapacityText = NULL;
     this->DownloadingThrobber = NULL;
     this->ServerBrowserCheckBox = NULL;
     this->ServerBrowserHorizontalBox = NULL;
@@ -50,18 +47,6 @@ ESlateVisibility UFactionSelectScreen::GetServerBrowserCheckBoxVisibility() {
 }
 
 ESlateVisibility UFactionSelectScreen::GetDeleteProfileButtonVisibility() {
-    return ESlateVisibility::Visible;
-}
-
-ESlateVisibility UFactionSelectScreen::FactionNovanAtCapacityVisibility() {
-    return ESlateVisibility::Visible;
-}
-
-ESlateVisibility UFactionSelectScreen::FactionMirrishAtCapacityVisibility() {
-    return ESlateVisibility::Visible;
-}
-
-ESlateVisibility UFactionSelectScreen::FactionAranicAtCapacityVisibility() {
     return ESlateVisibility::Visible;
 }
 

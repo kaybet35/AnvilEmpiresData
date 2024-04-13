@@ -8,7 +8,6 @@ class UAnvilButtonWidget;
 class UButton;
 class UCheckBox;
 class UHorizontalBox;
-class UTextBlock;
 class UThrobber;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -27,15 +26,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAnvilButtonWidget* DeleteProfileButton;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* FactionAranicAtCapacityText;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* FactionMirrishAtCapacityText;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* FactionNovanAtCapacityText;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UThrobber* DownloadingThrobber;
@@ -82,15 +72,6 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetDeleteProfileButtonVisibility();
-    
-    UFUNCTION(BlueprintCallable)
-    ESlateVisibility FactionNovanAtCapacityVisibility();
-    
-    UFUNCTION(BlueprintCallable)
-    ESlateVisibility FactionMirrishAtCapacityVisibility();
-    
-    UFUNCTION(BlueprintCallable)
-    ESlateVisibility FactionAranicAtCapacityVisibility();
     
 };
 
