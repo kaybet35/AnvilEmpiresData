@@ -154,7 +154,7 @@ struct FDeploymentPointInfo
     uint64 EntityId;                                                                  // 0x0008 (size: 0x8)
     uint8 FactionId;                                                                  // 0x0010 (size: 0x1)
     FVector WorldPos;                                                                 // 0x0018 (size: 0x18)
-    FTownHallDeploymentInfo TownHallDeploymentInfo;                                   // 0x0030 (size: 0x1C)
+    FTownHallDeploymentInfo TownHallDeploymentInfo;                                   // 0x0030 (size: 0x20)
 
 }; // Size: 0x50
 
@@ -277,8 +277,9 @@ struct FTownHallDeploymentInfo
     int32 NumTotalTents;                                                              // 0x0010 (size: 0x4)
     int32 NumUnclaimedTents;                                                          // 0x0014 (size: 0x4)
     int32 NumReinforcementSupplies;                                                   // 0x0018 (size: 0x4)
+    bool bTownUnderAttack;                                                            // 0x001C (size: 0x1)
 
-}; // Size: 0x1C
+}; // Size: 0x20
 
 struct FVoiceLoginInfo
 {
@@ -572,8 +573,12 @@ class AVisEffect : public AVisActor
 class AVisFamilyMarkerArea : public AVisStructure
 {
     class UFamilyAreaMarkerDataComponent* FamilyAreaMarkerDataComponent;              // 0x0480 (size: 0x8)
+    class UDecalComponent* BuildAreaDecalComponent;                                   // 0x0488 (size: 0x8)
+    class UMaterialInterface* BuildAreaDecalAranic;                                   // 0x0490 (size: 0x8)
+    class UMaterialInterface* BuildAreaDecalMirrish;                                  // 0x0498 (size: 0x8)
+    class UMaterialInterface* BuildAreaDecalNovan;                                    // 0x04A0 (size: 0x8)
 
-}; // Size: 0x488
+}; // Size: 0x4A8
 
 class AVisFarm : public AVisStructure
 {
@@ -783,11 +788,12 @@ class AVisResource : public AVisActor
     class UResourceDataComponent* ResourceDataComponent;                              // 0x03F0 (size: 0x8)
     class UPlantGrowthDataComponent* PlantGrowthComponent;                            // 0x03F8 (size: 0x8)
     TArray<class UStaticMesh*> StageMeshes;                                           // 0x0400 (size: 0x10)
-    class UArrowComponent* ArrowComponent;                                            // 0x0410 (size: 0x8)
-    class UStaticMeshComponent* Mesh;                                                 // 0x0418 (size: 0x8)
-    class UCurveVector* ShakeCurve;                                                   // 0x0420 (size: 0x8)
+    bool bApplyIdBasedRandomRotation;                                                 // 0x0410 (size: 0x1)
+    class UArrowComponent* ArrowComponent;                                            // 0x0418 (size: 0x8)
+    class UStaticMeshComponent* Mesh;                                                 // 0x0420 (size: 0x8)
+    class UCurveVector* ShakeCurve;                                                   // 0x0428 (size: 0x8)
 
-}; // Size: 0x438
+}; // Size: 0x440
 
 class AVisRichSoil : public AVisActor
 {
@@ -991,17 +997,17 @@ class UAnvilGameInstance : public UGameInstance
 {
     class UMapWidget* MapWidget;                                                      // 0x0230 (size: 0x8)
     class UHUDWidget* HUDWidget;                                                      // 0x0238 (size: 0x8)
-    FString TravelAddress;                                                            // 0x0298 (size: 0x10)
-    TArray<uint8> ConnectTokenBuffer;                                                 // 0x02A8 (size: 0x10)
-    class UAnvilCharacterSave* CharacterSave;                                         // 0x02B8 (size: 0x8)
-    class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x02C0 (size: 0x8)
-    FAnvilAssetManager AssetManager;                                                  // 0x02C8 (size: 0x168)
-    FAnvilOptionsManager OptionsManager;                                              // 0x0430 (size: 0x1A0)
-    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x05D0 (size: 0x8)
-    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x05D8 (size: 0x10)
-    TArray<class AVisActor*> VisActorList;                                            // 0x05E8 (size: 0x10)
-    TArray<class AVisActor*> TravelVisActorList;                                      // 0x05F8 (size: 0x10)
-    FClientConfigManager ClientConfigManager;                                         // 0x0608 (size: 0x68)
+    FString TravelAddress;                                                            // 0x02A0 (size: 0x10)
+    TArray<uint8> ConnectTokenBuffer;                                                 // 0x02B0 (size: 0x10)
+    class UAnvilCharacterSave* CharacterSave;                                         // 0x02C0 (size: 0x8)
+    class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x02C8 (size: 0x8)
+    FAnvilAssetManager AssetManager;                                                  // 0x02D0 (size: 0x168)
+    FAnvilOptionsManager OptionsManager;                                              // 0x0438 (size: 0x1A0)
+    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x05D8 (size: 0x8)
+    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x05E0 (size: 0x10)
+    TArray<class AVisActor*> VisActorList;                                            // 0x05F0 (size: 0x10)
+    TArray<class AVisActor*> TravelVisActorList;                                      // 0x0600 (size: 0x10)
+    FClientConfigManager ClientConfigManager;                                         // 0x0610 (size: 0x68)
 
     void GetVisActors(TArray<class AVisActor*>& OutVisActorList);
     void GetVersion(int32& OutMajor, int32& OutMinor, int32& OutPatch, int32& OutCL);
@@ -1010,7 +1016,7 @@ class UAnvilGameInstance : public UGameInstance
     bool GetIsNight();
     void GetDayCurrentSeconds(int32& OutSeconds);
     void DumpProperties(FString OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter);
-}; // Size: 0x1698
+}; // Size: 0x16A0
 
 class UAnvilKeyEntryWidget : public UUserWidget
 {
@@ -1131,7 +1137,9 @@ class UBuildMenuStructureButton : public UGridItemWidget
 
 class UBuildMenuTabButton : public UGridItemWidget
 {
-}; // Size: 0x2F0
+    class UImage* SelectedImage;                                                      // 0x02F0 (size: 0x8)
+
+}; // Size: 0x300
 
 class UBuildMenuWindow : public UHUDWindow
 {
@@ -1140,9 +1148,8 @@ class UBuildMenuWindow : public UHUDWindow
     TSubclassOf<class UBuildMenuTabButton> TabButtonClass;                            // 0x02C0 (size: 0x8)
     TMap<class EBuildSiteCategory, class UTexture2D*> TabButtonIcons;                 // 0x02C8 (size: 0x50)
     int32 BuildLocation;                                                              // 0x0318 (size: 0x4)
-    class UBuildMenuTabButton* CurrentTabButton;                                      // 0x0320 (size: 0x8)
 
-}; // Size: 0x330
+}; // Size: 0x320
 
 class UChatEntryWidget : public UUserWidget
 {
@@ -1237,7 +1244,9 @@ class UDeploymentPointWidget : public UUserWidget
     class UStatusWidget* NumHousesStatus;                                             // 0x02A8 (size: 0x8)
     class UStatusWidget* NumTentsStatus;                                              // 0x02B0 (size: 0x8)
     class UStatusWidget* NumReinforcementSuppliesStatus;                              // 0x02B8 (size: 0x8)
-    class UCanvasPanelSlot* ParentSlot;                                               // 0x02C0 (size: 0x8)
+    float FlashingFrequency;                                                          // 0x02C0 (size: 0x4)
+    float FlashingMinOpacity;                                                         // 0x02C4 (size: 0x4)
+    class UCanvasPanelSlot* ParentSlot;                                               // 0x02C8 (size: 0x8)
 
     void OnDeploymentPointClicked();
     bool IsDeploymentPointEnabled();
@@ -1250,7 +1259,7 @@ class UDeploymentPointWidget : public UUserWidget
     ESlateVisibility GetNumHousesVisibility();
     FText GetNumHousesText();
     ESlateVisibility GetDeploymentPointVisibility();
-}; // Size: 0x360
+}; // Size: 0x368
 
 class UDeploymentScreen : public UAnvilScreen
 {
@@ -1312,13 +1321,15 @@ class UFactionSelectScreen : public UAnvilScreen
 class UFamilyAreaMarkerWindow : public UStructureWindow
 {
     class UScrollBox* FamilyMembersScrollBox;                                         // 0x02D8 (size: 0x8)
-    TSubclassOf<class UFamilyMemberListItemWidget> FamilyMemberListItemWidgetType;    // 0x02E0 (size: 0x8)
-    class UCheckBox* FamilyAreaRestrictedCheckBox;                                    // 0x02E8 (size: 0x8)
+    class UImage* TaxIcon;                                                            // 0x02E0 (size: 0x8)
+    class UTextBlock* TaxTextBlock;                                                   // 0x02E8 (size: 0x8)
+    TSubclassOf<class UFamilyMemberListItemWidget> FamilyMemberListItemWidgetType;    // 0x02F0 (size: 0x8)
+    class UCheckBox* FamilyAreaRestrictedCheckBox;                                    // 0x02F8 (size: 0x8)
 
     void OnFamilyAreaRestrictedChecked(bool bIsChecked);
     ESlateVisibility GetFamilyAreaRestrictedVisibility();
     ECheckBoxState GetFamilyAreaRestrictedCheckedState();
-}; // Size: 0x2F0
+}; // Size: 0x300
 
 class UFamilyMemberListItemWidget : public UUserWidget
 {
@@ -1868,9 +1879,9 @@ class UPledgedPlayerListItem : public UUserWidget
     class UTextBlock* PlayerTownCurrencyText;                                         // 0x0298 (size: 0x8)
     class UCheckBox* VoteButton;                                                      // 0x02A0 (size: 0x8)
     class UImage* OnlineStatusIcon;                                                   // 0x02A8 (size: 0x8)
-    TMap<class EPledgedOnlineStatus, class UTexture2D*> OnlineStatusIconMap;          // 0x02B0 (size: 0x50)
-    TMap<class EPledgedOnlineStatus, class FSlateColor> OnlineStatusColorMap;         // 0x0300 (size: 0x50)
-    TMap<class EPledgedOnlineStatus, class FSlateColor> OnlineStatusTownCurrencyColorMap; // 0x0350 (size: 0x50)
+    TMap<class EAnvilPledgedOnlineStatus, class UTexture2D*> OnlineStatusIconMap;     // 0x02B0 (size: 0x50)
+    TMap<class EAnvilPledgedOnlineStatus, class FSlateColor> OnlineStatusColorMap;    // 0x0300 (size: 0x50)
+    TMap<class EAnvilPledgedOnlineStatus, class FSlateColor> OnlineStatusTownCurrencyColorMap; // 0x0350 (size: 0x50)
 
     void OnVoteChecked(bool bIsChecked);
 }; // Size: 0x3A8
@@ -2117,10 +2128,6 @@ class UVisBalljointComponent : public USceneComponent
 
 }; // Size: 0x2E0
 
-class UVisBatteringRamAnimInstance : public UVisCartAnimInstance
-{
-}; // Size: 0x360
-
 class UVisBuildGhostComponent : public UActorComponent
 {
     FLinearColor ValidPlacementColour;                                                // 0x00A0 (size: 0x10)
@@ -2145,13 +2152,8 @@ class UVisCanalWaterControllerComponent : public USceneComponent
     void OnCurrentUpdate();
 }; // Size: 0x320
 
-class UVisCartAnimInstance : public UAnimInstance
+class UVisCartAnimInstance : public UVisVehicleAnimInstance
 {
-    float NativeSpeed;                                                                // 0x0348 (size: 0x4)
-    float NativeHorizontalMovement;                                                   // 0x034C (size: 0x4)
-    float NativeVerticalMovement;                                                     // 0x0350 (size: 0x4)
-    bool bIsOccupied;                                                                 // 0x0354 (size: 0x1)
-
 }; // Size: 0x360
 
 class UVisFoundationDecorMesh : public UStaticMeshComponent
@@ -2163,10 +2165,6 @@ class UVisGateAnimInstance : public UAnimInstance
     bool bIsOpen;                                                                     // 0x0348 (size: 0x1)
 
 }; // Size: 0x350
-
-class UVisHorseAnimInstance : public UVisCartAnimInstance
-{
-}; // Size: 0x360
 
 class UVisItem : public UObject
 {
@@ -2330,6 +2328,15 @@ class UVisTownAreaMarkerDecalComponent : public UDecalComponent
 
     void SetRangeParameters(const EAnvilFactionId FactionId, float Radius);
 }; // Size: 0x310
+
+class UVisVehicleAnimInstance : public UAnimInstance
+{
+    float NativeSpeed;                                                                // 0x0348 (size: 0x4)
+    float NativeHorizontalMovement;                                                   // 0x034C (size: 0x4)
+    float NativeVerticalMovement;                                                     // 0x0350 (size: 0x4)
+    bool bIsOccupied;                                                                 // 0x0354 (size: 0x1)
+
+}; // Size: 0x360
 
 class UVitalityStatusWidget : public UUserWidget
 {

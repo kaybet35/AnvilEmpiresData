@@ -3,6 +3,6 @@
 
 class UBPDeploymentPointWidget_C : public UDeploymentPointWidget
 {
-}; // Size: 0x360
+}; // Size: 0x368
 
 #endif

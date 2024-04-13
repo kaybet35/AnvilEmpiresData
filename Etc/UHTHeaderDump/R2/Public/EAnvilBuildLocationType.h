@@ -12,12 +12,13 @@ enum class EAnvilBuildLocationType : uint8 {
     Marketplace,
     Industry,
     Shore,
-    UnderFoundationCeiling,
+    RequresCeiling,
     AdditionalCollisionAllowWater,
     Deployed,
     Stable,
     FamilyArea,
     Static,
     House,
+    RequiresEnclosure,
 };
 

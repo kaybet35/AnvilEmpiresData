@@ -8,7 +8,9 @@
 
 class UCheckBox;
 class UFamilyMemberListItemWidget;
+class UImage;
 class UScrollBox;
+class UTextBlock;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UFamilyAreaMarkerWindow : public UStructureWindow {
@@ -17,6 +19,12 @@ public:
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UScrollBox* FamilyMembersScrollBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UImage* TaxIcon;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* TaxTextBlock;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UFamilyMemberListItemWidget> FamilyMemberListItemWidgetType;

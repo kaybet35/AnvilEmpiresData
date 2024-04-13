@@ -5,7 +5,6 @@ UBuildMenuWindow::UBuildMenuWindow() {
     this->StructureButtonGrid = NULL;
     this->TabButtonClass = NULL;
     this->BuildLocation = 0;
-    this->CurrentTabButton = NULL;
 }
 
 

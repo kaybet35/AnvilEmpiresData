@@ -292,6 +292,10 @@ AVisEffect = {}
 
 ---@class AVisFamilyMarkerArea : AVisStructure
 ---@field FamilyAreaMarkerDataComponent UFamilyAreaMarkerDataComponent
+---@field BuildAreaDecalComponent UDecalComponent
+---@field BuildAreaDecalAranic UMaterialInterface
+---@field BuildAreaDecalMirrish UMaterialInterface
+---@field BuildAreaDecalNovan UMaterialInterface
 AVisFamilyMarkerArea = {}
 
 
@@ -514,6 +518,7 @@ AVisRelicTechCenter = {}
 ---@field ResourceDataComponent UResourceDataComponent
 ---@field PlantGrowthComponent UPlantGrowthDataComponent
 ---@field StageMeshes TArray<UStaticMesh>
+---@field bApplyIdBasedRandomRotation boolean
 ---@field ArrowComponent UArrowComponent
 ---@field Mesh UStaticMeshComponent
 ---@field ShakeCurve UCurveVector
@@ -885,6 +890,7 @@ FServerRegion = {}
 ---@field NumTotalTents int32
 ---@field NumUnclaimedTents int32
 ---@field NumReinforcementSupplies int32
+---@field bTownUnderAttack boolean
 FTownHallDeploymentInfo = {}
 
 
@@ -1183,7 +1189,9 @@ function UBuildMenuStructureButton:OnBuild(ItemSlot) end
 
 
 ---@class UBuildMenuTabButton : UGridItemWidget
+---@field SelectedImage UImage
 UBuildMenuTabButton = {}
+
 
 
 ---@class UBuildMenuWindow : UHUDWindow
@@ -1192,7 +1200,6 @@ UBuildMenuTabButton = {}
 ---@field TabButtonClass TSubclassOf<UBuildMenuTabButton>
 ---@field TabButtonIcons TMap<EBuildSiteCategory, UTexture2D>
 ---@field BuildLocation int32
----@field CurrentTabButton UBuildMenuTabButton
 UBuildMenuWindow = {}
 
 
@@ -1304,6 +1311,8 @@ function UDeathMarketMapIcon:OnLastDeathLocationChanged(OldVal, NewVal) end
 ---@field NumHousesStatus UStatusWidget
 ---@field NumTentsStatus UStatusWidget
 ---@field NumReinforcementSuppliesStatus UStatusWidget
+---@field FlashingFrequency float
+---@field FlashingMinOpacity float
 ---@field ParentSlot UCanvasPanelSlot
 UDeploymentPointWidget = {}
 
@@ -1401,6 +1410,8 @@ function UFactionSelectScreen:GetDeleteProfileButtonVisibility() end
 
 ---@class UFamilyAreaMarkerWindow : UStructureWindow
 ---@field FamilyMembersScrollBox UScrollBox
+---@field TaxIcon UImage
+---@field TaxTextBlock UTextBlock
 ---@field FamilyMemberListItemWidgetType TSubclassOf<UFamilyMemberListItemWidget>
 ---@field FamilyAreaRestrictedCheckBox UCheckBox
 UFamilyAreaMarkerWindow = {}
@@ -1996,9 +2007,9 @@ function UPledgedPlayerBox:OnVoteChecked(bIsChecked, PlayerId) end
 ---@field PlayerTownCurrencyText UTextBlock
 ---@field VoteButton UCheckBox
 ---@field OnlineStatusIcon UImage
----@field OnlineStatusIconMap TMap<EPledgedOnlineStatus, UTexture2D>
----@field OnlineStatusColorMap TMap<EPledgedOnlineStatus, FSlateColor>
----@field OnlineStatusTownCurrencyColorMap TMap<EPledgedOnlineStatus, FSlateColor>
+---@field OnlineStatusIconMap TMap<EAnvilPledgedOnlineStatus, UTexture2D>
+---@field OnlineStatusColorMap TMap<EAnvilPledgedOnlineStatus, FSlateColor>
+---@field OnlineStatusTownCurrencyColorMap TMap<EAnvilPledgedOnlineStatus, FSlateColor>
 UPledgedPlayerListItem = {}
 
 ---@param bIsChecked boolean
@@ -2259,10 +2270,6 @@ UVisBalljointComponent = {}
 
 
 
----@class UVisBatteringRamAnimInstance : UVisCartAnimInstance
-UVisBatteringRamAnimInstance = {}
-
-
 ---@class UVisBuildGhostComponent : UActorComponent
 ---@field ValidPlacementColour FLinearColor
 ---@field InvalidPlacementColour FLinearColor
@@ -2287,13 +2294,8 @@ function UVisCanalWaterControllerComponent:OnSplineUpdate() end
 function UVisCanalWaterControllerComponent:OnCurrentUpdate() end
 
 
----@class UVisCartAnimInstance : UAnimInstance
----@field NativeSpeed float
----@field NativeHorizontalMovement float
----@field NativeVerticalMovement float
----@field bIsOccupied boolean
+---@class UVisCartAnimInstance : UVisVehicleAnimInstance
 UVisCartAnimInstance = {}
-
 
 
 ---@class UVisFoundationDecorMesh : UStaticMeshComponent
@@ -2304,10 +2306,6 @@ UVisFoundationDecorMesh = {}
 ---@field bIsOpen boolean
 UVisGateAnimInstance = {}
 
-
-
----@class UVisHorseAnimInstance : UVisCartAnimInstance
-UVisHorseAnimInstance = {}
 
 
 ---@class UVisItem : UObject
@@ -2473,6 +2471,15 @@ UVisTownAreaMarkerDecalComponent = {}
 ---@param FactionId EAnvilFactionId
 ---@param Radius float
 function UVisTownAreaMarkerDecalComponent:SetRangeParameters(FactionId, Radius) end
+
+
+---@class UVisVehicleAnimInstance : UAnimInstance
+---@field NativeSpeed float
+---@field NativeHorizontalMovement float
+---@field NativeVerticalMovement float
+---@field bIsOccupied boolean
+UVisVehicleAnimInstance = {}
+
 
 
 ---@class UVitalityStatusWidget : UUserWidget

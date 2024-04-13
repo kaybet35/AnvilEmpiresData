@@ -48,7 +48,6 @@ enum class EAnvilStatusMessageType : uint8 {
     MissingResource,
     MissingHorse,
     VehicleMustBeEmpty,
-    VehicleInventoryMustBeEmpty,
     QueueIsFull,
     NotEnoughPayment,
     TownNotInRareResourceArea,
@@ -90,7 +89,7 @@ enum class EAnvilStatusMessageType : uint8 {
     BedAlreadyClaimed,
     BedMustHaveHouseOrTentAtTown,
     BedClaimCleared,
-    BedNotUnderCeiling,
+    BedNotEnclosed,
     HorseNotHungry,
     PvpIsNerfed,
     NoItemsForPacking,
@@ -103,6 +102,8 @@ enum class EAnvilStatusMessageType : uint8 {
     NotEnoughTownCurrency,
     TravelDestinationAtCapacity,
     UnableToIncreaseStatusUsingLocalCoin,
+    TaxesAreOverdue,
+    FamilyAreaClaimed,
     NumTypes,
 };
 

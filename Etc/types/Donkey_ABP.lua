@@ -36,7 +36,7 @@ FAnimBlueprintGeneratedMutableData = {}
 
 
 
----@class UDonkey_ABP_C : UVisHorseAnimInstance
+---@class UDonkey_ABP_C : UVisVehicleAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field __AnimBlueprintMutables FAnimBlueprintGeneratedMutableData
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance

@@ -79,31 +79,43 @@
         },
         "Disabled": {
           "DrawAs": "ESlateBrushDrawType::Image",
-          "ImageType": "ESlateBrushImageType::FullColor",
           "ImageSize": {
             "X": 64.0,
             "Y": 64.0
           },
-          "Margin": {
-            "Left": 0.25,
-            "Top": 0.25,
-            "Right": 0.25,
-            "Bottom": 0.25
-          },
           "TintColor": {
             "SpecifiedColor": {
-              "R": 0.508881,
-              "G": 0.346704,
-              "B": 0.0865,
-              "A": 1.0,
-              "Hex": "FFBD9F53"
+              "R": 0.7,
+              "G": 0.7,
+              "B": 0.7,
+              "A": 0.0,
+              "Hex": "DADADA"
             }
+          },
+          "OutlineSettings": {
+            "CornerRadii": {
+              "X": 4.0,
+              "Y": 4.0,
+              "Z": 4.0,
+              "W": 4.0
+            },
+            "Color": {
+              "SpecifiedColor": {
+                "R": 0.695111,
+                "G": 0.695111,
+                "B": 0.695111,
+                "A": 1.0,
+                "Hex": "FFDADADA"
+              }
+            },
+            "Width": 1.0,
+            "RoundingType": "ESlateBrushRoundingType::FixedRadius",
+            "bUseBrushTransparency": true
           },
           "ResourceObject": {
             "ObjectName": "Texture2D'FlatBG'",
             "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
-          },
-          "ResourceName": "../../../Engine/Content/Slate/Common/Button_Hovered.png"
+          }
         },
         "NormalPadding": {
           "Left": 0.0,
@@ -147,8 +159,8 @@
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuTabButton.1"
       },
       "Content": {
-        "ObjectName": "Image'BPBuildMenuTabButton_C:WidgetTree.ItemImage'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuTabButton.5"
+        "ObjectName": "Overlay'BPBuildMenuTabButton_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuTabButton.7"
       }
     }
   },
@@ -196,8 +208,92 @@
         }
       },
       "Slot": {
+        "ObjectName": "OverlaySlot'BPBuildMenuTabButton_C:WidgetTree.Overlay_0.OverlaySlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuTabButton.8"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "SelectedImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "ColorAndOpacity": {
+        "R": 0.508881,
+        "G": 0.346704,
+        "B": 0.0865,
+        "A": 0.5,
+        "Hex": "7FBD9F53"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'BPBuildMenuTabButton_C:WidgetTree.Overlay_0.OverlaySlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuTabButton.9"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'BPBuildMenuTabButton_C:WidgetTree.Overlay_0.OverlaySlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuTabButton.8"
+        },
+        {
+          "ObjectName": "OverlaySlot'BPBuildMenuTabButton_C:WidgetTree.Overlay_0.OverlaySlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuTabButton.9"
+        }
+      ],
+      "Slot": {
         "ObjectName": "ButtonSlot'BPBuildMenuTabButton_C:WidgetTree.Button.ButtonSlot_1'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuTabButton.2"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "Overlay_0",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 2.0,
+        "Top": 2.0,
+        "Right": 2.0,
+        "Bottom": 2.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'BPBuildMenuTabButton_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuTabButton.7"
+      },
+      "Content": {
+        "ObjectName": "Image'BPBuildMenuTabButton_C:WidgetTree.ItemImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuTabButton.5"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "Overlay_0",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'BPBuildMenuTabButton_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuTabButton.7"
+      },
+      "Content": {
+        "ObjectName": "Image'BPBuildMenuTabButton_C:WidgetTree.SelectedImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuTabButton.6"
       }
     }
   },
@@ -208,7 +304,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPBuildMenuTabButton_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuTabButton.7"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPBuildMenuTabButton.11"
       },
       "bClassRequiresNativeTick": true
     },

@@ -3,6 +3,6 @@
 
 class ABPVisWildCabbage_C : public AVisResource
 {
-}; // Size: 0x438
+}; // Size: 0x440
 
 #endif

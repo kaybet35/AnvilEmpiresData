@@ -36,12 +36,6 @@ public:
     float DetachMaxZDelta;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<UEntityTemplate> AttachedNewEntityType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<UEntityTemplate> DetachedNewEntityType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UEntityTemplate>> TargetEntityTypes;
     
     UEntityAttachableProxyComponent();

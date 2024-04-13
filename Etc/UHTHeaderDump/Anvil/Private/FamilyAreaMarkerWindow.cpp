@@ -2,6 +2,8 @@
 
 UFamilyAreaMarkerWindow::UFamilyAreaMarkerWindow() {
     this->FamilyMembersScrollBox = NULL;
+    this->TaxIcon = NULL;
+    this->TaxTextBlock = NULL;
     this->FamilyMemberListItemWidgetType = NULL;
     this->FamilyAreaRestrictedCheckBox = NULL;
 }

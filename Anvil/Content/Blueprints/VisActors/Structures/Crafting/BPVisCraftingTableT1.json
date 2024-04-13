@@ -16,9 +16,14 @@
         "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Structures/WoodCutterRefine_Cue.0"
       },
       "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
+        "X": -288.17285,
+        "Y": -37.85361,
         "Z": 600.0
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -176.64551,
+        "Roll": 0.0
       },
       "ComponentTags": [
         "Refining"
@@ -32,7 +37,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisCraftingTableT1_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.18"
       }
     },
     "SuperStruct": {
@@ -40,6 +45,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "RefineSound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "VisStaticMesh11",
@@ -53,62 +69,7 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "VisStaticMesh10",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStaticMeshComponent'",
-          "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "VisStaticMesh6",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStaticMeshComponent'",
-          "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "VisStaticMesh5",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStaticMeshComponent'",
-          "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "VisStaticMesh4",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStaticMeshComponent'",
-          "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "VisStaticMesh3",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStaticMeshComponent'",
-          "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "VisStaticMesh2",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -160,28 +121,6 @@
           "ObjectName": "Class'VisStaticMeshComponent'",
           "ObjectPath": "/Script/Anvil"
         }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "RefineSound",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'AudioComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "VisStaticMesh",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStaticMeshComponent'",
-          "ObjectPath": "/Script/Anvil"
-        }
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -210,7 +149,7 @@
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisCraftingTableT1_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.29"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.23"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconWorkbench'",
@@ -219,7 +158,7 @@
       "BuildSiteOrder": -10,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisCraftingTableT1_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.28"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.22"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisCraftingTableT1_C:HealthDataComponent'",
@@ -227,11 +166,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisCraftingTableT1_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.27"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.21"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisCraftingTableT1_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.26"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.20"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisCraftingTableT1_C:ScorchDataComponent'",
@@ -301,7 +240,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisCraftingTableT1_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.25"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.19"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisCraftingTableT1_C:ArrowComponent'",
@@ -381,7 +320,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisCraftingTableT1_C:VisStaticMesh8_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.39"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.28"
       },
       "VariableGuid": "0956EBC5-41089047-ED847380-51E3AB32",
       "InternalVariableName": "VisStaticMesh8"
@@ -399,30 +338,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisCraftingTableT1_C:VisStaticMesh9_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.40"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.29"
       },
       "VariableGuid": "78FD8238-426DEE80-9BC7F387-041B3FFE",
       "InternalVariableName": "VisStaticMesh9"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_13",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisStaticMeshComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisCraftingTableT1_C:VisStaticMesh4_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.35"
-      },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "B92EF71E-4DC1AAB5-6B1A38B9-8DA12B84",
-      "InternalVariableName": "VisStaticMesh4"
     }
   },
   {
@@ -437,48 +356,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisCraftingTableT1_C:VisStaticMesh5_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.36"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.26"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "3DD90CF7-4333C0F7-AB935ABF-4DAD4366",
       "InternalVariableName": "VisStaticMesh5"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_15",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisStaticMeshComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisCraftingTableT1_C:VisStaticMesh6_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.37"
-      },
-      "VariableGuid": "590B9E11-453AEC4B-89ADC798-0FC6A3A3",
-      "InternalVariableName": "VisStaticMesh6"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_16",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisStaticMeshComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisCraftingTableT1_C:VisStaticMesh10_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.30"
-      },
-      "VariableGuid": "67F23BE9-4EB06636-B379D7AA-986B1FB7",
-      "InternalVariableName": "VisStaticMesh10"
     }
   },
   {
@@ -493,54 +376,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisCraftingTableT1_C:VisStaticMesh11_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.31"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.24"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "1D41EF01-4F482D19-F6403293-21F69413",
       "InternalVariableName": "VisStaticMesh11"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_2",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisStaticMeshComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisCraftingTableT1_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.41"
-      },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.11"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.21"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.22"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.16"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.17"
-        }
-      ],
-      "VariableGuid": "159C68CF-43554964-4CB0D4B1-AC2A7C0C",
-      "InternalVariableName": "VisStaticMesh"
     }
   },
   {
@@ -555,7 +396,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisCraftingTableT1_C:VisStaticMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.32"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.25"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -571,42 +412,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_4",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisStaticMeshComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisCraftingTableT1_C:VisStaticMesh2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.33"
-      },
-      "VariableGuid": "048BC17A-4A215B89-8FDF25A3-7E756D0B",
-      "InternalVariableName": "VisStaticMesh2"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_5",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisStaticMeshComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisCraftingTableT1_C:VisStaticMesh3_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.34"
-      },
-      "VariableGuid": "5A393FAF-436A1CBB-A7227AB2-B99DE56F",
-      "InternalVariableName": "VisStaticMesh3"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_9",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -617,7 +422,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisCraftingTableT1_C:VisStaticMesh7_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.38"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.27"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -625,6 +430,10 @@
         {
           "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.11"
         }
       ],
       "VariableGuid": "CB8CD432-40810381-1C4DCF83-EE412BA1",
@@ -639,46 +448,30 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.19"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.20"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.16"
         },
         {
           "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.17"
         },
         {
           "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.14"
         },
         {
           "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.18"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.15"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.19"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.11"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.20"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.16"
         },
         {
           "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.23"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.17"
         },
         {
           "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_10'",
@@ -689,32 +482,16 @@
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.21"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.22"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_14'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.14"
         },
         {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_17'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.15"
         },
         {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.16"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.17"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.18"
+          "ObjectName": "SCS_Node'BPVisCraftingTableT1_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisCraftingTableT1.11"
         }
       ],
       "DefaultSceneRootNode": {
@@ -761,34 +538,6 @@
   },
   {
     "Type": "VisStaticMeshComponent",
-    "Name": "VisStaticMesh10_GEN_VARIABLE",
-    "Outer": "BPVisCraftingTableT1_C",
-    "Class": "UScriptClass'VisStaticMeshComponent'",
-    "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::Structure",
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'Ruler'",
-        "ObjectPath": "Anvil/Content/Meshes/Props/Ruler.2"
-      },
-      "RelativeLocation": {
-        "X": -17.221632,
-        "Y": -100.94908,
-        "Z": 131.32281
-      },
-      "RelativeRotation": {
-        "Pitch": 1.072663,
-        "Yaw": -6.9306684,
-        "Roll": 1.3893818
-      },
-      "ComponentTags": [
-        "Refining",
-        "Structure",
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "VisStaticMeshComponent",
     "Name": "VisStaticMesh11_GEN_VARIABLE",
     "Outer": "BPVisCraftingTableT1_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
@@ -799,9 +548,9 @@
         "ObjectPath": "Anvil/Content/Meshes/Props/WoodPile02.2"
       },
       "RelativeLocation": {
-        "X": 298.5402,
-        "Y": 217.93633,
-        "Z": 0.0
+        "X": -29.294844,
+        "Y": 179.25854,
+        "Z": 1.364242E-12
       },
       "RelativeRotation": {
         "Pitch": 0.0,
@@ -828,99 +577,9 @@
         "ObjectPath": "Anvil/Content/Meshes/Structures/Shavehorse.2"
       },
       "RelativeLocation": {
-        "X": 359.44696,
-        "Y": 8.604308,
-        "Z": 0.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 6.728619,
-        "Roll": 0.0
-      },
-      "ComponentTags": [
-        "Structure",
-        "Collision",
-        "ProjectToLandscape",
-        "RotateToLandscape"
-      ]
-    }
-  },
-  {
-    "Type": "VisStaticMeshComponent",
-    "Name": "VisStaticMesh2_GEN_VARIABLE",
-    "Outer": "BPVisCraftingTableT1_C",
-    "Class": "UScriptClass'VisStaticMeshComponent'",
-    "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::Structure",
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'StoneTools03'",
-        "ObjectPath": "Anvil/Content/Meshes/Props/StoneTools03.2"
-      },
-      "RelativeLocation": {
-        "X": 8.62778,
-        "Y": 119.5877,
-        "Z": 126.35124
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 20.000074,
-        "Roll": 0.0
-      },
-      "RelativeScale3D": {
-        "X": 0.55556536,
-        "Y": 0.55556536,
-        "Z": 0.55556536
-      },
-      "ComponentTags": [
-        "Refining",
-        "Structure",
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "VisStaticMeshComponent",
-    "Name": "VisStaticMesh3_GEN_VARIABLE",
-    "Outer": "BPVisCraftingTableT1_C",
-    "Class": "UScriptClass'VisStaticMeshComponent'",
-    "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::Structure",
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'Saw01'",
-        "ObjectPath": "Anvil/Content/Meshes/Props/Saw01.2"
-      },
-      "RelativeLocation": {
-        "X": 20.675896,
-        "Y": -32.99694,
-        "Z": 143.3271
-      },
-      "RelativeRotation": {
-        "Pitch": -5.2613294E-05,
-        "Yaw": -165.00331,
-        "Roll": 89.99982
-      },
-      "ComponentTags": [
-        "Refining",
-        "Structure",
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "VisStaticMeshComponent",
-    "Name": "VisStaticMesh4_GEN_VARIABLE",
-    "Outer": "BPVisCraftingTableT1_C",
-    "Class": "UScriptClass'VisStaticMeshComponent'",
-    "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscapeRotate",
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'WoodPile02'",
-        "ObjectPath": "Anvil/Content/Meshes/Props/WoodPile02.2"
-      },
-      "RelativeLocation": {
-        "X": 17.158226,
-        "Y": -162.68033,
-        "Z": 0.0
+        "X": 31.611925,
+        "Y": -30.073477,
+        "Z": 1.364242E-12
       },
       "RelativeRotation": {
         "Pitch": 0.0,
@@ -947,8 +606,8 @@
         "ObjectPath": "Anvil/Content/Meshes/Props/WoodPile03.2"
       },
       "RelativeLocation": {
-        "X": 367.0254,
-        "Y": -55.63295,
+        "X": 39.190353,
+        "Y": -94.31074,
         "Z": 3.0517578E-05
       },
       "RelativeRotation": {
@@ -966,34 +625,6 @@
   },
   {
     "Type": "VisStaticMeshComponent",
-    "Name": "VisStaticMesh6_GEN_VARIABLE",
-    "Outer": "BPVisCraftingTableT1_C",
-    "Class": "UScriptClass'VisStaticMeshComponent'",
-    "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::Structure",
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'Hammer'",
-        "ObjectPath": "Anvil/Content/Meshes/Props/Hammer.2"
-      },
-      "RelativeLocation": {
-        "X": 6.105625,
-        "Y": -177.15363,
-        "Z": 127.08701
-      },
-      "RelativeRotation": {
-        "Pitch": 1.3572698,
-        "Yaw": -13.199328,
-        "Roll": 2.5298665
-      },
-      "ComponentTags": [
-        "Refining",
-        "Structure",
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "VisStaticMeshComponent",
     "Name": "VisStaticMesh7_GEN_VARIABLE",
     "Outer": "BPVisCraftingTableT1_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
@@ -1004,9 +635,9 @@
         "ObjectPath": "Anvil/Content/Meshes/Structures/SawHorse.2"
       },
       "RelativeLocation": {
-        "X": 311.2739,
-        "Y": 227.30446,
-        "Z": 0.0
+        "X": -16.56114,
+        "Y": 188.62668,
+        "Z": 1.364242E-12
       },
       "RelativeRotation": {
         "Pitch": 0.0,
@@ -1064,35 +695,6 @@
         "Refining",
         "Structure",
         "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "VisStaticMeshComponent",
-    "Name": "VisStaticMesh_GEN_VARIABLE",
-    "Outer": "BPVisCraftingTableT1_C",
-    "Class": "UScriptClass'VisStaticMeshComponent'",
-    "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscapeRotate",
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'Workbench'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Workbench.2"
-      },
-      "RelativeLocation": {
-        "X": 70.10605,
-        "Y": -163.53244,
-        "Z": 0.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": -90.0,
-        "Roll": 0.0
-      },
-      "ComponentTags": [
-        "Structure",
-        "Collision",
-        "ProjectToLandscape",
-        "RotateToLandscape"
       ]
     }
   }

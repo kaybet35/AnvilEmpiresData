@@ -30,10 +30,6 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 BuildLocation;
     
-private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UBuildMenuTabButton* CurrentTabButton;
-    
 public:
     UBuildMenuWindow();
 

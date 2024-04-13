@@ -41,7 +41,7 @@ struct FAnimBlueprintGeneratedMutableData : public FAnimBlueprintMutableData
 
 }; // Size: 0x20
 
-class UHorse_ABP_C : public UVisHorseAnimInstance
+class UHorse_ABP_C : public UVisVehicleAnimInstance
 {
     FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0360 (size: 0x8)
     FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                       // 0x0368 (size: 0x20)

@@ -30,7 +30,7 @@ FAnimBlueprintGeneratedMutableData = {}
 
 
 
----@class UBatteringRam_ABP_C : UVisBatteringRamAnimInstance
+---@class UBatteringRam_ABP_C : UVisVehicleAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field __AnimBlueprintMutables FAnimBlueprintGeneratedMutableData
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance

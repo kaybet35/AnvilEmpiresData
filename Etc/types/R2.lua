@@ -668,8 +668,6 @@ UEntityAttachableDataComponent = {}
 ---@field AngleTolerance float
 ---@field DistanceTolerance float
 ---@field DetachMaxZDelta float
----@field AttachedNewEntityType TSubclassOf<UEntityTemplate>
----@field DetachedNewEntityType TSubclassOf<UEntityTemplate>
 ---@field TargetEntityTypes TArray<TSubclassOf<UEntityTemplate>>
 UEntityAttachableProxyComponent = {}
 
@@ -707,17 +705,23 @@ UEquipmentProxyComponent = {}
 ---@class UFamilyAreaMarkerDataComponent : UDataComponent
 ---@field FamilyId int32
 ---@field AllowPublicPledging boolean
+---@field Tier uint8
+---@field ExtensionTier uint8
 ---@field ClaimTownCurrencyCost int32
 ---@field FamilyMembers TArray<FFamilyMemberData>
 ---@field VisVarMaxNumFamilyMembers int32
 ---@field VisVarRestrictedBoxExtent float
 ---@field ParentFamilyArea int64
+---@field IsFamilyAreaCore uint8
+---@field NumChildAreas uint8
 UFamilyAreaMarkerDataComponent = {}
 
 
 
 ---@class UFamilyAreaMarkerProxyComponent : UProxyComponent
+---@field Tier uint8
 ---@field ClaimTownCurrencyCost int32
+---@field IsFamilyAreaCore uint8
 UFamilyAreaMarkerProxyComponent = {}
 
 
@@ -855,6 +859,7 @@ UHousingDataComponent = {}
 ---@field PlayerCapacity uint8
 ---@field IsForCampsOnly boolean
 ---@field IsGroupHouse boolean
+---@field bRequiresCeilingCheck boolean
 UHousingProxyComponent = {}
 
 

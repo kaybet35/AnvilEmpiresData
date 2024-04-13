@@ -4,7 +4,6 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field GrassRemovalFamilyArea UGrassRemovalVolumeComponent
 ---@field FamilyArea UDecalComponent
----@field FamilyAreaFlagMesh UVisStaticMeshComponent
 ---@field Audio UAudioComponent
 ---@field RangeMarkerVisibility boolean
 ABPVisFamilyAreaMarker_C = {}

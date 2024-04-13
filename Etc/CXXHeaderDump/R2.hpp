@@ -672,11 +672,9 @@ class UEntityAttachableProxyComponent : public UProxyComponent
     float AngleTolerance;                                                             // 0x0068 (size: 0x4)
     float DistanceTolerance;                                                          // 0x006C (size: 0x4)
     float DetachMaxZDelta;                                                            // 0x0070 (size: 0x4)
-    TSubclassOf<class UEntityTemplate> AttachedNewEntityType;                         // 0x0078 (size: 0x8)
-    TSubclassOf<class UEntityTemplate> DetachedNewEntityType;                         // 0x0080 (size: 0x8)
-    TArray<class TSubclassOf<UEntityTemplate>> TargetEntityTypes;                     // 0x0088 (size: 0x10)
+    TArray<class TSubclassOf<UEntityTemplate>> TargetEntityTypes;                     // 0x0078 (size: 0x10)
 
-}; // Size: 0x98
+}; // Size: 0x88
 
 class UEntityTemplate : public UObject
 {
@@ -708,19 +706,25 @@ class UFamilyAreaMarkerDataComponent : public UDataComponent
 {
     int32 FamilyId;                                                                   // 0x00A8 (size: 0x4)
     bool AllowPublicPledging;                                                         // 0x00C8 (size: 0x1)
-    int32 ClaimTownCurrencyCost;                                                      // 0x00E8 (size: 0x4)
-    TArray<FFamilyMemberData> FamilyMembers;                                          // 0x0108 (size: 0x10)
-    int32 VisVarMaxNumFamilyMembers;                                                  // 0x0118 (size: 0x4)
-    float VisVarRestrictedBoxExtent;                                                  // 0x0138 (size: 0x4)
-    int64 ParentFamilyArea;                                                           // 0x0158 (size: 0x8)
+    uint8 Tier;                                                                       // 0x00E8 (size: 0x1)
+    uint8 ExtensionTier;                                                              // 0x0108 (size: 0x1)
+    int32 ClaimTownCurrencyCost;                                                      // 0x0128 (size: 0x4)
+    TArray<FFamilyMemberData> FamilyMembers;                                          // 0x0148 (size: 0x10)
+    int32 VisVarMaxNumFamilyMembers;                                                  // 0x0158 (size: 0x4)
+    float VisVarRestrictedBoxExtent;                                                  // 0x0178 (size: 0x4)
+    int64 ParentFamilyArea;                                                           // 0x0198 (size: 0x8)
+    uint8 IsFamilyAreaCore;                                                           // 0x01B8 (size: 0x1)
+    uint8 NumChildAreas;                                                              // 0x01D8 (size: 0x1)
 
-}; // Size: 0x178
+}; // Size: 0x1F8
 
 class UFamilyAreaMarkerProxyComponent : public UProxyComponent
 {
-    int32 ClaimTownCurrencyCost;                                                      // 0x0028 (size: 0x4)
+    uint8 Tier;                                                                       // 0x0028 (size: 0x1)
+    int32 ClaimTownCurrencyCost;                                                      // 0x002C (size: 0x4)
+    uint8 IsFamilyAreaCore;                                                           // 0x0030 (size: 0x1)
 
-}; // Size: 0x30
+}; // Size: 0x38
 
 class UFarmDataComponent : public UDataComponent
 {
@@ -856,6 +860,7 @@ class UHousingProxyComponent : public UProxyComponent
     uint8 PlayerCapacity;                                                             // 0x0028 (size: 0x1)
     bool IsForCampsOnly;                                                              // 0x0029 (size: 0x1)
     bool IsGroupHouse;                                                                // 0x002A (size: 0x1)
+    bool bRequiresCeilingCheck;                                                       // 0x002B (size: 0x1)
 
 }; // Size: 0x30
 
