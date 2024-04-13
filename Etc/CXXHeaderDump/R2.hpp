@@ -657,14 +657,6 @@ class UEditorSpawnerProxyComponent : public UProxyComponent
 {
 }; // Size: 0x28
 
-class UEntityAttachableDataComponent : public UDataComponent
-{
-    int32 AttachedNewEntityType;                                                      // 0x00A8 (size: 0x4)
-    int32 DetachedNewEntityType;                                                      // 0x00C8 (size: 0x4)
-    int32 TargetEntityType;                                                           // 0x00E8 (size: 0x4)
-
-}; // Size: 0x108
-
 class UEntityAttachableProxyComponent : public UProxyComponent
 {
     uint8 SlotId;                                                                     // 0x0028 (size: 0x1)
@@ -839,25 +831,6 @@ class UHitConverterProxyComponent : public UProxyComponent
     EAnvilToolType RequiredTool;                                                      // 0x0038 (size: 0x1)
 
 }; // Size: 0x40
-
-class UHorseAttachableDataComponent : public UDataComponent
-{
-    int32 AttachedEntityType;                                                         // 0x00A8 (size: 0x4)
-    int32 DetachedEntityType;                                                         // 0x00C8 (size: 0x4)
-    int32 HorseEntityType;                                                            // 0x00E8 (size: 0x4)
-
-}; // Size: 0x108
-
-class UHorseAttachableProxyComponent : public UProxyComponent
-{
-    FVector SlotOffset;                                                               // 0x0028 (size: 0x18)
-    float AngleTolerance;                                                             // 0x0040 (size: 0x4)
-    float DistanceTolerance;                                                          // 0x0044 (size: 0x4)
-    TSubclassOf<class UEntityTemplate> AttachedEntityType;                            // 0x0048 (size: 0x8)
-    TSubclassOf<class UEntityTemplate> DetachedEntityType;                            // 0x0050 (size: 0x8)
-    TSubclassOf<class UEntityTemplate> HorseEntityType;                               // 0x0058 (size: 0x8)
-
-}; // Size: 0x60
 
 class UHousingDataComponent : public UDataComponent
 {

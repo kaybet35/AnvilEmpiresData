@@ -654,14 +654,6 @@ UDestroyableProxyComponent = {}
 UEditorSpawnerProxyComponent = {}
 
 
----@class UEntityAttachableDataComponent : UDataComponent
----@field AttachedNewEntityType int32
----@field DetachedNewEntityType int32
----@field TargetEntityType int32
-UEntityAttachableDataComponent = {}
-
-
-
 ---@class UEntityAttachableProxyComponent : UProxyComponent
 ---@field SlotId uint8
 ---@field SlotOffset FVector
@@ -837,25 +829,6 @@ UHitConverterDataComponent = {}
 ---@field OutputList TArray<FHitConverterOutput>
 ---@field RequiredTool EAnvilToolType
 UHitConverterProxyComponent = {}
-
-
-
----@class UHorseAttachableDataComponent : UDataComponent
----@field AttachedEntityType int32
----@field DetachedEntityType int32
----@field HorseEntityType int32
-UHorseAttachableDataComponent = {}
-
-
-
----@class UHorseAttachableProxyComponent : UProxyComponent
----@field SlotOffset FVector
----@field AngleTolerance float
----@field DistanceTolerance float
----@field AttachedEntityType TSubclassOf<UEntityTemplate>
----@field DetachedEntityType TSubclassOf<UEntityTemplate>
----@field HorseEntityType TSubclassOf<UEntityTemplate>
-UHorseAttachableProxyComponent = {}
 
 
 
