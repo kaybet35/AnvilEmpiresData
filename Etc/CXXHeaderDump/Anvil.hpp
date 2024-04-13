@@ -1326,6 +1326,7 @@ class UGrassRemovalVolumeComponent : public USceneComponent
     class USplineDataComponent* SplineDataComponent;                                  // 0x02C0 (size: 0x8)
 
     void TryRemoveGrass();
+    void RemoveGrassWithRetry();
     bool RemoveGrass();
 }; // Size: 0x2E0
 

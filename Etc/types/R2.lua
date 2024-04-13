@@ -360,7 +360,7 @@ UAnimalAttackProxyComponent = {}
 ---@class UAnimalLivestockProxyComponent : UProxyComponent
 ---@field MaxDistanceToHomeLivestockStructure float
 ---@field FoodItem TSubclassOf<UItemTemplate>
----@field ProducedItem TSubclassOf<UItemTemplate>
+---@field ProducedItems TArray<TSubclassOf<UItemTemplate>>
 ---@field FeedingTimeOfDayHour int32
 ---@field bFeedsAtNight boolean
 ---@field NormalizedChanceToProduceWithoutFood float

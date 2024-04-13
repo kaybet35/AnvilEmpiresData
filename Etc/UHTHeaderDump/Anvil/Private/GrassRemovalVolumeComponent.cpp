@@ -9,6 +9,9 @@ UGrassRemovalVolumeComponent::UGrassRemovalVolumeComponent(const FObjectInitiali
 void UGrassRemovalVolumeComponent::TryRemoveGrass() {
 }
 
+void UGrassRemovalVolumeComponent::RemoveGrassWithRetry() {
+}
+
 bool UGrassRemovalVolumeComponent::RemoveGrass() {
     return false;
 }

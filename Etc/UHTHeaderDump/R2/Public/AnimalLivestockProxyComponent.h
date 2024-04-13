@@ -18,7 +18,7 @@ public:
     TSubclassOf<UItemTemplate> FoodItem;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<UItemTemplate> ProducedItem;
+    TArray<TSubclassOf<UItemTemplate>> ProducedItems;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 FeedingTimeOfDayHour;

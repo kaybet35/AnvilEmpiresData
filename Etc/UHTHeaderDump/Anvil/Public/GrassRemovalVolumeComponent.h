@@ -27,6 +27,9 @@ public:
     void TryRemoveGrass();
     
     UFUNCTION(BlueprintCallable)
+    void RemoveGrassWithRetry();
+    
+    UFUNCTION(BlueprintCallable)
     bool RemoveGrass();
     
 };

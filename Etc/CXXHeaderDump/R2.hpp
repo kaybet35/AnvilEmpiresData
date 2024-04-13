@@ -364,14 +364,14 @@ class UAnimalLivestockProxyComponent : public UProxyComponent
 {
     float MaxDistanceToHomeLivestockStructure;                                        // 0x0028 (size: 0x4)
     TSubclassOf<class UItemTemplate> FoodItem;                                        // 0x0030 (size: 0x8)
-    TSubclassOf<class UItemTemplate> ProducedItem;                                    // 0x0038 (size: 0x8)
-    int32 FeedingTimeOfDayHour;                                                       // 0x0040 (size: 0x4)
-    bool bFeedsAtNight;                                                               // 0x0044 (size: 0x1)
-    float NormalizedChanceToProduceWithoutFood;                                       // 0x0048 (size: 0x4)
-    float TimeToBecomeWildSec;                                                        // 0x004C (size: 0x4)
-    TSubclassOf<class UEntityTemplate> WildEntity;                                    // 0x0050 (size: 0x8)
+    TArray<class TSubclassOf<UItemTemplate>> ProducedItems;                           // 0x0038 (size: 0x10)
+    int32 FeedingTimeOfDayHour;                                                       // 0x0048 (size: 0x4)
+    bool bFeedsAtNight;                                                               // 0x004C (size: 0x1)
+    float NormalizedChanceToProduceWithoutFood;                                       // 0x0050 (size: 0x4)
+    float TimeToBecomeWildSec;                                                        // 0x0054 (size: 0x4)
+    TSubclassOf<class UEntityTemplate> WildEntity;                                    // 0x0058 (size: 0x8)
 
-}; // Size: 0x58
+}; // Size: 0x60
 
 class UAnimalScavengeProxyComponent : public UProxyComponent
 {

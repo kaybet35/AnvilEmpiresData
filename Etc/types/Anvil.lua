@@ -1412,6 +1412,7 @@ UGameplayScreen = {}
 UGrassRemovalVolumeComponent = {}
 
 function UGrassRemovalVolumeComponent:TryRemoveGrass() end
+function UGrassRemovalVolumeComponent:RemoveGrassWithRetry() end
 ---@return boolean
 function UGrassRemovalVolumeComponent:RemoveGrass() end
 
