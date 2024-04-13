@@ -1416,6 +1416,8 @@ function UFactionSelectScreen:GetDeleteProfileButtonVisibility() end
 ---@field FamilyAreaRestrictedCheckBox UCheckBox
 UFamilyAreaMarkerWindow = {}
 
+---@param PlayerId uint64
+function UFamilyAreaMarkerWindow:OnKickClicked(PlayerId) end
 ---@param bIsChecked boolean
 function UFamilyAreaMarkerWindow:OnFamilyAreaRestrictedChecked(bIsChecked) end
 ---@return ESlateVisibility
@@ -1426,8 +1428,10 @@ function UFamilyAreaMarkerWindow:GetFamilyAreaRestrictedCheckedState() end
 
 ---@class UFamilyMemberListItemWidget : UUserWidget
 ---@field PlayerNameText UTextBlock
+---@field KickButton UButton
 UFamilyMemberListItemWidget = {}
 
+function UFamilyMemberListItemWidget:OnKickButtonClicked() end
 
 
 ---@class UFoodCooldownIconWidget : UUserWidget

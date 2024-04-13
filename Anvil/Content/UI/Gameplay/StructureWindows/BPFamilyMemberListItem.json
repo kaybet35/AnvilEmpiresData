@@ -9,6 +9,41 @@
     }
   },
   {
+    "Type": "Button",
+    "Name": "KickButton",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Button'",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ResourceObject": {
+            "ObjectName": "Texture2D'Cancel'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/Cancel.0"
+          }
+        },
+        "Hovered": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ResourceObject": {
+            "ObjectName": "Texture2D'Cancel'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/Cancel.0"
+          }
+        },
+        "Pressed": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ResourceObject": {
+            "ObjectName": "Texture2D'Cancel'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/Cancel.0"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.6"
+      }
+    }
+  },
+  {
     "Type": "HorizontalBox",
     "Name": "HorizontalBox_169",
     "Outer": "WidgetTree",
@@ -17,16 +52,20 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.4"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.5"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.3"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.4"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.6"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.11"
       }
     }
   },
@@ -39,7 +78,7 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_24.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.5"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.7"
         }
       ]
     }
@@ -53,15 +92,14 @@
       "Padding": {
         "Left": 4.0
       },
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.1"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.2"
       },
       "Content": {
         "ObjectName": "TextBlock'BPFamilyMemberListItem_C:WidgetTree.PlayerNameText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.7"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.9"
       }
     }
   },
@@ -73,11 +111,31 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.1"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.2"
       },
       "Content": {
         "ObjectName": "Image'BPFamilyMemberListItem_C:WidgetTree.HouseOccupantIcon'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.6"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.8"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_169",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.2"
+      },
+      "Content": {
+        "ObjectName": "Button'BPFamilyMemberListItem_C:WidgetTree.KickButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.1"
       }
     }
   },
@@ -87,13 +145,17 @@
     "Outer": "HorizontalBox_24",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_24'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.2"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.3"
       },
       "Content": {
         "ObjectName": "VerticalBox'BPFamilyMemberListItem_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.8"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.10"
       }
     }
   },
@@ -115,7 +177,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.4"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.5"
       }
     }
   },
@@ -141,7 +203,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.3"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.4"
       }
     }
   },
@@ -154,12 +216,12 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.9"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.11"
         }
       ],
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_24.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.5"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.7"
       }
     }
   },
@@ -169,13 +231,16 @@
     "Outer": "VerticalBox_0",
     "Class": "UScriptClass'VerticalBoxSlot'",
     "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
       "Parent": {
         "ObjectName": "VerticalBox'BPFamilyMemberListItem_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.8"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.10"
       },
       "Content": {
         "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.1"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.2"
       }
     }
   },
@@ -186,7 +251,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPFamilyMemberListItem_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.11"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.13"
       },
       "bClassRequiresNativeTick": true
     },
@@ -230,7 +295,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_24'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.2"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.3"
       }
     }
   }

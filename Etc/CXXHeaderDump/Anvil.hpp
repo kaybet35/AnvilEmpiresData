@@ -1326,6 +1326,7 @@ class UFamilyAreaMarkerWindow : public UStructureWindow
     TSubclassOf<class UFamilyMemberListItemWidget> FamilyMemberListItemWidgetType;    // 0x02F0 (size: 0x8)
     class UCheckBox* FamilyAreaRestrictedCheckBox;                                    // 0x02F8 (size: 0x8)
 
+    void OnKickClicked(uint64 PlayerId);
     void OnFamilyAreaRestrictedChecked(bool bIsChecked);
     ESlateVisibility GetFamilyAreaRestrictedVisibility();
     ECheckBoxState GetFamilyAreaRestrictedCheckedState();
@@ -1333,9 +1334,11 @@ class UFamilyAreaMarkerWindow : public UStructureWindow
 
 class UFamilyMemberListItemWidget : public UUserWidget
 {
-    class UTextBlock* PlayerNameText;                                                 // 0x0278 (size: 0x8)
+    class UTextBlock* PlayerNameText;                                                 // 0x0288 (size: 0x8)
+    class UButton* KickButton;                                                        // 0x0290 (size: 0x8)
 
-}; // Size: 0x288
+    void OnKickButtonClicked();
+}; // Size: 0x2A0
 
 class UFoodCooldownIconWidget : public UUserWidget
 {

@@ -36,6 +36,9 @@ public:
     UFamilyAreaMarkerWindow();
 
 private:
+    UFUNCTION()
+    void OnKickClicked(uint64 PlayerId);
+    
     UFUNCTION(BlueprintCallable)
     void OnFamilyAreaRestrictedChecked(bool bIsChecked);
     

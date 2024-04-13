@@ -8,6 +8,9 @@ UFamilyAreaMarkerWindow::UFamilyAreaMarkerWindow() {
     this->FamilyAreaRestrictedCheckBox = NULL;
 }
 
+void UFamilyAreaMarkerWindow::OnKickClicked(uint64 PlayerId) {
+}
+
 void UFamilyAreaMarkerWindow::OnFamilyAreaRestrictedChecked(bool bIsChecked) {
 }
 
