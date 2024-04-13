@@ -52,7 +52,7 @@ public:
     bool bAllowRapidBuild;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool DontMigrateFootprintToBuiltEntity;
+    bool CanBuildTownStructureWithoutPledge;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TierPrerequisite;

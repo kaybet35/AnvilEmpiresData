@@ -68,17 +68,6 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "FamilyArea",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'DecalComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "GrassRemovalFamilyArea",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -90,7 +79,18 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "VisStaticMesh",
+        "Name": "FamilyArea",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FamilyAreaFlagMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -206,20 +206,14 @@
       "VisDisplayName": {
         "Namespace": "",
         "Key": "22D3F0734DCAB0A3C480138967634040",
-        "SourceString": "Family Area Marker",
-        "LocalizedString": "Family Area Marker"
+        "SourceString": "Property",
+        "LocalizedString": "Property"
       },
       "Description": {
         "Namespace": "",
         "Key": "EA51845342EE9B7D1BF7B8B629164C79",
-        "SourceString": "Segment off an area of a Settlement for a Family. Structures built inside a Family Area can only be used by designated Family members.",
-        "LocalizedString": "Segment off an area of a Settlement for a Family. Structures built inside a Family Area can only be used by designated Family members."
-      },
-      "DescriptionFooter": {
-        "Namespace": "",
-        "Key": "548F13574B9FCCEE590D2CBE938F8779",
-        "SourceString": "IMPORTANT: This feature is highly experimental and my contain severe bugs or side effects.",
-        "LocalizedString": "IMPORTANT: This feature is highly experimental and my contain severe bugs or side effects."
+        "SourceString": "A plot of land that can be claimed for ownership. Assets placed inside this land can only be accessed by designated Settlement members.",
+        "LocalizedString": "A plot of land that can be claimed for ownership. Assets placed inside this land can only be accessed by designated Settlement members."
       },
       "MapIconProperty": {
         "Icon": {
@@ -247,8 +241,8 @@
       },
       "DecalSize": {
         "X": 500.0,
-        "Y": 1500.0,
-        "Z": 1500.0
+        "Y": 600.0,
+        "Z": 600.0
       },
       "RelativeRotation": {
         "Pitch": -90.0,
@@ -340,8 +334,8 @@
     "Class": "UScriptClass'GrassRemovalVolumeComponent'",
     "Properties": {
       "Extents": {
-        "X": 1500.0,
-        "Y": 1500.0,
+        "X": 600.0,
+        "Y": 600.0,
         "Z": 500.0
       },
       "SplineDataComponent": {
@@ -421,6 +415,8 @@
         "ObjectName": "DecalComponent'BPVisFamilyAreaMarker_C:FamilyArea_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.4"
       },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
       "VariableGuid": "73A7848D-4811F089-566C4681-1F6741A6",
       "InternalVariableName": "FamilyArea"
     }
@@ -439,6 +435,8 @@
         "ObjectName": "GrassRemovalVolumeComponent'BPVisFamilyAreaMarker_C:GrassRemovalFamilyArea_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.10"
       },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
       "VariableGuid": "496A1BA5-412D4CEC-54850394-B711F1AE",
       "InternalVariableName": "GrassRemovalFamilyArea"
     }
@@ -474,23 +472,13 @@
         "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisFamilyAreaMarker_C:VisStaticMesh_GEN_VARIABLE'",
+        "ObjectName": "VisStaticMeshComponent'BPVisFamilyAreaMarker_C:FamilyAreaFlagMesh_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.27"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.17"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.16"
-        }
-      ],
       "VariableGuid": "E2B9CCA2-43707E7C-24C9DA99-8637FB9A",
-      "InternalVariableName": "VisStaticMesh"
+      "InternalVariableName": "FamilyAreaFlagMesh"
     }
   },
   {
@@ -507,6 +495,14 @@
         {
           "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.17"
         }
       ],
       "AllNodes": [
@@ -519,12 +515,12 @@
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.19"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.17"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyAreaMarker_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaMarker.17"
         }
       ],
       "DefaultSceneRootNode": {
@@ -577,7 +573,7 @@
   },
   {
     "Type": "VisStaticMeshComponent",
-    "Name": "VisStaticMesh_GEN_VARIABLE",
+    "Name": "FamilyAreaFlagMesh_GEN_VARIABLE",
     "Outer": "BPVisFamilyAreaMarker_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
     "Properties": {
@@ -585,6 +581,16 @@
       "StaticMesh": {
         "ObjectName": "StaticMesh'FamilyAreaMarker'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/FamilyAreaMarker.2"
+      },
+      "RelativeLocation": {
+        "X": 525.0,
+        "Y": 525.0,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.5,
+        "Y": 0.5,
+        "Z": 0.5
       },
       "ComponentTags": [
         "Structure",

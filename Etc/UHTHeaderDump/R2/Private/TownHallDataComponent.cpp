@@ -9,6 +9,7 @@ UTownHallDataComponent::UTownHallDataComponent(const FObjectInitializer& ObjectI
     this->bHasSupplyStructure = false;
     this->PledgedPlayersArrayCount = 0;
     this->NumTotalHouses = 0;
+    this->NumUnclaimedHouses = 0;
     this->NumTotalTents = 0;
     this->NumUnclaimedTents = 0;
     this->NumReinforcementSupplies = 0;

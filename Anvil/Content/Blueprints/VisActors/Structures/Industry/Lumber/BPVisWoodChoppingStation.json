@@ -22,7 +22,7 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "AnvilMesh",
+        "Name": "WoodChoppingStationMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -336,13 +336,13 @@
         "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisWoodChoppingStation_C:AnvilMesh_GEN_VARIABLE'",
+        "ObjectName": "VisStaticMeshComponent'BPVisWoodChoppingStation_C:WoodChoppingStationMesh_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.19"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "078D6C4F-4D0617D7-5AAE87BF-CC443993",
-      "InternalVariableName": "AnvilMesh"
+      "InternalVariableName": "WoodChoppingStationMesh"
     }
   },
   {
@@ -433,19 +433,18 @@
   },
   {
     "Type": "VisStaticMeshComponent",
-    "Name": "AnvilMesh_GEN_VARIABLE",
+    "Name": "WoodChoppingStationMesh_GEN_VARIABLE",
     "Outer": "BPVisWoodChoppingStation_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
     "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
       "StaticMesh": {
         "ObjectName": "StaticMesh'IndustryWoodChoppingStation'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/IndustryWoodChoppingStation.2"
       },
       "ComponentTags": [
         "Structure",
-        "Collision",
-        "ProjectToLandscape"
+        "Collision"
       ]
     }
   }

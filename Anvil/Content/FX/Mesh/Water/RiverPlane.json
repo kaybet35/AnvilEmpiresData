@@ -209,18 +209,35 @@
           }
         ]
       },
+      "PhysMaterial": {
+        "ObjectName": "PhysicalMaterial'LakePhys'",
+        "ObjectPath": "Anvil/Content/Blueprints/Physmats/LakePhys.0"
+      },
       "DefaultInstance": {
         "ObjectType": "ECollisionChannel::ECC_WorldStatic",
-        "CollisionProfileName": "BlockAll"
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
       }
     },
-    "BodySetupGuid": "15EB57C14F9700CD6091F3A3A73CD79A",
+    "BodySetupGuid": "2AF72F0C4C82CFCD8D166EB9085EDBFF",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 44752,
         "SizeOnDisk": 44752,
-        "OffsetInFile": "0x147A2"
+        "OffsetInFile": "0x1499E"
       }
     }
   },
@@ -234,7 +251,7 @@
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 745,
         "SizeOnDisk": 745,
-        "OffsetInFile": "0x1F6B4"
+        "OffsetInFile": "0x1F8B0"
       }
     }
   },
@@ -274,7 +291,7 @@
           "Y": 492.20404,
           "Z": 0.0
         },
-        "SphereRadius": 564.5511096181118
+        "SphereRadius": 564.5511474609375
       }
     },
     "BodySetup": {
@@ -376,7 +393,7 @@
           "BulkDataFlags": "BULKDATA_None",
           "ElementCount": 0,
           "SizeOnDisk": 0,
-          "OffsetInFile": "0x27B9A"
+          "OffsetInFile": "0x27D96"
         },
         "ImposterAtlas": [],
         "HierarchyNodes": [],

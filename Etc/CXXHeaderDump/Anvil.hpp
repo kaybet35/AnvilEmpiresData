@@ -502,12 +502,13 @@ class AVisCart : public AVisVehicle
 {
     class UHungerDataComponent* HungerDataComponent;                                  // 0x0418 (size: 0x8)
     class UStaminaDataComponent* StaminaDataComponent;                                // 0x0420 (size: 0x8)
-    FName SeatSocketName;                                                             // 0x0428 (size: 0x8)
-    class USkeletalMeshComponent* HorseMesh;                                          // 0x0430 (size: 0x8)
-    class USkeletalMeshComponent* SaddleMesh;                                         // 0x0438 (size: 0x8)
-    class USkeletalMeshComponent* CartMesh;                                           // 0x0440 (size: 0x8)
+    class UAnimalAIDataComponent* AnimalAIDataComponent;                              // 0x0428 (size: 0x8)
+    FName SeatSocketName;                                                             // 0x0430 (size: 0x8)
+    class USkeletalMeshComponent* HorseMesh;                                          // 0x0438 (size: 0x8)
+    class USkeletalMeshComponent* SaddleMesh;                                         // 0x0440 (size: 0x8)
+    class USkeletalMeshComponent* CartMesh;                                           // 0x0448 (size: 0x8)
 
-}; // Size: 0x448
+}; // Size: 0x450
 
 class AVisController : public AVisActor
 {
@@ -734,7 +735,7 @@ class AVisPowerMill : public AVisStructure
     class USkeletalMeshComponent* SKMesh;                                             // 0x0488 (size: 0x8)
     class UVisPowerUnitAnimInstance* AnimInst;                                        // 0x0490 (size: 0x8)
 
-}; // Size: 0x4C8
+}; // Size: 0x518
 
 class AVisRefinery : public AVisStructure
 {
@@ -1262,8 +1263,12 @@ class UFamilyAreaMarkerWindow : public UStructureWindow
 {
     class UScrollBox* FamilyMembersScrollBox;                                         // 0x02D8 (size: 0x8)
     TSubclassOf<class UFamilyMemberListItemWidget> FamilyMemberListItemWidgetType;    // 0x02E0 (size: 0x8)
+    class UCheckBox* FamilyAreaRestrictedCheckBox;                                    // 0x02E8 (size: 0x8)
 
-}; // Size: 0x2E8
+    void OnFamilyAreaRestrictedChecked(bool bIsChecked);
+    ESlateVisibility GetFamilyAreaRestrictedVisibility();
+    ECheckBoxState GetFamilyAreaRestrictedCheckedState();
+}; // Size: 0x2F0
 
 class UFamilyMemberListItemWidget : public UUserWidget
 {
@@ -1605,13 +1610,16 @@ class UMapWidget : public UUserWidget
     class UBorder* DeploymentInstructionOrSpawnTimerBorder;                           // 0x0380 (size: 0x8)
     class UTextBlock* DeploymentInstructionOrSpawnTimerText;                          // 0x0388 (size: 0x8)
     class UBorder* ObjectiveBorder;                                                   // 0x0390 (size: 0x8)
-    TArray<class UMapIcon*> DisplayedBeaconTowerPlayerInfos;                          // 0x0408 (size: 0x10)
+    class UAnvilButtonWidget* LogoutButton;                                           // 0x0398 (size: 0x8)
+    TArray<class UMapIcon*> DisplayedBeaconTowerPlayerInfos;                          // 0x0418 (size: 0x10)
 
+    void OnLogoutButtonClicked();
     ESlateVisibility GetRespawnTimerVisibility();
     FText GetRespawnTimerText();
     ESlateVisibility GetObjectiveBorderVisibility();
+    ESlateVisibility GetLogoutButtonVisibility();
     void BP_OnMapImageSet(class UTexture2D* MapImage);
-}; // Size: 0x428
+}; // Size: 0x438
 
 class UMarketItemGridWidget : public UGridPanelWidget
 {

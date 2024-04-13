@@ -1,8 +1,10 @@
 #include "HousingProxyComponent.h"
 
 UHousingProxyComponent::UHousingProxyComponent() {
-    this->IsForCampsOnly = 0;
     this->PlayerCapacity = 0;
+    this->IsForCampsOnly = false;
+    this->IsGroupHouse = false;
+    this->PledgeTownCurrencyCost = 0;
 }
 
 

@@ -7,6 +7,9 @@ UCLASS(Blueprintable, EditInlineNew)
 class R2_API UFamilyAreaMarkerProxyComponent : public UProxyComponent {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 ClaimTownCurrencyCost;
+    
     UFamilyAreaMarkerProxyComponent();
 
 };

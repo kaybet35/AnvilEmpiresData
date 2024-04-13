@@ -1,9 +1,11 @@
 #include "HousingDataComponent.h"
 
 UHousingDataComponent::UHousingDataComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->IsForCampsOnly = 0;
     this->PlayerCapacity = 0;
     this->AllowPublicPledging = false;
+    this->IsForCampsOnly = false;
+    this->IsGroupHouse = false;
+    this->PledgeTownCurrencyCost = 0;
 }
 
 

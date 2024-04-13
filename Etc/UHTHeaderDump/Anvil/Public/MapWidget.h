@@ -7,6 +7,7 @@
 #include "MapIconTypeProperty.h"
 #include "MapWidget.generated.h"
 
+class UAnvilButtonWidget;
 class UBorder;
 class UCanvasPanel;
 class UImage;
@@ -55,6 +56,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBorder* ObjectiveBorder;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAnvilButtonWidget* LogoutButton;
+    
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UMapIcon*> DisplayedBeaconTowerPlayerInfos;
@@ -64,6 +68,9 @@ public:
 
 private:
     UFUNCTION(BlueprintCallable)
+    void OnLogoutButtonClicked();
+    
+    UFUNCTION(BlueprintCallable)
     ESlateVisibility GetRespawnTimerVisibility();
     
     UFUNCTION(BlueprintCallable)
@@ -71,6 +78,9 @@ private:
     
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetObjectiveBorderVisibility();
+    
+    UFUNCTION(BlueprintCallable)
+    ESlateVisibility GetLogoutButtonVisibility();
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

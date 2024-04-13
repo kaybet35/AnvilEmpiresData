@@ -14,7 +14,7 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->bBuildableInEnemyTerritory = false;
     this->bBuildableNearEnemies = false;
     this->bAllowRapidBuild = false;
-    this->DontMigrateFootprintToBuiltEntity = false;
+    this->CanBuildTownStructureWithoutPledge = false;
     this->TierPrerequisite = 0;
     this->RequiredDeployable = NULL;
     this->MaxHeightShift = 0.00f;

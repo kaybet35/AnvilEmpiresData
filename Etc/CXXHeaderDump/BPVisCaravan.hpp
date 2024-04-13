@@ -3,6 +3,6 @@
 
 class ABPVisCaravan_C : public AVisCart
 {
-}; // Size: 0x448
+}; // Size: 0x450
 
 #endif

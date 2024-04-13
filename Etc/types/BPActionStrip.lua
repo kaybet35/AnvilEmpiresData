@@ -9,8 +9,6 @@
 ---@field BPDeployLadderActionButton UBPDeployLadderActionButton_C
 ---@field BPDetachActionButton UBPDetachActionButton_C
 ---@field BPDismantleActionButton UBPDismantleActionButton_C
----@field BPFamilyPledgingRestrictionOff UBPFamilyPledgingRestrictionOff_C
----@field BPFamilyPledgingRestrictionOn UBPFamilyPledgingRestrictionOn_C
 ---@field BPGotoSleepActionButton UBPGotoSleepActionButton_C
 ---@field BPPledgeToTownActionButton UBPPledgeToTownActionButton_C
 ---@field BPPushLadderActionButton UBPPushLadderActionButton_C

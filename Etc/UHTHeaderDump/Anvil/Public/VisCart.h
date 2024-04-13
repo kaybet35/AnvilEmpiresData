@@ -3,6 +3,7 @@
 #include "VisVehicle.h"
 #include "VisCart.generated.h"
 
+class UAnimalAIDataComponent;
 class UHungerDataComponent;
 class USkeletalMeshComponent;
 class UStaminaDataComponent;
@@ -16,6 +17,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStaminaDataComponent* StaminaDataComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAnimalAIDataComponent* AnimalAIDataComponent;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ABPVisWoodChoppingStation_C : AVisHitConverterStructure
----@field AnvilMesh UVisStaticMeshComponent
+---@field WoodChoppingStationMesh UVisStaticMeshComponent
 ABPVisWoodChoppingStation_C = {}
 
 

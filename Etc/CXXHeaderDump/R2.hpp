@@ -326,8 +326,9 @@ class UAnimalAIDataComponent : public UDataComponent
 {
     EAnvilAnimalState CurrentState;                                                   // 0x00A8 (size: 0x1)
     FVector Velocity;                                                                 // 0x00C8 (size: 0x18)
+    int64 AttachedTarget;                                                             // 0x00F8 (size: 0x8)
 
-}; // Size: 0xF8
+}; // Size: 0x118
 
 class UAnimalAIProxyComponent : public UProxyComponent
 {
@@ -532,7 +533,7 @@ class UBuildSiteProxyComponent : public UProxyComponent
     bool bBuildableInEnemyTerritory;                                                  // 0x003F (size: 0x1)
     bool bBuildableNearEnemies;                                                       // 0x0040 (size: 0x1)
     bool bAllowRapidBuild;                                                            // 0x0041 (size: 0x1)
-    bool DontMigrateFootprintToBuiltEntity;                                           // 0x0042 (size: 0x1)
+    bool CanBuildTownStructureWithoutPledge;                                          // 0x0042 (size: 0x1)
     uint8 TierPrerequisite;                                                           // 0x0043 (size: 0x1)
     TSubclassOf<class UItemTemplate> RequiredDeployable;                              // 0x0048 (size: 0x8)
     float MaxHeightShift;                                                             // 0x0050 (size: 0x4)
@@ -657,6 +658,12 @@ class UEditorSpawnerProxyComponent : public UProxyComponent
 {
 }; // Size: 0x28
 
+class UEntityAttachableDataComponent : public UDataComponent
+{
+    int64 AttachedEntity;                                                             // 0x00A8 (size: 0x8)
+
+}; // Size: 0xC8
+
 class UEntityAttachableProxyComponent : public UProxyComponent
 {
     uint8 SlotId;                                                                     // 0x0028 (size: 0x1)
@@ -703,15 +710,18 @@ class UFamilyAreaMarkerDataComponent : public UDataComponent
 {
     int32 FamilyId;                                                                   // 0x00A8 (size: 0x4)
     bool AllowPublicPledging;                                                         // 0x00C8 (size: 0x1)
-    TArray<FFamilyMemberData> FamilyMembers;                                          // 0x00E8 (size: 0x10)
-    int32 VisVarMaxNumFamilyMembers;                                                  // 0x00F8 (size: 0x4)
-    float VisVarRestrictedBoxExtent;                                                  // 0x0118 (size: 0x4)
+    int32 ClaimTownCurrencyCost;                                                      // 0x00E8 (size: 0x4)
+    TArray<FFamilyMemberData> FamilyMembers;                                          // 0x0108 (size: 0x10)
+    int32 VisVarMaxNumFamilyMembers;                                                  // 0x0118 (size: 0x4)
+    float VisVarRestrictedBoxExtent;                                                  // 0x0138 (size: 0x4)
 
-}; // Size: 0x138
+}; // Size: 0x158
 
 class UFamilyAreaMarkerProxyComponent : public UProxyComponent
 {
-}; // Size: 0x28
+    int32 ClaimTownCurrencyCost;                                                      // 0x0028 (size: 0x4)
+
+}; // Size: 0x30
 
 class UFarmDataComponent : public UDataComponent
 {
@@ -834,17 +844,21 @@ class UHitConverterProxyComponent : public UProxyComponent
 
 class UHousingDataComponent : public UDataComponent
 {
-    uint8 IsForCampsOnly;                                                             // 0x00A8 (size: 0x1)
-    uint8 PlayerCapacity;                                                             // 0x00C8 (size: 0x1)
-    bool AllowPublicPledging;                                                         // 0x00E8 (size: 0x1)
-    FHousePledgedPlayerIdArray PledgedPlayerIds;                                      // 0x0108 (size: 0x10)
+    uint8 PlayerCapacity;                                                             // 0x00A8 (size: 0x1)
+    bool AllowPublicPledging;                                                         // 0x00C8 (size: 0x1)
+    bool IsForCampsOnly;                                                              // 0x00E8 (size: 0x1)
+    bool IsGroupHouse;                                                                // 0x0108 (size: 0x1)
+    int32 PledgeTownCurrencyCost;                                                     // 0x0128 (size: 0x4)
+    FHousePledgedPlayerIdArray PledgedPlayerIds;                                      // 0x0148 (size: 0x10)
 
-}; // Size: 0x118
+}; // Size: 0x158
 
 class UHousingProxyComponent : public UProxyComponent
 {
-    uint8 IsForCampsOnly;                                                             // 0x0028 (size: 0x1)
-    uint8 PlayerCapacity;                                                             // 0x0029 (size: 0x1)
+    uint8 PlayerCapacity;                                                             // 0x0028 (size: 0x1)
+    bool IsForCampsOnly;                                                              // 0x0029 (size: 0x1)
+    bool IsGroupHouse;                                                                // 0x002A (size: 0x1)
+    int32 PledgeTownCurrencyCost;                                                     // 0x002C (size: 0x4)
 
 }; // Size: 0x30
 
@@ -1031,8 +1045,7 @@ class UMeshCollisionProxyComponent : public UProxyComponent
     FVector Position;                                                                 // 0x0030 (size: 0x18)
     FRotator Rotation;                                                                // 0x0048 (size: 0x18)
     uint8 ProjectToLandscape;                                                         // 0x0060 (size: 0x1)
-    uint8 SkipFootprintValidation;                                                    // 0x0061 (size: 0x1)
-    EAnvilPhysicalSurfaceType SurfaceType;                                            // 0x0062 (size: 0x1)
+    EAnvilPhysicalSurfaceType SurfaceType;                                            // 0x0061 (size: 0x1)
     int32 CollisionMask;                                                              // 0x0064 (size: 0x4)
     float StepAngle;                                                                  // 0x0068 (size: 0x4)
 
@@ -1136,8 +1149,8 @@ class UPlantGrowthProxyComponent : public UProxyComponent
 
 class UPlayerControllerDataComponent : public UDataComponent
 {
-    int32 PledgedTownHallId;                                                          // 0x00A8 (size: 0x4)
-    int32 PledgedMilitiaTownHallId;                                                   // 0x00C8 (size: 0x4)
+    int64 PledgedTownHallInfo;                                                        // 0x00A8 (size: 0x8)
+    int64 PledgedMilitiaInfo;                                                         // 0x00C8 (size: 0x8)
     uint8 bShowRespawnScreen;                                                         // 0x00E8 (size: 0x1)
     float CurrentSpawnTimer;                                                          // 0x0108 (size: 0x4)
     uint8 bShowDeathMarker;                                                           // 0x0128 (size: 0x1)
@@ -1211,13 +1224,10 @@ class UPowerMillDataComponent : public UDataComponent
 
 class UPowerMillProxyComponent : public UProxyComponent
 {
-    FVector PosOffset;                                                                // 0x0028 (size: 0x18)
-    FVector ExitOffset;                                                               // 0x0040 (size: 0x18)
-    float ExitZTolerance;                                                             // 0x0058 (size: 0x4)
-    float MaxRotationSpeed;                                                           // 0x005C (size: 0x4)
-    float RotationAcceleration;                                                       // 0x0060 (size: 0x4)
+    float MaxRotationSpeed;                                                           // 0x0028 (size: 0x4)
+    float RotationAcceleration;                                                       // 0x002C (size: 0x4)
 
-}; // Size: 0x68
+}; // Size: 0x30
 
 class UPowerToActionConverterProxyComponent : public UProxyComponent
 {
@@ -1637,16 +1647,17 @@ class UTownHallDataComponent : public UDataComponent
     bool bHasSupplyStructure;                                                         // 0x0148 (size: 0x1)
     int32 PledgedPlayersArrayCount;                                                   // 0x0168 (size: 0x4)
     int32 NumTotalHouses;                                                             // 0x0188 (size: 0x4)
-    int32 NumTotalTents;                                                              // 0x01A8 (size: 0x4)
-    int32 NumUnclaimedTents;                                                          // 0x01C8 (size: 0x4)
-    int32 NumReinforcementSupplies;                                                   // 0x01E8 (size: 0x4)
-    int32 CitizenXpRequirement;                                                       // 0x0208 (size: 0x4)
-    int32 NobleXpRequirement;                                                         // 0x0228 (size: 0x4)
-    int32 TownXp;                                                                     // 0x0248 (size: 0x4)
-    uint8 TownNameId;                                                                 // 0x0268 (size: 0x1)
-    uint8 TownNameOrdinal;                                                            // 0x0288 (size: 0x1)
+    int32 NumUnclaimedHouses;                                                         // 0x01A8 (size: 0x4)
+    int32 NumTotalTents;                                                              // 0x01C8 (size: 0x4)
+    int32 NumUnclaimedTents;                                                          // 0x01E8 (size: 0x4)
+    int32 NumReinforcementSupplies;                                                   // 0x0208 (size: 0x4)
+    int32 CitizenXpRequirement;                                                       // 0x0228 (size: 0x4)
+    int32 NobleXpRequirement;                                                         // 0x0248 (size: 0x4)
+    int32 TownXp;                                                                     // 0x0268 (size: 0x4)
+    uint8 TownNameId;                                                                 // 0x0288 (size: 0x1)
+    uint8 TownNameOrdinal;                                                            // 0x02A8 (size: 0x1)
 
-}; // Size: 0x2A8
+}; // Size: 0x2C8
 
 class UTownHallProxyComponent : public UProxyComponent
 {

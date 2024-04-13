@@ -15,6 +15,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Velocity;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int64 AttachedTarget;
+    
     UAnimalAIDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };

@@ -322,6 +322,7 @@ UAdvancedSnappingProxyComponent = {}
 ---@class UAnimalAIDataComponent : UDataComponent
 ---@field CurrentState EAnvilAnimalState
 ---@field Velocity FVector
+---@field AttachedTarget int64
 UAnimalAIDataComponent = {}
 
 
@@ -528,7 +529,7 @@ UBuildSiteDataComponent = {}
 ---@field bBuildableInEnemyTerritory boolean
 ---@field bBuildableNearEnemies boolean
 ---@field bAllowRapidBuild boolean
----@field DontMigrateFootprintToBuiltEntity boolean
+---@field CanBuildTownStructureWithoutPledge boolean
 ---@field TierPrerequisite uint8
 ---@field RequiredDeployable TSubclassOf<UItemTemplate>
 ---@field MaxHeightShift float
@@ -654,6 +655,12 @@ UDestroyableProxyComponent = {}
 UEditorSpawnerProxyComponent = {}
 
 
+---@class UEntityAttachableDataComponent : UDataComponent
+---@field AttachedEntity int64
+UEntityAttachableDataComponent = {}
+
+
+
 ---@class UEntityAttachableProxyComponent : UProxyComponent
 ---@field SlotId uint8
 ---@field SlotOffset FVector
@@ -702,6 +709,7 @@ UEquipmentProxyComponent = {}
 ---@class UFamilyAreaMarkerDataComponent : UDataComponent
 ---@field FamilyId int32
 ---@field AllowPublicPledging boolean
+---@field ClaimTownCurrencyCost int32
 ---@field FamilyMembers TArray<FFamilyMemberData>
 ---@field VisVarMaxNumFamilyMembers int32
 ---@field VisVarRestrictedBoxExtent float
@@ -710,7 +718,9 @@ UFamilyAreaMarkerDataComponent = {}
 
 
 ---@class UFamilyAreaMarkerProxyComponent : UProxyComponent
+---@field ClaimTownCurrencyCost int32
 UFamilyAreaMarkerProxyComponent = {}
+
 
 
 ---@class UFarmDataComponent : UDataComponent
@@ -833,17 +843,21 @@ UHitConverterProxyComponent = {}
 
 
 ---@class UHousingDataComponent : UDataComponent
----@field IsForCampsOnly uint8
 ---@field PlayerCapacity uint8
 ---@field AllowPublicPledging boolean
+---@field IsForCampsOnly boolean
+---@field IsGroupHouse boolean
+---@field PledgeTownCurrencyCost int32
 ---@field PledgedPlayerIds FHousePledgedPlayerIdArray
 UHousingDataComponent = {}
 
 
 
 ---@class UHousingProxyComponent : UProxyComponent
----@field IsForCampsOnly uint8
 ---@field PlayerCapacity uint8
+---@field IsForCampsOnly boolean
+---@field IsGroupHouse boolean
+---@field PledgeTownCurrencyCost int32
 UHousingProxyComponent = {}
 
 
@@ -1030,7 +1044,6 @@ UMarketShopProxyComponent = {}
 ---@field Position FVector
 ---@field Rotation FRotator
 ---@field ProjectToLandscape uint8
----@field SkipFootprintValidation uint8
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
 ---@field StepAngle float
@@ -1135,8 +1148,8 @@ UPlantGrowthProxyComponent = {}
 
 
 ---@class UPlayerControllerDataComponent : UDataComponent
----@field PledgedTownHallId int32
----@field PledgedMilitiaTownHallId int32
+---@field PledgedTownHallInfo int64
+---@field PledgedMilitiaInfo int64
 ---@field bShowRespawnScreen uint8
 ---@field CurrentSpawnTimer float
 ---@field bShowDeathMarker uint8
@@ -1210,9 +1223,6 @@ UPowerMillDataComponent = {}
 
 
 ---@class UPowerMillProxyComponent : UProxyComponent
----@field PosOffset FVector
----@field ExitOffset FVector
----@field ExitZTolerance float
 ---@field MaxRotationSpeed float
 ---@field RotationAcceleration float
 UPowerMillProxyComponent = {}
@@ -1636,6 +1646,7 @@ UTechItemTemplate = {}
 ---@field bHasSupplyStructure boolean
 ---@field PledgedPlayersArrayCount int32
 ---@field NumTotalHouses int32
+---@field NumUnclaimedHouses int32
 ---@field NumTotalTents int32
 ---@field NumUnclaimedTents int32
 ---@field NumReinforcementSupplies int32

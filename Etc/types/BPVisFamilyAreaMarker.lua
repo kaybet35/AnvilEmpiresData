@@ -2,9 +2,9 @@
 
 ---@class ABPVisFamilyAreaMarker_C : AVisFamilyMarkerArea
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field FamilyArea UDecalComponent
 ---@field GrassRemovalFamilyArea UGrassRemovalVolumeComponent
----@field VisStaticMesh UVisStaticMeshComponent
+---@field FamilyArea UDecalComponent
+---@field FamilyAreaFlagMesh UVisStaticMeshComponent
 ---@field Audio UAudioComponent
 ---@field RangeMarkerVisibility boolean
 ABPVisFamilyAreaMarker_C = {}

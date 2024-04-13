@@ -30,16 +30,29 @@
       },
       "DefaultInstance": {
         "ObjectType": "ECollisionChannel::ECC_WorldStatic",
-        "CollisionProfileName": "BlockAll"
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
       }
     },
-    "BodySetupGuid": "0F49960841E048D4A911A8BC337CF255",
+    "BodySetupGuid": "D8A119804738C2B1051E1A92B9FBA6A5",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 99386,
         "SizeOnDisk": 99386,
-        "OffsetInFile": "0x2BA74"
+        "OffsetInFile": "0x2BAFA"
       }
     }
   },
@@ -53,7 +66,7 @@
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 361,
         "SizeOnDisk": 361,
-        "OffsetInFile": "0x43EF0"
+        "OffsetInFile": "0x43F76"
       }
     }
   },
@@ -88,7 +101,7 @@
           "Y": 1174.2296,
           "Z": 7.1900825E-14
         },
-        "SphereRadius": 1660.6114458235263
+        "SphereRadius": 1660.6114501953125
       }
     },
     "BodySetup": {
@@ -190,7 +203,7 @@
           "BulkDataFlags": "BULKDATA_None",
           "ElementCount": 0,
           "SizeOnDisk": 0,
-          "OffsetInFile": "0x567E6"
+          "OffsetInFile": "0x5686C"
         },
         "ImposterAtlas": [],
         "HierarchyNodes": [],

@@ -1,25 +1,16 @@
 ---@meta
 
 ---@class ABPVisCookshopT3_C : AVisRefinery
----@field ScorchEffect1 UScorchEffectComponent
----@field ScorchEffect9 UScorchEffectComponent
----@field ScorchEffect7 UScorchEffectComponent
----@field ScorchEffect8 UScorchEffectComponent
----@field ScorchEffect6 UScorchEffectComponent
----@field ScorchEffect3 UScorchEffectComponent
----@field ScorchEffect2 UScorchEffectComponent
----@field ScorchEffect4 UScorchEffectComponent
----@field ScorchEffect5 UScorchEffectComponent
----@field Fire USceneComponent
----@field VisStaticMesh3 UVisStaticMeshComponent
----@field VisStaticMesh2 UVisStaticMeshComponent
----@field VisStaticMesh1 UVisStaticMeshComponent
----@field VisTeamMesh UVisTeamMeshComponent
 ---@field VisStaticMesh4 UVisStaticMeshComponent
----@field VisStaticMesh UVisStaticMeshComponent
----@field SmokeStack UNiagaraComponent
----@field Audio UAudioComponent
----@field Populated USceneComponent
+---@field VisStaticMesh3 UVisStaticMeshComponent
+---@field VisStaticMesh7 UVisStaticMeshComponent
+---@field VisStaticMesh6 UVisStaticMeshComponent
+---@field VisStaticMesh5 UVisStaticMeshComponent
+---@field VisTeamMesh UVisTeamMeshComponent
+---@field MainMesh UVisStaticMeshComponent
+---@field BakerySmoke UNiagaraComponent
+---@field VisStaticMesh2 UVisStaticMeshComponent
+---@field OvenMesh UVisStaticMeshComponent
 ABPVisCookshopT3_C = {}
 
 

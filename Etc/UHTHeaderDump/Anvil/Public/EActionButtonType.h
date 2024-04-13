@@ -25,8 +25,6 @@ enum class EActionButtonType : uint8 {
     SetTownName,
     PushLadder,
     RetractLadder,
-    FamilyPledgeRestrictedOn,
-    FamilyPledgeRestrictedOff,
     ClaimFamilyArea,
     StartPowerMill,
     StopPowerMill,

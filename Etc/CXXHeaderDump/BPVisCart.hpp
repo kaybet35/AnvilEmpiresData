@@ -3,8 +3,8 @@
 
 class ABPVisCart_C : public AVisCart
 {
-    class UVisMultiItemStockpileComponent* VisMultiItemStockpile;                     // 0x0448 (size: 0x8)
+    class UVisMultiItemStockpileComponent* VisMultiItemStockpile;                     // 0x0450 (size: 0x8)
 
-}; // Size: 0x450
+}; // Size: 0x458
 
 #endif

@@ -246,6 +246,7 @@ AVisBuildSite = {}
 ---@class AVisCart : AVisVehicle
 ---@field HungerDataComponent UHungerDataComponent
 ---@field StaminaDataComponent UStaminaDataComponent
+---@field AnimalAIDataComponent UAnimalAIDataComponent
 ---@field SeatSocketName FName
 ---@field HorseMesh USkeletalMeshComponent
 ---@field SaddleMesh USkeletalMeshComponent
@@ -1343,8 +1344,15 @@ function UFactionSelectScreen:FactionAranicAtCapacityVisibility() end
 ---@class UFamilyAreaMarkerWindow : UStructureWindow
 ---@field FamilyMembersScrollBox UScrollBox
 ---@field FamilyMemberListItemWidgetType TSubclassOf<UFamilyMemberListItemWidget>
+---@field FamilyAreaRestrictedCheckBox UCheckBox
 UFamilyAreaMarkerWindow = {}
 
+---@param bIsChecked boolean
+function UFamilyAreaMarkerWindow:OnFamilyAreaRestrictedChecked(bIsChecked) end
+---@return ESlateVisibility
+function UFamilyAreaMarkerWindow:GetFamilyAreaRestrictedVisibility() end
+---@return ECheckBoxState
+function UFamilyAreaMarkerWindow:GetFamilyAreaRestrictedCheckedState() end
 
 
 ---@class UFamilyMemberListItemWidget : UUserWidget
@@ -1705,15 +1713,19 @@ UMapPostMapIcon = {}
 ---@field DeploymentInstructionOrSpawnTimerBorder UBorder
 ---@field DeploymentInstructionOrSpawnTimerText UTextBlock
 ---@field ObjectiveBorder UBorder
+---@field LogoutButton UAnvilButtonWidget
 ---@field DisplayedBeaconTowerPlayerInfos TArray<UMapIcon>
 UMapWidget = {}
 
+function UMapWidget:OnLogoutButtonClicked() end
 ---@return ESlateVisibility
 function UMapWidget:GetRespawnTimerVisibility() end
 ---@return FText
 function UMapWidget:GetRespawnTimerText() end
 ---@return ESlateVisibility
 function UMapWidget:GetObjectiveBorderVisibility() end
+---@return ESlateVisibility
+function UMapWidget:GetLogoutButtonVisibility() end
 ---@param MapImage UTexture2D
 function UMapWidget:BP_OnMapImageSet(MapImage) end
 

@@ -11,6 +11,10 @@ UMapWidget::UMapWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->DeploymentInstructionOrSpawnTimerBorder = NULL;
     this->DeploymentInstructionOrSpawnTimerText = NULL;
     this->ObjectiveBorder = NULL;
+    this->LogoutButton = NULL;
+}
+
+void UMapWidget::OnLogoutButtonClicked() {
 }
 
 ESlateVisibility UMapWidget::GetRespawnTimerVisibility() {
@@ -22,6 +26,10 @@ FText UMapWidget::GetRespawnTimerText() {
 }
 
 ESlateVisibility UMapWidget::GetObjectiveBorderVisibility() {
+    return ESlateVisibility::Visible;
+}
+
+ESlateVisibility UMapWidget::GetLogoutButtonVisibility() {
     return ESlateVisibility::Visible;
 }
 

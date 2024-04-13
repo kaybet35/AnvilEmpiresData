@@ -21,12 +21,10 @@ EActionButtonType = {
     SetTownName = 18,
     PushLadder = 19,
     RetractLadder = 20,
-    FamilyPledgeRestrictedOn = 21,
-    FamilyPledgeRestrictedOff = 22,
-    ClaimFamilyArea = 23,
-    StartPowerMill = 24,
-    StopPowerMill = 25,
-    EActionButtonType_MAX = 26,
+    ClaimFamilyArea = 21,
+    StartPowerMill = 22,
+    StopPowerMill = 23,
+    EActionButtonType_MAX = 24,
 }
 
 ---@enum EAnvilScreenType

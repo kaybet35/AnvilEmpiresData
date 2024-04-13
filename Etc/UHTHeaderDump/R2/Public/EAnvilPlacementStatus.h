@@ -42,6 +42,6 @@ enum class EAnvilPlacementStatus : uint8 {
     YouMustBelongToFamily,
     NotAtFullHealth,
     CantBuildBorderRegion,
-    MustBePledgedToHouse,
+    MustBePledgedToTown,
 };
 

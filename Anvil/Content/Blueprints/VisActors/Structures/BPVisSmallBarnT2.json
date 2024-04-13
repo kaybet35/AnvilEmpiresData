@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisSmallBarnT2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.17"
       }
     },
     "SuperStruct": {
@@ -20,17 +20,6 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
-      {
-        "Type": "ObjectProperty",
-        "Name": "Roof",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStaticMeshComponent'",
-          "ObjectPath": "/Script/Anvil"
-        }
-      },
       {
         "Type": "ObjectProperty",
         "Name": "ResourceWater",
@@ -44,7 +33,29 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "VisStockpile",
+        "Name": "VisStockpileWater",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStockpileComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Roof",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStockpileFeed",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -98,7 +109,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisSmallBarnT2_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.22"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconSmallBarn'",
@@ -107,7 +118,7 @@
       "BuildSiteCategory": "EBuildSiteCategory::Farming",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisSmallBarnT2_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.21"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisSmallBarnT2_C:HealthDataComponent'",
@@ -115,11 +126,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisSmallBarnT2_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.20"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisSmallBarnT2_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.19"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisSmallBarnT2_C:ScorchDataComponent'",
@@ -177,7 +188,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisSmallBarnT2_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.18"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisSmallBarnT2_C:ArrowComponent'",
@@ -269,18 +280,22 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisSmallBarnT2_C:AnvilMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.23"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisSmallBarnT2_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.14"
         },
         {
           "ObjectName": "SCS_Node'BPVisSmallBarnT2_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBarnT2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.13"
         }
       ],
       "VariableGuid": "078D6C4F-4D0617D7-5AAE87BF-CC443993",
@@ -299,10 +314,34 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisSmallBarnT2_C:Roof_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.24"
       },
       "VariableGuid": "072E7ACC-4CFE8824-A4B4C1A3-A738D069",
       "InternalVariableName": "Roof"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStockpileComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStockpileComponent'BPVisSmallBarnT2_C:VisStockpileWater_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.26"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBarnT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.16"
+        }
+      ],
+      "VariableGuid": "3565D049-4832A89E-3070CFAF-D5555B4D",
+      "InternalVariableName": "VisStockpileWater"
     }
   },
   {
@@ -316,21 +355,17 @@
         "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "VisStockpileComponent'BPVisSmallBarnT2_C:VisStockpile_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.24"
+        "ObjectName": "VisStockpileComponent'BPVisSmallBarnT2_C:VisStockpileFeed_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.25"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisSmallBarnT2_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.14"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisSmallBarnT2_C:SimpleConstructionScript_0.SCS_Node_9'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.15"
         }
       ],
       "VariableGuid": "0B981D9D-4936F733-9714B983-6DE0E691",
-      "InternalVariableName": "VisStockpile"
+      "InternalVariableName": "VisStockpileFeed"
     }
   },
   {
@@ -388,19 +423,23 @@
         },
         {
           "ObjectName": "SCS_Node'BPVisSmallBarnT2_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisSmallBarnT2_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.13"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisSmallBarnT2_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.14"
         },
         {
           "ObjectName": "SCS_Node'BPVisSmallBarnT2_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBarnT2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBarnT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisSmallBarnT2.16"
         }
       ],
       "DefaultSceneRootNode": {
@@ -481,7 +520,13 @@
   },
   {
     "Type": "VisStockpileComponent",
-    "Name": "VisStockpile_GEN_VARIABLE",
+    "Name": "VisStockpileFeed_GEN_VARIABLE",
+    "Outer": "BPVisSmallBarnT2_C",
+    "Class": "UScriptClass'VisStockpileComponent'"
+  },
+  {
+    "Type": "VisStockpileComponent",
+    "Name": "VisStockpileWater_GEN_VARIABLE",
     "Outer": "BPVisSmallBarnT2_C",
     "Class": "UScriptClass'VisStockpileComponent'"
   }

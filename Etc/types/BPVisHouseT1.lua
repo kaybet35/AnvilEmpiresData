@@ -1,22 +1,11 @@
 ---@meta
 
 ---@class ABPVisHouseT1_C : AVisHouse
----@field HouseAreaFenceCollision UVisStaticMeshComponent
----@field HouseAreaFence9 UVisStaticMeshComponent
----@field HouseAreaFence4 UVisStaticMeshComponent
----@field HouseAreaFence8 UVisStaticMeshComponent
----@field HouseAreaFence7 UVisStaticMeshComponent
----@field HouseAreaFence5 UVisStaticMeshComponent
----@field HouseAreaFence6 UVisStaticMeshComponent
----@field HouseAreaFence3 UVisStaticMeshComponent
----@field HouseAreaFence2 UVisStaticMeshComponent
----@field HouseAreaFence1 UVisStaticMeshComponent
----@field HouseAreaDecal UDecalComponent
----@field HouseAreaGrassRemoval UGrassRemovalVolumeComponent
 ---@field Audio UAudioComponent
 ---@field Niagara UNiagaraComponent
 ---@field VisStaticMesh10 UVisStaticMeshComponent
 ---@field OwnerFlagMesh UStaticMeshComponent
+---@field VisStaticMesh9 UVisStaticMeshComponent
 ---@field VisStaticMesh8 UVisStaticMeshComponent
 ---@field VisStaticMesh7 UVisStaticMeshComponent
 ---@field VisTeamMesh UVisTeamMeshComponent

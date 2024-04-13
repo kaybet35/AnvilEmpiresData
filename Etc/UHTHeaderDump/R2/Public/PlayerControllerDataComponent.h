@@ -8,11 +8,11 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class R2_API UPlayerControllerDataComponent : public UDataComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 PledgedTownHallId;
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int64 PledgedTownHallInfo;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 PledgedMilitiaTownHallId;
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int64 PledgedMilitiaInfo;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bShowRespawnScreen;

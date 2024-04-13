@@ -32,6 +32,5 @@ enum class EAnvilCollisionChannel : uint8 {
     AnvilCollisionChannelIndustry,
     AnvilCollisionChannelBorderRegion,
     AnvilCollisionChannelFamilyArea,
-    AnvilCollisionChannelHouseArea,
 };
 

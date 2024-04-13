@@ -3,17 +3,17 @@
 
 class UBPMapWidget_C : public UMapWidget
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0428 (size: 0x8)
-    class UImage* Background;                                                         // 0x0430 (size: 0x8)
-    class UImage* Frame;                                                              // 0x0438 (size: 0x8)
-    class UTextBlock* ObjectiveHeaderText;                                            // 0x0440 (size: 0x8)
-    class UTextBlock* ObjectiveText;                                                  // 0x0448 (size: 0x8)
-    class UTextBlock* TimeOfDayText;                                                  // 0x0450 (size: 0x8)
-    class UMaterialInstanceDynamic* DynamicMaterialInstance;                          // 0x0458 (size: 0x8)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0438 (size: 0x8)
+    class UImage* Background;                                                         // 0x0440 (size: 0x8)
+    class UImage* Frame;                                                              // 0x0448 (size: 0x8)
+    class UTextBlock* ObjectiveHeaderText;                                            // 0x0450 (size: 0x8)
+    class UTextBlock* ObjectiveText;                                                  // 0x0458 (size: 0x8)
+    class UTextBlock* TimeOfDayText;                                                  // 0x0460 (size: 0x8)
+    class UMaterialInstanceDynamic* DynamicMaterialInstance;                          // 0x0468 (size: 0x8)
 
     void Tick(FGeometry MyGeometry, float InDeltaTime);
     void BP_OnMapImageSet(class UTexture2D* MapImage);
     void ExecuteUbergraph_BPMapWidget(int32 EntryPoint);
-}; // Size: 0x460
+}; // Size: 0x470
 
 #endif
