@@ -24,7 +24,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisStoneProjectile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.9"
       }
     },
     "SuperStruct": {
@@ -66,15 +66,19 @@
     "Properties": {
       "PickupDataComponent": {
         "ObjectName": "PickupDataComponent'Default__BPVisStoneProjectile_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.5"
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisStoneProjectile_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.10"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisStoneProjectile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisStoneProjectile_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.4"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -83,6 +87,19 @@
         "LocalizedString": "Arrow"
       },
       "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisStoneProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.0"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisStoneProjectile_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisStoneProjectile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.0"
       }
@@ -112,7 +129,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisStoneProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.6"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -147,18 +164,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisStoneProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.8"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisStoneProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.8"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisStoneProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneProjectile.7"
       }
     }
   },

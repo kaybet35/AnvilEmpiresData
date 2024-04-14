@@ -15,6 +15,9 @@ public:
     bool bOnFoundation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsCollapsed;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilBuildStructureType StructureType;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))

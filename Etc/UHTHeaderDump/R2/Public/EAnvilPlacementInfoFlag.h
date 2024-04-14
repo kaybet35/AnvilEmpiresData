@@ -18,6 +18,10 @@ enum class EAnvilPlacementInfoFlag : uint8 {
     InRareFoodArea_Clay,
     InRareFoodArea_None,
     RareFoodArea_End,
-    ContextEnd,
+    BeaconDetectionRangeNormal,
+    BeaconDetectionRangeHigh,
+    BeaconDetectionRangeVeryHigh,
+    BeaconDetectionRangeHighest,
+    NumTypes,
 };
 

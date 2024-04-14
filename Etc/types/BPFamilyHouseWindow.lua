@@ -8,7 +8,6 @@
 ---@field BPMainAreaContainer UBPMainAreaContainer_C
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 ---@field FamilyHousePanel UBPAnvilPanel_C
----@field TaxIcon UImage
 UBPFamilyHouseWindow_C = {}
 
 ---@param EntryPoint int32

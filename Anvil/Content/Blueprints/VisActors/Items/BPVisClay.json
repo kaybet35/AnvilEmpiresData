@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisClay_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisClay.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisClay.7"
       }
     },
     "SuperStruct": {
@@ -41,15 +41,19 @@
     "Properties": {
       "PickupDataComponent": {
         "ObjectName": "PickupDataComponent'Default__BPVisClay_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisClay.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisClay.4"
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisClay_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisClay.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisClay.8"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisClay_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisClay.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisClay_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisClay.3"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -64,6 +68,19 @@
         "LocalizedString": "A lump of Clay"
       },
       "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisClay_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisClay.0"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisClay_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisClay_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisClay.0"
       }
@@ -93,7 +110,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisClay_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisClay.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisClay.5"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -107,7 +124,7 @@
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisClay_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisClay.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisClay.6"
       }
     }
   },

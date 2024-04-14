@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisCrate_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.7"
       }
     },
     "SuperStruct": {
@@ -65,15 +65,19 @@
     "Properties": {
       "PickupDataComponent": {
         "ObjectName": "PickupDataComponent'Default__BPVisCrate_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.4"
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisCrate_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.8"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisCrate_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisCrate_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.3"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -82,6 +86,19 @@
         "LocalizedString": "Crate"
       },
       "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCrate_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.0"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisCrate_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisCrate_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.0"
       }
@@ -111,7 +128,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisCrate_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.5"
       },
       "VariableGuid": "682F0F80-4FB2C272-38F38F8A-912D4110",
       "InternalVariableName": "DefaultSceneRoot"
@@ -125,7 +142,7 @@
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisCrate_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCrate.6"
       }
     }
   },

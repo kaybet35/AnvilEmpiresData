@@ -51,6 +51,52 @@
           "TriggerTimeOffset": 0.0,
           "EndTriggerTimeOffset": 0.0,
           "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'Farming_TossSeeds_Montage:AnimNotify_PlaySound_0'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Farming_TossSeeds_Montage.2"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Farming_TossSeeds_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Farming_TossSeeds_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.5640051,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'TossSeeds'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/TossSeeds.0"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0001,
+          "TriggerWeightThreshold": 1E-05,
           "NotifyName": "PlayNiagaraEffect",
           "Notify": {
             "ObjectName": "AnimNotify_PlayNiagaraEffect'Farming_TossSeeds_Montage:AnimNotify_PlayNiagaraEffect_0'",
@@ -113,6 +159,18 @@
         "ObjectPath": "Anvil/Content/FX/Niagara/SeedSpread.11"
       },
       "SocketName": "S_HandToss"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_0",
+    "Outer": "Farming_TossSeeds_Montage",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'HandsWoosh_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Hands/HandsWoosh_Cue.0"
+      }
     }
   }
 ]

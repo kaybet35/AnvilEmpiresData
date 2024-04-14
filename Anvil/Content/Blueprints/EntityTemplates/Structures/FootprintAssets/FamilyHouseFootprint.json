@@ -6,7 +6,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'FamilyHouseFootprint_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyHouseFootprint.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyHouseFootprint.5"
       }
     },
     "SuperStruct": {
@@ -35,10 +35,29 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "FamilyHouseFootprint_C'Default__FamilyHouseFootprint_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyHouseFootprint.1"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyHouseFootprint.2"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__FamilyHouseFootprint_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 125.0
+      },
+      "Extents": {
+        "X": 225.0,
+        "Y": 550.0,
+        "Z": 125.0
+      },
+      "CollisionMask": 32768
     }
   },
   {
@@ -48,14 +67,14 @@
     "Properties": {
       "bShowMesh": true,
       "Position": {
-        "X": -105.33542,
-        "Y": -79.52104,
-        "Z": 315.97626
+        "X": 1.9522247,
+        "Y": -9.196931E-07,
+        "Z": 271.78394
       },
       "Extents": {
-        "X": 399.1129,
-        "Y": 407.5914,
-        "Z": 315.97626
+        "X": 237.04706,
+        "Y": 860.4254,
+        "Z": 271.78394
       },
       "StructureTiers": [
         {
@@ -63,6 +82,17 @@
         },
         {
           "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyHouseBuildSite.FamilyHouseBuildSite_C'": true
+        }
+      ],
+      "FootprintSharedComponents": [
+        {
+          "Comp": {
+            "ObjectName": "BoxCollisionProxyComponent'Default__FamilyHouseFootprint_C:BoxCollisionProxyComponent_0'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyHouseFootprint.1"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": true
         }
       ]
     }
@@ -85,7 +115,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'FamilyHouseFootprint_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyHouseFootprint.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyHouseFootprint.3"
       },
       "VariableGuid": "7B6CC75A-460B45A4-4FED16B1-8DD7CAFF",
       "InternalVariableName": "DefaultSceneRoot"
@@ -100,18 +130,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'FamilyHouseFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyHouseFootprint.3"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyHouseFootprint.4"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'FamilyHouseFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyHouseFootprint.3"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyHouseFootprint.4"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'FamilyHouseFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyHouseFootprint.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyHouseFootprint.4"
       }
     }
   }

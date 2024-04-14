@@ -238,7 +238,8 @@ EMapIconType = {
     BeaconTower = 15,
     BeaconTowerPlayerInfo = 16,
     FamilyMarker = 17,
-    EMapIconType_MAX = 18,
+    FamilyCenter = 18,
+    EMapIconType_MAX = 19,
 }
 
 ---@enum EMapMode

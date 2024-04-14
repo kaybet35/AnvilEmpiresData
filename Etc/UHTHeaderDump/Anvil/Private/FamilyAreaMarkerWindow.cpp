@@ -3,8 +3,8 @@
 UFamilyAreaMarkerWindow::UFamilyAreaMarkerWindow() {
     this->FamilyMembersScrollBox = NULL;
     this->AlliedFamiliesScrollBox = NULL;
-    this->TaxIcon = NULL;
-    this->TaxTextBlock = NULL;
+    this->UpkeepIcon = NULL;
+    this->UpkeepTextBlock = NULL;
     this->FamilyMemberListItemWidgetType = NULL;
     this->FamilyAreaRestrictedCheckBox = NULL;
     this->FamilyAreaAllianceButton = NULL;

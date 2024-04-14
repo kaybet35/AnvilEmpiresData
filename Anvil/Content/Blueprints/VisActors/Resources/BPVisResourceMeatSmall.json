@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisResourceMeatSmall_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.8"
       }
     },
     "SuperStruct": {
@@ -54,15 +54,19 @@
     "Properties": {
       "PickupDataComponent": {
         "ObjectName": "PickupDataComponent'Default__BPVisResourceMeatSmall_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.4"
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisResourceMeatSmall_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.10"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisResourceMeatSmall_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisResourceMeatSmall_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.3"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -77,6 +81,19 @@
         "LocalizedString": "Resource. Can be cooked into Meat Rations at the Fire Pit."
       },
       "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisResourceMeatSmall_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.0"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisResourceMeatSmall_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisResourceMeatSmall_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.0"
       }
@@ -106,7 +123,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisResourceMeatSmall_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.5"
       },
       "VariableGuid": "C6741DAE-425DE468-C0156289-091D60AE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -124,7 +141,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisResourceMeatSmall_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.9"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -141,18 +158,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisResourceMeatSmall_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.6"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.7"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisResourceMeatSmall_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.6"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.7"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisResourceMeatSmall_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceMeatSmall.6"
       }
     }
   },

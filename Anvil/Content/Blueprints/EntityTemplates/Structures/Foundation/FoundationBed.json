@@ -86,7 +86,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__FoundationBed_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FoundationBed.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FoundationBed.14"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__FoundationBed_C:HealthComp'",
@@ -94,11 +94,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__FoundationBed_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FoundationBed.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FoundationBed.11"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__FoundationBed_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FoundationBed.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FoundationBed.13"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__FoundationBed_C:DestroyableComp'",
@@ -106,7 +106,7 @@
       },
       "MeshCollisionComp": {
         "ObjectName": "MeshCollisionProxyComponent'Default__FoundationBed_C:MeshCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FoundationBed.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FoundationBed.9"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__FoundationBed_C:FootprintCollisionProxyComponent_0'",
@@ -122,7 +122,7 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__FoundationBed_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FoundationBed.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FoundationBed.12"
       },
       "CodeNameString": "FoundationBed",
       "CodeName": -1587321823,
@@ -130,11 +130,15 @@
       "Components": [
         {
           "ObjectName": "PlayerSpawnerProxyComponent'Default__FoundationBed_C:PlayerSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FoundationBed.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FoundationBed.10"
         },
         {
           "ObjectName": "HousingProxyComponent'Default__FoundationBed_C:HousingProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FoundationBed.7"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__FoundationBed_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FoundationBed.8"
         }
       ],
       "VisActorClass": {
@@ -164,6 +168,33 @@
     "Properties": {
       "PlayerCapacity": 1,
       "bRequiresCeilingCheck": true
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__FoundationBed_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 4,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "bCheckDedicatedUnderlyingItem": true,
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
+        }
+      ]
     }
   },
   {
@@ -239,9 +270,6 @@
     "Template": {
       "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
-    },
-    "Properties": {
-      "Accessibility": "EAnvilAccessibilityType::AllCanUse"
     }
   }
 ]

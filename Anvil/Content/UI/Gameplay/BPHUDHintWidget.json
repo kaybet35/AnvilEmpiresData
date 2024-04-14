@@ -1,0 +1,174 @@
+[
+  {
+    "Type": "Border",
+    "Name": "Border",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Padding": {
+        "Left": 20.0,
+        "Top": 20.0,
+        "Right": 20.0,
+        "Bottom": 20.0
+      },
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.75,
+            "Hex": "BF000000"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPHUDHintWidget_C:WidgetTree.Border.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.1"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPHUDHintWidget_C:WidgetTree.HintCanvas.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.4"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 20.0,
+        "Top": 20.0,
+        "Right": 20.0,
+        "Bottom": 20.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Border'BPHUDHintWidget_C:WidgetTree.Border'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.0"
+      },
+      "Content": {
+        "ObjectName": "RichTextBlock'BPHUDHintWidget_C:WidgetTree.HintTextBlock'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.5"
+      }
+    }
+  },
+  {
+    "Type": "BPHUDHintWidget_C",
+    "Name": "Default__BPHUDHintWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPHUDHintWidget.BPHUDHintWidget_C'",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "HintCanvas",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPHUDHintWidget_C:WidgetTree.HintCanvas.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.4"
+        }
+      ],
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "HintCanvas",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPHUDHintWidget_C:WidgetTree.HintCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.3"
+      },
+      "Content": {
+        "ObjectName": "Border'BPHUDHintWidget_C:WidgetTree.Border'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.0"
+      }
+    }
+  },
+  {
+    "Type": "RichTextBlock",
+    "Name": "HintTextBlock",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'RichTextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "682A919D444FB173667A0B8DA490A717",
+        "SourceString": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+        "LocalizedString": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+      },
+      "TextStyleSet": {
+        "ObjectName": "DataTable'AnvilRichTextStyleData'",
+        "ObjectPath": "Anvil/Content/UI/AnvilRichTextStyleData.0"
+      },
+      "DecoratorClasses": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'AnvilRichTextDecorator_C'",
+          "ObjectPath": "Anvil/Content/UI/AnvilRichTextDecorator.1"
+        }
+      ],
+      "AutoWrapText": true,
+      "WrapTextAt": 350.0,
+      "Slot": {
+        "ObjectName": "BorderSlot'BPHUDHintWidget_C:WidgetTree.Border.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.1"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPHUDHintWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPHUDHintWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.7"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'HUDHintWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPHUDHintWidget_C'Default__BPHUDHintWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPHUDHintWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPHUDHintWidget_C:WidgetTree.HintCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.3"
+      }
+    }
+  }
+]

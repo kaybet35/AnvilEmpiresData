@@ -50,10 +50,16 @@
         "ObjectName": "BlueprintGeneratedClass'MarketplaceShopT1_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceShopT1.0"
       },
-      "BuildLocation": 4098,
+      "BuildLocation": 34,
       "RequiredTool": "EAnvilToolType::Hands",
       "bRequiresTownHall": true,
-      "TierPrerequisite": 1
+      "TierPrerequisite": 1,
+      "MaterialRequirements": [
+        {
+          "CodeName": 1175186297,
+          "Count": 5
+        }
+      ]
     }
   },
   {
@@ -107,7 +113,7 @@
       },
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__MarketplaceShopBuildSite_C:TeamProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Market/MarketplaceShopBuildSite.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Market/MarketplaceShopBuildSite.9"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__MarketplaceShopBuildSite_C:HealthProxyComponent_0'",
@@ -127,11 +133,17 @@
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__MarketplaceShopBuildSite_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Market/MarketplaceShopBuildSite.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Market/MarketplaceShopBuildSite.8"
       },
       "CodeNameString": "MarketplaceShopBuildSite",
       "CodeName": -1841686229,
       "bGenerateMeshCollisionsFromVisActor": true,
+      "Components": [
+        {
+          "ObjectName": "MarketShopProxyComponent'Default__MarketplaceShopBuildSite_C:MarketShopProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Market/MarketplaceShopBuildSite.7"
+        }
+      ],
       "VisActorClass": {
         "ObjectName": "Class'VisBuildSite'",
         "ObjectPath": "/Script/Anvil"
@@ -141,6 +153,12 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.1"
       }
     }
+  },
+  {
+    "Type": "MarketShopProxyComponent",
+    "Name": "MarketShopProxyComponent_0",
+    "Outer": "Default__MarketplaceShopBuildSite_C",
+    "Class": "UScriptClass'MarketShopProxyComponent'"
   },
   {
     "Type": "StructureProxyComponent",

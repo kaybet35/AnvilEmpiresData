@@ -23,8 +23,6 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->EncumbranceIcon = NULL;
     this->EncumbranceText = NULL;
     this->PlayerStatusText = NULL;
-    this->GameplayHintText = NULL;
-    this->GameplayHintCanvas = NULL;
     this->WinConditionCanvas = NULL;
     this->WinConditionText = NULL;
     this->WinConditionLogo = NULL;

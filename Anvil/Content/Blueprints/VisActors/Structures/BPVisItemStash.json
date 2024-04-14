@@ -1,16 +1,22 @@
 [
   {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisItemStash_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BPVisItemStash_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisItemStash_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.7"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisActor'",
+      "ObjectName": "Class'VisItemStash'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
@@ -24,17 +30,6 @@
           "ObjectName": "Class'StaticMeshComponent'",
           "ObjectPath": "/Script/Engine"
         }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "DefaultSceneRoot",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'SceneComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -46,7 +41,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisItemStash_C'Default__BPVisItemStash_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.1"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.2"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -57,6 +52,14 @@
     "Name": "Default__BPVisItemStash_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.BPVisItemStash_C'",
     "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisItemStash_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisItemStash_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.3"
+      },
       "VisDisplayName": {
         "Namespace": "",
         "Key": "1A35115145AADE82BB0339A77B8426F9",
@@ -70,7 +73,24 @@
         "LocalizedString": "Item Stash"
       },
       "UseWindowType": "EHUDWindowType::ItemStash",
-      "bUseDepthStencilForInteractionHighlight": true
+      "bUseDepthStencilForInteractionHighlight": true,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisItemStash_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.0"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisItemStash_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisItemStash_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.0"
+      }
     }
   },
   {
@@ -91,14 +111,8 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisItemStash_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.4"
       },
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisItemStash_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.4"
-        }
-      ],
       "VariableGuid": "A11BC16A-4CB87A22-D504559D-AAADC33A",
       "InternalVariableName": "DefaultSceneRoot"
     }
@@ -115,8 +129,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisItemStash_C:StorageChestT1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.8"
       },
+      "ParentComponentOrVariableName": "LootMarkerVFX",
+      "bIsParentComponentNative": true,
       "VariableGuid": "F846A957-4CD7DFE5-B9D143B7-C08B0BF3",
       "InternalVariableName": "StorageChestT1"
     }
@@ -129,23 +145,19 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisItemStash_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.3"
+          "ObjectName": "SCS_Node'BPVisItemStash_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.6"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisItemStash_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.3"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisItemStash_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.4"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.6"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisItemStash_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisItemStash.5"
       }
     }
   },

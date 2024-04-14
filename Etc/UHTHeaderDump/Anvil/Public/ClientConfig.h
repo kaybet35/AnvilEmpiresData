@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GlobalShardConfig.h"
 #include "ShardConfig.h"
 #include "ClientConfig.generated.h"
 
@@ -8,7 +9,7 @@ struct FClientConfig {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FString DiscordRoleServerUrl;
+    FGlobalShardConfig GlobalShardConfig;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FShardConfig> AvailableShardList;

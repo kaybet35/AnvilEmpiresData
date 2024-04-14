@@ -5,6 +5,8 @@ UTweakableDataComponent::UTweakableDataComponent(const FObjectInitializer& Objec
     this->PopulationRequirementT3 = 0;
     this->FamilyHouseRequirementT2 = 0;
     this->FamilyHouseRequirementT3 = 0;
+    this->MarketplaceAreaRequirementT2 = 0;
+    this->MarketplaceAreaRequirementT3 = 0;
     this->TownCenterRequiredBuilders = 0;
 }
 

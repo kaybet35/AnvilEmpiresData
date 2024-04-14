@@ -6,7 +6,6 @@
 class UButton;
 class UHeaderContainer;
 class UImage;
-class UInventoryContainerWidget;
 class UPledgedPlayerBox;
 class UStatusWidget;
 class UTextBlock;
@@ -33,19 +32,13 @@ protected:
     UStatusWidget* RareResourceStatus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UHeaderContainer* ReserveInventoryHeaderContainer;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UUserWidget* ReserveInventoryMainAreaContainer;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UInventoryContainerWidget* ReserveInventoryContainerWidget;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UImage* PublicInventorySubmitImage;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UButton* IncreaseTownStatusButton;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UImage* UpkeepIcon;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* UpkeepTextBlock;
     
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

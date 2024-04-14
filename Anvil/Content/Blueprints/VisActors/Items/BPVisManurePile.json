@@ -29,7 +29,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisManurePile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.15"
       }
     },
     "SuperStruct": {
@@ -104,15 +104,19 @@
     "Properties": {
       "PickupDataComponent": {
         "ObjectName": "PickupDataComponent'Default__BPVisManurePile_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.8"
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisManurePile_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.17"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisManurePile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisManurePile_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.7"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -161,7 +165,7 @@
       },
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'BPVisManurePile_C:GrassRemovalVolume_GEN_VARIABLE.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.16"
       }
     }
   },
@@ -180,6 +184,19 @@
         "X": 1.25,
         "Y": 1.25,
         "Z": 1.25
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisManurePile_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisManurePile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.0"
       }
     }
   },
@@ -207,7 +224,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisManurePile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.9"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -302,42 +319,42 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.12"
         },
         {
           "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.14"
         },
         {
           "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.11"
         },
         {
           "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.13"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.12"
         },
         {
           "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.14"
         },
         {
           "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.11"
         },
         {
           "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.13"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisManurePile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisManurePile.10"
       }
     }
   },

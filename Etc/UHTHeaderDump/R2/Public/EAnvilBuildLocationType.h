@@ -22,5 +22,6 @@ enum class EAnvilBuildLocationType : uint8 {
     RequiresEnclosure,
     OutsideTownArea,
     TownArea,
+    NumTypes,
 };
 

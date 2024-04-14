@@ -1,0 +1,183 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SwordWhooshCue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'SwordWhooshCue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Melee/SwordWhooshCue.2"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Weapons'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.7"
+      },
+      "bHasDelayNode": true,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'FoleyConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/FoleyConcurrency.0"
+        }
+      ],
+      "Duration": 1.4072187,
+      "MaxDistance": 7900.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Foley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "SwordWhooshCue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 0.5,
+      "DelayMax": 0.5,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'SwordWhooshCue:SoundNodeRandom_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Melee/SwordWhooshCue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "SwordWhooshCue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'SwordWhooshCue:SoundNodeDelay_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Melee/SwordWhooshCue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "SwordWhooshCue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SwordWhooshCue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Melee/SwordWhooshCue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SwordWhooshCue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Melee/SwordWhooshCue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SwordWhooshCue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Melee/SwordWhooshCue.6"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SwordWhooshCue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Melee/SwordWhooshCue.7"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SwordWhooshCue:SoundNodeWavePlayer_5'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Melee/SwordWhooshCue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "SwordWhooshCue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/BladeReady01.BladeReady01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BladeReady01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Melee/BladeReady01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "SwordWhooshCue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/BladeReady02.BladeReady02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BladeReady02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Melee/BladeReady02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "SwordWhooshCue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/BladeReady03.BladeReady03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BladeReady03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Melee/BladeReady03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "SwordWhooshCue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/BladeReady04.BladeReady04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BladeReady04'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Melee/BladeReady04.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "SwordWhooshCue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/BladeReady05.BladeReady05",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BladeReady05'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Melee/BladeReady05.0"
+    }
+  }
+]

@@ -6,11 +6,9 @@ UTownCenterWindow::UTownCenterWindow() {
     this->CivicPledgePanel = NULL;
     this->PledgedHeader = NULL;
     this->RareResourceStatus = NULL;
-    this->ReserveInventoryHeaderContainer = NULL;
-    this->ReserveInventoryMainAreaContainer = NULL;
-    this->ReserveInventoryContainerWidget = NULL;
-    this->PublicInventorySubmitImage = NULL;
     this->IncreaseTownStatusButton = NULL;
+    this->UpkeepIcon = NULL;
+    this->UpkeepTextBlock = NULL;
 }
 
 void UTownCenterWindow::OnIncreaseTownStatusButtonClicked() {

@@ -24,7 +24,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisScorpionArrowProjectile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.9"
       }
     },
     "SuperStruct": {
@@ -66,15 +66,19 @@
     "Properties": {
       "PickupDataComponent": {
         "ObjectName": "PickupDataComponent'Default__BPVisScorpionArrowProjectile_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.5"
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisScorpionArrowProjectile_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.10"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisScorpionArrowProjectile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisScorpionArrowProjectile_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.4"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -83,6 +87,19 @@
         "LocalizedString": "Arrow"
       },
       "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisScorpionArrowProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.0"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisScorpionArrowProjectile_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisScorpionArrowProjectile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.0"
       }
@@ -112,7 +129,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisScorpionArrowProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.6"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -147,18 +164,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisScorpionArrowProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.8"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisScorpionArrowProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.8"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisScorpionArrowProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisScorpionArrowProjectile.7"
       }
     }
   },

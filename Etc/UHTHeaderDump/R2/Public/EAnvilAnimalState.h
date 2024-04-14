@@ -8,6 +8,7 @@ enum class EAnvilAnimalState : uint8 {
     Walking,
     Running,
     Scavenging,
+    Posturing,
     ChasingTarget,
     Attacking,
     Trapped,

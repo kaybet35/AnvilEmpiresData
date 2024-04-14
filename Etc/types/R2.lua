@@ -276,6 +276,21 @@ FProducableItem = {}
 
 
 
+---@class FR2Family
+---@field FamilyId int32
+---@field TeamId uint8
+---@field EntityId int64
+---@field TownHallId int32
+---@field MapHash int32
+---@field EntityGlobalPosition FVector
+---@field bAllowPublicPledging boolean
+---@field bIsAbandoned boolean
+---@field MemberOnlineIdList TArray<FR2FamilyMember>
+---@field AlliedFamilyIdList TArray<int32>
+FR2Family = {}
+
+
+
 ---@class FR2FamilyMember
 ---@field OnlineId int64
 ---@field Role EAnvilR2FamilyRoleType
@@ -368,6 +383,7 @@ FWorldEntityBeaconTowerData = {}
 ---@field DataType EAnvilWorldEntityType
 ---@field TownHallData FWorldEntityTownHallData
 ---@field BeaconTowerData FWorldEntityBeaconTowerData
+---@field FamilyCenterData FWorldEntityFamilyCenterData
 FWorldEntityData = {}
 
 
@@ -381,6 +397,12 @@ FWorldEntityData = {}
 ---@field WorldPos FVector
 ---@field Data FWorldEntityData
 FWorldEntityEntry = {}
+
+
+
+---@class FWorldEntityFamilyCenterData
+---@field OwnerTownHallId int32
+FWorldEntityFamilyCenterData = {}
 
 
 
@@ -455,6 +477,9 @@ UAnimalAIProxyComponent = {}
 ---@class UAnimalAttackProxyComponent : UProxyComponent
 ---@field AttackTargetTypes TArray<TSubclassOf<UEntityTemplate>>
 ---@field OnRoadVisionRange float
+---@field PosturingHoldDist float
+---@field PosturingAggroDist float
+---@field PosturingDuration float
 ---@field ChaseDuration float
 ---@field ChaseCooldown float
 ---@field AttackOffset FVector
@@ -464,6 +489,7 @@ UAnimalAIProxyComponent = {}
 ---@field MinNumAttacks uint8
 ---@field MaxNumAttacks uint8
 ---@field AttackDamage int32
+---@field bDoesFirstAttackFail boolean
 UAnimalAttackProxyComponent = {}
 
 
@@ -612,8 +638,9 @@ UBeaconTowerDataComponent = {}
 
 ---@class UBeaconTowerProxyComponent : UProxyComponent
 ---@field bViewerNode boolean
----@field LinkRange float
----@field DetectionRange float
+---@field LinkRangeMinMax FR2FloatRange
+---@field DetectionRangeMinMax FR2FloatRange
+---@field AltitudeMinMax FR2FloatRange
 ---@field DetectionFuelCostPerHour float
 ---@field InformingFuelCostPerHour float
 UBeaconTowerProxyComponent = {}
@@ -856,7 +883,6 @@ UEquipmentProxyComponent = {}
 ---@class UFamilyAreaMarkerDataComponent : UDataComponent
 ---@field AllowPublicPledging boolean
 ---@field bHasMembers boolean
----@field NumFamilyOwnedStructures uint8
 UFamilyAreaMarkerDataComponent = {}
 
 
@@ -1319,6 +1345,7 @@ UPlantGrowthProxyComponent = {}
 ---@field PledgedTownHallInfo int64
 ---@field PledgedMilitiaInfo int64
 ---@field bShowRespawnScreen uint8
+---@field RedeployTarget uint8
 ---@field bShowDeathMarker uint8
 ---@field LastDeathLocation FVector
 UPlayerControllerDataComponent = {}
@@ -1749,6 +1776,7 @@ UStaticTorchProxyComponent = {}
 ---@class UStructureDataComponent : UDataComponent
 ---@field bRestrictedMode boolean
 ---@field bOnFoundation boolean
+---@field bIsCollapsed boolean
 ---@field StructureType EAnvilBuildStructureType
 ---@field BuilderId int64
 ---@field TownFamilyAreaId int32
@@ -1765,6 +1793,8 @@ UStructureProtectionProxyComponent = {}
 ---@class UStructureProxyComponent : UProxyComponent
 ---@field bCannotBeDismantled boolean
 ---@field bRequireSupport boolean
+---@field bCanCollapse boolean
+---@field bIsAlwaysEnclosed boolean
 ---@field IgnoreMeshVisbilityChanges boolean
 ---@field StructureType EAnvilBuildStructureType
 UStructureProxyComponent = {}
@@ -1782,12 +1812,6 @@ UTeamDataComponent = {}
 ---@field Accessibility EAnvilAccessibilityType
 ---@field bAlwaysAllowAccessWhenScorched boolean
 UTeamProxyComponent = {}
-
-
-
----@class UTechCenterProxyComponent : UProxyComponent
----@field TechCountList TArray<uint32>
-UTechCenterProxyComponent = {}
 
 
 
@@ -1827,13 +1851,10 @@ UTemperatureProxyComponent = {}
 ---@field NumUnclaimedTents int32
 ---@field NumReinforcementSupplies int32
 ---@field NumTotalFamilyHouses int32
+---@field NumMarketplaceAreas int32
 ---@field TownNameId uint8
 ---@field TownNameOrdinal uint8
 ---@field CurrentBuildRadius float
----@field PopulationRequirementT2 uint8
----@field PopulationRequirementT3 uint8
----@field FamilyHouseRequirementT2 uint8
----@field FamilyHouseRequirementT3 uint8
 UTownHallDataComponent = {}
 
 
@@ -1866,6 +1887,8 @@ UTrapProxyComponent = {}
 ---@field PopulationRequirementT3 uint8
 ---@field FamilyHouseRequirementT2 uint8
 ---@field FamilyHouseRequirementT3 uint8
+---@field MarketplaceAreaRequirementT2 uint8
+---@field MarketplaceAreaRequirementT3 uint8
 ---@field TownCenterRequiredBuilders uint8
 UTweakableDataComponent = {}
 

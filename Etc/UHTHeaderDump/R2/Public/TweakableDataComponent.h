@@ -20,6 +20,12 @@ public:
     uint8 FamilyHouseRequirementT3;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 MarketplaceAreaRequirementT2;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 MarketplaceAreaRequirementT3;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TownCenterRequiredBuilders;
     
     UTweakableDataComponent(const FObjectInitializer& ObjectInitializer);

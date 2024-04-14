@@ -1,9 +1,9 @@
 ---@meta
 
----@class ABPTestEntityVisActor_C : AVisActor
+---@class ABPVisMapInfo_C : AVisMapInfo
 ---@field Cube UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPTestEntityVisActor_C = {}
+ABPVisMapInfo_C = {}
 
 
 

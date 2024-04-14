@@ -18,6 +18,12 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 PledgedTownHallTownHallId;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bHasHousePledge;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bHasBedPledge;
+    
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 PledgedMilitiaMapHash;
     

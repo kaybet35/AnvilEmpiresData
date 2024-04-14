@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisSpearRelicProjectile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.8"
       }
     },
     "SuperStruct": {
@@ -54,15 +54,19 @@
     "Properties": {
       "PickupDataComponent": {
         "ObjectName": "PickupDataComponent'Default__BPVisSpearRelicProjectile_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.4"
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisSpearRelicProjectile_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.10"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisSpearRelicProjectile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisSpearRelicProjectile_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.3"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -71,6 +75,19 @@
         "LocalizedString": "Spear"
       },
       "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSpearRelicProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.0"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisSpearRelicProjectile_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisSpearRelicProjectile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.0"
       }
@@ -100,7 +117,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisSpearRelicProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.5"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -118,7 +135,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisSpearRelicProjectile_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.9"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -135,18 +152,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisSpearRelicProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.6"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.7"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisSpearRelicProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.6"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.7"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisSpearRelicProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearRelicProjectile.6"
       }
     }
   },

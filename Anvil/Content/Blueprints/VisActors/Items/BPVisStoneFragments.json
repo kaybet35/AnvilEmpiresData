@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisStoneFragments_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.9"
       }
     },
     "SuperStruct": {
@@ -54,15 +54,19 @@
     "Properties": {
       "PickupDataComponent": {
         "ObjectName": "PickupDataComponent'Default__BPVisStoneFragments_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.5"
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisStoneFragments_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.11"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisStoneFragments_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisStoneFragments_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.4"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -95,7 +99,20 @@
       },
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'BPVisStoneFragments_C:GrassRemovalVolume_GEN_VARIABLE.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.10"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisStoneFragments_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisStoneFragments_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.0"
       }
     }
   },
@@ -123,7 +140,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisStoneFragments_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.6"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -158,18 +175,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisStoneFragments_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.8"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisStoneFragments_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.8"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisStoneFragments_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisStoneFragments.7"
       }
     }
   },

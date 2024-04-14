@@ -5,6 +5,7 @@
 ---@field TownStatusAlertAnimation UWidgetAnimation
 ---@field WinConditionAnimation UWidgetAnimation
 ---@field BPFoodCooldownWidget UBPFoodCooldownWidget_C
+---@field BPHUDHintWidget UBPHUDHintWidget_C
 ---@field PreAlphaBadge UImage
 UBPHUDWidget_C = {}
 

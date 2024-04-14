@@ -10,7 +10,6 @@ AVisAnimal::AVisAnimal(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->HealthDataComponent = CreateDefaultSubobject<UHealthDataComponent>(TEXT("HealthDataComponent"));
     this->Capsule = (UCapsuleComponent*)RootComponent;
     this->Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
-    this->TelegraphSoundQueue = NULL;
     this->Mesh->SetupAttachment(RootComponent);
 }
 

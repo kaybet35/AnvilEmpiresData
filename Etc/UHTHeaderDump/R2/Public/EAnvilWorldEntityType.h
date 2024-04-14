@@ -11,6 +11,7 @@ enum class EAnvilWorldEntityType : uint8 {
     SmallCamp,
     MarketShop,
     BeaconTower,
+    FamilyCenter,
     NumTypes,
 };
 

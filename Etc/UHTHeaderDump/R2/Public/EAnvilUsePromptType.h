@@ -13,5 +13,6 @@ enum class EAnvilUsePromptType : uint8 {
     Gate,
     Feed,
     Gathering,
+    NumTypes,
 };
 

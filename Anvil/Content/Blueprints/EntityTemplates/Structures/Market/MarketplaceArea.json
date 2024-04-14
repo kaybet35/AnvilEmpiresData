@@ -3,9 +3,13 @@
     "Type": "BlueprintGeneratedClass",
     "Name": "MarketplaceArea_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
     "SuperStruct": {
-      "ObjectName": "Class'EntityTemplate'",
-      "ObjectPath": "/Script/R2"
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
     },
     "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
@@ -16,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "MarketplaceArea_C'Default__MarketplaceArea_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.2"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.6"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -27,34 +31,107 @@
     "Name": "BoxCollisionProxyComponent_0",
     "Outer": "Default__MarketplaceArea_C",
     "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__MarketplaceArea_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableComp",
+    "Outer": "Default__MarketplaceArea_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Template": {
+      "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__MarketplaceArea_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
     "Properties": {
-      "Extents": {
-        "X": 800.0,
-        "Y": 800.0,
-        "Z": 100.0
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'MarketplaceAreaFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/MarketplaceAreaFootprint.0"
       },
-      "CollisionMask": 1048576
+      "CollisionMask": 17825800
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthComp",
+    "Outer": "Default__MarketplaceArea_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
     }
   },
   {
     "Type": "MarketplaceArea_C",
     "Name": "Default__MarketplaceArea_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.MarketplaceArea_C'",
+    "Template": {
+      "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
+    },
     "Properties": {
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__MarketplaceArea_C:TeamComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.11"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__MarketplaceArea_C:HealthComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.5"
+      },
+      "RepairComp": {
+        "ObjectName": "RepairProxyComponent'Default__MarketplaceArea_C:RepairComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.8"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__MarketplaceArea_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.10"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__MarketplaceArea_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.3"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__MarketplaceArea_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.4"
+      },
+      "UseBoxComp": null,
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__MarketplaceArea_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.2"
+      },
+      "ScorchComp": {
+        "ObjectName": "ScorchProxyComponent'Default__MarketplaceArea_C:ScorchProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.9"
+      },
       "CodeNameString": "MarketplaceArea",
       "CodeName": -984598746,
+      "GenerateMeshCollisionMask": 0,
       "Components": [
         {
-          "ObjectName": "BoxCollisionProxyComponent'Default__MarketplaceArea_C:BoxCollisionProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.1"
-        },
-        {
           "ObjectName": "ProxyEntitySpawnerProxyComponent'Default__MarketplaceArea_C:ProxyEntitySpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.3"
-        },
-        {
-          "ObjectName": "TeamProxyComponent'Default__MarketplaceArea_C:TeamProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.4"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Market/MarketplaceArea.7"
         }
       ],
       "VisActorClass": {
@@ -76,12 +153,43 @@
     }
   },
   {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairComp",
+    "Outer": "Default__MarketplaceArea_C",
+    "Class": "UScriptClass'RepairProxyComponent'",
+    "Template": {
+      "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+    }
+  },
+  {
+    "Type": "ScorchProxyComponent",
+    "Name": "ScorchProxyComponent_0",
+    "Outer": "Default__MarketplaceArea_C",
+    "Class": "UScriptClass'ScorchProxyComponent'",
+    "Template": {
+      "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__MarketplaceArea_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    }
+  },
+  {
     "Type": "TeamProxyComponent",
-    "Name": "TeamProxyComponent_0",
+    "Name": "TeamComp",
     "Outer": "Default__MarketplaceArea_C",
     "Class": "UScriptClass'TeamProxyComponent'",
-    "Properties": {
-      "Accessibility": "EAnvilAccessibilityType::AllCanUse"
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
     }
   }
 ]

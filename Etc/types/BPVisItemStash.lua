@@ -1,8 +1,7 @@
 ---@meta
 
----@class ABPVisItemStash_C : AVisActor
+---@class ABPVisItemStash_C : AVisItemStash
 ---@field StorageChestT1 UStaticMeshComponent
----@field DefaultSceneRoot USceneComponent
 ABPVisItemStash_C = {}
 
 

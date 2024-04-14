@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "EAnvilWorldEntityType.h"
 #include "WorldEntityBeaconTowerData.h"
+#include "WorldEntityFamilyCenterData.h"
 #include "WorldEntityTownHallData.h"
 #include "WorldEntityData.generated.h"
 
@@ -17,6 +18,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWorldEntityBeaconTowerData BeaconTowerData;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FWorldEntityFamilyCenterData FamilyCenterData;
     
     R2_API FWorldEntityData();
 };

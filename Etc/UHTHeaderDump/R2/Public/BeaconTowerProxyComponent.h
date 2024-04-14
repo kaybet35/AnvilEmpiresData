@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ProxyComponent.h"
+#include "R2FloatRange.h"
 #include "BeaconTowerProxyComponent.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -11,10 +12,13 @@ public:
     bool bViewerNode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float LinkRange;
+    FR2FloatRange LinkRangeMinMax;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float DetectionRange;
+    FR2FloatRange DetectionRangeMinMax;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FR2FloatRange AltitudeMinMax;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DetectionFuelCostPerHour;

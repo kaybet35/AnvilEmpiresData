@@ -13,9 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bHasMembers;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 NumFamilyOwnedStructures;
-    
     UFamilyAreaMarkerDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };

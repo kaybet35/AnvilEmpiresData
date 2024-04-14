@@ -9,7 +9,6 @@ class UAnimalAIDataComponent;
 class UCapsuleComponent;
 class UHealthDataComponent;
 class USkeletalMeshComponent;
-class USoundCue;
 
 UCLASS(Blueprintable)
 class ANVIL_API AVisAnimal : public AVisActor {
@@ -30,9 +29,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EAnvilAnimalState, UAnimMontage*> CurrentStateMontageMap;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USoundCue* TelegraphSoundQueue;
     
 public:
     AVisAnimal(const FObjectInitializer& ObjectInitializer);

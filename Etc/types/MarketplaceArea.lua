@@ -1,6 +1,6 @@
 ---@meta
 
----@class UMarketplaceArea_C : UEntityTemplate
+---@class UMarketplaceArea_C : UBPBaseStructureEntity_C
 UMarketplaceArea_C = {}
 
 

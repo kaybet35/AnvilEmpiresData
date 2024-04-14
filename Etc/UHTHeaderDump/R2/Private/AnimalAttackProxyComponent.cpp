@@ -2,6 +2,9 @@
 
 UAnimalAttackProxyComponent::UAnimalAttackProxyComponent() {
     this->OnRoadVisionRange = 500.00f;
+    this->PosturingHoldDist = 500.00f;
+    this->PosturingAggroDist = 200.00f;
+    this->PosturingDuration = 0.00f;
     this->ChaseDuration = 0.00f;
     this->ChaseCooldown = 5.00f;
     this->AttackRadius = 150.00f;
@@ -10,6 +13,7 @@ UAnimalAttackProxyComponent::UAnimalAttackProxyComponent() {
     this->MinNumAttacks = 0;
     this->MaxNumAttacks = 0;
     this->AttackDamage = 0;
+    this->bDoesFirstAttackFail = false;
 }
 
 

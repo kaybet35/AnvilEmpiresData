@@ -29,7 +29,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisTorchProjectile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.12"
       }
     },
     "SuperStruct": {
@@ -104,15 +104,19 @@
     "Properties": {
       "PickupDataComponent": {
         "ObjectName": "PickupDataComponent'Default__BPVisTorchProjectile_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.6"
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisTorchProjectile_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.14"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisTorchProjectile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisTorchProjectile_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.5"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -194,6 +198,19 @@
     }
   },
   {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisTorchProjectile_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisTorchProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.0"
+      }
+    }
+  },
+  {
     "Type": "PickupDataComponent",
     "Name": "PickupDataComponent",
     "Outer": "Default__BPVisTorchProjectile_C",
@@ -217,7 +234,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisTorchProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.7"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -254,18 +271,18 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisTorchProjectile_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.13"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisTorchProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.8"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.9"
         },
         {
           "ObjectName": "SCS_Node'BPVisTorchProjectile_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.11"
         }
       ],
       "VariableGuid": "16DA5995-4497C063-7031CD88-BB8CA241",
@@ -300,26 +317,26 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisTorchProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.10"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisTorchProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.10"
         },
         {
           "ObjectName": "SCS_Node'BPVisTorchProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.8"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.9"
         },
         {
           "ObjectName": "SCS_Node'BPVisTorchProjectile_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.11"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisTorchProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisTorchProjectile.8"
       }
     }
   },

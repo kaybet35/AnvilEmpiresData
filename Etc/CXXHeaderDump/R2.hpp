@@ -234,6 +234,21 @@ struct FProducableItem
 
 }; // Size: 0x28
 
+struct FR2Family
+{
+    int32 FamilyId;                                                                   // 0x0000 (size: 0x4)
+    uint8 TeamId;                                                                     // 0x0004 (size: 0x1)
+    int64 EntityId;                                                                   // 0x0008 (size: 0x8)
+    int32 TownHallId;                                                                 // 0x0010 (size: 0x4)
+    int32 MapHash;                                                                    // 0x0014 (size: 0x4)
+    FVector EntityGlobalPosition;                                                     // 0x0018 (size: 0x18)
+    bool bAllowPublicPledging;                                                        // 0x0030 (size: 0x1)
+    bool bIsAbandoned;                                                                // 0x0031 (size: 0x1)
+    TArray<FR2FamilyMember> MemberOnlineIdList;                                       // 0x0038 (size: 0x10)
+    TArray<int32> AlliedFamilyIdList;                                                 // 0x0048 (size: 0x10)
+
+}; // Size: 0x58
+
 struct FR2FamilyMember
 {
     int64 OnlineId;                                                                   // 0x0000 (size: 0x8)
@@ -327,8 +342,9 @@ struct FWorldEntityData
     EAnvilWorldEntityType DataType;                                                   // 0x0000 (size: 0x1)
     FWorldEntityTownHallData TownHallData;                                            // 0x0004 (size: 0x20)
     FWorldEntityBeaconTowerData BeaconTowerData;                                      // 0x0024 (size: 0x8)
+    FWorldEntityFamilyCenterData FamilyCenterData;                                    // 0x002C (size: 0x4)
 
-}; // Size: 0x2C
+}; // Size: 0x30
 
 struct FWorldEntityEntry
 {
@@ -338,9 +354,15 @@ struct FWorldEntityEntry
     int32 RegionIndex;                                                                // 0x0010 (size: 0x4)
     uint8 TeamId;                                                                     // 0x0014 (size: 0x1)
     FVector WorldPos;                                                                 // 0x0018 (size: 0x18)
-    FWorldEntityData Data;                                                            // 0x0030 (size: 0x2C)
+    FWorldEntityData Data;                                                            // 0x0030 (size: 0x30)
 
 }; // Size: 0x60
+
+struct FWorldEntityFamilyCenterData
+{
+    int32 OwnerTownHallId;                                                            // 0x0000 (size: 0x4)
+
+}; // Size: 0x4
 
 struct FWorldEntityTownHallData
 {
@@ -459,17 +481,21 @@ class UAnimalAttackProxyComponent : public UProxyComponent
 {
     TArray<class TSubclassOf<UEntityTemplate>> AttackTargetTypes;                     // 0x0028 (size: 0x10)
     float OnRoadVisionRange;                                                          // 0x0038 (size: 0x4)
-    float ChaseDuration;                                                              // 0x003C (size: 0x4)
-    float ChaseCooldown;                                                              // 0x0040 (size: 0x4)
-    FVector AttackOffset;                                                             // 0x0048 (size: 0x18)
-    float AttackRadius;                                                               // 0x0060 (size: 0x4)
-    float AttackFrequency;                                                            // 0x0064 (size: 0x4)
-    float AttackDelay;                                                                // 0x0068 (size: 0x4)
-    uint8 MinNumAttacks;                                                              // 0x006C (size: 0x1)
-    uint8 MaxNumAttacks;                                                              // 0x006D (size: 0x1)
-    int32 AttackDamage;                                                               // 0x0070 (size: 0x4)
+    float PosturingHoldDist;                                                          // 0x003C (size: 0x4)
+    float PosturingAggroDist;                                                         // 0x0040 (size: 0x4)
+    float PosturingDuration;                                                          // 0x0044 (size: 0x4)
+    float ChaseDuration;                                                              // 0x0048 (size: 0x4)
+    float ChaseCooldown;                                                              // 0x004C (size: 0x4)
+    FVector AttackOffset;                                                             // 0x0050 (size: 0x18)
+    float AttackRadius;                                                               // 0x0068 (size: 0x4)
+    float AttackFrequency;                                                            // 0x006C (size: 0x4)
+    float AttackDelay;                                                                // 0x0070 (size: 0x4)
+    uint8 MinNumAttacks;                                                              // 0x0074 (size: 0x1)
+    uint8 MaxNumAttacks;                                                              // 0x0075 (size: 0x1)
+    int32 AttackDamage;                                                               // 0x0078 (size: 0x4)
+    bool bDoesFirstAttackFail;                                                        // 0x007C (size: 0x1)
 
-}; // Size: 0x78
+}; // Size: 0x80
 
 class UAnimalFlyingProxyComponent : public UProxyComponent
 {
@@ -616,12 +642,13 @@ class UBeaconTowerDataComponent : public UDataComponent
 class UBeaconTowerProxyComponent : public UProxyComponent
 {
     bool bViewerNode;                                                                 // 0x0028 (size: 0x1)
-    float LinkRange;                                                                  // 0x002C (size: 0x4)
-    float DetectionRange;                                                             // 0x0030 (size: 0x4)
-    float DetectionFuelCostPerHour;                                                   // 0x0034 (size: 0x4)
-    float InformingFuelCostPerHour;                                                   // 0x0038 (size: 0x4)
+    FR2FloatRange LinkRangeMinMax;                                                    // 0x002C (size: 0x8)
+    FR2FloatRange DetectionRangeMinMax;                                               // 0x0034 (size: 0x8)
+    FR2FloatRange AltitudeMinMax;                                                     // 0x003C (size: 0x8)
+    float DetectionFuelCostPerHour;                                                   // 0x0044 (size: 0x4)
+    float InformingFuelCostPerHour;                                                   // 0x0048 (size: 0x4)
 
-}; // Size: 0x40
+}; // Size: 0x50
 
 class UBoxCollisionProxyComponent : public UProxyComponent
 {
@@ -857,9 +884,8 @@ class UFamilyAreaMarkerDataComponent : public UDataComponent
 {
     bool AllowPublicPledging;                                                         // 0x00A8 (size: 0x1)
     bool bHasMembers;                                                                 // 0x00C8 (size: 0x1)
-    uint8 NumFamilyOwnedStructures;                                                   // 0x00E8 (size: 0x1)
 
-}; // Size: 0x108
+}; // Size: 0xE8
 
 class UFamilyAreaMarkerProxyComponent : public UProxyComponent
 {
@@ -1320,10 +1346,11 @@ class UPlayerControllerDataComponent : public UDataComponent
     int64 PledgedTownHallInfo;                                                        // 0x00A8 (size: 0x8)
     int64 PledgedMilitiaInfo;                                                         // 0x00C8 (size: 0x8)
     uint8 bShowRespawnScreen;                                                         // 0x00E8 (size: 0x1)
-    uint8 bShowDeathMarker;                                                           // 0x0108 (size: 0x1)
-    FVector LastDeathLocation;                                                        // 0x0128 (size: 0x18)
+    uint8 RedeployTarget;                                                             // 0x0108 (size: 0x1)
+    uint8 bShowDeathMarker;                                                           // 0x0128 (size: 0x1)
+    FVector LastDeathLocation;                                                        // 0x0148 (size: 0x18)
 
-}; // Size: 0x158
+}; // Size: 0x178
 
 class UPlayerControllerProxyComponent : public UProxyComponent
 {
@@ -1750,11 +1777,12 @@ class UStructureDataComponent : public UDataComponent
 {
     bool bRestrictedMode;                                                             // 0x00A8 (size: 0x1)
     bool bOnFoundation;                                                               // 0x00C8 (size: 0x1)
-    EAnvilBuildStructureType StructureType;                                           // 0x00E8 (size: 0x1)
-    int64 BuilderId;                                                                  // 0x0108 (size: 0x8)
-    int32 TownFamilyAreaId;                                                           // 0x0128 (size: 0x4)
+    bool bIsCollapsed;                                                                // 0x00E8 (size: 0x1)
+    EAnvilBuildStructureType StructureType;                                           // 0x0108 (size: 0x1)
+    int64 BuilderId;                                                                  // 0x0128 (size: 0x8)
+    int32 TownFamilyAreaId;                                                           // 0x0148 (size: 0x4)
 
-}; // Size: 0x148
+}; // Size: 0x168
 
 class UStructureProtectionProxyComponent : public UProxyComponent
 {
@@ -1766,8 +1794,10 @@ class UStructureProxyComponent : public UProxyComponent
 {
     bool bCannotBeDismantled;                                                         // 0x0028 (size: 0x1)
     bool bRequireSupport;                                                             // 0x0029 (size: 0x1)
-    bool IgnoreMeshVisbilityChanges;                                                  // 0x002A (size: 0x1)
-    EAnvilBuildStructureType StructureType;                                           // 0x002B (size: 0x1)
+    bool bCanCollapse;                                                                // 0x002A (size: 0x1)
+    bool bIsAlwaysEnclosed;                                                           // 0x002B (size: 0x1)
+    bool IgnoreMeshVisbilityChanges;                                                  // 0x002C (size: 0x1)
+    EAnvilBuildStructureType StructureType;                                           // 0x002D (size: 0x1)
 
 }; // Size: 0x30
 
@@ -1784,12 +1814,6 @@ class UTeamProxyComponent : public UProxyComponent
     bool bAlwaysAllowAccessWhenScorched;                                              // 0x002A (size: 0x1)
 
 }; // Size: 0x30
-
-class UTechCenterProxyComponent : public UProxyComponent
-{
-    TArray<uint32> TechCountList;                                                     // 0x0028 (size: 0x10)
-
-}; // Size: 0x38
 
 class UTechItemTemplate : public UObject
 {
@@ -1828,15 +1852,12 @@ class UTownHallDataComponent : public UDataComponent
     int32 NumUnclaimedTents;                                                          // 0x0188 (size: 0x4)
     int32 NumReinforcementSupplies;                                                   // 0x01A8 (size: 0x4)
     int32 NumTotalFamilyHouses;                                                       // 0x01C8 (size: 0x4)
-    uint8 TownNameId;                                                                 // 0x01E8 (size: 0x1)
-    uint8 TownNameOrdinal;                                                            // 0x0208 (size: 0x1)
-    float CurrentBuildRadius;                                                         // 0x0228 (size: 0x4)
-    uint8 PopulationRequirementT2;                                                    // 0x0248 (size: 0x1)
-    uint8 PopulationRequirementT3;                                                    // 0x0268 (size: 0x1)
-    uint8 FamilyHouseRequirementT2;                                                   // 0x0288 (size: 0x1)
-    uint8 FamilyHouseRequirementT3;                                                   // 0x02A8 (size: 0x1)
+    int32 NumMarketplaceAreas;                                                        // 0x01E8 (size: 0x4)
+    uint8 TownNameId;                                                                 // 0x0208 (size: 0x1)
+    uint8 TownNameOrdinal;                                                            // 0x0228 (size: 0x1)
+    float CurrentBuildRadius;                                                         // 0x0248 (size: 0x4)
 
-}; // Size: 0x2C8
+}; // Size: 0x268
 
 class UTownHallProxyComponent : public UProxyComponent
 {
@@ -1867,9 +1888,11 @@ class UTweakableDataComponent : public UDataComponent
     uint8 PopulationRequirementT3;                                                    // 0x00C8 (size: 0x1)
     uint8 FamilyHouseRequirementT2;                                                   // 0x00E8 (size: 0x1)
     uint8 FamilyHouseRequirementT3;                                                   // 0x0108 (size: 0x1)
-    uint8 TownCenterRequiredBuilders;                                                 // 0x0128 (size: 0x1)
+    uint8 MarketplaceAreaRequirementT2;                                               // 0x0128 (size: 0x1)
+    uint8 MarketplaceAreaRequirementT3;                                               // 0x0148 (size: 0x1)
+    uint8 TownCenterRequiredBuilders;                                                 // 0x0168 (size: 0x1)
 
-}; // Size: 0x148
+}; // Size: 0x188
 
 class UTweakableProxyComponent : public UProxyComponent
 {

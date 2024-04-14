@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisPike_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.8"
       }
     },
     "SuperStruct": {
@@ -54,15 +54,19 @@
     "Properties": {
       "PickupDataComponent": {
         "ObjectName": "PickupDataComponent'Default__BPVisPike_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.4"
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisPike_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.10"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisPike_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisPike_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.3"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -71,6 +75,19 @@
         "LocalizedString": "Pike"
       },
       "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisPike_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.0"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisPike_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisPike_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.0"
       }
@@ -100,7 +117,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisPike_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.5"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -118,7 +135,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisPike_C:Pike_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.9"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -135,18 +152,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisPike_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.6"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.7"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisPike_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.6"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.7"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisPike_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisPike.6"
       }
     }
   },

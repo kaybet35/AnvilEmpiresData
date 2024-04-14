@@ -3,8 +3,8 @@
 
 class ABPVisSpearBronzeProjectile_C : public AVisPickupItem
 {
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0468 (size: 0x8)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0470 (size: 0x8)
 
-}; // Size: 0x470
+}; // Size: 0x478
 
 #endif

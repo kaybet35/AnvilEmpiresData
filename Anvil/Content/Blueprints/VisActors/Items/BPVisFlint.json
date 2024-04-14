@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisFlint_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.9"
       }
     },
     "SuperStruct": {
@@ -54,15 +54,19 @@
     "Properties": {
       "PickupDataComponent": {
         "ObjectName": "PickupDataComponent'Default__BPVisFlint_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.5"
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisFlint_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.11"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisFlint_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisFlint_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.4"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -95,7 +99,20 @@
       },
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'BPVisFlint_C:GrassRemovalVolume_GEN_VARIABLE.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.10"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisFlint_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFlint_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.0"
       }
     }
   },
@@ -123,7 +140,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisFlint_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.6"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -158,18 +175,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFlint_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.8"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFlint_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.8"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisFlint_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisFlint.7"
       }
     }
   },

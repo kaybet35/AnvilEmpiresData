@@ -225,7 +225,6 @@ AVisActor = {}
 ---@field Capsule UCapsuleComponent
 ---@field Mesh USkeletalMeshComponent
 ---@field CurrentStateMontageMap TMap<EAnvilAnimalState, UAnimMontage>
----@field TelegraphSoundQueue USoundCue
 AVisAnimal = {}
 
 
@@ -432,10 +431,23 @@ AVisImpactEffect = {}
 
 
 
+---@class AVisItemStash : AVisActor
+---@field ArrowComponent UArrowComponent
+---@field LootMarkerVFXComponent UNiagaraComponent
+AVisItemStash = {}
+
+
+
 ---@class AVisLivestockStructure : AVisStructure
 ---@field FoodItem TSubclassOf<UItemTemplate>
 ---@field ProducedItem TSubclassOf<UItemTemplate>
 AVisLivestockStructure = {}
+
+
+
+---@class AVisMapInfo : AVisActor
+---@field TweakableDataComponent UTweakableDataComponent
+AVisMapInfo = {}
 
 
 
@@ -481,6 +493,7 @@ AVisOfflineCharacter = {}
 ---@field PickupDataComponent UPickupDataComponent
 ---@field Mesh UStaticMeshComponent
 ---@field ArrowComponent UArrowComponent
+---@field LootMarkerVFXComponent UNiagaraComponent
 AVisPickupItem = {}
 
 
@@ -780,7 +793,7 @@ FCameraRotateState = {}
 
 
 ---@class FClientConfig
----@field DiscordRoleServerUrl FString
+---@field GlobalShardConfig FGlobalShardConfig
 ---@field AvailableShardList TArray<FShardConfig>
 FClientConfig = {}
 
@@ -882,6 +895,12 @@ FFoodData = {}
 
 
 
+---@class FGlobalShardConfig
+---@field DiscordRoleServerUrl FString
+FGlobalShardConfig = {}
+
+
+
 ---@class FGraphData
 FGraphData = {}
 
@@ -951,6 +970,8 @@ FMapIconTypeProperty = {}
 ---@field LockedFactionId uint8
 ---@field PledgedTownHallMapHash uint32
 ---@field PledgedTownHallTownHallId uint32
+---@field bHasHousePledge boolean
+---@field bHasBedPledge boolean
 ---@field PledgedMilitiaMapHash uint32
 ---@field PledgedMilitiaTownHallId uint32
 ---@field OfflineCharacterServerName FString
@@ -1341,12 +1362,6 @@ function UAnvilWindow:OutputNextButtonClicked() end
 function UAnvilWindow:OnCurrentSelectedOutputIndexChanged(Old, New) end
 
 
----@class UBeaconTowerMapIcon : UMapIcon
----@field IconSlot UCanvasPanelSlot
-UBeaconTowerMapIcon = {}
-
-
-
 ---@class UBeaconTowerPlayerInfoMapIcon : UMapIcon
 ---@field FriendlyColour FSlateColor
 ---@field EnemyColour FSlateColor
@@ -1572,8 +1587,8 @@ function UFactionSelectScreen:GetDeleteProfileButtonVisibility() end
 ---@class UFamilyAreaMarkerWindow : UStructureWindow
 ---@field FamilyMembersScrollBox UScrollBox
 ---@field AlliedFamiliesScrollBox UScrollBox
----@field TaxIcon UImage
----@field TaxTextBlock UTextBlock
+---@field UpkeepIcon UImage
+---@field UpkeepTextBlock UTextBlock
 ---@field FamilyMemberListItemWidgetType TSubclassOf<UFamilyMemberListItemWidget>
 ---@field FamilyAreaRestrictedCheckBox UCheckBox
 ---@field FamilyAreaAllianceButton UButton
@@ -1710,6 +1725,13 @@ UGridPanelWidget = {}
 
 
 
+---@class UHUDHintWidget : UUserWidget
+---@field HintTextBlock URichTextBlock
+---@field HintCanvas UCanvasPanel
+UHUDHintWidget = {}
+
+
+
 ---@class UHUDNameWidget : UUserWidget
 ---@field TargetVisActor AVisActor
 ---@field NameText UTextBlock
@@ -1760,8 +1782,6 @@ UHUDStatsWidget = {}
 ---@field EncumbranceIcon UImage
 ---@field EncumbranceText UTextBlock
 ---@field PlayerStatusText UTextBlock
----@field GameplayHintText UTextBlock
----@field GameplayHintCanvas UCanvasPanel
 ---@field WinConditionCanvas UCanvasPanel
 ---@field WinConditionText UTextBlock
 ---@field WinConditionLogo UImage
@@ -2424,11 +2444,9 @@ function UTownCenterMapIcon:GetNumHousesText() end
 ---@field CivicPledgePanel UUserWidget
 ---@field PledgedHeader UHeaderContainer
 ---@field RareResourceStatus UStatusWidget
----@field ReserveInventoryHeaderContainer UHeaderContainer
----@field ReserveInventoryMainAreaContainer UUserWidget
----@field ReserveInventoryContainerWidget UInventoryContainerWidget
----@field PublicInventorySubmitImage UImage
 ---@field IncreaseTownStatusButton UButton
+---@field UpkeepIcon UImage
+---@field UpkeepTextBlock UTextBlock
 ---@field TownNames1 TArray<FText>
 ---@field TownNames2 TArray<FText>
 ---@field TownNames3 TArray<FText>
@@ -2761,6 +2779,10 @@ UWorldEntityMapIcon = {}
 ---@field RegionHashMap TMap<int32, URegionEntry>
 UWorldEntityPoolManager = {}
 
+
+
+---@class UWorldFamilySpawnMapIcon : UDeploymentPointMapIcon
+UWorldFamilySpawnMapIcon = {}
 
 
 ---@class UWorldMarketShopMapIcon : UWorldEntityMapIcon

@@ -8,6 +8,7 @@ enum class EAnvilAccessibilityTestResult : uint8 {
     AccessDeniedBelongsToEnemy,
     AccessDeniedMustBePledged,
     AccessDeniedMustBeInFamily,
+    AccessDeniedStructureCollapsed,
     Error,
 };
 

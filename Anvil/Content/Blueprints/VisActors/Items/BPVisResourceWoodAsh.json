@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisResourceWoodAsh_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.9"
       }
     },
     "SuperStruct": {
@@ -54,15 +54,19 @@
     "Properties": {
       "PickupDataComponent": {
         "ObjectName": "PickupDataComponent'Default__BPVisResourceWoodAsh_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.5"
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisResourceWoodAsh_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.10"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisResourceWoodAsh_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisResourceWoodAsh_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.4"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisResourceWoodAsh_C:ArrowComponent'",
@@ -103,6 +107,19 @@
     }
   },
   {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisResourceWoodAsh_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisResourceWoodAsh_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.0"
+      }
+    }
+  },
+  {
     "Type": "PickupDataComponent",
     "Name": "PickupDataComponent",
     "Outer": "Default__BPVisResourceWoodAsh_C",
@@ -126,7 +143,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisResourceWoodAsh_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.6"
       },
       "VariableGuid": "2D36A754-4AC18DB8-7069A09F-12CBC54C",
       "InternalVariableName": "DefaultSceneRoot"
@@ -161,18 +178,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisResourceWoodAsh_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.8"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisResourceWoodAsh_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.8"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisResourceWoodAsh_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisResourceWoodAsh.7"
       }
     }
   },

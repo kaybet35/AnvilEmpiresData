@@ -4,6 +4,7 @@
 #include "VisPickupItem.generated.h"
 
 class UArrowComponent;
+class UNiagaraComponent;
 class UPickupDataComponent;
 class UStaticMeshComponent;
 
@@ -20,6 +21,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UArrowComponent* ArrowComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UNiagaraComponent* LootMarkerVFXComponent;
     
 public:
     AVisPickupItem(const FObjectInitializer& ObjectInitializer);

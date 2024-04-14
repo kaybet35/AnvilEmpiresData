@@ -25,10 +25,10 @@ private:
     UScrollBox* AlliedFamiliesScrollBox;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UImage* TaxIcon;
+    UImage* UpkeepIcon;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* TaxTextBlock;
+    UTextBlock* UpkeepTextBlock;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UFamilyMemberListItemWidget> FamilyMemberListItemWidgetType;

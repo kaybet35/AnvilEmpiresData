@@ -10,9 +10,8 @@ class UBPFamilyHouseWindow_C : public UFamilyHouseWindow
     class UBPMainAreaContainer_C* BPMainAreaContainer;                                // 0x0300 (size: 0x8)
     class UBPSubHeaderContainer_C* BPSubHeaderContainer;                              // 0x0308 (size: 0x8)
     class UBPAnvilPanel_C* FamilyHousePanel;                                          // 0x0310 (size: 0x8)
-    class UImage* TaxIcon;                                                            // 0x0318 (size: 0x8)
 
     void ExecuteUbergraph_BPFamilyHouseWindow(int32 EntryPoint);
-}; // Size: 0x320
+}; // Size: 0x318
 
 #endif

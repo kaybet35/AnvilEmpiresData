@@ -2,6 +2,9 @@
 
 ---@class ABPVisFamilyCenter_C : AVisFamilyCenter
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field Stairs2 UVisStaticMeshComponent
+---@field Stairs3 UVisStaticMeshComponent
+---@field CollapsedMesh UVisStaticMeshComponent
 ---@field VisTeamMesh1 UVisTeamMeshComponent
 ---@field BPVisFamilyMeshComponent1 UBPVisFamilyMeshComponent_C
 ---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C

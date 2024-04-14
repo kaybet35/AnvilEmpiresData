@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisCoal_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.7"
       }
     },
     "SuperStruct": {
@@ -41,15 +41,19 @@
     "Properties": {
       "PickupDataComponent": {
         "ObjectName": "PickupDataComponent'Default__BPVisCoal_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.4"
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisCoal_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.8"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisCoal_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisCoal_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.3"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -64,6 +68,19 @@
         "LocalizedString": "A lump of coal"
       },
       "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCoal_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.0"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisCoal_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisCoal_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.0"
       }
@@ -93,7 +110,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisCoal_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.5"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -107,7 +124,7 @@
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisCoal_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCoal.6"
       }
     }
   },

@@ -5,8 +5,18 @@
     "Outer": "Default__TownCenterT2_C",
     "Class": "UScriptClass'BeaconTowerProxyComponent'",
     "Properties": {
-      "LinkRange": 27500.0,
-      "DetectionRange": 15000.0
+      "LinkRangeMinMax": {
+        "Min": 23000.0,
+        "Max": 70000.0
+      },
+      "DetectionRangeMinMax": {
+        "Min": 12000.0,
+        "Max": 36000.0
+      },
+      "AltitudeMinMax": {
+        "Min": 4000.0,
+        "Max": 12500.0
+      }
     }
   },
   {
@@ -30,7 +40,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "TownCenterT2_C'Default__TownCenterT2_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.16"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.15"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -107,15 +117,17 @@
           "bOr": false,
           "HeldItem": null,
           "Count": 0,
-          "StackLimit": 10000,
-          "bAllowWithdrawal": false,
+          "StackLimit": 30000,
+          "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
-          "AcceptedTags": [],
+          "AcceptedTags": [
+            "EAnvilItemTag::Silver"
+          ],
           "RequiredTags": [],
           "ProhibitedTags": [],
           "DedicatedItemType": {
-            "ObjectName": "BlueprintGeneratedClass'ReinforcementSupplies_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Upkeep/ReinforcementSupplies.0"
+            "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
           },
           "DedicatedUnderlyingItemType": null,
           "bCheckDedicatedUnderlyingItem": true,
@@ -127,15 +139,15 @@
           "bOr": false,
           "HeldItem": null,
           "Count": 0,
-          "StackLimit": 30000,
+          "StackLimit": 10000,
           "bAllowWithdrawal": false,
           "bIsPlayerEquipmentSlot": false,
           "AcceptedTags": [],
           "RequiredTags": [],
           "ProhibitedTags": [],
           "DedicatedItemType": {
-            "ObjectName": "BlueprintGeneratedClass'StructureSupplies_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Upkeep/StructureSupplies.0"
+            "ObjectName": "BlueprintGeneratedClass'ReinforcementSupplies_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Upkeep/ReinforcementSupplies.0"
           },
           "DedicatedUnderlyingItemType": null,
           "bCheckDedicatedUnderlyingItem": true,
@@ -173,41 +185,6 @@
       "bEnforceWithdrawalStamina": true,
       "bOnlyAllowMaxDurabilityItems": true,
       "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_2",
-    "Outer": "Default__TownCenterT2_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "Slots": [
-        {
-          "ProxyRepeat": 4,
-          "bOr": false,
-          "HeldItem": null,
-          "Count": 0,
-          "StackLimit": 30000,
-          "bAllowWithdrawal": true,
-          "bIsPlayerEquipmentSlot": false,
-          "AcceptedTags": [
-            "EAnvilItemTag::Silver"
-          ],
-          "RequiredTags": [],
-          "ProhibitedTags": [],
-          "DedicatedItemType": {
-            "ObjectName": "BlueprintGeneratedClass'Silver_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
-          },
-          "DedicatedUnderlyingItemType": null,
-          "bCheckDedicatedUnderlyingItem": true,
-          "RequiredEnablingItem": null,
-          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
-        }
-      ],
-      "bUnpackCrates": true,
-      "bEnforceWithdrawalStamina": true,
-      "bOnlyAllowMaxDurabilityItems": true
     }
   },
   {
@@ -338,7 +315,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__TownCenterT2_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.15"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.14"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__TownCenterT2_C:HealthComp'",
@@ -346,11 +323,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__TownCenterT2_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.9"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__TownCenterT2_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.14"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.13"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__TownCenterT2_C:DestroyableComp'",
@@ -367,7 +344,7 @@
       "DecayComp": null,
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__TownCenterT2_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.12"
       },
       "CodeNameString": "TownCenterT2",
       "CodeName": -648095830,
@@ -377,27 +354,23 @@
       "Components": [
         {
           "ObjectName": "TownHallProxyComponent'Default__TownCenterT2_C:TownHallProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.17"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.16"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__TownCenterT2_C:InventoryProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.7"
         },
         {
-          "ObjectName": "InventoryProxyComponent'Default__TownCenterT2_C:InventoryProxyComponent_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.8"
-        },
-        {
           "ObjectName": "UpgradeProxyComponent'Default__TownCenterT2_C:UpgradeProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.18"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.17"
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__TownCenterT2_C:ResourceSpawnerProxyComponent_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.12"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.11"
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__TownCenterT2_C:ResourceSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.11"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.10"
         },
         {
           "ObjectName": "BeaconTowerProxyComponent'Default__TownCenterT2_C:BeaconTowerProxyComponent_0'",
@@ -405,7 +378,7 @@
         },
         {
           "ObjectName": "PlayerSpawnerProxyComponent'Default__TownCenterT2_C:PlayerSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterT2.8"
         }
       ],
       "VisActorClass": {

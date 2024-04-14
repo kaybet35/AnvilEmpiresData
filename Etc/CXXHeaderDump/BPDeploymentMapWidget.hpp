@@ -3,9 +3,9 @@
 
 class UBPDeploymentMapWidget_C : public UDeploymentMapWidget
 {
-    class UImage* MapBackground;                                                      // 0x02F8 (size: 0x8)
-    class UImage* MapFrame;                                                           // 0x0300 (size: 0x8)
+    class UImage* MapBackground;                                                      // 0x0300 (size: 0x8)
+    class UImage* MapFrame;                                                           // 0x0308 (size: 0x8)
 
-}; // Size: 0x308
+}; // Size: 0x310
 
 #endif
