@@ -929,6 +929,7 @@ UInventoryProxyComponent = {}
 ---@field DurabilityLossPerUse float
 ---@field DurabilityLossPerSec float
 ---@field bRearmAfterConsumption boolean
+---@field bRearmSkipsEquipActivity boolean
 ---@field StockPileWithdrawalValue float
 ---@field HeatedItem TSubclassOf<UItemTemplate>
 ---@field CooledItem TSubclassOf<UItemTemplate>

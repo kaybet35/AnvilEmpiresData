@@ -930,6 +930,7 @@ class UItemTemplate : public UObject
     float DurabilityLossPerUse;                                                       // 0x0068 (size: 0x4)
     float DurabilityLossPerSec;                                                       // 0x006C (size: 0x4)
     bool bRearmAfterConsumption;                                                      // 0x0070 (size: 0x1)
+    bool bRearmSkipsEquipActivity;                                                    // 0x0071 (size: 0x1)
     float StockPileWithdrawalValue;                                                   // 0x0074 (size: 0x4)
     TSubclassOf<class UItemTemplate> HeatedItem;                                      // 0x0078 (size: 0x8)
     TSubclassOf<class UItemTemplate> CooledItem;                                      // 0x0080 (size: 0x8)

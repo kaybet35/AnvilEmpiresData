@@ -18,6 +18,7 @@ UItemTemplate::UItemTemplate() {
     this->DurabilityLossPerUse = 0.00f;
     this->DurabilityLossPerSec = 0.00f;
     this->bRearmAfterConsumption = false;
+    this->bRearmSkipsEquipActivity = false;
     this->StockPileWithdrawalValue = 1.00f;
     this->HeatedItem = NULL;
     this->CooledItem = NULL;
