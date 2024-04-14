@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EAnvilInventoryStackRule.h"
 #include "ItemSlot.h"
 #include "ProxyComponent.h"
 #include "InventoryProxyComponent.generated.h"
@@ -15,7 +16,7 @@ public:
     bool bUnpackCrates;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bForceStackable;
+    EAnvilInventoryStackRule StackRule;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnforceWithdrawalStamina;

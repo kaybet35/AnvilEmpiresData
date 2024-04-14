@@ -6,6 +6,7 @@
 #include "ActionButtonWidget.generated.h"
 
 class UButton;
+class USoundCue;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UActionButtonWidget : public UUserWidget {
@@ -17,6 +18,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UButton* ActionButton;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USoundCue* CallForReinforcementsCue;
     
 public:
     UActionButtonWidget();

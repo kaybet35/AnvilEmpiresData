@@ -31,8 +31,8 @@
         }
       ],
       "Slot": {
-        "ObjectName": "VerticalBoxSlot'BPDeploymentPointWidget_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.27"
+        "ObjectName": "VerticalBoxSlot'BPDeploymentPointWidget_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_5'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.29"
       }
     }
   },
@@ -68,8 +68,8 @@
         }
       ],
       "Slot": {
-        "ObjectName": "VerticalBoxSlot'BPDeploymentPointWidget_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.26"
+        "ObjectName": "VerticalBoxSlot'BPDeploymentPointWidget_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.28"
       }
     }
   },
@@ -436,7 +436,7 @@
       },
       "Content": {
         "ObjectName": "VerticalBox'BPDeploymentPointWidget_C:WidgetTree.TownStatusVerticalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.25"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.26"
       }
     }
   },
@@ -700,6 +700,37 @@
     }
   },
   {
+    "Type": "TextBlock",
+    "Name": "TownWarningText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "B91F9E494ACF823493A742B956C7E8C4",
+        "SourceString": "CALLING FOR REINFORCEMENTS",
+        "LocalizedString": "CALLING FOR REINFORCEMENTS"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.947307,
+          "G": 0.623961,
+          "B": 0.171441,
+          "A": 1.0,
+          "Hex": "FFF9CF73"
+        }
+      },
+      "Font": {
+        "Size": 16
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPDeploymentPointWidget_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.27"
+      }
+    }
+  },
+  {
     "Type": "VerticalBox",
     "Name": "TownStatusVerticalBox",
     "Outer": "WidgetTree",
@@ -707,12 +738,16 @@
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "VerticalBoxSlot'BPDeploymentPointWidget_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_2'",
+          "ObjectName": "VerticalBoxSlot'BPDeploymentPointWidget_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_3'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.27"
         },
         {
-          "ObjectName": "VerticalBoxSlot'BPDeploymentPointWidget_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.26"
+          "ObjectName": "VerticalBoxSlot'BPDeploymentPointWidget_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.28"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPDeploymentPointWidget_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.29"
         }
       ],
       "Slot": {
@@ -723,7 +758,23 @@
   },
   {
     "Type": "VerticalBoxSlot",
-    "Name": "VerticalBoxSlot_0",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "TownStatusVerticalBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPDeploymentPointWidget_C:WidgetTree.TownStatusVerticalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.26"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPDeploymentPointWidget_C:WidgetTree.TownWarningText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.25"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
     "Outer": "TownStatusVerticalBox",
     "Class": "UScriptClass'VerticalBoxSlot'",
     "Properties": {
@@ -734,7 +785,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
       "Parent": {
         "ObjectName": "VerticalBox'BPDeploymentPointWidget_C:WidgetTree.TownStatusVerticalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.25"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.26"
       },
       "Content": {
         "ObjectName": "Border'BPDeploymentPointWidget_C:WidgetTree.TownStatusBorder'",
@@ -744,7 +795,7 @@
   },
   {
     "Type": "VerticalBoxSlot",
-    "Name": "VerticalBoxSlot_2",
+    "Name": "VerticalBoxSlot_5",
     "Outer": "TownStatusVerticalBox",
     "Class": "UScriptClass'VerticalBoxSlot'",
     "Properties": {
@@ -752,7 +803,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
       "Parent": {
         "ObjectName": "VerticalBox'BPDeploymentPointWidget_C:WidgetTree.TownStatusVerticalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.25"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.26"
       },
       "Content": {
         "ObjectName": "Border'BPDeploymentPointWidget_C:WidgetTree.TownNameBorder'",
@@ -767,7 +818,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPDeploymentPointWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.29"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.31"
       },
       "bClassRequiresNativeTick": true
     },

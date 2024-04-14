@@ -3,6 +3,7 @@
 UActionButtonWidget::UActionButtonWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->ActionButtonType = EActionButtonType::None;
     this->ActionButton = NULL;
+    this->CallForReinforcementsCue = NULL;
 }
 
 void UActionButtonWidget::OnHovered() {

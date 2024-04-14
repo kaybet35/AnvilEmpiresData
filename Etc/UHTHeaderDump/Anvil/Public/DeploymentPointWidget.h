@@ -53,6 +53,9 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UScaleBox* DetectionRangeCirleBox;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* TownWarningText;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UMarketShopMapTooltip> MarketShopTooltipClass;
     
@@ -89,6 +92,12 @@ private:
     
     UFUNCTION(BlueprintCallable)
     bool IsDeploymentPointEnabled();
+    
+    UFUNCTION(BlueprintCallable)
+    ESlateVisibility GetTownWarningTextVisibility();
+    
+    UFUNCTION(BlueprintCallable)
+    FText GetTownWarningText();
     
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetTownStatusVerticalBoxVisibility();

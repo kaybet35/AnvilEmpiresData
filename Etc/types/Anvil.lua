@@ -950,6 +950,7 @@ FWeatherManager = {}
 ---@class UActionButtonWidget : UUserWidget
 ---@field ActionButtonType EActionButtonType
 ---@field ActionButton UButton
+---@field CallForReinforcementsCue USoundCue
 UActionButtonWidget = {}
 
 function UActionButtonWidget:OnHovered() end
@@ -1381,6 +1382,7 @@ function UDeathMarketMapIcon:OnLastDeathLocationChanged(OldVal, NewVal) end
 ---@field NumTentsStatus UStatusWidget
 ---@field NumReinforcementSuppliesStatus UStatusWidget
 ---@field DetectionRangeCirleBox UScaleBox
+---@field TownWarningText UTextBlock
 ---@field MarketShopTooltipClass TSubclassOf<UMarketShopMapTooltip>
 ---@field IconSizeBox USizeBox
 ---@field FlashingFrequency float
@@ -1395,6 +1397,10 @@ UDeploymentPointWidget = {}
 function UDeploymentPointWidget:OnDeploymentPointClicked() end
 ---@return boolean
 function UDeploymentPointWidget:IsDeploymentPointEnabled() end
+---@return ESlateVisibility
+function UDeploymentPointWidget:GetTownWarningTextVisibility() end
+---@return FText
+function UDeploymentPointWidget:GetTownWarningText() end
 ---@return ESlateVisibility
 function UDeploymentPointWidget:GetTownStatusVerticalBoxVisibility() end
 ---@return ESlateVisibility

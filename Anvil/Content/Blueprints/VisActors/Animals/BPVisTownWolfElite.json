@@ -1,0 +1,179 @@
+[
+  {
+    "Type": "AnimalAIDataComponent",
+    "Name": "AnimalAIDataComponent",
+    "Outer": "Default__BPVisTownWolfElite_C",
+    "Class": "UScriptClass'AnimalAIDataComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisTownWolfElite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisTownWolfElite_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisTownWolfElite.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisAnimal'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisTownWolfElite_C'Default__BPVisTownWolfElite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisTownWolfElite.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisTownWolfElite_C",
+    "Name": "Default__BPVisTownWolfElite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Animals/BPVisTownWolfElite.BPVisTownWolfElite_C'",
+    "Properties": {
+      "AnimalAIDataComponent": {
+        "ObjectName": "AnimalAIDataComponent'Default__BPVisTownWolfElite_C:AnimalAIDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisTownWolfElite.0"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisTownWolfElite_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisTownWolfElite.4"
+      },
+      "Capsule": {
+        "ObjectName": "CapsuleComponent'Default__BPVisTownWolfElite_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisTownWolfElite.3"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisTownWolfElite_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisTownWolfElite.8"
+      },
+      "CurrentStateMontageMap": [
+        {
+          "EAnvilAnimalState::Trapped": {
+            "ObjectName": "AnimMontage'Wolf_trapped_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Wolf_trapped_Montage.0"
+          }
+        }
+      ],
+      "TelegraphSoundQueue": {
+        "ObjectName": "SoundCue'WolfTelegraph_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Wolf/WolfTelegraph_Cue.0"
+      },
+      "bNightVisibility": true,
+      "PositionSmoothSpeed": 8.0,
+      "RotationSmoothSpeed": 4.0,
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BPVisTownWolfElite_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisTownWolfElite.3"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule",
+    "Outer": "Default__BPVisTownWolfElite_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Properties": {
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisTownWolfElite_C",
+    "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisTownWolfElite_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisTownWolfElite_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisTownWolfElite.5"
+      },
+      "VariableGuid": "90A79A14-452C59A4-730B32AD-811C92BE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisTownWolfElite_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisTownWolfElite_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisTownWolfElite.6"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisTownWolfElite_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Wolf_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Wolf_ABP.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Wolf_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Wolf_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Wolf_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Wolf_SK.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'TownWolfElite'",
+          "ObjectPath": "Anvil/Content/Materials/Animals/TownWolfElite.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'TownWolfEliteFur'",
+          "ObjectPath": "Anvil/Content/Materials/Animals/TownWolfEliteFur.0"
+        }
+      ],
+      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPVisTownWolfElite_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisTownWolfElite.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -150.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0000001,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  }
+]

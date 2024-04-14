@@ -930,12 +930,13 @@ class UActionButtonWidget : public UUserWidget
 {
     EActionButtonType ActionButtonType;                                               // 0x0278 (size: 0x1)
     class UButton* ActionButton;                                                      // 0x0280 (size: 0x8)
+    class USoundCue* CallForReinforcementsCue;                                        // 0x0288 (size: 0x8)
 
     void OnHovered();
     void OnClicked();
     bool IsActionButtonEnabled();
     ESlateVisibility GetActionButtonVisibility();
-}; // Size: 0x288
+}; // Size: 0x290
 
 class UActionStrip : public UUserWidget
 {
@@ -1315,18 +1316,21 @@ class UDeploymentPointWidget : public UUserWidget
     class UStatusWidget* NumTentsStatus;                                              // 0x02B0 (size: 0x8)
     class UStatusWidget* NumReinforcementSuppliesStatus;                              // 0x02B8 (size: 0x8)
     class UScaleBox* DetectionRangeCirleBox;                                          // 0x02C0 (size: 0x8)
-    TSubclassOf<class UMarketShopMapTooltip> MarketShopTooltipClass;                  // 0x02C8 (size: 0x8)
-    class USizeBox* IconSizeBox;                                                      // 0x02D0 (size: 0x8)
-    float FlashingFrequency;                                                          // 0x02D8 (size: 0x4)
-    float FlashingMinOpacity;                                                         // 0x02DC (size: 0x4)
-    class UCanvasPanelSlot* ParentSlot;                                               // 0x02E0 (size: 0x8)
-    class UCanvasPanelSlot* DetectionRangeCirleSlot;                                  // 0x02E8 (size: 0x8)
-    FMapIconTypeProperty TypeProperty;                                                // 0x02F0 (size: 0x30)
-    FMapIconInstanceProperty InstanceProperty;                                        // 0x0320 (size: 0x88)
-    class UMarketShopMapTooltip* CachedMarketShopTooltip;                             // 0x03A8 (size: 0x8)
+    class UTextBlock* TownWarningText;                                                // 0x02C8 (size: 0x8)
+    TSubclassOf<class UMarketShopMapTooltip> MarketShopTooltipClass;                  // 0x02D0 (size: 0x8)
+    class USizeBox* IconSizeBox;                                                      // 0x02D8 (size: 0x8)
+    float FlashingFrequency;                                                          // 0x02E0 (size: 0x4)
+    float FlashingMinOpacity;                                                         // 0x02E4 (size: 0x4)
+    class UCanvasPanelSlot* ParentSlot;                                               // 0x02E8 (size: 0x8)
+    class UCanvasPanelSlot* DetectionRangeCirleSlot;                                  // 0x02F0 (size: 0x8)
+    FMapIconTypeProperty TypeProperty;                                                // 0x02F8 (size: 0x30)
+    FMapIconInstanceProperty InstanceProperty;                                        // 0x0328 (size: 0x88)
+    class UMarketShopMapTooltip* CachedMarketShopTooltip;                             // 0x03B0 (size: 0x8)
 
     void OnDeploymentPointClicked();
     bool IsDeploymentPointEnabled();
+    ESlateVisibility GetTownWarningTextVisibility();
+    FText GetTownWarningText();
     ESlateVisibility GetTownStatusVerticalBoxVisibility();
     ESlateVisibility GetTownStatusBorderVisibility();
     FText GetTownNameText();
@@ -1336,7 +1340,7 @@ class UDeploymentPointWidget : public UUserWidget
     ESlateVisibility GetNumHousesVisibility();
     FText GetNumHousesText();
     ESlateVisibility GetDeploymentPointVisibility();
-}; // Size: 0x450
+}; // Size: 0x458
 
 class UDeploymentScreen : public UAnvilScreen
 {

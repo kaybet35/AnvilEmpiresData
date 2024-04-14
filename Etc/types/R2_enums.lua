@@ -261,6 +261,14 @@ EAnvilInputResponseType = {
     EAnvilInputResponseType_MAX = 6,
 }
 
+---@enum EAnvilInventoryStackRule
+EAnvilInventoryStackRule = {
+    Default = 0,
+    ForceStackNonLargeItems = 1,
+    ForceStackAllItems = 2,
+    EAnvilInventoryStackRule_MAX = 3,
+}
+
 ---@enum EAnvilItemDurabilityType
 EAnvilItemDurabilityType = {
     None = 0,

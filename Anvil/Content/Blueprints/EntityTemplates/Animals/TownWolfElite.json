@@ -1,0 +1,193 @@
+[
+  {
+    "Type": "AnimalAIProxyComponent",
+    "Name": "AnimalAIProxyComponent_0",
+    "Outer": "Default__TownWolfElite_C",
+    "Class": "UScriptClass'AnimalAIProxyComponent'",
+    "Properties": {
+      "VisionAngle": 270.0,
+      "SlowSpeed": 150.0,
+      "FastSpeed": 600.0,
+      "TrapTime": 60.0,
+      "bHoming": true,
+      "HomingDistance": 1000.0
+    }
+  },
+  {
+    "Type": "AnimalAttackProxyComponent",
+    "Name": "AnimalAttackProxyComponent_0",
+    "Outer": "Default__TownWolfElite_C",
+    "Class": "UScriptClass'AnimalAttackProxyComponent'",
+    "Properties": {
+      "AttackTargetTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'Player_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.3"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Horse_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.3"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'OfflineCharacter_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/OfflineCharacter.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Cart_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Caravan_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Caravan.0"
+        }
+      ],
+      "OnRoadVisionRange": 300.0,
+      "ChaseDuration": 6.0,
+      "AttackOffset": {
+        "X": 150.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "MinNumAttacks": 2,
+      "MaxNumAttacks": 6,
+      "AttackDamage": 20
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "TownWolfElite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "TownWolfElite_C'Default__TownWolfElite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/TownWolfElite.8"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__TownWolfElite_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -5.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 35.0,
+        "Z": 50.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 8256
+    }
+  },
+  {
+    "Type": "CapsuleCollisionProxyComponent",
+    "Name": "CapsuleCollisionProxyComponent_0",
+    "Outer": "Default__TownWolfElite_C",
+    "Class": "UScriptClass'CapsuleCollisionProxyComponent'",
+    "Properties": {
+      "Radius": 75.0,
+      "HalfHeight": 72.0,
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 524288
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_1",
+    "Outer": "Default__TownWolfElite_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "MaxHealth": 175.0,
+      "AutoRegenRate": 3.0,
+      "AutoRegenStartDelay": 600.0,
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectPlayer_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
+      },
+      "TargetType": "EAnvilDamageTargetType::Infantry"
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__TownWolfElite_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 900.0
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__TownWolfElite_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "bInventoryTransferToPlayer": false,
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'TownWolfEliteHusk_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/TownWolfEliteHusk.0"
+      }
+    }
+  },
+  {
+    "Type": "TownWolfElite_C",
+    "Name": "Default__TownWolfElite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Animals/TownWolfElite.TownWolfElite_C'",
+    "Properties": {
+      "CodeNameString": "TownWolfElite",
+      "CodeName": -2021644563,
+      "bStatic": false,
+      "Components": [
+        {
+          "ObjectName": "HealthProxyComponent'Default__TownWolfElite_C:HealthProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/TownWolfElite.5"
+        },
+        {
+          "ObjectName": "AnimalAIProxyComponent'Default__TownWolfElite_C:AnimalAIProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/TownWolfElite.0"
+        },
+        {
+          "ObjectName": "CapsuleCollisionProxyComponent'Default__TownWolfElite_C:CapsuleCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/TownWolfElite.4"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__TownWolfElite_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/TownWolfElite.3"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__TownWolfElite_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/TownWolfElite.7"
+        },
+        {
+          "ObjectName": "AnimalAttackProxyComponent'Default__TownWolfElite_C:AnimalAttackProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/TownWolfElite.1"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__TownWolfElite_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/TownWolfElite.6"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisTownWolfElite_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisTownWolfElite.1"
+      }
+    }
+  }
+]

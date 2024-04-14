@@ -927,7 +927,7 @@ class UInventoryProxyComponent : public UProxyComponent
 {
     TArray<FItemSlot> Slots;                                                          // 0x0028 (size: 0x10)
     bool bUnpackCrates;                                                               // 0x0038 (size: 0x1)
-    bool bForceStackable;                                                             // 0x0039 (size: 0x1)
+    EAnvilInventoryStackRule StackRule;                                               // 0x0039 (size: 0x1)
     bool bEnforceWithdrawalStamina;                                                   // 0x003A (size: 0x1)
     bool bOnlyAllowMaxDurabilityItems;                                                // 0x003B (size: 0x1)
     float NormalizedSpoilageFactor;                                                   // 0x003C (size: 0x4)

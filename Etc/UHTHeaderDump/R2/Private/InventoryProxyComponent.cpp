@@ -2,7 +2,7 @@
 
 UInventoryProxyComponent::UInventoryProxyComponent() {
     this->bUnpackCrates = false;
-    this->bForceStackable = false;
+    this->StackRule = EAnvilInventoryStackRule::Default;
     this->bEnforceWithdrawalStamina = false;
     this->bOnlyAllowMaxDurabilityItems = false;
     this->NormalizedSpoilageFactor = 0.00f;

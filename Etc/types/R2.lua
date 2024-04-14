@@ -926,7 +926,7 @@ UImpactSurfaceProxyComponent = {}
 ---@class UInventoryProxyComponent : UProxyComponent
 ---@field Slots TArray<FItemSlot>
 ---@field bUnpackCrates boolean
----@field bForceStackable boolean
+---@field StackRule EAnvilInventoryStackRule
 ---@field bEnforceWithdrawalStamina boolean
 ---@field bOnlyAllowMaxDurabilityItems boolean
 ---@field NormalizedSpoilageFactor float

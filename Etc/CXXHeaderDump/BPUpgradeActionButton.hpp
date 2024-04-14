@@ -3,6 +3,6 @@
 
 class UBPUpgradeActionButton_C : public UActionButtonWidget
 {
-}; // Size: 0x288
+}; // Size: 0x290
 
 #endif

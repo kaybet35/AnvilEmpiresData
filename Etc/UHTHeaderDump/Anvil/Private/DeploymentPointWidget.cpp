@@ -11,6 +11,7 @@ UDeploymentPointWidget::UDeploymentPointWidget() : UUserWidget(FObjectInitialize
     this->NumTentsStatus = NULL;
     this->NumReinforcementSuppliesStatus = NULL;
     this->DetectionRangeCirleBox = NULL;
+    this->TownWarningText = NULL;
     this->MarketShopTooltipClass = NULL;
     this->IconSizeBox = NULL;
     this->FlashingFrequency = 0.00f;
@@ -25,6 +26,14 @@ void UDeploymentPointWidget::OnDeploymentPointClicked() {
 
 bool UDeploymentPointWidget::IsDeploymentPointEnabled() {
     return false;
+}
+
+ESlateVisibility UDeploymentPointWidget::GetTownWarningTextVisibility() {
+    return ESlateVisibility::Visible;
+}
+
+FText UDeploymentPointWidget::GetTownWarningText() {
+    return FText::GetEmpty();
 }
 
 ESlateVisibility UDeploymentPointWidget::GetTownStatusVerticalBoxVisibility() {
