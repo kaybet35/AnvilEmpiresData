@@ -499,6 +499,7 @@ AVisPickupItem = {}
 ---@field MeleeAimMeshTargetComponent UStaticMeshComponent
 ---@field FishingAimMeshClass TSubclassOf<AVisFishingIndicator>
 ---@field FishingBobberClass TSubclassOf<AVisFishingBobber>
+---@field HintDirectionMeshComponent UStaticMeshComponent
 ---@field PlayerVisualsComponent UVisPlayerVisualsComponent
 ---@field ActivityStateMontageMap TMap<EAnvilSimActivityState, UAnimMontage>
 ---@field ArmourDataComponent UArmorDataComponent

@@ -872,28 +872,29 @@ class AVisPlayer : public AVisActor
     class UStaticMeshComponent* MeleeAimMeshTargetComponent;                          // 0x04F0 (size: 0x8)
     TSubclassOf<class AVisFishingIndicator> FishingAimMeshClass;                      // 0x04F8 (size: 0x8)
     TSubclassOf<class AVisFishingBobber> FishingBobberClass;                          // 0x0508 (size: 0x8)
-    class UVisPlayerVisualsComponent* PlayerVisualsComponent;                         // 0x0510 (size: 0x8)
-    TMap<class EAnvilSimActivityState, class UAnimMontage*> ActivityStateMontageMap;  // 0x0518 (size: 0x50)
-    class UArmorDataComponent* ArmourDataComponent;                                   // 0x0568 (size: 0x8)
-    class UBillboardComponent* VoiceIndicator;                                        // 0x0570 (size: 0x8)
-    class UNiagaraComponent* TorchVFXComponent;                                       // 0x0578 (size: 0x8)
-    class UAudioComponent* TorchAudioComponent;                                       // 0x0580 (size: 0x8)
-    class UNiagaraComponent* RainVFXComponent;                                        // 0x0588 (size: 0x8)
-    class UNiagaraComponent* SnowVFXComponent;                                        // 0x0590 (size: 0x8)
-    class UNiagaraComponent* BreathFogVFXComponent;                                   // 0x0598 (size: 0x8)
-    class UAudioComponent* RainLowAudioComponent;                                     // 0x05A0 (size: 0x8)
-    class UAudioComponent* RainMidAudioComponent;                                     // 0x05A8 (size: 0x8)
-    class UAudioComponent* RainHighAudioComponent;                                    // 0x05B0 (size: 0x8)
-    class UAudioComponent* SnowLowAudioComponent;                                     // 0x05B8 (size: 0x8)
-    class UAudioComponent* SnowMidAudioComponent;                                     // 0x05C0 (size: 0x8)
-    class UAudioComponent* SnowHighAudioComponent;                                    // 0x05C8 (size: 0x8)
-    class UAudioComponent* WindLowAudioComponent;                                     // 0x05D0 (size: 0x8)
-    class UAudioComponent* WindMidAudioComponent;                                     // 0x05D8 (size: 0x8)
-    class UAudioComponent* WindHighAudioComponent;                                    // 0x05E0 (size: 0x8)
-    class UMaterialParameterCollection* PostProcessMaterialParameterCollection;       // 0x05E8 (size: 0x8)
-    class UMaterialParameterCollection* PositionPostProcessMaterialParameterCollection; // 0x05F0 (size: 0x8)
-    class AVisActor* CurrentUsableVisActor;                                           // 0x0660 (size: 0x8)
-    class AVisActor* CurrentMountableVisActor;                                        // 0x0668 (size: 0x8)
+    class UStaticMeshComponent* HintDirectionMeshComponent;                           // 0x0510 (size: 0x8)
+    class UVisPlayerVisualsComponent* PlayerVisualsComponent;                         // 0x0518 (size: 0x8)
+    TMap<class EAnvilSimActivityState, class UAnimMontage*> ActivityStateMontageMap;  // 0x0520 (size: 0x50)
+    class UArmorDataComponent* ArmourDataComponent;                                   // 0x0570 (size: 0x8)
+    class UBillboardComponent* VoiceIndicator;                                        // 0x0578 (size: 0x8)
+    class UNiagaraComponent* TorchVFXComponent;                                       // 0x0580 (size: 0x8)
+    class UAudioComponent* TorchAudioComponent;                                       // 0x0588 (size: 0x8)
+    class UNiagaraComponent* RainVFXComponent;                                        // 0x0590 (size: 0x8)
+    class UNiagaraComponent* SnowVFXComponent;                                        // 0x0598 (size: 0x8)
+    class UNiagaraComponent* BreathFogVFXComponent;                                   // 0x05A0 (size: 0x8)
+    class UAudioComponent* RainLowAudioComponent;                                     // 0x05A8 (size: 0x8)
+    class UAudioComponent* RainMidAudioComponent;                                     // 0x05B0 (size: 0x8)
+    class UAudioComponent* RainHighAudioComponent;                                    // 0x05B8 (size: 0x8)
+    class UAudioComponent* SnowLowAudioComponent;                                     // 0x05C0 (size: 0x8)
+    class UAudioComponent* SnowMidAudioComponent;                                     // 0x05C8 (size: 0x8)
+    class UAudioComponent* SnowHighAudioComponent;                                    // 0x05D0 (size: 0x8)
+    class UAudioComponent* WindLowAudioComponent;                                     // 0x05D8 (size: 0x8)
+    class UAudioComponent* WindMidAudioComponent;                                     // 0x05E0 (size: 0x8)
+    class UAudioComponent* WindHighAudioComponent;                                    // 0x05E8 (size: 0x8)
+    class UMaterialParameterCollection* PostProcessMaterialParameterCollection;       // 0x05F0 (size: 0x8)
+    class UMaterialParameterCollection* PositionPostProcessMaterialParameterCollection; // 0x05F8 (size: 0x8)
+    class AVisActor* CurrentUsableVisActor;                                           // 0x0668 (size: 0x8)
+    class AVisActor* CurrentMountableVisActor;                                        // 0x0670 (size: 0x8)
 
     float GetVelocityHeadingDegrees();
     FString GetPlayerName();
@@ -903,7 +904,7 @@ class AVisPlayer : public AVisActor
     void BP_UpdateNightShroudMaterials(float NightTimeNormalized);
     void BP_OnHeldItemChanged();
     FVector AnimGetVelocity();
-}; // Size: 0x680
+}; // Size: 0x688
 
 class AVisPowerMill : public AVisStructure
 {

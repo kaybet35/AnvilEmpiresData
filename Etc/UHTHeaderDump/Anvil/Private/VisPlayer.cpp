@@ -52,6 +52,7 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->MeleeAimMeshTargetComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeleeAimMeshTarget"));
     this->FishingAimMeshClass = NULL;
     this->FishingBobberClass = NULL;
+    this->HintDirectionMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("HintDirectionMesh"));
     this->PlayerVisualsComponent = CreateDefaultSubobject<UVisPlayerVisualsComponent>(TEXT("PlayerVisualsComponent"));
     this->ArmourDataComponent = CreateDefaultSubobject<UArmorDataComponent>(TEXT("ArmourDataComponent"));
     this->VoiceIndicator = CreateDefaultSubobject<UBillboardComponent>(TEXT("BillboardComponent"));
@@ -76,6 +77,7 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->AimMeshComponent->SetupAttachment(RootComponent);
     this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
     this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
+    this->HintDirectionMeshComponent->SetupAttachment(RootComponent);
     this->VoiceIndicator->SetupAttachment(RootComponent);
     this->TorchVFXComponent->SetupAttachment(Mesh);
     this->TorchAudioComponent->SetupAttachment(Mesh);
