@@ -72,14 +72,12 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->WindHighAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("WindHighAudioComponent"));
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
-    this->RainHighAudioComponent->SetupAttachment(SpringArm);
     this->SnowLowAudioComponent->SetupAttachment(SpringArm);
     this->SnowMidAudioComponent->SetupAttachment(SpringArm);
     this->SnowHighAudioComponent->SetupAttachment(SpringArm);
     this->WindLowAudioComponent->SetupAttachment(SpringArm);
     this->WindMidAudioComponent->SetupAttachment(SpringArm);
     this->WindHighAudioComponent->SetupAttachment(SpringArm);
-    this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
@@ -96,7 +94,9 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->BreathFogVFXComponent->SetupAttachment(Mesh);
     this->RainLowAudioComponent->SetupAttachment(SpringArm);
     this->RainMidAudioComponent->SetupAttachment(SpringArm);
+    this->RainHighAudioComponent->SetupAttachment(SpringArm);
     this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 float AVisPlayer::GetVelocityHeadingDegrees() {

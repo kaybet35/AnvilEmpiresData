@@ -297,8 +297,9 @@ EAnvilInputEventType = {
     StopPowerMill = 44,
     IncreaseTownStatus = 45,
     RequestFamilySync = 46,
-    ChangeFamilyRole = 47,
-    EAnvilInputEventType_MAX = 48,
+    RequestFamilyListSync = 47,
+    ChangeFamilyRole = 48,
+    EAnvilInputEventType_MAX = 49,
 }
 
 ---@enum EAnvilInputResponseType
