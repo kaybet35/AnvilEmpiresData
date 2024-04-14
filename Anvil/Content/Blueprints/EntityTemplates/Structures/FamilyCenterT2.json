@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "FamilyCenterT2_C'Default__FamilyCenterT2_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.6"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.7"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -34,6 +34,25 @@
     "Template": {
       "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_1",
+    "Outer": "Default__FamilyCenterT2_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 200.0
+      },
+      "Extents": {
+        "X": 350.0,
+        "Y": 625.0,
+        "Z": 175.0
+      },
+      "CollisionMask": 268468224
     }
   },
   {
@@ -85,27 +104,27 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__FamilyCenterT2_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.15"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__FamilyCenterT2_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.9"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__FamilyCenterT2_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.12"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__FamilyCenterT2_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.14"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__FamilyCenterT2_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.4"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__FamilyCenterT2_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.8"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__FamilyCenterT2_C:BoxCollisionProxyComponent_0'",
@@ -113,33 +132,43 @@
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__FamilyCenterT2_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.3"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__FamilyCenterT2_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.13"
       },
       "CodeNameString": "FamilyCenterT2",
       "CodeName": -1284528119,
       "RelevancyDistSqr": 56250000.0,
       "bShowOnMap": true,
       "bGenerateMeshCollisionsFromVisActor": true,
+      "GenerateMeshCollisionMask": 287318018,
+      "GenerateMeshCollisionStepAngle": 65.0,
       "Components": [
         {
           "ObjectName": "FamilyCenterProxyComponent'Default__FamilyCenterT2_C:FamilyCenterProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.5"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.6"
         },
         {
           "ObjectName": "FamilyAreaMarkerProxyComponent'Default__FamilyCenterT2_C:FamilyAreaMarkerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.4"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.5"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__FamilyCenterT2_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.10"
         },
         {
           "ObjectName": "UpgradeProxyComponent'Default__FamilyCenterT2_C:UpgradeProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.14"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.16"
+        },
+        {
+          "ObjectName": "MeshVisibilityProxyComponent'Default__FamilyCenterT2_C:MeshVisibilityProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.11"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__FamilyCenterT2_C:BoxCollisionProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.2"
         }
       ],
       "VisActorClass": {
@@ -161,7 +190,8 @@
       "Box": {
         "ObjectName": "BlueprintGeneratedClass'FamilyCenterFootprint_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyCenterFootprint.0"
-      }
+      },
+      "CollisionMask": 0
     }
   },
   {
@@ -202,6 +232,7 @@
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
           },
           "DedicatedUnderlyingItemType": null,
+          "bCheckDedicatedUnderlyingItem": true,
           "RequiredEnablingItem": null,
           "BackgroundType": "EAnvilItemSlotBackgroundType::None"
         },
@@ -218,11 +249,18 @@
           "ProhibitedTags": [],
           "DedicatedItemType": null,
           "DedicatedUnderlyingItemType": null,
+          "bCheckDedicatedUnderlyingItem": true,
           "RequiredEnablingItem": null,
           "BackgroundType": "EAnvilItemSlotBackgroundType::None"
         }
       ]
     }
+  },
+  {
+    "Type": "MeshVisibilityProxyComponent",
+    "Name": "MeshVisibilityProxyComponent_0",
+    "Outer": "Default__FamilyCenterT2_C",
+    "Class": "UScriptClass'MeshVisibilityProxyComponent'"
   },
   {
     "Type": "RepairProxyComponent",
@@ -232,6 +270,9 @@
     "Template": {
       "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+    },
+    "Properties": {
+      "TotalRepairCost": 25
     }
   },
   {

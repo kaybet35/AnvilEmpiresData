@@ -441,7 +441,7 @@ FEnvTraceData = {}
 
 
 ---@class FGenericTeamId
----@field TeamID uint8
+---@field TeamId uint8
 FGenericTeamId = {}
 
 

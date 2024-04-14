@@ -3,6 +3,6 @@
 
 class UBPGameInstance_C : public UAnvilGameInstance
 {
-}; // Size: 0x16F0
+}; // Size: 0x16F8
 
 #endif

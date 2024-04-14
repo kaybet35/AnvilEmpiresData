@@ -3,6 +3,7 @@
 FMapIconTypeProperty::FMapIconTypeProperty() {
     this->bRotationFixed = false;
     this->bPositionFixed = false;
+    this->bHasWorldEntityMapIcon = false;
     this->BaseSize = 0.00f;
     this->BaseSizeZoomFactor = 0.00f;
     this->FontSize = 0.00f;

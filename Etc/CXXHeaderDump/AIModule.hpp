@@ -316,7 +316,7 @@ struct FEnvTraceData
 
 struct FGenericTeamId
 {
-    uint8 TeamID;                                                                     // 0x0000 (size: 0x1)
+    uint8 TeamId;                                                                     // 0x0000 (size: 0x1)
 
 }; // Size: 0x1
 

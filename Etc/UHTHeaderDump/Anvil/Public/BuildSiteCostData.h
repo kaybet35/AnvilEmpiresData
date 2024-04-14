@@ -40,6 +40,9 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int16 ResourceStoneFragments;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ProcessedWoodHard;
+    
     ANVIL_API FBuildSiteCostData();
 };
 

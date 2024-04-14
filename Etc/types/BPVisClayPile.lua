@@ -1,9 +1,7 @@
 ---@meta
 
----@class ABPVisClayPile_C : AVisActor
+---@class ABPVisClayPile_C : AVisResource
 ---@field Decal UDecalComponent
----@field Mesh UStaticMeshComponent
----@field DefaultSceneRoot USceneComponent
 ABPVisClayPile_C = {}
 
 

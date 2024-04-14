@@ -5,6 +5,7 @@ UCookingWindow::UCookingWindow() {
     this->RecipeOutputItemGrid = NULL;
     this->FuelInputItemGrid = NULL;
     this->FuelOutputItemGrid = NULL;
+    this->WaterInputItemGrid = NULL;
     this->CookingDurationText = NULL;
     this->FuelDurationText = NULL;
 }

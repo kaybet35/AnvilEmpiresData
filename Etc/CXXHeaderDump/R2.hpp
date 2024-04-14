@@ -53,6 +53,7 @@ struct FCookingRecipe
     TArray<FBasicItemCount> InputItems;                                               // 0x0000 (size: 0x10)
     TArray<FBasicItemCount> OutputItems;                                              // 0x0010 (size: 0x10)
     float CookDurationSec;                                                            // 0x0020 (size: 0x4)
+    float TargetNormalizedTemperature;                                                // 0x0024 (size: 0x4)
 
 }; // Size: 0x28
 
@@ -98,8 +99,9 @@ struct FFuelType
     TSubclassOf<class UItemTemplate> FuelItem;                                        // 0x0000 (size: 0x8)
     int32 FuelItemVisVar;                                                             // 0x0008 (size: 0x4)
     float BurnDurationSec;                                                            // 0x000C (size: 0x4)
+    float NormalizedTemperature;                                                      // 0x0010 (size: 0x4)
 
-}; // Size: 0x10
+}; // Size: 0x18
 
 struct FGridItem
 {
@@ -184,10 +186,11 @@ struct FItemSlot
     TArray<EAnvilItemTag> ProhibitedTags;                                             // 0x0040 (size: 0x10)
     TSubclassOf<class UItemTemplate> DedicatedItemType;                               // 0x0050 (size: 0x8)
     TSubclassOf<class UItemTemplate> DedicatedUnderlyingItemType;                     // 0x0058 (size: 0x8)
-    TSubclassOf<class UItemTemplate> RequiredEnablingItem;                            // 0x0060 (size: 0x8)
-    EAnvilItemSlotBackgroundType BackgroundType;                                      // 0x0068 (size: 0x1)
+    bool bCheckDedicatedUnderlyingItem;                                               // 0x0060 (size: 0x1)
+    TSubclassOf<class UItemTemplate> RequiredEnablingItem;                            // 0x0068 (size: 0x8)
+    EAnvilItemSlotBackgroundType BackgroundType;                                      // 0x0070 (size: 0x1)
 
-}; // Size: 0x70
+}; // Size: 0x78
 
 struct FLootTableItem
 {
@@ -311,6 +314,48 @@ struct FWeatherData
     FVector WindDir;                                                                  // 0x0018 (size: 0x18)
 
 }; // Size: 0x30
+
+struct FWorldEntityBeaconTowerData
+{
+    int32 TowerId;                                                                    // 0x0000 (size: 0x4)
+    bool bActive;                                                                     // 0x0004 (size: 0x1)
+
+}; // Size: 0x8
+
+struct FWorldEntityData
+{
+    EAnvilWorldEntityType DataType;                                                   // 0x0000 (size: 0x1)
+    FWorldEntityTownHallData TownHallData;                                            // 0x0004 (size: 0x20)
+    FWorldEntityBeaconTowerData BeaconTowerData;                                      // 0x0024 (size: 0x8)
+
+}; // Size: 0x2C
+
+struct FWorldEntityEntry
+{
+    EAnvilWorldEntityType Type;                                                       // 0x0000 (size: 0x1)
+    int32 CodeName;                                                                   // 0x0004 (size: 0x4)
+    int64 EntityId;                                                                   // 0x0008 (size: 0x8)
+    int32 RegionIndex;                                                                // 0x0010 (size: 0x4)
+    uint8 TeamId;                                                                     // 0x0014 (size: 0x1)
+    FVector WorldPos;                                                                 // 0x0018 (size: 0x18)
+    FWorldEntityData Data;                                                            // 0x0030 (size: 0x2C)
+
+}; // Size: 0x60
+
+struct FWorldEntityTownHallData
+{
+    int32 TownHallId;                                                                 // 0x0000 (size: 0x4)
+    uint8 TownNameOrdinal;                                                            // 0x0004 (size: 0x1)
+    uint8 TownNameId;                                                                 // 0x0005 (size: 0x1)
+    int32 NumTotalHouses;                                                             // 0x0008 (size: 0x4)
+    int32 NumUnclaimedHouses;                                                         // 0x000C (size: 0x4)
+    int32 NumTotalTents;                                                              // 0x0010 (size: 0x4)
+    int32 NumUnclaimedTents;                                                          // 0x0014 (size: 0x4)
+    int32 NumReinforcementSupplies;                                                   // 0x0018 (size: 0x4)
+    bool bTownUnderAttack;                                                            // 0x001C (size: 0x1)
+    bool bCallForReinforcements;                                                      // 0x001D (size: 0x1)
+
+}; // Size: 0x20
 
 class AAnvilPrefab : public AActor
 {
@@ -587,6 +632,7 @@ class UBoxCollisionProxyComponent : public UProxyComponent
     EAnvilPhysicalSurfaceType SurfaceType;                                            // 0x0078 (size: 0x1)
     int32 CollisionMask;                                                              // 0x007C (size: 0x4)
     float StepAngle;                                                                  // 0x0080 (size: 0x4)
+    bool bVaultable;                                                                  // 0x0084 (size: 0x1)
 
 }; // Size: 0x88
 
@@ -638,6 +684,7 @@ class UCapsuleCollisionProxyComponent : public UProxyComponent
     EAnvilPhysicalSurfaceType SurfaceType;                                            // 0x0060 (size: 0x1)
     int32 CollisionMask;                                                              // 0x0064 (size: 0x4)
     float StepAngle;                                                                  // 0x0068 (size: 0x4)
+    bool bVaultable;                                                                  // 0x006C (size: 0x1)
 
 }; // Size: 0x70
 
@@ -650,6 +697,7 @@ class UCollisionProxyComponent : public UProxyComponent
     EAnvilPhysicalSurfaceType SurfaceType;                                            // 0x0028 (size: 0x1)
     int32 CollisionMask;                                                              // 0x002C (size: 0x4)
     float StepAngle;                                                                  // 0x0030 (size: 0x4)
+    bool bVaultable;                                                                  // 0x0034 (size: 0x1)
 
 }; // Size: 0x38
 
@@ -673,22 +721,35 @@ class UConstructionFacilityProxyComponent : public UProxyComponent
 
 class UCookingDataComponent : public UDataComponent
 {
-    int32 FuelExpiryTimestampAgeSec;                                                  // 0x00A8 (size: 0x4)
-    bool bIsFueled;                                                                   // 0x00C8 (size: 0x1)
-    bool bCanCookWithExistingOutputs;                                                 // 0x00E8 (size: 0x1)
-    int32 CookCompleteTimestampAgeSec;                                                // 0x0108 (size: 0x4)
-    bool bIsFoodBurning;                                                              // 0x0128 (size: 0x1)
+    EAnvilCookingType CookType;                                                       // 0x00A8 (size: 0x1)
+    TArray<FCookingRecipe> RecipeList;                                                // 0x00C8 (size: 0x10)
+    float WaterDurationPerUnitItemAtMaxTempSecVisVar;                                 // 0x00D8 (size: 0x4)
+    int32 FuelExpiryTimestampAgeSec;                                                  // 0x00F8 (size: 0x4)
+    int32 CookCompleteTimestampAgeSec;                                                // 0x0118 (size: 0x4)
+    int32 CurrentRecipeIndex;                                                         // 0x0138 (size: 0x4)
+    float NormalizedWaterLevel;                                                       // 0x0158 (size: 0x4)
+    float EffectiveNormalizedTemp;                                                    // 0x0178 (size: 0x4)
+    uint8 bCanCookWithExistingOutputs;                                                // 0x0198 (size: 0x1)
+    bool bIsFueled;                                                                   // 0x01B8 (size: 0x1)
+    bool bIsFoodBurning;                                                              // 0x01D8 (size: 0x1)
+    bool bIsWatered;                                                                  // 0x01F8 (size: 0x1)
 
-}; // Size: 0x148
+}; // Size: 0x218
 
 class UCookingProxyComponent : public UProxyComponent
 {
-    TArray<FFuelType> FuelList;                                                       // 0x0028 (size: 0x10)
-    TArray<FCookingRecipe> RecipeList;                                                // 0x0038 (size: 0x10)
-    float FoodBurnDurationSec;                                                        // 0x0048 (size: 0x4)
-    bool bCanCookWithExistingOutputs;                                                 // 0x004C (size: 0x1)
+    EAnvilCookingType CookType;                                                       // 0x0028 (size: 0x1)
+    TArray<FFuelType> FuelList;                                                       // 0x0030 (size: 0x10)
+    TArray<FCookingRecipe> RecipeList;                                                // 0x0040 (size: 0x10)
+    float FoodBurnDurationSec;                                                        // 0x0050 (size: 0x4)
+    float WaterDurationPerUnitItemAtMaxTempSec;                                       // 0x0054 (size: 0x4)
+    float BellowsTemperatureModifier;                                                 // 0x0058 (size: 0x4)
+    float TemperatureDiffHighQuality;                                                 // 0x005C (size: 0x4)
+    float TemperatureDiffMedQuality;                                                  // 0x0060 (size: 0x4)
+    float TemperatureDiffLowQuality;                                                  // 0x0064 (size: 0x4)
+    uint8 bCanCookWithExistingOutputs;                                                // 0x0068 (size: 0x1)
 
-}; // Size: 0x50
+}; // Size: 0x70
 
 class UCraftingDataComponent : public UDataComponent
 {
@@ -778,7 +839,8 @@ class UEntityTemplate : public UObject
     bool bGenerateMeshCollisionsFromVisActor;                                         // 0x004A (size: 0x1)
     int32 GenerateMeshCollisionMask;                                                  // 0x004C (size: 0x4)
     float GenerateMeshCollisionStepAngle;                                             // 0x0050 (size: 0x4)
-    EAnvilPhysicalSurfaceType GenerateMeshCollisionSurfaceType;                       // 0x0054 (size: 0x1)
+    bool bGenerateMeshCollisionVaultable;                                             // 0x0054 (size: 0x1)
+    EAnvilPhysicalSurfaceType GenerateMeshCollisionSurfaceType;                       // 0x0055 (size: 0x1)
     TArray<class UProxyComponent*> Components;                                        // 0x0058 (size: 0x10)
     TSubclassOf<class AVisActorBase> VisActorClass;                                   // 0x0068 (size: 0x8)
     TSubclassOf<class AVisActorBase> VisActorTemplateClass;                           // 0x0070 (size: 0x8)
@@ -863,6 +925,7 @@ class UFootprintCollisionProxyComponent : public UProxyComponent
     EAnvilPhysicalSurfaceType SurfaceType;                                            // 0x0032 (size: 0x1)
     int32 CollisionMask;                                                              // 0x0034 (size: 0x4)
     float StepAngle;                                                                  // 0x0038 (size: 0x4)
+    bool bVaultable;                                                                  // 0x003C (size: 0x1)
 
 }; // Size: 0x40
 
@@ -1152,6 +1215,7 @@ class UMeshCollisionProxyComponent : public UProxyComponent
     EAnvilPhysicalSurfaceType SurfaceType;                                            // 0x0061 (size: 0x1)
     int32 CollisionMask;                                                              // 0x0064 (size: 0x4)
     float StepAngle;                                                                  // 0x0068 (size: 0x4)
+    bool bVaultable;                                                                  // 0x006C (size: 0x1)
 
 }; // Size: 0x70
 
@@ -1309,10 +1373,11 @@ class UPlayerSpawnerProxyComponent : public UProxyComponent
     EAnvilSpawnType Type;                                                             // 0x0028 (size: 0x1)
     FVector SpawnOffset;                                                              // 0x0030 (size: 0x18)
     FVector SpawnExtents;                                                             // 0x0048 (size: 0x18)
-    float SpawnRadius;                                                                // 0x0060 (size: 0x4)
-    EAnvilFactionId Faction;                                                          // 0x0064 (size: 0x1)
+    FRotator SpawnBoxRotation;                                                        // 0x0060 (size: 0x18)
+    float SpawnRadius;                                                                // 0x0078 (size: 0x4)
+    EAnvilFactionId Faction;                                                          // 0x007C (size: 0x1)
 
-}; // Size: 0x68
+}; // Size: 0x80
 
 class UPlayerUnstuckProxyComponent : public UProxyComponent
 {
@@ -1548,7 +1613,7 @@ class USimPlayerDataComponent : public UDataComponent
 {
     FVector Velocity;                                                                 // 0x00A8 (size: 0x18)
     uint8 GuardStrength;                                                              // 0x00D8 (size: 0x1)
-    uint8 TeamID;                                                                     // 0x00F8 (size: 0x1)
+    uint8 TeamId;                                                                     // 0x00F8 (size: 0x1)
     uint8 Encumbrance;                                                                // 0x0118 (size: 0x1)
     float GuardMeter;                                                                 // 0x0138 (size: 0x4)
     EAnvilSimActivityState ActivityState;                                             // 0x0158 (size: 0x1)
@@ -1618,6 +1683,7 @@ class USnapPointProxyComponent : public UProxyComponent
     EAnvilPhysicalSurfaceType SurfaceType;                                            // 0x007A (size: 0x1)
     int32 CollisionMask;                                                              // 0x007C (size: 0x4)
     float StepAngle;                                                                  // 0x0080 (size: 0x4)
+    bool bVaultable;                                                                  // 0x0084 (size: 0x1)
 
 }; // Size: 0x88
 
@@ -1649,6 +1715,7 @@ class USplineProxyComponent : public UProxyComponent
     EAnvilPhysicalSurfaceType SurfaceType;                                            // 0x0079 (size: 0x1)
     int32 CollisionMask;                                                              // 0x007C (size: 0x4)
     float StepAngle;                                                                  // 0x0080 (size: 0x4)
+    bool bVaultable;                                                                  // 0x0084 (size: 0x1)
 
 }; // Size: 0x88
 
@@ -1706,13 +1773,13 @@ class UStructureProxyComponent : public UProxyComponent
 
 class UTeamDataComponent : public UDataComponent
 {
-    uint8 TeamID;                                                                     // 0x00A8 (size: 0x1)
+    uint8 TeamId;                                                                     // 0x00A8 (size: 0x1)
 
 }; // Size: 0xC8
 
 class UTeamProxyComponent : public UProxyComponent
 {
-    uint8 TeamID;                                                                     // 0x0028 (size: 0x1)
+    uint8 TeamId;                                                                     // 0x0028 (size: 0x1)
     EAnvilAccessibilityType Accessibility;                                            // 0x0029 (size: 0x1)
     bool bAlwaysAllowAccessWhenScorched;                                              // 0x002A (size: 0x1)
 

@@ -5,6 +5,7 @@
 UENUM(BlueprintType)
 enum class EAnvilR2FamilyRoleType : uint8 {
     Founder,
+    Manager,
     Member,
 };
 

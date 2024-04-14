@@ -10,6 +10,7 @@ enum class EAnvilPlacementStatus : uint8 {
     InvalidFoundation,
     InvalidSurface,
     TooCloseToTownHall,
+    TooCloseToFamilyCenter,
     TooCloseToCamp,
     TooFarFromTownHallOrCamp,
     TooFarFromTownHall,
@@ -45,10 +46,12 @@ enum class EAnvilPlacementStatus : uint8 {
     YouMustBelongToFamily,
     NotAtFullHealth,
     CantBuildBorderRegion,
+    TooCloseToBorder,
     MustBePledgedToTown,
     RequiresNearbyPlayers,
     RequiresMorePopulation,
     RequiresMoreFamilyHouses,
+    AreaMustBeEmpty,
     YouMustBeOfficial,
 };
 

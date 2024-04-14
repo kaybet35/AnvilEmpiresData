@@ -1,0 +1,209 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "HeatingVatTempHigh_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'HeatingVatTempHigh_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatTempHigh_Cue.4"
+      },
+      "VolumeMultiplier": 0.1,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "bHasDelayNode": true,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'IndustryConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/IndustryConcurrency.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 128,
+        "VolumeScale": 0.5
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 7900.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Foley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "HeatingVatTempHigh_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 25.0,
+      "DelayMax": 65.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'HeatingVatTempHigh_Cue:SoundNodeModulator_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatTempHigh_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "HeatingVatTempHigh_Cue",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'HeatingVatTempHigh_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatTempHigh_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "HeatingVatTempHigh_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'HeatingVatTempHigh_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatTempHigh_Cue.7"
+        },
+        {
+          "ObjectName": "SoundNodeLooping'HeatingVatTempHigh_Cue:SoundNodeLooping_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatTempHigh_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "HeatingVatTempHigh_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeMixer'HeatingVatTempHigh_Cue:SoundNodeMixer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatTempHigh_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "HeatingVatTempHigh_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'HeatingVatTempHigh_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatTempHigh_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "HeatingVatTempHigh_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'HeatingVatTempHigh_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatTempHigh_Cue.8"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'HeatingVatTempHigh_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatTempHigh_Cue.9"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'HeatingVatTempHigh_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatTempHigh_Cue.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "HeatingVatTempHigh_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Industry/HeatingVat/HeatingVatTempHigh.HeatingVatTempHigh",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'HeatingVatTempHigh'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatTempHigh.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "HeatingVatTempHigh_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Industry/HeatingVat/HeatingVatHiss01.HeatingVatHiss01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'HeatingVatHiss01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatHiss01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "HeatingVatTempHigh_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Industry/HeatingVat/HeatingVatHiss02.HeatingVatHiss02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'HeatingVatHiss02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatHiss02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "HeatingVatTempHigh_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Industry/HeatingVat/HeatingVatHiss03.HeatingVatHiss03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'HeatingVatHiss03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatHiss03.0"
+    }
+  }
+]

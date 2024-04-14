@@ -57,6 +57,9 @@ public:
     float GenerateMeshCollisionStepAngle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bGenerateMeshCollisionVaultable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilPhysicalSurfaceType GenerateMeshCollisionSurfaceType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

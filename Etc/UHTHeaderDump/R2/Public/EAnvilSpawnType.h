@@ -8,5 +8,6 @@ enum class EAnvilSpawnType : uint8 {
     House,
     Tent,
     Bed,
+    Town,
 };
 

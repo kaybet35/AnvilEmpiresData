@@ -4,19 +4,20 @@
 
 UENUM(BlueprintType)
 enum class EBuildSiteCategory : uint8 {
-    Settlement,
+    General,
     Housing,
-    Camp,
-    Defenses,
-    Foundations,
-    Industry,
-    Water,
-    Smithing,
     Cooking,
+    Defenses,
     Vehicles,
-    Farming,
     Lumber,
+    Smithing,
     Stone,
+    Farming,
+    Water,
+    Industry,
+    Settlement,
+    Foundations,
+    Camp,
     NumTypes,
 };
 

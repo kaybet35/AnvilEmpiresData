@@ -9,7 +9,7 @@ class R2_API UTeamProxyComponent : public UProxyComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 TeamID;
+    uint8 TeamId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilAccessibilityType Accessibility;

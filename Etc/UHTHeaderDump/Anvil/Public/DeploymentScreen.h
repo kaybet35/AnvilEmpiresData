@@ -5,7 +5,7 @@
 #include "DeploymentScreen.generated.h"
 
 class UAnvilButtonWidget;
-class UNewMapWidget;
+class UDeploymentMapWidget;
 class UTextBlock;
 class UThrobber;
 
@@ -13,10 +13,10 @@ UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UDeploymentScreen : public UAnvilScreen {
     GENERATED_BODY()
 public:
-private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UNewMapWidget* MapWidget;
+    UDeploymentMapWidget* MapWidget;
     
+private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UThrobber* Throbber;
     

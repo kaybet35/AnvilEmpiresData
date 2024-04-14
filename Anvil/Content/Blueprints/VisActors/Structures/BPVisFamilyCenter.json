@@ -38,7 +38,7 @@
       ],
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisFamilyCenter_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.27"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.33"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BPVisFamilyCenter_C:ExecuteUbergraph_BPVisFamilyCenter'",
@@ -77,13 +77,13 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "SmokeStack",
+        "Name": "VisTeamMesh1",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
-          "ObjectName": "Class'NiagaraComponent'",
-          "ObjectPath": "/Script/Niagara"
+          "ObjectName": "Class'VisTeamMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
         }
       },
       {
@@ -116,6 +116,61 @@
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
           "ObjectName": "Class'VisTeamMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Stairs1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MeshVisibilityData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MeshVisibilityDataComponent'",
+          "ObjectPath": "/Script/R2"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Stairs",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SmokeStack",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Roof",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
           "ObjectPath": "/Script/Anvil"
         }
       },
@@ -215,7 +270,7 @@
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisFamilyCenter_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.33"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.39"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconGroupHouse'",
@@ -223,7 +278,7 @@
       },
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisFamilyCenter_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.32"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.38"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisFamilyCenter_C:HealthDataComponent'",
@@ -231,15 +286,15 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisFamilyCenter_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.31"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.37"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisFamilyCenter_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.30"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.36"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisFamilyCenter_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.19"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyCenter_C:ArrowComponent'",
@@ -297,9 +352,9 @@
     },
     "Properties": {
       "RelativeLocation": {
-        "X": 230.0,
-        "Y": 523.0,
-        "Z": 424.0
+        "X": -160.03494,
+        "Y": 651.6911,
+        "Z": 312.11084
       },
       "RelativeScale3D": {
         "X": 1.5,
@@ -319,9 +374,14 @@
     },
     "Properties": {
       "RelativeLocation": {
-        "X": 207.0,
-        "Y": 5.0,
-        "Z": 214.0
+        "X": -197.18294,
+        "Y": -664.6556,
+        "Z": 344.5354
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -180.0,
+        "Roll": 0.0
       },
       "RelativeScale3D": {
         "X": 1.5,
@@ -451,7 +511,7 @@
       },
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'BPVisFamilyCenter_C:GrassRemovalFamilyArea_GEN_VARIABLE.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.28"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.34"
       }
     }
   },
@@ -468,7 +528,7 @@
       },
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisFamilyCenter_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.29"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.35"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyCenter_C:ArrowComponent'",
@@ -481,6 +541,12 @@
     "Name": "HealthDataComponent",
     "Outer": "Default__BPVisFamilyCenter_C",
     "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "MeshVisibilityDataComponent",
+    "Name": "MeshVisibilityData_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenter_C",
+    "Class": "UScriptClass'MeshVisibilityDataComponent'"
   },
   {
     "Type": "NiagaraComponent",
@@ -581,7 +647,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisFamilyCenter_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.18"
       },
       "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -599,26 +665,22 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFamilyCenter_C:HouseMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.34"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.40"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.24"
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.31"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.25"
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.32"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.21"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.26"
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.22"
         }
       ],
       "VariableGuid": "33615271-4FA8C621-50190C80-A73B49F8",
@@ -627,7 +689,83 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_2",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisFamilyCenter_C:Stairs1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.42"
+      },
+      "VariableGuid": "AE305024-47587091-A78A5689-30553DE7",
+      "InternalVariableName": "Stairs1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MeshVisibilityDataComponent'",
+        "ObjectPath": "/Script/R2"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MeshVisibilityDataComponent'BPVisFamilyCenter_C:MeshVisibilityData_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.16"
+      },
+      "VariableGuid": "D38424A3-410FB42C-FC7DF188-14F2BE86",
+      "InternalVariableName": "MeshVisibilityData"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_14",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisTeamMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisTeamMeshComponent'BPVisFamilyCenter_C:VisTeamMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.45"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "CA7CDED2-4A96AB85-66703DB6-2F052767",
+      "InternalVariableName": "VisTeamMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_15",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisFamilyMeshComponent_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPVisFamilyMeshComponent_C'BPVisFamilyCenter_C:BPVisFamilyMeshComponent_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.5"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "703B041C-4D4E951E-DCFCC398-DFD8D59E",
+      "InternalVariableName": "BPVisFamilyMeshComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_16",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
@@ -639,8 +777,30 @@
         "ObjectName": "BPVisFamilyMeshComponent_C'BPVisFamilyCenter_C:BPVisFamilyMeshComponent1_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.4"
       },
-      "VariableGuid": "003C41D0-4AFE45E0-C6CF0F94-9E96421C",
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "81905198-4ED55CBA-03DC4381-7DBB6E76",
       "InternalVariableName": "BPVisFamilyMeshComponent1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_17",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisTeamMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisTeamMeshComponent'BPVisFamilyCenter_C:VisTeamMesh1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.44"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6CB9234A-445C3B96-C78AF999-C4D02E6B",
+      "InternalVariableName": "VisTeamMesh1"
     }
   },
   {
@@ -685,42 +845,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_5",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisTeamMeshComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisTeamMeshComponent'BPVisFamilyCenter_C:VisTeamMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.35"
-      },
-      "VariableGuid": "F382B871-4ED0DEC9-E81E2182-205F2567",
-      "InternalVariableName": "VisTeamMesh"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_6",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "BlueprintGeneratedClass'BPVisFamilyMeshComponent_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.0"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "BPVisFamilyMeshComponent_C'BPVisFamilyCenter_C:BPVisFamilyMeshComponent_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.5"
-      },
-      "VariableGuid": "E1EE1F71-4B6AF0E8-0F1EDE96-BE58D02C",
-      "InternalVariableName": "BPVisFamilyMeshComponent"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_7",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -731,10 +855,52 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisFamilyCenter_C:SmokeStack_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.17"
       },
       "VariableGuid": "1280C397-49FCF59E-B29ED58F-712A8E42",
       "InternalVariableName": "SmokeStack"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisFamilyCenter_C:Roof_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.41"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.30"
+        }
+      ],
+      "VariableGuid": "22C30CE9-410E6523-C6FA6391-6893664A",
+      "InternalVariableName": "Roof"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisFamilyCenter_C:Stairs_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.43"
+      },
+      "VariableGuid": "AD82B423-40028F84-83D443AD-8B452622",
+      "InternalVariableName": "Stairs"
     }
   },
   {
@@ -746,50 +912,90 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.23"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.29"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.22"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.28"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.20"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.27"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.23"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.29"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.22"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.28"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.21"
         },
         {
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.31"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_16'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.27"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisFamilyCenter_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenter.20"
       }
     }
   },
@@ -841,16 +1047,102 @@
     "Outer": "BPVisFamilyCenter_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
     "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
       "StaticMesh": {
-        "ObjectName": "StaticMesh'GroupHouse'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/GroupHouse.2"
+        "ObjectName": "StaticMesh'FamilyCenterT1'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/FamilyCenterT1.2"
       },
       "ComponentTags": [
         "Structure",
-        "Collision",
-        "ProjectToLandscape"
+        "Collision"
       ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "Roof_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenter_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "bMeshVisibility": true,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FamilyCenterT1Roof'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/FamilyCenterT1Roof.2"
+      },
+      "ComponentTags": [
+        "ToggleVisibilty",
+        "Structure",
+        "Collision",
+        "ToggleVisibility"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "Stairs1_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenter_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'HouseStairs'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/HouseStairs.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -640.0,
+        "Z": 30.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": -0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "Stairs_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenter_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'HouseStairs'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/HouseStairs.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 640.0,
+        "Z": 30.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  },
+  {
+    "Type": "VisTeamMeshComponent",
+    "Name": "VisTeamMesh1_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenter_C",
+    "Class": "UScriptClass'VisTeamMeshComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 164.78683,
+        "Y": -666.51056,
+        "Z": 347.49695
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -180.0,
+        "Roll": 2.404989
+      }
     }
   },
   {
@@ -860,14 +1152,14 @@
     "Class": "UScriptClass'VisTeamMeshComponent'",
     "Properties": {
       "RelativeLocation": {
-        "X": 102.76544,
-        "Y": 520.95764,
-        "Z": 423.5303
+        "X": 164.78683,
+        "Y": 649.64874,
+        "Z": 311.64114
       },
       "RelativeRotation": {
         "Pitch": 0.0,
         "Yaw": 0.0,
-        "Roll": -2.4049888
+        "Roll": -2.404989
       }
     }
   }

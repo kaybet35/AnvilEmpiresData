@@ -61,17 +61,41 @@
     }
   },
   {
+    "Type": "AudioComponent",
+    "Name": "BoilingTemperatureHighAudio",
+    "Outer": "Default__BPVisHearth_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHearth_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.0"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "BoilingTemperatureLowAudio",
+    "Outer": "Default__BPVisHearth_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHearth_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.0"
+      }
+    }
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BPVisHearth_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisHearth_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.40"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.42"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BPVisHearth_C:ExecuteUbergraph_BPVisHearth'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.9"
       }
     },
     "SuperStruct": {
@@ -81,11 +105,11 @@
     "Children": [
       {
         "ObjectName": "Function'BPVisHearth_C:ReceiveBeginPlay'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.10"
       },
       {
         "ObjectName": "Function'BPVisHearth_C:ExecuteUbergraph_BPVisHearth'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.9"
       }
     ],
     "ChildProperties": [
@@ -280,11 +304,11 @@
     "FuncMap": {
       "ExecuteUbergraph_BPVisHearth": {
         "ObjectName": "Function'BPVisHearth_C:ExecuteUbergraph_BPVisHearth'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.9"
       },
       "ReceiveBeginPlay": {
         "ObjectName": "Function'BPVisHearth_C:ReceiveBeginPlay'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.10"
       }
     },
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -296,7 +320,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisHearth_C'Default__BPVisHearth_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.4"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.6"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -310,11 +334,23 @@
       "UberGraphFrame": {},
       "CookingDataComponent": {
         "ObjectName": "CookingDataComponent'Default__BPVisHearth_C:CookingDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.7"
+      },
+      "WaterLevelMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisHearth_C:WaterLevelMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.44"
+      },
+      "BoilingTemperatureHighAudio": {
+        "ObjectName": "AudioComponent'Default__BPVisHearth_C:BoilingTemperatureHighAudio'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.3"
+      },
+      "BoilingTemperatureLowAudio": {
+        "ObjectName": "AudioComponent'Default__BPVisHearth_C:BoilingTemperatureLowAudio'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.4"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisHearth_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.45"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.48"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconHearth'",
@@ -324,23 +360,23 @@
       "BuildSiteOrder": 1,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisHearth_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.44"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.47"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisHearth_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.12"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisHearth_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.43"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.46"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisHearth_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.42"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.45"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisHearth_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.18"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisHearth_C:ArrowComponent'",
@@ -348,11 +384,11 @@
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisHearth_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.8"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisHearth_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.11"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -452,7 +488,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisHearth_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.41"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.43"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisHearth_C:ArrowComponent'",
@@ -1186,7 +1222,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisHearth_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.16"
       },
       "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -1204,7 +1240,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisHearth_C:RefiningAssets_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.47"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.50"
       },
       "VariableGuid": "07829B6E-4C4E0680-40430598-C704AA03",
       "InternalVariableName": "RefiningAssets"
@@ -1222,7 +1258,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisHearth_C:ScorchEffect7_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.23"
       },
       "VariableGuid": "53BBB16C-4B3B3483-3E1171A9-C2422D26",
       "InternalVariableName": "ScorchEffect7"
@@ -1240,7 +1276,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisHearth_C:ScorchEffect1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.19"
       },
       "VariableGuid": "76AC289C-441F17AF-A9A516BE-4EAD7B1F",
       "InternalVariableName": "ScorchEffect1"
@@ -1258,7 +1294,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisHearth_C:ScorchEffect4_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.20"
       },
       "VariableGuid": "50AB52C0-4121636B-61503C8D-9A88D90E",
       "InternalVariableName": "ScorchEffect4"
@@ -1276,46 +1312,46 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisHearth_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.48"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.51"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_21'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.32"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.34"
         },
         {
           "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.38"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.40"
         },
         {
           "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.39"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.41"
         },
         {
           "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.27"
         },
         {
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.29"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.37"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.39"
         },
         {
           "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.24"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.26"
         },
         {
           "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.30"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.32"
         }
       ],
       "VariableGuid": "2E892AA1-44D5795A-6C49839C-46318124",
@@ -1334,7 +1370,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisHearth_C:Refining_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.15"
       },
       "VariableGuid": "0F38FCEA-470C595A-63A8B4B8-825A4F13",
       "InternalVariableName": "Refining"
@@ -1352,32 +1388,32 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisHearth_C:Scene_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.17"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.31"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.34"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.33"
         },
         {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.35"
         },
         {
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.37"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.29"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.31"
         },
         {
           "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.36"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.38"
         }
       ],
       "VariableGuid": "E0B6B89E-4D999C41-7352E08E-DA1A3D53",
@@ -1396,7 +1432,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisHearth_C:FireWood_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.46"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.49"
       },
       "VariableGuid": "61CC52D7-4F117C3C-31CF5A8B-3F735C7C",
       "InternalVariableName": "FireWood"
@@ -1414,7 +1450,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisTeamMeshComponent'BPVisHearth_C:VisTeamMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.49"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.52"
       },
       "VariableGuid": "047E694A-424AA847-C0C7B486-D75C8C90",
       "InternalVariableName": "VisTeamMesh"
@@ -1432,7 +1468,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisHearth_C:Fuelled_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.14"
       },
       "VariableGuid": "C173FAF1-48FAF703-A8AEABB4-22358D36",
       "InternalVariableName": "Fuelled"
@@ -1468,7 +1504,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisHearth_C:Burning_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.13"
       },
       "VariableGuid": "DD3CE683-4E5B35C0-943A26A4-C63506D6",
       "InternalVariableName": "Burning"
@@ -1504,7 +1540,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisHearth_C:ScorchEffect5_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.21"
       },
       "VariableGuid": "119D4D50-4D831CF0-47CBEEBE-8C81F2E5",
       "InternalVariableName": "ScorchEffect5"
@@ -1522,7 +1558,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisHearth_C:ScorchEffect6_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.22"
       },
       "VariableGuid": "15895921-420068DE-63ADE9AB-A342ED72",
       "InternalVariableName": "ScorchEffect6"
@@ -1540,7 +1576,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisHearth_C:ScorchEffect8_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.24"
       },
       "VariableGuid": "0F4F7341-412A8638-FA06C28B-189CDCAC",
       "InternalVariableName": "ScorchEffect8"
@@ -1555,78 +1591,78 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.28"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.30"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.28"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_21'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.32"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.38"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.39"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.37"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_15'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.30"
         },
         {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.31"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_21'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.34"
         },
         {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.33"
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.40"
         },
         {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.35"
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.41"
         },
         {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.29"
         },
         {
-          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.38"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisHearth_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.25"
       }
     }
   },
@@ -1635,6 +1671,18 @@
     "Name": "SplineDataComponent",
     "Outer": "GrassRemovalVolume",
     "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "WaterLevelMesh",
+    "Outer": "Default__BPVisHearth_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHearth_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.0"
+      }
+    }
   },
   {
     "Type": "StructureDataComponent",

@@ -23,6 +23,10 @@ bool UFamilyAreaMarkerWindow::IsFamilyAreaSetAllianceButtonEnabled() {
     return false;
 }
 
+bool UFamilyAreaMarkerWindow::IsFamilyAreaRestrictedCheckBoxEnabled() {
+    return false;
+}
+
 ESlateVisibility UFamilyAreaMarkerWindow::GetFamilyAreaSetAllianceVisibility() {
     return ESlateVisibility::Visible;
 }

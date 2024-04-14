@@ -38,8 +38,8 @@
         }
       },
       "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.8"
+        "ObjectName": "SizeBoxSlot'BPFamilyMemberListItem_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.22"
       }
     }
   },
@@ -57,7 +57,7 @@
       ],
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.7"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.8"
       }
     }
   },
@@ -90,7 +90,222 @@
       },
       "Content": {
         "ObjectName": "Image'BPFamilyMemberListItem_C:WidgetTree.HouseOccupantIcon'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.10"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.14"
+      }
+    }
+  },
+  {
+    "Type": "ComboBoxString",
+    "Name": "RoleComboBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'ComboBoxString'",
+    "Properties": {
+      "SelectedOption": "0",
+      "WidgetStyle": {
+        "ComboButtonStyle": {
+          "ButtonStyle": {
+            "Normal": {
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "ImageSize": {
+                "X": 64.0,
+                "Y": 64.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 0.114583,
+                  "G": 0.098549,
+                  "B": 0.085341,
+                  "A": 1.0,
+                  "Hex": "FF5F5852"
+                }
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FlatBG'",
+                "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+              }
+            },
+            "Hovered": {
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "ImageSize": {
+                "X": 64.0,
+                "Y": 64.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 0.730461,
+                  "G": 0.491021,
+                  "B": 0.124772,
+                  "A": 1.0,
+                  "Hex": "FFDEBA63"
+                }
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FlatBG'",
+                "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+              }
+            },
+            "Pressed": {
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "ImageSize": {
+                "X": 64.0,
+                "Y": 64.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 0.046665,
+                  "G": 0.042311,
+                  "B": 0.035601,
+                  "A": 1.0,
+                  "Hex": "FF3D3A35"
+                }
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FlatBG'",
+                "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+              }
+            },
+            "Disabled": {
+              "DrawAs": "ESlateBrushDrawType::Image"
+            }
+          },
+          "MenuBorderBrush": {
+            "ImageSize": {
+              "X": 64.0,
+              "Y": 64.0
+            },
+            "TintColor": {
+              "SpecifiedColor": {
+                "R": 0.098958,
+                "G": 0.096532,
+                "B": 0.087104,
+                "A": 1.0,
+                "Hex": "FF585753"
+              }
+            },
+            "ResourceObject": {
+              "ObjectName": "Texture2D'FlatBG'",
+              "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+            }
+          },
+          "ContentPadding": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          },
+          "DownArrowPadding": {
+            "Left": 10.0
+          }
+        },
+        "ContentPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 5.0,
+          "Bottom": 0.0
+        }
+      },
+      "ItemStyle": {
+        "SelectorFocusedBrush": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.533277,
+              "G": 0.417885,
+              "B": 0.242281,
+              "A": 1.0,
+              "Hex": "FFC1AD87"
+            }
+          }
+        },
+        "ActiveHoveredBrush": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.533277,
+              "G": 0.417885,
+              "B": 0.242281,
+              "A": 1.0,
+              "Hex": "FFC1AD87"
+            }
+          }
+        },
+        "ActiveBrush": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.730461,
+              "G": 0.491021,
+              "B": 0.124772,
+              "A": 1.0,
+              "Hex": "FFDEBA63"
+            }
+          }
+        },
+        "TextColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFFFF"
+          }
+        },
+        "SelectedTextColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF000000"
+          }
+        },
+        "DropIndicator_Above": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.730461,
+              "G": 0.491021,
+              "B": 0.124772,
+              "A": 1.0,
+              "Hex": "FFDEBA63"
+            }
+          }
+        },
+        "DropIndicator_Onto": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.730461,
+              "G": 0.491021,
+              "B": 0.124772,
+              "A": 1.0,
+              "Hex": "FFDEBA63"
+            }
+          }
+        },
+        "DropIndicator_Below": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.730461,
+              "G": 0.491021,
+              "B": 0.124772,
+              "A": 1.0,
+              "Hex": "FFDEBA63"
+            }
+          }
+        }
+      },
+      "ContentPadding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default"
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPFamilyMemberListItem_C:WidgetTree.RoleComboBoxSizeBox.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.19"
       }
     }
   },
@@ -103,20 +318,32 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.7"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.8"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.6"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.7"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.10"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.11"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_9'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.12"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.8"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.9"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.13"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.27"
       }
     }
   },
@@ -129,7 +356,7 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_24.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.9"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.13"
         }
       ]
     }
@@ -140,17 +367,14 @@
     "Outer": "HorizontalBox_169",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Properties": {
-      "Padding": {
-        "Left": 4.0
-      },
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.4"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.5"
       },
       "Content": {
-        "ObjectName": "TextBlock'BPFamilyMemberListItem_C:WidgetTree.PlayerNameText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.11"
+        "ObjectName": "SizeBox'BPFamilyMemberListItem_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.17"
       }
     }
   },
@@ -162,7 +386,7 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.4"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.5"
       },
       "Content": {
         "ObjectName": "CanvasPanel'BPFamilyMemberListItem_C:WidgetTree.CanvasPanel_0'",
@@ -176,17 +400,76 @@
     "Outer": "HorizontalBox_169",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Properties": {
-      "Size": {
-        "SizeRule": "ESlateSizeRule::Fill"
+      "Padding": {
+        "Left": 10.0
       },
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
       "Parent": {
         "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.4"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.5"
       },
       "Content": {
-        "ObjectName": "Button'BPFamilyMemberListItem_C:WidgetTree.KickButton'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.1"
+        "ObjectName": "SizeBox'BPFamilyMemberListItem_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.18"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "HorizontalBox_169",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.5"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPFamilyMemberListItem_C:WidgetTree.Spacer_99'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.23"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Outer": "HorizontalBox_169",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Top": 0.5,
+        "Right": 5.0,
+        "Bottom": 0.5
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.5"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPFamilyMemberListItem_C:WidgetTree.RoleComboBoxSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.15"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_9",
+    "Outer": "HorizontalBox_169",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.5"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPFamilyMemberListItem_C:WidgetTree.RoleTextSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.16"
       }
     }
   },
@@ -202,11 +485,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_24'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.5"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.6"
       },
       "Content": {
         "ObjectName": "VerticalBox'BPFamilyMemberListItem_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.12"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.26"
       }
     }
   },
@@ -233,16 +516,174 @@
     }
   },
   {
+    "Type": "SizeBox",
+    "Name": "RoleComboBoxSizeBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPFamilyMemberListItem_C:WidgetTree.RoleComboBoxSizeBox.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_6'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.11"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "RoleTextSizeBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPFamilyMemberListItem_C:WidgetTree.RoleTextSizeBox.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.20"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_9'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.12"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 200.0,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPFamilyMemberListItem_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.21"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.7"
+      },
+      "Clipping": "EWidgetClipping::ClipToBounds"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 40.0,
+      "HeightOverride": 40.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPFamilyMemberListItem_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.22"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.9"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "RoleComboBoxSizeBox",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPFamilyMemberListItem_C:WidgetTree.RoleComboBoxSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.15"
+      },
+      "Content": {
+        "ObjectName": "ComboBoxString'BPFamilyMemberListItem_C:WidgetTree.RoleComboBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.4"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "RoleTextSizeBox",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Right": 5.0
+      },
+      "Parent": {
+        "ObjectName": "SizeBox'BPFamilyMemberListItem_C:WidgetTree.RoleTextSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.16"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPFamilyMemberListItem_C:WidgetTree.RoleTextBlock'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.25"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPFamilyMemberListItem_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.17"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPFamilyMemberListItem_C:WidgetTree.PlayerNameText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.24"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_1",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPFamilyMemberListItem_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.18"
+      },
+      "Content": {
+        "ObjectName": "Button'BPFamilyMemberListItem_C:WidgetTree.KickButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.1"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_99",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.10"
+      }
+    }
+  },
+  {
     "Type": "TextBlock",
     "Name": "PlayerNameText",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'TextBlock'",
     "Properties": {
       "Text": {
-        "Namespace": "UMG",
-        "Key": "TextBlockDefaultValue",
-        "SourceString": "Text Block",
-        "LocalizedString": "Text Block"
+        "Namespace": "",
+        "Key": "4CA3683A4C16E40DC7D144BE00FAD561",
+        "SourceString": "Player Name",
+        "LocalizedString": "Player Name"
       },
       "Font": {
         "FontObject": {
@@ -253,8 +694,34 @@
         "Size": 14
       },
       "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.6"
+        "ObjectName": "SizeBoxSlot'BPFamilyMemberListItem_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.21"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "RoleTextBlock",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "DB94BE1A4FDD7F2947D50FA0C7FC9B39",
+        "SourceString": "Member",
+        "LocalizedString": "Member"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 16
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPFamilyMemberListItem_C:WidgetTree.RoleTextSizeBox.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.20"
       }
     }
   },
@@ -267,12 +734,12 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.13"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.27"
         }
       ],
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_24.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.13"
       }
     }
   },
@@ -287,11 +754,11 @@
       },
       "Parent": {
         "ObjectName": "VerticalBox'BPFamilyMemberListItem_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.12"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.26"
       },
       "Content": {
         "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_169'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.4"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.5"
       }
     }
   },
@@ -302,7 +769,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPFamilyMemberListItem_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.15"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.29"
       },
       "bClassRequiresNativeTick": true
     },
@@ -346,7 +813,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "HorizontalBox'BPFamilyMemberListItem_C:WidgetTree.HorizontalBox_24'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.5"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPFamilyMemberListItem.6"
       }
     }
   }

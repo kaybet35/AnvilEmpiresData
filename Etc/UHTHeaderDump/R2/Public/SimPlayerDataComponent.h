@@ -18,7 +18,7 @@ public:
     uint8 GuardStrength;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 TeamID;
+    uint8 TeamId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 Encumbrance;

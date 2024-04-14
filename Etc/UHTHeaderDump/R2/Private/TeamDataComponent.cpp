@@ -1,7 +1,7 @@
 #include "TeamDataComponent.h"
 
 UTeamDataComponent::UTeamDataComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->TeamID = 0;
+    this->TeamId = 0;
 }
 
 

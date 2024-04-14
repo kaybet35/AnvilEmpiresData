@@ -1,0 +1,398 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisPlatformBuildSite_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisPlatformBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisPlatformBuildSite_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisSplineBuildSite'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisPlatformBuildSite_C'Default__BPVisPlatformBuildSite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisPlatformBuildSite_C",
+    "Name": "Default__BPVisPlatformBuildSite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.BPVisPlatformBuildSite_C'",
+    "Properties": {
+      "SplineComponent": {
+        "ObjectName": "VisSplineComponent'Default__BPVisPlatformBuildSite_C:SplineComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.13"
+      },
+      "VisBuildGhostComponent": {
+        "ObjectName": "VisBuildGhostComponent'Default__BPVisPlatformBuildSite_C:VisBuildGhostComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.12"
+      },
+      "BuildSiteDataComponent": {
+        "ObjectName": "BuildSiteDataComponent'Default__BPVisPlatformBuildSite_C:BuildSiteDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.3"
+      },
+      "StructureDataComponent": {
+        "ObjectName": "StructureDataComponent'Default__BPVisPlatformBuildSite_C:StructureDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.11"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'IconWallPlatform'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconWallPlatform.0"
+      },
+      "Category": "EBuildSiteCategory::Defenses",
+      "BuildSiteVisibility": "EBuildSiteVisibility::Never",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisPlatformBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.0"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisPlatformBuildSite_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.10"
+      },
+      "BuildCollisionDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisPlatformBuildSite_C:BuildCollisionDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.4"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "6AA852244728D83185CC93A7A306DDD2",
+        "SourceString": "Platform",
+        "LocalizedString": "Platform"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "DC3366954903DFCF80F258BB0D5EF0C8",
+        "SourceString": " Allows players to gain the high ground. Can be snapped to walls. Requires a ramp to access.",
+        "LocalizedString": " Allows players to gain the high ground. Can be snapped to walls. Requires a ramp to access."
+      },
+      "TemplateCDO": null,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisPlatformBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "BuildSiteDataComponent",
+    "Name": "BuildSiteDataComponent",
+    "Outer": "Default__BPVisPlatformBuildSite_C",
+    "Class": "UScriptClass'BuildSiteDataComponent'"
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "BuildCollisionDecalComponent",
+    "Outer": "Default__BPVisPlatformBuildSite_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisPlatformBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "GroundDecalComponent",
+    "Outer": "SplineComponent",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalSize": {
+        "X": 128.0,
+        "Y": 250.0,
+        "Z": 256.0
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 250.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisPlatformBuildSite_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisPlatformBuildSite_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.6"
+      },
+      "VariableGuid": "81C71026-4EC7E402-B814B2B3-B1C5AA2F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisPlatformBuildSite_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisPlatformBuildSite_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.7"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "SplineComponent",
+    "Class": "UScriptClass'SplineDataComponent'",
+    "Properties": {
+      "MidPieceTransforms": [
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 50.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 100.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 200.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 300.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 400.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 450.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        }
+      ],
+      "End": {
+        "X": 0.0,
+        "Y": 500.0,
+        "Z": 0.0
+      },
+      "SegmentLength": 500.0
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisPlatformBuildSite_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisPlatformBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.0"
+      }
+    }
+  },
+  {
+    "Type": "StructureDataComponent",
+    "Name": "StructureDataComponent",
+    "Outer": "Default__BPVisPlatformBuildSite_C",
+    "Class": "UScriptClass'StructureDataComponent'"
+  },
+  {
+    "Type": "VisBuildGhostComponent",
+    "Name": "VisBuildGhostComponent",
+    "Outer": "Default__BPVisPlatformBuildSite_C",
+    "Class": "UScriptClass'VisBuildGhostComponent'"
+  },
+  {
+    "Type": "VisSplineComponent",
+    "Name": "SplineComponent",
+    "Outer": "Default__BPVisPlatformBuildSite_C",
+    "Class": "UScriptClass'VisSplineComponent'",
+    "Properties": {
+      "GroundDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisPlatformBuildSite_C:SplineComponent.GroundDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.5"
+      },
+      "PreviewPieceLength": 100.0,
+      "PreviewEndLocation": {
+        "X": 0.0,
+        "Y": 500.0,
+        "Z": 0.0
+      },
+      "DecalMaterial": {
+        "ObjectName": "Material'DecalBuildSite'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/DecalBuildSite.0"
+      },
+      "MaterialOverride": {
+        "ObjectName": "Material'Ghost'",
+        "ObjectPath": "Anvil/Content/Materials/Ghost.0"
+      },
+      "EndPieceMesh": {
+        "ObjectName": "StaticMesh'WallT2_Platform01'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/WallT2_Platform01.2"
+      },
+      "MidPieceMeshes": [
+        {
+          "ObjectName": "StaticMesh'WallT2_Platform02'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/WallT2_Platform02.2"
+        },
+        {
+          "ObjectName": "StaticMesh'WallT2_Platform03'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/WallT2_Platform03.2"
+        }
+      ],
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'Default__BPVisPlatformBuildSite_C:SplineComponent.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.9"
+      },
+      "MidPieces": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "EndPieces": [
+        null,
+        null
+      ],
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisPlatformBuildSite_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisPlatformBuildSite.0"
+      }
+    }
+  }
+]

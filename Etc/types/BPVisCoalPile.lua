@@ -1,9 +1,7 @@
 ---@meta
 
----@class ABPVisCoalPile_C : AVisActor
+---@class ABPVisCoalPile_C : AVisResource
 ---@field Decal UDecalComponent
----@field Mesh UStaticMeshComponent
----@field DefaultSceneRoot USceneComponent
 ABPVisCoalPile_C = {}
 
 

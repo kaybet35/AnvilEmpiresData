@@ -1,9 +1,6 @@
 ---@meta
 
----@class ABPVisSilverPile_C : AVisActor
----@field Mesh UStaticMeshComponent
----@field DefaultSceneRoot USceneComponent
+---@class ABPVisSilverPile_C : AVisResource
 ABPVisSilverPile_C = {}
-
 
 

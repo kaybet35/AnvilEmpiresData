@@ -16,6 +16,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CookDurationSec;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float TargetNormalizedTemperature;
+    
     R2_API FCookingRecipe();
 };
 

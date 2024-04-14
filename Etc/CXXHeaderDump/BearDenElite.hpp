@@ -1,8 +1,8 @@
 #ifndef UE4SS_SDK_BearDenElite_HPP
 #define UE4SS_SDK_BearDenElite_HPP
 
-class UBearDenElite_C : public UEntityTemplate
+class UBearDenElite_C : public UBPBaseStructureEntity_C
 {
-}; // Size: 0x80
+}; // Size: 0xD8
 
 #endif

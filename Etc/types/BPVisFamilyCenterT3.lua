@@ -2,10 +2,15 @@
 
 ---@class ABPVisFamilyCenterT3_C : AVisFamilyCenter
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field SmokeStack UNiagaraComponent
 ---@field BPVisFamilyMeshComponent1 UBPVisFamilyMeshComponent_C
 ---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field VisTeamMesh UVisTeamMeshComponent
+---@field VisTeamMesh1 UVisTeamMeshComponent
+---@field Stairs1 UVisStaticMeshComponent
+---@field MeshVisibilityData UMeshVisibilityDataComponent
+---@field Stairs UVisStaticMeshComponent
+---@field SmokeStack UNiagaraComponent
+---@field Roof UVisStaticMeshComponent
 ---@field HouseMesh UVisStaticMeshComponent
 ---@field GrassRemovalFamilyArea UGrassRemovalVolumeComponent
 ---@field Audio UAudioComponent

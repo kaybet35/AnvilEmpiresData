@@ -15,6 +15,7 @@ class UAnvilCharacterSave;
 class UAnvilClientVoiceClient;
 class UHUDWidget;
 class UMapWidget;
+class UWorldEntityPoolManager;
 
 UCLASS(Blueprintable, NonTransient)
 class ANVIL_API UAnvilGameInstance : public UGameInstance {
@@ -25,6 +26,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UHUDWidget* HUDWidget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UWorldEntityPoolManager* WorldEntityPoolManager;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

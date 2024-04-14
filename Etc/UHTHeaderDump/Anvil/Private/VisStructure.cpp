@@ -13,7 +13,7 @@ AVisStructure::AVisStructure(const FObjectInitializer& ObjectInitializer) : Supe
     this->RootComponent = CreateDefaultSubobject<UArrowComponent>(TEXT("ArrowComponent"));
     this->ScaffoldingComponent = CreateDefaultSubobject<UVisScaffoldingComponent>(TEXT("ScaffoldingComponent"));
     this->StructureIcon = NULL;
-    this->BuildSiteCategory = EBuildSiteCategory::Settlement;
+    this->BuildSiteCategory = EBuildSiteCategory::General;
     this->BuildSiteOrder = 0;
     this->BuildSiteVisibility = EBuildSiteVisibility::AlwaysVisible;
     this->UpgradeDataComponent = CreateDefaultSubobject<UUpgradeDataComponent>(TEXT("UpgradeDataComponent"));
@@ -25,9 +25,9 @@ AVisStructure::AVisStructure(const FObjectInitializer& ObjectInitializer) : Supe
     this->UseVolumeDecalComponent = CreateDefaultSubobject<UDecalComponent>(TEXT("UseVolumeDecalComponent"));
     this->GrassRemovalVolume = CreateDefaultSubobject<UGrassRemovalVolumeComponent>(TEXT("GrassRemovalVolume"));
     this->GeneratedScorchEffects = 0;
+    this->GrassRemovalVolume->SetupAttachment(RootComponent);
     this->ScaffoldingComponent->SetupAttachment(RootComponent);
     this->UseVolumeDecalComponent->SetupAttachment(RootComponent);
-    this->GrassRemovalVolume->SetupAttachment(RootComponent);
 }
 
 

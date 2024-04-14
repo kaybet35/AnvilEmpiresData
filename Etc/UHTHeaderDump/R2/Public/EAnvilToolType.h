@@ -19,6 +19,7 @@ enum class EAnvilToolType : uint8 {
     Knife,
     KnifeT2,
     KnifeT3,
+    PickaxeT2,
     NumTypes,
 };
 

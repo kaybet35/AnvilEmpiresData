@@ -1,6 +1,6 @@
 #include "MapIcon.h"
 
-UMapIcon::UMapIcon() : UUserWidget(FObjectInitializer::Get()) {
+UMapIcon::UMapIcon() {
     this->Marker = NULL;
     this->LabelBox = NULL;
     this->IconBox = NULL;

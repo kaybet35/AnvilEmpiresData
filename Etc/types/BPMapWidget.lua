@@ -13,8 +13,8 @@ UBPMapWidget_C = {}
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
 function UBPMapWidget_C:Tick(MyGeometry, InDeltaTime) end
----@param MapImage UTexture2D
-function UBPMapWidget_C:BP_OnMapImageSet(MapImage) end
+---@param MapImageTexture UTexture2D
+function UBPMapWidget_C:BP_OnMapImageSet(MapImageTexture) end
 ---@param EntryPoint int32
 function UBPMapWidget_C:ExecuteUbergraph_BPMapWidget(EntryPoint) end
 

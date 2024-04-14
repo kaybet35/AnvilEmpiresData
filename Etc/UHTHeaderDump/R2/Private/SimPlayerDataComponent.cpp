@@ -2,7 +2,7 @@
 
 USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GuardStrength = 0;
-    this->TeamID = 0;
+    this->TeamId = 0;
     this->Encumbrance = 0;
     this->GuardMeter = 0.00f;
     this->ActivityState = EAnvilSimActivityState::None;

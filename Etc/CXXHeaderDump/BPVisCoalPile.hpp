@@ -1,12 +1,10 @@
 #ifndef UE4SS_SDK_BPVisCoalPile_HPP
 #define UE4SS_SDK_BPVisCoalPile_HPP
 
-class ABPVisCoalPile_C : public AVisActor
+class ABPVisCoalPile_C : public AVisResource
 {
-    class UDecalComponent* Decal;                                                     // 0x0450 (size: 0x8)
-    class UStaticMeshComponent* Mesh;                                                 // 0x0458 (size: 0x8)
-    class USceneComponent* DefaultSceneRoot;                                          // 0x0460 (size: 0x8)
+    class UDecalComponent* Decal;                                                     // 0x04A0 (size: 0x8)
 
-}; // Size: 0x468
+}; // Size: 0x4A8
 
 #endif

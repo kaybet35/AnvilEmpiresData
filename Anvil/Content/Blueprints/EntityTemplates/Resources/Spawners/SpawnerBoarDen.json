@@ -1,0 +1,96 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SpawnerBoarDen_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SpawnerBoarDen_C'Default__SpawnerBoarDen_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerBoarDen.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_1",
+    "Outer": "Default__SpawnerBoarDen_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'BoarDen_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BoarDen.0"
+      },
+      "SpawnRadius": 2000.0,
+      "SpawnInterval": 300.0,
+      "SpawnQuantity": 1,
+      "MaxSpawn": 1,
+      "ResourceReserveInitial": 1,
+      "SpawnDelayAfterResourceDepleted": 1800.0,
+      "bDontSpawnInSettlements": true,
+      "bDontSpawnNearPlayers": true,
+      "CompatibleSurfaceTypes": 8708,
+      "OtherResourcesToAvoid": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'BoarDen_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BoarDen.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'BoarDenElite_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BoarDenElite.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'WolfDen_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/WolfDen.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'WolfDenElite_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/WolfDenElite.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'BearDen_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDen.1"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'BearDenElite_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDenElite.1"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'RavenDen_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDen.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SpawnerBoarDen_C",
+    "Name": "Default__SpawnerBoarDen_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerBoarDen.SpawnerBoarDen_C'",
+    "Properties": {
+      "CodeNameString": "SpawnerBoarDen",
+      "CodeName": 1245369075,
+      "bShowOnMap": true,
+      "Components": [
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerBoarDen_C:ResourceSpawnerProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerBoarDen.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisBoarDenSpawner_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisBoarDenSpawner.1"
+      }
+    }
+  }
+]

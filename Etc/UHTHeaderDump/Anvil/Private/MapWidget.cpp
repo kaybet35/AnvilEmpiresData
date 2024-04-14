@@ -1,20 +1,12 @@
 #include "MapWidget.h"
 
-UMapWidget::UMapWidget() : UUserWidget(FObjectInitializer::Get()) {
-    this->MapSheet = NULL;
-    this->ZoomSpeed = 0.00f;
-    this->ZoomMin = 0.00f;
-    this->ZoomMax = 0.00f;
-    this->ZoomAnimationTime = 0.00f;
-    this->MapImageBox = NULL;
+UMapWidget::UMapWidget() {
     this->FogOfWarMask = NULL;
     this->FogOfWarRadius = 5;
-    this->DeploymentPointWidgetClass = NULL;
     this->DeploymentInstructionOrSpawnTimerBorder = NULL;
     this->DeploymentInstructionOrSpawnTimerText = NULL;
     this->ObjectiveBorder = NULL;
     this->LogoutButton = NULL;
-    this->MapSheetSlot = NULL;
 }
 
 void UMapWidget::OnLogoutButtonClicked() {

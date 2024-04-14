@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "HeatingVat_C'Default__HeatingVat_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.6"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.7"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -34,6 +34,297 @@
     "Template": {
       "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "CookingProxyComponent",
+    "Name": "CookingProxyComponent_1",
+    "Outer": "Default__HeatingVat_C",
+    "Class": "UScriptClass'CookingProxyComponent'",
+    "Properties": {
+      "CookType": "EAnvilCookingType::Boiled",
+      "FuelList": [
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+          },
+          "FuelItemVisVar": 0,
+          "BurnDurationSec": 180.0,
+          "NormalizedTemperature": 0.6
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
+          },
+          "FuelItemVisVar": 0,
+          "BurnDurationSec": 30.0,
+          "NormalizedTemperature": 0.45
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+          },
+          "FuelItemVisVar": 0,
+          "BurnDurationSec": 60.0,
+          "NormalizedTemperature": 0.25
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceCoal_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceCoal.0"
+          },
+          "FuelItemVisVar": 0,
+          "BurnDurationSec": 1080.0,
+          "NormalizedTemperature": 0.8
+        }
+      ],
+      "RecipeList": [
+        {
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceThickLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceThickLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Tree01Seed_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Tree01Seed.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            }
+          ],
+          "OutputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ThickLeatherTanned_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ThickLeatherTanned.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "CookDurationSec": 120.0,
+          "TargetNormalizedTemperature": 0.7
+        },
+        {
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceThickLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceThickLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Tree02Seed_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Tree02Seed.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            }
+          ],
+          "OutputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ThickLeatherTanned_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ThickLeatherTanned.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "CookDurationSec": 120.0,
+          "TargetNormalizedTemperature": 0.7
+        },
+        {
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceThickLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceThickLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Tree03Seed_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Tree03Seed.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            }
+          ],
+          "OutputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ThickLeatherTanned_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ThickLeatherTanned.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "CookDurationSec": 120.0,
+          "TargetNormalizedTemperature": 0.7
+        },
+        {
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceResin_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceResin.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "OutputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedResin_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedResin.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "CookDurationSec": 120.0,
+          "TargetNormalizedTemperature": 1.0
+        },
+        {
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceThickLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceThickLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Tree01Seed_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Tree01Seed.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Tree02Seed_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Tree02Seed.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "OutputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ThickLeatherTanned_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ThickLeatherTanned.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "CookDurationSec": 150.0,
+          "TargetNormalizedTemperature": 0.7
+        },
+        {
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceThickLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceThickLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Tree01Seed_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Tree01Seed.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Tree03Seed_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Tree03Seed.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "OutputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ThickLeatherTanned_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ThickLeatherTanned.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "CookDurationSec": 150.0,
+          "TargetNormalizedTemperature": 0.7
+        },
+        {
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceThickLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceThickLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Tree03Seed_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Tree03Seed.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Tree02Seed_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Tree02Seed.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "OutputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ThickLeatherTanned_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ThickLeatherTanned.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "CookDurationSec": 150.0,
+          "TargetNormalizedTemperature": 0.7
+        }
+      ],
+      "FoodBurnDurationSec": 0.0,
+      "WaterDurationPerUnitItemAtMaxTempSec": 75.0
     }
   },
   {
@@ -85,7 +376,7 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
     },
     "Properties": {
-      "MaxHealth": 30.0
+      "MaxHealth": 60.0
     }
   },
   {
@@ -99,27 +390,27 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__HeatingVat_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.14"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.19"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__HeatingVat_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.6"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__HeatingVat_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.15"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__HeatingVat_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.18"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__HeatingVat_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.4"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__HeatingVat_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.5"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__HeatingVat_C:BoxCollisionProxyComponent_0'",
@@ -127,32 +418,52 @@
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__HeatingVat_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.3"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__HeatingVat_C:ScorchProxyComponent_1'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.17"
       },
       "CodeNameString": "HeatingVat",
       "CodeName": 117850078,
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
-          "ObjectName": "InventoryProxyComponent'Default__HeatingVat_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.7"
+          "ObjectName": "CookingProxyComponent'Default__HeatingVat_C:CookingProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.2"
         },
         {
           "ObjectName": "PowerToActionConverterProxyComponent'Default__HeatingVat_C:PowerToActionConverterProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.13"
         },
         {
           "ObjectName": "PowerUnitProxyComponent'Default__HeatingVat_C:PowerUnitProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.14"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__HeatingVat_C:InventoryProxyComponent_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.11"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__HeatingVat_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.8"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__HeatingVat_C:InventoryProxyComponent_1'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.9"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__HeatingVat_C:InventoryProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.10"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__HeatingVat_C:InventoryProxyComponent_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.12"
         }
       ],
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisHeatingVat_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.1"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.3"
       }
     }
   },
@@ -162,24 +473,48 @@
     "Outer": "Default__HeatingVat_C",
     "Class": "UScriptClass'InventoryProxyComponent'",
     "Properties": {
-      "Slots": [
-        {
-          "ProxyRepeat": 3,
-          "bOr": false,
-          "HeldItem": null,
-          "Count": 0,
-          "StackLimit": 10,
-          "bAllowWithdrawal": true,
-          "bIsPlayerEquipmentSlot": false,
-          "AcceptedTags": [],
-          "RequiredTags": [],
-          "ProhibitedTags": [],
-          "DedicatedItemType": null,
-          "DedicatedUnderlyingItemType": null,
-          "RequiredEnablingItem": null,
-          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
-        }
-      ]
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "NormalizedSpoilageFactor": 0.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__HeatingVat_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "NormalizedSpoilageFactor": 0.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_2",
+    "Outer": "Default__HeatingVat_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "NormalizedSpoilageFactor": 0.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_4",
+    "Outer": "Default__HeatingVat_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "NormalizedSpoilageFactor": 0.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_5",
+    "Outer": "Default__HeatingVat_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "NormalizedSpoilageFactor": 0.0
     }
   },
   {
@@ -199,7 +534,7 @@
     "Class": "UScriptClass'PowerUnitProxyComponent'",
     "Properties": {
       "Type": "EAnvilPowerUnitType::Sink",
-      "CurrentMax": 1.0
+      "CurrentMax": 2.0
     }
   },
   {

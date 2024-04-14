@@ -14,7 +14,7 @@ AVisBuildSite::AVisBuildSite(const FObjectInitializer& ObjectInitializer) : Supe
     this->BuildSiteDataComponent = CreateDefaultSubobject<UBuildSiteDataComponent>(TEXT("BuildSiteDataComponent"));
     this->StructureDataComponent = CreateDefaultSubobject<UStructureDataComponent>(TEXT("StructureDataComponent"));
     this->Icon = NULL;
-    this->Category = EBuildSiteCategory::Settlement;
+    this->Category = EBuildSiteCategory::General;
     this->Order = 0;
     this->BuildSiteVisibility = EBuildSiteVisibility::AlwaysVisible;
     this->ArrowComponent = (UArrowComponent*)RootComponent;

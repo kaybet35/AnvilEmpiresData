@@ -8,7 +8,7 @@ class R2_API UTeamDataComponent : public UDataComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 TeamID;
+    uint8 TeamId;
     
     UTeamDataComponent(const FObjectInitializer& ObjectInitializer);
 

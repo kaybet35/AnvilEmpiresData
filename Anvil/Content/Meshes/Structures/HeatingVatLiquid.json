@@ -10,19 +10,19 @@
         "CollisionProfileName": "BlockAll"
       }
     },
-    "BodySetupGuid": "F8C79ED045A500F85AD0E2A28D31370A",
+    "BodySetupGuid": "74676ED44B793607FCA66BAB96356CBE",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 2266,
-        "SizeOnDisk": 2266,
-        "OffsetInFile": "0x292A"
+        "ElementCount": 245290,
+        "SizeOnDisk": 245290,
+        "OffsetInFile": "0x97198"
       }
     }
   },
   {
     "Type": "NavCollision",
-    "Name": "NavCollision_1",
+    "Name": "NavCollision_24",
     "Outer": "HeatingVatLiquid",
     "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
@@ -30,7 +30,7 @@
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
-        "OffsetInFile": "0x3246"
+        "OffsetInFile": "0xD3004"
       }
     }
   },
@@ -42,35 +42,30 @@
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant'Water'",
-            "ObjectPath": "Anvil/Content/Materials/Environment/Props/Water.0"
+            "ObjectName": "MaterialInstanceConstant'WaterHeatingVat01'",
+            "ObjectPath": "Anvil/Content/Materials/WaterHeatingVat01.0"
           },
-          "MaterialSlotName": "Liquid",
-          "ImportedMaterialSlotName": "Liquid",
+          "MaterialSlotName": "WorldGridMaterial",
+          "ImportedMaterialSlotName": "WorldGridMaterial",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 156.28261,
+            "LocalUVDensities": 168.5344,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0
           }
         }
       ],
-      "LightmapUVDensity": 156.28261,
+      "LightmapUVDensity": 168.5344,
       "LightMapResolution": 64,
       "ExtendedBounds": {
-        "Origin": {
-          "X": 3.8146973E-06,
-          "Y": 0.0,
-          "Z": -2.266757E-05
-        },
         "BoxExtent": {
-          "X": 78.38754,
-          "Y": 78.387535,
-          "Z": 0.0002128605
+          "X": 84.30786,
+          "Y": 84.30786,
+          "Z": 1.3735494E-05
         },
-        "SphereRadius": 78.3875544110223
+        "SphereRadius": 84.307867508403
       }
     },
     "BodySetup": {
@@ -78,10 +73,10 @@
       "ObjectPath": "Anvil/Content/Meshes/Structures/HeatingVatLiquid.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision'HeatingVatLiquid:NavCollision_1'",
+      "ObjectName": "NavCollision'HeatingVatLiquid:NavCollision_24'",
       "ObjectPath": "Anvil/Content/Meshes/Structures/HeatingVatLiquid.1"
     },
-    "LightingGuid": "F6068CF5-48C9A974-251A069F-BEE55933",
+    "LightingGuid": "86D7B8B5-4FF892A7-C19905AB-23285741",
     "RenderData": {
       "LODs": [
         {
@@ -89,9 +84,9 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 40,
+              "NumTriangles": 5100,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 40,
+              "MaxVertexIndex": 2600,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -101,30 +96,30 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 41
+            "NumVertices": 2601
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 41,
+            "NumVertices": 2601,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
+            "Stride": 4,
+            "NumVertices": 2601
           },
           "CardRepresentationData": {
             "Bounds": {
               "Min": {
-                "X": -79.38754,
-                "Y": -79.387535,
-                "Z": -1.0002356
+                "X": -85.30786,
+                "Y": -85.30786,
+                "Z": -1.0000137
               },
               "Max": {
-                "X": 79.38754,
-                "Y": 79.387535,
-                "Z": 1.0001901
+                "X": 85.30786,
+                "Y": 85.30786,
+                "Z": 1.0000137
               },
               "IsValid": 1
             },
@@ -151,11 +146,11 @@
                   "Origin": {
                     "X": 0.0,
                     "Y": 0.0,
-                    "Z": -2.2888184E-05
+                    "Z": 0.0
                   },
                   "Extent": {
-                    "X": 79.38754,
-                    "Y": 79.38754,
+                    "X": 85.0,
+                    "Y": 85.0,
                     "Z": 10.0
                   }
                 },
@@ -170,30 +165,30 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 20,
+              "NumTriangles": 2550,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 21,
+              "MaxVertexIndex": 1325,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
               "bVisibleInRayTracing": true
             }
           ],
-          "MaxDeviation": 21.201036,
+          "MaxDeviation": 9.294307E-05,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 22
+            "NumVertices": 1326
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 22,
+            "NumVertices": 1326,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
+            "Stride": 4,
+            "NumVertices": 1326
           }
         },
         {
@@ -201,30 +196,30 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 10,
+              "NumTriangles": 1274,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 11,
+              "MaxVertexIndex": 687,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
               "bVisibleInRayTracing": true
             }
           ],
-          "MaxDeviation": 76.62543,
+          "MaxDeviation": 0.0004711341,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 12
+            "NumVertices": 688
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 12,
+            "NumVertices": 688,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
+            "Stride": 4,
+            "NumVertices": 688
           }
         },
         {
@@ -232,30 +227,30 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 5,
+              "NumTriangles": 638,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 6,
+              "MaxVertexIndex": 369,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
               "bVisibleInRayTracing": true
             }
           ],
-          "MaxDeviation": 378.26938,
+          "MaxDeviation": 0.0015940159,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 7
+            "NumVertices": 370
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 7,
+            "NumVertices": 370,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
+            "Stride": 4,
+            "NumVertices": 370
           }
         }
       ],
@@ -265,7 +260,7 @@
           "BulkDataFlags": "BULKDATA_None",
           "ElementCount": 0,
           "SizeOnDisk": 0,
-          "OffsetInFile": "0x4534"
+          "OffsetInFile": "0x12D5EE"
         },
         "ImposterAtlas": [],
         "HierarchyNodes": [],
@@ -285,23 +280,23 @@
       },
       "Bounds": {
         "Origin": {
-          "X": 3.8146973E-06,
+          "X": 0.0,
           "Y": 0.0,
-          "Z": -2.266757E-05
+          "Z": 0.0
         },
         "BoxExtent": {
-          "X": 78.38754,
-          "Y": 78.387535,
-          "Z": 0.0002128605
+          "X": 84.30786,
+          "Y": 84.30786,
+          "Z": 1.3735494E-05
         },
-        "SphereRadius": 78.38755
+        "SphereRadius": 84.30787
       },
       "bLODsShareStaticLighting": true,
       "ScreenSize": [
         2.0,
-        0.06593012,
-        0.018744634,
-        0.0038292673,
+        1.7775896,
+        1.7768245,
+        1.7745568,
         0.0,
         0.0,
         0.0,

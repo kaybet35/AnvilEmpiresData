@@ -18,6 +18,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BurnDurationSec;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float NormalizedTemperature;
+    
     R2_API FFuelType();
 };
 

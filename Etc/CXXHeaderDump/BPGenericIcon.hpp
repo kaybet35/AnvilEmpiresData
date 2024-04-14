@@ -3,6 +3,6 @@
 
 class UBPGenericIcon_C : public UMapIcon
 {
-}; // Size: 0x388
+}; // Size: 0x390
 
 #endif

@@ -22,7 +22,7 @@
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_6'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.18"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.17"
       }
     }
   },
@@ -126,10 +126,6 @@
       "ZoomMin": 0.75,
       "ZoomMax": 10.0,
       "ZoomAnimationTime": 0.1,
-      "DeploymentPointWidgetClass": {
-        "ObjectName": "WidgetBlueprintGeneratedClass'BPDeploymentPointWidget_C'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.32"
-      },
       "bHasScriptImplementedPaint": false
     }
   },
@@ -175,8 +171,12 @@
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.15"
         },
         {
-          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_5'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.17"
+          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_8'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.19"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_7'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.18"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_0'",
@@ -184,7 +184,7 @@
         },
         {
           "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_6'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.18"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.17"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_1'",
@@ -195,35 +195,31 @@
   },
   {
     "Type": "CanvasPanel",
-    "Name": "MapSheet",
+    "Name": "MapImageSheet",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'CanvasPanel'",
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapSheet.CanvasPanelSlot_2'",
+          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapImageSheet.CanvasPanelSlot_2'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.20"
-        },
-        {
-          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapSheet.CanvasPanelSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.19"
         }
       ],
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.17"
+        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_8'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.19"
       }
     }
   },
   {
     "Type": "CanvasPanel",
-    "Name": "TownHallIconCanvas",
+    "Name": "MapSheet",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'CanvasPanel'",
     "Properties": {
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapSheet.CanvasPanelSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.19"
+        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_7'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.18"
       }
     }
   },
@@ -466,42 +462,6 @@
   },
   {
     "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_5",
-    "Outer": "MapContainer",
-    "Class": "UScriptClass'CanvasPanelSlot'",
-    "Properties": {
-      "LayoutData": {
-        "Offsets": {
-          "Right": 1000.0,
-          "Bottom": 1000.0
-        },
-        "Anchors": {
-          "Minimum": {
-            "X": 0.5,
-            "Y": 0.5
-          },
-          "Maximum": {
-            "X": 0.5,
-            "Y": 0.5
-          }
-        },
-        "Alignment": {
-          "X": 0.5,
-          "Y": 0.5
-        }
-      },
-      "Parent": {
-        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapContainer'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.7"
-      },
-      "Content": {
-        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapSheet'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.8"
-      }
-    }
-  },
-  {
-    "Type": "CanvasPanelSlot",
     "Name": "CanvasPanelSlot_6",
     "Outer": "MapContainer",
     "Class": "UScriptClass'CanvasPanelSlot'",
@@ -539,8 +499,8 @@
   },
   {
     "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_0",
-    "Outer": "MapSheet",
+    "Name": "CanvasPanelSlot_7",
+    "Outer": "MapContainer",
     "Class": "UScriptClass'CanvasPanelSlot'",
     "Properties": {
       "LayoutData": {
@@ -563,21 +523,56 @@
           "Y": 0.5
         }
       },
-      "ZOrder": 90,
       "Parent": {
-        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapSheet'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.8"
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapContainer'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.7"
       },
       "Content": {
-        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.TownHallIconCanvas'",
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapSheet'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.9"
       }
     }
   },
   {
     "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_8",
+    "Outer": "MapContainer",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1000.0,
+          "Bottom": 1000.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapContainer'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.7"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapImageSheet'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
     "Name": "CanvasPanelSlot_2",
-    "Outer": "MapSheet",
+    "Outer": "MapImageSheet",
     "Class": "UScriptClass'CanvasPanelSlot'",
     "Properties": {
       "LayoutData": {
@@ -597,11 +592,11 @@
         }
       },
       "Parent": {
-        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapSheet'",
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapImageSheet'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.8"
       },
       "Content": {
-        "ObjectName": "Image'BPMapWidget_C:WidgetTree.MapImageBox'",
+        "ObjectName": "Image'BPMapWidget_C:WidgetTree.MapImage'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.28"
       }
     }
@@ -618,7 +613,7 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "MapImage",
+        "Name": "MapImageTexture",
         "Flags": "RF_Public",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
@@ -645,7 +640,7 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "K2Node_Event_MapImage",
+        "Name": "K2Node_Event_MapImageTexture",
         "Flags": "RF_Public",
         "ElementSize": 8,
         "PropertyClass": {
@@ -938,7 +933,7 @@
   },
   {
     "Type": "Image",
-    "Name": "MapImageBox",
+    "Name": "MapImage",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'Image'",
     "Properties": {
@@ -953,7 +948,7 @@
         }
       },
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapSheet.CanvasPanelSlot_2'",
+        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapImageSheet.CanvasPanelSlot_2'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.20"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"

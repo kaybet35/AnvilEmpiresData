@@ -57,21 +57,22 @@ enum class EAnvilSpringArmMode {
 };
 
 enum class EBuildSiteCategory {
-    Settlement = 0,
+    General = 0,
     Housing = 1,
-    Camp = 2,
+    Cooking = 2,
     Defenses = 3,
-    Foundations = 4,
-    Industry = 5,
-    Water = 6,
-    Smithing = 7,
-    Cooking = 8,
-    Vehicles = 9,
-    Farming = 10,
-    Lumber = 11,
-    Stone = 12,
-    NumTypes = 13,
-    EBuildSiteCategory_MAX = 14,
+    Vehicles = 4,
+    Lumber = 5,
+    Smithing = 6,
+    Stone = 7,
+    Farming = 8,
+    Water = 9,
+    Industry = 10,
+    Settlement = 11,
+    Foundations = 12,
+    Camp = 13,
+    NumTypes = 14,
+    EBuildSiteCategory_MAX = 15,
 };
 
 enum class EBuildSiteVisibility {
@@ -116,15 +117,6 @@ enum class EConnectionFailedReason {
     R2ServerConnectionError = 3,
     AnvilServiceVersionMismatch = 4,
     EConnectionFailedReason_MAX = 5,
-};
-
-enum class EDeploymentPointType {
-    WildSpawn = 0,
-    TownHall = 1,
-    LargeCamp = 2,
-    SmallCamp = 3,
-    MarketShop = 4,
-    EDeploymentPointType_MAX = 5,
 };
 
 enum class EEquippedItemGripType {

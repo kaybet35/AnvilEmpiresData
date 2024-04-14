@@ -10,6 +10,7 @@ FItemSlot::FItemSlot() {
     this->bIsPlayerEquipmentSlot = false;
     this->DedicatedItemType = NULL;
     this->DedicatedUnderlyingItemType = NULL;
+    this->bCheckDedicatedUnderlyingItem = false;
     this->RequiredEnablingItem = NULL;
     this->BackgroundType = EAnvilItemSlotBackgroundType::None;
 }

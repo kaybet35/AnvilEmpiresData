@@ -1,16 +1,22 @@
 [
   {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisCoalPile_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BPVisCoalPile_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisCoalPile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.9"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisActor'",
+      "ObjectName": "Class'VisResource'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
@@ -24,28 +30,6 @@
           "ObjectName": "Class'DecalComponent'",
           "ObjectPath": "/Script/Engine"
         }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Mesh",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "DefaultSceneRoot",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'SceneComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -57,7 +41,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisCoalPile_C'Default__BPVisCoalPile_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.1"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.2"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -66,7 +50,33 @@
   {
     "Type": "BPVisCoalPile_C",
     "Name": "Default__BPVisCoalPile_C",
-    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.BPVisCoalPile_C'"
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.BPVisCoalPile_C'",
+    "Properties": {
+      "ResourceDataComponent": {
+        "ObjectName": "ResourceDataComponent'Default__BPVisCoalPile_C:ResourceDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.5"
+      },
+      "PlantGrowthComponent": {
+        "ObjectName": "PlantGrowthDataComponent'Default__BPVisCoalPile_C:PlantGrowthComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.4"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCoalPile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.0"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisCoalPile_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.10"
+      },
+      "ShakeCurve": {
+        "ObjectName": "CurveVector'ResourceAnimCurve'",
+        "ObjectPath": "Anvil/Content/Animations/Curves/ResourceAnimCurve.0"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCoalPile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.0"
+      }
+    }
   },
   {
     "Type": "DecalComponent",
@@ -96,6 +106,18 @@
     }
   },
   {
+    "Type": "PlantGrowthDataComponent",
+    "Name": "PlantGrowthComponent",
+    "Outer": "Default__BPVisCoalPile_C",
+    "Class": "UScriptClass'PlantGrowthDataComponent'"
+  },
+  {
+    "Type": "ResourceDataComponent",
+    "Name": "ResourceDataComponent",
+    "Outer": "Default__BPVisCoalPile_C",
+    "Class": "UScriptClass'ResourceDataComponent'"
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPVisCoalPile_C",
@@ -113,38 +135,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisCoalPile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.6"
       },
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisCoalPile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.5"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCoalPile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.6"
-        }
-      ],
       "VariableGuid": "886040F4-4816A9A2-5A3D7C86-8B14DA09",
       "InternalVariableName": "DefaultSceneRoot"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisCoalPile_C:Mesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.8"
-      },
-      "VariableGuid": "DD2939F2-4AE3E9EC-FC067D87-186D8A74",
-      "InternalVariableName": "Mesh"
     }
   },
   {
@@ -159,8 +153,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPVisCoalPile_C:Decal_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.3"
       },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
       "VariableGuid": "779ADF49-4A4B6EEC-C0A8E591-66368A8A",
       "InternalVariableName": "Decal"
     }
@@ -173,44 +169,36 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisCoalPile_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.4"
+          "ObjectName": "SCS_Node'BPVisCoalPile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.8"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisCoalPile_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.4"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCoalPile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.5"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisCoalPile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.6"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.8"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisCoalPile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.7"
       }
     }
   },
   {
     "Type": "StaticMeshComponent",
-    "Name": "Mesh_GEN_VARIABLE",
-    "Outer": "BPVisCoalPile_C",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisCoalPile_C",
     "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
       "StaticMesh": {
         "ObjectName": "StaticMesh'ResourceCoal'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/ResourceCoal.2"
       },
-      "OverrideMaterials": [
-        null
-      ],
-      "bReceivesDecals": false
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisCoalPile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisCoalPile.0"
+      }
     }
   }
 ]

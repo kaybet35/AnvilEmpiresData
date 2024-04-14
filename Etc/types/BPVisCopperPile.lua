@@ -1,10 +1,8 @@
 ---@meta
 
----@class ABPVisCopperPile_C : AVisActor
+---@class ABPVisCopperPile_C : AVisResource
 ---@field GrassRemovalVolume UGrassRemovalVolumeComponent
 ---@field Decal UDecalComponent
----@field Mesh UStaticMeshComponent
----@field DefaultSceneRoot USceneComponent
 ABPVisCopperPile_C = {}
 
 

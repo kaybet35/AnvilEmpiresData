@@ -1,16 +1,22 @@
 [
   {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisTinPile_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BPVisTinPile_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisTinPile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.11"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisActor'",
+      "ObjectName": "Class'VisResource'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
@@ -35,28 +41,6 @@
           "ObjectName": "Class'DecalComponent'",
           "ObjectPath": "/Script/Engine"
         }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Mesh",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "DefaultSceneRoot",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'SceneComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -68,7 +52,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisTinPile_C'Default__BPVisTinPile_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.1"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.2"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -77,7 +61,33 @@
   {
     "Type": "BPVisTinPile_C",
     "Name": "Default__BPVisTinPile_C",
-    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.BPVisTinPile_C'"
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.BPVisTinPile_C'",
+    "Properties": {
+      "ResourceDataComponent": {
+        "ObjectName": "ResourceDataComponent'Default__BPVisTinPile_C:ResourceDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.6"
+      },
+      "PlantGrowthComponent": {
+        "ObjectName": "PlantGrowthDataComponent'Default__BPVisTinPile_C:PlantGrowthComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.5"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisTinPile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.0"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisTinPile_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.13"
+      },
+      "ShakeCurve": {
+        "ObjectName": "CurveVector'ResourceAnimCurve'",
+        "ObjectPath": "Anvil/Content/Animations/Curves/ResourceAnimCurve.0"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisTinPile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.0"
+      }
+    }
   },
   {
     "Type": "DecalComponent",
@@ -119,9 +129,21 @@
       },
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'BPVisTinPile_C:GrassRemovalVolume_GEN_VARIABLE.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.12"
       }
     }
+  },
+  {
+    "Type": "PlantGrowthDataComponent",
+    "Name": "PlantGrowthComponent",
+    "Outer": "Default__BPVisTinPile_C",
+    "Class": "UScriptClass'PlantGrowthDataComponent'"
+  },
+  {
+    "Type": "ResourceDataComponent",
+    "Name": "ResourceDataComponent",
+    "Outer": "Default__BPVisTinPile_C",
+    "Class": "UScriptClass'ResourceDataComponent'"
   },
   {
     "Type": "SceneComponent",
@@ -141,42 +163,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisTinPile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.7"
       },
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisTinPile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.6"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTinPile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.7"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTinPile_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.8"
-        }
-      ],
       "VariableGuid": "886040F4-4816A9A2-5A3D7C86-8B14DA09",
       "InternalVariableName": "DefaultSceneRoot"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisTinPile_C:Mesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.11"
-      },
-      "VariableGuid": "DD2939F2-4AE3E9EC-FC067D87-186D8A74",
-      "InternalVariableName": "Mesh"
     }
   },
   {
@@ -191,8 +181,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPVisTinPile_C:Decal_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.3"
       },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
       "VariableGuid": "8598C6AB-4EABC65A-71FAE0A2-8EDCA280",
       "InternalVariableName": "Decal"
     }
@@ -209,8 +201,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "GrassRemovalVolumeComponent'BPVisTinPile_C:GrassRemovalVolume_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.4"
       },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
       "VariableGuid": "458BBBB5-481547C0-EB6F35BE-339F9916",
       "InternalVariableName": "GrassRemovalVolume"
     }
@@ -223,31 +217,27 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisTinPile_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.5"
+          "ObjectName": "SCS_Node'BPVisTinPile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTinPile_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.10"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisTinPile_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.5"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTinPile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.6"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisTinPile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.9"
         },
         {
           "ObjectName": "SCS_Node'BPVisTinPile_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.8"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.10"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisTinPile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.8"
       }
     }
   },
@@ -259,18 +249,18 @@
   },
   {
     "Type": "StaticMeshComponent",
-    "Name": "Mesh_GEN_VARIABLE",
-    "Outer": "BPVisTinPile_C",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisTinPile_C",
     "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
       "StaticMesh": {
         "ObjectName": "StaticMesh'ResourceCassiteriteNode01'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/ResourceCassiteriteNode01.2"
       },
-      "OverrideMaterials": [
-        null
-      ],
-      "bReceivesDecals": false
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisTinPile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisTinPile.0"
+      }
     }
   }
 ]

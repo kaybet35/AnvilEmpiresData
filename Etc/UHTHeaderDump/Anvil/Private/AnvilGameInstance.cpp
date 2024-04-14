@@ -3,6 +3,7 @@
 UAnvilGameInstance::UAnvilGameInstance() {
     this->MapWidget = NULL;
     this->HUDWidget = NULL;
+    this->WorldEntityPoolManager = NULL;
     this->CharacterSave = NULL;
     this->AnvilClientVoiceClient = NULL;
     this->UIGlobalsClass = NULL;

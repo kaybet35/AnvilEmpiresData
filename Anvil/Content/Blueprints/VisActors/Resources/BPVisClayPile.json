@@ -1,16 +1,22 @@
 [
   {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisClayPile_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BPVisClayPile_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisClayPile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.9"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisActor'",
+      "ObjectName": "Class'VisResource'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
@@ -24,28 +30,6 @@
           "ObjectName": "Class'DecalComponent'",
           "ObjectPath": "/Script/Engine"
         }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Mesh",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "DefaultSceneRoot",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'SceneComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -57,7 +41,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisClayPile_C'Default__BPVisClayPile_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.1"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.2"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -66,7 +50,33 @@
   {
     "Type": "BPVisClayPile_C",
     "Name": "Default__BPVisClayPile_C",
-    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.BPVisClayPile_C'"
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.BPVisClayPile_C'",
+    "Properties": {
+      "ResourceDataComponent": {
+        "ObjectName": "ResourceDataComponent'Default__BPVisClayPile_C:ResourceDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.5"
+      },
+      "PlantGrowthComponent": {
+        "ObjectName": "PlantGrowthDataComponent'Default__BPVisClayPile_C:PlantGrowthComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.4"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisClayPile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.0"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisClayPile_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.10"
+      },
+      "ShakeCurve": {
+        "ObjectName": "CurveVector'ResourceAnimCurve'",
+        "ObjectPath": "Anvil/Content/Animations/Curves/ResourceAnimCurve.0"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisClayPile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.0"
+      }
+    }
   },
   {
     "Type": "DecalComponent",
@@ -96,6 +106,18 @@
     }
   },
   {
+    "Type": "PlantGrowthDataComponent",
+    "Name": "PlantGrowthComponent",
+    "Outer": "Default__BPVisClayPile_C",
+    "Class": "UScriptClass'PlantGrowthDataComponent'"
+  },
+  {
+    "Type": "ResourceDataComponent",
+    "Name": "ResourceDataComponent",
+    "Outer": "Default__BPVisClayPile_C",
+    "Class": "UScriptClass'ResourceDataComponent'"
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPVisClayPile_C",
@@ -113,38 +135,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisClayPile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.6"
       },
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisClayPile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.5"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisClayPile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.6"
-        }
-      ],
       "VariableGuid": "886040F4-4816A9A2-5A3D7C86-8B14DA09",
       "InternalVariableName": "DefaultSceneRoot"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisClayPile_C:Mesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.8"
-      },
-      "VariableGuid": "DD2939F2-4AE3E9EC-FC067D87-186D8A74",
-      "InternalVariableName": "Mesh"
     }
   },
   {
@@ -159,8 +153,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPVisClayPile_C:Decal_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.3"
       },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
       "VariableGuid": "779ADF49-4A4B6EEC-C0A8E591-66368A8A",
       "InternalVariableName": "Decal"
     }
@@ -173,44 +169,36 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisClayPile_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.4"
+          "ObjectName": "SCS_Node'BPVisClayPile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.8"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisClayPile_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.4"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisClayPile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.5"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisClayPile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.6"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.8"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisClayPile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.7"
       }
     }
   },
   {
     "Type": "StaticMeshComponent",
-    "Name": "Mesh_GEN_VARIABLE",
-    "Outer": "BPVisClayPile_C",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisClayPile_C",
     "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
       "StaticMesh": {
         "ObjectName": "StaticMesh'ResourceClay'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/ResourceClay.2"
       },
-      "OverrideMaterials": [
-        null
-      ],
-      "bReceivesDecals": false
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisClayPile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisClayPile.0"
+      }
     }
   }
 ]

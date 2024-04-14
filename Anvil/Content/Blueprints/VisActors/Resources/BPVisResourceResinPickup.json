@@ -12,26 +12,13 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisResourceResinPickup_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceResinPickup.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceResinPickup.6"
       }
     },
     "SuperStruct": {
       "ObjectName": "Class'VisPickupItem'",
       "ObjectPath": "/Script/Anvil"
     },
-    "ChildProperties": [
-      {
-        "Type": "ObjectProperty",
-        "Name": "StaticMesh",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      }
-    ],
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -58,7 +45,7 @@
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisResourceResinPickup_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceResinPickup.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceResinPickup.7"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisResourceResinPickup_C:ArrowComponent'",
@@ -101,69 +88,14 @@
     }
   },
   {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisResourceResinPickup_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceResinPickup.8"
-      },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "B9013507-49B190E9-ADAE7CBF-C1392EB6",
-      "InternalVariableName": "StaticMesh"
-    }
-  },
-  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPVisResourceResinPickup_C",
     "Class": "UScriptClass'SimpleConstructionScript'",
     "Properties": {
-      "RootNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisResourceResinPickup_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceResinPickup.6"
-        }
-      ],
-      "AllNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisResourceResinPickup_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceResinPickup.6"
-        }
-      ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisResourceResinPickup_C:SimpleConstructionScript_0.SCS_Node_0'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceResinPickup.5"
-      }
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "StaticMesh_GEN_VARIABLE",
-    "Outer": "BPVisResourceResinPickup_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'tempItemMesh_SM'",
-        "ObjectPath": "Anvil/Content/Meshes/Blockin/tempItemMesh_SM.2"
-      },
-      "bReceivesDecals": false,
-      "RelativeLocation": {
-        "X": -5.3513443E-09,
-        "Y": -8.3942255E-17,
-        "Z": 0.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 90.0,
-        "Roll": 0.0
       }
     }
   },
@@ -173,6 +105,10 @@
     "Outer": "Default__BPVisResourceResinPickup_C",
     "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'ResourceResinPickup'",
+        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceResinPickup.2"
+      },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisResourceResinPickup_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisResourceResinPickup.0"

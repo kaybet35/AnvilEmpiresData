@@ -94,6 +94,7 @@ FBasicItemCount = {}
 ---@field InputItems TArray<FBasicItemCount>
 ---@field OutputItems TArray<FBasicItemCount>
 ---@field CookDurationSec float
+---@field TargetNormalizedTemperature float
 FCookingRecipe = {}
 
 
@@ -139,6 +140,7 @@ FFootprintSharedCompEntry = {}
 ---@field FuelItem TSubclassOf<UItemTemplate>
 ---@field FuelItemVisVar int32
 ---@field BurnDurationSec float
+---@field NormalizedTemperature float
 FFuelType = {}
 
 
@@ -225,6 +227,7 @@ FItemCount = {}
 ---@field ProhibitedTags TArray<EAnvilItemTag>
 ---@field DedicatedItemType TSubclassOf<UItemTemplate>
 ---@field DedicatedUnderlyingItemType TSubclassOf<UItemTemplate>
+---@field bCheckDedicatedUnderlyingItem boolean
 ---@field RequiredEnablingItem TSubclassOf<UItemTemplate>
 ---@field BackgroundType EAnvilItemSlotBackgroundType
 FItemSlot = {}
@@ -351,6 +354,48 @@ FVisvarPowerConnection = {}
 ---@field Wind float
 ---@field WindDir FVector
 FWeatherData = {}
+
+
+
+---@class FWorldEntityBeaconTowerData
+---@field TowerId int32
+---@field bActive boolean
+FWorldEntityBeaconTowerData = {}
+
+
+
+---@class FWorldEntityData
+---@field DataType EAnvilWorldEntityType
+---@field TownHallData FWorldEntityTownHallData
+---@field BeaconTowerData FWorldEntityBeaconTowerData
+FWorldEntityData = {}
+
+
+
+---@class FWorldEntityEntry
+---@field Type EAnvilWorldEntityType
+---@field CodeName int32
+---@field EntityId int64
+---@field RegionIndex int32
+---@field TeamId uint8
+---@field WorldPos FVector
+---@field Data FWorldEntityData
+FWorldEntityEntry = {}
+
+
+
+---@class FWorldEntityTownHallData
+---@field TownHallId int32
+---@field TownNameOrdinal uint8
+---@field TownNameId uint8
+---@field NumTotalHouses int32
+---@field NumUnclaimedHouses int32
+---@field NumTotalTents int32
+---@field NumUnclaimedTents int32
+---@field NumReinforcementSupplies int32
+---@field bTownUnderAttack boolean
+---@field bCallForReinforcements boolean
+FWorldEntityTownHallData = {}
 
 
 
@@ -583,6 +628,7 @@ UBeaconTowerProxyComponent = {}
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
 ---@field StepAngle float
+---@field bVaultable boolean
 UBoxCollisionProxyComponent = {}
 
 
@@ -634,6 +680,7 @@ UCannonProxyComponent = {}
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
 ---@field StepAngle float
+---@field bVaultable boolean
 UCapsuleCollisionProxyComponent = {}
 
 
@@ -646,6 +693,7 @@ UChatMessage = {}
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
 ---@field StepAngle float
+---@field bVaultable boolean
 UCollisionProxyComponent = {}
 
 
@@ -669,20 +717,33 @@ UConstructionFacilityProxyComponent = {}
 
 
 ---@class UCookingDataComponent : UDataComponent
+---@field CookType EAnvilCookingType
+---@field RecipeList TArray<FCookingRecipe>
+---@field WaterDurationPerUnitItemAtMaxTempSecVisVar float
 ---@field FuelExpiryTimestampAgeSec int32
----@field bIsFueled boolean
----@field bCanCookWithExistingOutputs boolean
 ---@field CookCompleteTimestampAgeSec int32
+---@field CurrentRecipeIndex int32
+---@field NormalizedWaterLevel float
+---@field EffectiveNormalizedTemp float
+---@field bCanCookWithExistingOutputs uint8
+---@field bIsFueled boolean
 ---@field bIsFoodBurning boolean
+---@field bIsWatered boolean
 UCookingDataComponent = {}
 
 
 
 ---@class UCookingProxyComponent : UProxyComponent
+---@field CookType EAnvilCookingType
 ---@field FuelList TArray<FFuelType>
 ---@field RecipeList TArray<FCookingRecipe>
 ---@field FoodBurnDurationSec float
----@field bCanCookWithExistingOutputs boolean
+---@field WaterDurationPerUnitItemAtMaxTempSec float
+---@field BellowsTemperatureModifier float
+---@field TemperatureDiffHighQuality float
+---@field TemperatureDiffMedQuality float
+---@field TemperatureDiffLowQuality float
+---@field bCanCookWithExistingOutputs uint8
 UCookingProxyComponent = {}
 
 
@@ -774,6 +835,7 @@ UEntityAttachableProxyComponent = {}
 ---@field bGenerateMeshCollisionsFromVisActor boolean
 ---@field GenerateMeshCollisionMask int32
 ---@field GenerateMeshCollisionStepAngle float
+---@field bGenerateMeshCollisionVaultable boolean
 ---@field GenerateMeshCollisionSurfaceType EAnvilPhysicalSurfaceType
 ---@field Components TArray<UProxyComponent>
 ---@field VisActorClass TSubclassOf<AVisActorBase>
@@ -862,6 +924,7 @@ UFishResourceProxyComponent = {}
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
 ---@field StepAngle float
+---@field bVaultable boolean
 UFootprintCollisionProxyComponent = {}
 
 
@@ -1151,6 +1214,7 @@ UMarketShopProxyComponent = {}
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
 ---@field StepAngle float
+---@field bVaultable boolean
 UMeshCollisionProxyComponent = {}
 
 
@@ -1308,6 +1372,7 @@ UPlayerSpawnerDataComponent = {}
 ---@field Type EAnvilSpawnType
 ---@field SpawnOffset FVector
 ---@field SpawnExtents FVector
+---@field SpawnBoxRotation FRotator
 ---@field SpawnRadius float
 ---@field Faction EAnvilFactionId
 UPlayerSpawnerProxyComponent = {}
@@ -1547,7 +1612,7 @@ USeekerProxyComponent = {}
 ---@class USimPlayerDataComponent : UDataComponent
 ---@field Velocity FVector
 ---@field GuardStrength uint8
----@field TeamID uint8
+---@field TeamId uint8
 ---@field Encumbrance uint8
 ---@field GuardMeter float
 ---@field ActivityState EAnvilSimActivityState
@@ -1617,6 +1682,7 @@ USimPlayerProxyComponent = {}
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
 ---@field StepAngle float
+---@field bVaultable boolean
 USnapPointProxyComponent = {}
 
 
@@ -1648,6 +1714,7 @@ USplineDataComponent = {}
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
 ---@field StepAngle float
+---@field bVaultable boolean
 USplineProxyComponent = {}
 
 
@@ -1705,13 +1772,13 @@ UStructureProxyComponent = {}
 
 
 ---@class UTeamDataComponent : UDataComponent
----@field TeamID uint8
+---@field TeamId uint8
 UTeamDataComponent = {}
 
 
 
 ---@class UTeamProxyComponent : UProxyComponent
----@field TeamID uint8
+---@field TeamId uint8
 ---@field Accessibility EAnvilAccessibilityType
 ---@field bAlwaysAllowAccessWhenScorched boolean
 UTeamProxyComponent = {}

@@ -43,7 +43,7 @@
       "RepairComp": null,
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__BoarDen_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BoarDen.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BoarDen.13"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__BoarDen_C:DestroyableComp'",
@@ -62,12 +62,20 @@
       "GenerateMeshCollisionMask": 8194,
       "Components": [
         {
-          "ObjectName": "ResourceSpawnerProxyComponent'Default__BoarDen_C:ResourceSpawnerProxyComponent_2'",
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__BoarDen_C:ResourceSpawnerProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BoarDen.10"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__BoarDen_C:ResourceProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BoarDen.8"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__BoarDen_C:ResourceSpawnerProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BoarDen.9"
         },
         {
-          "ObjectName": "InventoryProxyComponent'Default__BoarDen_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BoarDen.7"
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__BoarDen_C:ResourceSpawnerProxyComponent_17'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BoarDen.11"
         }
       ],
       "VisActorClass": {
@@ -132,55 +140,7 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
     },
     "Properties": {
-      "MaxHealth": 60.0
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_0",
-    "Outer": "Default__BoarDen_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "Slots": [
-        {
-          "ProxyRepeat": 1,
-          "bOr": false,
-          "HeldItem": {
-            "ObjectName": "BlueprintGeneratedClass'ResourceLeather_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceLeather.0"
-          },
-          "Count": 4,
-          "StackLimit": 0,
-          "bAllowWithdrawal": true,
-          "bIsPlayerEquipmentSlot": false,
-          "AcceptedTags": [],
-          "RequiredTags": [],
-          "ProhibitedTags": [],
-          "DedicatedItemType": null,
-          "DedicatedUnderlyingItemType": null,
-          "RequiredEnablingItem": null,
-          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
-        },
-        {
-          "ProxyRepeat": 1,
-          "bOr": false,
-          "HeldItem": {
-            "ObjectName": "BlueprintGeneratedClass'ResourceIronFragments_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceIronFragments.0"
-          },
-          "Count": 15,
-          "StackLimit": 0,
-          "bAllowWithdrawal": true,
-          "bIsPlayerEquipmentSlot": false,
-          "AcceptedTags": [],
-          "RequiredTags": [],
-          "ProhibitedTags": [],
-          "DedicatedItemType": null,
-          "DedicatedUnderlyingItemType": null,
-          "RequiredEnablingItem": null,
-          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
-        }
-      ]
+      "MaxHealth": 25.0
     }
   },
   {
@@ -194,14 +154,78 @@
     }
   },
   {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_2",
+    "Outer": "Default__BoarDen_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "LootTable": [
+        {
+          "ItemToDrop": {
+            "CodeName": {
+              "ObjectName": "BlueprintGeneratedClass'ResourceStoneFragments_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceStoneFragments.0"
+            },
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 9,
+            "ItemFlags": 0,
+            "Payload": 0
+          },
+          "NormalizedChanceToDrop": 1.0,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
+        },
+        {
+          "ItemToDrop": {
+            "CodeName": {
+              "ObjectName": "BlueprintGeneratedClass'ResourceStoneFragments_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceStoneFragments.0"
+            },
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 3,
+            "ItemFlags": 0,
+            "Payload": 0
+          },
+          "NormalizedChanceToDrop": 0.33,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
+        }
+      ]
+    }
+  },
+  {
     "Type": "ResourceSpawnerProxyComponent",
-    "Name": "ResourceSpawnerProxyComponent_2",
+    "Name": "ResourceSpawnerProxyComponent_0",
     "Outer": "Default__BoarDen_C",
     "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
     "Properties": {
       "SpawnedResource": {
-        "ObjectName": "BlueprintGeneratedClass'WolfElite_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfElite.2"
+        "ObjectName": "BlueprintGeneratedClass'SpawnerBoarDen_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerBoarDen.0"
+      },
+      "SpawnRadius": 250.0,
+      "SpawnInterval": 60.0,
+      "SpawnQuantity": 1,
+      "MaxSpawn": 1,
+      "ResourceReserveInitial": 1,
+      "MinDistanceBetweenSpawns": 2500.0
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_1",
+    "Outer": "Default__BoarDen_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'Boar_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.2"
       },
       "SpawnOffset": {
         "X": 0.0,
@@ -211,15 +235,34 @@
       "SpawnRadius": 1000.0,
       "MinimumSpawnRadius": 400.0,
       "SpawnInterval": 300.0,
-      "SpawnQuantity": 2,
-      "MaxSpawn": 2,
-      "ResourceReserveInitial": 5,
+      "SpawnQuantity": 3,
+      "MaxSpawn": 3,
+      "ResourceReserveInitial": 6,
       "ReserveReplenishTimeSecs": 3600,
       "MinDistanceBetweenSpawns": 250.0,
       "bRequiresNavmesh": true,
       "bTrackSpawnedEntity": true,
       "bDontSpawnNearPlayers": true,
       "CompatibleSurfaceTypes": 26116
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_17",
+    "Outer": "Default__BoarDen_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'StoneFragmentsPile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.0"
+      },
+      "SpawnRadius": 1500.0,
+      "SpawnInterval": 450.0,
+      "SpawnQuantity": 3,
+      "MaxSpawn": 3,
+      "ResourceReserveInitial": -1,
+      "MinDistanceBetweenSpawns": 300.0,
+      "CompatibleSurfaceTypes": 25092
     }
   },
   {

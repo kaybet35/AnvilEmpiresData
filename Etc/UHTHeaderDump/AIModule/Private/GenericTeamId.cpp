@@ -1,6 +1,6 @@
 #include "GenericTeamId.h"
 
 FGenericTeamId::FGenericTeamId() {
-    this->TeamID = 0;
+    this->TeamId = 0;
 }
 

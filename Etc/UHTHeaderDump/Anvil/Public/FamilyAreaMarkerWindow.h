@@ -56,6 +56,9 @@ private:
     bool IsFamilyAreaSetAllianceButtonEnabled();
     
     UFUNCTION(BlueprintCallable)
+    bool IsFamilyAreaRestrictedCheckBoxEnabled();
+    
+    UFUNCTION(BlueprintCallable)
     ESlateVisibility GetFamilyAreaSetAllianceVisibility();
     
     UFUNCTION(BlueprintCallable)

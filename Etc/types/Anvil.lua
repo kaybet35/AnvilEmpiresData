@@ -187,6 +187,7 @@ AServerPartition = {}
 ---@field TownNames2 TArray<FText>
 ---@field TownNames3 TArray<FText>
 ---@field IconTemplates TMap<EMapIconType, FMapIconTypeProperty>
+---@field WorldEntityIconClasses TMap<EAnvilWorldEntityType, TSubclassOf<UWorldEntityMapIcon>>
 AUIGlobals = {}
 
 
@@ -290,6 +291,12 @@ AVisController = {}
 
 ---@class AVisCookingStructure : AVisStructure
 ---@field CookingDataComponent UCookingDataComponent
+---@field WaterMeshMaterialMap TMap<TSubclassOf<UItemTemplate>, UMaterialInterface>
+---@field WaterLevelMesh UStaticMeshComponent
+---@field WaterHeightCurve UCurveFloat
+---@field WaterScaleCurve UCurveVector
+---@field BoilingTemperatureHighAudio UAudioComponent
+---@field BoilingTemperatureLowAudio UAudioComponent
 AVisCookingStructure = {}
 
 
@@ -759,6 +766,7 @@ FAutoMoveState = {}
 ---@field AnimalBones int16
 ---@field ProcessedLeather int16
 ---@field ResourceStoneFragments int16
+---@field ProcessedWoodHard int16
 FBuildSiteCostData = {}
 
 
@@ -839,17 +847,6 @@ FDecayData = {}
 ---@field bDeletedProfile boolean
 ---@field ProfileInfo FProfileInfoResponse
 FDeleteProfileResponse = {}
-
-
-
----@class FDeploymentPointInfo
----@field Type EDeploymentPointType
----@field CodeName uint32
----@field EntityId uint64
----@field FactionId uint8
----@field WorldPos FVector
----@field TownHallDeploymentInfo FTownHallDeploymentInfo
-FDeploymentPointInfo = {}
 
 
 
@@ -935,6 +932,7 @@ FMapIconInstanceProperty = {}
 ---@class FMapIconTypeProperty
 ---@field bRotationFixed boolean
 ---@field bPositionFixed boolean
+---@field bHasWorldEntityMapIcon boolean
 ---@field BaseSize float
 ---@field BaseSizeZoomFactor float
 ---@field FontSize float
@@ -980,14 +978,19 @@ FRefineryQueueItem = {}
 ---@field ServerName FString
 ---@field ServerAddress FString
 ---@field MapName FString
----@field DeploymentPointList TArray<FDeploymentPointInfo>
+---@field RegionIndex int32
+---@field OriginX float
+---@field OriginY float
+---@field ExtentsX float
+---@field ExtentsY float
+---@field WorldEntityPoolData FString
 FServerListEntry = {}
 
 
 
 ---@class FServerListResponse
 ---@field ServerList TArray<FServerListEntry>
----@field DeploymentListVersion uint32
+---@field WorldEntityPoolVersion uint32
 FServerListResponse = {}
 
 
@@ -1004,25 +1007,6 @@ FServerRegion = {}
 ---@field Announcement FString
 ---@field NextTestUnixTimestamp FString
 FShardConfig = {}
-
-
-
----@class FTownHallData
-FTownHallData = {}
-
-
----@class FTownHallDeploymentInfo
----@field TownHallId uint32
----@field TownNameOrdinal uint8
----@field TownNameId uint8
----@field NumTotalHouses int32
----@field NumUnclaimedHouses int32
----@field NumTotalTents int32
----@field NumUnclaimedTents int32
----@field NumReinforcementSupplies int32
----@field bTownUnderAttack boolean
----@field bCallForReinforcements boolean
-FTownHallDeploymentInfo = {}
 
 
 
@@ -1212,6 +1196,7 @@ function UAnvilDropdownEntryWidget:OnOptionSelected(SelectedItem, SelectionType)
 ---@class UAnvilGameInstance : UGameInstance
 ---@field MapWidget UMapWidget
 ---@field HUDWidget UHUDWidget
+---@field WorldEntityPoolManager UWorldEntityPoolManager
 ---@field TravelAddress FString
 ---@field ConnectTokenBuffer TArray<uint8>
 ---@field CharacterSave UAnvilCharacterSave
@@ -1455,6 +1440,7 @@ function UConnectScreen:GetThrobberVisibility() end
 ---@field RecipeOutputItemGrid UInventoryWidget
 ---@field FuelInputItemGrid UInventoryWidget
 ---@field FuelOutputItemGrid UInventoryWidget
+---@field WaterInputItemGrid UInventoryWidget
 ---@field CookingDurationText UTextBlock
 ---@field FuelDurationText UTextBlock
 UCookingWindow = {}
@@ -1491,59 +1477,23 @@ UDeathMarketMapIcon = {}
 function UDeathMarketMapIcon:OnLastDeathLocationChanged(OldVal, NewVal) end
 
 
----@class UDeploymentPointWidget : UUserWidget
----@field MainElements UPanelWidget
----@field MapItemButton UButton
----@field MapItemImage UImage
----@field TownStatusVerticalBox UVerticalBox
----@field TownNameBorder UBorder
----@field TownNameText UTextBlock
----@field TownStatusBorder UBorder
----@field NumHousesStatus UStatusWidget
----@field NumTentsStatus UStatusWidget
----@field NumReinforcementSuppliesStatus UStatusWidget
----@field DetectionRangeCirleBox UScaleBox
----@field TownWarningText UTextBlock
----@field MarketShopTooltipClass TSubclassOf<UMarketShopMapTooltip>
----@field IconSizeBox USizeBox
----@field FlashingFrequency float
----@field FlashingMinOpacity float
----@field ParentSlot UCanvasPanelSlot
----@field DetectionRangeCirleSlot UCanvasPanelSlot
----@field TypeProperty FMapIconTypeProperty
----@field InstanceProperty FMapIconInstanceProperty
----@field CachedMarketShopTooltip UMarketShopMapTooltip
-UDeploymentPointWidget = {}
+---@class UDeploymentMapWidget : UMapWidgetBase
+UDeploymentMapWidget = {}
 
-function UDeploymentPointWidget:OnDeploymentPointClicked() end
+
+---@class UDeploymentPointMapIcon : UWorldEntityMapIcon
+---@field MapItemButton UButton
+UDeploymentPointMapIcon = {}
+
+function UDeploymentPointMapIcon:OnDeploymentPointClicked() end
 ---@return boolean
-function UDeploymentPointWidget:IsDeploymentPointEnabled() end
+function UDeploymentPointMapIcon:IsDeploymentPointEnabled() end
 ---@return ESlateVisibility
-function UDeploymentPointWidget:GetTownWarningTextVisibility() end
----@return FText
-function UDeploymentPointWidget:GetTownWarningText() end
----@return ESlateVisibility
-function UDeploymentPointWidget:GetTownStatusVerticalBoxVisibility() end
----@return ESlateVisibility
-function UDeploymentPointWidget:GetTownStatusBorderVisibility() end
----@return FText
-function UDeploymentPointWidget:GetTownNameText() end
----@return ESlateVisibility
-function UDeploymentPointWidget:GetTownNameBorderVisibility() end
----@return FText
-function UDeploymentPointWidget:GetNumTentsText() end
----@return FText
-function UDeploymentPointWidget:GetNumReinforcementSuppliesText() end
----@return ESlateVisibility
-function UDeploymentPointWidget:GetNumHousesVisibility() end
----@return FText
-function UDeploymentPointWidget:GetNumHousesText() end
----@return ESlateVisibility
-function UDeploymentPointWidget:GetDeploymentPointVisibility() end
+function UDeploymentPointMapIcon:GetDeploymentPointVisibility() end
 
 
 ---@class UDeploymentScreen : UAnvilScreen
----@field MapWidget UNewMapWidget
+---@field MapWidget UDeploymentMapWidget
 ---@field Throbber UThrobber
 ---@field LogoutButton UAnvilButtonWidget
 ---@field ConnectingText UTextBlock
@@ -1636,6 +1586,8 @@ function UFamilyAreaMarkerWindow:OnFamilyAreaSetAllianceClicked() end
 function UFamilyAreaMarkerWindow:OnFamilyAreaRestrictedChecked(bIsChecked) end
 ---@return boolean
 function UFamilyAreaMarkerWindow:IsFamilyAreaSetAllianceButtonEnabled() end
+---@return boolean
+function UFamilyAreaMarkerWindow:IsFamilyAreaRestrictedCheckBoxEnabled() end
 ---@return ESlateVisibility
 function UFamilyAreaMarkerWindow:GetFamilyAreaSetAllianceVisibility() end
 ---@return ESlateVisibility
@@ -1654,10 +1606,27 @@ UFamilyMarkerMapIcon = {}
 
 ---@class UFamilyMemberListItemWidget : UUserWidget
 ---@field PlayerNameText UTextBlock
+---@field RoleComboBoxSizeBox USizeBox
+---@field RoleComboBox UComboBoxString
+---@field RoleTextSizeBox USizeBox
+---@field RoleTextBlock UTextBlock
 ---@field KickButton UButton
 UFamilyMemberListItemWidget = {}
 
 function UFamilyMemberListItemWidget:OnKickButtonClicked() end
+---@param SelectedItem FString
+---@param SelectionType ESelectInfo::Type
+function UFamilyMemberListItemWidget:OnFamilyRoleSelectionChanged(SelectedItem, SelectionType) end
+---@return ESlateVisibility
+function UFamilyMemberListItemWidget:GetRoleTextVisibility() end
+---@return FText
+function UFamilyMemberListItemWidget:GetRoleText() end
+---@return ESlateVisibility
+function UFamilyMemberListItemWidget:GetRoleComboBoxVisibility() end
+---@return FText
+function UFamilyMemberListItemWidget:GetPlayerNameText() end
+---@return ESlateVisibility
+function UFamilyMemberListItemWidget:GetKickButtonVisibility() end
 
 
 ---@class UFoodCooldownIconWidget : UUserWidget
@@ -1973,10 +1942,8 @@ UMainAreaContainer = {}
 
 
 
----@class UMapIcon : UUserWidget
+---@class UMapIcon : UMapIconBase
 ---@field Marker AActor
----@field TypeProperty FMapIconTypeProperty
----@field InstanceProperty FMapIconInstanceProperty
 ---@field LabelBox UTextBlock
 ---@field IconBox UImage
 UMapIcon = {}
@@ -1985,6 +1952,15 @@ UMapIcon = {}
 function UMapIcon:IsIconEnabled() end
 ---@return ESlateVisibility
 function UMapIcon:GetIconVisibility() end
+
+
+---@class UMapIconBase : UUserWidget
+---@field TypeProperty FMapIconTypeProperty
+---@field InstanceProperty FMapIconInstanceProperty
+---@field Map UMapWidgetBase
+---@field ParentSlot UCanvasPanelSlot
+UMapIconBase = {}
+
 
 
 ---@class UMapMarkerComponent : UActorComponent
@@ -1997,22 +1973,14 @@ UMapMarkerComponent = {}
 UMapPostMapIcon = {}
 
 
----@class UMapWidget : UUserWidget
----@field MapSheet UCanvasPanel
+---@class UMapWidget : UMapWidgetBase
 ---@field EnemyIconColour FSlateColor
----@field ZoomSpeed float
----@field ZoomMin float
----@field ZoomMax float
----@field ZoomAnimationTime float
----@field MapImageBox UImage
 ---@field FogOfWarMask UTexture2D
 ---@field FogOfWarRadius int32
----@field DeploymentPointWidgetClass TSubclassOf<UDeploymentPointWidget>
 ---@field DeploymentInstructionOrSpawnTimerBorder UBorder
 ---@field DeploymentInstructionOrSpawnTimerText UTextBlock
 ---@field ObjectiveBorder UBorder
 ---@field LogoutButton UAnvilButtonWidget
----@field MapSheetSlot UCanvasPanelSlot
 ---@field DisplayedBeaconTowerPlayerInfos TArray<UMapIcon>
 UMapWidget = {}
 
@@ -2025,8 +1993,21 @@ function UMapWidget:GetRespawnTimerText() end
 function UMapWidget:GetObjectiveBorderVisibility() end
 ---@return ESlateVisibility
 function UMapWidget:GetLogoutButtonVisibility() end
----@param MapImage UTexture2D
-function UMapWidget:BP_OnMapImageSet(MapImage) end
+---@param MapImageTexture UTexture2D
+function UMapWidget:BP_OnMapImageSet(MapImageTexture) end
+
+
+---@class UMapWidgetBase : UUserWidget
+---@field MapSheet UCanvasPanel
+---@field ZoomSpeed float
+---@field ZoomMin float
+---@field ZoomMax float
+---@field ZoomAnimationTime float
+---@field MapImage UImage
+---@field MapImageSheet UCanvasPanel
+---@field MapImageSheetSlot UCanvasPanelSlot
+UMapWidgetBase = {}
+
 
 
 ---@class UMarketItemGridWidget : UGridPanelWidget
@@ -2089,21 +2070,6 @@ UMarketShopWindow = {}
 function UMarketShopWindow:GetSilverAmountVisibility() end
 ---@return FText
 function UMarketShopWindow:GetSilverAmountText() end
-
-
----@class UNewMapWidget : UUserWidget
----@field MapItemWidgetClass TSubclassOf<UDeploymentPointWidget>
----@field ZoomSpeed float
----@field ZoomMin float
----@field ZoomMax float
----@field ZoomAnimationTime float
----@field MapImage UImage
----@field MapImageCanvas UCanvasPanel
----@field MapImageCanvasSlot UCanvasPanelSlot
----@field MapItemCanvas UCanvasPanel
----@field MapItemCanvasSlot UCanvasPanelSlot
-UNewMapWidget = {}
-
 
 
 ---@class UNextTestWidget : UUserWidget
@@ -2300,6 +2266,12 @@ URefineryWindow = {}
 ---@param Old boolean
 ---@param New boolean
 function URefineryWindow:OnStatusChanged(Old, New) end
+
+
+---@class URegionEntry : UObject
+---@field WorldEntityMap TMap<uint64, UWorldEntityHandle>
+URegionEntry = {}
+
 
 
 ---@class URelicTechCenterWindow : UStructureWindow
@@ -2761,5 +2733,75 @@ UVitalityStatusWidget = {}
 UWildSpawnPointMapIcon = {}
 
 function UWildSpawnPointMapIcon:OnClicked() end
+
+
+---@class UWorldBeaconTowerMapIcon : UWorldEntityMapIcon
+UWorldBeaconTowerMapIcon = {}
+
+
+---@class UWorldEntityHandle : UObject
+---@field RegionEntry URegionEntry
+UWorldEntityHandle = {}
+
+
+
+---@class UWorldEntityMapIcon : UMapIconBase
+---@field EntityHandle UWorldEntityHandle
+---@field MapItemImage UImage
+---@field IconSizeBox USizeBox
+---@field EntityTemplateCDO UEntityTemplate
+---@field VisActorCDO AVisActor
+UWorldEntityMapIcon = {}
+
+
+
+---@class UWorldEntityPoolManager : UObject
+---@field GameInstance UAnvilGameInstance
+---@field RegionIndexMap TMap<int32, URegionEntry>
+---@field RegionHashMap TMap<int32, URegionEntry>
+UWorldEntityPoolManager = {}
+
+
+
+---@class UWorldMarketShopMapIcon : UWorldEntityMapIcon
+---@field MarketShopTooltipClass TSubclassOf<UMarketShopMapTooltip>
+---@field CachedMarketShopTooltip UMarketShopMapTooltip
+UWorldMarketShopMapIcon = {}
+
+
+
+---@class UWorldTownCenterMapIcon : UDeploymentPointMapIcon
+---@field MainElements UPanelWidget
+---@field TownStatusVerticalBox UVerticalBox
+---@field TownNameBorder UBorder
+---@field TownNameText UTextBlock
+---@field TownStatusBorder UBorder
+---@field NumHousesStatus UStatusWidget
+---@field NumTentsStatus UStatusWidget
+---@field NumReinforcementSuppliesStatus UStatusWidget
+---@field TownWarningText UTextBlock
+---@field DetectionRangeCircle UImage
+---@field FlashingFrequency float
+---@field FlashingMinOpacity float
+UWorldTownCenterMapIcon = {}
+
+---@return ESlateVisibility
+function UWorldTownCenterMapIcon:GetTownWarningTextVisibility() end
+---@return FText
+function UWorldTownCenterMapIcon:GetTownWarningText() end
+---@return ESlateVisibility
+function UWorldTownCenterMapIcon:GetTownStatusBorderVisibility() end
+---@return FText
+function UWorldTownCenterMapIcon:GetTownNameText() end
+---@return ESlateVisibility
+function UWorldTownCenterMapIcon:GetTownNameBorderVisibility() end
+---@return FText
+function UWorldTownCenterMapIcon:GetNumTentsText() end
+---@return FText
+function UWorldTownCenterMapIcon:GetNumReinforcementSuppliesText() end
+---@return ESlateVisibility
+function UWorldTownCenterMapIcon:GetNumHousesVisibility() end
+---@return FText
+function UWorldTownCenterMapIcon:GetNumHousesText() end
 
 

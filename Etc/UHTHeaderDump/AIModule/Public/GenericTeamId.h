@@ -8,7 +8,7 @@ struct AIMODULE_API FGenericTeamId {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 TeamID;
+    uint8 TeamId;
     
 public:
     FGenericTeamId();

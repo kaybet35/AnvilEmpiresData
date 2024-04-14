@@ -1,6 +1,7 @@
 #include "BaseStructureEntity.h"
 
 UBaseStructureEntity::UBaseStructureEntity() {
+    this->bGenerateMeshCollisionVaultable = false;
     this->TeamComp = NULL;
     this->HealthComp = NULL;
     this->RepairComp = NULL;

@@ -48,6 +48,9 @@ public:
     TSubclassOf<UItemTemplate> DedicatedUnderlyingItemType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bCheckDedicatedUnderlyingItem;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UItemTemplate> RequiredEnablingItem;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

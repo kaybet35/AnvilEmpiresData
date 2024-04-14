@@ -11,7 +11,7 @@ public:
     TArray<FServerListEntry> ServerList;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint32 DeploymentListVersion;
+    uint32 WorldEntityPoolVersion;
     
     ANVIL_API FServerListResponse();
 };

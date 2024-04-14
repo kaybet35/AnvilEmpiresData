@@ -1,0 +1,177 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "StairsBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseBuildSiteEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseBuildSiteEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "StairsBuildSite_C'Default__StairsBuildSite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/StairsBuildSite.7"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__StairsBuildSite_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseBuildSiteEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.1"
+    }
+  },
+  {
+    "Type": "BuildSiteProxyComponent",
+    "Name": "BuildSiteProxyComponent_0",
+    "Outer": "Default__StairsBuildSite_C",
+    "Class": "UScriptClass'BuildSiteProxyComponent'",
+    "Template": {
+      "ObjectName": "BuildSiteProxyComponent'Default__BPBaseBuildSiteEntity_C:BuildSiteProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.3"
+    },
+    "Properties": {
+      "BuiltStructureEntity": {
+        "ObjectName": "BlueprintGeneratedClass'StairsT2_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Walls/StairsT2.0"
+      },
+      "BuildLocation": 7,
+      "RequiredTool": "EAnvilToolType::Hammer",
+      "bRequiresTownHall": true,
+      "TierPrerequisite": 2
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__StairsBuildSite_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseBuildSiteEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.4"
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__StairsBuildSite_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseBuildSiteEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'Stairs_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Stairs.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_0",
+    "Outer": "Default__StairsBuildSite_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseBuildSiteEntity_C:HealthProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.6"
+    }
+  },
+  {
+    "Type": "MeshCollisionProxyComponent",
+    "Name": "MeshCollisionProxyComponent_0",
+    "Outer": "Default__StairsBuildSite_C",
+    "Class": "UScriptClass'MeshCollisionProxyComponent'",
+    "Properties": {
+      "PhysicsAssetName": {
+        "ObjectName": "StaticMesh'WallT2_Stairs'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/WallT2_Stairs.2"
+      },
+      "CollisionMask": 16785408
+    }
+  },
+  {
+    "Type": "StairsBuildSite_C",
+    "Name": "Default__StairsBuildSite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/StairsBuildSite.StairsBuildSite_C'",
+    "Template": {
+      "ObjectName": "BPBaseBuildSiteEntity_C'Default__BPBaseBuildSiteEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.2"
+    },
+    "Properties": {
+      "BuildSiteComp": {
+        "ObjectName": "BuildSiteProxyComponent'Default__StairsBuildSite_C:BuildSiteProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/StairsBuildSite.2"
+      },
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__StairsBuildSite_C:TeamProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/StairsBuildSite.9"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__StairsBuildSite_C:HealthProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/StairsBuildSite.5"
+      },
+      "MeshCollisionComp": {
+        "ObjectName": "MeshCollisionProxyComponent'Default__StairsBuildSite_C:MeshCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/StairsBuildSite.6"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__StairsBuildSite_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/StairsBuildSite.4"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__StairsBuildSite_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/StairsBuildSite.1"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__StairsBuildSite_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/StairsBuildSite.3"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__StairsBuildSite_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/StairsBuildSite.8"
+      },
+      "CodeNameString": "StairsBuildSite",
+      "CodeName": -2003863793,
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisStairsBuildSite_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisStairsBuildSite.1"
+      }
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__StairsBuildSite_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseBuildSiteEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.7"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamProxyComponent_0",
+    "Outer": "Default__StairsBuildSite_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseBuildSiteEntity_C:TeamProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.8"
+    }
+  }
+]

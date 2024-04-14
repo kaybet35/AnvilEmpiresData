@@ -1,12 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Info -FallbackName=Info
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilWorldEntityType -FallbackName=EAnvilWorldEntityType
 #include "EMapIconType.h"
 #include "MapIconTypeProperty.h"
 #include "Templates/SubclassOf.h"
 #include "UIGlobals.generated.h"
 
 class UUserWidget;
+class UWorldEntityMapIcon;
 
 UCLASS(Blueprintable)
 class ANVIL_API AUIGlobals : public AInfo {
@@ -26,6 +28,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EMapIconType, FMapIconTypeProperty> IconTemplates;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<EAnvilWorldEntityType, TSubclassOf<UWorldEntityMapIcon>> WorldEntityIconClasses;
     
     AUIGlobals(const FObjectInitializer& ObjectInitializer);
 

@@ -26,6 +26,7 @@ enum class EAnvilItemTag : uint8 {
     AnimalEquipment,
     AnimalFeed,
     Seed,
+    Supplies,
     MaxTag = 63,
 };
 

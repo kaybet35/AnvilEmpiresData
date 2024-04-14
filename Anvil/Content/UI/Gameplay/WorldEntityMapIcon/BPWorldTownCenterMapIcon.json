@@ -1,0 +1,858 @@
+[
+  {
+    "Type": "Border",
+    "Name": "TownNameBorder",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Padding": {
+        "Left": 6.0,
+        "Top": 1.0,
+        "Right": 6.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.046667,
+            "G": 0.042311,
+            "B": 0.035601,
+            "A": 1.0,
+            "Hex": "FF3D3A35"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPWorldTownCenterMapIcon_C:WidgetTree.TownNameBorder.BorderSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.2"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPWorldTownCenterMapIcon_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_5'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.29"
+      }
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "TownStatusBorder",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.046667,
+            "G": 0.042311,
+            "B": 0.035601,
+            "A": 1.0,
+            "Hex": "FF3D3A35"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPWorldTownCenterMapIcon_C:WidgetTree.TownStatusBorder.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.3"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPWorldTownCenterMapIcon_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.28"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_1",
+    "Outer": "TownNameBorder",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 6.0,
+        "Top": 1.0,
+        "Right": 6.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Border'BPWorldTownCenterMapIcon_C:WidgetTree.TownNameBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.0"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPWorldTownCenterMapIcon_C:WidgetTree.TownNameText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.24"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "TownStatusBorder",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "Parent": {
+        "ObjectName": "Border'BPWorldTownCenterMapIcon_C:WidgetTree.TownStatusBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.1"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPWorldTownCenterMapIcon_C:WidgetTree.HorizontalBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.16"
+      }
+    }
+  },
+  {
+    "Type": "BPStatusWidget_C",
+    "Name": "NumHousesStatus",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPStatusWidget.BPStatusWidget_C'",
+    "Template": {
+      "ObjectName": "BPStatusWidget_C'Default__BPStatusWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/BPStatusWidget.0"
+    },
+    "Properties": {
+      "IconTexture": {
+        "ObjectName": "Texture2D'TownLevelStatusIcon'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Status/TownLevelStatusIcon.0"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPWorldTownCenterMapIcon_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.17"
+      }
+    }
+  },
+  {
+    "Type": "BPStatusWidget_C",
+    "Name": "NumReinforcementSuppliesStatus",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPStatusWidget.BPStatusWidget_C'",
+    "Template": {
+      "ObjectName": "BPStatusWidget_C'Default__BPStatusWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/BPStatusWidget.0"
+    },
+    "Properties": {
+      "IconTexture": {
+        "ObjectName": "Texture2D'Militia'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Status/Militia.0"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPWorldTownCenterMapIcon_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_5'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.19"
+      }
+    }
+  },
+  {
+    "Type": "BPStatusWidget_C",
+    "Name": "NumTentsStatus",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPStatusWidget.BPStatusWidget_C'",
+    "Template": {
+      "ObjectName": "BPStatusWidget_C'Default__BPStatusWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/BPStatusWidget.0"
+    },
+    "Properties": {
+      "IconTexture": {
+        "ObjectName": "Texture2D'IconCampTent'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconCampTent.0"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPWorldTownCenterMapIcon_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.18"
+      }
+    }
+  },
+  {
+    "Type": "BPWorldTownCenterMapIcon_C",
+    "Name": "Default__BPWorldTownCenterMapIcon_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.BPWorldTownCenterMapIcon_C'",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "MapItemButton",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Button'",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 128.0,
+            "Y": 128.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.7,
+              "G": 0.7,
+              "B": 0.7,
+              "A": 0.0,
+              "Hex": "DADADA"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'TownCenterMap'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Map/TownCenterMap.0"
+          }
+        },
+        "Hovered": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 128.0,
+            "Y": 128.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.7,
+              "G": 0.7,
+              "B": 0.7,
+              "A": 0.0,
+              "Hex": "DADADA"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'TownCenterMap'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Map/TownCenterMap.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "Pressed": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 128.0,
+            "Y": 128.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.7,
+              "G": 0.7,
+              "B": 0.7,
+              "A": 0.0,
+              "Hex": "DADADA"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'TownCenterMap'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Map/TownCenterMap.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::FullColor",
+          "ImageSize": {
+            "X": 128.0,
+            "Y": 128.0
+          },
+          "Margin": {
+            "Left": 0.25,
+            "Top": 0.25,
+            "Right": 0.25,
+            "Bottom": 0.25
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.7,
+              "G": 0.7,
+              "B": 0.7,
+              "A": 0.0,
+              "Hex": "DADADA"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'TownCenterMap'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Map/TownCenterMap.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "IsFocusable": false,
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'BPWorldTownCenterMapIcon_C:WidgetTree.MapItemButton.ButtonSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPWorldTownCenterMapIcon_C:WidgetTree.IconSizeBox.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.23"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Outer": "MapItemButton",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Button'BPWorldTownCenterMapIcon_C:WidgetTree.MapItemButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.8"
+      },
+      "Content": {
+        "ObjectName": "Image'BPWorldTownCenterMapIcon_C:WidgetTree.MapItemImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.21"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_17",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPWorldTownCenterMapIcon_C:WidgetTree.CanvasPanel_17.CanvasPanelSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.13"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPWorldTownCenterMapIcon_C:WidgetTree.CanvasPanel_17.CanvasPanelSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "MainElements",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPWorldTownCenterMapIcon_C:WidgetTree.MainElements.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPWorldTownCenterMapIcon_C:WidgetTree.MainElements.CanvasPanelSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPWorldTownCenterMapIcon_C:WidgetTree.CanvasPanel_17.CanvasPanelSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Outer": "CanvasPanel_17",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 300.0,
+          "Bottom": 300.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPWorldTownCenterMapIcon_C:WidgetTree.CanvasPanel_17'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.10"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'BPWorldTownCenterMapIcon_C:WidgetTree.MainElements'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.11"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Outer": "CanvasPanel_17",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": -1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPWorldTownCenterMapIcon_C:WidgetTree.CanvasPanel_17'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.10"
+      },
+      "Content": {
+        "ObjectName": "Image'BPWorldTownCenterMapIcon_C:WidgetTree.DetectionRangeCircle'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.20"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "MainElements",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -48.0,
+          "Right": 300.0,
+          "Bottom": 100.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 1.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPWorldTownCenterMapIcon_C:WidgetTree.MainElements'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.11"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'BPWorldTownCenterMapIcon_C:WidgetTree.TownStatusVerticalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.26"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Outer": "MainElements",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 75.0,
+          "Bottom": 75.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPWorldTownCenterMapIcon_C:WidgetTree.MainElements'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.11"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPWorldTownCenterMapIcon_C:WidgetTree.IconSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.22"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPWorldTownCenterMapIcon_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.17"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPWorldTownCenterMapIcon_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.18"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPWorldTownCenterMapIcon_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot'BPWorldTownCenterMapIcon_C:WidgetTree.TownStatusBorder.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.3"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "HorizontalBox_1",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPWorldTownCenterMapIcon_C:WidgetTree.HorizontalBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.16"
+      },
+      "Content": {
+        "ObjectName": "BPStatusWidget_C'BPWorldTownCenterMapIcon_C:WidgetTree.NumHousesStatus'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.4"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Outer": "HorizontalBox_1",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPWorldTownCenterMapIcon_C:WidgetTree.HorizontalBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.16"
+      },
+      "Content": {
+        "ObjectName": "BPStatusWidget_C'BPWorldTownCenterMapIcon_C:WidgetTree.NumTentsStatus'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.6"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Outer": "HorizontalBox_1",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPWorldTownCenterMapIcon_C:WidgetTree.HorizontalBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.16"
+      },
+      "Content": {
+        "ObjectName": "BPStatusWidget_C'BPWorldTownCenterMapIcon_C:WidgetTree.NumReinforcementSuppliesStatus'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.5"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "DetectionRangeCircle",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 315.0,
+          "Y": 315.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'BeaconTowerRangeIndicator'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Map/BeaconTowerRangeIndicator.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.085,
+        "Hex": "15FFFFFF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPWorldTownCenterMapIcon_C:WidgetTree.CanvasPanel_17.CanvasPanelSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.13"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "MapItemImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "ButtonSlot'BPWorldTownCenterMapIcon_C:WidgetTree.MapItemButton.ButtonSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.9"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "IconSizeBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 75.0,
+      "HeightOverride": 75.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPWorldTownCenterMapIcon_C:WidgetTree.IconSizeBox.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.23"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPWorldTownCenterMapIcon_C:WidgetTree.MainElements.CanvasPanelSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.15"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "IconSizeBox",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPWorldTownCenterMapIcon_C:WidgetTree.IconSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.22"
+      },
+      "Content": {
+        "ObjectName": "Button'BPWorldTownCenterMapIcon_C:WidgetTree.MapItemButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.8"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TownNameText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "E484B7D44EC30AE09C63449AF7B29D7E",
+        "SourceString": "TownName",
+        "LocalizedString": "TownName"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "Size": 18
+      },
+      "Slot": {
+        "ObjectName": "BorderSlot'BPWorldTownCenterMapIcon_C:WidgetTree.TownNameBorder.BorderSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.2"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TownWarningText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "D6F2433B4341D2E8137C569D0FDE100C",
+        "SourceString": "CALLING FOR REINFORCEMENTS",
+        "LocalizedString": "CALLING FOR REINFORCEMENTS"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.947307,
+          "G": 0.623961,
+          "B": 0.171441,
+          "A": 1.0,
+          "Hex": "FFF9CF73"
+        }
+      },
+      "Font": {
+        "Size": 16
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPWorldTownCenterMapIcon_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.27"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "TownStatusVerticalBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'BPWorldTownCenterMapIcon_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.27"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPWorldTownCenterMapIcon_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.28"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPWorldTownCenterMapIcon_C:WidgetTree.TownStatusVerticalBox.VerticalBoxSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.29"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPWorldTownCenterMapIcon_C:WidgetTree.MainElements.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.14"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "TownStatusVerticalBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPWorldTownCenterMapIcon_C:WidgetTree.TownStatusVerticalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.26"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPWorldTownCenterMapIcon_C:WidgetTree.TownWarningText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.25"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
+    "Outer": "TownStatusVerticalBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Top": 5.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPWorldTownCenterMapIcon_C:WidgetTree.TownStatusVerticalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.26"
+      },
+      "Content": {
+        "ObjectName": "Border'BPWorldTownCenterMapIcon_C:WidgetTree.TownStatusBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.1"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_5",
+    "Outer": "TownStatusVerticalBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPWorldTownCenterMapIcon_C:WidgetTree.TownStatusVerticalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.26"
+      },
+      "Content": {
+        "ObjectName": "Border'BPWorldTownCenterMapIcon_C:WidgetTree.TownNameBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.0"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPWorldTownCenterMapIcon_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPWorldTownCenterMapIcon_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.31"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WorldTownCenterMapIcon'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPWorldTownCenterMapIcon_C'Default__BPWorldTownCenterMapIcon_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.7"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPWorldTownCenterMapIcon_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPWorldTownCenterMapIcon_C:WidgetTree.CanvasPanel_17'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.10"
+      }
+    }
+  }
+]

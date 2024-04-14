@@ -6,6 +6,38 @@
     "Class": "UScriptClass'ArrowComponent'"
   },
   {
+    "Type": "AudioComponent",
+    "Name": "BoilingTemperatureHighAudio",
+    "Outer": "Default__BPVisHeatingVat_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'HeatingVatTempHigh_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatTempHigh_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHeatingVat_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.0"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "BoilingTemperatureLowAudio",
+    "Outer": "Default__BPVisHeatingVat_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'HeatingVatTempLow_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Industry/HeatingVat/HeatingVatTempLow_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHeatingVat_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.0"
+      }
+    }
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BPVisHeatingVat_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
@@ -16,13 +48,13 @@
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisCraftingStructure'",
+      "ObjectName": "Class'VisCookingStructure'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "Fuelled",
+        "Name": "Burning",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -33,7 +65,7 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "Burning",
+        "Name": "Fuelled",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -77,28 +109,6 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "ResourceWater",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisInstancedStockpileComponent'",
-          "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "VisInstancedStockpile",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisInstancedStockpileComponent'",
-          "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "VisStaticMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -118,7 +128,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisHeatingVat_C'Default__BPVisHeatingVat_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.2"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.4"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -129,39 +139,72 @@
     "Name": "Default__BPVisHeatingVat_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.BPVisHeatingVat_C'",
     "Properties": {
-      "CraftingDataComponent": {
-        "ObjectName": "CraftingDataComponent'Default__BPVisHeatingVat_C:CraftingDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.3"
+      "CookingDataComponent": {
+        "ObjectName": "CookingDataComponent'Default__BPVisHeatingVat_C:CookingDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.5"
+      },
+      "WaterMeshMaterialMap": [
+        {
+          "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Resources/ThickLeatherTanned.ThickLeatherTanned_C'": {
+            "ObjectName": "MaterialInstanceConstant'WaterHeatingVat02'",
+            "ObjectPath": "Anvil/Content/Materials/WaterHeatingVat02.0"
+          }
+        },
+        {
+          "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedResin.ProcessedResin_C'": {
+            "ObjectName": "MaterialInstanceConstant'WaterHeatingVat01'",
+            "ObjectPath": "Anvil/Content/Materials/WaterHeatingVat01.0"
+          }
+        }
+      ],
+      "WaterLevelMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisHeatingVat_C:WaterLevelMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.24"
+      },
+      "WaterHeightCurve": {
+        "ObjectName": "CurveFloat'HeatingVatWaterHeightCurve'",
+        "ObjectPath": "Anvil/Content/Blueprints/Data/Curves/HeatingVatWaterHeightCurve.0"
+      },
+      "WaterScaleCurve": {
+        "ObjectName": "CurveVector'HeatingVatWaterScaleCurve'",
+        "ObjectPath": "Anvil/Content/Blueprints/Data/Curves/HeatingVatWaterScaleCurve.0"
+      },
+      "BoilingTemperatureHighAudio": {
+        "ObjectName": "AudioComponent'Default__BPVisHeatingVat_C:BoilingTemperatureHighAudio'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.1"
+      },
+      "BoilingTemperatureLowAudio": {
+        "ObjectName": "AudioComponent'Default__BPVisHeatingVat_C:BoilingTemperatureLowAudio'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.2"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisHeatingVat_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.29"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.28"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconIndustryHeatingVat'",
         "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconIndustryHeatingVat.0"
       },
-      "BuildSiteCategory": "EBuildSiteCategory::Industry",
-      "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
+      "BuildSiteCategory": "EBuildSiteCategory::Water",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisHeatingVat_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.26"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.27"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisHeatingVat_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.8"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisHeatingVat_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.25"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.26"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisHeatingVat_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.25"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisHeatingVat_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.14"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisHeatingVat_C:ArrowComponent'",
@@ -169,12 +212,13 @@
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisHeatingVat_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.6"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisHeatingVat_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.7"
       },
+      "GeneratedScorchEffects": 5,
       "VisDisplayName": {
         "Namespace": "",
         "Key": "C2F3807C462FAB7A1E427291999D0452",
@@ -184,16 +228,17 @@
       "Description": {
         "Namespace": "",
         "Key": "EE6F575D43FFCEB900C3E3BAE29D86DB",
-        "SourceString": "TEMP",
-        "LocalizedString": "TEMP"
+        "SourceString": "A large vat used to heat raw resources for various industrial processes. It requires both a fire burning fuel and water to function. The type of fuel used determines the Temperature of the vat. Higher quality materials can be produced by maintaining a Temperature in that vat that is optimal for the material.",
+        "LocalizedString": "A large vat used to heat raw resources for various industrial processes. It requires both a fire burning fuel and water to function. The type of fuel used determines the Temperature of the vat. Higher quality materials can be produced by maintaining a Temperature in that vat that is optimal for the material."
       },
       "DescriptionFooter": {
         "Namespace": "",
         "Key": "C15CB29F48AB13CA9D0073BFFAA73843",
-        "SourceString": "Must be built in Workshop areas.",
-        "LocalizedString": "Must be built in Workshop areas."
+        "SourceString": "Must be built in Workshop areas",
+        "LocalizedString": "Must be built in Workshop areas"
       },
-      "UseWindowType": "EHUDWindowType::Crafting",
+      "UseWindowType": "EHUDWindowType::Cooking",
+      "bUseForceCameraZoom": true,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisHeatingVat_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.0"
@@ -201,10 +246,10 @@
     }
   },
   {
-    "Type": "CraftingDataComponent",
-    "Name": "CraftingDataComponent",
+    "Type": "CookingDataComponent",
+    "Name": "CookingDataComponent",
     "Outer": "Default__BPVisHeatingVat_C",
-    "Class": "UScriptClass'CraftingDataComponent'"
+    "Class": "UScriptClass'CookingDataComponent'"
   },
   {
     "Type": "DecalComponent",
@@ -304,7 +349,7 @@
       "RelativeLocation": {
         "X": -14.863387,
         "Y": 98.9652,
-        "Z": -90.369095
+        "Z": -272.76532
       },
       "ComponentTags": [
         "Active1"
@@ -372,6 +417,11 @@
           0
         ]
       },
+      "RelativeLocation": {
+        "X": -11.838876,
+        "Y": 83.00887,
+        "Z": -91.26159
+      },
       "ComponentTags": [
         "Populated"
       ],
@@ -385,8 +435,8 @@
     "Class": "UScriptClass'NiagaraComponent'",
     "Properties": {
       "Asset": {
-        "ObjectName": "NiagaraSystem'SmokeStackSmall'",
-        "ObjectPath": "Anvil/Content/FX/Niagara/SmokeStackSmall.10"
+        "ObjectName": "NiagaraSystem'Steam'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/Steam.9"
       },
       "OverrideParameters": {
         "UserParameterRedirects": [
@@ -439,6 +489,11 @@
         ]
       },
       "TranslucencySortPriority": 1,
+      "RelativeLocation": {
+        "X": -1.4210855E-14,
+        "Y": -1.0625883E-07,
+        "Z": -69.653946
+      },
       "ComponentTags": [
         "Refining"
       ],
@@ -482,7 +537,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisHeatingVat_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.12"
       },
       "VariableGuid": "D82C2CC7-4AB252F5-8E1ED9A8-F54408F4",
       "InternalVariableName": "DefaultSceneRoot"
@@ -500,22 +555,18 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisHeatingVat_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.31"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.30"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.20"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.17"
         },
         {
           "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.16"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.18"
         }
       ],
       "VariableGuid": "078D6C4F-4D0617D7-5AAE87BF-CC443993",
@@ -534,7 +585,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisHeatingVat_C:PopulatedAssets_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.30"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.29"
       },
       "VariableGuid": "603DE72B-4A506049-E55C46AE-60C8A01F",
       "InternalVariableName": "PopulatedAssets"
@@ -552,42 +603,24 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisHeatingVat_C:Fire_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.13"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.19"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.17"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.20"
         },
         {
           "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.18"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.21"
         }
       ],
       "VariableGuid": "4EEC05D3-41AD9D2F-75E6A380-600BF924",
       "InternalVariableName": "Fire"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_15",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'NiagaraComponent'",
-        "ObjectPath": "/Script/Niagara"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "NiagaraComponent'BPVisHeatingVat_C:Burning_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.7"
-      },
-      "VariableGuid": "70383151-4A562F5D-1CA05D97-95E2E70B",
-      "InternalVariableName": "Burning"
     }
   },
   {
@@ -602,7 +635,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisHeatingVat_C:Fuelled_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.10"
       },
       "VariableGuid": "6C13232A-4452B934-AFF604B8-D7A552AD",
       "InternalVariableName": "Fuelled"
@@ -620,7 +653,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisHeatingVat_C:Refining_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.11"
       },
       "VariableGuid": "B56D5C4F-4414EAFF-3630299F-B32E0926",
       "InternalVariableName": "Refining"
@@ -628,44 +661,20 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_6",
+    "Name": "SCS_Node_2",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'VisInstancedStockpileComponent'",
-        "ObjectPath": "/Script/Anvil"
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
       },
       "ComponentTemplate": {
-        "ObjectName": "VisInstancedStockpileComponent'BPVisHeatingVat_C:VisInstancedStockpile_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.28"
+        "ObjectName": "NiagaraComponent'BPVisHeatingVat_C:Burning_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.9"
       },
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.21"
-        }
-      ],
-      "VariableGuid": "69398257-4B6477BE-272F4791-8DD997B8",
-      "InternalVariableName": "VisInstancedStockpile"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_8",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisInstancedStockpileComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisInstancedStockpileComponent'BPVisHeatingVat_C:ResourceWater_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.27"
-      },
-      "VariableGuid": "8E0983C2-4E553963-188A599E-6A3C15DE",
-      "InternalVariableName": "ResourceWater"
+      "VariableGuid": "9462C606-4DF3A688-057502B8-AC5787AA",
+      "InternalVariableName": "Burning"
     }
   },
   {
@@ -677,46 +686,38 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.16"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.14"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.21"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.15"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_14'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.16"
         },
         {
-          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.19"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.17"
         },
         {
-          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_14'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.21"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisHeatingVat_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.15"
       }
     }
   },
@@ -725,6 +726,33 @@
     "Name": "SplineDataComponent",
     "Outer": "GrassRemovalVolume",
     "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "WaterLevelMesh",
+    "Outer": "Default__BPVisHeatingVat_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'HeatingVatLiquid'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/HeatingVatLiquid.2"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHeatingVat_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 195.0
+      },
+      "RelativeScale3D": {
+        "X": 1.2,
+        "Y": 1.2,
+        "Z": 1.2
+      },
+      "bVisible": true
+    }
   },
   {
     "Type": "StructureDataComponent",
@@ -743,25 +771,6 @@
     "Name": "UpgradeDataComponent",
     "Outer": "Default__BPVisHeatingVat_C",
     "Class": "UScriptClass'UpgradeDataComponent'"
-  },
-  {
-    "Type": "VisInstancedStockpileComponent",
-    "Name": "ResourceWater_GEN_VARIABLE",
-    "Outer": "BPVisHeatingVat_C",
-    "Class": "UScriptClass'VisInstancedStockpileComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'HeatingVatLiquid'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/HeatingVatLiquid.2"
-      },
-      "bHasPerInstanceHitProxies": true
-    }
-  },
-  {
-    "Type": "VisInstancedStockpileComponent",
-    "Name": "VisInstancedStockpile_GEN_VARIABLE",
-    "Outer": "BPVisHeatingVat_C",
-    "Class": "UScriptClass'VisInstancedStockpileComponent'"
   },
   {
     "Type": "VisScaffoldingComponent",
@@ -786,10 +795,16 @@
         "ObjectName": "StaticMesh'FireWood02'",
         "ObjectPath": "Anvil/Content/Meshes/Props/FireWood02.2"
       },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'LogsBurning'",
+          "ObjectPath": "Anvil/Content/Materials/Structures/LogsBurning.0"
+        }
+      ],
       "RelativeLocation": {
         "X": -5.159203,
         "Y": 56.565243,
-        "Z": 66.207954
+        "Z": 60.377964
       },
       "RelativeRotation": {
         "Pitch": 0.0,
@@ -799,7 +814,8 @@
       "ComponentTags": [
         "Structure",
         "Populated",
-        "ExcludeFromVisActorTemplate"
+        "ExcludeFromVisActorTemplate",
+        "FuelTemperature"
       ]
     }
   },
