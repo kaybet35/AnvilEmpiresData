@@ -3,7 +3,10 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "EAnvilCharacterStance.h"
 #include "ProxyComponent.h"
+#include "Templates/SubclassOf.h"
 #include "VehicleSeatProxyComponent.generated.h"
+
+class UItemTemplate;
 
 UCLASS(Blueprintable, EditInlineNew)
 class R2_API UVehicleSeatProxyComponent : public UProxyComponent {
@@ -34,10 +37,16 @@ public:
     bool bMustNearExitToMount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bRevertRequiredEquipments;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 AnimationIndex;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MountedAttackDamageMultiplier;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<TSubclassOf<UItemTemplate>> RequiredEquipments;
     
     UVehicleSeatProxyComponent();
 

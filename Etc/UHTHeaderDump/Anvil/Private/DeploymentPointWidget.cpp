@@ -10,9 +10,11 @@ UDeploymentPointWidget::UDeploymentPointWidget() : UUserWidget(FObjectInitialize
     this->NumHousesStatus = NULL;
     this->NumTentsStatus = NULL;
     this->NumReinforcementSuppliesStatus = NULL;
+    this->DetectionRangeCirleBox = NULL;
     this->FlashingFrequency = 0.00f;
     this->FlashingMinOpacity = 0.00f;
     this->ParentSlot = NULL;
+    this->DetectionRangeCirleSlot = NULL;
 }
 
 void UDeploymentPointWidget::OnDeploymentPointClicked() {

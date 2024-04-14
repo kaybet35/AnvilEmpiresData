@@ -5,6 +5,7 @@
 
 class UAnimalAIDataComponent;
 class UHungerDataComponent;
+class USkeletalMesh;
 class USkeletalMeshComponent;
 class UStaminaDataComponent;
 
@@ -36,6 +37,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* HalterBodyMesh;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<USkeletalMesh*> SaddleMeshes;
     
 public:
     AVisCart(const FObjectInitializer& ObjectInitializer);

@@ -1,6 +1,5 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EAnvilItemTag.h"
 #include "GridItem.h"
 #include "InventoryItem.generated.h"
 
@@ -17,8 +16,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Count;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<EAnvilItemTag> AcceptedTags;
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int64 AcceptedTags;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Durability;

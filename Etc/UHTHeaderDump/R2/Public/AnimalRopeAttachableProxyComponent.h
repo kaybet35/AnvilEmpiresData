@@ -8,7 +8,7 @@ class R2_API UAnimalRopeAttachableProxyComponent : public UProxyComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float FollowSpeed;
+    float MaxFollowSpeed;
     
     UAnimalRopeAttachableProxyComponent();
 

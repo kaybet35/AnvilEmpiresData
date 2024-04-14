@@ -7,6 +7,7 @@ UVehicleSeatProxyComponent::UVehicleSeatProxyComponent() {
     this->bUseMountedWeapon = false;
     this->bUseDeployable = false;
     this->bMustNearExitToMount = false;
+    this->bRevertRequiredEquipments = false;
     this->AnimationIndex = 0;
     this->MountedAttackDamageMultiplier = 1.00f;
 }

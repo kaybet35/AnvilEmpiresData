@@ -158,7 +158,7 @@ FHousePledgedPlayerIdArray = {}
 ---@field Base FGridItem
 ---@field DedicatedItem FGridItem
 ---@field Count int32
----@field AcceptedTags TArray<EAnvilItemTag>
+---@field AcceptedTags int64
 ---@field Durability float
 ---@field ItemFlags uint8
 ---@field Payload uint8
@@ -206,6 +206,7 @@ FItemQuantity = {}
 ---@field ProhibitedTags TArray<EAnvilItemTag>
 ---@field DedicatedItemType TSubclassOf<UItemTemplate>
 ---@field DedicatedUnderlyingItemType TSubclassOf<UItemTemplate>
+---@field RequiredEnablingItem TSubclassOf<UItemTemplate>
 FItemSlot = {}
 
 
@@ -379,7 +380,7 @@ UAnimalRopeAttachableDataComponent = {}
 
 
 ---@class UAnimalRopeAttachableProxyComponent : UProxyComponent
----@field FollowSpeed float
+---@field MaxFollowSpeed float
 UAnimalRopeAttachableProxyComponent = {}
 
 
@@ -694,6 +695,7 @@ UEntityAttachableDataComponent = {}
 ---@field DistanceTolerance float
 ---@field DetachMaxZDelta float
 ---@field TargetEntityTypes TArray<TSubclassOf<UEntityTemplate>>
+---@field RequiredEquipments TArray<TSubclassOf<UItemTemplate>>
 UEntityAttachableProxyComponent = {}
 
 
@@ -919,7 +921,6 @@ UImpactSurfaceProxyComponent = {}
 ---@field NormalizedSpoilageFactor float
 ---@field LifespanWhenEmpty float
 ---@field bAllowWithdrawal boolean
----@field bConvertItemsToPublic boolean
 UInventoryProxyComponent = {}
 
 
@@ -1528,6 +1529,8 @@ USimPlayerDataComponent = {}
 ---@field RotationSpeed float
 ---@field MovementAcceleration float
 ---@field SprintStaminaDrain float
+---@field ClimbStaminaCostSmall float
+---@field ClimbStaminaCostTall float
 USimPlayerProxyComponent = {}
 
 
@@ -1667,9 +1670,8 @@ UTechItemTemplate = {}
 ---@field Tier uint8
 ---@field bIsSmallCamp boolean
 ---@field bLocalReinforcementOnly boolean
----@field TownHallId uint8
 ---@field bTownUnderAttack boolean
----@field bHasSupplyStructure boolean
+---@field TownHallId uint8
 ---@field PledgedPlayersArrayCount int32
 ---@field NumTotalHouses int32
 ---@field NumUnclaimedHouses int32
@@ -1720,11 +1722,13 @@ UTrapProxyComponent = {}
 ---@field ProcessedStoneRequirement int32
 ---@field ProcessedIronRequirement int32
 ---@field ReinforcedWoodRequirement int32
+---@field SilverRequirement int32
 ---@field WorkSubmitted int32
 ---@field ProcessedWoodSubmitted int32
 ---@field ProcessedStoneSubmitted int32
 ---@field ProcessedIronSubmitted int32
 ---@field ReinforcedWoodSubmitted int32
+---@field SilverSubmitted int32
 ---@field bIsUpgrading int32
 UUpgradeDataComponent = {}
 
@@ -1740,6 +1744,7 @@ UUpgradeDataComponent = {}
 ---@field ProcessedStoneRequirement int32
 ---@field ProcessedIronRequirement int32
 ---@field ReinforcedWoodRequirement int32
+---@field SilverRequirement int32
 UUpgradeProxyComponent = {}
 
 
@@ -1786,8 +1791,10 @@ UVehicleMovementProxyComponent = {}
 ---@field bUseMountedWeapon boolean
 ---@field bUseDeployable boolean
 ---@field bMustNearExitToMount boolean
+---@field bRevertRequiredEquipments boolean
 ---@field AnimationIndex int32
 ---@field MountedAttackDamageMultiplier float
+---@field RequiredEquipments TArray<TSubclassOf<UItemTemplate>>
 UVehicleSeatProxyComponent = {}
 
 

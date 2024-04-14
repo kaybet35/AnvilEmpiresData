@@ -8,5 +8,6 @@ FItemSlot::FItemSlot() {
     this->StackLimit = 0;
     this->DedicatedItemType = NULL;
     this->DedicatedUnderlyingItemType = NULL;
+    this->RequiredEnablingItem = NULL;
 }
 

@@ -30,7 +30,7 @@ ARecastNavMesh::ARecastNavMesh(const FObjectInitializer& ObjectInitializer) : Su
     this->CellHeight = 10.00f;
     this->AgentRadius = 100.00f;
     this->AgentHeight = 144.00f;
-    this->AgentMaxSlope = 35.00f;
+    this->AgentMaxSlope = 40.00f;
     this->AgentMaxStepHeight = 35.00f;
     this->MinRegionArea = 0.00f;
     this->MergeRegionSize = 400.00f;

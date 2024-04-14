@@ -3,6 +3,8 @@
 
 class UBPDeploymentPointWidget_C : public UDeploymentPointWidget
 {
-}; // Size: 0x428
+    class UImage* DetectionRangeCirle;                                                // 0x0438 (size: 0x8)
+
+}; // Size: 0x440
 
 #endif

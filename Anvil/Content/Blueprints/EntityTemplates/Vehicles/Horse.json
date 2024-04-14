@@ -178,7 +178,7 @@
       ],
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisHorse_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.6"
       }
     }
   },
@@ -197,6 +197,46 @@
       "Slots": [
         {
           "ProxyRepeat": 1,
+          "bOr": true,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1,
+          "AcceptedTags": [
+            "EAnvilItemTag::AnimalEquipment"
+          ],
+          "RequiredTags": [
+            "EAnvilItemTag::AnimalEquipment"
+          ],
+          "ProhibitedTags": [],
+          "DedicatedItemType": {
+            "ObjectName": "BlueprintGeneratedClass'SaddleBasic_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/AnimalEquipment/SaddleBasic.0"
+          },
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        },
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 1,
+          "AcceptedTags": [
+            "EAnvilItemTag::AnimalEquipment"
+          ],
+          "RequiredTags": [
+            "EAnvilItemTag::AnimalEquipment"
+          ],
+          "ProhibitedTags": [],
+          "DedicatedItemType": {
+            "ObjectName": "BlueprintGeneratedClass'SaddleMill_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/AnimalEquipment/SaddleMill.0"
+          },
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        },
+        {
+          "ProxyRepeat": 1,
           "bOr": false,
           "HeldItem": null,
           "Count": 0,
@@ -205,7 +245,11 @@
           "RequiredTags": [],
           "ProhibitedTags": [],
           "DedicatedItemType": null,
-          "DedicatedUnderlyingItemType": null
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": {
+            "ObjectName": "BlueprintGeneratedClass'SaddleBasic_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/AnimalEquipment/SaddleBasic.0"
+          }
         }
       ],
       "NormalizedSpoilageFactor": 1.0
@@ -255,7 +299,13 @@
         "Z": 100.0
       },
       "bIsDriver": true,
-      "MountedAttackDamageMultiplier": 2.0
+      "MountedAttackDamageMultiplier": 2.0,
+      "RequiredEquipments": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'SaddleBasic_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/AnimalEquipment/SaddleBasic.0"
+        }
+      ]
     }
   }
 ]

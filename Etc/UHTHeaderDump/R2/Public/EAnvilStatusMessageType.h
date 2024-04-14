@@ -23,7 +23,6 @@ enum class EAnvilStatusMessageType : uint8 {
     CanOnlyVoteForNobles,
     MustBeOfficialToDoThat,
     MustBePledged,
-    ItemTransfer_Error,
     ItemTransfer_StaminaNotEnough,
     ItemTransfer_CannotAccept,
     ItemTransfer_InventoryFull,
@@ -105,8 +104,9 @@ enum class EAnvilStatusMessageType : uint8 {
     TaxesAreOverdue,
     FamilyAreaClaimed,
     FamilyAllianceSet,
-    RopeAttachFailAlreadyInUse,
-    MountFailRopeAttached,
+    TargetInUse,
+    ItemInUse,
+    MissingEquipment,
     NumTypes,
 };
 

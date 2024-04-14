@@ -4,6 +4,7 @@
 #include "VisRopeComponent.generated.h"
 
 class UAnimalRopeAttachableDataComponent;
+class UAnimalRopeSlotDataComponent;
 class UCableComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -16,6 +17,9 @@ public:
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAnimalRopeAttachableDataComponent* RopeDataComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAnimalRopeSlotDataComponent* RopeSlotDataComponent;
     
 public:
     UVisRopeComponent(const FObjectInitializer& ObjectInitializer);

@@ -2,6 +2,7 @@
 
 FInventoryItem::FInventoryItem() {
     this->Count = 0;
+    this->AcceptedTags = 0;
     this->Durability = 0.00f;
     this->ItemFlags = 0;
     this->Payload = 0;

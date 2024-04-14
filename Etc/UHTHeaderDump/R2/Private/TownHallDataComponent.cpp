@@ -4,9 +4,8 @@ UTownHallDataComponent::UTownHallDataComponent(const FObjectInitializer& ObjectI
     this->Tier = 0;
     this->bIsSmallCamp = false;
     this->bLocalReinforcementOnly = false;
-    this->TownHallId = 0;
     this->bTownUnderAttack = false;
-    this->bHasSupplyStructure = false;
+    this->TownHallId = 0;
     this->PledgedPlayersArrayCount = 0;
     this->NumTotalHouses = 0;
     this->NumUnclaimedHouses = 0;

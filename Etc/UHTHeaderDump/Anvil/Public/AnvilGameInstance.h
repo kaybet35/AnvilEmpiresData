@@ -5,6 +5,7 @@
 #include "AnvilOptionsManager.h"
 #include "ClientConfigManager.h"
 #include "Templates/SubclassOf.h"
+#include "WeatherManager.h"
 #include "AnvilGameInstance.generated.h"
 
 class ALandscapeProxy;
@@ -40,6 +41,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAnvilAssetManager AssetManager;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FWeatherManager WeatherManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAnvilOptionsManager OptionsManager;

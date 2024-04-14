@@ -4,6 +4,12 @@
 AAnvilGameModeBase = {}
 
 
+---@class AAnvilHUD : AHUD
+---@field ScreenshotRT UTextureRenderTarget2D
+AAnvilHUD = {}
+
+
+
 ---@class AAnvilMovieCharacter : AVisActorBase
 ---@field SimPlayerDataComponent USimPlayerDataComponent
 ---@field ItemMeshComponent USkeletalMeshComponent
@@ -257,6 +263,7 @@ AVisBuildSite = {}
 ---@field SaddleMesh USkeletalMeshComponent
 ---@field HalterHeadMesh USkeletalMeshComponent
 ---@field HalterBodyMesh USkeletalMeshComponent
+---@field SaddleMeshes TArray<USkeletalMesh>
 AVisCart = {}
 
 
@@ -921,6 +928,17 @@ FVoiceLoginInfo = {}
 
 
 
+---@class FWeatherManager
+---@field SeasonToAutumnCurve UCurveFloat
+---@field SeasonToWinterCurve UCurveFloat
+---@field SeasonToTempCurve UCurveFloat
+---@field SeasonToTintCurve UCurveFloat
+---@field WeatherSeasonsMaterialParameterCollection UMaterialParameterCollection
+---@field WinterPostProcessVolume APostProcessVolume
+FWeatherManager = {}
+
+
+
 ---@class UActionButtonWidget : UUserWidget
 ---@field ActionButtonType EActionButtonType
 ---@field ActionButton UButton
@@ -1072,6 +1090,7 @@ function UAnvilDropdownEntryWidget:OnOptionSelected(SelectedItem, SelectionType)
 ---@field CharacterSave UAnvilCharacterSave
 ---@field AnvilClientVoiceClient UAnvilClientVoiceClient
 ---@field AssetManager FAnvilAssetManager
+---@field WeatherManager FWeatherManager
 ---@field OptionsManager FAnvilOptionsManager
 ---@field UIGlobalsClass TSubclassOf<AUIGlobals>
 ---@field DirtyLandscapeProxies TArray<ALandscapeProxy>
@@ -1353,9 +1372,11 @@ function UDeathMarketMapIcon:OnLastDeathLocationChanged(OldVal, NewVal) end
 ---@field NumHousesStatus UStatusWidget
 ---@field NumTentsStatus UStatusWidget
 ---@field NumReinforcementSuppliesStatus UStatusWidget
+---@field DetectionRangeCirleBox UScaleBox
 ---@field FlashingFrequency float
 ---@field FlashingMinOpacity float
 ---@field ParentSlot UCanvasPanelSlot
+---@field DetectionRangeCirleSlot UCanvasPanelSlot
 ---@field TypeProperty FMapIconTypeProperty
 ---@field InstanceProperty FMapIconInstanceProperty
 UDeploymentPointWidget = {}
@@ -2475,6 +2496,7 @@ UVisPowerUnitAnimInstance = {}
 ---@class UVisRopeComponent : USceneComponent
 ---@field LineComponent UCableComponent
 ---@field RopeDataComponent UAnimalRopeAttachableDataComponent
+---@field RopeSlotDataComponent UAnimalRopeSlotDataComponent
 UVisRopeComponent = {}
 
 

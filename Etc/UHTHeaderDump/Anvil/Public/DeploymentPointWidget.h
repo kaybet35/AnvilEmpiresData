@@ -10,6 +10,7 @@ class UBorder;
 class UButton;
 class UCanvasPanelSlot;
 class UImage;
+class UScaleBox;
 class UStatusWidget;
 class UTextBlock;
 class UVerticalBox;
@@ -46,6 +47,9 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStatusWidget* NumReinforcementSuppliesStatus;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UScaleBox* DetectionRangeCirleBox;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FlashingFrequency;
     
@@ -54,6 +58,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCanvasPanelSlot* ParentSlot;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCanvasPanelSlot* DetectionRangeCirleSlot;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMapIconTypeProperty TypeProperty;

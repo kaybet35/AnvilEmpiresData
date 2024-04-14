@@ -40,6 +40,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UItemTemplate> DedicatedUnderlyingItemType;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UItemTemplate> RequiredEnablingItem;
+    
     R2_API FItemSlot();
 };
 

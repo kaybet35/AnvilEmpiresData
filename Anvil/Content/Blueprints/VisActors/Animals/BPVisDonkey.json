@@ -12,6 +12,12 @@
     "Class": "UScriptClass'AnimalRopeAttachableDataComponent'"
   },
   {
+    "Type": "AnimalRopeSlotDataComponent",
+    "Name": "RopeSlotDataComponent",
+    "Outer": "VisRope_GEN_VARIABLE",
+    "Class": "UScriptClass'AnimalRopeSlotDataComponent'"
+  },
+  {
     "Type": "ArrowComponent",
     "Name": "ArrowComponent",
     "Outer": "Default__BPVisDonkey_C",
@@ -37,7 +43,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.3"
       }
     }
   },
@@ -48,7 +54,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisDonkey_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.16"
       }
     },
     "SuperStruct": {
@@ -88,7 +94,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisDonkey_C'Default__BPVisDonkey_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.6"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.7"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -101,11 +107,11 @@
     "Properties": {
       "HungerDataComponent": {
         "ObjectName": "HungerDataComponent'Default__BPVisDonkey_C:HungerDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.10"
       },
       "StaminaDataComponent": {
         "ObjectName": "StaminaDataComponent'Default__BPVisDonkey_C:StaminaDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.21"
       },
       "AnimalAIDataComponent": {
         "ObjectName": "AnimalAIDataComponent'Default__BPVisDonkey_C:AnimalAIDataComponent'",
@@ -114,39 +120,49 @@
       "SeatSocketName": "S_Seat",
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.19"
       },
       "SaddleMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:SaddleMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.20"
       },
       "HalterHeadMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:HalterHeadMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.18"
       },
       "HalterBodyMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:HalterBodyMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.17"
       },
+      "SaddleMeshes": [
+        {
+          "ObjectName": "SkeletalMesh'SaddleDonkeyMill_SK'",
+          "ObjectPath": "Anvil/Content/Meshes/Animals/SaddleDonkeyMill_SK.0"
+        },
+        {
+          "ObjectName": "SkeletalMesh'SaddleDonkeyLiquid_SK'",
+          "ObjectPath": "Anvil/Content/Meshes/Animals/SaddleDonkeyLiquid_SK.0"
+        }
+      ],
       "VehicleMovementDataComponent": {
         "ObjectName": "VehicleMovementDataComponent'Default__BPVisDonkey_C:VehicleMovementDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.22"
       },
       "MoveLoopAudioComponent": {
         "ObjectName": "AudioComponent'Default__BPVisDonkey_C:MovementAudioComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.5"
       },
       "MoveLoopParticleSystem": {
         "ObjectName": "NiagaraComponent'Default__BPVisDonkey_C:MovementParticleSystem'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.11"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisDonkey_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.9"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.3"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -168,7 +184,7 @@
       "PositionSmoothSpeed": 4.0,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.3"
       }
     }
   },
@@ -198,7 +214,7 @@
       "bGenerateOverlapEvents": false,
       "AttachParent": {
         "ObjectName": "VisRopeComponent'BPVisDonkey_C:VisRope_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.23"
       },
       "bVisible": true,
       "bCanEverAffectNavigation": false
@@ -225,7 +241,7 @@
       "OverrideParameters": {},
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.3"
       }
     }
   },
@@ -247,7 +263,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisDonkey_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.12"
       },
       "VariableGuid": "EB6DB83B-4628ED71-EA4EC794-F7B15235",
       "InternalVariableName": "DefaultSceneRoot"
@@ -265,7 +281,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "AudioComponent'BPVisDonkey_C:Idle_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.4"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -285,7 +301,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRopeComponent'BPVisDonkey_C:VisRope_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.23"
       },
       "AttachToName": "S_Rope",
       "ParentComponentOrVariableName": "Mesh",
@@ -303,26 +319,26 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisDonkey_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisDonkey_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.14"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisDonkey_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisDonkey_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.14"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisDonkey_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.13"
       }
     }
   },
@@ -342,15 +358,12 @@
       },
       "LeaderPoseComponent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.19"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.2"
-      },
-      "ComponentTags": [
-        "TargetRopeSlot"
-      ]
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.3"
+      }
     }
   },
   {
@@ -369,15 +382,12 @@
       },
       "LeaderPoseComponent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.19"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.2"
-      },
-      "ComponentTags": [
-        "SourceRopeSlot"
-      ]
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.3"
+      }
     }
   },
   {
@@ -400,7 +410,7 @@
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.3"
       }
     }
   },
@@ -412,11 +422,11 @@
     "Properties": {
       "LeaderPoseComponent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.19"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.3"
       }
     }
   },
@@ -440,11 +450,15 @@
     "Properties": {
       "LineComponent": {
         "ObjectName": "CableComponent'BPVisDonkey_C:VisRope_GEN_VARIABLE.LineComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.8"
       },
       "RopeDataComponent": {
         "ObjectName": "AnimalRopeAttachableDataComponent'BPVisDonkey_C:VisRope_GEN_VARIABLE.RopeDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.1"
+      },
+      "RopeSlotDataComponent": {
+        "ObjectName": "AnimalRopeSlotDataComponent'BPVisDonkey_C:VisRope_GEN_VARIABLE.RopeSlotDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.2"
       }
     }
   }

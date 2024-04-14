@@ -12,6 +12,12 @@
     "Class": "UScriptClass'AnimalRopeAttachableDataComponent'"
   },
   {
+    "Type": "AnimalRopeSlotDataComponent",
+    "Name": "RopeSlotDataComponent",
+    "Outer": "VisRope_GEN_VARIABLE",
+    "Class": "UScriptClass'AnimalRopeSlotDataComponent'"
+  },
+  {
     "Type": "ArrowComponent",
     "Name": "ArrowComponent",
     "Outer": "Default__BPVisHorse_C",
@@ -37,7 +43,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.3"
       }
     }
   },
@@ -48,7 +54,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisHorse_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.16"
       }
     },
     "SuperStruct": {
@@ -88,7 +94,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisHorse_C'Default__BPVisHorse_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.6"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.7"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -101,11 +107,11 @@
     "Properties": {
       "HungerDataComponent": {
         "ObjectName": "HungerDataComponent'Default__BPVisHorse_C:HungerDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.10"
       },
       "StaminaDataComponent": {
         "ObjectName": "StaminaDataComponent'Default__BPVisHorse_C:StaminaDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.21"
       },
       "AnimalAIDataComponent": {
         "ObjectName": "AnimalAIDataComponent'Default__BPVisHorse_C:AnimalAIDataComponent'",
@@ -114,39 +120,49 @@
       "SeatSocketName": "S_Seat",
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisHorse_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.19"
       },
       "SaddleMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisHorse_C:SaddleMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.20"
       },
       "HalterHeadMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisHorse_C:HalterHeadMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.18"
       },
       "HalterBodyMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisHorse_C:HalterBodyMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.17"
       },
+      "SaddleMeshes": [
+        {
+          "ObjectName": "SkeletalMesh'Saddle_SK'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/Saddle_SK.0"
+        },
+        {
+          "ObjectName": "SkeletalMesh'Saddle_HorseMill'",
+          "ObjectPath": "Anvil/Content/Meshes/Animals/Saddle_HorseMill.0"
+        }
+      ],
       "VehicleMovementDataComponent": {
         "ObjectName": "VehicleMovementDataComponent'Default__BPVisHorse_C:VehicleMovementDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.22"
       },
       "MoveLoopAudioComponent": {
         "ObjectName": "AudioComponent'Default__BPVisHorse_C:MovementAudioComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.5"
       },
       "MoveLoopParticleSystem": {
         "ObjectName": "NiagaraComponent'Default__BPVisHorse_C:MovementParticleSystem'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.11"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisHorse_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.9"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.3"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -167,7 +183,7 @@
       "PositionSmoothSpeed": 4.0,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.3"
       }
     }
   },
@@ -197,7 +213,7 @@
       "bGenerateOverlapEvents": false,
       "AttachParent": {
         "ObjectName": "VisRopeComponent'BPVisHorse_C:VisRope_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.23"
       },
       "bVisible": true,
       "bCanEverAffectNavigation": false
@@ -224,7 +240,7 @@
       "OverrideParameters": {},
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.3"
       }
     }
   },
@@ -246,7 +262,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisHorse_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.12"
       },
       "VariableGuid": "EB6DB83B-4628ED71-EA4EC794-F7B15235",
       "InternalVariableName": "DefaultSceneRoot"
@@ -264,7 +280,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "AudioComponent'BPVisHorse_C:Idle_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.4"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -284,7 +300,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRopeComponent'BPVisHorse_C:VisRope_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.23"
       },
       "AttachToName": "S_Rope",
       "ParentComponentOrVariableName": "Mesh",
@@ -302,26 +318,26 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHorse_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisHorse_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.14"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHorse_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisHorse_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.14"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisHorse_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.13"
       }
     }
   },
@@ -333,11 +349,11 @@
     "Properties": {
       "LeaderPoseComponent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisHorse_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.19"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.3"
       }
     }
   },
@@ -347,13 +363,21 @@
     "Outer": "Default__BPVisHorse_C",
     "Class": "UScriptClass'SkeletalMeshComponent'",
     "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'HalterHorseHead_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/HalterHorseHead_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'HalterHorseHead_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/HalterHorseHead_SK.0"
+      },
       "LeaderPoseComponent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisHorse_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.19"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.3"
       }
     }
   },
@@ -377,7 +401,7 @@
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.3"
       }
     }
   },
@@ -397,11 +421,11 @@
       },
       "LeaderPoseComponent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisHorse_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.19"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisHorse_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.3"
       }
     }
   },
@@ -425,11 +449,15 @@
     "Properties": {
       "LineComponent": {
         "ObjectName": "CableComponent'BPVisHorse_C:VisRope_GEN_VARIABLE.LineComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.8"
       },
       "RopeDataComponent": {
         "ObjectName": "AnimalRopeAttachableDataComponent'BPVisHorse_C:VisRope_GEN_VARIABLE.RopeDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.1"
+      },
+      "RopeSlotDataComponent": {
+        "ObjectName": "AnimalRopeSlotDataComponent'BPVisHorse_C:VisRope_GEN_VARIABLE.RopeSlotDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisHorse.2"
       }
     }
   }

@@ -117,15 +117,15 @@ struct FInventoryItem
     FGridItem Base;                                                                   // 0x0000 (size: 0x8)
     FGridItem DedicatedItem;                                                          // 0x0008 (size: 0x8)
     int32 Count;                                                                      // 0x0010 (size: 0x4)
-    TArray<EAnvilItemTag> AcceptedTags;                                               // 0x0018 (size: 0x10)
-    float Durability;                                                                 // 0x0028 (size: 0x4)
-    uint8 ItemFlags;                                                                  // 0x002C (size: 0x1)
-    uint8 Payload;                                                                    // 0x002D (size: 0x1)
-    int32 StackLimit;                                                                 // 0x0030 (size: 0x4)
-    bool bIsDisabled;                                                                 // 0x0034 (size: 0x1)
-    bool bTooEncumberedToEquip;                                                       // 0x0035 (size: 0x1)
+    int64 AcceptedTags;                                                               // 0x0018 (size: 0x8)
+    float Durability;                                                                 // 0x0020 (size: 0x4)
+    uint8 ItemFlags;                                                                  // 0x0024 (size: 0x1)
+    uint8 Payload;                                                                    // 0x0025 (size: 0x1)
+    int32 StackLimit;                                                                 // 0x0028 (size: 0x4)
+    bool bIsDisabled;                                                                 // 0x002C (size: 0x1)
+    bool bTooEncumberedToEquip;                                                       // 0x002D (size: 0x1)
 
-}; // Size: 0x38
+}; // Size: 0x30
 
 struct FItemCost
 {
@@ -165,8 +165,9 @@ struct FItemSlot
     TArray<EAnvilItemTag> ProhibitedTags;                                             // 0x0038 (size: 0x10)
     TSubclassOf<class UItemTemplate> DedicatedItemType;                               // 0x0048 (size: 0x8)
     TSubclassOf<class UItemTemplate> DedicatedUnderlyingItemType;                     // 0x0050 (size: 0x8)
+    TSubclassOf<class UItemTemplate> RequiredEnablingItem;                            // 0x0058 (size: 0x8)
 
-}; // Size: 0x58
+}; // Size: 0x60
 
 struct FLootTableItem
 {
@@ -383,7 +384,7 @@ class UAnimalRopeAttachableDataComponent : public UDataComponent
 
 class UAnimalRopeAttachableProxyComponent : public UProxyComponent
 {
-    float FollowSpeed;                                                                // 0x0028 (size: 0x4)
+    float MaxFollowSpeed;                                                             // 0x0028 (size: 0x4)
 
 }; // Size: 0x30
 
@@ -698,8 +699,9 @@ class UEntityAttachableProxyComponent : public UProxyComponent
     float DistanceTolerance;                                                          // 0x006C (size: 0x4)
     float DetachMaxZDelta;                                                            // 0x0070 (size: 0x4)
     TArray<class TSubclassOf<UEntityTemplate>> TargetEntityTypes;                     // 0x0078 (size: 0x10)
+    TArray<class TSubclassOf<UItemTemplate>> RequiredEquipments;                      // 0x0088 (size: 0x10)
 
-}; // Size: 0x88
+}; // Size: 0x98
 
 class UEntityTemplate : public UObject
 {
@@ -920,7 +922,6 @@ class UInventoryProxyComponent : public UProxyComponent
     float NormalizedSpoilageFactor;                                                   // 0x003C (size: 0x4)
     float LifespanWhenEmpty;                                                          // 0x0040 (size: 0x4)
     bool bAllowWithdrawal;                                                            // 0x0044 (size: 0x1)
-    bool bConvertItemsToPublic;                                                       // 0x0045 (size: 0x1)
 
 }; // Size: 0x48
 
@@ -1529,8 +1530,10 @@ class USimPlayerProxyComponent : public UProxyComponent
     float RotationSpeed;                                                              // 0x0064 (size: 0x4)
     float MovementAcceleration;                                                       // 0x0068 (size: 0x4)
     float SprintStaminaDrain;                                                         // 0x006C (size: 0x4)
+    float ClimbStaminaCostSmall;                                                      // 0x0070 (size: 0x4)
+    float ClimbStaminaCostTall;                                                       // 0x0074 (size: 0x4)
 
-}; // Size: 0x70
+}; // Size: 0x78
 
 class USnapPointProxyComponent : public UProxyComponent
 {
@@ -1668,19 +1671,18 @@ class UTownHallDataComponent : public UDataComponent
     uint8 Tier;                                                                       // 0x00A8 (size: 0x1)
     bool bIsSmallCamp;                                                                // 0x00C8 (size: 0x1)
     bool bLocalReinforcementOnly;                                                     // 0x00E8 (size: 0x1)
-    uint8 TownHallId;                                                                 // 0x0108 (size: 0x1)
-    bool bTownUnderAttack;                                                            // 0x0128 (size: 0x1)
-    bool bHasSupplyStructure;                                                         // 0x0148 (size: 0x1)
-    int32 PledgedPlayersArrayCount;                                                   // 0x0168 (size: 0x4)
-    int32 NumTotalHouses;                                                             // 0x0188 (size: 0x4)
-    int32 NumUnclaimedHouses;                                                         // 0x01A8 (size: 0x4)
-    int32 NumTotalTents;                                                              // 0x01C8 (size: 0x4)
-    int32 NumUnclaimedTents;                                                          // 0x01E8 (size: 0x4)
-    int32 NumReinforcementSupplies;                                                   // 0x0208 (size: 0x4)
-    uint8 TownNameId;                                                                 // 0x0228 (size: 0x1)
-    uint8 TownNameOrdinal;                                                            // 0x0248 (size: 0x1)
+    bool bTownUnderAttack;                                                            // 0x0108 (size: 0x1)
+    uint8 TownHallId;                                                                 // 0x0128 (size: 0x1)
+    int32 PledgedPlayersArrayCount;                                                   // 0x0148 (size: 0x4)
+    int32 NumTotalHouses;                                                             // 0x0168 (size: 0x4)
+    int32 NumUnclaimedHouses;                                                         // 0x0188 (size: 0x4)
+    int32 NumTotalTents;                                                              // 0x01A8 (size: 0x4)
+    int32 NumUnclaimedTents;                                                          // 0x01C8 (size: 0x4)
+    int32 NumReinforcementSupplies;                                                   // 0x01E8 (size: 0x4)
+    uint8 TownNameId;                                                                 // 0x0208 (size: 0x1)
+    uint8 TownNameOrdinal;                                                            // 0x0228 (size: 0x1)
 
-}; // Size: 0x268
+}; // Size: 0x248
 
 class UTownHallProxyComponent : public UProxyComponent
 {
@@ -1721,14 +1723,16 @@ class UUpgradeDataComponent : public UDataComponent
     int32 ProcessedStoneRequirement;                                                  // 0x0148 (size: 0x4)
     int32 ProcessedIronRequirement;                                                   // 0x0168 (size: 0x4)
     int32 ReinforcedWoodRequirement;                                                  // 0x0188 (size: 0x4)
-    int32 WorkSubmitted;                                                              // 0x01A8 (size: 0x4)
-    int32 ProcessedWoodSubmitted;                                                     // 0x01C8 (size: 0x4)
-    int32 ProcessedStoneSubmitted;                                                    // 0x01E8 (size: 0x4)
-    int32 ProcessedIronSubmitted;                                                     // 0x0208 (size: 0x4)
-    int32 ReinforcedWoodSubmitted;                                                    // 0x0228 (size: 0x4)
-    int32 bIsUpgrading;                                                               // 0x0248 (size: 0x4)
+    int32 SilverRequirement;                                                          // 0x01A8 (size: 0x4)
+    int32 WorkSubmitted;                                                              // 0x01C8 (size: 0x4)
+    int32 ProcessedWoodSubmitted;                                                     // 0x01E8 (size: 0x4)
+    int32 ProcessedStoneSubmitted;                                                    // 0x0208 (size: 0x4)
+    int32 ProcessedIronSubmitted;                                                     // 0x0228 (size: 0x4)
+    int32 ReinforcedWoodSubmitted;                                                    // 0x0248 (size: 0x4)
+    int32 SilverSubmitted;                                                            // 0x0268 (size: 0x4)
+    int32 bIsUpgrading;                                                               // 0x0288 (size: 0x4)
 
-}; // Size: 0x268
+}; // Size: 0x2A8
 
 class UUpgradeProxyComponent : public UProxyComponent
 {
@@ -1741,8 +1745,9 @@ class UUpgradeProxyComponent : public UProxyComponent
     int32 ProcessedStoneRequirement;                                                  // 0x0044 (size: 0x4)
     int32 ProcessedIronRequirement;                                                   // 0x0048 (size: 0x4)
     int32 ReinforcedWoodRequirement;                                                  // 0x004C (size: 0x4)
+    int32 SilverRequirement;                                                          // 0x0050 (size: 0x4)
 
-}; // Size: 0x50
+}; // Size: 0x58
 
 class UVehicleMovementDataComponent : public UDataComponent
 {
@@ -1787,10 +1792,12 @@ class UVehicleSeatProxyComponent : public UProxyComponent
     bool bUseMountedWeapon;                                                           // 0x0062 (size: 0x1)
     bool bUseDeployable;                                                              // 0x0063 (size: 0x1)
     bool bMustNearExitToMount;                                                        // 0x0064 (size: 0x1)
+    bool bRevertRequiredEquipments;                                                   // 0x0065 (size: 0x1)
     int32 AnimationIndex;                                                             // 0x0068 (size: 0x4)
     float MountedAttackDamageMultiplier;                                              // 0x006C (size: 0x4)
+    TArray<class TSubclassOf<UItemTemplate>> RequiredEquipments;                      // 0x0070 (size: 0x10)
 
-}; // Size: 0x70
+}; // Size: 0x80
 
 class UWellDataComponent : public UDataComponent
 {

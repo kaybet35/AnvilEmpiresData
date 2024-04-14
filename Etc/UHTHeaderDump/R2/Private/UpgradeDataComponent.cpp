@@ -9,11 +9,13 @@ UUpgradeDataComponent::UUpgradeDataComponent(const FObjectInitializer& ObjectIni
     this->ProcessedStoneRequirement = 0;
     this->ProcessedIronRequirement = 0;
     this->ReinforcedWoodRequirement = 0;
+    this->SilverRequirement = 0;
     this->WorkSubmitted = 0;
     this->ProcessedWoodSubmitted = 0;
     this->ProcessedStoneSubmitted = 0;
     this->ProcessedIronSubmitted = 0;
     this->ReinforcedWoodSubmitted = 0;
+    this->SilverSubmitted = 0;
     this->bIsUpgrading = 0;
 }
 

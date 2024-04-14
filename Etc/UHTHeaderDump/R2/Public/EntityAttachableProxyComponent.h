@@ -6,6 +6,7 @@
 #include "EntityAttachableProxyComponent.generated.h"
 
 class UEntityTemplate;
+class UItemTemplate;
 
 UCLASS(Blueprintable, EditInlineNew)
 class R2_API UEntityAttachableProxyComponent : public UProxyComponent {
@@ -37,6 +38,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UEntityTemplate>> TargetEntityTypes;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<TSubclassOf<UItemTemplate>> RequiredEquipments;
     
     UEntityAttachableProxyComponent();
 
