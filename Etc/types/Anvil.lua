@@ -255,6 +255,8 @@ AVisBuildSite = {}
 ---@field SeatSocketName FName
 ---@field Mesh USkeletalMeshComponent
 ---@field SaddleMesh USkeletalMeshComponent
+---@field HalterHeadMesh USkeletalMeshComponent
+---@field HalterBodyMesh USkeletalMeshComponent
 AVisCart = {}
 
 

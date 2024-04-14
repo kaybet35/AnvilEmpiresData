@@ -31,6 +31,12 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* SaddleMesh;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    USkeletalMeshComponent* HalterHeadMesh;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    USkeletalMeshComponent* HalterBodyMesh;
+    
 public:
     AVisCart(const FObjectInitializer& ObjectInitializer);
 

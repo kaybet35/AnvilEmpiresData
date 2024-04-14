@@ -105,7 +105,7 @@
       },
       "StaminaDataComponent": {
         "ObjectName": "StaminaDataComponent'Default__BPVisDonkey_C:StaminaDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.20"
       },
       "AnimalAIDataComponent": {
         "ObjectName": "AnimalAIDataComponent'Default__BPVisDonkey_C:AnimalAIDataComponent'",
@@ -114,15 +114,23 @@
       "SeatSocketName": "S_Seat",
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.18"
       },
       "SaddleMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:SaddleMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.19"
+      },
+      "HalterHeadMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:HalterHeadMesh'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.17"
+      },
+      "HalterBodyMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:HalterBodyMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.16"
       },
       "VehicleMovementDataComponent": {
         "ObjectName": "VehicleMovementDataComponent'Default__BPVisDonkey_C:VehicleMovementDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.21"
       },
       "MoveLoopAudioComponent": {
         "ObjectName": "AudioComponent'Default__BPVisDonkey_C:MovementAudioComponent'",
@@ -190,7 +198,7 @@
       "bGenerateOverlapEvents": false,
       "AttachParent": {
         "ObjectName": "VisRopeComponent'BPVisDonkey_C:VisRope_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.22"
       },
       "bVisible": true,
       "bCanEverAffectNavigation": false
@@ -277,7 +285,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRopeComponent'BPVisDonkey_C:VisRope_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.22"
       },
       "AttachToName": "S_Rope",
       "ParentComponentOrVariableName": "Mesh",
@@ -320,6 +328,60 @@
   },
   {
     "Type": "SkeletalMeshComponent",
+    "Name": "HalterBodyMesh",
+    "Outer": "Default__BPVisDonkey_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'HalterDonkeyBody_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/HalterDonkeyBody_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'HalterDonkeyBody_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/HalterDonkeyBody_SK.0"
+      },
+      "LeaderPoseComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.18"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.2"
+      },
+      "ComponentTags": [
+        "TargetRopeSlot"
+      ]
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "HalterHeadMesh",
+    "Outer": "Default__BPVisDonkey_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'HalterDonkeyHead_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/HalterDonkeyHead_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'HalterDonkeyHead_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/HalterDonkeyHead_SK.0"
+      },
+      "LeaderPoseComponent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.18"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.2"
+      },
+      "ComponentTags": [
+        "SourceRopeSlot"
+      ]
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
     "Name": "Mesh",
     "Outer": "Default__BPVisDonkey_C",
     "Class": "UScriptClass'SkeletalMeshComponent'",
@@ -348,17 +410,9 @@
     "Outer": "Default__BPVisDonkey_C",
     "Class": "UScriptClass'SkeletalMeshComponent'",
     "Properties": {
-      "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'HalterDonkeyHead_SK'",
-        "ObjectPath": "Anvil/Content/Meshes/Animals/HalterDonkeyHead_SK.0"
-      },
-      "SkinnedAsset": {
-        "ObjectName": "SkeletalMesh'HalterDonkeyHead_SK'",
-        "ObjectPath": "Anvil/Content/Meshes/Animals/HalterDonkeyHead_SK.0"
-      },
       "LeaderPoseComponent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.18"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",

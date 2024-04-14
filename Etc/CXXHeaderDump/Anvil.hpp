@@ -549,8 +549,10 @@ class AVisCart : public AVisVehicle
     FName SeatSocketName;                                                             // 0x0430 (size: 0x8)
     class USkeletalMeshComponent* Mesh;                                               // 0x0438 (size: 0x8)
     class USkeletalMeshComponent* SaddleMesh;                                         // 0x0440 (size: 0x8)
+    class USkeletalMeshComponent* HalterHeadMesh;                                     // 0x0448 (size: 0x8)
+    class USkeletalMeshComponent* HalterBodyMesh;                                     // 0x0450 (size: 0x8)
 
-}; // Size: 0x448
+}; // Size: 0x458
 
 class AVisController : public AVisActor
 {

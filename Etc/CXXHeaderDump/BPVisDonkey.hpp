@@ -3,9 +3,9 @@
 
 class ABPVisDonkey_C : public AVisCart
 {
-    class UAudioComponent* idle;                                                      // 0x0448 (size: 0x8)
-    class UVisRopeComponent* VisRope;                                                 // 0x0450 (size: 0x8)
+    class UAudioComponent* idle;                                                      // 0x0458 (size: 0x8)
+    class UVisRopeComponent* VisRope;                                                 // 0x0460 (size: 0x8)
 
-}; // Size: 0x458
+}; // Size: 0x468
 
 #endif
