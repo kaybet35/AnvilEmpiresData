@@ -1717,12 +1717,6 @@ class UTownHallProxyComponent : public UProxyComponent
 
 }; // Size: 0x30
 
-class UTownMarkerProxyComponent : public UProxyComponent
-{
-    float InfluenceRadius;                                                            // 0x0028 (size: 0x4)
-
-}; // Size: 0x30
-
 class UTrapDataComponent : public UDataComponent
 {
     bool bWasTriggered;                                                               // 0x00A8 (size: 0x1)

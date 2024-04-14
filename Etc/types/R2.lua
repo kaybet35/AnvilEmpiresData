@@ -1717,12 +1717,6 @@ UTownHallProxyComponent = {}
 
 
 
----@class UTownMarkerProxyComponent : UProxyComponent
----@field InfluenceRadius float
-UTownMarkerProxyComponent = {}
-
-
-
 ---@class UTrapDataComponent : UDataComponent
 ---@field bWasTriggered boolean
 UTrapDataComponent = {}
