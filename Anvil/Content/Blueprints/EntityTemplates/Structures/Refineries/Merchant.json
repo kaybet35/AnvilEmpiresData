@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "Merchant_C'Default__Merchant_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.7"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.8"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -93,7 +93,52 @@
     "Type": "InventoryProxyComponent",
     "Name": "InventoryProxyComponent_0",
     "Outer": "Default__Merchant_C",
-    "Class": "UScriptClass'InventoryProxyComponent'"
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 9,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__Merchant_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 12,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "bAllowSubmission": false
+    }
   },
   {
     "Type": "Merchant_C",
@@ -106,7 +151,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__Merchant_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__Merchant_C:HealthComp'",
@@ -114,11 +159,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__Merchant_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__Merchant_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__Merchant_C:DestroyableComp'",
@@ -138,22 +183,25 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__Merchant_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.11"
       },
       "CodeNameString": "Merchant",
       "CodeName": 712958894,
       "RelevancyDistSqr": 1.6E+09,
       "bShowOnMap": true,
-      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
           "ObjectName": "RefineResourceProxyComponent'Default__Merchant_C:RefineResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.9"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__Merchant_C:InventoryProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.6"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Merchant_C:InventoryProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Merchant.7"
         }
       ],
       "VisActorClass": {
@@ -174,20 +222,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'Silver_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
-              "ItemCodeName": 0,
-              "Count": 5,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 5
             }
           ],
           "ProductionTime": 1.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -196,20 +243,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedStone_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedStone.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'Silver_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
-              "ItemCodeName": 0,
-              "Count": 20,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 20
             }
           ],
           "ProductionTime": 1.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -218,20 +264,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'Silver_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
-              "ItemCodeName": 0,
-              "Count": 30,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 30
             }
           ],
           "ProductionTime": 1.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -240,20 +285,19 @@
             "ObjectName": "BlueprintGeneratedClass'AxeWeak_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/AxeWeak.1"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'Silver_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
-              "ItemCodeName": 0,
-              "Count": 60,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 60
             }
           ],
           "ProductionTime": 1.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -262,20 +306,19 @@
             "ObjectName": "BlueprintGeneratedClass'PickaxeWeak_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/PickaxeWeak.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'Silver_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
-              "ItemCodeName": 0,
-              "Count": 60,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 60
             }
           ],
           "ProductionTime": 1.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -284,20 +327,19 @@
             "ObjectName": "BlueprintGeneratedClass'Sword_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Sword.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'Silver_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
-              "ItemCodeName": 0,
-              "Count": 120,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 120
             }
           ],
           "ProductionTime": 1.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -306,20 +348,19 @@
             "ObjectName": "BlueprintGeneratedClass'ShortBow_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/ShortBow.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'Silver_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
-              "ItemCodeName": 0,
-              "Count": 150,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 150
             }
           ],
           "ProductionTime": 1.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -328,20 +369,19 @@
             "ObjectName": "BlueprintGeneratedClass'Arrows_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Arrows.1"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'Silver_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
-              "ItemCodeName": 0,
-              "Count": 100,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 100
             }
           ],
           "ProductionTime": 1.0,
           "OutputCount": 30,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -350,20 +390,19 @@
             "ObjectName": "BlueprintGeneratedClass'ShieldSmall_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/ShieldSmall.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'Silver_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
-              "ItemCodeName": 0,
-              "Count": 120,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 120
             }
           ],
           "ProductionTime": 1.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -372,20 +411,19 @@
             "ObjectName": "BlueprintGeneratedClass'LeatherArmour_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Armour/LeatherArmour.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'Silver_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
-              "ItemCodeName": 0,
-              "Count": 200,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 200
             }
           ],
           "ProductionTime": 1.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         }

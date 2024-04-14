@@ -1,9 +1,9 @@
 #include "CraftingRecipe.h"
 
 FCraftingRecipe::FCraftingRecipe() {
-    this->CraftedItemTemplate = NULL;
-    this->CraftedItemCodeName = 0;
-    this->QualityIngredientTemplate = NULL;
-    this->QualityIngredientCodeName = 0;
+    this->CraftedItem = NULL;
+    this->CraftedItemVisVar = 0;
+    this->QualityIngredient = NULL;
+    this->QualityIngredientVisVar = 0;
 }
 

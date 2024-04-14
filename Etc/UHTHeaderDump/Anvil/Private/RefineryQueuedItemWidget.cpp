@@ -2,7 +2,6 @@
 
 URefineryQueuedItemWidget::URefineryQueuedItemWidget() {
     this->CancelButton = NULL;
-    this->PrivateIcon = NULL;
     this->ItemBorder = NULL;
 }
 

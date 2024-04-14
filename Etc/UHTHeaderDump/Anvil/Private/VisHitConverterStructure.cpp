@@ -11,8 +11,8 @@ AVisHitConverterStructure::AVisHitConverterStructure(const FObjectInitializer& O
     this->HitFailVFX = NULL;
     this->HitSuccessSoundCue = NULL;
     this->HitFailSoundCue = NULL;
-    this->ConvertedItemMeshComponent->SetupAttachment(RootComponent);
     this->HitVFXLocation->SetupAttachment(RootComponent);
+    this->ConvertedItemMeshComponent->SetupAttachment(RootComponent);
 }
 
 void AVisHitConverterStructure::OnHitConverterCounterChanged(const float& Old, const float& New) {

@@ -67,7 +67,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__FoodRefineryT1_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FoodRefineryT1.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FoodRefineryT1.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__FoodRefineryT1_C:HealthComp'",
@@ -75,11 +75,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__FoodRefineryT1_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FoodRefineryT1.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FoodRefineryT1.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__FoodRefineryT1_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FoodRefineryT1.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FoodRefineryT1.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__FoodRefineryT1_C:DestroyableComp'",
@@ -99,17 +99,16 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__FoodRefineryT1_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FoodRefineryT1.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FoodRefineryT1.11"
       },
       "CodeNameString": "FoodRefineryT1",
       "CodeName": 1374831599,
       "bShowOnMap": true,
-      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
           "ObjectName": "RefineResourceProxyComponent'Default__FoodRefineryT1_C:RefineResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FoodRefineryT1.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FoodRefineryT1.9"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__FoodRefineryT1_C:InventoryProxyComponent_0'",
@@ -117,7 +116,11 @@
         },
         {
           "ObjectName": "UpgradeProxyComponent'Default__FoodRefineryT1_C:UpgradeProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FoodRefineryT1.13"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FoodRefineryT1.14"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__FoodRefineryT1_C:InventoryProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FoodRefineryT1.8"
         }
       ],
       "VisActorClass": {
@@ -159,7 +162,52 @@
     "Type": "InventoryProxyComponent",
     "Name": "InventoryProxyComponent_0",
     "Outer": "Default__FoodRefineryT1_C",
-    "Class": "UScriptClass'InventoryProxyComponent'"
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 9,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__FoodRefineryT1_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 12,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "bAllowSubmission": false
+    }
   },
   {
     "Type": "RefineResourceProxyComponent",
@@ -173,20 +221,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedWheat_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWheat.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceWheat_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWheat.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 45.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -195,20 +242,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedAnimalFeed_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedAnimalFeed.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'WheatSeed_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WheatSeed.0"
               },
-              "ItemCodeName": 0,
-              "Count": 2,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 2
             }
           ],
           "ProductionTime": 5.0,
           "OutputCount": 5,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -217,20 +263,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedAnimalFeedHorse_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedAnimalFeedHorse.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'CabbageSeed_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/CabbageSeed.0"
               },
-              "ItemCodeName": 0,
-              "Count": 2,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 2
             }
           ],
           "ProductionTime": 5.0,
           "OutputCount": 5,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         }
@@ -291,9 +336,20 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/FoodRefineryT2.0"
       },
       "TierPrerequisite": 2,
-      "ProcessedWoodRequirement": 5,
-      "AnimalFatRequirement": 3,
-      "AnimalBonesRequirement": 1
+      "MaterialRequirements": [
+        {
+          "CodeName": -667807241,
+          "Count": 5
+        },
+        {
+          "CodeName": -34612789,
+          "Count": 3
+        },
+        {
+          "CodeName": 979967872,
+          "Count": 1
+        }
+      ]
     }
   }
 ]

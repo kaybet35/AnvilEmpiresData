@@ -10,7 +10,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__ArmourRefineryT3_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ArmourRefineryT3.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ArmourRefineryT3.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__ArmourRefineryT3_C:HealthComp'",
@@ -18,11 +18,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__ArmourRefineryT3_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ArmourRefineryT3.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ArmourRefineryT3.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__ArmourRefineryT3_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ArmourRefineryT3.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ArmourRefineryT3.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__ArmourRefineryT3_C:DestroyableComp'",
@@ -42,21 +42,24 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__ArmourRefineryT3_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ArmourRefineryT3.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ArmourRefineryT3.11"
       },
       "CodeNameString": "ArmourRefineryT3",
       "CodeName": -369595599,
       "bShowOnMap": true,
-      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
           "ObjectName": "RefineResourceProxyComponent'Default__ArmourRefineryT3_C:RefineResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ArmourRefineryT3.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ArmourRefineryT3.9"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__ArmourRefineryT3_C:InventoryProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ArmourRefineryT3.7"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__ArmourRefineryT3_C:InventoryProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/ArmourRefineryT3.8"
         }
       ],
       "VisActorClass": {
@@ -158,7 +161,52 @@
     "Type": "InventoryProxyComponent",
     "Name": "InventoryProxyComponent_0",
     "Outer": "Default__ArmourRefineryT3_C",
-    "Class": "UScriptClass'InventoryProxyComponent'"
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 9,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__ArmourRefineryT3_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 12,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "bAllowSubmission": false
+    }
   },
   {
     "Type": "RefineResourceProxyComponent",
@@ -172,20 +220,19 @@
             "ObjectName": "BlueprintGeneratedClass'LeatherArmour_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Armour/LeatherArmour.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
               },
-              "ItemCodeName": 0,
-              "Count": 2,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 2
             }
           ],
           "ProductionTime": 40.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -194,20 +241,19 @@
             "ObjectName": "BlueprintGeneratedClass'LeatherHelmet_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Armour/LeatherHelmet.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 35.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -216,29 +262,27 @@
             "ObjectName": "BlueprintGeneratedClass'ShieldSmall_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/ShieldSmall.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
               },
-              "ItemCodeName": 0,
-              "Count": 3,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 3
             },
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'AnimalBones_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalBones.1"
               },
-              "ItemCodeName": 0,
-              "Count": 5,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 5
             }
           ],
           "ProductionTime": 35.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -247,29 +291,27 @@
             "ObjectName": "BlueprintGeneratedClass'IronArmour_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Armour/IronArmour.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedThickLeather_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedThickLeather.0"
               },
-              "ItemCodeName": 0,
-              "Count": 2,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 2
             },
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
               },
-              "ItemCodeName": 0,
-              "Count": 3,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 3
             }
           ],
           "ProductionTime": 70.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -278,29 +320,27 @@
             "ObjectName": "BlueprintGeneratedClass'IronHelmet_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Armour/IronHelmet.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedThickLeather_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedThickLeather.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             },
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 60.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -309,38 +349,35 @@
             "ObjectName": "BlueprintGeneratedClass'Shield_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Shield.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
               },
-              "ItemCodeName": 0,
-              "Count": 3,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 3
             },
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'AnimalBones_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalBones.1"
               },
-              "ItemCodeName": 0,
-              "Count": 5,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 5
             },
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
               },
-              "ItemCodeName": 0,
-              "Count": 2,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 2
             }
           ],
           "ProductionTime": 20.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         }

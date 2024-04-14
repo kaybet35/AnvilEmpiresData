@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ItemCost.h"
+#include "BasicItemCount.h"
 #include "Templates/SubclassOf.h"
 #include "ProducableItem.generated.h"
 
@@ -14,16 +14,16 @@ public:
     TSubclassOf<UItemTemplate> ProducedItem;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FItemCost> ProducedItemCost;
+    int32 ProducedItemVisVar;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FBasicItemCount> InputItems;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ProductionTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 OutputCount;
-    
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint32 OutputMax;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bRequiresResearch;

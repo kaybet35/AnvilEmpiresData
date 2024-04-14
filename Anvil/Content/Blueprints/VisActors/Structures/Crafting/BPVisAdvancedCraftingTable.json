@@ -1,0 +1,609 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "RefineSound_GEN_VARIABLE",
+    "Outer": "BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'WoodCutterRefine_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Structures/WoodCutterRefine_Cue.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 600.0
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "Refining"
+      ]
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisAdvancedCraftingTable_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.18"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisRefinery'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RefineSound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPVisFamilyMeshComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BPVisFamilyMeshComponent_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisAdvancedCraftingTable_C'Default__BPVisAdvancedCraftingTable_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisAdvancedCraftingTable_C",
+    "Name": "Default__BPVisAdvancedCraftingTable_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.BPVisAdvancedCraftingTable_C'",
+    "Properties": {
+      "RefineResourceDataComponent": {
+        "ObjectName": "RefineResourceDataComponent'Default__BPVisAdvancedCraftingTable_C:RefineResourceDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.8"
+      },
+      "ScaffoldingComponent": {
+        "ObjectName": "VisScaffoldingComponent'Default__BPVisAdvancedCraftingTable_C:ScaffoldingComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.23"
+      },
+      "StructureIcon": {
+        "ObjectName": "Texture2D'IconAssemblyStation'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconAssemblyStation.0"
+      },
+      "BuildSiteOrder": -99,
+      "UpgradeDataComponent": {
+        "ObjectName": "UpgradeDataComponent'Default__BPVisAdvancedCraftingTable_C:UpgradeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.22"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisAdvancedCraftingTable_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.7"
+      },
+      "TeamDataComponent": {
+        "ObjectName": "TeamDataComponent'Default__BPVisAdvancedCraftingTable_C:TeamDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.21"
+      },
+      "StructureDataComponent": {
+        "ObjectName": "StructureDataComponent'Default__BPVisAdvancedCraftingTable_C:StructureDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.20"
+      },
+      "ScorchDataComponent": {
+        "ObjectName": "ScorchDataComponent'Default__BPVisAdvancedCraftingTable_C:ScorchDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.10"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisAdvancedCraftingTable_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.0"
+      },
+      "UseVolumeDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BPVisAdvancedCraftingTable_C:UseVolumeDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.5"
+      },
+      "GrassRemovalVolume": {
+        "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisAdvancedCraftingTable_C:GrassRemovalVolume'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.6"
+      },
+      "GeneratedScorchEffects": 6,
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "2C3112274B783A51C41E94915DD5AC30",
+        "SourceString": "Advanced Workbench",
+        "LocalizedString": "Advanced Workbench"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "0D62C9AB43F40A44A94AAAB5050040A9",
+        "SourceString": "A work area used to craft advanced equipment and weapons.",
+        "LocalizedString": "A work area used to craft advanced equipment and weapons."
+      },
+      "MapIconProperty": {
+        "Icon": {
+          "ObjectName": "Texture2D'IconWorkbench'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconWorkbench.0"
+        },
+        "MapActorType": "EMapIconType::MinorStructure"
+      },
+      "UseWindowType": "EHUDWindowType::Refinery",
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisAdvancedCraftingTable_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.0"
+      }
+    }
+  },
+  {
+    "Type": "BPVisFamilyMeshComponent_C",
+    "Name": "BPVisFamilyMeshComponent_GEN_VARIABLE",
+    "Outer": "BPVisAdvancedCraftingTable_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.BPVisFamilyMeshComponent_C'",
+    "Template": {
+      "ObjectName": "BPVisFamilyMeshComponent_C'Default__BPVisFamilyMeshComponent_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.1"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -46.7023,
+        "Y": 66.31791,
+        "Z": 112.0
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "UseVolumeDecalComponent",
+    "Outer": "Default__BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalSize": {
+        "X": 256.0,
+        "Y": 128.0,
+        "Z": 128.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisAdvancedCraftingTable_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.0"
+      }
+    }
+  },
+  {
+    "Type": "GrassRemovalVolumeComponent",
+    "Name": "GrassRemovalVolume",
+    "Outer": "Default__BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'GrassRemovalVolumeComponent'",
+    "Properties": {
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'Default__BPVisAdvancedCraftingTable_C:GrassRemovalVolume.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.19"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisAdvancedCraftingTable_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "RefineResourceDataComponent",
+    "Name": "RefineResourceDataComponent",
+    "Outer": "Default__BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'RefineResourceDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "ScorchDataComponent",
+    "Name": "ScorchDataComponent",
+    "Outer": "Default__BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'ScorchDataComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisAdvancedCraftingTable_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.9"
+      },
+      "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'BPVisAdvancedCraftingTable_C:RefineSound_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.1"
+      },
+      "VariableGuid": "0402F649-45983BAF-E5F1F3BC-263959FB",
+      "InternalVariableName": "RefineSound"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisFamilyMeshComponent_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPVisFamilyMeshComponent_C'BPVisAdvancedCraftingTable_C:BPVisFamilyMeshComponent_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.4"
+      },
+      "VariableGuid": "75A3E9FC-44BCA887-F4041EBC-6A1C353A",
+      "InternalVariableName": "BPVisFamilyMeshComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisAdvancedCraftingTable_C:VisStaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.27"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisAdvancedCraftingTable_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAdvancedCraftingTable_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAdvancedCraftingTable_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAdvancedCraftingTable_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAdvancedCraftingTable_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.17"
+        }
+      ],
+      "VariableGuid": "0B972A31-4A25059B-D0B088BE-077B60A0",
+      "InternalVariableName": "VisStaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisAdvancedCraftingTable_C:VisStaticMesh1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.24"
+      },
+      "VariableGuid": "62DDD04C-42DB65E1-78CF63B7-4EF28916",
+      "InternalVariableName": "VisStaticMesh1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisAdvancedCraftingTable_C:VisStaticMesh2_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.25"
+      },
+      "VariableGuid": "E443DED0-4C5B951A-DCD4F18D-DFFCB699",
+      "InternalVariableName": "VisStaticMesh2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisAdvancedCraftingTable_C:VisStaticMesh3_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.26"
+      },
+      "VariableGuid": "29FDAA87-4729F9D6-C06316A3-8647674C",
+      "InternalVariableName": "VisStaticMesh3"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisAdvancedCraftingTable_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.14"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisAdvancedCraftingTable_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAdvancedCraftingTable_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAdvancedCraftingTable_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAdvancedCraftingTable_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAdvancedCraftingTable_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAdvancedCraftingTable_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.17"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisAdvancedCraftingTable_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.11"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "GrassRemovalVolume",
+    "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "StructureDataComponent",
+    "Name": "StructureDataComponent",
+    "Outer": "Default__BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'StructureDataComponent'"
+  },
+  {
+    "Type": "TeamDataComponent",
+    "Name": "TeamDataComponent",
+    "Outer": "Default__BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'TeamDataComponent'"
+  },
+  {
+    "Type": "UpgradeDataComponent",
+    "Name": "UpgradeDataComponent",
+    "Outer": "Default__BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'UpgradeDataComponent'"
+  },
+  {
+    "Type": "VisScaffoldingComponent",
+    "Name": "ScaffoldingComponent",
+    "Outer": "Default__BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'VisScaffoldingComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisAdvancedCraftingTable_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisAdvancedCraftingTable.0"
+      }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh1_GEN_VARIABLE",
+    "Outer": "BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Hammer'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Hammer.2"
+      },
+      "RelativeLocation": {
+        "X": -48.0,
+        "Y": 16.389471,
+        "Z": 119.02539
+      },
+      "RelativeRotation": {
+        "Pitch": -0.794289,
+        "Yaw": -12.61914,
+        "Roll": -3.543238
+      },
+      "ComponentTags": [
+        "Structure"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh2_GEN_VARIABLE",
+    "Outer": "BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Sword_SM'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/Sword_SM.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeLocation": {
+        "X": 44.58771,
+        "Y": -43.275383,
+        "Z": 122.67753
+      },
+      "RelativeRotation": {
+        "Pitch": -1.114257,
+        "Yaw": 22.46001,
+        "Roll": 87.69322
+      },
+      "ComponentTags": [
+        "Structure"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh3_GEN_VARIABLE",
+    "Outer": "BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Axe_SM'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/Axe_SM.2"
+      },
+      "RelativeLocation": {
+        "X": -8.379809,
+        "Y": -19.500145,
+        "Z": 119.19492
+      },
+      "RelativeRotation": {
+        "Pitch": -4.481342E-07,
+        "Yaw": -40.0,
+        "Roll": 90.0
+      },
+      "ComponentTags": [
+        "Structure"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh_GEN_VARIABLE",
+    "Outer": "BPVisAdvancedCraftingTable_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscapeRotate",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Table02'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Table02.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  }
+]

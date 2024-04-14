@@ -3,6 +3,6 @@
 
 class UBPPlayerInventoryWindow_C : public UHUDWindow
 {
-}; // Size: 0x2B0
+}; // Size: 0x2B8
 
 #endif

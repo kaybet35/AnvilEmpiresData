@@ -12,6 +12,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=PlayerInputDataComponent -FallbackName=PlayerInputDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=SimPlayerDataComponent -FallbackName=SimPlayerDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=StaminaDataComponent -FallbackName=StaminaDataComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=TemperatureDataComponent -FallbackName=TemperatureDataComponent
 #include "MapMarkerComponent.h"
 #include "VisPlayerVisualsComponent.h"
 #include "VisSpringArmComponent.h"
@@ -25,11 +26,13 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->HealthDataComponent = CreateDefaultSubobject<UHealthDataComponent>(TEXT("HealthDataComponent"));
     this->HungerDataComponent = CreateDefaultSubobject<UHungerDataComponent>(TEXT("HungerDataComponent"));
     this->StaminaDataComponent = CreateDefaultSubobject<UStaminaDataComponent>(TEXT("StaminaDataComponent"));
+    this->TemperatureDataComponent = CreateDefaultSubobject<UTemperatureDataComponent>(TEXT("TemperatureDataComponent"));
     this->ItemMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ItemMesh"));
     this->ItemSecondaryMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ItemSecondaryMesh"));
     this->UnarmedItemMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("UnarmedItemMesh"));
     this->UnarmedItemSecondaryMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("UnarmedItemSecondaryMesh"));
     this->PostProcessComponent = CreateDefaultSubobject<UPostProcessComponent>(TEXT("PostProcessComponent"));
+    this->LandscapeCullVirtualTextureVolumeClass = NULL;
     this->RotationAmount = 1.00f;
     this->CameraRotationLerpSpeed = 1.00f;
     this->AimMeshLength = 100.00f;
@@ -52,8 +55,38 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->VoiceIndicator = CreateDefaultSubobject<UBillboardComponent>(TEXT("BillboardComponent"));
     this->TorchVFXComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("TorchVFXComponent"));
     this->TorchAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("TorchAudioComponent"));
+    this->RainVFXComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("RainVFXComponent"));
+    this->SnowVFXComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("SnowVFXComponent"));
+    this->BreathFogVFXComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("BreathFogVFXComponent"));
+    this->RainLowAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("RainLowAudioComponent"));
+    this->RainMidAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("RainMidAudioComponent"));
+    this->RainHighAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("RainHighAudioComponent"));
+    this->SnowLowAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("SnowLowAudioComponent"));
+    this->SnowMidAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("SnowMidAudioComponent"));
+    this->SnowHighAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("SnowHighAudioComponent"));
+    this->WindLowAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("WindLowAudioComponent"));
+    this->WindMidAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("WindMidAudioComponent"));
+    this->WindHighAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("WindHighAudioComponent"));
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
+    this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
+    this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
+    this->VoiceIndicator->SetupAttachment(RootComponent);
+    this->TorchVFXComponent->SetupAttachment(Mesh);
+    this->TorchAudioComponent->SetupAttachment(Mesh);
+    this->RainVFXComponent->SetupAttachment(SpringArm);
+    this->SnowVFXComponent->SetupAttachment(SpringArm);
+    this->BreathFogVFXComponent->SetupAttachment(Mesh);
+    this->RainLowAudioComponent->SetupAttachment(SpringArm);
+    this->RainMidAudioComponent->SetupAttachment(SpringArm);
+    this->RainHighAudioComponent->SetupAttachment(SpringArm);
+    this->SnowLowAudioComponent->SetupAttachment(SpringArm);
+    this->SnowMidAudioComponent->SetupAttachment(SpringArm);
+    this->SnowHighAudioComponent->SetupAttachment(SpringArm);
+    this->WindLowAudioComponent->SetupAttachment(SpringArm);
+    this->WindMidAudioComponent->SetupAttachment(SpringArm);
+    this->WindHighAudioComponent->SetupAttachment(SpringArm);
+    this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
@@ -61,12 +94,6 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->Mesh->SetupAttachment(RootComponent);
     this->Head->SetupAttachment(Mesh);
     this->AimMeshComponent->SetupAttachment(RootComponent);
-    this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
-    this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
-    this->VoiceIndicator->SetupAttachment(RootComponent);
-    this->TorchVFXComponent->SetupAttachment(Mesh);
-    this->TorchAudioComponent->SetupAttachment(Mesh);
-    this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 float AVisPlayer::GetVelocityHeadingDegrees() {

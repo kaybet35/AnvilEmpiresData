@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ItemCost.h"
+#include "BasicItemCount.h"
 #include "Templates/SubclassOf.h"
 #include "CraftingRecipe.generated.h"
 
@@ -11,19 +11,19 @@ struct FCraftingRecipe {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FItemCost> RecipeIngredients;
+    TArray<FBasicItemCount> RecipeIngredients;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<UItemTemplate> CraftedItemTemplate;
+    TSubclassOf<UItemTemplate> CraftedItem;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 CraftedItemCodeName;
+    int32 CraftedItemVisVar;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<UItemTemplate> QualityIngredientTemplate;
+    TSubclassOf<UItemTemplate> QualityIngredient;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 QualityIngredientCodeName;
+    int32 QualityIngredientVisVar;
     
     R2_API FCraftingRecipe();
 };

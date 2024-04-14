@@ -99,10 +99,30 @@
         {
           "ProxyRepeat": 1,
           "bOr": false,
+          "HeldItem": {
+            "ObjectName": "BlueprintGeneratedClass'ReinforcementSupplies_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Upkeep/ReinforcementSupplies.0"
+          },
+          "Count": 50,
+          "StackLimit": 100,
+          "bAllowWithdrawal": false,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": {
+            "ObjectName": "BlueprintGeneratedClass'ReinforcementSupplies_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Upkeep/ReinforcementSupplies.0"
+          },
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        },
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
           "HeldItem": null,
           "Count": 0,
-          "StackLimit": 250,
-          "bAllowWithdrawal": true,
+          "StackLimit": 25,
+          "bAllowWithdrawal": false,
           "AcceptedTags": [],
           "RequiredTags": [],
           "ProhibitedTags": [],
@@ -114,16 +134,23 @@
           "RequiredEnablingItem": null
         },
         {
-          "ProxyRepeat": 11,
+          "ProxyRepeat": 16,
           "bOr": false,
           "HeldItem": null,
           "Count": 0,
           "StackLimit": 250,
           "bAllowWithdrawal": true,
-          "AcceptedTags": [],
+          "AcceptedTags": [
+            "EAnvilItemTag::PrimaryTool",
+            "EAnvilItemTag::SecondaryTool",
+            "EAnvilItemTag::Head",
+            "EAnvilItemTag::Body",
+            "EAnvilItemTag::WeaponStorage"
+          ],
           "RequiredTags": [],
           "ProhibitedTags": [
-            "EAnvilItemTag::Resource"
+            "EAnvilItemTag::AnimalFeed",
+            "EAnvilItemTag::Seed"
           ],
           "DedicatedItemType": null,
           "DedicatedUnderlyingItemType": null,
@@ -131,8 +158,8 @@
         }
       ],
       "bUnpackCrates": true,
-      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
-      "bOnlyAllowMaxDurabilityItems": true
+      "bOnlyAllowMaxDurabilityItems": true,
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
     }
   },
   {

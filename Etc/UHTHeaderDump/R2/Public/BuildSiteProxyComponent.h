@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "BasicCount.h"
 #include "EAnvilToolType.h"
 #include "ProxyComponent.h"
 #include "Templates/SubclassOf.h"
@@ -34,9 +35,6 @@ public:
     bool bRequiresSmallCamp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool RequiresHorseToComplete;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bBuildableOverRoads;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -58,6 +56,9 @@ public:
     bool bBuildsInstantly;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bMinDistanceCheckIgnoreEnemyStructures;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TierPrerequisite;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -76,34 +77,7 @@ public:
     TArray<TSubclassOf<UEntityTemplate>> MinDistanceStructureTypes;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 RoadMaterialRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ResourceBranchesRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ProcessedWoodRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ProcessedStoneRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ProcessedIronRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ReinforcedWoodRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ResourceFibreRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 AnimalFatRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 AnimalBonesRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ProcessedLeatherRequirement;
+    TArray<FBasicCount> MaterialRequirements;
     
     UBuildSiteProxyComponent();
 

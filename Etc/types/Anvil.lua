@@ -139,7 +139,8 @@ APlayerVisualsInfo = {}
 AProxyPawn = {}
 
 function AProxyPawn:StopBandwidthRecording() end
-function AProxyPawn:StartBandwidthRecording() end
+---@param WatchTarget FString
+function AProxyPawn:StartBandwidthRecording(WatchTarget) end
 ---@param bDrawCollisions boolean
 function AProxyPawn:SetDrawCollisions(bDrawCollisions) end
 ---@param Height float
@@ -248,7 +249,6 @@ AVisBeaconTower = {}
 ---@field Category EBuildSiteCategory
 ---@field Order int32
 ---@field BuildSiteVisibility EBuildSiteVisibility
----@field BuildSiteCDO UBuildSiteProxyComponent
 ---@field ArrowComponent UArrowComponent
 ---@field Mesh UStaticMeshComponent
 ---@field BuildCollisionDecalComponent UDecalComponent
@@ -452,11 +452,13 @@ AVisPickupItem = {}
 ---@field HealthDataComponent UHealthDataComponent
 ---@field HungerDataComponent UHungerDataComponent
 ---@field StaminaDataComponent UStaminaDataComponent
+---@field TemperatureDataComponent UTemperatureDataComponent
 ---@field ItemMeshComponent USkeletalMeshComponent
 ---@field ItemSecondaryMeshComponent USkeletalMeshComponent
 ---@field UnarmedItemMeshComponent USkeletalMeshComponent
 ---@field UnarmedItemSecondaryMeshComponent USkeletalMeshComponent
 ---@field PostProcessComponent UPostProcessComponent
+---@field LandscapeCullVirtualTextureVolumeClass TSubclassOf<ARuntimeVirtualTextureVolume>
 ---@field RotationAmount float
 ---@field CameraRotationLerpSpeed float
 ---@field AimMeshLength float
@@ -480,6 +482,18 @@ AVisPickupItem = {}
 ---@field VoiceIndicator UBillboardComponent
 ---@field TorchVFXComponent UNiagaraComponent
 ---@field TorchAudioComponent UAudioComponent
+---@field RainVFXComponent UNiagaraComponent
+---@field SnowVFXComponent UNiagaraComponent
+---@field BreathFogVFXComponent UNiagaraComponent
+---@field RainLowAudioComponent UAudioComponent
+---@field RainMidAudioComponent UAudioComponent
+---@field RainHighAudioComponent UAudioComponent
+---@field SnowLowAudioComponent UAudioComponent
+---@field SnowMidAudioComponent UAudioComponent
+---@field SnowHighAudioComponent UAudioComponent
+---@field WindLowAudioComponent UAudioComponent
+---@field WindMidAudioComponent UAudioComponent
+---@field WindHighAudioComponent UAudioComponent
 ---@field PostProcessMaterialParameterCollection UMaterialParameterCollection
 ---@field PositionPostProcessMaterialParameterCollection UMaterialParameterCollection
 ---@field CurrentUsableVisActor AVisActor
@@ -693,6 +707,21 @@ FAudioVolumeClass = {}
 FAutoMoveState = {}
 
 
+---@class FBuildSiteCostData : FTableRowBase
+---@field RoadMaterial int16
+---@field ResourceBranches int16
+---@field ProcessedWood int16
+---@field ProcessedStone int16
+---@field ProcessedIron int16
+---@field ReinforcedWood int16
+---@field ResourceFibre int16
+---@field AnimalFat int16
+---@field AnimalBones int16
+---@field ProcessedLeather int16
+FBuildSiteCostData = {}
+
+
+
 ---@class FCachedCameraState
 FCachedCameraState = {}
 
@@ -871,6 +900,13 @@ FQueueStatusResponse = {}
 
 
 
+---@class FRefineryQueueItem
+---@field Base FGridItem
+---@field bCanCancel boolean
+FRefineryQueueItem = {}
+
+
+
 ---@class FServerListEntry
 ---@field ServerName FString
 ---@field ServerAddress FString
@@ -918,6 +954,19 @@ FTownHallData = {}
 ---@field bTownUnderAttack boolean
 ---@field bCallForReinforcements boolean
 FTownHallDeploymentInfo = {}
+
+
+
+---@class FUpgradeCostData : FTableRowBase
+---@field ProcessedWood int16
+---@field ProcessedStone int16
+---@field ProcessedIron int16
+---@field Silver int16
+---@field ReinforcedWood int16
+---@field AnimalFat int16
+---@field AnimalBones int16
+---@field ProcessedLeather int16
+FUpgradeCostData = {}
 
 
 
@@ -1592,6 +1641,8 @@ function UGrassRemovalVolumeComponent:RemoveGrass() end
 ---@field SizeBox USizeBox
 ---@field ItemImage UImage
 ---@field SubItemImage UImage
+---@field QualityIconImage UImage
+---@field QualityIconTextures TMap<EAnvilItemQualityType, UTexture2D>
 ---@field EmptyImage UTexture2D
 ---@field bIsActive boolean
 UGridItemWidget = {}
@@ -1676,7 +1727,7 @@ UHUDStatsWidget = {}
 ---@field LocalChatDisplayTime float
 ---@field InteractionProgressBar1 UProgressBar
 ---@field InteractionProgressBar2 UProgressBar
----@field EnvironmentStatsText UTextBlock
+---@field WeatherStatsText UTextBlock
 ---@field NewLocalMessages TArray<UChatMessage>
 UHUDWidget = {}
 
@@ -1684,11 +1735,11 @@ function UHUDWidget:PlayWinConditionAnimation() end
 ---@param AlertText FText
 function UHUDWidget:PlayTownStatusAlert(AlertText) end
 ---@return ESlateVisibility
-function UHUDWidget:GetHUDWidgetVisibility() end
----@return ESlateVisibility
-function UHUDWidget:GetEnvironmentStatsTextVisibility() end
+function UHUDWidget:GetWeatherStatsTextVisibility() end
 ---@return FText
-function UHUDWidget:GetEnvironmentStatsText() end
+function UHUDWidget:GetWeatherStatsText() end
+---@return ESlateVisibility
+function UHUDWidget:GetHUDWidgetVisibility() end
 
 
 ---@class UHUDWindow : UUserWidget
@@ -1696,6 +1747,7 @@ function UHUDWidget:GetEnvironmentStatsText() end
 ---@field StructureToPlayerTransfer boolean
 ---@field PlayerToStructureTransfer boolean
 ---@field StructureInventoryContainerWidget UInventoryContainerWidget
+---@field StructureInventoryContainerWidget2 UInventoryContainerWidget
 ---@field PlayerInventoryPanel UPlayerInventoryWidget
 ---@field TargetHeader UHeaderContainer
 UHUDWindow = {}
@@ -1806,8 +1858,6 @@ UInventoryContainerWidget = {}
 ---@field OverEncumberedImage UImage
 ---@field PublicIconImage UImage
 ---@field HitConversionProgressBar UProgressBar
----@field QualityIconImage UImage
----@field QualityIconTextures TMap<EItemQualityType, UTexture2D>
 UInventoryItemWidget = {}
 
 
@@ -1911,8 +1961,6 @@ UMarketItemGridWidget = {}
 ---@field PriceTextSizeBox USizeBox
 ---@field PriceEditableTextSizeBox USizeBox
 ---@field DurabilityBar UProgressBar
----@field QualityIconImage UImage
----@field QualityIconTextures TMap<EItemQualityType, UTexture2D>
 ---@field BelowDefaultValueColour FColor
 ---@field AboveDefaultValueColour FColor
 UMarketItemWidget = {}
@@ -2153,10 +2201,8 @@ URefineryQueueWidget = {}
 
 ---@class URefineryQueuedItemWidget : UGridItemWidget
 ---@field CancelButton UButton
----@field PrivateIcon UImage
 ---@field ItemBorder UBorder
 ---@field ItemBorderBrush FSlateBrush
----@field ItemBorderOtherPlayerBrush FSlateBrush
 URefineryQueuedItemWidget = {}
 
 function URefineryQueuedItemWidget:OnCancelClicked() end
@@ -2168,15 +2214,11 @@ function URefineryQueuedItemWidget:OnCancelClicked() end
 ---@field QueueTotalTimeText UTextBlock
 ---@field QueueTimeText UTextBlock
 ---@field StatusText UTextBlock
----@field PrivateButton UButton
----@field PrivateButtonStyleOn FButtonStyle
----@field PrivateButtonStyleOff FButtonStyle
 URefineryWindow = {}
 
 ---@param Old boolean
 ---@param New boolean
 function URefineryWindow:OnStatusChanged(Old, New) end
-function URefineryWindow:OnPrivateButtonClicked() end
 
 
 ---@class URelicTechCenterWindow : UStructureWindow
@@ -2607,6 +2649,9 @@ UVisVehicleAnimInstance = {}
 ---@field HealthBar UProgressBar
 ---@field StaminaOverlay UOverlay
 ---@field StaminaBar UProgressBar
+---@field TemperatureBar UProgressBar
+---@field TemperatureWarmColour FLinearColor
+---@field TemperatureColdColour FLinearColor
 UVitalityStatusWidget = {}
 
 

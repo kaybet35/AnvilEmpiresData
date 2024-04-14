@@ -3,6 +3,6 @@
 
 class ABPVisPowerRopeBuildsite_C : public AVisSplineBuildSite
 {
-}; // Size: 0x470
+}; // Size: 0x468
 
 #endif

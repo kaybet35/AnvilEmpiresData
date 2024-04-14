@@ -1,9 +1,13 @@
 #include "ItemCount.h"
 
 FItemCount::FItemCount() {
-    this->ItemType = NULL;
-    this->ItemCodeName = 0;
+    this->CodeName = NULL;
+    this->CodeNameVisVar = 0;
+    this->UnderlyingCodeName = NULL;
+    this->UnderlyingCodeNameVisVar = 0;
+    this->Durability = 0.00f;
     this->Count = 0;
     this->ItemFlags = 0;
+    this->Payload = 0;
 }
 

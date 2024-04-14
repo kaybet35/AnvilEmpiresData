@@ -17,6 +17,8 @@ enum class EAnvilSnappingChannelType : uint8 {
     CanalSideStart,
     PowerStart,
     PowerEnd,
+    PowerRopeStart,
+    PowerRopeEnd,
     PowerConvertedAnvilStart,
     PowerConvertedAnvilEnd,
     PowerConvertedHeatStart,

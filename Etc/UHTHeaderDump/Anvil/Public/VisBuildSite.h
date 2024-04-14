@@ -7,7 +7,6 @@
 
 class UArrowComponent;
 class UBuildSiteDataComponent;
-class UBuildSiteProxyComponent;
 class UDecalComponent;
 class UMaterialInterface;
 class UStaticMeshComponent;
@@ -39,9 +38,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EBuildSiteVisibility BuildSiteVisibility;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UBuildSiteProxyComponent* BuildSiteCDO;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

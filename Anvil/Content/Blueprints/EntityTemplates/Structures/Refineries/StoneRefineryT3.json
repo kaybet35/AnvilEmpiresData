@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "StoneRefineryT3_C'Default__StoneRefineryT3_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/StoneRefineryT3.10"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/StoneRefineryT3.11"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -92,7 +92,52 @@
     "Type": "InventoryProxyComponent",
     "Name": "InventoryProxyComponent_0",
     "Outer": "Default__StoneRefineryT3_C",
-    "Class": "UScriptClass'InventoryProxyComponent'"
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 9,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__StoneRefineryT3_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 12,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "bAllowSubmission": false
+    }
   },
   {
     "Type": "RefineResourceProxyComponent",
@@ -106,20 +151,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedStone_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedStone.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceStoneFragments_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceStoneFragments.0"
               },
-              "ItemCodeName": 0,
-              "Count": 3,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 3
             }
           ],
           "ProductionTime": 45.0,
           "OutputCount": 1,
-          "OutputMax": 30,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -128,20 +172,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedStone_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedStone.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceStone_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceStone.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 45.0,
           "OutputCount": 2,
-          "OutputMax": 30,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -150,20 +193,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedClay_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedClay.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceClay_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceClay.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 45.0,
           "OutputCount": 1,
-          "OutputMax": 30,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -172,20 +214,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedCoal_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedCoal.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceCoal_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceCoal.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 45.0,
           "OutputCount": 1,
-          "OutputMax": 30,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         }
@@ -226,7 +267,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__StoneRefineryT3_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/StoneRefineryT3.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/StoneRefineryT3.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__StoneRefineryT3_C:HealthComp'",
@@ -234,11 +275,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__StoneRefineryT3_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/StoneRefineryT3.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/StoneRefineryT3.9"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__StoneRefineryT3_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/StoneRefineryT3.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/StoneRefineryT3.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__StoneRefineryT3_C:DestroyableComp'",
@@ -258,21 +299,24 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__StoneRefineryT3_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/StoneRefineryT3.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/StoneRefineryT3.10"
       },
       "CodeNameString": "StoneRefineryT3",
       "CodeName": 1613145547,
       "bShowOnMap": true,
-      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
           "ObjectName": "RefineResourceProxyComponent'Default__StoneRefineryT3_C:RefineResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/StoneRefineryT3.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/StoneRefineryT3.8"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__StoneRefineryT3_C:InventoryProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/StoneRefineryT3.6"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__StoneRefineryT3_C:InventoryProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/StoneRefineryT3.7"
         }
       ],
       "VisActorClass": {

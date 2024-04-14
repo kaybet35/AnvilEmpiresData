@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "MineralRefineryT3_C'Default__MineralRefineryT3_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/MineralRefineryT3.7"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/MineralRefineryT3.8"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -92,7 +92,52 @@
     "Type": "InventoryProxyComponent",
     "Name": "InventoryProxyComponent_0",
     "Outer": "Default__MineralRefineryT3_C",
-    "Class": "UScriptClass'InventoryProxyComponent'"
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 9,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__MineralRefineryT3_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 12,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "bAllowSubmission": false
+    }
   },
   {
     "Type": "MineralRefineryT3_C",
@@ -105,7 +150,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__MineralRefineryT3_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/MineralRefineryT3.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/MineralRefineryT3.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__MineralRefineryT3_C:HealthComp'",
@@ -113,11 +158,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__MineralRefineryT3_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/MineralRefineryT3.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/MineralRefineryT3.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__MineralRefineryT3_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/MineralRefineryT3.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/MineralRefineryT3.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__MineralRefineryT3_C:DestroyableComp'",
@@ -137,21 +182,24 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__MineralRefineryT3_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/MineralRefineryT3.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/MineralRefineryT3.11"
       },
       "CodeNameString": "MineralRefineryT3",
       "CodeName": -2073196787,
       "bShowOnMap": true,
-      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
           "ObjectName": "RefineResourceProxyComponent'Default__MineralRefineryT3_C:RefineResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/MineralRefineryT3.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/MineralRefineryT3.9"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__MineralRefineryT3_C:InventoryProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/MineralRefineryT3.6"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__MineralRefineryT3_C:InventoryProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/MineralRefineryT3.7"
         }
       ],
       "VisActorClass": {
@@ -172,20 +220,19 @@
             "ObjectName": "BlueprintGeneratedClass'ResourceIronFragments_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceIronFragments.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceIronOre_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceIronOre.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 45.0,
           "OutputCount": 3,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         }

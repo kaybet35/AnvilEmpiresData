@@ -300,6 +300,16 @@ EAnvilItemPayloadType = {
     EAnvilItemPayloadType_MAX = 4,
 }
 
+---@enum EAnvilItemQualityType
+EAnvilItemQualityType = {
+    None = 0,
+    Low = 1,
+    Medium = 2,
+    High = 3,
+    NumTypes = 4,
+    EAnvilItemQualityType_MAX = 5,
+}
+
 ---@enum EAnvilItemTag
 EAnvilItemTag = {
     None = 0,
@@ -323,6 +333,7 @@ EAnvilItemTag = {
     LiquidStorage = 18,
     AnimalEquipment = 19,
     AnimalFeed = 20,
+    Seed = 21,
     MaxTag = 63,
     EAnvilItemTag_MAX = 64,
 }
@@ -502,6 +513,13 @@ EAnvilProfileNameCheckType = {
     EAnvilProfileNameCheckType_MAX = 5,
 }
 
+---@enum EAnvilR2WeatherEventType
+EAnvilR2WeatherEventType = {
+    Rain = 0,
+    Snow = 1,
+    EAnvilR2WeatherEventType_MAX = 2,
+}
+
 ---@enum EAnvilRareResourceAreaType
 EAnvilRareResourceAreaType = {
     None = 0,
@@ -579,17 +597,19 @@ EAnvilSnappingChannelType = {
     CanalSideStart = 10,
     PowerStart = 11,
     PowerEnd = 12,
-    PowerConvertedAnvilStart = 13,
-    PowerConvertedAnvilEnd = 14,
-    PowerConvertedHeatStart = 15,
-    PowerConvertedHeatEnd = 16,
-    DebugPowerSource = 17,
-    NaturalWaterRequired = 18,
-    NaturalWaterOptional = 19,
-    PowerConvertedWoodChoppingStationStart = 20,
-    PowerConvertedWoodChoppingStationEnd = 21,
-    PropertyArea = 22,
-    EAnvilSnappingChannelType_MAX = 23,
+    PowerRopeStart = 13,
+    PowerRopeEnd = 14,
+    PowerConvertedAnvilStart = 15,
+    PowerConvertedAnvilEnd = 16,
+    PowerConvertedHeatStart = 17,
+    PowerConvertedHeatEnd = 18,
+    DebugPowerSource = 19,
+    NaturalWaterRequired = 20,
+    NaturalWaterOptional = 21,
+    PowerConvertedWoodChoppingStationStart = 22,
+    PowerConvertedWoodChoppingStationEnd = 23,
+    PropertyArea = 24,
+    EAnvilSnappingChannelType_MAX = 25,
 }
 
 ---@enum EAnvilSpawnType
@@ -746,7 +766,8 @@ EAnvilTravelType = {
     Reinforce = 2,
     ReturnToPledgedTown = 3,
     Respawn = 4,
-    EAnvilTravelType_MAX = 5,
+    Teleport = 5,
+    EAnvilTravelType_MAX = 6,
 }
 
 ---@enum EAnvilUsePromptType
@@ -803,18 +824,7 @@ EEntitySerializationType = {
     SerializationTypeDefault = 0,
     SerializationTypePlayer = 1,
     SerializationTypeController = 2,
-    SerializationTypeRefinery = 3,
     SerializationTypeMarketplace = 4,
     EEntitySerializationType_MAX = 5,
-}
-
----@enum EItemQualityType
-EItemQualityType = {
-    None = 0,
-    Low = 1,
-    Medium = 2,
-    High = 3,
-    NumTypes = 4,
-    EItemQualityType_MAX = 5,
 }
 

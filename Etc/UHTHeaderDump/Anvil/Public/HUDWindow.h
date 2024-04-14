@@ -26,6 +26,9 @@ protected:
     UInventoryContainerWidget* StructureInventoryContainerWidget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UInventoryContainerWidget* StructureInventoryContainerWidget2;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPlayerInventoryWidget* PlayerInventoryPanel;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

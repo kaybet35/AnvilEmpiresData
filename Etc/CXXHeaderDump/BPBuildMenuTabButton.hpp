@@ -3,6 +3,6 @@
 
 class UBPBuildMenuTabButton_C : public UBuildMenuTabButton
 {
-}; // Size: 0x300
+}; // Size: 0x358
 
 #endif

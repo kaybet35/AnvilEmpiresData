@@ -47,7 +47,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__CookshopT3_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CookshopT3.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CookshopT3.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__CookshopT3_C:HealthComp'",
@@ -55,11 +55,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__CookshopT3_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CookshopT3.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CookshopT3.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__CookshopT3_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CookshopT3.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CookshopT3.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__CookshopT3_C:DestroyableComp'",
@@ -79,12 +79,11 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__CookshopT3_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CookshopT3.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CookshopT3.11"
       },
       "CodeNameString": "CookshopT3",
       "CodeName": -672011098,
       "bShowOnMap": true,
-      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
@@ -93,6 +92,10 @@
         },
         {
           "ObjectName": "RefineResourceProxyComponent'Default__CookshopT3_C:RefineResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CookshopT3.9"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__CookshopT3_C:InventoryProxyComponent_1'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CookshopT3.8"
         }
       ],
@@ -162,23 +165,47 @@
     "Properties": {
       "Slots": [
         {
-          "ProxyRepeat": 1,
+          "ProxyRepeat": 9,
           "bOr": false,
           "HeldItem": null,
           "Count": 0,
-          "StackLimit": 1000,
+          "StackLimit": 30,
           "bAllowWithdrawal": true,
           "AcceptedTags": [],
           "RequiredTags": [],
           "ProhibitedTags": [],
-          "DedicatedItemType": {
-            "ObjectName": "BlueprintGeneratedClass'Silver_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
-          },
+          "DedicatedItemType": null,
           "DedicatedUnderlyingItemType": null,
           "RequiredEnablingItem": null
         }
-      ]
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__CookshopT3_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 12,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "bAllowSubmission": false
     }
   },
   {
@@ -193,20 +220,19 @@
             "ObjectName": "BlueprintGeneratedClass'ReinforcementSupplies_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Upkeep/ReinforcementSupplies.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceMeat_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceMeat.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
           "OutputCount": 2,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -215,20 +241,19 @@
             "ObjectName": "BlueprintGeneratedClass'ReinforcementSupplies_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Upkeep/ReinforcementSupplies.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceMeatBoar_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceMeatBoar.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
           "OutputCount": 2,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -237,20 +262,19 @@
             "ObjectName": "BlueprintGeneratedClass'ReinforcementSupplies_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Upkeep/ReinforcementSupplies.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceCabbage_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceCabbage.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
           "OutputCount": 2,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -259,20 +283,19 @@
             "ObjectName": "BlueprintGeneratedClass'ReinforcementSupplies_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Upkeep/ReinforcementSupplies.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceWheat_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWheat.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
           "OutputCount": 2,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -281,20 +304,19 @@
             "ObjectName": "BlueprintGeneratedClass'StructureSupplies_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Upkeep/StructureSupplies.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'Silver_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         }

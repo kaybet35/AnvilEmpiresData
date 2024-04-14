@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ItemCost.h"
+#include "BasicItemCount.h"
 #include "ProxyComponent.h"
 #include "RelicTechCenterProxyComponent.generated.h"
 
@@ -9,7 +9,7 @@ class R2_API URelicTechCenterProxyComponent : public UProxyComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FItemCost> RelicTechCosts;
+    TArray<FBasicItemCount> RelicTechCosts;
     
     URelicTechCenterProxyComponent();
 

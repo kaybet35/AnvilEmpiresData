@@ -1,10 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=ButtonStyle -FallbackName=ButtonStyle
 #include "StructureWindow.h"
 #include "RefineryWindow.generated.h"
 
-class UButton;
 class URefineryProducibleListWidget;
 class URefineryQueueWidget;
 class UTextBlock;
@@ -29,24 +27,12 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* StatusText;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UButton* PrivateButton;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FButtonStyle PrivateButtonStyleOn;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FButtonStyle PrivateButtonStyleOff;
-    
 public:
     URefineryWindow();
 
 private:
     UFUNCTION(BlueprintCallable)
     void OnStatusChanged(const bool& Old, const bool& New);
-    
-    UFUNCTION(BlueprintCallable)
-    void OnPrivateButtonClicked();
     
 };
 

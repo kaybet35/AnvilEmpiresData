@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "DataComponent.h"
-#include "HousePledgedPlayerIdArray.h"
+#include "HousePledgedPlayerArray.h"
 #include "HousingDataComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -21,7 +21,7 @@ public:
     bool IsGroupHouse;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FHousePledgedPlayerIdArray PledgedPlayerIds;
+    FHousePledgedPlayerArray PledgedPlayerIds;
     
     UHousingDataComponent(const FObjectInitializer& ObjectInitializer);
 

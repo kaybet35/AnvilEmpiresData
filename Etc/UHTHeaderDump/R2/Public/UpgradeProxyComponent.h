@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "BasicCount.h"
 #include "ProxyComponent.h"
 #include "Templates/SubclassOf.h"
 #include "UpgradeProxyComponent.generated.h"
@@ -23,31 +24,7 @@ public:
     uint8 TierPrerequisite;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 WorkRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ProcessedWoodRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ProcessedStoneRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ProcessedIronRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ReinforcedWoodRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 SilverRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 AnimalFatRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 AnimalBonesRequirement;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ProcessedLeatherRequirement;
+    TArray<FBasicCount> MaterialRequirements;
     
     UUpgradeProxyComponent();
 

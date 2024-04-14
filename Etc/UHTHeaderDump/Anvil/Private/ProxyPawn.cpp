@@ -11,7 +11,7 @@ AProxyPawn::AProxyPawn(const FObjectInitializer& ObjectInitializer) : Super(Obje
 void AProxyPawn::StopBandwidthRecording() {
 }
 
-void AProxyPawn::StartBandwidthRecording() {
+void AProxyPawn::StartBandwidthRecording(const FString& WatchTarget) {
 }
 
 void AProxyPawn::SetDrawCollisions(bool bDrawCollisions) {

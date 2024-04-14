@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
 #include "VitalityStatusWidget.generated.h"
 
@@ -24,6 +25,15 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UProgressBar* StaminaBar;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UProgressBar* TemperatureBar;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FLinearColor TemperatureWarmColour;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FLinearColor TemperatureColdColour;
     
     UVitalityStatusWidget();
 

@@ -13,9 +13,8 @@ class ABPVisMarketplaceShopT1_C : public AVisMarketShop
     class UScorchEffectComponent* ScorchEffect7;                                      // 0x04C0 (size: 0x8)
     class UScorchEffectComponent* ScorchEffect8;                                      // 0x04C8 (size: 0x8)
     class UScorchEffectComponent* ScorchEffect6;                                      // 0x04D0 (size: 0x8)
-    class UStaticMeshComponent* StaticMesh;                                           // 0x04D8 (size: 0x8)
-    class UStaticMeshComponent* StaticMesh1;                                          // 0x04E0 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh1;                                          // 0x04D8 (size: 0x8)
 
-}; // Size: 0x4E8
+}; // Size: 0x4E0
 
 #endif

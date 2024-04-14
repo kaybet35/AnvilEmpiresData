@@ -75,27 +75,35 @@ FAnvilSimActivity = {}
 
 
 
----@class FCookingFuel
----@field FuelItem TSubclassOf<UItemTemplate>
----@field BurnDurationSec float
-FCookingFuel = {}
+---@class FBasicCount
+---@field CodeName int32
+---@field Count int32
+FBasicCount = {}
+
+
+
+---@class FBasicItemCount
+---@field CodeName TSubclassOf<UItemTemplate>
+---@field CodeNameVisVar int32
+---@field Count int32
+FBasicItemCount = {}
 
 
 
 ---@class FCookingRecipe
----@field InputItems TArray<FItemQuantity>
----@field OutputItems TArray<FItemQuantity>
+---@field InputItems TArray<FBasicItemCount>
+---@field OutputItems TArray<FBasicItemCount>
 ---@field CookDurationSec float
 FCookingRecipe = {}
 
 
 
 ---@class FCraftingRecipe
----@field RecipeIngredients TArray<FItemCost>
----@field CraftedItemTemplate TSubclassOf<UItemTemplate>
----@field CraftedItemCodeName int32
----@field QualityIngredientTemplate TSubclassOf<UItemTemplate>
----@field QualityIngredientCodeName int32
+---@field RecipeIngredients TArray<FBasicItemCount>
+---@field CraftedItem TSubclassOf<UItemTemplate>
+---@field CraftedItemVisVar int32
+---@field QualityIngredient TSubclassOf<UItemTemplate>
+---@field QualityIngredientVisVar int32
 FCraftingRecipe = {}
 
 
@@ -115,9 +123,18 @@ FFootprintSharedCompEntry = {}
 
 
 
+---@class FFuelType
+---@field FuelItem TSubclassOf<UItemTemplate>
+---@field FuelItemVisVar int32
+---@field BurnDurationSec float
+FFuelType = {}
+
+
+
 ---@class FGridItem
 ---@field CodeName int32
 ---@field UnderlyingCodeName int32
+---@field Payload uint8
 FGridItem = {}
 
 
@@ -148,9 +165,9 @@ FHitConverterOutput = {}
 
 
 
----@class FHousePledgedPlayerIdArray
----@field PlayerArray TArray<int64>
-FHousePledgedPlayerIdArray = {}
+---@class FHousePledgedPlayerArray
+---@field WrappedArray TArray<int64>
+FHousePledgedPlayerArray = {}
 
 
 
@@ -169,29 +186,16 @@ FInventoryItem = {}
 
 
 
----@class FItemCost
----@field CostItem TSubclassOf<UItemTemplate>
----@field ItemCodeName int32
----@field Count uint8
----@field RequiredRareResourceArea EAnvilRareResourceAreaType
-FItemCost = {}
-
-
-
 ---@class FItemCount
----@field ItemType TSubclassOf<UItemTemplate>
----@field ItemCodeName int32
+---@field CodeName TSubclassOf<UItemTemplate>
+---@field CodeNameVisVar int32
+---@field UnderlyingCodeName TSubclassOf<UItemTemplate>
+---@field UnderlyingCodeNameVisVar int32
+---@field Durability float
 ---@field Count int32
 ---@field ItemFlags uint8
+---@field Payload uint8
 FItemCount = {}
-
-
-
----@class FItemQuantity
----@field ItemType TSubclassOf<UItemTemplate>
----@field ItemCodeName int32
----@field Quantity uint8
-FItemQuantity = {}
 
 
 
@@ -239,50 +243,55 @@ FNightShroudLightSource = {}
 
 
 
----@class FNightShroudLightSourceData
----@field LightSourceArray TArray<FNightShroudLightSource>
-FNightShroudLightSourceData = {}
-
-
-
 ---@class FPledgedPlayer
 FPledgedPlayer = {}
 
 
 ---@class FProducableItem
 ---@field ProducedItem TSubclassOf<UItemTemplate>
----@field ProducedItemCost TArray<FItemCost>
+---@field ProducedItemVisVar int32
+---@field InputItems TArray<FBasicItemCount>
 ---@field ProductionTime float
 ---@field OutputCount uint8
----@field OutputMax uint32
 ---@field bRequiresResearch boolean
 ---@field bCrateProducedItems boolean
 FProducableItem = {}
 
 
 
----@class FRefineryProducibleItem
----@field Base FGridItem
----@field OutputCount int32
----@field Cost TArray<FRefineryProducibleItemCost>
----@field bRequiresResearch boolean
----@field bCrateProducedItems boolean
-FRefineryProducibleItem = {}
+---@class FR2WeatherEvent
+---@field Config FR2WeatherEventConfig
+---@field StartUnixTimestamp int64
+FR2WeatherEvent = {}
 
 
 
----@class FRefineryProducibleItemCost
----@field CodeName int32
-FRefineryProducibleItemCost = {}
+---@class FR2WeatherEventConfig
+---@field Type EAnvilR2WeatherEventType
+---@field StartingPositionGlobalX float
+---@field StartingPositionGlobalY float
+---@field InnerRadius float
+---@field OuterRadius float
+---@field VelocityX float
+---@field VelocityY float
+---@field MaxDurationSec int32
+---@field PeakIntensity float
+FR2WeatherEventConfig = {}
 
 
 
----@class FRefineryQueueItem
----@field Base FGridItem
----@field OwnerId int64
----@field bIsPrivate boolean
----@field bCanCancel boolean
-FRefineryQueueItem = {}
+---@class FRefineQueueItem
+---@field Index uint8
+---@field Resources TArray<FItemCount>
+---@field ItemQuality uint8
+FRefineQueueItem = {}
+
+
+
+---@class FReplicatedRefineQueueItem
+---@field Index uint8
+---@field ItemQuality uint8
+FReplicatedRefineQueueItem = {}
 
 
 
@@ -513,34 +522,7 @@ UBoxCollisionProxyComponent = {}
 
 
 ---@class UBuildSiteDataComponent : UDataComponent
----@field BuiltStructureEntity int32
----@field RequiredTool EAnvilToolType
----@field bRequiresTownHall boolean
----@field bRequiresCamp boolean
----@field bRequiresSmallCamp boolean
----@field RequiresHorseToComplete boolean
----@field bBuildsInstantly boolean
----@field TierPrerequisite uint8
----@field RoadMaterialRequirement int32
----@field ResourceBranchesRequirement int32
----@field ProcessedWoodRequirement int32
----@field ProcessedStoneRequirement int32
----@field ProcessedIronRequirement int32
----@field ReinforcedWoodRequirement int32
----@field ResourceFibreRequirement int32
----@field AnimalFatRequirement int32
----@field AnimalBonesRequirement int32
----@field ProcessedLeatherRequirement int32
----@field RoadMaterialSubmitted int32
----@field ResourceBranchesSubmitted int32
----@field ProcessedWoodSubmitted int32
----@field ProcessedStoneSubmitted int32
----@field ProcessedIronSubmitted int32
----@field ReinforcedWoodSubmitted int32
----@field ResourceFibreSubmitted int32
----@field AnimalFatSubmitted int32
----@field AnimalBonesSubmitted int32
----@field ProcessedLeatherSubmitted int32
+---@field MaterialSubmissions TArray<int32>
 ---@field BuildGhostPlacementStatus int64
 ---@field PlacementInfoFlags int32
 UBuildSiteDataComponent = {}
@@ -555,7 +537,6 @@ UBuildSiteDataComponent = {}
 ---@field bRequiresTownHall boolean
 ---@field bRequiresCamp boolean
 ---@field bRequiresSmallCamp boolean
----@field RequiresHorseToComplete boolean
 ---@field bBuildableOverRoads boolean
 ---@field bBuildableNearSpawnPoint boolean
 ---@field bBuildableInEnemyTerritory boolean
@@ -563,22 +544,14 @@ UBuildSiteDataComponent = {}
 ---@field bAllowRapidBuild boolean
 ---@field CanBuildTownStructureWithoutPledge boolean
 ---@field bBuildsInstantly boolean
+---@field bMinDistanceCheckIgnoreEnemyStructures boolean
 ---@field TierPrerequisite uint8
 ---@field RequiredDeployable TSubclassOf<UItemTemplate>
 ---@field MaxHeightShift float
 ---@field AdditionalMaxHeightShift float
 ---@field MinDistanceBetweenStructures float
 ---@field MinDistanceStructureTypes TArray<TSubclassOf<UEntityTemplate>>
----@field RoadMaterialRequirement int32
----@field ResourceBranchesRequirement int32
----@field ProcessedWoodRequirement int32
----@field ProcessedStoneRequirement int32
----@field ProcessedIronRequirement int32
----@field ReinforcedWoodRequirement int32
----@field ResourceFibreRequirement int32
----@field AnimalFatRequirement int32
----@field AnimalBonesRequirement int32
----@field ProcessedLeatherRequirement int32
+---@field MaterialRequirements TArray<FBasicCount>
 UBuildSiteProxyComponent = {}
 
 
@@ -640,7 +613,7 @@ UCookingDataComponent = {}
 
 
 ---@class UCookingProxyComponent : UProxyComponent
----@field FuelList TArray<FCookingFuel>
+---@field FuelList TArray<FFuelType>
 ---@field RecipeList TArray<FCookingRecipe>
 ---@field FoodBurnDurationSec float
 ---@field bCanCookWithExistingOutputs boolean
@@ -887,7 +860,7 @@ UHitConverterProxyComponent = {}
 ---@field AllowPublicPledging boolean
 ---@field IsForCampsOnly boolean
 ---@field IsGroupHouse boolean
----@field PledgedPlayerIds FHousePledgedPlayerIdArray
+---@field PledgedPlayerIds FHousePledgedPlayerArray
 UHousingDataComponent = {}
 
 
@@ -926,12 +899,13 @@ UImpactSurfaceProxyComponent = {}
 ---@class UInventoryProxyComponent : UProxyComponent
 ---@field Slots TArray<FItemSlot>
 ---@field bUnpackCrates boolean
----@field StackRule EAnvilInventoryStackRule
 ---@field bEnforceWithdrawalStamina boolean
 ---@field bOnlyAllowMaxDurabilityItems boolean
+---@field StackRule EAnvilInventoryStackRule
 ---@field NormalizedSpoilageFactor float
 ---@field LifespanWhenEmpty float
 ---@field bAllowWithdrawal boolean
+---@field bAllowSubmission boolean
 UInventoryProxyComponent = {}
 
 
@@ -1348,11 +1322,12 @@ URareResourceAreaMarkerProxyComponent = {}
 
 ---@class URefineResourceDataComponent : UDataComponent
 ---@field bCrateProducedItems boolean
----@field NumItemsInQueue int32
+---@field bInventoryFull boolean
+---@field ReplicatedRefineQueue TArray<FReplicatedRefineQueueItem>
+---@field NumItemsInQueue uint8
 ---@field ItemProductionTimeLeft float
 ---@field EstItemProductionTimeLeft float
 ---@field TotalProductionTimeLeft float
----@field bInventoryFull boolean
 ---@field Priority uint8
 URefineResourceDataComponent = {}
 
@@ -1366,14 +1341,14 @@ URefineResourceProxyComponent = {}
 
 
 ---@class URelicTechCenterDataComponent : UDataComponent
----@field RelicTechCosts TArray<FItemCost>
+---@field RelicTechCosts TArray<FBasicItemCount>
 ---@field TechItemsDeposited TArray<int32>
 URelicTechCenterDataComponent = {}
 
 
 
 ---@class URelicTechCenterProxyComponent : UProxyComponent
----@field RelicTechCosts TArray<FItemCost>
+---@field RelicTechCosts TArray<FBasicItemCount>
 URelicTechCenterProxyComponent = {}
 
 
@@ -1510,10 +1485,10 @@ USeekerProxyComponent = {}
 ---@field bInTravelZone boolean
 ---@field bIsMeshHidden boolean
 ---@field bIsHomesteadOwnerInTown boolean
----@field bShowEnvStats boolean
+---@field bShowWeatherStats boolean
 ---@field SecondsUntilFullDecay float
 ---@field HeldItemLightSourceRadius float
----@field LightSourceData FNightShroudLightSourceData
+---@field LightSourceData TArray<FNightShroudLightSource>
 ---@field FoodTypesOnCooldownBits uint8
 ---@field AimYaw float
 ---@field AimPitch float
@@ -1644,10 +1619,6 @@ UStructureProxyComponent = {}
 
 
 
----@class USupplyStorageProxyComponent : UProxyComponent
-USupplyStorageProxyComponent = {}
-
-
 ---@class UTeamDataComponent : UDataComponent
 ---@field TeamID uint8
 UTeamDataComponent = {}
@@ -1675,6 +1646,21 @@ UTechCenterProxyComponent = {}
 ---@field Description FText
 ---@field Image UTexture2D
 UTechItemTemplate = {}
+
+
+
+---@class UTemperatureDataComponent : UDataComponent
+---@field CurrentNormalizedTemperature float
+UTemperatureDataComponent = {}
+
+
+
+---@class UTemperatureProxyComponent : UProxyComponent
+---@field DamagePerFreezingTick float
+---@field StructureInteriorTempIncreasePerSec float
+---@field WarmStructureTempIncreasePerSec float
+---@field WarmStructureSearchRadius float
+UTemperatureProxyComponent = {}
 
 
 
@@ -1724,28 +1710,9 @@ UTrapProxyComponent = {}
 
 
 ---@class UUpgradeDataComponent : UDataComponent
----@field UpgradeTarget int32
 ---@field PopRequirement int32
----@field TierPrerequisite uint8
----@field WorkRequirement int32
----@field ProcessedWoodRequirement int32
----@field ProcessedStoneRequirement int32
----@field ProcessedIronRequirement int32
----@field ReinforcedWoodRequirement int32
----@field SilverRequirement int32
----@field AnimalFatRequirement int32
----@field AnimalBonesRequirement int32
----@field ProcessedLeatherRequirement int32
----@field WorkSubmitted int32
----@field ProcessedWoodSubmitted int32
----@field ProcessedStoneSubmitted int32
----@field ProcessedIronSubmitted int32
----@field ReinforcedWoodSubmitted int32
----@field SilverSubmitted int32
----@field AnimalFatSubmitted int32
----@field AnimalBonesSubmitted int32
----@field ProcessedLeatherSubmitted int32
----@field bIsUpgrading int32
+---@field MaterialSubmissions TArray<int32>
+---@field bIsUpgrading boolean
 UUpgradeDataComponent = {}
 
 
@@ -1755,15 +1722,7 @@ UUpgradeDataComponent = {}
 ---@field GoldRequirement int32
 ---@field PopRequirement int32
 ---@field TierPrerequisite uint8
----@field WorkRequirement int32
----@field ProcessedWoodRequirement int32
----@field ProcessedStoneRequirement int32
----@field ProcessedIronRequirement int32
----@field ReinforcedWoodRequirement int32
----@field SilverRequirement int32
----@field AnimalFatRequirement int32
----@field AnimalBonesRequirement int32
----@field ProcessedLeatherRequirement int32
+---@field MaterialRequirements TArray<FBasicCount>
 UUpgradeProxyComponent = {}
 
 
@@ -1816,6 +1775,22 @@ UVehicleMovementProxyComponent = {}
 ---@field RequiredEquipments TArray<TSubclassOf<UItemTemplate>>
 UVehicleSeatProxyComponent = {}
 
+
+
+---@class UWeatherDataComponent : UDataComponent
+---@field ActiveWeatherEvents TArray<FR2WeatherEvent>
+---@field CurrentNormalizedSeason float
+---@field GlobalNormalizedTemperature float
+---@field GlobalNormalizedWetness float
+---@field GlobalNormalizedWind float
+---@field GlobalWindDirectionX float
+---@field GlobalWindDirectionY float
+UWeatherDataComponent = {}
+
+
+
+---@class UWeatherProxyComponent : UProxyComponent
+UWeatherProxyComponent = {}
 
 
 ---@class UWellDataComponent : UDataComponent

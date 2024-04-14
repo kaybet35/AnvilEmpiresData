@@ -1,18 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Color -FallbackName=Color
-//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EItemQualityType -FallbackName=EItemQualityType
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=ETextCommit -FallbackName=ETextCommit
 #include "GridItemWidget.h"
 #include "MarketItemWidget.generated.h"
 
 class UButton;
 class UEditableTextBox;
-class UImage;
 class UProgressBar;
 class USizeBox;
 class UTextBlock;
-class UTexture2D;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UMarketItemWidget : public UGridItemWidget {
@@ -42,12 +39,6 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UProgressBar* DurabilityBar;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UImage* QualityIconImage;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<EItemQualityType, UTexture2D*> QualityIconTextures;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FColor BelowDefaultValueColour;

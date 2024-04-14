@@ -3,6 +3,6 @@
 
 class UBPMarketTooltipItemWidget_C : public UGridItemWidget
 {
-}; // Size: 0x2F0
+}; // Size: 0x348
 
 #endif

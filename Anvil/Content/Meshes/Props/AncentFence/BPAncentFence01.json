@@ -6,7 +6,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPAncentFence01_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.7"
+        "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.9"
       }
     },
     "SuperStruct": {
@@ -14,6 +14,17 @@
       "ObjectPath": "/Script/R2"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "GrassRemovalVolume",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'GrassRemovalVolumeComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "Decal",
@@ -96,6 +107,23 @@
     }
   },
   {
+    "Type": "GrassRemovalVolumeComponent",
+    "Name": "GrassRemovalVolume_GEN_VARIABLE",
+    "Outer": "BPAncentFence01_C",
+    "Class": "UScriptClass'GrassRemovalVolumeComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 368.25287,
+        "Y": 79.04047,
+        "Z": 50.0
+      },
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'BPAncentFence01_C:GrassRemovalVolume_GEN_VARIABLE.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.10"
+      }
+    }
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPAncentFence01_C",
@@ -113,12 +141,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPAncentFence01_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.3"
+        "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.4"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPAncentFence01_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.5"
+          "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.6"
         }
       ],
       "VariableGuid": "74777C82-4EE3EFEE-FB39379C-840FFBFA",
@@ -137,16 +165,38 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPAncentFence01_C:AncentFence_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.8"
+        "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.11"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPAncentFence01_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.6"
+          "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BPAncentFence01_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.7"
         }
       ],
       "VariableGuid": "80F172C9-47D9B286-C62691BF-7607E30F",
       "InternalVariableName": "AncentFence"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'GrassRemovalVolumeComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GrassRemovalVolumeComponent'BPAncentFence01_C:GrassRemovalVolume_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.3"
+      },
+      "VariableGuid": "DE388B8C-4721F8C6-CCEC10A3-62C89510",
+      "InternalVariableName": "GrassRemovalVolume"
     }
   },
   {
@@ -176,28 +226,38 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPAncentFence01_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.4"
+          "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.5"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPAncentFence01_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.4"
-        },
-        {
-          "ObjectName": "SCS_Node'BPAncentFence01_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.5"
         },
         {
-          "ObjectName": "SCS_Node'BPAncentFence01_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectName": "SCS_Node'BPAncentFence01_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.6"
+        },
+        {
+          "ObjectName": "SCS_Node'BPAncentFence01_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BPAncentFence01_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.7"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPAncentFence01_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.4"
+        "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/BPAncentFence01.5"
       }
     }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "GrassRemovalVolume_GEN_VARIABLE",
+    "Class": "UScriptClass'SplineDataComponent'"
   },
   {
     "Type": "StaticMeshComponent",

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CookingFuel.h"
 #include "CookingRecipe.h"
+#include "FuelType.h"
 #include "ProxyComponent.h"
 #include "CookingProxyComponent.generated.h"
 
@@ -10,7 +10,7 @@ class R2_API UCookingProxyComponent : public UProxyComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FCookingFuel> FuelList;
+    TArray<FFuelType> FuelList;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCookingRecipe> RecipeList;

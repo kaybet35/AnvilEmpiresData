@@ -40,21 +40,21 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->LocalChatDisplayTime = 3.00f;
     this->InteractionProgressBar1 = NULL;
     this->InteractionProgressBar2 = NULL;
-    this->EnvironmentStatsText = NULL;
+    this->WeatherStatsText = NULL;
 }
 
 
+
+ESlateVisibility UHUDWidget::GetWeatherStatsTextVisibility() {
+    return ESlateVisibility::Visible;
+}
+
+FText UHUDWidget::GetWeatherStatsText() {
+    return FText::GetEmpty();
+}
 
 ESlateVisibility UHUDWidget::GetHUDWidgetVisibility() {
     return ESlateVisibility::Visible;
-}
-
-ESlateVisibility UHUDWidget::GetEnvironmentStatsTextVisibility() {
-    return ESlateVisibility::Visible;
-}
-
-FText UHUDWidget::GetEnvironmentStatsText() {
-    return FText::GetEmpty();
 }
 
 

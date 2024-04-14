@@ -3,6 +3,6 @@
 
 class UBPCraftingRecipeWidget_C : public UCraftingRecipeWidget
 {
-}; // Size: 0x2F0
+}; // Size: 0x348
 
 #endif

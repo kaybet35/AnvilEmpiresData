@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilItemTag -FallbackName=EAnvilItemTag
-//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EItemQualityType -FallbackName=EItemQualityType
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateColor -FallbackName=SlateColor
 #include "GridItemWidget.h"
 #include "InventoryItemWidget.generated.h"
@@ -45,12 +44,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UProgressBar* HitConversionProgressBar;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UImage* QualityIconImage;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<EItemQualityType, UTexture2D*> QualityIconTextures;
     
 public:
     UInventoryItemWidget();

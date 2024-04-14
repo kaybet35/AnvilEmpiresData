@@ -71,6 +71,21 @@ struct FAutoMoveState
 {
 }; // Size: 0xC
 
+struct FBuildSiteCostData : public FTableRowBase
+{
+    int16 RoadMaterial;                                                               // 0x0008 (size: 0x2)
+    int16 ResourceBranches;                                                           // 0x000A (size: 0x2)
+    int16 ProcessedWood;                                                              // 0x000C (size: 0x2)
+    int16 ProcessedStone;                                                             // 0x000E (size: 0x2)
+    int16 ProcessedIron;                                                              // 0x0010 (size: 0x2)
+    int16 ReinforcedWood;                                                             // 0x0012 (size: 0x2)
+    int16 ResourceFibre;                                                              // 0x0014 (size: 0x2)
+    int16 AnimalFat;                                                                  // 0x0016 (size: 0x2)
+    int16 AnimalBones;                                                                // 0x0018 (size: 0x2)
+    int16 ProcessedLeather;                                                           // 0x001A (size: 0x2)
+
+}; // Size: 0x20
+
 struct FCachedCameraState
 {
 }; // Size: 0xC
@@ -249,6 +264,13 @@ struct FQueueStatusResponse
 
 }; // Size: 0x20
 
+struct FRefineryQueueItem
+{
+    FGridItem Base;                                                                   // 0x0000 (size: 0xC)
+    bool bCanCancel;                                                                  // 0x000C (size: 0x1)
+
+}; // Size: 0x10
+
 struct FServerListEntry
 {
     FString ServerName;                                                               // 0x0000 (size: 0x10)
@@ -299,6 +321,19 @@ struct FTownHallDeploymentInfo
 
 }; // Size: 0x20
 
+struct FUpgradeCostData : public FTableRowBase
+{
+    int16 ProcessedWood;                                                              // 0x0008 (size: 0x2)
+    int16 ProcessedStone;                                                             // 0x000A (size: 0x2)
+    int16 ProcessedIron;                                                              // 0x000C (size: 0x2)
+    int16 Silver;                                                                     // 0x000E (size: 0x2)
+    int16 ReinforcedWood;                                                             // 0x0010 (size: 0x2)
+    int16 AnimalFat;                                                                  // 0x0012 (size: 0x2)
+    int16 AnimalBones;                                                                // 0x0014 (size: 0x2)
+    int16 ProcessedLeather;                                                           // 0x0016 (size: 0x2)
+
+}; // Size: 0x18
+
 struct FVoiceLoginInfo
 {
     FString OnlineId;                                                                 // 0x0000 (size: 0x10)
@@ -323,7 +358,7 @@ struct FWeatherManager
     class UMaterialParameterCollection* WeatherSeasonsMaterialParameterCollection;    // 0x0038 (size: 0x8)
     class APostProcessVolume* WinterPostProcessVolume;                                // 0x0040 (size: 0x8)
 
-}; // Size: 0x50
+}; // Size: 0x78
 
 class AAnvilGameModeBase : public AGameModeBase
 {
@@ -463,7 +498,7 @@ class AProxyPawn : public ADefaultPawn
     float MinCameraDistance;                                                          // 0x0354 (size: 0x4)
 
     void StopBandwidthRecording();
-    void StartBandwidthRecording();
+    void StartBandwidthRecording(FString WatchTarget);
     void SetDrawCollisions(bool bDrawCollisions);
     void SetCameraHeight(float Height);
     void SetCameraFov(float FOV);
@@ -561,13 +596,12 @@ class AVisBuildSite : public AVisActor
     EBuildSiteCategory Category;                                                      // 0x0410 (size: 0x1)
     int32 Order;                                                                      // 0x0414 (size: 0x4)
     EBuildSiteVisibility BuildSiteVisibility;                                         // 0x0418 (size: 0x1)
-    class UBuildSiteProxyComponent* BuildSiteCDO;                                     // 0x0420 (size: 0x8)
-    class UArrowComponent* ArrowComponent;                                            // 0x0428 (size: 0x8)
-    class UStaticMeshComponent* Mesh;                                                 // 0x0430 (size: 0x8)
-    class UDecalComponent* BuildCollisionDecalComponent;                              // 0x0438 (size: 0x8)
-    class UMaterialInterface* BuildSiteMaterial;                                      // 0x0440 (size: 0x8)
+    class UArrowComponent* ArrowComponent;                                            // 0x0420 (size: 0x8)
+    class UStaticMeshComponent* Mesh;                                                 // 0x0428 (size: 0x8)
+    class UDecalComponent* BuildCollisionDecalComponent;                              // 0x0430 (size: 0x8)
+    class UMaterialInterface* BuildSiteMaterial;                                      // 0x0438 (size: 0x8)
 
-}; // Size: 0x468
+}; // Size: 0x460
 
 class AVisCart : public AVisVehicle
 {
@@ -763,38 +797,52 @@ class AVisPlayer : public AVisActor
     class UHealthDataComponent* HealthDataComponent;                                  // 0x0408 (size: 0x8)
     class UHungerDataComponent* HungerDataComponent;                                  // 0x0410 (size: 0x8)
     class UStaminaDataComponent* StaminaDataComponent;                                // 0x0418 (size: 0x8)
-    class USkeletalMeshComponent* ItemMeshComponent;                                  // 0x0420 (size: 0x8)
-    class USkeletalMeshComponent* ItemSecondaryMeshComponent;                         // 0x0428 (size: 0x8)
-    class USkeletalMeshComponent* UnarmedItemMeshComponent;                           // 0x0430 (size: 0x8)
-    class USkeletalMeshComponent* UnarmedItemSecondaryMeshComponent;                  // 0x0438 (size: 0x8)
-    class UPostProcessComponent* PostProcessComponent;                                // 0x0440 (size: 0x8)
-    float RotationAmount;                                                             // 0x0460 (size: 0x4)
-    float CameraRotationLerpSpeed;                                                    // 0x0464 (size: 0x4)
-    float AimMeshLength;                                                              // 0x0468 (size: 0x4)
-    float YawSpeed;                                                                   // 0x0470 (size: 0x4)
-    class UMapMarkerComponent* MapMarker;                                             // 0x0478 (size: 0x8)
-    float MinShroudRadius;                                                            // 0x0480 (size: 0x4)
-    float MaxShroudRadius;                                                            // 0x0484 (size: 0x4)
-    class USoundCue* DeathCue;                                                        // 0x0488 (size: 0x8)
-    class UCapsuleComponent* Capsule;                                                 // 0x0490 (size: 0x8)
-    class USkeletalMeshComponent* Mesh;                                               // 0x0498 (size: 0x8)
-    class USkeletalMeshComponent* Head;                                               // 0x04A0 (size: 0x8)
-    class UStaticMeshComponent* AimMeshComponent;                                     // 0x04A8 (size: 0x8)
-    class UMaterialInstanceDynamic* AimMeshMaterial;                                  // 0x04B0 (size: 0x8)
-    class UStaticMeshComponent* MeleeAimMeshComponent;                                // 0x04B8 (size: 0x8)
-    class UStaticMeshComponent* MeleeAimMeshTargetComponent;                          // 0x04C0 (size: 0x8)
-    TSubclassOf<class AVisFishingIndicator> FishingAimMeshClass;                      // 0x04C8 (size: 0x8)
-    TSubclassOf<class AVisFishingBobber> FishingBobberClass;                          // 0x04D8 (size: 0x8)
-    class UVisPlayerVisualsComponent* PlayerVisualsComponent;                         // 0x04E0 (size: 0x8)
-    TMap<class EAnvilSimActivityState, class UAnimMontage*> ActivityStateMontageMap;  // 0x04E8 (size: 0x50)
-    class UArmorDataComponent* ArmourDataComponent;                                   // 0x0538 (size: 0x8)
-    class UBillboardComponent* VoiceIndicator;                                        // 0x0540 (size: 0x8)
-    class UNiagaraComponent* TorchVFXComponent;                                       // 0x0548 (size: 0x8)
-    class UAudioComponent* TorchAudioComponent;                                       // 0x0550 (size: 0x8)
-    class UMaterialParameterCollection* PostProcessMaterialParameterCollection;       // 0x0558 (size: 0x8)
-    class UMaterialParameterCollection* PositionPostProcessMaterialParameterCollection; // 0x0560 (size: 0x8)
-    class AVisActor* CurrentUsableVisActor;                                           // 0x05D0 (size: 0x8)
-    class AVisActor* CurrentMountableVisActor;                                        // 0x05D8 (size: 0x8)
+    class UTemperatureDataComponent* TemperatureDataComponent;                        // 0x0420 (size: 0x8)
+    class USkeletalMeshComponent* ItemMeshComponent;                                  // 0x0428 (size: 0x8)
+    class USkeletalMeshComponent* ItemSecondaryMeshComponent;                         // 0x0430 (size: 0x8)
+    class USkeletalMeshComponent* UnarmedItemMeshComponent;                           // 0x0438 (size: 0x8)
+    class USkeletalMeshComponent* UnarmedItemSecondaryMeshComponent;                  // 0x0440 (size: 0x8)
+    class UPostProcessComponent* PostProcessComponent;                                // 0x0448 (size: 0x8)
+    TSubclassOf<class ARuntimeVirtualTextureVolume> LandscapeCullVirtualTextureVolumeClass; // 0x0450 (size: 0x8)
+    float RotationAmount;                                                             // 0x0470 (size: 0x4)
+    float CameraRotationLerpSpeed;                                                    // 0x0474 (size: 0x4)
+    float AimMeshLength;                                                              // 0x0478 (size: 0x4)
+    float YawSpeed;                                                                   // 0x0480 (size: 0x4)
+    class UMapMarkerComponent* MapMarker;                                             // 0x0488 (size: 0x8)
+    float MinShroudRadius;                                                            // 0x0490 (size: 0x4)
+    float MaxShroudRadius;                                                            // 0x0494 (size: 0x4)
+    class USoundCue* DeathCue;                                                        // 0x0498 (size: 0x8)
+    class UCapsuleComponent* Capsule;                                                 // 0x04A0 (size: 0x8)
+    class USkeletalMeshComponent* Mesh;                                               // 0x04A8 (size: 0x8)
+    class USkeletalMeshComponent* Head;                                               // 0x04B0 (size: 0x8)
+    class UStaticMeshComponent* AimMeshComponent;                                     // 0x04B8 (size: 0x8)
+    class UMaterialInstanceDynamic* AimMeshMaterial;                                  // 0x04C0 (size: 0x8)
+    class UStaticMeshComponent* MeleeAimMeshComponent;                                // 0x04C8 (size: 0x8)
+    class UStaticMeshComponent* MeleeAimMeshTargetComponent;                          // 0x04D0 (size: 0x8)
+    TSubclassOf<class AVisFishingIndicator> FishingAimMeshClass;                      // 0x04D8 (size: 0x8)
+    TSubclassOf<class AVisFishingBobber> FishingBobberClass;                          // 0x04E8 (size: 0x8)
+    class UVisPlayerVisualsComponent* PlayerVisualsComponent;                         // 0x04F0 (size: 0x8)
+    TMap<class EAnvilSimActivityState, class UAnimMontage*> ActivityStateMontageMap;  // 0x04F8 (size: 0x50)
+    class UArmorDataComponent* ArmourDataComponent;                                   // 0x0548 (size: 0x8)
+    class UBillboardComponent* VoiceIndicator;                                        // 0x0550 (size: 0x8)
+    class UNiagaraComponent* TorchVFXComponent;                                       // 0x0558 (size: 0x8)
+    class UAudioComponent* TorchAudioComponent;                                       // 0x0560 (size: 0x8)
+    class UNiagaraComponent* RainVFXComponent;                                        // 0x0568 (size: 0x8)
+    class UNiagaraComponent* SnowVFXComponent;                                        // 0x0570 (size: 0x8)
+    class UNiagaraComponent* BreathFogVFXComponent;                                   // 0x0578 (size: 0x8)
+    class UAudioComponent* RainLowAudioComponent;                                     // 0x0580 (size: 0x8)
+    class UAudioComponent* RainMidAudioComponent;                                     // 0x0588 (size: 0x8)
+    class UAudioComponent* RainHighAudioComponent;                                    // 0x0590 (size: 0x8)
+    class UAudioComponent* SnowLowAudioComponent;                                     // 0x0598 (size: 0x8)
+    class UAudioComponent* SnowMidAudioComponent;                                     // 0x05A0 (size: 0x8)
+    class UAudioComponent* SnowHighAudioComponent;                                    // 0x05A8 (size: 0x8)
+    class UAudioComponent* WindLowAudioComponent;                                     // 0x05B0 (size: 0x8)
+    class UAudioComponent* WindMidAudioComponent;                                     // 0x05B8 (size: 0x8)
+    class UAudioComponent* WindHighAudioComponent;                                    // 0x05C0 (size: 0x8)
+    class UMaterialParameterCollection* PostProcessMaterialParameterCollection;       // 0x05C8 (size: 0x8)
+    class UMaterialParameterCollection* PositionPostProcessMaterialParameterCollection; // 0x05D0 (size: 0x8)
+    class AVisActor* CurrentUsableVisActor;                                           // 0x0640 (size: 0x8)
+    class AVisActor* CurrentMountableVisActor;                                        // 0x0648 (size: 0x8)
 
     float GetVelocityHeadingDegrees();
     FString GetPlayerName();
@@ -804,7 +852,7 @@ class AVisPlayer : public AVisActor
     void BP_UpdateNightShroudMaterials(float NightTimeNormalized);
     void BP_OnHeldItemChanged();
     FVector AnimGetVelocity();
-}; // Size: 0x5F0
+}; // Size: 0x660
 
 class AVisPowerMill : public AVisStructure
 {
@@ -818,7 +866,7 @@ class AVisRefinery : public AVisStructure
 {
     class URefineResourceDataComponent* RefineResourceDataComponent;                  // 0x0480 (size: 0x8)
 
-}; // Size: 0x490
+}; // Size: 0x488
 
 class AVisRelicTechCenter : public AVisStructure
 {
@@ -861,9 +909,9 @@ class AVisSpline : public AVisStructure
 
 class AVisSplineBuildSite : public AVisBuildSite
 {
-    class UVisSplineComponent* SplineComponent;                                       // 0x0468 (size: 0x8)
+    class UVisSplineComponent* SplineComponent;                                       // 0x0460 (size: 0x8)
 
-}; // Size: 0x470
+}; // Size: 0x468
 
 class AVisStaticTorch : public AVisStructure
 {
@@ -1069,13 +1117,13 @@ class UAnvilGameInstance : public UGameInstance
     class UAnvilCharacterSave* CharacterSave;                                         // 0x02C0 (size: 0x8)
     class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x02C8 (size: 0x8)
     FAnvilAssetManager AssetManager;                                                  // 0x02D0 (size: 0x168)
-    FWeatherManager WeatherManager;                                                   // 0x0438 (size: 0x50)
-    FAnvilOptionsManager OptionsManager;                                              // 0x0488 (size: 0x1A0)
-    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x0628 (size: 0x8)
-    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x0630 (size: 0x10)
-    TArray<class AVisActor*> VisActorList;                                            // 0x0640 (size: 0x10)
-    TArray<class AVisActor*> TravelVisActorList;                                      // 0x0650 (size: 0x10)
-    FClientConfigManager ClientConfigManager;                                         // 0x0660 (size: 0x38)
+    FWeatherManager WeatherManager;                                                   // 0x0438 (size: 0x78)
+    FAnvilOptionsManager OptionsManager;                                              // 0x04B0 (size: 0x1A0)
+    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x0650 (size: 0x8)
+    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x0658 (size: 0x10)
+    TArray<class AVisActor*> VisActorList;                                            // 0x0668 (size: 0x10)
+    TArray<class AVisActor*> TravelVisActorList;                                      // 0x0678 (size: 0x10)
+    FClientConfigManager ClientConfigManager;                                         // 0x0688 (size: 0x38)
 
     void GetVisActors(TArray<class AVisActor*>& OutVisActorList);
     void GetVersion(int32& OutMajor, int32& OutMinor, int32& OutPatch, int32& OutCL);
@@ -1084,7 +1132,7 @@ class UAnvilGameInstance : public UGameInstance
     bool GetIsNight();
     void GetDayCurrentSeconds(int32& OutSeconds);
     void DumpProperties(FString OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter);
-}; // Size: 0x16C0
+}; // Size: 0x16E8
 
 class UAnvilKeyEntryWidget : public UUserWidget
 {
@@ -1178,14 +1226,14 @@ class UAnvilSliderWidget : public UUserWidget
 
 class UAnvilWindow : public UStructureWindow
 {
-    class UImage* CurrentSelectedOutputImage;                                         // 0x02D8 (size: 0x8)
-    class UButton* OutputPreviousButton;                                              // 0x02E0 (size: 0x8)
-    class UButton* OutputNextButton;                                                  // 0x02E8 (size: 0x8)
+    class UImage* CurrentSelectedOutputImage;                                         // 0x02E0 (size: 0x8)
+    class UButton* OutputPreviousButton;                                              // 0x02E8 (size: 0x8)
+    class UButton* OutputNextButton;                                                  // 0x02F0 (size: 0x8)
 
     void OutputPreviousButtonClicked();
     void OutputNextButtonClicked();
     void OnCurrentSelectedOutputIndexChanged(const uint8& Old, const uint8& New);
-}; // Size: 0x2F0
+}; // Size: 0x2F8
 
 class UBeaconTowerMapIcon : public UMapIcon
 {
@@ -1204,23 +1252,23 @@ class UBuildMenuStructureButton : public UGridItemWidget
 {
 
     void OnBuild(class UGridItemWidget* ItemSlot);
-}; // Size: 0x2F0
+}; // Size: 0x348
 
 class UBuildMenuTabButton : public UGridItemWidget
 {
-    class UImage* SelectedImage;                                                      // 0x02F0 (size: 0x8)
+    class UImage* SelectedImage;                                                      // 0x0348 (size: 0x8)
 
-}; // Size: 0x300
+}; // Size: 0x358
 
 class UBuildMenuWindow : public UHUDWindow
 {
-    class UPanelWidget* TabButtonPanel;                                               // 0x02B0 (size: 0x8)
-    class UGridPanelWidget* StructureButtonGrid;                                      // 0x02B8 (size: 0x8)
-    TSubclassOf<class UBuildMenuTabButton> TabButtonClass;                            // 0x02C0 (size: 0x8)
-    TMap<class EBuildSiteCategory, class UTexture2D*> TabButtonIcons;                 // 0x02C8 (size: 0x50)
-    int32 BuildLocation;                                                              // 0x0318 (size: 0x4)
+    class UPanelWidget* TabButtonPanel;                                               // 0x02B8 (size: 0x8)
+    class UGridPanelWidget* StructureButtonGrid;                                      // 0x02C0 (size: 0x8)
+    TSubclassOf<class UBuildMenuTabButton> TabButtonClass;                            // 0x02C8 (size: 0x8)
+    TMap<class EBuildSiteCategory, class UTexture2D*> TabButtonIcons;                 // 0x02D0 (size: 0x50)
+    int32 BuildLocation;                                                              // 0x0320 (size: 0x4)
 
-}; // Size: 0x320
+}; // Size: 0x328
 
 class UChatEntryWidget : public UUserWidget
 {
@@ -1271,18 +1319,18 @@ class UConnectScreen : public UAnvilScreen
 
 class UCookingWindow : public UStructureWindow
 {
-    class UInventoryWidget* RecipeInputItemGrid;                                      // 0x02D8 (size: 0x8)
-    class UInventoryWidget* RecipeOutputItemGrid;                                     // 0x02E0 (size: 0x8)
-    class UInventoryWidget* FuelInputItemGrid;                                        // 0x02E8 (size: 0x8)
-    class UInventoryWidget* FuelOutputItemGrid;                                       // 0x02F0 (size: 0x8)
-    class UTextBlock* CookingDurationText;                                            // 0x02F8 (size: 0x8)
-    class UTextBlock* FuelDurationText;                                               // 0x0300 (size: 0x8)
+    class UInventoryWidget* RecipeInputItemGrid;                                      // 0x02E0 (size: 0x8)
+    class UInventoryWidget* RecipeOutputItemGrid;                                     // 0x02E8 (size: 0x8)
+    class UInventoryWidget* FuelInputItemGrid;                                        // 0x02F0 (size: 0x8)
+    class UInventoryWidget* FuelOutputItemGrid;                                       // 0x02F8 (size: 0x8)
+    class UTextBlock* CookingDurationText;                                            // 0x0300 (size: 0x8)
+    class UTextBlock* FuelDurationText;                                               // 0x0308 (size: 0x8)
 
     ESlateVisibility GetFuelDurationTextVisibility();
     FText GetFuelDurationText();
     ESlateVisibility GetCookingDurationTextVisibility();
     FText GetCookingDurationText();
-}; // Size: 0x308
+}; // Size: 0x310
 
 class UCraftingRecipeListWidget : public UGridPanelWidget
 {
@@ -1290,13 +1338,13 @@ class UCraftingRecipeListWidget : public UGridPanelWidget
 
 class UCraftingRecipeWidget : public UGridItemWidget
 {
-}; // Size: 0x2F0
+}; // Size: 0x348
 
 class UCraftingWindow : public UStructureWindow
 {
-    class UCraftingRecipeListWidget* CraftingRecipeListWidget;                        // 0x02D8 (size: 0x8)
+    class UCraftingRecipeListWidget* CraftingRecipeListWidget;                        // 0x02E0 (size: 0x8)
 
-}; // Size: 0x2E0
+}; // Size: 0x2E8
 
 class UDeathMarketMapIcon : public UMapIcon
 {
@@ -1409,12 +1457,12 @@ class UFactionSelectScreen : public UAnvilScreen
 
 class UFamilyAreaMarkerWindow : public UStructureWindow
 {
-    class UScrollBox* FamilyMembersScrollBox;                                         // 0x02D8 (size: 0x8)
-    class UImage* TaxIcon;                                                            // 0x02E0 (size: 0x8)
-    class UTextBlock* TaxTextBlock;                                                   // 0x02E8 (size: 0x8)
-    TSubclassOf<class UFamilyMemberListItemWidget> FamilyMemberListItemWidgetType;    // 0x02F0 (size: 0x8)
-    class UCheckBox* FamilyAreaRestrictedCheckBox;                                    // 0x02F8 (size: 0x8)
-    class UButton* FamilyAreaAllianceButton;                                          // 0x0300 (size: 0x8)
+    class UScrollBox* FamilyMembersScrollBox;                                         // 0x02E0 (size: 0x8)
+    class UImage* TaxIcon;                                                            // 0x02E8 (size: 0x8)
+    class UTextBlock* TaxTextBlock;                                                   // 0x02F0 (size: 0x8)
+    TSubclassOf<class UFamilyMemberListItemWidget> FamilyMemberListItemWidgetType;    // 0x02F8 (size: 0x8)
+    class UCheckBox* FamilyAreaRestrictedCheckBox;                                    // 0x0300 (size: 0x8)
+    class UButton* FamilyAreaAllianceButton;                                          // 0x0308 (size: 0x8)
 
     void OnKickClicked(uint64 PlayerId);
     void OnFamilyAreaSetAllianceClicked();
@@ -1422,7 +1470,7 @@ class UFamilyAreaMarkerWindow : public UStructureWindow
     ESlateVisibility GetFamilyAreaSetAllianceVisibility();
     ESlateVisibility GetFamilyAreaRestrictedVisibility();
     ECheckBoxState GetFamilyAreaRestrictedCheckedState();
-}; // Size: 0x308
+}; // Size: 0x310
 
 class UFamilyMemberListItemWidget : public UUserWidget
 {
@@ -1495,11 +1543,13 @@ class UGridItemWidget : public UUserWidget
     class USizeBox* SizeBox;                                                          // 0x02C8 (size: 0x8)
     class UImage* ItemImage;                                                          // 0x02D0 (size: 0x8)
     class UImage* SubItemImage;                                                       // 0x02D8 (size: 0x8)
-    class UTexture2D* EmptyImage;                                                     // 0x02E0 (size: 0x8)
-    bool bIsActive;                                                                   // 0x02E8 (size: 0x1)
+    class UImage* QualityIconImage;                                                   // 0x02E0 (size: 0x8)
+    TMap<class EAnvilItemQualityType, class UTexture2D*> QualityIconTextures;         // 0x02E8 (size: 0x50)
+    class UTexture2D* EmptyImage;                                                     // 0x0338 (size: 0x8)
+    bool bIsActive;                                                                   // 0x0340 (size: 0x1)
 
     void OnClicked();
-}; // Size: 0x2F0
+}; // Size: 0x348
 
 class UGridPanelWidget : public UUniformGridPanel
 {
@@ -1574,14 +1624,14 @@ class UHUDWidget : public UUserWidget
     float LocalChatDisplayTime;                                                       // 0x0590 (size: 0x4)
     class UProgressBar* InteractionProgressBar1;                                      // 0x0598 (size: 0x8)
     class UProgressBar* InteractionProgressBar2;                                      // 0x05A0 (size: 0x8)
-    class UTextBlock* EnvironmentStatsText;                                           // 0x05A8 (size: 0x8)
+    class UTextBlock* WeatherStatsText;                                               // 0x05A8 (size: 0x8)
     TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05B8 (size: 0x10)
 
     void PlayWinConditionAnimation();
     void PlayTownStatusAlert(const FText& AlertText);
+    ESlateVisibility GetWeatherStatsTextVisibility();
+    FText GetWeatherStatsText();
     ESlateVisibility GetHUDWidgetVisibility();
-    ESlateVisibility GetEnvironmentStatsTextVisibility();
-    FText GetEnvironmentStatsText();
 }; // Size: 0x5D0
 
 class UHUDWindow : public UUserWidget
@@ -1590,10 +1640,11 @@ class UHUDWindow : public UUserWidget
     bool StructureToPlayerTransfer;                                                   // 0x0280 (size: 0x1)
     bool PlayerToStructureTransfer;                                                   // 0x0281 (size: 0x1)
     class UInventoryContainerWidget* StructureInventoryContainerWidget;               // 0x0298 (size: 0x8)
-    class UPlayerInventoryWidget* PlayerInventoryPanel;                               // 0x02A0 (size: 0x8)
-    class UHeaderContainer* TargetHeader;                                             // 0x02A8 (size: 0x8)
+    class UInventoryContainerWidget* StructureInventoryContainerWidget2;              // 0x02A0 (size: 0x8)
+    class UPlayerInventoryWidget* PlayerInventoryPanel;                               // 0x02A8 (size: 0x8)
+    class UHeaderContainer* TargetHeader;                                             // 0x02B0 (size: 0x8)
 
-}; // Size: 0x2B0
+}; // Size: 0x2B8
 
 class UHeaderContainer : public UUserWidget
 {
@@ -1612,14 +1663,14 @@ class UHeaderContainer : public UUserWidget
 
 class UHeatingWindow : public UStructureWindow
 {
-    class UInventoryWidget* ItemsItemGrid;                                            // 0x02D8 (size: 0x8)
-    class UInventoryWidget* FuelInputItemGrid;                                        // 0x02E0 (size: 0x8)
-    class UInventoryWidget* FuelOutputItemGrid;                                       // 0x02E8 (size: 0x8)
-    class UTextBlock* FuelDurationText;                                               // 0x02F0 (size: 0x8)
+    class UInventoryWidget* ItemsItemGrid;                                            // 0x02E0 (size: 0x8)
+    class UInventoryWidget* FuelInputItemGrid;                                        // 0x02E8 (size: 0x8)
+    class UInventoryWidget* FuelOutputItemGrid;                                       // 0x02F0 (size: 0x8)
+    class UTextBlock* FuelDurationText;                                               // 0x02F8 (size: 0x8)
 
     ESlateVisibility GetFuelDurationTextVisibility();
     FText GetFuelDurationText();
-}; // Size: 0x2F8
+}; // Size: 0x300
 
 class UHelpScreen : public UAnvilScreen
 {
@@ -1630,14 +1681,14 @@ class UHelpScreen : public UAnvilScreen
 
 class UHitConversionWindow : public UStructureWindow
 {
-    class UImage* CurrentSelectedOutputImage;                                         // 0x02D8 (size: 0x8)
-    class UButton* OutputPreviousButton;                                              // 0x02E0 (size: 0x8)
-    class UButton* OutputNextButton;                                                  // 0x02E8 (size: 0x8)
+    class UImage* CurrentSelectedOutputImage;                                         // 0x02E0 (size: 0x8)
+    class UButton* OutputPreviousButton;                                              // 0x02E8 (size: 0x8)
+    class UButton* OutputNextButton;                                                  // 0x02F0 (size: 0x8)
 
     void OutputPreviousButtonClicked();
     void OutputNextButtonClicked();
     void OnCurrentSelectedOutputIndexChanged(const uint8& Old, const uint8& New);
-}; // Size: 0x2F0
+}; // Size: 0x2F8
 
 class UHousePlayerInventoryListItem : public UUserWidget
 {
@@ -1654,13 +1705,13 @@ class UHousePlayerInventoryWidgetBox : public UScrollBox
 
 class UHouseWindow : public UStructureWindow
 {
-    class UHousePlayerInventoryWidgetBox* PlayerInventoriesBox;                       // 0x02D8 (size: 0x8)
-    class UCheckBox* HouseAreaRestrictedCheckBox;                                     // 0x02E0 (size: 0x8)
+    class UHousePlayerInventoryWidgetBox* PlayerInventoriesBox;                       // 0x02E0 (size: 0x8)
+    class UCheckBox* HouseAreaRestrictedCheckBox;                                     // 0x02E8 (size: 0x8)
 
     void OnHouseAreaRestrictedChecked(bool bIsChecked);
     ESlateVisibility GetHouseAreaRestrictedVisibility();
     ECheckBoxState GetHouseAreaRestrictedCheckedState();
-}; // Size: 0x2E8
+}; // Size: 0x2F0
 
 class UInteractionIconWidget : public UUserWidget
 {
@@ -1683,20 +1734,18 @@ class UInventoryContainerWidget : public UUserWidget
 
 class UInventoryItemWidget : public UGridItemWidget
 {
-    int32 ItemQuantityTextSize;                                                       // 0x0320 (size: 0x4)
-    FSlateColor DisabledTint;                                                         // 0x0324 (size: 0x14)
-    float DedicatedImageOpacity;                                                      // 0x0338 (size: 0x4)
-    TMap<class EAnvilItemTag, class UTexture2D*> EmptyImageMap;                       // 0x0340 (size: 0x50)
-    class UTextBlock* ItemQuantityText;                                               // 0x0390 (size: 0x8)
-    class UProgressBar* DurabilityBar;                                                // 0x0398 (size: 0x8)
-    class UImage* SubtypeIconRelic;                                                   // 0x03A0 (size: 0x8)
-    class UImage* OverEncumberedImage;                                                // 0x03A8 (size: 0x8)
-    class UImage* PublicIconImage;                                                    // 0x03B0 (size: 0x8)
-    class UProgressBar* HitConversionProgressBar;                                     // 0x03B8 (size: 0x8)
-    class UImage* QualityIconImage;                                                   // 0x03C0 (size: 0x8)
-    TMap<class EItemQualityType, class UTexture2D*> QualityIconTextures;              // 0x03C8 (size: 0x50)
+    int32 ItemQuantityTextSize;                                                       // 0x0380 (size: 0x4)
+    FSlateColor DisabledTint;                                                         // 0x0384 (size: 0x14)
+    float DedicatedImageOpacity;                                                      // 0x0398 (size: 0x4)
+    TMap<class EAnvilItemTag, class UTexture2D*> EmptyImageMap;                       // 0x03A0 (size: 0x50)
+    class UTextBlock* ItemQuantityText;                                               // 0x03F0 (size: 0x8)
+    class UProgressBar* DurabilityBar;                                                // 0x03F8 (size: 0x8)
+    class UImage* SubtypeIconRelic;                                                   // 0x0400 (size: 0x8)
+    class UImage* OverEncumberedImage;                                                // 0x0408 (size: 0x8)
+    class UImage* PublicIconImage;                                                    // 0x0410 (size: 0x8)
+    class UProgressBar* HitConversionProgressBar;                                     // 0x0418 (size: 0x8)
 
-}; // Size: 0x420
+}; // Size: 0x428
 
 class UInventoryWidget : public UGridPanelWidget
 {
@@ -1783,16 +1832,14 @@ class UMarketItemGridWidget : public UGridPanelWidget
 
 class UMarketItemWidget : public UGridItemWidget
 {
-    class UButton* PriceUpButton;                                                     // 0x02F0 (size: 0x8)
-    class UButton* PriceDownButton;                                                   // 0x02F8 (size: 0x8)
-    class UTextBlock* ItemQuantityText;                                               // 0x0300 (size: 0x8)
-    class UTextBlock* PriceText;                                                      // 0x0308 (size: 0x8)
-    class UEditableTextBox* PriceEditableText;                                        // 0x0310 (size: 0x8)
-    class USizeBox* PriceTextSizeBox;                                                 // 0x0318 (size: 0x8)
-    class USizeBox* PriceEditableTextSizeBox;                                         // 0x0320 (size: 0x8)
-    class UProgressBar* DurabilityBar;                                                // 0x0328 (size: 0x8)
-    class UImage* QualityIconImage;                                                   // 0x0330 (size: 0x8)
-    TMap<class EItemQualityType, class UTexture2D*> QualityIconTextures;              // 0x0338 (size: 0x50)
+    class UButton* PriceUpButton;                                                     // 0x0348 (size: 0x8)
+    class UButton* PriceDownButton;                                                   // 0x0350 (size: 0x8)
+    class UTextBlock* ItemQuantityText;                                               // 0x0358 (size: 0x8)
+    class UTextBlock* PriceText;                                                      // 0x0360 (size: 0x8)
+    class UEditableTextBox* PriceEditableText;                                        // 0x0368 (size: 0x8)
+    class USizeBox* PriceTextSizeBox;                                                 // 0x0370 (size: 0x8)
+    class USizeBox* PriceEditableTextSizeBox;                                         // 0x0378 (size: 0x8)
+    class UProgressBar* DurabilityBar;                                                // 0x0380 (size: 0x8)
     FColor BelowDefaultValueColour;                                                   // 0x0388 (size: 0x4)
     FColor AboveDefaultValueColour;                                                   // 0x038C (size: 0x4)
 
@@ -1828,12 +1875,12 @@ class UMarketShopMapTooltipRow : public UUserWidget
 
 class UMarketShopWindow : public UStructureWindow
 {
-    class UMarketItemGridWidget* MarketItemGrid;                                      // 0x02D8 (size: 0x8)
-    class UStatusWidget* SilverStatus;                                                // 0x02E0 (size: 0x8)
+    class UMarketItemGridWidget* MarketItemGrid;                                      // 0x02E0 (size: 0x8)
+    class UStatusWidget* SilverStatus;                                                // 0x02E8 (size: 0x8)
 
     ESlateVisibility GetSilverAmountVisibility();
     FText GetSilverAmountText();
-}; // Size: 0x2E8
+}; // Size: 0x2F0
 
 class UNewMapWidget : public UUserWidget
 {
@@ -1942,10 +1989,10 @@ class UOptionsScreen : public UAnvilScreen
 
 class UPackingWindow : public UStructureWindow
 {
-    class UButton* PackButton;                                                        // 0x02D8 (size: 0x8)
+    class UButton* PackButton;                                                        // 0x02E0 (size: 0x8)
 
     void OnPackButtonClicked();
-}; // Size: 0x2E0
+}; // Size: 0x2E8
 
 class UPauseScreen : public UAnvilScreen
 {
@@ -1995,17 +2042,17 @@ class UPledgedPlayerListItem : public UUserWidget
 
 class UQuenchingWindow : public UStructureWindow
 {
-    class UButton* QuenchButton;                                                      // 0x02D8 (size: 0x8)
+    class UButton* QuenchButton;                                                      // 0x02E0 (size: 0x8)
 
     void OnQuenchButtonClicked();
-}; // Size: 0x2E0
+}; // Size: 0x2E8
 
 class URefineryProducibleItemWidget : public UGridItemWidget
 {
-    class UTextBlock* OutputCount;                                                    // 0x02F0 (size: 0x8)
-    class UPanelWidget* OutputCountContainer;                                         // 0x02F8 (size: 0x8)
+    class UTextBlock* OutputCount;                                                    // 0x0348 (size: 0x8)
+    class UPanelWidget* OutputCountContainer;                                         // 0x0350 (size: 0x8)
 
-}; // Size: 0x300
+}; // Size: 0x358
 
 class URefineryProducibleListWidget : public UGridPanelWidget
 {
@@ -2017,36 +2064,30 @@ class URefineryQueueWidget : public UGridPanelWidget
 
 class URefineryQueuedItemWidget : public UGridItemWidget
 {
-    class UButton* CancelButton;                                                      // 0x02F0 (size: 0x8)
-    class UImage* PrivateIcon;                                                        // 0x02F8 (size: 0x8)
-    class UBorder* ItemBorder;                                                        // 0x0300 (size: 0x8)
-    FSlateBrush ItemBorderBrush;                                                      // 0x0310 (size: 0xD0)
-    FSlateBrush ItemBorderOtherPlayerBrush;                                           // 0x03E0 (size: 0xD0)
+    class UButton* CancelButton;                                                      // 0x0348 (size: 0x8)
+    class UBorder* ItemBorder;                                                        // 0x0350 (size: 0x8)
+    FSlateBrush ItemBorderBrush;                                                      // 0x0360 (size: 0xD0)
 
     void OnCancelClicked();
-}; // Size: 0x4B0
+}; // Size: 0x430
 
 class URefineryWindow : public UStructureWindow
 {
-    class URefineryProducibleListWidget* RefineryProducibleItemsList;                 // 0x02D8 (size: 0x8)
-    class URefineryQueueWidget* RefineryQueue;                                        // 0x02E0 (size: 0x8)
-    class UTextBlock* QueueTotalTimeText;                                             // 0x02E8 (size: 0x8)
-    class UTextBlock* QueueTimeText;                                                  // 0x02F0 (size: 0x8)
-    class UTextBlock* StatusText;                                                     // 0x02F8 (size: 0x8)
-    class UButton* PrivateButton;                                                     // 0x0300 (size: 0x8)
-    FButtonStyle PrivateButtonStyleOn;                                                // 0x0310 (size: 0x3F0)
-    FButtonStyle PrivateButtonStyleOff;                                               // 0x0700 (size: 0x3F0)
+    class URefineryProducibleListWidget* RefineryProducibleItemsList;                 // 0x02E0 (size: 0x8)
+    class URefineryQueueWidget* RefineryQueue;                                        // 0x02E8 (size: 0x8)
+    class UTextBlock* QueueTotalTimeText;                                             // 0x02F0 (size: 0x8)
+    class UTextBlock* QueueTimeText;                                                  // 0x02F8 (size: 0x8)
+    class UTextBlock* StatusText;                                                     // 0x0300 (size: 0x8)
 
     void OnStatusChanged(const bool& Old, const bool& New);
-    void OnPrivateButtonClicked();
-}; // Size: 0xB00
+}; // Size: 0x310
 
 class URelicTechCenterWindow : public UStructureWindow
 {
-    class UVerticalBox* TechProgressVerticalBox;                                      // 0x02D8 (size: 0x8)
-    TSubclassOf<class URelicTechProgressWidget> RelicTechProgressWidgetClass;         // 0x02E0 (size: 0x8)
+    class UVerticalBox* TechProgressVerticalBox;                                      // 0x02E0 (size: 0x8)
+    TSubclassOf<class URelicTechProgressWidget> RelicTechProgressWidgetClass;         // 0x02E8 (size: 0x8)
 
-}; // Size: 0x2E8
+}; // Size: 0x2F0
 
 class URelicTechProgressWidget : public UUserWidget
 {
@@ -2059,10 +2100,10 @@ class URelicTechProgressWidget : public UUserWidget
 
 class URepairStationWindow : public UStructureWindow
 {
-    class UButton* RepairButton;                                                      // 0x02D8 (size: 0x8)
+    class UButton* RepairButton;                                                      // 0x02E0 (size: 0x8)
 
     void OnRepairClicked();
-}; // Size: 0x2E0
+}; // Size: 0x2E8
 
 class UResourceWidget : public UUserWidget
 {
@@ -2128,13 +2169,13 @@ class UStatusWidget : public UUserWidget
 
 class UStructureWindow : public UHUDWindow
 {
-    class UStatusWidget* HealthStatus;                                                // 0x02B0 (size: 0x8)
-    class UStatusWidget* HeartStatus;                                                 // 0x02B8 (size: 0x8)
-    class UStatusWidget* HungerStatus;                                                // 0x02C0 (size: 0x8)
-    class UStatusWidget* StaminaStatus;                                               // 0x02C8 (size: 0x8)
-    class UStatusWidget* DecayStatus;                                                 // 0x02D0 (size: 0x8)
+    class UStatusWidget* HealthStatus;                                                // 0x02B8 (size: 0x8)
+    class UStatusWidget* HeartStatus;                                                 // 0x02C0 (size: 0x8)
+    class UStatusWidget* HungerStatus;                                                // 0x02C8 (size: 0x8)
+    class UStatusWidget* StaminaStatus;                                               // 0x02D0 (size: 0x8)
+    class UStatusWidget* DecayStatus;                                                 // 0x02D8 (size: 0x8)
 
-}; // Size: 0x2D8
+}; // Size: 0x2E0
 
 class USubHeaderContainer : public UUserWidget
 {
@@ -2180,22 +2221,22 @@ class UTownCenterMapIcon : public UMapIcon
 
 class UTownCenterWindow : public UStructureWindow
 {
-    class UPledgedPlayerBox* PledgedPlayerList;                                       // 0x02D8 (size: 0x8)
-    class UTextBlock* LocalPlayerStatus;                                              // 0x02E0 (size: 0x8)
-    class UUserWidget* CivicPledgePanel;                                              // 0x02E8 (size: 0x8)
-    class UHeaderContainer* PledgedHeader;                                            // 0x02F0 (size: 0x8)
-    class UStatusWidget* RareResourceStatus;                                          // 0x02F8 (size: 0x8)
-    class UHeaderContainer* ReserveInventoryHeaderContainer;                          // 0x0300 (size: 0x8)
-    class UUserWidget* ReserveInventoryMainAreaContainer;                             // 0x0308 (size: 0x8)
-    class UInventoryContainerWidget* ReserveInventoryContainerWidget;                 // 0x0310 (size: 0x8)
-    class UImage* PublicInventorySubmitImage;                                         // 0x0318 (size: 0x8)
-    class UButton* IncreaseTownStatusButton;                                          // 0x0320 (size: 0x8)
-    TArray<FText> TownNames1;                                                         // 0x0328 (size: 0x10)
-    TArray<FText> TownNames2;                                                         // 0x0338 (size: 0x10)
-    TArray<FText> TownNames3;                                                         // 0x0348 (size: 0x10)
+    class UPledgedPlayerBox* PledgedPlayerList;                                       // 0x02E0 (size: 0x8)
+    class UTextBlock* LocalPlayerStatus;                                              // 0x02E8 (size: 0x8)
+    class UUserWidget* CivicPledgePanel;                                              // 0x02F0 (size: 0x8)
+    class UHeaderContainer* PledgedHeader;                                            // 0x02F8 (size: 0x8)
+    class UStatusWidget* RareResourceStatus;                                          // 0x0300 (size: 0x8)
+    class UHeaderContainer* ReserveInventoryHeaderContainer;                          // 0x0308 (size: 0x8)
+    class UUserWidget* ReserveInventoryMainAreaContainer;                             // 0x0310 (size: 0x8)
+    class UInventoryContainerWidget* ReserveInventoryContainerWidget;                 // 0x0318 (size: 0x8)
+    class UImage* PublicInventorySubmitImage;                                         // 0x0320 (size: 0x8)
+    class UButton* IncreaseTownStatusButton;                                          // 0x0328 (size: 0x8)
+    TArray<FText> TownNames1;                                                         // 0x0330 (size: 0x10)
+    TArray<FText> TownNames2;                                                         // 0x0340 (size: 0x10)
+    TArray<FText> TownNames3;                                                         // 0x0350 (size: 0x10)
 
     void OnIncreaseTownStatusButtonClicked();
-}; // Size: 0x358
+}; // Size: 0x360
 
 class UTownStatusWidget : public UUserWidget
 {
@@ -2461,8 +2502,11 @@ class UVitalityStatusWidget : public UUserWidget
     class UProgressBar* HealthBar;                                                    // 0x0288 (size: 0x8)
     class UOverlay* StaminaOverlay;                                                   // 0x0290 (size: 0x8)
     class UProgressBar* StaminaBar;                                                   // 0x0298 (size: 0x8)
+    class UProgressBar* TemperatureBar;                                               // 0x02A0 (size: 0x8)
+    FLinearColor TemperatureWarmColour;                                               // 0x02A8 (size: 0x10)
+    FLinearColor TemperatureColdColour;                                               // 0x02B8 (size: 0x10)
 
-}; // Size: 0x2C0
+}; // Size: 0x2F0
 
 class UWildSpawnPointMapIcon : public UMapIcon
 {

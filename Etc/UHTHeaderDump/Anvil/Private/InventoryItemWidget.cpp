@@ -9,7 +9,6 @@ UInventoryItemWidget::UInventoryItemWidget() {
     this->OverEncumberedImage = NULL;
     this->PublicIconImage = NULL;
     this->HitConversionProgressBar = NULL;
-    this->QualityIconImage = NULL;
 }
 
 

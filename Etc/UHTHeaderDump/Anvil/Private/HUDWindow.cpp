@@ -5,6 +5,7 @@ UHUDWindow::UHUDWindow() : UUserWidget(FObjectInitializer::Get()) {
     this->StructureToPlayerTransfer = false;
     this->PlayerToStructureTransfer = false;
     this->StructureInventoryContainerWidget = NULL;
+    this->StructureInventoryContainerWidget2 = NULL;
     this->PlayerInventoryPanel = NULL;
     this->TargetHeader = NULL;
 }

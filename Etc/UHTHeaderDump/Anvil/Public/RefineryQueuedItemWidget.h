@@ -6,7 +6,6 @@
 
 class UBorder;
 class UButton;
-class UImage;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API URefineryQueuedItemWidget : public UGridItemWidget {
@@ -17,16 +16,10 @@ protected:
     UButton* CancelButton;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UImage* PrivateIcon;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBorder* ItemBorder;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSlateBrush ItemBorderBrush;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FSlateBrush ItemBorderOtherPlayerBrush;
     
 public:
     URefineryQueuedItemWidget();

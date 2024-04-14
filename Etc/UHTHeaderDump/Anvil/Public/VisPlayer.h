@@ -7,6 +7,7 @@
 #include "VisActor.h"
 #include "VisPlayer.generated.h"
 
+class ARuntimeVirtualTextureVolume;
 class AVisFishingBobber;
 class AVisFishingIndicator;
 class UAnimMontage;
@@ -27,6 +28,7 @@ class USkeletalMeshComponent;
 class USoundCue;
 class UStaminaDataComponent;
 class UStaticMeshComponent;
+class UTemperatureDataComponent;
 class UVisPlayerVisualsComponent;
 class UVisSpringArmComponent;
 
@@ -53,6 +55,9 @@ public:
     UStaminaDataComponent* StaminaDataComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTemperatureDataComponent* TemperatureDataComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* ItemMeshComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -66,6 +71,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPostProcessComponent* PostProcessComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<ARuntimeVirtualTextureVolume> LandscapeCullVirtualTextureVolumeClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RotationAmount;
@@ -137,6 +145,42 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAudioComponent* TorchAudioComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UNiagaraComponent* RainVFXComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UNiagaraComponent* SnowVFXComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UNiagaraComponent* BreathFogVFXComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAudioComponent* RainLowAudioComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAudioComponent* RainMidAudioComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAudioComponent* RainHighAudioComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAudioComponent* SnowLowAudioComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAudioComponent* SnowMidAudioComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAudioComponent* SnowHighAudioComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAudioComponent* WindLowAudioComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAudioComponent* WindMidAudioComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAudioComponent* WindHighAudioComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialParameterCollection* PostProcessMaterialParameterCollection;

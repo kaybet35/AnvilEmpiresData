@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "LeatherRefinery_C'Default__LeatherRefinery_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/LeatherRefinery.7"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/LeatherRefinery.8"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -46,7 +46,7 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
     },
     "Properties": {
-      "DecayTimeHours": 12.0
+      "DecayTimeHours": 48.0
     }
   },
   {
@@ -92,7 +92,52 @@
     "Type": "InventoryProxyComponent",
     "Name": "InventoryProxyComponent_0",
     "Outer": "Default__LeatherRefinery_C",
-    "Class": "UScriptClass'InventoryProxyComponent'"
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 9,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__LeatherRefinery_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 12,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "bAllowSubmission": false
+    }
   },
   {
     "Type": "LeatherRefinery_C",
@@ -105,7 +150,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__LeatherRefinery_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/LeatherRefinery.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/LeatherRefinery.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__LeatherRefinery_C:HealthComp'",
@@ -113,11 +158,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__LeatherRefinery_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/LeatherRefinery.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/LeatherRefinery.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__LeatherRefinery_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/LeatherRefinery.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/LeatherRefinery.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__LeatherRefinery_C:DestroyableComp'",
@@ -137,20 +182,23 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__LeatherRefinery_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/LeatherRefinery.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/LeatherRefinery.11"
       },
       "CodeNameString": "LeatherRefinery",
       "CodeName": -1856136601,
-      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
           "ObjectName": "RefineResourceProxyComponent'Default__LeatherRefinery_C:RefineResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/LeatherRefinery.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/LeatherRefinery.9"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__LeatherRefinery_C:InventoryProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/LeatherRefinery.6"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__LeatherRefinery_C:InventoryProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/LeatherRefinery.7"
         }
       ],
       "VisActorClass": {
@@ -171,20 +219,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceLeather_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceLeather.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 180.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -193,20 +240,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedThickLeather_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedThickLeather.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceThickLeather_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceThickLeather.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 360.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         }

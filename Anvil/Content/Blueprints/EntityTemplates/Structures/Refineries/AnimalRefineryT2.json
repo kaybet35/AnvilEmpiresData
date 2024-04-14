@@ -19,7 +19,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__AnimalRefineryT2_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT2.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT2.14"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__AnimalRefineryT2_C:HealthComp'",
@@ -27,11 +27,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__AnimalRefineryT2_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT2.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT2.11"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__AnimalRefineryT2_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT2.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT2.13"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__AnimalRefineryT2_C:DestroyableComp'",
@@ -51,17 +51,16 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__AnimalRefineryT2_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT2.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT2.12"
       },
       "CodeNameString": "AnimalRefineryT2",
       "CodeName": 1486820897,
       "bShowOnMap": true,
-      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
           "ObjectName": "RefineResourceProxyComponent'Default__AnimalRefineryT2_C:RefineResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT2.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT2.10"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__AnimalRefineryT2_C:InventoryProxyComponent_0'",
@@ -69,11 +68,15 @@
         },
         {
           "ObjectName": "UpgradeProxyComponent'Default__AnimalRefineryT2_C:UpgradeProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT2.14"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT2.15"
         },
         {
           "ObjectName": "AIStimulusProxyComponent'Default__AnimalRefineryT2_C:AIStimulusProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT2.0"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__AnimalRefineryT2_C:InventoryProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT2.9"
         }
       ],
       "VisActorClass": {
@@ -175,7 +178,52 @@
     "Type": "InventoryProxyComponent",
     "Name": "InventoryProxyComponent_0",
     "Outer": "Default__AnimalRefineryT2_C",
-    "Class": "UScriptClass'InventoryProxyComponent'"
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 9,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__AnimalRefineryT2_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 12,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "bAllowSubmission": false
+    }
   },
   {
     "Type": "RefineResourceProxyComponent",
@@ -189,29 +237,27 @@
             "ObjectName": "BlueprintGeneratedClass'OilFlask_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/OilFlask.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
               },
-              "ItemCodeName": 0,
-              "Count": 5,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 5
             },
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'AnimalFat_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalFat.1"
               },
-              "ItemCodeName": 0,
-              "Count": 5,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 5
             }
           ],
           "ProductionTime": 60.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": true
         },
@@ -220,29 +266,27 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedFertilizer_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedFertilizer.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceManure_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceManure.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             },
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceWoodAsh_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWoodAsh.0"
               },
-              "ItemCodeName": 0,
-              "Count": 5,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 5
             }
           ],
           "ProductionTime": 60.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -251,29 +295,27 @@
             "ObjectName": "BlueprintGeneratedClass'AnimalRope_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/AnimalRope.1"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
               },
-              "ItemCodeName": 0,
-              "Count": 5,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 5
             },
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'AnimalFat_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalFat.1"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 15.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -282,38 +324,35 @@
             "ObjectName": "BlueprintGeneratedClass'SaddleBasic_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/AnimalEquipment/SaddleBasic.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             },
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             },
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'AnimalRope_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/AnimalRope.1"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -322,29 +361,27 @@
             "ObjectName": "BlueprintGeneratedClass'SaddleMill_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/AnimalEquipment/SaddleMill.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             },
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
               },
-              "ItemCodeName": 0,
-              "Count": 2,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 2
             }
           ],
           "ProductionTime": 15.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -353,38 +390,35 @@
             "ObjectName": "BlueprintGeneratedClass'SaddlePack_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/AnimalEquipment/SaddlePack.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             },
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             },
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'Crate_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Crate.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
           "OutputCount": 1,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         }
@@ -442,10 +476,24 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/AnimalRefineryT3.2"
       },
       "TierPrerequisite": 3,
-      "ProcessedWoodRequirement": 8,
-      "ProcessedStoneRequirement": 8,
-      "AnimalFatRequirement": 6,
-      "AnimalBonesRequirement": 3
+      "MaterialRequirements": [
+        {
+          "CodeName": -667807241,
+          "Count": 8
+        },
+        {
+          "CodeName": -879937657,
+          "Count": 8
+        },
+        {
+          "CodeName": -34612789,
+          "Count": 6
+        },
+        {
+          "CodeName": 979967872,
+          "Count": 3
+        }
+      ]
     }
   }
 ]

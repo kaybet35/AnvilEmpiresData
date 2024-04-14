@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "WoodRefineryT2_C'Default__WoodRefineryT2_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.13"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.14"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -92,7 +92,52 @@
     "Type": "InventoryProxyComponent",
     "Name": "InventoryProxyComponent_0",
     "Outer": "Default__WoodRefineryT2_C",
-    "Class": "UScriptClass'InventoryProxyComponent'"
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 9,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__WoodRefineryT2_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 12,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "bAllowSubmission": false
+    }
   },
   {
     "Type": "RefineResourceProxyComponent",
@@ -106,20 +151,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceWood01_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWood01.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
           "OutputCount": 2,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -128,20 +172,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceWood02_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWood02.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
           "OutputCount": 2,
-          "OutputMax": 30,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -150,20 +193,19 @@
             "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceWood03_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWood03.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
           "OutputCount": 3,
-          "OutputMax": 30,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -172,20 +214,19 @@
             "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceWood01_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWood01.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
           "OutputCount": 3,
-          "OutputMax": 30,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -194,20 +235,19 @@
             "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceWood02_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWood02.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
           "OutputCount": 5,
-          "OutputMax": 30,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -216,20 +256,19 @@
             "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceWood03_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWood03.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
           "OutputCount": 3,
-          "OutputMax": 30,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         }
@@ -287,8 +326,16 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT3.0"
       },
       "TierPrerequisite": 3,
-      "ProcessedWoodRequirement": 25,
-      "ProcessedStoneRequirement": 15
+      "MaterialRequirements": [
+        {
+          "CodeName": -667807241,
+          "Count": 25
+        },
+        {
+          "CodeName": -879937657,
+          "Count": 15
+        }
+      ]
     }
   },
   {
@@ -302,7 +349,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__WoodRefineryT2_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.12"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__WoodRefineryT2_C:HealthComp'",
@@ -310,11 +357,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__WoodRefineryT2_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.9"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__WoodRefineryT2_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.11"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__WoodRefineryT2_C:DestroyableComp'",
@@ -334,17 +381,16 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__WoodRefineryT2_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.10"
       },
       "CodeNameString": "WoodRefineryT2",
       "CodeName": -1422155946,
       "bShowOnMap": true,
-      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
           "ObjectName": "RefineResourceProxyComponent'Default__WoodRefineryT2_C:RefineResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.8"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__WoodRefineryT2_C:InventoryProxyComponent_0'",
@@ -352,7 +398,11 @@
         },
         {
           "ObjectName": "UpgradeProxyComponent'Default__WoodRefineryT2_C:UpgradeProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.12"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.13"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__WoodRefineryT2_C:InventoryProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/WoodRefineryT2.7"
         }
       ],
       "VisActorClass": {

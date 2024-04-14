@@ -33,28 +33,36 @@ struct FAnvilSimActivity
 
 }; // Size: 0x20
 
-struct FCookingFuel
+struct FBasicCount
 {
-    TSubclassOf<class UItemTemplate> FuelItem;                                        // 0x0000 (size: 0x8)
-    float BurnDurationSec;                                                            // 0x0008 (size: 0x4)
+    int32 CodeName;                                                                   // 0x0000 (size: 0x4)
+    int32 Count;                                                                      // 0x0004 (size: 0x4)
+
+}; // Size: 0x8
+
+struct FBasicItemCount
+{
+    TSubclassOf<class UItemTemplate> CodeName;                                        // 0x0000 (size: 0x8)
+    int32 CodeNameVisVar;                                                             // 0x0008 (size: 0x4)
+    int32 Count;                                                                      // 0x000C (size: 0x4)
 
 }; // Size: 0x10
 
 struct FCookingRecipe
 {
-    TArray<FItemQuantity> InputItems;                                                 // 0x0000 (size: 0x10)
-    TArray<FItemQuantity> OutputItems;                                                // 0x0010 (size: 0x10)
+    TArray<FBasicItemCount> InputItems;                                               // 0x0000 (size: 0x10)
+    TArray<FBasicItemCount> OutputItems;                                              // 0x0010 (size: 0x10)
     float CookDurationSec;                                                            // 0x0020 (size: 0x4)
 
 }; // Size: 0x28
 
 struct FCraftingRecipe
 {
-    TArray<FItemCost> RecipeIngredients;                                              // 0x0000 (size: 0x10)
-    TSubclassOf<class UItemTemplate> CraftedItemTemplate;                             // 0x0010 (size: 0x8)
-    int32 CraftedItemCodeName;                                                        // 0x0018 (size: 0x4)
-    TSubclassOf<class UItemTemplate> QualityIngredientTemplate;                       // 0x0020 (size: 0x8)
-    int32 QualityIngredientCodeName;                                                  // 0x0028 (size: 0x4)
+    TArray<FBasicItemCount> RecipeIngredients;                                        // 0x0000 (size: 0x10)
+    TSubclassOf<class UItemTemplate> CraftedItem;                                     // 0x0010 (size: 0x8)
+    int32 CraftedItemVisVar;                                                          // 0x0018 (size: 0x4)
+    TSubclassOf<class UItemTemplate> QualityIngredient;                               // 0x0020 (size: 0x8)
+    int32 QualityIngredientVisVar;                                                    // 0x0028 (size: 0x4)
 
 }; // Size: 0x30
 
@@ -73,12 +81,21 @@ struct FFootprintSharedCompEntry
 
 }; // Size: 0x10
 
+struct FFuelType
+{
+    TSubclassOf<class UItemTemplate> FuelItem;                                        // 0x0000 (size: 0x8)
+    int32 FuelItemVisVar;                                                             // 0x0008 (size: 0x4)
+    float BurnDurationSec;                                                            // 0x000C (size: 0x4)
+
+}; // Size: 0x10
+
 struct FGridItem
 {
     int32 CodeName;                                                                   // 0x0000 (size: 0x4)
     int32 UnderlyingCodeName;                                                         // 0x0004 (size: 0x4)
+    uint8 Payload;                                                                    // 0x0008 (size: 0x1)
 
-}; // Size: 0x8
+}; // Size: 0xC
 
 struct FHeatingFuel
 {
@@ -106,52 +123,39 @@ struct FHitConverterOutput
 
 }; // Size: 0x30
 
-struct FHousePledgedPlayerIdArray
+struct FHousePledgedPlayerArray
 {
-    TArray<int64> PlayerArray;                                                        // 0x0000 (size: 0x10)
+    TArray<int64> WrappedArray;                                                       // 0x0000 (size: 0x10)
 
 }; // Size: 0x10
 
 struct FInventoryItem
 {
-    FGridItem Base;                                                                   // 0x0000 (size: 0x8)
-    FGridItem DedicatedItem;                                                          // 0x0008 (size: 0x8)
-    int32 Count;                                                                      // 0x0010 (size: 0x4)
-    int64 AcceptedTags;                                                               // 0x0018 (size: 0x8)
-    float Durability;                                                                 // 0x0020 (size: 0x4)
-    uint8 ItemFlags;                                                                  // 0x0024 (size: 0x1)
-    uint8 Payload;                                                                    // 0x0025 (size: 0x1)
-    int32 StackLimit;                                                                 // 0x0028 (size: 0x4)
-    bool bIsDisabled;                                                                 // 0x002C (size: 0x1)
-    bool bTooEncumberedToEquip;                                                       // 0x002D (size: 0x1)
+    FGridItem Base;                                                                   // 0x0000 (size: 0xC)
+    FGridItem DedicatedItem;                                                          // 0x000C (size: 0xC)
+    int32 Count;                                                                      // 0x0018 (size: 0x4)
+    int64 AcceptedTags;                                                               // 0x0020 (size: 0x8)
+    float Durability;                                                                 // 0x0028 (size: 0x4)
+    uint8 ItemFlags;                                                                  // 0x002C (size: 0x1)
+    uint8 Payload;                                                                    // 0x002D (size: 0x1)
+    int32 StackLimit;                                                                 // 0x0030 (size: 0x4)
+    bool bIsDisabled;                                                                 // 0x0034 (size: 0x1)
+    bool bTooEncumberedToEquip;                                                       // 0x0035 (size: 0x1)
 
-}; // Size: 0x30
-
-struct FItemCost
-{
-    TSubclassOf<class UItemTemplate> CostItem;                                        // 0x0000 (size: 0x8)
-    int32 ItemCodeName;                                                               // 0x0008 (size: 0x4)
-    uint8 Count;                                                                      // 0x000C (size: 0x1)
-    EAnvilRareResourceAreaType RequiredRareResourceArea;                              // 0x000D (size: 0x1)
-
-}; // Size: 0x10
+}; // Size: 0x38
 
 struct FItemCount
 {
-    TSubclassOf<class UItemTemplate> ItemType;                                        // 0x0000 (size: 0x8)
-    int32 ItemCodeName;                                                               // 0x0008 (size: 0x4)
-    int32 Count;                                                                      // 0x000C (size: 0x4)
-    uint8 ItemFlags;                                                                  // 0x0010 (size: 0x1)
+    TSubclassOf<class UItemTemplate> CodeName;                                        // 0x0000 (size: 0x8)
+    int32 CodeNameVisVar;                                                             // 0x0008 (size: 0x4)
+    TSubclassOf<class UItemTemplate> UnderlyingCodeName;                              // 0x0010 (size: 0x8)
+    int32 UnderlyingCodeNameVisVar;                                                   // 0x0018 (size: 0x4)
+    float Durability;                                                                 // 0x001C (size: 0x4)
+    int32 Count;                                                                      // 0x0020 (size: 0x4)
+    uint8 ItemFlags;                                                                  // 0x0024 (size: 0x1)
+    uint8 Payload;                                                                    // 0x0025 (size: 0x1)
 
-}; // Size: 0x18
-
-struct FItemQuantity
-{
-    TSubclassOf<class UItemTemplate> ItemType;                                        // 0x0000 (size: 0x8)
-    int32 ItemCodeName;                                                               // 0x0008 (size: 0x4)
-    uint8 Quantity;                                                                   // 0x000C (size: 0x1)
-
-}; // Size: 0x10
+}; // Size: 0x28
 
 struct FItemSlot
 {
@@ -172,23 +176,23 @@ struct FItemSlot
 
 struct FLootTableItem
 {
-    FItemCount ItemToDrop;                                                            // 0x0000 (size: 0x18)
-    float NormalizedChanceToDrop;                                                     // 0x0018 (size: 0x4)
-    float MinDurability;                                                              // 0x001C (size: 0x4)
-    float MaxDurability;                                                              // 0x0020 (size: 0x4)
+    FItemCount ItemToDrop;                                                            // 0x0000 (size: 0x28)
+    float NormalizedChanceToDrop;                                                     // 0x0028 (size: 0x4)
+    float MinDurability;                                                              // 0x002C (size: 0x4)
+    float MaxDurability;                                                              // 0x0030 (size: 0x4)
 
-}; // Size: 0x28
+}; // Size: 0x38
 
 struct FMarketShopItem
 {
-    FGridItem Base;                                                                   // 0x0000 (size: 0x8)
-    int32 Count;                                                                      // 0x0008 (size: 0x4)
-    float Durability;                                                                 // 0x000C (size: 0x4)
-    uint8 Payload;                                                                    // 0x0010 (size: 0x1)
-    int32 Price;                                                                      // 0x0014 (size: 0x4)
-    int32 DefaultPrice;                                                               // 0x0018 (size: 0x4)
+    FGridItem Base;                                                                   // 0x0000 (size: 0xC)
+    int32 Count;                                                                      // 0x000C (size: 0x4)
+    float Durability;                                                                 // 0x0010 (size: 0x4)
+    uint8 Payload;                                                                    // 0x0014 (size: 0x1)
+    int32 Price;                                                                      // 0x0018 (size: 0x4)
+    int32 DefaultPrice;                                                               // 0x001C (size: 0x4)
 
-}; // Size: 0x1C
+}; // Size: 0x20
 
 struct FNightShroudLightSource
 {
@@ -197,12 +201,6 @@ struct FNightShroudLightSource
 
 }; // Size: 0x20
 
-struct FNightShroudLightSourceData
-{
-    TArray<FNightShroudLightSource> LightSourceArray;                                 // 0x0000 (size: 0x10)
-
-}; // Size: 0x10
-
 struct FPledgedPlayer
 {
 }; // Size: 0x28
@@ -210,39 +208,50 @@ struct FPledgedPlayer
 struct FProducableItem
 {
     TSubclassOf<class UItemTemplate> ProducedItem;                                    // 0x0000 (size: 0x8)
-    TArray<FItemCost> ProducedItemCost;                                               // 0x0008 (size: 0x10)
-    float ProductionTime;                                                             // 0x0018 (size: 0x4)
-    uint8 OutputCount;                                                                // 0x001C (size: 0x1)
-    uint32 OutputMax;                                                                 // 0x0020 (size: 0x4)
-    bool bRequiresResearch;                                                           // 0x0024 (size: 0x1)
-    bool bCrateProducedItems;                                                         // 0x0025 (size: 0x1)
+    int32 ProducedItemVisVar;                                                         // 0x0008 (size: 0x4)
+    TArray<FBasicItemCount> InputItems;                                               // 0x0010 (size: 0x10)
+    float ProductionTime;                                                             // 0x0020 (size: 0x4)
+    uint8 OutputCount;                                                                // 0x0024 (size: 0x1)
+    bool bRequiresResearch;                                                           // 0x0025 (size: 0x1)
+    bool bCrateProducedItems;                                                         // 0x0026 (size: 0x1)
 
 }; // Size: 0x28
 
-struct FRefineryProducibleItem
+struct FR2WeatherEvent
 {
-    FGridItem Base;                                                                   // 0x0000 (size: 0x8)
-    int32 OutputCount;                                                                // 0x0008 (size: 0x4)
-    TArray<FRefineryProducibleItemCost> Cost;                                         // 0x0010 (size: 0x10)
-    bool bRequiresResearch;                                                           // 0x0020 (size: 0x1)
-    bool bCrateProducedItems;                                                         // 0x0021 (size: 0x1)
+    FR2WeatherEventConfig Config;                                                     // 0x0000 (size: 0x24)
+    int64 StartUnixTimestamp;                                                         // 0x0028 (size: 0x8)
 
-}; // Size: 0x28
+}; // Size: 0x30
 
-struct FRefineryProducibleItemCost
+struct FR2WeatherEventConfig
 {
-    int32 CodeName;                                                                   // 0x0000 (size: 0x4)
+    EAnvilR2WeatherEventType Type;                                                    // 0x0000 (size: 0x1)
+    float StartingPositionGlobalX;                                                    // 0x0004 (size: 0x4)
+    float StartingPositionGlobalY;                                                    // 0x0008 (size: 0x4)
+    float InnerRadius;                                                                // 0x000C (size: 0x4)
+    float OuterRadius;                                                                // 0x0010 (size: 0x4)
+    float VelocityX;                                                                  // 0x0014 (size: 0x4)
+    float VelocityY;                                                                  // 0x0018 (size: 0x4)
+    int32 MaxDurationSec;                                                             // 0x001C (size: 0x4)
+    float PeakIntensity;                                                              // 0x0020 (size: 0x4)
 
-}; // Size: 0xC
+}; // Size: 0x24
 
-struct FRefineryQueueItem
+struct FRefineQueueItem
 {
-    FGridItem Base;                                                                   // 0x0000 (size: 0x8)
-    int64 OwnerId;                                                                    // 0x0008 (size: 0x8)
-    bool bIsPrivate;                                                                  // 0x0010 (size: 0x1)
-    bool bCanCancel;                                                                  // 0x0011 (size: 0x1)
+    uint8 Index;                                                                      // 0x0000 (size: 0x1)
+    TArray<FItemCount> Resources;                                                     // 0x0008 (size: 0x10)
+    uint8 ItemQuality;                                                                // 0x0018 (size: 0x1)
 
-}; // Size: 0x18
+}; // Size: 0x20
+
+struct FReplicatedRefineQueueItem
+{
+    uint8 Index;                                                                      // 0x0000 (size: 0x1)
+    uint8 ItemQuality;                                                                // 0x0001 (size: 0x1)
+
+}; // Size: 0x2
 
 struct FTechItem
 {
@@ -517,38 +526,11 @@ class UBoxCollisionProxyComponent : public UProxyComponent
 
 class UBuildSiteDataComponent : public UDataComponent
 {
-    int32 BuiltStructureEntity;                                                       // 0x00A8 (size: 0x4)
-    EAnvilToolType RequiredTool;                                                      // 0x00C8 (size: 0x1)
-    bool bRequiresTownHall;                                                           // 0x00E8 (size: 0x1)
-    bool bRequiresCamp;                                                               // 0x0108 (size: 0x1)
-    bool bRequiresSmallCamp;                                                          // 0x0128 (size: 0x1)
-    bool RequiresHorseToComplete;                                                     // 0x0148 (size: 0x1)
-    bool bBuildsInstantly;                                                            // 0x0168 (size: 0x1)
-    uint8 TierPrerequisite;                                                           // 0x0188 (size: 0x1)
-    int32 RoadMaterialRequirement;                                                    // 0x01A8 (size: 0x4)
-    int32 ResourceBranchesRequirement;                                                // 0x01C8 (size: 0x4)
-    int32 ProcessedWoodRequirement;                                                   // 0x01E8 (size: 0x4)
-    int32 ProcessedStoneRequirement;                                                  // 0x0208 (size: 0x4)
-    int32 ProcessedIronRequirement;                                                   // 0x0228 (size: 0x4)
-    int32 ReinforcedWoodRequirement;                                                  // 0x0248 (size: 0x4)
-    int32 ResourceFibreRequirement;                                                   // 0x0268 (size: 0x4)
-    int32 AnimalFatRequirement;                                                       // 0x0288 (size: 0x4)
-    int32 AnimalBonesRequirement;                                                     // 0x02A8 (size: 0x4)
-    int32 ProcessedLeatherRequirement;                                                // 0x02C8 (size: 0x4)
-    int32 RoadMaterialSubmitted;                                                      // 0x02E8 (size: 0x4)
-    int32 ResourceBranchesSubmitted;                                                  // 0x0308 (size: 0x4)
-    int32 ProcessedWoodSubmitted;                                                     // 0x0328 (size: 0x4)
-    int32 ProcessedStoneSubmitted;                                                    // 0x0348 (size: 0x4)
-    int32 ProcessedIronSubmitted;                                                     // 0x0368 (size: 0x4)
-    int32 ReinforcedWoodSubmitted;                                                    // 0x0388 (size: 0x4)
-    int32 ResourceFibreSubmitted;                                                     // 0x03A8 (size: 0x4)
-    int32 AnimalFatSubmitted;                                                         // 0x03C8 (size: 0x4)
-    int32 AnimalBonesSubmitted;                                                       // 0x03E8 (size: 0x4)
-    int32 ProcessedLeatherSubmitted;                                                  // 0x0408 (size: 0x4)
-    int64 BuildGhostPlacementStatus;                                                  // 0x0428 (size: 0x8)
-    int32 PlacementInfoFlags;                                                         // 0x0448 (size: 0x4)
+    TArray<int32> MaterialSubmissions;                                                // 0x00A8 (size: 0x10)
+    int64 BuildGhostPlacementStatus;                                                  // 0x00B8 (size: 0x8)
+    int32 PlacementInfoFlags;                                                         // 0x00D8 (size: 0x4)
 
-}; // Size: 0x468
+}; // Size: 0xF8
 
 class UBuildSiteProxyComponent : public UProxyComponent
 {
@@ -559,32 +541,23 @@ class UBuildSiteProxyComponent : public UProxyComponent
     bool bRequiresTownHall;                                                           // 0x0039 (size: 0x1)
     bool bRequiresCamp;                                                               // 0x003A (size: 0x1)
     bool bRequiresSmallCamp;                                                          // 0x003B (size: 0x1)
-    bool RequiresHorseToComplete;                                                     // 0x003C (size: 0x1)
-    bool bBuildableOverRoads;                                                         // 0x003D (size: 0x1)
-    bool bBuildableNearSpawnPoint;                                                    // 0x003E (size: 0x1)
-    bool bBuildableInEnemyTerritory;                                                  // 0x003F (size: 0x1)
-    bool bBuildableNearEnemies;                                                       // 0x0040 (size: 0x1)
-    bool bAllowRapidBuild;                                                            // 0x0041 (size: 0x1)
-    bool CanBuildTownStructureWithoutPledge;                                          // 0x0042 (size: 0x1)
-    bool bBuildsInstantly;                                                            // 0x0043 (size: 0x1)
+    bool bBuildableOverRoads;                                                         // 0x003C (size: 0x1)
+    bool bBuildableNearSpawnPoint;                                                    // 0x003D (size: 0x1)
+    bool bBuildableInEnemyTerritory;                                                  // 0x003E (size: 0x1)
+    bool bBuildableNearEnemies;                                                       // 0x003F (size: 0x1)
+    bool bAllowRapidBuild;                                                            // 0x0040 (size: 0x1)
+    bool CanBuildTownStructureWithoutPledge;                                          // 0x0041 (size: 0x1)
+    bool bBuildsInstantly;                                                            // 0x0042 (size: 0x1)
+    bool bMinDistanceCheckIgnoreEnemyStructures;                                      // 0x0043 (size: 0x1)
     uint8 TierPrerequisite;                                                           // 0x0044 (size: 0x1)
     TSubclassOf<class UItemTemplate> RequiredDeployable;                              // 0x0048 (size: 0x8)
     float MaxHeightShift;                                                             // 0x0050 (size: 0x4)
     float AdditionalMaxHeightShift;                                                   // 0x0054 (size: 0x4)
     float MinDistanceBetweenStructures;                                               // 0x0058 (size: 0x4)
     TArray<class TSubclassOf<UEntityTemplate>> MinDistanceStructureTypes;             // 0x0060 (size: 0x10)
-    int32 RoadMaterialRequirement;                                                    // 0x0070 (size: 0x4)
-    int32 ResourceBranchesRequirement;                                                // 0x0074 (size: 0x4)
-    int32 ProcessedWoodRequirement;                                                   // 0x0078 (size: 0x4)
-    int32 ProcessedStoneRequirement;                                                  // 0x007C (size: 0x4)
-    int32 ProcessedIronRequirement;                                                   // 0x0080 (size: 0x4)
-    int32 ReinforcedWoodRequirement;                                                  // 0x0084 (size: 0x4)
-    int32 ResourceFibreRequirement;                                                   // 0x0088 (size: 0x4)
-    int32 AnimalFatRequirement;                                                       // 0x008C (size: 0x4)
-    int32 AnimalBonesRequirement;                                                     // 0x0090 (size: 0x4)
-    int32 ProcessedLeatherRequirement;                                                // 0x0094 (size: 0x4)
+    TArray<FBasicCount> MaterialRequirements;                                         // 0x0070 (size: 0x10)
 
-}; // Size: 0x98
+}; // Size: 0x80
 
 class UCannonProxyComponent : public UProxyComponent
 {
@@ -644,7 +617,7 @@ class UCookingDataComponent : public UDataComponent
 
 class UCookingProxyComponent : public UProxyComponent
 {
-    TArray<FCookingFuel> FuelList;                                                    // 0x0028 (size: 0x10)
+    TArray<FFuelType> FuelList;                                                       // 0x0028 (size: 0x10)
     TArray<FCookingRecipe> RecipeList;                                                // 0x0038 (size: 0x10)
     float FoodBurnDurationSec;                                                        // 0x0048 (size: 0x4)
     bool bCanCookWithExistingOutputs;                                                 // 0x004C (size: 0x1)
@@ -888,7 +861,7 @@ class UHousingDataComponent : public UDataComponent
     bool AllowPublicPledging;                                                         // 0x00C8 (size: 0x1)
     bool IsForCampsOnly;                                                              // 0x00E8 (size: 0x1)
     bool IsGroupHouse;                                                                // 0x0108 (size: 0x1)
-    FHousePledgedPlayerIdArray PledgedPlayerIds;                                      // 0x0128 (size: 0x10)
+    FHousePledgedPlayerArray PledgedPlayerIds;                                        // 0x0128 (size: 0x10)
 
 }; // Size: 0x138
 
@@ -927,12 +900,13 @@ class UInventoryProxyComponent : public UProxyComponent
 {
     TArray<FItemSlot> Slots;                                                          // 0x0028 (size: 0x10)
     bool bUnpackCrates;                                                               // 0x0038 (size: 0x1)
-    EAnvilInventoryStackRule StackRule;                                               // 0x0039 (size: 0x1)
-    bool bEnforceWithdrawalStamina;                                                   // 0x003A (size: 0x1)
-    bool bOnlyAllowMaxDurabilityItems;                                                // 0x003B (size: 0x1)
+    bool bEnforceWithdrawalStamina;                                                   // 0x0039 (size: 0x1)
+    bool bOnlyAllowMaxDurabilityItems;                                                // 0x003A (size: 0x1)
+    EAnvilInventoryStackRule StackRule;                                               // 0x003B (size: 0x1)
     float NormalizedSpoilageFactor;                                                   // 0x003C (size: 0x4)
     float LifespanWhenEmpty;                                                          // 0x0040 (size: 0x4)
     bool bAllowWithdrawal;                                                            // 0x0044 (size: 0x1)
+    bool bAllowSubmission;                                                            // 0x0045 (size: 0x1)
 
 }; // Size: 0x48
 
@@ -1160,15 +1134,15 @@ class UPassiveDamageProxyComponent : public UProxyComponent
 
 class UPickupDataComponent : public UDataComponent
 {
-    FItemCount Item;                                                                  // 0x00A8 (size: 0x18)
+    FItemCount Item;                                                                  // 0x00A8 (size: 0x28)
 
-}; // Size: 0xC0
+}; // Size: 0xD0
 
 class UPickupProxyComponent : public UProxyComponent
 {
-    FItemCount Item;                                                                  // 0x0028 (size: 0x18)
+    FItemCount Item;                                                                  // 0x0028 (size: 0x28)
 
-}; // Size: 0x40
+}; // Size: 0x50
 
 class UPlantGrowthDataComponent : public UDataComponent
 {
@@ -1349,14 +1323,15 @@ class URareResourceAreaMarkerProxyComponent : public UProxyComponent
 class URefineResourceDataComponent : public UDataComponent
 {
     bool bCrateProducedItems;                                                         // 0x00A8 (size: 0x1)
-    int32 NumItemsInQueue;                                                            // 0x00C8 (size: 0x4)
-    float ItemProductionTimeLeft;                                                     // 0x00E8 (size: 0x4)
-    float EstItemProductionTimeLeft;                                                  // 0x0108 (size: 0x4)
-    float TotalProductionTimeLeft;                                                    // 0x0128 (size: 0x4)
-    bool bInventoryFull;                                                              // 0x0148 (size: 0x1)
-    uint8 Priority;                                                                   // 0x0168 (size: 0x1)
+    bool bInventoryFull;                                                              // 0x00C8 (size: 0x1)
+    TArray<FReplicatedRefineQueueItem> ReplicatedRefineQueue;                         // 0x00E8 (size: 0x10)
+    uint8 NumItemsInQueue;                                                            // 0x00F8 (size: 0x1)
+    float ItemProductionTimeLeft;                                                     // 0x0118 (size: 0x4)
+    float EstItemProductionTimeLeft;                                                  // 0x0138 (size: 0x4)
+    float TotalProductionTimeLeft;                                                    // 0x0158 (size: 0x4)
+    uint8 Priority;                                                                   // 0x0178 (size: 0x1)
 
-}; // Size: 0x188
+}; // Size: 0x198
 
 class URefineResourceProxyComponent : public UProxyComponent
 {
@@ -1367,14 +1342,14 @@ class URefineResourceProxyComponent : public UProxyComponent
 
 class URelicTechCenterDataComponent : public UDataComponent
 {
-    TArray<FItemCost> RelicTechCosts;                                                 // 0x00A8 (size: 0x10)
+    TArray<FBasicItemCount> RelicTechCosts;                                           // 0x00A8 (size: 0x10)
     TArray<int32> TechItemsDeposited;                                                 // 0x00B8 (size: 0x10)
 
 }; // Size: 0xC8
 
 class URelicTechCenterProxyComponent : public UProxyComponent
 {
-    TArray<FItemCost> RelicTechCosts;                                                 // 0x0028 (size: 0x10)
+    TArray<FBasicItemCount> RelicTechCosts;                                           // 0x0028 (size: 0x10)
 
 }; // Size: 0x38
 
@@ -1511,10 +1486,10 @@ class USimPlayerDataComponent : public UDataComponent
     bool bInTravelZone;                                                               // 0x0428 (size: 0x1)
     bool bIsMeshHidden;                                                               // 0x0448 (size: 0x1)
     bool bIsHomesteadOwnerInTown;                                                     // 0x0468 (size: 0x1)
-    bool bShowEnvStats;                                                               // 0x0488 (size: 0x1)
+    bool bShowWeatherStats;                                                           // 0x0488 (size: 0x1)
     float SecondsUntilFullDecay;                                                      // 0x04A8 (size: 0x4)
     float HeldItemLightSourceRadius;                                                  // 0x04C8 (size: 0x4)
-    FNightShroudLightSourceData LightSourceData;                                      // 0x04E8 (size: 0x10)
+    TArray<FNightShroudLightSource> LightSourceData;                                  // 0x04E8 (size: 0x10)
     uint8 FoodTypesOnCooldownBits;                                                    // 0x04F8 (size: 0x1)
     float AimYaw;                                                                     // 0x0518 (size: 0x4)
     float AimPitch;                                                                   // 0x0538 (size: 0x4)
@@ -1644,10 +1619,6 @@ class UStructureProxyComponent : public UProxyComponent
 
 }; // Size: 0x30
 
-class USupplyStorageProxyComponent : public UProxyComponent
-{
-}; // Size: 0x28
-
 class UTeamDataComponent : public UDataComponent
 {
     uint8 TeamID;                                                                     // 0x00A8 (size: 0x1)
@@ -1677,6 +1648,21 @@ class UTechItemTemplate : public UObject
     class UTexture2D* Image;                                                          // 0x0070 (size: 0x8)
 
 }; // Size: 0x78
+
+class UTemperatureDataComponent : public UDataComponent
+{
+    float CurrentNormalizedTemperature;                                               // 0x00A8 (size: 0x4)
+
+}; // Size: 0xC8
+
+class UTemperatureProxyComponent : public UProxyComponent
+{
+    float DamagePerFreezingTick;                                                      // 0x0028 (size: 0x4)
+    float StructureInteriorTempIncreasePerSec;                                        // 0x002C (size: 0x4)
+    float WarmStructureTempIncreasePerSec;                                            // 0x0030 (size: 0x4)
+    float WarmStructureSearchRadius;                                                  // 0x0034 (size: 0x4)
+
+}; // Size: 0x38
 
 class UTownHallDataComponent : public UDataComponent
 {
@@ -1725,30 +1711,11 @@ class UTrapProxyComponent : public UProxyComponent
 
 class UUpgradeDataComponent : public UDataComponent
 {
-    int32 UpgradeTarget;                                                              // 0x00A8 (size: 0x4)
-    int32 PopRequirement;                                                             // 0x00C8 (size: 0x4)
-    uint8 TierPrerequisite;                                                           // 0x00E8 (size: 0x1)
-    int32 WorkRequirement;                                                            // 0x0108 (size: 0x4)
-    int32 ProcessedWoodRequirement;                                                   // 0x0128 (size: 0x4)
-    int32 ProcessedStoneRequirement;                                                  // 0x0148 (size: 0x4)
-    int32 ProcessedIronRequirement;                                                   // 0x0168 (size: 0x4)
-    int32 ReinforcedWoodRequirement;                                                  // 0x0188 (size: 0x4)
-    int32 SilverRequirement;                                                          // 0x01A8 (size: 0x4)
-    int32 AnimalFatRequirement;                                                       // 0x01C8 (size: 0x4)
-    int32 AnimalBonesRequirement;                                                     // 0x01E8 (size: 0x4)
-    int32 ProcessedLeatherRequirement;                                                // 0x0208 (size: 0x4)
-    int32 WorkSubmitted;                                                              // 0x0228 (size: 0x4)
-    int32 ProcessedWoodSubmitted;                                                     // 0x0248 (size: 0x4)
-    int32 ProcessedStoneSubmitted;                                                    // 0x0268 (size: 0x4)
-    int32 ProcessedIronSubmitted;                                                     // 0x0288 (size: 0x4)
-    int32 ReinforcedWoodSubmitted;                                                    // 0x02A8 (size: 0x4)
-    int32 SilverSubmitted;                                                            // 0x02C8 (size: 0x4)
-    int32 AnimalFatSubmitted;                                                         // 0x02E8 (size: 0x4)
-    int32 AnimalBonesSubmitted;                                                       // 0x0308 (size: 0x4)
-    int32 ProcessedLeatherSubmitted;                                                  // 0x0328 (size: 0x4)
-    int32 bIsUpgrading;                                                               // 0x0348 (size: 0x4)
+    int32 PopRequirement;                                                             // 0x00A8 (size: 0x4)
+    TArray<int32> MaterialSubmissions;                                                // 0x00C8 (size: 0x10)
+    bool bIsUpgrading;                                                                // 0x00D8 (size: 0x1)
 
-}; // Size: 0x368
+}; // Size: 0xF8
 
 class UUpgradeProxyComponent : public UProxyComponent
 {
@@ -1756,17 +1723,9 @@ class UUpgradeProxyComponent : public UProxyComponent
     int32 GoldRequirement;                                                            // 0x0030 (size: 0x4)
     int32 PopRequirement;                                                             // 0x0034 (size: 0x4)
     uint8 TierPrerequisite;                                                           // 0x0038 (size: 0x1)
-    int32 WorkRequirement;                                                            // 0x003C (size: 0x4)
-    int32 ProcessedWoodRequirement;                                                   // 0x0040 (size: 0x4)
-    int32 ProcessedStoneRequirement;                                                  // 0x0044 (size: 0x4)
-    int32 ProcessedIronRequirement;                                                   // 0x0048 (size: 0x4)
-    int32 ReinforcedWoodRequirement;                                                  // 0x004C (size: 0x4)
-    int32 SilverRequirement;                                                          // 0x0050 (size: 0x4)
-    int32 AnimalFatRequirement;                                                       // 0x0054 (size: 0x4)
-    int32 AnimalBonesRequirement;                                                     // 0x0058 (size: 0x4)
-    int32 ProcessedLeatherRequirement;                                                // 0x005C (size: 0x4)
+    TArray<FBasicCount> MaterialRequirements;                                         // 0x0040 (size: 0x10)
 
-}; // Size: 0x60
+}; // Size: 0x50
 
 class UVehicleMovementDataComponent : public UDataComponent
 {
@@ -1817,6 +1776,22 @@ class UVehicleSeatProxyComponent : public UProxyComponent
     TArray<class TSubclassOf<UItemTemplate>> RequiredEquipments;                      // 0x0070 (size: 0x10)
 
 }; // Size: 0x80
+
+class UWeatherDataComponent : public UDataComponent
+{
+    TArray<FR2WeatherEvent> ActiveWeatherEvents;                                      // 0x00A8 (size: 0x10)
+    float CurrentNormalizedSeason;                                                    // 0x00B8 (size: 0x4)
+    float GlobalNormalizedTemperature;                                                // 0x00D8 (size: 0x4)
+    float GlobalNormalizedWetness;                                                    // 0x00F8 (size: 0x4)
+    float GlobalNormalizedWind;                                                       // 0x0118 (size: 0x4)
+    float GlobalWindDirectionX;                                                       // 0x0138 (size: 0x4)
+    float GlobalWindDirectionY;                                                       // 0x0158 (size: 0x4)
+
+}; // Size: 0x178
+
+class UWeatherProxyComponent : public UProxyComponent
+{
+}; // Size: 0x28
 
 class UWellDataComponent : public UDataComponent
 {

@@ -28,7 +28,7 @@ public:
     void StopBandwidthRecording();
     
     UFUNCTION(BlueprintCallable, Exec)
-    void StartBandwidthRecording();
+    void StartBandwidthRecording(const FString& WatchTarget);
     
     UFUNCTION(BlueprintCallable, Exec)
     void SetDrawCollisions(bool bDrawCollisions);

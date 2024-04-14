@@ -10,7 +10,6 @@
 ---@field ScorchEffect1 UScorchEffectComponent
 ---@field ScorchEffect7 UScorchEffectComponent
 ---@field ScorchEffect8 UScorchEffectComponent
----@field StaticMesh UStaticMeshComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ABPVisMarketplaceShopT2_C = {}
 

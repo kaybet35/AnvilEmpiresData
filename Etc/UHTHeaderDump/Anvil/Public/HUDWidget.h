@@ -154,7 +154,7 @@ protected:
     UProgressBar* InteractionProgressBar2;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* EnvironmentStatsText;
+    UTextBlock* WeatherStatsText;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -172,13 +172,13 @@ protected:
     
 private:
     UFUNCTION(BlueprintCallable)
+    ESlateVisibility GetWeatherStatsTextVisibility();
+    
+    UFUNCTION(BlueprintCallable)
+    FText GetWeatherStatsText();
+    
+    UFUNCTION(BlueprintCallable)
     ESlateVisibility GetHUDWidgetVisibility();
-    
-    UFUNCTION(BlueprintCallable)
-    ESlateVisibility GetEnvironmentStatsTextVisibility();
-    
-    UFUNCTION(BlueprintCallable)
-    FText GetEnvironmentStatsText();
     
 };
 

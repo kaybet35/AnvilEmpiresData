@@ -4,7 +4,7 @@
 #include "DataComponent.h"
 #include "EAnvilCharacterStance.h"
 #include "EAnvilSimActivityState.h"
-#include "NightShroudLightSourceData.h"
+#include "NightShroudLightSource.h"
 #include "SimPlayerDataComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -102,7 +102,7 @@ public:
     bool bIsHomesteadOwnerInTown;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bShowEnvStats;
+    bool bShowWeatherStats;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SecondsUntilFullDecay;
@@ -111,7 +111,7 @@ public:
     float HeldItemLightSourceRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FNightShroudLightSourceData LightSourceData;
+    TArray<FNightShroudLightSource> LightSourceData;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 FoodTypesOnCooldownBits;

@@ -12,6 +12,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 UnderlyingCodeName;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 Payload;
+    
     FGridItem();
 };
 

@@ -99,7 +99,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__HuntingCabinT2_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/HuntingCabinT2.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/HuntingCabinT2.14"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__HuntingCabinT2_C:HealthComp'",
@@ -107,11 +107,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__HuntingCabinT2_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/HuntingCabinT2.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/HuntingCabinT2.11"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__HuntingCabinT2_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/HuntingCabinT2.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/HuntingCabinT2.13"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__HuntingCabinT2_C:DestroyableComp'",
@@ -119,7 +119,7 @@
       },
       "MeshCollisionComp": {
         "ObjectName": "MeshCollisionProxyComponent'Default__HuntingCabinT2_C:MeshCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/HuntingCabinT2.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/HuntingCabinT2.9"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__HuntingCabinT2_C:FootprintCollisionProxyComponent_0'",
@@ -135,20 +135,23 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__HuntingCabinT2_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/HuntingCabinT2.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/HuntingCabinT2.12"
       },
       "CodeNameString": "HuntingCabinT2",
       "CodeName": -437966644,
       "bShowOnMap": true,
-      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
       "Components": [
         {
           "ObjectName": "RefineResourceProxyComponent'Default__HuntingCabinT2_C:RefineResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/HuntingCabinT2.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/HuntingCabinT2.10"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__HuntingCabinT2_C:InventoryProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/HuntingCabinT2.7"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__HuntingCabinT2_C:InventoryProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/HuntingCabinT2.8"
         }
       ],
       "VisActorClass": {
@@ -161,7 +164,52 @@
     "Type": "InventoryProxyComponent",
     "Name": "InventoryProxyComponent_0",
     "Outer": "Default__HuntingCabinT2_C",
-    "Class": "UScriptClass'InventoryProxyComponent'"
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 9,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__HuntingCabinT2_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 12,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "bAllowSubmission": false
+    }
   },
   {
     "Type": "MeshCollisionProxyComponent",
@@ -188,29 +236,27 @@
             "ObjectName": "BlueprintGeneratedClass'TrapItem_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/TrapItem.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
               },
-              "ItemCodeName": 0,
-              "Count": 10,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 10
             },
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
               },
-              "ItemCodeName": 0,
-              "Count": 2,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 2
             }
           ],
           "ProductionTime": 60.0,
           "OutputCount": 5,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         }

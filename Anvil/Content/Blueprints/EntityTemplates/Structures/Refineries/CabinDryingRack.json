@@ -56,7 +56,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__CabinDryingRack_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CabinDryingRack.14"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CabinDryingRack.15"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__CabinDryingRack_C:HealthComp'",
@@ -64,11 +64,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__CabinDryingRack_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CabinDryingRack.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CabinDryingRack.12"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__CabinDryingRack_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CabinDryingRack.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CabinDryingRack.14"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__CabinDryingRack_C:DestroyableComp'",
@@ -76,7 +76,7 @@
       },
       "MeshCollisionComp": {
         "ObjectName": "MeshCollisionProxyComponent'Default__CabinDryingRack_C:MeshCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CabinDryingRack.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CabinDryingRack.10"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__CabinDryingRack_C:FootprintCollisionProxyComponent_0'",
@@ -92,16 +92,15 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__CabinDryingRack_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CabinDryingRack.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CabinDryingRack.13"
       },
       "CodeNameString": "CabinDryingRack",
       "CodeName": -1431761254,
       "bShowOnMap": true,
-      "SerializationType": "EEntitySerializationType::SerializationTypeRefinery",
       "Components": [
         {
           "ObjectName": "RefineResourceProxyComponent'Default__CabinDryingRack_C:RefineResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CabinDryingRack.10"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CabinDryingRack.11"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__CabinDryingRack_C:InventoryProxyComponent_0'",
@@ -110,6 +109,10 @@
         {
           "ObjectName": "AIStimulusProxyComponent'Default__CabinDryingRack_C:AIStimulusProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CabinDryingRack.0"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__CabinDryingRack_C:InventoryProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/CabinDryingRack.9"
         }
       ],
       "VisActorClass": {
@@ -171,7 +174,52 @@
     "Type": "InventoryProxyComponent",
     "Name": "InventoryProxyComponent_0",
     "Outer": "Default__CabinDryingRack_C",
-    "Class": "UScriptClass'InventoryProxyComponent'"
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 9,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__CabinDryingRack_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 12,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "bAllowSubmission": false
+    }
   },
   {
     "Type": "MeshCollisionProxyComponent",
@@ -198,20 +246,19 @@
             "ObjectName": "BlueprintGeneratedClass'DriedMeat_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/DriedMeat.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceMeat_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceMeat.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 120.0,
           "OutputCount": 10,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -220,20 +267,19 @@
             "ObjectName": "BlueprintGeneratedClass'DriedMeat_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/DriedMeat.0"
           },
-          "ProducedItemCost": [
+          "ProducedItemVisVar": 0,
+          "InputItems": [
             {
-              "CostItem": {
+              "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceMeatBoar_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceMeatBoar.0"
               },
-              "ItemCodeName": 0,
-              "Count": 1,
-              "RequiredRareResourceArea": "EAnvilRareResourceAreaType::None"
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 120.0,
           "OutputCount": 10,
-          "OutputMax": 1000,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         }

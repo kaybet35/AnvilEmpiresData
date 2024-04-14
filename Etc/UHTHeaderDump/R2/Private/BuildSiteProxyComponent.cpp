@@ -8,7 +8,6 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->bRequiresTownHall = false;
     this->bRequiresCamp = false;
     this->bRequiresSmallCamp = false;
-    this->RequiresHorseToComplete = false;
     this->bBuildableOverRoads = false;
     this->bBuildableNearSpawnPoint = false;
     this->bBuildableInEnemyTerritory = false;
@@ -16,21 +15,12 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->bAllowRapidBuild = false;
     this->CanBuildTownStructureWithoutPledge = false;
     this->bBuildsInstantly = false;
+    this->bMinDistanceCheckIgnoreEnemyStructures = false;
     this->TierPrerequisite = 0;
     this->RequiredDeployable = NULL;
     this->MaxHeightShift = 0.00f;
     this->AdditionalMaxHeightShift = 0.00f;
     this->MinDistanceBetweenStructures = 0.00f;
-    this->RoadMaterialRequirement = 0;
-    this->ResourceBranchesRequirement = 0;
-    this->ProcessedWoodRequirement = 0;
-    this->ProcessedStoneRequirement = 0;
-    this->ProcessedIronRequirement = 0;
-    this->ReinforcedWoodRequirement = 0;
-    this->ResourceFibreRequirement = 0;
-    this->AnimalFatRequirement = 0;
-    this->AnimalBonesRequirement = 0;
-    this->ProcessedLeatherRequirement = 0;
 }
 
 

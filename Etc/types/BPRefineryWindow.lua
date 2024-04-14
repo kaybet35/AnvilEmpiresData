@@ -2,6 +2,7 @@
 
 ---@class UBPRefineryWindow_C : URefineryWindow
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field Arrow_1 UImage
 ---@field BPActionStrip UBPActionStrip_C
 ---@field BPAnvilPanel_1 UBPAnvilPanel_C
 ---@field BPFooterContainer UBPFooterContainer_C
@@ -13,8 +14,6 @@
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 ---@field Image UImage
 ---@field Image_84 UImage
----@field Image_142 UImage
----@field Image_193 UImage
 UBPRefineryWindow_C = {}
 
 ---@param IsDesignTime boolean
