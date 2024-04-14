@@ -182,7 +182,7 @@ class ADatasmithSceneActor : public AActor
 
 class UDatasmithActorTemplate : public UDatasmithObjectTemplate
 {
-    TSet<FName> Layers;                                                               // 0x0030 (size: 0x50)
+    TSet<FName> LayerS;                                                               // 0x0030 (size: 0x50)
     TSet<FName> Tags;                                                                 // 0x0080 (size: 0x50)
 
 }; // Size: 0xD0

@@ -3,8 +3,8 @@
 
 class ABPVisDeployedTrap_C : public AVisTrap
 {
-    class UPickupDataComponent* PickupDataComponent;                                  // 0x0428 (size: 0x8)
+    class UPickupDataComponent* PickupDataComponent;                                  // 0x0470 (size: 0x8)
 
-}; // Size: 0x430
+}; // Size: 0x478
 
 #endif

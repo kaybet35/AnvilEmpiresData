@@ -10,23 +10,23 @@
       "Components": [
         {
           "ObjectName": "VehicleMovementProxyComponent'Default__BatteringRam_C:VehicleMovementProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BatteringRam.8"
-        },
-        {
-          "ObjectName": "VehicleSeatProxyComponent'Default__BatteringRam_C:VehicleSeatProxyComponent_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BatteringRam.10"
-        },
-        {
-          "ObjectName": "VehicleSeatProxyComponent'Default__BatteringRam_C:VehicleSeatProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BatteringRam.9"
         },
         {
-          "ObjectName": "VehicleSeatProxyComponent'Default__BatteringRam_C:VehicleSeatProxyComponent_2'",
+          "ObjectName": "VehicleSeatProxyComponent'Default__BatteringRam_C:VehicleSeatProxyComponent_1'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BatteringRam.11"
         },
         {
-          "ObjectName": "VehicleSeatProxyComponent'Default__BatteringRam_C:VehicleSeatProxyComponent_3'",
+          "ObjectName": "VehicleSeatProxyComponent'Default__BatteringRam_C:VehicleSeatProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BatteringRam.10"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__BatteringRam_C:VehicleSeatProxyComponent_2'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BatteringRam.12"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__BatteringRam_C:VehicleSeatProxyComponent_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BatteringRam.13"
         },
         {
           "ObjectName": "HealthProxyComponent'Default__BatteringRam_C:HealthProxyComponent_0'",
@@ -51,6 +51,10 @@
         {
           "ObjectName": "FootprintCollisionProxyComponent'Default__BatteringRam_C:FootprintCollisionProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BatteringRam.6"
+        },
+        {
+          "ObjectName": "RepairProxyComponent'Default__BatteringRam_C:RepairProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BatteringRam.8"
         }
       ],
       "VisActorClass": {
@@ -173,6 +177,15 @@
     }
   },
   {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairProxyComponent_0",
+    "Outer": "Default__BatteringRam_C",
+    "Class": "UScriptClass'RepairProxyComponent'",
+    "Properties": {
+      "TotalRepairCost": 20
+    }
+  },
+  {
     "Type": "VehicleMovementProxyComponent",
     "Name": "VehicleMovementProxyComponent_0",
     "Outer": "Default__BatteringRam_C",
@@ -190,7 +203,7 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectRam.0"
       },
       "RammingDamage": 250.0,
-      "RammingVelocityFactor": 0.9,
+      "RammingVelocityFactor": 0.6,
       "RammingDamageType": "EAnvilDamageType::Siege",
       "bUsePitch": false
     }

@@ -7,5 +7,6 @@ enum class EAnvilItemDurabilityType : uint8 {
     None,
     Default,
     Heat,
+    DryingProgress,
 };
 

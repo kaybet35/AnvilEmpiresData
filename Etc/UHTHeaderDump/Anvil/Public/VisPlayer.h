@@ -92,9 +92,6 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float YawSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UMapMarkerComponent* MapMarker;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinShroudRadius;
     
@@ -133,10 +130,13 @@ private:
     TSubclassOf<AVisFishingBobber> FishingBobberClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UStaticMeshComponent* HintDirectionMeshComponent;
+    UVisPlayerVisualsComponent* PlayerVisualsComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UVisPlayerVisualsComponent* PlayerVisualsComponent;
+    UMapMarkerComponent* MapMarker;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UMapMarkerComponent* FamilyMarkerMapMarker;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EAnvilSimActivityState, UAnimMontage*> ActivityStateMontageMap;

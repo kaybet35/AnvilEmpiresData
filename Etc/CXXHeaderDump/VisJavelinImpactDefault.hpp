@@ -3,6 +3,6 @@
 
 class AVisJavelinImpactDefault_C : public AVisEffect
 {
-}; // Size: 0x438
+}; // Size: 0x480
 
 #endif

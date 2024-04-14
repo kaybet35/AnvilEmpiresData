@@ -4,7 +4,7 @@ UChatWidget::UChatWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->ChatWidth = 500.00f;
     this->ChatHeight = 300.00f;
     this->ChatMinimizedHeight = 0.00f;
-    this->CurrentMode = EChatType::WORLD;
+    this->CurrentMode = EAnvilChatType::DataCommandList;
     this->MinimizeButton = NULL;
     this->MaximizeButton = NULL;
     this->ChatEntryDropdown = NULL;

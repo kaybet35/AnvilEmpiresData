@@ -12,6 +12,7 @@ class UButton;
 class UCanvasPanelSlot;
 class UImage;
 class UMarketShopMapTooltip;
+class UPanelWidget;
 class UScaleBox;
 class USizeBox;
 class UStatusWidget;
@@ -23,6 +24,9 @@ class ANVIL_API UDeploymentPointWidget : public UUserWidget {
     GENERATED_BODY()
 public:
 private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPanelWidget* MainElements;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UButton* MapItemButton;
     

@@ -3,8 +3,8 @@
 
 class ABPVisArrowProjectile_C : public AVisPickupItem
 {
-    class UAudioComponent* Audio;                                                     // 0x0420 (size: 0x8)
+    class UAudioComponent* Audio;                                                     // 0x0468 (size: 0x8)
 
-}; // Size: 0x428
+}; // Size: 0x470
 
 #endif

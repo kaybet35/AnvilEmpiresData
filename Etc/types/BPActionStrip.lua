@@ -4,6 +4,7 @@
 ---@field BPAttachActionButton UBPAttachActionButton_C
 ---@field BPClaimBedActionButton UBPClaimBedActionButton_C
 ---@field BPClaimFamilyAreaActionButton UBPClaimFamilyAreaActionButton_C
+---@field BPClaimFamilyInventoryActionButton UBPClaimFamilyInventoryActionButton_C
 ---@field BPDeployAsMilitiaActionButton UBPDeployAsMilitiaActionButton_C
 ---@field BPDeployCampActionButton UBPDeployCampActionButton_C
 ---@field BPDeployLadderActionButton UBPDeployLadderActionButton_C

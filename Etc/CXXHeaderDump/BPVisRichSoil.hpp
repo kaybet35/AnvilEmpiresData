@@ -3,8 +3,8 @@
 
 class ABPVisRichSoil_C : public AVisRichSoil
 {
-    class UGrassRemovalVolumeComponent* GrassRemovalVolume;                           // 0x0428 (size: 0x8)
+    class UGrassRemovalVolumeComponent* GrassRemovalVolume;                           // 0x0470 (size: 0x8)
 
-}; // Size: 0x430
+}; // Size: 0x478
 
 #endif

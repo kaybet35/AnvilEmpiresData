@@ -3,6 +3,6 @@
 
 class ABPVisCabinDryingRackBuildSite_C : public AVisBuildSite
 {
-}; // Size: 0x478
+}; // Size: 0x4C0
 
 #endif

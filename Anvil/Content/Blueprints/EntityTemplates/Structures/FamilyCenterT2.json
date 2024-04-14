@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "FamilyCenterT2_C'Default__FamilyCenterT2_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.5"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.6"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -44,6 +44,9 @@
     "Template": {
       "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    },
+    "Properties": {
+      "DecayTimeHours": 48.0
     }
   },
   {
@@ -55,6 +58,12 @@
       "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
     }
+  },
+  {
+    "Type": "FamilyAreaMarkerProxyComponent",
+    "Name": "FamilyAreaMarkerProxyComponent_0",
+    "Outer": "Default__FamilyCenterT2_C",
+    "Class": "UScriptClass'FamilyAreaMarkerProxyComponent'"
   },
   {
     "Type": "FamilyCenterProxyComponent",
@@ -76,19 +85,19 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__FamilyCenterT2_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__FamilyCenterT2_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.8"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__FamilyCenterT2_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__FamilyCenterT2_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__FamilyCenterT2_C:DestroyableComp'",
@@ -96,7 +105,7 @@
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__FamilyCenterT2_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.7"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__FamilyCenterT2_C:BoxCollisionProxyComponent_0'",
@@ -108,7 +117,7 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__FamilyCenterT2_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.11"
       },
       "CodeNameString": "FamilyCenterT2",
       "CodeName": -1284528119,
@@ -118,11 +127,19 @@
       "Components": [
         {
           "ObjectName": "FamilyCenterProxyComponent'Default__FamilyCenterT2_C:FamilyCenterProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.5"
+        },
+        {
+          "ObjectName": "FamilyAreaMarkerProxyComponent'Default__FamilyCenterT2_C:FamilyAreaMarkerProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.4"
         },
         {
+          "ObjectName": "InventoryProxyComponent'Default__FamilyCenterT2_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.9"
+        },
+        {
           "ObjectName": "UpgradeProxyComponent'Default__FamilyCenterT2_C:UpgradeProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.12"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT2.14"
         }
       ],
       "VisActorClass": {
@@ -157,7 +174,54 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
     },
     "Properties": {
-      "MaxHealth": 300.0
+      "MaxHealth": 500.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__FamilyCenterT2_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30000,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "AcceptedTags": [
+            "EAnvilItemTag::Silver"
+          ],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": {
+            "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+          },
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
+        },
+        {
+          "ProxyRepeat": 14,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
+        }
+      ]
     }
   },
   {
@@ -216,7 +280,21 @@
         "ObjectName": "BlueprintGeneratedClass'FamilyCenterT3_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT3.0"
       },
-      "TierPrerequisite": 3
+      "TierPrerequisite": 3,
+      "MaterialRequirements": [
+        {
+          "CodeName": -667807241,
+          "Count": 20
+        },
+        {
+          "CodeName": -879937657,
+          "Count": 10
+        },
+        {
+          "CodeName": 1361768531,
+          "Count": 3
+        }
+      ]
     }
   }
 ]

@@ -15,8 +15,6 @@ enum class EActionButtonType : uint8 {
     DismantleByOfficial,
     RestrictedModeOn,
     RestrictedModeOff,
-    IncreaseRefineryPriority,
-    DecreaseRefineryPriority,
     DeployCamp,
     DeployLadder,
     WithdrawSilver,
@@ -29,5 +27,6 @@ enum class EActionButtonType : uint8 {
     ClaimFamilyArea,
     StartPowerMill,
     StopPowerMill,
+    ClaimFamilyInventory,
 };
 

@@ -13,5 +13,6 @@ enum class EAnvilDismantleStatus : uint8 {
     EnemiesNearby,
     MustBeRepaired,
     MustBeEmpty,
+    FamilyAreaMustBeEmpty,
 };
 

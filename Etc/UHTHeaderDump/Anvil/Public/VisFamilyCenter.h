@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VisStructure.h"
+#include "VisFamilyMarkerArea.h"
 #include "VisFamilyCenter.generated.h"
 
 class UDecalComponent;
 class UFamilyCenterDataComponent;
 
 UCLASS(Blueprintable)
-class ANVIL_API AVisFamilyCenter : public AVisStructure {
+class ANVIL_API AVisFamilyCenter : public AVisFamilyMarkerArea {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

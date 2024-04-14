@@ -16,10 +16,30 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "DeerHusk_C'Default__DeerHusk_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/DeerHusk.1"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/DeerHusk.2"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__DeerHusk_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 75.0,
+        "Z": 50.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 16
     }
   },
   {
@@ -32,7 +52,15 @@
       "Components": [
         {
           "ObjectName": "LifetimeProxyComponent'Default__DeerHusk_C:LifetimeProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/DeerHusk.2"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/DeerHusk.3"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__DeerHusk_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/DeerHusk.1"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__DeerHusk_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/DeerHusk.4"
         }
       ],
       "VisActorClass": {
@@ -47,7 +75,51 @@
     "Outer": "Default__DeerHusk_C",
     "Class": "UScriptClass'LifetimeProxyComponent'",
     "Properties": {
-      "LifeSpan": 60.0
+      "LifeSpan": 180.0
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__DeerHusk_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "HitPoints": 2,
+      "RequiredTool": "EAnvilToolType::Knife",
+      "DroppedResourceAmount": 1,
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'MeatPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/MeatPickup.0"
+      },
+      "DroppedSecondaryResourceAmount": 1,
+      "DroppedSecondaryResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'LeatherPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/LeatherPickup.0"
+      },
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'MediumHarvestedAnimalHuskEmpty_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/MediumHarvestedAnimalHuskEmpty.0"
+      },
+      "LootTable": [
+        {
+          "ItemToDrop": {
+            "CodeName": {
+              "ObjectName": "BlueprintGeneratedClass'AnimalFat_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalFat.1"
+            },
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 1,
+            "ItemFlags": 0,
+            "Payload": 0
+          },
+          "NormalizedChanceToDrop": 1.0,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
+        }
+      ]
     }
   }
 ]

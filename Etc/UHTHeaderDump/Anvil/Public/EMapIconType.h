@@ -21,5 +21,6 @@ enum class EMapIconType : uint8 {
     MapPost,
     BeaconTower,
     BeaconTowerPlayerInfo,
+    FamilyMarker,
 };
 

@@ -11,21 +11,20 @@ EActionButtonType = {
     DismantleByOfficial = 8,
     RestrictedModeOn = 9,
     RestrictedModeOff = 10,
-    IncreaseRefineryPriority = 11,
-    DecreaseRefineryPriority = 12,
-    DeployCamp = 13,
-    DeployLadder = 14,
-    WithdrawSilver = 15,
-    AttachAnimal = 16,
-    DetachAnimal = 17,
-    RepairItem = 18,
-    SetTownName = 19,
-    PushLadder = 20,
-    RetractLadder = 21,
-    ClaimFamilyArea = 22,
-    StartPowerMill = 23,
-    StopPowerMill = 24,
-    EActionButtonType_MAX = 25,
+    DeployCamp = 11,
+    DeployLadder = 12,
+    WithdrawSilver = 13,
+    AttachAnimal = 14,
+    DetachAnimal = 15,
+    RepairItem = 16,
+    SetTownName = 17,
+    PushLadder = 18,
+    RetractLadder = 19,
+    ClaimFamilyArea = 20,
+    StartPowerMill = 21,
+    StopPowerMill = 22,
+    ClaimFamilyInventory = 23,
+    EActionButtonType_MAX = 24,
 }
 
 ---@enum EAlertType
@@ -205,8 +204,9 @@ EHUDWindowType = {
     Packing = 21,
     Anvil = 22,
     FamilyAreaMarker = 23,
-    Count = 24,
-    EHUDWindowType_MAX = 25,
+    FamilyHouse = 24,
+    Count = 25,
+    EHUDWindowType_MAX = 26,
 }
 
 ---@enum EIncomingAttackDirection
@@ -246,7 +246,8 @@ EMapIconType = {
     MapPost = 14,
     BeaconTower = 15,
     BeaconTowerPlayerInfo = 16,
-    EMapIconType_MAX = 17,
+    FamilyMarker = 17,
+    EMapIconType_MAX = 18,
 }
 
 ---@enum EMapMode

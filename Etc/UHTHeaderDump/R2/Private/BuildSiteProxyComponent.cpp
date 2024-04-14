@@ -6,7 +6,6 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->CompatibleSurfaceTypes = 0;
     this->RequiredTool = EAnvilToolType::None;
     this->bRequiresTownHall = false;
-    this->bRequiresFamilyHouse = false;
     this->bRequiresCamp = false;
     this->bRequiresSmallCamp = false;
     this->bBuildableOverRoads = false;

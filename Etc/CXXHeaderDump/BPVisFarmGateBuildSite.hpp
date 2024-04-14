@@ -3,8 +3,8 @@
 
 class ABPVisFarmGateBuildSite_C : public AVisBuildSite
 {
-    class UStaticMeshComponent* StaticMesh;                                           // 0x0478 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh;                                           // 0x04C0 (size: 0x8)
 
-}; // Size: 0x480
+}; // Size: 0x4C8
 
 #endif

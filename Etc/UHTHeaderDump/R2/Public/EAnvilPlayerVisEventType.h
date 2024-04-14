@@ -7,5 +7,7 @@ enum class EAnvilPlayerVisEventType : uint8 {
     OnDeath,
     StatusMessage,
     ForceActivityState,
+    ConfirmFamilyPledgeDialog,
+    ConfirmHousePledgeDialog,
 };
 

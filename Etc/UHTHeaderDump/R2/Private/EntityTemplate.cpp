@@ -14,6 +14,7 @@ UEntityTemplate::UEntityTemplate() {
     this->bGenerateMeshCollisionsFromVisActor = false;
     this->GenerateMeshCollisionMask = 0;
     this->GenerateMeshCollisionStepAngle = 0.00f;
+    this->GenerateMeshCollisionSurfaceType = EAnvilPhysicalSurfaceType::SurfaceTypeDefault;
     this->VisActorClass = NULL;
     this->VisActorTemplateClass = NULL;
     this->VisActorDefaultObject = NULL;

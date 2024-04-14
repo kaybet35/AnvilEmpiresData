@@ -11,5 +11,6 @@ FBuildSiteCostData::FBuildSiteCostData() {
     this->AnimalFat = 0;
     this->AnimalBones = 0;
     this->ProcessedLeather = 0;
+    this->ResourceStoneFragments = 0;
 }
 

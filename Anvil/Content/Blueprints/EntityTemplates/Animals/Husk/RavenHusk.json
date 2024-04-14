@@ -16,10 +16,30 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "RavenHusk_C'Default__RavenHusk_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/RavenHusk.2"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/RavenHusk.3"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__RavenHusk_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 75.0,
+        "Z": 50.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "CollisionMask": 16
     }
   },
   {
@@ -28,7 +48,7 @@
     "Outer": "Default__RavenHusk_C",
     "Class": "UScriptClass'LifetimeProxyComponent'",
     "Properties": {
-      "LifeSpan": 60.0
+      "LifeSpan": 180.0
     }
   },
   {
@@ -41,13 +61,66 @@
       "Components": [
         {
           "ObjectName": "LifetimeProxyComponent'Default__RavenHusk_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/RavenHusk.2"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__RavenHusk_C:BoxCollisionProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/RavenHusk.1"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__RavenHusk_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/RavenHusk.4"
         }
       ],
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisRavenHusk_C'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRavenHusk.2"
       }
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__RavenHusk_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "HitPoints": 3,
+      "RequiredTool": "EAnvilToolType::Knife",
+      "DroppedResourceAmount": 1,
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'FeathersPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/FeathersPickup.0"
+      },
+      "bScatterSecondaryResource": true,
+      "DroppedSecondaryResourceAmount": 1,
+      "DroppedSecondaryResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'MeatSmallPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/MeatSmallPickup.0"
+      },
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'SmallHarvestedAnimalHuskEmpty_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/SmallHarvestedAnimalHuskEmpty.0"
+      },
+      "LootTable": [
+        {
+          "ItemToDrop": {
+            "CodeName": {
+              "ObjectName": "BlueprintGeneratedClass'AnimalFat_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalFat.1"
+            },
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 1,
+            "ItemFlags": 0,
+            "Payload": 0
+          },
+          "NormalizedChanceToDrop": 1.0,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
+        }
+      ]
     }
   }
 ]

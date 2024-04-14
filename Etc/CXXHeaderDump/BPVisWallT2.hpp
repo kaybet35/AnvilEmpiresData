@@ -3,6 +3,6 @@
 
 class ABPVisWallT2_C : public AVisSpline
 {
-}; // Size: 0x490
+}; // Size: 0x4D8
 
 #endif

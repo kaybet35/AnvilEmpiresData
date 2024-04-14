@@ -1,6 +1,7 @@
 #include "DeploymentPointWidget.h"
 
 UDeploymentPointWidget::UDeploymentPointWidget() : UUserWidget(FObjectInitializer::Get()) {
+    this->MainElements = NULL;
     this->MapItemButton = NULL;
     this->MapItemImage = NULL;
     this->TownStatusVerticalBox = NULL;

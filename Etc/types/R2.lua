@@ -116,6 +116,16 @@ FDismantleVoteInfo = {}
 
 
 
+---@class FDryingRackRecipe
+---@field InputItem TSubclassOf<UItemTemplate>
+---@field InputItemVisVar int32
+---@field OutputItem TSubclassOf<UItemTemplate>
+---@field OutputItemVisVar int32
+---@field DryingDurationSeconds float
+FDryingRackRecipe = {}
+
+
+
 ---@class FFootprintSharedCompEntry
 ---@field Comp UProxyComponent
 ---@field bHighlight boolean
@@ -270,6 +280,13 @@ FR2FamilyMember = {}
 
 
 
+---@class FR2FloatRange
+---@field Min float
+---@field Max float
+FR2FloatRange = {}
+
+
+
 ---@class FR2WeatherEvent
 ---@field Config FR2WeatherEventConfig
 ---@field StartUnixTimestamp int64
@@ -383,6 +400,7 @@ UAnimalAIDataComponent = {}
 ---@field Acceleration float
 ---@field RotationSpeed float
 ---@field TrapTime float
+---@field WalkingTime float
 ---@field bHoming boolean
 ---@field HomingDistance float
 UAnimalAIProxyComponent = {}
@@ -471,6 +489,7 @@ UAnimalTameProxyComponent = {}
 
 
 ---@class UAnvilDataComponent : UDataComponent
+---@field GameplayType EAnvilAnvilGameplayType
 ---@field InputItemName int32
 ---@field CurrentSelectedOutputIndex uint8
 ---@field OutputList TArray<FAnvilOutput>
@@ -480,6 +499,7 @@ UAnvilDataComponent = {}
 
 
 ---@class UAnvilProxyComponent : UProxyComponent
+---@field GameplayType EAnvilAnvilGameplayType
 ---@field InputItemName TSubclassOf<UItemTemplate>
 ---@field OutputList TArray<FAnvilOutput>
 ---@field RequiredTool EAnvilToolType
@@ -581,7 +601,6 @@ UBuildSiteDataComponent = {}
 ---@field CompatibleSurfaceTypes int32
 ---@field RequiredTool EAnvilToolType
 ---@field bRequiresTownHall boolean
----@field bRequiresFamilyHouse boolean
 ---@field bRequiresCamp boolean
 ---@field bRequiresSmallCamp boolean
 ---@field bBuildableOverRoads boolean
@@ -706,6 +725,15 @@ UDestroyableProxyComponent = {}
 
 
 
+---@class UDryingRackProxyComponent : UProxyComponent
+---@field Recipes TArray<FDryingRackRecipe>
+---@field DesiredWetRange FR2FloatRange
+---@field DesiredTempRange FR2FloatRange
+---@field QualityChangeTime float
+UDryingRackProxyComponent = {}
+
+
+
 ---@class UEditorSpawnerProxyComponent : UProxyComponent
 UEditorSpawnerProxyComponent = {}
 
@@ -746,6 +774,7 @@ UEntityAttachableProxyComponent = {}
 ---@field bGenerateMeshCollisionsFromVisActor boolean
 ---@field GenerateMeshCollisionMask int32
 ---@field GenerateMeshCollisionStepAngle float
+---@field GenerateMeshCollisionSurfaceType EAnvilPhysicalSurfaceType
 ---@field Components TArray<UProxyComponent>
 ---@field VisActorClass TSubclassOf<AVisActorBase>
 ---@field VisActorTemplateClass TSubclassOf<AVisActorBase>
@@ -784,6 +813,10 @@ UFamilyCenterDataComponent = {}
 ---@field Tier uint8
 UFamilyCenterProxyComponent = {}
 
+
+
+---@class UFamilyInventoryProxyComponent : UProxyComponent
+UFamilyInventoryProxyComponent = {}
 
 
 ---@class UFamilyListProxyComponent : UProxyComponent
@@ -1386,7 +1419,6 @@ URareResourceAreaMarkerProxyComponent = {}
 ---@field ItemProductionTimeLeft float
 ---@field EstItemProductionTimeLeft float
 ---@field TotalProductionTimeLeft float
----@field Priority uint8
 URefineResourceDataComponent = {}
 
 

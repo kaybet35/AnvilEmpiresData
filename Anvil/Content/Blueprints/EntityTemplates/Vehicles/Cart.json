@@ -88,7 +88,7 @@
       "Components": [
         {
           "ObjectName": "VehicleMovementProxyComponent'Default__Cart_C:VehicleMovementProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.10"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.11"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__Cart_C:InventoryProxyComponent_0'",
@@ -121,6 +121,10 @@
         {
           "ObjectName": "EntityAttachableProxyComponent'Default__Cart_C:EntityAttachableProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.6"
+        },
+        {
+          "ObjectName": "RepairProxyComponent'Default__Cart_C:RepairProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.10"
         }
       ],
       "VisActorClass": {
@@ -204,7 +208,9 @@
             "EAnvilItemTag::Crate"
           ],
           "RequiredTags": [],
-          "ProhibitedTags": [],
+          "ProhibitedTags": [
+            "EAnvilItemTag::WeaponStorage"
+          ],
           "DedicatedItemType": null,
           "DedicatedUnderlyingItemType": null,
           "RequiredEnablingItem": null,
@@ -214,6 +220,12 @@
       "StackRule": "EAnvilInventoryStackRule::ForceStackNonLargeItems",
       "NormalizedSpoilageFactor": 0.1
     }
+  },
+  {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairProxyComponent_0",
+    "Outer": "Default__Cart_C",
+    "Class": "UScriptClass'RepairProxyComponent'"
   },
   {
     "Type": "VehicleMovementProxyComponent",

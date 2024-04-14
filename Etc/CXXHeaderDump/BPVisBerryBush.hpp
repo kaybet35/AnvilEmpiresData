@@ -3,6 +3,6 @@
 
 class ABPVisBerryBush_C : public AVisResource
 {
-}; // Size: 0x458
+}; // Size: 0x4A0
 
 #endif

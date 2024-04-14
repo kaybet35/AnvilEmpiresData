@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "FamilyHouse_C'Default__FamilyHouse_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyHouse.5"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyHouse.4"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -58,12 +58,6 @@
       "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
     }
-  },
-  {
-    "Type": "FamilyAreaMarkerProxyComponent",
-    "Name": "FamilyAreaMarkerProxyComponent_0",
-    "Outer": "Default__FamilyHouse_C",
-    "Class": "UScriptClass'FamilyAreaMarkerProxyComponent'"
   },
   {
     "Type": "FamilyHouse_C",
@@ -112,16 +106,15 @@
       },
       "CodeNameString": "FamilyHouse",
       "CodeName": -1872560842,
-      "RelevancyDistSqr": 56250000.0,
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
-          "ObjectName": "FamilyAreaMarkerProxyComponent'Default__FamilyHouse_C:FamilyAreaMarkerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyHouse.4"
-        },
-        {
           "ObjectName": "InventoryProxyComponent'Default__FamilyHouse_C:InventoryProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyHouse.8"
+        },
+        {
+          "ObjectName": "FamilyInventoryProxyComponent'Default__FamilyHouse_C:FamilyInventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyHouse.5"
         }
       ],
       "VisActorClass": {
@@ -129,6 +122,12 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyHouse.2"
       }
     }
+  },
+  {
+    "Type": "FamilyInventoryProxyComponent",
+    "Name": "FamilyInventoryProxyComponent_0",
+    "Outer": "Default__FamilyHouse_C",
+    "Class": "UScriptClass'FamilyInventoryProxyComponent'"
   },
   {
     "Type": "FootprintCollisionProxyComponent",

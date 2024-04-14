@@ -74,6 +74,16 @@ struct FDismantleVoteInfo
 
 }; // Size: 0x10
 
+struct FDryingRackRecipe
+{
+    TSubclassOf<class UItemTemplate> InputItem;                                       // 0x0000 (size: 0x8)
+    int32 InputItemVisVar;                                                            // 0x0008 (size: 0x4)
+    TSubclassOf<class UItemTemplate> OutputItem;                                      // 0x0010 (size: 0x8)
+    int32 OutputItemVisVar;                                                           // 0x0018 (size: 0x4)
+    float DryingDurationSeconds;                                                      // 0x001C (size: 0x4)
+
+}; // Size: 0x20
+
 struct FFootprintSharedCompEntry
 {
     class UProxyComponent* Comp;                                                      // 0x0000 (size: 0x8)
@@ -227,6 +237,13 @@ struct FR2FamilyMember
     EAnvilR2FamilyRoleType Role;                                                      // 0x0008 (size: 0x1)
 
 }; // Size: 0x10
+
+struct FR2FloatRange
+{
+    float Min;                                                                        // 0x0000 (size: 0x4)
+    float Max;                                                                        // 0x0004 (size: 0x4)
+
+}; // Size: 0x8
 
 struct FR2WeatherEvent
 {
@@ -387,8 +404,9 @@ class UAnimalAIProxyComponent : public UProxyComponent
     float Acceleration;                                                               // 0x0038 (size: 0x4)
     float RotationSpeed;                                                              // 0x003C (size: 0x4)
     float TrapTime;                                                                   // 0x0040 (size: 0x4)
-    bool bHoming;                                                                     // 0x0044 (size: 0x1)
-    float HomingDistance;                                                             // 0x0048 (size: 0x4)
+    float WalkingTime;                                                                // 0x0044 (size: 0x4)
+    bool bHoming;                                                                     // 0x0048 (size: 0x1)
+    float HomingDistance;                                                             // 0x004C (size: 0x4)
 
 }; // Size: 0x50
 
@@ -475,20 +493,22 @@ class UAnimalTameProxyComponent : public UProxyComponent
 
 class UAnvilDataComponent : public UDataComponent
 {
-    int32 InputItemName;                                                              // 0x00A8 (size: 0x4)
-    uint8 CurrentSelectedOutputIndex;                                                 // 0x00C8 (size: 0x1)
-    TArray<FAnvilOutput> OutputList;                                                  // 0x00E8 (size: 0x10)
-    float HitCounter;                                                                 // 0x00F8 (size: 0x4)
+    EAnvilAnvilGameplayType GameplayType;                                             // 0x00A8 (size: 0x1)
+    int32 InputItemName;                                                              // 0x00C8 (size: 0x4)
+    uint8 CurrentSelectedOutputIndex;                                                 // 0x00E8 (size: 0x1)
+    TArray<FAnvilOutput> OutputList;                                                  // 0x0108 (size: 0x10)
+    float HitCounter;                                                                 // 0x0118 (size: 0x4)
 
-}; // Size: 0x118
+}; // Size: 0x138
 
 class UAnvilProxyComponent : public UProxyComponent
 {
-    TSubclassOf<class UItemTemplate> InputItemName;                                   // 0x0028 (size: 0x8)
-    TArray<FAnvilOutput> OutputList;                                                  // 0x0030 (size: 0x10)
-    EAnvilToolType RequiredTool;                                                      // 0x0040 (size: 0x1)
+    EAnvilAnvilGameplayType GameplayType;                                             // 0x0028 (size: 0x1)
+    TSubclassOf<class UItemTemplate> InputItemName;                                   // 0x0030 (size: 0x8)
+    TArray<FAnvilOutput> OutputList;                                                  // 0x0038 (size: 0x10)
+    EAnvilToolType RequiredTool;                                                      // 0x0048 (size: 0x1)
 
-}; // Size: 0x48
+}; // Size: 0x50
 
 class UArmorDataComponent : public UDataComponent
 {
@@ -585,18 +605,17 @@ class UBuildSiteProxyComponent : public UProxyComponent
     int32 CompatibleSurfaceTypes;                                                     // 0x0034 (size: 0x4)
     EAnvilToolType RequiredTool;                                                      // 0x0038 (size: 0x1)
     bool bRequiresTownHall;                                                           // 0x0039 (size: 0x1)
-    bool bRequiresFamilyHouse;                                                        // 0x003A (size: 0x1)
-    bool bRequiresCamp;                                                               // 0x003B (size: 0x1)
-    bool bRequiresSmallCamp;                                                          // 0x003C (size: 0x1)
-    bool bBuildableOverRoads;                                                         // 0x003D (size: 0x1)
-    bool bBuildableNearSpawnPoint;                                                    // 0x003E (size: 0x1)
-    bool bBuildableInEnemyTerritory;                                                  // 0x003F (size: 0x1)
-    bool bBuildableNearEnemies;                                                       // 0x0040 (size: 0x1)
-    bool bAllowRapidBuild;                                                            // 0x0041 (size: 0x1)
-    bool CanBuildTownStructureWithoutPledge;                                          // 0x0042 (size: 0x1)
-    bool bBuildsInstantly;                                                            // 0x0043 (size: 0x1)
-    bool bMinDistanceCheckIgnoreEnemyStructures;                                      // 0x0044 (size: 0x1)
-    uint8 TierPrerequisite;                                                           // 0x0045 (size: 0x1)
+    bool bRequiresCamp;                                                               // 0x003A (size: 0x1)
+    bool bRequiresSmallCamp;                                                          // 0x003B (size: 0x1)
+    bool bBuildableOverRoads;                                                         // 0x003C (size: 0x1)
+    bool bBuildableNearSpawnPoint;                                                    // 0x003D (size: 0x1)
+    bool bBuildableInEnemyTerritory;                                                  // 0x003E (size: 0x1)
+    bool bBuildableNearEnemies;                                                       // 0x003F (size: 0x1)
+    bool bAllowRapidBuild;                                                            // 0x0040 (size: 0x1)
+    bool CanBuildTownStructureWithoutPledge;                                          // 0x0041 (size: 0x1)
+    bool bBuildsInstantly;                                                            // 0x0042 (size: 0x1)
+    bool bMinDistanceCheckIgnoreEnemyStructures;                                      // 0x0043 (size: 0x1)
+    uint8 TierPrerequisite;                                                           // 0x0044 (size: 0x1)
     TSubclassOf<class UItemTemplate> RequiredDeployable;                              // 0x0048 (size: 0x8)
     float MaxHeightShift;                                                             // 0x0050 (size: 0x4)
     float AdditionalMaxHeightShift;                                                   // 0x0054 (size: 0x4)
@@ -709,6 +728,15 @@ class UDestroyableProxyComponent : public UProxyComponent
 
 }; // Size: 0x30
 
+class UDryingRackProxyComponent : public UProxyComponent
+{
+    TArray<FDryingRackRecipe> Recipes;                                                // 0x0028 (size: 0x10)
+    FR2FloatRange DesiredWetRange;                                                    // 0x0038 (size: 0x8)
+    FR2FloatRange DesiredTempRange;                                                   // 0x0040 (size: 0x8)
+    float QualityChangeTime;                                                          // 0x0048 (size: 0x4)
+
+}; // Size: 0x50
+
 class UEditorSpawnerProxyComponent : public UProxyComponent
 {
 }; // Size: 0x28
@@ -750,6 +778,7 @@ class UEntityTemplate : public UObject
     bool bGenerateMeshCollisionsFromVisActor;                                         // 0x004A (size: 0x1)
     int32 GenerateMeshCollisionMask;                                                  // 0x004C (size: 0x4)
     float GenerateMeshCollisionStepAngle;                                             // 0x0050 (size: 0x4)
+    EAnvilPhysicalSurfaceType GenerateMeshCollisionSurfaceType;                       // 0x0054 (size: 0x1)
     TArray<class UProxyComponent*> Components;                                        // 0x0058 (size: 0x10)
     TSubclassOf<class AVisActorBase> VisActorClass;                                   // 0x0068 (size: 0x8)
     TSubclassOf<class AVisActorBase> VisActorTemplateClass;                           // 0x0070 (size: 0x8)
@@ -785,6 +814,10 @@ class UFamilyCenterProxyComponent : public UProxyComponent
     uint8 Tier;                                                                       // 0x0028 (size: 0x1)
 
 }; // Size: 0x30
+
+class UFamilyInventoryProxyComponent : public UProxyComponent
+{
+}; // Size: 0x28
 
 class UFamilyListProxyComponent : public UProxyComponent
 {
@@ -1387,9 +1420,8 @@ class URefineResourceDataComponent : public UDataComponent
     float ItemProductionTimeLeft;                                                     // 0x00F8 (size: 0x4)
     float EstItemProductionTimeLeft;                                                  // 0x0118 (size: 0x4)
     float TotalProductionTimeLeft;                                                    // 0x0138 (size: 0x4)
-    uint8 Priority;                                                                   // 0x0158 (size: 0x1)
 
-}; // Size: 0x178
+}; // Size: 0x158
 
 class URefineResourceProxyComponent : public UProxyComponent
 {

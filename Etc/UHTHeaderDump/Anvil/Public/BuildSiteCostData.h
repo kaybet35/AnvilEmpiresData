@@ -37,6 +37,9 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int16 ProcessedLeather;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ResourceStoneFragments;
+    
     ANVIL_API FBuildSiteCostData();
 };
 

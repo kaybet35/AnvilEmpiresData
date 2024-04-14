@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABPVisFamilyHouse_C : AVisFamilyMarkerArea
+---@class ABPVisFamilyHouse_C : AVisFamilyInventory
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field SmokeStack UNiagaraComponent
 ---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C

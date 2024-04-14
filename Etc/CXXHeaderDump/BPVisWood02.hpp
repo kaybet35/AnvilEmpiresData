@@ -3,6 +3,6 @@
 
 class ABPVisWood02_C : public AVisPickupItem
 {
-}; // Size: 0x420
+}; // Size: 0x468
 
 #endif

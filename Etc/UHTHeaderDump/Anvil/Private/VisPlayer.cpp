@@ -39,7 +39,6 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->CameraRotationLerpSpeed = 1.00f;
     this->AimMeshLength = 100.00f;
     this->YawSpeed = 1.00f;
-    this->MapMarker = CreateDefaultSubobject<UMapMarkerComponent>(TEXT("MapMarker"));
     this->MinShroudRadius = 750.00f;
     this->MaxShroudRadius = 3000.00f;
     this->DeathCue = NULL;
@@ -52,8 +51,9 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->MeleeAimMeshTargetComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeleeAimMeshTarget"));
     this->FishingAimMeshClass = NULL;
     this->FishingBobberClass = NULL;
-    this->HintDirectionMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("HintDirectionMesh"));
     this->PlayerVisualsComponent = CreateDefaultSubobject<UVisPlayerVisualsComponent>(TEXT("PlayerVisualsComponent"));
+    this->MapMarker = CreateDefaultSubobject<UMapMarkerComponent>(TEXT("MapMarker"));
+    this->FamilyMarkerMapMarker = CreateDefaultSubobject<UMapMarkerComponent>(TEXT("FamilyMarkerMapMarker"));
     this->ArmourDataComponent = CreateDefaultSubobject<UArmorDataComponent>(TEXT("ArmourDataComponent"));
     this->VoiceIndicator = CreateDefaultSubobject<UBillboardComponent>(TEXT("BillboardComponent"));
     this->TorchVFXComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("TorchVFXComponent"));
@@ -72,18 +72,6 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->WindHighAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("WindHighAudioComponent"));
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
-    this->Mesh->SetupAttachment(RootComponent);
-    this->Head->SetupAttachment(Mesh);
-    this->AimMeshComponent->SetupAttachment(RootComponent);
-    this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
-    this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
-    this->HintDirectionMeshComponent->SetupAttachment(RootComponent);
-    this->VoiceIndicator->SetupAttachment(RootComponent);
-    this->TorchVFXComponent->SetupAttachment(Mesh);
-    this->TorchAudioComponent->SetupAttachment(Mesh);
-    this->RainVFXComponent->SetupAttachment(SpringArm);
-    this->SnowVFXComponent->SetupAttachment(SpringArm);
-    this->BreathFogVFXComponent->SetupAttachment(Mesh);
     this->RainLowAudioComponent->SetupAttachment(SpringArm);
     this->RainMidAudioComponent->SetupAttachment(SpringArm);
     this->RainHighAudioComponent->SetupAttachment(SpringArm);
@@ -93,11 +81,22 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->WindLowAudioComponent->SetupAttachment(SpringArm);
     this->WindMidAudioComponent->SetupAttachment(SpringArm);
     this->WindHighAudioComponent->SetupAttachment(SpringArm);
-    this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->Mesh->SetupAttachment(RootComponent);
+    this->Head->SetupAttachment(Mesh);
+    this->AimMeshComponent->SetupAttachment(RootComponent);
+    this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
+    this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
+    this->VoiceIndicator->SetupAttachment(RootComponent);
+    this->TorchVFXComponent->SetupAttachment(Mesh);
+    this->TorchAudioComponent->SetupAttachment(Mesh);
+    this->RainVFXComponent->SetupAttachment(SpringArm);
+    this->SnowVFXComponent->SetupAttachment(SpringArm);
+    this->BreathFogVFXComponent->SetupAttachment(Mesh);
+    this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 float AVisPlayer::GetVelocityHeadingDegrees() {

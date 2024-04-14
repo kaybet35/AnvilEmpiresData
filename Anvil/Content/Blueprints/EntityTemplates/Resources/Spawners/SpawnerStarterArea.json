@@ -16,7 +16,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "SpawnerStarterArea_C'Default__SpawnerStarterArea_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.17"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.18"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -35,9 +35,9 @@
       "SpawnRadius": 25000.0,
       "MinimumSpawnRadius": 10000.0,
       "SpawnInterval": 300.0,
-      "SpawnQuantity": 4,
-      "MaxSpawn": 4,
-      "ResourceReserveInitial": 4,
+      "SpawnQuantity": 3,
+      "MaxSpawn": 3,
+      "ResourceReserveInitial": 3,
       "MinDistanceBetweenSpawns": 15000.0,
       "CompatibleSurfaceTypes": 17412
     }
@@ -58,7 +58,7 @@
       "SpawnQuantity": 6,
       "MaxSpawn": 6,
       "ResourceReserveInitial": 6,
-      "MinDistanceBetweenSpawns": 15000.0,
+      "MinDistanceBetweenSpawns": 1000.0,
       "bDontSpawnInSettlements": true,
       "CompatibleSurfaceTypes": 1024,
       "OtherResourcesToAvoid": [
@@ -89,6 +89,18 @@
         {
           "ObjectName": "BlueprintGeneratedClass'WolfSpawner_C'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/WolfSpawner.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Tree01_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree01.1"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Tree02_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree02.1"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Tree03_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03.1"
         }
       ]
     }
@@ -306,6 +318,25 @@
       "MaxSpawn": 1,
       "ResourceReserveInitial": 1,
       "MinDistanceBetweenSpawns": 20000.0
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_17",
+    "Outer": "Default__SpawnerStarterArea_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'CopperFragmentsPile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/CopperFragmentsPile.0"
+      },
+      "SpawnRadius": 50000.0,
+      "SpawnInterval": 180.0,
+      "SpawnQuantity": 45,
+      "MaxSpawn": 45,
+      "ResourceReserveInitial": -1,
+      "MinDistanceBetweenSpawns": 500.0,
+      "CompatibleSurfaceTypes": 25092
     }
   },
   {
@@ -531,7 +562,7 @@
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerStarterArea_C:ResourceSpawnerProxyComponent_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.12"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.13"
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerStarterArea_C:ResourceSpawnerProxyComponent_11'",
@@ -539,7 +570,7 @@
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerStarterArea_C:ResourceSpawnerProxyComponent_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.13"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.14"
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerStarterArea_C:ResourceSpawnerProxyComponent_12'",
@@ -551,7 +582,7 @@
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerStarterArea_C:ResourceSpawnerProxyComponent_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.16"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.17"
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerStarterArea_C:ResourceSpawnerProxyComponent_10'",
@@ -559,23 +590,27 @@
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerStarterArea_C:ResourceSpawnerProxyComponent_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.11"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.12"
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerStarterArea_C:ResourceSpawnerProxyComponent_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.10"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.11"
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerStarterArea_C:ResourceSpawnerProxyComponent_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.10"
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerStarterArea_C:ResourceSpawnerProxyComponent_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.15"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.16"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerStarterArea_C:ResourceSpawnerProxyComponent_17'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.9"
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerStarterArea_C:ResourceSpawnerProxyComponent_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.14"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerStarterArea.15"
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__SpawnerStarterArea_C:ResourceSpawnerProxyComponent_0'",

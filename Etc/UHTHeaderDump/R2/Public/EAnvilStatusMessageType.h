@@ -73,6 +73,7 @@ enum class EAnvilStatusMessageType : uint8 {
     AccessDeniedTooFarToInteract,
     DismantleNoPermission,
     DismantleMustBeEmpty,
+    FamilyAreaMustBeEmpty,
     GateIsBreached,
     EnemiesNearby,
     UnstuckStarting,
@@ -103,6 +104,7 @@ enum class EAnvilStatusMessageType : uint8 {
     UnableToIncreaseStatusUsingSilver,
     TaxesAreOverdue,
     FamilyAllianceSet,
+    RequiresFamily,
     RemovedFromFamily,
     TargetInUse,
     ItemInUse,
@@ -114,6 +116,8 @@ enum class EAnvilStatusMessageType : uint8 {
     OnlyOneFamilyCenterPerFamily,
     TooCloseToExistingStructure,
     TargetImmuneFriendlyFire,
+    TargetImmuneEveryone,
+    ToolTierTooLow,
     NumTypes,
 };
 

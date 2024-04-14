@@ -1,0 +1,103 @@
+[
+  {
+    "Type": "BearDenElite_C",
+    "Name": "Default__BearDenElite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDenElite.BearDenElite_C'",
+    "Properties": {
+      "CodeNameString": "BearDenElite",
+      "CodeName": -370462001,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__BearDenElite_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDenElite.2"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__BearDenElite_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDenElite.3"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisBearDenElite_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisBearDenElite.1"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BearDenElite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BearDenElite_C'Default__BearDenElite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDenElite.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__BearDenElite_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 75.0,
+        "Z": 50.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeWood",
+      "CollisionMask": 16
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__BearDenElite_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "HitPoints": 1,
+      "RequiredTool": "EAnvilToolType::Hands",
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'BearDenEliteEmpty_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/BearDenEliteEmpty.1"
+      },
+      "bSnapHuskEntityToGround": false,
+      "LootTable": [
+        {
+          "ItemToDrop": {
+            "CodeName": {
+              "ObjectName": "BlueprintGeneratedClass'ResourceResin_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceResin.0"
+            },
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 1,
+            "ItemFlags": 0,
+            "Payload": 0
+          },
+          "NormalizedChanceToDrop": 1.0,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
+        }
+      ]
+    }
+  }
+]

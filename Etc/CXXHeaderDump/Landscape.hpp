@@ -574,7 +574,7 @@ class UMaterialExpressionLandscapeGrassOutput : public UMaterialExpressionCustom
 
 class UMaterialExpressionLandscapeLayerBlend : public UMaterialExpression
 {
-    TArray<FLayerBlendInput> Layers;                                                  // 0x00B0 (size: 0x10)
+    TArray<FLayerBlendInput> LayerS;                                                  // 0x00B0 (size: 0x10)
 
 }; // Size: 0xC0
 

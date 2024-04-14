@@ -8,7 +8,7 @@ class DATASMITHCONTENT_API UDatasmithActorTemplate : public UDatasmithObjectTemp
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSet<FName> Layers;
+    TSet<FName> LayerS;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<FName> Tags;

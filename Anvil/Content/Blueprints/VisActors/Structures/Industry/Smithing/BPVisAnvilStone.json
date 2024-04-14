@@ -80,38 +80,32 @@
       "ConvertedItemMeshMap": [
         {
           "BladeSwordBronze": {
-            "ObjectName": "SkeletalMesh'BladeSword_SK'",
-            "ObjectPath": "Anvil/Content/Meshes/Items/BladeSword_SK.1"
+            "ObjectName": "SkeletalMesh'BladeSwordBronze_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/BladeSwordBronze_SK.1"
           }
         },
         {
           "BladeAxeBronze": {
-            "ObjectName": "SkeletalMesh'BladeAxe_SK'",
-            "ObjectPath": "Anvil/Content/Meshes/Items/BladeAxe_SK.1"
-          }
-        },
-        {
-          "BladeTipBronze": {
-            "ObjectName": "SkeletalMesh'BladeTip_SK'",
-            "ObjectPath": "Anvil/Content/Meshes/Items/BladeTip_SK.1"
+            "ObjectName": "SkeletalMesh'BladeAxeBronze_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/BladeAxeBronze_SK.1"
           }
         },
         {
           "BladeToolBronze": {
-            "ObjectName": "SkeletalMesh'BladeTool_SK'",
-            "ObjectPath": "Anvil/Content/Meshes/Items/BladeTool_SK.1"
+            "ObjectName": "SkeletalMesh'BladeToolBronze_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/BladeToolBronze_SK.1"
           }
         },
         {
-          "ProcessedIronHeated": {
-            "ObjectName": "SkeletalMesh'BladeSword_SK'",
-            "ObjectPath": "Anvil/Content/Meshes/Items/BladeSword_SK.1"
+          "BladeTipBronze": {
+            "ObjectName": "SkeletalMesh'BladeSpearBronze_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/BladeSpearBronze_SK.1"
           }
         },
         {
-          "ProcessedIron": {
-            "ObjectName": "SkeletalMesh'BladeCooled_SK'",
-            "ObjectPath": "Anvil/Content/Meshes/Items/BladeCooled_SK.1"
+          "ProcessedBronze": {
+            "ObjectName": "SkeletalMesh'BladeSwordBronze_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/BladeSwordBronze_SK.1"
           }
         }
       ],
@@ -144,7 +138,6 @@
         "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconIndustryAnvilStone.0"
       },
       "BuildSiteCategory": "EBuildSiteCategory::Smithing",
-      "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisAnvilStone_C:UpgradeDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvilStone.19"
@@ -177,6 +170,7 @@
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisAnvilStone_C:GrassRemovalVolume'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvilStone.5"
       },
+      "GeneratedScorchEffects": 4,
       "VisDisplayName": {
         "Namespace": "",
         "Key": "B9A92F854B3B6E2E944981881848D6BE",
@@ -186,8 +180,8 @@
       "Description": {
         "Namespace": "",
         "Key": "878BD00345471A29B2D65F9782FA635A",
-        "SourceString": "A dense stone with a flat section on top. Used to draw out softer metals like bronze",
-        "LocalizedString": "A dense stone with a flat section on top. Used to draw out softer metals like bronze"
+        "SourceString": "A dense stone with a flat section on top. Used to draw out softer metals like bronze. Bronze ingots are shaped into Blades here.",
+        "LocalizedString": "A dense stone with a flat section on top. Used to draw out softer metals like bronze. Bronze ingots are shaped into Blades here."
       },
       "UseWindowType": "EHUDWindowType::Anvil",
       "bUseForceCameraZoom": true,
@@ -375,27 +369,39 @@
     "Outer": "Default__BPVisAnvilStone_C",
     "Class": "UScriptClass'SkeletalMeshComponent'",
     "Properties": {
+      "bUseRefPoseOnInitAnim": true,
       "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'BladeSword_SK'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/BladeSword_SK.1"
+        "ObjectName": "SkeletalMesh'BladeAxeBronze_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/BladeAxeBronze_SK.1"
       },
       "SkinnedAsset": {
-        "ObjectName": "SkeletalMesh'BladeSword_SK'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/BladeSword_SK.1"
+        "ObjectName": "SkeletalMesh'BladeAxeBronze_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/BladeAxeBronze_SK.1"
       },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'BronzeTools'",
+          "ObjectPath": "Anvil/Content/Materials/Items/BronzeTools.0"
+        }
+      ],
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisAnvilStone_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Smithing/BPVisAnvilStone.1"
       },
       "RelativeLocation": {
-        "X": -6.864958,
-        "Y": -0.8664887,
-        "Z": 110.0
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 105.94413
       },
       "RelativeRotation": {
         "Pitch": 0.0,
         "Yaw": -90.0,
         "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
       }
     }
   },

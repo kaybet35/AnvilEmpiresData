@@ -3,10 +3,10 @@
 
 class ABPVisCart_C : public AVisVehicle
 {
-    class UEntityAttachableDataComponent* EntityAttachableData;                       // 0x0430 (size: 0x8)
-    class UVisMultiItemStockpileComponent* VisMultiItemStockpile;                     // 0x0438 (size: 0x8)
-    class USkeletalMeshComponent* CartMesh;                                           // 0x0440 (size: 0x8)
+    class UEntityAttachableDataComponent* EntityAttachableData;                       // 0x0478 (size: 0x8)
+    class UVisMultiItemStockpileComponent* VisMultiItemStockpile;                     // 0x0480 (size: 0x8)
+    class USkeletalMeshComponent* CartMesh;                                           // 0x0488 (size: 0x8)
 
-}; // Size: 0x448
+}; // Size: 0x490
 
 #endif

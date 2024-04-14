@@ -6,7 +6,6 @@ URefineResourceDataComponent::URefineResourceDataComponent(const FObjectInitiali
     this->ItemProductionTimeLeft = 0.00f;
     this->EstItemProductionTimeLeft = 0.00f;
     this->TotalProductionTimeLeft = 0.00f;
-    this->Priority = 0;
 }
 
 

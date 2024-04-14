@@ -4003,7 +4003,7 @@ struct FMaterialLayersFunctionsEditorOnlyData
 
 struct FMaterialLayersFunctionsRuntimeData
 {
-    TArray<class UMaterialFunctionInterface*> Layers;                                 // 0x0000 (size: 0x10)
+    TArray<class UMaterialFunctionInterface*> LayerS;                                 // 0x0000 (size: 0x10)
     TArray<class UMaterialFunctionInterface*> Blends;                                 // 0x0010 (size: 0x10)
 
 }; // Size: 0x20
@@ -7872,7 +7872,7 @@ class AActor : public UObject
     class APawn* Instigator;                                                          // 0x0180 (size: 0x8)
     TArray<class AActor*> Children;                                                   // 0x0188 (size: 0x10)
     class USceneComponent* RootComponent;                                             // 0x0198 (size: 0x8)
-    TArray<FName> Layers;                                                             // 0x01A8 (size: 0x10)
+    TArray<FName> LayerS;                                                             // 0x01A8 (size: 0x10)
     TWeakObjectPtr<class UChildActorComponent> ParentComponent;                       // 0x01B8 (size: 0x8)
     TArray<FName> Tags;                                                               // 0x01C0 (size: 0x10)
     FActorOnTakeAnyDamage OnTakeAnyDamage;                                            // 0x01D0 (size: 0x1)

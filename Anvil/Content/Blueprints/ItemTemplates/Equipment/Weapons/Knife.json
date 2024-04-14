@@ -49,6 +49,7 @@
       },
       "bStaggersWielder": true,
       "DamageType": "EAnvilDamageType::Slashing",
+      "ToolType": "EAnvilToolType::KnifeT2",
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
         "Delay": 0.35,
@@ -59,8 +60,17 @@
       "RangedActivity": {
         "bRepeatable": false
       },
+      "GatherActivity": {
+        "State": "EAnvilSimActivityState::UsingHandTool",
+        "Delay": 0.2,
+        "Duration": 1.1,
+        "MovementSpeedModifier": 0.0,
+        "RotationSpeedModifier": 0.0,
+        "StaminaCost": 15.0,
+        "AimedStaminaCost": 3.0
+      },
       "bAllowCameraPan": false,
-      "Damage": 15,
+      "Damage": 25,
       "DurabilityLossPerUse": 2.5,
       "DamageRadius": 125.0,
       "AimMovementSpeedModifier": 0.55,

@@ -6,7 +6,7 @@
     "Properties": {
       "ModeNameMap": [
         {
-          "EChatType::ALERT": {
+          "EAnvilChatType::Alert": {
             "Namespace": "Anvil",
             "Key": "ChatAlert",
             "SourceString": "Alert",
@@ -14,7 +14,7 @@
           }
         },
         {
-          "EChatType::ADMIN": {
+          "EAnvilChatType::Admin": {
             "Namespace": "Anvil",
             "Key": "ChatAdmin",
             "SourceString": "Admin",
@@ -22,7 +22,7 @@
           }
         },
         {
-          "EChatType::TOWN": {
+          "EAnvilChatType::WorldTown": {
             "Namespace": "Anvil",
             "Key": "ChatTown",
             "SourceString": "Town",
@@ -30,7 +30,7 @@
           }
         },
         {
-          "EChatType::TEAM": {
+          "EAnvilChatType::Team": {
             "Namespace": "Anvil",
             "Key": "ChatTeam",
             "SourceString": "Alliance",
@@ -38,7 +38,7 @@
           }
         },
         {
-          "EChatType::LOCAL": {
+          "EAnvilChatType::Local": {
             "Namespace": "Anvil",
             "Key": "ChatLocal",
             "SourceString": "Local",
@@ -46,29 +46,40 @@
           }
         },
         {
-          "EChatType::WORLD_TEAM": {
+          "EAnvilChatType::WorldTeam": {
             "Namespace": "Anvil",
             "Key": "ChatWorld",
             "SourceString": "World",
             "LocalizedString": "World"
           }
+        },
+        {
+          "EAnvilChatType::WorldFamily": {
+            "Namespace": "Anvil",
+            "Key": "ChatWorldFamily",
+            "SourceString": "Family",
+            "LocalizedString": "Family"
+          }
         }
       ],
       "ModeSwitchKeywordMap": [
         {
-          "/w": "EChatType::WORLD_TEAM"
+          "/w": "EAnvilChatType::WorldTeam"
         },
         {
-          "/a": "EChatType::ADMIN"
+          "/a": "EAnvilChatType::Admin"
         },
         {
-          "/l": "EChatType::LOCAL"
+          "/l": "EAnvilChatType::Local"
         },
         {
-          "/t": "EChatType::TEAM"
+          "/t": "EAnvilChatType::Team"
         },
         {
-          "/s": "EChatType::TOWN"
+          "/s": "EAnvilChatType::WorldTown"
+        },
+        {
+          "/f": "EAnvilChatType::WorldFamily"
         }
       ],
       "bHasScriptImplementedTick": false,

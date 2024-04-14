@@ -179,7 +179,7 @@ FDatasmithTessellationOptions = {}
 
 
 ---@class UDatasmithActorTemplate : UDatasmithObjectTemplate
----@field Layers TSet<FName>
+---@field LayerS TSet<FName>
 ---@field Tags TSet<FName>
 UDatasmithActorTemplate = {}
 

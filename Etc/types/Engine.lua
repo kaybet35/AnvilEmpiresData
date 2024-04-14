@@ -59,7 +59,7 @@
 ---@field Instigator APawn
 ---@field Children TArray<AActor>
 ---@field RootComponent USceneComponent
----@field Layers TArray<FName>
+---@field LayerS TArray<FName>
 ---@field ParentComponent TWeakObjectPtr<UChildActorComponent>
 ---@field Tags TArray<FName>
 ---@field OnTakeAnyDamage FActorOnTakeAnyDamage
@@ -6867,7 +6867,7 @@ FMaterialLayersFunctionsEditorOnlyData = {}
 
 
 ---@class FMaterialLayersFunctionsRuntimeData
----@field Layers TArray<UMaterialFunctionInterface>
+---@field LayerS TArray<UMaterialFunctionInterface>
 ---@field Blends TArray<UMaterialFunctionInterface>
 FMaterialLayersFunctionsRuntimeData = {}
 

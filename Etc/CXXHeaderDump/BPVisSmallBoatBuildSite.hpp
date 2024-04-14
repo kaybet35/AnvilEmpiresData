@@ -3,8 +3,8 @@
 
 class ABPVisSmallBoatBuildSite_C : public AVisBuildSite
 {
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0478 (size: 0x8)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x04C0 (size: 0x8)
 
-}; // Size: 0x480
+}; // Size: 0x4C8
 
 #endif

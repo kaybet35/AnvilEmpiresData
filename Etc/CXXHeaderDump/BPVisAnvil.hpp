@@ -3,9 +3,9 @@
 
 class ABPVisAnvil_C : public AVisAnvilStructure
 {
-    class UNiagaraComponent* Smoke;                                                   // 0x0518 (size: 0x8)
-    class UVisStaticMeshComponent* AnvilMesh;                                         // 0x0520 (size: 0x8)
+    class UNiagaraComponent* Smoke;                                                   // 0x0560 (size: 0x8)
+    class UVisStaticMeshComponent* AnvilMesh;                                         // 0x0568 (size: 0x8)
 
-}; // Size: 0x528
+}; // Size: 0x570
 
 #endif

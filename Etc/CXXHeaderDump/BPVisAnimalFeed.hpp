@@ -3,8 +3,8 @@
 
 class ABPVisAnimalFeed_C : public AVisPickupItem
 {
-    class UStaticMeshComponent* StaticMesh;                                           // 0x0420 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh;                                           // 0x0468 (size: 0x8)
 
-}; // Size: 0x428
+}; // Size: 0x470
 
 #endif

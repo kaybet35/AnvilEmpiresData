@@ -3,8 +3,8 @@
 
 class ABPVisCartHusk_C : public AVisEffect
 {
-    class UStaticMeshComponent* StaticMesh;                                           // 0x0438 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh;                                           // 0x0480 (size: 0x8)
 
-}; // Size: 0x440
+}; // Size: 0x488
 
 #endif

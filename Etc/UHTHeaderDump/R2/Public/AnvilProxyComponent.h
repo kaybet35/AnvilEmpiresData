@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AnvilOutput.h"
+#include "EAnvilAnvilGameplayType.h"
 #include "EAnvilToolType.h"
 #include "ProxyComponent.h"
 #include "Templates/SubclassOf.h"
@@ -12,6 +13,9 @@ UCLASS(Blueprintable, EditInlineNew)
 class R2_API UAnvilProxyComponent : public UProxyComponent {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EAnvilAnvilGameplayType GameplayType;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UItemTemplate> InputItemName;
     

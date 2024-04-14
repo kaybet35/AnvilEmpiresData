@@ -8,12 +8,17 @@ enum class EAnvilToolType : uint8 {
     Hands,
     Hammer,
     Axe,
+    AxeT2,
+    AxeT3,
     Hoe,
     Scythe,
     Pickaxe,
     FishingPole,
     WeakAxe,
     WeakPickAxe,
+    Knife,
+    KnifeT2,
+    KnifeT3,
     NumTypes,
 };
 

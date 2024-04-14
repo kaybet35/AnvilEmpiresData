@@ -28,6 +28,7 @@ enum class EHUDWindowType : uint8 {
     Packing,
     Anvil,
     FamilyAreaMarker,
+    FamilyHouse,
     Count,
 };
 

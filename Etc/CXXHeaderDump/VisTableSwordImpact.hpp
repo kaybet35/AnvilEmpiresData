@@ -3,6 +3,6 @@
 
 class AVisTableSwordImpact_C : public AVisImpactEffect
 {
-}; // Size: 0x4A8
+}; // Size: 0x4F0
 
 #endif

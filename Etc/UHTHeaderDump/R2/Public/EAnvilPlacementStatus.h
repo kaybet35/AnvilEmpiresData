@@ -30,7 +30,7 @@ enum class EAnvilPlacementStatus : uint8 {
     RequiresIndustry,
     RequiresHouse,
     RequiresFamilyArea,
-    RequiresFamilyHouse,
+    RequiresFamily,
     OnlyOneFamilyCenterPerTown,
     TooCloseTogether,
     TooCloseToWildSpawn,

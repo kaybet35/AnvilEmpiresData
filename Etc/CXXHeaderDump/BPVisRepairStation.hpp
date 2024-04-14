@@ -3,8 +3,8 @@
 
 class ABPVisRepairStation_C : public AVisRefinery
 {
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0488 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x04D0 (size: 0x8)
 
-}; // Size: 0x490
+}; // Size: 0x4D8
 
 #endif

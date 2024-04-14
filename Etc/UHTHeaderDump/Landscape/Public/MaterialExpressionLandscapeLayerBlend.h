@@ -9,7 +9,7 @@ class LANDSCAPE_API UMaterialExpressionLandscapeLayerBlend : public UMaterialExp
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FLayerBlendInput> Layers;
+    TArray<FLayerBlendInput> LayerS;
     
     UMaterialExpressionLandscapeLayerBlend();
 

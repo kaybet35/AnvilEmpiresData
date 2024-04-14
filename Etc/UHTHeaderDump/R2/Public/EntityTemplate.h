@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "EAnvilPhysicalSurfaceType.h"
 #include "EEntityRelevancyPolicy.h"
 #include "EEntitySerializationType.h"
 #include "Templates/SubclassOf.h"
@@ -54,6 +55,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float GenerateMeshCollisionStepAngle;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EAnvilPhysicalSurfaceType GenerateMeshCollisionSurfaceType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UProxyComponent*> Components;

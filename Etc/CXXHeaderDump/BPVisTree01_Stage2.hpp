@@ -3,8 +3,8 @@
 
 class ABPVisTree01_Stage2_C : public AVisResource
 {
-    class UDecalComponent* Decal;                                                     // 0x0458 (size: 0x8)
+    class UDecalComponent* Decal;                                                     // 0x04A0 (size: 0x8)
 
-}; // Size: 0x460
+}; // Size: 0x4A8
 
 #endif

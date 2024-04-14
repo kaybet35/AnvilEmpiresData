@@ -204,6 +204,8 @@ AUIGlobals = {}
 ---@field bUseInteractionOutline boolean
 ---@field InteractionIcon UTexture2D
 ---@field AnimSpeed float
+---@field AnimRotationalSpeed FRotator
+---@field AnimVelocity FVector
 ---@field TemplateCDO UEntityTemplate
 ---@field MeshVisibilityDataComponent UMeshVisibilityDataComponent
 ---@field PositionSmoothSpeed float
@@ -298,6 +300,15 @@ AVisCraftingStructure = {}
 
 
 
+---@class AVisDryingRack : AVisStructure
+---@field BaseMesh UStaticMeshComponent
+---@field DryingItemMesh UStaticMeshComponent
+---@field DryingRackProxy UDryingRackProxyComponent
+---@field DryingItemMeshMaterial UMaterialInstanceDynamic
+AVisDryingRack = {}
+
+
+
 ---@class AVisEffect : AVisActor
 ---@field ArrowComponent UArrowComponent
 ---@field AudioComponent UAudioComponent
@@ -316,19 +327,19 @@ AVisEntityPrefab = {}
 
 
 
----@class AVisFamilyCenter : AVisStructure
+---@class AVisFamilyCenter : AVisFamilyMarkerArea
 ---@field FamilyCenterDataComponent UFamilyCenterDataComponent
 ---@field BuildAreaDecalComponent UDecalComponent
 AVisFamilyCenter = {}
 
 
 
+---@class AVisFamilyInventory : AVisStructure
+AVisFamilyInventory = {}
+
+
 ---@class AVisFamilyMarkerArea : AVisStructure
 ---@field FamilyAreaMarkerDataComponent UFamilyAreaMarkerDataComponent
----@field BuildAreaDecalComponent UDecalComponent
----@field BuildAreaDecalAranic UMaterialInterface
----@field BuildAreaDecalMirrish UMaterialInterface
----@field BuildAreaDecalNovan UMaterialInterface
 AVisFamilyMarkerArea = {}
 
 
@@ -486,7 +497,6 @@ AVisPickupItem = {}
 ---@field CameraRotationLerpSpeed float
 ---@field AimMeshLength float
 ---@field YawSpeed float
----@field MapMarker UMapMarkerComponent
 ---@field MinShroudRadius float
 ---@field MaxShroudRadius float
 ---@field DeathCue USoundCue
@@ -499,8 +509,9 @@ AVisPickupItem = {}
 ---@field MeleeAimMeshTargetComponent UStaticMeshComponent
 ---@field FishingAimMeshClass TSubclassOf<AVisFishingIndicator>
 ---@field FishingBobberClass TSubclassOf<AVisFishingBobber>
----@field HintDirectionMeshComponent UStaticMeshComponent
 ---@field PlayerVisualsComponent UVisPlayerVisualsComponent
+---@field MapMarker UMapMarkerComponent
+---@field FamilyMarkerMapMarker UMapMarkerComponent
 ---@field ActivityStateMontageMap TMap<EAnvilSimActivityState, UAnimMontage>
 ---@field ArmourDataComponent UArmorDataComponent
 ---@field VoiceIndicator UBillboardComponent
@@ -747,6 +758,7 @@ FAutoMoveState = {}
 ---@field AnimalFat int16
 ---@field AnimalBones int16
 ---@field ProcessedLeather int16
+---@field ResourceStoneFragments int16
 FBuildSiteCostData = {}
 
 
@@ -1383,8 +1395,8 @@ UBuildMenuWindow = {}
 
 
 ---@class UChatEntryWidget : UUserWidget
----@field ModeNameMap TMap<EChatType, FText>
----@field ModeSwitchKeywordMap TMap<FString, EChatType>
+---@field ModeNameMap TMap<EAnvilChatType, FText>
+---@field ModeSwitchKeywordMap TMap<FString, EAnvilChatType>
 ---@field ChatTextField URichTextBlock
 UChatEntryWidget = {}
 
@@ -1394,7 +1406,7 @@ UChatEntryWidget = {}
 ---@field ChatWidth float
 ---@field ChatHeight float
 ---@field ChatMinimizedHeight float
----@field CurrentMode EChatType
+---@field CurrentMode EAnvilChatType
 ---@field MinimizeButton UButton
 ---@field MaximizeButton UButton
 ---@field ChatEntryDropdown UComboBoxString
@@ -1480,6 +1492,7 @@ function UDeathMarketMapIcon:OnLastDeathLocationChanged(OldVal, NewVal) end
 
 
 ---@class UDeploymentPointWidget : UUserWidget
+---@field MainElements UPanelWidget
 ---@field MapItemButton UButton
 ---@field MapItemImage UImage
 ---@field TownStatusVerticalBox UVerticalBox
@@ -1629,6 +1642,14 @@ function UFamilyAreaMarkerWindow:GetFamilyAreaSetAllianceVisibility() end
 function UFamilyAreaMarkerWindow:GetFamilyAreaRestrictedVisibility() end
 ---@return ECheckBoxState
 function UFamilyAreaMarkerWindow:GetFamilyAreaRestrictedCheckedState() end
+
+
+---@class UFamilyHouseWindow : UStructureWindow
+UFamilyHouseWindow = {}
+
+
+---@class UFamilyMarkerMapIcon : UMapIcon
+UFamilyMarkerMapIcon = {}
 
 
 ---@class UFamilyMemberListItemWidget : UUserWidget
@@ -1978,7 +1999,6 @@ UMapPostMapIcon = {}
 
 ---@class UMapWidget : UUserWidget
 ---@field MapSheet UCanvasPanel
----@field TownHallIconCanvas UCanvasPanel
 ---@field EnemyIconColour FSlateColor
 ---@field ZoomSpeed float
 ---@field ZoomMin float
@@ -2519,6 +2539,13 @@ UVisFoundationDecorMesh = {}
 ---@class UVisGateAnimInstance : UAnimInstance
 ---@field bIsOpen boolean
 UVisGateAnimInstance = {}
+
+
+
+---@class UVisInstancedStockpileComponent : UInstancedStaticMeshComponent
+---@field CurrentInstancedMesh UInstancedStaticMeshComponent
+---@field ItemCodeNameInstancedMeshMap TMap<int32, UInstancedStaticMeshComponent>
+UVisInstancedStockpileComponent = {}
 
 
 

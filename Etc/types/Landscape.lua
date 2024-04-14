@@ -620,7 +620,7 @@ UMaterialExpressionLandscapeGrassOutput = {}
 
 
 ---@class UMaterialExpressionLandscapeLayerBlend : UMaterialExpression
----@field Layers TArray<FLayerBlendInput>
+---@field LayerS TArray<FLayerBlendInput>
 UMaterialExpressionLandscapeLayerBlend = {}
 
 

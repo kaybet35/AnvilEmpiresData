@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EChatType -FallbackName=EChatType
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilChatType -FallbackName=EAnvilChatType
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=ESelectInfo -FallbackName=ESelectInfo
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=ETextCommit -FallbackName=ETextCommit
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
@@ -29,7 +29,7 @@ protected:
     float ChatMinimizedHeight;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EChatType CurrentMode;
+    EAnvilChatType CurrentMode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UButton* MinimizeButton;
