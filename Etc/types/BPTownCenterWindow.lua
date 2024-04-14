@@ -9,6 +9,7 @@
 ---@field BPHeaderContainer_601 UBPHeaderContainer_C
 ---@field BPMainAreaContainer_126 UBPMainAreaContainer_C
 ---@field BPMainAreaContainer_275 UBPMainAreaContainer_C
+---@field BPSecondaryActionStrip UBPSecondaryActionStrip_C
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
 UBPTownCenterWindow_C = {}
 

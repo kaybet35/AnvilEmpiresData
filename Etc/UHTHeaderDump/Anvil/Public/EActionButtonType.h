@@ -11,6 +11,7 @@ enum class EActionButtonType : uint8 {
     GotoSleep,
     DeployAsMilitia,
     ReturnToPledgedTown,
+    CallForReinforcements,
     DismantleByOfficial,
     RestrictedModeOn,
     RestrictedModeOff,

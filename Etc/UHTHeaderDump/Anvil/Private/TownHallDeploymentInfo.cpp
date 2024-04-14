@@ -10,5 +10,6 @@ FTownHallDeploymentInfo::FTownHallDeploymentInfo() {
     this->NumUnclaimedTents = 0;
     this->NumReinforcementSupplies = 0;
     this->bTownUnderAttack = false;
+    this->bCallForReinforcements = false;
 }
 

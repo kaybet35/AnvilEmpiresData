@@ -1,6 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Info -FallbackName=Info
+#include "EMapIconType.h"
+#include "MapIconTypeProperty.h"
 #include "Templates/SubclassOf.h"
 #include "UIGlobals.generated.h"
 
@@ -21,6 +23,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FText> TownNames3;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<EMapIconType, FMapIconTypeProperty> IconTemplates;
     
     AUIGlobals(const FObjectInitializer& ObjectInitializer);
 

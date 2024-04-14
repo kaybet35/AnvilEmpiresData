@@ -5,7 +5,4 @@ AVisTownCenter::AVisTownCenter(const FObjectInitializer& ObjectInitializer) : Su
     this->TownHallDataComponent = CreateDefaultSubobject<UTownHallDataComponent>(TEXT("TownHallDataComponent"));
 }
 
-void AVisTownCenter::OnUnderAttackChanged(const bool& OldVal, const bool& NewVal) {
-}
-
 

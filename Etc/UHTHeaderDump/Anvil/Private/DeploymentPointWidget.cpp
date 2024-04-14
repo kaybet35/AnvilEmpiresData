@@ -11,10 +11,13 @@ UDeploymentPointWidget::UDeploymentPointWidget() : UUserWidget(FObjectInitialize
     this->NumTentsStatus = NULL;
     this->NumReinforcementSuppliesStatus = NULL;
     this->DetectionRangeCirleBox = NULL;
+    this->MarketShopTooltipClass = NULL;
+    this->IconSizeBox = NULL;
     this->FlashingFrequency = 0.00f;
     this->FlashingMinOpacity = 0.00f;
     this->ParentSlot = NULL;
     this->DetectionRangeCirleSlot = NULL;
+    this->CachedMarketShopTooltip = NULL;
 }
 
 void UDeploymentPointWidget::OnDeploymentPointClicked() {

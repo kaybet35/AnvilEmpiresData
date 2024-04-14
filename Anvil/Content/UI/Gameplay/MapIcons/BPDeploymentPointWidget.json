@@ -126,6 +126,10 @@
     "Name": "Default__BPDeploymentPointWidget_C",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.BPDeploymentPointWidget_C'",
     "Properties": {
+      "MarketShopTooltipClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'BPMarketShopMapTooltip_C'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPMarketShopMapTooltip.7"
+      },
       "FlashingFrequency": 2.0,
       "FlashingMinOpacity": 0.2,
       "bHasScriptImplementedTick": false,
@@ -310,7 +314,7 @@
         }
       ],
       "Slot": {
-        "ObjectName": "ScaleBoxSlot'BPDeploymentPointWidget_C:WidgetTree.ScaleBox_41.ScaleBoxSlot_1'",
+        "ObjectName": "SizeBoxSlot'BPDeploymentPointWidget_C:WidgetTree.IconSizeBox.SizeBoxSlot_0'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.23"
       }
     }
@@ -322,9 +326,13 @@
     "Class": "UScriptClass'ButtonSlot'",
     "Properties": {
       "Padding": {
-        "Top": 4.0,
-        "Bottom": 4.0
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
       },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
       "Parent": {
         "ObjectName": "Button'BPDeploymentPointWidget_C:WidgetTree.MapItemButton'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.8"
@@ -365,7 +373,8 @@
     "Properties": {
       "LayoutData": {
         "Offsets": {
-          "Bottom": 100.0
+          "Right": 75.0,
+          "Bottom": 75.0
         },
         "Anchors": {
           "Minimum": {
@@ -382,13 +391,14 @@
           "Y": 0.5
         }
       },
+      "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPDeploymentPointWidget_C:WidgetTree.CanvasPanel_17'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.10"
       },
       "Content": {
-        "ObjectName": "ScaleBox'BPDeploymentPointWidget_C:WidgetTree.ScaleBox_41'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.21"
+        "ObjectName": "SizeBox'BPDeploymentPointWidget_C:WidgetTree.IconSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.22"
       }
     }
   },
@@ -574,7 +584,7 @@
       },
       "Slot": {
         "ObjectName": "ScaleBoxSlot'BPDeploymentPointWidget_C:WidgetTree.DetectionRangeCirleBox.ScaleBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.22"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.21"
       }
     }
   },
@@ -600,30 +610,12 @@
       "Slots": [
         {
           "ObjectName": "ScaleBoxSlot'BPDeploymentPointWidget_C:WidgetTree.DetectionRangeCirleBox.ScaleBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.22"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.21"
         }
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPDeploymentPointWidget_C:WidgetTree.CanvasPanel_17.CanvasPanelSlot_5'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.13"
-      }
-    }
-  },
-  {
-    "Type": "ScaleBox",
-    "Name": "ScaleBox_41",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'ScaleBox'",
-    "Properties": {
-      "Slots": [
-        {
-          "ObjectName": "ScaleBoxSlot'BPDeploymentPointWidget_C:WidgetTree.ScaleBox_41.ScaleBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.23"
-        }
-      ],
-      "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPDeploymentPointWidget_C:WidgetTree.CanvasPanel_17.CanvasPanelSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.11"
       }
     }
   },
@@ -644,14 +636,36 @@
     }
   },
   {
-    "Type": "ScaleBoxSlot",
-    "Name": "ScaleBoxSlot_1",
-    "Outer": "ScaleBox_41",
-    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Type": "SizeBox",
+    "Name": "IconSizeBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 75.0,
+      "HeightOverride": 75.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPDeploymentPointWidget_C:WidgetTree.IconSizeBox.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.23"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPDeploymentPointWidget_C:WidgetTree.CanvasPanel_17.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.11"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "IconSizeBox",
+    "Class": "UScriptClass'SizeBoxSlot'",
     "Properties": {
       "Parent": {
-        "ObjectName": "ScaleBox'BPDeploymentPointWidget_C:WidgetTree.ScaleBox_41'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.21"
+        "ObjectName": "SizeBox'BPDeploymentPointWidget_C:WidgetTree.IconSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPDeploymentPointWidget.22"
       },
       "Content": {
         "ObjectName": "Button'BPDeploymentPointWidget_C:WidgetTree.MapItemButton'",

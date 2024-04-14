@@ -4,13 +4,16 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
 #include "MapIconInstanceProperty.h"
 #include "MapIconTypeProperty.h"
+#include "Templates/SubclassOf.h"
 #include "DeploymentPointWidget.generated.h"
 
 class UBorder;
 class UButton;
 class UCanvasPanelSlot;
 class UImage;
+class UMarketShopMapTooltip;
 class UScaleBox;
+class USizeBox;
 class UStatusWidget;
 class UTextBlock;
 class UVerticalBox;
@@ -51,6 +54,12 @@ private:
     UScaleBox* DetectionRangeCirleBox;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UMarketShopMapTooltip> MarketShopTooltipClass;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    USizeBox* IconSizeBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FlashingFrequency;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -67,6 +76,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMapIconInstanceProperty InstanceProperty;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UMarketShopMapTooltip* CachedMarketShopTooltip;
     
 public:
     UDeploymentPointWidget();

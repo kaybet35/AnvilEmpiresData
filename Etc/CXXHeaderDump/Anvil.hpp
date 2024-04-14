@@ -280,6 +280,10 @@ struct FShardConfig
 
 }; // Size: 0x50
 
+struct FTownHallData
+{
+}; // Size: 0x78
+
 struct FTownHallDeploymentInfo
 {
     uint32 TownHallId;                                                                // 0x0000 (size: 0x4)
@@ -291,6 +295,7 @@ struct FTownHallDeploymentInfo
     int32 NumUnclaimedTents;                                                          // 0x0014 (size: 0x4)
     int32 NumReinforcementSupplies;                                                   // 0x0018 (size: 0x4)
     bool bTownUnderAttack;                                                            // 0x001C (size: 0x1)
+    bool bCallForReinforcements;                                                      // 0x001D (size: 0x1)
 
 }; // Size: 0x20
 
@@ -312,10 +317,13 @@ struct FWeatherManager
     class UCurveFloat* SeasonToWinterCurve;                                           // 0x0008 (size: 0x8)
     class UCurveFloat* SeasonToTempCurve;                                             // 0x0010 (size: 0x8)
     class UCurveFloat* SeasonToTintCurve;                                             // 0x0018 (size: 0x8)
-    class UMaterialParameterCollection* WeatherSeasonsMaterialParameterCollection;    // 0x0020 (size: 0x8)
-    class APostProcessVolume* WinterPostProcessVolume;                                // 0x0028 (size: 0x8)
+    class UCurveFloat* TemperatureVisualsCurve;                                       // 0x0020 (size: 0x8)
+    class UCurveFloat* WetnessVisualsCurve;                                           // 0x0028 (size: 0x8)
+    class UCurveFloat* WindVisualsCurve;                                              // 0x0030 (size: 0x8)
+    class UMaterialParameterCollection* WeatherSeasonsMaterialParameterCollection;    // 0x0038 (size: 0x8)
+    class APostProcessVolume* WinterPostProcessVolume;                                // 0x0040 (size: 0x8)
 
-}; // Size: 0x38
+}; // Size: 0x50
 
 class AAnvilGameModeBase : public AGameModeBase
 {
@@ -409,7 +417,9 @@ class AGameplayGameMode : public AAnvilGameModeBase
 
 class AGameplayPlayerController : public AAnvilPlayerController
 {
-}; // Size: 0x8D8
+    class USoundCue* CallForReinforcementsCue;                                        // 0x08D0 (size: 0x8)
+
+}; // Size: 0x960
 
 class AMainMenuGameMode : public AAnvilGameModeBase
 {
@@ -484,8 +494,9 @@ class AUIGlobals : public AInfo
     TArray<FText> TownNames1;                                                         // 0x0298 (size: 0x10)
     TArray<FText> TownNames2;                                                         // 0x02A8 (size: 0x10)
     TArray<FText> TownNames3;                                                         // 0x02B8 (size: 0x10)
+    TMap<class EMapIconType, class FMapIconTypeProperty> IconTemplates;               // 0x02C8 (size: 0x50)
 
-}; // Size: 0x2C8
+}; // Size: 0x318
 
 class AVisActor : public AVisActorBase
 {
@@ -886,8 +897,7 @@ class AVisTownCenter : public AVisStructure
 {
     class UTownHallDataComponent* TownHallDataComponent;                              // 0x0480 (size: 0x8)
 
-    void OnUnderAttackChanged(const bool& OldVal, const bool& NewVal);
-}; // Size: 0x490
+}; // Size: 0x488
 
 class AVisTownMarker : public AVisStructure
 {
@@ -1058,13 +1068,13 @@ class UAnvilGameInstance : public UGameInstance
     class UAnvilCharacterSave* CharacterSave;                                         // 0x02C0 (size: 0x8)
     class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x02C8 (size: 0x8)
     FAnvilAssetManager AssetManager;                                                  // 0x02D0 (size: 0x168)
-    FWeatherManager WeatherManager;                                                   // 0x0438 (size: 0x38)
-    FAnvilOptionsManager OptionsManager;                                              // 0x0470 (size: 0x1A0)
-    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x0610 (size: 0x8)
-    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x0618 (size: 0x10)
-    TArray<class AVisActor*> VisActorList;                                            // 0x0628 (size: 0x10)
-    TArray<class AVisActor*> TravelVisActorList;                                      // 0x0638 (size: 0x10)
-    FClientConfigManager ClientConfigManager;                                         // 0x0648 (size: 0x38)
+    FWeatherManager WeatherManager;                                                   // 0x0438 (size: 0x50)
+    FAnvilOptionsManager OptionsManager;                                              // 0x0488 (size: 0x1A0)
+    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x0628 (size: 0x8)
+    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x0630 (size: 0x10)
+    TArray<class AVisActor*> VisActorList;                                            // 0x0640 (size: 0x10)
+    TArray<class AVisActor*> TravelVisActorList;                                      // 0x0650 (size: 0x10)
+    FClientConfigManager ClientConfigManager;                                         // 0x0660 (size: 0x38)
 
     void GetVisActors(TArray<class AVisActor*>& OutVisActorList);
     void GetVersion(int32& OutMajor, int32& OutMinor, int32& OutPatch, int32& OutCL);
@@ -1073,7 +1083,7 @@ class UAnvilGameInstance : public UGameInstance
     bool GetIsNight();
     void GetDayCurrentSeconds(int32& OutSeconds);
     void DumpProperties(FString OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter);
-}; // Size: 0x16A8
+}; // Size: 0x16C0
 
 class UAnvilKeyEntryWidget : public UUserWidget
 {
@@ -1305,12 +1315,15 @@ class UDeploymentPointWidget : public UUserWidget
     class UStatusWidget* NumTentsStatus;                                              // 0x02B0 (size: 0x8)
     class UStatusWidget* NumReinforcementSuppliesStatus;                              // 0x02B8 (size: 0x8)
     class UScaleBox* DetectionRangeCirleBox;                                          // 0x02C0 (size: 0x8)
-    float FlashingFrequency;                                                          // 0x02C8 (size: 0x4)
-    float FlashingMinOpacity;                                                         // 0x02CC (size: 0x4)
-    class UCanvasPanelSlot* ParentSlot;                                               // 0x02D0 (size: 0x8)
-    class UCanvasPanelSlot* DetectionRangeCirleSlot;                                  // 0x02D8 (size: 0x8)
-    FMapIconTypeProperty TypeProperty;                                                // 0x02E0 (size: 0x30)
-    FMapIconInstanceProperty InstanceProperty;                                        // 0x0310 (size: 0x88)
+    TSubclassOf<class UMarketShopMapTooltip> MarketShopTooltipClass;                  // 0x02C8 (size: 0x8)
+    class USizeBox* IconSizeBox;                                                      // 0x02D0 (size: 0x8)
+    float FlashingFrequency;                                                          // 0x02D8 (size: 0x4)
+    float FlashingMinOpacity;                                                         // 0x02DC (size: 0x4)
+    class UCanvasPanelSlot* ParentSlot;                                               // 0x02E0 (size: 0x8)
+    class UCanvasPanelSlot* DetectionRangeCirleSlot;                                  // 0x02E8 (size: 0x8)
+    FMapIconTypeProperty TypeProperty;                                                // 0x02F0 (size: 0x30)
+    FMapIconInstanceProperty InstanceProperty;                                        // 0x0320 (size: 0x88)
+    class UMarketShopMapTooltip* CachedMarketShopTooltip;                             // 0x03A8 (size: 0x8)
 
     void OnDeploymentPointClicked();
     bool IsDeploymentPointEnabled();
@@ -1323,7 +1336,7 @@ class UDeploymentPointWidget : public UUserWidget
     ESlateVisibility GetNumHousesVisibility();
     FText GetNumHousesText();
     ESlateVisibility GetDeploymentPointVisibility();
-}; // Size: 0x438
+}; // Size: 0x450
 
 class UDeploymentScreen : public UAnvilScreen
 {
@@ -1557,12 +1570,15 @@ class UHUDWidget : public UUserWidget
     float LocalChatDisplayTime;                                                       // 0x0590 (size: 0x4)
     class UProgressBar* InteractionProgressBar1;                                      // 0x0598 (size: 0x8)
     class UProgressBar* InteractionProgressBar2;                                      // 0x05A0 (size: 0x8)
-    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05B0 (size: 0x10)
+    class UTextBlock* EnvironmentStatsText;                                           // 0x05A8 (size: 0x8)
+    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05B8 (size: 0x10)
 
     void PlayWinConditionAnimation();
     void PlayTownStatusAlert(const FText& AlertText);
     ESlateVisibility GetHUDWidgetVisibility();
-}; // Size: 0x5C0
+    ESlateVisibility GetEnvironmentStatsTextVisibility();
+    FText GetEnvironmentStatsText();
+}; // Size: 0x5D0
 
 class UHUDWindow : public UUserWidget
 {
@@ -1732,23 +1748,22 @@ class UMapWidget : public UUserWidget
 {
     class UCanvasPanel* MapSheet;                                                     // 0x0278 (size: 0x8)
     class UCanvasPanel* TownHallIconCanvas;                                           // 0x0280 (size: 0x8)
-    TMap<class EMapIconType, class FMapIconTypeProperty> IconTemplates;               // 0x0288 (size: 0x50)
-    FSlateColor EnemyIconColour;                                                      // 0x02D8 (size: 0x14)
-    float ZoomSpeed;                                                                  // 0x0358 (size: 0x4)
-    float ZoomMin;                                                                    // 0x035C (size: 0x4)
-    float ZoomMax;                                                                    // 0x0360 (size: 0x4)
-    float ZoomAnimationTime;                                                          // 0x0364 (size: 0x4)
-    class UImage* MapImageBox;                                                        // 0x0368 (size: 0x8)
-    class UTexture2D* FogOfWarMask;                                                   // 0x0370 (size: 0x8)
-    int32 FogOfWarRadius;                                                             // 0x0378 (size: 0x4)
-    TSubclassOf<class UDeploymentPointWidget> DeploymentPointWidgetClass;             // 0x0380 (size: 0x8)
-    class UBorder* DeploymentInstructionOrSpawnTimerBorder;                           // 0x0390 (size: 0x8)
-    class UTextBlock* DeploymentInstructionOrSpawnTimerText;                          // 0x0398 (size: 0x8)
-    class UBorder* ObjectiveBorder;                                                   // 0x03A0 (size: 0x8)
-    class UAnvilButtonWidget* LogoutButton;                                           // 0x03A8 (size: 0x8)
-    class UCanvasPanelSlot* MapSheetSlot;                                             // 0x03B0 (size: 0x8)
-    class UCanvasPanelSlot* TownHallIconCanvasSlot;                                   // 0x03B8 (size: 0x8)
-    TArray<class UMapIcon*> DisplayedBeaconTowerPlayerInfos;                          // 0x0478 (size: 0x10)
+    FSlateColor EnemyIconColour;                                                      // 0x0288 (size: 0x14)
+    float ZoomSpeed;                                                                  // 0x0308 (size: 0x4)
+    float ZoomMin;                                                                    // 0x030C (size: 0x4)
+    float ZoomMax;                                                                    // 0x0310 (size: 0x4)
+    float ZoomAnimationTime;                                                          // 0x0314 (size: 0x4)
+    class UImage* MapImageBox;                                                        // 0x0318 (size: 0x8)
+    class UTexture2D* FogOfWarMask;                                                   // 0x0320 (size: 0x8)
+    int32 FogOfWarRadius;                                                             // 0x0328 (size: 0x4)
+    TSubclassOf<class UDeploymentPointWidget> DeploymentPointWidgetClass;             // 0x0330 (size: 0x8)
+    class UBorder* DeploymentInstructionOrSpawnTimerBorder;                           // 0x0340 (size: 0x8)
+    class UTextBlock* DeploymentInstructionOrSpawnTimerText;                          // 0x0348 (size: 0x8)
+    class UBorder* ObjectiveBorder;                                                   // 0x0350 (size: 0x8)
+    class UAnvilButtonWidget* LogoutButton;                                           // 0x0358 (size: 0x8)
+    class UCanvasPanelSlot* MapSheetSlot;                                             // 0x0360 (size: 0x8)
+    class UCanvasPanelSlot* TownHallIconCanvasSlot;                                   // 0x0368 (size: 0x8)
+    TArray<class UMapIcon*> DisplayedBeaconTowerPlayerInfos;                          // 0x0428 (size: 0x10)
 
     void OnLogoutButtonClicked();
     ESlateVisibility GetRespawnTimerVisibility();
@@ -1756,7 +1771,7 @@ class UMapWidget : public UUserWidget
     ESlateVisibility GetObjectiveBorderVisibility();
     ESlateVisibility GetLogoutButtonVisibility();
     void BP_OnMapImageSet(class UTexture2D* MapImage);
-}; // Size: 0x4D0
+}; // Size: 0x480
 
 class UMarketItemGridWidget : public UGridPanelWidget
 {

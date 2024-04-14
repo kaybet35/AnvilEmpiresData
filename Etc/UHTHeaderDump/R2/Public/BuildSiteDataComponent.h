@@ -27,6 +27,9 @@ public:
     bool RequiresHorseToComplete;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bBuildsInstantly;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TierPrerequisite;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -51,7 +54,13 @@ public:
     int32 ResourceFibreRequirement;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ResourceBranchesRawRequirement;
+    int32 AnimalFatRequirement;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 AnimalBonesRequirement;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 ProcessedLeatherRequirement;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 RoadMaterialSubmitted;
@@ -75,7 +84,13 @@ public:
     int32 ResourceFibreSubmitted;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 ResourceBranchesRawSubmitted;
+    int32 AnimalFatSubmitted;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 AnimalBonesSubmitted;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 ProcessedLeatherSubmitted;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 BuildGhostPlacementStatus;

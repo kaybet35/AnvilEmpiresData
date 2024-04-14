@@ -11,8 +11,9 @@ class UBPTownCenterWindow_C : public UTownCenterWindow
     class UBPHeaderContainer_C* BPHeaderContainer_601;                                // 0x0380 (size: 0x8)
     class UBPMainAreaContainer_C* BPMainAreaContainer_126;                            // 0x0388 (size: 0x8)
     class UBPMainAreaContainer_C* BPMainAreaContainer_275;                            // 0x0390 (size: 0x8)
-    class UBPSubHeaderContainer_C* BPSubHeaderContainer;                              // 0x0398 (size: 0x8)
+    class UBPSecondaryActionStrip_C* BPSecondaryActionStrip;                          // 0x0398 (size: 0x8)
+    class UBPSubHeaderContainer_C* BPSubHeaderContainer;                              // 0x03A0 (size: 0x8)
 
-}; // Size: 0x3A0
+}; // Size: 0x3A8
 
 #endif

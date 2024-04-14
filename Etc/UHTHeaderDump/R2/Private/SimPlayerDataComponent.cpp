@@ -27,6 +27,7 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->bInTravelZone = false;
     this->bIsMeshHidden = false;
     this->bIsHomesteadOwnerInTown = false;
+    this->bShowEnvStats = false;
     this->SecondsUntilFullDecay = 0.00f;
     this->HeldItemLightSourceRadius = 0.00f;
     this->FoodTypesOnCooldownBits = 0;

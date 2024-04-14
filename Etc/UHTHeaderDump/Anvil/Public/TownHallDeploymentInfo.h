@@ -33,6 +33,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bTownUnderAttack;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bCallForReinforcements;
+    
     ANVIL_API FTownHallDeploymentInfo();
 };
 

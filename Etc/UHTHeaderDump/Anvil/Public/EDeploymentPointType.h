@@ -8,5 +8,6 @@ enum class EDeploymentPointType : uint8 {
     TownHall,
     LargeCamp,
     SmallCamp,
+    MarketShop,
 };
 

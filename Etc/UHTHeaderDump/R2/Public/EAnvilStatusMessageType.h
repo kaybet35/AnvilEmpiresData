@@ -107,6 +107,7 @@ enum class EAnvilStatusMessageType : uint8 {
     TargetInUse,
     ItemInUse,
     MissingEquipment,
+    TooSoonToUse,
     NumTypes,
 };
 

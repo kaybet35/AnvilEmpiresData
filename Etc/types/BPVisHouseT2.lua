@@ -1,11 +1,11 @@
 ---@meta
 
----@class ABPVisHouseT2_C : AVisHouse
----@field OwnerFlagMesh UStaticMeshComponent
+---@class ABPVisHouseT2_C : AVisStructure
+---@field MeshVisibilityData UMeshVisibilityDataComponent
+---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
+---@field VisStaticMesh_Roof UVisStaticMeshComponent
 ---@field VisTeamMesh UVisTeamMeshComponent
 ---@field VisStaticMesh2 UVisStaticMeshComponent
----@field Populated USceneComponent
----@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field ScorchEffect9 UScorchEffectComponent
 ---@field ScorchEffect7 UScorchEffectComponent

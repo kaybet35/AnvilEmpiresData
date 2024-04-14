@@ -92,7 +92,9 @@ AGameplayGameMode = {}
 
 
 ---@class AGameplayPlayerController : AAnvilPlayerController
+---@field CallForReinforcementsCue USoundCue
 AGameplayPlayerController = {}
+
 
 
 ---@class AMainMenuGameMode : AAnvilGameModeBase
@@ -177,6 +179,7 @@ AServerPartition = {}
 ---@field TownNames1 TArray<FText>
 ---@field TownNames2 TArray<FText>
 ---@field TownNames3 TArray<FText>
+---@field IconTemplates TMap<EMapIconType, FMapIconTypeProperty>
 AUIGlobals = {}
 
 
@@ -593,9 +596,6 @@ AVisStructure = {}
 ---@field TownHallDataComponent UTownHallDataComponent
 AVisTownCenter = {}
 
----@param OldVal boolean
----@param NewVal boolean
-function AVisTownCenter:OnUnderAttackChanged(OldVal, NewVal) end
 
 
 ---@class AVisTownMarker : AVisStructure
@@ -902,6 +902,10 @@ FShardConfig = {}
 
 
 
+---@class FTownHallData
+FTownHallData = {}
+
+
 ---@class FTownHallDeploymentInfo
 ---@field TownHallId uint32
 ---@field TownNameOrdinal uint8
@@ -912,6 +916,7 @@ FShardConfig = {}
 ---@field NumUnclaimedTents int32
 ---@field NumReinforcementSupplies int32
 ---@field bTownUnderAttack boolean
+---@field bCallForReinforcements boolean
 FTownHallDeploymentInfo = {}
 
 
@@ -933,6 +938,9 @@ FVoiceLoginInfo = {}
 ---@field SeasonToWinterCurve UCurveFloat
 ---@field SeasonToTempCurve UCurveFloat
 ---@field SeasonToTintCurve UCurveFloat
+---@field TemperatureVisualsCurve UCurveFloat
+---@field WetnessVisualsCurve UCurveFloat
+---@field WindVisualsCurve UCurveFloat
 ---@field WeatherSeasonsMaterialParameterCollection UMaterialParameterCollection
 ---@field WinterPostProcessVolume APostProcessVolume
 FWeatherManager = {}
@@ -1373,12 +1381,15 @@ function UDeathMarketMapIcon:OnLastDeathLocationChanged(OldVal, NewVal) end
 ---@field NumTentsStatus UStatusWidget
 ---@field NumReinforcementSuppliesStatus UStatusWidget
 ---@field DetectionRangeCirleBox UScaleBox
+---@field MarketShopTooltipClass TSubclassOf<UMarketShopMapTooltip>
+---@field IconSizeBox USizeBox
 ---@field FlashingFrequency float
 ---@field FlashingMinOpacity float
 ---@field ParentSlot UCanvasPanelSlot
 ---@field DetectionRangeCirleSlot UCanvasPanelSlot
 ---@field TypeProperty FMapIconTypeProperty
 ---@field InstanceProperty FMapIconInstanceProperty
+---@field CachedMarketShopTooltip UMarketShopMapTooltip
 UDeploymentPointWidget = {}
 
 function UDeploymentPointWidget:OnDeploymentPointClicked() end
@@ -1659,6 +1670,7 @@ UHUDStatsWidget = {}
 ---@field LocalChatDisplayTime float
 ---@field InteractionProgressBar1 UProgressBar
 ---@field InteractionProgressBar2 UProgressBar
+---@field EnvironmentStatsText UTextBlock
 ---@field NewLocalMessages TArray<UChatMessage>
 UHUDWidget = {}
 
@@ -1667,6 +1679,10 @@ function UHUDWidget:PlayWinConditionAnimation() end
 function UHUDWidget:PlayTownStatusAlert(AlertText) end
 ---@return ESlateVisibility
 function UHUDWidget:GetHUDWidgetVisibility() end
+---@return ESlateVisibility
+function UHUDWidget:GetEnvironmentStatsTextVisibility() end
+---@return FText
+function UHUDWidget:GetEnvironmentStatsText() end
 
 
 ---@class UHUDWindow : UUserWidget
@@ -1845,7 +1861,6 @@ UMapPostMapIcon = {}
 ---@class UMapWidget : UUserWidget
 ---@field MapSheet UCanvasPanel
 ---@field TownHallIconCanvas UCanvasPanel
----@field IconTemplates TMap<EMapIconType, FMapIconTypeProperty>
 ---@field EnemyIconColour FSlateColor
 ---@field ZoomSpeed float
 ---@field ZoomMin float

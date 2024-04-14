@@ -1,21 +1,14 @@
 ---@meta
 
----@class ABPVisHouseT1_C : AVisHouse
----@field Audio UAudioComponent
+---@class ABPVisHouseT1_C : AVisStructure
+---@field MeshVisibilityData UMeshVisibilityDataComponent
+---@field VisStaticMesh_Roof UVisStaticMeshComponent
+---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field Niagara UNiagaraComponent
 ---@field VisStaticMesh10 UVisStaticMeshComponent
----@field OwnerFlagMesh UStaticMeshComponent
----@field VisStaticMesh9 UVisStaticMeshComponent
----@field VisStaticMesh8 UVisStaticMeshComponent
----@field VisStaticMesh7 UVisStaticMeshComponent
 ---@field VisTeamMesh UVisTeamMeshComponent
 ---@field VisStaticMesh6 UVisStaticMeshComponent
 ---@field Decal UDecalComponent
----@field ['Chimney Smoke'] UNiagaraComponent
----@field VisStaticMesh5 UVisStaticMeshComponent
----@field VisStaticMesh4 UVisStaticMeshComponent
----@field VisStaticMesh3 UVisStaticMeshComponent
----@field VisStaticMesh2 UVisStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field ScorchEffect9 UScorchEffectComponent
 ---@field ScorchEffect6 UScorchEffectComponent

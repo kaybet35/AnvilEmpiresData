@@ -15,6 +15,7 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->bBuildableNearEnemies = false;
     this->bAllowRapidBuild = false;
     this->CanBuildTownStructureWithoutPledge = false;
+    this->bBuildsInstantly = false;
     this->TierPrerequisite = 0;
     this->RequiredDeployable = NULL;
     this->MaxHeightShift = 0.00f;
@@ -27,7 +28,9 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->ProcessedIronRequirement = 0;
     this->ReinforcedWoodRequirement = 0;
     this->ResourceFibreRequirement = 0;
-    this->ResourceBranchesRawRequirement = 0;
+    this->AnimalFatRequirement = 0;
+    this->AnimalBonesRequirement = 0;
+    this->ProcessedLeatherRequirement = 0;
 }
 
 

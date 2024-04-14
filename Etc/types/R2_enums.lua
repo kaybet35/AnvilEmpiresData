@@ -217,16 +217,16 @@ EAnvilInputEventType = {
     GotoSleep = 14,
     PledgeAsMilitia = 15,
     ReturnToPledgedTown = 16,
-    DismantleByOfficial = 17,
-    RestrictedModeOn = 18,
-    RestrictedModeOff = 19,
-    IncreaseRefineryPriority = 20,
-    DecreaseRefineryPriority = 21,
-    MouseRotationMovement = 22,
-    MouseWheelMovement = 23,
-    Mount = 24,
-    WithdrawSilver = 25,
-    MarketShopDataRequest = 26,
+    CallForReinforcements = 17,
+    DismantleByOfficial = 18,
+    RestrictedModeOn = 19,
+    RestrictedModeOff = 20,
+    IncreaseRefineryPriority = 21,
+    DecreaseRefineryPriority = 22,
+    MouseRotationMovement = 23,
+    MouseWheelMovement = 24,
+    Mount = 25,
+    WithdrawSilver = 26,
     RepairStationRepairRequest = 27,
     AttachAnimal = 28,
     DetachAnimal = 29,
@@ -442,6 +442,15 @@ EAnvilPlayerInputMode = {
     MouseSelect = 4,
     NumTypes = 5,
     EAnvilPlayerInputMode_MAX = 6,
+}
+
+---@enum EAnvilPlayerVisEventType
+EAnvilPlayerVisEventType = {
+    OnDeath = 0,
+    StatusMessage = 1,
+    ConfirmPledgeDialog = 2,
+    ForceActivityState = 3,
+    EAnvilPlayerVisEventType_MAX = 4,
 }
 
 ---@enum EAnvilPledgedOnlineStatus
@@ -689,8 +698,9 @@ EAnvilStatusMessageType = {
     TargetInUse = 100,
     ItemInUse = 101,
     MissingEquipment = 102,
-    NumTypes = 103,
-    EAnvilStatusMessageType_MAX = 104,
+    TooSoonToUse = 103,
+    NumTypes = 104,
+    EAnvilStatusMessageType_MAX = 105,
 }
 
 ---@enum EAnvilStimulusType

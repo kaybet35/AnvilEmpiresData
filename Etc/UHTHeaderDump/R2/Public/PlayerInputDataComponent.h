@@ -12,10 +12,10 @@ class R2_API UPlayerInputDataComponent : public UDataComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FVector AimLocation;
+    FVector ClientAimLocation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FVector AimArcEndGroundLocation;
+    FVector ClientAimArcEndGroundLocation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector ClickHeading;
@@ -27,7 +27,7 @@ public:
     EAnvilPlayerAimMeshType AimMeshType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FVector AimMeshLocation;
+    FVector ClientAimMeshLocation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AimArcRotation;

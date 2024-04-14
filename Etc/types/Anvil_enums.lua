@@ -7,31 +7,33 @@ EActionButtonType = {
     GotoSleep = 4,
     DeployAsMilitia = 5,
     ReturnToPledgedTown = 6,
-    DismantleByOfficial = 7,
-    RestrictedModeOn = 8,
-    RestrictedModeOff = 9,
-    IncreaseRefineryPriority = 10,
-    DecreaseRefineryPriority = 11,
-    DeployCamp = 12,
-    DeployLadder = 13,
-    WithdrawSilver = 14,
-    AttachAnimal = 15,
-    DetachAnimal = 16,
-    RepairItem = 17,
-    SetTownName = 18,
-    PushLadder = 19,
-    RetractLadder = 20,
-    ClaimFamilyArea = 21,
-    StartPowerMill = 22,
-    StopPowerMill = 23,
-    EActionButtonType_MAX = 24,
+    CallForReinforcements = 7,
+    DismantleByOfficial = 8,
+    RestrictedModeOn = 9,
+    RestrictedModeOff = 10,
+    IncreaseRefineryPriority = 11,
+    DecreaseRefineryPriority = 12,
+    DeployCamp = 13,
+    DeployLadder = 14,
+    WithdrawSilver = 15,
+    AttachAnimal = 16,
+    DetachAnimal = 17,
+    RepairItem = 18,
+    SetTownName = 19,
+    PushLadder = 20,
+    RetractLadder = 21,
+    ClaimFamilyArea = 22,
+    StartPowerMill = 23,
+    StopPowerMill = 24,
+    EActionButtonType_MAX = 25,
 }
 
 ---@enum EAlertType
 EAlertType = {
     General = 0,
     QueueStatus = 1,
-    EAlertType_MAX = 2,
+    Reinforcement = 2,
+    EAlertType_MAX = 3,
 }
 
 ---@enum EAnvilScreenType
@@ -133,7 +135,8 @@ EDeploymentPointType = {
     TownHall = 1,
     LargeCamp = 2,
     SmallCamp = 3,
-    EDeploymentPointType_MAX = 4,
+    MarketShop = 4,
+    EDeploymentPointType_MAX = 5,
 }
 
 ---@enum EEquippedItemGripType

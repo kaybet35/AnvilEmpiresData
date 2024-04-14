@@ -6,6 +6,7 @@ FItemSlot::FItemSlot() {
     this->HeldItem = NULL;
     this->Count = 0;
     this->StackLimit = 0;
+    this->bAllowWithdrawal = false;
     this->DedicatedItemType = NULL;
     this->DedicatedUnderlyingItemType = NULL;
     this->RequiredEnablingItem = NULL;

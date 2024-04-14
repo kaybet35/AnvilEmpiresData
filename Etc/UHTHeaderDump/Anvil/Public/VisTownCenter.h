@@ -14,9 +14,5 @@ public:
     
     AVisTownCenter(const FObjectInitializer& ObjectInitializer);
 
-private:
-    UFUNCTION(BlueprintCallable)
-    void OnUnderAttackChanged(const bool& OldVal, const bool& NewVal);
-    
 };
 

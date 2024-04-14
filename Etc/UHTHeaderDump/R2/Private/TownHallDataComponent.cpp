@@ -3,8 +3,6 @@
 UTownHallDataComponent::UTownHallDataComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Tier = 0;
     this->bIsSmallCamp = false;
-    this->bLocalReinforcementOnly = false;
-    this->bTownUnderAttack = false;
     this->TownHallId = 0;
     this->PledgedPlayersArrayCount = 0;
     this->NumTotalHouses = 0;

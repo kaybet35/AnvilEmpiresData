@@ -1,6 +1,9 @@
 ---@meta
 
 ---@class ABPVisResourceStockpileT1_C : AVisStructure
+---@field BPVisFamilyMeshComponent1 UBPVisFamilyMeshComponent_C
+---@field AnimalFat UInstancedStaticMeshComponent
+---@field AnimalBones UInstancedStaticMeshComponent
 ---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field ResourceThickLeather UInstancedStaticMeshComponent
 ---@field ResourceLeather UInstancedStaticMeshComponent

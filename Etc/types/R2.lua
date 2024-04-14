@@ -201,6 +201,7 @@ FItemQuantity = {}
 ---@field HeldItem TSubclassOf<UItemTemplate>
 ---@field Count int32
 ---@field StackLimit int32
+---@field bAllowWithdrawal boolean
 ---@field AcceptedTags TArray<EAnvilItemTag>
 ---@field RequiredTags TArray<EAnvilItemTag>
 ---@field ProhibitedTags TArray<EAnvilItemTag>
@@ -318,6 +319,7 @@ UAIStimulusProxyComponent = {}
 ---@field bOverrideAngleOverlapMin boolean
 ---@field OverridedAngleOverlapMin float
 ---@field NumSnappingRequired uint8
+---@field MaxOverlapDistOverride float
 UAdvancedSnappingProxyComponent = {}
 
 
@@ -517,6 +519,7 @@ UBoxCollisionProxyComponent = {}
 ---@field bRequiresCamp boolean
 ---@field bRequiresSmallCamp boolean
 ---@field RequiresHorseToComplete boolean
+---@field bBuildsInstantly boolean
 ---@field TierPrerequisite uint8
 ---@field RoadMaterialRequirement int32
 ---@field ResourceBranchesRequirement int32
@@ -525,7 +528,9 @@ UBoxCollisionProxyComponent = {}
 ---@field ProcessedIronRequirement int32
 ---@field ReinforcedWoodRequirement int32
 ---@field ResourceFibreRequirement int32
----@field ResourceBranchesRawRequirement int32
+---@field AnimalFatRequirement int32
+---@field AnimalBonesRequirement int32
+---@field ProcessedLeatherRequirement int32
 ---@field RoadMaterialSubmitted int32
 ---@field ResourceBranchesSubmitted int32
 ---@field ProcessedWoodSubmitted int32
@@ -533,7 +538,9 @@ UBoxCollisionProxyComponent = {}
 ---@field ProcessedIronSubmitted int32
 ---@field ReinforcedWoodSubmitted int32
 ---@field ResourceFibreSubmitted int32
----@field ResourceBranchesRawSubmitted int32
+---@field AnimalFatSubmitted int32
+---@field AnimalBonesSubmitted int32
+---@field ProcessedLeatherSubmitted int32
 ---@field BuildGhostPlacementStatus int64
 ---@field PlacementInfoFlags int32
 UBuildSiteDataComponent = {}
@@ -555,11 +562,13 @@ UBuildSiteDataComponent = {}
 ---@field bBuildableNearEnemies boolean
 ---@field bAllowRapidBuild boolean
 ---@field CanBuildTownStructureWithoutPledge boolean
+---@field bBuildsInstantly boolean
 ---@field TierPrerequisite uint8
 ---@field RequiredDeployable TSubclassOf<UItemTemplate>
 ---@field MaxHeightShift float
 ---@field AdditionalMaxHeightShift float
 ---@field MinDistanceBetweenStructures float
+---@field MinDistanceStructureTypes TArray<TSubclassOf<UEntityTemplate>>
 ---@field RoadMaterialRequirement int32
 ---@field ResourceBranchesRequirement int32
 ---@field ProcessedWoodRequirement int32
@@ -567,7 +576,9 @@ UBuildSiteDataComponent = {}
 ---@field ProcessedIronRequirement int32
 ---@field ReinforcedWoodRequirement int32
 ---@field ResourceFibreRequirement int32
----@field ResourceBranchesRawRequirement int32
+---@field AnimalFatRequirement int32
+---@field AnimalBonesRequirement int32
+---@field ProcessedLeatherRequirement int32
 UBuildSiteProxyComponent = {}
 
 
@@ -1190,12 +1201,12 @@ UPlayerControllerProxyComponent = {}
 
 
 ---@class UPlayerInputDataComponent : UDataComponent
----@field AimLocation FVector
----@field AimArcEndGroundLocation FVector
+---@field ClientAimLocation FVector
+---@field ClientAimArcEndGroundLocation FVector
 ---@field ClickHeading FVector
 ---@field InputMode EAnvilPlayerInputMode
 ---@field AimMeshType EAnvilPlayerAimMeshType
----@field AimMeshLocation FVector
+---@field ClientAimMeshLocation FVector
 ---@field AimArcRotation float
 ---@field AimArcA float
 ---@field AimArcX0 float
@@ -1499,6 +1510,7 @@ USeekerProxyComponent = {}
 ---@field bInTravelZone boolean
 ---@field bIsMeshHidden boolean
 ---@field bIsHomesteadOwnerInTown boolean
+---@field bShowEnvStats boolean
 ---@field SecondsUntilFullDecay float
 ---@field HeldItemLightSourceRadius float
 ---@field LightSourceData FNightShroudLightSourceData
@@ -1669,8 +1681,6 @@ UTechItemTemplate = {}
 ---@class UTownHallDataComponent : UDataComponent
 ---@field Tier uint8
 ---@field bIsSmallCamp boolean
----@field bLocalReinforcementOnly boolean
----@field bTownUnderAttack boolean
 ---@field TownHallId uint8
 ---@field PledgedPlayersArrayCount int32
 ---@field NumTotalHouses int32
@@ -1723,12 +1733,18 @@ UTrapProxyComponent = {}
 ---@field ProcessedIronRequirement int32
 ---@field ReinforcedWoodRequirement int32
 ---@field SilverRequirement int32
+---@field AnimalFatRequirement int32
+---@field AnimalBonesRequirement int32
+---@field ProcessedLeatherRequirement int32
 ---@field WorkSubmitted int32
 ---@field ProcessedWoodSubmitted int32
 ---@field ProcessedStoneSubmitted int32
 ---@field ProcessedIronSubmitted int32
 ---@field ReinforcedWoodSubmitted int32
 ---@field SilverSubmitted int32
+---@field AnimalFatSubmitted int32
+---@field AnimalBonesSubmitted int32
+---@field ProcessedLeatherSubmitted int32
 ---@field bIsUpgrading int32
 UUpgradeDataComponent = {}
 
@@ -1745,6 +1761,9 @@ UUpgradeDataComponent = {}
 ---@field ProcessedIronRequirement int32
 ---@field ReinforcedWoodRequirement int32
 ---@field SilverRequirement int32
+---@field AnimalFatRequirement int32
+---@field AnimalBonesRequirement int32
+---@field ProcessedLeatherRequirement int32
 UUpgradeProxyComponent = {}
 
 

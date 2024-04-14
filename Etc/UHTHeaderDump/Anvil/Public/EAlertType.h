@@ -6,5 +6,6 @@ UENUM(BlueprintType)
 enum class EAlertType : uint8 {
     General,
     QueueStatus,
+    Reinforcement,
 };
 

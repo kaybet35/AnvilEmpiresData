@@ -153,6 +153,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UProgressBar* InteractionProgressBar2;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* EnvironmentStatsText;
+    
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UChatMessage*> NewLocalMessages;
@@ -170,6 +173,12 @@ protected:
 private:
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetHUDWidgetVisibility();
+    
+    UFUNCTION(BlueprintCallable)
+    ESlateVisibility GetEnvironmentStatsTextVisibility();
+    
+    UFUNCTION(BlueprintCallable)
+    FText GetEnvironmentStatsText();
     
 };
 

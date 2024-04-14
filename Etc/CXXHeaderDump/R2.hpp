@@ -160,14 +160,15 @@ struct FItemSlot
     TSubclassOf<class UItemTemplate> HeldItem;                                        // 0x0008 (size: 0x8)
     int32 Count;                                                                      // 0x0010 (size: 0x4)
     int32 StackLimit;                                                                 // 0x0014 (size: 0x4)
-    TArray<EAnvilItemTag> AcceptedTags;                                               // 0x0018 (size: 0x10)
-    TArray<EAnvilItemTag> RequiredTags;                                               // 0x0028 (size: 0x10)
-    TArray<EAnvilItemTag> ProhibitedTags;                                             // 0x0038 (size: 0x10)
-    TSubclassOf<class UItemTemplate> DedicatedItemType;                               // 0x0048 (size: 0x8)
-    TSubclassOf<class UItemTemplate> DedicatedUnderlyingItemType;                     // 0x0050 (size: 0x8)
-    TSubclassOf<class UItemTemplate> RequiredEnablingItem;                            // 0x0058 (size: 0x8)
+    bool bAllowWithdrawal;                                                            // 0x0018 (size: 0x1)
+    TArray<EAnvilItemTag> AcceptedTags;                                               // 0x0020 (size: 0x10)
+    TArray<EAnvilItemTag> RequiredTags;                                               // 0x0030 (size: 0x10)
+    TArray<EAnvilItemTag> ProhibitedTags;                                             // 0x0040 (size: 0x10)
+    TSubclassOf<class UItemTemplate> DedicatedItemType;                               // 0x0050 (size: 0x8)
+    TSubclassOf<class UItemTemplate> DedicatedUnderlyingItemType;                     // 0x0058 (size: 0x8)
+    TSubclassOf<class UItemTemplate> RequiredEnablingItem;                            // 0x0060 (size: 0x8)
 
-}; // Size: 0x60
+}; // Size: 0x68
 
 struct FLootTableItem
 {
@@ -322,6 +323,7 @@ class UAdvancedSnappingProxyComponent : public UProxyComponent
     bool bOverrideAngleOverlapMin;                                                    // 0x002B (size: 0x1)
     float OverridedAngleOverlapMin;                                                   // 0x002C (size: 0x4)
     uint8 NumSnappingRequired;                                                        // 0x0030 (size: 0x1)
+    float MaxOverlapDistOverride;                                                     // 0x0034 (size: 0x4)
 
 }; // Size: 0x38
 
@@ -521,27 +523,32 @@ class UBuildSiteDataComponent : public UDataComponent
     bool bRequiresCamp;                                                               // 0x0108 (size: 0x1)
     bool bRequiresSmallCamp;                                                          // 0x0128 (size: 0x1)
     bool RequiresHorseToComplete;                                                     // 0x0148 (size: 0x1)
-    uint8 TierPrerequisite;                                                           // 0x0168 (size: 0x1)
-    int32 RoadMaterialRequirement;                                                    // 0x0188 (size: 0x4)
-    int32 ResourceBranchesRequirement;                                                // 0x01A8 (size: 0x4)
-    int32 ProcessedWoodRequirement;                                                   // 0x01C8 (size: 0x4)
-    int32 ProcessedStoneRequirement;                                                  // 0x01E8 (size: 0x4)
-    int32 ProcessedIronRequirement;                                                   // 0x0208 (size: 0x4)
-    int32 ReinforcedWoodRequirement;                                                  // 0x0228 (size: 0x4)
-    int32 ResourceFibreRequirement;                                                   // 0x0248 (size: 0x4)
-    int32 ResourceBranchesRawRequirement;                                             // 0x0268 (size: 0x4)
-    int32 RoadMaterialSubmitted;                                                      // 0x0288 (size: 0x4)
-    int32 ResourceBranchesSubmitted;                                                  // 0x02A8 (size: 0x4)
-    int32 ProcessedWoodSubmitted;                                                     // 0x02C8 (size: 0x4)
-    int32 ProcessedStoneSubmitted;                                                    // 0x02E8 (size: 0x4)
-    int32 ProcessedIronSubmitted;                                                     // 0x0308 (size: 0x4)
-    int32 ReinforcedWoodSubmitted;                                                    // 0x0328 (size: 0x4)
-    int32 ResourceFibreSubmitted;                                                     // 0x0348 (size: 0x4)
-    int32 ResourceBranchesRawSubmitted;                                               // 0x0368 (size: 0x4)
-    int64 BuildGhostPlacementStatus;                                                  // 0x0388 (size: 0x8)
-    int32 PlacementInfoFlags;                                                         // 0x03A8 (size: 0x4)
+    bool bBuildsInstantly;                                                            // 0x0168 (size: 0x1)
+    uint8 TierPrerequisite;                                                           // 0x0188 (size: 0x1)
+    int32 RoadMaterialRequirement;                                                    // 0x01A8 (size: 0x4)
+    int32 ResourceBranchesRequirement;                                                // 0x01C8 (size: 0x4)
+    int32 ProcessedWoodRequirement;                                                   // 0x01E8 (size: 0x4)
+    int32 ProcessedStoneRequirement;                                                  // 0x0208 (size: 0x4)
+    int32 ProcessedIronRequirement;                                                   // 0x0228 (size: 0x4)
+    int32 ReinforcedWoodRequirement;                                                  // 0x0248 (size: 0x4)
+    int32 ResourceFibreRequirement;                                                   // 0x0268 (size: 0x4)
+    int32 AnimalFatRequirement;                                                       // 0x0288 (size: 0x4)
+    int32 AnimalBonesRequirement;                                                     // 0x02A8 (size: 0x4)
+    int32 ProcessedLeatherRequirement;                                                // 0x02C8 (size: 0x4)
+    int32 RoadMaterialSubmitted;                                                      // 0x02E8 (size: 0x4)
+    int32 ResourceBranchesSubmitted;                                                  // 0x0308 (size: 0x4)
+    int32 ProcessedWoodSubmitted;                                                     // 0x0328 (size: 0x4)
+    int32 ProcessedStoneSubmitted;                                                    // 0x0348 (size: 0x4)
+    int32 ProcessedIronSubmitted;                                                     // 0x0368 (size: 0x4)
+    int32 ReinforcedWoodSubmitted;                                                    // 0x0388 (size: 0x4)
+    int32 ResourceFibreSubmitted;                                                     // 0x03A8 (size: 0x4)
+    int32 AnimalFatSubmitted;                                                         // 0x03C8 (size: 0x4)
+    int32 AnimalBonesSubmitted;                                                       // 0x03E8 (size: 0x4)
+    int32 ProcessedLeatherSubmitted;                                                  // 0x0408 (size: 0x4)
+    int64 BuildGhostPlacementStatus;                                                  // 0x0428 (size: 0x8)
+    int32 PlacementInfoFlags;                                                         // 0x0448 (size: 0x4)
 
-}; // Size: 0x3C8
+}; // Size: 0x468
 
 class UBuildSiteProxyComponent : public UProxyComponent
 {
@@ -559,21 +566,25 @@ class UBuildSiteProxyComponent : public UProxyComponent
     bool bBuildableNearEnemies;                                                       // 0x0040 (size: 0x1)
     bool bAllowRapidBuild;                                                            // 0x0041 (size: 0x1)
     bool CanBuildTownStructureWithoutPledge;                                          // 0x0042 (size: 0x1)
-    uint8 TierPrerequisite;                                                           // 0x0043 (size: 0x1)
+    bool bBuildsInstantly;                                                            // 0x0043 (size: 0x1)
+    uint8 TierPrerequisite;                                                           // 0x0044 (size: 0x1)
     TSubclassOf<class UItemTemplate> RequiredDeployable;                              // 0x0048 (size: 0x8)
     float MaxHeightShift;                                                             // 0x0050 (size: 0x4)
     float AdditionalMaxHeightShift;                                                   // 0x0054 (size: 0x4)
     float MinDistanceBetweenStructures;                                               // 0x0058 (size: 0x4)
-    int32 RoadMaterialRequirement;                                                    // 0x005C (size: 0x4)
-    int32 ResourceBranchesRequirement;                                                // 0x0060 (size: 0x4)
-    int32 ProcessedWoodRequirement;                                                   // 0x0064 (size: 0x4)
-    int32 ProcessedStoneRequirement;                                                  // 0x0068 (size: 0x4)
-    int32 ProcessedIronRequirement;                                                   // 0x006C (size: 0x4)
-    int32 ReinforcedWoodRequirement;                                                  // 0x0070 (size: 0x4)
-    int32 ResourceFibreRequirement;                                                   // 0x0074 (size: 0x4)
-    int32 ResourceBranchesRawRequirement;                                             // 0x0078 (size: 0x4)
+    TArray<class TSubclassOf<UEntityTemplate>> MinDistanceStructureTypes;             // 0x0060 (size: 0x10)
+    int32 RoadMaterialRequirement;                                                    // 0x0070 (size: 0x4)
+    int32 ResourceBranchesRequirement;                                                // 0x0074 (size: 0x4)
+    int32 ProcessedWoodRequirement;                                                   // 0x0078 (size: 0x4)
+    int32 ProcessedStoneRequirement;                                                  // 0x007C (size: 0x4)
+    int32 ProcessedIronRequirement;                                                   // 0x0080 (size: 0x4)
+    int32 ReinforcedWoodRequirement;                                                  // 0x0084 (size: 0x4)
+    int32 ResourceFibreRequirement;                                                   // 0x0088 (size: 0x4)
+    int32 AnimalFatRequirement;                                                       // 0x008C (size: 0x4)
+    int32 AnimalBonesRequirement;                                                     // 0x0090 (size: 0x4)
+    int32 ProcessedLeatherRequirement;                                                // 0x0094 (size: 0x4)
 
-}; // Size: 0x80
+}; // Size: 0x98
 
 class UCannonProxyComponent : public UProxyComponent
 {
@@ -1191,12 +1202,12 @@ class UPlayerControllerProxyComponent : public UProxyComponent
 
 class UPlayerInputDataComponent : public UDataComponent
 {
-    FVector AimLocation;                                                              // 0x00A8 (size: 0x18)
-    FVector AimArcEndGroundLocation;                                                  // 0x00D8 (size: 0x18)
+    FVector ClientAimLocation;                                                        // 0x00A8 (size: 0x18)
+    FVector ClientAimArcEndGroundLocation;                                            // 0x00D8 (size: 0x18)
     FVector ClickHeading;                                                             // 0x0108 (size: 0x18)
     EAnvilPlayerInputMode InputMode;                                                  // 0x0138 (size: 0x1)
     EAnvilPlayerAimMeshType AimMeshType;                                              // 0x0158 (size: 0x1)
-    FVector AimMeshLocation;                                                          // 0x0178 (size: 0x18)
+    FVector ClientAimMeshLocation;                                                    // 0x0178 (size: 0x18)
     float AimArcRotation;                                                             // 0x01A8 (size: 0x4)
     float AimArcA;                                                                    // 0x01C8 (size: 0x4)
     float AimArcX0;                                                                   // 0x01E8 (size: 0x4)
@@ -1500,15 +1511,16 @@ class USimPlayerDataComponent : public UDataComponent
     bool bInTravelZone;                                                               // 0x0428 (size: 0x1)
     bool bIsMeshHidden;                                                               // 0x0448 (size: 0x1)
     bool bIsHomesteadOwnerInTown;                                                     // 0x0468 (size: 0x1)
-    float SecondsUntilFullDecay;                                                      // 0x0488 (size: 0x4)
-    float HeldItemLightSourceRadius;                                                  // 0x04A8 (size: 0x4)
-    FNightShroudLightSourceData LightSourceData;                                      // 0x04C8 (size: 0x10)
-    uint8 FoodTypesOnCooldownBits;                                                    // 0x04D8 (size: 0x1)
-    float AimYaw;                                                                     // 0x04F8 (size: 0x4)
-    float AimPitch;                                                                   // 0x0518 (size: 0x4)
-    float LastIncomingAttackAngle;                                                    // 0x0538 (size: 0x4)
+    bool bShowEnvStats;                                                               // 0x0488 (size: 0x1)
+    float SecondsUntilFullDecay;                                                      // 0x04A8 (size: 0x4)
+    float HeldItemLightSourceRadius;                                                  // 0x04C8 (size: 0x4)
+    FNightShroudLightSourceData LightSourceData;                                      // 0x04E8 (size: 0x10)
+    uint8 FoodTypesOnCooldownBits;                                                    // 0x04F8 (size: 0x1)
+    float AimYaw;                                                                     // 0x0518 (size: 0x4)
+    float AimPitch;                                                                   // 0x0538 (size: 0x4)
+    float LastIncomingAttackAngle;                                                    // 0x0558 (size: 0x4)
 
-}; // Size: 0x558
+}; // Size: 0x578
 
 class USimPlayerProxyComponent : public UProxyComponent
 {
@@ -1670,19 +1682,17 @@ class UTownHallDataComponent : public UDataComponent
 {
     uint8 Tier;                                                                       // 0x00A8 (size: 0x1)
     bool bIsSmallCamp;                                                                // 0x00C8 (size: 0x1)
-    bool bLocalReinforcementOnly;                                                     // 0x00E8 (size: 0x1)
-    bool bTownUnderAttack;                                                            // 0x0108 (size: 0x1)
-    uint8 TownHallId;                                                                 // 0x0128 (size: 0x1)
-    int32 PledgedPlayersArrayCount;                                                   // 0x0148 (size: 0x4)
-    int32 NumTotalHouses;                                                             // 0x0168 (size: 0x4)
-    int32 NumUnclaimedHouses;                                                         // 0x0188 (size: 0x4)
-    int32 NumTotalTents;                                                              // 0x01A8 (size: 0x4)
-    int32 NumUnclaimedTents;                                                          // 0x01C8 (size: 0x4)
-    int32 NumReinforcementSupplies;                                                   // 0x01E8 (size: 0x4)
-    uint8 TownNameId;                                                                 // 0x0208 (size: 0x1)
-    uint8 TownNameOrdinal;                                                            // 0x0228 (size: 0x1)
+    uint8 TownHallId;                                                                 // 0x00E8 (size: 0x1)
+    int32 PledgedPlayersArrayCount;                                                   // 0x0108 (size: 0x4)
+    int32 NumTotalHouses;                                                             // 0x0128 (size: 0x4)
+    int32 NumUnclaimedHouses;                                                         // 0x0148 (size: 0x4)
+    int32 NumTotalTents;                                                              // 0x0168 (size: 0x4)
+    int32 NumUnclaimedTents;                                                          // 0x0188 (size: 0x4)
+    int32 NumReinforcementSupplies;                                                   // 0x01A8 (size: 0x4)
+    uint8 TownNameId;                                                                 // 0x01C8 (size: 0x1)
+    uint8 TownNameOrdinal;                                                            // 0x01E8 (size: 0x1)
 
-}; // Size: 0x248
+}; // Size: 0x208
 
 class UTownHallProxyComponent : public UProxyComponent
 {
@@ -1724,15 +1734,21 @@ class UUpgradeDataComponent : public UDataComponent
     int32 ProcessedIronRequirement;                                                   // 0x0168 (size: 0x4)
     int32 ReinforcedWoodRequirement;                                                  // 0x0188 (size: 0x4)
     int32 SilverRequirement;                                                          // 0x01A8 (size: 0x4)
-    int32 WorkSubmitted;                                                              // 0x01C8 (size: 0x4)
-    int32 ProcessedWoodSubmitted;                                                     // 0x01E8 (size: 0x4)
-    int32 ProcessedStoneSubmitted;                                                    // 0x0208 (size: 0x4)
-    int32 ProcessedIronSubmitted;                                                     // 0x0228 (size: 0x4)
-    int32 ReinforcedWoodSubmitted;                                                    // 0x0248 (size: 0x4)
-    int32 SilverSubmitted;                                                            // 0x0268 (size: 0x4)
-    int32 bIsUpgrading;                                                               // 0x0288 (size: 0x4)
+    int32 AnimalFatRequirement;                                                       // 0x01C8 (size: 0x4)
+    int32 AnimalBonesRequirement;                                                     // 0x01E8 (size: 0x4)
+    int32 ProcessedLeatherRequirement;                                                // 0x0208 (size: 0x4)
+    int32 WorkSubmitted;                                                              // 0x0228 (size: 0x4)
+    int32 ProcessedWoodSubmitted;                                                     // 0x0248 (size: 0x4)
+    int32 ProcessedStoneSubmitted;                                                    // 0x0268 (size: 0x4)
+    int32 ProcessedIronSubmitted;                                                     // 0x0288 (size: 0x4)
+    int32 ReinforcedWoodSubmitted;                                                    // 0x02A8 (size: 0x4)
+    int32 SilverSubmitted;                                                            // 0x02C8 (size: 0x4)
+    int32 AnimalFatSubmitted;                                                         // 0x02E8 (size: 0x4)
+    int32 AnimalBonesSubmitted;                                                       // 0x0308 (size: 0x4)
+    int32 ProcessedLeatherSubmitted;                                                  // 0x0328 (size: 0x4)
+    int32 bIsUpgrading;                                                               // 0x0348 (size: 0x4)
 
-}; // Size: 0x2A8
+}; // Size: 0x368
 
 class UUpgradeProxyComponent : public UProxyComponent
 {
@@ -1746,8 +1762,11 @@ class UUpgradeProxyComponent : public UProxyComponent
     int32 ProcessedIronRequirement;                                                   // 0x0048 (size: 0x4)
     int32 ReinforcedWoodRequirement;                                                  // 0x004C (size: 0x4)
     int32 SilverRequirement;                                                          // 0x0050 (size: 0x4)
+    int32 AnimalFatRequirement;                                                       // 0x0054 (size: 0x4)
+    int32 AnimalBonesRequirement;                                                     // 0x0058 (size: 0x4)
+    int32 ProcessedLeatherRequirement;                                                // 0x005C (size: 0x4)
 
-}; // Size: 0x58
+}; // Size: 0x60
 
 class UVehicleMovementDataComponent : public UDataComponent
 {
