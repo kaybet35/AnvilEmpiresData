@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
 #include "EAnvilScreenType.h"
 #include "AnvilRootWidget.generated.h"
@@ -43,5 +44,9 @@ protected:
 public:
     UAnvilRootWidget();
 
+protected:
+    UFUNCTION(BlueprintCallable)
+    ESlateVisibility GetAlertsContainerVisibility();
+    
 };
 

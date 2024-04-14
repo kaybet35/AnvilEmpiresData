@@ -9,5 +9,6 @@ enum class EAnvilDismantleStatus : uint8 {
     NoPermission,
     OverTimeLimit,
     EnemiesNearby,
+    MustBeEmpty,
 };
 

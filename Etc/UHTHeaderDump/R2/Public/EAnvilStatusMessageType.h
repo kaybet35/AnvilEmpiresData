@@ -73,6 +73,7 @@ enum class EAnvilStatusMessageType : uint8 {
     AccessDeniedMustBeInFamily,
     AccessDeniedTooFarToInteract,
     DismantleNoPermission,
+    DismantleMustBeEmpty,
     GateIsBreached,
     EnemiesNearby,
     UnstuckStarting,
@@ -103,6 +104,8 @@ enum class EAnvilStatusMessageType : uint8 {
     UnableToIncreaseStatusUsingSilver,
     TaxesAreOverdue,
     FamilyAreaClaimed,
+    RopeAttachFailAlreadyInUse,
+    MountFailRopeAttached,
     NumTypes,
 };
 

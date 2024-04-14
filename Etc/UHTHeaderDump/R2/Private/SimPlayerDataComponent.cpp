@@ -25,13 +25,13 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->bDebugDraw = false;
     this->bPriming = false;
     this->bInTravelZone = false;
+    this->bIsMeshHidden = false;
     this->SecondsUntilFullDecay = 0.00f;
     this->HeldItemLightSourceRadius = 0.00f;
     this->FoodTypesOnCooldownBits = 0;
     this->AimYaw = 0.00f;
     this->AimPitch = 0.00f;
     this->LastIncomingAttackAngle = 0.00f;
-    this->bIsMeshHidden = false;
 }
 
 

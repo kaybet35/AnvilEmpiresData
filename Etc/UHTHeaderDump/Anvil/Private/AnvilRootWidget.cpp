@@ -9,4 +9,8 @@ UAnvilRootWidget::UAnvilRootWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->AlertsContainerWidget = NULL;
 }
 
+ESlateVisibility UAnvilRootWidget::GetAlertsContainerVisibility() {
+    return ESlateVisibility::Visible;
+}
+
 

@@ -12,9 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 LockedFactionId;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bIsAdmin;
-    
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 PledgedTownHallMapHash;
     

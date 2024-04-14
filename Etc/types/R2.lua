@@ -222,6 +222,7 @@ FLootTableItem = {}
 ---@field Base FGridItem
 ---@field Count int32
 ---@field Durability float
+---@field Payload uint8
 ---@field Price int32
 FMarketShopItem = {}
 
@@ -367,6 +368,16 @@ UAnimalAttackProxyComponent = {}
 ---@field WildEntity TSubclassOf<UEntityTemplate>
 UAnimalLivestockProxyComponent = {}
 
+
+
+---@class UAnimalRopeAttachableDataComponent : UDataComponent
+---@field AttachedTarget int64
+UAnimalRopeAttachableDataComponent = {}
+
+
+
+---@class UAnimalRopeAttachableProxyComponent : UProxyComponent
+UAnimalRopeAttachableProxyComponent = {}
 
 
 ---@class UAnimalScavengeProxyComponent : UProxyComponent
@@ -1470,6 +1481,7 @@ USeekerProxyComponent = {}
 ---@field bDebugDraw boolean
 ---@field bPriming boolean
 ---@field bInTravelZone boolean
+---@field bIsMeshHidden boolean
 ---@field SecondsUntilFullDecay float
 ---@field HeldItemLightSourceRadius float
 ---@field LightSourceData FNightShroudLightSourceData
@@ -1477,7 +1489,6 @@ USeekerProxyComponent = {}
 ---@field AimYaw float
 ---@field AimPitch float
 ---@field LastIncomingAttackAngle float
----@field bIsMeshHidden boolean
 USimPlayerDataComponent = {}
 
 

@@ -9,6 +9,7 @@ UMarketItemWidget::UMarketItemWidget() {
     this->PriceTextSizeBox = NULL;
     this->PriceEditableTextSizeBox = NULL;
     this->DurabilityBar = NULL;
+    this->QualityIconImage = NULL;
 }
 
 void UMarketItemWidget::OnPriceUpClicked() {

@@ -255,7 +255,6 @@ AVisBuildSite = {}
 ---@field SeatSocketName FName
 ---@field HorseMesh USkeletalMeshComponent
 ---@field SaddleMesh USkeletalMeshComponent
----@field CartMesh USkeletalMeshComponent
 AVisCart = {}
 
 
@@ -842,7 +841,6 @@ FMapIconTypeProperty = {}
 ---@class FProfileInfoResponse
 ---@field OnlineId uint64
 ---@field LockedFactionId uint8
----@field bIsAdmin boolean
 ---@field PledgedTownHallMapHash uint32
 ---@field PledgedTownHallTownHallId uint32
 ---@field PledgedMilitiaMapHash uint32
@@ -1166,6 +1164,8 @@ UAnvilPanel = {}
 ---@field ScreenStack TArray<EAnvilScreenType>
 UAnvilRootWidget = {}
 
+---@return ESlateVisibility
+function UAnvilRootWidget:GetAlertsContainerVisibility() end
 
 
 ---@class UAnvilScreen : UUserWidget
@@ -1816,6 +1816,7 @@ UMapPostMapIcon = {}
 ---@field IconTemplates TMap<EMapIconType, FMapIconTypeProperty>
 ---@field EnemyIconColour FSlateColor
 ---@field ZoomSpeed float
+---@field ZoomMin float
 ---@field ZoomMax float
 ---@field ZoomAnimationTime float
 ---@field MapImageBox UImage
@@ -1857,6 +1858,8 @@ UMarketItemGridWidget = {}
 ---@field PriceTextSizeBox USizeBox
 ---@field PriceEditableTextSizeBox USizeBox
 ---@field DurabilityBar UProgressBar
+---@field QualityIconImage UImage
+---@field QualityIconTextures TMap<EItemQualityType, UTexture2D>
 UMarketItemWidget = {}
 
 function UMarketItemWidget:OnPriceUpClicked() end
@@ -1907,6 +1910,7 @@ function UMarketShopWindow:GetSilverAmountText() end
 ---@class UNewMapWidget : UUserWidget
 ---@field MapItemWidgetClass TSubclassOf<UDeploymentPointWidget>
 ---@field ZoomSpeed float
+---@field ZoomMin float
 ---@field ZoomMax float
 ---@field ZoomAnimationTime float
 ---@field MapImage UImage
@@ -2445,6 +2449,13 @@ UVisPlayerVisualsComponent = {}
 ---@field InFlowHeight float
 ---@field PowerUnitDataComponent UPowerUnitDataComponent
 UVisPowerUnitAnimInstance = {}
+
+
+
+---@class UVisRopeComponent : USceneComponent
+---@field LineComponent UCableComponent
+---@field RopeDataComponent UAnimalRopeAttachableDataComponent
+UVisRopeComponent = {}
 
 
 

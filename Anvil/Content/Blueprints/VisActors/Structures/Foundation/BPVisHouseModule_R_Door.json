@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisHouseModule_R_Door_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.16"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pillar07",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "Pillar06",
@@ -98,7 +109,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisHouseModule_R_Door_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.21"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconHouseModule_R_door'",
@@ -107,7 +118,7 @@
       "BuildSiteCategory": "EBuildSiteCategory::Housing",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisHouseModule_R_Door_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.20"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisHouseModule_R_Door_C:HealthDataComponent'",
@@ -115,11 +126,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisHouseModule_R_Door_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.19"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisHouseModule_R_Door_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.18"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisHouseModule_R_Door_C:ScorchDataComponent'",
@@ -184,7 +195,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisHouseModule_R_Door_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.17"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisHouseModule_R_Door_C:ArrowComponent'",
@@ -246,7 +257,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisHouseModule_R_Door_C:VisStaticMesh_Roof_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.26"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -266,7 +277,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisHouseModule_R_Door_C:Pillar06_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.24"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -304,12 +315,30 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisHouseModule_R_Door_C:Pillar04_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.22"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "46D39D29-4A5F5AD8-F2C50EA9-076BD80E",
       "InternalVariableName": "Pillar04"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisHouseModule_R_Door_C:Pillar07_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.25"
+      },
+      "VariableGuid": "32EBA687-4E88B017-A2A9DD95-8085F0D3",
+      "InternalVariableName": "Pillar07"
     }
   },
   {
@@ -324,10 +353,16 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisHouseModule_R_Door_C:Pillar05_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.23"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisHouseModule_R_Door_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.14"
+        }
+      ],
       "VariableGuid": "4AC3445A-4EA745F4-77E074AE-F4D27FB8",
       "InternalVariableName": "Pillar05"
     }
@@ -353,7 +388,7 @@
         },
         {
           "ObjectName": "SCS_Node'BPVisHouseModule_R_Door_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisHouseModule_R_Door_C:SimpleConstructionScript_0.SCS_Node_2'",
@@ -375,11 +410,15 @@
         },
         {
           "ObjectName": "SCS_Node'BPVisHouseModule_R_Door_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisHouseModule_R_Door_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHouseModule_R_Door_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisHouseModule_R_Door.14"
         }
       ],
       "DefaultSceneRootNode": {
@@ -495,6 +534,32 @@
         "X": 0.0,
         "Y": 0.0,
         "Z": 155.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "Pillar07_GEN_VARIABLE",
+    "Outer": "BPVisHouseModule_R_Door_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'StairsHighInclineT2'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Fort/StairsHighInclineT2.2"
+      },
+      "OverrideMaterials": [
+        null,
+        null
+      ],
+      "RelativeLocation": {
+        "X": -2.2737368E-13,
+        "Y": 215.0,
+        "Z": 1.3711161E-07
       },
       "ComponentTags": [
         "Structure",

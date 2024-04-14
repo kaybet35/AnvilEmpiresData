@@ -13,8 +13,8 @@ AVisVehicle::AVisVehicle(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->MoveLoopParticleSystem = CreateDefaultSubobject<UNiagaraComponent>(TEXT("MovementParticleSystem"));
     this->HealthDataComponent = CreateDefaultSubobject<UHealthDataComponent>(TEXT("HealthDataComponent"));
     this->ArrowComponent = (UArrowComponent*)RootComponent;
-    this->MoveLoopAudioComponent->SetupAttachment(RootComponent);
     this->MoveLoopParticleSystem->SetupAttachment(RootComponent);
+    this->MoveLoopAudioComponent->SetupAttachment(RootComponent);
 }
 
 

@@ -3,6 +3,7 @@
 
 class ABPVisHorse_C : public AVisCart
 {
+    class UVisRopeComponent* VisRope;                                                 // 0x0448 (size: 0x8)
     class UAudioComponent* idle;                                                      // 0x0450 (size: 0x8)
 
 }; // Size: 0x458

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisHouseModule_T1_R_Door_C : AVisStructure
+---@field Pillar09 UVisStaticMeshComponent
 ---@field Pillar07 UVisStaticMeshComponent
 ---@field Pillar06 UVisStaticMeshComponent
 ---@field Pillar05 UVisStaticMeshComponent

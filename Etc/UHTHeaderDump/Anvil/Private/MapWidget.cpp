@@ -4,6 +4,7 @@ UMapWidget::UMapWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->MapSheet = NULL;
     this->TownHallIconCanvas = NULL;
     this->ZoomSpeed = 0.00f;
+    this->ZoomMin = 0.00f;
     this->ZoomMax = 0.00f;
     this->ZoomAnimationTime = 0.00f;
     this->MapImageBox = NULL;

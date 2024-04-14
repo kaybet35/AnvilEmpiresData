@@ -5,7 +5,7 @@
 
 struct FAlert
 {
-}; // Size: 0x48
+}; // Size: 0x50
 
 struct FAnvilAssetManager
 {
@@ -229,7 +229,6 @@ struct FProfileInfoResponse
 {
     uint64 OnlineId;                                                                  // 0x0000 (size: 0x8)
     uint8 LockedFactionId;                                                            // 0x0008 (size: 0x1)
-    bool bIsAdmin;                                                                    // 0x0009 (size: 0x1)
     uint32 PledgedTownHallMapHash;                                                    // 0x000C (size: 0x4)
     uint32 PledgedTownHallTownHallId;                                                 // 0x0010 (size: 0x4)
     uint32 PledgedMilitiaMapHash;                                                     // 0x0014 (size: 0x4)
@@ -547,9 +546,8 @@ class AVisCart : public AVisVehicle
     FName SeatSocketName;                                                             // 0x0430 (size: 0x8)
     class USkeletalMeshComponent* HorseMesh;                                          // 0x0438 (size: 0x8)
     class USkeletalMeshComponent* SaddleMesh;                                         // 0x0440 (size: 0x8)
-    class USkeletalMeshComponent* CartMesh;                                           // 0x0448 (size: 0x8)
 
-}; // Size: 0x450
+}; // Size: 0x448
 
 class AVisController : public AVisActor
 {
@@ -954,7 +952,7 @@ class UAlertWidget : public UUserWidget
 
     void OnDeclineClicked();
     void OnAcceptClicked();
-}; // Size: 0x2C0
+}; // Size: 0x2C8
 
 class UAlertsContainerWidget : public UUserWidget
 {
@@ -1117,6 +1115,7 @@ class UAnvilRootWidget : public UUserWidget
     class UAlertsContainerWidget* AlertsContainerWidget;                              // 0x02F0 (size: 0x8)
     TArray<EAnvilScreenType> ScreenStack;                                             // 0x02F8 (size: 0x10)
 
+    ESlateVisibility GetAlertsContainerVisibility();
 }; // Size: 0x310
 
 class UAnvilScreen : public UUserWidget
@@ -1705,8 +1704,9 @@ class UMapWidget : public UUserWidget
     TMap<class EMapIconType, class FMapIconTypeProperty> IconTemplates;               // 0x0288 (size: 0x50)
     FSlateColor EnemyIconColour;                                                      // 0x02D8 (size: 0x14)
     float ZoomSpeed;                                                                  // 0x0358 (size: 0x4)
-    float ZoomMax;                                                                    // 0x035C (size: 0x4)
-    float ZoomAnimationTime;                                                          // 0x0360 (size: 0x4)
+    float ZoomMin;                                                                    // 0x035C (size: 0x4)
+    float ZoomMax;                                                                    // 0x0360 (size: 0x4)
+    float ZoomAnimationTime;                                                          // 0x0364 (size: 0x4)
     class UImage* MapImageBox;                                                        // 0x0368 (size: 0x8)
     class UTexture2D* FogOfWarMask;                                                   // 0x0370 (size: 0x8)
     int32 FogOfWarRadius;                                                             // 0x0378 (size: 0x4)
@@ -1741,13 +1741,15 @@ class UMarketItemWidget : public UGridItemWidget
     class USizeBox* PriceTextSizeBox;                                                 // 0x0318 (size: 0x8)
     class USizeBox* PriceEditableTextSizeBox;                                         // 0x0320 (size: 0x8)
     class UProgressBar* DurabilityBar;                                                // 0x0328 (size: 0x8)
+    class UImage* QualityIconImage;                                                   // 0x0330 (size: 0x8)
+    TMap<class EItemQualityType, class UTexture2D*> QualityIconTextures;              // 0x0338 (size: 0x50)
 
     void OnPriceUpClicked();
     void OnPriceTextCommitted(const FText& Text, const TEnumAsByte<ETextCommit::Type> CommitMethod);
     void OnPriceDownClicked();
     bool IsPriceUpEnabled();
     bool IsPriceDownEnabled();
-}; // Size: 0x338
+}; // Size: 0x390
 
 class UMarketShopMapIcon : public UMapIcon
 {
@@ -1785,8 +1787,9 @@ class UNewMapWidget : public UUserWidget
 {
     TSubclassOf<class UDeploymentPointWidget> MapItemWidgetClass;                     // 0x0278 (size: 0x8)
     float ZoomSpeed;                                                                  // 0x0280 (size: 0x4)
-    float ZoomMax;                                                                    // 0x0284 (size: 0x4)
-    float ZoomAnimationTime;                                                          // 0x0288 (size: 0x4)
+    float ZoomMin;                                                                    // 0x0284 (size: 0x4)
+    float ZoomMax;                                                                    // 0x0288 (size: 0x4)
+    float ZoomAnimationTime;                                                          // 0x028C (size: 0x4)
     class UImage* MapImage;                                                           // 0x0290 (size: 0x8)
     class UCanvasPanel* MapImageCanvas;                                               // 0x0298 (size: 0x8)
     class UCanvasPanelSlot* MapImageCanvasSlot;                                       // 0x02A0 (size: 0x8)
@@ -2306,6 +2309,13 @@ class UVisPowerUnitAnimInstance : public UAnimInstance
     class UPowerUnitDataComponent* PowerUnitDataComponent;                            // 0x0358 (size: 0x8)
 
 }; // Size: 0x360
+
+class UVisRopeComponent : public USceneComponent
+{
+    class UCableComponent* LineComponent;                                             // 0x02A0 (size: 0x8)
+    class UAnimalRopeAttachableDataComponent* RopeDataComponent;                      // 0x02A8 (size: 0x8)
+
+}; // Size: 0x2B0
 
 class UVisScaffoldingComponent : public USceneComponent
 {

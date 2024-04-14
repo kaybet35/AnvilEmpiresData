@@ -181,9 +181,10 @@ struct FMarketShopItem
     FGridItem Base;                                                                   // 0x0000 (size: 0x8)
     int32 Count;                                                                      // 0x0008 (size: 0x4)
     float Durability;                                                                 // 0x000C (size: 0x4)
-    int32 Price;                                                                      // 0x0010 (size: 0x4)
+    uint8 Payload;                                                                    // 0x0010 (size: 0x1)
+    int32 Price;                                                                      // 0x0014 (size: 0x4)
 
-}; // Size: 0x14
+}; // Size: 0x18
 
 struct FNightShroudLightSource
 {
@@ -371,6 +372,16 @@ class UAnimalLivestockProxyComponent : public UProxyComponent
     TSubclassOf<class UEntityTemplate> WildEntity;                                    // 0x0058 (size: 0x8)
 
 }; // Size: 0x60
+
+class UAnimalRopeAttachableDataComponent : public UDataComponent
+{
+    int64 AttachedTarget;                                                             // 0x00A8 (size: 0x8)
+
+}; // Size: 0xC8
+
+class UAnimalRopeAttachableProxyComponent : public UProxyComponent
+{
+}; // Size: 0x28
 
 class UAnimalScavengeProxyComponent : public UProxyComponent
 {
@@ -1471,14 +1482,14 @@ class USimPlayerDataComponent : public UDataComponent
     bool bDebugDraw;                                                                  // 0x03E8 (size: 0x1)
     bool bPriming;                                                                    // 0x0408 (size: 0x1)
     bool bInTravelZone;                                                               // 0x0428 (size: 0x1)
-    float SecondsUntilFullDecay;                                                      // 0x0448 (size: 0x4)
-    float HeldItemLightSourceRadius;                                                  // 0x0468 (size: 0x4)
-    FNightShroudLightSourceData LightSourceData;                                      // 0x0488 (size: 0x10)
-    uint8 FoodTypesOnCooldownBits;                                                    // 0x0498 (size: 0x1)
-    float AimYaw;                                                                     // 0x04B8 (size: 0x4)
-    float AimPitch;                                                                   // 0x04D8 (size: 0x4)
-    float LastIncomingAttackAngle;                                                    // 0x04F8 (size: 0x4)
-    bool bIsMeshHidden;                                                               // 0x0518 (size: 0x1)
+    bool bIsMeshHidden;                                                               // 0x0448 (size: 0x1)
+    float SecondsUntilFullDecay;                                                      // 0x0468 (size: 0x4)
+    float HeldItemLightSourceRadius;                                                  // 0x0488 (size: 0x4)
+    FNightShroudLightSourceData LightSourceData;                                      // 0x04A8 (size: 0x10)
+    uint8 FoodTypesOnCooldownBits;                                                    // 0x04B8 (size: 0x1)
+    float AimYaw;                                                                     // 0x04D8 (size: 0x4)
+    float AimPitch;                                                                   // 0x04F8 (size: 0x4)
+    float LastIncomingAttackAngle;                                                    // 0x0518 (size: 0x4)
 
 }; // Size: 0x538
 

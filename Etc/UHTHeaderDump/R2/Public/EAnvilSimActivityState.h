@@ -24,6 +24,7 @@ enum class EAnvilSimActivityState : uint8 {
     Eating,
     Feeding,
     Farming,
+    AttachRope,
     FishingWaiting,
     FishingHooked,
     FishingSuccess,
