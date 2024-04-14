@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisMarketplaceShopT1_C : AVisMarketShop
+---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field Fire USceneComponent
 ---@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent

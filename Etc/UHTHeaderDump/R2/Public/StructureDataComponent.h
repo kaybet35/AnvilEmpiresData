@@ -15,13 +15,13 @@ public:
     bool bOnFoundation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bInFamilyArea;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilBuildStructureType StructureType;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 BuilderId;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 TownFamilyAreaId;
     
     UStructureDataComponent(const FObjectInitializer& ObjectInitializer);
 

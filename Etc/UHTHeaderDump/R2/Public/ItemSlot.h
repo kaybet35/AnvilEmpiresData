@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EAnvilItemType.h"
+#include "EAnvilItemTag.h"
 #include "Templates/SubclassOf.h"
 #include "ItemSlot.generated.h"
 
@@ -26,10 +26,13 @@ public:
     int32 StackLimit;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bHoldsLarge;
+    TArray<EAnvilItemTag> AcceptedTags;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EAnvilItemType SlotType;
+    TArray<EAnvilItemTag> RequiredTags;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<EAnvilItemTag> ProhibitedTags;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UItemTemplate> DedicatedItemType;

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisWeaponFactoryT3_C : AVisRefinery
+---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field VisStaticMesh8 UVisStaticMeshComponent
 ---@field VisStaticMesh7 UVisStaticMeshComponent
 ---@field VisStaticMesh6 UVisStaticMeshComponent

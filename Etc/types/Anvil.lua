@@ -253,7 +253,7 @@ AVisBuildSite = {}
 ---@field StaminaDataComponent UStaminaDataComponent
 ---@field AnimalAIDataComponent UAnimalAIDataComponent
 ---@field SeatSocketName FName
----@field HorseMesh USkeletalMeshComponent
+---@field Mesh USkeletalMeshComponent
 ---@field SaddleMesh USkeletalMeshComponent
 AVisCart = {}
 
@@ -709,6 +709,8 @@ FClientConfigManager = {}
 ---@field TargetServerName FString
 ---@field SelectedFactionId uint8
 ---@field QueueTypeToJoin uint8
+---@field MajorVersion int32
+---@field MinorVersion int32
 FClientConnectionRequest = {}
 
 
@@ -798,6 +800,7 @@ FHitConverterItemMeshInfo = {}
 
 ---@class FItemData : FTableRowBase
 ---@field Damage uint8
+---@field DefaultMarketplaceValue uint16
 FItemData = {}
 
 
@@ -1351,6 +1354,8 @@ function UDeathMarketMapIcon:OnLastDeathLocationChanged(OldVal, NewVal) end
 ---@field FlashingFrequency float
 ---@field FlashingMinOpacity float
 ---@field ParentSlot UCanvasPanelSlot
+---@field TypeProperty FMapIconTypeProperty
+---@field InstanceProperty FMapIconInstanceProperty
 UDeploymentPointWidget = {}
 
 function UDeploymentPointWidget:OnDeploymentPointClicked() end
@@ -1459,12 +1464,16 @@ function UFactionSelectScreen:GetDeleteProfileButtonVisibility() end
 ---@field TaxTextBlock UTextBlock
 ---@field FamilyMemberListItemWidgetType TSubclassOf<UFamilyMemberListItemWidget>
 ---@field FamilyAreaRestrictedCheckBox UCheckBox
+---@field FamilyAreaAllianceButton UButton
 UFamilyAreaMarkerWindow = {}
 
 ---@param PlayerId uint64
 function UFamilyAreaMarkerWindow:OnKickClicked(PlayerId) end
+function UFamilyAreaMarkerWindow:OnFamilyAreaSetAllianceClicked() end
 ---@param bIsChecked boolean
 function UFamilyAreaMarkerWindow:OnFamilyAreaRestrictedChecked(bIsChecked) end
+---@return ESlateVisibility
+function UFamilyAreaMarkerWindow:GetFamilyAreaSetAllianceVisibility() end
 ---@return ESlateVisibility
 function UFamilyAreaMarkerWindow:GetFamilyAreaRestrictedVisibility() end
 ---@return ECheckBoxState
@@ -1745,7 +1754,7 @@ UInventoryContainerWidget = {}
 ---@field ItemQuantityTextSize int32
 ---@field DisabledTint FSlateColor
 ---@field DedicatedImageOpacity float
----@field EmptyImageMap TMap<EAnvilItemType, UTexture2D>
+---@field EmptyImageMap TMap<EAnvilItemTag, UTexture2D>
 ---@field ItemQuantityText UTextBlock
 ---@field DurabilityBar UProgressBar
 ---@field SubtypeIconRelic UImage
@@ -1860,6 +1869,8 @@ UMarketItemGridWidget = {}
 ---@field DurabilityBar UProgressBar
 ---@field QualityIconImage UImage
 ---@field QualityIconTextures TMap<EItemQualityType, UTexture2D>
+---@field BelowDefaultValueColour FColor
+---@field AboveDefaultValueColour FColor
 UMarketItemWidget = {}
 
 function UMarketItemWidget:OnPriceUpClicked() end
@@ -2345,6 +2356,13 @@ function UVisCanalWaterControllerComponent:OnCurrentUpdate() end
 
 ---@class UVisCartAnimInstance : UVisVehicleAnimInstance
 UVisCartAnimInstance = {}
+
+
+---@class UVisFamilyMeshComponent : UStaticMeshComponent
+---@field FamilyVisualsMaterialIndex int32
+---@field ColourTable TArray<FLinearColor>
+UVisFamilyMeshComponent = {}
+
 
 
 ---@class UVisFoundationDecorMesh : UStaticMeshComponent

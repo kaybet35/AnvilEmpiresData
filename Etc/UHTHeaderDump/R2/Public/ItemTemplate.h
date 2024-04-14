@@ -9,7 +9,7 @@
 #include "EAnvilFoodType.h"
 #include "EAnvilItemDurabilityType.h"
 #include "EAnvilItemPayloadType.h"
-#include "EAnvilItemType.h"
+#include "EAnvilItemTag.h"
 #include "EAnvilToolType.h"
 #include "Templates/SubclassOf.h"
 #include "ItemTemplate.generated.h"
@@ -28,10 +28,7 @@ public:
     int32 CodeName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EAnvilItemType ItemType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EAnvilItemType SecondaryType;
+    TArray<EAnvilItemTag> ItemTags;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilItemDurabilityType ItemDurabilityType;
@@ -50,15 +47,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEntityTemplate> ItemHitEffect;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bStackable;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bLarge;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bTwoHanded;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 Encumberance;
@@ -218,6 +206,9 @@ public:
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint16 QuantityPerCrate;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint16 DefaultMarketValue;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StunChance;

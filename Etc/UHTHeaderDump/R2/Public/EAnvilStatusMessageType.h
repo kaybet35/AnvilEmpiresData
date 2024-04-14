@@ -104,6 +104,7 @@ enum class EAnvilStatusMessageType : uint8 {
     UnableToIncreaseStatusUsingSilver,
     TaxesAreOverdue,
     FamilyAreaClaimed,
+    FamilyAllianceSet,
     RopeAttachFailAlreadyInUse,
     MountFailRopeAttached,
     NumTypes,

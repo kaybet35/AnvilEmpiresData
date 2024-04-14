@@ -2,6 +2,7 @@
 
 ---@class ABPVisMineralRefineryT3_C : AVisRefinery
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field VisStaticMesh7 UVisStaticMeshComponent
 ---@field VisStaticMesh6 UVisStaticMeshComponent
 ---@field Niagara UNiagaraComponent

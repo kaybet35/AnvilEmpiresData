@@ -97,8 +97,10 @@ struct FClientConnectionRequest
     FString TargetServerName;                                                         // 0x0010 (size: 0x10)
     uint8 SelectedFactionId;                                                          // 0x0020 (size: 0x1)
     uint8 QueueTypeToJoin;                                                            // 0x0021 (size: 0x1)
+    int32 MajorVersion;                                                               // 0x0024 (size: 0x4)
+    int32 MinorVersion;                                                               // 0x0028 (size: 0x4)
 
-}; // Size: 0x28
+}; // Size: 0x30
 
 struct FConnectToServerResponse
 {
@@ -186,6 +188,7 @@ struct FHitConverterItemMeshInfo
 struct FItemData : public FTableRowBase
 {
     uint8 Damage;                                                                     // 0x0008 (size: 0x1)
+    uint16 DefaultMarketplaceValue;                                                   // 0x000A (size: 0x2)
 
 }; // Size: 0x10
 
@@ -544,7 +547,7 @@ class AVisCart : public AVisVehicle
     class UStaminaDataComponent* StaminaDataComponent;                                // 0x0420 (size: 0x8)
     class UAnimalAIDataComponent* AnimalAIDataComponent;                              // 0x0428 (size: 0x8)
     FName SeatSocketName;                                                             // 0x0430 (size: 0x8)
-    class USkeletalMeshComponent* HorseMesh;                                          // 0x0438 (size: 0x8)
+    class USkeletalMeshComponent* Mesh;                                               // 0x0438 (size: 0x8)
     class USkeletalMeshComponent* SaddleMesh;                                         // 0x0440 (size: 0x8)
 
 }; // Size: 0x448
@@ -1283,6 +1286,8 @@ class UDeploymentPointWidget : public UUserWidget
     float FlashingFrequency;                                                          // 0x02C0 (size: 0x4)
     float FlashingMinOpacity;                                                         // 0x02C4 (size: 0x4)
     class UCanvasPanelSlot* ParentSlot;                                               // 0x02C8 (size: 0x8)
+    FMapIconTypeProperty TypeProperty;                                                // 0x02D0 (size: 0x30)
+    FMapIconInstanceProperty InstanceProperty;                                        // 0x0300 (size: 0x88)
 
     void OnDeploymentPointClicked();
     bool IsDeploymentPointEnabled();
@@ -1295,7 +1300,7 @@ class UDeploymentPointWidget : public UUserWidget
     ESlateVisibility GetNumHousesVisibility();
     FText GetNumHousesText();
     ESlateVisibility GetDeploymentPointVisibility();
-}; // Size: 0x368
+}; // Size: 0x428
 
 class UDeploymentScreen : public UAnvilScreen
 {
@@ -1369,12 +1374,15 @@ class UFamilyAreaMarkerWindow : public UStructureWindow
     class UTextBlock* TaxTextBlock;                                                   // 0x02E8 (size: 0x8)
     TSubclassOf<class UFamilyMemberListItemWidget> FamilyMemberListItemWidgetType;    // 0x02F0 (size: 0x8)
     class UCheckBox* FamilyAreaRestrictedCheckBox;                                    // 0x02F8 (size: 0x8)
+    class UButton* FamilyAreaAllianceButton;                                          // 0x0300 (size: 0x8)
 
     void OnKickClicked(uint64 PlayerId);
+    void OnFamilyAreaSetAllianceClicked();
     void OnFamilyAreaRestrictedChecked(bool bIsChecked);
+    ESlateVisibility GetFamilyAreaSetAllianceVisibility();
     ESlateVisibility GetFamilyAreaRestrictedVisibility();
     ECheckBoxState GetFamilyAreaRestrictedCheckedState();
-}; // Size: 0x300
+}; // Size: 0x308
 
 class UFamilyMemberListItemWidget : public UUserWidget
 {
@@ -1632,20 +1640,20 @@ class UInventoryContainerWidget : public UUserWidget
 
 class UInventoryItemWidget : public UGridItemWidget
 {
-    int32 ItemQuantityTextSize;                                                       // 0x0318 (size: 0x4)
-    FSlateColor DisabledTint;                                                         // 0x031C (size: 0x14)
-    float DedicatedImageOpacity;                                                      // 0x0330 (size: 0x4)
-    TMap<class EAnvilItemType, class UTexture2D*> EmptyImageMap;                      // 0x0338 (size: 0x50)
-    class UTextBlock* ItemQuantityText;                                               // 0x0388 (size: 0x8)
-    class UProgressBar* DurabilityBar;                                                // 0x0390 (size: 0x8)
-    class UImage* SubtypeIconRelic;                                                   // 0x0398 (size: 0x8)
-    class UImage* OverEncumberedImage;                                                // 0x03A0 (size: 0x8)
-    class UImage* PublicIconImage;                                                    // 0x03A8 (size: 0x8)
-    class UProgressBar* HitConversionProgressBar;                                     // 0x03B0 (size: 0x8)
-    class UImage* QualityIconImage;                                                   // 0x03B8 (size: 0x8)
-    TMap<class EItemQualityType, class UTexture2D*> QualityIconTextures;              // 0x03C0 (size: 0x50)
+    int32 ItemQuantityTextSize;                                                       // 0x0328 (size: 0x4)
+    FSlateColor DisabledTint;                                                         // 0x032C (size: 0x14)
+    float DedicatedImageOpacity;                                                      // 0x0340 (size: 0x4)
+    TMap<class EAnvilItemTag, class UTexture2D*> EmptyImageMap;                       // 0x0348 (size: 0x50)
+    class UTextBlock* ItemQuantityText;                                               // 0x0398 (size: 0x8)
+    class UProgressBar* DurabilityBar;                                                // 0x03A0 (size: 0x8)
+    class UImage* SubtypeIconRelic;                                                   // 0x03A8 (size: 0x8)
+    class UImage* OverEncumberedImage;                                                // 0x03B0 (size: 0x8)
+    class UImage* PublicIconImage;                                                    // 0x03B8 (size: 0x8)
+    class UProgressBar* HitConversionProgressBar;                                     // 0x03C0 (size: 0x8)
+    class UImage* QualityIconImage;                                                   // 0x03C8 (size: 0x8)
+    TMap<class EItemQualityType, class UTexture2D*> QualityIconTextures;              // 0x03D0 (size: 0x50)
 
-}; // Size: 0x418
+}; // Size: 0x428
 
 class UInventoryWidget : public UGridPanelWidget
 {
@@ -1743,13 +1751,15 @@ class UMarketItemWidget : public UGridItemWidget
     class UProgressBar* DurabilityBar;                                                // 0x0328 (size: 0x8)
     class UImage* QualityIconImage;                                                   // 0x0330 (size: 0x8)
     TMap<class EItemQualityType, class UTexture2D*> QualityIconTextures;              // 0x0338 (size: 0x50)
+    FColor BelowDefaultValueColour;                                                   // 0x0388 (size: 0x4)
+    FColor AboveDefaultValueColour;                                                   // 0x038C (size: 0x4)
 
     void OnPriceUpClicked();
     void OnPriceTextCommitted(const FText& Text, const TEnumAsByte<ETextCommit::Type> CommitMethod);
     void OnPriceDownClicked();
     bool IsPriceUpEnabled();
     bool IsPriceDownEnabled();
-}; // Size: 0x390
+}; // Size: 0x398
 
 class UMarketShopMapIcon : public UMapIcon
 {
@@ -2204,6 +2214,13 @@ class UVisCanalWaterControllerComponent : public USceneComponent
 class UVisCartAnimInstance : public UVisVehicleAnimInstance
 {
 }; // Size: 0x360
+
+class UVisFamilyMeshComponent : public UStaticMeshComponent
+{
+    int32 FamilyVisualsMaterialIndex;                                                 // 0x05F0 (size: 0x4)
+    TArray<FLinearColor> ColourTable;                                                 // 0x05F8 (size: 0x10)
+
+}; // Size: 0x610
 
 class UVisFoundationDecorMesh : public UStaticMeshComponent
 {

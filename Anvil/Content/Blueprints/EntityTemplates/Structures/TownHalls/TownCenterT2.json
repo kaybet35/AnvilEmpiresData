@@ -98,8 +98,15 @@
           "HeldItem": null,
           "Count": 0,
           "StackLimit": 1000,
-          "bHoldsLarge": true,
-          "SlotType": "EAnvilItemType::BaseStockpile",
+          "AcceptedTags": [
+            "EAnvilItemTag::PrimaryTool",
+            "EAnvilItemTag::SecondaryTool",
+            "EAnvilItemTag::Head",
+            "EAnvilItemTag::Body",
+            "EAnvilItemTag::WeaponStorage"
+          ],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
           "DedicatedItemType": null,
           "DedicatedUnderlyingItemType": null
         }
@@ -123,8 +130,11 @@
           "HeldItem": null,
           "Count": 0,
           "StackLimit": 30000,
-          "bHoldsLarge": false,
-          "SlotType": "EAnvilItemType::Silver",
+          "AcceptedTags": [
+            "EAnvilItemTag::Silver"
+          ],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
           "DedicatedItemType": {
             "ObjectName": "BlueprintGeneratedClass'Silver_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"

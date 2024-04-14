@@ -10,5 +10,6 @@ enum class EClientConnectToServerResponseType : uint8 {
     AuthFailed,
     AllowedToJoin,
     PromptToJoinAdminQueue,
+    VersionMismatch,
 };
 

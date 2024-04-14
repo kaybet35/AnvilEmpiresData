@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisHenhouseT1_C : AVisLivestockStructure
+---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field AnimalFeedPile2 UVisStaticMeshComponent
 ---@field AnimalFeedPile1 UVisStaticMeshComponent
 ---@field Decal1 UDecalComponent

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisIndustryFoundation_3x3_C : AVisStructure
+---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field VisFoundationDecorMesh5 UVisFoundationDecorMesh
 ---@field VisFoundationDecorMesh4 UVisFoundationDecorMesh
 ---@field Pillar04 UVisStaticMeshComponent

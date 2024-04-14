@@ -68,6 +68,17 @@
       },
       {
         "Type": "ObjectProperty",
+        "Name": "BPVisFamilyMeshComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BPVisFamilyMeshComponent_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "VisStaticMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -86,17 +97,6 @@
         "PropertyClass": {
           "ObjectName": "Class'GrassRemovalVolumeComponent'",
           "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "FamilyArea",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'DecalComponent'",
-          "ObjectPath": "/Script/Engine"
         }
       },
       {
@@ -234,23 +234,23 @@
     }
   },
   {
-    "Type": "DecalComponent",
-    "Name": "FamilyArea_GEN_VARIABLE",
+    "Type": "BPVisFamilyMeshComponent_C",
+    "Name": "BPVisFamilyMeshComponent_GEN_VARIABLE",
     "Outer": "BPVisFamilyAreaCore_C",
-    "Class": "UScriptClass'DecalComponent'",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.BPVisFamilyMeshComponent_C'",
+    "Template": {
+      "ObjectName": "BPVisFamilyMeshComponent_C'Default__BPVisFamilyMeshComponent_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.1"
+    },
     "Properties": {
-      "DecalMaterial": {
-        "ObjectName": "MaterialInstanceConstant'Decal_BuildArea'",
-        "ObjectPath": "Anvil/Content/Materials/Decals/Decal_BuildArea.0"
-      },
-      "DecalSize": {
-        "X": 800.0,
-        "Y": 800.0,
-        "Z": 654.5455
+      "RelativeLocation": {
+        "X": 113.0,
+        "Y": 68.0,
+        "Z": 323.0
       },
       "RelativeRotation": {
-        "Pitch": -90.0,
-        "Yaw": 0.0,
+        "Pitch": -0.0,
+        "Yaw": -90.0,
         "Roll": 0.0
       }
     }
@@ -262,9 +262,9 @@
     "Class": "UScriptClass'DecalComponent'",
     "Properties": {
       "DecalSize": {
-        "X": 500.0,
-        "Y": 500.0,
-        "Z": 500.0
+        "X": 300.0,
+        "Y": 150.0,
+        "Z": 150.0
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyAreaCore_C:ArrowComponent'",
@@ -284,18 +284,13 @@
     "Class": "UScriptClass'DecalComponent'",
     "Properties": {
       "DecalSize": {
-        "X": 37.68502,
-        "Y": 75.37004,
-        "Z": 75.37004
+        "X": 300.0,
+        "Y": 150.0,
+        "Z": 150.0
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyAreaCore_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaCore.0"
-      },
-      "RelativeLocation": {
-        "X": 400.0,
-        "Y": 400.0,
-        "Z": 0.0
       }
     }
   },
@@ -365,8 +360,8 @@
     "Class": "UScriptClass'GrassRemovalVolumeComponent'",
     "Properties": {
       "Extents": {
-        "X": 550.0,
-        "Y": 550.0,
+        "X": 125.0,
+        "Y": 125.0,
         "Z": 500.0
       },
       "SplineDataComponent": {
@@ -382,8 +377,8 @@
     "Class": "UScriptClass'GrassRemovalVolumeComponent'",
     "Properties": {
       "Extents": {
-        "X": 550.0,
-        "Y": 550.0,
+        "X": 125.0,
+        "Y": 125.0,
         "Z": 500.0
       },
       "SplineDataComponent": {
@@ -434,22 +429,20 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_2",
+    "Name": "SCS_Node_1",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'DecalComponent'",
-        "ObjectPath": "/Script/Engine"
+        "ObjectName": "BlueprintGeneratedClass'BPVisFamilyMeshComponent_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.0"
       },
       "ComponentTemplate": {
-        "ObjectName": "DecalComponent'BPVisFamilyAreaCore_C:FamilyArea_GEN_VARIABLE'",
+        "ObjectName": "BPVisFamilyMeshComponent_C'BPVisFamilyAreaCore_C:BPVisFamilyMeshComponent_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaCore.4"
       },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "73A7848D-4811F089-566C4681-1F6741A6",
-      "InternalVariableName": "FamilyArea"
+      "VariableGuid": "5A2B6858-418032CD-FD3354A2-1912F8EF",
+      "InternalVariableName": "BPVisFamilyMeshComponent"
     }
   },
   {
@@ -508,6 +501,12 @@
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyAreaCore_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaCore.17"
+        }
+      ],
       "VariableGuid": "66AC4382-4056236F-92CF54B6-DD034723",
       "InternalVariableName": "VisStaticMesh"
     }
@@ -524,10 +523,6 @@
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaCore.19"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFamilyAreaCore_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaCore.17"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisFamilyAreaCore_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaCore.18"
         },
@@ -542,16 +537,16 @@
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaCore.19"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFamilyAreaCore_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaCore.17"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisFamilyAreaCore_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaCore.18"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyAreaCore_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaCore.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyAreaCore_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyAreaCore.17"
         }
       ],
       "DefaultSceneRootNode": {
@@ -612,11 +607,6 @@
       "StaticMesh": {
         "ObjectName": "StaticMesh'Homestead_T1'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead_T1.2"
-      },
-      "RelativeLocation": {
-        "X": -325.0,
-        "Y": -325.0,
-        "Z": 0.0
       },
       "ComponentTags": [
         "Structure",

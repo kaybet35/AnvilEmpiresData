@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisFoodRefineryT1_C : AVisRefinery
+---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field Niagara3 UNiagaraComponent
 ---@field Niagara2 UNiagaraComponent
 ---@field VisStaticMesh7 UVisStaticMeshComponent

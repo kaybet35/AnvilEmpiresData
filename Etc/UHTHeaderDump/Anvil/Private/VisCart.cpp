@@ -8,9 +8,9 @@ AVisCart::AVisCart(const FObjectInitializer& ObjectInitializer) : Super(ObjectIn
     this->HungerDataComponent = CreateDefaultSubobject<UHungerDataComponent>(TEXT("HungerDataComponent"));
     this->StaminaDataComponent = CreateDefaultSubobject<UStaminaDataComponent>(TEXT("StaminaDataComponent"));
     this->AnimalAIDataComponent = CreateDefaultSubobject<UAnimalAIDataComponent>(TEXT("AnimalAIDataComponent"));
-    this->HorseMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("HorseMesh"));
+    this->Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
     this->SaddleMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SaddleMesh"));
-    this->HorseMesh->SetupAttachment(RootComponent);
+    this->Mesh->SetupAttachment(RootComponent);
     this->SaddleMesh->SetupAttachment(RootComponent);
 }
 

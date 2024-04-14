@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilItemType -FallbackName=EAnvilItemType
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilItemTag -FallbackName=EAnvilItemTag
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EItemQualityType -FallbackName=EItemQualityType
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateColor -FallbackName=SlateColor
 #include "GridItemWidget.h"
@@ -26,7 +26,7 @@ protected:
     float DedicatedImageOpacity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<EAnvilItemType, UTexture2D*> EmptyImageMap;
+    TMap<EAnvilItemTag, UTexture2D*> EmptyImageMap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* ItemQuantityText;

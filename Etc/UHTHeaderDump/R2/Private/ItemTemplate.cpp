@@ -2,17 +2,12 @@
 
 UItemTemplate::UItemTemplate() {
     this->CodeName = 0;
-    this->ItemType = EAnvilItemType::Normal;
-    this->SecondaryType = EAnvilItemType::None;
     this->ItemDurabilityType = EAnvilItemDurabilityType::None;
     this->ItemPayloadType = EAnvilItemPayloadType::None;
     this->PickupEntity = NULL;
     this->ItemDestroyedEffect = NULL;
     this->ItemInvokedEffect = NULL;
     this->ItemHitEffect = NULL;
-    this->bStackable = false;
-    this->bLarge = false;
-    this->bTwoHanded = false;
     this->Encumberance = 0;
     this->ArmedDurabilityLossPerSec = 0.00f;
     this->DurabilityLossPerUse = 0.00f;
@@ -59,6 +54,7 @@ UItemTemplate::UItemTemplate() {
     this->HealthLimitRestored = 0.00f;
     this->StaminaLimitRestored = 0.00f;
     this->QuantityPerCrate = 10;
+    this->DefaultMarketValue = 1;
     this->StunChance = 0.00f;
     this->StunDuration = 0.00f;
     this->StunThrowDistance = 0.00f;

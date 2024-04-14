@@ -12,11 +12,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisFoodRefineryT2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.43"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.45"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BPVisFoodRefineryT2_C:ExecuteUbergraph_BPVisFoodRefineryT2'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.5"
       }
     },
     "SuperStruct": {
@@ -26,11 +26,11 @@
     "Children": [
       {
         "ObjectName": "Function'BPVisFoodRefineryT2_C:ReceiveTick'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.6"
       },
       {
         "ObjectName": "Function'BPVisFoodRefineryT2_C:ExecuteUbergraph_BPVisFoodRefineryT2'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.5"
       }
     ],
     "ChildProperties": [
@@ -43,6 +43,17 @@
         "Struct": {
           "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
           "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPVisFamilyMeshComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BPVisFamilyMeshComponent_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.0"
         }
       },
       {
@@ -287,11 +298,11 @@
     "FuncMap": {
       "ExecuteUbergraph_BPVisFoodRefineryT2": {
         "ObjectName": "Function'BPVisFoodRefineryT2_C:ExecuteUbergraph_BPVisFoodRefineryT2'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.5"
       },
       "ReceiveTick": {
         "ObjectName": "Function'BPVisFoodRefineryT2_C:ReceiveTick'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.6"
       }
     },
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -303,10 +314,32 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisFoodRefineryT2_C'Default__BPVisFoodRefineryT2_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.2"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.3"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisFamilyMeshComponent_C",
+    "Name": "BPVisFamilyMeshComponent_GEN_VARIABLE",
+    "Outer": "BPVisFoodRefineryT2_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.BPVisFamilyMeshComponent_C'",
+    "Template": {
+      "ObjectName": "BPVisFamilyMeshComponent_C'Default__BPVisFamilyMeshComponent_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.1"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 117.23103,
+        "Y": 150.01959,
+        "Z": 322.1201
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
     }
   },
   {
@@ -318,11 +351,11 @@
       "RotateSpeed": 120.0,
       "RefineResourceDataComponent": {
         "ObjectName": "RefineResourceDataComponent'Default__BPVisFoodRefineryT2_C:RefineResourceDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.11"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisFoodRefineryT2_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.48"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.50"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconFlourMill'",
@@ -331,23 +364,23 @@
       "BuildSiteCategory": "EBuildSiteCategory::Cooking",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisFoodRefineryT2_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.47"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.49"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisFoodRefineryT2_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.8"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisFoodRefineryT2_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.46"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.48"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisFoodRefineryT2_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.45"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.47"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisFoodRefineryT2_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.14"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisFoodRefineryT2_C:ArrowComponent'",
@@ -355,11 +388,11 @@
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisFoodRefineryT2_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.4"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisFoodRefineryT2_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.7"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -511,7 +544,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisFoodRefineryT2_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.44"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.46"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisFoodRefineryT2_C:ArrowComponent'",
@@ -1124,7 +1157,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisFoodRefineryT2_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.12"
       },
       "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -1142,22 +1175,22 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFoodRefineryT2_C:MillSmall2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.50"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.52"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.32"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.34"
         },
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.29"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.30"
         },
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.30"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.31"
         }
       ],
       "VariableGuid": "22AE6229-4C420C6D-8D70348B-B504BDE2",
@@ -1176,7 +1209,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisFoodRefineryT2_C:ScorchEffect7_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.19"
       },
       "VariableGuid": "8758243B-4A287CF4-90C485AB-069355B9",
       "InternalVariableName": "ScorchEffect7"
@@ -1194,7 +1227,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisFoodRefineryT2_C:ScorchEffect1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.15"
       },
       "VariableGuid": "3DE6482B-4A9E8C32-6C5401AC-2730F360",
       "InternalVariableName": "ScorchEffect1"
@@ -1212,7 +1245,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisFoodRefineryT2_C:ScorchEffect4_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.16"
       },
       "VariableGuid": "E59882B9-47385774-541D9ABB-E26D06AC",
       "InternalVariableName": "ScorchEffect4"
@@ -1230,7 +1263,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisFoodRefineryT2_C:ScorchEffect9_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.21"
       },
       "VariableGuid": "59A6B677-498EB174-AFFE01BC-315928ED",
       "InternalVariableName": "ScorchEffect9"
@@ -1248,14 +1281,18 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFoodRefineryT2_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.58"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.60"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.28"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.33"
         }
       ],
       "VariableGuid": "1482A5B0-4D5141D2-34E48B86-D87DBF32",
@@ -1274,7 +1311,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisTeamMeshComponent'BPVisFoodRefineryT2_C:VisTeamMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.59"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.61"
       },
       "VariableGuid": "FDE888F8-427F11C8-1DA805AC-B00A2AF4",
       "InternalVariableName": "VisTeamMesh"
@@ -1292,7 +1329,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisFoodRefineryT2_C:Niagara1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.9"
       },
       "VariableGuid": "93757FD8-411D6599-9E6034A0-A3CA3684",
       "InternalVariableName": "Niagara1"
@@ -1310,7 +1347,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFoodRefineryT2_C:MillSmallActive2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.52"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.54"
       },
       "VariableGuid": "7E9262B1-49F40DAE-3D7167B6-3C8803DB",
       "InternalVariableName": "MillSmallActive2"
@@ -1328,10 +1365,28 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFoodRefineryT2_C:MillSmallActive1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.51"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.53"
       },
       "VariableGuid": "E182E0C0-4798C66A-29E7F3AA-F0EBF0A9",
       "InternalVariableName": "MillSmallActive1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_19",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisFamilyMeshComponent_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPVisFamilyMeshComponent_C'BPVisFoodRefineryT2_C:BPVisFamilyMeshComponent_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.2"
+      },
+      "VariableGuid": "85D37C4F-4D479567-F7C45A8E-B6800ED4",
+      "InternalVariableName": "BPVisFamilyMeshComponent"
     }
   },
   {
@@ -1346,7 +1401,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFoodRefineryT2_C:VisStaticMesh2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.53"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.55"
       },
       "VariableGuid": "EF57830B-49EFDB68-A51F68BB-FE44A2C7",
       "InternalVariableName": "VisStaticMesh2"
@@ -1364,18 +1419,18 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFoodRefineryT2_C:MillSmall1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.49"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.51"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.37"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.39"
         },
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_18'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.31"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.32"
         }
       ],
       "VariableGuid": "1A6E82FA-4F17B4A3-5D4725AD-C93AD839",
@@ -1394,14 +1449,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFoodRefineryT2_C:VisStaticMesh5_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.56"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.58"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.35"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.37"
         }
       ],
       "VariableGuid": "73BC7F62-4688A88E-6B00EF85-64657E70",
@@ -1420,7 +1475,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFoodRefineryT2_C:VisStaticMesh6_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.57"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.59"
       },
       "VariableGuid": "8B325BCD-40916B76-1F82D090-11A7FCC7",
       "InternalVariableName": "VisStaticMesh6"
@@ -1438,14 +1493,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFoodRefineryT2_C:VisStaticMesh3_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.54"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.56"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.38"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.40"
         }
       ],
       "VariableGuid": "5A9C467A-42AC3AE4-D8FAA181-ED691DEF",
@@ -1464,7 +1519,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisFoodRefineryT2_C:Niagara_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.10"
       },
       "VariableGuid": "C1A46831-496DF691-F6D2FDA3-32D5FF04",
       "InternalVariableName": "Niagara"
@@ -1482,7 +1537,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFoodRefineryT2_C:VisStaticMesh4_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.55"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.57"
       },
       "VariableGuid": "ADBCA5CA-4F273DE2-6CFFFB8F-827A99B6",
       "InternalVariableName": "VisStaticMesh4"
@@ -1500,38 +1555,38 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisFoodRefineryT2_C:Fire_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.13"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.40"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.41"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_9'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.42"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.23"
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.43"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.24"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.25"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.27"
         }
       ],
       "VariableGuid": "319D449E-40FC23AE-EA354FA3-CF55D2B8",
@@ -1550,7 +1605,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisFoodRefineryT2_C:ScorchEffect6_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.18"
       },
       "VariableGuid": "699AC825-463EDE69-70B44187-7CDEC87B",
       "InternalVariableName": "ScorchEffect6"
@@ -1568,7 +1623,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisFoodRefineryT2_C:ScorchEffect8_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.20"
       },
       "VariableGuid": "32921F75-4950F8DC-2B8E8F94-DF167399",
       "InternalVariableName": "ScorchEffect8"
@@ -1586,7 +1641,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ScorchEffectComponent'BPVisFoodRefineryT2_C:ScorchEffect5_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.17"
       },
       "VariableGuid": "9B1FBC25-4208BEDB-F3C33AAF-BCB2E93A",
       "InternalVariableName": "ScorchEffect5"
@@ -1601,118 +1656,122 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.39"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.41"
         },
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.27"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.28"
         },
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.22"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.23"
         },
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.36"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.38"
         },
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_24'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.33"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.35"
         },
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_25'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.34"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.36"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.39"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.40"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_8'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.41"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.42"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.23"
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.43"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.24"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.25"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.26"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_13'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.27"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_14'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.28"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.22"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.32"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.36"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.38"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_24'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.33"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_25'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.34"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.35"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.37"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_15'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.29"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.38"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_24'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_16'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.30"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_17'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.33"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisFoodRefineryT2_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisFoodRefineryT2.22"
       }
     }
   },

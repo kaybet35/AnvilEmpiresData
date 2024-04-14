@@ -6,6 +6,7 @@
 #include "Templates/SubclassOf.h"
 #include "FamilyAreaMarkerWindow.generated.h"
 
+class UButton;
 class UCheckBox;
 class UFamilyMemberListItemWidget;
 class UImage;
@@ -32,6 +33,9 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCheckBox* FamilyAreaRestrictedCheckBox;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UButton* FamilyAreaAllianceButton;
+    
 public:
     UFamilyAreaMarkerWindow();
 
@@ -40,7 +44,13 @@ private:
     void OnKickClicked(uint64 PlayerId);
     
     UFUNCTION(BlueprintCallable)
+    void OnFamilyAreaSetAllianceClicked();
+    
+    UFUNCTION(BlueprintCallable)
     void OnFamilyAreaRestrictedChecked(bool bIsChecked);
+    
+    UFUNCTION(BlueprintCallable)
+    ESlateVisibility GetFamilyAreaSetAllianceVisibility();
     
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetFamilyAreaRestrictedVisibility();

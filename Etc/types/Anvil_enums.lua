@@ -113,7 +113,8 @@ EClientConnectToServerResponseType = {
     AuthFailed = 3,
     AllowedToJoin = 4,
     PromptToJoinAdminQueue = 5,
-    EClientConnectToServerResponseType_MAX = 6,
+    VersionMismatch = 6,
+    EClientConnectToServerResponseType_MAX = 7,
 }
 
 ---@enum EConnectionFailedReason
@@ -122,7 +123,8 @@ EConnectionFailedReason = {
     AnvilServiceConnectTokenResponseError = 1,
     AnvilServiceNotQueued = 2,
     R2ServerConnectionError = 3,
-    EConnectionFailedReason_MAX = 4,
+    AnvilServiceVersionMismatch = 4,
+    EConnectionFailedReason_MAX = 5,
 }
 
 ---@enum EDeploymentPointType

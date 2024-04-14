@@ -10,6 +10,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 Damage;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint16 DefaultMarketplaceValue;
+    
     ANVIL_API FItemData();
 };
 

@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.18"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPVisFamilyMeshComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BPVisFamilyMeshComponent_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.0"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "VisFoundationDecorMesh5",
@@ -96,10 +107,27 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisIndustryFoundation_3x3_C'Default__BPVisIndustryFoundation_3x3_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.2"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.3"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisFamilyMeshComponent_C",
+    "Name": "BPVisFamilyMeshComponent_GEN_VARIABLE",
+    "Outer": "BPVisIndustryFoundation_3x3_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.BPVisFamilyMeshComponent_C'",
+    "Template": {
+      "ObjectName": "BPVisFamilyMeshComponent_C'Default__BPVisFamilyMeshComponent_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.1"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -99.0,
+        "Y": 150.0,
+        "Z": 696.0
+      }
     }
   },
   {
@@ -109,7 +137,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisIndustryFoundation_3x3_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.25"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconStructureIndustry3x3'",
@@ -118,23 +146,23 @@
       "BuildSiteCategory": "EBuildSiteCategory::Industry",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisIndustryFoundation_3x3_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.22"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisIndustryFoundation_3x3_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.6"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisIndustryFoundation_3x3_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.21"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisIndustryFoundation_3x3_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.20"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisIndustryFoundation_3x3_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.9"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisIndustryFoundation_3x3_C:ArrowComponent'",
@@ -142,11 +170,11 @@
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisIndustryFoundation_3x3_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.4"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisIndustryFoundation_3x3_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.5"
       },
       "GeneratedScorchEffects": 8,
       "VisDisplayName": {
@@ -195,7 +223,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisIndustryFoundation_3x3_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.19"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisIndustryFoundation_3x3_C:ArrowComponent'",
@@ -239,7 +267,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisIndustryFoundation_3x3_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.8"
       },
       "VariableGuid": "4AE59C32-4E7C4C48-88CE61B9-68337C23",
       "InternalVariableName": "DefaultSceneRoot"
@@ -257,12 +285,32 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisIndustryFoundation_3x3_C:VisStaticMesh_Roof_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.26"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.28"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "84DDA7F8-41CDECD0-F5291E95-FDAE6AB6",
       "InternalVariableName": "VisStaticMesh_Roof"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisFamilyMeshComponent_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPVisFamilyMeshComponent_C'BPVisIndustryFoundation_3x3_C:BPVisFamilyMeshComponent_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.2"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "413846B0-4B0ED7A7-86923991-EA49E19B",
+      "InternalVariableName": "BPVisFamilyMeshComponent"
     }
   },
   {
@@ -277,7 +325,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "MeshVisibilityDataComponent'BPVisIndustryFoundation_3x3_C:MeshVisibilityData_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.7"
       },
       "VariableGuid": "599A5CD9-40F45229-B18C63BD-6DD6C6B5",
       "InternalVariableName": "MeshVisibilityData"
@@ -295,7 +343,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationDecorMesh'BPVisIndustryFoundation_3x3_C:VisFoundationDecorMesh4_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.23"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -315,7 +363,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisIndustryFoundation_3x3_C:Pillar01_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.26"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -335,7 +383,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationDecorMesh'BPVisIndustryFoundation_3x3_C:VisFoundationDecorMesh5_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.24"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -355,7 +403,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisIndustryFoundation_3x3_C:Pillar04_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.25"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.27"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -372,58 +420,66 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.10"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.11"
         },
         {
-          "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.15"
         },
         {
+          "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.17"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.14"
         },
         {
           "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.12"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.10"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.11"
         },
         {
-          "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.15"
         },
         {
+          "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.17"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.14"
         },
         {
           "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.12"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisIndustryFoundation_3x3_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisIndustryFoundation_3x3.10"
       }
     }
   },

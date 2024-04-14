@@ -271,37 +271,27 @@ enum class EAnvilItemPayloadType {
     EAnvilItemPayloadType_MAX = 4,
 };
 
-enum class EAnvilItemType {
+enum class EAnvilItemTag {
     None = 0,
-    Normal = 1,
-    Head = 2,
-    Body = 3,
-    PrimaryTool = 4,
-    SecondaryTool = 5,
-    Crate = 6,
-    Resource = 7,
-    StorableFoodT1 = 8,
-    StorableFoodT2 = 9,
-    StorableFoodT3 = 10,
-    Silver = 11,
-    All = 12,
-    Tool = 13,
-    Armor = 14,
-    LargeResource = 15,
-    NotResource = 16,
-    FoodStorageT1 = 17,
-    FoodStorageT2 = 18,
-    FoodStorageT3 = 19,
-    MeatIngredientsStorage = 20,
-    IngredientsStorage = 21,
-    LiquidStorage = 22,
-    WeaponStorage = 23,
-    BaseStockpile = 24,
-    Quenchable = 25,
-    NumTypes = 26,
-    LeftHand = 27,
-    RightHand = 28,
-    EAnvilItemType_MAX = 29,
+    Crate = 1,
+    Stackable = 2,
+    TwoHanded = 3,
+    Large = 4,
+    PrimaryTool = 5,
+    SecondaryTool = 6,
+    Head = 7,
+    Body = 8,
+    Silver = 9,
+    LeftHand = 10,
+    RightHand = 11,
+    Quenchable = 12,
+    Resource = 13,
+    IngredientsStorage = 14,
+    MeatIngredientsStorage = 15,
+    StorableFoodT1 = 16,
+    WeaponStorage = 17,
+    LiquidStorage = 18,
+    EAnvilItemTag_MAX = 19,
 };
 
 enum class EAnvilMapPostType {
@@ -654,10 +644,11 @@ enum class EAnvilStatusMessageType {
     UnableToIncreaseStatusUsingSilver = 97,
     TaxesAreOverdue = 98,
     FamilyAreaClaimed = 99,
-    RopeAttachFailAlreadyInUse = 100,
-    MountFailRopeAttached = 101,
-    NumTypes = 102,
-    EAnvilStatusMessageType_MAX = 103,
+    FamilyAllianceSet = 100,
+    RopeAttachFailAlreadyInUse = 101,
+    MountFailRopeAttached = 102,
+    NumTypes = 103,
+    EAnvilStatusMessageType_MAX = 104,
 };
 
 enum class EAnvilStimulusType {
@@ -745,7 +736,8 @@ enum EEntitySerializationType {
     SerializationTypePlayer = 1,
     SerializationTypeController = 2,
     SerializationTypeRefinery = 3,
-    EEntitySerializationType_MAX = 4,
+    SerializationTypeMarketplace = 4,
+    EEntitySerializationType_MAX = 5,
 };
 
 enum class EItemQualityType {

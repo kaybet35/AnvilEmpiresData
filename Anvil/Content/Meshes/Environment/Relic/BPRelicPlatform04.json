@@ -1,0 +1,329 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPRelicPlatform04_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPRelicPlatform04_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AnvilPrefab'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "GrassRemovalVolume",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'GrassRemovalVolumeComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Decal",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Platform",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPRelicPlatform04_C'Default__BPRelicPlatform04_C'",
+      "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPRelicPlatform04_C",
+    "Name": "Default__BPRelicPlatform04_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.BPRelicPlatform04_C'"
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Outer": "BPRelicPlatform04_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'DecalDirtFaint05Square'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/DecalDirtFaint05Square.0"
+      },
+      "DecalSize": {
+        "X": 46.332623,
+        "Y": 1400.0,
+        "Z": 1400.0
+      },
+      "RelativeLocation": {
+        "X": -1.2455769E-05,
+        "Y": 9.463433E-06,
+        "Z": 127.32541
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 180.0,
+        "Roll": 180.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 0.3884353,
+        "Z": 0.38860288
+      }
+    }
+  },
+  {
+    "Type": "GrassRemovalVolumeComponent",
+    "Name": "GrassRemovalVolume_GEN_VARIABLE",
+    "Outer": "BPRelicPlatform04_C",
+    "Class": "UScriptClass'GrassRemovalVolumeComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 600.0,
+        "Y": 600.0,
+        "Z": 300.0
+      },
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'BPRelicPlatform04_C:GrassRemovalVolume_GEN_VARIABLE.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.10"
+      },
+      "RelativeLocation": {
+        "X": 1.4621138E-06,
+        "Y": -4.2644343E-12,
+        "Z": -143.0182
+      },
+      "RelativeRotation": {
+        "Pitch": -4.4979834E-15,
+        "Yaw": -3.180555E-14,
+        "Roll": -4.4979834E-15
+      },
+      "RelativeScale3D": {
+        "X": 1.0000005,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPRelicPlatform04_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPRelicPlatform04_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.4"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPRelicPlatform04_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.6"
+        }
+      ],
+      "VariableGuid": "9B74F3BE-44DBBC20-7BB7179E-D9DCCAEE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPRelicPlatform04_C:Platform_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.11"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPRelicPlatform04_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRelicPlatform04_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.7"
+        }
+      ],
+      "VariableGuid": "0213FDFC-4D23A3D9-DC86459B-8C1CE214",
+      "InternalVariableName": "Platform"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'GrassRemovalVolumeComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GrassRemovalVolumeComponent'BPRelicPlatform04_C:GrassRemovalVolume_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.3"
+      },
+      "VariableGuid": "79659DB5-43F5B38E-B1C190A4-05243FCB",
+      "InternalVariableName": "GrassRemovalVolume"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPRelicPlatform04_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.2"
+      },
+      "VariableGuid": "EDB8BA5C-49D50F2F-E92D749F-F81643C4",
+      "InternalVariableName": "Decal"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPRelicPlatform04_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPRelicPlatform04_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.5"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPRelicPlatform04_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.5"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRelicPlatform04_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.6"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRelicPlatform04_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRelicPlatform04_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPRelicPlatform04_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/BPRelicPlatform04.5"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "GrassRemovalVolume_GEN_VARIABLE",
+    "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "Platform_GEN_VARIABLE",
+    "Outer": "BPRelicPlatform04_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'RuinsPlatform04'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/RuinsPlatform04.2"
+      },
+      "OverrideMaterials": [
+        null,
+        null,
+        {
+          "ObjectName": "MaterialInstanceConstant'RelicBrickTrim01'",
+          "ObjectPath": "Anvil/Content/Materials/Environment/Relic/RelicBrickTrim01.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'RelicDirt'",
+          "ObjectPath": "Anvil/Content/Materials/Environment/Relic/RelicDirt.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'RelicOrnaments01'",
+          "ObjectPath": "Anvil/Content/Materials/Environment/Relic/RelicOrnaments01.0"
+        }
+      ],
+      "bReceivesDecals": true,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "Mobility": "EComponentMobility::Static",
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  }
+]

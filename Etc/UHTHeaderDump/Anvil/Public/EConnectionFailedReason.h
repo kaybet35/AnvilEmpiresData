@@ -8,5 +8,6 @@ enum class EConnectionFailedReason : uint8 {
     AnvilServiceConnectTokenResponseError,
     AnvilServiceNotQueued,
     R2ServerConnectionError,
+    AnvilServiceVersionMismatch,
 };
 

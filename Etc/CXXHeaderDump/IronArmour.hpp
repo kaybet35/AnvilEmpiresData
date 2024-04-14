@@ -3,6 +3,6 @@
 
 class UIronArmour_C : public UItemTemplate
 {
-}; // Size: 0x230
+}; // Size: 0x248
 
 #endif

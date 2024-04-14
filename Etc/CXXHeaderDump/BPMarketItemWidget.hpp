@@ -3,8 +3,8 @@
 
 class UBPMarketItemWidget_C : public UMarketItemWidget
 {
-    class UImage* SilverImage;                                                        // 0x0390 (size: 0x8)
+    class UImage* SilverImage;                                                        // 0x0398 (size: 0x8)
 
-}; // Size: 0x398
+}; // Size: 0x3A0
 
 #endif

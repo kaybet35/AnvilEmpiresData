@@ -158,7 +158,7 @@ FHousePledgedPlayerIdArray = {}
 ---@field Base FGridItem
 ---@field DedicatedItem FGridItem
 ---@field Count int32
----@field SlotType EAnvilItemType
+---@field AcceptedTags TArray<EAnvilItemTag>
 ---@field Durability float
 ---@field ItemFlags uint8
 ---@field Payload uint8
@@ -201,8 +201,9 @@ FItemQuantity = {}
 ---@field HeldItem TSubclassOf<UItemTemplate>
 ---@field Count int32
 ---@field StackLimit int32
----@field bHoldsLarge boolean
----@field SlotType EAnvilItemType
+---@field AcceptedTags TArray<EAnvilItemTag>
+---@field RequiredTags TArray<EAnvilItemTag>
+---@field ProhibitedTags TArray<EAnvilItemTag>
 ---@field DedicatedItemType TSubclassOf<UItemTemplate>
 ---@field DedicatedUnderlyingItemType TSubclassOf<UItemTemplate>
 FItemSlot = {}
@@ -224,6 +225,7 @@ FLootTableItem = {}
 ---@field Durability float
 ---@field Payload uint8
 ---@field Price int32
+---@field DefaultPrice int32
 FMarketShopItem = {}
 
 
@@ -377,7 +379,19 @@ UAnimalRopeAttachableDataComponent = {}
 
 
 ---@class UAnimalRopeAttachableProxyComponent : UProxyComponent
+---@field FollowSpeed float
 UAnimalRopeAttachableProxyComponent = {}
+
+
+
+---@class UAnimalRopeSlotDataComponent : UDataComponent
+---@field AttachedTarget int64
+UAnimalRopeSlotDataComponent = {}
+
+
+
+---@class UAnimalRopeSlotProxyComponent : UProxyComponent
+UAnimalRopeSlotProxyComponent = {}
 
 
 ---@class UAnimalScavengeProxyComponent : UProxyComponent
@@ -913,17 +927,13 @@ UInventoryProxyComponent = {}
 ---@class UItemTemplate : UObject
 ---@field CodeNameString FString
 ---@field CodeName int32
----@field ItemType EAnvilItemType
----@field SecondaryType EAnvilItemType
+---@field ItemTags TArray<EAnvilItemTag>
 ---@field ItemDurabilityType EAnvilItemDurabilityType
 ---@field ItemPayloadType EAnvilItemPayloadType
 ---@field PickupEntity TSubclassOf<UEntityTemplate>
 ---@field ItemDestroyedEffect TSubclassOf<UEntityTemplate>
 ---@field ItemInvokedEffect TSubclassOf<UEntityTemplate>
 ---@field ItemHitEffect TSubclassOf<UEntityTemplate>
----@field bStackable boolean
----@field bLarge boolean
----@field bTwoHanded boolean
 ---@field Encumberance uint8
 ---@field ArmedDurabilityLossPerSec float
 ---@field DurabilityLossPerUse float
@@ -977,6 +987,7 @@ UInventoryProxyComponent = {}
 ---@field HealthLimitRestored float
 ---@field StaminaLimitRestored float
 ---@field QuantityPerCrate uint16
+---@field DefaultMarketValue uint16
 ---@field StunChance float
 ---@field StunDuration float
 ---@field StunThrowDistance float
@@ -1040,6 +1051,7 @@ UMapPostProxyComponent = {}
 
 ---@class UMarketShopDataComponent : UDataComponent
 ---@field PriceList TArray<int32>
+---@field DefaultPriceList TArray<int32>
 ---@field SilverStored int32
 ---@field OwnerPlayerName FString
 ---@field MinItemPrice int32
@@ -1049,7 +1061,9 @@ UMarketShopDataComponent = {}
 
 
 ---@class UMarketShopProxyComponent : UProxyComponent
+---@field AutoBuySeconds int32
 UMarketShopProxyComponent = {}
+
 
 
 ---@class UMeshCollisionProxyComponent : UProxyComponent
@@ -1483,6 +1497,7 @@ USeekerProxyComponent = {}
 ---@field bPriming boolean
 ---@field bInTravelZone boolean
 ---@field bIsMeshHidden boolean
+---@field bIsHomesteadOwnerInTown boolean
 ---@field SecondsUntilFullDecay float
 ---@field HeldItemLightSourceRadius float
 ---@field LightSourceData FNightShroudLightSourceData
@@ -1592,9 +1607,9 @@ UStaticTorchProxyComponent = {}
 ---@class UStructureDataComponent : UDataComponent
 ---@field bRestrictedMode boolean
 ---@field bOnFoundation boolean
----@field bInFamilyArea boolean
 ---@field StructureType EAnvilBuildStructureType
 ---@field BuilderId int64
+---@field TownFamilyAreaId int32
 UStructureDataComponent = {}
 
 

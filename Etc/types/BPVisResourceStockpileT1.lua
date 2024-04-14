@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisResourceStockpileT1_C : AVisStructure
+---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field ResourceThickLeather UInstancedStaticMeshComponent
 ---@field ResourceLeather UInstancedStaticMeshComponent
 ---@field ResourceFlint UInstancedStaticMeshComponent
@@ -29,7 +30,6 @@
 ---@field ResourceStoneFragments UInstancedStaticMeshComponent
 ---@field ProcessedWood UInstancedStaticMeshComponent
 ---@field VisStockpile UVisStockpileComponent
----@field VisTeamMesh UVisTeamMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ABPVisResourceStockpileT1_C = {}
 

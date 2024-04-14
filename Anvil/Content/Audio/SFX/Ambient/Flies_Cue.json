@@ -1,0 +1,47 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Flies_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeWavePlayer'Flies_Cue:SoundNodeWavePlayer_1'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Flies_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'A-B'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX_Master/A-B.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'AmbientConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/AmbientConcurrency.0"
+        }
+      ],
+      "Duration": 10000.0,
+      "MaxDistance": 3800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'AmbientPositional'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/AmbientPositional.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Flies_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Ambient/Flies.Flies",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Flies'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Flies.0"
+    }
+  }
+]

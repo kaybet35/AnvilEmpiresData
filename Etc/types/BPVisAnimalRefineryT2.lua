@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisAnimalRefineryT2_C : AVisRefinery
+---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field VisStaticMesh11 UVisStaticMeshComponent
 ---@field VisStaticMesh10 UVisStaticMeshComponent
 ---@field Niagara1 UNiagaraComponent

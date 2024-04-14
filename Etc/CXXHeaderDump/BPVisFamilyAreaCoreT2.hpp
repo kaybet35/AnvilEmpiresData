@@ -4,7 +4,7 @@
 class ABPVisFamilyAreaCoreT2_C : public AVisFamilyMarkerArea
 {
     FPointerToUberGraphFrame UberGraphFrame;                                          // 0x04A8 (size: 0x8)
-    class UDecalComponent* FamilyArea;                                                // 0x04B0 (size: 0x8)
+    class UBPVisFamilyMeshComponent_C* BPVisFamilyMeshComponent;                      // 0x04B0 (size: 0x8)
     class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x04B8 (size: 0x8)
     class UGrassRemovalVolumeComponent* GrassRemovalFamilyArea;                       // 0x04C0 (size: 0x8)
     class UAudioComponent* Audio;                                                     // 0x04C8 (size: 0x8)

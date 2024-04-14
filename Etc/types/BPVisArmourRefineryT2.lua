@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisArmourRefineryT2_C : AVisRefinery
+---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field ScorchEffect7 UScorchEffectComponent
 ---@field ScorchEffect8 UScorchEffectComponent
 ---@field ScorchEffect9 UScorchEffectComponent

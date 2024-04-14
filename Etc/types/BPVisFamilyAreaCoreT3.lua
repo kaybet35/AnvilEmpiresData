@@ -2,8 +2,8 @@
 
 ---@class ABPVisFamilyAreaCoreT3_C : AVisFamilyMarkerArea
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field VisStaticMesh UVisStaticMeshComponent
----@field GrassRemovalFamilyArea UGrassRemovalVolumeComponent
 ---@field FamilyArea UDecalComponent
 ---@field Audio UAudioComponent
 ---@field RangeMarkerVisibility boolean

@@ -2,6 +2,7 @@
 
 ---@class ABPVisFoodRefineryT3_C : AVisRefinery
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field Niagara2 UNiagaraComponent
 ---@field VisStaticMesh2 UVisStaticMeshComponent
 ---@field MillSmallActive2 UVisStaticMeshComponent

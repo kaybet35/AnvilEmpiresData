@@ -5,5 +5,6 @@ FMarketShopItem::FMarketShopItem() {
     this->Durability = 0.00f;
     this->Payload = 0;
     this->Price = 0;
+    this->DefaultPrice = 0;
 }
 

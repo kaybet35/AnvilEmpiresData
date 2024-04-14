@@ -10,6 +10,12 @@
     }
   },
   {
+    "Type": "AnimalRopeSlotProxyComponent",
+    "Name": "AnimalRopeSlotProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'AnimalRopeSlotProxyComponent'"
+  },
+  {
     "Type": "ArmorProxyComponent",
     "Name": "ArmorProxyComponent_0",
     "Outer": "Default__Player_C",
@@ -32,7 +38,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "Player_C'Default__Player_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.8"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.9"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -89,8 +95,11 @@
           "HeldItem": null,
           "Count": 0,
           "StackLimit": 1,
-          "bHoldsLarge": false,
-          "SlotType": "EAnvilItemType::Head",
+          "AcceptedTags": [
+            "EAnvilItemTag::Head"
+          ],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
           "DedicatedItemType": null,
           "DedicatedUnderlyingItemType": null
         },
@@ -100,8 +109,11 @@
           "HeldItem": null,
           "Count": 0,
           "StackLimit": 1,
-          "bHoldsLarge": false,
-          "SlotType": "EAnvilItemType::PrimaryTool",
+          "AcceptedTags": [
+            "EAnvilItemTag::PrimaryTool"
+          ],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
           "DedicatedItemType": null,
           "DedicatedUnderlyingItemType": null
         },
@@ -111,8 +123,11 @@
           "HeldItem": null,
           "Count": 0,
           "StackLimit": 1,
-          "bHoldsLarge": false,
-          "SlotType": "EAnvilItemType::Body",
+          "AcceptedTags": [
+            "EAnvilItemTag::Body"
+          ],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
           "DedicatedItemType": null,
           "DedicatedUnderlyingItemType": null
         },
@@ -122,8 +137,11 @@
           "HeldItem": null,
           "Count": 0,
           "StackLimit": 1,
-          "bHoldsLarge": false,
-          "SlotType": "EAnvilItemType::SecondaryTool",
+          "AcceptedTags": [
+            "EAnvilItemTag::SecondaryTool"
+          ],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
           "DedicatedItemType": null,
           "DedicatedUnderlyingItemType": null
         },
@@ -133,8 +151,11 @@
           "HeldItem": null,
           "Count": 0,
           "StackLimit": 10000,
-          "bHoldsLarge": false,
-          "SlotType": "EAnvilItemType::Silver",
+          "AcceptedTags": [
+            "EAnvilItemTag::Silver"
+          ],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
           "DedicatedItemType": {
             "ObjectName": "BlueprintGeneratedClass'Silver_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
@@ -147,8 +168,11 @@
           "HeldItem": null,
           "Count": 0,
           "StackLimit": 30,
-          "bHoldsLarge": false,
-          "SlotType": "EAnvilItemType::All",
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [
+            "EAnvilItemTag::Large"
+          ],
           "DedicatedItemType": null,
           "DedicatedUnderlyingItemType": null
         }
@@ -170,31 +194,31 @@
       "Components": [
         {
           "ObjectName": "SimPlayerProxyComponent'Default__Player_C:SimPlayerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.11"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.12"
         },
         {
           "ObjectName": "HealthProxyComponent'Default__Player_C:HealthProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.5"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.6"
         },
         {
           "ObjectName": "HandsProxyComponent'Default__Player_C:HandsProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.4"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.5"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__Player_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.8"
         },
         {
           "ObjectName": "ArmorProxyComponent'Default__Player_C:ArmorProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.1"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.2"
         },
         {
           "ObjectName": "CapsuleCollisionProxyComponent'Default__Player_C:CapsuleCollisionProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.3"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.4"
         },
         {
           "ObjectName": "PlayerInputProxyComponent'Default__Player_C:PlayerInputProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.10"
         },
         {
           "ObjectName": "AIStimulusProxyComponent'Default__Player_C:AIStimulusProxyComponent_0'",
@@ -202,15 +226,19 @@
         },
         {
           "ObjectName": "PlayerUnstuckProxyComponent'Default__Player_C:PlayerUnstuckProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.10"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.11"
         },
         {
           "ObjectName": "HungerProxyComponent'Default__Player_C:HungerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.6"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.7"
         },
         {
           "ObjectName": "StaminaProxyComponent'Default__Player_C:StaminaProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.12"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.13"
+        },
+        {
+          "ObjectName": "AnimalRopeSlotProxyComponent'Default__Player_C:AnimalRopeSlotProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.1"
         }
       ],
       "VisActorClass": {

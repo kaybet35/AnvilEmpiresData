@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisStoneRefineryT3_C : AVisRefinery
+---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field VisStaticMesh17 UVisStaticMeshComponent
 ---@field VisStaticMesh2 UVisStaticMeshComponent
 ---@field Populated USceneComponent
