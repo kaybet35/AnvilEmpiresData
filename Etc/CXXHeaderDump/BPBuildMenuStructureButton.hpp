@@ -3,6 +3,6 @@
 
 class UBPBuildMenuStructureButton_C : public UBuildMenuStructureButton
 {
-}; // Size: 0x350
+}; // Size: 0x358
 
 #endif

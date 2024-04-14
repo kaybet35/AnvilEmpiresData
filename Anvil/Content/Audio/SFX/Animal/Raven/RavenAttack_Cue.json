@@ -1,0 +1,288 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "RavenAttack_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'RavenAttack_Cue:SoundNodeMixer_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttack_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'VoiceConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/VoiceConcurrency.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 128,
+        "VolumeScale": 0.5
+      },
+      "Duration": 1.3471875,
+      "MaxDistance": 11600.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Voice'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Voice.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "RavenAttack_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        0.5,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'RavenAttack_Cue:SoundNodeModulator_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttack_Cue.2"
+        },
+        {
+          "ObjectName": "SoundNodeModulator'RavenAttack_Cue:SoundNodeModulator_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttack_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "RavenAttack_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.8,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'RavenAttack_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttack_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "RavenAttack_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.925,
+      "PitchMax": 1.075,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'RavenAttack_Cue:SoundNodeRandom_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttack_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "RavenAttack_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'RavenAttack_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttack_Cue.6"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'RavenAttack_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttack_Cue.7"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'RavenAttack_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttack_Cue.13"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "RavenAttack_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        0.075,
+        0.075,
+        0.075,
+        0.075,
+        0.075,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'RavenAttack_Cue:SoundNodeWavePlayer_14'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttack_Cue.10"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'RavenAttack_Cue:SoundNodeWavePlayer_12'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttack_Cue.8"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'RavenAttack_Cue:SoundNodeWavePlayer_13'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttack_Cue.9"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'RavenAttack_Cue:SoundNodeWavePlayer_15'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttack_Cue.11"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'RavenAttack_Cue:SoundNodeWavePlayer_17'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttack_Cue.12"
+        },
+        null
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "RavenAttack_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Raven/RavenAttackFlutter01.RavenAttackFlutter01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'RavenAttackFlutter01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttackFlutter01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "RavenAttack_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Raven/RavenAttackFlutter02.RavenAttackFlutter02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'RavenAttackFlutter02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttackFlutter02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_12",
+    "Outer": "RavenAttack_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Raven/RavenAggroCaw01.RavenAggroCaw01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'RavenAggroCaw01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAggroCaw01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_13",
+    "Outer": "RavenAttack_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Raven/RavenIdleCaw03.RavenIdleCaw03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'RavenIdleCaw03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenIdleCaw03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_14",
+    "Outer": "RavenAttack_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Raven/RavenIdleCaw01.RavenIdleCaw01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'RavenIdleCaw01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenIdleCaw01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_15",
+    "Outer": "RavenAttack_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Raven/RavenAggroCaw02.RavenAggroCaw02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'RavenAggroCaw02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAggroCaw02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_17",
+    "Outer": "RavenAttack_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Raven/RavenAggroCaw03.RavenAggroCaw03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'RavenAggroCaw03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAggroCaw03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "RavenAttack_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Raven/RavenAttackFlutter03.RavenAttackFlutter03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'RavenAttackFlutter03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Raven/RavenAttackFlutter03.0"
+    }
+  }
+]

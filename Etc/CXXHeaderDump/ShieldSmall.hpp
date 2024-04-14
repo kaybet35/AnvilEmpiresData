@@ -3,6 +3,6 @@
 
 class UShieldSmall_C : public UItemTemplate
 {
-}; // Size: 0x248
+}; // Size: 0x250
 
 #endif

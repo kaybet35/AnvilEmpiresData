@@ -8,6 +8,7 @@ AVisActor::AVisActor(const FObjectInitializer& ObjectInitializer) : Super(Object
     this->InteractionIcon = NULL;
     this->AnimSpeed = 0.00f;
     this->TemplateCDO = NULL;
+    this->MeshVisibilityDataComponent = NULL;
     this->PositionSmoothSpeed = 0.00f;
     this->RotationSmoothSpeed = 0.00f;
     this->ClientMovementSmoothingDistance = 5.00f;

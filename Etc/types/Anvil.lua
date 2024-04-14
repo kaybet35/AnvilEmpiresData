@@ -205,11 +205,13 @@ AUIGlobals = {}
 ---@field InteractionIcon UTexture2D
 ---@field AnimSpeed float
 ---@field TemplateCDO UEntityTemplate
+---@field MeshVisibilityDataComponent UMeshVisibilityDataComponent
 ---@field PositionSmoothSpeed float
 ---@field RotationSmoothSpeed float
 ---@field ClientMovementSmoothingDistance float
 ---@field bHasLandscapeCollisions boolean
 ---@field bUseDepthStencilForInteractionHighlight boolean
+---@field ToggleVisibilityComponents TArray<USceneComponent>
 AVisActor = {}
 
 
@@ -304,6 +306,20 @@ AVisCraftingStructure = {}
 ---@field LifetimeDataComponent ULifetimeDataComponent
 ---@field bSeekAudioComponent boolean
 AVisEffect = {}
+
+
+
+---@class AVisEntityPrefab : AVisActor
+---@field ArrowComponent UArrowComponent
+---@field MeshVisibilityArea UBoxComponent
+AVisEntityPrefab = {}
+
+
+
+---@class AVisFamilyCenter : AVisStructure
+---@field FamilyCenterDataComponent UFamilyCenterDataComponent
+---@field BuildAreaDecalComponent UDecalComponent
+AVisFamilyCenter = {}
 
 
 
@@ -459,6 +475,7 @@ AVisPickupItem = {}
 ---@field HungerDataComponent UHungerDataComponent
 ---@field StaminaDataComponent UStaminaDataComponent
 ---@field TemperatureDataComponent UTemperatureDataComponent
+---@field AdminEnvDataComponent UAdminEnvDataComponent
 ---@field ItemMeshComponent USkeletalMeshComponent
 ---@field ItemSecondaryMeshComponent USkeletalMeshComponent
 ---@field UnarmedItemMeshComponent USkeletalMeshComponent
@@ -605,8 +622,6 @@ AVisStaticTorch = {}
 ---@field UseVolumeDecalComponent UDecalComponent
 ---@field GrassRemovalVolume UGrassRemovalVolumeComponent
 ---@field GeneratedScorchEffects int32
----@field MeshVisibilityDataComponent UMeshVisibilityDataComponent
----@field ToggleVisibilityComponents TArray<USceneComponent>
 ---@field ScorchEffectAssets TArray<UNiagaraSystem>
 AVisStructure = {}
 
@@ -825,10 +840,35 @@ FDeploymentPointInfo = {}
 
 
 
+---@class FEquipmentData : FTableRowBase
+---@field DurabilityLossPerUse float
+---@field DamageRadius float
+---@field VariableDamageMaxModifier float
+---@field VariableDamageMinModifier float
+---@field GuardMeterReductionMultiplier float
+---@field ShieldDurabilityLossMultiplier float
+---@field GuardMeterCostPerHit float
+---@field ArmorMitigation uint8
+---@field ToolEffectiveness float
+---@field AimMovementSpeedModifier float
+---@field AimRotationSpeedModifier float
+FEquipmentData = {}
+
+
+
 ---@class FFactionLockResponse
 ---@field LockedFactionId uint8
 ---@field bCanDeleteProfile boolean
 FFactionLockResponse = {}
+
+
+
+---@class FFoodData : FTableRowBase
+---@field RegenPerSec float
+---@field HungerRestored float
+---@field HealthLimitRestored float
+---@field StaminaLimitRestored float
+FFoodData = {}
 
 
 
@@ -852,6 +892,9 @@ FHitConverterItemMeshInfo = {}
 ---@class FItemData : FTableRowBase
 ---@field Damage uint8
 ---@field DefaultMarketplaceValue uint16
+---@field DurabilityLossPerSec float
+---@field StockPileWithdrawalValue float
+---@field QuantityPerCrate uint16
 FItemData = {}
 
 
@@ -1314,7 +1357,8 @@ UBeaconTowerPlayerInfoMapIcon = {}
 
 
 ---@class UBuildMenuStructureButton : UGridItemWidget
----@field PublicIconImage UImage
+---@field TownAreaIconImage UImage
+---@field FamilyAreaIconImage UImage
 UBuildMenuStructureButton = {}
 
 ---@param ItemSlot UGridItemWidget
@@ -1563,6 +1607,7 @@ function UFactionSelectScreen:GetDeleteProfileButtonVisibility() end
 
 ---@class UFamilyAreaMarkerWindow : UStructureWindow
 ---@field FamilyMembersScrollBox UScrollBox
+---@field AlliedFamiliesScrollBox UScrollBox
 ---@field TaxIcon UImage
 ---@field TaxTextBlock UTextBlock
 ---@field FamilyMemberListItemWidgetType TSubclassOf<UFamilyMemberListItemWidget>
@@ -1575,6 +1620,8 @@ function UFamilyAreaMarkerWindow:OnKickClicked(PlayerId) end
 function UFamilyAreaMarkerWindow:OnFamilyAreaSetAllianceClicked() end
 ---@param bIsChecked boolean
 function UFamilyAreaMarkerWindow:OnFamilyAreaRestrictedChecked(bIsChecked) end
+---@return boolean
+function UFamilyAreaMarkerWindow:IsFamilyAreaSetAllianceButtonEnabled() end
 ---@return ESlateVisibility
 function UFamilyAreaMarkerWindow:GetFamilyAreaSetAllianceVisibility() end
 ---@return ESlateVisibility
@@ -1945,7 +1992,6 @@ UMapPostMapIcon = {}
 ---@field ObjectiveBorder UBorder
 ---@field LogoutButton UAnvilButtonWidget
 ---@field MapSheetSlot UCanvasPanelSlot
----@field TownHallIconCanvasSlot UCanvasPanelSlot
 ---@field DisplayedBeaconTowerPlayerInfos TArray<UMapIcon>
 UMapWidget = {}
 
@@ -2486,9 +2532,10 @@ UVisGateAnimInstance = {}
 ---@field StockpileMesh UStaticMesh
 ---@field bAutoSetStockpileExtents boolean
 ---@field StockpileExtents FVector
----@field StockpileOffset FVector
----@field StockpileRotation FRotator
----@field bStockpileDefaultRotate boolean
+---@field bStockpileCanFlip boolean
+---@field StockpileRandomTranslation FVector
+---@field StockpileRandomRotation FRotator
+---@field StockpileRandomScale FVector2D
 ---@field StockpileOrder int8
 ---@field FactionMeshOverrides TMap<EAnvilFactionId, USkeletalMesh>
 ---@field GripType EEquippedItemGripType
@@ -2524,10 +2571,7 @@ UVisMobileWeaponAnimInstance = {}
 
 
 ---@class UVisMultiItemStockpileComponent : USceneComponent
----@field TestItem TSubclassOf<UVisItem>
 ---@field StockpileExtents FVector
----@field LevelHeight float
----@field bDefaultRotate boolean
 ---@field DisplayedMeshes TArray<UStaticMeshComponent>
 ---@field BoxVisualizer UCollisionVisualizerComponent
 UVisMultiItemStockpileComponent = {}
@@ -2568,6 +2612,12 @@ UVisPlayerVisualsComponent = {}
 ---@field InFlowHeight float
 ---@field PowerUnitDataComponent UPowerUnitDataComponent
 UVisPowerUnitAnimInstance = {}
+
+
+
+---@class UVisRandomizedStaticMeshComponent : UVisStaticMeshComponent
+---@field VisibilityChance float
+UVisRandomizedStaticMeshComponent = {}
 
 
 
@@ -2624,8 +2674,9 @@ UVisStaticMeshComponent = {}
 
 
 ---@class UVisStockpileComponent : UInstancedStaticMeshComponent
----@field CurrentInstancedMesh UInstancedStaticMeshComponent
----@field ItemCodeNameInstancedMeshMap TMap<int32, UInstancedStaticMeshComponent>
+---@field StockpileExtents FVector
+---@field BoxVisualizer UCollisionVisualizerComponent
+---@field CurrentItem UVisItem
 UVisStockpileComponent = {}
 
 

@@ -254,7 +254,8 @@ EMapMode = {
     InGame = 0,
     Spawn = 1,
     MilitiaDeployment = 2,
-    EMapMode_MAX = 3,
+    BugScreenshot = 3,
+    EMapMode_MAX = 4,
 }
 
 ---@enum ENotificationDuration

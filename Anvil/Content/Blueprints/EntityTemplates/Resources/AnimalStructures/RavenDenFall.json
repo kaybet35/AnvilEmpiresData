@@ -1,0 +1,93 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "RavenDenFall_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "RavenDenFall_C'Default__RavenDenFall_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDenFall.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CapsuleCollisionProxyComponent",
+    "Name": "CapsuleCollisionProxyComponent_0",
+    "Outer": "Default__RavenDenFall_C",
+    "Class": "UScriptClass'CapsuleCollisionProxyComponent'",
+    "Properties": {
+      "Radius": 20.0,
+      "HalfHeight": 100.0,
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeWood",
+      "CollisionMask": 8194
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__RavenDenFall_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 1.5,
+      "DropResourceOnDeath": true
+    }
+  },
+  {
+    "Type": "RavenDenFall_C",
+    "Name": "Default__RavenDenFall_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDenFall.RavenDenFall_C'",
+    "Properties": {
+      "CodeNameString": "RavenDenFall",
+      "CodeName": 770685319,
+      "bUseScale": true,
+      "Components": [
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__RavenDenFall_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDenFall.2"
+        },
+        {
+          "ObjectName": "CapsuleCollisionProxyComponent'Default__RavenDenFall_C:CapsuleCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDenFall.1"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__RavenDenFall_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDenFall.4"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisRavenDenFall_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDenFall.0"
+      }
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__RavenDenFall_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilResourceType::ChoppedTree",
+      "DroppedResourceAmount": 2,
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'WoodHardPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/WoodHardPickup.0"
+      },
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'RavenDenStump_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDenStump.0"
+      }
+    }
+  }
+]

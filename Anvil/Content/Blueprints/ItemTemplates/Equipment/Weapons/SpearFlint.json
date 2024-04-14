@@ -43,16 +43,13 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectSpearImpact.0"
       },
       "Encumberance": 50,
-      "DurabilityLossPerUse": 5.0,
       "bRearmAfterConsumption": true,
       "bRanged": true,
-      "Damage": 20,
       "DamageOffset": {
         "X": 80.0,
         "Y": 0.0,
         "Z": 75.0
       },
-      "DamageRadius": 128.0,
       "FireOffset": {
         "X": 50.0,
         "Y": 0.0,
@@ -68,24 +65,29 @@
       },
       "bStaggersWielder": true,
       "DamageType": "EAnvilDamageType::Piercing",
-      "AimMovementSpeedModifier": 0.5,
-      "AimRotationSpeedModifier": 3.5,
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
         "Delay": 0.5,
         "Duration": 1.1,
-        "RotationSpeedModifier": 3.5
+        "RotationSpeedModifier": 3.5,
+        "StaminaCost": 10.0
       },
       "RangedActivity": {
         "State": "EAnvilSimActivityState::LaunchingProjectile",
         "Delay": 0.7,
         "Duration": 1.1,
-        "bRepeatable": false
+        "bRepeatable": false,
+        "StaminaCost": 10.0
       },
       "BuildActivity": {
         "bRepeatable": false
       },
-      "MaxEncumbranceforAction": 0.5
+      "MaxEncumbranceforAction": 0.5,
+      "Damage": 20,
+      "DurabilityLossPerUse": 5.0,
+      "DamageRadius": 128.0,
+      "AimMovementSpeedModifier": 0.5,
+      "AimRotationSpeedModifier": 3.5
     }
   }
 ]

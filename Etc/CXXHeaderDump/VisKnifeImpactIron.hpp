@@ -3,6 +3,6 @@
 
 class AVisKnifeImpactIron_C : public AVisEffect
 {
-}; // Size: 0x420
+}; // Size: 0x438
 
 #endif

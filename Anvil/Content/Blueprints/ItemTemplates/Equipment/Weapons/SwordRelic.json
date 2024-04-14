@@ -43,14 +43,11 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectSwordImpact.0"
       },
       "Encumberance": 40,
-      "DurabilityLossPerUse": 2.0,
-      "Damage": 60,
       "DamageOffset": {
         "X": 100.0,
         "Y": 0.0,
         "Z": 0.0
       },
-      "DamageRadius": 125.0,
       "bStaggersWielder": true,
       "DamageType": "EAnvilDamageType::Slashing",
       "StanceOverride": [
@@ -61,19 +58,22 @@
           }
         }
       ],
-      "AimMovementSpeedModifier": 0.45,
-      "AimRotationSpeedModifier": 4.0,
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
         "Delay": 0.4,
         "Duration": 1.1,
         "RotationSpeedModifier": 4.0,
-        "StaminaCost": 16.0
+        "StaminaCost": 10.0
       },
       "RangedActivity": {
         "bRepeatable": false
       },
-      "bAllowCameraPan": false
+      "bAllowCameraPan": false,
+      "Damage": 60,
+      "DurabilityLossPerUse": 2.0,
+      "DamageRadius": 125.0,
+      "AimMovementSpeedModifier": 0.45,
+      "AimRotationSpeedModifier": 4.0
     }
   }
 ]

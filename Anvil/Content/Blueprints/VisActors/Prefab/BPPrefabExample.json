@@ -1,0 +1,280 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPPrefabExample_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPPrefabExample_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPPrefabExample_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.10"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisEntityPrefab'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "MeshVisibilityData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MeshVisibilityDataComponent'",
+          "ObjectPath": "/Script/R2"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RoofMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BaseMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPPrefabExample_C'Default__BPPrefabExample_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "MeshVisibilityArea",
+    "Outer": "Default__BPPrefabExample_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 300.0,
+        "Y": 640.0,
+        "Z": 175.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPPrefabExample_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -90.0,
+        "Z": 390.0
+      },
+      "ComponentTags": [
+        "ToggleVisibility"
+      ]
+    }
+  },
+  {
+    "Type": "BPPrefabExample_C",
+    "Name": "Default__BPPrefabExample_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.BPPrefabExample_C'",
+    "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPPrefabExample_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.0"
+      },
+      "MeshVisibilityArea": {
+        "ObjectName": "BoxComponent'Default__BPPrefabExample_C:MeshVisibilityArea'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.2"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPPrefabExample_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.0"
+      }
+    }
+  },
+  {
+    "Type": "MeshVisibilityDataComponent",
+    "Name": "MeshVisibilityData_GEN_VARIABLE",
+    "Outer": "BPPrefabExample_C",
+    "Class": "UScriptClass'MeshVisibilityDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPPrefabExample_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPPrefabExample_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.5"
+      },
+      "VariableGuid": "301EE104-47D4F866-ED959DA1-DADCBA6F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MeshVisibilityDataComponent'",
+        "ObjectPath": "/Script/R2"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MeshVisibilityDataComponent'BPPrefabExample_C:MeshVisibilityData_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.4"
+      },
+      "VariableGuid": "36EB2B86-41A0FDEF-826CD5B5-AB57E5F0",
+      "InternalVariableName": "MeshVisibilityData"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPPrefabExample_C:BaseMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.11"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6F3F7EB6-4634BCB0-E23CFFBE-162338C7",
+      "InternalVariableName": "BaseMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPPrefabExample_C:RoofMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.12"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "C88F659E-495D66F3-2311DDB5-E195074B",
+      "InternalVariableName": "RoofMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPPrefabExample_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPPrefabExample_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BPPrefabExample_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPPrefabExample_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPPrefabExample_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BPPrefabExample_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPPrefabExample_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPPrefabExample_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prefab/BPPrefabExample.6"
+      }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "BaseMesh_GEN_VARIABLE",
+    "Outer": "BPPrefabExample_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'ChurchT3'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/ChurchT3.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "RoofMesh_GEN_VARIABLE",
+    "Outer": "BPPrefabExample_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "bMeshVisibility": true,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'ChurchT3Roof'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/ChurchT3Roof.2"
+      },
+      "ComponentTags": [
+        "ToggleVisibility",
+        "Structure",
+        "Collision"
+      ]
+    }
+  }
+]

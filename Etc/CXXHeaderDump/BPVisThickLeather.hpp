@@ -3,6 +3,6 @@
 
 class ABPVisThickLeather_C : public AVisPickupItem
 {
-}; // Size: 0x408
+}; // Size: 0x420
 
 #endif

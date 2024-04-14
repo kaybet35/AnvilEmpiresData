@@ -1,0 +1,174 @@
+[
+  {
+    "Type": "AnimalRopeSlotProxyComponent",
+    "Name": "AnimalRopeSlotProxyComponent_0",
+    "Outer": "Default__RavenDen_C",
+    "Class": "UScriptClass'AnimalRopeSlotProxyComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "RavenDen_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "RavenDen_C'Default__RavenDen_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDen.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__RavenDen_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 600.0
+      },
+      "Extents": {
+        "X": 35.0,
+        "Y": 35.0,
+        "Z": 600.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeWood",
+      "CollisionMask": 8210
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__RavenDen_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'RavenDenFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/FootprintAssets/RavenDenFootprint.0"
+      },
+      "CollisionMask": 256
+    }
+  },
+  {
+    "Type": "RavenDen_C",
+    "Name": "Default__RavenDen_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDen.RavenDen_C'",
+    "Properties": {
+      "CodeNameString": "RavenDen",
+      "CodeName": -1958751511,
+      "bUseScale": true,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__RavenDen_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDen.2"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__RavenDen_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDen.5"
+        },
+        {
+          "ObjectName": "FootprintCollisionProxyComponent'Default__RavenDen_C:FootprintCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDen.3"
+        },
+        {
+          "ObjectName": "AnimalRopeSlotProxyComponent'Default__RavenDen_C:AnimalRopeSlotProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDen.0"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__RavenDen_C:ResourceSpawnerProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDen.7"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__RavenDen_C:ResourceSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDen.6"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisRavenDen_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.1"
+      }
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__RavenDen_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilResourceType::ChoppedTree",
+      "HitPoints": 20,
+      "RequiredTool": "EAnvilToolType::Axe",
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'WoodHardPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/WoodHardPickup.0"
+      },
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'RavenDenFall_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDenFall.0"
+      },
+      "DestructionEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectRavenDenFall01_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectRavenDenFall01.0"
+      }
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_0",
+    "Outer": "Default__RavenDen_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'SpawnerRavenDen_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/SpawnerRavenDen.0"
+      },
+      "SpawnRadius": 250.0,
+      "SpawnInterval": 60.0,
+      "SpawnQuantity": 1,
+      "MaxSpawn": 1,
+      "ResourceReserveInitial": 1,
+      "MinDistanceBetweenSpawns": 2500.0
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_2",
+    "Outer": "Default__RavenDen_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'Raven_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Raven.3"
+      },
+      "SpawnOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 300.0
+      },
+      "SpawnRadius": 2000.0,
+      "MinimumSpawnRadius": 400.0,
+      "SpawnInterval": 300.0,
+      "SpawnQuantity": 3,
+      "MaxSpawn": 3,
+      "ResourceReserveInitial": 6,
+      "ReserveReplenishTimeSecs": 3600,
+      "MinDistanceBetweenSpawns": 250.0,
+      "bRequiresNavmesh": true,
+      "bTrackSpawnedEntity": true,
+      "bDontSpawnNearPlayers": true,
+      "CompatibleSurfaceTypes": 26116
+    }
+  }
+]

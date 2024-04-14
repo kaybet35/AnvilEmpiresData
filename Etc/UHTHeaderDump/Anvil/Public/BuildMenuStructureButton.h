@@ -11,7 +11,10 @@ class ANVIL_API UBuildMenuStructureButton : public UGridItemWidget {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UImage* PublicIconImage;
+    UImage* TownAreaIconImage;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UImage* FamilyAreaIconImage;
     
 public:
     UBuildMenuStructureButton();

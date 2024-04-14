@@ -3,6 +3,6 @@
 
 class UBPVisItemFoodFrenchToast_C : public UVisItem
 {
-}; // Size: 0x210
+}; // Size: 0x228
 
 #endif

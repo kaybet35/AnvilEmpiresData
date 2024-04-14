@@ -71,9 +71,6 @@ private:
     UCanvasPanelSlot* MapSheetSlot;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UCanvasPanelSlot* TownHallIconCanvasSlot;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UMapIcon*> DisplayedBeaconTowerPlayerInfos;
     
 public:

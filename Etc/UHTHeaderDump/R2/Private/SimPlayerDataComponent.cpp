@@ -20,14 +20,10 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->StaggerTimer = 0.00f;
     this->bIsAiming = false;
     this->bIsGuarding = false;
-    this->bShowStructureStats = false;
     this->bIsAdmin = false;
-    this->bDebugDraw = false;
     this->bPriming = false;
     this->bInTravelZone = false;
     this->bIsMeshHidden = false;
-    this->bIsHomesteadOwnerInTown = false;
-    this->bShowWeatherStats = false;
     this->SecondsUntilFullDecay = 0.00f;
     this->HeldItemLightSourceRadius = 0.00f;
     this->FoodTypesOnCooldownBits = 0;

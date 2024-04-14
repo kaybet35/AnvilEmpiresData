@@ -3,8 +3,8 @@
 
 class ABPVisMarketAreaMapIconProxy_C : public AVisActor
 {
-    class USceneComponent* DefaultSceneRoot;                                          // 0x03F0 (size: 0x8)
+    class USceneComponent* DefaultSceneRoot;                                          // 0x0408 (size: 0x8)
 
-}; // Size: 0x3F8
+}; // Size: 0x410
 
 #endif

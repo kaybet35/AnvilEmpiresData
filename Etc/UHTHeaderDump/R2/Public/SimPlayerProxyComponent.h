@@ -62,10 +62,7 @@ public:
     float SprintStaminaDrain;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float ClimbStaminaCostSmall;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float ClimbStaminaCostTall;
+    float ClimbStaminaCost;
     
     USimPlayerProxyComponent();
 

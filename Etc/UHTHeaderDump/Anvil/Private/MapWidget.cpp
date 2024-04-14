@@ -16,7 +16,6 @@ UMapWidget::UMapWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->ObjectiveBorder = NULL;
     this->LogoutButton = NULL;
     this->MapSheetSlot = NULL;
-    this->TownHallIconCanvasSlot = NULL;
 }
 
 void UMapWidget::OnLogoutButtonClicked() {

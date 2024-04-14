@@ -3,6 +3,6 @@
 
 class ABpVisCampStockadeBuildSite_C : public AVisBuildSite
 {
-}; // Size: 0x460
+}; // Size: 0x478
 
 #endif

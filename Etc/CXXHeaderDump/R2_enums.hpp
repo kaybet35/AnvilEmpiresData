@@ -52,7 +52,9 @@ enum class EAnvilBuildLocationType {
     Static = 13,
     House = 14,
     RequiresEnclosure = 15,
-    EAnvilBuildLocationType_MAX = 16,
+    OutsideTownArea = 16,
+    TownArea = 17,
+    EAnvilBuildLocationType_MAX = 18,
 };
 
 enum class EAnvilBuildStructureType {
@@ -235,7 +237,8 @@ enum class EAnvilInputEventType {
     StartPowerMill = 44,
     StopPowerMill = 45,
     IncreaseTownStatus = 46,
-    EAnvilInputEventType_MAX = 47,
+    RequestFamilySync = 47,
+    EAnvilInputEventType_MAX = 48,
 };
 
 enum class EAnvilInputResponseType {
@@ -401,7 +404,7 @@ enum class EAnvilPlacementStatus {
     TooShort = 13,
     TooHigh = 14,
     TooLow = 15,
-    NotEnoughGold = 16,
+    TooCloseToTownCenter = 16,
     TooCloseToEnemy = 17,
     TooCloseToOtherWell = 18,
     TooFarFromPlayer = 19,
@@ -411,22 +414,27 @@ enum class EAnvilPlacementStatus {
     RequiresIndustry = 23,
     RequiresHouse = 24,
     RequiresFamilyArea = 25,
-    TooCloseTogether = 26,
-    TooCloseToWildSpawn = 27,
-    TooCloseToWater = 28,
-    VehicleMustBeEmpty = 29,
-    RequiresEnclosure = 30,
-    RequiresValidSupport = 31,
-    RequiresFoundation = 32,
-    RequiresLandscape = 33,
-    RequiresWater = 34,
-    RequiresSnappping = 35,
-    YouMustBelongToFamily = 36,
-    NotAtFullHealth = 37,
-    CantBuildBorderRegion = 38,
-    MustBePledgedToTown = 39,
-    RequiresNearbyPlayers = 40,
-    EAnvilPlacementStatus_MAX = 41,
+    RequiresFamilyHouse = 26,
+    OnlyOneFamilyCenterPerTown = 27,
+    TooCloseTogether = 28,
+    TooCloseToWildSpawn = 29,
+    TooCloseToWater = 30,
+    VehicleMustBeEmpty = 31,
+    RequiresEnclosure = 32,
+    RequiresValidSupport = 33,
+    RequiresFoundation = 34,
+    RequiresLandscape = 35,
+    RequiresWater = 36,
+    RequiresSnappping = 37,
+    YouMustBelongToFamily = 38,
+    NotAtFullHealth = 39,
+    CantBuildBorderRegion = 40,
+    MustBePledgedToTown = 41,
+    RequiresNearbyPlayers = 42,
+    RequiresMorePopulation = 43,
+    RequiresMoreFamilyHouses = 44,
+    YouMustBeOfficial = 45,
+    EAnvilPlacementStatus_MAX = 46,
 };
 
 enum class EAnvilPlayerAimMeshType {
@@ -453,9 +461,8 @@ enum class EAnvilPlayerInputMode {
 enum class EAnvilPlayerVisEventType {
     OnDeath = 0,
     StatusMessage = 1,
-    ConfirmPledgeDialog = 2,
-    ForceActivityState = 3,
-    EAnvilPlayerVisEventType_MAX = 4,
+    ForceActivityState = 2,
+    EAnvilPlayerVisEventType_MAX = 3,
 };
 
 enum class EAnvilPledgedOnlineStatus {
@@ -493,6 +500,18 @@ enum class EAnvilProfileNameCheckType {
     InvalidChar = 3,
     AlreadyTaken = 4,
     EAnvilProfileNameCheckType_MAX = 5,
+};
+
+enum class EAnvilR2FamilyErrorType {
+    Error = 0,
+    FamilyAlreadyExists = 1,
+    EAnvilR2FamilyErrorType_MAX = 2,
+};
+
+enum class EAnvilR2FamilyRoleType {
+    Founder = 0,
+    Member = 1,
+    EAnvilR2FamilyRoleType_MAX = 2,
 };
 
 enum class EAnvilR2WeatherEventType {
@@ -695,16 +714,20 @@ enum class EAnvilStatusMessageType {
     TravelDestinationUnavailable = 95,
     UnableToIncreaseStatusUsingSilver = 96,
     TaxesAreOverdue = 97,
-    FamilyAreaClaimed = 98,
-    FamilyAllianceSet = 99,
+    FamilyAllianceSet = 98,
+    RemovedFromFamily = 99,
     TargetInUse = 100,
     ItemInUse = 101,
     MissingEquipment = 102,
     TooSoonToUse = 103,
     DismantleVoteRegistered = 104,
     DismantleVoteTooSoon = 105,
-    NumTypes = 106,
-    EAnvilStatusMessageType_MAX = 107,
+    HitConverterOutputNotSupported = 106,
+    OnlyOneFamilyCenterPerFamily = 107,
+    TooCloseToExistingStructure = 108,
+    TargetImmuneFriendlyFire = 109,
+    NumTypes = 110,
+    EAnvilStatusMessageType_MAX = 111,
 };
 
 enum class EAnvilStimulusType {

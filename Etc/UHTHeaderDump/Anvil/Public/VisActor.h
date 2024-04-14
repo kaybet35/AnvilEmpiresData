@@ -7,6 +7,8 @@
 #include "VisActor.generated.h"
 
 class UEntityTemplate;
+class UMeshVisibilityDataComponent;
+class USceneComponent;
 class UTexture2D;
 
 UCLASS(Blueprintable)
@@ -53,6 +55,9 @@ public:
     UEntityTemplate* TemplateCDO;
     
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UMeshVisibilityDataComponent* MeshVisibilityDataComponent;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PositionSmoothSpeed;
     
@@ -67,6 +72,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseDepthStencilForInteractionHighlight;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<USceneComponent*> ToggleVisibilityComponents;
     
 public:
     AVisActor(const FObjectInitializer& ObjectInitializer);

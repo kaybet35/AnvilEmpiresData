@@ -1,0 +1,77 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "PickaxeBronze_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "PickaxeBronze_C'Default__PickaxeBronze_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/PickaxeBronze.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "PickaxeBronze_C",
+    "Name": "Default__PickaxeBronze_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/PickaxeBronze.PickaxeBronze_C'",
+    "Properties": {
+      "CodeNameString": "PickaxeBronze",
+      "CodeName": 2024317881,
+      "ItemTags": [
+        "EAnvilItemTag::PrimaryTool",
+        "EAnvilItemTag::WeaponStorage",
+        "EAnvilItemTag::TwoHanded"
+      ],
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "ItemHitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectAxeImpact_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectAxeImpact.0"
+      },
+      "Encumberance": 10,
+      "DamageOffset": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "DamageType": "EAnvilDamageType::Slashing",
+      "ToolType": "EAnvilToolType::Pickaxe",
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 0.2,
+        "Duration": 1.1,
+        "StaminaCost": 10.0
+      },
+      "RangedActivity": {
+        "bRepeatable": false
+      },
+      "GatherActivity": {
+        "State": "EAnvilSimActivityState::UsingHandTool",
+        "Delay": 0.2,
+        "Duration": 1.1,
+        "MovementSpeedModifier": 0.0,
+        "RotationSpeedModifier": 0.0,
+        "StaminaCost": 12.25,
+        "AimedStaminaCost": 3.0
+      },
+      "DurabilityLossPerUse": 1.25,
+      "DamageRadius": 80.0,
+      "ToolEffectiveness": 0.6,
+      "AimMovementSpeedModifier": 0.5
+    }
+  }
+]

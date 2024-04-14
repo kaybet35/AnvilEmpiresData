@@ -10,6 +10,7 @@ UEntityTemplate::UEntityTemplate() {
     this->bUseScale = false;
     this->bObserver = false;
     this->SerializationType = SerializationTypeDefault;
+    this->bGenerateBoxCollisionsFromVisActor = false;
     this->bGenerateMeshCollisionsFromVisActor = false;
     this->GenerateMeshCollisionMask = 0;
     this->GenerateMeshCollisionStepAngle = 0.00f;

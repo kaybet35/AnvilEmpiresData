@@ -10,9 +10,14 @@ UTownHallDataComponent::UTownHallDataComponent(const FObjectInitializer& ObjectI
     this->NumTotalTents = 0;
     this->NumUnclaimedTents = 0;
     this->NumReinforcementSupplies = 0;
+    this->NumTotalFamilyHouses = 0;
     this->TownNameId = 0;
     this->TownNameOrdinal = 0;
     this->CurrentBuildRadius = 0.00f;
+    this->PopulationRequirementT2 = 0;
+    this->PopulationRequirementT3 = 0;
+    this->FamilyHouseRequirementT2 = 0;
+    this->FamilyHouseRequirementT3 = 0;
 }
 
 

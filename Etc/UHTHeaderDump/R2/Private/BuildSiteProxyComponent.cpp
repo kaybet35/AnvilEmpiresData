@@ -6,6 +6,7 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->CompatibleSurfaceTypes = 0;
     this->RequiredTool = EAnvilToolType::None;
     this->bRequiresTownHall = false;
+    this->bRequiresFamilyHouse = false;
     this->bRequiresCamp = false;
     this->bRequiresSmallCamp = false;
     this->bBuildableOverRoads = false;
@@ -21,7 +22,6 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->MaxHeightShift = 0.00f;
     this->AdditionalMaxHeightShift = 0.00f;
     this->MinDistanceBetweenStructures = 0.00f;
-    this->NumNearbyPlayersRequired = 0;
 }
 
 

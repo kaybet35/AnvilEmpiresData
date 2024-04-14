@@ -3,8 +3,8 @@
 
 class AVisHitEffectOilFlask_C : public AVisEffect
 {
-    class UDecalComponent* Decal;                                                     // 0x0420 (size: 0x8)
+    class UDecalComponent* Decal;                                                     // 0x0438 (size: 0x8)
 
-}; // Size: 0x428
+}; // Size: 0x440
 
 #endif

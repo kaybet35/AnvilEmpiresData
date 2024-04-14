@@ -7,12 +7,6 @@ UCLASS(Blueprintable, EditInlineNew)
 class R2_API UFamilyAreaMarkerProxyComponent : public UProxyComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 Tier;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 IsFamilyAreaCore;
-    
     UFamilyAreaMarkerProxyComponent();
 
 };

@@ -44,21 +44,17 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectPickAxeImpact.0"
       },
       "Encumberance": 10,
-      "DurabilityLossPerUse": 0.5,
-      "Damage": 10,
       "DamageOffset": {
         "X": 50.0,
         "Y": 0.0,
         "Z": 0.0
       },
-      "DamageRadius": 64.0,
       "ToolType": "EAnvilToolType::Pickaxe",
-      "ToolEffectiveness": 0.66,
-      "AimMovementSpeedModifier": 0.5,
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
         "Delay": 0.5,
-        "Duration": 1.1
+        "Duration": 1.1,
+        "StaminaCost": 10.0
       },
       "RangedActivity": {
         "bRepeatable": false
@@ -69,8 +65,13 @@
         "Duration": 1.1,
         "MovementSpeedModifier": 0.0,
         "RotationSpeedModifier": 0.0,
-        "StaminaCost": 10.0
-      }
+        "StaminaCost": 12.25
+      },
+      "Damage": 10,
+      "DurabilityLossPerUse": 0.5,
+      "DamageRadius": 64.0,
+      "ToolEffectiveness": 0.66,
+      "AimMovementSpeedModifier": 0.5
     }
   }
 ]

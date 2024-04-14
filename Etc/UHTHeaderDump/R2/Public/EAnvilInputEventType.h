@@ -51,5 +51,6 @@ enum class EAnvilInputEventType : uint8 {
     StartPowerMill,
     StopPowerMill,
     IncreaseTownStatus,
+    RequestFamilySync,
 };
 

@@ -9,9 +9,7 @@ class UArrowComponent;
 class UDecalComponent;
 class UGrassRemovalVolumeComponent;
 class UHealthDataComponent;
-class UMeshVisibilityDataComponent;
 class UNiagaraSystem;
-class USceneComponent;
 class UScorchDataComponent;
 class UStructureDataComponent;
 class UTeamDataComponent;
@@ -65,12 +63,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 GeneratedScorchEffects;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UMeshVisibilityDataComponent* MeshVisibilityDataComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    TArray<USceneComponent*> ToggleVisibilityComponents;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UNiagaraSystem*> ScorchEffectAssets;

@@ -116,12 +116,6 @@ FDismantleVoteInfo = {}
 
 
 
----@class FFamilyMemberData
----@field PlayerId int64
-FFamilyMemberData = {}
-
-
-
 ---@class FFootprintSharedCompEntry
 ---@field Comp UProxyComponent
 ---@field bHighlight boolean
@@ -265,8 +259,14 @@ FPledgedPlayer = {}
 ---@field ProductionTime float
 ---@field OutputCount uint8
 ---@field bRequiresResearch boolean
----@field bCrateProducedItems boolean
 FProducableItem = {}
+
+
+
+---@class FR2FamilyMember
+---@field OnlineId int64
+---@field Role EAnvilR2FamilyRoleType
+FR2FamilyMember = {}
 
 
 
@@ -344,6 +344,18 @@ UAIStimulusProxyComponent = {}
 
 
 
+---@class UAdminEnvDataComponent : UDataComponent
+---@field bDebugDrawHook boolean
+---@field bShowStructureStatsHook boolean
+---@field bShowWeatherStatsHook boolean
+UAdminEnvDataComponent = {}
+
+
+
+---@class UAdminEnvProxyComponent : UProxyComponent
+UAdminEnvProxyComponent = {}
+
+
 ---@class UAdvancedSnappingProxyComponent : UProxyComponent
 ---@field bBlockSnapping boolean
 ---@field bDisableMinSnapWhenNotSnapping boolean
@@ -358,7 +370,6 @@ UAdvancedSnappingProxyComponent = {}
 
 ---@class UAnimalAIDataComponent : UDataComponent
 ---@field CurrentState EAnvilAnimalState
----@field Velocity FVector
 ---@field AttachedTarget int64
 UAnimalAIDataComponent = {}
 
@@ -391,6 +402,18 @@ UAnimalAIProxyComponent = {}
 ---@field MaxNumAttacks uint8
 ---@field AttackDamage int32
 UAnimalAttackProxyComponent = {}
+
+
+
+---@class UAnimalFlyingProxyComponent : UProxyComponent
+---@field CruisingHeightMin float
+---@field CruisingHeightMax float
+---@field SlowTurningAccel float
+---@field FastTurningAccel float
+---@field ClimbingSpeedModifier float
+---@field DivingSpeedModifier float
+---@field DiveRange float
+UAnimalFlyingProxyComponent = {}
 
 
 
@@ -558,6 +581,7 @@ UBuildSiteDataComponent = {}
 ---@field CompatibleSurfaceTypes int32
 ---@field RequiredTool EAnvilToolType
 ---@field bRequiresTownHall boolean
+---@field bRequiresFamilyHouse boolean
 ---@field bRequiresCamp boolean
 ---@field bRequiresSmallCamp boolean
 ---@field bBuildableOverRoads boolean
@@ -574,7 +598,6 @@ UBuildSiteDataComponent = {}
 ---@field AdditionalMaxHeightShift float
 ---@field MinDistanceBetweenStructures float
 ---@field MinDistanceStructureTypes TArray<TSubclassOf<UEntityTemplate>>
----@field NumNearbyPlayersRequired int32
 ---@field MaterialRequirements TArray<FBasicCount>
 UBuildSiteProxyComponent = {}
 
@@ -719,6 +742,7 @@ UEntityAttachableProxyComponent = {}
 ---@field bUseScale boolean
 ---@field bObserver boolean
 ---@field SerializationType EEntitySerializationType
+---@field bGenerateBoxCollisionsFromVisActor boolean
 ---@field bGenerateMeshCollisionsFromVisActor boolean
 ---@field GenerateMeshCollisionMask int32
 ---@field GenerateMeshCollisionStepAngle float
@@ -739,25 +763,35 @@ UEquipmentProxyComponent = {}
 
 
 ---@class UFamilyAreaMarkerDataComponent : UDataComponent
----@field FamilyId int32
 ---@field AllowPublicPledging boolean
----@field Tier uint8
----@field FamilyMembers TArray<FFamilyMemberData>
----@field VisVarMaxNumFamilyMembers int32
----@field VisVarRestrictedBoxExtent float
----@field ParentFamilyArea int64
----@field AttachedFamilyArea int64
----@field IsFamilyAreaCore uint8
----@field NumChildAreas uint8
+---@field bHasMembers boolean
+---@field NumFamilyOwnedStructures uint8
 UFamilyAreaMarkerDataComponent = {}
 
 
 
 ---@class UFamilyAreaMarkerProxyComponent : UProxyComponent
----@field Tier uint8
----@field IsFamilyAreaCore uint8
 UFamilyAreaMarkerProxyComponent = {}
 
+
+---@class UFamilyCenterDataComponent : UDataComponent
+---@field FamilyAreaRadius float
+UFamilyCenterDataComponent = {}
+
+
+
+---@class UFamilyCenterProxyComponent : UProxyComponent
+---@field Tier uint8
+UFamilyCenterProxyComponent = {}
+
+
+
+---@class UFamilyListProxyComponent : UProxyComponent
+UFamilyListProxyComponent = {}
+
+
+---@class UFamilyUserProxyComponent : UProxyComponent
+UFamilyUserProxyComponent = {}
 
 
 ---@class UFarmDataComponent : UDataComponent
@@ -947,61 +981,60 @@ UInventoryProxyComponent = {}
 ---@field ItemHitEffect TSubclassOf<UEntityTemplate>
 ---@field Encumberance uint8
 ---@field ArmedDurabilityLossPerSec float
----@field DurabilityLossPerUse float
----@field DurabilityLossPerSec float
 ---@field bRearmAfterConsumption boolean
 ---@field bRearmSkipsEquipActivity boolean
----@field StockPileWithdrawalValue float
 ---@field HeatedItem TSubclassOf<UItemTemplate>
 ---@field CooledItem TSubclassOf<UItemTemplate>
 ---@field bRanged boolean
----@field Damage uint8
 ---@field DamageOffset FVector
----@field DamageRadius float
 ---@field FireOffset FVector
 ---@field AmmoType TSubclassOf<UItemTemplate>
 ---@field ProjectileEntity TSubclassOf<UEntityTemplate>
----@field VariableDamageMaxModifier float
----@field VariableDamageMinModifier float
----@field GuardMeterReductionMultiplier float
 ---@field bStaggersWielder boolean
 ---@field ArmourType EAnvilArmourType
 ---@field DamageType EAnvilDamageType
----@field ArmorMitigation uint8
 ---@field MitigationSuccessDurabilityLoss uint8
 ---@field MitigationFailureDurabilityLoss uint8
 ---@field ArmourMitigatedEffect TSubclassOf<UEntityTemplate>
 ---@field ToolType EAnvilToolType
----@field ToolEffectiveness float
----@field RegenPerSec float
 ---@field RegenDuration float
----@field ConversionRatioToFood uint8
 ---@field FoodType EAnvilFoodType
 ---@field bDoesSpoil boolean
 ---@field SpoilageDurabilityLossPerSec float
 ---@field RequiredStance EAnvilCharacterStance
 ---@field StanceOverride TMap<EAnvilCharacterStance, TSubclassOf<UItemTemplate>>
----@field AimMovementSpeedModifier float
----@field AimRotationSpeedModifier float
 ---@field DefaultActivity FAnvilSimActivity
 ---@field RangedActivity FAnvilSimActivity
 ---@field BuildActivity FAnvilSimActivity
 ---@field GatherActivity FAnvilSimActivity
 ---@field bIsDeployable boolean
 ---@field DeployedBuildSite TSubclassOf<UEntityTemplate>
----@field GuardMeterCostPerHit float
 ---@field NightShroudLightRadius float
 ---@field bAllowCameraPan boolean
 ---@field MaxEncumbranceforAction float
----@field ShieldDurabilityLossMultiplier float
----@field HungerRestored float
----@field HealthLimitRestored float
----@field StaminaLimitRestored float
----@field QuantityPerCrate uint16
----@field DefaultMarketValue uint16
 ---@field StunChance float
 ---@field StunDuration float
 ---@field StunThrowDistance float
+---@field Damage uint8
+---@field DefaultMarketplaceValue uint16
+---@field DurabilityLossPerSec float
+---@field StockPileWithdrawalValue float
+---@field QuantityPerCrate uint16
+---@field RegenPerSec float
+---@field HungerRestored float
+---@field HealthLimitRestored float
+---@field StaminaLimitRestored float
+---@field DurabilityLossPerUse float
+---@field DamageRadius float
+---@field VariableDamageMaxModifier float
+---@field VariableDamageMinModifier float
+---@field GuardMeterReductionMultiplier float
+---@field ShieldDurabilityLossMultiplier float
+---@field GuardMeterCostPerHit float
+---@field ArmorMitigation uint8
+---@field ToolEffectiveness float
+---@field AimMovementSpeedModifier float
+---@field AimRotationSpeedModifier float
 UItemTemplate = {}
 
 
@@ -1347,7 +1380,6 @@ URareResourceAreaMarkerProxyComponent = {}
 
 
 ---@class URefineResourceDataComponent : UDataComponent
----@field bCrateProducedItems boolean
 ---@field bInventoryFull boolean
 ---@field ReplicatedRefineQueue TArray<FReplicatedRefineQueueItem>
 ---@field NumItemsInQueue uint8
@@ -1361,7 +1393,6 @@ URefineResourceDataComponent = {}
 
 ---@class URefineResourceProxyComponent : UProxyComponent
 ---@field ProducableItemList TArray<FProducableItem>
----@field bCrateProducedItems boolean
 URefineResourceProxyComponent = {}
 
 
@@ -1505,14 +1536,10 @@ USeekerProxyComponent = {}
 ---@field StaggerTimer float
 ---@field bIsAiming boolean
 ---@field bIsGuarding boolean
----@field bShowStructureStats boolean
 ---@field bIsAdmin boolean
----@field bDebugDraw boolean
 ---@field bPriming boolean
 ---@field bInTravelZone boolean
 ---@field bIsMeshHidden boolean
----@field bIsHomesteadOwnerInTown boolean
----@field bShowWeatherStats boolean
 ---@field SecondsUntilFullDecay float
 ---@field HeldItemLightSourceRadius float
 ---@field LightSourceData TArray<FNightShroudLightSource>
@@ -1543,8 +1570,7 @@ USimPlayerDataComponent = {}
 ---@field RotationSpeed float
 ---@field MovementAcceleration float
 ---@field SprintStaminaDrain float
----@field ClimbStaminaCostSmall float
----@field ClimbStaminaCostTall float
+---@field ClimbStaminaCost float
 USimPlayerProxyComponent = {}
 
 
@@ -1701,9 +1727,14 @@ UTemperatureProxyComponent = {}
 ---@field NumTotalTents int32
 ---@field NumUnclaimedTents int32
 ---@field NumReinforcementSupplies int32
+---@field NumTotalFamilyHouses int32
 ---@field TownNameId uint8
 ---@field TownNameOrdinal uint8
 ---@field CurrentBuildRadius float
+---@field PopulationRequirementT2 uint8
+---@field PopulationRequirementT3 uint8
+---@field FamilyHouseRequirementT2 uint8
+---@field FamilyHouseRequirementT3 uint8
 UTownHallDataComponent = {}
 
 
@@ -1731,8 +1762,21 @@ UTrapProxyComponent = {}
 
 
 
+---@class UTweakableDataComponent : UDataComponent
+---@field PopulationRequirementT2 uint8
+---@field PopulationRequirementT3 uint8
+---@field FamilyHouseRequirementT2 uint8
+---@field FamilyHouseRequirementT3 uint8
+---@field TownCenterRequiredBuilders uint8
+UTweakableDataComponent = {}
+
+
+
+---@class UTweakableProxyComponent : UProxyComponent
+UTweakableProxyComponent = {}
+
+
 ---@class UUpgradeDataComponent : UDataComponent
----@field PopRequirement int32
 ---@field MaterialSubmissions TArray<int32>
 ---@field bIsUpgrading boolean
 UUpgradeDataComponent = {}
@@ -1741,8 +1785,6 @@ UUpgradeDataComponent = {}
 
 ---@class UUpgradeProxyComponent : UProxyComponent
 ---@field UpgradeTarget TSubclassOf<UEntityTemplate>
----@field GoldRequirement int32
----@field PopRequirement int32
 ---@field TierPrerequisite uint8
 ---@field MaterialRequirements TArray<FBasicCount>
 UUpgradeProxyComponent = {}

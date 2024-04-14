@@ -3,9 +3,9 @@
 
 class ABPChickenHusk_C : public AVisEffect
 {
-    class UDecalComponent* Decal1;                                                    // 0x0420 (size: 0x8)
-    class UDecalComponent* Decal;                                                     // 0x0428 (size: 0x8)
+    class UDecalComponent* Decal1;                                                    // 0x0438 (size: 0x8)
+    class UDecalComponent* Decal;                                                     // 0x0440 (size: 0x8)
 
-}; // Size: 0x430
+}; // Size: 0x448
 
 #endif

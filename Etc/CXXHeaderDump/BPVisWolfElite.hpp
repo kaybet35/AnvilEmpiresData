@@ -3,6 +3,6 @@
 
 class ABPVisWolfElite_C : public AVisAnimal
 {
-}; // Size: 0x470
+}; // Size: 0x488
 
 #endif

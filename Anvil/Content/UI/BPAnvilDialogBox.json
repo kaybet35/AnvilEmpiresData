@@ -52,7 +52,7 @@
       },
       "Content": {
         "ObjectName": "CanvasPanel'BPAnvilDialogBox_C:WidgetTree.DialogBoxCanvas'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.5"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.6"
       }
     }
   },
@@ -76,8 +76,8 @@
       "ButtonWidth": 150.0,
       "ButtonHeight": 30.0,
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPAnvilDialogBox_C:WidgetTree.DialogBoxCanvas.CanvasPanelSlot_10'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.8"
+        "ObjectName": "HorizontalBoxSlot'BPAnvilDialogBox_C:WidgetTree.HorizontalBox_115.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.13"
       }
     }
   },
@@ -101,8 +101,8 @@
       "ButtonWidth": 150.0,
       "ButtonHeight": 30.0,
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPAnvilDialogBox_C:WidgetTree.DialogBoxCanvas.CanvasPanelSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.7"
+        "ObjectName": "HorizontalBoxSlot'BPAnvilDialogBox_C:WidgetTree.HorizontalBox_115.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.14"
       }
     }
   },
@@ -117,6 +117,24 @@
   },
   {
     "Type": "CanvasPanel",
+    "Name": "CanvasPanel_115",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPAnvilDialogBox_C:WidgetTree.CanvasPanel_115.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_8'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.33"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
     "Name": "DialogBoxCanvas",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'CanvasPanel'",
@@ -125,14 +143,6 @@
         {
           "ObjectName": "CanvasPanelSlot'BPAnvilDialogBox_C:WidgetTree.DialogBoxCanvas.CanvasPanelSlot_4'",
           "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.9"
-        },
-        {
-          "ObjectName": "CanvasPanelSlot'BPAnvilDialogBox_C:WidgetTree.DialogBoxCanvas.CanvasPanelSlot_10'",
-          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.8"
-        },
-        {
-          "ObjectName": "CanvasPanelSlot'BPAnvilDialogBox_C:WidgetTree.DialogBoxCanvas.CanvasPanelSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.7"
         }
       ],
       "Slot": {
@@ -155,81 +165,40 @@
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'BPAnvilDialogBox_C:WidgetTree.DialogOverlay.OverlaySlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.14"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.17"
       }
     }
   },
   {
     "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_1",
-    "Outer": "DialogBoxCanvas",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_115",
     "Class": "UScriptClass'CanvasPanelSlot'",
     "Properties": {
       "LayoutData": {
-        "Offsets": {
-          "Left": 100.0,
-          "Top": -40.0
-        },
         "Anchors": {
           "Minimum": {
             "X": 0.5,
-            "Y": 1.0
+            "Y": 0.5
           },
           "Maximum": {
             "X": 0.5,
-            "Y": 1.0
+            "Y": 0.5
           }
         },
         "Alignment": {
           "X": 0.5,
-          "Y": 1.0
+          "Y": 0.5
         }
       },
       "bAutoSize": true,
       "Parent": {
-        "ObjectName": "CanvasPanel'BPAnvilDialogBox_C:WidgetTree.DialogBoxCanvas'",
+        "ObjectName": "CanvasPanel'BPAnvilDialogBox_C:WidgetTree.CanvasPanel_115'",
         "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.5"
       },
       "Content": {
-        "ObjectName": "BPAnvilButtonWidget_C'BPAnvilDialogBox_C:WidgetTree.RightButton'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.3"
-      }
-    }
-  },
-  {
-    "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_10",
-    "Outer": "DialogBoxCanvas",
-    "Class": "UScriptClass'CanvasPanelSlot'",
-    "Properties": {
-      "LayoutData": {
-        "Offsets": {
-          "Left": -100.0,
-          "Top": -40.0
-        },
-        "Anchors": {
-          "Minimum": {
-            "X": 0.5,
-            "Y": 1.0
-          },
-          "Maximum": {
-            "X": 0.5,
-            "Y": 1.0
-          }
-        },
-        "Alignment": {
-          "X": 0.5,
-          "Y": 1.0
-        }
-      },
-      "bAutoSize": true,
-      "Parent": {
-        "ObjectName": "CanvasPanel'BPAnvilDialogBox_C:WidgetTree.DialogBoxCanvas'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.5"
-      },
-      "Content": {
-        "ObjectName": "BPAnvilButtonWidget_C'BPAnvilDialogBox_C:WidgetTree.LeftButton'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.2"
+        "ObjectName": "HorizontalBox'BPAnvilDialogBox_C:WidgetTree.HorizontalBox_115'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.12"
       }
     }
   },
@@ -240,9 +209,6 @@
     "Class": "UScriptClass'CanvasPanelSlot'",
     "Properties": {
       "LayoutData": {
-        "Offsets": {
-          "Top": -40.0
-        },
         "Anchors": {
           "Minimum": {
             "X": 0.5,
@@ -261,11 +227,11 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPAnvilDialogBox_C:WidgetTree.DialogBoxCanvas'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.5"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.6"
       },
       "Content": {
         "ObjectName": "VerticalBox'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.19"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.25"
       }
     }
   },
@@ -295,9 +261,10 @@
           "Y": 0.5
         }
       },
+      "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPAnvilDialogBox_C:WidgetTree.DialogCanvas'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.6"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.7"
       },
       "Content": {
         "ObjectName": "Border'BPAnvilDialogBox_C:WidgetTree.Border_96'",
@@ -488,7 +455,61 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_7'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.23"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.32"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_115",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPAnvilDialogBox_C:WidgetTree.HorizontalBox_115.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.13"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPAnvilDialogBox_C:WidgetTree.HorizontalBox_115.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPAnvilDialogBox_C:WidgetTree.CanvasPanel_115.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.8"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_115",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPAnvilDialogBox_C:WidgetTree.HorizontalBox_115'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.12"
+      },
+      "Content": {
+        "ObjectName": "BPAnvilButtonWidget_C'BPAnvilDialogBox_C:WidgetTree.LeftButton'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.2"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_115",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPAnvilDialogBox_C:WidgetTree.HorizontalBox_115'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.12"
+      },
+      "Content": {
+        "ObjectName": "BPAnvilButtonWidget_C'BPAnvilDialogBox_C:WidgetTree.RightButton'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.3"
       }
     }
   },
@@ -511,7 +532,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'BPAnvilDialogBox_C:WidgetTree.DialogOverlay.OverlaySlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.15"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.18"
       }
     }
   },
@@ -524,11 +545,11 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'BPAnvilDialogBox_C:WidgetTree.DialogOverlay.OverlaySlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.15"
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.18"
         },
         {
           "ObjectName": "OverlaySlot'BPAnvilDialogBox_C:WidgetTree.DialogOverlay.OverlaySlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.14"
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.17"
         }
       ]
     }
@@ -543,11 +564,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'BPAnvilDialogBox_C:WidgetTree.DialogOverlay'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.13"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.16"
       },
       "Content": {
         "ObjectName": "CanvasPanel'BPAnvilDialogBox_C:WidgetTree.DialogCanvas'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.6"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.7"
       }
     }
   },
@@ -561,11 +582,59 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'BPAnvilDialogBox_C:WidgetTree.DialogOverlay'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.13"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.16"
       },
       "Content": {
         "ObjectName": "Image'BPAnvilDialogBox_C:WidgetTree.Background'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.12"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.15"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 20.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.29"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 25.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_10'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.27"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_191",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 25.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.26"
       }
     }
   },
@@ -589,13 +658,13 @@
         "TypefaceFontName": "Default",
         "Size": 12
       },
-      "MinDesiredWidth": 400.0,
+      "MinDesiredWidth": 430.0,
       "Justification": "ETextJustify::Center",
       "AutoWrapText": true,
-      "WrapTextAt": 350.0,
+      "WrapTextAt": 400.0,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_6'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.22"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.31"
       }
     }
   },
@@ -630,7 +699,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.21"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.30"
       }
     }
   },
@@ -641,8 +710,8 @@
     "Class": "UScriptClass'Throbber'",
     "Properties": {
       "Slot": {
-        "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.20"
+        "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.28"
       }
     }
   },
@@ -654,20 +723,36 @@
     "Properties": {
       "Slots": [
         {
+          "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.26"
+        },
+        {
           "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_5'",
-          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.21"
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.30"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_6'",
-          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.22"
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.31"
         },
         {
-          "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.20"
+          "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.28"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_7'",
-          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.23"
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.32"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.29"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_8'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.33"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_10'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.27"
         }
       ],
       "Slot": {
@@ -678,24 +763,66 @@
   },
   {
     "Type": "VerticalBoxSlot",
-    "Name": "VerticalBoxSlot_0",
+    "Name": "VerticalBoxSlot_1",
     "Outer": "VerticalBox_464",
     "Class": "UScriptClass'VerticalBoxSlot'",
     "Properties": {
-      "Padding": {
-        "Left": 10.0,
-        "Top": 10.0,
-        "Right": 10.0,
-        "Bottom": 10.0
+      "Parent": {
+        "ObjectName": "VerticalBox'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.25"
       },
+      "Content": {
+        "ObjectName": "Spacer'BPAnvilDialogBox_C:WidgetTree.Spacer_191'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.21"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_10",
+    "Outer": "VerticalBox_464",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.25"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPAnvilDialogBox_C:WidgetTree.Spacer_1'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.20"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Outer": "VerticalBox_464",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.19"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.25"
       },
       "Content": {
         "ObjectName": "Throbber'BPAnvilDialogBox_C:WidgetTree.Throbber'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.18"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.24"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "VerticalBox_464",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.25"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPAnvilDialogBox_C:WidgetTree.Spacer'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.19"
       }
     }
   },
@@ -710,11 +837,11 @@
       },
       "Parent": {
         "ObjectName": "VerticalBox'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.19"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.25"
       },
       "Content": {
         "ObjectName": "TextBlock'BPAnvilDialogBox_C:WidgetTree.HeaderText'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.17"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.23"
       }
     }
   },
@@ -732,11 +859,11 @@
       },
       "Parent": {
         "ObjectName": "VerticalBox'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.19"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.25"
       },
       "Content": {
         "ObjectName": "TextBlock'BPAnvilDialogBox_C:WidgetTree.BodyText'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.16"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.22"
       }
     }
   },
@@ -748,11 +875,27 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.19"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.25"
       },
       "Content": {
         "ObjectName": "ComboBoxString'BPAnvilDialogBox_C:WidgetTree.ComboBox'",
         "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.11"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_8",
+    "Outer": "VerticalBox_464",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPAnvilDialogBox_C:WidgetTree.VerticalBox_464'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.25"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'BPAnvilDialogBox_C:WidgetTree.CanvasPanel_115'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.5"
       }
     }
   },
@@ -763,7 +906,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPAnvilDialogBox_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.25"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.35"
       },
       "bClassRequiresNativeTick": true
     },
@@ -807,7 +950,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "Overlay'BPAnvilDialogBox_C:WidgetTree.DialogOverlay'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.13"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.16"
       }
     }
   }

@@ -3,6 +3,6 @@
 
 class ABPVisWildWheat_C : public AVisResource
 {
-}; // Size: 0x440
+}; // Size: 0x458
 
 #endif

@@ -3,8 +3,8 @@
 
 class ABPVisBatteringRamBuildSite_C : public AVisBuildSite
 {
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0460 (size: 0x8)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0478 (size: 0x8)
 
-}; // Size: 0x468
+}; // Size: 0x480
 
 #endif

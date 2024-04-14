@@ -40,25 +40,21 @@
         "ObjectName": "BlueprintGeneratedClass'HitEffectHand_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectHand.0"
       },
-      "Damage": 5,
       "DamageOffset": {
         "X": 55.0,
         "Y": 0.0,
         "Z": 0.0
       },
-      "DamageRadius": 60.0,
       "bStaggersWielder": true,
       "ToolType": "EAnvilToolType::Hands",
-      "AimMovementSpeedModifier": 0.6,
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
         "Delay": 0.2,
         "Duration": 1.0,
-        "StaminaCost": 15.0
+        "StaminaCost": 10.0
       },
       "RangedActivity": {
-        "bRepeatable": false,
-        "StaminaCost": 10.0
+        "bRepeatable": false
       },
       "BuildActivity": {
         "State": "EAnvilSimActivityState::BuildingWithHandTool",
@@ -66,7 +62,7 @@
         "Duration": 1.0,
         "MovementSpeedModifier": 0.0,
         "RotationSpeedModifier": 0.0,
-        "StaminaCost": 1.0,
+        "StaminaCost": 5.0,
         "AimedStaminaCost": 1.0
       },
       "GatherActivity": {
@@ -75,10 +71,13 @@
         "Duration": 1.5,
         "MovementSpeedModifier": 0.0,
         "RotationSpeedModifier": 0.0,
-        "StaminaCost": 4.0,
+        "StaminaCost": 5.0,
         "AimedStaminaCost": 4.0
       },
-      "QuantityPerCrate": 0
+      "Damage": 5,
+      "QuantityPerCrate": 0,
+      "DamageRadius": 60.0,
+      "AimMovementSpeedModifier": 0.6
     }
   }
 ]

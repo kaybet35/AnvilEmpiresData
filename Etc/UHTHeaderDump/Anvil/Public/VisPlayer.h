@@ -10,6 +10,7 @@
 class ARuntimeVirtualTextureVolume;
 class AVisFishingBobber;
 class AVisFishingIndicator;
+class UAdminEnvDataComponent;
 class UAnimMontage;
 class UArmorDataComponent;
 class UAudioComponent;
@@ -56,6 +57,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTemperatureDataComponent* TemperatureDataComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAdminEnvDataComponent* AdminEnvDataComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* ItemMeshComponent;

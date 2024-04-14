@@ -40,13 +40,11 @@
       },
       "bRearmAfterConsumption": true,
       "bRanged": true,
-      "Damage": 100,
       "DamageOffset": {
         "X": 50.0,
         "Y": 0.0,
         "Z": 75.0
       },
-      "DamageRadius": 75.0,
       "AmmoType": {
         "ObjectName": "BlueprintGeneratedClass'ResourceWater_C'",
         "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWater.0"
@@ -55,7 +53,6 @@
         "ObjectName": "BlueprintGeneratedClass'WaterProjectile_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/WaterProjectile.0"
       },
-      "AimMovementSpeedModifier": 0.5,
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Farming",
         "Delay": 0.7,
@@ -63,7 +60,6 @@
         "MovementSpeedModifier": 0.0,
         "RotationSpeedModifier": 0.0,
         "bRepeatable": false,
-        "StaminaCost": 0.0,
         "AimedStaminaCost": 0.0
       },
       "RangedActivity": {
@@ -71,10 +67,13 @@
         "Delay": 0.8,
         "Duration": 1.1,
         "bRepeatable": false,
-        "StaminaCost": 15.0,
+        "StaminaCost": 10.0,
         "AimedStaminaCost": 5.0
       },
-      "QuantityPerCrate": 0
+      "Damage": 100,
+      "QuantityPerCrate": 0,
+      "DamageRadius": 75.0,
+      "AimMovementSpeedModifier": 0.5
     }
   }
 ]

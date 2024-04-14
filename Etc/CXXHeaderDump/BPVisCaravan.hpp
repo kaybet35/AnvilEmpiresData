@@ -3,9 +3,9 @@
 
 class ABPVisCaravan_C : public AVisVehicle
 {
-    class UEntityAttachableDataComponent* EntityAttachableData;                       // 0x0418 (size: 0x8)
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0420 (size: 0x8)
+    class UEntityAttachableDataComponent* EntityAttachableData;                       // 0x0430 (size: 0x8)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0438 (size: 0x8)
 
-}; // Size: 0x428
+}; // Size: 0x440
 
 #endif

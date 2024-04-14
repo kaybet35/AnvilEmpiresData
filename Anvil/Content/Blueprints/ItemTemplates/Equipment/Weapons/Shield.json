@@ -37,14 +37,11 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
       },
       "Encumberance": 80,
-      "DurabilityLossPerUse": 0.9,
-      "Damage": 35,
       "DamageOffset": {
         "X": 100.0,
         "Y": 0.0,
         "Z": 0.0
       },
-      "DamageRadius": 125.0,
       "bStaggersWielder": true,
       "StanceOverride": [
         {
@@ -54,19 +51,22 @@
           }
         }
       ],
-      "AimMovementSpeedModifier": 0.45,
-      "AimRotationSpeedModifier": 4.0,
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
         "Delay": 0.4,
         "Duration": 1.1,
         "RotationSpeedModifier": 4.0,
-        "StaminaCost": 16.0
+        "StaminaCost": 10.0
       },
       "RangedActivity": {
         "bRepeatable": false
       },
-      "GuardMeterCostPerHit": 16.0
+      "Damage": 35,
+      "DurabilityLossPerUse": 0.9,
+      "DamageRadius": 125.0,
+      "GuardMeterCostPerHit": 16.0,
+      "AimMovementSpeedModifier": 0.45,
+      "AimRotationSpeedModifier": 4.0
     }
   }
 ]

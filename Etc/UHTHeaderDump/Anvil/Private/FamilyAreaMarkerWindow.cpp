@@ -2,6 +2,7 @@
 
 UFamilyAreaMarkerWindow::UFamilyAreaMarkerWindow() {
     this->FamilyMembersScrollBox = NULL;
+    this->AlliedFamiliesScrollBox = NULL;
     this->TaxIcon = NULL;
     this->TaxTextBlock = NULL;
     this->FamilyMemberListItemWidgetType = NULL;
@@ -16,6 +17,10 @@ void UFamilyAreaMarkerWindow::OnFamilyAreaSetAllianceClicked() {
 }
 
 void UFamilyAreaMarkerWindow::OnFamilyAreaRestrictedChecked(bool bIsChecked) {
+}
+
+bool UFamilyAreaMarkerWindow::IsFamilyAreaSetAllianceButtonEnabled() {
+    return false;
 }
 
 ESlateVisibility UFamilyAreaMarkerWindow::GetFamilyAreaSetAllianceVisibility() {

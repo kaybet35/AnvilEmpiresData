@@ -22,6 +22,9 @@ private:
     UScrollBox* FamilyMembersScrollBox;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UScrollBox* AlliedFamiliesScrollBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UImage* TaxIcon;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -48,6 +51,9 @@ private:
     
     UFUNCTION(BlueprintCallable)
     void OnFamilyAreaRestrictedChecked(bool bIsChecked);
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsFamilyAreaSetAllianceButtonEnabled();
     
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetFamilyAreaSetAllianceVisibility();

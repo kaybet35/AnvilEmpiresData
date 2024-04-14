@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisResourceStockpileT3_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.75"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.16"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStockpile",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStockpileComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "BPVisFamilyMeshComponent1",
@@ -33,28 +44,6 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "AnimalBones",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "AnimalFat",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "BPVisFamilyMeshComponent",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -62,325 +51,6 @@
         "PropertyClass": {
           "ObjectName": "BlueprintGeneratedClass'BPVisFamilyMeshComponent_C'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.0"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceThickLeather",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceLeather",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceWoodFragments1",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceFlint",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceChickenEgg",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceFibre",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceFeathers",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ProcessedClay",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceWoodAsh",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ProcessedCoal",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ProcessedSteel",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceClay",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceWood02",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ProcessedAnimalFeed",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceManure",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceCoal",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceWood03",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceStoneFragments",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ReinforcedWood",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceBranches",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ProcessedIron",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ProcessedStone",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ProcessedWood",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceStone",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceIronOre",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceIronFragments",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceWoodFragments",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceWood01",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "VisStockpile",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStockpileComponent'",
-          "ObjectPath": "/Script/Anvil"
         }
       },
       {
@@ -456,27 +126,27 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisResourceStockpileT3_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.80"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.21"
       },
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisResourceStockpileT3_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.79"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.20"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisResourceStockpileT3_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.8"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisResourceStockpileT3_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.78"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.19"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisResourceStockpileT3_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.77"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.18"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisResourceStockpileT3_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.39"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.10"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisResourceStockpileT3_C:ArrowComponent'",
@@ -484,11 +154,11 @@
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisResourceStockpileT3_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.6"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisResourceStockpileT3_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.7"
       },
       "GeneratedScorchEffects": 6,
       "VisDisplayName": {
@@ -507,6 +177,19 @@
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisResourceStockpileT3_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.0"
+      }
+    }
+  },
+  {
+    "Type": "CollisionVisualizerComponent",
+    "Name": "BoxVisualizer",
+    "Outer": "VisStockpile_GEN_VARIABLE",
+    "Class": "UScriptClass'CollisionVisualizerComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 210.0,
+        "Y": 135.0,
+        "Z": 60.0
       }
     }
   },
@@ -530,7 +213,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisResourceStockpileT3_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.76"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.17"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisResourceStockpileT3_C:ArrowComponent'",
@@ -543,621 +226,6 @@
     "Name": "HealthDataComponent",
     "Outer": "Default__BPVisResourceStockpileT3_C",
     "Class": "UScriptClass'HealthDataComponent'"
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "AnimalBones_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'PileOBones'",
-        "ObjectPath": "Anvil/Content/Meshes/Imports/Infinity_Blade_Assets/Meshes/Props/PileOBones.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "AnimalFat_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'CuredMeat'",
-        "ObjectPath": "Anvil/Content/Meshes/Resources/CuredMeat.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ProcessedAnimalFeed_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ProcessedStockpileResourceAnimalFeed'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ProcessedStockpileResourceAnimalFeed.2"
-      },
-      "OverrideMaterials": [
-        null
-      ],
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ProcessedClay_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileProcessedClay'",
-        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileProcessedClay.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ProcessedCoal_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileProcessedCoal'",
-        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileProcessedCoal.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ProcessedIron_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileProcessedIron'",
-        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileProcessedIron.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ProcessedSteel_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileProcessedSteel'",
-        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileProcessedSteel.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ProcessedStone_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileProcessedStone'",
-        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileProcessedStone.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ProcessedWood_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileProcessedWood'",
-        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileProcessedWood.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "RelativeLocation": {
-        "X": 4.093094,
-        "Y": 4.6E-05,
-        "Z": 0.0
-      },
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ReinforcedWood_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileReinforcedWood'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ResourceStockpileReinforcedWood.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "RelativeLocation": {
-        "X": 4.093094,
-        "Y": 4.6E-05,
-        "Z": 0.0
-      },
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceBranches_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileResourceBranches'",
-        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileResourceBranches.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceChickenEgg_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileEggs'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ResourceStockpileEggs.2"
-      },
-      "OverrideMaterials": [
-        null
-      ],
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceClay_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileResourceClay'",
-        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileResourceClay.2"
-      },
-      "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'Clay'",
-          "ObjectPath": "Anvil/Content/Materials/Resources/Clay.0"
-        }
-      ],
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceCoal_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileResourceCoal'",
-        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileResourceCoal.2"
-      },
-      "OverrideMaterials": [
-        {
-          "ObjectName": "Material'Coals'",
-          "ObjectPath": "Anvil/Content/FX/Materials/Coals.0"
-        }
-      ],
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceFeathers_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileFeathers'",
-        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileFeathers.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceFibre_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileFibre'",
-        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileFibre.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceFlint_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileFlint'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ResourceStockpileFlint.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceIronFragments_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileIronFragments'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ResourceStockpileIronFragments.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceIronOre_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceIron'",
-        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceIron.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceLeather_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileLeather'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ResourceStockpileLeather.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceManure_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileManure'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ResourceStockpileManure.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceStone_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStone_SM'",
-        "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStone_SM.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceStoneFragments_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileStoneFragments'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ResourceStockpileStoneFragments.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceThickLeather_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileLeather'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ResourceStockpileLeather.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceWood01_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileProcessedWood01'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ResourceStockpileProcessedWood01.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "RelativeLocation": {
-        "X": 4.093094,
-        "Y": 4.6E-05,
-        "Z": 0.0
-      },
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceWood02_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileProcessedWood02'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ResourceStockpileProcessedWood02.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "RelativeLocation": {
-        "X": 8.186188,
-        "Y": 9.2E-05,
-        "Z": 0.0
-      },
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceWood03_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileProcessedWood03'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ResourceStockpileProcessedWood03.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "RelativeLocation": {
-        "X": 8.186188,
-        "Y": 9.2E-05,
-        "Z": 0.0
-      },
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceWoodAsh_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileResourceWoodAsh'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ResourceStockpileResourceWoodAsh.2"
-      },
-      "OverrideMaterials": [
-        null
-      ],
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceWoodFragments1_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileWoodFragments'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ResourceStockpileWoodFragments.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
-  },
-  {
-    "Type": "InstancedStaticMeshComponent",
-    "Name": "ResourceWoodFragments_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'InstancedStaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'ResourceStockpileWoodFragments'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/ResourceStockpileWoodFragments.2"
-      },
-      "bReceivesDecals": false,
-      "bHasPerInstanceHitProxies": true,
-      "bVisible": false,
-      "bHiddenInGame": true,
-      "ComponentTags": [
-        "ExcludeFromVisActorTemplate"
-      ]
-    }
   },
   {
     "Type": "SceneComponent",
@@ -1183,28 +251,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisResourceStockpileT3_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.38"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.9"
       },
       "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
       "InternalVariableName": "DefaultSceneRoot"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceCoal_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.21"
-      },
-      "VariableGuid": "F949A137-426B3F0D-7589C489-3A3061C2",
-      "InternalVariableName": "ResourceCoal"
     }
   },
   {
@@ -1219,440 +269,26 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisResourceStockpileT3_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.81"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.22"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.71"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_32'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.66"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.13"
         },
         {
           "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_34'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.68"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_37'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.15"
         }
       ],
       "VariableGuid": "D23F8F79-4A3B86E4-9659B2AC-8A78ECD2",
       "InternalVariableName": "VisStaticMesh"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_11",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ProcessedStone_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.15"
-      },
-      "VariableGuid": "7894CC96-46BA8F87-86765CA0-F0EAD24D",
-      "InternalVariableName": "ProcessedStone"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_12",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceFeathers_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.22"
-      },
-      "VariableGuid": "7B560DED-48A8E2DF-0B1AD2AB-E90C825B",
-      "InternalVariableName": "ResourceFeathers"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_13",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceManure_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.28"
-      },
-      "VariableGuid": "9F84F1E0-48A1EA9C-EED01388-8FBF2F0D",
-      "InternalVariableName": "ResourceManure"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_14",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ProcessedIron_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.13"
-      },
-      "VariableGuid": "A00C1AF8-4CE2AF01-FEDF26B2-A9F39126",
-      "InternalVariableName": "ProcessedIron"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_15",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceBranches_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.18"
-      },
-      "VariableGuid": "B46AE4AA-45C05D9E-4F6EEBB3-A4661D7C",
-      "InternalVariableName": "ResourceBranches"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_16",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceChickenEgg_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.19"
-      },
-      "VariableGuid": "80D26A5B-41A53693-E59394A2-A94C3EDA",
-      "InternalVariableName": "ResourceChickenEgg"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_17",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceFlint_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.24"
-      },
-      "VariableGuid": "D9A0ECAD-4A595C46-38E21290-A2B333F9",
-      "InternalVariableName": "ResourceFlint"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_18",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceWoodFragments1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.36"
-      },
-      "VariableGuid": "6BE4E81C-494A6126-527426A3-B47253CF",
-      "InternalVariableName": "ResourceWoodFragments1"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_19",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ReinforcedWood_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.17"
-      },
-      "VariableGuid": "D266438C-465BD0D2-74AD92B0-082C4D0F",
-      "InternalVariableName": "ReinforcedWood"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_2",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceClay_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.20"
-      },
-      "VariableGuid": "8BC02F7A-42538B94-A48AF599-46763F1D",
-      "InternalVariableName": "ResourceClay"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_20",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceWood01_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.32"
-      },
-      "VariableGuid": "61730AB4-4E60290B-1E90B996-BB57EA27",
-      "InternalVariableName": "ResourceWood01"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_21",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceWood03_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.34"
-      },
-      "VariableGuid": "E27748FA-4C024791-F68D7A87-4114D922",
-      "InternalVariableName": "ResourceWood03"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_22",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ProcessedWood_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.16"
-      },
-      "VariableGuid": "B5DD0D9A-400E2144-27B0C1BB-74062DB4",
-      "InternalVariableName": "ProcessedWood"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_23",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceWood02_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.33"
-      },
-      "VariableGuid": "4AD57904-4B9B14C2-C71718BD-0F71BDA9",
-      "InternalVariableName": "ResourceWood02"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_24",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceStoneFragments_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.30"
-      },
-      "VariableGuid": "7F6CB5AE-4CF9F268-404E3997-BBC46C38",
-      "InternalVariableName": "ResourceStoneFragments"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_25",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceWoodFragments_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.37"
-      },
-      "VariableGuid": "4FB6E32F-485CAE8A-49FDEFB5-B74BE7D8",
-      "InternalVariableName": "ResourceWoodFragments"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_26",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceIronFragments_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.25"
-      },
-      "VariableGuid": "D1A5331B-42B49156-26857FA0-8B603767",
-      "InternalVariableName": "ResourceIronFragments"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_27",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceIronOre_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.26"
-      },
-      "VariableGuid": "00F16756-49053909-C8E6638F-372FD950",
-      "InternalVariableName": "ResourceIronOre"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_28",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceStone_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.29"
-      },
-      "VariableGuid": "6F7C93EC-41CCD49F-8A926387-C19C2525",
-      "InternalVariableName": "ResourceStone"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_29",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:AnimalFat_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.9"
-      },
-      "VariableGuid": "0B98BB58-45A39C33-264EBEB7-7980FE17",
-      "InternalVariableName": "AnimalFat"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_3",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ProcessedSteel_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.14"
-      },
-      "VariableGuid": "13C02AB1-495294A6-7807D6AF-9FDB84BA",
-      "InternalVariableName": "ProcessedSteel"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_30",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceThickLeather_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.31"
-      },
-      "VariableGuid": "A342BE92-4869B252-75822E87-DF6DD610",
-      "InternalVariableName": "ResourceThickLeather"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_31",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceLeather_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.27"
-      },
-      "VariableGuid": "18102232-4BF43B16-8B780785-B46A3524",
-      "InternalVariableName": "ResourceLeather"
     }
   },
   {
@@ -1675,24 +311,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_33",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:AnimalBones_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.8"
-      },
-      "VariableGuid": "BE987591-4F3CF6F4-C3A7A788-6BC04652",
-      "InternalVariableName": "AnimalBones"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_34",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -1711,43 +329,7 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_4",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ProcessedCoal_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.12"
-      },
-      "VariableGuid": "C525B5F7-4DF0C11A-C971B6BF-E7818395",
-      "InternalVariableName": "ProcessedCoal"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_5",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ProcessedClay_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.11"
-      },
-      "VariableGuid": "42179B17-42A394A1-EE0E17AF-FE4AC64A",
-      "InternalVariableName": "ProcessedClay"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_6",
+    "Name": "SCS_Node_37",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
@@ -1757,186 +339,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStockpileComponent'BPVisResourceStockpileT3_C:VisStockpile_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.82"
-      },
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_20'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.53"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_25'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.58"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.59"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_27'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.60"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_28'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.61"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_22'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.55"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.43"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.46"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.47"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.51"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_24'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.57"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_21'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.54"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.41"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.45"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.73"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_23'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.56"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.52"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.63"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.69"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.72"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.70"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.44"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.74"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.48"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.49"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_18'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.50"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_31'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.65"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_30'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.64"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_29'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.62"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_33'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.67"
-        }
-      ],
-      "VariableGuid": "094170E3-443486E6-4F964988-755F967D",
-      "InternalVariableName": "VisStockpile"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_7",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceWoodAsh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.35"
-      },
-      "VariableGuid": "38CAFC67-4A9B2624-F65FF691-D62E5F1F",
-      "InternalVariableName": "ResourceWoodAsh"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_8",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ProcessedAnimalFeed_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.10"
-      },
-      "VariableGuid": "FF4EC524-4A0954DD-BDE0DD8B-E14A517F",
-      "InternalVariableName": "ProcessedAnimalFeed"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_9",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'InstancedStaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "InstancedStaticMeshComponent'BPVisResourceStockpileT3_C:ResourceFibre_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.23"
       },
-      "VariableGuid": "55AB8B1C-49B70B46-5E56B7B3-7A869664",
-      "InternalVariableName": "ResourceFibre"
+      "VariableGuid": "359BC71F-4AC00898-9D5C3C97-8BB4233F",
+      "InternalVariableName": "VisStockpile"
     }
   },
   {
@@ -1948,150 +354,30 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.42"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.12"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.42"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.71"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_20'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.53"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_25'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.58"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.59"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_27'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.60"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_28'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.61"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_22'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.55"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.43"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.46"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.47"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.51"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_24'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.57"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_21'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.54"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.41"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.45"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.73"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_23'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.56"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.52"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.63"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.69"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.72"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.70"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.44"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.74"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.48"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.49"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_18'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.50"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_31'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.65"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_30'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.64"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.12"
         },
         {
           "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_32'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.66"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_29'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.62"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_33'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.67"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.13"
         },
         {
           "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_34'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.68"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_37'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.15"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisResourceStockpileT3_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.40"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.11"
       }
     }
   },
@@ -2154,6 +440,22 @@
     "Type": "VisStockpileComponent",
     "Name": "VisStockpile_GEN_VARIABLE",
     "Outer": "BPVisResourceStockpileT3_C",
-    "Class": "UScriptClass'VisStockpileComponent'"
+    "Class": "UScriptClass'VisStockpileComponent'",
+    "Properties": {
+      "StockpileExtents": {
+        "X": 210.0,
+        "Y": 135.0,
+        "Z": 60.0
+      },
+      "BoxVisualizer": {
+        "ObjectName": "CollisionVisualizerComponent'BPVisResourceStockpileT3_C:VisStockpile_GEN_VARIABLE.BoxVisualizer'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT3.5"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 90.0
+      }
+    }
   }
 ]

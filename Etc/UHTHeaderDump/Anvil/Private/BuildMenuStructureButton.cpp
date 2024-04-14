@@ -1,7 +1,8 @@
 #include "BuildMenuStructureButton.h"
 
 UBuildMenuStructureButton::UBuildMenuStructureButton() {
-    this->PublicIconImage = NULL;
+    this->TownAreaIconImage = NULL;
+    this->FamilyAreaIconImage = NULL;
 }
 
 void UBuildMenuStructureButton::OnBuild(UGridItemWidget* ItemSlot) {

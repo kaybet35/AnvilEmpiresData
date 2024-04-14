@@ -3,10 +3,10 @@
 
 class ABPVisIronFragments_C : public AVisPickupItem
 {
-    class UGrassRemovalVolumeComponent* GrassRemovalVolume;                           // 0x0408 (size: 0x8)
-    class UStaticMeshComponent* Mesh3;                                                // 0x0410 (size: 0x8)
-    class UStaticMeshComponent* Mesh2;                                                // 0x0418 (size: 0x8)
+    class UGrassRemovalVolumeComponent* GrassRemovalVolume;                           // 0x0420 (size: 0x8)
+    class UStaticMeshComponent* Mesh3;                                                // 0x0428 (size: 0x8)
+    class UStaticMeshComponent* Mesh2;                                                // 0x0430 (size: 0x8)
 
-}; // Size: 0x420
+}; // Size: 0x438
 
 #endif

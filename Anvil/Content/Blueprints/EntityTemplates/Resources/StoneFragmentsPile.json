@@ -16,7 +16,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "StoneFragmentsPile_C'Default__StoneFragmentsPile_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.3"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.4"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -34,12 +34,26 @@
         "Z": 75.0
       },
       "Extents": {
-        "X": 100.0,
-        "Y": 100.0,
+        "X": 75.0,
+        "Y": 125.0,
         "Z": 75.0
       },
       "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeStone",
-      "CollisionMask": 8210
+      "CollisionMask": 8208
+    }
+  },
+  {
+    "Type": "MeshCollisionProxyComponent",
+    "Name": "MeshCollisionProxyComponent_0",
+    "Outer": "Default__StoneFragmentsPile_C",
+    "Class": "UScriptClass'MeshCollisionProxyComponent'",
+    "Properties": {
+      "PhysicsAssetName": {
+        "ObjectName": "StaticMesh'ResourceStoneSmall_50pLarger'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/ResourceStoneSmall_50pLarger.2"
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeStone",
+      "CollisionMask": 2
     }
   },
   {
@@ -109,6 +123,10 @@
         },
         {
           "ObjectName": "ResourceProxyComponent'Default__StoneFragmentsPile_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.3"
+        },
+        {
+          "ObjectName": "MeshCollisionProxyComponent'Default__StoneFragmentsPile_C:MeshCollisionProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.2"
         }
       ],

@@ -3,6 +3,6 @@
 
 class ABPVisOfflineCharacter_C : public AVisOfflineCharacter
 {
-}; // Size: 0x438
+}; // Size: 0x450
 
 #endif

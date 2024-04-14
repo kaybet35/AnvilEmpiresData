@@ -44,13 +44,11 @@
       "ArmedDurabilityLossPerSec": 0.2,
       "bRearmAfterConsumption": true,
       "bRanged": true,
-      "Damage": 1,
       "DamageOffset": {
         "X": 50.0,
         "Y": 0.0,
         "Z": 0.0
       },
-      "DamageRadius": 64.0,
       "AmmoType": {
         "ObjectName": "BlueprintGeneratedClass'Torch_C'",
         "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Torch.0"
@@ -70,18 +68,22 @@
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
         "Delay": 0.5,
-        "Duration": 1.1
+        "Duration": 1.1,
+        "StaminaCost": 10.0
       },
       "RangedActivity": {
         "State": "EAnvilSimActivityState::LaunchingProjectile",
         "Delay": 0.4,
         "Duration": 1.1,
-        "bRepeatable": false
+        "bRepeatable": false,
+        "StaminaCost": 10.0
       },
       "BuildActivity": {
         "bRepeatable": false
       },
-      "NightShroudLightRadius": 2000.0
+      "NightShroudLightRadius": 2000.0,
+      "Damage": 1,
+      "DamageRadius": 64.0
     }
   }
 ]

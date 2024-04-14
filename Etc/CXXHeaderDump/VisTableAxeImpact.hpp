@@ -3,6 +3,6 @@
 
 class AVisTableAxeImpact_C : public AVisImpactEffect
 {
-}; // Size: 0x490
+}; // Size: 0x4A8
 
 #endif

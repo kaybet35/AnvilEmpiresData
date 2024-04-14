@@ -7,5 +7,6 @@ enum class EMapMode : uint8 {
     InGame,
     Spawn,
     MilitiaDeployment,
+    BugScreenshot,
 };
 

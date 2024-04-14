@@ -39,15 +39,12 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
       },
       "Encumberance": 255,
-      "DurabilityLossPerUse": 2.0,
       "bRanged": true,
-      "Damage": 15,
       "DamageOffset": {
         "X": 50.0,
         "Y": 0.0,
         "Z": 75.0
       },
-      "DamageRadius": 64.0,
       "FireOffset": {
         "X": 50.0,
         "Y": 0.0,
@@ -58,22 +55,27 @@
         "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Pike.0"
       },
       "DamageType": "EAnvilDamageType::Piercing",
-      "AimMovementSpeedModifier": 0.5,
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
         "Delay": 0.5,
-        "Duration": 1.1
+        "Duration": 1.1,
+        "StaminaCost": 10.0
       },
       "RangedActivity": {
         "State": "EAnvilSimActivityState::LaunchingProjectile",
         "Delay": 0.7,
         "Duration": 1.1,
-        "bRepeatable": false
+        "bRepeatable": false,
+        "StaminaCost": 10.0
       },
       "BuildActivity": {
         "bRepeatable": false
       },
-      "bAllowCameraPan": false
+      "bAllowCameraPan": false,
+      "Damage": 15,
+      "DurabilityLossPerUse": 2.0,
+      "DamageRadius": 64.0,
+      "AimMovementSpeedModifier": 0.5
     }
   }
 ]

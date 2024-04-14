@@ -3,8 +3,8 @@
 
 class ABPVisChicken_C : public AVisAnimal
 {
-    class UAudioComponent* Audio;                                                     // 0x0470 (size: 0x8)
+    class UAudioComponent* Audio;                                                     // 0x0488 (size: 0x8)
 
-}; // Size: 0x478
+}; // Size: 0x490
 
 #endif

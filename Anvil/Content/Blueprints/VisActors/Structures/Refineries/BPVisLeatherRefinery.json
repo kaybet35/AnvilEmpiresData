@@ -221,6 +221,12 @@
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisLeatherRefinery_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisLeatherRefinery.11"
+        }
+      ],
       "VariableGuid": "D27D9E17-4AD5489A-2B653C95-0102B6E6",
       "InternalVariableName": "VisStaticMesh"
     }
@@ -239,8 +245,6 @@
         "ObjectName": "VisStaticMeshComponent'BPVisLeatherRefinery_C:VisStaticMeshActive_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisLeatherRefinery.19"
       },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
       "VariableGuid": "11CF0B3D-473B40CE-85517D81-81DC9992",
       "InternalVariableName": "VisStaticMeshActive"
     }
@@ -255,10 +259,6 @@
         {
           "ObjectName": "SCS_Node'BPVisLeatherRefinery_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisLeatherRefinery.10"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisLeatherRefinery_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisLeatherRefinery.11"
         }
       ],
       "AllNodes": [
@@ -319,14 +319,16 @@
     "Outer": "BPVisLeatherRefinery_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
     "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscapeRotate",
       "StaticMesh": {
         "ObjectName": "StaticMesh'LeatherRefinery'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/LeatherRefinery.2"
       },
       "ComponentTags": [
         "Structure",
-        "Collision"
+        "Collision",
+        "ProjectToLandscape",
+        "RotateToLandscape"
       ]
     }
   },

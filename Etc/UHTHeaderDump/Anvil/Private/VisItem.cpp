@@ -6,7 +6,7 @@ UVisItem::UVisItem() {
     this->Mesh = NULL;
     this->StockpileMesh = NULL;
     this->bAutoSetStockpileExtents = false;
-    this->bStockpileDefaultRotate = false;
+    this->bStockpileCanFlip = true;
     this->StockpileOrder = 0;
     this->GripType = EEquippedItemGripType::NoWeapon;
     this->AnimClass = NULL;

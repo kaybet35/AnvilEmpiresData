@@ -20,7 +20,7 @@ enum class EAnvilPlacementStatus : uint8 {
     TooShort,
     TooHigh,
     TooLow,
-    NotEnoughGold,
+    TooCloseToTownCenter,
     TooCloseToEnemy,
     TooCloseToOtherWell,
     TooFarFromPlayer,
@@ -30,6 +30,8 @@ enum class EAnvilPlacementStatus : uint8 {
     RequiresIndustry,
     RequiresHouse,
     RequiresFamilyArea,
+    RequiresFamilyHouse,
+    OnlyOneFamilyCenterPerTown,
     TooCloseTogether,
     TooCloseToWildSpawn,
     TooCloseToWater,
@@ -45,5 +47,8 @@ enum class EAnvilPlacementStatus : uint8 {
     CantBuildBorderRegion,
     MustBePledgedToTown,
     RequiresNearbyPlayers,
+    RequiresMorePopulation,
+    RequiresMoreFamilyHouses,
+    YouMustBeOfficial,
 };
 
