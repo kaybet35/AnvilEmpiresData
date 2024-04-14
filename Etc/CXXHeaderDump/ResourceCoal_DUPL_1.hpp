@@ -1,8 +1,0 @@
-#ifndef UE4SS_SDK_ResourceCoal_DUPL_1_HPP
-#define UE4SS_SDK_ResourceCoal_DUPL_1_HPP
-
-class UResourceCoal_C : public UItemTemplate
-{
-}; // Size: 0x248
-
-#endif
