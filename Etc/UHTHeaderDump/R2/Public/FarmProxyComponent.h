@@ -23,6 +23,9 @@ public:
     float WaterDurationPerUnitItem;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float EnvWetnessWaterDurationIncreaseMultiplier;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FertilizeDurationPerUnitItem;
     
     UFarmProxyComponent();

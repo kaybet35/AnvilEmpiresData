@@ -15,7 +15,6 @@
 ---@field VisFoundationDecorMesh3 UVisFoundationDecorMesh
 ---@field VisFoundationDecorMesh1 UVisFoundationDecorMesh
 ---@field VisStaticMesh UVisStaticMeshComponent
----@field Decal UDecalComponent
 ---@field Scaffolding UStaticMeshComponent
 ABPVisFoundationGateT2_C = {}
 

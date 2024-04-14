@@ -1,0 +1,115 @@
+[
+  {
+    "Type": "BlendSpace1D",
+    "Name": "BS_WIndvane_Horizontal",
+    "Class": "UScriptClass'BlendSpace1D'",
+    "Properties": {
+      "InterpolationParam": {
+        "InterpolationTime": 1.5,
+        "DampingRatio": 0.4
+      },
+      "AnimLength": 0.033333335,
+      "SampleData": [
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'Windvane_BS_Back_POSE'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Windvane/Windvane_BS_Back_POSE.0"
+          },
+          "SampleValue": {
+            "X": -180.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'Windvane_BS_Back_POSE'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Windvane/Windvane_BS_Back_POSE.0"
+          },
+          "SampleValue": {
+            "X": 180.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'Windvane_BS_Forward_POSE'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Windvane/Windvane_BS_Forward_POSE.0"
+          },
+          "SampleValue": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'Windvane_BS_Left_POSE'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Windvane/Windvane_BS_Left_POSE.0"
+          },
+          "SampleValue": {
+            "X": -90.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'Windvane_BS_Right_POSE'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Windvane/Windvane_BS_Right_POSE.0"
+          },
+          "SampleValue": {
+            "X": 90.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        }
+      ],
+      "BlendSpaceData": {
+        "Segments": [
+          {
+            "SampleIndices": 0,
+            "SampleIndices": 3,
+            "Vertices": 0.0,
+            "Vertices": 0.25
+          },
+          {
+            "SampleIndices": 3,
+            "SampleIndices": 2,
+            "Vertices": 0.25,
+            "Vertices": 0.5
+          },
+          {
+            "SampleIndices": 2,
+            "SampleIndices": 4,
+            "Vertices": 0.5,
+            "Vertices": 0.75
+          },
+          {
+            "SampleIndices": 4,
+            "SampleIndices": 1,
+            "Vertices": 0.75,
+            "Vertices": 1.0
+          }
+        ]
+      },
+      "BlendParameters": {
+        "DisplayName": "Wind Direction",
+        "Min": -180.0,
+        "Max": 180.0,
+        "bWrapInput": true
+      },
+      "Skeleton": {
+        "ObjectName": "Skeleton'SK_Windvane_Skeleton'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Windmill/SK_Windvane_Skeleton.0"
+      }
+    },
+    "SkeletonGuid": "C35A4FDF-44BDE591-68F21C90-C8F57584"
+  }
+]

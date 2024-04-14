@@ -31,17 +31,17 @@ struct FAnimBlueprintGeneratedMutableData : public FAnimBlueprintMutableData
 
 class UWaterWheel_ABP_C : public UVisPowerUnitAnimInstance
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0360 (size: 0x8)
-    FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                       // 0x0368 (size: 0x10)
-    FAnimSubsystemInstance AnimBlueprintExtension_PropertyAccess;                     // 0x0378 (size: 0x8)
-    FAnimSubsystemInstance AnimBlueprintExtension_Base;                               // 0x0380 (size: 0x8)
-    FAnimNode_Root AnimGraphNode_Root;                                                // 0x0388 (size: 0x20)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_3;                          // 0x03A8 (size: 0x48)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_2;                          // 0x03F0 (size: 0x48)
-    FAnimNode_LayeredBoneBlend AnimGraphNode_LayeredBoneBlend;                        // 0x0438 (size: 0xE0)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_1;                          // 0x0518 (size: 0x48)
-    FAnimNode_TwoWayBlend AnimGraphNode_TwoWayBlend;                                  // 0x0560 (size: 0xC8)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer;                            // 0x0628 (size: 0x48)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0370 (size: 0x8)
+    FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                       // 0x0378 (size: 0x10)
+    FAnimSubsystemInstance AnimBlueprintExtension_PropertyAccess;                     // 0x0388 (size: 0x8)
+    FAnimSubsystemInstance AnimBlueprintExtension_Base;                               // 0x0390 (size: 0x8)
+    FAnimNode_Root AnimGraphNode_Root;                                                // 0x0398 (size: 0x20)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_3;                          // 0x03B8 (size: 0x48)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_2;                          // 0x0400 (size: 0x48)
+    FAnimNode_LayeredBoneBlend AnimGraphNode_LayeredBoneBlend;                        // 0x0448 (size: 0xE0)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_1;                          // 0x0528 (size: 0x48)
+    FAnimNode_TwoWayBlend AnimGraphNode_TwoWayBlend;                                  // 0x0570 (size: 0xC8)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer;                            // 0x0638 (size: 0x48)
 
     void AnimGraph(FPoseLink& AnimGraph);
     void EvaluateGraphExposedInputs_ExecuteUbergraph_WaterWheel_ABP_AnimGraphNode_TwoWayBlend_00AFD8C74C7323616BF2A78530582840();
@@ -49,6 +49,6 @@ class UWaterWheel_ABP_C : public UVisPowerUnitAnimInstance
     void EvaluateGraphExposedInputs_ExecuteUbergraph_WaterWheel_ABP_AnimGraphNode_SequencePlayer_B2FC20AF4631615283AD33A712009A58();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_WaterWheel_ABP_AnimGraphNode_SequencePlayer_9C260BCD4EF325039968A5AC79FABFAD();
     void ExecuteUbergraph_WaterWheel_ABP(int32 EntryPoint);
-}; // Size: 0x670
+}; // Size: 0x680
 
 #endif

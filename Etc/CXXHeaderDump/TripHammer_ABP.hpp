@@ -40,29 +40,29 @@ struct FAnimBlueprintGeneratedMutableData : public FAnimBlueprintMutableData
 
 class UTripHammer_ABP_C : public UVisPowerUnitAnimInstance
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0360 (size: 0x8)
-    FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                       // 0x0368 (size: 0x14)
-    FAnimSubsystemInstance AnimBlueprintExtension_PropertyAccess;                     // 0x0380 (size: 0x8)
-    FAnimSubsystemInstance AnimBlueprintExtension_Base;                               // 0x0388 (size: 0x8)
-    FAnimNode_Root AnimGraphNode_Root;                                                // 0x0390 (size: 0x20)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_2;                          // 0x03B0 (size: 0x48)
-    FAnimNode_LayeredBoneBlend AnimGraphNode_LayeredBoneBlend;                        // 0x03F8 (size: 0xE0)
-    FAnimNode_TransitionResult AnimGraphNode_TransitionResult_2;                      // 0x04D8 (size: 0x28)
-    FAnimNode_TransitionResult AnimGraphNode_TransitionResult_1;                      // 0x0500 (size: 0x28)
-    FAnimNode_TransitionResult AnimGraphNode_TransitionResult;                        // 0x0528 (size: 0x28)
-    FAnimNode_StateResult AnimGraphNode_StateResult_2;                                // 0x0550 (size: 0x20)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_1;                          // 0x0570 (size: 0x48)
-    FAnimNode_StateResult AnimGraphNode_StateResult_1;                                // 0x05B8 (size: 0x20)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer;                            // 0x05D8 (size: 0x48)
-    FAnimNode_StateResult AnimGraphNode_StateResult;                                  // 0x0620 (size: 0x20)
-    FAnimNode_StateMachine AnimGraphNode_StateMachine;                                // 0x0640 (size: 0xC8)
-    double AnimSlowAmount;                                                            // 0x0708 (size: 0x8)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0370 (size: 0x8)
+    FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                       // 0x0378 (size: 0x14)
+    FAnimSubsystemInstance AnimBlueprintExtension_PropertyAccess;                     // 0x0390 (size: 0x8)
+    FAnimSubsystemInstance AnimBlueprintExtension_Base;                               // 0x0398 (size: 0x8)
+    FAnimNode_Root AnimGraphNode_Root;                                                // 0x03A0 (size: 0x20)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_2;                          // 0x03C0 (size: 0x48)
+    FAnimNode_LayeredBoneBlend AnimGraphNode_LayeredBoneBlend;                        // 0x0408 (size: 0xE0)
+    FAnimNode_TransitionResult AnimGraphNode_TransitionResult_2;                      // 0x04E8 (size: 0x28)
+    FAnimNode_TransitionResult AnimGraphNode_TransitionResult_1;                      // 0x0510 (size: 0x28)
+    FAnimNode_TransitionResult AnimGraphNode_TransitionResult;                        // 0x0538 (size: 0x28)
+    FAnimNode_StateResult AnimGraphNode_StateResult_2;                                // 0x0560 (size: 0x20)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_1;                          // 0x0580 (size: 0x48)
+    FAnimNode_StateResult AnimGraphNode_StateResult_1;                                // 0x05C8 (size: 0x20)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer;                            // 0x05E8 (size: 0x48)
+    FAnimNode_StateResult AnimGraphNode_StateResult;                                  // 0x0630 (size: 0x20)
+    FAnimNode_StateMachine AnimGraphNode_StateMachine;                                // 0x0650 (size: 0xC8)
+    double AnimSlowAmount;                                                            // 0x0718 (size: 0x8)
 
     void AnimGraph(FPoseLink& AnimGraph);
     void EvaluateGraphExposedInputs_ExecuteUbergraph_TripHammer_ABP_AnimGraphNode_TransitionResult_42E43B7140FE0B3E24AA30B758E5DD5A();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_TripHammer_ABP_AnimGraphNode_TransitionResult_338CCDAC4D29ADACDA4EFC9EDE75FCF8();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_TripHammer_ABP_AnimGraphNode_TransitionResult_D1C51FA9400EC4245AAE7A8833B4C9A2();
     void ExecuteUbergraph_TripHammer_ABP(int32 EntryPoint);
-}; // Size: 0x710
+}; // Size: 0x720
 
 #endif

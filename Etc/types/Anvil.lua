@@ -113,6 +113,12 @@ AMapBorderActor = {}
 
 
 
+---@class AMapEditorNote : AActor
+---@field NoteTextComponent UTextRenderComponent
+AMapEditorNote = {}
+
+
+
 ---@class AMapList : AInfo
 ---@field MapDatabase TMap<FName, FMapData>
 AMapList = {}
@@ -612,10 +618,6 @@ AVisTownCenter = {}
 
 
 
----@class AVisTownMarker : AVisStructure
-AVisTownMarker = {}
-
-
 ---@class AVisTrap : AVisActor
 ---@field ArrowComponent UArrowComponent
 ---@field Mesh USkeletalMeshComponent
@@ -632,6 +634,17 @@ AVisTrap = {}
 ---@field HealthDataComponent UHealthDataComponent
 ---@field ArrowComponent UArrowComponent
 AVisVehicle = {}
+
+
+
+---@class AVisWindMill : AVisStructure
+---@field WindMillDataComponent UWindMillDataComponent
+---@field PowerUnitDataComponent UPowerUnitDataComponent
+---@field SlotData UEntityAttachableDataComponent
+---@field SKMesh USkeletalMeshComponent
+---@field AnimInst UVisPowerUnitAnimInstance
+---@field IsRefiningPercentageCurrentMin float
+AVisWindMill = {}
 
 
 
@@ -1301,6 +1314,7 @@ UBeaconTowerPlayerInfoMapIcon = {}
 
 
 ---@class UBuildMenuStructureButton : UGridItemWidget
+---@field PublicIconImage UImage
 UBuildMenuStructureButton = {}
 
 ---@param ItemSlot UGridItemWidget
@@ -1643,7 +1657,7 @@ function UGrassRemovalVolumeComponent:RemoveGrass() end
 ---@field SubItemImage UImage
 ---@field QualityIconImage UImage
 ---@field QualityIconTextures TMap<EAnvilItemQualityType, UTexture2D>
----@field EmptyImage UTexture2D
+---@field BackgroundImageTexture UTexture2D
 ---@field bIsActive boolean
 UGridItemWidget = {}
 
@@ -1851,7 +1865,7 @@ UInventoryContainerWidget = {}
 ---@field ItemQuantityTextSize int32
 ---@field DisabledTint FSlateColor
 ---@field DedicatedImageOpacity float
----@field EmptyImageMap TMap<EAnvilItemTag, UTexture2D>
+---@field ItemSlotBackgroundMap TMap<EAnvilItemSlotBackgroundType, UTexture2D>
 ---@field ItemQuantityText UTextBlock
 ---@field DurabilityBar UProgressBar
 ---@field SubtypeIconRelic UImage
@@ -2109,7 +2123,7 @@ function UOptionsMenuKeybindWidget:OnResetKeyBinds() end
 UOptionsMenuVideoWidget = {}
 
 ---@param Input FString
-function UOptionsMenuVideoWidget:OnFullscreenModeChanged(Input) end
+function UOptionsMenuVideoWidget:SetFullscreen(Input) end
 
 
 ---@class UOptionsScreen : UAnvilScreen
@@ -2549,6 +2563,7 @@ UVisPlayerVisualsComponent = {}
 ---@class UVisPowerUnitAnimInstance : UAnimInstance
 ---@field InputValue float
 ---@field PercentageCurrent float
+---@field CurrentMax float
 ---@field InFlowDirection float
 ---@field InFlowHeight float
 ---@field PowerUnitDataComponent UPowerUnitDataComponent
@@ -2640,6 +2655,12 @@ function UVisTownAreaMarkerDecalComponent:SetRangeParameters(FactionId, Radius) 
 ---@field NativeVerticalMovement float
 ---@field bIsOccupied boolean
 UVisVehicleAnimInstance = {}
+
+
+
+---@class UVisWeatherIndicatorAnimInstance : UAnimInstance
+---@field Weather FWeatherData
+UVisWeatherIndicatorAnimInstance = {}
 
 
 

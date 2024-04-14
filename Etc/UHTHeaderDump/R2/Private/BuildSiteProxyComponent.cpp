@@ -21,6 +21,7 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->MaxHeightShift = 0.00f;
     this->AdditionalMaxHeightShift = 0.00f;
     this->MinDistanceBetweenStructures = 0.00f;
+    this->NumNearbyPlayersRequired = 0;
 }
 
 

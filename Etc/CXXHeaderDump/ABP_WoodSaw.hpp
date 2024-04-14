@@ -26,17 +26,17 @@ struct FAnimBlueprintGeneratedMutableData : public FAnimBlueprintMutableData
 
 class UABP_WoodSaw_C : public UVisPowerUnitAnimInstance
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0360 (size: 0x8)
-    FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                       // 0x0368 (size: 0xC)
-    FAnimSubsystemInstance AnimBlueprintExtension_PropertyAccess;                     // 0x0378 (size: 0x8)
-    FAnimSubsystemInstance AnimBlueprintExtension_Base;                               // 0x0380 (size: 0x8)
-    FAnimNode_Root AnimGraphNode_Root;                                                // 0x0388 (size: 0x20)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer;                            // 0x03A8 (size: 0x48)
-    double AnimSlowAmount;                                                            // 0x03F0 (size: 0x8)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0370 (size: 0x8)
+    FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                       // 0x0378 (size: 0xC)
+    FAnimSubsystemInstance AnimBlueprintExtension_PropertyAccess;                     // 0x0388 (size: 0x8)
+    FAnimSubsystemInstance AnimBlueprintExtension_Base;                               // 0x0390 (size: 0x8)
+    FAnimNode_Root AnimGraphNode_Root;                                                // 0x0398 (size: 0x20)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer;                            // 0x03B8 (size: 0x48)
+    double AnimSlowAmount;                                                            // 0x0400 (size: 0x8)
 
     void AnimGraph(FPoseLink& AnimGraph);
     void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_WoodSaw_AnimGraphNode_SequencePlayer_CE4759AE4F1128ECAAC24D9D24E6ABF4();
     void ExecuteUbergraph_ABP_WoodSaw(int32 EntryPoint);
-}; // Size: 0x3F8
+}; // Size: 0x408
 
 #endif

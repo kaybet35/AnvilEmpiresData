@@ -39,7 +39,7 @@ protected:
     TMap<EAnvilItemQualityType, UTexture2D*> QualityIconTextures;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UTexture2D* EmptyImage;
+    UTexture2D* BackgroundImageTexture;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIsActive;

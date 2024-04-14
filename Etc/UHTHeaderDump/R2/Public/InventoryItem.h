@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EAnvilItemSlotBackgroundType.h"
 #include "GridItem.h"
 #include "InventoryItem.generated.h"
 
@@ -36,6 +37,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bTooEncumberedToEquip;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EAnvilItemSlotBackgroundType BackgroundType;
     
     FInventoryItem();
 };

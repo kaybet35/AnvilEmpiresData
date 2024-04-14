@@ -22,6 +22,17 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
+        "Name": "PropsMeshes",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "BPVisFamilyMeshComponent",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -40,17 +51,6 @@
         "PropertyClass": {
           "ObjectName": "Class'SceneComponent'",
           "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "VisStaticMesh1",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStaticMeshComponent'",
-          "ObjectPath": "/Script/Anvil"
         }
       },
       {
@@ -827,12 +827,12 @@
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.21"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.21"
         }
       ],
       "VariableGuid": "19FAE35B-4A09DBE3-F2E5AEB1-DC935F2D",
@@ -850,11 +850,11 @@
         "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisMarketplaceShopT1_C:VisStaticMesh1_GEN_VARIABLE'",
+        "ObjectName": "VisStaticMeshComponent'BPVisMarketplaceShopT1_C:PropsMeshes_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.36"
       },
       "VariableGuid": "91F44367-4B58BC95-2C6FC687-E3658207",
-      "InternalVariableName": "VisStaticMesh1"
+      "InternalVariableName": "PropsMeshes"
     }
   },
   {
@@ -1065,16 +1065,16 @@
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.20"
         },
         {
-          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.21"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.23"
         },
         {
           "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisMarketplaceShopT1_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Market/BPVisMarketplaceShopT1.21"
         }
       ],
       "DefaultSceneRootNode": {
@@ -1134,18 +1134,17 @@
   },
   {
     "Type": "VisStaticMeshComponent",
-    "Name": "VisStaticMesh1_GEN_VARIABLE",
+    "Name": "PropsMeshes_GEN_VARIABLE",
     "Outer": "BPVisMarketplaceShopT1_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
     "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "VisMeshProfile": "EVisMeshProfile::StructureLandscape",
       "StaticMesh": {
         "ObjectName": "StaticMesh'MarketplaceShopT1Props'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/MarketplaceShopT1Props.2"
       },
       "ComponentTags": [
         "Structure",
-        "Collision",
         "ProjectToLandscape"
       ]
     }
@@ -1156,15 +1155,14 @@
     "Outer": "BPVisMarketplaceShopT1_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
     "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
       "StaticMesh": {
         "ObjectName": "StaticMesh'MarketplaceShopT1'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/MarketplaceShopT1.2"
       },
       "ComponentTags": [
         "Structure",
-        "Collision",
-        "ProjectToLandscape"
+        "Collision"
       ]
     }
   }

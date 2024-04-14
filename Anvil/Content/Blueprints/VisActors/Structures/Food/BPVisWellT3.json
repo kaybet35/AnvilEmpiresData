@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisWellT3_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.16"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,61 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "BucketProp",
@@ -65,12 +120,16 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisWellT3_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.27"
+      },
+      "StructureIcon": {
+        "ObjectName": "Texture2D'IconWell'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconWell.0"
       },
       "BuildSiteCategory": "EBuildSiteCategory::Water",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisWellT3_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.26"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisWellT3_C:HealthDataComponent'",
@@ -78,11 +137,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisWellT3_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.25"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisWellT3_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.24"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisWellT3_C:ScorchDataComponent'",
@@ -112,13 +171,6 @@
         "Key": "7D7CA47E46BA22CB267C63BB0F48DF8C",
         "SourceString": "A deep well. Increased Water limit and draw speed.",
         "LocalizedString": "A deep well. Increased Water limit and draw speed."
-      },
-      "MapIconProperty": {
-        "Icon": {
-          "ObjectName": "Texture2D'IconWell'",
-          "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconWell.0"
-        },
-        "MapActorType": "EMapIconType::MinorStructure"
       },
       "UseWindowType": "EHUDWindowType::InventoryStructure",
       "UseDisclaimerText": {
@@ -153,7 +205,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisWellT3_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.17"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisWellT3_C:ArrowComponent'",
@@ -209,12 +261,106 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisWellT3_C:Deep Well_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.19"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWellT3_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWellT3_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWellT3_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWellT3_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWellT3_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.10"
+        }
+      ],
       "VariableGuid": "6825B53E-415A48CE-34C8F1A1-3EFD6209",
       "InternalVariableName": "Deep Well"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisWellT3_C:StaticMesh5_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.23"
+      },
+      "VariableGuid": "9168CAD4-44DD6F0F-23D55493-805267E5",
+      "InternalVariableName": "StaticMesh5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisWellT3_C:StaticMesh4_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.22"
+      },
+      "VariableGuid": "158253A9-487C86A1-EA8AE9B9-8FA472CA",
+      "InternalVariableName": "StaticMesh4"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisWellT3_C:StaticMesh3_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.21"
+      },
+      "VariableGuid": "8AD29DC7-4025495D-DF5A18A8-6977D85E",
+      "InternalVariableName": "StaticMesh3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisWellT3_C:StaticMesh2_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.20"
+      },
+      "VariableGuid": "308B1B59-4F15D691-ECA6C1A8-53432B94",
+      "InternalVariableName": "StaticMesh2"
     }
   },
   {
@@ -229,12 +375,30 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisWellT3_C:BucketProp_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.18"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "A3D5393F-4E1B534F-282821AE-BD2B8680",
       "InternalVariableName": "BucketProp"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisWellT3_C:VisStaticMesh1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.28"
+      },
+      "VariableGuid": "8E446A4B-443DBAD5-C94C8E90-1085AF06",
+      "InternalVariableName": "VisStaticMesh1"
     }
   },
   {
@@ -250,7 +414,7 @@
         },
         {
           "ObjectName": "SCS_Node'BPVisWellT3_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.14"
         }
       ],
       "AllNodes": [
@@ -260,6 +424,26 @@
         },
         {
           "ObjectName": "SCS_Node'BPVisWellT3_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWellT3_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWellT3_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWellT3_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWellT3_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWellT3_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.10"
         }
       ],
@@ -310,7 +494,191 @@
           "ObjectPath": "Anvil/Content/FX/Water/Materials/WaterTrough.0"
         }
       ],
-      "bReceivesDecals": false
+      "bReceivesDecals": false,
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh2_GEN_VARIABLE",
+    "Outer": "BPVisWellT3_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'WallT3_01'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/WallT3_01.2"
+      },
+      "bGenerateOverlapEvents": false,
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 160.1569,
+        "Y": 66.81779,
+        "Z": -358.35074
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.570292,
+        "Roll": -0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh3_GEN_VARIABLE",
+    "Outer": "BPVisWellT3_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'WallT3_01'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/WallT3_01.2"
+      },
+      "bGenerateOverlapEvents": false,
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 170.2428,
+        "Y": -61.02773,
+        "Z": -376.34048
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 175.13591,
+        "Roll": -0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh4_GEN_VARIABLE",
+    "Outer": "BPVisWellT3_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'WallT3_02'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/WallT3_02.2"
+      },
+      "bGenerateOverlapEvents": false,
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -190.2805,
+        "Y": 68.86193,
+        "Z": -310.86026
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 5.210642,
+        "Roll": -0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh5_GEN_VARIABLE",
+    "Outer": "BPVisWellT3_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'WallT3_03'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Walls/WallT3_03.2"
+      },
+      "bGenerateOverlapEvents": false,
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -200.92216,
+        "Y": -66.990425,
+        "Z": -321.36737
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.024064,
+        "Roll": -0.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
     }
   },
   {
@@ -341,6 +709,33 @@
         "ObjectName": "ArrowComponent'Default__BPVisWellT3_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT3.0"
       }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh1_GEN_VARIABLE",
+    "Outer": "BPVisWellT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FoundationT3_3x3x9'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/FoundationT3_3x3x9.2"
+      },
+      "RelativeLocation": {
+        "X": -12.192177,
+        "Y": -8E-06,
+        "Z": -1003.4655
+      },
+      "RelativeScale3D": {
+        "X": 1.2454975,
+        "Y": 0.689992,
+        "Z": 1.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
     }
   }
 ]

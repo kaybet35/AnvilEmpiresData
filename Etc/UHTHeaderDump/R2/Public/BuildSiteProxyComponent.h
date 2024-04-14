@@ -77,6 +77,9 @@ public:
     TArray<TSubclassOf<UEntityTemplate>> MinDistanceStructureTypes;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 NumNearbyPlayersRequired;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBasicCount> MaterialRequirements;
     
     UBuildSiteProxyComponent();

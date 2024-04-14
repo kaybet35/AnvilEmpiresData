@@ -28,20 +28,20 @@ struct FAnimBlueprintGeneratedMutableData : public FAnimBlueprintMutableData
 
 class UBellow_ABP_C : public UVisPowerUnitAnimInstance
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0360 (size: 0x8)
-    FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                       // 0x0368 (size: 0x14)
-    FAnimSubsystemInstance AnimBlueprintExtension_PropertyAccess;                     // 0x0380 (size: 0x8)
-    FAnimSubsystemInstance AnimBlueprintExtension_Base;                               // 0x0388 (size: 0x8)
-    FAnimNode_Root AnimGraphNode_Root;                                                // 0x0390 (size: 0x20)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_1;                          // 0x03B0 (size: 0x48)
-    FAnimNode_LayeredBoneBlend AnimGraphNode_LayeredBoneBlend;                        // 0x03F8 (size: 0xE0)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer;                            // 0x04D8 (size: 0x48)
-    double AnimSlowAmount;                                                            // 0x0520 (size: 0x8)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0370 (size: 0x8)
+    FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                       // 0x0378 (size: 0x14)
+    FAnimSubsystemInstance AnimBlueprintExtension_PropertyAccess;                     // 0x0390 (size: 0x8)
+    FAnimSubsystemInstance AnimBlueprintExtension_Base;                               // 0x0398 (size: 0x8)
+    FAnimNode_Root AnimGraphNode_Root;                                                // 0x03A0 (size: 0x20)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_1;                          // 0x03C0 (size: 0x48)
+    FAnimNode_LayeredBoneBlend AnimGraphNode_LayeredBoneBlend;                        // 0x0408 (size: 0xE0)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer;                            // 0x04E8 (size: 0x48)
+    double AnimSlowAmount;                                                            // 0x0530 (size: 0x8)
 
     void AnimGraph(FPoseLink& AnimGraph);
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Bellow_ABP_AnimGraphNode_SequencePlayer_62436E04435E8D115D0850AE74FCC40B();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Bellow_ABP_AnimGraphNode_SequencePlayer_42E9D75E4BB4E37F085D1D89ED143FFA();
     void ExecuteUbergraph_Bellow_ABP(int32 EntryPoint);
-}; // Size: 0x528
+}; // Size: 0x538
 
 #endif

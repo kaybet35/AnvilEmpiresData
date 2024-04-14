@@ -28,20 +28,20 @@ struct FAnimBlueprintGeneratedMutableData : public FAnimBlueprintMutableData
 
 class UAnimalPoweredMill_ABP_C : public UVisPowerUnitAnimInstance
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0360 (size: 0x8)
-    FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                       // 0x0368 (size: 0x10)
-    FAnimSubsystemInstance AnimBlueprintExtension_PropertyAccess;                     // 0x0378 (size: 0x8)
-    FAnimSubsystemInstance AnimBlueprintExtension_Base;                               // 0x0380 (size: 0x8)
-    FAnimNode_Root AnimGraphNode_Root;                                                // 0x0388 (size: 0x20)
-    FAnimNode_LayeredBoneBlend AnimGraphNode_LayeredBoneBlend;                        // 0x03A8 (size: 0xE0)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer;                            // 0x0488 (size: 0x48)
-    FAnimNode_BlendSpacePlayer AnimGraphNode_BlendSpacePlayer;                        // 0x04D0 (size: 0x70)
-    double Anim Slow Amount;                                                          // 0x0540 (size: 0x8)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0370 (size: 0x8)
+    FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                       // 0x0378 (size: 0x10)
+    FAnimSubsystemInstance AnimBlueprintExtension_PropertyAccess;                     // 0x0388 (size: 0x8)
+    FAnimSubsystemInstance AnimBlueprintExtension_Base;                               // 0x0390 (size: 0x8)
+    FAnimNode_Root AnimGraphNode_Root;                                                // 0x0398 (size: 0x20)
+    FAnimNode_LayeredBoneBlend AnimGraphNode_LayeredBoneBlend;                        // 0x03B8 (size: 0xE0)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer;                            // 0x0498 (size: 0x48)
+    FAnimNode_BlendSpacePlayer AnimGraphNode_BlendSpacePlayer;                        // 0x04E0 (size: 0x70)
+    double Anim Slow Amount;                                                          // 0x0550 (size: 0x8)
 
     void AnimGraph(FPoseLink& AnimGraph);
     void EvaluateGraphExposedInputs_ExecuteUbergraph_AnimalPoweredMill_ABP_AnimGraphNode_BlendSpacePlayer_DE6CE9134B5EB24F1934C6960E381621();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_AnimalPoweredMill_ABP_AnimGraphNode_SequencePlayer_98D3081D43DED1111667D0B5D26C038E();
     void ExecuteUbergraph_AnimalPoweredMill_ABP(int32 EntryPoint);
-}; // Size: 0x548
+}; // Size: 0x558
 
 #endif

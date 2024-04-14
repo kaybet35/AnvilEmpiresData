@@ -3,7 +3,10 @@
     "Type": "ArrowComponent",
     "Name": "ArrowComponent",
     "Outer": "Default__BPCliff05_C",
-    "Class": "UScriptClass'ArrowComponent'"
+    "Class": "UScriptClass'ArrowComponent'",
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
   },
   {
     "Type": "BlueprintGeneratedClass",
@@ -102,10 +105,15 @@
         "ObjectName": "StaticMesh'SM_cliff_04_brown'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/Cliffs/SM_cliff_04_brown.2"
       },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPCliff05_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/Environment/BPCliff05.0"
-      }
+      },
+      "Mobility": "EComponentMobility::Static"
     }
   }
 ]

@@ -40,6 +40,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TownNameOrdinal;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float CurrentBuildRadius;
+    
     UTownHallDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };

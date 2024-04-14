@@ -7,7 +7,7 @@ UOptionsMenuVideoWidget::UOptionsMenuVideoWidget() : UUserWidget(FObjectInitiali
     this->VSyncDropdown = NULL;
 }
 
-void UOptionsMenuVideoWidget::OnFullscreenModeChanged(const FString& Input) {
+void UOptionsMenuVideoWidget::SetFullscreen(const FString& Input) {
 }
 
 

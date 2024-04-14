@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ABPVisMarketplaceShopT1_C : AVisMarketShop
+---@field PropsMeshes UVisStaticMeshComponent
 ---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field Fire USceneComponent
----@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field ScorchEffect5 UScorchEffectComponent
 ---@field ScorchEffect4 UScorchEffectComponent

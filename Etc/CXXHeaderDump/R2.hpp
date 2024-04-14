@@ -66,6 +66,14 @@ struct FCraftingRecipe
 
 }; // Size: 0x30
 
+struct FDismantleVoteInfo
+{
+    int64 VoterId;                                                                    // 0x0000 (size: 0x8)
+    int32 VoteTime;                                                                   // 0x0008 (size: 0x4)
+    uint8 VoteCount;                                                                  // 0x000C (size: 0x1)
+
+}; // Size: 0x10
+
 struct FFamilyMemberData
 {
     int64 PlayerId;                                                                   // 0x0000 (size: 0x8)
@@ -141,8 +149,9 @@ struct FInventoryItem
     int32 StackLimit;                                                                 // 0x0030 (size: 0x4)
     bool bIsDisabled;                                                                 // 0x0034 (size: 0x1)
     bool bTooEncumberedToEquip;                                                       // 0x0035 (size: 0x1)
+    EAnvilItemSlotBackgroundType BackgroundType;                                      // 0x0038 (size: 0x1)
 
-}; // Size: 0x38
+}; // Size: 0x40
 
 struct FItemCount
 {
@@ -165,14 +174,16 @@ struct FItemSlot
     int32 Count;                                                                      // 0x0010 (size: 0x4)
     int32 StackLimit;                                                                 // 0x0014 (size: 0x4)
     bool bAllowWithdrawal;                                                            // 0x0018 (size: 0x1)
+    bool bIsPlayerEquipmentSlot;                                                      // 0x0019 (size: 0x1)
     TArray<EAnvilItemTag> AcceptedTags;                                               // 0x0020 (size: 0x10)
     TArray<EAnvilItemTag> RequiredTags;                                               // 0x0030 (size: 0x10)
     TArray<EAnvilItemTag> ProhibitedTags;                                             // 0x0040 (size: 0x10)
     TSubclassOf<class UItemTemplate> DedicatedItemType;                               // 0x0050 (size: 0x8)
     TSubclassOf<class UItemTemplate> DedicatedUnderlyingItemType;                     // 0x0058 (size: 0x8)
     TSubclassOf<class UItemTemplate> RequiredEnablingItem;                            // 0x0060 (size: 0x8)
+    EAnvilItemSlotBackgroundType BackgroundType;                                      // 0x0068 (size: 0x1)
 
-}; // Size: 0x68
+}; // Size: 0x70
 
 struct FLootTableItem
 {
@@ -271,6 +282,18 @@ struct FVisvarPowerConnection
     uint64 ID;                                                                        // 0x0010 (size: 0x8)
 
 }; // Size: 0x18
+
+struct FWeatherData
+{
+    float NormalizedSeason;                                                           // 0x0000 (size: 0x4)
+    float RainIntensity;                                                              // 0x0004 (size: 0x4)
+    float SnowIntensity;                                                              // 0x0008 (size: 0x4)
+    float Temperature;                                                                // 0x000C (size: 0x4)
+    float Wetness;                                                                    // 0x0010 (size: 0x4)
+    float Wind;                                                                       // 0x0014 (size: 0x4)
+    FVector WindDir;                                                                  // 0x0018 (size: 0x18)
+
+}; // Size: 0x30
 
 class AAnvilPrefab : public AActor
 {
@@ -555,9 +578,10 @@ class UBuildSiteProxyComponent : public UProxyComponent
     float AdditionalMaxHeightShift;                                                   // 0x0054 (size: 0x4)
     float MinDistanceBetweenStructures;                                               // 0x0058 (size: 0x4)
     TArray<class TSubclassOf<UEntityTemplate>> MinDistanceStructureTypes;             // 0x0060 (size: 0x10)
-    TArray<FBasicCount> MaterialRequirements;                                         // 0x0070 (size: 0x10)
+    int32 NumNearbyPlayersRequired;                                                   // 0x0070 (size: 0x4)
+    TArray<FBasicCount> MaterialRequirements;                                         // 0x0078 (size: 0x10)
 
-}; // Size: 0x80
+}; // Size: 0x88
 
 class UCannonProxyComponent : public UProxyComponent
 {
@@ -749,9 +773,10 @@ class UFarmProxyComponent : public UProxyComponent
     float RichSoilMaturityTimeModifier;                                               // 0x0038 (size: 0x4)
     float WaterDurationMaxSeconds;                                                    // 0x003C (size: 0x4)
     float WaterDurationPerUnitItem;                                                   // 0x0040 (size: 0x4)
-    float FertilizeDurationPerUnitItem;                                               // 0x0044 (size: 0x4)
+    float EnvWetnessWaterDurationIncreaseMultiplier;                                  // 0x0044 (size: 0x4)
+    float FertilizeDurationPerUnitItem;                                               // 0x0048 (size: 0x4)
 
-}; // Size: 0x48
+}; // Size: 0x50
 
 class UFishResourceProxyComponent : public UProxyComponent
 {
@@ -1251,11 +1276,12 @@ class UPowerToActionConverterProxyComponent : public UProxyComponent
 class UPowerUnitDataComponent : public UDataComponent
 {
     float PercentageCurrent;                                                          // 0x00A8 (size: 0x4)
-    int32 VisVarUpdateHook;                                                           // 0x00C8 (size: 0x4)
-    float InFlowDirection;                                                            // 0x00E8 (size: 0x4)
-    float InFlowHeight;                                                               // 0x0108 (size: 0x4)
+    float CurrentMax;                                                                 // 0x00C8 (size: 0x4)
+    int32 VisVarUpdateHook;                                                           // 0x00E8 (size: 0x4)
+    float InFlowDirection;                                                            // 0x0108 (size: 0x4)
+    float InFlowHeight;                                                               // 0x0128 (size: 0x4)
 
-}; // Size: 0x128
+}; // Size: 0x148
 
 class UPowerUnitProxyComponent : public UProxyComponent
 {
@@ -1409,11 +1435,12 @@ class UResourceSpawnerProxyComponent : public UProxyComponent
     float SpawnDelayAfterResourceDepleted;                                            // 0x006C (size: 0x4)
     float MinDistanceBetweenSpawns;                                                   // 0x0070 (size: 0x4)
     bool bWaterOnly;                                                                  // 0x0074 (size: 0x1)
-    bool bTrackSpawnedEntity;                                                         // 0x0075 (size: 0x1)
-    bool bDontSpawnInSettlements;                                                     // 0x0076 (size: 0x1)
-    bool bIsRare;                                                                     // 0x0077 (size: 0x1)
-    bool bDontSpawnNearPlayers;                                                       // 0x0078 (size: 0x1)
-    bool bWalkBackToSpawner;                                                          // 0x0079 (size: 0x1)
+    bool bRequiresNavmesh;                                                            // 0x0075 (size: 0x1)
+    bool bTrackSpawnedEntity;                                                         // 0x0076 (size: 0x1)
+    bool bDontSpawnInSettlements;                                                     // 0x0077 (size: 0x1)
+    bool bIsRare;                                                                     // 0x0078 (size: 0x1)
+    bool bDontSpawnNearPlayers;                                                       // 0x0079 (size: 0x1)
+    bool bWalkBackToSpawner;                                                          // 0x007A (size: 0x1)
     int32 CompatibleSurfaceTypes;                                                     // 0x007C (size: 0x4)
     TArray<class TSubclassOf<UEntityTemplate>> OtherResourcesToAvoid;                 // 0x0080 (size: 0x10)
     TArray<class TSubclassOf<UEntityTemplate>> OtherResourcesToCountForSpawnLimit;    // 0x0090 (size: 0x10)
@@ -1677,8 +1704,9 @@ class UTownHallDataComponent : public UDataComponent
     int32 NumReinforcementSupplies;                                                   // 0x01A8 (size: 0x4)
     uint8 TownNameId;                                                                 // 0x01C8 (size: 0x1)
     uint8 TownNameOrdinal;                                                            // 0x01E8 (size: 0x1)
+    float CurrentBuildRadius;                                                         // 0x0208 (size: 0x4)
 
-}; // Size: 0x208
+}; // Size: 0x228
 
 class UTownHallProxyComponent : public UProxyComponent
 {
@@ -1729,12 +1757,11 @@ class UUpgradeProxyComponent : public UProxyComponent
 
 class UVehicleMovementDataComponent : public UDataComponent
 {
-    FVector Velocity;                                                                 // 0x00A8 (size: 0x18)
-    FVector FrontAxleCastHit;                                                         // 0x00D8 (size: 0x18)
-    FVector RearAxleCastHit;                                                          // 0x0108 (size: 0x18)
-    uint8 SeatOccupancyBits;                                                          // 0x0138 (size: 0x1)
+    FVector FrontAxleCastHit;                                                         // 0x00A8 (size: 0x18)
+    FVector RearAxleCastHit;                                                          // 0x00D8 (size: 0x18)
+    uint8 SeatOccupancyBits;                                                          // 0x0108 (size: 0x1)
 
-}; // Size: 0x158
+}; // Size: 0x128
 
 class UVehicleMovementProxyComponent : public UProxyComponent
 {
@@ -1745,20 +1772,21 @@ class UVehicleMovementProxyComponent : public UProxyComponent
     float SprintRotationalSpeedFactor;                                                // 0x0038 (size: 0x4)
     float SprintStaminaDrain;                                                         // 0x003C (size: 0x4)
     float WalkStaminaDrain;                                                           // 0x0040 (size: 0x4)
-    bool bGroupVehicle;                                                               // 0x0044 (size: 0x1)
-    bool bYawInPlace;                                                                 // 0x0045 (size: 0x1)
-    bool bLadderMovement;                                                             // 0x0046 (size: 0x1)
-    TSubclassOf<class UEntityTemplate> CollisionEffect;                               // 0x0048 (size: 0x8)
-    float RammingDamage;                                                              // 0x0050 (size: 0x4)
-    float RammingVelocityFactor;                                                      // 0x0054 (size: 0x4)
-    EAnvilDamageType RammingDamageType;                                               // 0x0058 (size: 0x1)
-    bool bDoAxleRaycasts;                                                             // 0x0059 (size: 0x1)
-    bool bWaterVehicle;                                                               // 0x005A (size: 0x1)
-    bool bUsePitch;                                                                   // 0x005B (size: 0x1)
-    FVector FrontAxleOffset;                                                          // 0x0060 (size: 0x18)
-    FVector RearAxleOffset;                                                           // 0x0078 (size: 0x18)
+    float RoadFactor;                                                                 // 0x0044 (size: 0x4)
+    bool bGroupVehicle;                                                               // 0x0048 (size: 0x1)
+    bool bYawInPlace;                                                                 // 0x0049 (size: 0x1)
+    bool bLadderMovement;                                                             // 0x004A (size: 0x1)
+    TSubclassOf<class UEntityTemplate> CollisionEffect;                               // 0x0050 (size: 0x8)
+    float RammingDamage;                                                              // 0x0058 (size: 0x4)
+    float RammingVelocityFactor;                                                      // 0x005C (size: 0x4)
+    EAnvilDamageType RammingDamageType;                                               // 0x0060 (size: 0x1)
+    bool bDoAxleRaycasts;                                                             // 0x0061 (size: 0x1)
+    bool bWaterVehicle;                                                               // 0x0062 (size: 0x1)
+    bool bUsePitch;                                                                   // 0x0063 (size: 0x1)
+    FVector FrontAxleOffset;                                                          // 0x0068 (size: 0x18)
+    FVector RearAxleOffset;                                                           // 0x0080 (size: 0x18)
 
-}; // Size: 0x90
+}; // Size: 0x98
 
 class UVehicleSeatProxyComponent : public UProxyComponent
 {
@@ -1802,6 +1830,19 @@ class UWellDataComponent : public UDataComponent
 class UWellProxyComponent : public UProxyComponent
 {
     int32 WaterGenerationTimeSec;                                                     // 0x0028 (size: 0x4)
+
+}; // Size: 0x30
+
+class UWindMillDataComponent : public UDataComponent
+{
+    float Rotation;                                                                   // 0x00A8 (size: 0x4)
+
+}; // Size: 0xC8
+
+class UWindMillProxyComponent : public UProxyComponent
+{
+    float MaxRotationSpeed;                                                           // 0x0028 (size: 0x4)
+    float RotationAcceleration;                                                       // 0x002C (size: 0x4)
 
 }; // Size: 0x30
 

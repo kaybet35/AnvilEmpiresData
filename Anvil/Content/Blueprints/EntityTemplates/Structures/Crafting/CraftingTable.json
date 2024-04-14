@@ -171,12 +171,14 @@
           "Count": 0,
           "StackLimit": 30,
           "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
           "AcceptedTags": [],
           "RequiredTags": [],
           "ProhibitedTags": [],
           "DedicatedItemType": null,
           "DedicatedUnderlyingItemType": null,
-          "RequiredEnablingItem": null
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
         }
       ],
       "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
@@ -194,14 +196,16 @@
           "bOr": false,
           "HeldItem": null,
           "Count": 0,
-          "StackLimit": 30,
+          "StackLimit": 100,
           "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
           "AcceptedTags": [],
           "RequiredTags": [],
           "ProhibitedTags": [],
           "DedicatedItemType": null,
           "DedicatedUnderlyingItemType": null,
-          "RequiredEnablingItem": null
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
         }
       ],
       "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
@@ -584,43 +588,6 @@
         },
         {
           "ProducedItem": {
-            "ObjectName": "BlueprintGeneratedClass'ScorpionArrows_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ScorpionArrows.0"
-          },
-          "ProducedItemVisVar": 0,
-          "InputItems": [
-            {
-              "CodeName": {
-                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
-              },
-              "CodeNameVisVar": 0,
-              "Count": 3
-            },
-            {
-              "CodeName": {
-                "ObjectName": "BlueprintGeneratedClass'ResourceFeathers_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFeathers.0"
-              },
-              "CodeNameVisVar": 0,
-              "Count": 2
-            },
-            {
-              "CodeName": {
-                "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
-              },
-              "CodeNameVisVar": 0,
-              "Count": 2
-            }
-          ],
-          "ProductionTime": 45.0,
-          "OutputCount": 1,
-          "bRequiresResearch": false,
-          "bCrateProducedItems": true
-        },
-        {
-          "ProducedItem": {
             "ObjectName": "BlueprintGeneratedClass'RepairMaterial_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/RepairMaterial.0"
           },
@@ -632,11 +599,11 @@
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
               },
               "CodeNameVisVar": 0,
-              "Count": 1
+              "Count": 10
             }
           ],
           "ProductionTime": 5.0,
-          "OutputCount": 5,
+          "OutputCount": 50,
           "bRequiresResearch": false,
           "bCrateProducedItems": false
         },
@@ -678,6 +645,201 @@
             }
           ],
           "ProductionTime": 5.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'OilFlask_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/OilFlask.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 5
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'AnimalFat_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalFat.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 5
+            }
+          ],
+          "ProductionTime": 60.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": true
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'AnimalRope_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/AnimalRope.1"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 5
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'AnimalFat_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalFat.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 15.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'SaddleBasic_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/AnimalEquipment/SaddleBasic.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'AnimalRope_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/AnimalRope.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'ProcessedFertilizer_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedFertilizer.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceManure_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceManure.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceWoodAsh_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWoodAsh.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 5
+            }
+          ],
+          "ProductionTime": 60.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'LeatherArmour_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Armour/LeatherArmour.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            }
+          ],
+          "ProductionTime": 40.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'LeatherHelmet_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Armour/LeatherHelmet.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 35.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bCrateProducedItems": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'ShieldSmall_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/ShieldSmall.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 3
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'AnimalBones_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalBones.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 5
+            }
+          ],
+          "ProductionTime": 35.0,
           "OutputCount": 1,
           "bRequiresResearch": false,
           "bCrateProducedItems": false

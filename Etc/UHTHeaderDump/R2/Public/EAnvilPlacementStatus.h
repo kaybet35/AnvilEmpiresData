@@ -11,7 +11,6 @@ enum class EAnvilPlacementStatus : uint8 {
     InvalidSurface,
     TooCloseToTownHall,
     TooCloseToCamp,
-    TooCloseToTownMarker,
     TooFarFromTownHallOrCamp,
     TooFarFromTownHall,
     TooFarFromCamp,
@@ -45,5 +44,6 @@ enum class EAnvilPlacementStatus : uint8 {
     NotAtFullHealth,
     CantBuildBorderRegion,
     MustBePledgedToTown,
+    RequiresNearbyPlayers,
 };
 

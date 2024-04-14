@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EAnvilItemSlotBackgroundType.h"
 #include "EAnvilItemTag.h"
 #include "Templates/SubclassOf.h"
 #include "ItemSlot.generated.h"
@@ -29,6 +30,9 @@ public:
     bool bAllowWithdrawal;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsPlayerEquipmentSlot;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<EAnvilItemTag> AcceptedTags;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -45,6 +49,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UItemTemplate> RequiredEnablingItem;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EAnvilItemSlotBackgroundType BackgroundType;
     
     R2_API FItemSlot();
 };

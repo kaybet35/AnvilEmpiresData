@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "WellBuildSite_C'Default__WellBuildSite_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/WellBuildSite.9"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/WellBuildSite.8"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -53,7 +53,17 @@
       "RequiredTool": "EAnvilToolType::Hammer",
       "bRequiresTownHall": true,
       "TierPrerequisite": 2,
-      "MinDistanceBetweenStructures": 4000.0
+      "MinDistanceBetweenStructures": 4000.0,
+      "MaterialRequirements": [
+        {
+          "CodeName": -667807241,
+          "Count": 5
+        },
+        {
+          "CodeName": -34612789,
+          "Count": 4
+        }
+      ]
     }
   },
   {
@@ -93,20 +103,6 @@
     }
   },
   {
-    "Type": "MeshCollisionProxyComponent",
-    "Name": "MeshCollisionProxyComponent_0",
-    "Outer": "Default__WellBuildSite_C",
-    "Class": "UScriptClass'MeshCollisionProxyComponent'",
-    "Properties": {
-      "PhysicsAssetName": {
-        "ObjectName": "StaticMesh'WellT2'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/WellT2.2"
-      },
-      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeStone",
-      "CollisionMask": 16785408
-    }
-  },
-  {
     "Type": "StructureProxyComponent",
     "Name": "StructureProxyComponent_0",
     "Outer": "Default__WellBuildSite_C",
@@ -141,15 +137,11 @@
       },
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__WellBuildSite_C:TeamProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/WellBuildSite.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/WellBuildSite.7"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__WellBuildSite_C:HealthProxyComponent_0'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/WellBuildSite.5"
-      },
-      "MeshCollisionComp": {
-        "ObjectName": "MeshCollisionProxyComponent'Default__WellBuildSite_C:MeshCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/WellBuildSite.6"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__WellBuildSite_C:FootprintCollisionProxyComponent_0'",
@@ -165,13 +157,18 @@
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__WellBuildSite_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/WellBuildSite.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/WellBuildSite.6"
       },
       "CodeNameString": "WellBuildSite",
       "CodeName": 1134596850,
+      "bGenerateMeshCollisionsFromVisActor": true,
       "VisActorClass": {
-        "ObjectName": "BlueprintGeneratedClass'BPVisWellT2BuildSite_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisWellT2BuildSite.1"
+        "ObjectName": "Class'VisBuildSite'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "VisActorTemplateClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisWellT2_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.1"
       }
     }
   }

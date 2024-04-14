@@ -108,6 +108,14 @@ FCraftingRecipe = {}
 
 
 
+---@class FDismantleVoteInfo
+---@field VoterId int64
+---@field VoteTime int32
+---@field VoteCount uint8
+FDismantleVoteInfo = {}
+
+
+
 ---@class FFamilyMemberData
 ---@field PlayerId int64
 FFamilyMemberData = {}
@@ -182,6 +190,7 @@ FHousePledgedPlayerArray = {}
 ---@field StackLimit int32
 ---@field bIsDisabled boolean
 ---@field bTooEncumberedToEquip boolean
+---@field BackgroundType EAnvilItemSlotBackgroundType
 FInventoryItem = {}
 
 
@@ -206,12 +215,14 @@ FItemCount = {}
 ---@field Count int32
 ---@field StackLimit int32
 ---@field bAllowWithdrawal boolean
+---@field bIsPlayerEquipmentSlot boolean
 ---@field AcceptedTags TArray<EAnvilItemTag>
 ---@field RequiredTags TArray<EAnvilItemTag>
 ---@field ProhibitedTags TArray<EAnvilItemTag>
 ---@field DedicatedItemType TSubclassOf<UItemTemplate>
 ---@field DedicatedUnderlyingItemType TSubclassOf<UItemTemplate>
 ---@field RequiredEnablingItem TSubclassOf<UItemTemplate>
+---@field BackgroundType EAnvilItemSlotBackgroundType
 FItemSlot = {}
 
 
@@ -311,6 +322,18 @@ FTestStruct = {}
 ---@field OuterWidth float
 ---@field ID uint64
 FVisvarPowerConnection = {}
+
+
+
+---@class FWeatherData
+---@field NormalizedSeason float
+---@field RainIntensity float
+---@field SnowIntensity float
+---@field Temperature float
+---@field Wetness float
+---@field Wind float
+---@field WindDir FVector
+FWeatherData = {}
 
 
 
@@ -551,6 +574,7 @@ UBuildSiteDataComponent = {}
 ---@field AdditionalMaxHeightShift float
 ---@field MinDistanceBetweenStructures float
 ---@field MinDistanceStructureTypes TArray<TSubclassOf<UEntityTemplate>>
+---@field NumNearbyPlayersRequired int32
 ---@field MaterialRequirements TArray<FBasicCount>
 UBuildSiteProxyComponent = {}
 
@@ -748,6 +772,7 @@ UFarmDataComponent = {}
 ---@field RichSoilMaturityTimeModifier float
 ---@field WaterDurationMaxSeconds float
 ---@field WaterDurationPerUnitItem float
+---@field EnvWetnessWaterDurationIncreaseMultiplier float
 ---@field FertilizeDurationPerUnitItem float
 UFarmProxyComponent = {}
 
@@ -1250,6 +1275,7 @@ UPowerToActionConverterProxyComponent = {}
 
 ---@class UPowerUnitDataComponent : UDataComponent
 ---@field PercentageCurrent float
+---@field CurrentMax float
 ---@field VisVarUpdateHook int32
 ---@field InFlowDirection float
 ---@field InFlowHeight float
@@ -1408,6 +1434,7 @@ UResourceProxyComponent = {}
 ---@field SpawnDelayAfterResourceDepleted float
 ---@field MinDistanceBetweenSpawns float
 ---@field bWaterOnly boolean
+---@field bRequiresNavmesh boolean
 ---@field bTrackSpawnedEntity boolean
 ---@field bDontSpawnInSettlements boolean
 ---@field bIsRare boolean
@@ -1676,6 +1703,7 @@ UTemperatureProxyComponent = {}
 ---@field NumReinforcementSupplies int32
 ---@field TownNameId uint8
 ---@field TownNameOrdinal uint8
+---@field CurrentBuildRadius float
 UTownHallDataComponent = {}
 
 
@@ -1728,7 +1756,6 @@ UUpgradeProxyComponent = {}
 
 
 ---@class UVehicleMovementDataComponent : UDataComponent
----@field Velocity FVector
 ---@field FrontAxleCastHit FVector
 ---@field RearAxleCastHit FVector
 ---@field SeatOccupancyBits uint8
@@ -1744,6 +1771,7 @@ UVehicleMovementDataComponent = {}
 ---@field SprintRotationalSpeedFactor float
 ---@field SprintStaminaDrain float
 ---@field WalkStaminaDrain float
+---@field RoadFactor float
 ---@field bGroupVehicle boolean
 ---@field bYawInPlace boolean
 ---@field bLadderMovement boolean
@@ -1802,6 +1830,19 @@ UWellDataComponent = {}
 ---@class UWellProxyComponent : UProxyComponent
 ---@field WaterGenerationTimeSec int32
 UWellProxyComponent = {}
+
+
+
+---@class UWindMillDataComponent : UDataComponent
+---@field Rotation float
+UWindMillDataComponent = {}
+
+
+
+---@class UWindMillProxyComponent : UProxyComponent
+---@field MaxRotationSpeed float
+---@field RotationAcceleration float
+UWindMillProxyComponent = {}
 
 
 

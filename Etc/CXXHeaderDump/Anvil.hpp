@@ -304,7 +304,7 @@ struct FShardConfig
 
 struct FTownHallData
 {
-}; // Size: 0x78
+}; // Size: 0x70
 
 struct FTownHallDeploymentInfo
 {
@@ -358,7 +358,7 @@ struct FWeatherManager
     class UMaterialParameterCollection* WeatherSeasonsMaterialParameterCollection;    // 0x0038 (size: 0x8)
     class APostProcessVolume* WinterPostProcessVolume;                                // 0x0040 (size: 0x8)
 
-}; // Size: 0x78
+}; // Size: 0x80
 
 class AAnvilGameModeBase : public AGameModeBase
 {
@@ -471,6 +471,12 @@ class AMapBorderActor : public ACameraActor
     class UStaticMeshComponent* BoxVisualizer;                                        // 0x09A8 (size: 0x8)
 
 }; // Size: 0x9B0
+
+class AMapEditorNote : public AActor
+{
+    class UTextRenderComponent* NoteTextComponent;                                    // 0x0290 (size: 0x8)
+
+}; // Size: 0x298
 
 class AMapList : public AInfo
 {
@@ -947,10 +953,6 @@ class AVisTownCenter : public AVisStructure
 
 }; // Size: 0x488
 
-class AVisTownMarker : public AVisStructure
-{
-}; // Size: 0x480
-
 class AVisTrap : public AVisActor
 {
     class UArrowComponent* ArrowComponent;                                            // 0x03F0 (size: 0x8)
@@ -969,6 +971,17 @@ class AVisVehicle : public AVisActor
     class UArrowComponent* ArrowComponent;                                            // 0x0410 (size: 0x8)
 
 }; // Size: 0x418
+
+class AVisWindMill : public AVisStructure
+{
+    class UWindMillDataComponent* WindMillDataComponent;                              // 0x0480 (size: 0x8)
+    class UPowerUnitDataComponent* PowerUnitDataComponent;                            // 0x0488 (size: 0x8)
+    class UEntityAttachableDataComponent* SlotData;                                   // 0x0490 (size: 0x8)
+    class USkeletalMeshComponent* SKMesh;                                             // 0x0498 (size: 0x8)
+    class UVisPowerUnitAnimInstance* AnimInst;                                        // 0x04A0 (size: 0x8)
+    float IsRefiningPercentageCurrentMin;                                             // 0x04A8 (size: 0x4)
+
+}; // Size: 0x4E8
 
 class AvisLadder : public AVisStructure
 {
@@ -1117,13 +1130,13 @@ class UAnvilGameInstance : public UGameInstance
     class UAnvilCharacterSave* CharacterSave;                                         // 0x02C0 (size: 0x8)
     class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x02C8 (size: 0x8)
     FAnvilAssetManager AssetManager;                                                  // 0x02D0 (size: 0x168)
-    FWeatherManager WeatherManager;                                                   // 0x0438 (size: 0x78)
-    FAnvilOptionsManager OptionsManager;                                              // 0x04B0 (size: 0x1A0)
-    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x0650 (size: 0x8)
-    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x0658 (size: 0x10)
-    TArray<class AVisActor*> VisActorList;                                            // 0x0668 (size: 0x10)
-    TArray<class AVisActor*> TravelVisActorList;                                      // 0x0678 (size: 0x10)
-    FClientConfigManager ClientConfigManager;                                         // 0x0688 (size: 0x38)
+    FWeatherManager WeatherManager;                                                   // 0x0438 (size: 0x80)
+    FAnvilOptionsManager OptionsManager;                                              // 0x04B8 (size: 0x1A0)
+    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x0658 (size: 0x8)
+    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x0660 (size: 0x10)
+    TArray<class AVisActor*> VisActorList;                                            // 0x0670 (size: 0x10)
+    TArray<class AVisActor*> TravelVisActorList;                                      // 0x0680 (size: 0x10)
+    FClientConfigManager ClientConfigManager;                                         // 0x0690 (size: 0x38)
 
     void GetVisActors(TArray<class AVisActor*>& OutVisActorList);
     void GetVersion(int32& OutMajor, int32& OutMinor, int32& OutPatch, int32& OutCL);
@@ -1132,7 +1145,7 @@ class UAnvilGameInstance : public UGameInstance
     bool GetIsNight();
     void GetDayCurrentSeconds(int32& OutSeconds);
     void DumpProperties(FString OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter);
-}; // Size: 0x16E8
+}; // Size: 0x16F0
 
 class UAnvilKeyEntryWidget : public UUserWidget
 {
@@ -1250,9 +1263,10 @@ class UBeaconTowerPlayerInfoMapIcon : public UMapIcon
 
 class UBuildMenuStructureButton : public UGridItemWidget
 {
+    class UImage* PublicIconImage;                                                    // 0x0348 (size: 0x8)
 
     void OnBuild(class UGridItemWidget* ItemSlot);
-}; // Size: 0x348
+}; // Size: 0x350
 
 class UBuildMenuTabButton : public UGridItemWidget
 {
@@ -1388,7 +1402,7 @@ class UDeploymentPointWidget : public UUserWidget
     ESlateVisibility GetNumHousesVisibility();
     FText GetNumHousesText();
     ESlateVisibility GetDeploymentPointVisibility();
-}; // Size: 0x458
+}; // Size: 0x460
 
 class UDeploymentScreen : public UAnvilScreen
 {
@@ -1545,7 +1559,7 @@ class UGridItemWidget : public UUserWidget
     class UImage* SubItemImage;                                                       // 0x02D8 (size: 0x8)
     class UImage* QualityIconImage;                                                   // 0x02E0 (size: 0x8)
     TMap<class EAnvilItemQualityType, class UTexture2D*> QualityIconTextures;         // 0x02E8 (size: 0x50)
-    class UTexture2D* EmptyImage;                                                     // 0x0338 (size: 0x8)
+    class UTexture2D* BackgroundImageTexture;                                         // 0x0338 (size: 0x8)
     bool bIsActive;                                                                   // 0x0340 (size: 0x1)
 
     void OnClicked();
@@ -1734,18 +1748,18 @@ class UInventoryContainerWidget : public UUserWidget
 
 class UInventoryItemWidget : public UGridItemWidget
 {
-    int32 ItemQuantityTextSize;                                                       // 0x0380 (size: 0x4)
-    FSlateColor DisabledTint;                                                         // 0x0384 (size: 0x14)
-    float DedicatedImageOpacity;                                                      // 0x0398 (size: 0x4)
-    TMap<class EAnvilItemTag, class UTexture2D*> EmptyImageMap;                       // 0x03A0 (size: 0x50)
-    class UTextBlock* ItemQuantityText;                                               // 0x03F0 (size: 0x8)
-    class UProgressBar* DurabilityBar;                                                // 0x03F8 (size: 0x8)
-    class UImage* SubtypeIconRelic;                                                   // 0x0400 (size: 0x8)
-    class UImage* OverEncumberedImage;                                                // 0x0408 (size: 0x8)
-    class UImage* PublicIconImage;                                                    // 0x0410 (size: 0x8)
-    class UProgressBar* HitConversionProgressBar;                                     // 0x0418 (size: 0x8)
+    int32 ItemQuantityTextSize;                                                       // 0x0388 (size: 0x4)
+    FSlateColor DisabledTint;                                                         // 0x038C (size: 0x14)
+    float DedicatedImageOpacity;                                                      // 0x03A0 (size: 0x4)
+    TMap<class EAnvilItemSlotBackgroundType, class UTexture2D*> ItemSlotBackgroundMap; // 0x03A8 (size: 0x50)
+    class UTextBlock* ItemQuantityText;                                               // 0x03F8 (size: 0x8)
+    class UProgressBar* DurabilityBar;                                                // 0x0400 (size: 0x8)
+    class UImage* SubtypeIconRelic;                                                   // 0x0408 (size: 0x8)
+    class UImage* OverEncumberedImage;                                                // 0x0410 (size: 0x8)
+    class UImage* PublicIconImage;                                                    // 0x0418 (size: 0x8)
+    class UProgressBar* HitConversionProgressBar;                                     // 0x0420 (size: 0x8)
 
-}; // Size: 0x428
+}; // Size: 0x430
 
 class UInventoryWidget : public UGridPanelWidget
 {
@@ -1975,7 +1989,7 @@ class UOptionsMenuVideoWidget : public UUserWidget
     class UAnvilDropdownEntryWidget* QualityDropdown;                                 // 0x0288 (size: 0x8)
     class UAnvilDropdownEntryWidget* VSyncDropdown;                                   // 0x0290 (size: 0x8)
 
-    void OnFullscreenModeChanged(FString Input);
+    void SetFullscreen(FString Input);
 }; // Size: 0x298
 
 class UOptionsScreen : public UAnvilScreen
@@ -2404,11 +2418,12 @@ class UVisPowerUnitAnimInstance : public UAnimInstance
 {
     float InputValue;                                                                 // 0x0348 (size: 0x4)
     float PercentageCurrent;                                                          // 0x034C (size: 0x4)
-    float InFlowDirection;                                                            // 0x0350 (size: 0x4)
-    float InFlowHeight;                                                               // 0x0354 (size: 0x4)
-    class UPowerUnitDataComponent* PowerUnitDataComponent;                            // 0x0358 (size: 0x8)
+    float CurrentMax;                                                                 // 0x0350 (size: 0x4)
+    float InFlowDirection;                                                            // 0x0354 (size: 0x4)
+    float InFlowHeight;                                                               // 0x0358 (size: 0x4)
+    class UPowerUnitDataComponent* PowerUnitDataComponent;                            // 0x0360 (size: 0x8)
 
-}; // Size: 0x360
+}; // Size: 0x370
 
 class UVisRopeComponent : public USceneComponent
 {
@@ -2494,6 +2509,12 @@ class UVisVehicleAnimInstance : public UAnimInstance
     bool bIsOccupied;                                                                 // 0x0354 (size: 0x1)
 
 }; // Size: 0x360
+
+class UVisWeatherIndicatorAnimInstance : public UAnimInstance
+{
+    FWeatherData Weather;                                                             // 0x0348 (size: 0x30)
+
+}; // Size: 0x380
 
 class UVitalityStatusWidget : public UUserWidget
 {

@@ -8,7 +8,7 @@ UGridItemWidget::UGridItemWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->ItemImage = NULL;
     this->SubItemImage = NULL;
     this->QualityIconImage = NULL;
-    this->EmptyImage = NULL;
+    this->BackgroundImageTexture = NULL;
     this->bIsActive = true;
 }
 

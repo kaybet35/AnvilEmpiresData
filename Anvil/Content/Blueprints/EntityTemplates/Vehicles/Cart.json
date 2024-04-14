@@ -198,14 +198,19 @@
           "Count": 0,
           "StackLimit": 4,
           "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
           "AcceptedTags": [
-            "EAnvilItemTag::Resource"
+            "EAnvilItemTag::Resource",
+            "EAnvilItemTag::Crate"
           ],
           "RequiredTags": [],
-          "ProhibitedTags": [],
+          "ProhibitedTags": [
+            "EAnvilItemTag::PrimaryTool"
+          ],
           "DedicatedItemType": null,
           "DedicatedUnderlyingItemType": null,
-          "RequiredEnablingItem": null
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
         }
       ],
       "StackRule": "EAnvilInventoryStackRule::ForceStackNonLargeItems",
@@ -219,8 +224,10 @@
     "Class": "UScriptClass'VehicleMovementProxyComponent'",
     "Properties": {
       "Acceleration": 2000.0,
-      "MaxVelocity": 480.0,
+      "MaxVelocity": 400.0,
       "RotationalSpeed": 50.0,
+      "SprintFactor": 1.5,
+      "RoadFactor": 1.2,
       "RearAxleOffset": {
         "X": -450.0,
         "Y": 0.0,

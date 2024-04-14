@@ -1,0 +1,290 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "TownWall03_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'TownWall03_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.10"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AnvilPrefab'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "GrassRemovalVolume",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'GrassRemovalVolumeComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SharedRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Scene",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "TownWall03_C'Default__TownWall03_C'",
+      "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.13"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GrassRemovalVolumeComponent",
+    "Name": "GrassRemovalVolume_GEN_VARIABLE",
+    "Outer": "TownWall03_C",
+    "Class": "UScriptClass'GrassRemovalVolumeComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 36.18216,
+        "Y": 237.985,
+        "Z": 51.789444
+      },
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'TownWall03_C:GrassRemovalVolume_GEN_VARIABLE.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.11"
+      },
+      "RelativeLocation": {
+        "X": 4.5901447E-06,
+        "Y": 247.08879,
+        "Z": -3.7599585
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "TownWall03_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Scene_GEN_VARIABLE",
+    "Outer": "TownWall03_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SharedRoot_GEN_VARIABLE",
+    "Outer": "TownWall03_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'TownWall03_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.2"
+      },
+      "VariableGuid": "55AC563A-4F3BEE31-E62C3295-8225883B",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'TownWall03_C:SharedRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.4"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'TownWall03_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.7"
+        }
+      ],
+      "VariableGuid": "01139BDB-4BDDBAC8-97AD2AA3-67615CB6",
+      "InternalVariableName": "SharedRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'TownWall03_C:Mesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.12"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'TownWall03_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.8"
+        }
+      ],
+      "VariableGuid": "B430DF9B-437846B0-95EC248F-512493E6",
+      "InternalVariableName": "Mesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'GrassRemovalVolumeComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GrassRemovalVolumeComponent'TownWall03_C:GrassRemovalVolume_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.1"
+      },
+      "VariableGuid": "35A17548-48E2DA0B-0B53E38F-C587C4A0",
+      "InternalVariableName": "GrassRemovalVolume"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'TownWall03_C:Scene_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.3"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'TownWall03_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.6"
+        }
+      ],
+      "VariableGuid": "94538F2A-4F483937-FA2460B6-C0009903",
+      "InternalVariableName": "Scene"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "TownWall03_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'TownWall03_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.9"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'TownWall03_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.7"
+        },
+        {
+          "ObjectName": "SCS_Node'TownWall03_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.9"
+        },
+        {
+          "ObjectName": "SCS_Node'TownWall03_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.6"
+        },
+        {
+          "ObjectName": "SCS_Node'TownWall03_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.8"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'TownWall03_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Meshes/Prefabs/TownWall03.5"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "GrassRemovalVolume_GEN_VARIABLE",
+    "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_GEN_VARIABLE",
+    "Outer": "TownWall03_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'TownWall_500_03'",
+        "ObjectPath": "Anvil/Content/Meshes/Props/Town/TownWall_500_03.2"
+      },
+      "bUseDefaultCollision": true,
+      "bGenerateOverlapEvents": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      }
+    }
+  },
+  {
+    "Type": "TownWall03_C",
+    "Name": "Default__TownWall03_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Meshes/Prefabs/TownWall03.TownWall03_C'"
+  }
+]

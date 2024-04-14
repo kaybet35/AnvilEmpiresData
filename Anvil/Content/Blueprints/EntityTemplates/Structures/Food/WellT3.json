@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "WellT3_C'Default__WellT3_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WellT3.13"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WellT3.12"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -102,6 +102,7 @@
           "Count": 0,
           "StackLimit": 4,
           "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
           "AcceptedTags": [],
           "RequiredTags": [],
           "ProhibitedTags": [],
@@ -110,24 +111,11 @@
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWater.0"
           },
           "DedicatedUnderlyingItemType": null,
-          "RequiredEnablingItem": null
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
         }
       ],
       "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
-    }
-  },
-  {
-    "Type": "MeshCollisionProxyComponent",
-    "Name": "MeshCollisionProxyComponent_0",
-    "Outer": "Default__WellT3_C",
-    "Class": "UScriptClass'MeshCollisionProxyComponent'",
-    "Properties": {
-      "PhysicsAssetName": {
-        "ObjectName": "StaticMesh'WellT3'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/WellT3.2"
-      },
-      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeStone",
-      "CollisionMask": 16785410
     }
   },
   {
@@ -196,7 +184,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__WellT3_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WellT3.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WellT3.10"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__WellT3_C:HealthComp'",
@@ -204,19 +192,15 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__WellT3_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WellT3.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WellT3.7"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__WellT3_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WellT3.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WellT3.9"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__WellT3_C:DestroyableComp'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WellT3.3"
-      },
-      "MeshCollisionComp": {
-        "ObjectName": "MeshCollisionProxyComponent'Default__WellT3_C:MeshCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WellT3.7"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__WellT3_C:FootprintCollisionProxyComponent_0'",
@@ -232,15 +216,15 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__WellT3_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WellT3.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WellT3.8"
       },
       "CodeNameString": "WellT3",
       "CodeName": -1815395071,
-      "bShowOnMap": true,
+      "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
           "ObjectName": "WellProxyComponent'Default__WellT3_C:WellProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WellT3.12"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/WellT3.11"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__WellT3_C:InventoryProxyComponent_0'",

@@ -17,9 +17,8 @@ class ABPVisFoundationGateT2_C : public AVisGate
     class UVisFoundationDecorMesh* VisFoundationDecorMesh3;                           // 0x04E8 (size: 0x8)
     class UVisFoundationDecorMesh* VisFoundationDecorMesh1;                           // 0x04F0 (size: 0x8)
     class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x04F8 (size: 0x8)
-    class UDecalComponent* Decal;                                                     // 0x0500 (size: 0x8)
-    class UStaticMeshComponent* Scaffolding;                                          // 0x0508 (size: 0x8)
+    class UStaticMeshComponent* Scaffolding;                                          // 0x0500 (size: 0x8)
 
-}; // Size: 0x510
+}; // Size: 0x508
 
 #endif

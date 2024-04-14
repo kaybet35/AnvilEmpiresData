@@ -12,6 +12,7 @@ UTownHallDataComponent::UTownHallDataComponent(const FObjectInitializer& ObjectI
     this->NumReinforcementSupplies = 0;
     this->TownNameId = 0;
     this->TownNameOrdinal = 0;
+    this->CurrentBuildRadius = 0.00f;
 }
 
 

@@ -27,7 +27,7 @@ public:
 
 private:
     UFUNCTION(BlueprintCallable)
-    void OnFullscreenModeChanged(const FString& Input);
+    void SetFullscreen(const FString& Input);
     
 };
 

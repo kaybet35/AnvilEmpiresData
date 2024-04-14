@@ -9,5 +9,6 @@ FInventoryItem::FInventoryItem() {
     this->StackLimit = 0;
     this->bIsDisabled = false;
     this->bTooEncumberedToEquip = false;
+    this->BackgroundType = EAnvilItemSlotBackgroundType::None;
 }
 
