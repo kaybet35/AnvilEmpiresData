@@ -1,5 +1,5 @@
-#ifndef UE4SS_SDK_RockMine_DUPL_1_HPP
-#define UE4SS_SDK_RockMine_DUPL_1_HPP
+#ifndef UE4SS_SDK_RockMine_DUPL_2_HPP
+#define UE4SS_SDK_RockMine_DUPL_2_HPP
 
 class ARockMine_C : public AFootprint
 {

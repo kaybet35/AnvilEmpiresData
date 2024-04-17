@@ -1,7 +1,7 @@
 #include "FamilyCenterProxyComponent.h"
 
 UFamilyCenterProxyComponent::UFamilyCenterProxyComponent() {
-    this->Tier = 0;
+    this->Tier = 1;
 }
 
 

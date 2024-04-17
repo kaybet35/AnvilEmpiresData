@@ -16,6 +16,9 @@ UCLASS(Blueprintable)
 class ANVIL_API AVisCookingStructure : public AVisStructure {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bShowCheatSheet;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCookingDataComponent* CookingDataComponent;
     

@@ -129,6 +129,21 @@ EConnectionFailedReason = {
     EConnectionFailedReason_MAX = 5,
 }
 
+---@enum EDeploymentPointTooltipType
+EDeploymentPointTooltipType = {
+    None = 0,
+    Wild = 1,
+    TownCenterWild = 2,
+    TownCenterMilitia = 3,
+    CampMilitia = 4,
+    SmallCampMilitia = 5,
+    TownCenter = 6,
+    FamilyCenter = 7,
+    Camp = 8,
+    SmallCamp = 9,
+    EDeploymentPointTooltipType_MAX = 10,
+}
+
 ---@enum EEquippedItemGripType
 EEquippedItemGripType = {
     NoWeapon = 0,
@@ -156,6 +171,25 @@ EFishingBobberState = {
     Hooked = 3,
     Retracting = 4,
     EFishingBobberState_MAX = 5,
+}
+
+---@enum EGameplayHint
+EGameplayHint = {
+    Homestead1 = 0,
+    Homestead2 = 1,
+    Homestead3 = 2,
+    HomesteadComplete = 3,
+    HomesteadUpgrade1 = 4,
+    HomesteadUpgrade2 = 5,
+    HomesteadUpgrade3 = 6,
+    HomesteadUpgradeComplete = 7,
+    SettlementCore1 = 8,
+    SettlementCore2 = 9,
+    SettlementCore3 = 10,
+    SettlementCoreComplete = 11,
+    Part2 = 12,
+    NumGameplayHintTypes = 13,
+    EGameplayHint_MAX = 14,
 }
 
 ---@enum EHUDPlayerNameColourType

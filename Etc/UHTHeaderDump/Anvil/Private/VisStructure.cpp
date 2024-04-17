@@ -25,9 +25,9 @@ AVisStructure::AVisStructure(const FObjectInitializer& ObjectInitializer) : Supe
     this->UseVolumeDecalComponent = CreateDefaultSubobject<UDecalComponent>(TEXT("UseVolumeDecalComponent"));
     this->GrassRemovalVolume = CreateDefaultSubobject<UGrassRemovalVolumeComponent>(TEXT("GrassRemovalVolume"));
     this->GeneratedScorchEffects = 0;
-    this->ScaffoldingComponent->SetupAttachment(RootComponent);
     this->UseVolumeDecalComponent->SetupAttachment(RootComponent);
     this->GrassRemovalVolume->SetupAttachment(RootComponent);
+    this->ScaffoldingComponent->SetupAttachment(RootComponent);
 }
 
 

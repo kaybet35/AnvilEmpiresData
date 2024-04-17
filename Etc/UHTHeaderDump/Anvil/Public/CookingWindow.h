@@ -4,7 +4,9 @@
 #include "StructureWindow.h"
 #include "CookingWindow.generated.h"
 
+class UCanvasPanel;
 class UInventoryWidget;
+class URichTextBlock;
 class UTextBlock;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -32,6 +34,12 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* FuelDurationText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCanvasPanel* CheatSheetCanvasPanel;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    URichTextBlock* CheatSheetTextBlock;
     
 public:
     UCookingWindow();

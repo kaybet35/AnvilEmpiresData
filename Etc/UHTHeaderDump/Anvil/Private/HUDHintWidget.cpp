@@ -1,8 +1,10 @@
 #include "HUDHintWidget.h"
 
 UHUDHintWidget::UHUDHintWidget() : UUserWidget(FObjectInitializer::Get()) {
-    this->HintTextBlock = NULL;
-    this->HintCanvas = NULL;
+    this->PrimaryHintTextBlock = NULL;
+    this->PrimaryHintCanvas = NULL;
+    this->SecondaryHintTextBlock = NULL;
+    this->SecondaryHintCanvas = NULL;
 }
 
 

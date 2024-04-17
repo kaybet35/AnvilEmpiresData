@@ -18,20 +18,56 @@
             "R": 0.0,
             "G": 0.0,
             "B": 0.0,
-            "A": 0.75,
-            "Hex": "BF000000"
+            "A": 0.7,
+            "Hex": "B3000000"
           }
         }
       },
       "Slots": [
         {
           "ObjectName": "BorderSlot'BPHUDHintWidget_C:WidgetTree.Border.BorderSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.1"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.2"
         }
       ],
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPHUDHintWidget_C:WidgetTree.HintCanvas.CanvasPanelSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.4"
+        "ObjectName": "CanvasPanelSlot'BPHUDHintWidget_C:WidgetTree.PrimaryHintCanvas.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.7"
+      }
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Padding": {
+        "Left": 20.0,
+        "Top": 20.0,
+        "Right": 20.0,
+        "Bottom": 20.0
+      },
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.7,
+            "Hex": "B3000000"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPHUDHintWidget_C:WidgetTree.Border_1.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.3"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPHUDHintWidget_C:WidgetTree.SecondaryHintCanvas.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.8"
       }
     }
   },
@@ -53,8 +89,31 @@
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.0"
       },
       "Content": {
-        "ObjectName": "RichTextBlock'BPHUDHintWidget_C:WidgetTree.HintTextBlock'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.5"
+        "ObjectName": "RichTextBlock'BPHUDHintWidget_C:WidgetTree.PrimaryHintTextBlock'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.9"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_1",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 20.0,
+        "Top": 20.0,
+        "Right": 20.0,
+        "Bottom": 20.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Border'BPHUDHintWidget_C:WidgetTree.Border_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.1"
+      },
+      "Content": {
+        "ObjectName": "RichTextBlock'BPHUDHintWidget_C:WidgetTree.SecondaryHintTextBlock'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.10"
       }
     }
   },
@@ -69,29 +128,52 @@
   },
   {
     "Type": "CanvasPanel",
-    "Name": "HintCanvas",
+    "Name": "PrimaryHintCanvas",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'CanvasPanel'",
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "CanvasPanelSlot'BPHUDHintWidget_C:WidgetTree.HintCanvas.CanvasPanelSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.4"
+          "ObjectName": "CanvasPanelSlot'BPHUDHintWidget_C:WidgetTree.PrimaryHintCanvas.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.7"
         }
       ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPHUDHintWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.13"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "SecondaryHintCanvas",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPHUDHintWidget_C:WidgetTree.SecondaryHintCanvas.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPHUDHintWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.14"
+      },
       "Visibility": "ESlateVisibility::Collapsed"
     }
   },
   {
     "Type": "CanvasPanelSlot",
     "Name": "CanvasPanelSlot_0",
-    "Outer": "HintCanvas",
+    "Outer": "PrimaryHintCanvas",
     "Class": "UScriptClass'CanvasPanelSlot'",
     "Properties": {
       "bAutoSize": true,
       "Parent": {
-        "ObjectName": "CanvasPanel'BPHUDHintWidget_C:WidgetTree.HintCanvas'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.3"
+        "ObjectName": "CanvasPanel'BPHUDHintWidget_C:WidgetTree.PrimaryHintCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.5"
       },
       "Content": {
         "ObjectName": "Border'BPHUDHintWidget_C:WidgetTree.Border'",
@@ -100,8 +182,25 @@
     }
   },
   {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "SecondaryHintCanvas",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPHUDHintWidget_C:WidgetTree.SecondaryHintCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.6"
+      },
+      "Content": {
+        "ObjectName": "Border'BPHUDHintWidget_C:WidgetTree.Border_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.1"
+      }
+    }
+  },
+  {
     "Type": "RichTextBlock",
-    "Name": "HintTextBlock",
+    "Name": "PrimaryHintTextBlock",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'RichTextBlock'",
     "Properties": {
@@ -121,11 +220,129 @@
           "ObjectPath": "Anvil/Content/UI/AnvilRichTextDecorator.1"
         }
       ],
+      "MinDesiredWidth": 350.0,
       "AutoWrapText": true,
       "WrapTextAt": 350.0,
       "Slot": {
         "ObjectName": "BorderSlot'BPHUDHintWidget_C:WidgetTree.Border.BorderSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.1"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.2"
+      }
+    }
+  },
+  {
+    "Type": "RichTextBlock",
+    "Name": "SecondaryHintTextBlock",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'RichTextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "682A919D444FB173667A0B8DA490A717",
+        "SourceString": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+        "LocalizedString": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+      },
+      "TextStyleSet": {
+        "ObjectName": "DataTable'AnvilRichTextStyleData'",
+        "ObjectPath": "Anvil/Content/UI/AnvilRichTextStyleData.0"
+      },
+      "DecoratorClasses": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'AnvilRichTextDecorator_C'",
+          "ObjectPath": "Anvil/Content/UI/AnvilRichTextDecorator.1"
+        }
+      ],
+      "MinDesiredWidth": 350.0,
+      "AutoWrapText": true,
+      "WrapTextAt": 350.0,
+      "Slot": {
+        "ObjectName": "BorderSlot'BPHUDHintWidget_C:WidgetTree.Border_1.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.3"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_144",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 5.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPHUDHintWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.15"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'BPHUDHintWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.13"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPHUDHintWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.15"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPHUDHintWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.14"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPHUDHintWidget_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.12"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'BPHUDHintWidget_C:WidgetTree.PrimaryHintCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.5"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPHUDHintWidget_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.12"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'BPHUDHintWidget_C:WidgetTree.SecondaryHintCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.6"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPHUDHintWidget_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.12"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPHUDHintWidget_C:WidgetTree.Spacer_144'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.11"
       }
     }
   },
@@ -136,7 +353,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPHUDHintWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.7"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.17"
       },
       "bClassRequiresNativeTick": true
     },
@@ -153,7 +370,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPHUDHintWidget_C'Default__BPHUDHintWidget_C'",
-      "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.2"
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.4"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -166,8 +383,8 @@
     "Class": "UScriptClass'WidgetTree'",
     "Properties": {
       "RootWidget": {
-        "ObjectName": "CanvasPanel'BPHUDHintWidget_C:WidgetTree.HintCanvas'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.3"
+        "ObjectName": "VerticalBox'BPHUDHintWidget_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.12"
       }
     }
   }

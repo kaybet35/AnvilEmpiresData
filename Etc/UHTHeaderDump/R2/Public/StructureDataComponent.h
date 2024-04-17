@@ -18,6 +18,12 @@ public:
     bool bIsCollapsed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsFamilyDestroyed;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsTownDestroyed;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilBuildStructureType StructureType;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))

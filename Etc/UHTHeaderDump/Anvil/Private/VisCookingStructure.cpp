@@ -4,15 +4,16 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=CookingDataComponent -FallbackName=CookingDataComponent
 
 AVisCookingStructure::AVisCookingStructure(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bShowCheatSheet = false;
     this->CookingDataComponent = CreateDefaultSubobject<UCookingDataComponent>(TEXT("CookingDataComponent"));
     this->WaterLevelMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("WaterLevelMesh"));
     this->WaterHeightCurve = NULL;
     this->WaterScaleCurve = NULL;
     this->BoilingTemperatureHighAudio = CreateDefaultSubobject<UAudioComponent>(TEXT("BoilingTemperatureHighAudio"));
     this->BoilingTemperatureLowAudio = CreateDefaultSubobject<UAudioComponent>(TEXT("BoilingTemperatureLowAudio"));
-    this->WaterLevelMesh->SetupAttachment(RootComponent);
     this->BoilingTemperatureHighAudio->SetupAttachment(RootComponent);
     this->BoilingTemperatureLowAudio->SetupAttachment(RootComponent);
+    this->WaterLevelMesh->SetupAttachment(RootComponent);
 }
 
 

@@ -1778,11 +1778,13 @@ class UStructureDataComponent : public UDataComponent
     bool bRestrictedMode;                                                             // 0x00A8 (size: 0x1)
     bool bOnFoundation;                                                               // 0x00C8 (size: 0x1)
     bool bIsCollapsed;                                                                // 0x00E8 (size: 0x1)
-    EAnvilBuildStructureType StructureType;                                           // 0x0108 (size: 0x1)
-    int64 BuilderId;                                                                  // 0x0128 (size: 0x8)
-    int32 TownFamilyAreaId;                                                           // 0x0148 (size: 0x4)
+    bool bIsFamilyDestroyed;                                                          // 0x0108 (size: 0x1)
+    bool bIsTownDestroyed;                                                            // 0x0128 (size: 0x1)
+    EAnvilBuildStructureType StructureType;                                           // 0x0148 (size: 0x1)
+    int64 BuilderId;                                                                  // 0x0168 (size: 0x8)
+    int32 TownFamilyAreaId;                                                           // 0x0188 (size: 0x4)
 
-}; // Size: 0x168
+}; // Size: 0x1A8
 
 class UStructureProtectionProxyComponent : public UProxyComponent
 {
@@ -1890,9 +1892,12 @@ class UTweakableDataComponent : public UDataComponent
     uint8 FamilyHouseRequirementT3;                                                   // 0x0108 (size: 0x1)
     uint8 MarketplaceAreaRequirementT2;                                               // 0x0128 (size: 0x1)
     uint8 MarketplaceAreaRequirementT3;                                               // 0x0148 (size: 0x1)
-    uint8 TownCenterRequiredBuilders;                                                 // 0x0168 (size: 0x1)
+    uint8 TentRequirementT2;                                                          // 0x0168 (size: 0x1)
+    uint8 TentRequirementT3;                                                          // 0x0188 (size: 0x1)
+    uint8 TownCenterRequiredBuilders;                                                 // 0x01A8 (size: 0x1)
+    uint8 TownMapDisableSize;                                                         // 0x01C8 (size: 0x1)
 
-}; // Size: 0x188
+}; // Size: 0x1E8
 
 class UTweakableProxyComponent : public UProxyComponent
 {

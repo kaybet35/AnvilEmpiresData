@@ -52,6 +52,7 @@ enum class EAnvilPlacementStatus : uint8 {
     RequiresMorePopulation,
     RequiresMoreFamilyHouses,
     RequiresMoreMarketplaceAreas,
+    RequiresMoreTents,
     AreaMustBeEmpty,
     YouMustBeOfficial,
 };

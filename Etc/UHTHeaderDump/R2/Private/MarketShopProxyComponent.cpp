@@ -1,7 +1,7 @@
 #include "MarketShopProxyComponent.h"
 
 UMarketShopProxyComponent::UMarketShopProxyComponent() {
-    this->AutoBuySeconds = 0;
+    this->AutoBuySeconds = 3600;
 }
 
 

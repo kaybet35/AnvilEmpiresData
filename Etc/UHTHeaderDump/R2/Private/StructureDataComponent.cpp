@@ -4,6 +4,8 @@ UStructureDataComponent::UStructureDataComponent(const FObjectInitializer& Objec
     this->bRestrictedMode = false;
     this->bOnFoundation = false;
     this->bIsCollapsed = false;
+    this->bIsFamilyDestroyed = false;
+    this->bIsTownDestroyed = false;
     this->StructureType = EAnvilBuildStructureType::Monolithic;
     this->BuilderId = 0;
     this->TownFamilyAreaId = 0;

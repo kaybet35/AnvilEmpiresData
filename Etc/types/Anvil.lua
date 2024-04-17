@@ -289,6 +289,7 @@ AVisController = {}
 
 
 ---@class AVisCookingStructure : AVisStructure
+---@field bShowCheatSheet boolean
 ---@field CookingDataComponent UCookingDataComponent
 ---@field WaterMeshMaterialMap TMap<TSubclassOf<UItemTemplate>, UMaterialInterface>
 ---@field WaterLevelMesh UStaticMeshComponent
@@ -1163,6 +1164,7 @@ function UAnvilButtonWidget:ContextfulOnClicked() end
 
 ---@class UAnvilCharacterSave : USaveGame
 ---@field FogOfWarData TArray<uint8>
+---@field CompletedGameplayHints int32
 UAnvilCharacterSave = {}
 
 
@@ -1458,6 +1460,8 @@ function UConnectScreen:GetThrobberVisibility() end
 ---@field WaterInputItemGrid UInventoryWidget
 ---@field CookingDurationText UTextBlock
 ---@field FuelDurationText UTextBlock
+---@field CheatSheetCanvasPanel UCanvasPanel
+---@field CheatSheetTextBlock URichTextBlock
 UCookingWindow = {}
 
 ---@return ESlateVisibility
@@ -1726,8 +1730,10 @@ UGridPanelWidget = {}
 
 
 ---@class UHUDHintWidget : UUserWidget
----@field HintTextBlock URichTextBlock
----@field HintCanvas UCanvasPanel
+---@field PrimaryHintTextBlock URichTextBlock
+---@field PrimaryHintCanvas UCanvasPanel
+---@field SecondaryHintTextBlock URichTextBlock
+---@field SecondaryHintCanvas UCanvasPanel
 UHUDHintWidget = {}
 
 
@@ -2445,6 +2451,7 @@ function UTownCenterMapIcon:GetNumHousesText() end
 ---@field PledgedHeader UHeaderContainer
 ---@field RareResourceStatus UStatusWidget
 ---@field IncreaseTownStatusButton UButton
+---@field UpkeepBox UHorizontalBox
 ---@field UpkeepIcon UImage
 ---@field UpkeepTextBlock UTextBlock
 ---@field TownNames1 TArray<FText>

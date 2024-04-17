@@ -1,7 +1,7 @@
 #include "RichSoilProxyComponent.h"
 
 URichSoilProxyComponent::URichSoilProxyComponent() {
-    this->Radius = 0.00f;
+    this->Radius = 1000.00f;
 }
 
 

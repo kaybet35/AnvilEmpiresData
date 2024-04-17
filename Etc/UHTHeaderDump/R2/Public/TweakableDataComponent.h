@@ -26,7 +26,16 @@ public:
     uint8 MarketplaceAreaRequirementT3;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 TentRequirementT2;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 TentRequirementT3;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TownCenterRequiredBuilders;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 TownMapDisableSize;
     
     UTweakableDataComponent(const FObjectInitializer& ObjectInitializer);
 

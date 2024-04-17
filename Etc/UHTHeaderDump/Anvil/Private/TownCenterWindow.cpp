@@ -7,6 +7,7 @@ UTownCenterWindow::UTownCenterWindow() {
     this->PledgedHeader = NULL;
     this->RareResourceStatus = NULL;
     this->IncreaseTownStatusButton = NULL;
+    this->UpkeepBox = NULL;
     this->UpkeepIcon = NULL;
     this->UpkeepTextBlock = NULL;
 }

@@ -1,7 +1,7 @@
 #include "RepairProxyComponent.h"
 
 URepairProxyComponent::URepairProxyComponent() {
-    this->TotalRepairCost = 0;
+    this->TotalRepairCost = 10;
 }
 
 

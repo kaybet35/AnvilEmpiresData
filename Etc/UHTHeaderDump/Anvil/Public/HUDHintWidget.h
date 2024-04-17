@@ -12,10 +12,16 @@ class ANVIL_API UHUDHintWidget : public UUserWidget {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    URichTextBlock* HintTextBlock;
+    URichTextBlock* PrimaryHintTextBlock;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UCanvasPanel* HintCanvas;
+    UCanvasPanel* PrimaryHintCanvas;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    URichTextBlock* SecondaryHintTextBlock;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCanvasPanel* SecondaryHintCanvas;
     
 public:
     UHUDHintWidget();

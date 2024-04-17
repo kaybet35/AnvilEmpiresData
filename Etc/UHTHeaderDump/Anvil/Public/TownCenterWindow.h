@@ -5,6 +5,7 @@
 
 class UButton;
 class UHeaderContainer;
+class UHorizontalBox;
 class UImage;
 class UPledgedPlayerBox;
 class UStatusWidget;
@@ -33,6 +34,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UButton* IncreaseTownStatusButton;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UHorizontalBox* UpkeepBox;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UImage* UpkeepIcon;

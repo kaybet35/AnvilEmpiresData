@@ -52,6 +52,7 @@ enum class EAnvilStatusMessageType : uint8 {
     NotEnoughPayment,
     TownNotInRareResourceArea,
     TownTooClose,
+    TownTooFar,
     CampTooClose,
     FamilyTooClose,
     WeaponIneffective,
@@ -76,6 +77,8 @@ enum class EAnvilStatusMessageType : uint8 {
     AccessDeniedAlliedFamilyNotAllowed,
     AccessDeniedStructureCollapsed,
     AccessDeniedTooFarToInteract,
+    AccessDeniedFamilyDestroyed,
+    AccessDeniedTownDestroyed,
     MustBeFamilyManagerToTransferItem,
     DismantleNoPermission,
     DismantleMustBeEmpty,
@@ -124,6 +127,8 @@ enum class EAnvilStatusMessageType : uint8 {
     TargetImmuneEveryone,
     ToolTierTooLow,
     StructureIsBurnt,
+    InventoryMustBeEmpty,
+    PlayerDeploying,
     NumTypes,
 };
 

@@ -8,6 +8,8 @@ UCookingWindow::UCookingWindow() {
     this->WaterInputItemGrid = NULL;
     this->CookingDurationText = NULL;
     this->FuelDurationText = NULL;
+    this->CheatSheetCanvasPanel = NULL;
+    this->CheatSheetTextBlock = NULL;
 }
 
 ESlateVisibility UCookingWindow::GetFuelDurationTextVisibility() {

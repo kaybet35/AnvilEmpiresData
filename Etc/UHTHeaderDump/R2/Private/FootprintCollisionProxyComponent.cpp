@@ -7,7 +7,7 @@ UFootprintCollisionProxyComponent::UFootprintCollisionProxyComponent() {
     this->SurfaceType = EAnvilPhysicalSurfaceType::SurfaceTypeDefault;
     this->CollisionMask = 0;
     this->StepAngle = 0.00f;
-    this->bVaultable = false;
+    this->bVaultable = true;
 }
 
 

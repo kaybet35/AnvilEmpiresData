@@ -650,6 +650,7 @@ class AVisController : public AVisActor
 
 class AVisCookingStructure : public AVisStructure
 {
+    bool bShowCheatSheet;                                                             // 0x04D9 (size: 0x1)
     class UCookingDataComponent* CookingDataComponent;                                // 0x04E0 (size: 0x8)
     TMap<class TSubclassOf<UItemTemplate>, class UMaterialInterface*> WaterMeshMaterialMap; // 0x04E8 (size: 0x50)
     class UStaticMeshComponent* WaterLevelMesh;                                       // 0x0538 (size: 0x8)
@@ -1138,8 +1139,9 @@ class UAnvilButtonWidget : public UUserWidget
 class UAnvilCharacterSave : public USaveGame
 {
     TArray<uint8> FogOfWarData;                                                       // 0x0028 (size: 0x10)
+    int32 CompletedGameplayHints;                                                     // 0x0038 (size: 0x4)
 
-}; // Size: 0x38
+}; // Size: 0x40
 
 class UAnvilClientVoiceClient : public UObject
 {
@@ -1397,12 +1399,14 @@ class UCookingWindow : public UStructureWindow
     class UInventoryWidget* WaterInputItemGrid;                                       // 0x0300 (size: 0x8)
     class UTextBlock* CookingDurationText;                                            // 0x0308 (size: 0x8)
     class UTextBlock* FuelDurationText;                                               // 0x0310 (size: 0x8)
+    class UCanvasPanel* CheatSheetCanvasPanel;                                        // 0x0318 (size: 0x8)
+    class URichTextBlock* CheatSheetTextBlock;                                        // 0x0320 (size: 0x8)
 
     ESlateVisibility GetFuelDurationTextVisibility();
     FText GetFuelDurationText();
     ESlateVisibility GetCookingDurationTextVisibility();
     FText GetCookingDurationText();
-}; // Size: 0x318
+}; // Size: 0x328
 
 class UCraftingRecipeListWidget : public UGridPanelWidget
 {
@@ -1629,10 +1633,12 @@ class UGridPanelWidget : public UUniformGridPanel
 
 class UHUDHintWidget : public UUserWidget
 {
-    class URichTextBlock* HintTextBlock;                                              // 0x0278 (size: 0x8)
-    class UCanvasPanel* HintCanvas;                                                   // 0x0280 (size: 0x8)
+    class URichTextBlock* PrimaryHintTextBlock;                                       // 0x0278 (size: 0x8)
+    class UCanvasPanel* PrimaryHintCanvas;                                            // 0x0280 (size: 0x8)
+    class URichTextBlock* SecondaryHintTextBlock;                                     // 0x0288 (size: 0x8)
+    class UCanvasPanel* SecondaryHintCanvas;                                          // 0x0290 (size: 0x8)
 
-}; // Size: 0x288
+}; // Size: 0x298
 
 class UHUDNameWidget : public UUserWidget
 {
@@ -2301,14 +2307,15 @@ class UTownCenterWindow : public UStructureWindow
     class UHeaderContainer* PledgedHeader;                                            // 0x02F8 (size: 0x8)
     class UStatusWidget* RareResourceStatus;                                          // 0x0300 (size: 0x8)
     class UButton* IncreaseTownStatusButton;                                          // 0x0308 (size: 0x8)
-    class UImage* UpkeepIcon;                                                         // 0x0310 (size: 0x8)
-    class UTextBlock* UpkeepTextBlock;                                                // 0x0318 (size: 0x8)
-    TArray<FText> TownNames1;                                                         // 0x0320 (size: 0x10)
-    TArray<FText> TownNames2;                                                         // 0x0330 (size: 0x10)
-    TArray<FText> TownNames3;                                                         // 0x0340 (size: 0x10)
+    class UHorizontalBox* UpkeepBox;                                                  // 0x0310 (size: 0x8)
+    class UImage* UpkeepIcon;                                                         // 0x0318 (size: 0x8)
+    class UTextBlock* UpkeepTextBlock;                                                // 0x0320 (size: 0x8)
+    TArray<FText> TownNames1;                                                         // 0x0328 (size: 0x10)
+    TArray<FText> TownNames2;                                                         // 0x0338 (size: 0x10)
+    TArray<FText> TownNames3;                                                         // 0x0348 (size: 0x10)
 
     void OnIncreaseTownStatusButtonClicked();
-}; // Size: 0x350
+}; // Size: 0x358
 
 class UTownStatusWidget : public UUserWidget
 {
@@ -2669,6 +2676,6 @@ class UWorldTownCenterMapIcon : public UDeploymentPointMapIcon
     FText GetNumReinforcementSuppliesText();
     ESlateVisibility GetNumHousesVisibility();
     FText GetNumHousesText();
-}; // Size: 0x3F8
+}; // Size: 0x400
 
 #endif

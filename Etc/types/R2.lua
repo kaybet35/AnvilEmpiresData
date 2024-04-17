@@ -1777,6 +1777,8 @@ UStaticTorchProxyComponent = {}
 ---@field bRestrictedMode boolean
 ---@field bOnFoundation boolean
 ---@field bIsCollapsed boolean
+---@field bIsFamilyDestroyed boolean
+---@field bIsTownDestroyed boolean
 ---@field StructureType EAnvilBuildStructureType
 ---@field BuilderId int64
 ---@field TownFamilyAreaId int32
@@ -1889,7 +1891,10 @@ UTrapProxyComponent = {}
 ---@field FamilyHouseRequirementT3 uint8
 ---@field MarketplaceAreaRequirementT2 uint8
 ---@field MarketplaceAreaRequirementT3 uint8
+---@field TentRequirementT2 uint8
+---@field TentRequirementT3 uint8
 ---@field TownCenterRequiredBuilders uint8
+---@field TownMapDisableSize uint8
 UTweakableDataComponent = {}
 
 

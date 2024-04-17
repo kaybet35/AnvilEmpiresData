@@ -7,7 +7,10 @@ UTweakableDataComponent::UTweakableDataComponent(const FObjectInitializer& Objec
     this->FamilyHouseRequirementT3 = 0;
     this->MarketplaceAreaRequirementT2 = 0;
     this->MarketplaceAreaRequirementT3 = 0;
+    this->TentRequirementT2 = 0;
+    this->TentRequirementT3 = 0;
     this->TownCenterRequiredBuilders = 0;
+    this->TownMapDisableSize = 0;
 }
 
 
