@@ -71,8 +71,9 @@ EAnvilBuildLocationType = {
     RequiresEnclosure = 15,
     OutsideTownArea = 16,
     TownArea = 17,
-    NumTypes = 18,
-    EAnvilBuildLocationType_MAX = 19,
+    TownAreaOnly = 18,
+    NumTypes = 19,
+    EAnvilBuildLocationType_MAX = 20,
 }
 
 ---@enum EAnvilBuildStructureType
