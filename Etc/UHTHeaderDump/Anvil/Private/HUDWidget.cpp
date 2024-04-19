@@ -39,6 +39,7 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->InteractionProgressBar1 = NULL;
     this->InteractionProgressBar2 = NULL;
     this->WeatherStatsText = NULL;
+    this->BorderRegionIndicatorText = NULL;
 }
 
 

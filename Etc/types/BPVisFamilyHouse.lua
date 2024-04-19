@@ -2,6 +2,8 @@
 
 ---@class ABPVisFamilyHouse_C : AVisFamilyInventory
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field OwnerFlagMesh2 UStaticMeshComponent
+---@field OwnerFlagMesh UStaticMeshComponent
 ---@field SmokeStack1 UNiagaraComponent
 ---@field SmokeStack UNiagaraComponent
 ---@field VisStaticMesh_Roof UVisStaticMeshComponent

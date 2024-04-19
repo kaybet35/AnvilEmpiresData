@@ -1806,6 +1806,7 @@ UHUDStatsWidget = {}
 ---@field InteractionProgressBar1 UProgressBar
 ---@field InteractionProgressBar2 UProgressBar
 ---@field WeatherStatsText UTextBlock
+---@field BorderRegionIndicatorText UTextBlock
 ---@field NewLocalMessages TArray<UChatMessage>
 UHUDWidget = {}
 

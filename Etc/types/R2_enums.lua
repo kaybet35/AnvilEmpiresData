@@ -852,8 +852,9 @@ EAnvilStatusMessageType = {
     StructureIsBurnt = 122,
     InventoryMustBeEmpty = 123,
     PlayerDeploying = 124,
-    NumTypes = 125,
-    EAnvilStatusMessageType_MAX = 126,
+    BedNotInYourFamilyHouse = 125,
+    NumTypes = 126,
+    EAnvilStatusMessageType_MAX = 127,
 }
 
 ---@enum EAnvilStimulusType

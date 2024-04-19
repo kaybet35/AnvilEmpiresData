@@ -95,19 +95,21 @@ class UBear_ABP_C : public UVisAnimalAnimInstance
     bool isBearStanding;                                                              // 0x0DE8 (size: 0x1)
 
     void AnimGraph(FPoseLink& AnimGraph);
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_SequencePlayer_00E597E243CA36A367D5C0895C40D856();
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_SequencePlayer_7F90BDBF476EBB3E181A51BFB0BD0067();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_9A3816C54772E6FB560339BE25D2C6A8();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0F805E57442B8A422E5B75902685168D();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_4BDC01DA4B3E36A3FE611384FEEC7D78();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_733F9F06451B3F7BFBD7AA9150E026A3();
-    void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_FCC1FA1C41745D31127F59BDFA86E609();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_C17F80D4458AC3267AC27B9E4B69AB3C();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_325243A244EDF7369EB46DAA59F2C4E6();
-    void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_76D1A75B46990B1AD7B65C9DD90F5933();
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_FCC1FA1C41745D31127F59BDFA86E609();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_DECED4A542C3AEDDDBD8699293067182();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D87DB6174C8D2C654975AF80590CB60E();
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_76D1A75B46990B1AD7B65C9DD90F5933();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_34E7121A4222F50393F45F99432CC2F7();
-    void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0A689E4845CE320B820228A778E7F877();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_350F5B9F4D7A597EB4BA67ABFFEEE65D();
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0A689E4845CE320B820228A778E7F877();
     void BlueprintUpdateAnimation(float DeltaTimeX);
     void BlueprintInitializeAnimation();
     void AnimNotify_EnterPosturingEvent();

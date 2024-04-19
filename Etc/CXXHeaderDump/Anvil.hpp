@@ -1704,7 +1704,8 @@ class UHUDWidget : public UUserWidget
     class UProgressBar* InteractionProgressBar1;                                      // 0x0588 (size: 0x8)
     class UProgressBar* InteractionProgressBar2;                                      // 0x0590 (size: 0x8)
     class UTextBlock* WeatherStatsText;                                               // 0x0598 (size: 0x8)
-    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05A8 (size: 0x10)
+    class UTextBlock* BorderRegionIndicatorText;                                      // 0x05A0 (size: 0x8)
+    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05B0 (size: 0x10)
 
     void PlayWinConditionAnimation();
     void PlayTownStatusAlert(const FText& AlertText);

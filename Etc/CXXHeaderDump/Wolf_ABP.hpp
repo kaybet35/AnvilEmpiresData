@@ -84,6 +84,8 @@ class UWolf_ABP_C : public UVisAnimalAnimInstance
     double localYaw;                                                                  // 0x0CE0 (size: 0x8)
 
     void AnimGraph(FPoseLink& AnimGraph);
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_Wolf_ABP_AnimGraphNode_SequencePlayer_6040ED0F487FD6E9082C3D983D32E3FF();
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_Wolf_ABP_AnimGraphNode_SequencePlayer_290510FA4F2A0743ED667B9847E0BE48();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Wolf_ABP_AnimGraphNode_TransitionResult_80B29E964BB3905696838D812FBA8083();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Wolf_ABP_AnimGraphNode_TransitionResult_3EC39E7A48D770DAA9D6E5A02165B013();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Wolf_ABP_AnimGraphNode_TransitionResult_0BC42D6647B27A0363DA38BDE60A2145();

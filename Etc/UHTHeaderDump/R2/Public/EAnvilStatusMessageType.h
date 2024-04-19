@@ -129,6 +129,7 @@ enum class EAnvilStatusMessageType : uint8 {
     StructureIsBurnt,
     InventoryMustBeEmpty,
     PlayerDeploying,
+    BedNotInYourFamilyHouse,
     NumTypes,
 };
 

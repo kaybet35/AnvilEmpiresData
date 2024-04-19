@@ -1,7 +1,7 @@
 #include "AlertsContainerWidget.h"
 
 UAlertsContainerWidget::UAlertsContainerWidget() : UUserWidget(FObjectInitializer::Get()) {
-    this->MaxNumVisibleAlerts = 3;
+    this->MaxNumVisibleAlerts = 4;
     this->AlertWidgetClass = NULL;
     this->AlertsMaximizeButton = NULL;
     this->AlertsMinimizeButton = NULL;

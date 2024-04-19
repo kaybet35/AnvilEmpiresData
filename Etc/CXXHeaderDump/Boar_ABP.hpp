@@ -79,6 +79,8 @@ class UBoar_ABP_C : public UVisAnimalAnimInstance
     double localYaw;                                                                  // 0x0C50 (size: 0x8)
 
     void AnimGraph(FPoseLink& AnimGraph);
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_SequencePlayer_2A7125954AD339959504009D1A537F23();
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_SequencePlayer_48110F994887293CBF92A7A00E63AA40();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_B7AF77FD4605FA277A9A0CB553C99B91();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_99B54A324D6931A465CCDAAC6A11B14A();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_AEC398124D56E3557684AD8E49E35854();
