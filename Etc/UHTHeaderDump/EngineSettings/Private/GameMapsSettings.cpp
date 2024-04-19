@@ -5,7 +5,7 @@ UGameMapsSettings::UGameMapsSettings() {
     this->TwoPlayerSplitscreenLayout = ETwoPlayerSplitScreenType::Horizontal;
     this->ThreePlayerSplitscreenLayout = EThreePlayerSplitScreenType::FavorTop;
     this->FourPlayerSplitscreenLayout = EFourPlayerSplitScreenType::Grid;
-    this->bOffsetPlayerGamepadIds = false;
+    this->bOffsetPlayerGamepadIds = true;
 }
 
 void UGameMapsSettings::SetSkipAssigningGamepadToPlayer1(bool bSkipFirstPlayer) {
