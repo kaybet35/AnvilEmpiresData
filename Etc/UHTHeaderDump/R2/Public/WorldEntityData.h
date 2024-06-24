@@ -2,8 +2,10 @@
 #include "CoreMinimal.h"
 #include "EAnvilWorldEntityType.h"
 #include "WorldEntityBeaconTowerData.h"
+#include "WorldEntityCentralMarketplaceData.h"
 #include "WorldEntityFamilyCenterData.h"
 #include "WorldEntityTownHallData.h"
+#include "WorldEntityWildSpawnData.h"
 #include "WorldEntityData.generated.h"
 
 USTRUCT(BlueprintType)
@@ -14,6 +16,9 @@ public:
     EAnvilWorldEntityType DataType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FWorldEntityWildSpawnData WildSpawnData;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWorldEntityTownHallData TownHallData;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -21,6 +26,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWorldEntityFamilyCenterData FamilyCenterData;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FWorldEntityCentralMarketplaceData CentralMarketplaceData;
     
     R2_API FWorldEntityData();
 };

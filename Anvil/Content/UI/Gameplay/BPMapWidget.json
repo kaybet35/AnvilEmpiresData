@@ -1,28 +1,36 @@
 [
   {
     "Type": "Border",
-    "Name": "DeploymentInstructionOrSpawnTimerBorder",
+    "Name": "CentralMarketplaceWidgetBorder",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'Border'",
     "Properties": {
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
-      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
-      "BrushColor": {
-        "R": 0.0,
-        "G": 0.0,
-        "B": 0.0,
-        "A": 0.33,
-        "Hex": "54000000"
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.8,
+            "Hex": "CC000000"
+          }
+        }
       },
       "Slots": [
         {
-          "ObjectName": "BorderSlot'BPMapWidget_C:WidgetTree.DeploymentInstructionOrSpawnTimerBorder.BorderSlot_0'",
+          "ObjectName": "BorderSlot'BPMapWidget_C:WidgetTree.CentralMarketplaceWidgetBorder.BorderSlot_0'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.2"
         }
       ],
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_6'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.17"
+        "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.16"
       }
     }
   },
@@ -54,18 +62,22 @@
   {
     "Type": "BorderSlot",
     "Name": "BorderSlot_0",
-    "Outer": "DeploymentInstructionOrSpawnTimerBorder",
+    "Outer": "CentralMarketplaceWidgetBorder",
     "Class": "UScriptClass'BorderSlot'",
     "Properties": {
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
-      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
       "Parent": {
-        "ObjectName": "Border'BPMapWidget_C:WidgetTree.DeploymentInstructionOrSpawnTimerBorder'",
+        "ObjectName": "Border'BPMapWidget_C:WidgetTree.CentralMarketplaceWidgetBorder'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.0"
       },
       "Content": {
-        "ObjectName": "TextBlock'BPMapWidget_C:WidgetTree.DeploymentInstructionOrSpawnTimerText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.31"
+        "ObjectName": "BPCentralMarketplaceWidget_C'BPMapWidget_C:WidgetTree.CentralMarketplaceWidget'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.4"
       }
     }
   },
@@ -86,24 +98,19 @@
     }
   },
   {
-    "Type": "BPAnvilButtonWidget_C",
-    "Name": "LogoutButton",
+    "Type": "BPCentralMarketplaceWidget_C",
+    "Name": "CentralMarketplaceWidget",
     "Outer": "WidgetTree",
-    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPAnvilButtonWidget.BPAnvilButtonWidget_C'",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.BPCentralMarketplaceWidget_C'",
     "Template": {
-      "ObjectName": "BPAnvilButtonWidget_C'Default__BPAnvilButtonWidget_C'",
-      "ObjectPath": "Anvil/Content/UI/BPAnvilButtonWidget.0"
+      "ObjectName": "BPCentralMarketplaceWidget_C'Default__BPCentralMarketplaceWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.11"
     },
     "Properties": {
-      "LabelText": {
-        "Namespace": "",
-        "Key": "B58414CE463462DF6A3D09A5251895B0",
-        "SourceString": "Logout",
-        "LocalizedString": "Logout"
-      },
+      "bIsMapWidget": true,
       "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPMapWidget_C:WidgetTree.BottomButtonsHorizontalBox.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.25"
+        "ObjectName": "BorderSlot'BPMapWidget_C:WidgetTree.CentralMarketplaceWidgetBorder.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.2"
       }
     }
   },
@@ -119,7 +126,7 @@
           "G": 0.559401,
           "B": 0.541667,
           "A": 1.0,
-          "Hex": "FFFFC5C3"
+          "Hex": "FFC5C3"
         }
       },
       "ZoomSpeed": 0.25,
@@ -164,7 +171,7 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.16"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.17"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_2'",
@@ -183,12 +190,12 @@
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.13"
         },
         {
-          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_6'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.17"
-        },
-        {
           "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_1'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.16"
         }
       ]
     }
@@ -254,7 +261,7 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPMapWidget_C:WidgetTree.ObjectiveText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.33"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.31"
       }
     }
   },
@@ -289,7 +296,7 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPMapWidget_C:WidgetTree.ObjectiveHeaderText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.32"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.30"
       }
     }
   },
@@ -324,7 +331,7 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPMapWidget_C:WidgetTree.TimeOfDayText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.34"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.32"
       }
     }
   },
@@ -427,7 +434,41 @@
       },
       "Content": {
         "ObjectName": "ScaleBox'BPMapWidget_C:WidgetTree.ScaleBox_100'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.29"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.28"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Outer": "MapContainer",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 100,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapContainer'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.7"
+      },
+      "Content": {
+        "ObjectName": "Border'BPMapWidget_C:WidgetTree.CentralMarketplaceWidgetBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.0"
       }
     }
   },
@@ -456,44 +497,7 @@
       },
       "Content": {
         "ObjectName": "Image'BPMapWidget_C:WidgetTree.frame'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.27"
-      }
-    }
-  },
-  {
-    "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_6",
-    "Outer": "MapContainer",
-    "Class": "UScriptClass'CanvasPanelSlot'",
-    "Properties": {
-      "LayoutData": {
-        "Offsets": {
-          "Top": 59.761402,
-          "Right": 280.0,
-          "Bottom": 40.0
-        },
-        "Anchors": {
-          "Minimum": {
-            "X": 0.5,
-            "Y": 0.0
-          },
-          "Maximum": {
-            "X": 0.5,
-            "Y": 0.0
-          }
-        },
-        "Alignment": {
-          "X": 0.5,
-          "Y": 0.0
-        }
-      },
-      "Parent": {
-        "ObjectName": "CanvasPanel'BPMapWidget_C:WidgetTree.MapContainer'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.7"
-      },
-      "Content": {
-        "ObjectName": "Border'BPMapWidget_C:WidgetTree.DeploymentInstructionOrSpawnTimerBorder'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.0"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.26"
       }
     }
   },
@@ -597,7 +601,7 @@
       },
       "Content": {
         "ObjectName": "Image'BPMapWidget_C:WidgetTree.MapImage'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.28"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.27"
       }
     }
   },
@@ -851,31 +855,9 @@
     "Outer": "WidgetTree",
     "Class": "UScriptClass'HorizontalBox'",
     "Properties": {
-      "Slots": [
-        {
-          "ObjectName": "HorizontalBoxSlot'BPMapWidget_C:WidgetTree.BottomButtonsHorizontalBox.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.25"
-        }
-      ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_1'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.14"
-      }
-    }
-  },
-  {
-    "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_0",
-    "Outer": "BottomButtonsHorizontalBox",
-    "Class": "UScriptClass'HorizontalBoxSlot'",
-    "Properties": {
-      "Parent": {
-        "ObjectName": "HorizontalBox'BPMapWidget_C:WidgetTree.BottomButtonsHorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.24"
-      },
-      "Content": {
-        "ObjectName": "BPAnvilButtonWidget_C'BPMapWidget_C:WidgetTree.LogoutButton'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.4"
       }
     }
   },
@@ -897,7 +879,7 @@
       },
       "Slot": {
         "ObjectName": "ScaleBoxSlot'BPMapWidget_C:WidgetTree.ScaleBox_100.ScaleBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.30"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.29"
       }
     }
   },
@@ -926,7 +908,7 @@
       },
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPMapWidget_C:WidgetTree.MapContainer.CanvasPanelSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.16"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.17"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -964,7 +946,7 @@
       "Slots": [
         {
           "ObjectName": "ScaleBoxSlot'BPMapWidget_C:WidgetTree.ScaleBox_100.ScaleBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.30"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.29"
         }
       ],
       "Slot": {
@@ -981,49 +963,12 @@
     "Properties": {
       "Parent": {
         "ObjectName": "ScaleBox'BPMapWidget_C:WidgetTree.ScaleBox_100'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.29"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.28"
       },
       "Content": {
         "ObjectName": "Image'BPMapWidget_C:WidgetTree.background'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.26"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.25"
       }
-    }
-  },
-  {
-    "Type": "TextBlock",
-    "Name": "DeploymentInstructionOrSpawnTimerText",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'TextBlock'",
-    "Properties": {
-      "Text": {
-        "Namespace": "",
-        "Key": "6D5D6D064FC1336A3E17BBA87055BE91",
-        "SourceString": "Deployment available in 5s",
-        "LocalizedString": "Deployment available in 5s"
-      },
-      "ColorAndOpacity": {
-        "SpecifiedColor": {
-          "R": 0.9,
-          "G": 0.9,
-          "B": 0.9,
-          "A": 1.0,
-          "Hex": "FFF4F4F4"
-        }
-      },
-      "Font": {
-        "FontObject": {
-          "ObjectName": "Font'Renner-Book_Font'",
-          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
-        },
-        "TypefaceFontName": "Default",
-        "Size": 16
-      },
-      "Justification": "ETextJustify::Center",
-      "Slot": {
-        "ObjectName": "BorderSlot'BPMapWidget_C:WidgetTree.DeploymentInstructionOrSpawnTimerBorder.BorderSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.2"
-      },
-      "bIsVariable": true
     }
   },
   {
@@ -1044,7 +989,7 @@
           "G": 0.9,
           "B": 0.9,
           "A": 1.0,
-          "Hex": "FFF4F4F4"
+          "Hex": "F4F4F4"
         }
       },
       "Font": {
@@ -1081,7 +1026,7 @@
           "G": 0.9,
           "B": 0.9,
           "A": 1.0,
-          "Hex": "FFF4F4F4"
+          "Hex": "F4F4F4"
         }
       },
       "Font": {
@@ -1118,7 +1063,7 @@
           "G": 0.9,
           "B": 0.9,
           "A": 1.0,
-          "Hex": "FFF4F4F4"
+          "Hex": "F4F4F4"
         }
       },
       "Font": {
@@ -1144,7 +1089,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPMapWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.36"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.34"
       },
       "bClassRequiresNativeTick": true,
       "UberGraphFunction": {

@@ -8,7 +8,7 @@
       "VisionRange": 2000.0,
       "VisionAngle": 270.0,
       "SlowSpeed": 150.0,
-      "FastSpeed": 600.0,
+      "FastSpeed": 1000.0,
       "TrapTime": 30.0,
       "bHoming": true,
       "HomingDistance": 1000.0
@@ -44,7 +44,7 @@
       ],
       "OnRoadVisionRange": 300.0,
       "PosturingHoldDist": 1000.0,
-      "PosturingDuration": 5.0,
+      "PosturingDuration": 8.0,
       "ChaseDuration": 10.0,
       "AttackOffset": {
         "X": 250.0,
@@ -80,7 +80,7 @@
         },
         {
           "ObjectName": "ResourceProxyComponent'Default__Bear_C:ResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Bear.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Bear.8"
         },
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__Bear_C:BoxCollisionProxyComponent_0'",
@@ -89,6 +89,10 @@
         {
           "ObjectName": "AnimalAttackProxyComponent'Default__Bear_C:AnimalAttackProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Bear.1"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__Bear_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Bear.7"
         }
       ],
       "VisActorClass": {
@@ -136,7 +140,7 @@
         "Y": 35.0,
         "Z": 50.0
       },
-      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Flesh",
       "CollisionMask": 8256
     }
   },
@@ -148,7 +152,7 @@
     "Properties": {
       "Radius": 100.0,
       "HalfHeight": 100.0,
-      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Flesh",
       "CollisionMask": 524288
     }
   },
@@ -166,6 +170,16 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
       },
       "TargetType": "EAnvilDamageTargetType::Infantry"
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__Bear_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 120.0,
+      "ResetIfObserved": true
     }
   },
   {

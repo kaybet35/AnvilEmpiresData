@@ -80,12 +80,6 @@ public:
     void GetTimeOfDay(int32& OutHours, int32& OutMinutes, int32& OutSeconds) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    float GetNightTimeNormalized() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    bool GetIsNight() const;
-    
-    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetDayCurrentSeconds(int32& OutSeconds) const;
     
 private:

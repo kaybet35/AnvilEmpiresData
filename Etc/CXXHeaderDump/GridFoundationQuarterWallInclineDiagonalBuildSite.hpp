@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_GridFoundationQuarterWallInclineDiagonalBuildSite_HPP
+#define UE4SS_SDK_GridFoundationQuarterWallInclineDiagonalBuildSite_HPP
+
+class UGridFoundationQuarterWallInclineDiagonalBuildSite_C : public UBPBaseFoundationModularBuildSiteEntity_C
+{
+}; // Size: 0xC8
+
+#endif

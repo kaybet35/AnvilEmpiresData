@@ -32,6 +32,7 @@ enum class EAnvilPlacementStatus : uint8 {
     RequiresHouse,
     RequiresFamilyArea,
     RequiresFamily,
+    RequiresClaimedFamilyHouse,
     OnlyOneFamilyCenterPerTown,
     TooCloseTogether,
     TooCloseToWildSpawn,
@@ -55,5 +56,6 @@ enum class EAnvilPlacementStatus : uint8 {
     RequiresMoreTents,
     AreaMustBeEmpty,
     YouMustBeOfficial,
+    MustBeUniquePerTown,
 };
 

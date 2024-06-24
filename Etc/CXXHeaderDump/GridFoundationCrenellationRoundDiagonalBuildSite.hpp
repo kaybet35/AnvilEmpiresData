@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_GridFoundationCrenellationRoundDiagonalBuildSite_HPP
+#define UE4SS_SDK_GridFoundationCrenellationRoundDiagonalBuildSite_HPP
+
+class UGridFoundationCrenellationRoundDiagonalBuildSite_C : public UBPBaseModularBuildSiteEntity_C
+{
+}; // Size: 0xC8
+
+#endif

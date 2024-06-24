@@ -3,6 +3,6 @@
 
 class UBPHUDHintWidget_C : public UHUDHintWidget
 {
-}; // Size: 0x298
+}; // Size: 0x2B0
 
 #endif

@@ -5,6 +5,8 @@
 
 class UAnvilButtonWidget;
 class UComboBoxString;
+class UEditableTextBox;
+class USlider;
 class UTextBlock;
 class UThrobber;
 
@@ -26,6 +28,24 @@ protected:
     UComboBoxString* ComboBox;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    USlider* Slider;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* SliderCurrentValueText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* SliderMinValueText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* SliderMaxValueText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* TextInputLabelTextBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UEditableTextBox* TextInputEditableTextBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAnvilButtonWidget* LeftButton;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -40,6 +60,12 @@ private:
     
     UFUNCTION(BlueprintCallable)
     void OnLeftButtonClicked();
+    
+    UFUNCTION(BlueprintCallable)
+    FText GetSliderCurrentValueText();
+    
+    UFUNCTION(BlueprintCallable)
+    void FOnSliderValueChanged(const float Value);
     
 };
 

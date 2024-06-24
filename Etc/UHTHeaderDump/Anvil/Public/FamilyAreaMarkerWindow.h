@@ -44,7 +44,10 @@ public:
 
 private:
     UFUNCTION()
-    void OnKickClicked(uint64 PlayerId);
+    void OnRemoveAlliedFamilyClicked(const uint64 AlliedFamilyFounderOnlineId);
+    
+    UFUNCTION()
+    void OnKickMemberClicked(const uint64 PlayerId);
     
     UFUNCTION(BlueprintCallable)
     void OnFamilyAreaSetAllianceClicked();

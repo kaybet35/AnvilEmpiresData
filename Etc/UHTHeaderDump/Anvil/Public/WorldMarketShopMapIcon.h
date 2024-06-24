@@ -4,7 +4,8 @@
 #include "WorldEntityMapIcon.h"
 #include "WorldMarketShopMapIcon.generated.h"
 
-class UMarketShopMapTooltip;
+class UButton;
+class UCentralMarketplaceMapTooltip;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UWorldMarketShopMapIcon : public UWorldEntityMapIcon {
@@ -12,13 +13,20 @@ class ANVIL_API UWorldMarketShopMapIcon : public UWorldEntityMapIcon {
 public:
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<UMarketShopMapTooltip> MarketShopTooltipClass;
+    TSubclassOf<UCentralMarketplaceMapTooltip> CentralMarketplaceTooltipClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UMarketShopMapTooltip* CachedMarketShopTooltip;
+    UButton* MapItemButton;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCentralMarketplaceMapTooltip* CachedCentralMarketplaceTooltip;
     
 public:
     UWorldMarketShopMapIcon();
 
+private:
+    UFUNCTION(BlueprintCallable)
+    void OnIconClicked();
+    
 };
 

@@ -104,7 +104,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__FamilyCenterT3_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT3.15"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT3.16"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__FamilyCenterT3_C:HealthComp'",
@@ -112,11 +112,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__FamilyCenterT3_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT3.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT3.13"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__FamilyCenterT3_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT3.14"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT3.15"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__FamilyCenterT3_C:DestroyableComp'",
@@ -136,7 +136,7 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__FamilyCenterT3_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT3.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT3.14"
       },
       "CodeNameString": "FamilyCenterT3",
       "CodeName": 1492267168,
@@ -165,6 +165,10 @@
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__FamilyCenterT3_C:BoxCollisionProxyComponent_1'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT3.2"
+        },
+        {
+          "ObjectName": "PlayerSpawnerProxyComponent'Default__FamilyCenterT3_C:PlayerSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterT3.12"
         }
       ],
       "VisActorClass": {
@@ -259,6 +263,16 @@
     "Class": "UScriptClass'MeshVisibilityProxyComponent'"
   },
   {
+    "Type": "PlayerSpawnerProxyComponent",
+    "Name": "PlayerSpawnerProxyComponent_0",
+    "Outer": "Default__FamilyCenterT3_C",
+    "Class": "UScriptClass'PlayerSpawnerProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilSpawnType::Town",
+      "SpawnRadius": 2500.0
+    }
+  },
+  {
     "Type": "RepairProxyComponent",
     "Name": "RepairComp",
     "Outer": "Default__FamilyCenterT3_C",
@@ -266,9 +280,6 @@
     "Template": {
       "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
-    },
-    "Properties": {
-      "TotalRepairCost": 30
     }
   },
   {

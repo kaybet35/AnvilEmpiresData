@@ -29,6 +29,8 @@ enum class EHUDWindowType : uint8 {
     Anvil,
     FamilyAreaMarker,
     FamilyHouse,
+    Lore,
+    CentralMarket,
     Count,
 };
 

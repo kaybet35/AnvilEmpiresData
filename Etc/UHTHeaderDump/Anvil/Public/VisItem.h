@@ -98,6 +98,9 @@ public:
     TMap<EAnvilSimActivityState, UAnimMontage*> ActivityStateMontageMap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<UAnimMontage*> AttackChainMontages;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* TransferSoundCue;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -28,5 +28,6 @@ enum class EActionButtonType : uint8 {
     StartPowerMill,
     StopPowerMill,
     ClaimFamilyInventory,
+    PledgeToTown,
 };
 

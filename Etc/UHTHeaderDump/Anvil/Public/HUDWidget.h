@@ -106,12 +106,6 @@ protected:
     UImage* WinConditionLogo;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UCanvasPanel* TownStatusAlertCanvas;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* TownStatusAlertText;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UVitalityStatusWidget* PlayerVitality;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -163,9 +157,6 @@ public:
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void PlayWinConditionAnimation();
-    
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void PlayTownStatusAlert(const FText& AlertText);
     
 private:
     UFUNCTION(BlueprintCallable)

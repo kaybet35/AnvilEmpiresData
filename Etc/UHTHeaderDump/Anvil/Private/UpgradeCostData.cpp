@@ -9,5 +9,7 @@ FUpgradeCostData::FUpgradeCostData() {
     this->AnimalFat = 0;
     this->AnimalBones = 0;
     this->ProcessedLeather = 0;
+    this->Mortar = 0;
+    this->Gravel = 0;
 }
 

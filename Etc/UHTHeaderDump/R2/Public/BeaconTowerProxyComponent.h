@@ -18,7 +18,10 @@ public:
     FR2FloatRange DetectionRangeMinMax;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FR2FloatRange AltitudeMinMax;
+    FR2FloatRange AltitudeDeltaMinMax;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float AltitudeCheckRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DetectionFuelCostPerHour;

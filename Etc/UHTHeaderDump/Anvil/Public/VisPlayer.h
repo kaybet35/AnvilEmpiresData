@@ -7,6 +7,7 @@
 #include "VisActor.h"
 #include "VisPlayer.generated.h"
 
+class AActor;
 class ARuntimeVirtualTextureVolume;
 class AVisFishingBobber;
 class AVisFishingIndicator;
@@ -23,6 +24,7 @@ class UMaterialInstanceDynamic;
 class UMaterialParameterCollection;
 class UNiagaraComponent;
 class UPlayerInputDataComponent;
+class UPlayerStatusDataComponent;
 class UPostProcessComponent;
 class USimPlayerDataComponent;
 class USkeletalMeshComponent;
@@ -62,6 +64,9 @@ public:
     UAdminEnvDataComponent* AdminEnvDataComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPlayerStatusDataComponent* PlayerStatusDataComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* ItemMeshComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -91,12 +96,6 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float YawSpeed;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float MinShroudRadius;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float MaxShroudRadius;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -201,6 +200,9 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AVisActor* CurrentMountableVisActor;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AActor* CurrentUEUsableActor;
+    
 public:
     AVisPlayer(const FObjectInitializer& ObjectInitializer);
 
@@ -211,7 +213,7 @@ public:
     FString GetPlayerName() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    float GetNightVisibilityRadius(float NightTimeNormalized) const;
+    float GetNightVisibilityRadius() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FLinearColor GetNightShroudLightSourcePositionAndRadius(const int32 Index) const;
@@ -220,7 +222,7 @@ public:
     FVector GetCameraVelocity();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void BP_UpdateNightShroudMaterials(float NightTimeNormalized);
+    void BP_UpdateNightShroudMaterials();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BP_OnHeldItemChanged();

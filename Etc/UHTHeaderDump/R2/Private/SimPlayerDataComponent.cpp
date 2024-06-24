@@ -5,6 +5,8 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->TeamId = 0;
     this->Encumbrance = 0;
     this->GuardMeter = 0.00f;
+    this->CurrentActivitySpeedModifier = 0.00f;
+    this->CurrentActivityChainIndex = 0;
     this->ActivityState = EAnvilSimActivityState::None;
     this->CurrentStance = EAnvilCharacterStance::Standing;
     this->PrimaryHeldItemCodeName = 0;

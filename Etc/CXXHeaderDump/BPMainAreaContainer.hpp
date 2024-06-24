@@ -3,6 +3,6 @@
 
 class UBPMainAreaContainer_C : public UMainAreaContainer
 {
-}; // Size: 0x2C0
+}; // Size: 0x2D8
 
 #endif

@@ -5,8 +5,7 @@
 ---@field Camera UCameraComponent
 ABpVisPlayer_C = {}
 
----@param NightTimeNormalized float
-function ABpVisPlayer_C:BP_UpdateNightShroudMaterials(NightTimeNormalized) end
+function ABpVisPlayer_C:BP_UpdateNightShroudMaterials() end
 ---@param EntryPoint int32
 function ABpVisPlayer_C:ExecuteUbergraph_BpVisPlayer(EntryPoint) end
 

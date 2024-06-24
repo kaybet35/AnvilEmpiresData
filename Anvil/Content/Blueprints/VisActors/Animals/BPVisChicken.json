@@ -24,14 +24,31 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisChicken_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.11"
       }
     },
     "SuperStruct": {
       "ObjectName": "Class'VisAnimal'",
       "ObjectPath": "/Script/Anvil"
     },
+    "Children": [
+      {
+        "ObjectName": "Function'BPVisChicken_C:UserConstructionScript'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.5"
+      }
+    ],
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fur",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "Audio",
@@ -44,6 +61,12 @@
         }
       }
     ],
+    "FuncMap": {
+      "UserConstructionScript": {
+        "ObjectName": "Function'BPVisChicken_C:UserConstructionScript'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.5"
+      }
+    },
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -70,7 +93,7 @@
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisChicken_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.6"
       },
       "Capsule": {
         "ObjectName": "CapsuleComponent'Default__BPVisChicken_C:Capsule'",
@@ -78,11 +101,12 @@
       },
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisChicken_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.13"
       },
       "CurrentStateMontageMap": [
         {
-          "EAnvilAnimalState::Trapped": {
+          "Key": "EAnvilAnimalState::Trapped",
+          "Value": {
             "ObjectName": "AnimMontage'ChickenTrappedMontage'",
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Chicken/ChickenTrappedMontage.0"
           }
@@ -117,6 +141,17 @@
     }
   },
   {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "BPVisChicken_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
     "Type": "HealthDataComponent",
     "Name": "HealthDataComponent",
     "Outer": "Default__BPVisChicken_C",
@@ -140,7 +175,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisChicken_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.7"
       },
       "VariableGuid": "90A79A14-452C59A4-730B32AD-811C92BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -167,6 +202,26 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisChicken_C:Fur_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.12"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "3ED7C470-44A3DA04-080211AF-0B83F7CA",
+      "InternalVariableName": "Fur"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPVisChicken_C",
@@ -175,18 +230,52 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisChicken_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.8"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisChicken_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.10"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisChicken_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.8"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisChicken_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.10"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisChicken_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisChicken.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Fur_GEN_VARIABLE",
+    "Outer": "BPVisChicken_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_Chicken_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Chicken/ABP_Chicken.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_ChickenFur'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/SK_ChickenFur.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SK_ChickenFur'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/SK_ChickenFur.0"
+      },
+      "bReceivesDecals": false,
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": -0.27332056
       }
     }
   },

@@ -24,6 +24,9 @@ public:
     bool IgnoreMeshVisbilityChanges;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsGridPiece;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilBuildStructureType StructureType;
     
     UStructureProxyComponent();

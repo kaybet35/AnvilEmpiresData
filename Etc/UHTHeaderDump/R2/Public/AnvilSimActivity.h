@@ -11,10 +11,19 @@ public:
     EAnvilSimActivityState State;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bChainable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Delay;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    float AttackChainDelays[2];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Duration;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    float AttackChainDurations[2];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MovementSpeedModifier;

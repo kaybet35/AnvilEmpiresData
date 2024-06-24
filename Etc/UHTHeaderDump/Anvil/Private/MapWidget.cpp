@@ -3,28 +3,12 @@
 UMapWidget::UMapWidget() {
     this->FogOfWarMask = NULL;
     this->FogOfWarRadius = 5;
-    this->DeploymentInstructionOrSpawnTimerBorder = NULL;
-    this->DeploymentInstructionOrSpawnTimerText = NULL;
     this->ObjectiveBorder = NULL;
-    this->LogoutButton = NULL;
-}
-
-void UMapWidget::OnLogoutButtonClicked() {
-}
-
-ESlateVisibility UMapWidget::GetRespawnTimerVisibility() {
-    return ESlateVisibility::Visible;
-}
-
-FText UMapWidget::GetRespawnTimerText() {
-    return FText::GetEmpty();
+    this->CentralMarketplaceWidgetBorder = NULL;
+    this->CentralMarketplaceWidget = NULL;
 }
 
 ESlateVisibility UMapWidget::GetObjectiveBorderVisibility() {
-    return ESlateVisibility::Visible;
-}
-
-ESlateVisibility UMapWidget::GetLogoutButtonVisibility() {
     return ESlateVisibility::Visible;
 }
 

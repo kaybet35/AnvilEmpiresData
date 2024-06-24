@@ -2,6 +2,7 @@
 
 UMainAreaContainer::UMainAreaContainer() : UUserWidget(FObjectInitializer::Get()) {
     this->MainAreaSizeBox = NULL;
+    this->MainAreaBorder = NULL;
     this->MainAreaVerticalBox = NULL;
     this->MainAreaSlot0 = NULL;
     this->MainAreaSlot1 = NULL;
@@ -18,6 +19,7 @@ UMainAreaContainer::UMainAreaContainer() : UUserWidget(FObjectInitializer::Get()
     this->bOverride_MinDesiredHeight = false;
     this->bOverride_MaxDesiredWidth = false;
     this->bOverride_MaxDesiredHeight = false;
+    this->bOverride_ContentPadding = false;
 }
 
 

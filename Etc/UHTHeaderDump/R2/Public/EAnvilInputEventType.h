@@ -21,7 +21,7 @@ enum class EAnvilInputEventType : uint8 {
     ClaimFamilyInventory,
     GotoSleep,
     PledgeAsMilitia,
-    ReturnToPledgedTown,
+    ReturnFromReinforcement,
     CallForReinforcements,
     DismantleByOfficial,
     RestrictedModeOn,
@@ -52,6 +52,6 @@ enum class EAnvilInputEventType : uint8 {
     IncreaseTownStatus,
     RequestFamilySync,
     RequestFamilyListSync,
-    ChangeFamilyRole,
+    PledgeToTown,
 };
 

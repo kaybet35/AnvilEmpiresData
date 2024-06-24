@@ -13,6 +13,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAnvilDropdownEntryWidget* ShowPlayerNameDropDown;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAnvilDropdownEntryWidget* InteractCameraZoomDropDown;
+    
 public:
     UOptionsMenuGameplayWidget();
 

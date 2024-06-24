@@ -4,12 +4,159 @@
     "Name": "Default__BPWorldMarketShopMapIcon_C",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.BPWorldMarketShopMapIcon_C'",
     "Properties": {
-      "MarketShopTooltipClass": {
-        "ObjectName": "WidgetBlueprintGeneratedClass'BPMarketShopMapTooltip_C'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPMarketShopMapTooltip.7"
+      "CentralMarketplaceTooltipClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'BPCentralMarketplaceMapTooltip_C'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceMapTooltip.6"
       },
       "bHasScriptImplementedTick": false,
       "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "MapItemButton",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Button'",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 100.0,
+            "Y": 100.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.7,
+              "G": 0.7,
+              "B": 0.7,
+              "A": 1.0,
+              "Hex": "DADADA"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'IconMarketplaceShop'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconMarketplaceShop.0"
+          }
+        },
+        "Hovered": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 100.0,
+            "Y": 100.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 1.0,
+              "Hex": "FFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'IconMarketplaceShop'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconMarketplaceShop.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "Pressed": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 100.0,
+            "Y": 100.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.3,
+              "G": 0.3,
+              "B": 0.3,
+              "A": 1.0,
+              "Hex": "959595"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'IconMarketplaceShop'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconMarketplaceShop.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::FullColor",
+          "ImageSize": {
+            "X": 100.0,
+            "Y": 100.0
+          },
+          "Margin": {
+            "Left": 0.25,
+            "Top": 0.25,
+            "Right": 0.25,
+            "Bottom": 0.25
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.2,
+              "G": 0.2,
+              "B": 0.2,
+              "A": 1.0,
+              "Hex": "7C7C7C"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'IconMarketplaceShop'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconMarketplaceShop.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "IsFocusable": false,
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'BPWorldMarketShopMapIcon_C:WidgetTree.MapItemButton.ButtonSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.2"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPWorldMarketShopMapIcon_C:WidgetTree.IconSizeBox.SizeBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.5"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Outer": "MapItemButton",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Button'BPWorldMarketShopMapIcon_C:WidgetTree.MapItemButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.1"
+      },
+      "Content": {
+        "ObjectName": "Image'BPWorldMarketShopMapIcon_C:WidgetTree.MapItemImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.3"
+      }
     }
   },
   {
@@ -18,10 +165,26 @@
     "Outer": "WidgetTree",
     "Class": "UScriptClass'Image'",
     "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.0,
+            "Hex": "FFFFFF"
+          }
+        }
+      },
       "Slot": {
-        "ObjectName": "SizeBoxSlot'BPWorldMarketShopMapIcon_C:WidgetTree.IconSizeBox.SizeBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.3"
-      }
+        "ObjectName": "ButtonSlot'BPWorldMarketShopMapIcon_C:WidgetTree.MapItemButton.ButtonSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.2"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
   },
   {
@@ -37,7 +200,7 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'BPWorldMarketShopMapIcon_C:WidgetTree.IconSizeBox.SizeBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.3"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.5"
         }
       ]
     }
@@ -50,10 +213,10 @@
     "Properties": {
       "Parent": {
         "ObjectName": "SizeBox'BPWorldMarketShopMapIcon_C:WidgetTree.IconSizeBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.2"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.4"
       },
       "Content": {
-        "ObjectName": "Image'BPWorldMarketShopMapIcon_C:WidgetTree.MapItemImage'",
+        "ObjectName": "Button'BPWorldMarketShopMapIcon_C:WidgetTree.MapItemButton'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.1"
       }
     }
@@ -65,7 +228,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPWorldMarketShopMapIcon_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.5"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.7"
       },
       "bClassRequiresNativeTick": true
     },
@@ -96,7 +259,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "SizeBox'BPWorldMarketShopMapIcon_C:WidgetTree.IconSizeBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.2"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldMarketShopMapIcon.4"
       }
     }
   }

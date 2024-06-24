@@ -57,12 +57,25 @@
         "ObjectName": "BlueprintGeneratedClass'FamilyCenter_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenter.0"
       },
-      "BuildLocation": 65538,
       "RequiredTool": "EAnvilToolType::Hands",
-      "bRequiresTownHall": true,
-      "CanBuildTownStructureWithoutPledge": true,
-      "TierPrerequisite": 1,
-      "MinDistanceBetweenStructures": 11000.0,
+      "KeepDistanceWithStructures": [
+        {
+          "CodeName": {
+            "ObjectName": "BlueprintGeneratedClass'FamilyCenterBuildSite_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterBuildSite.0"
+          },
+          "CodeNameVisVar": 0,
+          "Value": 7000.0
+        },
+        {
+          "CodeName": {
+            "ObjectName": "BlueprintGeneratedClass'LargeFamilyCenterBuildSite_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/LargeFamilyCenterBuildSite.0"
+          },
+          "CodeNameVisVar": 0,
+          "Value": 8000.0
+        }
+      ],
       "MaterialRequirements": [
         {
           "CodeName": 1175186297,
@@ -153,9 +166,6 @@
     "Template": {
       "ObjectName": "HealthProxyComponent'Default__BPBaseBuildSiteEntity_C:HealthProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.6"
-    },
-    "Properties": {
-      "MaxHealth": 100.0
     }
   },
   {

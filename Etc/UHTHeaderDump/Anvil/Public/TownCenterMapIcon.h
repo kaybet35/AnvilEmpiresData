@@ -53,9 +53,6 @@ private:
     
 protected:
     UFUNCTION(BlueprintCallable)
-    void OnClicked();
-    
-    UFUNCTION(BlueprintCallable)
     FText GetNumTentsText();
     
     UFUNCTION(BlueprintCallable)

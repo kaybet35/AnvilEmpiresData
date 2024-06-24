@@ -18,5 +18,6 @@ enum class EEquippedItemGripType : uint8 {
     Shield,
     Axe,
     LargeArrow,
+    Pike,
 };
 

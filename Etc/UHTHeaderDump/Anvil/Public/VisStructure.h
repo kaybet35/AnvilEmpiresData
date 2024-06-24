@@ -70,5 +70,9 @@ protected:
 public:
     AVisStructure(const FObjectInitializer& ObjectInitializer);
 
+private:
+    UFUNCTION(BlueprintCallable)
+    void UpdateVisualComponentsByTag(const FName Tag, const bool bIsVisible);
+    
 };
 

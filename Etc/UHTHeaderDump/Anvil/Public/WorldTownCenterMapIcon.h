@@ -7,6 +7,7 @@
 class UBorder;
 class UImage;
 class UPanelWidget;
+class USizeBox;
 class UStatusWidget;
 class UTextBlock;
 class UVerticalBox;
@@ -15,6 +16,9 @@ UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UWorldTownCenterMapIcon : public UDeploymentPointMapIcon {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    USizeBox* IconNudgeBox;
+    
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPanelWidget* MainElements;

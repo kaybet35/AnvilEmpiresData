@@ -3,6 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
 #include "HeaderContainer.generated.h"
 
+class UButton;
 class USizeBox;
 class USpacer;
 class UTextBlock;
@@ -43,8 +44,15 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWidget* TooltipButton;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UButton* CloseButton;
+    
 public:
     UHeaderContainer();
 
+protected:
+    UFUNCTION(BlueprintCallable)
+    void OnCloseButtonClicked();
+    
 };
 

@@ -1,0 +1,1330 @@
+[
+  {
+    "Type": "Border",
+    "Name": "MarketListingsHeaderBorder",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "Padding": {
+        "Top": 6.0,
+        "Bottom": 6.0
+      },
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.012983,
+            "G": 0.011612,
+            "B": 0.011612,
+            "A": 0.8,
+            "Hex": "CC1E1C1C"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderBorder.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.2"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsVerticalBox.VerticalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.52"
+      }
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "MarketTabButtonsBorder",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.009134,
+            "G": 0.009134,
+            "B": 0.008568,
+            "A": 1.0,
+            "Hex": "181817"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketTabButtonsBorder.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "MarketListingsHeaderBorder",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "Padding": {
+        "Top": 6.0,
+        "Bottom": 6.0
+      },
+      "Parent": {
+        "ObjectName": "Border'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.0"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.19"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "MarketTabButtonsBorder",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "Border'BPCentralMarketplaceWidget_C:WidgetTree.MarketTabButtonsBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.1"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.HorizontalBox_81'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.18"
+      }
+    }
+  },
+  {
+    "Type": "BPAnvilButtonWidget_C",
+    "Name": "ActiveOrdersButton",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPAnvilButtonWidget.BPAnvilButtonWidget_C'",
+    "Template": {
+      "ObjectName": "BPAnvilButtonWidget_C'Default__BPAnvilButtonWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/BPAnvilButtonWidget.0"
+    },
+    "Properties": {
+      "LabelText": {
+        "Namespace": "",
+        "Key": "7F9FA1B84AF6EE78307B7592D1DA3975",
+        "SourceString": "Active Orders",
+        "LocalizedString": "Active Orders"
+      },
+      "LabelFontSize": 16,
+      "ButtonWidth": 173.0,
+      "ButtonHeight": 48.0,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.HorizontalBox_81.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.23"
+      }
+    }
+  },
+  {
+    "Type": "BPAnvilButtonWidget_C",
+    "Name": "BuySellButton",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPAnvilButtonWidget.BPAnvilButtonWidget_C'",
+    "Template": {
+      "ObjectName": "BPAnvilButtonWidget_C'Default__BPAnvilButtonWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/BPAnvilButtonWidget.0"
+    },
+    "Properties": {
+      "LabelText": {
+        "Namespace": "",
+        "Key": "AB1CACE042B1EF34C6504E846E4F5CBA",
+        "SourceString": "Buy/Sell",
+        "LocalizedString": "Buy/Sell"
+      },
+      "LabelFontSize": 16,
+      "ButtonWidth": 173.0,
+      "ButtonHeight": 48.0,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.HorizontalBox_81.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.21"
+      }
+    }
+  },
+  {
+    "Type": "BPAnvilButtonWidget_C",
+    "Name": "PlaceOrderButton",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPAnvilButtonWidget.BPAnvilButtonWidget_C'",
+    "Template": {
+      "ObjectName": "BPAnvilButtonWidget_C'Default__BPAnvilButtonWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/BPAnvilButtonWidget.0"
+    },
+    "Properties": {
+      "LabelText": {
+        "Namespace": "",
+        "Key": "0E1ECD85498516F067C27DA0FF1DF04C",
+        "SourceString": "Place Order",
+        "LocalizedString": "Place Order"
+      },
+      "LabelFontSize": 16,
+      "ButtonWidth": 173.0,
+      "ButtonHeight": 48.0,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.HorizontalBox_81.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.22"
+      }
+    }
+  },
+  {
+    "Type": "BPAnvilPanel_C",
+    "Name": "BPAnvilPanel",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPAnvilPanel.BPAnvilPanel_C'",
+    "Template": {
+      "ObjectName": "BPAnvilPanel_C'Default__BPAnvilPanel_C'",
+      "ObjectPath": "Anvil/Content/UI/BPAnvilPanel.0"
+    },
+    "Properties": {
+      "ForegroundColor": {
+        "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+      },
+      "Padding": {
+        "Bottom": -4.0
+      },
+      "NamedSlotBindings": [
+        {
+          "Name": "AnvilPanelSlot0",
+          "Content": {
+            "ObjectName": "BPHeaderContainer_C'BPCentralMarketplaceWidget_C:WidgetTree.HeaderContainer'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.12"
+          }
+        },
+        {
+          "Name": "AnvilPanelSlot1",
+          "Content": {
+            "ObjectName": "BPSubHeaderContainer_C'BPCentralMarketplaceWidget_C:WidgetTree.BPSubHeaderContainer'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.14"
+          }
+        },
+        {
+          "Name": "AnvilPanelSlot2",
+          "Content": {
+            "ObjectName": "BPMainAreaContainer_C'BPCentralMarketplaceWidget_C:WidgetTree.BPMainAreaContainer'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.13"
+          }
+        },
+        {
+          "Name": "AnvilPanelSlot3",
+          "Content": {
+            "ObjectName": "Border'BPCentralMarketplaceWidget_C:WidgetTree.MarketTabButtonsBorder'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.1"
+          }
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPCentralMarketplaceWidget_C:WidgetTree.CanvasPanel_24.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.16"
+      }
+    }
+  },
+  {
+    "Type": "BPCentralMarketplaceListEntryWidget_C",
+    "Name": "BPCentralMarketplaceListEntryWidget",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPCentralMarketplaceListEntryWidget.BPCentralMarketplaceListEntryWidget_C'",
+    "Template": {
+      "ObjectName": "BPCentralMarketplaceListEntryWidget_C'Default__BPCentralMarketplaceListEntryWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceListEntryWidget.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListEntriesScrollBox.ScrollBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.32"
+      }
+    }
+  },
+  {
+    "Type": "BPCentralMarketplaceListEntryWidget_C",
+    "Name": "BPCentralMarketplaceListEntryWidget_1",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPCentralMarketplaceListEntryWidget.BPCentralMarketplaceListEntryWidget_C'",
+    "Template": {
+      "ObjectName": "BPCentralMarketplaceListEntryWidget_C'Default__BPCentralMarketplaceListEntryWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceListEntryWidget.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListEntriesScrollBox.ScrollBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.33"
+      }
+    }
+  },
+  {
+    "Type": "BPCentralMarketplaceListEntryWidget_C",
+    "Name": "BPCentralMarketplaceListEntryWidget_2",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPCentralMarketplaceListEntryWidget.BPCentralMarketplaceListEntryWidget_C'",
+    "Template": {
+      "ObjectName": "BPCentralMarketplaceListEntryWidget_C'Default__BPCentralMarketplaceListEntryWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceListEntryWidget.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListEntriesScrollBox.ScrollBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.34"
+      }
+    }
+  },
+  {
+    "Type": "BPCentralMarketplaceWidget_C",
+    "Name": "Default__BPCentralMarketplaceWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.BPCentralMarketplaceWidget_C'",
+    "Properties": {
+      "CentralMarketplaceListEntryWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'BPCentralMarketplaceListEntryWidget_C'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceListEntryWidget.34"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "BPHeaderContainer_C",
+    "Name": "HeaderContainer",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPHeaderContainer.BPHeaderContainer_C'",
+    "Template": {
+      "ObjectName": "BPHeaderContainer_C'Default__BPHeaderContainer_C'",
+      "ObjectPath": "Anvil/Content/UI/BPHeaderContainer.2"
+    },
+    "Properties": {
+      "HeaderText": {
+        "Namespace": "",
+        "Key": "DE2A56534E96448CF2C284975D1FE903",
+        "SourceString": "Central Marketplace",
+        "LocalizedString": "Central Marketplace"
+      },
+      "HeaderWidth": 100.0,
+      "UpperPadding": 0.0
+    }
+  },
+  {
+    "Type": "BPMainAreaContainer_C",
+    "Name": "BPMainAreaContainer",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPMainAreaContainer.BPMainAreaContainer_C'",
+    "Template": {
+      "ObjectName": "BPMainAreaContainer_C'Default__BPMainAreaContainer_C'",
+      "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.2"
+    },
+    "Properties": {
+      "WidthOverride": 850.0,
+      "HeightOverride": 445.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "bOverride_ContentPadding": true,
+      "NamedSlotBindings": [
+        {
+          "Name": "MainAreaSlot0",
+          "Content": {
+            "ObjectName": "WidgetSwitcher'BPCentralMarketplaceWidget_C:WidgetTree.MarketTabSwitcher'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.55"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BPSubHeaderContainer_C",
+    "Name": "BPSubHeaderContainer",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPSubHeaderContainer.BPSubHeaderContainer_C'",
+    "Template": {
+      "ObjectName": "BPSubHeaderContainer_C'Default__BPSubHeaderContainer_C'",
+      "ObjectPath": "Anvil/Content/UI/BPSubHeaderContainer.2"
+    },
+    "Properties": {
+      "SubHeaderWidth": 850.0
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_24",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPCentralMarketplaceWidget_C:WidgetTree.CanvasPanel_24.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.16"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_24",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPCentralMarketplaceWidget_C:WidgetTree.CanvasPanel_24'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.15"
+      },
+      "Content": {
+        "ObjectName": "BPAnvilPanel_C'BPCentralMarketplaceWidget_C:WidgetTree.BPAnvilPanel'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.7"
+      }
+    }
+  },
+  {
+    "Type": "CentralMarketplaceOrderGridPanelWidget",
+    "Name": "CentralMarketplaceOrderGridPanelWidget_91",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CentralMarketplaceOrderGridPanelWidget'",
+    "Properties": {
+      "ItemSlotWidgetType": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'BPCentralMarketplaceOrderItemWidget_C'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceOrderItemWidget.8"
+      },
+      "SlotPadding": {
+        "Left": 4.0,
+        "Top": 4.0,
+        "Right": 4.0,
+        "Bottom": 4.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.PlaceOrderHorizonBox.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.30"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_81",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.HorizontalBox_81.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.21"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.HorizontalBox_81.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.22"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.HorizontalBox_81.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.23"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketTabButtonsBorder.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.3"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "MarketListingsHeaderHorizontalBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox.HorizontalBoxSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.28"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox.HorizontalBoxSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.29"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.24"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.25"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.26"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox.HorizontalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.27"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderBorder.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.2"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "PlaceOrderHorizonBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.PlaceOrderHorizonBox.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.30"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketTabSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.57"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_81",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.HorizontalBox_81'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.18"
+      },
+      "Content": {
+        "ObjectName": "BPAnvilButtonWidget_C'BPCentralMarketplaceWidget_C:WidgetTree.BuySellButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.5"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_81",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 10.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.HorizontalBox_81'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.18"
+      },
+      "Content": {
+        "ObjectName": "BPAnvilButtonWidget_C'BPCentralMarketplaceWidget_C:WidgetTree.PlaceOrderButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.6"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_81",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 10.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.HorizontalBox_81'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.18"
+      },
+      "Content": {
+        "ObjectName": "BPAnvilButtonWidget_C'BPCentralMarketplaceWidget_C:WidgetTree.ActiveOrdersButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.4"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "MarketListingsHeaderHorizontalBox",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.19"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.37"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "MarketListingsHeaderHorizontalBox",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 43.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.19"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.36"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "MarketListingsHeaderHorizontalBox",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 35.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.19"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.38"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "MarketListingsHeaderHorizontalBox",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 38.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.19"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.39"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Outer": "MarketListingsHeaderHorizontalBox",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 10.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.19"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPCentralMarketplaceWidget_C:WidgetTree.Spacer_371'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.45"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Outer": "MarketListingsHeaderHorizontalBox",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 10.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.19"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPCentralMarketplaceWidget_C:WidgetTree.Spacer_66'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.46"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "PlaceOrderHorizonBox",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.PlaceOrderHorizonBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.20"
+      },
+      "Content": {
+        "ObjectName": "CentralMarketplaceOrderGridPanelWidget'BPCentralMarketplaceWidget_C:WidgetTree.CentralMarketplaceOrderGridPanelWidget_91'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.17"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBox",
+    "Name": "MarketListEntriesScrollBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'ScrollBox'",
+    "Properties": {
+      "ConsumeMouseWheel": "EConsumeMouseWheel::Always",
+      "Slots": [
+        {
+          "ObjectName": "ScrollBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListEntriesScrollBox.ScrollBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.32"
+        },
+        {
+          "ObjectName": "ScrollBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListEntriesScrollBox.ScrollBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.33"
+        },
+        {
+          "ObjectName": "ScrollBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListEntriesScrollBox.ScrollBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.34"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListEntriesSizeBox.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.40"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_0",
+    "Outer": "MarketListEntriesScrollBox",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScrollBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListEntriesScrollBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.31"
+      },
+      "Content": {
+        "ObjectName": "BPCentralMarketplaceListEntryWidget_C'BPCentralMarketplaceWidget_C:WidgetTree.BPCentralMarketplaceListEntryWidget'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_1",
+    "Outer": "MarketListEntriesScrollBox",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScrollBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListEntriesScrollBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.31"
+      },
+      "Content": {
+        "ObjectName": "BPCentralMarketplaceListEntryWidget_C'BPCentralMarketplaceWidget_C:WidgetTree.BPCentralMarketplaceListEntryWidget_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.9"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_2",
+    "Outer": "MarketListEntriesScrollBox",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScrollBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListEntriesScrollBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.31"
+      },
+      "Content": {
+        "ObjectName": "BPCentralMarketplaceListEntryWidget_C'BPCentralMarketplaceWidget_C:WidgetTree.BPCentralMarketplaceListEntryWidget_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.10"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "MarketListEntriesSizeBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "HeightOverride": 410.0,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListEntriesSizeBox.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.40"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsVerticalBox.VerticalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.53"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 150.0,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.41"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.25"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 150.0,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.42"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.24"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 60.0,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.43"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.26"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_2",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 80.0,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox_2.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.44"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox.HorizontalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.27"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "MarketListEntriesSizeBox",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListEntriesSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.35"
+      },
+      "Content": {
+        "ObjectName": "ScrollBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListEntriesScrollBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.31"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.36"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPCentralMarketplaceWidget_C:WidgetTree.BuyerSellerTextBlock'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.47"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.37"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPCentralMarketplaceWidget_C:WidgetTree.TextBlock_136'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.50"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_1",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.38"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPCentralMarketplaceWidget_C:WidgetTree.QuantityTextBlock'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.49"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_2",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.39"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPCentralMarketplaceWidget_C:WidgetTree.PricePerUnitTextBlock'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.48"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_371",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 40.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox.HorizontalBoxSlot_5'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.28"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_66",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 10.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderHorizontalBox.HorizontalBoxSlot_6'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.29"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "BuyerSellerTextBlock",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "219204F4460149E244D55194CF118E58",
+        "SourceString": "Seller",
+        "LocalizedString": "Seller"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.947307,
+          "G": 0.623961,
+          "B": 0.171441,
+          "A": 1.0,
+          "Hex": "F9CF73"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 14
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.41"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "PricePerUnitTextBlock",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "D1C8357F4A71AC56CE37A5864EDF20A4",
+        "SourceString": "Silver per Item",
+        "LocalizedString": "Silver per Item"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.947307,
+          "G": 0.623961,
+          "B": 0.171441,
+          "A": 1.0,
+          "Hex": "F9CF73"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 14
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox_2.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.44"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "QuantityTextBlock",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "6FA7B9784872963715E95090CF4C2481",
+        "SourceString": "Quantity",
+        "LocalizedString": "Quantity"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.947307,
+          "G": 0.623961,
+          "B": 0.171441,
+          "A": 1.0,
+          "Hex": "F9CF73"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 14
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.43"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_136",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "4B80E4A34C3E98DDD1B98387A7280309",
+        "SourceString": "Item Name",
+        "LocalizedString": "Item Name"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.947307,
+          "G": 0.623961,
+          "B": 0.171441,
+          "A": 1.0,
+          "Hex": "F9CF73"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 14
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.42"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "MarketListingsVerticalBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsVerticalBox.VerticalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.52"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsVerticalBox.VerticalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.53"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketTabSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.56"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "MarketListingsVerticalBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsVerticalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.51"
+      },
+      "Content": {
+        "ObjectName": "Border'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsHeaderBorder'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.0"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "MarketListingsVerticalBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsVerticalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.51"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListEntriesSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.35"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPCentralMarketplaceWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPCentralMarketplaceWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.58"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CentralMarketplaceWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPAnvilPanel",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPAnvilPanel_C'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilPanel.37"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPCentralMarketplaceListEntryWidget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPCentralMarketplaceListEntryWidget_C'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceListEntryWidget.34"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPCentralMarketplaceListEntryWidget_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPCentralMarketplaceListEntryWidget_C'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceListEntryWidget.34"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPCentralMarketplaceListEntryWidget_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPCentralMarketplaceListEntryWidget_C'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceListEntryWidget.34"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPMainAreaContainer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPMainAreaContainer_C'",
+          "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.20"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPSubHeaderContainer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPSubHeaderContainer_C'",
+          "ObjectPath": "Anvil/Content/UI/BPSubHeaderContainer.10"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPCentralMarketplaceWidget_C'Default__BPCentralMarketplaceWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.11"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "MarketTabSwitcher",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketTabSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.56"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'BPCentralMarketplaceWidget_C:WidgetTree.MarketTabSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.57"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Outer": "MarketTabSwitcher",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'BPCentralMarketplaceWidget_C:WidgetTree.MarketTabSwitcher'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.55"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'BPCentralMarketplaceWidget_C:WidgetTree.MarketListingsVerticalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.51"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Outer": "MarketTabSwitcher",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'BPCentralMarketplaceWidget_C:WidgetTree.MarketTabSwitcher'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.55"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.PlaceOrderHorizonBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.20"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPCentralMarketplaceWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPCentralMarketplaceWidget_C:WidgetTree.CanvasPanel_24'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.15"
+      }
+    }
+  }
+]

@@ -2,8 +2,13 @@
 
 FAnvilSimActivity::FAnvilSimActivity() {
     this->State = EAnvilSimActivityState::None;
+    this->bChainable = false;
     this->Delay = 0.00f;
+    this->AttackChainDelays[0] = 0.00f;
+    this->AttackChainDelays[1] = 0.00f;
     this->Duration = 0.00f;
+    this->AttackChainDurations[0] = 0.00f;
+    this->AttackChainDurations[1] = 0.00f;
     this->MovementSpeedModifier = 0.00f;
     this->RotationSpeedModifier = 0.00f;
     this->bRepeatable = false;

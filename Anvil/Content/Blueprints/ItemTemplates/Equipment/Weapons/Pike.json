@@ -31,51 +31,72 @@
       "CodeName": -671641769,
       "ItemTags": [
         "EAnvilItemTag::PrimaryTool",
-        "EAnvilItemTag::WeaponStorage"
+        "EAnvilItemTag::WeaponStorage",
+        "EAnvilItemTag::TwoHanded"
       ],
       "ItemPayloadType": "EAnvilItemPayloadType::Quality",
+      "PickupEntity": {
+        "ObjectName": "BlueprintGeneratedClass'PikePickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/PikePickup.0"
+      },
       "ItemDestroyedEffect": {
         "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
       },
       "Encumberance": 255,
-      "bRanged": true,
       "DamageOffset": {
-        "X": 50.0,
-        "Y": 0.0,
-        "Z": 75.0
+        "X": 275.0,
+        "Y": 25.0,
+        "Z": 0.0
       },
-      "FireOffset": {
-        "X": 50.0,
-        "Y": 0.0,
-        "Z": 75.0
-      },
-      "AmmoType": {
-        "ObjectName": "BlueprintGeneratedClass'Pike_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Pike.0"
-      },
+      "AdditionalDamageOffsets": [
+        {
+          "X": 350.0,
+          "Y": 25.0,
+          "Z": 0.0
+        },
+        {
+          "X": 425.0,
+          "Y": 25.0,
+          "Z": 0.0
+        }
+      ],
       "DamageType": "EAnvilDamageType::Piercing",
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
+        "bChainable": true,
         "Delay": 0.5,
-        "Duration": 1.1,
-        "StaminaCost": 10.0
+        "AttackChainDelays": 0.5,
+        "AttackChainDelays": 0.5,
+        "Duration": 1.033333,
+        "AttackChainDurations": 1.033333,
+        "AttackChainDurations": 1.033333,
+        "RotationSpeedModifier": 4.0,
+        "bRequireAim": true,
+        "StaminaCost": 10.0,
+        "AimedStaminaCost": 15.0
       },
       "RangedActivity": {
-        "State": "EAnvilSimActivityState::LaunchingProjectile",
-        "Delay": 0.7,
-        "Duration": 1.1,
+        "Delay": 0.5,
+        "AttackChainDelays": 0.5,
+        "AttackChainDelays": 0.5,
+        "Duration": 1.033333,
+        "AttackChainDurations": 1.033333,
+        "AttackChainDurations": 1.033333,
         "bRepeatable": false,
-        "StaminaCost": 10.0
+        "StaminaCost": 10.0,
+        "AimedStaminaCost": 15.0
       },
       "BuildActivity": {
         "bRepeatable": false
       },
       "bAllowCameraPan": false,
       "Damage": 15,
+      "DefaultMarketplaceValue": 4,
       "DurabilityLossPerUse": 2.0,
-      "DamageRadius": 64.0,
-      "AimMovementSpeedModifier": 0.5
+      "DamageRadius": 32.0,
+      "AimMovementSpeedModifier": 0.4,
+      "AimRotationSpeedModifier": 0.75
     }
   }
 ]

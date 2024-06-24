@@ -20,10 +20,10 @@ public:
     uint8 FamilyHouseRequirementT3;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 MarketplaceAreaRequirementT2;
+    uint8 MarketplaceRequirementT2;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 MarketplaceAreaRequirementT3;
+    uint8 MarketplaceRequirementT3;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TentRequirementT2;

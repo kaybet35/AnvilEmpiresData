@@ -3,6 +3,6 @@
 
 class UBPFamilySpawnPointMapIcon_C : public UWorldFamilySpawnMapIcon
 {
-}; // Size: 0x398
+}; // Size: 0x3A8
 
 #endif

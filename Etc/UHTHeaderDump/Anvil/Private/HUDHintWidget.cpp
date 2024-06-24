@@ -5,6 +5,15 @@ UHUDHintWidget::UHUDHintWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->PrimaryHintCanvas = NULL;
     this->SecondaryHintTextBlock = NULL;
     this->SecondaryHintCanvas = NULL;
+    this->HintVerticalBox = NULL;
+    this->HintMaximizeButton = NULL;
+    this->HintMinimizeButton = NULL;
+}
+
+void UHUDHintWidget::OnHintMinimizeClicked() {
+}
+
+void UHUDHintWidget::OnHintMaximizeClicked() {
 }
 
 

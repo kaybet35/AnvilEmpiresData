@@ -20,6 +20,9 @@ protected:
     UAnvilDropdownEntryWidget* QualityDropdown;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAnvilDropdownEntryWidget* ShadowQualityDropdown;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAnvilDropdownEntryWidget* VSyncDropdown;
     
 public:

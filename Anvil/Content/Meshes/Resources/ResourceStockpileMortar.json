@@ -1,0 +1,551 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Outer": "ResourceStockpileMortar",
+    "Class": "UScriptClass'BodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 59.999996,
+            "Y": 90.0,
+            "Z": 30.000013,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      }
+    },
+    "BodySetupGuid": "98DA17C54B498DD515E55C9E25DD7069",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 23926,
+        "SizeOnDisk": 23926,
+        "OffsetInFile": "0x12EB9"
+      }
+    }
+  },
+  {
+    "Type": "NavCollision",
+    "Name": "NavCollision_2",
+    "Outer": "ResourceStockpileMortar",
+    "Class": "UScriptClass'NavCollision'",
+    "CookedFormatData": {
+      "NavCollision_Chaos": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 361,
+        "SizeOnDisk": 361,
+        "OffsetInFile": "0x18C71"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "ResourceStockpileMortar",
+    "Class": "UScriptClass'StaticMesh'",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'Barrels'",
+            "ObjectPath": "Anvil/Content/Materials/Props/bARRELS.0"
+          },
+          "MaterialSlotName": "Barrels",
+          "ImportedMaterialSlotName": "Barrels",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 455.906,
+            "LocalUVDensities": 2.2939343,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'Limestone'",
+            "ObjectPath": "Anvil/Content/Materials/Props/Limestone.0"
+          },
+          "MaterialSlotName": "Limestone",
+          "ImportedMaterialSlotName": "Limestone",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 371.79895,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 2.2939343,
+      "LightMapResolution": 64,
+      "LightMapCoordinateIndex": 1,
+      "ExtendedBounds": {
+        "Origin": {
+          "X": -5.8174133E-05,
+          "Y": 0.00032234192,
+          "Z": 9.786153
+        },
+        "BoxExtent": {
+          "X": 29.965515,
+          "Y": 45.0,
+          "Z": 24.673695
+        },
+        "SphereRadius": 59.42823441127234
+      }
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'ResourceStockpileMortar:BodySetup_0'",
+      "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileMortar.0"
+    },
+    "NavCollision": {
+      "ObjectName": "NavCollision'ResourceStockpileMortar:NavCollision_2'",
+      "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileMortar.1"
+    },
+    "LightingGuid": "2D29B54E-48CA12AB-08314794-319D8046",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 160,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 225,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 480,
+              "NumTriangles": 319,
+              "MinVertexIndex": 226,
+              "MaxVertexIndex": 398,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 399
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 399,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -30.965572,
+                "Y": -45.99968,
+                "Z": -15.887542
+              },
+              "Max": {
+                "X": 30.965458,
+                "Y": 46.00032,
+                "Z": 35.459846
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": -1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -10.000057,
+                    "Y": 0.00032043457,
+                    "Z": 9.786153
+                  },
+                  "Extent": {
+                    "X": 45.0,
+                    "Y": 25.0,
+                    "Z": 25.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 0
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 9.999943,
+                    "Y": 0.00032043457,
+                    "Z": 9.786153
+                  },
+                  "Extent": {
+                    "X": 45.0,
+                    "Y": 25.0,
+                    "Z": 25.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 1
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -5.722046E-05,
+                    "Y": -19.99968,
+                    "Z": 9.786153
+                  },
+                  "Extent": {
+                    "X": 30.0,
+                    "Y": 25.0,
+                    "Z": 30.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -5.722046E-05,
+                    "Y": 15.00032,
+                    "Z": 9.786153
+                  },
+                  "Extent": {
+                    "X": 30.0,
+                    "Y": 25.0,
+                    "Z": 35.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 3
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": -1.0
+                  },
+                  "Origin": {
+                    "X": -5.722046E-05,
+                    "Y": 0.00032043457,
+                    "Z": -10.213847
+                  },
+                  "Extent": {
+                    "X": 30.0,
+                    "Y": 45.0,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 4
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": -5.722046E-05,
+                    "Y": 0.00032043457,
+                    "Z": 14.786152
+                  },
+                  "Extent": {
+                    "X": 30.0,
+                    "Y": 45.0,
+                    "Z": 25.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              }
+            ]
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 100,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 167,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 300,
+              "NumTriangles": 139,
+              "MinVertexIndex": 168,
+              "MaxVertexIndex": 249,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 8.34526,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 250
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 250,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 90,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 157,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 270,
+              "NumTriangles": 30,
+              "MinVertexIndex": 158,
+              "MaxVertexIndex": 178,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 27.24164,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 179
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 179,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 52,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 103,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 156,
+              "NumTriangles": 8,
+              "MinVertexIndex": 104,
+              "MaxVertexIndex": 110,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 75.81058,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 111
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 111,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        }
+      ],
+      "NaniteResources": {
+        "RootData": null,
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0x24DD5"
+        },
+        "ImposterAtlas": [],
+        "HierarchyNodes": [],
+        "HierarchyRootOffsets": [],
+        "PageStreamingStates": [],
+        "PageDependencies": [],
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "TangentPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": 0
+      },
+      "Bounds": {
+        "Origin": {
+          "X": -5.8174133E-05,
+          "Y": 0.00032234192,
+          "Z": 9.786153
+        },
+        "BoxExtent": {
+          "X": 29.965515,
+          "Y": 45.0,
+          "Z": 24.673695
+        },
+        "SphereRadius": 59.428234
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        2.0,
+        0.12276724,
+        0.039500922,
+        0.014399165,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

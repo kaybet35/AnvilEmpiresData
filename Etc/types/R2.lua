@@ -63,8 +63,11 @@ FAnvilOutput = {}
 
 ---@class FAnvilSimActivity
 ---@field State EAnvilSimActivityState
+---@field bChainable boolean
 ---@field Delay float
+---@field AttackChainDelays float
 ---@field Duration float
+---@field AttackChainDurations float
 ---@field MovementSpeedModifier float
 ---@field RotationSpeedModifier float
 ---@field bRepeatable boolean
@@ -87,6 +90,26 @@ FBasicCount = {}
 ---@field CodeNameVisVar int32
 ---@field Count int32
 FBasicItemCount = {}
+
+
+
+---@class FCentralMarketplaceListing
+---@field ListingId int32
+---@field Item FItemCount
+---@field PricePerItem int32
+---@field ListingOwnerOnlineId int64
+---@field NumItemsFulfilled int32
+FCentralMarketplaceListing = {}
+
+
+
+---@class FCentralMarketplaceUserData
+---@field DataVersion int32
+---@field DataForMarketEntityId int64
+---@field DataForMarketMapHash int32
+---@field SaleListings TArray<FCentralMarketplaceListing>
+---@field RequestsListings TArray<FCentralMarketplaceListing>
+FCentralMarketplaceUserData = {}
 
 
 
@@ -124,6 +147,37 @@ FDismantleVoteInfo = {}
 ---@field OutputItemVisVar int32
 ---@field DryingDurationSeconds float
 FDryingRackRecipe = {}
+
+
+
+---@class FEntityFloatPair
+---@field CodeName TSubclassOf<UEntityTemplate>
+---@field CodeNameVisVar int32
+---@field Value float
+FEntityFloatPair = {}
+
+
+
+---@class FExplorationSpawnedEntityAvoidInfo
+---@field EntityTypeToAvoid TSubclassOf<UEntityTemplate>
+---@field EntityTypeToAvoidVisVar int32
+---@field Distance float
+FExplorationSpawnedEntityAvoidInfo = {}
+
+
+
+---@class FExplorationSpawnedEntityInfo
+---@field SpawnedEntity TSubclassOf<UEntityTemplate>
+---@field SpawnedEntityVisVar int32
+---@field MinDistFromFamilyArea float
+---@field ChanceToSpawnPerMin float
+---@field MinDistanceBetweenSpawns float
+---@field bRequiresNavmesh boolean
+---@field bConsiderAllFamilyAreas boolean
+---@field bDontSpawnInSettlements boolean
+---@field CompatibleSurfaceTypes int32
+---@field OtherResourcesToAvoidByDistance TArray<FExplorationSpawnedEntityAvoidInfo>
+FExplorationSpawnedEntityInfo = {}
 
 
 
@@ -261,6 +315,17 @@ FNightShroudLightSource = {}
 
 
 
+---@class FPlayerAgeDeployData
+---@field TeamId uint8
+---@field FamilyHouseInfo int64
+---@field PledgedTownHallInfo int64
+---@field PledgedMilitiaInfo int64
+---@field AllowedToSpawnUnixTimeStamp int64
+---@field OfflineCharacterServerName FString
+FPlayerAgeDeployData = {}
+
+
+
 ---@class FPledgedPlayer
 FPledgedPlayer = {}
 
@@ -280,7 +345,6 @@ FProducableItem = {}
 ---@field FamilyId int32
 ---@field TeamId uint8
 ---@field EntityId int64
----@field TownHallId int32
 ---@field MapHash int32
 ---@field EntityGlobalPosition FVector
 ---@field bAllowPublicPledging boolean
@@ -341,6 +405,14 @@ FReplicatedRefineQueueItem = {}
 
 
 
+---@class FTavernBuffConfig
+---@field NumPlayer uint8
+---@field Level uint8
+---@field Duration float
+FTavernBuffConfig = {}
+
+
+
 ---@class FTechItem
 FTechItem = {}
 
@@ -375,15 +447,25 @@ FWeatherData = {}
 ---@class FWorldEntityBeaconTowerData
 ---@field TowerId int32
 ---@field bActive boolean
+---@field LinkRange float
+---@field DetectionRange float
 FWorldEntityBeaconTowerData = {}
+
+
+
+---@class FWorldEntityCentralMarketplaceData
+---@field DataVersion int32
+FWorldEntityCentralMarketplaceData = {}
 
 
 
 ---@class FWorldEntityData
 ---@field DataType EAnvilWorldEntityType
+---@field WildSpawnData FWorldEntityWildSpawnData
 ---@field TownHallData FWorldEntityTownHallData
 ---@field BeaconTowerData FWorldEntityBeaconTowerData
 ---@field FamilyCenterData FWorldEntityFamilyCenterData
+---@field CentralMarketplaceData FWorldEntityCentralMarketplaceData
 FWorldEntityData = {}
 
 
@@ -401,7 +483,7 @@ FWorldEntityEntry = {}
 
 
 ---@class FWorldEntityFamilyCenterData
----@field OwnerTownHallId int32
+---@field FamilyId int32
 FWorldEntityFamilyCenterData = {}
 
 
@@ -421,6 +503,12 @@ FWorldEntityTownHallData = {}
 
 
 
+---@class FWorldEntityWildSpawnData
+---@field bIsActiveWildSpawn boolean
+FWorldEntityWildSpawnData = {}
+
+
+
 ---@class UAIStimulusProxyComponent : UProxyComponent
 ---@field Type EAnvilStimulusType
 ---@field bAgroTarget boolean
@@ -432,6 +520,7 @@ UAIStimulusProxyComponent = {}
 ---@field bDebugDrawHook boolean
 ---@field bShowStructureStatsHook boolean
 ---@field bShowWeatherStatsHook boolean
+---@field bFastReinforcementsAlertCooldown boolean
 UAdminEnvDataComponent = {}
 
 
@@ -640,7 +729,8 @@ UBeaconTowerDataComponent = {}
 ---@field bViewerNode boolean
 ---@field LinkRangeMinMax FR2FloatRange
 ---@field DetectionRangeMinMax FR2FloatRange
----@field AltitudeMinMax FR2FloatRange
+---@field AltitudeDeltaMinMax FR2FloatRange
+---@field AltitudeCheckRadius float
 ---@field DetectionFuelCostPerHour float
 ---@field InformingFuelCostPerHour float
 UBeaconTowerProxyComponent = {}
@@ -661,6 +751,7 @@ UBoxCollisionProxyComponent = {}
 
 
 ---@class UBuildSiteDataComponent : UDataComponent
+---@field NearbyPlayersRequired int32
 ---@field MaterialSubmissions TArray<int32>
 ---@field BuildGhostPlacementStatus int64
 ---@field PlacementInfoFlags int32
@@ -676,6 +767,7 @@ UBuildSiteDataComponent = {}
 ---@field bRequiresTownHall boolean
 ---@field bRequiresCamp boolean
 ---@field bRequiresSmallCamp boolean
+---@field bRequiresClaimedFamilyHouse boolean
 ---@field bBuildableOverRoads boolean
 ---@field bBuildableNearSpawnPoint boolean
 ---@field bBuildableInEnemyTerritory boolean
@@ -684,12 +776,15 @@ UBuildSiteDataComponent = {}
 ---@field CanBuildTownStructureWithoutPledge boolean
 ---@field bBuildsInstantly boolean
 ---@field bMinDistanceCheckIgnoreEnemyStructures boolean
+---@field bIsGridDiagonalPiece boolean
 ---@field TierPrerequisite uint8
 ---@field RequiredDeployable TSubclassOf<UItemTemplate>
+---@field LevelCheckRayOffset FVector
 ---@field MaxHeightShift float
 ---@field AdditionalMaxHeightShift float
----@field MinDistanceBetweenStructures float
----@field MinDistanceStructureTypes TArray<TSubclassOf<UEntityTemplate>>
+---@field KeepDistanceWithStructures TArray<FEntityFloatPair>
+---@field GridDiagonalPair TSubclassOf<UEntityTemplate>
+---@field NearbyPlayersRequired int32
 ---@field MaterialRequirements TArray<FBasicCount>
 UBuildSiteProxyComponent = {}
 
@@ -710,6 +805,16 @@ UCannonProxyComponent = {}
 ---@field bVaultable boolean
 UCapsuleCollisionProxyComponent = {}
 
+
+
+---@class UCentralMarketplaceDataComponent : UDataComponent
+---@field DataVersion int32
+UCentralMarketplaceDataComponent = {}
+
+
+
+---@class UCentralMarketplaceProxyComponent : UProxyComponent
+UCentralMarketplaceProxyComponent = {}
 
 
 ---@class UChatMessage : UObject
@@ -880,6 +985,12 @@ function UEntityTemplate:GetProxyComponent(EntityType, ComponentType) end
 UEquipmentProxyComponent = {}
 
 
+---@class UExplorationSpawnerProxyComponent : UProxyComponent
+---@field SpawnedEntitiesData TArray<FExplorationSpawnedEntityInfo>
+UExplorationSpawnerProxyComponent = {}
+
+
+
 ---@class UFamilyAreaMarkerDataComponent : UDataComponent
 ---@field AllowPublicPledging boolean
 ---@field bHasMembers boolean
@@ -898,6 +1009,7 @@ UFamilyCenterDataComponent = {}
 
 
 ---@class UFamilyCenterProxyComponent : UProxyComponent
+---@field FamilyAreaRadius float
 ---@field Tier uint8
 UFamilyCenterProxyComponent = {}
 
@@ -1109,6 +1221,7 @@ UInventoryProxyComponent = {}
 ---@field CooledItem TSubclassOf<UItemTemplate>
 ---@field bRanged boolean
 ---@field DamageOffset FVector
+---@field AdditionalDamageOffsets TArray<FVector>
 ---@field FireOffset FVector
 ---@field AmmoType TSubclassOf<UItemTemplate>
 ---@field ProjectileEntity TSubclassOf<UEntityTemplate>
@@ -1185,6 +1298,7 @@ ULifetimeDataComponent = {}
 ---@class ULifetimeProxyComponent : UProxyComponent
 ---@field LifeSpan float
 ---@field DropResourceOnDeath boolean
+---@field ResetIfObserved boolean
 ULifetimeProxyComponent = {}
 
 
@@ -1342,6 +1456,7 @@ UPlantGrowthProxyComponent = {}
 
 
 ---@class UPlayerControllerDataComponent : UDataComponent
+---@field FamilyHouseInfo int64
 ---@field PledgedTownHallInfo int64
 ---@field PledgedMilitiaInfo int64
 ---@field bShowRespawnScreen uint8
@@ -1404,6 +1519,16 @@ UPlayerSpawnerDataComponent = {}
 ---@field Faction EAnvilFactionId
 UPlayerSpawnerProxyComponent = {}
 
+
+
+---@class UPlayerStatusDataComponent : UDataComponent
+---@field RestedLevel uint8
+UPlayerStatusDataComponent = {}
+
+
+
+---@class UPlayerStatusProxyComponent : UProxyComponent
+UPlayerStatusProxyComponent = {}
 
 
 ---@class UPlayerUnstuckProxyComponent : UProxyComponent
@@ -1541,9 +1666,7 @@ URepTestProxyComponent = {}
 
 
 ---@class URepairProxyComponent : UProxyComponent
----@field TotalRepairCost int32
 URepairProxyComponent = {}
-
 
 
 ---@class URepairStationProxyComponent : UProxyComponent
@@ -1642,6 +1765,8 @@ USeekerProxyComponent = {}
 ---@field TeamId uint8
 ---@field Encumbrance uint8
 ---@field GuardMeter float
+---@field CurrentActivitySpeedModifier float
+---@field CurrentActivityChainIndex uint8
 ---@field ActivityState EAnvilSimActivityState
 ---@field ActivityAimLocation FVector
 ---@field CurrentStance EAnvilCharacterStance
@@ -1695,6 +1820,8 @@ USimPlayerDataComponent = {}
 ---@field MovementAcceleration float
 ---@field SprintStaminaDrain float
 ---@field ClimbStaminaCost float
+---@field FallingDistRange FR2FloatRange
+---@field FallingDamageRange FR2FloatRange
 USimPlayerProxyComponent = {}
 
 
@@ -1798,8 +1925,21 @@ UStructureProtectionProxyComponent = {}
 ---@field bCanCollapse boolean
 ---@field bIsAlwaysEnclosed boolean
 ---@field IgnoreMeshVisbilityChanges boolean
+---@field bIsGridPiece boolean
 ---@field StructureType EAnvilBuildStructureType
 UStructureProxyComponent = {}
+
+
+
+---@class UTavernDataComponent : UDataComponent
+---@field CurrentBuffLevel uint8
+UTavernDataComponent = {}
+
+
+
+---@class UTavernProxyComponent : UProxyComponent
+---@field Buffs TArray<FTavernBuffConfig>
+UTavernProxyComponent = {}
 
 
 
@@ -1813,6 +1953,7 @@ UTeamDataComponent = {}
 ---@field TeamId uint8
 ---@field Accessibility EAnvilAccessibilityType
 ---@field bAlwaysAllowAccessWhenScorched boolean
+---@field bAllowAccessUsingVehicles boolean
 UTeamProxyComponent = {}
 
 
@@ -1853,7 +1994,7 @@ UTemperatureProxyComponent = {}
 ---@field NumUnclaimedTents int32
 ---@field NumReinforcementSupplies int32
 ---@field NumTotalFamilyHouses int32
----@field NumMarketplaceAreas int32
+---@field NumMarketplaces int32
 ---@field TownNameId uint8
 ---@field TownNameOrdinal uint8
 ---@field CurrentBuildRadius float
@@ -1880,6 +2021,7 @@ UTrapDataComponent = {}
 ---@field PlayerTrapDurationSec float
 ---@field AnimalBleedDamagePerSec float
 ---@field NormalizedAnimalEscapeChance float
+---@field MissEffect TSubclassOf<UEntityTemplate>
 UTrapProxyComponent = {}
 
 
@@ -1889,8 +2031,8 @@ UTrapProxyComponent = {}
 ---@field PopulationRequirementT3 uint8
 ---@field FamilyHouseRequirementT2 uint8
 ---@field FamilyHouseRequirementT3 uint8
----@field MarketplaceAreaRequirementT2 uint8
----@field MarketplaceAreaRequirementT3 uint8
+---@field MarketplaceRequirementT2 uint8
+---@field MarketplaceRequirementT3 uint8
 ---@field TentRequirementT2 uint8
 ---@field TentRequirementT3 uint8
 ---@field TownCenterRequiredBuilders uint8

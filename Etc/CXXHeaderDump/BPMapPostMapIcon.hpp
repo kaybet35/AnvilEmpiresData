@@ -3,8 +3,8 @@
 
 class UBPMapPostMapIcon_C : public UMapPostMapIcon
 {
-    class UImage* BlackBG;                                                            // 0x0390 (size: 0x8)
+    class UImage* BlackBG;                                                            // 0x03A0 (size: 0x8)
 
-}; // Size: 0x398
+}; // Size: 0x3A8
 
 #endif

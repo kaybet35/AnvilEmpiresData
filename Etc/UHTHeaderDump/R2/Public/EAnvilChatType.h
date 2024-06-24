@@ -12,7 +12,6 @@ enum class EAnvilChatType : uint8 {
     WorldTown,
     WorldFamily,
     Local,
-    Team,
     NumTypes,
 };
 

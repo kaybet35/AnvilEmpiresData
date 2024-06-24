@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_GridFoundationWallRoundWindowDiagonalBuildSite_HPP
+#define UE4SS_SDK_GridFoundationWallRoundWindowDiagonalBuildSite_HPP
+
+class UGridFoundationWallRoundWindowDiagonalBuildSite_C : public UBPBaseFoundationModularBuildSiteEntity_C
+{
+}; // Size: 0xC8
+
+#endif

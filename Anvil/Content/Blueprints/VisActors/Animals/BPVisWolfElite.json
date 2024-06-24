@@ -12,12 +12,37 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisWolfElite_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.9"
       }
     },
     "SuperStruct": {
       "ObjectName": "Class'VisAnimal'",
       "ObjectPath": "/Script/Anvil"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BPVisWolfElite_C:UserConstructionScript'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fur",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "UserConstructionScript": {
+        "ObjectName": "Function'BPVisWolfElite_C:UserConstructionScript'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.4"
+      }
     },
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
@@ -45,7 +70,7 @@
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisWolfElite_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.5"
       },
       "Capsule": {
         "ObjectName": "CapsuleComponent'Default__BPVisWolfElite_C:Capsule'",
@@ -53,11 +78,12 @@
       },
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisWolfElite_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.11"
       },
       "CurrentStateMontageMap": [
         {
-          "EAnvilAnimalState::Trapped": {
+          "Key": "EAnvilAnimalState::Trapped",
+          "Value": {
             "ObjectName": "AnimMontage'Wolf_trapped_Montage'",
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Wolf_trapped_Montage.0"
           }
@@ -86,6 +112,17 @@
     }
   },
   {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "BPVisWolfElite_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
     "Type": "HealthDataComponent",
     "Name": "HealthDataComponent",
     "Outer": "Default__BPVisWolfElite_C",
@@ -109,10 +146,30 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisWolfElite_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.6"
       },
       "VariableGuid": "90A79A14-452C59A4-730B32AD-811C92BE",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisWolfElite_C:Fur_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.10"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6CB273FE-40C3C367-015339AD-5F5A63B5",
+      "InternalVariableName": "Fur"
     }
   },
   {
@@ -121,10 +178,49 @@
     "Outer": "BPVisWolfElite_C",
     "Class": "UScriptClass'SimpleConstructionScript'",
     "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWolfElite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisWolfElite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.8"
+        }
+      ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisWolfElite_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfElite.7"
       }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Fur_GEN_VARIABLE",
+    "Outer": "BPVisWolfElite_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Wolf_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Wolf_ABP.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'WolfFur_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/WolfFur_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'WolfFur_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/WolfFur_SK.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'WolfEliteFur'",
+          "ObjectPath": "Anvil/Content/Materials/Animals/WolfEliteFur.0"
+        }
+      ],
+      "bReceivesDecals": false
     }
   },
   {

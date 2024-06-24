@@ -38,7 +38,7 @@ public:
     int32 NumTotalFamilyHouses;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 NumMarketplaceAreas;
+    int32 NumMarketplaces;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TownNameId;

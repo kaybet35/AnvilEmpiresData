@@ -2,6 +2,8 @@
 
 ---@class UBPAnvilKeyEntryWidget_C : UAnvilKeyEntryWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field EntryBorder UBorder
+---@field EntryHorizontalBox UHorizontalBox
 UBPAnvilKeyEntryWidget_C = {}
 
 ---@param IsDesignTime boolean

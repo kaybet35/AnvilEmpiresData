@@ -44,7 +44,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "Player_C'Default__Player_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.11"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.12"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -58,8 +58,790 @@
     "Properties": {
       "Radius": 30.0,
       "HalfHeight": 60.0,
-      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Flesh",
       "CollisionMask": 8196
+    }
+  },
+  {
+    "Type": "ExplorationSpawnerProxyComponent",
+    "Name": "ExplorationSpawnerProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'ExplorationSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedEntitiesData": [
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'Deer_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Deer.1"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 5000.0,
+          "ChanceToSpawnPerMin": 0.5,
+          "MinDistanceBetweenSpawns": 0.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": []
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'Rabbit_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Rabbit.2"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 5000.0,
+          "ChanceToSpawnPerMin": 0.5,
+          "MinDistanceBetweenSpawns": 0.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": []
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'Boar_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.2"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 5000.0,
+          "ChanceToSpawnPerMin": 2.0,
+          "MinDistanceBetweenSpawns": 0.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Wolf_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Wolf.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'WolfElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfElite.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Boar_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'BoarElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BoarElite.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Bear_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Bear.3"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'BearElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.3"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            }
+          ]
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'StoneFragmentsPile_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.0"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 7495.0,
+          "ChanceToSpawnPerMin": 1.0,
+          "MinDistanceBetweenSpawns": 2500.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'CopperFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/CopperFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'IronFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/IronFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'StoneFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'TinFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/TinFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            }
+          ]
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'Wolf_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Wolf.2"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 20000.0,
+          "ChanceToSpawnPerMin": 2.0,
+          "MinDistanceBetweenSpawns": 0.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Wolf_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Wolf.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'WolfElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfElite.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Boar_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'BoarElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BoarElite.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Bear_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Bear.3"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'BearElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.3"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            }
+          ]
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'CopperFragmentsPile_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/CopperFragmentsPile.0"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 30000.0,
+          "ChanceToSpawnPerMin": 2.0,
+          "MinDistanceBetweenSpawns": 2500.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'CopperFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/CopperFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'IronFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/IronFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'StoneFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'TinFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/TinFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            }
+          ]
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'TinFragmentsPile_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/TinFragmentsPile.0"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 30000.0,
+          "ChanceToSpawnPerMin": 1.0,
+          "MinDistanceBetweenSpawns": 1000.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'CopperFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/CopperFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'IronFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/IronFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'StoneFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'TinFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/TinFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            }
+          ]
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'RavenDen_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/AnimalStructures/RavenDen.1"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 30000.0,
+          "ChanceToSpawnPerMin": 1.0,
+          "MinDistanceBetweenSpawns": 10000.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Tree01_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree01.1"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 1500.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Tree02_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree02.1"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 1500.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Tree03_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/Tree03.1"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 1500.0
+            }
+          ]
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'BoarElite_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BoarElite.2"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 40000.0,
+          "ChanceToSpawnPerMin": 2.0,
+          "MinDistanceBetweenSpawns": 0.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Wolf_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Wolf.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'WolfElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfElite.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Boar_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'BoarElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BoarElite.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Bear_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Bear.3"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'BearElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.3"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            }
+          ]
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'Treasure_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Treasure.0"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 50000.0,
+          "ChanceToSpawnPerMin": 0.5,
+          "MinDistanceBetweenSpawns": 10000.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": []
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'WolfElite_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfElite.2"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 50000.0,
+          "ChanceToSpawnPerMin": 2.0,
+          "MinDistanceBetweenSpawns": 0.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Wolf_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Wolf.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'WolfElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfElite.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Boar_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'BoarElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BoarElite.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Bear_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Bear.3"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'BearElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.3"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            }
+          ]
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'IronFragmentsPile_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/IronFragmentsPile.0"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 60000.0,
+          "ChanceToSpawnPerMin": 1.0,
+          "MinDistanceBetweenSpawns": 1000.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'CopperFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/CopperFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'IronFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/IronFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'StoneFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'TinFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/TinFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 2000.0
+            }
+          ]
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'Bear_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Bear.3"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 60000.0,
+          "ChanceToSpawnPerMin": 1.0,
+          "MinDistanceBetweenSpawns": 0.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Wolf_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Wolf.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'WolfElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfElite.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Boar_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'BoarElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BoarElite.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Bear_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Bear.3"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'BearElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.3"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            }
+          ]
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'BearElite_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.3"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 65000.0,
+          "ChanceToSpawnPerMin": 1.0,
+          "MinDistanceBetweenSpawns": 0.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Wolf_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Wolf.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'WolfElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfElite.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Boar_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'BoarElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BoarElite.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Bear_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Bear.3"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'BearElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.3"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 3000.0
+            }
+          ]
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'ResinPile_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/ResinPile.0"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 75000.0,
+          "ChanceToSpawnPerMin": 1.0,
+          "MinDistanceBetweenSpawns": 6000.0,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": []
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'RockMineUnbuilt_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMineUnbuilt.0"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 40000.0,
+          "ChanceToSpawnPerMin": 0.5,
+          "MinDistanceBetweenSpawns": 50000.0,
+          "bRequiresNavmesh": false,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'RockMineUnbuilt_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMineUnbuilt.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 30000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'ClayMineUnbuilt_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMineUnbuilt.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 30000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'IronMineUnbuilt_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/IronMineUnbuilt.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 30000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'CoalMineUnbuilt_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/CoalMineUnbuilt.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 30000.0
+            }
+          ]
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'IronMineUnbuilt_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/IronMineUnbuilt.0"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 60000.0,
+          "ChanceToSpawnPerMin": 0.5,
+          "MinDistanceBetweenSpawns": 50000.0,
+          "bRequiresNavmesh": false,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "CompatibleSurfaceTypes": 0,
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'RockMineUnbuilt_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/RockMineUnbuilt.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 30000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'ClayMineUnbuilt_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/ClayMineUnbuilt.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 30000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'IronMineUnbuilt_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/IronMineUnbuilt.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 30000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'CoalMineUnbuilt_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/CoalMineUnbuilt.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 30000.0
+            }
+          ]
+        }
+      ]
     }
   },
   {
@@ -289,19 +1071,19 @@
       "Components": [
         {
           "ObjectName": "SimPlayerProxyComponent'Default__Player_C:SimPlayerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.14"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.16"
         },
         {
           "ObjectName": "HealthProxyComponent'Default__Player_C:HealthProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.9"
         },
         {
           "ObjectName": "HandsProxyComponent'Default__Player_C:HandsProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.8"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__Player_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.10"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.11"
         },
         {
           "ObjectName": "ArmorProxyComponent'Default__Player_C:ArmorProxyComponent_0'",
@@ -313,7 +1095,7 @@
         },
         {
           "ObjectName": "PlayerInputProxyComponent'Default__Player_C:PlayerInputProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.12"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.13"
         },
         {
           "ObjectName": "AIStimulusProxyComponent'Default__Player_C:AIStimulusProxyComponent_0'",
@@ -321,15 +1103,15 @@
         },
         {
           "ObjectName": "PlayerUnstuckProxyComponent'Default__Player_C:PlayerUnstuckProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.13"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.15"
         },
         {
           "ObjectName": "HungerProxyComponent'Default__Player_C:HungerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.10"
         },
         {
           "ObjectName": "StaminaProxyComponent'Default__Player_C:StaminaProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.15"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.17"
         },
         {
           "ObjectName": "AnimalRopeSlotProxyComponent'Default__Player_C:AnimalRopeSlotProxyComponent_0'",
@@ -337,7 +1119,7 @@
         },
         {
           "ObjectName": "TemperatureProxyComponent'Default__Player_C:TemperatureProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.16"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.18"
         },
         {
           "ObjectName": "AdminEnvProxyComponent'Default__Player_C:AdminEnvProxyComponent_0'",
@@ -345,7 +1127,15 @@
         },
         {
           "ObjectName": "FamilyUserProxyComponent'Default__Player_C:FamilyUserProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.7"
+        },
+        {
+          "ObjectName": "ExplorationSpawnerProxyComponent'Default__Player_C:ExplorationSpawnerProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.6"
+        },
+        {
+          "ObjectName": "PlayerStatusProxyComponent'Default__Player_C:PlayerStatusProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.14"
         }
       ],
       "VisActorClass": {
@@ -366,6 +1156,12 @@
     }
   },
   {
+    "Type": "PlayerStatusProxyComponent",
+    "Name": "PlayerStatusProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'PlayerStatusProxyComponent'"
+  },
+  {
     "Type": "PlayerUnstuckProxyComponent",
     "Name": "PlayerUnstuckProxyComponent_0",
     "Outer": "Default__Player_C",
@@ -382,7 +1178,15 @@
       "CrouchedHalfHeight": 40.0,
       "MaxVelocity": 525.0,
       "MaxSprintVelocity": 1050.0,
-      "BreakDeceleration": 2500.0
+      "BreakDeceleration": 2500.0,
+      "FallingDistRange": {
+        "Min": 1000.0,
+        "Max": 2000.0
+      },
+      "FallingDamageRange": {
+        "Min": 10.0,
+        "Max": 100.0
+      }
     }
   },
   {

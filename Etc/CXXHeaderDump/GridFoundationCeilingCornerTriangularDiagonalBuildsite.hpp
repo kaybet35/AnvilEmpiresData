@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_GridFoundationCeilingCornerTriangularDiagonalBuildsite_HPP
+#define UE4SS_SDK_GridFoundationCeilingCornerTriangularDiagonalBuildsite_HPP
+
+class UGridFoundationCeilingCornerTriangularDiagonalBuildsite_C : public UBPBaseFoundationModularBuildSiteEntity_C
+{
+}; // Size: 0xC8
+
+#endif

@@ -1,6 +1,7 @@
 #include "WorldTownCenterMapIcon.h"
 
 UWorldTownCenterMapIcon::UWorldTownCenterMapIcon() {
+    this->IconNudgeBox = NULL;
     this->MainElements = NULL;
     this->TownStatusVerticalBox = NULL;
     this->TownNameBorder = NULL;

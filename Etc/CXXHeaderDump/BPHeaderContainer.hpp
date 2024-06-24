@@ -3,6 +3,6 @@
 
 class UBPHeaderContainer_C : public UHeaderContainer
 {
-}; // Size: 0x2C8
+}; // Size: 0x2E0
 
 #endif

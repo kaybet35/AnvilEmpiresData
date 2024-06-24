@@ -40,8 +40,8 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
       },
       "ItemHitEffect": {
-        "ObjectName": "BlueprintGeneratedClass'EffectPickAxeImpact_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectPickAxeImpact.0"
+        "ObjectName": "BlueprintGeneratedClass'EffectAxeImpact_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectAxeImpact.0"
       },
       "Encumberance": 10,
       "DamageOffset": {
@@ -53,9 +53,9 @@
       "ToolType": "EAnvilToolType::PickaxeT2",
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
-        "Delay": 0.5,
+        "Delay": 0.2,
         "Duration": 1.1,
-        "StaminaCost": 10.0
+        "StaminaCost": 12.0
       },
       "RangedActivity": {
         "bRepeatable": false
@@ -66,12 +66,13 @@
         "Duration": 1.1,
         "MovementSpeedModifier": 0.0,
         "RotationSpeedModifier": 0.0,
-        "StaminaCost": 12.25
+        "StaminaCost": 10.0,
+        "AimedStaminaCost": 5.0
       },
-      "Damage": 10,
+      "Damage": 12,
+      "DefaultMarketplaceValue": 12,
       "DurabilityLossPerUse": 0.5,
-      "DamageRadius": 64.0,
-      "ToolEffectiveness": 0.66,
+      "DamageRadius": 80.0,
       "AimMovementSpeedModifier": 0.5
     }
   }

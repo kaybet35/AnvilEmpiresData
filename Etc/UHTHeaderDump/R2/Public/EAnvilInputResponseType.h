@@ -10,5 +10,6 @@ enum class EAnvilInputResponseType : uint8 {
     CancelUI,
     StructureUpgradeFailed,
     ToggleBuildMenu,
+    UnHandledInteract,
 };
 

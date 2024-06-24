@@ -3,6 +3,6 @@
 
 class UBPOptionsMenuGameplayWidget_C : public UOptionsMenuGameplayWidget
 {
-}; // Size: 0x280
+}; // Size: 0x288
 
 #endif

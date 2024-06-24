@@ -13,5 +13,8 @@ FBuildSiteCostData::FBuildSiteCostData() {
     this->ProcessedLeather = 0;
     this->ResourceStoneFragments = 0;
     this->ProcessedWoodHard = 0;
+    this->Nails = 0;
+    this->Mortar = 0;
+    this->Gravel = 0;
 }
 

@@ -6,7 +6,6 @@ UENUM(BlueprintType)
 enum class EDeploymentPointTooltipType : uint8 {
     None,
     Wild,
-    TownCenterWild,
     TownCenterMilitia,
     CampMilitia,
     SmallCampMilitia,

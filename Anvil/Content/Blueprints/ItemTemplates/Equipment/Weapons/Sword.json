@@ -44,15 +44,28 @@
       },
       "Encumberance": 40,
       "DamageOffset": {
-        "X": 100.0,
-        "Y": 0.0,
+        "X": 110.0,
+        "Y": 75.0,
         "Z": 0.0
       },
+      "AdditionalDamageOffsets": [
+        {
+          "X": 135.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        {
+          "X": 110.0,
+          "Y": -75.0,
+          "Z": 0.0
+        }
+      ],
       "bStaggersWielder": true,
       "DamageType": "EAnvilDamageType::Slashing",
       "StanceOverride": [
         {
-          "EAnvilCharacterStance::OnHorse": {
+          "Key": "EAnvilCharacterStance::OnHorse",
+          "Value": {
             "ObjectName": "BlueprintGeneratedClass'MountedSword_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/MountedSword.0"
           }
@@ -61,7 +74,11 @@
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
         "Delay": 0.4,
-        "Duration": 1.1,
+        "AttackChainDelays": 0.9,
+        "AttackChainDelays": 0.9,
+        "Duration": 1.0,
+        "AttackChainDurations": 1.2,
+        "AttackChainDurations": 1.2,
         "RotationSpeedModifier": 4.0,
         "StaminaCost": 10.0
       },
@@ -70,8 +87,9 @@
       },
       "bAllowCameraPan": false,
       "Damage": 35,
+      "DefaultMarketplaceValue": 32,
       "DurabilityLossPerUse": 2.0,
-      "DamageRadius": 125.0,
+      "DamageRadius": 55.0,
       "AimMovementSpeedModifier": 0.45,
       "AimRotationSpeedModifier": 4.0
     }

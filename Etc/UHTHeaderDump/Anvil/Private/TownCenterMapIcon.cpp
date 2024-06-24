@@ -16,9 +16,6 @@ UTownCenterMapIcon::UTownCenterMapIcon() {
 void UTownCenterMapIcon::UpdateName() {
 }
 
-void UTownCenterMapIcon::OnClicked() {
-}
-
 FText UTownCenterMapIcon::GetNumTentsText() {
     return FText::GetEmpty();
 }

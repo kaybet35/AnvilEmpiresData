@@ -11,6 +11,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=HealthDataComponent -FallbackName=HealthDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=HungerDataComponent -FallbackName=HungerDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=PlayerInputDataComponent -FallbackName=PlayerInputDataComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=PlayerStatusDataComponent -FallbackName=PlayerStatusDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=SimPlayerDataComponent -FallbackName=SimPlayerDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=StaminaDataComponent -FallbackName=StaminaDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=TemperatureDataComponent -FallbackName=TemperatureDataComponent
@@ -29,6 +30,7 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->StaminaDataComponent = CreateDefaultSubobject<UStaminaDataComponent>(TEXT("StaminaDataComponent"));
     this->TemperatureDataComponent = CreateDefaultSubobject<UTemperatureDataComponent>(TEXT("TemperatureDataComponent"));
     this->AdminEnvDataComponent = CreateDefaultSubobject<UAdminEnvDataComponent>(TEXT("AdminEnvDataComponent"));
+    this->PlayerStatusDataComponent = CreateDefaultSubobject<UPlayerStatusDataComponent>(TEXT("PlayerStatusDataComponent"));
     this->ItemMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ItemMesh"));
     this->ItemSecondaryMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ItemSecondaryMesh"));
     this->UnarmedItemMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("UnarmedItemMesh"));
@@ -39,8 +41,6 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->CameraRotationLerpSpeed = 1.00f;
     this->AimMeshLength = 100.00f;
     this->YawSpeed = 1.00f;
-    this->MinShroudRadius = 750.00f;
-    this->MaxShroudRadius = 3000.00f;
     this->DeathCue = NULL;
     this->Capsule = (UCapsuleComponent*)RootComponent;
     this->Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
@@ -72,11 +72,7 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->WindHighAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("WindHighAudioComponent"));
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
-    this->Mesh->SetupAttachment(RootComponent);
-    this->Head->SetupAttachment(Mesh);
-    this->AimMeshComponent->SetupAttachment(RootComponent);
-    this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
-    this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
+    this->CurrentUEUsableActor = NULL;
     this->VoiceIndicator->SetupAttachment(RootComponent);
     this->TorchVFXComponent->SetupAttachment(Mesh);
     this->TorchAudioComponent->SetupAttachment(Mesh);
@@ -97,6 +93,11 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->ItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->Mesh->SetupAttachment(RootComponent);
+    this->Head->SetupAttachment(Mesh);
+    this->AimMeshComponent->SetupAttachment(RootComponent);
+    this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
+    this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
 }
 
 float AVisPlayer::GetVelocityHeadingDegrees() {
@@ -107,7 +108,7 @@ FString AVisPlayer::GetPlayerName() const {
     return TEXT("");
 }
 
-float AVisPlayer::GetNightVisibilityRadius(float NightTimeNormalized) const {
+float AVisPlayer::GetNightVisibilityRadius() const {
     return 0.0f;
 }
 

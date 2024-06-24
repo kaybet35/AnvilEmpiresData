@@ -16,7 +16,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "TinFragmentsPile_C'Default__TinFragmentsPile_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/TinFragmentsPile.3"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/TinFragmentsPile.4"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -38,8 +38,18 @@
         "Y": 100.0,
         "Z": 75.0
       },
-      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeStone",
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Stone",
       "CollisionMask": 8210
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__TinFragmentsPile_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 600.0,
+      "ResetIfObserved": true
     }
   },
   {
@@ -72,6 +82,10 @@
         },
         {
           "ObjectName": "ResourceProxyComponent'Default__TinFragmentsPile_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/TinFragmentsPile.3"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__TinFragmentsPile_C:LifetimeProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/TinFragmentsPile.2"
         }
       ],

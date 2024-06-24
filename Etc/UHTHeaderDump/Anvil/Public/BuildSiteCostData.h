@@ -43,6 +43,15 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int16 ProcessedWoodHard;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 Nails;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 Mortar;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 Gravel;
+    
     ANVIL_API FBuildSiteCostData();
 };
 

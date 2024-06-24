@@ -16,9 +16,5 @@ private:
 public:
     UWildSpawnPointMapIcon();
 
-private:
-    UFUNCTION(BlueprintCallable)
-    void OnClicked();
-    
 };
 

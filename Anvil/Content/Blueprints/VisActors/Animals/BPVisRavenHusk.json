@@ -33,7 +33,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisRavenHusk_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRavenHusk.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRavenHusk.11"
       }
     },
     "SuperStruct": {
@@ -41,6 +41,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SkeletalMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "Decal",
@@ -87,7 +98,7 @@
       },
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisRavenHusk_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRavenHusk.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRavenHusk.13"
       },
       "LifetimeDataComponent": {
         "ObjectName": "LifetimeDataComponent'Default__BPVisRavenHusk_C:LifetimeDataComponent'",
@@ -190,6 +201,26 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisRavenHusk_C:SkeletalMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRavenHusk.12"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "84454FFB-4C91B226-5F64B4BE-55290C44",
+      "InternalVariableName": "SkeletalMesh"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPVisRavenHusk_C",
@@ -199,18 +230,50 @@
         {
           "ObjectName": "SCS_Node'BPVisRavenHusk_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRavenHusk.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisRavenHusk_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRavenHusk.10"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisRavenHusk_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRavenHusk.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisRavenHusk_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRavenHusk.10"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisRavenHusk_C:SimpleConstructionScript_0.SCS_Node_0'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisRavenHusk.8"
       }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMesh_GEN_VARIABLE",
+    "Outer": "BPVisRavenHusk_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'Raven_death_anim'",
+          "ObjectPath": "Anvil/Content/Animations/Animals/Raven/Raven_death_anim.1"
+        }
+      },
+      "AnimationMode": "EAnimationMode::AnimationSingleNode",
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'RavenFur_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/RavenFur_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'RavenFur_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/RavenFur_SK.0"
+      },
+      "bReceivesDecals": false
     }
   },
   {

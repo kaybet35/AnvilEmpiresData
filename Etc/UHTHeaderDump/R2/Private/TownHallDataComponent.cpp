@@ -11,7 +11,7 @@ UTownHallDataComponent::UTownHallDataComponent(const FObjectInitializer& ObjectI
     this->NumUnclaimedTents = 0;
     this->NumReinforcementSupplies = 0;
     this->NumTotalFamilyHouses = 0;
-    this->NumMarketplaceAreas = 0;
+    this->NumMarketplaces = 0;
     this->TownNameId = 0;
     this->TownNameOrdinal = 0;
     this->CurrentBuildRadius = 0.00f;

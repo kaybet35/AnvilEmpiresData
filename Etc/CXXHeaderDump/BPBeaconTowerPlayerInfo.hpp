@@ -3,6 +3,6 @@
 
 class UBPBeaconTowerPlayerInfo_C : public UBeaconTowerPlayerInfoMapIcon
 {
-}; // Size: 0x3B8
+}; // Size: 0x3C8
 
 #endif

@@ -5,9 +5,11 @@
 UENUM(BlueprintType)
 enum class EAnvilSpawnType : uint8 {
     Starter,
+    FamilyArea,
     House,
     Tent,
     Bed,
     Town,
+    None,
 };
 

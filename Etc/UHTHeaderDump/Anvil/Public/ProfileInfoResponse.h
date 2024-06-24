@@ -10,31 +10,7 @@ public:
     uint64 OnlineId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 LockedFactionId;
-    
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint32 PledgedTownHallMapHash;
-    
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint32 PledgedTownHallTownHallId;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bHasHousePledge;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bHasBedPledge;
-    
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint32 PledgedMilitiaMapHash;
-    
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint32 PledgedMilitiaTownHallId;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FString OfflineCharacterServerName;
-    
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint32 SpawnTimeRemainingSec;
+    FString AgeDeployData;
     
     ANVIL_API FProfileInfoResponse();
 };

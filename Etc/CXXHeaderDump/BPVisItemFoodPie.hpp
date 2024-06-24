@@ -3,6 +3,6 @@
 
 class UBPVisItemFoodPie_C : public UVisItem
 {
-}; // Size: 0x228
+}; // Size: 0x238
 
 #endif

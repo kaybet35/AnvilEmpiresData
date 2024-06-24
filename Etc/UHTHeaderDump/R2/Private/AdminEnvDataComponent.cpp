@@ -4,6 +4,7 @@ UAdminEnvDataComponent::UAdminEnvDataComponent(const FObjectInitializer& ObjectI
     this->bDebugDrawHook = false;
     this->bShowStructureStatsHook = false;
     this->bShowWeatherStatsHook = false;
+    this->bFastReinforcementsAlertCooldown = false;
 }
 
 

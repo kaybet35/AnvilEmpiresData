@@ -2,8 +2,8 @@
 
 UWorldEntityMapIcon::UWorldEntityMapIcon() {
     this->EntityHandle = NULL;
-    this->MapItemImage = NULL;
     this->IconSizeBox = NULL;
+    this->MapItemImage = NULL;
     this->EntityTemplateCDO = NULL;
     this->VisActorCDO = NULL;
 }

@@ -26,8 +26,6 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->WinConditionCanvas = NULL;
     this->WinConditionText = NULL;
     this->WinConditionLogo = NULL;
-    this->TownStatusAlertCanvas = NULL;
-    this->TownStatusAlertText = NULL;
     this->PlayerVitality = NULL;
     this->HorseVitality = NULL;
     this->DisclaimerCanvas = NULL;
@@ -41,7 +39,6 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->WeatherStatsText = NULL;
     this->BorderRegionIndicatorText = NULL;
 }
-
 
 
 ESlateVisibility UHUDWidget::GetWeatherStatsTextVisibility() {

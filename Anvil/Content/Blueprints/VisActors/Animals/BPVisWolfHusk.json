@@ -33,7 +33,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisWolfHusk_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfHusk.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfHusk.11"
       }
     },
     "SuperStruct": {
@@ -41,6 +41,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SkeletalMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "Decal",
@@ -87,7 +98,7 @@
       },
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisWolfHusk_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfHusk.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfHusk.13"
       },
       "LifetimeDataComponent": {
         "ObjectName": "LifetimeDataComponent'Default__BPVisWolfHusk_C:LifetimeDataComponent'",
@@ -186,6 +197,26 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisWolfHusk_C:SkeletalMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfHusk.12"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "51DDC407-4D6B83D5-58DE72AF-BDF165DF",
+      "InternalVariableName": "SkeletalMesh"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPVisWolfHusk_C",
@@ -195,17 +226,59 @@
         {
           "ObjectName": "SCS_Node'BPVisWolfHusk_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfHusk.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWolfHusk_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfHusk.10"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWolfHusk_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfHusk.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWolfHusk_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfHusk.10"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisWolfHusk_C:SimpleConstructionScript_0.SCS_Node_0'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisWolfHusk.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMesh_GEN_VARIABLE",
+    "Outer": "BPVisWolfHusk_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Wolf_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Wolf_ABP.0"
+      },
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'wolf_death_anim'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/wolf_death_anim.0"
+        },
+        "bSavedLooping": false
+      },
+      "AnimationMode": "EAnimationMode::AnimationSingleNode",
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'WolfFur_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/WolfFur_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'WolfFur_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/WolfFur_SK.0"
+      },
+      "bReceivesDecals": false,
+      "RelativeScale3D": {
+        "X": 1.1764705,
+        "Y": 1.1764705,
+        "Z": 1.1764705
       }
     }
   },

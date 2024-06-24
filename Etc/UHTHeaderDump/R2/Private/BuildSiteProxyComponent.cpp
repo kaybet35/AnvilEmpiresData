@@ -8,6 +8,7 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->bRequiresTownHall = false;
     this->bRequiresCamp = false;
     this->bRequiresSmallCamp = false;
+    this->bRequiresClaimedFamilyHouse = false;
     this->bBuildableOverRoads = false;
     this->bBuildableNearSpawnPoint = false;
     this->bBuildableInEnemyTerritory = false;
@@ -16,11 +17,13 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->CanBuildTownStructureWithoutPledge = false;
     this->bBuildsInstantly = false;
     this->bMinDistanceCheckIgnoreEnemyStructures = false;
+    this->bIsGridDiagonalPiece = false;
     this->TierPrerequisite = 0;
     this->RequiredDeployable = NULL;
     this->MaxHeightShift = 0.00f;
     this->AdditionalMaxHeightShift = 0.00f;
-    this->MinDistanceBetweenStructures = 0.00f;
+    this->GridDiagonalPair = NULL;
+    this->NearbyPlayersRequired = 0;
 }
 
 

@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
 #include "HUDWindow.generated.h"
 
-class AVisActor;
+class AActor;
 class UHeaderContainer;
 class UInventoryContainerWidget;
 class UPlayerInventoryWidget;
@@ -13,7 +13,7 @@ class ANVIL_API UHUDWindow : public UUserWidget {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    AVisActor* WindowContext;
+    AActor* WindowContext;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

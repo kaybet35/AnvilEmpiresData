@@ -24,14 +24,31 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisBear_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.11"
       }
     },
     "SuperStruct": {
       "ObjectName": "Class'VisAnimal'",
       "ObjectPath": "/Script/Anvil"
     },
+    "Children": [
+      {
+        "ObjectName": "Function'BPVisBear_C:UserConstructionScript'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.5"
+      }
+    ],
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fur",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "Idle",
@@ -44,6 +61,12 @@
         }
       }
     ],
+    "FuncMap": {
+      "UserConstructionScript": {
+        "ObjectName": "Function'BPVisBear_C:UserConstructionScript'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.5"
+      }
+    },
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -70,7 +93,7 @@
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisBear_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.6"
       },
       "Capsule": {
         "ObjectName": "CapsuleComponent'Default__BPVisBear_C:Capsule'",
@@ -78,11 +101,12 @@
       },
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisBear_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.13"
       },
       "CurrentStateMontageMap": [
         {
-          "EAnvilAnimalState::Trapped": {
+          "Key": "EAnvilAnimalState::Trapped",
+          "Value": {
             "ObjectName": "AnimMontage'Bear_trapped_montage'",
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_trapped_montage.0"
           }
@@ -111,6 +135,17 @@
     }
   },
   {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "BPVisBear_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
     "Type": "HealthDataComponent",
     "Name": "HealthDataComponent",
     "Outer": "Default__BPVisBear_C",
@@ -134,7 +169,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisBear_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.7"
       },
       "VariableGuid": "90A79A14-452C59A4-730B32AD-811C92BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -161,6 +196,26 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisBear_C:Fur_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.12"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "CA90C44A-4D56CF61-0B9F70B8-0EE0C201",
+      "InternalVariableName": "Fur"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPVisBear_C",
@@ -169,19 +224,48 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisBear_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.8"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisBear_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.10"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisBear_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.8"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisBear_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.10"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisBear_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBear.8"
       }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Fur_GEN_VARIABLE",
+    "Outer": "BPVisBear_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'BearFur_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/BearFur_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'BearFur_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/BearFur_SK.0"
+      },
+      "bReceivesDecals": false
     }
   },
   {
@@ -214,8 +298,8 @@
       },
       "RelativeScale3D": {
         "X": 0.8,
-        "Y": 0.8,
-        "Z": 0.79999995
+        "Y": 0.8000001,
+        "Z": 0.8000001
       }
     }
   }

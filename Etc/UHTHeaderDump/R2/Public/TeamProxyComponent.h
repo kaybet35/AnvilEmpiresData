@@ -17,6 +17,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAlwaysAllowAccessWhenScorched;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bAllowAccessUsingVehicles;
+    
     UTeamProxyComponent();
 
 };

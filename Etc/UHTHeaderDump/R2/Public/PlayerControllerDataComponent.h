@@ -9,6 +9,9 @@ class R2_API UPlayerControllerDataComponent : public UDataComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int64 FamilyHouseInfo;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 PledgedTownHallInfo;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))

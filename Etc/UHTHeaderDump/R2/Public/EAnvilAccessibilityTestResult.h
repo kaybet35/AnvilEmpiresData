@@ -11,6 +11,7 @@ enum class EAnvilAccessibilityTestResult : uint8 {
     AccessDeniedStructureCollapsed,
     AccessDeniedFamilyDestroyed,
     AccessDeniedTownDestroyed,
+    AccessDeniedCannotUseInVehicle,
     Error,
 };
 

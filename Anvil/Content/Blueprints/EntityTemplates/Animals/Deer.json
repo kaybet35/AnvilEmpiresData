@@ -48,7 +48,7 @@
         "Y": 24.0,
         "Z": 55.0
       },
-      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Flesh",
       "CollisionMask": 8256
     }
   },
@@ -60,7 +60,7 @@
     "Properties": {
       "Radius": 30.0,
       "HalfHeight": 72.0,
-      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Flesh",
       "CollisionMask": 524288
     }
   },
@@ -87,11 +87,15 @@
         },
         {
           "ObjectName": "ResourceProxyComponent'Default__Deer_C:ResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Deer.6"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Deer.7"
         },
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__Deer_C:BoxCollisionProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Deer.2"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__Deer_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Deer.6"
         }
       ],
       "VisActorClass": {
@@ -112,6 +116,16 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
       },
       "TargetType": "EAnvilDamageTargetType::Infantry"
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__Deer_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 120.0,
+      "ResetIfObserved": true
     }
   },
   {

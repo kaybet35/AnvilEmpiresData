@@ -2,6 +2,8 @@
 
 ---@class UBPAnvilDropdownEntryWidget_C : UAnvilDropdownEntryWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field ComboHorizontalBox UHorizontalBox
+---@field LabelBorder UBorder
 UBPAnvilDropdownEntryWidget_C = {}
 
 ---@param IsDesignTime boolean

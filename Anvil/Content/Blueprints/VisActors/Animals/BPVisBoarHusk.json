@@ -33,7 +33,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisBoarHusk_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoarHusk.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoarHusk.11"
       }
     },
     "SuperStruct": {
@@ -41,6 +41,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fur",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "Decal",
@@ -87,7 +98,7 @@
       },
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisBoarHusk_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoarHusk.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoarHusk.13"
       },
       "LifetimeDataComponent": {
         "ObjectName": "LifetimeDataComponent'Default__BPVisBoarHusk_C:LifetimeDataComponent'",
@@ -186,6 +197,26 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisBoarHusk_C:Fur_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoarHusk.12"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FFC8457B-465B04A9-10AA7ABF-51E9A01F",
+      "InternalVariableName": "Fur"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPVisBoarHusk_C",
@@ -195,18 +226,55 @@
         {
           "ObjectName": "SCS_Node'BPVisBoarHusk_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoarHusk.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisBoarHusk_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoarHusk.10"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisBoarHusk_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoarHusk.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisBoarHusk_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoarHusk.10"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisBoarHusk_C:SimpleConstructionScript_0.SCS_Node_0'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBoarHusk.8"
       }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Fur_GEN_VARIABLE",
+    "Outer": "BPVisBoarHusk_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Boar_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.0"
+      },
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'Boar_Anim_death'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_Anim_death.0"
+        },
+        "bSavedLooping": false
+      },
+      "AnimationMode": "EAnimationMode::AnimationSingleNode",
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'BoarFur_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/BoarFur_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'BoarFur_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/BoarFur_SK.0"
+      },
+      "bReceivesDecals": false
     }
   },
   {

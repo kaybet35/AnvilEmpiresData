@@ -1,0 +1,155 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__VisEffectTrapMiss_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AudioComponent",
+    "Outer": "Default__VisEffectTrapMiss_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'FleshBladeImpact_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Melee/Sword/FleshBladeImpact_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisEffectTrapMiss_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectTrapMiss.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "VisEffectTrapMiss_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'VisEffectTrapMiss_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectTrapMiss.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisEffect'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "VisEffectTrapMiss_C'Default__VisEffectTrapMiss_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectTrapMiss.9"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "LifetimeDataComponent",
+    "Name": "LifetimeDataComponent",
+    "Outer": "Default__VisEffectTrapMiss_C",
+    "Class": "UScriptClass'LifetimeDataComponent'"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraComponent",
+    "Outer": "Default__VisEffectTrapMiss_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'BloodImpactBlade'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/BloodImpactBlade.12"
+      },
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisEffectTrapMiss_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectTrapMiss.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "VisEffectTrapMiss_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'VisEffectTrapMiss_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectTrapMiss.5"
+      },
+      "VariableGuid": "E858BE26-40E979D1-68BD9BA9-7E63CFA9",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "VisEffectTrapMiss_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'VisEffectTrapMiss_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectTrapMiss.6"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__VisEffectTrapMiss_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisEffectTrapMiss_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectTrapMiss.0"
+      }
+    }
+  },
+  {
+    "Type": "VisEffectTrapMiss_C",
+    "Name": "Default__VisEffectTrapMiss_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/FX/VisEffectTrapMiss.VisEffectTrapMiss_C'",
+    "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__VisEffectTrapMiss_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectTrapMiss.0"
+      },
+      "AudioComponent": {
+        "ObjectName": "AudioComponent'Default__VisEffectTrapMiss_C:AudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectTrapMiss.1"
+      },
+      "NiagaraComponent": {
+        "ObjectName": "NiagaraComponent'Default__VisEffectTrapMiss_C:NiagaraComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectTrapMiss.4"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__VisEffectTrapMiss_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectTrapMiss.8"
+      },
+      "LifetimeDataComponent": {
+        "ObjectName": "LifetimeDataComponent'Default__VisEffectTrapMiss_C:LifetimeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectTrapMiss.3"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__VisEffectTrapMiss_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectTrapMiss.0"
+      }
+    }
+  }
+]

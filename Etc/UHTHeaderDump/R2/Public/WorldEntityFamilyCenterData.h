@@ -7,7 +7,7 @@ struct FWorldEntityFamilyCenterData {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 OwnerTownHallId;
+    int32 FamilyId;
     
     R2_API FWorldEntityFamilyCenterData();
 };

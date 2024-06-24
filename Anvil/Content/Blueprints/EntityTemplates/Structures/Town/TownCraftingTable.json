@@ -1,0 +1,374 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "TownCraftingTable_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "TownCraftingTable_C'Default__TownCraftingTable_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownCraftingTable.13"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__TownCraftingTable_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__TownCraftingTable_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    },
+    "Properties": {
+      "DecayTimeHours": 48.0
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableComp",
+    "Outer": "Default__TownCraftingTable_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Template": {
+      "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__TownCraftingTable_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'TownCraftingTableFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Town/TownCraftingTableFootprint.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthComp",
+    "Outer": "Default__TownCraftingTable_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__TownCraftingTable_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 9,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [
+            "EAnvilItemTag::WeaponStorage",
+            "EAnvilItemTag::Head",
+            "EAnvilItemTag::Body",
+            "EAnvilItemTag::StorableFoodT1"
+          ],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "bCheckDedicatedUnderlyingItem": true,
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
+        }
+      ],
+      "bOnlyAllowMaxDurabilityItems": true,
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__TownCraftingTable_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 12,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 100,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "bCheckDedicatedUnderlyingItem": true,
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "bAllowSubmission": false
+    }
+  },
+  {
+    "Type": "RefineResourceProxyComponent",
+    "Name": "RefineResourceProxyComponent_0",
+    "Outer": "Default__TownCraftingTable_C",
+    "Class": "UScriptClass'RefineResourceProxyComponent'",
+    "Properties": {
+      "ProducableItemList": [
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Nails_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Nails.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceCopperFragments_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceCopperFragments.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 5.0,
+          "OutputCount": 5,
+          "bRequiresResearch": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'ReinforcedWood_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ReinforcedWood.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Nails_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Nails.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 5.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Mortar_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Mortar.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceWoodAsh_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWoodAsh.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 10
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceLimestone_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceLimestone.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'AnimalBones_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalBones.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 5.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Gravel_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Gravel.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceLimestone_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceLimestone.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 5.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false
+        }
+      ]
+    }
+  },
+  {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairComp",
+    "Outer": "Default__TownCraftingTable_C",
+    "Class": "UScriptClass'RepairProxyComponent'",
+    "Template": {
+      "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+    }
+  },
+  {
+    "Type": "ScorchProxyComponent",
+    "Name": "ScorchProxyComponent_0",
+    "Outer": "Default__TownCraftingTable_C",
+    "Class": "UScriptClass'ScorchProxyComponent'",
+    "Template": {
+      "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__TownCraftingTable_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamComp",
+    "Outer": "Default__TownCraftingTable_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    }
+  },
+  {
+    "Type": "TownCraftingTable_C",
+    "Name": "Default__TownCraftingTable_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownCraftingTable.TownCraftingTable_C'",
+    "Template": {
+      "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
+    },
+    "Properties": {
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__TownCraftingTable_C:TeamComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownCraftingTable.12"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__TownCraftingTable_C:HealthComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownCraftingTable.5"
+      },
+      "RepairComp": {
+        "ObjectName": "RepairProxyComponent'Default__TownCraftingTable_C:RepairComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownCraftingTable.9"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__TownCraftingTable_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownCraftingTable.11"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__TownCraftingTable_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownCraftingTable.3"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__TownCraftingTable_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownCraftingTable.4"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__TownCraftingTable_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownCraftingTable.1"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__TownCraftingTable_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownCraftingTable.2"
+      },
+      "ScorchComp": {
+        "ObjectName": "ScorchProxyComponent'Default__TownCraftingTable_C:ScorchProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownCraftingTable.10"
+      },
+      "CodeNameString": "TownCraftingTable",
+      "CodeName": 800666507,
+      "bShowOnMap": true,
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "Components": [
+        {
+          "ObjectName": "RefineResourceProxyComponent'Default__TownCraftingTable_C:RefineResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownCraftingTable.8"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__TownCraftingTable_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownCraftingTable.6"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__TownCraftingTable_C:InventoryProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownCraftingTable.7"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisTownCraftingTable_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.2"
+      }
+    }
+  }
+]

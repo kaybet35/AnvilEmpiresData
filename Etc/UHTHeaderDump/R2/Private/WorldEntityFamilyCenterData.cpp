@@ -1,6 +1,6 @@
 #include "WorldEntityFamilyCenterData.h"
 
 FWorldEntityFamilyCenterData::FWorldEntityFamilyCenterData() {
-    this->OwnerTownHallId = 0;
+    this->FamilyId = 0;
 }
 

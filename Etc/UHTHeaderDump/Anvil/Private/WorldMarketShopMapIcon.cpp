@@ -1,8 +1,12 @@
 #include "WorldMarketShopMapIcon.h"
 
 UWorldMarketShopMapIcon::UWorldMarketShopMapIcon() {
-    this->MarketShopTooltipClass = NULL;
-    this->CachedMarketShopTooltip = NULL;
+    this->CentralMarketplaceTooltipClass = NULL;
+    this->MapItemButton = NULL;
+    this->CachedCentralMarketplaceTooltip = NULL;
+}
+
+void UWorldMarketShopMapIcon::OnIconClicked() {
 }
 
 

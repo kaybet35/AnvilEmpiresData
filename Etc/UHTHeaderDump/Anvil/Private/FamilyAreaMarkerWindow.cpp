@@ -10,7 +10,10 @@ UFamilyAreaMarkerWindow::UFamilyAreaMarkerWindow() {
     this->FamilyAreaAllianceButton = NULL;
 }
 
-void UFamilyAreaMarkerWindow::OnKickClicked(uint64 PlayerId) {
+void UFamilyAreaMarkerWindow::OnRemoveAlliedFamilyClicked(const uint64 AlliedFamilyFounderOnlineId) {
+}
+
+void UFamilyAreaMarkerWindow::OnKickMemberClicked(const uint64 PlayerId) {
 }
 
 void UFamilyAreaMarkerWindow::OnFamilyAreaSetAllianceClicked() {

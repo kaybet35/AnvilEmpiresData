@@ -24,7 +24,8 @@ EActionButtonType = {
     StartPowerMill = 21,
     StopPowerMill = 22,
     ClaimFamilyInventory = 23,
-    EActionButtonType_MAX = 24,
+    PledgeToTown = 24,
+    EActionButtonType_MAX = 25,
 }
 
 ---@enum EAlertType
@@ -133,15 +134,14 @@ EConnectionFailedReason = {
 EDeploymentPointTooltipType = {
     None = 0,
     Wild = 1,
-    TownCenterWild = 2,
-    TownCenterMilitia = 3,
-    CampMilitia = 4,
-    SmallCampMilitia = 5,
-    TownCenter = 6,
-    FamilyCenter = 7,
-    Camp = 8,
-    SmallCamp = 9,
-    EDeploymentPointTooltipType_MAX = 10,
+    TownCenterMilitia = 2,
+    CampMilitia = 3,
+    SmallCampMilitia = 4,
+    TownCenter = 5,
+    FamilyCenter = 6,
+    Camp = 7,
+    SmallCamp = 8,
+    EDeploymentPointTooltipType_MAX = 9,
 }
 
 ---@enum EEquippedItemGripType
@@ -160,7 +160,8 @@ EEquippedItemGripType = {
     Shield = 11,
     Axe = 12,
     LargeArrow = 13,
-    EEquippedItemGripType_MAX = 14,
+    Pike = 14,
+    EEquippedItemGripType_MAX = 15,
 }
 
 ---@enum EFishingBobberState
@@ -177,19 +178,20 @@ EFishingBobberState = {
 EGameplayHint = {
     Homestead1 = 0,
     Homestead2 = 1,
-    Homestead3 = 2,
-    HomesteadComplete = 3,
-    HomesteadUpgrade1 = 4,
-    HomesteadUpgrade2 = 5,
-    HomesteadUpgrade3 = 6,
-    HomesteadUpgradeComplete = 7,
-    SettlementCore1 = 8,
-    SettlementCore2 = 9,
-    SettlementCore3 = 10,
-    SettlementCoreComplete = 11,
-    Part2 = 12,
-    NumGameplayHintTypes = 13,
-    EGameplayHint_MAX = 14,
+    HomesteadComplete = 2,
+    HomesteadUpgrade1 = 3,
+    HomesteadUpgrade2 = 4,
+    HomesteadUpgrade3 = 5,
+    HomesteadUpgradeComplete = 6,
+    Town1 = 7,
+    Town2 = 8,
+    Town3 = 9,
+    Town4 = 10,
+    Town5 = 11,
+    TownComplete = 12,
+    Part2 = 13,
+    NumGameplayHintTypes = 14,
+    EGameplayHint_MAX = 15,
 }
 
 ---@enum EHUDPlayerNameColourType
@@ -230,8 +232,10 @@ EHUDWindowType = {
     Anvil = 22,
     FamilyAreaMarker = 23,
     FamilyHouse = 24,
-    Count = 25,
-    EHUDWindowType_MAX = 26,
+    Lore = 25,
+    CentralMarket = 26,
+    Count = 27,
+    EHUDWindowType_MAX = 28,
 }
 
 ---@enum EIncomingAttackDirection
@@ -314,22 +318,17 @@ EQueueType = {
 ESimpleTooltip = {
     None = 0,
     Health = 1,
-    Population = 2,
-    StarvingPopulation = 3,
-    Silver = 4,
-    Hunger = 5,
-    Militia = 6,
-    Labourers = 7,
-    Tax = 8,
-    Happiness = 9,
-    HappinessModifier = 10,
-    TownLevel = 11,
-    PledgedStatus = 12,
-    MarketSilverStored = 13,
-    Decay = 14,
-    Stamina = 15,
-    AnimalHealth = 16,
-    ESimpleTooltip_MAX = 17,
+    Silver = 2,
+    Hunger = 3,
+    Militia = 4,
+    Labourers = 5,
+    Tax = 6,
+    PledgedStatus = 7,
+    MarketSilverStored = 8,
+    Decay = 9,
+    Stamina = 10,
+    AnimalHealth = 11,
+    ESimpleTooltip_MAX = 12,
 }
 
 ---@enum EUnarmedItemMeshLocation

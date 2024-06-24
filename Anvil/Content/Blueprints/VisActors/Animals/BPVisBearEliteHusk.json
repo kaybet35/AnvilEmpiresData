@@ -33,7 +33,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisBearEliteHusk_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBearEliteHusk.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBearEliteHusk.11"
       }
     },
     "SuperStruct": {
@@ -41,6 +41,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fur",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "Decal",
@@ -87,7 +98,7 @@
       },
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisBearEliteHusk_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBearEliteHusk.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBearEliteHusk.13"
       },
       "LifetimeDataComponent": {
         "ObjectName": "LifetimeDataComponent'Default__BPVisBearEliteHusk_C:LifetimeDataComponent'",
@@ -186,6 +197,26 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisBearEliteHusk_C:Fur_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBearEliteHusk.12"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "50B297E0-4CC355F6-3E48069E-E51B697C",
+      "InternalVariableName": "Fur"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPVisBearEliteHusk_C",
@@ -195,18 +226,62 @@
         {
           "ObjectName": "SCS_Node'BPVisBearEliteHusk_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBearEliteHusk.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisBearEliteHusk_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBearEliteHusk.10"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisBearEliteHusk_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBearEliteHusk.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisBearEliteHusk_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBearEliteHusk.10"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisBearEliteHusk_C:SimpleConstructionScript_0.SCS_Node_0'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBearEliteHusk.8"
       }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Fur_GEN_VARIABLE",
+    "Outer": "BPVisBearEliteHusk_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+      },
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'bear_death'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/bear_death.0"
+        },
+        "bSavedLooping": false
+      },
+      "AnimationMode": "EAnimationMode::AnimationSingleNode",
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'BearFur_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/BearFur_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'BearFur_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/BearFur_SK.0"
+      },
+      "OverrideMaterials": [
+        null,
+        {
+          "ObjectName": "MaterialInstanceConstant'BearFurElite'",
+          "ObjectPath": "Anvil/Content/Materials/Animals/BearFurElite.0"
+        }
+      ],
+      "bReceivesDecals": false
     }
   },
   {

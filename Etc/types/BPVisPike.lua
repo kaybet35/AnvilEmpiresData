@@ -1,8 +1,6 @@
 ---@meta
 
----@class ABPVisPike_C : AVisPickupItem
----@field Pike USkeletalMeshComponent
-ABPVisPike_C = {}
-
+---@class UBPVisPike_C : UVisItem
+UBPVisPike_C = {}
 
 

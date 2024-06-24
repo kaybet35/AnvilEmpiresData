@@ -1,7 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "BasicCount.h"
 #include "EAnvilToolType.h"
+#include "EntityFloatPair.h"
 #include "ProxyComponent.h"
 #include "Templates/SubclassOf.h"
 #include "BuildSiteProxyComponent.generated.h"
@@ -35,6 +37,9 @@ public:
     bool bRequiresSmallCamp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bRequiresClaimedFamilyHouse;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bBuildableOverRoads;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -59,10 +64,16 @@ public:
     bool bMinDistanceCheckIgnoreEnemyStructures;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsGridDiagonalPiece;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TierPrerequisite;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UItemTemplate> RequiredDeployable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FVector LevelCheckRayOffset;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxHeightShift;
@@ -71,10 +82,13 @@ public:
     float AdditionalMaxHeightShift;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float MinDistanceBetweenStructures;
+    TArray<FEntityFloatPair> KeepDistanceWithStructures;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<TSubclassOf<UEntityTemplate>> MinDistanceStructureTypes;
+    TSubclassOf<UEntityTemplate> GridDiagonalPair;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 NearbyPlayersRequired;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBasicCount> MaterialRequirements;

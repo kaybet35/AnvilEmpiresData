@@ -16,6 +16,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bShowWeatherStatsHook;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bFastReinforcementsAlertCooldown;
+    
     UAdminEnvDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };

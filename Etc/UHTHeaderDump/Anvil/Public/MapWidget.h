@@ -5,10 +5,9 @@
 #include "MapWidgetBase.h"
 #include "MapWidget.generated.h"
 
-class UAnvilButtonWidget;
 class UBorder;
+class UCentralMarketplaceWidget;
 class UMapIcon;
-class UTextBlock;
 class UTexture2D;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -26,16 +25,13 @@ protected:
     int32 FogOfWarRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UBorder* DeploymentInstructionOrSpawnTimerBorder;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* DeploymentInstructionOrSpawnTimerText;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBorder* ObjectiveBorder;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UAnvilButtonWidget* LogoutButton;
+    UBorder* CentralMarketplaceWidgetBorder;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCentralMarketplaceWidget* CentralMarketplaceWidget;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -46,19 +42,7 @@ public:
 
 private:
     UFUNCTION(BlueprintCallable)
-    void OnLogoutButtonClicked();
-    
-    UFUNCTION(BlueprintCallable)
-    ESlateVisibility GetRespawnTimerVisibility();
-    
-    UFUNCTION(BlueprintCallable)
-    FText GetRespawnTimerText();
-    
-    UFUNCTION(BlueprintCallable)
     ESlateVisibility GetObjectiveBorderVisibility();
-    
-    UFUNCTION(BlueprintCallable)
-    ESlateVisibility GetLogoutButtonVisibility();
     
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

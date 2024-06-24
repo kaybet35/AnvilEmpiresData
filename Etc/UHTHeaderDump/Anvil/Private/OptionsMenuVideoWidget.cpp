@@ -4,6 +4,7 @@ UOptionsMenuVideoWidget::UOptionsMenuVideoWidget() : UUserWidget(FObjectInitiali
     this->FullscreenDropdown = NULL;
     this->ResolutionDropdown = NULL;
     this->QualityDropdown = NULL;
+    this->ShadowQualityDropdown = NULL;
     this->VSyncDropdown = NULL;
 }
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ProxyComponent.h"
+#include "R2FloatRange.h"
 #include "SimPlayerProxyComponent.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -63,6 +64,12 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ClimbStaminaCost;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FR2FloatRange FallingDistRange;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FR2FloatRange FallingDamageRange;
     
     USimPlayerProxyComponent();
 

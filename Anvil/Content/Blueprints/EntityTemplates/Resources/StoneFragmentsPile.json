@@ -16,7 +16,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "StoneFragmentsPile_C'Default__StoneFragmentsPile_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.4"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.5"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -38,8 +38,18 @@
         "Y": 125.0,
         "Z": 75.0
       },
-      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeStone",
-      "CollisionMask": 8208
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Stone",
+      "CollisionMask": 8210
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__StoneFragmentsPile_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 600.0,
+      "ResetIfObserved": true
     }
   },
   {
@@ -52,7 +62,7 @@
         "ObjectName": "StaticMesh'ResourceStoneSmall_50pLarger'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/ResourceStoneSmall_50pLarger.2"
       },
-      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeStone",
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Stone",
       "CollisionMask": 2
     }
   },
@@ -105,6 +115,42 @@
           "NormalizedChanceToDrop": 0.5,
           "MinDurability": 100.0,
           "MaxDurability": 100.0
+        },
+        {
+          "ItemToDrop": {
+            "CodeName": {
+              "ObjectName": "BlueprintGeneratedClass'ResourceLimestone_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceLimestone.0"
+            },
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 1,
+            "ItemFlags": 0,
+            "Payload": 0
+          },
+          "NormalizedChanceToDrop": 1.0,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
+        },
+        {
+          "ItemToDrop": {
+            "CodeName": {
+              "ObjectName": "BlueprintGeneratedClass'ResourceLimestone_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceLimestone.0"
+            },
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 1,
+            "ItemFlags": 0,
+            "Payload": 0
+          },
+          "NormalizedChanceToDrop": 0.5,
+          "MinDurability": 100.0,
+          "MaxDurability": 100.0
         }
       ]
     }
@@ -123,10 +169,14 @@
         },
         {
           "ObjectName": "ResourceProxyComponent'Default__StoneFragmentsPile_C:ResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.3"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.4"
         },
         {
           "ObjectName": "MeshCollisionProxyComponent'Default__StoneFragmentsPile_C:MeshCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.3"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__StoneFragmentsPile_C:LifetimeProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/StoneFragmentsPile.2"
         }
       ],

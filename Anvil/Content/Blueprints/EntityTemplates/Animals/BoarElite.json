@@ -7,7 +7,7 @@
     "Properties": {
       "VisionRange": 1400.0,
       "SlowSpeed": 150.0,
-      "FastSpeed": 500.0,
+      "FastSpeed": 1000.0,
       "TrapTime": 60.0,
       "bHoming": true,
       "HomingDistance": 1000.0
@@ -43,7 +43,7 @@
       ],
       "OnRoadVisionRange": 300.0,
       "PosturingHoldDist": 700.0,
-      "PosturingDuration": 5.0,
+      "PosturingDuration": 8.0,
       "ChaseDuration": 3.0,
       "AttackOffset": {
         "X": 150.0,
@@ -102,7 +102,7 @@
         },
         {
           "ObjectName": "ResourceProxyComponent'Default__BoarElite_C:ResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BoarElite.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BoarElite.8"
         },
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__BoarElite_C:BoxCollisionProxyComponent_0'",
@@ -111,6 +111,10 @@
         {
           "ObjectName": "AnimalAttackProxyComponent'Default__BoarElite_C:AnimalAttackProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BoarElite.1"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__BoarElite_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BoarElite.7"
         }
       ],
       "VisActorClass": {
@@ -135,7 +139,7 @@
         "Y": 35.0,
         "Z": 50.0
       },
-      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Flesh",
       "CollisionMask": 8256
     }
   },
@@ -147,7 +151,7 @@
     "Properties": {
       "Radius": 75.0,
       "HalfHeight": 72.0,
-      "SurfaceType": "EAnvilPhysicalSurfaceType::SurfaceTypeFlesh",
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Flesh",
       "CollisionMask": 524288
     }
   },
@@ -165,6 +169,16 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
       },
       "TargetType": "EAnvilDamageTargetType::Infantry"
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__BoarElite_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 120.0,
+      "ResetIfObserved": true
     }
   },
   {

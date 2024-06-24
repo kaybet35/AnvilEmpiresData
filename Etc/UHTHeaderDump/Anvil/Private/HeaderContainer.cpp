@@ -10,6 +10,10 @@ UHeaderContainer::UHeaderContainer() : UUserWidget(FObjectInitializer::Get()) {
     this->HeaderSizeBox = NULL;
     this->HeaderSpacer = NULL;
     this->TooltipButton = NULL;
+    this->CloseButton = NULL;
+}
+
+void UHeaderContainer::OnCloseButtonClicked() {
 }
 
 

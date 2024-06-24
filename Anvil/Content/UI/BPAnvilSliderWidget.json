@@ -6,6 +6,7 @@
     "Class": "UScriptClass'Border'",
     "Properties": {
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Padding": {
         "Left": 5.0,
         "Top": 0.0,
@@ -27,7 +28,7 @@
       ],
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAnvilSliderWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.9"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.7"
       },
       "bIsVariable": true
     }
@@ -45,13 +46,14 @@
         "Bottom": 0.0
       },
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "Border'BPAnvilSliderWidget_C:WidgetTree.Border'",
         "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.0"
       },
       "Content": {
         "ObjectName": "TextBlock'BPAnvilSliderWidget_C:WidgetTree.LabelTextBox'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.14"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.12"
       }
     }
   },
@@ -67,57 +69,8 @@
         "SourceString": "Slider Label",
         "LocalizedString": "Slider Label"
       },
-      "SliderLabelFontSize": 16,
       "bHasScriptImplementedTick": false,
       "bHasScriptImplementedPaint": false
-    }
-  },
-  {
-    "Type": "CanvasPanel",
-    "Name": "CanvasPanel_0",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'CanvasPanel'",
-    "Properties": {
-      "Slots": [
-        {
-          "ObjectName": "CanvasPanelSlot'BPAnvilSliderWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.4"
-        }
-      ],
-      "Clipping": "EWidgetClipping::ClipToBounds"
-    }
-  },
-  {
-    "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_1",
-    "Outer": "CanvasPanel_0",
-    "Class": "UScriptClass'CanvasPanelSlot'",
-    "Properties": {
-      "LayoutData": {
-        "Anchors": {
-          "Minimum": {
-            "X": 0.5,
-            "Y": 0.5
-          },
-          "Maximum": {
-            "X": 0.5,
-            "Y": 0.5
-          }
-        },
-        "Alignment": {
-          "X": 0.5,
-          "Y": 0.5
-        }
-      },
-      "bAutoSize": true,
-      "Parent": {
-        "ObjectName": "CanvasPanel'BPAnvilSliderWidget_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.3"
-      },
-      "Content": {
-        "ObjectName": "SizeBox'BPAnvilSliderWidget_C:WidgetTree.SizeBox'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.11"
-      }
     }
   },
   {
@@ -145,22 +98,6 @@
         "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
       },
       {
-        "Type": "StructProperty",
-        "Name": "K2Node_MakeStruct_SlateChildSize",
-        "Flags": "RF_Public",
-        "ElementSize": 8,
-        "Struct": {
-          "ObjectName": "ScriptStruct'SlateChildSize'",
-          "ObjectPath": "/Script/UMG"
-        }
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
         "Type": "BoolProperty",
         "Name": "K2Node_Event_IsDesignTime",
         "Flags": "RF_Public",
@@ -171,53 +108,9 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "K2Node_MakeStruct_SlateChildSize_1",
-        "Flags": "RF_Public",
-        "ElementSize": 8,
-        "Struct": {
-          "ObjectName": "ScriptStruct'SlateChildSize'",
-          "ObjectPath": "/Script/UMG"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_SlotAsHorizontalBoxSlot_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8,
-        "PropertyFlags": "InstancedReference",
-        "PropertyClass": {
-          "ObjectName": "Class'HorizontalBoxSlot'",
-          "ObjectPath": "/Script/UMG"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_SlotAsHorizontalBoxSlot_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 8,
-        "PropertyFlags": "InstancedReference",
-        "PropertyClass": {
-          "ObjectName": "Class'HorizontalBoxSlot'",
-          "ObjectPath": "/Script/UMG"
-        }
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Subtract_DoubleDouble_B_ImplicitCast",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "K2Node_MakeStruct_Value_ImplicitCast",
-        "Flags": "RF_Public",
-        "ElementSize": 4
       }
     ],
-    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
   },
   {
     "Type": "Function",
@@ -254,16 +147,16 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPAnvilSliderWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.9"
+          "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.7"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPAnvilSliderWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.10"
+          "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.8"
         }
       ],
       "Slot": {
-        "ObjectName": "SizeBoxSlot'BPAnvilSliderWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.12"
+        "ObjectName": "SizeBoxSlot'BPAnvilSliderWidget_C:WidgetTree.SizeBox_23.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.10"
       }
     }
   },
@@ -277,11 +170,10 @@
         "Value": 0.5,
         "SizeRule": "ESlateSizeRule::Fill"
       },
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPAnvilSliderWidget_C:WidgetTree.HorizontalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.8"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.6"
       },
       "Content": {
         "ObjectName": "Border'BPAnvilSliderWidget_C:WidgetTree.Border'",
@@ -299,52 +191,52 @@
         "Value": 0.5,
         "SizeRule": "ESlateSizeRule::Fill"
       },
+      "Padding": {
+        "Left": 5.0,
+        "Top": 5.0,
+        "Right": 5.0,
+        "Bottom": 5.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPAnvilSliderWidget_C:WidgetTree.HorizontalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.8"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.6"
       },
       "Content": {
         "ObjectName": "Slider'BPAnvilSliderWidget_C:WidgetTree.Slider'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.13"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.11"
       }
     }
   },
   {
     "Type": "SizeBox",
-    "Name": "SizeBox",
+    "Name": "SizeBox_23",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'SizeBox'",
     "Properties": {
-      "WidthOverride": 200.0,
       "HeightOverride": 50.0,
-      "bOverride_WidthOverride": true,
       "bOverride_HeightOverride": true,
       "Slots": [
         {
-          "ObjectName": "SizeBoxSlot'BPAnvilSliderWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.12"
+          "ObjectName": "SizeBoxSlot'BPAnvilSliderWidget_C:WidgetTree.SizeBox_23.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.10"
         }
-      ],
-      "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPAnvilSliderWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.4"
-      },
-      "bIsVariable": true
+      ]
     }
   },
   {
     "Type": "SizeBoxSlot",
     "Name": "SizeBoxSlot_0",
-    "Outer": "SizeBox",
+    "Outer": "SizeBox_23",
     "Class": "UScriptClass'SizeBoxSlot'",
     "Properties": {
       "Parent": {
-        "ObjectName": "SizeBox'BPAnvilSliderWidget_C:WidgetTree.SizeBox'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.11"
+        "ObjectName": "SizeBox'BPAnvilSliderWidget_C:WidgetTree.SizeBox_23'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.9"
       },
       "Content": {
         "ObjectName": "HorizontalBox'BPAnvilSliderWidget_C:WidgetTree.HorizontalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.8"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.6"
       }
     }
   },
@@ -363,7 +255,7 @@
               "G": 0.491021,
               "B": 0.124772,
               "A": 1.0,
-              "Hex": "FFDEBA63"
+              "Hex": "DEBA63"
             }
           }
         },
@@ -374,7 +266,7 @@
               "G": 0.042311,
               "B": 0.035601,
               "A": 1.0,
-              "Hex": "FF3D3A35"
+              "Hex": "3D3A35"
             }
           }
         },
@@ -399,7 +291,7 @@
               "G": 0.491021,
               "B": 0.124772,
               "A": 1.0,
-              "Hex": "FFDEBA63"
+              "Hex": "DEBA63"
             }
           },
           "ResourceObject": {
@@ -418,7 +310,7 @@
               "G": 0.042311,
               "B": 0.035601,
               "A": 1.0,
-              "Hex": "FF3D3A35"
+              "Hex": "3D3A35"
             }
           },
           "ResourceObject": {
@@ -430,7 +322,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAnvilSliderWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.10"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.8"
       }
     }
   },
@@ -452,7 +344,7 @@
           "G": 0.658375,
           "B": 0.564712,
           "A": 1.0,
-          "Hex": "FFDED4C6"
+          "Hex": "DED4C6"
         }
       },
       "Font": {
@@ -460,7 +352,8 @@
           "ObjectName": "Font'Renner-Book_Font'",
           "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
         },
-        "TypefaceFontName": "Default"
+        "TypefaceFontName": "Default",
+        "Size": 16
       },
       "Justification": "ETextJustify::Center",
       "Slot": {
@@ -477,12 +370,12 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPAnvilSliderWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.16"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.14"
       },
       "bClassRequiresNativeTick": true,
       "UberGraphFunction": {
         "ObjectName": "Function'BPAnvilSliderWidget_C:ExecuteUbergraph_BPAnvilSliderWidget'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.6"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.4"
       }
     },
     "SuperStruct": {
@@ -492,15 +385,15 @@
     "Children": [
       {
         "ObjectName": "Function'BPAnvilSliderWidget_C:PreConstruct'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.7"
-      },
-      {
-        "ObjectName": "Function'BPAnvilSliderWidget_C:Construct'",
         "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.5"
       },
       {
+        "ObjectName": "Function'BPAnvilSliderWidget_C:Construct'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.3"
+      },
+      {
         "ObjectName": "Function'BPAnvilSliderWidget_C:ExecuteUbergraph_BPAnvilSliderWidget'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.6"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.4"
       }
     ],
     "ChildProperties": [
@@ -530,15 +423,15 @@
     "FuncMap": {
       "ExecuteUbergraph_BPAnvilSliderWidget": {
         "ObjectName": "Function'BPAnvilSliderWidget_C:ExecuteUbergraph_BPAnvilSliderWidget'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.6"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.4"
       },
       "Construct": {
         "ObjectName": "Function'BPAnvilSliderWidget_C:Construct'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.5"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.3"
       },
       "PreConstruct": {
         "ObjectName": "Function'BPAnvilSliderWidget_C:PreConstruct'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.7"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.5"
       }
     },
     "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
@@ -563,8 +456,8 @@
     "Class": "UScriptClass'WidgetTree'",
     "Properties": {
       "RootWidget": {
-        "ObjectName": "CanvasPanel'BPAnvilSliderWidget_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.3"
+        "ObjectName": "SizeBox'BPAnvilSliderWidget_C:WidgetTree.SizeBox_23'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilSliderWidget.9"
       }
     }
   }

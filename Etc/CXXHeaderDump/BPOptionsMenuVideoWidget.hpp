@@ -3,6 +3,6 @@
 
 class UBPOptionsMenuVideoWidget_C : public UOptionsMenuVideoWidget
 {
-}; // Size: 0x298
+}; // Size: 0x2A0
 
 #endif

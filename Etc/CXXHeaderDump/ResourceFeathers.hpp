@@ -3,6 +3,6 @@
 
 class UResourceFeathers_C : public UItemTemplate
 {
-}; // Size: 0x250
+}; // Size: 0x2A0
 
 #endif
