@@ -166,9 +166,9 @@ struct FDecayData : public FTableRowBase
 struct FDeleteProfileResponse
 {
     bool bDeletedProfile;                                                             // 0x0000 (size: 0x1)
-    FProfileInfoResponse ProfileInfo;                                                 // 0x0008 (size: 0x18)
+    FProfileInfoResponse ProfileInfo;                                                 // 0x0008 (size: 0x20)
 
-}; // Size: 0x20
+}; // Size: 0x28
 
 struct FEquipmentData : public FTableRowBase
 {
@@ -285,9 +285,10 @@ struct FMapIconTypeProperty
 struct FProfileInfoResponse
 {
     uint64 OnlineId;                                                                  // 0x0000 (size: 0x8)
-    FString AgeDeployData;                                                            // 0x0008 (size: 0x10)
+    int64 Timestamp;                                                                  // 0x0008 (size: 0x8)
+    FString AgeDeployData;                                                            // 0x0010 (size: 0x10)
 
-}; // Size: 0x18
+}; // Size: 0x20
 
 struct FQueueStatusResponse
 {

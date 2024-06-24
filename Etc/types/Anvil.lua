@@ -988,6 +988,7 @@ FMapIconTypeProperty = {}
 
 ---@class FProfileInfoResponse
 ---@field OnlineId uint64
+---@field Timestamp int64
 ---@field AgeDeployData FString
 FProfileInfoResponse = {}
 

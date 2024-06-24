@@ -11,8 +11,8 @@ AVisAnvilStructure::AVisAnvilStructure(const FObjectInitializer& ObjectInitializ
     this->HitFailVFX = NULL;
     this->HitSuccessSoundCue = NULL;
     this->HitFailSoundCue = NULL;
-    this->HitVFXLocation->SetupAttachment(RootComponent);
     this->ConvertedItemMeshComponent->SetupAttachment(RootComponent);
+    this->HitVFXLocation->SetupAttachment(RootComponent);
 }
 
 void AVisAnvilStructure::OnHitCounterChanged(const float& Old, const float& New) {
