@@ -59,6 +59,7 @@ enum class EAnvilStatusMessageType : uint8 {
     MarketNotOwner,
     MarketInvalidItem,
     MarketPublicItemNotAllowed,
+    MarketNumMaxListingsReached,
     TooSoonToEat,
     FishingStart,
     FishingHooked,

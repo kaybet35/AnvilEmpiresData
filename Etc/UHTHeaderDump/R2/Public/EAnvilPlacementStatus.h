@@ -51,7 +51,6 @@ enum class EAnvilPlacementStatus : uint8 {
     MustBePledgedToTown,
     RequiresNearbyPlayers,
     RequiresMorePopulation,
-    RequiresMoreFamilyHouses,
     RequiresMoreMarketplaceAreas,
     RequiresMoreTents,
     AreaMustBeEmpty,

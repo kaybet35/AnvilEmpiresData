@@ -1993,7 +1993,6 @@ UTemperatureProxyComponent = {}
 ---@field NumTotalTents int32
 ---@field NumUnclaimedTents int32
 ---@field NumReinforcementSupplies int32
----@field NumTotalFamilyHouses int32
 ---@field NumMarketplaces int32
 ---@field TownNameId uint8
 ---@field TownNameOrdinal uint8
@@ -2029,8 +2028,6 @@ UTrapProxyComponent = {}
 ---@class UTweakableDataComponent : UDataComponent
 ---@field PopulationRequirementT2 uint8
 ---@field PopulationRequirementT3 uint8
----@field FamilyHouseRequirementT2 uint8
----@field FamilyHouseRequirementT3 uint8
 ---@field MarketplaceRequirementT2 uint8
 ---@field MarketplaceRequirementT3 uint8
 ---@field TentRequirementT2 uint8

@@ -1994,13 +1994,12 @@ class UTownHallDataComponent : public UDataComponent
     int32 NumTotalTents;                                                              // 0x0168 (size: 0x4)
     int32 NumUnclaimedTents;                                                          // 0x0188 (size: 0x4)
     int32 NumReinforcementSupplies;                                                   // 0x01A8 (size: 0x4)
-    int32 NumTotalFamilyHouses;                                                       // 0x01C8 (size: 0x4)
-    int32 NumMarketplaces;                                                            // 0x01E8 (size: 0x4)
-    uint8 TownNameId;                                                                 // 0x0208 (size: 0x1)
-    uint8 TownNameOrdinal;                                                            // 0x0228 (size: 0x1)
-    float CurrentBuildRadius;                                                         // 0x0248 (size: 0x4)
+    int32 NumMarketplaces;                                                            // 0x01C8 (size: 0x4)
+    uint8 TownNameId;                                                                 // 0x01E8 (size: 0x1)
+    uint8 TownNameOrdinal;                                                            // 0x0208 (size: 0x1)
+    float CurrentBuildRadius;                                                         // 0x0228 (size: 0x4)
 
-}; // Size: 0x268
+}; // Size: 0x248
 
 class UTownHallProxyComponent : public UProxyComponent
 {
@@ -2030,16 +2029,14 @@ class UTweakableDataComponent : public UDataComponent
 {
     uint8 PopulationRequirementT2;                                                    // 0x00A8 (size: 0x1)
     uint8 PopulationRequirementT3;                                                    // 0x00C8 (size: 0x1)
-    uint8 FamilyHouseRequirementT2;                                                   // 0x00E8 (size: 0x1)
-    uint8 FamilyHouseRequirementT3;                                                   // 0x0108 (size: 0x1)
-    uint8 MarketplaceRequirementT2;                                                   // 0x0128 (size: 0x1)
-    uint8 MarketplaceRequirementT3;                                                   // 0x0148 (size: 0x1)
-    uint8 TentRequirementT2;                                                          // 0x0168 (size: 0x1)
-    uint8 TentRequirementT3;                                                          // 0x0188 (size: 0x1)
-    uint8 TownCenterRequiredBuilders;                                                 // 0x01A8 (size: 0x1)
-    uint8 TownMapDisableSize;                                                         // 0x01C8 (size: 0x1)
+    uint8 MarketplaceRequirementT2;                                                   // 0x00E8 (size: 0x1)
+    uint8 MarketplaceRequirementT3;                                                   // 0x0108 (size: 0x1)
+    uint8 TentRequirementT2;                                                          // 0x0128 (size: 0x1)
+    uint8 TentRequirementT3;                                                          // 0x0148 (size: 0x1)
+    uint8 TownCenterRequiredBuilders;                                                 // 0x0168 (size: 0x1)
+    uint8 TownMapDisableSize;                                                         // 0x0188 (size: 0x1)
 
-}; // Size: 0x1E8
+}; // Size: 0x1A8
 
 class UTweakableProxyComponent : public UProxyComponent
 {

@@ -3,8 +3,6 @@
 UTweakableDataComponent::UTweakableDataComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PopulationRequirementT2 = 0;
     this->PopulationRequirementT3 = 0;
-    this->FamilyHouseRequirementT2 = 0;
-    this->FamilyHouseRequirementT3 = 0;
     this->MarketplaceRequirementT2 = 0;
     this->MarketplaceRequirementT3 = 0;
     this->TentRequirementT2 = 0;
