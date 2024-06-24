@@ -1,8 +1,6 @@
 ---@meta
 
----@class AStorageChest_C : AFootprint
----@field DefaultSceneRoot USceneComponent
-AStorageChest_C = {}
-
+---@class UStorageChest_C : UBPBaseStructureEntity_C
+UStorageChest_C = {}
 
 

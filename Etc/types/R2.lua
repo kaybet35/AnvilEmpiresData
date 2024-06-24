@@ -1194,6 +1194,7 @@ UImpactSurfaceProxyComponent = {}
 ---@field bUnpackCrates boolean
 ---@field bEnforceWithdrawalStamina boolean
 ---@field bOnlyAllowMaxDurabilityItems boolean
+---@field bIsCheatBox uint8
 ---@field StackRule EAnvilInventoryStackRule
 ---@field NormalizedSpoilageFactor float
 ---@field LifespanWhenEmpty float

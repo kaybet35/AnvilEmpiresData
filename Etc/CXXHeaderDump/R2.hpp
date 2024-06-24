@@ -1195,13 +1195,14 @@ class UInventoryProxyComponent : public UProxyComponent
     bool bUnpackCrates;                                                               // 0x0038 (size: 0x1)
     bool bEnforceWithdrawalStamina;                                                   // 0x0039 (size: 0x1)
     bool bOnlyAllowMaxDurabilityItems;                                                // 0x003A (size: 0x1)
-    EAnvilInventoryStackRule StackRule;                                               // 0x003B (size: 0x1)
-    float NormalizedSpoilageFactor;                                                   // 0x003C (size: 0x4)
-    float LifespanWhenEmpty;                                                          // 0x0040 (size: 0x4)
-    bool bAllowWithdrawal;                                                            // 0x0044 (size: 0x1)
-    bool bAllowSubmission;                                                            // 0x0045 (size: 0x1)
+    uint8 bIsCheatBox;                                                                // 0x003B (size: 0x1)
+    EAnvilInventoryStackRule StackRule;                                               // 0x003C (size: 0x1)
+    float NormalizedSpoilageFactor;                                                   // 0x0040 (size: 0x4)
+    float LifespanWhenEmpty;                                                          // 0x0044 (size: 0x4)
+    bool bAllowWithdrawal;                                                            // 0x0048 (size: 0x1)
+    bool bAllowSubmission;                                                            // 0x0049 (size: 0x1)
 
-}; // Size: 0x48
+}; // Size: 0x50
 
 class UItemTemplate : public UObject
 {
