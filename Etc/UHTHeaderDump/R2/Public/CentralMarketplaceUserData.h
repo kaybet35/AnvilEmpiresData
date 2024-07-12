@@ -20,7 +20,7 @@ public:
     TArray<FCentralMarketplaceListing> SaleListings;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FCentralMarketplaceListing> RequestsListings;
+    TArray<FCentralMarketplaceListing> OrderListings;
     
     R2_API FCentralMarketplaceUserData();
 };

@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "GridFoundationGateStraight_C'Default__GridFoundationGateStraight_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.7"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.8"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -44,6 +44,25 @@
     "Template": {
       "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseFoundationEntity_C:BoxCollisionProxyComponent_2'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationEntity.2"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_3",
+    "Outer": "Default__GridFoundationGateStraight_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 600.0
+      },
+      "Extents": {
+        "X": 600.001,
+        "Y": 150.0,
+        "Z": 1200.0
+      },
+      "CollisionMask": 1024
     }
   },
   {
@@ -82,7 +101,8 @@
       "Box": {
         "ObjectName": "BlueprintGeneratedClass'GridFoundationGateStraightFootprint_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationGateStraightFootprint.0"
-      }
+      },
+      "CollisionMask": 256
     }
   },
   {
@@ -108,27 +128,27 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__GridFoundationGateStraight_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__GridFoundationGateStraight_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.9"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__GridFoundationGateStraight_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__GridFoundationGateStraight_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__GridFoundationGateStraight_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.5"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__GridFoundationGateStraight_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.6"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__GridFoundationGateStraight_C:BoxCollisionProxyComponent_0'",
@@ -140,11 +160,11 @@
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__GridFoundationGateStraight_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.4"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__GridFoundationGateStraight_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.11"
       },
       "CodeNameString": "GridFoundationGateStraight",
       "CodeName": 1428306194,
@@ -152,7 +172,11 @@
       "Components": [
         {
           "ObjectName": "GateProxyComponent'Default__GridFoundationGateStraight_C:GateProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.6"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.7"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__GridFoundationGateStraight_C:BoxCollisionProxyComponent_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateStraight.3"
         }
       ],
       "VisActorClass": {
@@ -202,9 +226,6 @@
     "Template": {
       "ObjectName": "StructureProxyComponent'Default__BPBaseFoundationEntity_C:StructureProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationEntity.10"
-    },
-    "Properties": {
-      "bIsGridPiece": true
     }
   },
   {
@@ -215,6 +236,9 @@
     "Template": {
       "ObjectName": "TeamProxyComponent'Default__BPBaseFoundationEntity_C:TeamComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationEntity.11"
+    },
+    "Properties": {
+      "Accessibility": "EAnvilAccessibilityType::FriendlyOnly"
     }
   }
 ]

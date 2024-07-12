@@ -46,7 +46,7 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
     },
     "Properties": {
-      "bEnabled": false
+      "DecayTimeHours": 48.0
     }
   },
   {
@@ -83,9 +83,6 @@
     "Template": {
       "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
-    },
-    "Properties": {
-      "MaxHealth": 3000.0
     }
   },
   {
@@ -304,7 +301,8 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
     },
     "Properties": {
-      "Accessibility": "EAnvilAccessibilityType::AllCanUse"
+      "Accessibility": "EAnvilAccessibilityType::FriendlyOnly",
+      "bAlwaysAllowAccessWhenScorched": false
     }
   }
 ]

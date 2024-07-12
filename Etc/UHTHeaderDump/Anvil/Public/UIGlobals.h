@@ -1,12 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Info -FallbackName=Info
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilItemQualityType -FallbackName=EAnvilItemQualityType
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilWorldEntityType -FallbackName=EAnvilWorldEntityType
 #include "EMapIconType.h"
 #include "MapIconTypeProperty.h"
 #include "Templates/SubclassOf.h"
 #include "UIGlobals.generated.h"
 
+class UTexture2D;
 class UUserWidget;
 class UWorldEntityMapIcon;
 
@@ -31,6 +33,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EAnvilWorldEntityType, TSubclassOf<UWorldEntityMapIcon>> WorldEntityIconClasses;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<EAnvilItemQualityType, UTexture2D*> QualityIconTextures;
     
     AUIGlobals(const FObjectInitializer& ObjectInitializer);
 

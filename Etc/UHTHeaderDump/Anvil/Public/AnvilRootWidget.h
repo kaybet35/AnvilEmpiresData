@@ -1,11 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
 #include "EAnvilScreenType.h"
 #include "AnvilRootWidget.generated.h"
 
-class UAlertsContainerWidget;
 class UAnvilDialogBox;
 class UAnvilScreen;
 class UCanvasPanel;
@@ -35,18 +33,11 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* WatermarkVersionText;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UAlertsContainerWidget* AlertsContainerWidget;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<EAnvilScreenType> ScreenStack;
     
 public:
     UAnvilRootWidget();
 
-protected:
-    UFUNCTION(BlueprintCallable)
-    ESlateVisibility GetAlertsContainerVisibility();
-    
 };
 

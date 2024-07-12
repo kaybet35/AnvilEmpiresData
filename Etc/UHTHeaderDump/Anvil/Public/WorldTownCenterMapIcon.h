@@ -36,7 +36,7 @@ private:
     UBorder* TownStatusBorder;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UStatusWidget* NumHousesStatus;
+    UStatusWidget* NumPledgedStatus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStatusWidget* NumTentsStatus;
@@ -82,10 +82,10 @@ private:
     FText GetNumReinforcementSuppliesText();
     
     UFUNCTION(BlueprintCallable)
-    ESlateVisibility GetNumHousesVisibility();
+    ESlateVisibility GetNumPledgedVisibility();
     
     UFUNCTION(BlueprintCallable)
-    FText GetNumHousesText();
+    FText GetNumPledgedText();
     
 };
 

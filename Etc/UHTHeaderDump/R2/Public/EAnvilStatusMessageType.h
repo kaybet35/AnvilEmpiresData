@@ -6,7 +6,7 @@ UENUM(BlueprintType)
 enum class EAnvilStatusMessageType : uint8 {
     None,
     Success,
-    WrongTool,
+    RequiresTool,
     HouseClaimed,
     TentClaimed,
     HouseAlreadyClaimed,
@@ -134,6 +134,8 @@ enum class EAnvilStatusMessageType : uint8 {
     PlayerDeploying,
     BedNotInYourFamilyHouse,
     PledgedToTown,
+    VehicleCannotWorldEntranceTravel,
+    MustBeResetBeforeFiring,
     NumTypes,
 };
 

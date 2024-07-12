@@ -4,6 +4,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
 #include "GameplayOverlay.generated.h"
 
+class UAlertsContainerWidget;
 class UChatWidget;
 class UTextBlock;
 
@@ -26,6 +27,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* SecondaryPromptText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAlertsContainerWidget* AlertsContainerWidget;
     
 public:
     UGameplayOverlay();

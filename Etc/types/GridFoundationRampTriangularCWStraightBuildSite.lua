@@ -1,6 +1,6 @@
 ---@meta
 
----@class UGridFoundationRampTriangularCWStraightBuildSite_C : UBPBaseFoundationModularBuildSiteEntity_C
+---@class UGridFoundationRampTriangularCWStraightBuildSite_C : UBPBaseModularBuildSiteEntity_C
 UGridFoundationRampTriangularCWStraightBuildSite_C = {}
 
 

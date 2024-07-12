@@ -31,6 +31,8 @@ enum class EAnvilSimActivityState : uint8 {
     FishingFailed,
     StunnedOnGround,
     StunnedGettingUp,
+    EnteringAltAttackMode,
+    ExitingAltAttackMode,
     NumStates,
 };
 

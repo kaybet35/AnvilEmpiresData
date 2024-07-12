@@ -8,6 +8,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilSimActivityState -FallbackName=EAnvilSimActivityState
 #include "EEquippedItemGripType.h"
 #include "EUnarmedItemMeshLocation.h"
+#include "EVisItemCategory.h"
 #include "Templates/SubclassOf.h"
 #include "VisItem.generated.h"
 
@@ -39,6 +40,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* Icon;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EVisItemCategory Category;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USkeletalMesh* Mesh;

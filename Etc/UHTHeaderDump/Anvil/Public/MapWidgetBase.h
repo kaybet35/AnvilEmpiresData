@@ -6,6 +6,7 @@
 class UCanvasPanel;
 class UCanvasPanelSlot;
 class UImage;
+class UTexture2D;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UMapWidgetBase : public UUserWidget {
@@ -35,6 +36,10 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCanvasPanelSlot* MapImageSheetSlot;
+    
+private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UTexture2D* TerritoryTexture;
     
 public:
     UMapWidgetBase();

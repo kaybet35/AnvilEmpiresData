@@ -1,20 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=StaticMeshComponent -FallbackName=StaticMeshComponent
-#include "EVisMeshProfile.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=VisStaticMeshComponentBase -FallbackName=VisStaticMeshComponentBase
 #include "VisStaticMeshComponent.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
-class ANVIL_API UVisStaticMeshComponent : public UStaticMeshComponent {
+class ANVIL_API UVisStaticMeshComponent : public UVisStaticMeshComponentBase {
     GENERATED_BODY()
-public:
-protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EVisMeshProfile VisMeshProfile;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bMeshVisibility;
-    
 public:
     UVisStaticMeshComponent(const FObjectInitializer& ObjectInitializer);
 

@@ -3,6 +3,6 @@
 
 class UBPCentralMarketplaceOrderItemWidget_C : public UCentralMarketplaceOrderItemWidget
 {
-}; // Size: 0x348
+}; // Size: 0x2F8
 
 #endif

@@ -14,7 +14,7 @@ public:
     bool bIsSmallCamp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 TownHallId;
+    int32 TownHallId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PledgedPlayersArrayCount;

@@ -4,6 +4,7 @@
 
 class AVisBuildSite;
 class UObjectLibrary;
+class UVisItem;
 
 USTRUCT(BlueprintType)
 struct ANVIL_API FAnvilAssetManager {
@@ -21,6 +22,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AVisBuildSite*> BuildSiteList;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<UVisItem*> VisItemList;
     
 public:
     FAnvilAssetManager();

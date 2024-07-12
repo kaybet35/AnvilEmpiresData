@@ -1,0 +1,222 @@
+[
+  {
+    "Type": "Border",
+    "Name": "BG",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "ContentColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "BrushColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPLoadingScreen_C:WidgetTree.RootCanvas.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.3"
+      }
+    }
+  },
+  {
+    "Type": "BPLoadingScreen_C",
+    "Name": "Default__BPLoadingScreen_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Screens/BPLoadingScreen.BPLoadingScreen_C'",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "RootCanvas",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPLoadingScreen_C:WidgetTree.RootCanvas.CanvasPanelSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.4"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPLoadingScreen_C:WidgetTree.RootCanvas.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "RootCanvas",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": -5,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPLoadingScreen_C:WidgetTree.RootCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.2"
+      },
+      "Content": {
+        "ObjectName": "Border'BPLoadingScreen_C:WidgetTree.BG'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.0"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Outer": "RootCanvas",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPLoadingScreen_C:WidgetTree.RootCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.2"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'BPLoadingScreen_C:WidgetTree.ScaleBox_92'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.6"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "BackgroundImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 2560.0,
+          "Y": 1440.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'AnvilLoadingScreen'",
+          "ObjectPath": "Anvil/Content/Textures/UI/AnvilLoadingScreen.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'BPLoadingScreen_C:WidgetTree.ScaleBox_92.ScaleBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.7"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_92",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'ScaleBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'BPLoadingScreen_C:WidgetTree.ScaleBox_92.ScaleBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPLoadingScreen_C:WidgetTree.RootCanvas.CanvasPanelSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.4"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "ScaleBox_92",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'BPLoadingScreen_C:WidgetTree.ScaleBox_92'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.6"
+      },
+      "Content": {
+        "ObjectName": "Image'BPLoadingScreen_C:WidgetTree.BackgroundImage'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.5"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPLoadingScreen_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPLoadingScreen_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BackgroundImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPLoadingScreen_C'Default__BPLoadingScreen_C'",
+      "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPLoadingScreen_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPLoadingScreen_C:WidgetTree.RootCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.2"
+      }
+    }
+  }
+]

@@ -17,7 +17,10 @@ public:
     float Delay;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    float AttackChainDelays[2];
+    float AdditionalDelays[2];
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    float AttackChainDelays[6];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Duration;

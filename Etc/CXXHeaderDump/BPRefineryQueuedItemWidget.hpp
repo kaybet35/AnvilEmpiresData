@@ -3,8 +3,8 @@
 
 class UBPRefineryQueuedItemWidget_C : public URefineryQueuedItemWidget
 {
-    class USizeBox* SizeBox_1;                                                        // 0x0430 (size: 0x8)
+    class USizeBox* SizeBox_1;                                                        // 0x03E0 (size: 0x8)
 
-}; // Size: 0x438
+}; // Size: 0x3E8
 
 #endif

@@ -15,8 +15,11 @@ UItemTemplate::UItemTemplate() {
     this->HeatedItem = NULL;
     this->CooledItem = NULL;
     this->bRanged = false;
+    this->bHasAlt = false;
+    this->DamageOffsetCount = 1;
     this->AmmoType = NULL;
     this->ProjectileEntity = NULL;
+    this->ProjectileIndirectEntity = NULL;
     this->bStaggersWielder = false;
     this->ArmourType = EAnvilArmourType::None;
     this->DamageType = EAnvilDamageType::Default;

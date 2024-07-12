@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisGridFoundationHalfCrenellationRampDiagonal_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.12"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,28 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisFoundationFillerMeshDecor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisFoundationFillerMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisFoundationFillerMeshDecor1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisFoundationFillerMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "StaticMesh",
@@ -54,17 +76,18 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisGridFoundationHalfCrenellationRampDiagonal_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.20"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconGridFoundation_half_crenellationRamp'",
         "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconGridFoundation_half_crenellationRamp.0"
       },
       "BuildSiteCategory": "EBuildSiteCategory::Foundations",
+      "BuildSiteOrder": 46,
       "BuildSiteVisibility": "EBuildSiteVisibility::Never",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisGridFoundationHalfCrenellationRampDiagonal_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.17"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisGridFoundationHalfCrenellationRampDiagonal_C:HealthDataComponent'",
@@ -72,11 +95,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisGridFoundationHalfCrenellationRampDiagonal_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.16"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisGridFoundationHalfCrenellationRampDiagonal_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.15"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisGridFoundationHalfCrenellationRampDiagonal_C:ScorchDataComponent'",
@@ -145,7 +168,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisGridFoundationHalfCrenellationRampDiagonal_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.13"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationHalfCrenellationRampDiagonal_C:ArrowComponent'",
@@ -201,12 +224,52 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationHalfCrenellationRampDiagonal_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.14"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "596D0A2D-458A060B-2554BEB2-CC3D9D8C",
       "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisFoundationFillerMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisFoundationFillerMeshDecorComponent'BPVisGridFoundationHalfCrenellationRampDiagonal_C:VisFoundationFillerMeshDecor1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.18"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "75F85694-46C22228-42136B96-DD957015",
+      "InternalVariableName": "VisFoundationFillerMeshDecor1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisFoundationFillerMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisFoundationFillerMeshDecorComponent'BPVisGridFoundationHalfCrenellationRampDiagonal_C:VisFoundationFillerMeshDecor_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.19"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "C11DFED3-4EAFDBB1-3EC341AD-B19341DC",
+      "InternalVariableName": "VisFoundationFillerMeshDecor"
     }
   },
   {
@@ -219,12 +282,28 @@
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationHalfCrenellationRampDiagonal_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationHalfCrenellationRampDiagonal_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationHalfCrenellationRampDiagonal_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.11"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationHalfCrenellationRampDiagonal_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationHalfCrenellationRampDiagonal_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationHalfCrenellationRampDiagonal_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationRampDiagonal.11"
         }
       ],
       "DefaultSceneRootNode": {
@@ -276,6 +355,35 @@
     "Name": "UpgradeDataComponent",
     "Outer": "Default__BPVisGridFoundationHalfCrenellationRampDiagonal_C",
     "Class": "UScriptClass'UpgradeDataComponent'"
+  },
+  {
+    "Type": "VisFoundationFillerMeshDecorComponent",
+    "Name": "VisFoundationFillerMeshDecor1_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationHalfCrenellationRampDiagonal_C",
+    "Class": "UScriptClass'VisFoundationFillerMeshDecorComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundation_filler_crenellation'",
+        "ObjectPath": "Anvil/Content/Meshes/GridFoundation_filler_crenellation.2"
+      }
+    }
+  },
+  {
+    "Type": "VisFoundationFillerMeshDecorComponent",
+    "Name": "VisFoundationFillerMeshDecor_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationHalfCrenellationRampDiagonal_C",
+    "Class": "UScriptClass'VisFoundationFillerMeshDecorComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundation_filler_crenellation'",
+        "ObjectPath": "Anvil/Content/Meshes/GridFoundation_filler_crenellation.2"
+      },
+      "RelativeLocation": {
+        "X": 212.13203,
+        "Y": 0.0,
+        "Z": 150.0
+      }
+    }
   },
   {
     "Type": "VisScaffoldingComponent",

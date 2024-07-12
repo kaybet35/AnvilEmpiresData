@@ -1,0 +1,127 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "WorldEntrance_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WorldEntrance_C'Default__WorldEntrance_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntrance.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__WorldEntrance_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "Extents": {
+        "X": 200.0,
+        "Y": 200.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 8194,
+      "bVaultable": false
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_2",
+    "Outer": "Default__WorldEntrance_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'BearCave_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearCave.3"
+      },
+      "SpawnOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 300.0
+      },
+      "SpawnRadius": 1000.0,
+      "MinimumSpawnRadius": 400.0,
+      "SpawnInterval": 60.0,
+      "SpawnQuantity": 2,
+      "MaxSpawn": 2,
+      "ResourceReserveInitial": 2,
+      "ReserveReplenishTimeSecs": 3600,
+      "MinDistanceBetweenSpawns": 250.0,
+      "bRequiresNavmesh": true,
+      "bTrackSpawnedEntity": true,
+      "bDontSpawnNearPlayers": true,
+      "CompatibleSurfaceTypes": 26116
+    }
+  },
+  {
+    "Type": "WorldEntrance_C",
+    "Name": "Default__WorldEntrance_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntrance.WorldEntrance_C'",
+    "Properties": {
+      "CodeNameString": "WorldEntrance",
+      "CodeName": 378715291,
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "GenerateMeshCollisionMask": 8194,
+      "bGenerateMeshCollisionVaultable": false,
+      "Components": [
+        {
+          "ObjectName": "WorldEntranceProxyComponent'Default__WorldEntrance_C:WorldEntranceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntrance.4"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__WorldEntrance_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntrance.1"
+        },
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__WorldEntrance_C:ResourceSpawnerProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntrance.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisWorldEntranceCave_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.1"
+      }
+    }
+  },
+  {
+    "Type": "WorldEntranceProxyComponent",
+    "Name": "WorldEntranceProxyComponent_0",
+    "Outer": "Default__WorldEntrance_C",
+    "Class": "UScriptClass'WorldEntranceProxyComponent'",
+    "Properties": {
+      "DeparturePosition": {
+        "X": 0.0,
+        "Y": 300.0,
+        "Z": 0.0
+      },
+      "DepartureExtents": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 400.0
+      },
+      "ArrivalPosition": {
+        "X": 0.0,
+        "Y": 800.0,
+        "Z": 300.0
+      }
+    }
+  }
+]

@@ -1,0 +1,85 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CatapultWeapon_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CatapultWeapon_C'Default__CatapultWeapon_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/CatapultWeapon.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CatapultWeapon_C",
+    "Name": "Default__CatapultWeapon_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/CatapultWeapon.CatapultWeapon_C'",
+    "Properties": {
+      "CodeNameString": "CatapultWeapon",
+      "CodeName": -577201763,
+      "ItemTags": [
+        "EAnvilItemTag::PrimaryTool",
+        "EAnvilItemTag::Large",
+        "EAnvilItemTag::MountedWeapon",
+        "EAnvilItemTag::NotAllowedInMarket"
+      ],
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "ItemInvokedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectScorpionShot_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectScorpionShot.0"
+      },
+      "Encumberance": 255,
+      "bRanged": true,
+      "DamageOffset": {
+        "X": -300.0,
+        "Y": 0.0,
+        "Z": 500.0
+      },
+      "AmmoType": {
+        "ObjectName": "BlueprintGeneratedClass'CatapultAmmo_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/CatapultAmmo.0"
+      },
+      "ProjectileEntity": {
+        "ObjectName": "BlueprintGeneratedClass'CatapultProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/CatapultProjectile.0"
+      },
+      "ProjectileIndirectEntity": {
+        "ObjectName": "BlueprintGeneratedClass'CatapultProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/CatapultProjectile.0"
+      },
+      "bStaggersWielder": true,
+      "RequiredStance": "EAnvilCharacterStance::OnBatteringRam",
+      "DefaultActivity": {
+        "Delay": 0.7,
+        "Duration": 1.1
+      },
+      "RangedActivity": {
+        "State": "EAnvilSimActivityState::LaunchingProjectile",
+        "Delay": 0.7,
+        "Duration": 1.1,
+        "bRepeatable": false,
+        "StaminaCost": 10.0,
+        "AimedStaminaCost": 5.0
+      },
+      "BuildActivity": {
+        "bRepeatable": false
+      },
+      "bAllowCameraPan": false
+    }
+  }
+]

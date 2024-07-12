@@ -1,17 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ProfileInfoResponse.h"
 #include "DeleteProfileResponse.generated.h"
 
 USTRUCT(BlueprintType)
 struct FDeleteProfileResponse {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bDeletedProfile;
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint64 OnlineId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FProfileInfoResponse ProfileInfo;
+    bool bDeletedProfile;
     
     ANVIL_API FDeleteProfileResponse();
 };

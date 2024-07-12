@@ -7,7 +7,7 @@ UWorldTownCenterMapIcon::UWorldTownCenterMapIcon() {
     this->TownNameBorder = NULL;
     this->TownNameText = NULL;
     this->TownStatusBorder = NULL;
-    this->NumHousesStatus = NULL;
+    this->NumPledgedStatus = NULL;
     this->NumTentsStatus = NULL;
     this->NumReinforcementSuppliesStatus = NULL;
     this->TownWarningText = NULL;
@@ -44,11 +44,11 @@ FText UWorldTownCenterMapIcon::GetNumReinforcementSuppliesText() {
     return FText::GetEmpty();
 }
 
-ESlateVisibility UWorldTownCenterMapIcon::GetNumHousesVisibility() {
+ESlateVisibility UWorldTownCenterMapIcon::GetNumPledgedVisibility() {
     return ESlateVisibility::Visible;
 }
 
-FText UWorldTownCenterMapIcon::GetNumHousesText() {
+FText UWorldTownCenterMapIcon::GetNumPledgedText() {
     return FText::GetEmpty();
 }
 

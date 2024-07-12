@@ -5,6 +5,7 @@
 #include "EAnvilPlayerAimMeshType.h"
 #include "EAnvilPlayerInputMode.h"
 #include "EAnvilVehicleInputState.h"
+#include "StatusMessage.h"
 #include "PlayerInputDataComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -52,6 +53,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CurrentCollectableResourceType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FStatusMessage PrimaryUsePromptMessage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 UsePrompt;

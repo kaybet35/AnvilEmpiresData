@@ -3,8 +3,6 @@
 
 class ABPVisBridgeT1_C : public AVisSpline
 {
-    class UStaticMeshComponent* Sphere;                                               // 0x04D8 (size: 0x8)
-
-}; // Size: 0x4E0
+}; // Size: 0x4D8
 
 #endif

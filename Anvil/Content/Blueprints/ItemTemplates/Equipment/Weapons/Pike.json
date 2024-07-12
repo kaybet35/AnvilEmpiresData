@@ -32,7 +32,8 @@
       "ItemTags": [
         "EAnvilItemTag::PrimaryTool",
         "EAnvilItemTag::WeaponStorage",
-        "EAnvilItemTag::TwoHanded"
+        "EAnvilItemTag::TwoHanded",
+        "EAnvilItemTag::NotAllowedInMarket"
       ],
       "ItemPayloadType": "EAnvilItemPayloadType::Quality",
       "PickupEntity": {
@@ -45,36 +46,73 @@
       },
       "Encumberance": 255,
       "DamageOffset": {
-        "X": 275.0,
-        "Y": 25.0,
-        "Z": 0.0
+        "X": 327.0,
+        "Y": 53.0,
+        "Z": 60.0
       },
       "AdditionalDamageOffsets": [
         {
-          "X": 350.0,
-          "Y": 25.0,
+          "X": 403.0,
+          "Y": 55.0,
+          "Z": 39.0
+        },
+        {
+          "X": 479.0,
+          "Y": 36.0,
+          "Z": 35.0
+        },
+        {
+          "X": 302.0,
+          "Y": 26.0,
           "Z": 0.0
         },
         {
-          "X": 425.0,
-          "Y": 25.0,
-          "Z": 0.0
+          "X": 346.0,
+          "Y": 23.0,
+          "Z": 37.0
+        },
+        {
+          "X": 405.0,
+          "Y": 23.0,
+          "Z": 29.0
+        },
+        {
+          "X": 318.0,
+          "Y": 38.7,
+          "Z": 19.0
+        },
+        {
+          "X": 391.6,
+          "Y": 38.7,
+          "Z": 31.5
+        },
+        {
+          "X": 474.0,
+          "Y": 31.0,
+          "Z": 35.5
         }
       ],
+      "DamageOffsetCount": 3,
       "DamageType": "EAnvilDamageType::Piercing",
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
         "bChainable": true,
-        "Delay": 0.5,
+        "Delay": 0.41,
+        "AdditionalDelays": 0.45,
+        "AdditionalDelays": 0.5,
+        "AttackChainDelays": 0.35,
+        "AttackChainDelays": 0.44,
         "AttackChainDelays": 0.5,
-        "AttackChainDelays": 0.5,
+        "AttackChainDelays": 0.45,
+        "AttackChainDelays": 0.48,
+        "AttackChainDelays": 0.51,
         "Duration": 1.033333,
         "AttackChainDurations": 1.033333,
         "AttackChainDurations": 1.033333,
         "RotationSpeedModifier": 4.0,
         "bRequireAim": true,
-        "StaminaCost": 10.0,
-        "AimedStaminaCost": 15.0
+        "StaminaCost": 20.0,
+        "AimedStaminaCost": 25.0
       },
       "RangedActivity": {
         "Delay": 0.5,

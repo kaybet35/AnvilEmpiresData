@@ -29,6 +29,8 @@ enum class EAnvilItemTag : uint8 {
     Supplies,
     Ammunition,
     DryingRackStorage,
+    NotAllowedInMarket,
+    MountedWeapon,
     NumTypes,
 };
 

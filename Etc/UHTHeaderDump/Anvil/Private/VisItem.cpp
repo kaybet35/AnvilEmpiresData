@@ -3,6 +3,7 @@
 UVisItem::UVisItem() {
     this->CodeName = 0;
     this->Icon = NULL;
+    this->Category = EVisItemCategory::None;
     this->Mesh = NULL;
     this->StockpileMesh = NULL;
     this->bAutoSetStockpileExtents = false;

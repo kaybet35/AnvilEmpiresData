@@ -25,6 +25,7 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->bIsAdmin = false;
     this->bPriming = false;
     this->bInTravelZone = false;
+    this->bAltAttackMode = false;
     this->bIsMeshHidden = false;
     this->SecondsUntilFullDecay = 0.00f;
     this->HeldItemLightSourceRadius = 0.00f;

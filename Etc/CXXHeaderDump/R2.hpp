@@ -24,17 +24,18 @@ struct FAnvilSimActivity
     EAnvilSimActivityState State;                                                     // 0x0000 (size: 0x1)
     bool bChainable;                                                                  // 0x0001 (size: 0x1)
     float Delay;                                                                      // 0x0004 (size: 0x4)
-    float AttackChainDelays;                                                          // 0x0008 (size: 0x8)
-    float Duration;                                                                   // 0x0010 (size: 0x4)
-    float AttackChainDurations;                                                       // 0x0014 (size: 0x8)
-    float MovementSpeedModifier;                                                      // 0x001C (size: 0x4)
-    float RotationSpeedModifier;                                                      // 0x0020 (size: 0x4)
-    bool bRepeatable;                                                                 // 0x0024 (size: 0x1)
-    bool bRequireAim;                                                                 // 0x0025 (size: 0x1)
-    float StaminaCost;                                                                // 0x0028 (size: 0x4)
-    float AimedStaminaCost;                                                           // 0x002C (size: 0x4)
+    float AdditionalDelays;                                                           // 0x0008 (size: 0x8)
+    float AttackChainDelays;                                                          // 0x0010 (size: 0x18)
+    float Duration;                                                                   // 0x0028 (size: 0x4)
+    float AttackChainDurations;                                                       // 0x002C (size: 0x8)
+    float MovementSpeedModifier;                                                      // 0x0034 (size: 0x4)
+    float RotationSpeedModifier;                                                      // 0x0038 (size: 0x4)
+    bool bRepeatable;                                                                 // 0x003C (size: 0x1)
+    bool bRequireAim;                                                                 // 0x003D (size: 0x1)
+    float StaminaCost;                                                                // 0x0040 (size: 0x4)
+    float AimedStaminaCost;                                                           // 0x0044 (size: 0x4)
 
-}; // Size: 0x30
+}; // Size: 0x48
 
 struct FBasicCount
 {
@@ -61,13 +62,19 @@ struct FCentralMarketplaceListing
 
 }; // Size: 0x48
 
+struct FCentralMarketplaceOrderItem
+{
+    FGridItem Base;                                                                   // 0x0000 (size: 0xC)
+
+}; // Size: 0xC
+
 struct FCentralMarketplaceUserData
 {
     int32 DataVersion;                                                                // 0x0000 (size: 0x4)
     int64 DataForMarketEntityId;                                                      // 0x0008 (size: 0x8)
     int32 DataForMarketMapHash;                                                       // 0x0010 (size: 0x4)
     TArray<FCentralMarketplaceListing> SaleListings;                                  // 0x0018 (size: 0x10)
-    TArray<FCentralMarketplaceListing> RequestsListings;                              // 0x0028 (size: 0x10)
+    TArray<FCentralMarketplaceListing> OrderListings;                                 // 0x0028 (size: 0x10)
 
 }; // Size: 0x38
 
@@ -131,13 +138,24 @@ struct FExplorationSpawnedEntityInfo
     float MinDistFromFamilyArea;                                                      // 0x000C (size: 0x4)
     float ChanceToSpawnPerMin;                                                        // 0x0010 (size: 0x4)
     float MinDistanceBetweenSpawns;                                                   // 0x0014 (size: 0x4)
-    bool bRequiresNavmesh;                                                            // 0x0018 (size: 0x1)
-    bool bConsiderAllFamilyAreas;                                                     // 0x0019 (size: 0x1)
-    bool bDontSpawnInSettlements;                                                     // 0x001A (size: 0x1)
-    int32 CompatibleSurfaceTypes;                                                     // 0x001C (size: 0x4)
-    TArray<FExplorationSpawnedEntityAvoidInfo> OtherResourcesToAvoidByDistance;       // 0x0020 (size: 0x10)
+    int32 MaxNumInRadius;                                                             // 0x0018 (size: 0x4)
+    bool bRequiresNavmesh;                                                            // 0x001C (size: 0x1)
+    bool bConsiderAllFamilyAreas;                                                     // 0x001D (size: 0x1)
+    bool bDontSpawnInSettlements;                                                     // 0x001E (size: 0x1)
+    bool bDoExpensiveForbiddenSurfaceCheck;                                           // 0x001F (size: 0x1)
+    int32 CompatibleSurfaceTypes;                                                     // 0x0020 (size: 0x4)
+    int32 ForbiddenSurfaceTypes;                                                      // 0x0024 (size: 0x4)
+    TArray<FExplorationSpawnedEntityAvoidInfo> OtherResourcesToAvoidByDistance;       // 0x0028 (size: 0x10)
 
-}; // Size: 0x30
+}; // Size: 0x38
+
+struct FFamilyHouseInfoType
+{
+    int32 MapHash;                                                                    // 0x0000 (size: 0x4)
+    int32 FamilyId;                                                                   // 0x0004 (size: 0x4)
+    bool bHasHousePledge;                                                             // 0x0008 (size: 0x1)
+
+}; // Size: 0xC
 
 struct FFootprintSharedCompEntry
 {
@@ -276,13 +294,22 @@ struct FNightShroudLightSource
 struct FPlayerAgeDeployData
 {
     uint8 TeamId;                                                                     // 0x0000 (size: 0x1)
-    int64 FamilyHouseInfo;                                                            // 0x0008 (size: 0x8)
-    int64 PledgedTownHallInfo;                                                        // 0x0010 (size: 0x8)
-    int64 PledgedMilitiaInfo;                                                         // 0x0018 (size: 0x8)
-    int64 AllowedToSpawnUnixTimeStamp;                                                // 0x0020 (size: 0x8)
-    FString OfflineCharacterServerName;                                               // 0x0028 (size: 0x10)
+    FFamilyHouseInfoType FamilyHouseInfo;                                             // 0x0004 (size: 0xC)
+    FPledgeInfoType PledgedTownHallInfo;                                              // 0x0010 (size: 0xC)
+    FPledgeInfoType PledgedMilitiaInfo;                                               // 0x001C (size: 0xC)
+    int64 AllowedToSpawnUnixTimeStamp;                                                // 0x0028 (size: 0x8)
+    FString OfflineCharacterServerName;                                               // 0x0030 (size: 0x10)
 
-}; // Size: 0x38
+}; // Size: 0x40
+
+struct FPledgeInfoType
+{
+    int32 MapHash;                                                                    // 0x0000 (size: 0x4)
+    int32 TownHallId;                                                                 // 0x0004 (size: 0x4)
+    bool bHasHousePledge;                                                             // 0x0008 (size: 0x1)
+    bool bHasBedPledge;                                                               // 0x0009 (size: 0x1)
+
+}; // Size: 0xC
 
 struct FPledgedPlayer
 {
@@ -363,6 +390,44 @@ struct FReplicatedRefineQueueItem
 
 }; // Size: 0x2
 
+struct FStatusMessage
+{
+    EAnvilStatusMessageType MessageType;                                              // 0x0000 (size: 0x1)
+
+}; // Size: 0x20
+
+struct FStructureStats
+{
+    TSubclassOf<class UEntityTemplate> CodeName;                                      // 0x0000 (size: 0x8)
+    int32 CodeNameVisVar;                                                             // 0x0008 (size: 0x4)
+    FVector WorldPosition;                                                            // 0x0010 (size: 0x18)
+    float MaxHealth;                                                                  // 0x0028 (size: 0x4)
+    float Health;                                                                     // 0x002C (size: 0x4)
+    EAnvilDamageTargetType DamageTargetType;                                          // 0x0030 (size: 0x1)
+    uint8 TeamId;                                                                     // 0x0031 (size: 0x1)
+    int32 TownHallId;                                                                 // 0x0034 (size: 0x4)
+    int32 MarkerFamilyId;                                                             // 0x0038 (size: 0x4)
+    int32 StructureFamilyId;                                                          // 0x003C (size: 0x4)
+    bool bShouldDecay;                                                                // 0x0040 (size: 0x1)
+    bool bCanDecayBePrevented;                                                        // 0x0041 (size: 0x1)
+    float TimeUntilDecaySec;                                                          // 0x0044 (size: 0x4)
+    float DecayDamagePerHour;                                                         // 0x0048 (size: 0x4)
+    bool bCanBeScorched;                                                              // 0x004C (size: 0x1)
+    float ScorchIntensity;                                                            // 0x0050 (size: 0x4)
+    float BurntIntensity;                                                             // 0x0054 (size: 0x4)
+    EAnvilScorchState ScorchState;                                                    // 0x0058 (size: 0x1)
+    uint8 HousedLivestockCount;                                                       // 0x0059 (size: 0x1)
+    uint8 MaxLivestockCount;                                                          // 0x005A (size: 0x1)
+    int64 PledgedPlayerId;                                                            // 0x0070 (size: 0x8)
+    float FarmWaterDuration;                                                          // 0x0078 (size: 0x4)
+    float FarmWaterDurationMax;                                                       // 0x007C (size: 0x4)
+    float CookWaterDurationRemainingSec;                                              // 0x0084 (size: 0x4)
+    float CookCurrentTemperature;                                                     // 0x0088 (size: 0x4)
+    uint8 WorldEntranceDestinationMapId;                                              // 0x008C (size: 0x1)
+    int32 WorldEntranceId;                                                            // 0x0090 (size: 0x4)
+
+}; // Size: 0x98
+
 struct FTavernBuffConfig
 {
     uint8 NumPlayer;                                                                  // 0x0000 (size: 0x1)
@@ -421,12 +486,12 @@ struct FWorldEntityData
 {
     EAnvilWorldEntityType DataType;                                                   // 0x0000 (size: 0x1)
     FWorldEntityWildSpawnData WildSpawnData;                                          // 0x0001 (size: 0x1)
-    FWorldEntityTownHallData TownHallData;                                            // 0x0004 (size: 0x20)
-    FWorldEntityBeaconTowerData BeaconTowerData;                                      // 0x0024 (size: 0x10)
-    FWorldEntityFamilyCenterData FamilyCenterData;                                    // 0x0034 (size: 0x4)
-    FWorldEntityCentralMarketplaceData CentralMarketplaceData;                        // 0x0038 (size: 0x4)
+    FWorldEntityTownHallData TownHallData;                                            // 0x0004 (size: 0x24)
+    FWorldEntityBeaconTowerData BeaconTowerData;                                      // 0x0028 (size: 0x10)
+    FWorldEntityFamilyCenterData FamilyCenterData;                                    // 0x0038 (size: 0x4)
+    FWorldEntityCentralMarketplaceData CentralMarketplaceData;                        // 0x003C (size: 0x4)
 
-}; // Size: 0x3C
+}; // Size: 0x40
 
 struct FWorldEntityEntry
 {
@@ -436,7 +501,7 @@ struct FWorldEntityEntry
     int32 RegionIndex;                                                                // 0x0010 (size: 0x4)
     uint8 TeamId;                                                                     // 0x0014 (size: 0x1)
     FVector WorldPos;                                                                 // 0x0018 (size: 0x18)
-    FWorldEntityData Data;                                                            // 0x0030 (size: 0x3C)
+    FWorldEntityData Data;                                                            // 0x0030 (size: 0x40)
 
 }; // Size: 0x70
 
@@ -451,15 +516,17 @@ struct FWorldEntityTownHallData
     int32 TownHallId;                                                                 // 0x0000 (size: 0x4)
     uint8 TownNameOrdinal;                                                            // 0x0004 (size: 0x1)
     uint8 TownNameId;                                                                 // 0x0005 (size: 0x1)
+    uint8 Tier;                                                                       // 0x0006 (size: 0x1)
     int32 NumTotalHouses;                                                             // 0x0008 (size: 0x4)
     int32 NumUnclaimedHouses;                                                         // 0x000C (size: 0x4)
     int32 NumTotalTents;                                                              // 0x0010 (size: 0x4)
     int32 NumUnclaimedTents;                                                          // 0x0014 (size: 0x4)
     int32 NumReinforcementSupplies;                                                   // 0x0018 (size: 0x4)
-    bool bTownUnderAttack;                                                            // 0x001C (size: 0x1)
-    bool bCallForReinforcements;                                                      // 0x001D (size: 0x1)
+    int32 NumPledgedPlayers;                                                          // 0x001C (size: 0x4)
+    bool bTownUnderAttack;                                                            // 0x0020 (size: 0x1)
+    bool bCallForReinforcements;                                                      // 0x0021 (size: 0x1)
 
-}; // Size: 0x20
+}; // Size: 0x24
 
 struct FWorldEntityWildSpawnData
 {
@@ -497,6 +564,7 @@ class AFootprint : public AActor
 {
     bool bAutoSet;                                                                    // 0x0290 (size: 0x1)
     bool bShowMesh;                                                                   // 0x0291 (size: 0x1)
+    bool bFillGroundCheckPoints;                                                      // 0x0292 (size: 0x1)
     FVector Position;                                                                 // 0x0298 (size: 0x18)
     FRotator Rotation;                                                                // 0x02B0 (size: 0x18)
     FVector Extents;                                                                  // 0x02C8 (size: 0x18)
@@ -507,6 +575,13 @@ class AFootprint : public AActor
     TArray<class UStaticMeshComponent*> StaticMeshVisualizers;                        // 0x0358 (size: 0x10)
 
 }; // Size: 0x368
+
+class AUnderworldModulePrefab : public AAnvilPrefab
+{
+    class UArrowComponent* ArrowComponent;                                            // 0x0290 (size: 0x8)
+    class UBoxComponent* ModuleFootprint;                                             // 0x0298 (size: 0x8)
+
+}; // Size: 0x2A0
 
 class AVisActorBase : public AActor
 {
@@ -562,6 +637,7 @@ class UAnimalAIProxyComponent : public UProxyComponent
     float TrapTime;                                                                   // 0x0040 (size: 0x4)
     float WalkingTime;                                                                // 0x0044 (size: 0x4)
     bool bHoming;                                                                     // 0x0048 (size: 0x1)
+    bool bAvoidRoads;                                                                 // 0x0049 (size: 0x1)
     float HomingDistance;                                                             // 0x004C (size: 0x4)
 
 }; // Size: 0x50
@@ -772,26 +848,28 @@ class UBuildSiteProxyComponent : public UProxyComponent
     bool bRequiresCamp;                                                               // 0x003A (size: 0x1)
     bool bRequiresSmallCamp;                                                          // 0x003B (size: 0x1)
     bool bRequiresClaimedFamilyHouse;                                                 // 0x003C (size: 0x1)
-    bool bBuildableOverRoads;                                                         // 0x003D (size: 0x1)
-    bool bBuildableNearSpawnPoint;                                                    // 0x003E (size: 0x1)
-    bool bBuildableInEnemyTerritory;                                                  // 0x003F (size: 0x1)
-    bool bBuildableNearEnemies;                                                       // 0x0040 (size: 0x1)
-    bool bAllowRapidBuild;                                                            // 0x0041 (size: 0x1)
-    bool CanBuildTownStructureWithoutPledge;                                          // 0x0042 (size: 0x1)
-    bool bBuildsInstantly;                                                            // 0x0043 (size: 0x1)
-    bool bMinDistanceCheckIgnoreEnemyStructures;                                      // 0x0044 (size: 0x1)
-    bool bIsGridDiagonalPiece;                                                        // 0x0045 (size: 0x1)
-    uint8 TierPrerequisite;                                                           // 0x0046 (size: 0x1)
-    TSubclassOf<class UItemTemplate> RequiredDeployable;                              // 0x0048 (size: 0x8)
-    FVector LevelCheckRayOffset;                                                      // 0x0050 (size: 0x18)
-    float MaxHeightShift;                                                             // 0x0068 (size: 0x4)
-    float AdditionalMaxHeightShift;                                                   // 0x006C (size: 0x4)
-    TArray<FEntityFloatPair> KeepDistanceWithStructures;                              // 0x0070 (size: 0x10)
-    TSubclassOf<class UEntityTemplate> GridDiagonalPair;                              // 0x0080 (size: 0x8)
-    int32 NearbyPlayersRequired;                                                      // 0x0088 (size: 0x4)
-    TArray<FBasicCount> MaterialRequirements;                                         // 0x0090 (size: 0x10)
+    bool bRequiresTerritoryOwnership;                                                 // 0x003D (size: 0x1)
+    bool bBuildableOverRoads;                                                         // 0x003E (size: 0x1)
+    bool bBuildableNearSpawnPoint;                                                    // 0x003F (size: 0x1)
+    bool bBuildableInEnemyTerritory;                                                  // 0x0040 (size: 0x1)
+    bool bBuildableNearEnemies;                                                       // 0x0041 (size: 0x1)
+    bool bIsBuildableUnderground;                                                     // 0x0042 (size: 0x1)
+    bool bAllowRapidBuild;                                                            // 0x0043 (size: 0x1)
+    bool CanBuildTownStructureWithoutPledge;                                          // 0x0044 (size: 0x1)
+    bool bBuildsInstantly;                                                            // 0x0045 (size: 0x1)
+    bool bMinDistanceCheckIgnoreEnemyStructures;                                      // 0x0046 (size: 0x1)
+    bool bIsGridDiagonalPiece;                                                        // 0x0047 (size: 0x1)
+    uint8 TierPrerequisite;                                                           // 0x0048 (size: 0x1)
+    TSubclassOf<class UItemTemplate> RequiredDeployable;                              // 0x0050 (size: 0x8)
+    FVector LevelCheckRayOffset;                                                      // 0x0058 (size: 0x18)
+    float MaxHeightShift;                                                             // 0x0070 (size: 0x4)
+    float AdditionalMaxHeightShift;                                                   // 0x0074 (size: 0x4)
+    TArray<FEntityFloatPair> KeepDistanceWithStructures;                              // 0x0078 (size: 0x10)
+    TSubclassOf<class UEntityTemplate> GridDiagonalPair;                              // 0x0088 (size: 0x8)
+    int32 NearbyPlayersRequired;                                                      // 0x0090 (size: 0x4)
+    TArray<FBasicCount> MaterialRequirements;                                         // 0x0098 (size: 0x10)
 
-}; // Size: 0xA0
+}; // Size: 0xA8
 
 class UCannonProxyComponent : public UProxyComponent
 {
@@ -836,12 +914,12 @@ class UCollisionProxyComponent : public UProxyComponent
 class UCollisionVisualizerComponent : public UPrimitiveComponent
 {
     class UBodySetup* ShapeBodySetup;                                                 // 0x0538 (size: 0x8)
-    FVector Extents;                                                                  // 0x0540 (size: 0x18)
-    FLinearColor Color;                                                               // 0x0558 (size: 0x10)
-    bool bHighlight;                                                                  // 0x0568 (size: 0x1)
-    bool bIsCapsule;                                                                  // 0x0569 (size: 0x1)
+    FVector Extents;                                                                  // 0x0550 (size: 0x18)
+    FLinearColor Color;                                                               // 0x0568 (size: 0x10)
+    bool bHighlight;                                                                  // 0x0578 (size: 0x1)
+    bool bIsCapsule;                                                                  // 0x0579 (size: 0x1)
 
-}; // Size: 0x570
+}; // Size: 0x580
 
 class UConstructionFacilityProxyComponent : public UProxyComponent
 {
@@ -894,6 +972,10 @@ class UCraftingProxyComponent : public UProxyComponent
     TArray<FCraftingRecipe> RecipeList;                                               // 0x0028 (size: 0x10)
 
 }; // Size: 0x38
+
+class UCustomHeightmapComponent : public USceneComponent
+{
+}; // Size: 0x2A0
 
 class UDataComponent : public UActorComponent
 {
@@ -1083,11 +1165,13 @@ class UGateProxyComponent : public UProxyComponent
 
 class UGroundCheckBoxProxyComponent : public UProxyComponent
 {
-    FVector Position;                                                                 // 0x0028 (size: 0x18)
-    FRotator Rotation;                                                                // 0x0040 (size: 0x18)
-    FVector Extents;                                                                  // 0x0058 (size: 0x18)
+    bool ExtendFootprint;                                                             // 0x0028 (size: 0x1)
+    FVector Position;                                                                 // 0x0030 (size: 0x18)
+    FRotator Rotation;                                                                // 0x0048 (size: 0x18)
+    FVector Extents;                                                                  // 0x0060 (size: 0x18)
+    TArray<FVector> GroundCheckPoints;                                                // 0x0078 (size: 0x10)
 
-}; // Size: 0x70
+}; // Size: 0x88
 
 class UHandsProxyComponent : public UProxyComponent
 {
@@ -1222,58 +1306,61 @@ class UItemTemplate : public UObject
     TSubclassOf<class UItemTemplate> HeatedItem;                                      // 0x0088 (size: 0x8)
     TSubclassOf<class UItemTemplate> CooledItem;                                      // 0x0090 (size: 0x8)
     bool bRanged;                                                                     // 0x0098 (size: 0x1)
+    bool bHasAlt;                                                                     // 0x0099 (size: 0x1)
     FVector DamageOffset;                                                             // 0x00A0 (size: 0x18)
     TArray<FVector> AdditionalDamageOffsets;                                          // 0x00B8 (size: 0x10)
-    FVector FireOffset;                                                               // 0x00C8 (size: 0x18)
-    TSubclassOf<class UItemTemplate> AmmoType;                                        // 0x00E0 (size: 0x8)
-    TSubclassOf<class UEntityTemplate> ProjectileEntity;                              // 0x00E8 (size: 0x8)
-    bool bStaggersWielder;                                                            // 0x00F0 (size: 0x1)
-    EAnvilArmourType ArmourType;                                                      // 0x00F1 (size: 0x1)
-    EAnvilDamageType DamageType;                                                      // 0x00F2 (size: 0x1)
-    uint8 MitigationSuccessDurabilityLoss;                                            // 0x00F3 (size: 0x1)
-    uint8 MitigationFailureDurabilityLoss;                                            // 0x00F4 (size: 0x1)
-    TSubclassOf<class UEntityTemplate> ArmourMitigatedEffect;                         // 0x00F8 (size: 0x8)
-    EAnvilToolType ToolType;                                                          // 0x0100 (size: 0x1)
-    float RegenDuration;                                                              // 0x0104 (size: 0x4)
-    EAnvilFoodType FoodType;                                                          // 0x0108 (size: 0x1)
-    bool bDoesSpoil;                                                                  // 0x0109 (size: 0x1)
-    float SpoilageDurabilityLossPerSec;                                               // 0x010C (size: 0x4)
-    EAnvilCharacterStance RequiredStance;                                             // 0x0110 (size: 0x1)
-    TMap<class EAnvilCharacterStance, class TSubclassOf<UItemTemplate>> StanceOverride; // 0x0118 (size: 0x50)
-    FAnvilSimActivity DefaultActivity;                                                // 0x0168 (size: 0x30)
-    FAnvilSimActivity RangedActivity;                                                 // 0x0198 (size: 0x30)
-    FAnvilSimActivity BuildActivity;                                                  // 0x01C8 (size: 0x30)
-    FAnvilSimActivity GatherActivity;                                                 // 0x01F8 (size: 0x30)
-    bool bIsDeployable;                                                               // 0x0228 (size: 0x1)
-    TSubclassOf<class UEntityTemplate> DeployedBuildSite;                             // 0x0230 (size: 0x8)
-    float NightShroudLightRadius;                                                     // 0x0238 (size: 0x4)
-    bool bAllowCameraPan;                                                             // 0x023C (size: 0x1)
-    float MaxEncumbranceforAction;                                                    // 0x0240 (size: 0x4)
-    float StunChance;                                                                 // 0x0244 (size: 0x4)
-    float StunDuration;                                                               // 0x0248 (size: 0x4)
-    float StunThrowDistance;                                                          // 0x024C (size: 0x4)
-    uint8 Damage;                                                                     // 0x0250 (size: 0x1)
-    uint16 DefaultMarketplaceValue;                                                   // 0x0252 (size: 0x2)
-    float DurabilityLossPerSec;                                                       // 0x0254 (size: 0x4)
-    float StockPileWithdrawalValue;                                                   // 0x0258 (size: 0x4)
-    uint16 QuantityPerCrate;                                                          // 0x025C (size: 0x2)
-    float RegenPerSec;                                                                // 0x0260 (size: 0x4)
-    float HungerRestored;                                                             // 0x0264 (size: 0x4)
-    float HealthLimitRestored;                                                        // 0x0268 (size: 0x4)
-    float StaminaLimitRestored;                                                       // 0x026C (size: 0x4)
-    float DurabilityLossPerUse;                                                       // 0x0270 (size: 0x4)
-    float DamageRadius;                                                               // 0x0274 (size: 0x4)
-    float VariableDamageMaxModifier;                                                  // 0x0278 (size: 0x4)
-    float VariableDamageMinModifier;                                                  // 0x027C (size: 0x4)
-    float GuardMeterReductionMultiplier;                                              // 0x0280 (size: 0x4)
-    float ShieldDurabilityLossMultiplier;                                             // 0x0284 (size: 0x4)
-    float GuardMeterCostPerHit;                                                       // 0x0288 (size: 0x4)
-    uint8 ArmorMitigation;                                                            // 0x028C (size: 0x1)
-    float ToolEffectiveness;                                                          // 0x0290 (size: 0x4)
-    float AimMovementSpeedModifier;                                                   // 0x0294 (size: 0x4)
-    float AimRotationSpeedModifier;                                                   // 0x0298 (size: 0x4)
+    uint32 DamageOffsetCount;                                                         // 0x00C8 (size: 0x4)
+    FVector FireOffset;                                                               // 0x00D0 (size: 0x18)
+    TSubclassOf<class UItemTemplate> AmmoType;                                        // 0x00E8 (size: 0x8)
+    TSubclassOf<class UEntityTemplate> ProjectileEntity;                              // 0x00F0 (size: 0x8)
+    TSubclassOf<class UEntityTemplate> ProjectileIndirectEntity;                      // 0x00F8 (size: 0x8)
+    bool bStaggersWielder;                                                            // 0x0100 (size: 0x1)
+    EAnvilArmourType ArmourType;                                                      // 0x0101 (size: 0x1)
+    EAnvilDamageType DamageType;                                                      // 0x0102 (size: 0x1)
+    uint8 MitigationSuccessDurabilityLoss;                                            // 0x0103 (size: 0x1)
+    uint8 MitigationFailureDurabilityLoss;                                            // 0x0104 (size: 0x1)
+    TSubclassOf<class UEntityTemplate> ArmourMitigatedEffect;                         // 0x0108 (size: 0x8)
+    EAnvilToolType ToolType;                                                          // 0x0110 (size: 0x1)
+    float RegenDuration;                                                              // 0x0114 (size: 0x4)
+    EAnvilFoodType FoodType;                                                          // 0x0118 (size: 0x1)
+    bool bDoesSpoil;                                                                  // 0x0119 (size: 0x1)
+    float SpoilageDurabilityLossPerSec;                                               // 0x011C (size: 0x4)
+    EAnvilCharacterStance RequiredStance;                                             // 0x0120 (size: 0x1)
+    TMap<class EAnvilCharacterStance, class TSubclassOf<UItemTemplate>> StanceOverride; // 0x0128 (size: 0x50)
+    FAnvilSimActivity DefaultActivity;                                                // 0x0178 (size: 0x48)
+    FAnvilSimActivity RangedActivity;                                                 // 0x01C0 (size: 0x48)
+    FAnvilSimActivity BuildActivity;                                                  // 0x0208 (size: 0x48)
+    FAnvilSimActivity GatherActivity;                                                 // 0x0250 (size: 0x48)
+    bool bIsDeployable;                                                               // 0x0298 (size: 0x1)
+    TSubclassOf<class UEntityTemplate> DeployedBuildSite;                             // 0x02A0 (size: 0x8)
+    float NightShroudLightRadius;                                                     // 0x02A8 (size: 0x4)
+    bool bAllowCameraPan;                                                             // 0x02AC (size: 0x1)
+    float MaxEncumbranceforAction;                                                    // 0x02B0 (size: 0x4)
+    float StunChance;                                                                 // 0x02B4 (size: 0x4)
+    float StunDuration;                                                               // 0x02B8 (size: 0x4)
+    float StunThrowDistance;                                                          // 0x02BC (size: 0x4)
+    uint8 Damage;                                                                     // 0x02C0 (size: 0x1)
+    uint16 DefaultMarketplaceValue;                                                   // 0x02C2 (size: 0x2)
+    float DurabilityLossPerSec;                                                       // 0x02C4 (size: 0x4)
+    float StockPileWithdrawalValue;                                                   // 0x02C8 (size: 0x4)
+    uint16 QuantityPerCrate;                                                          // 0x02CC (size: 0x2)
+    float RegenPerSec;                                                                // 0x02D0 (size: 0x4)
+    float HungerRestored;                                                             // 0x02D4 (size: 0x4)
+    float HealthLimitRestored;                                                        // 0x02D8 (size: 0x4)
+    float StaminaLimitRestored;                                                       // 0x02DC (size: 0x4)
+    float DurabilityLossPerUse;                                                       // 0x02E0 (size: 0x4)
+    float DamageRadius;                                                               // 0x02E4 (size: 0x4)
+    float VariableDamageMaxModifier;                                                  // 0x02E8 (size: 0x4)
+    float VariableDamageMinModifier;                                                  // 0x02EC (size: 0x4)
+    float GuardMeterReductionMultiplier;                                              // 0x02F0 (size: 0x4)
+    float ShieldDurabilityLossMultiplier;                                             // 0x02F4 (size: 0x4)
+    float GuardMeterCostPerHit;                                                       // 0x02F8 (size: 0x4)
+    uint8 ArmorMitigation;                                                            // 0x02FC (size: 0x1)
+    float ToolEffectiveness;                                                          // 0x0300 (size: 0x4)
+    float AimMovementSpeedModifier;                                                   // 0x0304 (size: 0x4)
+    float AimRotationSpeedModifier;                                                   // 0x0308 (size: 0x4)
 
-}; // Size: 0x2A0
+}; // Size: 0x310
 
 class ULadderProxyComponent : public UProxyComponent
 {
@@ -1383,15 +1470,19 @@ class UMountedWeaponDataComponent : public UDataComponent
     bool bPriming;                                                                    // 0x00A8 (size: 0x1)
     bool bPrimed;                                                                     // 0x00C8 (size: 0x1)
     bool bLoaded;                                                                     // 0x00E8 (size: 0x1)
-    float AimYaw;                                                                     // 0x0108 (size: 0x4)
-    float AimPitch;                                                                   // 0x0128 (size: 0x4)
+    bool bFiring;                                                                     // 0x0108 (size: 0x1)
+    float AimYaw;                                                                     // 0x0128 (size: 0x4)
+    float AimPitch;                                                                   // 0x0148 (size: 0x4)
 
-}; // Size: 0x148
+}; // Size: 0x168
 
 class UMountedWeaponProxyComponent : public UProxyComponent
 {
     FVector AimPivot;                                                                 // 0x0028 (size: 0x18)
-    float PrimingTime;                                                                // 0x0040 (size: 0x4)
+    bool bHighArc;                                                                    // 0x0040 (size: 0x1)
+    bool bFixedAim;                                                                   // 0x0041 (size: 0x1)
+    bool bRequirePrimedLoad;                                                          // 0x0042 (size: 0x1)
+    float PrimingTime;                                                                // 0x0044 (size: 0x4)
     TSubclassOf<class UItemTemplate> Weapon;                                          // 0x0048 (size: 0x8)
 
 }; // Size: 0x50
@@ -1458,15 +1549,15 @@ class UPlantGrowthProxyComponent : public UProxyComponent
 
 class UPlayerControllerDataComponent : public UDataComponent
 {
-    int64 FamilyHouseInfo;                                                            // 0x00A8 (size: 0x8)
-    int64 PledgedTownHallInfo;                                                        // 0x00C8 (size: 0x8)
-    int64 PledgedMilitiaInfo;                                                         // 0x00E8 (size: 0x8)
-    uint8 bShowRespawnScreen;                                                         // 0x0108 (size: 0x1)
-    uint8 RedeployTarget;                                                             // 0x0128 (size: 0x1)
-    uint8 bShowDeathMarker;                                                           // 0x0148 (size: 0x1)
-    FVector LastDeathLocation;                                                        // 0x0168 (size: 0x18)
+    FFamilyHouseInfoType FamilyHouseInfo;                                             // 0x00A8 (size: 0xC)
+    FPledgeInfoType PledgedTownHallInfo;                                              // 0x00B4 (size: 0xC)
+    FPledgeInfoType PledgedMilitiaInfo;                                               // 0x00C0 (size: 0xC)
+    uint8 bShowRespawnScreen;                                                         // 0x00CC (size: 0x1)
+    uint8 RedeployTarget;                                                             // 0x00E8 (size: 0x1)
+    uint8 LastDeathMapId;                                                             // 0x0108 (size: 0x1)
+    FVector LastDeathLocation;                                                        // 0x0128 (size: 0x18)
 
-}; // Size: 0x198
+}; // Size: 0x158
 
 class UPlayerControllerProxyComponent : public UProxyComponent
 {
@@ -1488,12 +1579,13 @@ class UPlayerInputDataComponent : public UDataComponent
     int64 CurrentUsableEntityId;                                                      // 0x0248 (size: 0x8)
     int64 CurrentMountableEntityId;                                                   // 0x0268 (size: 0x8)
     int32 CurrentCollectableResourceType;                                             // 0x0288 (size: 0x4)
-    int32 UsePrompt;                                                                  // 0x02A8 (size: 0x4)
-    EAnvilVehicleInputState VehicleInput;                                             // 0x02C8 (size: 0x1)
-    int64 CurrentBuildGhostEntityId;                                                  // 0x02E8 (size: 0x8)
-    FVector CameraCurrentPosition;                                                    // 0x0308 (size: 0x18)
+    FStatusMessage PrimaryUsePromptMessage;                                           // 0x02A8 (size: 0x20)
+    int32 UsePrompt;                                                                  // 0x02C8 (size: 0x4)
+    EAnvilVehicleInputState VehicleInput;                                             // 0x02E8 (size: 0x1)
+    int64 CurrentBuildGhostEntityId;                                                  // 0x0308 (size: 0x8)
+    FVector CameraCurrentPosition;                                                    // 0x0328 (size: 0x18)
 
-}; // Size: 0x338
+}; // Size: 0x358
 
 class UPlayerInputProxyComponent : public UProxyComponent
 {
@@ -1600,8 +1692,10 @@ class UProjectileMovementProxyComponent : public UProxyComponent
     float RotationSpeed;                                                              // 0x0074 (size: 0x4)
     float ScorchAmount;                                                               // 0x0078 (size: 0x4)
     float DislodgeRate;                                                               // 0x007C (size: 0x4)
+    float Lifetime;                                                                   // 0x0080 (size: 0x4)
+    float RandomRadius;                                                               // 0x0084 (size: 0x4)
 
-}; // Size: 0x80
+}; // Size: 0x88
 
 class UProxyComponent : public UObject
 {
@@ -1781,25 +1875,26 @@ class USimPlayerDataComponent : public UDataComponent
     int64 CurrentMountedEntity;                                                       // 0x02C8 (size: 0x8)
     FVector CurrentMountedSeatOffset;                                                 // 0x02E8 (size: 0x18)
     FString PlayerName;                                                               // 0x0318 (size: 0x10)
-    int64 PlayerUniqueID;                                                             // 0x0328 (size: 0x8)
-    int64 NobleVoteId;                                                                // 0x0348 (size: 0x8)
-    float TrappedTimer;                                                               // 0x0368 (size: 0x4)
-    float StaggerTimer;                                                               // 0x0388 (size: 0x4)
-    bool bIsAiming;                                                                   // 0x03A8 (size: 0x1)
-    bool bIsGuarding;                                                                 // 0x03C8 (size: 0x1)
-    bool bIsAdmin;                                                                    // 0x03E8 (size: 0x1)
-    bool bPriming;                                                                    // 0x0408 (size: 0x1)
-    bool bInTravelZone;                                                               // 0x0428 (size: 0x1)
-    bool bIsMeshHidden;                                                               // 0x0448 (size: 0x1)
-    float SecondsUntilFullDecay;                                                      // 0x0468 (size: 0x4)
-    float HeldItemLightSourceRadius;                                                  // 0x0488 (size: 0x4)
-    TArray<FNightShroudLightSource> LightSourceData;                                  // 0x04A8 (size: 0x10)
-    uint8 FoodTypesOnCooldownBits;                                                    // 0x04B8 (size: 0x1)
-    float AimYaw;                                                                     // 0x04D8 (size: 0x4)
-    float AimPitch;                                                                   // 0x04F8 (size: 0x4)
-    float LastIncomingAttackAngle;                                                    // 0x0518 (size: 0x4)
+    int64 PlayerUniqueID;                                                             // 0x0340 (size: 0x8)
+    int64 NobleVoteId;                                                                // 0x0360 (size: 0x8)
+    float TrappedTimer;                                                               // 0x0380 (size: 0x4)
+    float StaggerTimer;                                                               // 0x03A0 (size: 0x4)
+    bool bIsAiming;                                                                   // 0x03C0 (size: 0x1)
+    bool bIsGuarding;                                                                 // 0x03E0 (size: 0x1)
+    bool bIsAdmin;                                                                    // 0x0400 (size: 0x1)
+    bool bPriming;                                                                    // 0x0420 (size: 0x1)
+    bool bInTravelZone;                                                               // 0x0440 (size: 0x1)
+    bool bAltAttackMode;                                                              // 0x0460 (size: 0x1)
+    bool bIsMeshHidden;                                                               // 0x0480 (size: 0x1)
+    float SecondsUntilFullDecay;                                                      // 0x04A0 (size: 0x4)
+    float HeldItemLightSourceRadius;                                                  // 0x04C0 (size: 0x4)
+    TArray<FNightShroudLightSource> LightSourceData;                                  // 0x04E0 (size: 0x10)
+    uint8 FoodTypesOnCooldownBits;                                                    // 0x04F0 (size: 0x1)
+    float AimYaw;                                                                     // 0x0510 (size: 0x4)
+    float AimPitch;                                                                   // 0x0530 (size: 0x4)
+    float LastIncomingAttackAngle;                                                    // 0x0550 (size: 0x4)
 
-}; // Size: 0x538
+}; // Size: 0x570
 
 class USimPlayerProxyComponent : public UProxyComponent
 {
@@ -1927,7 +2022,7 @@ class UStructureProxyComponent : public UProxyComponent
     bool bCanCollapse;                                                                // 0x002A (size: 0x1)
     bool bIsAlwaysEnclosed;                                                           // 0x002B (size: 0x1)
     bool IgnoreMeshVisbilityChanges;                                                  // 0x002C (size: 0x1)
-    bool bIsGridPiece;                                                                // 0x002D (size: 0x1)
+    uint8 CrenellationLevel;                                                          // 0x002D (size: 0x1)
     EAnvilBuildStructureType StructureType;                                           // 0x002E (size: 0x1)
 
 }; // Size: 0x30
@@ -1988,7 +2083,7 @@ class UTownHallDataComponent : public UDataComponent
 {
     uint8 Tier;                                                                       // 0x00A8 (size: 0x1)
     bool bIsSmallCamp;                                                                // 0x00C8 (size: 0x1)
-    uint8 TownHallId;                                                                 // 0x00E8 (size: 0x1)
+    int32 TownHallId;                                                                 // 0x00E8 (size: 0x4)
     int32 PledgedPlayersArrayCount;                                                   // 0x0108 (size: 0x4)
     int32 NumTotalHouses;                                                             // 0x0128 (size: 0x4)
     int32 NumUnclaimedHouses;                                                         // 0x0148 (size: 0x4)
@@ -2079,6 +2174,7 @@ class UVehicleMovementProxyComponent : public UProxyComponent
     bool bGroupVehicle;                                                               // 0x0048 (size: 0x1)
     bool bYawInPlace;                                                                 // 0x0049 (size: 0x1)
     bool bLadderMovement;                                                             // 0x004A (size: 0x1)
+    bool bCanWorldEntranceTravel;                                                     // 0x004B (size: 0x1)
     TSubclassOf<class UEntityTemplate> CollisionEffect;                               // 0x0050 (size: 0x8)
     float RammingDamage;                                                              // 0x0058 (size: 0x4)
     float RammingVelocityFactor;                                                      // 0x005C (size: 0x4)
@@ -2088,8 +2184,10 @@ class UVehicleMovementProxyComponent : public UProxyComponent
     bool bUsePitch;                                                                   // 0x0063 (size: 0x1)
     FVector FrontAxleOffset;                                                          // 0x0068 (size: 0x18)
     FVector RearAxleOffset;                                                           // 0x0080 (size: 0x18)
+    FR2FloatRange FallingDistRange;                                                   // 0x0098 (size: 0x8)
+    FR2FloatRange FallingDamageRange;                                                 // 0x00A0 (size: 0x8)
 
-}; // Size: 0x98
+}; // Size: 0xA8
 
 class UVehicleSeatProxyComponent : public UProxyComponent
 {
@@ -2099,14 +2197,24 @@ class UVehicleSeatProxyComponent : public UProxyComponent
     bool bIsDriver;                                                                   // 0x0060 (size: 0x1)
     bool bIsLeft;                                                                     // 0x0061 (size: 0x1)
     bool bUseMountedWeapon;                                                           // 0x0062 (size: 0x1)
-    bool bUseDeployable;                                                              // 0x0063 (size: 0x1)
-    bool bMustNearExitToMount;                                                        // 0x0064 (size: 0x1)
-    bool bRevertRequiredEquipments;                                                   // 0x0065 (size: 0x1)
+    bool bPrimeMountedWeapon;                                                         // 0x0063 (size: 0x1)
+    bool bUseDeployable;                                                              // 0x0064 (size: 0x1)
+    bool bMustNearExitToMount;                                                        // 0x0065 (size: 0x1)
+    bool bRevertRequiredEquipments;                                                   // 0x0066 (size: 0x1)
     int32 AnimationIndex;                                                             // 0x0068 (size: 0x4)
     float MountedAttackDamageMultiplier;                                              // 0x006C (size: 0x4)
     TArray<class TSubclassOf<UItemTemplate>> RequiredEquipments;                      // 0x0070 (size: 0x10)
 
 }; // Size: 0x80
+
+class UVisStaticMeshComponentBase : public UStaticMeshComponent
+{
+    bool bUseCustomGeneratedCollisionMask;                                            // 0x05F0 (size: 0x1)
+    int32 CustomGeneratedCollisionMask;                                               // 0x05F4 (size: 0x4)
+    EVisMeshProfile VisMeshProfile;                                                   // 0x05F8 (size: 0x1)
+    bool bMeshVisibility;                                                             // 0x05F9 (size: 0x1)
+
+}; // Size: 0x600
 
 class UWeatherDataComponent : public UDataComponent
 {
@@ -2148,5 +2256,22 @@ class UWindMillProxyComponent : public UProxyComponent
     float RotationAcceleration;                                                       // 0x002C (size: 0x4)
 
 }; // Size: 0x30
+
+class UWorldEntranceDataComponent : public UDataComponent
+{
+    FVector DeparturePosition;                                                        // 0x00A8 (size: 0x18)
+    FVector DepartureExtents;                                                         // 0x00D8 (size: 0x18)
+    FVector ArrivalPosition;                                                          // 0x0108 (size: 0x18)
+
+}; // Size: 0x138
+
+class UWorldEntranceProxyComponent : public UProxyComponent
+{
+    FVector DeparturePosition;                                                        // 0x0028 (size: 0x18)
+    FVector DepartureExtents;                                                         // 0x0040 (size: 0x18)
+    FVector ArrivalPosition;                                                          // 0x0058 (size: 0x18)
+    EAnvilMapId DestinationMapId;                                                     // 0x0070 (size: 0x1)
+
+}; // Size: 0x78
 
 #endif

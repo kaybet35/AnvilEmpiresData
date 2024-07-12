@@ -12,6 +12,7 @@ UVehicleMovementProxyComponent::UVehicleMovementProxyComponent() {
     this->bGroupVehicle = false;
     this->bYawInPlace = false;
     this->bLadderMovement = false;
+    this->bCanWorldEntranceTravel = false;
     this->CollisionEffect = NULL;
     this->RammingDamage = 480.00f;
     this->RammingVelocityFactor = 0.00f;

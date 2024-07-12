@@ -20,6 +20,9 @@ private:
     UImage* ItemImage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UImage* QualityIconImage;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* ItemNameTextBlock;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -42,7 +45,7 @@ private:
     void OnCancelButtonClicked();
     
     UFUNCTION(BlueprintCallable)
-    void OnBuyButtonClicked();
+    void OnBuySellButtonClicked();
     
     UFUNCTION(BlueprintCallable)
     FText GetPlayerNameText();

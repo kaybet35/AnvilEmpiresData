@@ -1,0 +1,68 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CatapultProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CatapultProjectile_C'Default__CatapultProjectile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/CatapultProjectile.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CatapultProjectile_C",
+    "Name": "Default__CatapultProjectile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Items/CatapultProjectile.CatapultProjectile_C'",
+    "Properties": {
+      "CodeNameString": "CatapultProjectile",
+      "CodeName": -1148168783,
+      "bStatic": false,
+      "bSkipPersist": true,
+      "Components": [
+        {
+          "ObjectName": "ProjectileMovementProxyComponent'Default__CatapultProjectile_C:ProjectileMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/CatapultProjectile.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisCatapultProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisCatapultProjectile.2"
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementProxyComponent",
+    "Name": "ProjectileMovementProxyComponent_0",
+    "Outer": "Default__CatapultProjectile_C",
+    "Class": "UScriptClass'ProjectileMovementProxyComponent'",
+    "Properties": {
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectRockBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectRockBreak.0"
+      },
+      "Speed": 3000.0,
+      "MaxRange": 8000.0,
+      "DamageAmount": 3000,
+      "DamageType": "EAnvilDamageType::Siege",
+      "Radius": 10.0,
+      "HeadingTolerance": 5.0,
+      "NozzlePitchMin": -22.5,
+      "NozzlePitchMax": 22.5,
+      "RotationSpeed": 30.0,
+      "RandomRadius": 200.0
+    }
+  }
+]

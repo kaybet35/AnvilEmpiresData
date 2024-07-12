@@ -264,24 +264,24 @@ enum class EAnvilInputEventType {
     DetachAnimal = 28,
     MouseSelect = 29,
     DisableSnapping = 30,
-    Unstuck = 31,
-    SetTownName = 32,
-    Reload = 33,
-    RetractLadder = 34,
-    Climb = 35,
-    QuenchItems = 36,
-    HitConverterNextOutput = 37,
-    HitConverterPreviousOutput = 38,
-    AnvilNextOutput = 39,
-    AnvilPreviousOutput = 40,
-    PackItems = 41,
-    ToggleFamilyAreaPledgeRestriction = 42,
-    StartPowerMill = 43,
-    StopPowerMill = 44,
-    IncreaseTownStatus = 45,
-    RequestFamilySync = 46,
-    RequestFamilyListSync = 47,
-    PledgeToTown = 48,
+    SetTownName = 31,
+    Reload = 32,
+    RetractLadder = 33,
+    Climb = 34,
+    QuenchItems = 35,
+    HitConverterNextOutput = 36,
+    HitConverterPreviousOutput = 37,
+    AnvilNextOutput = 38,
+    AnvilPreviousOutput = 39,
+    PackItems = 40,
+    ToggleFamilyAreaPledgeRestriction = 41,
+    StartPowerMill = 42,
+    StopPowerMill = 43,
+    IncreaseTownStatus = 44,
+    RequestFamilySync = 45,
+    RequestFamilyListSync = 46,
+    PledgeToTown = 47,
+    AltAttack = 48,
     EAnvilInputEventType_MAX = 49,
 };
 
@@ -379,8 +379,21 @@ enum class EAnvilItemTag {
     Supplies = 22,
     Ammunition = 23,
     DryingRackStorage = 24,
-    NumTypes = 25,
-    EAnvilItemTag_MAX = 26,
+    NotAllowedInMarket = 25,
+    MountedWeapon = 26,
+    NumTypes = 27,
+    EAnvilItemTag_MAX = 28,
+};
+
+enum class EAnvilMapId {
+    Invalid = 0,
+    Sandbox = 1,
+    Calligo01 = 2,
+    SandboxUnderworld = 3,
+    CalligoUnderworld01 = 4,
+    Trailer = 5,
+    NumTypes = 6,
+    EAnvilMapId_MAX = 7,
 };
 
 enum class EAnvilMapPostType {
@@ -493,7 +506,9 @@ enum class EAnvilPlacementStatus {
     AreaMustBeEmpty = 49,
     YouMustBeOfficial = 50,
     MustBeUniquePerTown = 51,
-    EAnvilPlacementStatus_MAX = 52,
+    RequiresTerritoryOwnership = 52,
+    CantBeBuiltUnderground = 53,
+    EAnvilPlacementStatus_MAX = 54,
 };
 
 enum class EAnvilPlayerAimMeshType {
@@ -637,8 +652,10 @@ enum class EAnvilSimActivityState {
     FishingFailed = 24,
     StunnedOnGround = 25,
     StunnedGettingUp = 26,
-    NumStates = 27,
-    EAnvilSimActivityState_MAX = 28,
+    EnteringAltAttackMode = 27,
+    ExitingAltAttackMode = 28,
+    NumStates = 29,
+    EAnvilSimActivityState_MAX = 30,
 };
 
 enum class EAnvilSnappingChannelType {
@@ -684,7 +701,7 @@ enum class EAnvilSpawnType {
 enum class EAnvilStatusMessageType {
     None = 0,
     Success = 1,
-    WrongTool = 2,
+    RequiresTool = 2,
     HouseClaimed = 3,
     TentClaimed = 4,
     HouseAlreadyClaimed = 5,
@@ -812,8 +829,10 @@ enum class EAnvilStatusMessageType {
     PlayerDeploying = 127,
     BedNotInYourFamilyHouse = 128,
     PledgedToTown = 129,
-    NumTypes = 130,
-    EAnvilStatusMessageType_MAX = 131,
+    VehicleCannotWorldEntranceTravel = 130,
+    MustBeResetBeforeFiring = 131,
+    NumTypes = 132,
+    EAnvilStatusMessageType_MAX = 133,
 };
 
 enum class EAnvilStimulusType {
@@ -837,13 +856,13 @@ enum class EAnvilToolType {
     Hoe = 6,
     Scythe = 7,
     Pickaxe = 8,
-    FishingPole = 9,
-    WeakAxe = 10,
-    WeakPickAxe = 11,
-    Knife = 12,
-    KnifeT2 = 13,
-    KnifeT3 = 14,
-    PickaxeT2 = 15,
+    PickaxeT2 = 9,
+    FishingPole = 10,
+    WeakAxe = 11,
+    WeakPickAxe = 12,
+    Knife = 13,
+    KnifeT2 = 14,
+    KnifeT3 = 15,
     NumTypes = 16,
     EAnvilToolType_MAX = 17,
 };
@@ -855,7 +874,9 @@ enum class EAnvilTravelType {
     ReturnFromReinforcement = 3,
     Respawn = 4,
     Teleport = 5,
-    EAnvilTravelType_MAX = 6,
+    WorldEntrance = 6,
+    BorderTravelOrWorldEntrance = 7,
+    EAnvilTravelType_MAX = 8,
 };
 
 enum class EAnvilUsePromptType {
@@ -910,5 +931,16 @@ enum EEntitySerializationType {
     SerializationTypeController = 2,
     SerializationTypeMarketplace = 4,
     EEntitySerializationType_MAX = 5,
+};
+
+enum class EVisMeshProfile {
+    Undefined = 0,
+    Structure = 1,
+    StructureLandscape = 2,
+    StructureLandscapeRotate = 3,
+    StructureCollision = 4,
+    StructureCollisionLandscape = 5,
+    StructureCollisionLandscapeRotate = 6,
+    EVisMeshProfile_MAX = 7,
 };
 

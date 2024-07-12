@@ -15,6 +15,8 @@ class UHUDStatsWidget;
 class UHUDWindow;
 class UImage;
 class UInteractionIconWidget;
+class UInventoryHUDWidget;
+class UInventoryItemHUDWidget;
 class UInventoryItemWidget;
 class UPanelWidget;
 class UProgressBar;
@@ -73,6 +75,12 @@ protected:
     UInventoryItemWidget* SecondaryHeldItem;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UInventoryItemHUDWidget* PrimaryEquipmentItem;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UInventoryItemHUDWidget* SecondaryEquipmentItem;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UProgressBar* GuardBar;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -110,6 +118,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UVitalityStatusWidget* HorseVitality;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UInventoryHUDWidget* InventoryHUD;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCanvasPanel* DisclaimerCanvas;

@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "GridFoundationGateDiagonal_C'Default__GridFoundationGateDiagonal_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.7"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.8"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -44,6 +44,25 @@
     "Template": {
       "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseFoundationEntity_C:BoxCollisionProxyComponent_2'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationEntity.2"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_3",
+    "Outer": "Default__GridFoundationGateDiagonal_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 600.0
+      },
+      "Extents": {
+        "X": 600.001,
+        "Y": 150.0,
+        "Z": 1200.0
+      },
+      "CollisionMask": 1024
     }
   },
   {
@@ -82,7 +101,8 @@
       "Box": {
         "ObjectName": "BlueprintGeneratedClass'GridFoundationGateDiagonalFootprint_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationGateDiagonalFootprint.0"
-      }
+      },
+      "CollisionMask": 256
     }
   },
   {
@@ -108,27 +128,27 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__GridFoundationGateDiagonal_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__GridFoundationGateDiagonal_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.9"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__GridFoundationGateDiagonal_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__GridFoundationGateDiagonal_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__GridFoundationGateDiagonal_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.5"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__GridFoundationGateDiagonal_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.6"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__GridFoundationGateDiagonal_C:BoxCollisionProxyComponent_0'",
@@ -140,11 +160,11 @@
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__GridFoundationGateDiagonal_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.4"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__GridFoundationGateDiagonal_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.11"
       },
       "CodeNameString": "GridFoundationGateDiagonal",
       "CodeName": 1891042952,
@@ -152,7 +172,11 @@
       "Components": [
         {
           "ObjectName": "GateProxyComponent'Default__GridFoundationGateDiagonal_C:GateProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.6"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.7"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__GridFoundationGateDiagonal_C:BoxCollisionProxyComponent_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal.3"
         }
       ],
       "VisActorClass": {
@@ -202,9 +226,6 @@
     "Template": {
       "ObjectName": "StructureProxyComponent'Default__BPBaseFoundationEntity_C:StructureProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationEntity.10"
-    },
-    "Properties": {
-      "bIsGridPiece": true
     }
   },
   {
@@ -215,6 +236,9 @@
     "Template": {
       "ObjectName": "TeamProxyComponent'Default__BPBaseFoundationEntity_C:TeamComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationEntity.11"
+    },
+    "Properties": {
+      "Accessibility": "EAnvilAccessibilityType::FriendlyOnly"
     }
   }
 ]

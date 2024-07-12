@@ -18,6 +18,7 @@ UVisPlayerAnimInstance::UVisPlayerAnimInstance() {
     this->AimPitch = 0.00f;
     this->AimYaw = 0.00f;
     this->bPriming = false;
+    this->bSecondaryMode = false;
 }
 
 

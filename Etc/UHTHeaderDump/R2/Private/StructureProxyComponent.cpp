@@ -6,7 +6,7 @@ UStructureProxyComponent::UStructureProxyComponent() {
     this->bCanCollapse = false;
     this->bIsAlwaysEnclosed = false;
     this->IgnoreMeshVisbilityChanges = false;
-    this->bIsGridPiece = false;
+    this->CrenellationLevel = 0;
     this->StructureType = EAnvilBuildStructureType::Monolithic;
 }
 

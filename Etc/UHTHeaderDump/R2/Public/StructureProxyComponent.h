@@ -24,7 +24,7 @@ public:
     bool IgnoreMeshVisbilityChanges;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bIsGridPiece;
+    uint8 CrenellationLevel;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilBuildStructureType StructureType;

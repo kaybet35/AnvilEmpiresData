@@ -3,6 +3,6 @@
 
 class UResourceFishR2_C : public UItemTemplate
 {
-}; // Size: 0x2A0
+}; // Size: 0x310
 
 #endif

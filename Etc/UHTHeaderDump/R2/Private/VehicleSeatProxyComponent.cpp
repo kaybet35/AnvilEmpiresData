@@ -5,6 +5,7 @@ UVehicleSeatProxyComponent::UVehicleSeatProxyComponent() {
     this->bIsDriver = false;
     this->bIsLeft = false;
     this->bUseMountedWeapon = false;
+    this->bPrimeMountedWeapon = false;
     this->bUseDeployable = false;
     this->bMustNearExitToMount = false;
     this->bRevertRequiredEquipments = false;

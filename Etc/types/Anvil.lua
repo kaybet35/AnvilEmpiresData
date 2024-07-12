@@ -81,6 +81,7 @@ function ADayNightManager:GetDayCurrentSeconds() end
 
 ---@class AEntityActor : AActor
 ---@field EntityTemplate TSubclassOf<UEntityTemplate>
+---@field bShowVisActorPreview boolean
 ---@field VisActorPreview UChildActorComponent
 ---@field SceneComponent UEntityActorRootComponent
 AEntityActor = {}
@@ -188,6 +189,7 @@ AServerPartition = {}
 ---@field TownNames3 TArray<FText>
 ---@field IconTemplates TMap<EMapIconType, FMapIconTypeProperty>
 ---@field WorldEntityIconClasses TMap<EAnvilWorldEntityType, TSubclassOf<UWorldEntityMapIcon>>
+---@field QualityIconTextures TMap<EAnvilItemQualityType, UTexture2D>
 AUIGlobals = {}
 
 
@@ -555,6 +557,7 @@ AVisPickupItem = {}
 ---@field WindLowAudioComponent UAudioComponent
 ---@field WindMidAudioComponent UAudioComponent
 ---@field WindHighAudioComponent UAudioComponent
+---@field RepairItemSoundCue USoundCue
 ---@field PostProcessMaterialParameterCollection UMaterialParameterCollection
 ---@field PositionPostProcessMaterialParameterCollection UMaterialParameterCollection
 ---@field CurrentUsableVisActor AVisActor
@@ -703,6 +706,19 @@ AVisWindMill = {}
 
 
 
+---@class AVisWorldEntrance : AVisActor
+---@field ArrowComponent UArrowComponent
+---@field GrassRemovalVolume UGrassRemovalVolumeComponent
+AVisWorldEntrance = {}
+
+
+
+---@class AVisualGlobals : AInfo
+---@field FoundationDecorSnapRange float
+AVisualGlobals = {}
+
+
+
 ---@class AvisLadder : AVisStructure
 AvisLadder = {}
 
@@ -716,6 +732,7 @@ FAlert = {}
 ---@field ItemTemplateObjectLibrary UObjectLibrary
 ---@field VisItemObjectLibrary UObjectLibrary
 ---@field BuildSiteList TArray<AVisBuildSite>
+---@field VisItemList TArray<UVisItem>
 FAnvilAssetManager = {}
 
 
@@ -803,6 +820,17 @@ FCachedCameraState = {}
 FCameraRotateState = {}
 
 
+---@class FCentralMarketplaceUserDataKey
+---@field DataForMarketEntityId int64
+---@field DataForMarketMapHash int32
+FCentralMarketplaceUserDataKey = {}
+
+
+
+---@class FCentralMarketplaceUserDataManager
+FCentralMarketplaceUserDataManager = {}
+
+
 ---@class FClientConfig
 ---@field GlobalShardConfig FGlobalShardConfig
 ---@field AvailableShardList TArray<FShardConfig>
@@ -868,8 +896,8 @@ FDecayData = {}
 
 
 ---@class FDeleteProfileResponse
+---@field OnlineId uint64
 ---@field bDeletedProfile boolean
----@field ProfileInfo FProfileInfoResponse
 FDeleteProfileResponse = {}
 
 
@@ -950,10 +978,13 @@ FLoreData = {}
 
 
 ---@class FMapData
+---@field MapId EAnvilMapId
+---@field bIsSecondaryWorld boolean
 ---@field WorldSize FVector2D
 ---@field WorldOrigin FVector2D
 ---@field CapturePadding FVector2D
 ---@field MapImage UTexture2D
+---@field MapTerritoryMask UTexture2D
 ---@field MapTreeLayerImage UTexture2D
 FMapData = {}
 
@@ -1334,12 +1365,9 @@ UAnvilPanel = {}
 ---@field DialogBox UAnvilDialogBox
 ---@field WatermarkCanvas UCanvasPanel
 ---@field WatermarkVersionText UTextBlock
----@field AlertsContainerWidget UAlertsContainerWidget
 ---@field ScreenStack TArray<EAnvilScreenType>
 UAnvilRootWidget = {}
 
----@return ESlateVisibility
-function UAnvilRootWidget:GetAlertsContainerVisibility() end
 
 
 ---@class UAnvilScreen : UUserWidget
@@ -1409,6 +1437,7 @@ UBuildMenuWindow = {}
 ---@class UCentralMarketplaceListEntryWidget : UUserWidget
 ---@field CancelButton UButton
 ---@field ItemImage UImage
+---@field QualityIconImage UImage
 ---@field ItemNameTextBlock UTextBlock
 ---@field BuyerSellerTextBlock UTextBlock
 ---@field QuantityTextBlock UTextBlock
@@ -1417,7 +1446,7 @@ UBuildMenuWindow = {}
 UCentralMarketplaceListEntryWidget = {}
 
 function UCentralMarketplaceListEntryWidget:OnCancelButtonClicked() end
-function UCentralMarketplaceListEntryWidget:OnBuyButtonClicked() end
+function UCentralMarketplaceListEntryWidget:OnBuySellButtonClicked() end
 ---@return FText
 function UCentralMarketplaceListEntryWidget:GetPlayerNameText() end
 
@@ -1436,16 +1465,45 @@ UCentralMarketplaceOrderItemWidget = {}
 
 ---@class UCentralMarketplaceWidget : UUserWidget
 ---@field CentralMarketplaceListEntryWidgetClass TSubclassOf<UCentralMarketplaceListEntryWidget>
+---@field ItemCategoryButtonClass TSubclassOf<UItemCategoryButton>
+---@field ItemCategoryIcons TMap<EVisItemCategory, UTexture2D>
 ---@field bIsMapWidget boolean
+---@field ItemCategoryButtonHorizontalBox UHorizontalBox
 ---@field MarketTabSwitcher UWidgetSwitcher
----@field MarketListEntriesScrollBox UScrollBox
----@field MarketTabButtonsBorder UBorder
----@field BuySellButton UAnvilButtonWidget
----@field PlaceOrderButton UAnvilButtonWidget
----@field ActiveOrdersButton UAnvilButtonWidget
+---@field SaleListEntriesScrollBox UScrollBox
+---@field OrderListEntriesScrollBox UScrollBox
+---@field BuySellTabButton UAnvilButtonWidget
+---@field PlaceOrderTabButton UAnvilButtonWidget
+---@field ActiveOrdersTabButton UAnvilButtonWidget
 ---@field HeaderContainer UHeaderContainer
+---@field OrderGridPanelWidget UCentralMarketplaceOrderGridPanelWidget
+---@field SelectedOrderItemNameText UTextBlock
+---@field SelectedOrderItemImage UImage
+---@field SelectedOrderItemQuantityEditableTextBox UEditableTextBox
+---@field SelectedOrderItemPriceEditableTextBox UEditableTextBox
+---@field SelectedOrderItemMinQualityComboBox UComboBoxString
+---@field SelectedOrderItemTotalPriceTextBlock UTextBlock
+---@field SelectedItemPlaceOrderButton UAnvilButtonWidget
 UCentralMarketplaceWidget = {}
 
+function UCentralMarketplaceWidget:OnSelectedItemPlaceOrderButtonClicked() end
+function UCentralMarketplaceWidget:OnPlaceOrderTabButtonClicked() end
+function UCentralMarketplaceWidget:OnBuySellTabButtonClicked() end
+function UCentralMarketplaceWidget:OnActiveOrdersTabButtonClicked() end
+---@return boolean
+function UCentralMarketplaceWidget:IsSelectedItemPlaceOrderButtonEnabled() end
+---@return boolean
+function UCentralMarketplaceWidget:IsPlaceOrderTabButtonEnabled() end
+---@return boolean
+function UCentralMarketplaceWidget:IsBuySellTabButtonEnabled() end
+---@return boolean
+function UCentralMarketplaceWidget:IsActiveOrdersTabButtonEnabled() end
+---@return ESlateVisibility
+function UCentralMarketplaceWidget:GetSelectedOrderItemTotalPriceTextVisibility() end
+---@return FText
+function UCentralMarketplaceWidget:GetSelectedOrderItemTotalPriceText() end
+---@return ESlateVisibility
+function UCentralMarketplaceWidget:GetItemCategoryButtonPanelVisibility() end
 
 
 ---@class UCentralMarketplaceWindow : UStructureWindow
@@ -1571,19 +1629,13 @@ function UDeploymentPointMapIcon:GetDeploymentPointVisibility() end
 
 ---@class UDeploymentScreen : UAnvilScreen
 ---@field MapWidget UDeploymentMapWidget
----@field Throbber UThrobber
 ---@field LogoutButton UAnvilButtonWidget
----@field ConnectingText UTextBlock
 ---@field DeploymentInstructionOrSpawnTimerText UTextBlock
 UDeploymentScreen = {}
 
 function UDeploymentScreen:OnLogoutButtonClicked() end
----@return ESlateVisibility
-function UDeploymentScreen:GetThrobberVisibility() end
 ---@return FText
 function UDeploymentScreen:GetDeploymentInstructionOrSpawnTimerText() end
----@return ESlateVisibility
-function UDeploymentScreen:GetConnectingTextVisibility() end
 
 
 ---@class UDisclaimerWidget : UUserWidget
@@ -1737,6 +1789,7 @@ UFooterContainer = {}
 ---@field SecondaryNotificationText UTextBlock
 ---@field PrimaryPromptText UTextBlock
 ---@field SecondaryPromptText UTextBlock
+---@field AlertsContainerWidget UAlertsContainerWidget
 UGameplayOverlay = {}
 
 ---@return ESlateVisibility
@@ -1773,7 +1826,6 @@ function UGrassRemovalVolumeComponent:RemoveGrass() end
 ---@field ItemImage UImage
 ---@field SubItemImage UImage
 ---@field QualityIconImage UImage
----@field QualityIconTextures TMap<EAnvilItemQualityType, UTexture2D>
 ---@field BackgroundImageTexture UTexture2D
 ---@field bIsActive boolean
 UGridItemWidget = {}
@@ -1845,6 +1897,8 @@ UHUDStatsWidget = {}
 ---@field CompassPlayerArrow UImage
 ---@field PrimaryHeldItem UInventoryItemWidget
 ---@field SecondaryHeldItem UInventoryItemWidget
+---@field PrimaryEquipmentItem UInventoryItemHUDWidget
+---@field SecondaryEquipmentItem UInventoryItemHUDWidget
 ---@field GuardBar UProgressBar
 ---@field GuardStatusWidget UPanelWidget
 ---@field GuardStrengthLeftIcon UImage
@@ -1858,6 +1912,7 @@ UHUDStatsWidget = {}
 ---@field WinConditionLogo UImage
 ---@field PlayerVitality UVitalityStatusWidget
 ---@field HorseVitality UVitalityStatusWidget
+---@field InventoryHUD UInventoryHUDWidget
 ---@field DisclaimerCanvas UCanvasPanel
 ---@field DisclaimerText UTextBlock
 ---@field AranicLogo UTexture2D
@@ -1989,6 +2044,14 @@ UInventoryContainerWidget = {}
 
 
 
+---@class UInventoryHUDWidget : UGridPanelWidget
+UInventoryHUDWidget = {}
+
+
+---@class UInventoryItemHUDWidget : UInventoryItemWidget
+UInventoryItemHUDWidget = {}
+
+
 ---@class UInventoryItemWidget : UGridItemWidget
 ---@field ItemQuantityTextSize int32
 ---@field DisabledTint FSlateColor
@@ -2008,6 +2071,15 @@ UInventoryItemWidget = {}
 ---@field bIsPlayerInventory boolean
 UInventoryWidget = {}
 
+
+
+---@class UItemCategoryButton : UUserWidget
+---@field ItemCategoryButton UButton
+---@field ItemImage UImage
+---@field SelectedImage UImage
+UItemCategoryButton = {}
+
+function UItemCategoryButton:OnItemCategoryButtonClicked() end
 
 
 ---@class ULoreWindow : UHUDWindow
@@ -2100,6 +2172,7 @@ function UMapWidget:BP_OnMapImageSet(MapImageTexture) end
 ---@field MapImage UImage
 ---@field MapImageSheet UCanvasPanel
 ---@field MapImageSheetSlot UCanvasPanelSlot
+---@field TerritoryTexture UTexture2D
 UMapWidgetBase = {}
 
 
@@ -2179,10 +2252,8 @@ function UNextTestWidget:OnDiscordButtonClicked() end
 ---@field PlayButton UAnvilButtonWidget
 ---@field ExitButton UAnvilButtonWidget
 ---@field OptionsButton UAnvilButtonWidget
----@field RoadmapButton UAnvilButtonWidget
 ---@field VersionText UTextBlock
 ---@field CLText UTextBlock
----@field RoadmapPopupButton UButton
 ---@field NextTestWidget UNextTestWidget
 ---@field DisclaimerWidget UDisclaimerWidget
 ---@field AnnouncementText UTextBlock
@@ -2193,8 +2264,6 @@ UOpeningScreen = {}
 
 function UOpeningScreen:UpdateVersionText() end
 function UOpeningScreen:ReenableDiscordRoleButton() end
-function UOpeningScreen:OnRoadmapClicked() end
-function UOpeningScreen:OnRoadmapButtonClicked() end
 function UOpeningScreen:OnPlayButtonClicked() end
 function UOpeningScreen:OnOptionsButtonClicked() end
 function UOpeningScreen:OnExitButtonClicked() end
@@ -2505,7 +2574,7 @@ UTooltipWidget = {}
 ---@field TownName UTextBlock
 ---@field TownNameBorder UBorder
 ---@field TownStatusBorder UBorder
----@field NumHousesStatus UStatusWidget
+---@field NumPledgedStatus UStatusWidget
 ---@field NumTentsStatus UStatusWidget
 ---@field NumReinforcementSuppliesStatus UStatusWidget
 UTownCenterMapIcon = {}
@@ -2516,7 +2585,7 @@ function UTownCenterMapIcon:GetNumTentsText() end
 ---@return FText
 function UTownCenterMapIcon:GetNumReinforcementSuppliesText() end
 ---@return FText
-function UTownCenterMapIcon:GetNumHousesText() end
+function UTownCenterMapIcon:GetNumPledgedText() end
 
 
 ---@class UTownCenterWindow : UStructureWindow
@@ -2604,8 +2673,26 @@ UVisFamilyMeshComponent = {}
 
 
 
----@class UVisFoundationDecorMesh : UStaticMeshComponent
-UVisFoundationDecorMesh = {}
+---@class UVisFoundationBottomMeshDecorComponent : USceneComponent
+---@field BottomMesh UStaticMesh
+---@field BottomMeshOffset FVector
+---@field BottomMeshComp UStaticMeshComponent
+UVisFoundationBottomMeshDecorComponent = {}
+
+
+
+---@class UVisFoundationEdgeMeshDecorComponent : UArrowComponent
+---@field InnerAngle float
+---@field EdgeMesh UStaticMesh
+---@field EdgeMeshOffset FVector
+---@field EdgeMeshRotation FRotator
+---@field EdgeMeshComp UStaticMeshComponent
+UVisFoundationEdgeMeshDecorComponent = {}
+
+
+
+---@class UVisFoundationFillerMeshDecorComponent : UStaticMeshComponent
+UVisFoundationFillerMeshDecorComponent = {}
 
 
 ---@class UVisGateAnimInstance : UAnimInstance
@@ -2628,6 +2715,7 @@ UVisInstancedStockpileComponent = {}
 ---@field DescriptionText FText
 ---@field DescriptionFooter FText
 ---@field Icon UTexture2D
+---@field Category EVisItemCategory
 ---@field Mesh USkeletalMesh
 ---@field StockpileMesh UStaticMesh
 ---@field bAutoSetStockpileExtents boolean
@@ -2673,6 +2761,7 @@ UVisLoreVolumeComponent = {}
 ---@field AimPitch float
 ---@field bPriming boolean
 ---@field bPrimed boolean
+---@field bFiring boolean
 UVisMobileWeaponAnimInstance = {}
 
 
@@ -2703,6 +2792,7 @@ UVisMultiItemStockpileComponent = {}
 ---@field AimPitch float
 ---@field AimYaw float
 ---@field bPriming boolean
+---@field bSecondaryMode boolean
 UVisPlayerAnimInstance = {}
 
 
@@ -2722,9 +2812,15 @@ UVisPowerUnitAnimInstance = {}
 
 
 
----@class UVisRandomizedStaticMeshComponent : UVisStaticMeshComponent
+---@class UVisRandomDecalDecorComponent : UDecalComponent
 ---@field VisibilityChance float
-UVisRandomizedStaticMeshComponent = {}
+UVisRandomDecalDecorComponent = {}
+
+
+
+---@class UVisRandomMeshDecorComponent : UStaticMeshComponent
+---@field VisibilityChance float
+UVisRandomMeshDecorComponent = {}
 
 
 
@@ -2773,11 +2869,8 @@ UVisSplineComponent = {}
 UVisSpringArmComponent = {}
 
 
----@class UVisStaticMeshComponent : UStaticMeshComponent
----@field VisMeshProfile EVisMeshProfile
----@field bMeshVisibility boolean
+---@class UVisStaticMeshComponent : UVisStaticMeshComponentBase
 UVisStaticMeshComponent = {}
-
 
 
 ---@class UVisStockpileComponent : UInstancedStaticMeshComponent
@@ -2889,7 +2982,7 @@ function UWorldMarketShopMapIcon:OnIconClicked() end
 ---@field TownNameBorder UBorder
 ---@field TownNameText UTextBlock
 ---@field TownStatusBorder UBorder
----@field NumHousesStatus UStatusWidget
+---@field NumPledgedStatus UStatusWidget
 ---@field NumTentsStatus UStatusWidget
 ---@field NumReinforcementSuppliesStatus UStatusWidget
 ---@field TownWarningText UTextBlock
@@ -2913,8 +3006,8 @@ function UWorldTownCenterMapIcon:GetNumTentsText() end
 ---@return FText
 function UWorldTownCenterMapIcon:GetNumReinforcementSuppliesText() end
 ---@return ESlateVisibility
-function UWorldTownCenterMapIcon:GetNumHousesVisibility() end
+function UWorldTownCenterMapIcon:GetNumPledgedVisibility() end
 ---@return FText
-function UWorldTownCenterMapIcon:GetNumHousesText() end
+function UWorldTownCenterMapIcon:GetNumPledgedText() end
 
 

@@ -1,5 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "FamilyHouseInfoType.h"
+#include "PledgeInfoType.h"
 #include "PlayerAgeDeployData.generated.h"
 
 USTRUCT(BlueprintType)
@@ -9,14 +11,14 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TeamId;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    int64 FamilyHouseInfo;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FFamilyHouseInfoType FamilyHouseInfo;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    int64 PledgedTownHallInfo;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FPledgeInfoType PledgedTownHallInfo;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    int64 PledgedMilitiaInfo;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FPledgeInfoType PledgedMilitiaInfo;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 AllowedToSpawnUnixTimeStamp;

@@ -6,6 +6,7 @@ UGameplayOverlay::UGameplayOverlay() : UUserWidget(FObjectInitializer::Get()) {
     this->SecondaryNotificationText = NULL;
     this->PrimaryPromptText = NULL;
     this->SecondaryPromptText = NULL;
+    this->AlertsContainerWidget = NULL;
 }
 
 ESlateVisibility UGameplayOverlay::GetHUDWidgetVisibility() {

@@ -3,6 +3,7 @@
 UCentralMarketplaceListEntryWidget::UCentralMarketplaceListEntryWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->CancelButton = NULL;
     this->ItemImage = NULL;
+    this->QualityIconImage = NULL;
     this->ItemNameTextBlock = NULL;
     this->BuyerSellerTextBlock = NULL;
     this->QuantityTextBlock = NULL;
@@ -13,7 +14,7 @@ UCentralMarketplaceListEntryWidget::UCentralMarketplaceListEntryWidget() : UUser
 void UCentralMarketplaceListEntryWidget::OnCancelButtonClicked() {
 }
 
-void UCentralMarketplaceListEntryWidget::OnBuyButtonClicked() {
+void UCentralMarketplaceListEntryWidget::OnBuySellButtonClicked() {
 }
 
 FText UCentralMarketplaceListEntryWidget::GetPlayerNameText() {

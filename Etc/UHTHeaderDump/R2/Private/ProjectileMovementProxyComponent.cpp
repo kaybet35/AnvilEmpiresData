@@ -19,6 +19,8 @@ UProjectileMovementProxyComponent::UProjectileMovementProxyComponent() {
     this->RotationSpeed = 10000.00f;
     this->ScorchAmount = 0.00f;
     this->DislodgeRate = 0.00f;
+    this->Lifetime = 3.50f;
+    this->RandomRadius = 0.00f;
 }
 
 

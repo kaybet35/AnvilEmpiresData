@@ -8,7 +8,7 @@ UTownCenterMapIcon::UTownCenterMapIcon() {
     this->TownName = NULL;
     this->TownNameBorder = NULL;
     this->TownStatusBorder = NULL;
-    this->NumHousesStatus = NULL;
+    this->NumPledgedStatus = NULL;
     this->NumTentsStatus = NULL;
     this->NumReinforcementSuppliesStatus = NULL;
 }
@@ -24,7 +24,7 @@ FText UTownCenterMapIcon::GetNumReinforcementSuppliesText() {
     return FText::GetEmpty();
 }
 
-FText UTownCenterMapIcon::GetNumHousesText() {
+FText UTownCenterMapIcon::GetNumPledgedText() {
     return FText::GetEmpty();
 }
 

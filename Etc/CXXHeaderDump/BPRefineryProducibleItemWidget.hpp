@@ -3,9 +3,9 @@
 
 class UBPRefineryProducibleItemWidget_C : public URefineryProducibleItemWidget
 {
-    class UImage* Image;                                                              // 0x0358 (size: 0x8)
-    class UImage* Image_81;                                                           // 0x0360 (size: 0x8)
+    class UImage* Image;                                                              // 0x0308 (size: 0x8)
+    class UImage* Image_81;                                                           // 0x0310 (size: 0x8)
 
-}; // Size: 0x368
+}; // Size: 0x318
 
 #endif

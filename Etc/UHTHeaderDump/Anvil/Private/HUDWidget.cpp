@@ -15,6 +15,8 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->CompassPlayerArrow = NULL;
     this->PrimaryHeldItem = NULL;
     this->SecondaryHeldItem = NULL;
+    this->PrimaryEquipmentItem = NULL;
+    this->SecondaryEquipmentItem = NULL;
     this->GuardBar = NULL;
     this->GuardStatusWidget = NULL;
     this->GuardStrengthLeftIcon = NULL;
@@ -28,6 +30,7 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->WinConditionLogo = NULL;
     this->PlayerVitality = NULL;
     this->HorseVitality = NULL;
+    this->InventoryHUD = NULL;
     this->DisclaimerCanvas = NULL;
     this->DisclaimerText = NULL;
     this->AranicLogo = NULL;

@@ -3,6 +3,6 @@
 
 class UBPVisItemWood03_C : public UVisItem
 {
-}; // Size: 0x238
+}; // Size: 0x240
 
 #endif

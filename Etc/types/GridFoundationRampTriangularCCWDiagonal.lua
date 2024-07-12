@@ -1,6 +1,6 @@
 ---@meta
 
----@class UGridFoundationRampTriangularCCWDiagonal_C : UBPBaseFoundationModularEntity_C
+---@class UGridFoundationRampTriangularCCWDiagonal_C : UBPBaseModularEntity_C
 UGridFoundationRampTriangularCCWDiagonal_C = {}
 
 

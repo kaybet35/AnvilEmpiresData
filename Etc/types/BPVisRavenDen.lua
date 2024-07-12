@@ -1,20 +1,21 @@
 ---@meta
 
 ---@class ABPVisRavenDen_C : AVisResource
----@field VisRandomizedStaticMesh13 UVisRandomizedStaticMeshComponent
----@field VisRandomizedStaticMesh12 UVisRandomizedStaticMeshComponent
----@field VisRandomizedStaticMesh11 UVisRandomizedStaticMeshComponent
----@field VisRandomizedStaticMesh10 UVisRandomizedStaticMeshComponent
----@field VisRandomizedStaticMesh9 UVisRandomizedStaticMeshComponent
----@field VisRandomizedStaticMesh8 UVisRandomizedStaticMeshComponent
----@field VisRandomizedStaticMesh7 UVisRandomizedStaticMeshComponent
----@field VisRandomizedStaticMesh6 UVisRandomizedStaticMeshComponent
----@field VisRandomizedStaticMesh5 UVisRandomizedStaticMeshComponent
----@field VisRandomizedStaticMesh4 UVisRandomizedStaticMeshComponent
----@field VisRandomizedStaticMesh3 UVisRandomizedStaticMeshComponent
----@field VisRandomizedStaticMesh2 UVisRandomizedStaticMeshComponent
----@field VisRandomizedStaticMesh1 UVisRandomizedStaticMeshComponent
----@field VisRandomizedStaticMesh UVisRandomizedStaticMeshComponent
+---@field VisRandomMeshDecor13 UVisRandomMeshDecorComponent
+---@field VisRandomMeshDecor11 UVisRandomMeshDecorComponent
+---@field VisRandomMeshDecor12 UVisRandomMeshDecorComponent
+---@field VisRandomMeshDecor10 UVisRandomMeshDecorComponent
+---@field VisRandomMeshDecor9 UVisRandomMeshDecorComponent
+---@field VisRandomMeshDecor8 UVisRandomMeshDecorComponent
+---@field VisRandomMeshDecor7 UVisRandomMeshDecorComponent
+---@field VisRandomMeshDecor6 UVisRandomMeshDecorComponent
+---@field VisRandomMeshDecor5 UVisRandomMeshDecorComponent
+---@field VisRandomMeshDecor4 UVisRandomMeshDecorComponent
+---@field VisRandomMeshDecor3 UVisRandomMeshDecorComponent
+---@field VisRandomMeshDecor2 UVisRandomMeshDecorComponent
+---@field VisRandomMeshDecor1 UVisRandomMeshDecorComponent
+---@field VisRandomMeshDecor UVisRandomMeshDecorComponent
+---@field Decors USceneComponent
 ---@field Decal UDecalComponent
 ABPVisRavenDen_C = {}
 

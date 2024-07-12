@@ -40,6 +40,7 @@
       },
       "Encumberance": 50,
       "bRanged": true,
+      "bHasAlt": true,
       "DamageOffset": {
         "X": 50.0,
         "Y": 0.0,
@@ -58,6 +59,10 @@
         "ObjectName": "BlueprintGeneratedClass'ArrowProjectile_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/ArrowProjectile.1"
       },
+      "ProjectileIndirectEntity": {
+        "ObjectName": "BlueprintGeneratedClass'ArrowIndirectProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/ArrowIndirectProjectile.1"
+      },
       "bStaggersWielder": true,
       "StanceOverride": [
         {
@@ -75,7 +80,7 @@
       "RangedActivity": {
         "State": "EAnvilSimActivityState::LaunchingProjectile",
         "Delay": 0.1,
-        "Duration": 1.1,
+        "Duration": 1.5,
         "bRepeatable": false,
         "StaminaCost": 10.0,
         "AimedStaminaCost": 5.0
@@ -85,7 +90,8 @@
       },
       "MaxEncumbranceforAction": 0.5,
       "Damage": 15,
-      "DurabilityLossPerUse": 2.0,
+      "DefaultMarketplaceValue": 10,
+      "DurabilityLossPerUse": 1.2,
       "AimMovementSpeedModifier": 0.5,
       "AimRotationSpeedModifier": 2.5
     }

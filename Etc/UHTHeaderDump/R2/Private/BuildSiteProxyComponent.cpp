@@ -9,10 +9,12 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->bRequiresCamp = false;
     this->bRequiresSmallCamp = false;
     this->bRequiresClaimedFamilyHouse = false;
+    this->bRequiresTerritoryOwnership = false;
     this->bBuildableOverRoads = false;
     this->bBuildableNearSpawnPoint = false;
     this->bBuildableInEnemyTerritory = false;
     this->bBuildableNearEnemies = false;
+    this->bIsBuildableUnderground = false;
     this->bAllowRapidBuild = false;
     this->CanBuildTownStructureWithoutPledge = false;
     this->bBuildsInstantly = false;

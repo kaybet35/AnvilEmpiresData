@@ -25,16 +25,10 @@ public:
     UAnvilButtonWidget* OptionsButton;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UAnvilButtonWidget* RoadmapButton;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* VersionText;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* CLText;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UButton* RoadmapPopupButton;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UNextTestWidget* NextTestWidget;
@@ -62,12 +56,6 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void ReenableDiscordRoleButton();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnRoadmapClicked();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnRoadmapButtonClicked();
     
     UFUNCTION(BlueprintCallable)
     void OnPlayButtonClicked();

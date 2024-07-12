@@ -5,6 +5,7 @@
 AEntityActor::AEntityActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RootComponent = CreateDefaultSubobject<UEntityActorRootComponent>(TEXT("RootComponent"));
     this->EntityTemplate = NULL;
+    this->bShowVisActorPreview = true;
     this->VisActorPreview = CreateDefaultSubobject<UChildActorComponent>(TEXT("VisPreview"));
     this->SceneComponent = (UEntityActorRootComponent*)RootComponent;
     this->VisActorPreview->SetupAttachment(RootComponent);

@@ -341,16 +341,17 @@ EUnarmedItemMeshLocation = {
     EUnarmedItemMeshLocation_MAX = 5,
 }
 
----@enum EVisMeshProfile
-EVisMeshProfile = {
-    Undefined = 0,
-    Structure = 1,
-    StructureLandscape = 2,
-    StructureLandscapeRotate = 3,
-    StructureCollision = 4,
-    StructureCollisionLandscape = 5,
-    StructureCollisionLandscapeRotate = 6,
-    EVisMeshProfile_MAX = 7,
+---@enum EVisItemCategory
+EVisItemCategory = {
+    None = 0,
+    WeaponShield = 1,
+    Armour = 2,
+    Tools = 3,
+    Food = 4,
+    ResourceRaw = 5,
+    ResourceProcessed = 6,
+    NumTypes = 7,
+    EVisItemCategory_MAX = 8,
 }
 
 ---@enum EVoiceChannelType

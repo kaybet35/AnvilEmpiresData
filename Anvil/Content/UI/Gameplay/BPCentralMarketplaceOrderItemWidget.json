@@ -4,8 +4,8 @@
     "Name": "Default__BPCentralMarketplaceOrderItemWidget_C",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPCentralMarketplaceOrderItemWidget.BPCentralMarketplaceOrderItemWidget_C'",
     "Properties": {
-      "ItemWidth": 40.0,
-      "ItemHeight": 40.0,
+      "ItemWidth": 64.0,
+      "ItemHeight": 64.0,
       "bHasScriptImplementedTick": false,
       "bHasScriptImplementedPaint": false
     }
@@ -18,12 +18,61 @@
     "Properties": {
       "WidgetStyle": {
         "Normal": {
+          "DrawAs": "ESlateBrushDrawType::Image",
           "ImageSize": {
-            "X": 40.0,
-            "Y": 40.0
+            "X": 100.0,
+            "Y": 100.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'MarketplaceItemSelector'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Marketplace/MarketplaceItemSelector.0"
           }
+        },
+        "Hovered": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 100.0,
+            "Y": 100.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'MarketplaceItemSelector'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Marketplace/MarketplaceItemSelector.0"
+          }
+        },
+        "Pressed": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 100.0,
+            "Y": 100.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'MarketplaceItemSelector'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Marketplace/MarketplaceItemSelector.0"
+          }
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
         }
       },
+      "IsFocusable": false,
       "Slots": [
         {
           "ObjectName": "ButtonSlot'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.Button.ButtonSlot_0'",
@@ -31,7 +80,7 @@
         }
       ],
       "Slot": {
-        "ObjectName": "SizeBoxSlot'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.SizeBox_17.SizeBoxSlot_0'",
+        "ObjectName": "SizeBoxSlot'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceOrderItemWidget.7"
       }
     }
@@ -55,7 +104,7 @@
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceOrderItemWidget.1"
       },
       "Content": {
-        "ObjectName": "Overlay'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.Overlay_44'",
+        "ObjectName": "Overlay'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.Overlay_57'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceOrderItemWidget.4"
       }
     }
@@ -77,7 +126,7 @@
         }
       },
       "Slot": {
-        "ObjectName": "OverlaySlot'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.Overlay_44.OverlaySlot_0'",
+        "ObjectName": "OverlaySlot'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_1'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceOrderItemWidget.5"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
@@ -85,32 +134,33 @@
   },
   {
     "Type": "Overlay",
-    "Name": "Overlay_44",
+    "Name": "Overlay_57",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'Overlay'",
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "OverlaySlot'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.Overlay_44.OverlaySlot_0'",
+          "ObjectName": "OverlaySlot'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.Overlay_57.OverlaySlot_1'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceOrderItemWidget.5"
         }
       ],
       "Slot": {
         "ObjectName": "ButtonSlot'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.Button.ButtonSlot_0'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceOrderItemWidget.2"
-      }
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
     }
   },
   {
     "Type": "OverlaySlot",
-    "Name": "OverlaySlot_0",
-    "Outer": "Overlay_44",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_57",
     "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
       "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
       "Parent": {
-        "ObjectName": "Overlay'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.Overlay_44'",
+        "ObjectName": "Overlay'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.Overlay_57'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceOrderItemWidget.4"
       },
       "Content": {
@@ -121,30 +171,31 @@
   },
   {
     "Type": "SizeBox",
-    "Name": "SizeBox_17",
+    "Name": "SizeBox",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'SizeBox'",
     "Properties": {
-      "WidthOverride": 40.0,
-      "HeightOverride": 40.0,
+      "WidthOverride": 64.0,
+      "HeightOverride": 64.0,
       "bOverride_WidthOverride": true,
       "bOverride_HeightOverride": true,
       "Slots": [
         {
-          "ObjectName": "SizeBoxSlot'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.SizeBox_17.SizeBoxSlot_0'",
+          "ObjectName": "SizeBoxSlot'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceOrderItemWidget.7"
         }
-      ]
+      ],
+      "bIsVariable": true
     }
   },
   {
     "Type": "SizeBoxSlot",
     "Name": "SizeBoxSlot_0",
-    "Outer": "SizeBox_17",
+    "Outer": "SizeBox",
     "Class": "UScriptClass'SizeBoxSlot'",
     "Properties": {
       "Parent": {
-        "ObjectName": "SizeBox'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.SizeBox_17'",
+        "ObjectName": "SizeBox'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.SizeBox'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceOrderItemWidget.6"
       },
       "Content": {
@@ -190,7 +241,7 @@
     "Class": "UScriptClass'WidgetTree'",
     "Properties": {
       "RootWidget": {
-        "ObjectName": "SizeBox'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.SizeBox_17'",
+        "ObjectName": "SizeBox'BPCentralMarketplaceOrderItemWidget_C:WidgetTree.SizeBox'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceOrderItemWidget.6"
       }
     }

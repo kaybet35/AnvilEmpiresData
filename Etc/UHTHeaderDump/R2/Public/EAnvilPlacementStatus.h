@@ -56,5 +56,7 @@ enum class EAnvilPlacementStatus : uint8 {
     AreaMustBeEmpty,
     YouMustBeOfficial,
     MustBeUniquePerTown,
+    RequiresTerritoryOwnership,
+    CantBeBuiltUnderground,
 };
 

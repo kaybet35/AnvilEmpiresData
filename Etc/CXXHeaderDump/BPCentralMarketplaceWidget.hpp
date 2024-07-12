@@ -3,13 +3,18 @@
 
 class UBPCentralMarketplaceWidget_C : public UCentralMarketplaceWidget
 {
-    class UBPAnvilPanel_C* BPAnvilPanel;                                              // 0x02C0 (size: 0x8)
-    class UBPCentralMarketplaceListEntryWidget_C* BPCentralMarketplaceListEntryWidget; // 0x02C8 (size: 0x8)
-    class UBPCentralMarketplaceListEntryWidget_C* BPCentralMarketplaceListEntryWidget_1; // 0x02D0 (size: 0x8)
-    class UBPCentralMarketplaceListEntryWidget_C* BPCentralMarketplaceListEntryWidget_2; // 0x02D8 (size: 0x8)
-    class UBPMainAreaContainer_C* BPMainAreaContainer;                                // 0x02E0 (size: 0x8)
-    class UBPSubHeaderContainer_C* BPSubHeaderContainer;                              // 0x02E8 (size: 0x8)
+    class UBPAnvilPanel_C* BPAnvilPanel;                                              // 0x0388 (size: 0x8)
+    class UBPCentralMarketplaceListEntryWidget_C* BPCentralMarketplaceListEntryWidget; // 0x0390 (size: 0x8)
+    class UBPCentralMarketplaceListEntryWidget_C* BPCentralMarketplaceListEntryWidget_1; // 0x0398 (size: 0x8)
+    class UBPCentralMarketplaceListEntryWidget_C* BPCentralMarketplaceListEntryWidget_2; // 0x03A0 (size: 0x8)
+    class UBPCentralMarketplaceListEntryWidget_C* BPCentralMarketplaceListEntryWidget_3; // 0x03A8 (size: 0x8)
+    class UBPCentralMarketplaceListEntryWidget_C* BPCentralMarketplaceListEntryWidget_4; // 0x03B0 (size: 0x8)
+    class UBPCentralMarketplaceListEntryWidget_C* BPCentralMarketplaceListEntryWidget_5; // 0x03B8 (size: 0x8)
+    class UBPMainAreaContainer_C* BPMainAreaContainer;                                // 0x03C0 (size: 0x8)
+    class UBPSubHeaderContainer_C* BPSubHeaderContainer;                              // 0x03C8 (size: 0x8)
+    class UTextBlock* PlaceOrderHeader;                                               // 0x03D0 (size: 0x8)
+    class UImage* SilverIcon;                                                         // 0x03D8 (size: 0x8)
 
-}; // Size: 0x2F0
+}; // Size: 0x3E0
 
 #endif

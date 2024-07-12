@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisGridFoundationCrenellationRoundStraight_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.12"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,28 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisFoundationFillerMeshDecor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisFoundationFillerMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisFoundationFillerMeshDecor1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisFoundationFillerMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "StaticMesh",
@@ -54,17 +76,17 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisGridFoundationCrenellationRoundStraight_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.20"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconGridFoundation_crenellationCurved'",
         "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconGridFoundation_crenellationCurved.0"
       },
       "BuildSiteCategory": "EBuildSiteCategory::Foundations",
-      "BuildSiteOrder": 1,
+      "BuildSiteOrder": 44,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisGridFoundationCrenellationRoundStraight_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.17"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisGridFoundationCrenellationRoundStraight_C:HealthDataComponent'",
@@ -72,11 +94,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisGridFoundationCrenellationRoundStraight_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.16"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisGridFoundationCrenellationRoundStraight_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.15"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisGridFoundationCrenellationRoundStraight_C:ScorchDataComponent'",
@@ -145,7 +167,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisGridFoundationCrenellationRoundStraight_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.13"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationCrenellationRoundStraight_C:ArrowComponent'",
@@ -201,12 +223,52 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationCrenellationRoundStraight_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.14"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "596D0A2D-458A060B-2554BEB2-CC3D9D8C",
       "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisFoundationFillerMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisFoundationFillerMeshDecorComponent'BPVisGridFoundationCrenellationRoundStraight_C:VisFoundationFillerMeshDecor1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.18"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E8C3BF37-4E7222DD-5E2E849F-99B410D2",
+      "InternalVariableName": "VisFoundationFillerMeshDecor1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisFoundationFillerMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisFoundationFillerMeshDecorComponent'BPVisGridFoundationCrenellationRoundStraight_C:VisFoundationFillerMeshDecor_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.19"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "DE55886C-4D89681D-301C5981-72C384F8",
+      "InternalVariableName": "VisFoundationFillerMeshDecor"
     }
   },
   {
@@ -219,12 +281,28 @@
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationCrenellationRoundStraight_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationCrenellationRoundStraight_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationCrenellationRoundStraight_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.11"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationCrenellationRoundStraight_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationCrenellationRoundStraight_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationCrenellationRoundStraight_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCrenellationRoundStraight.11"
         }
       ],
       "DefaultSceneRootNode": {
@@ -276,6 +354,40 @@
     "Name": "UpgradeDataComponent",
     "Outer": "Default__BPVisGridFoundationCrenellationRoundStraight_C",
     "Class": "UScriptClass'UpgradeDataComponent'"
+  },
+  {
+    "Type": "VisFoundationFillerMeshDecorComponent",
+    "Name": "VisFoundationFillerMeshDecor1_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationCrenellationRoundStraight_C",
+    "Class": "UScriptClass'VisFoundationFillerMeshDecorComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundation_filler_crenellation'",
+        "ObjectPath": "Anvil/Content/Meshes/GridFoundation_filler_crenellation.2"
+      },
+      "RelativeLocation": {
+        "X": -150.0,
+        "Y": 150.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "VisFoundationFillerMeshDecorComponent",
+    "Name": "VisFoundationFillerMeshDecor_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationCrenellationRoundStraight_C",
+    "Class": "UScriptClass'VisFoundationFillerMeshDecorComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundation_filler_crenellation'",
+        "ObjectPath": "Anvil/Content/Meshes/GridFoundation_filler_crenellation.2"
+      },
+      "RelativeLocation": {
+        "X": 150.0,
+        "Y": -150.0,
+        "Z": 0.0
+      }
+    }
   },
   {
     "Type": "VisScaffoldingComponent",

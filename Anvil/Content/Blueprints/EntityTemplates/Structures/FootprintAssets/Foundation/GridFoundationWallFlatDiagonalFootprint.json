@@ -49,12 +49,12 @@
       "bShowMesh": true,
       "Position": {
         "X": 0.0,
-        "Y": -12.5,
+        "Y": 0.0,
         "Z": 150.05101
       },
       "Extents": {
-        "X": 212.23305,
-        "Y": 12.601,
+        "X": 227.13304,
+        "Y": 15.001,
         "Z": 150.05101
       },
       "StructureTiers": [
@@ -65,9 +65,31 @@
         {
           "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallFlatDiagonal.GridFoundationWallFlatDiagonal_C'",
           "Value": true
+        },
+        {
+          "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallFlatDiagonal_T2.GridFoundationWallFlatDiagonal_T2_C'",
+          "Value": true
         }
       ],
       "FootprintSharedComponents": [
+        {
+          "Comp": {
+            "ObjectName": "SnapPointProxyComponent'Default__GridFoundationWallFlatDiagonalFootprint_C:SnapPointProxyComponent_2'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationWallFlatDiagonalFootprint.7"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": false
+        },
+        {
+          "Comp": {
+            "ObjectName": "SnapPointProxyComponent'Default__GridFoundationWallFlatDiagonalFootprint_C:SnapPointProxyComponent_3'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationWallFlatDiagonalFootprint.8"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": false
+        },
         {
           "Comp": {
             "ObjectName": "SnapPointProxyComponent'Default__GridFoundationWallFlatDiagonalFootprint_C:SnapPointProxyComponent_0'",
@@ -144,6 +166,51 @@
     "Class": "UScriptClass'SnapPointProxyComponent'",
     "Properties": {
       "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 150.0
+      },
+      "Rotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      },
+      "Extents": {
+        "X": 30.0,
+        "Y": 30.0,
+        "Z": 150.0
+      },
+      "SnappingChannel": "EAnvilSnappingChannelType::Foundation",
+      "bPointOnLine": true
+    }
+  },
+  {
+    "Type": "SnapPointProxyComponent",
+    "Name": "SnapPointProxyComponent_1",
+    "Outer": "Default__GridFoundationWallFlatDiagonalFootprint_C",
+    "Class": "UScriptClass'SnapPointProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 150.0
+      },
+      "Extents": {
+        "X": 30.0,
+        "Y": 30.0,
+        "Z": 150.0
+      },
+      "SnappingChannel": "EAnvilSnappingChannelType::Foundation",
+      "bPointOnLine": true
+    }
+  },
+  {
+    "Type": "SnapPointProxyComponent",
+    "Name": "SnapPointProxyComponent_2",
+    "Outer": "Default__GridFoundationWallFlatDiagonalFootprint_C",
+    "Class": "UScriptClass'SnapPointProxyComponent'",
+    "Properties": {
+      "Position": {
         "X": -212.13304,
         "Y": 0.0,
         "Z": 150.0
@@ -158,12 +225,13 @@
         "Y": 30.0,
         "Z": 150.0
       },
-      "SnappingChannel": "EAnvilSnappingChannelType::Foundation"
+      "SnappingChannel": "EAnvilSnappingChannelType::Foundation",
+      "bPointOnLine": true
     }
   },
   {
     "Type": "SnapPointProxyComponent",
-    "Name": "SnapPointProxyComponent_1",
+    "Name": "SnapPointProxyComponent_3",
     "Outer": "Default__GridFoundationWallFlatDiagonalFootprint_C",
     "Class": "UScriptClass'SnapPointProxyComponent'",
     "Properties": {
@@ -177,7 +245,8 @@
         "Y": 30.0,
         "Z": 150.0
       },
-      "SnappingChannel": "EAnvilSnappingChannelType::Foundation"
+      "SnappingChannel": "EAnvilSnappingChannelType::Foundation",
+      "bPointOnLine": true
     }
   }
 ]

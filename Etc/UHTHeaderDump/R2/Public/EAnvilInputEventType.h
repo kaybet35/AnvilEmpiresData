@@ -35,7 +35,6 @@ enum class EAnvilInputEventType : uint8 {
     DetachAnimal,
     MouseSelect,
     DisableSnapping,
-    Unstuck,
     SetTownName,
     Reload,
     RetractLadder,
@@ -53,5 +52,6 @@ enum class EAnvilInputEventType : uint8 {
     RequestFamilySync,
     RequestFamilyListSync,
     PledgeToTown,
+    AltAttack,
 };
 

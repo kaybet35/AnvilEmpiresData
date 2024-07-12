@@ -44,6 +44,26 @@
             "ObjectName": "AnimSequence'SwordAndShield_SlashSequence'",
             "ObjectPath": "Anvil/Content/Animations/Prototype/SwordAndShield_SlashSequence.0"
           }
+        },
+        {
+          "SectionName": "endToIdle",
+          "NextSectionName": "None",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Sword_QueueAttack3_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Sword_QueueAttack3_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 1.1999998,
+          "SegmentLength": 0.5,
+          "LinkValue": 1.1999998,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SwordAndShield_SlashSequence_01toIdle'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/SwordAndShield_SlashSequence_01toIdle.0"
+          }
         }
       ],
       "SlotAnimTracks": [
@@ -59,6 +79,17 @@
                 "StartPos": 0.0,
                 "AnimStartTime": 3.0,
                 "AnimEndTime": 4.2,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'SwordAndShield_SlashSequence_01toIdle'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/SwordAndShield_SlashSequence_01toIdle.0"
+                },
+                "StartPos": 1.1999998,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 0.5,
                 "AnimPlayRate": 1.0,
                 "LoopingCount": 1
               }
@@ -114,7 +145,7 @@
           }
         }
       ],
-      "SequenceLength": 1.1999998,
+      "SequenceLength": 1.6999998,
       "Skeleton": {
         "ObjectName": "Skeleton'PrototypeChar_Skeleton'",
         "ObjectPath": "Anvil/Content/Animations/Prototype/PrototypeChar_Skeleton.8"

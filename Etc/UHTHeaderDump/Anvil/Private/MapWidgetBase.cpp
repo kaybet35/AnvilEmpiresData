@@ -9,6 +9,7 @@ UMapWidgetBase::UMapWidgetBase() : UUserWidget(FObjectInitializer::Get()) {
     this->MapImage = NULL;
     this->MapImageSheet = NULL;
     this->MapImageSheetSlot = NULL;
+    this->TerritoryTexture = NULL;
 }
 
 

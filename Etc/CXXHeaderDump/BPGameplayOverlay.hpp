@@ -3,6 +3,6 @@
 
 class UBPGameplayOverlay_C : public UGameplayOverlay
 {
-}; // Size: 0x2C0
+}; // Size: 0x2C8
 
 #endif
