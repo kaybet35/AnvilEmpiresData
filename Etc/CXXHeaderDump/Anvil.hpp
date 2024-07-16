@@ -2615,6 +2615,7 @@ class UVisMobileWeaponAnimInstance : public UAnimInstance
     bool bPriming;                                                                    // 0x0350 (size: 0x1)
     bool bPrimed;                                                                     // 0x0351 (size: 0x1)
     bool bFiring;                                                                     // 0x0352 (size: 0x1)
+    float NativeSpeed;                                                                // 0x0354 (size: 0x4)
 
 }; // Size: 0x360
 

@@ -2762,6 +2762,7 @@ UVisLoreVolumeComponent = {}
 ---@field bPriming boolean
 ---@field bPrimed boolean
 ---@field bFiring boolean
+---@field NativeSpeed float
 UVisMobileWeaponAnimInstance = {}
 
 

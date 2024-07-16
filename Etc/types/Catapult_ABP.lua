@@ -8,11 +8,11 @@
 ---@field __IntProperty_95 int32
 ---@field __NameProperty_96 FName
 ---@field __IntProperty_97 int32
----@field __BoolProperty_98 boolean
----@field __FloatProperty_99 float
----@field __NameProperty_100 FName
----@field __IntProperty_101 int32
----@field __StructProperty_102 FAnimNodeFunctionRef
+---@field __FloatProperty_98 float
+---@field __NameProperty_99 FName
+---@field __IntProperty_100 int32
+---@field __StructProperty_101 FAnimNodeFunctionRef
+---@field __BoolProperty_102 boolean
 ---@field __FloatProperty_103 float
 ---@field __StructProperty_104 FInputScaleBiasClampConstants
 ---@field __FloatProperty_105 float
@@ -53,7 +53,6 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
 ---@field AnimGraphNode_LayeredBoneBlend FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
----@field Speed double
 UCatapult_ABP_C = {}
 
 ---@param AnimGraph FPoseLink
