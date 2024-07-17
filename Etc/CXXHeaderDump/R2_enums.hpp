@@ -171,9 +171,8 @@ enum class EAnvilDamageTargetType {
     Horse = 2,
     Structure = 3,
     Fire = 4,
-    Vehicle = 5,
-    NumTypes = 6,
-    EAnvilDamageTargetType_MAX = 7,
+    NumTypes = 5,
+    EAnvilDamageTargetType_MAX = 6,
 };
 
 enum class EAnvilDamageType {
@@ -832,9 +831,8 @@ enum class EAnvilStatusMessageType {
     PledgedToTown = 129,
     VehicleCannotWorldEntranceTravel = 130,
     MustBeResetBeforeFiring = 131,
-    NoProjectileLoaded = 132,
-    NumTypes = 133,
-    EAnvilStatusMessageType_MAX = 134,
+    NumTypes = 132,
+    EAnvilStatusMessageType_MAX = 133,
 };
 
 enum class EAnvilStimulusType {

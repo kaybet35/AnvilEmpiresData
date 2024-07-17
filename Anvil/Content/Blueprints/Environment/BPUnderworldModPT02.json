@@ -2705,49 +2705,6 @@
         "ObjectPath": "/Script/NavigationSystem"
       },
       "bUseSystemDefaultObstacleAreaClass": false,
-      "BodyInstance": {
-        "CollisionProfileName": "NavigationModifierBox",
-        "CollisionResponses": {
-          "ResponseArray": [
-            {
-              "Channel": "WorldStatic",
-              "Response": "ECollisionResponse::ECR_Overlap"
-            },
-            {
-              "Channel": "WorldDynamic",
-              "Response": "ECollisionResponse::ECR_Overlap"
-            },
-            {
-              "Channel": "Pawn",
-              "Response": "ECollisionResponse::ECR_Overlap"
-            },
-            {
-              "Channel": "Visibility",
-              "Response": "ECollisionResponse::ECR_Overlap"
-            },
-            {
-              "Channel": "Camera",
-              "Response": "ECollisionResponse::ECR_Overlap"
-            },
-            {
-              "Channel": "PhysicsBody",
-              "Response": "ECollisionResponse::ECR_Overlap"
-            },
-            {
-              "Channel": "Vehicle",
-              "Response": "ECollisionResponse::ECR_Overlap"
-            },
-            {
-              "Channel": "Destructible",
-              "Response": "ECollisionResponse::ECR_Overlap"
-            },
-            {
-              "Channel": "_Reserved",
-              "Response": "ECollisionResponse::ECR_Ignore"
-            }
-          ]
-        }
-      },
       "RelativeLocation": {
         "X": 0.0,
         "Y": 0.0,
@@ -3375,8 +3332,7 @@
         "X": -9.180212E-12,
         "Y": -2.1283837E-05,
         "Z": 2288.4226
-      },
-      "bAutoActivate": false
+      }
     }
   },
   {
@@ -9901,15 +9857,8 @@
       ],
       "CastShadow": false,
       "BodyInstance": {
-        "CollisionProfileName": "NavigationBox",
-        "CollisionResponses": {
-          "ResponseArray": [
-            {
-              "Channel": "_Reserved",
-              "Response": "ECollisionResponse::ECR_Ignore"
-            }
-          ]
-        }
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
       },
       "RelativeScale3D": {
         "X": 200.0,

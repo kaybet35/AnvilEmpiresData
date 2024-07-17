@@ -1604,6 +1604,10 @@ UCraftingWindow = {}
 
 
 
+---@class UCrenellationFillerMeshComponent : UStaticMeshComponent
+UCrenellationFillerMeshComponent = {}
+
+
 ---@class UDeathMarketMapIcon : UMapIcon
 UDeathMarketMapIcon = {}
 
@@ -2691,10 +2695,6 @@ UVisFoundationEdgeMeshDecorComponent = {}
 
 
 
----@class UVisFoundationFillerMeshDecorComponent : UStaticMeshComponent
-UVisFoundationFillerMeshDecorComponent = {}
-
-
 ---@class UVisGateAnimInstance : UAnimInstance
 ---@field bIsOpen boolean
 UVisGateAnimInstance = {}
@@ -2761,8 +2761,6 @@ UVisLoreVolumeComponent = {}
 ---@field AimPitch float
 ---@field bPriming boolean
 ---@field bPrimed boolean
----@field bFiring boolean
----@field NativeSpeed float
 UVisMobileWeaponAnimInstance = {}
 
 

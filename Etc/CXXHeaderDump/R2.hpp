@@ -1470,18 +1470,16 @@ class UMountedWeaponDataComponent : public UDataComponent
     bool bPriming;                                                                    // 0x00A8 (size: 0x1)
     bool bPrimed;                                                                     // 0x00C8 (size: 0x1)
     bool bLoaded;                                                                     // 0x00E8 (size: 0x1)
-    bool bFiring;                                                                     // 0x0108 (size: 0x1)
-    float AimYaw;                                                                     // 0x0128 (size: 0x4)
-    float AimPitch;                                                                   // 0x0148 (size: 0x4)
+    float AimYaw;                                                                     // 0x0108 (size: 0x4)
+    float AimPitch;                                                                   // 0x0128 (size: 0x4)
 
-}; // Size: 0x168
+}; // Size: 0x148
 
 class UMountedWeaponProxyComponent : public UProxyComponent
 {
     FVector AimPivot;                                                                 // 0x0028 (size: 0x18)
     bool bHighArc;                                                                    // 0x0040 (size: 0x1)
     bool bFixedAim;                                                                   // 0x0041 (size: 0x1)
-    bool bRequirePrimedLoad;                                                          // 0x0042 (size: 0x1)
     float PrimingTime;                                                                // 0x0044 (size: 0x4)
     TSubclassOf<class UItemTemplate> Weapon;                                          // 0x0048 (size: 0x8)
 
@@ -2184,10 +2182,8 @@ class UVehicleMovementProxyComponent : public UProxyComponent
     bool bUsePitch;                                                                   // 0x0063 (size: 0x1)
     FVector FrontAxleOffset;                                                          // 0x0068 (size: 0x18)
     FVector RearAxleOffset;                                                           // 0x0080 (size: 0x18)
-    FR2FloatRange FallingDistRange;                                                   // 0x0098 (size: 0x8)
-    FR2FloatRange FallingDamageRange;                                                 // 0x00A0 (size: 0x8)
 
-}; // Size: 0xA8
+}; // Size: 0x98
 
 class UVehicleSeatProxyComponent : public UProxyComponent
 {

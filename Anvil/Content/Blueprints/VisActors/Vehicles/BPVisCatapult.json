@@ -24,83 +24,26 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisCatapult_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.14"
-      },
-      "UberGraphFunction": {
-        "ObjectName": "Function'BPVisCatapult_C:ExecuteUbergraph_BPVisCatapult'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.9"
       }
     },
     "SuperStruct": {
       "ObjectName": "Class'VisVehicle'",
       "ObjectPath": "/Script/Anvil"
     },
-    "Children": [
-      {
-        "ObjectName": "Function'BPVisCatapult_C:ReceiveTick'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.5"
-      },
-      {
-        "ObjectName": "Function'BPVisCatapult_C:ExecuteUbergraph_BPVisCatapult'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.4"
-      }
-    ],
     "ChildProperties": [
       {
-        "Type": "StructProperty",
-        "Name": "UberGraphFrame",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 16,
-        "PropertyFlags": "Transient | DuplicateTransient",
-        "Struct": {
-          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
         "Type": "ObjectProperty",
-        "Name": "Projectile",
+        "Name": "VisStaticMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
-          "ObjectName": "Class'SkeletalMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "MountedWeaponData",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'MountedWeaponDataComponent'",
-          "ObjectPath": "/Script/R2"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "SkeletalMesh",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'SkeletalMeshComponent'",
-          "ObjectPath": "/Script/Engine"
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
         }
       }
     ],
-    "FuncMap": {
-      "ExecuteUbergraph_BPVisCatapult": {
-        "ObjectName": "Function'BPVisCatapult_C:ExecuteUbergraph_BPVisCatapult'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.4"
-      },
-      "ReceiveTick": {
-        "ObjectName": "Function'BPVisCatapult_C:ReceiveTick'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.5"
-      }
-    },
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -121,10 +64,9 @@
     "Name": "Default__BPVisCatapult_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.BPVisCatapult_C'",
     "Properties": {
-      "UberGraphFrame": {},
       "VehicleMovementDataComponent": {
         "ObjectName": "VehicleMovementDataComponent'Default__BPVisCatapult_C:VehicleMovementDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.10"
       },
       "MoveLoopAudioComponent": {
         "ObjectName": "AudioComponent'Default__BPVisCatapult_C:MovementAudioComponent'",
@@ -132,11 +74,11 @@
       },
       "MoveLoopParticleSystem": {
         "ObjectName": "NiagaraComponent'Default__BPVisCatapult_C:MovementParticleSystem'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.5"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisCatapult_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.4"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisCatapult_C:ArrowComponent'",
@@ -151,26 +93,10 @@
       "Description": {
         "Namespace": "",
         "Key": "D9142C1748BE968CC20D92A070FF0DCB",
-        "SourceString": "A siege weapon that's designed to damage enemy fortifications from a distance. Requires 4 people to move and operate.",
-        "LocalizedString": "A siege weapon that's designed to damage enemy fortifications from a distance. Requires 4 people to move and operate."
-      },
-      "DescriptionFooter": {
-        "Namespace": "",
-        "Key": "A614123B4A740E81EBA7A583E8640124",
-        "SourceString": "Built exclusively in camps\r\nUses Catapult Boulders",
-        "LocalizedString": "Built exclusively in camps\r\nUses Catapult Boulders"
-      },
-      "MapIconProperty": {
-        "Icon": {
-          "ObjectName": "Texture2D'CatapultIcon'",
-          "ObjectPath": "Anvil/Content/Textures/UI/Vehicles/CatapultIcon.0"
-        }
+        "SourceString": "TODO",
+        "LocalizedString": "TODO"
       },
       "UseWindowType": "EHUDWindowType::InventoryStructure",
-      "InteractionIcon": {
-        "ObjectName": "Texture2D'CatapultIcon'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Vehicles/CatapultIcon.0"
-      },
       "PositionSmoothSpeed": 4.0,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisCatapult_C:ArrowComponent'",
@@ -179,58 +105,10 @@
     }
   },
   {
-    "Type": "Function",
-    "Name": "ExecuteUbergraph_BPVisCatapult",
-    "Outer": "BPVisCatapult_C",
-    "Class": "UScriptClass'Function'",
-    "ChildProperties": [
-      {
-        "Type": "IntProperty",
-        "Name": "EntryPoint",
-        "Flags": "RF_Public",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "K2Node_Event_DeltaSeconds",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      }
-    ],
-    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
-  },
-  {
-    "Type": "Function",
-    "Name": "ReceiveTick",
-    "Outer": "BPVisCatapult_C",
-    "Class": "UScriptClass'Function'",
-    "SuperStruct": {
-      "ObjectName": "Function'Actor:ReceiveTick'",
-      "ObjectPath": "/Script/Engine"
-    },
-    "ChildProperties": [
-      {
-        "Type": "FloatProperty",
-        "Name": "DeltaSeconds",
-        "Flags": "RF_Public",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
-      }
-    ],
-    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
-  },
-  {
     "Type": "HealthDataComponent",
     "Name": "HealthDataComponent",
     "Outer": "Default__BPVisCatapult_C",
     "Class": "UScriptClass'HealthDataComponent'"
-  },
-  {
-    "Type": "MountedWeaponDataComponent",
-    "Name": "MountedWeaponData_GEN_VARIABLE",
-    "Outer": "BPVisCatapult_C",
-    "Class": "UScriptClass'MountedWeaponDataComponent'"
   },
   {
     "Type": "NiagaraComponent",
@@ -263,36 +141,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisCatapult_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.6"
       },
       "VariableGuid": "D82AE2A8-4A510B7D-C2FEF0B1-49C05F96",
       "InternalVariableName": "DefaultSceneRoot"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'SkeletalMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "SkeletalMeshComponent'BPVisCatapult_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.16"
-      },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisCatapult_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.13"
-        }
-      ],
-      "VariableGuid": "C8982FB6-4AEECABC-5FC851B5-BF33FF03",
-      "InternalVariableName": "SkeletalMesh"
     }
   },
   {
@@ -302,34 +154,17 @@
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'MountedWeaponDataComponent'",
-        "ObjectPath": "/Script/R2"
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "MountedWeaponDataComponent'BPVisCatapult_C:MountedWeaponData_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.7"
+        "ObjectName": "VisStaticMeshComponent'BPVisCatapult_C:VisStaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.11"
       },
-      "VariableGuid": "E47E70E8-4BAF9F49-DDA47788-EF124FDF",
-      "InternalVariableName": "MountedWeaponData"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_4",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'SkeletalMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "SkeletalMeshComponent'BPVisCatapult_C:Projectile_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.15"
-      },
-      "AttachToName": "S_Projectile",
-      "VariableGuid": "4E9CF372-414C5407-B9F15AAE-E2F4C723",
-      "InternalVariableName": "Projectile"
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6307490A-4E8B17BC-2451DCA4-052F5010",
+      "InternalVariableName": "VisStaticMesh"
     }
   },
   {
@@ -340,83 +175,19 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisCatapult_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.11"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisCatapult_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.8"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisCatapult_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.11"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisCatapult_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.12"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCatapult_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.8"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisCatapult_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.10"
-      }
-    }
-  },
-  {
-    "Type": "SkeletalMeshComponent",
-    "Name": "Projectile_GEN_VARIABLE",
-    "Outer": "BPVisCatapult_C",
-    "Class": "UScriptClass'SkeletalMeshComponent'",
-    "Properties": {
-      "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'CatapultProjectile_SK'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/CatapultProjectile_SK.0"
-      },
-      "SkinnedAsset": {
-        "ObjectName": "SkeletalMesh'CatapultProjectile_SK'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/CatapultProjectile_SK.0"
-      },
-      "RelativeRotation": {
-        "Pitch": 10.181984,
-        "Yaw": 2.482928E-13,
-        "Roll": 2.3904972E-13
-      },
-      "RelativeScale3D": {
-        "X": 1.2,
-        "Y": 1.2,
-        "Z": 1.2
-      },
-      "bVisible": false
-    }
-  },
-  {
-    "Type": "SkeletalMeshComponent",
-    "Name": "SkeletalMesh_GEN_VARIABLE",
-    "Outer": "BPVisCatapult_C",
-    "Class": "UScriptClass'SkeletalMeshComponent'",
-    "Properties": {
-      "AnimClass": {
-        "ObjectName": "AnimBlueprintGeneratedClass'Catapult_ABP_C'",
-        "ObjectPath": "Anvil/Content/Animations/Vehicles/Catapult/Catapult_ABP.0"
-      },
-      "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'Catapult_SK'",
-        "ObjectPath": "Anvil/Content/Meshes/Vehicles/Catapult_SK.0"
-      },
-      "SkinnedAsset": {
-        "ObjectName": "SkeletalMesh'Catapult_SK'",
-        "ObjectPath": "Anvil/Content/Meshes/Vehicles/Catapult_SK.0"
-      },
-      "RelativeLocation": {
-        "X": -215.0,
-        "Y": 0.0,
-        "Z": 0.0
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.7"
       }
     }
   },
@@ -425,5 +196,21 @@
     "Name": "VehicleMovementDataComponent",
     "Outer": "Default__BPVisCatapult_C",
     "Class": "UScriptClass'VehicleMovementDataComponent'"
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh_GEN_VARIABLE",
+    "Outer": "BPVisCatapult_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Catapult'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/Catapult.2"
+      },
+      "ComponentTags": [
+        "Structure"
+      ]
+    }
   }
 ]

@@ -1,12 +1,13 @@
 ---@meta
 
 ---@class ABPVisWorldEntranceCave_C : AVisWorldEntrance
----@field Rope2 UVisStaticMeshComponent
----@field Rope1 UVisStaticMeshComponent
----@field Rope UVisStaticMeshComponent
+---@field Decal UDecalComponent
+---@field Blood1 UDecalComponent
+---@field Blood UDecalComponent
 ---@field CaveEntrance UDecalComponent
 ---@field ['Animal Bones'] UDecalComponent
 ---@field BaseDecal UDecalComponent
+---@field StaticMesh UStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ABPVisWorldEntranceCave_C = {}
 
