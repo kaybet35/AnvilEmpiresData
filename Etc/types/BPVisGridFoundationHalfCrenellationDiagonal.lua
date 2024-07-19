@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ABPVisGridFoundationHalfCrenellationDiagonal_C : AVisStructure
----@field CrenellationFillerMesh UCrenellationFillerMeshComponent
----@field CrenellationFillerMesh1 UCrenellationFillerMeshComponent
+---@field VisFoundationFillerMeshDecor UVisFoundationFillerMeshDecorComponent
+---@field VisFoundationFillerMeshDecor1 UVisFoundationFillerMeshDecorComponent
 ---@field StaticMesh UStaticMeshComponent
 ABPVisGridFoundationHalfCrenellationDiagonal_C = {}
 

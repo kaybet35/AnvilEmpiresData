@@ -5,6 +5,8 @@ UVisMobileWeaponAnimInstance::UVisMobileWeaponAnimInstance() {
     this->AimPitch = 0.00f;
     this->bPriming = false;
     this->bPrimed = false;
+    this->bFiring = false;
+    this->NativeSpeed = 0.00f;
 }
 
 

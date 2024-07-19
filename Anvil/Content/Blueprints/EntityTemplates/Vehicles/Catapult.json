@@ -29,12 +29,12 @@
     "Class": "UScriptClass'BoxCollisionProxyComponent'",
     "Properties": {
       "Position": {
-        "X": -158.74715,
+        "X": -215.0,
         "Y": 0.0,
         "Z": 200.0
       },
       "Extents": {
-        "X": 412.6953,
+        "X": 300.0,
         "Y": 225.0,
         "Z": 200.0
       },
@@ -50,14 +50,14 @@
     "Class": "UScriptClass'BoxCollisionProxyComponent'",
     "Properties": {
       "Position": {
-        "X": -160.26689,
+        "X": -230.0,
         "Y": 0.0,
-        "Z": 118.747696
+        "Z": 150.0
       },
       "Extents": {
-        "X": 331.12045,
-        "Y": 22.074759,
-        "Z": 50.0
+        "X": 280.0,
+        "Y": 180.0,
+        "Z": 150.0
       },
       "SurfaceType": "EAnvilPhysicalSurfaceType::Wood",
       "CollisionMask": 8192,
@@ -159,8 +159,8 @@
     "Class": "UScriptClass'DestroyableProxyComponent'",
     "Properties": {
       "DestructionEffectEntity": {
-        "ObjectName": "BlueprintGeneratedClass'BatteringRamHusk_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Husks/BatteringRamHusk.1"
+        "ObjectName": "BlueprintGeneratedClass'CatapultHusk_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Husks/CatapultHusk.0"
       }
     }
   },
@@ -174,7 +174,8 @@
         "ObjectName": "BlueprintGeneratedClass'CatapultFootprint_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/FootprintAssets/CatapultFootprint.0"
       },
-      "CollisionMask": 256
+      "CollisionMask": 256,
+      "bVaultable": false
     }
   },
   {
@@ -183,8 +184,8 @@
     "Outer": "Default__Catapult_C",
     "Class": "UScriptClass'HealthProxyComponent'",
     "Properties": {
-      "MaxHealth": 150.0,
-      "TargetType": "EAnvilDamageTargetType::Horse"
+      "MaxHealth": 250.0,
+      "TargetType": "EAnvilDamageTargetType::Vehicle"
     }
   },
   {
@@ -230,6 +231,7 @@
       },
       "bHighArc": true,
       "bFixedAim": true,
+      "bRequirePrimedLoad": true,
       "PrimingTime": 5.0,
       "Weapon": {
         "ObjectName": "BlueprintGeneratedClass'CatapultWeapon_C'",

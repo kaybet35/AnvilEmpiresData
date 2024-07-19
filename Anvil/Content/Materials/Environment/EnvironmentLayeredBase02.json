@@ -12,6 +12,24 @@
       "ScalarParameterValues": [
         {
           "ParameterInfo": {
+            "Name": "Roughness Multiply",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.7,
+          "ExpressionGUID": "14FFC92F-48BD87E8-A2EE7789-4ADF1AC9"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Specular",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.3,
+          "ExpressionGUID": "2147EBA9-423E68E9-30024399-50BD8CCA"
+        },
+        {
+          "ParameterInfo": {
             "Name": "Mask 1",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
@@ -34,7 +52,7 @@
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 1.0,
+          "ParameterValue": 0.946172,
           "ExpressionGUID": "98F10D20-459969FF-3F36DD82-D4613625"
         },
         {
@@ -43,7 +61,7 @@
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 2.0,
+          "ParameterValue": 2.946575,
           "ExpressionGUID": "4D21ECD1-4DACA08B-22E126A2-6E9FB6EC"
         },
         {
@@ -52,7 +70,7 @@
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 1.0,
+          "ParameterValue": 0.622732,
           "ExpressionGUID": "6B4C4706-4DF06F66-6C4F49B7-0A824023"
         },
         {
@@ -61,7 +79,7 @@
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 1.0,
+          "ParameterValue": 0.987585,
           "ExpressionGUID": "341D1AE6-4671B5B3-F09952B1-79A92870"
         },
         {
@@ -104,18 +122,18 @@
       "VectorParameterValues": [
         {
           "ParameterInfo": {
-            "Name": "Height Map Selector",
+            "Name": "Colour Multiply",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           "ParameterValue": {
-            "R": 0.0,
-            "G": 0.0,
-            "B": 0.0,
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
             "A": 1.0,
-            "Hex": "000000"
+            "Hex": "FFFFFF"
           },
-          "ExpressionGUID": "D0711064-40B51D3F-E7339DA3-C55D11F4"
+          "ExpressionGUID": "C58E9A90-4E9C0B2D-806E9284-1D105D1C"
         }
       ],
       "TextureParameterValues": [
@@ -174,8 +192,8 @@
             "Index": -1
           },
           "ParameterValue": {
-            "ObjectName": "Texture2D'CliffTiling01A'",
-            "ObjectPath": "Anvil/Content/Textures/Environment/Rocks/CliffTiling01A.0"
+            "ObjectName": "Texture2D'TerrainFRock_A'",
+            "ObjectPath": "Anvil/Content/Textures/Environment/Terrain/TerrainFRock_A.0"
           },
           "ExpressionGUID": "4C9EAB48-464D0BD2-5B329EB2-5D4AAA10"
         },
@@ -186,8 +204,8 @@
             "Index": -1
           },
           "ParameterValue": {
-            "ObjectName": "Texture2D'CliffTiling01M'",
-            "ObjectPath": "Anvil/Content/Textures/Environment/Rocks/CliffTiling01M.0"
+            "ObjectName": "Texture2D'TerrainFRock_M'",
+            "ObjectPath": "Anvil/Content/Textures/Environment/Terrain/TerrainFRock_M.0"
           },
           "ExpressionGUID": "6E99A016-450D7CA2-50CF57B0-D58BA9E6"
         },
@@ -198,8 +216,8 @@
             "Index": -1
           },
           "ParameterValue": {
-            "ObjectName": "Texture2D'CliffTiling01N'",
-            "ObjectPath": "Anvil/Content/Textures/Environment/Rocks/CliffTiling01N.0"
+            "ObjectName": "Texture2D'TerrainFRock_N'",
+            "ObjectPath": "Anvil/Content/Textures/Environment/Terrain/TerrainFRock_N.0"
           },
           "ExpressionGUID": "0E8090C4-4C3E0566-F9D2D891-EE670809"
         },
@@ -210,8 +228,8 @@
             "Index": -1
           },
           "ParameterValue": {
-            "ObjectName": "Texture2D'MossA'",
-            "ObjectPath": "Anvil/Content/Textures/Environment/MossA.0"
+            "ObjectName": "Texture2D'TerrainFRock2_A'",
+            "ObjectPath": "Anvil/Content/Textures/Environment/Terrain/TerrainFRock2_A.0"
           },
           "ExpressionGUID": "30948E55-4CA13DE3-8201F9A2-8D219D16"
         },
@@ -222,8 +240,8 @@
             "Index": -1
           },
           "ParameterValue": {
-            "ObjectName": "Texture2D'MossM'",
-            "ObjectPath": "Anvil/Content/Textures/Environment/MossM.0"
+            "ObjectName": "Texture2D'TerrainFRock2_M'",
+            "ObjectPath": "Anvil/Content/Textures/Environment/Terrain/TerrainFRock2_M.0"
           },
           "ExpressionGUID": "DBDEA4C4-4826AB5A-2B8E2A8E-1A9F402F"
         },
@@ -234,8 +252,8 @@
             "Index": -1
           },
           "ParameterValue": {
-            "ObjectName": "Texture2D'MossN'",
-            "ObjectPath": "Anvil/Content/Textures/Environment/MossN.0"
+            "ObjectName": "Texture2D'TerrainFRock2_N'",
+            "ObjectPath": "Anvil/Content/Textures/Environment/Terrain/TerrainFRock2_N.0"
           },
           "ExpressionGUID": "8118F71D-46797188-ADD170B7-F79949D8"
         }
@@ -264,6 +282,26 @@
           "SamplingScale": 1.0,
           "UVChannelIndex": 0,
           "TextureName": "NoiseMask"
+        },
+        {
+          "SamplingScale": 2.0,
+          "UVChannelIndex": 0,
+          "TextureName": "RainDropMap"
+        },
+        {
+          "SamplingScale": 0.5,
+          "UVChannelIndex": 0,
+          "TextureName": "Snow_A"
+        },
+        {
+          "SamplingScale": 0.5,
+          "UVChannelIndex": 0,
+          "TextureName": "Snow_M"
+        },
+        {
+          "SamplingScale": 0.5,
+          "UVChannelIndex": 0,
+          "TextureName": "Snow_N"
         }
       ]
     },

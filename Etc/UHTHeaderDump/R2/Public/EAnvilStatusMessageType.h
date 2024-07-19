@@ -136,6 +136,7 @@ enum class EAnvilStatusMessageType : uint8 {
     PledgedToTown,
     VehicleCannotWorldEntranceTravel,
     MustBeResetBeforeFiring,
+    NoProjectileLoaded,
     NumTypes,
 };
 

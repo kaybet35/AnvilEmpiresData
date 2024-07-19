@@ -1469,6 +1469,7 @@ UMineProxyComponent = {}
 ---@field bPriming boolean
 ---@field bPrimed boolean
 ---@field bLoaded boolean
+---@field bFiring boolean
 ---@field AimYaw float
 ---@field AimPitch float
 UMountedWeaponDataComponent = {}
@@ -1479,6 +1480,7 @@ UMountedWeaponDataComponent = {}
 ---@field AimPivot FVector
 ---@field bHighArc boolean
 ---@field bFixedAim boolean
+---@field bRequirePrimedLoad boolean
 ---@field PrimingTime float
 ---@field Weapon TSubclassOf<UItemTemplate>
 UMountedWeaponProxyComponent = {}
@@ -2181,6 +2183,8 @@ UVehicleMovementDataComponent = {}
 ---@field bUsePitch boolean
 ---@field FrontAxleOffset FVector
 ---@field RearAxleOffset FVector
+---@field FallingDistRange FR2FloatRange
+---@field FallingDamageRange FR2FloatRange
 UVehicleMovementProxyComponent = {}
 
 
