@@ -13,6 +13,7 @@ UAnimalAttackProxyComponent::UAnimalAttackProxyComponent() {
     this->MinNumAttacks = 0;
     this->MaxNumAttacks = 0;
     this->AttackDamage = 0;
+    this->AttackDamageType = EAnvilDamageType::Slashing;
     this->bDoesFirstAttackFail = false;
 }
 

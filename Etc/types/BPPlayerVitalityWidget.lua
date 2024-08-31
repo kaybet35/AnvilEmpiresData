@@ -4,7 +4,7 @@
 ---@field HealthIcon UImage
 ---@field HungerIcon UImage
 ---@field StaminaIcon UImage
----@field TemperatureIcon UImage
+---@field StaminaIcon_1 UImage
 UBPPlayerVitalityWidget_C = {}
 
 

@@ -11,6 +11,7 @@ enum class EAnvilDamageType : uint8 {
     Siege,
     Water,
     Hands,
+    Unmitigated,
     Bleed,
     Decay,
     Admin,

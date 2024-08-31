@@ -3,6 +3,6 @@
 
 class UBPDeploymentScreen_C : public UDeploymentScreen
 {
-}; // Size: 0x2B8
+}; // Size: 0x2C0
 
 #endif

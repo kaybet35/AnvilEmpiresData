@@ -3,9 +3,9 @@
 
 class ABPVisTownWolfElite_C : public AVisAnimal
 {
-    class USkeletalMeshComponent* Fur;                                                // 0x04C8 (size: 0x8)
+    class USkeletalMeshComponent* Fur;                                                // 0x0518 (size: 0x8)
 
     void UserConstructionScript();
-}; // Size: 0x4D0
+}; // Size: 0x520
 
 #endif

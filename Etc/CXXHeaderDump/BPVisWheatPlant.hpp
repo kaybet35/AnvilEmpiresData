@@ -3,9 +3,9 @@
 
 class ABPVisWheatPlant_C : public AVisActor
 {
-    class UStaticMeshComponent* StaticMesh;                                           // 0x0450 (size: 0x8)
-    class USceneComponent* DefaultSceneRoot;                                          // 0x0458 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh;                                           // 0x04A0 (size: 0x8)
+    class USceneComponent* DefaultSceneRoot;                                          // 0x04A8 (size: 0x8)
 
-}; // Size: 0x460
+}; // Size: 0x4B0
 
 #endif

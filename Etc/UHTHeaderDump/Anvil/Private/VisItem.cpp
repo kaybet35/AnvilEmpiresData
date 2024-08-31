@@ -14,6 +14,7 @@ UVisItem::UVisItem() {
     this->UnarmedMeshLocation = EUnarmedItemMeshLocation::None;
     this->UnarmedMeshScale = 1.00f;
     this->AnimationIndex = -1;
+    this->SecondaryLaunchingProjectileOverride = NULL;
 }
 
 

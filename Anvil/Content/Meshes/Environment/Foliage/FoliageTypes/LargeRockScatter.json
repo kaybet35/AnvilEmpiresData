@@ -8,7 +8,7 @@
         "ObjectName": "StaticMesh'RockFormation01'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/RockFormation01.2"
       },
-      "UpdateGuid": "7C3AB8BE-446A75B2-892ED9BE-8F4FA77F",
+      "UpdateGuid": "6C68ECA4-48BB5272-F49798B0-E028E2B8",
       "AverageNormal": true,
       "GroundSlopeAngle": {
         "Min": 25.0,
@@ -45,9 +45,14 @@
       },
       "BodyInstance": {
         "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
-        "CollisionProfileName": "BlockAll",
+        "CollisionProfileName": "BlockingFoliage",
         "CollisionResponses": {
-          "ResponseArray": []
+          "ResponseArray": [
+            {
+              "Channel": "_Reserved",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
         }
       },
       "CollisionRadius": 1500.0,

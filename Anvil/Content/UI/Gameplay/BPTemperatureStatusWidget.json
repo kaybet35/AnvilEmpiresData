@@ -1,0 +1,271 @@
+[
+  {
+    "Type": "Border",
+    "Name": "Border_93",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.0,
+            "Hex": "FFFFFF"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPTemperatureStatusWidget_C:WidgetTree.Border_93.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.1"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPTemperatureStatusWidget_C:WidgetTree.CanvasPanel_20.CanvasPanelSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.4"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_93",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border'BPTemperatureStatusWidget_C:WidgetTree.Border_93'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.0"
+      },
+      "Content": {
+        "ObjectName": "Overlay'BPTemperatureStatusWidget_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.7"
+      }
+    }
+  },
+  {
+    "Type": "BPTemperatureStatusWidget_C",
+    "Name": "Default__BPTemperatureStatusWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.BPTemperatureStatusWidget_C'",
+    "Properties": {
+      "TemperatureWarmColour": {
+        "R": 0.938686,
+        "G": 0.201556,
+        "B": 0.048172,
+        "A": 1.0,
+        "Hex": "F87C3E"
+      },
+      "TemperatureColdColour": {
+        "R": 0.368627,
+        "G": 0.827451,
+        "B": 0.796079,
+        "A": 1.0,
+        "Hex": "A4EBE7"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_20",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPTemperatureStatusWidget_C:WidgetTree.CanvasPanel_20.CanvasPanelSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Outer": "CanvasPanel_20",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 24.0,
+          "Bottom": 24.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPTemperatureStatusWidget_C:WidgetTree.CanvasPanel_20'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.3"
+      },
+      "Content": {
+        "ObjectName": "Border'BPTemperatureStatusWidget_C:WidgetTree.Border_93'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.0"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "IconFillImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'HUDStatusTemperatureFill'",
+          "ObjectPath": "Anvil/Content/Textures/UI/HUD/HUDStatusTemperatureFill.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'BPTemperatureStatusWidget_C:WidgetTree.Overlay_0.OverlaySlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "IconImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'HUDStatusTemperature'",
+          "ObjectPath": "Anvil/Content/Textures/UI/HUD/HUDStatusTemperature.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'BPTemperatureStatusWidget_C:WidgetTree.Overlay_0.OverlaySlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.9"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'BPTemperatureStatusWidget_C:WidgetTree.Overlay_0.OverlaySlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.8"
+        },
+        {
+          "ObjectName": "OverlaySlot'BPTemperatureStatusWidget_C:WidgetTree.Overlay_0.OverlaySlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot'BPTemperatureStatusWidget_C:WidgetTree.Border_93.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.1"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "Overlay_0",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'BPTemperatureStatusWidget_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.7"
+      },
+      "Content": {
+        "ObjectName": "Image'BPTemperatureStatusWidget_C:WidgetTree.IconFillImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.5"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Outer": "Overlay_0",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'BPTemperatureStatusWidget_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.7"
+      },
+      "Content": {
+        "ObjectName": "Image'BPTemperatureStatusWidget_C:WidgetTree.IconImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.6"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPTemperatureStatusWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPTemperatureStatusWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.11"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'TemperatureStatusWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "IconImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPTemperatureStatusWidget_C'Default__BPTemperatureStatusWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPTemperatureStatusWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPTemperatureStatusWidget_C:WidgetTree.CanvasPanel_20'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPTemperatureStatusWidget.3"
+      }
+    }
+  }
+]

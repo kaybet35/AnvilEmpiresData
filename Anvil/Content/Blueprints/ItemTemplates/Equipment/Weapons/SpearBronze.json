@@ -32,8 +32,9 @@
       "ItemTags": [
         "EAnvilItemTag::PrimaryTool",
         "EAnvilItemTag::WeaponStorage",
-        "EAnvilItemTag::TwoHanded"
+        "EAnvilItemTag::HeavyTool"
       ],
+      "ItemPayloadType": "EAnvilItemPayloadType::Quality",
       "ItemDestroyedEffect": {
         "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
@@ -42,14 +43,57 @@
         "ObjectName": "BlueprintGeneratedClass'EffectSpearImpact_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectSpearImpact.0"
       },
-      "Encumberance": 50,
       "bRearmAfterConsumption": true,
-      "bRanged": true,
+      "bHasAlt": true,
+      "bAltIsRanged": true,
       "DamageOffset": {
-        "X": 80.0,
-        "Y": 0.0,
-        "Z": 75.0
+        "X": 131.0,
+        "Y": 18.0,
+        "Z": 93.0
       },
+      "AdditionalDamageOffsets": [
+        {
+          "X": 182.0,
+          "Y": 10.0,
+          "Z": 49.0
+        },
+        {
+          "X": 219.0,
+          "Y": 0.0,
+          "Z": -7.0
+        },
+        {
+          "X": 110.0,
+          "Y": 24.0,
+          "Z": 102.0
+        },
+        {
+          "X": 168.0,
+          "Y": 17.0,
+          "Z": 82.0
+        },
+        {
+          "X": 213.0,
+          "Y": 8.0,
+          "Z": 37.0
+        },
+        {
+          "X": 131.0,
+          "Y": 18.0,
+          "Z": 93.0
+        },
+        {
+          "X": 182.0,
+          "Y": 10.0,
+          "Z": 49.0
+        },
+        {
+          "X": 219.0,
+          "Y": 0.0,
+          "Z": -7.0
+        }
+      ],
+      "DamageOffsetCount": 3,
       "FireOffset": {
         "X": 50.0,
         "Y": 0.0,
@@ -65,14 +109,26 @@
       },
       "bStaggersWielder": true,
       "DamageType": "EAnvilDamageType::Piercing",
+      "bDoesNotArmWithHeavyArmour": true,
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
-        "Delay": 0.5,
-        "Duration": 1.1,
+        "bChainable": true,
+        "Delay": 0.15,
+        "AdditionalDelays": 0.21,
+        "AdditionalDelays": 0.25,
+        "AttackChainDelays": 0.74,
+        "AttackChainDelays": 0.79,
+        "AttackChainDelays": 0.83,
+        "AttackChainDelays": 0.74,
+        "AttackChainDelays": 0.8,
+        "AttackChainDelays": 0.84,
+        "Duration": 1.0,
+        "AttackChainDurations": 1.0,
+        "AttackChainDurations": 1.0,
         "RotationSpeedModifier": 3.5,
         "StaminaCost": 10.0
       },
-      "RangedActivity": {
+      "AltActivity": {
         "State": "EAnvilSimActivityState::LaunchingProjectile",
         "Delay": 0.7,
         "Duration": 1.1,
@@ -82,12 +138,16 @@
       "BuildActivity": {
         "bRepeatable": false
       },
-      "MaxEncumbranceforAction": 0.5,
-      "Damage": 20,
-      "DurabilityLossPerUse": 5.0,
-      "DamageRadius": 128.0,
+      "Damage": 28,
+      "DefaultMarketplaceValue": 10,
+      "DurabilityLossPerUse": 3.0,
+      "DamageRadius": 32.0,
       "AimMovementSpeedModifier": 0.5,
-      "AimRotationSpeedModifier": 3.5
+      "AimRotationSpeedModifier": 3.5,
+      "PrimaryMovementSpeedModifier": 0.6,
+      "SecondaryMovementSpeedModifier": 0.5,
+      "PrimaryChanceToPenetrateGuard": 0.3,
+      "SecondaryChanceToPenetrateGuard": 0.2
     }
   }
 ]

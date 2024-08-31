@@ -26,6 +26,14 @@ AAnvilWaterPlane = {}
 
 
 
+---@class ADynamicPrefab : AActor
+---@field CodeNameString FString
+---@field CodeName int32
+---@field ArrowComponent UArrowComponent
+ADynamicPrefab = {}
+
+
+
 ---@class AFootprint : AActor
 ---@field bAutoSet boolean
 ---@field bShowMesh boolean
@@ -91,6 +99,15 @@ FAnvilSimActivity = {}
 ---@field CodeName int32
 ---@field Count int32
 FBasicCount = {}
+
+
+
+---@class FBasicItemAndPayloadCount
+---@field CodeName TSubclassOf<UItemTemplate>
+---@field CodeNameVisVar int32
+---@field Payload uint8
+---@field Count int32
+FBasicItemAndPayloadCount = {}
 
 
 
@@ -275,7 +292,7 @@ FHousePledgedPlayerArray = {}
 ---@field Payload uint8
 ---@field StackLimit int32
 ---@field bIsDisabled boolean
----@field bTooEncumberedToEquip boolean
+---@field bCantArmDueToHeavyItem boolean
 ---@field BackgroundType EAnvilItemSlotBackgroundType
 FInventoryItem = {}
 
@@ -314,6 +331,14 @@ FItemSlot = {}
 
 
 
+---@class FLatticeMineProxyData
+---@field ChunkExtents FVector
+---@field GridDimensions FVector
+---@field ChunkTypes TMap<TSubclassOf<UEntityTemplate>, float>
+FLatticeMineProxyData = {}
+
+
+
 ---@class FLootTableItem
 ---@field ItemToDrop FItemCount
 ---@field NormalizedChanceToDrop float
@@ -348,6 +373,7 @@ FNightShroudLightSource = {}
 ---@field PledgedMilitiaInfo FPledgeInfoType
 ---@field AllowedToSpawnUnixTimeStamp int64
 ---@field OfflineCharacterServerName FString
+---@field bIsOfflineAtFamilyCenter boolean
 FPlayerAgeDeployData = {}
 
 
@@ -557,6 +583,7 @@ FWorldEntityEntry = {}
 
 ---@class FWorldEntityFamilyCenterData
 ---@field FamilyId int32
+---@field StoredFoodCounts TArray<FBasicItemAndPayloadCount>
 FWorldEntityFamilyCenterData = {}
 
 
@@ -570,8 +597,8 @@ FWorldEntityFamilyCenterData = {}
 ---@field NumUnclaimedHouses int32
 ---@field NumTotalTents int32
 ---@field NumUnclaimedTents int32
----@field NumReinforcementSupplies int32
 ---@field NumPledgedPlayers int32
+---@field StoredFoodCounts TArray<FBasicItemAndPayloadCount>
 ---@field bTownUnderAttack boolean
 ---@field bCallForReinforcements boolean
 FWorldEntityTownHallData = {}
@@ -654,6 +681,7 @@ UAnimalAIProxyComponent = {}
 ---@field MinNumAttacks uint8
 ---@field MaxNumAttacks uint8
 ---@field AttackDamage int32
+---@field AttackDamageType EAnvilDamageType
 ---@field bDoesFirstAttackFail boolean
 UAnimalAttackProxyComponent = {}
 
@@ -820,6 +848,7 @@ UBeaconTowerProxyComponent = {}
 ---@field Extents FVector
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
+---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
 UBoxCollisionProxyComponent = {}
@@ -879,6 +908,7 @@ UCannonProxyComponent = {}
 ---@field HalfHeight float
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
+---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
 UCapsuleCollisionProxyComponent = {}
@@ -902,6 +932,7 @@ UChatMessage = {}
 ---@class UCollisionProxyComponent : UProxyComponent
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
+---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
 UCollisionProxyComponent = {}
@@ -982,6 +1013,7 @@ UDataComponent = {}
 ---@field bEnabled boolean
 ---@field StartDelayHours float
 ---@field DecayTimeHours float
+---@field bForceDecayPreventionFromTown boolean
 UDecayProxyComponent = {}
 
 
@@ -1006,6 +1038,18 @@ UDestroyableProxyComponent = {}
 ---@field DesiredTempRange FR2FloatRange
 ---@field QualityChangeTime float
 UDryingRackProxyComponent = {}
+
+
+
+---@class UDynamicPrefabDataComponent : UDataComponent
+---@field PrefabCodeName int32
+UDynamicPrefabDataComponent = {}
+
+
+
+---@class UDynamicPrefabProxyComponent : UProxyComponent
+---@field PrefabCodeName TSubclassOf<ADynamicPrefab>
+UDynamicPrefabProxyComponent = {}
 
 
 
@@ -1143,6 +1187,7 @@ UFishResourceProxyComponent = {}
 ---@field bUseMeshAsFootprint boolean
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
+---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
 UFootprintCollisionProxyComponent = {}
@@ -1298,7 +1343,6 @@ UInventoryProxyComponent = {}
 ---@field ItemDestroyedEffect TSubclassOf<UEntityTemplate>
 ---@field ItemInvokedEffect TSubclassOf<UEntityTemplate>
 ---@field ItemHitEffect TSubclassOf<UEntityTemplate>
----@field Encumberance uint8
 ---@field ArmedDurabilityLossPerSec float
 ---@field bRearmAfterConsumption boolean
 ---@field bRearmSkipsEquipActivity boolean
@@ -1306,6 +1350,7 @@ UInventoryProxyComponent = {}
 ---@field CooledItem TSubclassOf<UItemTemplate>
 ---@field bRanged boolean
 ---@field bHasAlt boolean
+---@field bAltIsRanged boolean
 ---@field DamageOffset FVector
 ---@field AdditionalDamageOffsets TArray<FVector>
 ---@field DamageOffsetCount uint32
@@ -1324,9 +1369,14 @@ UInventoryProxyComponent = {}
 ---@field FoodType EAnvilFoodType
 ---@field bDoesSpoil boolean
 ---@field SpoilageDurabilityLossPerSec float
+---@field bDoesNotArmWithHeavyItem boolean
+---@field bDoesNotArmWithHeavyArmour boolean
+---@field bIsHeavyArmour boolean
+---@field AltTransitionTime float
 ---@field RequiredStance EAnvilCharacterStance
 ---@field StanceOverride TMap<EAnvilCharacterStance, TSubclassOf<UItemTemplate>>
 ---@field DefaultActivity FAnvilSimActivity
+---@field AltActivity FAnvilSimActivity
 ---@field RangedActivity FAnvilSimActivity
 ---@field BuildActivity FAnvilSimActivity
 ---@field GatherActivity FAnvilSimActivity
@@ -1334,7 +1384,6 @@ UInventoryProxyComponent = {}
 ---@field DeployedBuildSite TSubclassOf<UEntityTemplate>
 ---@field NightShroudLightRadius float
 ---@field bAllowCameraPan boolean
----@field MaxEncumbranceforAction float
 ---@field StunChance float
 ---@field StunDuration float
 ---@field StunThrowDistance float
@@ -1355,9 +1404,14 @@ UInventoryProxyComponent = {}
 ---@field ShieldDurabilityLossMultiplier float
 ---@field GuardMeterCostPerHit float
 ---@field ArmorMitigation uint8
+---@field StabilityDamage float
 ---@field ToolEffectiveness float
 ---@field AimMovementSpeedModifier float
 ---@field AimRotationSpeedModifier float
+---@field PrimaryMovementSpeedModifier float
+---@field SecondaryMovementSpeedModifier float
+---@field PrimaryChanceToPenetrateGuard float
+---@field SecondaryChanceToPenetrateGuard float
 UItemTemplate = {}
 
 
@@ -1374,6 +1428,12 @@ UItemTemplate = {}
 ---@field PlayerFallDamage float
 ---@field LadderFallDamage float
 ULadderProxyComponent = {}
+
+
+
+---@class ULatticeMineProxyComponent : UProxyComponent
+---@field Data FLatticeMineProxyData
+ULatticeMineProxyComponent = {}
 
 
 
@@ -1441,6 +1501,7 @@ UMarketShopProxyComponent = {}
 ---@field ProjectToLandscape uint8
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
+---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
 UMeshCollisionProxyComponent = {}
@@ -1449,6 +1510,7 @@ UMeshCollisionProxyComponent = {}
 
 ---@class UMeshVisibilityDataComponent : UDataComponent
 ---@field bIsVisible boolean
+---@field bGroup2IsVisible boolean
 UMeshVisibilityDataComponent = {}
 
 
@@ -1515,6 +1577,7 @@ UPackingProxyComponent = {}
 ---@field Extents FVector
 ---@field Damage float
 ---@field Frequency float
+---@field DamageType EAnvilDamageType
 UPassiveDamageProxyComponent = {}
 
 
@@ -1858,8 +1921,8 @@ USeekerProxyComponent = {}
 ---@field Velocity FVector
 ---@field GuardStrength uint8
 ---@field TeamId uint8
----@field Encumbrance uint8
 ---@field GuardMeter float
+---@field Stability float
 ---@field CurrentActivitySpeedModifier float
 ---@field CurrentActivityChainIndex uint8
 ---@field ActivityState EAnvilSimActivityState
@@ -1878,13 +1941,16 @@ USeekerProxyComponent = {}
 ---@field NobleVoteId int64
 ---@field TrappedTimer float
 ---@field StaggerTimer float
+---@field bStaggered boolean
 ---@field bIsAiming boolean
 ---@field bIsGuarding boolean
 ---@field bIsAdmin boolean
 ---@field bPriming boolean
 ---@field bInTravelZone boolean
 ---@field bAltAttackMode boolean
+---@field bAltShieldMode boolean
 ---@field bIsMeshHidden boolean
+---@field bIsReinforcing boolean
 ---@field SecondsUntilFullDecay float
 ---@field HeldItemLightSourceRadius float
 ---@field LightSourceData TArray<FNightShroudLightSource>
@@ -1897,7 +1963,12 @@ USimPlayerDataComponent = {}
 
 
 ---@class USimPlayerProxyComponent : UProxyComponent
----@field GuardAngleTolerance float
+---@field GuardAngleToleranceYaw float
+---@field GuardAngleTolerancePitchMin float
+---@field GuardAngleTolerancePitchMax float
+---@field GuardAngleToleranceYawAlt float
+---@field GuardAngleTolerancePitchMinAlt float
+---@field GuardAngleTolerancePitchMaxAlt float
 ---@field GuardMeterRegenCD float
 ---@field GuardMeterEmptyRegenCD float
 ---@field GuardMeterRegenSpeed float
@@ -1931,6 +2002,7 @@ USimPlayerProxyComponent = {}
 ---@field bPointOnLine boolean
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
+---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
 USnapPointProxyComponent = {}
@@ -1953,7 +2025,6 @@ USplineDataComponent = {}
 ---@field MaxSplineLength float
 ---@field SlopeMax float
 ---@field FlatSlope float
----@field bScaleCost boolean
 ---@field bPlatformMode boolean
 ---@field bBridgeMode boolean
 ---@field PlatformStartOffset FVector
@@ -1963,6 +2034,7 @@ USplineDataComponent = {}
 ---@field SnappingChannel EAnvilSnappingChannelType
 ---@field SurfaceType EAnvilPhysicalSurfaceType
 ---@field CollisionMask int32
+---@field Tags int32
 ---@field StepAngle float
 ---@field bVaultable boolean
 USplineProxyComponent = {}
@@ -2088,7 +2160,6 @@ UTemperatureProxyComponent = {}
 ---@field NumUnclaimedHouses int32
 ---@field NumTotalTents int32
 ---@field NumUnclaimedTents int32
----@field NumReinforcementSupplies int32
 ---@field NumMarketplaces int32
 ---@field TownNameId uint8
 ---@field TownNameOrdinal uint8
@@ -2136,6 +2207,15 @@ UTweakableDataComponent = {}
 
 ---@class UTweakableProxyComponent : UProxyComponent
 UTweakableProxyComponent = {}
+
+
+---@class UUnderworldModuleProxyComponent : UProxyComponent
+---@field bIsStatic boolean
+---@field EdgeList TArray<EAnvilUnderworldModuleEdgeType>
+---@field NumDynamicModulesMin int32
+---@field NumDynamicModulesMax int32
+UUnderworldModuleProxyComponent = {}
+
 
 
 ---@class UUpgradeDataComponent : UDataComponent
@@ -2212,6 +2292,7 @@ UVehicleSeatProxyComponent = {}
 ---@field CustomGeneratedCollisionMask int32
 ---@field VisMeshProfile EVisMeshProfile
 ---@field bMeshVisibility boolean
+---@field bMeshVisibilityGroup2 boolean
 UVisStaticMeshComponentBase = {}
 
 

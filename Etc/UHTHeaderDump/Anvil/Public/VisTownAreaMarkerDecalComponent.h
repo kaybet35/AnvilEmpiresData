@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DecalComponent -FallbackName=DecalComponent
-//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilFactionId -FallbackName=EAnvilFactionId
 #include "VisTownAreaMarkerDecalComponent.generated.h"
 
 class UMaterialInterface;
@@ -23,8 +22,5 @@ private:
 public:
     UVisTownAreaMarkerDecalComponent(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable)
-    void SetRangeParameters(const EAnvilFactionId FactionId, float Radius);
-    
 };
 

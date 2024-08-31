@@ -3,8 +3,8 @@
 
 class ABPVisCosmeticStructBarrels_C : public AVisRefinery
 {
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x04D0 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0520 (size: 0x8)
 
-}; // Size: 0x4D8
+}; // Size: 0x528
 
 #endif

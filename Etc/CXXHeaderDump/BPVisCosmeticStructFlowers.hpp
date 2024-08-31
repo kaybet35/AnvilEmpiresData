@@ -3,14 +3,14 @@
 
 class ABPVisCosmeticStructFlowers_C : public AVisRefinery
 {
-    class UVisStaticMeshComponent* Flower6;                                           // 0x04D0 (size: 0x8)
-    class UVisStaticMeshComponent* Flower5;                                           // 0x04D8 (size: 0x8)
-    class UVisStaticMeshComponent* Flower4;                                           // 0x04E0 (size: 0x8)
-    class UVisStaticMeshComponent* Flower3;                                           // 0x04E8 (size: 0x8)
-    class UVisStaticMeshComponent* Flower2;                                           // 0x04F0 (size: 0x8)
-    class UVisStaticMeshComponent* Flower1;                                           // 0x04F8 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0500 (size: 0x8)
+    class UVisStaticMeshComponent* Flower6;                                           // 0x0520 (size: 0x8)
+    class UVisStaticMeshComponent* Flower5;                                           // 0x0528 (size: 0x8)
+    class UVisStaticMeshComponent* Flower4;                                           // 0x0530 (size: 0x8)
+    class UVisStaticMeshComponent* Flower3;                                           // 0x0538 (size: 0x8)
+    class UVisStaticMeshComponent* Flower2;                                           // 0x0540 (size: 0x8)
+    class UVisStaticMeshComponent* Flower1;                                           // 0x0548 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0550 (size: 0x8)
 
-}; // Size: 0x508
+}; // Size: 0x558
 
 #endif

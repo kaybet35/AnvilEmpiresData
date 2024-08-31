@@ -3,8 +3,8 @@
 
 class ABPVisItemStash_C : public AVisItemStash
 {
-    class UStaticMeshComponent* StorageChestT1;                                       // 0x0460 (size: 0x8)
+    class UStaticMeshComponent* StorageChestT1;                                       // 0x04B0 (size: 0x8)
 
-}; // Size: 0x468
+}; // Size: 0x4B8
 
 #endif

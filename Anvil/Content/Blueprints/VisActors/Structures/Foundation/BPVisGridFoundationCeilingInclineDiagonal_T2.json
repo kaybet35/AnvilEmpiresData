@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisGridFoundationCeilingInclineDiagonal_T2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.12"
       }
     },
     "SuperStruct": {
@@ -22,7 +22,7 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "FootprintMesh",
+        "Name": "VisStaticMesh1",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -40,17 +40,6 @@
         "PropertyClass": {
           "ObjectName": "Class'MeshVisibilityDataComponent'",
           "ObjectPath": "/Script/R2"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "VisStaticMesh1",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStaticMeshComponent'",
-          "ObjectPath": "/Script/Anvil"
         }
       }
     ],
@@ -76,7 +65,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisGridFoundationCeilingInclineDiagonal_T2_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.17"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconGridFoundation_CeilignIncline'",
@@ -87,7 +76,7 @@
       "BuildSiteVisibility": "EBuildSiteVisibility::Never",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisGridFoundationCeilingInclineDiagonal_T2_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.16"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisGridFoundationCeilingInclineDiagonal_T2_C:HealthDataComponent'",
@@ -95,11 +84,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisGridFoundationCeilingInclineDiagonal_T2_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.15"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisGridFoundationCeilingInclineDiagonal_T2_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.14"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisGridFoundationCeilingInclineDiagonal_T2_C:ScorchDataComponent'",
@@ -118,6 +107,7 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.4"
       },
       "GeneratedScorchEffects": 8,
+      "UseWindowType": "EHUDWindowType::GenericStructure",
       "VisDisplayName": {
         "Namespace": "",
         "Key": "64DF4B574CF08B184EF056AF3423E8BB",
@@ -136,7 +126,6 @@
         "SourceString": "Use mouse to raise and lower this structure",
         "LocalizedString": "Use mouse to raise and lower this structure"
       },
-      "UseWindowType": "EHUDWindowType::GenericStructure",
       "bHasLandscapeCollisions": true,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationCeilingInclineDiagonal_T2_C:ArrowComponent'",
@@ -169,7 +158,7 @@
       "bDeferGrassUpdate": true,
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisGridFoundationCeilingInclineDiagonal_T2_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.13"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationCeilingInclineDiagonal_T2_C:ArrowComponent'",
@@ -221,26 +210,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisStaticMeshComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisGridFoundationCeilingInclineDiagonal_T2_C:VisStaticMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.20"
-      },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "011229F7-4C949998-E81662A4-C278BB1C",
-      "InternalVariableName": "VisStaticMesh1"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_2",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -259,7 +228,7 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_3",
+    "Name": "SCS_Node_4",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
@@ -268,13 +237,13 @@
         "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisGridFoundationCeilingInclineDiagonal_T2_C:FootprintMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.19"
+        "ObjectName": "VisStaticMeshComponent'BPVisGridFoundationCeilingInclineDiagonal_T2_C:VisStaticMesh1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.18"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
-      "VariableGuid": "483FE9B1-48047D0B-3FDC72A1-0A0D27E6",
-      "InternalVariableName": "FootprintMesh"
+      "VariableGuid": "DBD88EED-4D5523C9-9F682486-21FB4EC4",
+      "InternalVariableName": "VisStaticMesh1"
     }
   },
   {
@@ -285,30 +254,22 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInclineDiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInclineDiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.10"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInclineDiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInclineDiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.11"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInclineDiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.12"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInclineDiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInclineDiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.10"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInclineDiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInclineDiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.11"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInclineDiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInclineDiagonal_T2.12"
         }
       ],
       "DefaultSceneRootNode": {
@@ -355,31 +316,6 @@
   },
   {
     "Type": "VisStaticMeshComponent",
-    "Name": "FootprintMesh_GEN_VARIABLE",
-    "Outer": "BPVisGridFoundationCeilingInclineDiagonal_T2_C",
-    "Class": "UScriptClass'VisStaticMeshComponent'",
-    "Properties": {
-      "bUseCustomGeneratedCollisionMask": true,
-      "CustomGeneratedCollisionMask": 256,
-      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'GridFoundation_ceiling_incline_diagonal_footprintBox'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/GridFoundation_ceiling_incline_diagonal_footprintBox.2"
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 300.0
-      },
-      "bVisible": false,
-      "ComponentTags": [
-        "Structure",
-        "Collision"
-      ]
-    }
-  },
-  {
-    "Type": "VisStaticMeshComponent",
     "Name": "VisStaticMesh1_GEN_VARIABLE",
     "Outer": "BPVisGridFoundationCeilingInclineDiagonal_T2_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
@@ -396,8 +332,8 @@
           "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
         },
         {
-          "ObjectName": "MaterialInstanceConstant'LDGrid03'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGrid03.0"
+          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
+          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
         }
       ],
       "ComponentTags": [

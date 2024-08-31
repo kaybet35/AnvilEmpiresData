@@ -3,11 +3,11 @@
 
 class UBPPlayerVitalityWidget_C : public UVitalityStatusWidget
 {
-    class UImage* HealthIcon;                                                         // 0x02F0 (size: 0x8)
-    class UImage* HungerIcon;                                                         // 0x02F8 (size: 0x8)
-    class UImage* StaminaIcon;                                                        // 0x0300 (size: 0x8)
-    class UImage* TemperatureIcon;                                                    // 0x0308 (size: 0x8)
+    class UImage* HealthIcon;                                                         // 0x02C8 (size: 0x8)
+    class UImage* HungerIcon;                                                         // 0x02D0 (size: 0x8)
+    class UImage* StaminaIcon;                                                        // 0x02D8 (size: 0x8)
+    class UImage* StaminaIcon_1;                                                      // 0x02E0 (size: 0x8)
 
-}; // Size: 0x310
+}; // Size: 0x2E8
 
 #endif

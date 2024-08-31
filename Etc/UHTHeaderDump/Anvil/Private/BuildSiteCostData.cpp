@@ -16,5 +16,6 @@ FBuildSiteCostData::FBuildSiteCostData() {
     this->Nails = 0;
     this->Mortar = 0;
     this->Gravel = 0;
+    this->AnimalRope = 0;
 }
 

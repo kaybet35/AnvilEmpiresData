@@ -9,6 +9,7 @@ enum class EAnvilMapId : uint8 {
     Calligo01,
     SandboxUnderworld,
     CalligoUnderworld01,
+    SandboxUnderworld02,
     Trailer,
     NumTypes,
 };

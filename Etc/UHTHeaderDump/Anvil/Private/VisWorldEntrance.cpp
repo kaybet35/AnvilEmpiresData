@@ -4,6 +4,7 @@
 
 AVisWorldEntrance::AVisWorldEntrance(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RootComponent = CreateDefaultSubobject<UArrowComponent>(TEXT("ArrowComponent"));
+    this->bNoCheckOnCeilVisibility = true;
     this->ArrowComponent = (UArrowComponent*)RootComponent;
     this->GrassRemovalVolume = CreateDefaultSubobject<UGrassRemovalVolumeComponent>(TEXT("GrassRemovalVolume"));
     this->GrassRemovalVolume->SetupAttachment(RootComponent);

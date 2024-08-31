@@ -3,6 +3,6 @@
 
 class UBPAlertWidget_C : public UAlertWidget
 {
-}; // Size: 0x2C8
+}; // Size: 0x2D0
 
 #endif

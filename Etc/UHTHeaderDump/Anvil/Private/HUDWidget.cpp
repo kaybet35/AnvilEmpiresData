@@ -22,8 +22,6 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->GuardStrengthLeftIcon = NULL;
     this->GuardStrengthCenterIcon = NULL;
     this->GuardStrengthRightIcon = NULL;
-    this->EncumbranceIcon = NULL;
-    this->EncumbranceText = NULL;
     this->PlayerStatusText = NULL;
     this->WinConditionCanvas = NULL;
     this->WinConditionText = NULL;
@@ -41,6 +39,7 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->InteractionProgressBar2 = NULL;
     this->WeatherStatsText = NULL;
     this->BorderRegionIndicatorText = NULL;
+    this->ReinforcementStatus = NULL;
 }
 
 

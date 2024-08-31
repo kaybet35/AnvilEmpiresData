@@ -21,6 +21,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bMeshVisibility;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bMeshVisibilityGroup2;
+    
 public:
     UVisStaticMeshComponentBase(const FObjectInitializer& ObjectInitializer);
 

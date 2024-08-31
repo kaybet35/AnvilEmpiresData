@@ -4,6 +4,7 @@
 #include "DeploymentScreen.generated.h"
 
 class UAnvilButtonWidget;
+class UDeploymentFoodWidget;
 class UDeploymentMapWidget;
 class UTextBlock;
 
@@ -20,6 +21,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* DeploymentInstructionOrSpawnTimerText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UDeploymentFoodWidget* DeploymentFoodWidget;
     
 public:
     UDeploymentScreen();

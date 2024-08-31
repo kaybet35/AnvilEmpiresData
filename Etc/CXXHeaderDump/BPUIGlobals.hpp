@@ -3,6 +3,6 @@
 
 class ABPUIGlobals_C : public AUIGlobals
 {
-}; // Size: 0x3B8
+}; // Size: 0x458
 
 #endif

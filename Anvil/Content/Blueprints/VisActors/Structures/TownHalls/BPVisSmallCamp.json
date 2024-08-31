@@ -202,6 +202,10 @@
         "ObjectName": "TownHallDataComponent'Default__BPVisSmallCamp_C:TownHallDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/TownHalls/BPVisSmallCamp.33"
       },
+      "TownAreaMarkerDecal": {
+        "ObjectName": "VisTownAreaMarkerDecalComponent'Default__BPVisSmallCamp_C:TownAreaMarkerDecal'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/TownHalls/BPVisSmallCamp.40"
+      },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisSmallCamp_C:ScaffoldingComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/TownHalls/BPVisSmallCamp.35"
@@ -243,6 +247,23 @@
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisSmallCamp_C:GrassRemovalVolume'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/TownHalls/BPVisSmallCamp.6"
       },
+      "MapIconProperty": {
+        "Icon": {
+          "ObjectName": "Texture2D'IconCampTent'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconCampTent.0"
+        },
+        "MapModeIconOverrides": [
+          {
+            "Key": "EMapMode::MilitiaDeployment",
+            "Value": {
+              "ObjectName": "Texture2D'DeploymentMilitiaIcon'",
+              "ObjectPath": "Anvil/Content/Textures/UI/Map/DeploymentMilitiaIcon.0"
+            }
+          }
+        ],
+        "MapActorType": "EMapIconType::CampTownCenter"
+      },
+      "UseWindowType": "EHUDWindowType::TownCenter",
       "VisDisplayName": {
         "Namespace": "",
         "Key": "7A83F3A64066BFE2EAE0388E9BCBB9F4",
@@ -261,23 +282,6 @@
         "SourceString": "This structure decays very quickly",
         "LocalizedString": "This structure decays very quickly"
       },
-      "MapIconProperty": {
-        "Icon": {
-          "ObjectName": "Texture2D'IconCampTent'",
-          "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconCampTent.0"
-        },
-        "MapModeIconOverrides": [
-          {
-            "Key": "EMapMode::MilitiaDeployment",
-            "Value": {
-              "ObjectName": "Texture2D'DeploymentMilitiaIcon'",
-              "ObjectPath": "Anvil/Content/Textures/UI/Map/DeploymentMilitiaIcon.0"
-            }
-          }
-        ],
-        "MapActorType": "EMapIconType::CampTownCenter"
-      },
-      "UseWindowType": "EHUDWindowType::TownCenter",
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisSmallCamp_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/TownHalls/BPVisSmallCamp.0"
@@ -1285,6 +1289,18 @@
         "Pitch": -90.0,
         "Yaw": 0.0,
         "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "VisTownAreaMarkerDecalComponent",
+    "Name": "TownAreaMarkerDecal",
+    "Outer": "Default__BPVisSmallCamp_C",
+    "Class": "UScriptClass'VisTownAreaMarkerDecalComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSmallCamp_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/TownHalls/BPVisSmallCamp.0"
       }
     }
   }

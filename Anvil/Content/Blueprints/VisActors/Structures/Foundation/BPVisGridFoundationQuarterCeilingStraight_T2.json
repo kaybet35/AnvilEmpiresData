@@ -22,17 +22,6 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "MeshVisibilityData",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'MeshVisibilityDataComponent'",
-          "ObjectPath": "/Script/R2"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "VisStaticMesh1",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -40,6 +29,17 @@
         "PropertyClass": {
           "ObjectName": "Class'VisStaticMeshComponent'",
           "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MeshVisibilityData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MeshVisibilityDataComponent'",
+          "ObjectPath": "/Script/R2"
         }
       }
     ],
@@ -106,6 +106,7 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationQuarterCeilingStraight_T2.4"
       },
       "GeneratedScorchEffects": 8,
+      "UseWindowType": "EHUDWindowType::GenericStructure",
       "VisDisplayName": {
         "Namespace": "",
         "Key": "1C2F1AAE472DB20BCBB6889899DD6A3E",
@@ -124,7 +125,6 @@
         "SourceString": "Use mouse to raise and lower this structure",
         "LocalizedString": "Use mouse to raise and lower this structure"
       },
-      "UseWindowType": "EHUDWindowType::GenericStructure",
       "bHasLandscapeCollisions": true,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationQuarterCeilingStraight_T2_C:ArrowComponent'",
@@ -209,26 +209,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisStaticMeshComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisGridFoundationQuarterCeilingStraight_T2_C:VisStaticMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationQuarterCeilingStraight_T2.18"
-      },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "011229F7-4C949998-E81662A4-C278BB1C",
-      "InternalVariableName": "VisStaticMesh1"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_2",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -246,6 +226,26 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisGridFoundationQuarterCeilingStraight_T2_C:VisStaticMesh1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationQuarterCeilingStraight_T2.18"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "79F531EF-419DF2F2-0A09909A-44286759",
+      "InternalVariableName": "VisStaticMesh1"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPVisGridFoundationQuarterCeilingStraight_T2_C",
@@ -253,21 +253,21 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationQuarterCeilingStraight_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationQuarterCeilingStraight_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationQuarterCeilingStraight_T2.10"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationQuarterCeilingStraight_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationQuarterCeilingStraight_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationQuarterCeilingStraight_T2.11"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationQuarterCeilingStraight_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationQuarterCeilingStraight_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationQuarterCeilingStraight_T2.10"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationQuarterCeilingStraight_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationQuarterCeilingStraight_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationQuarterCeilingStraight_T2.11"
         }
       ],
@@ -330,13 +330,11 @@
           "ObjectName": "MaterialInstanceConstant'LDGridT2'",
           "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
         },
-        null
+        {
+          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
+          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
+        }
       ],
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 300.0
-      },
       "ComponentTags": [
         "ToggleVisibility",
         "Structure",

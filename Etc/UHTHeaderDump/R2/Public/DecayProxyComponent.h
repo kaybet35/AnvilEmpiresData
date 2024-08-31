@@ -16,6 +16,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DecayTimeHours;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bForceDecayPreventionFromTown;
+    
     UDecayProxyComponent();
 
 };

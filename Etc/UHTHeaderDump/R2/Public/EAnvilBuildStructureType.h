@@ -7,6 +7,8 @@ enum class EAnvilBuildStructureType : uint8 {
     Monolithic,
     Foundations,
     Modular,
+    FoundationCeiling,
+    FoundationWall,
     FoundationModular,
     MonolithicModular,
 };

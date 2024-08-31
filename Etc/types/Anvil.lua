@@ -107,7 +107,9 @@ AMainMenuPlayerController = {}
 
 
 ---@class AMapBorderActor : ACameraActor
----@field bPreCapture boolean
+---@field CaptureChunkCoordinate FIntPoint
+---@field bContinueFromGivenChunk boolean
+---@field bCaptureWholeGrid boolean
 ---@field bCapture boolean
 ---@field BoxVisualizer UStaticMeshComponent
 AMapBorderActor = {}
@@ -190,26 +192,37 @@ AServerPartition = {}
 ---@field IconTemplates TMap<EMapIconType, FMapIconTypeProperty>
 ---@field WorldEntityIconClasses TMap<EAnvilWorldEntityType, TSubclassOf<UWorldEntityMapIcon>>
 ---@field QualityIconTextures TMap<EAnvilItemQualityType, UTexture2D>
+---@field OnlineStatusIconMap TMap<EAnvilPlayerOnlineStatus, UTexture2D>
+---@field OnlineStatusColorMap TMap<EAnvilPlayerOnlineStatus, FSlateColor>
 AUIGlobals = {}
 
 
 
+---@class AUnderworldModuleDynamicPrefab : ADynamicPrefab
+AUnderworldModuleDynamicPrefab = {}
+
+
 ---@class AVisActor : AVisActorBase
----@field VisDisplayName FText
----@field Description FText
----@field DescriptionFooter FText
 ---@field MapIconProperty FMapIconInstanceProperty
 ---@field UseWindowType EHUDWindowType
 ---@field UseDisclaimerText FText
 ---@field bUseForceCameraZoom boolean
 ---@field AdditionalActionButtons TArray<EActionButtonType>
 ---@field bNightVisibility boolean
+---@field bNoCheckOnCeilVisibility boolean
 ---@field bUseInteractionOutline boolean
 ---@field InteractionIcon UTexture2D
 ---@field AnimSpeed float
 ---@field AnimRotationalSpeed FRotator
 ---@field AnimVelocity FVector
 ---@field TemplateCDO UEntityTemplate
+---@field VisDisplayName FText
+---@field Description FText
+---@field DescriptionFooter FText
+---@field bGenerateFoundationDescription boolean
+---@field FoundationShapeName FText
+---@field FoundationGroupName FText
+---@field FoundationVariantName FText
 ---@field MeshVisibilityDataComponent UMeshVisibilityDataComponent
 ---@field PositionSmoothSpeed float
 ---@field RotationSmoothSpeed float
@@ -607,6 +620,7 @@ AVisRelicTechCenter = {}
 ---@field PlantGrowthComponent UPlantGrowthDataComponent
 ---@field StageMeshes TArray<UStaticMesh>
 ---@field bApplyIdBasedRandomRotation boolean
+---@field bProjectAndRotateToLandscape boolean
 ---@field ArrowComponent UArrowComponent
 ---@field Mesh UStaticMeshComponent
 ---@field ShakeCurve UCurveVector
@@ -672,6 +686,7 @@ function AVisStructure:UpdateVisualComponentsByTag(Tag, bIsVisible) end
 
 ---@class AVisTownCenter : AVisStructure
 ---@field TownHallDataComponent UTownHallDataComponent
+---@field TownAreaMarkerDecal UVisTownAreaMarkerDecalComponent
 AVisTownCenter = {}
 
 
@@ -682,6 +697,19 @@ AVisTownCenter = {}
 ---@field TriggeredAnimation UAnimationAsset
 ---@field TrapDataComponent UTrapDataComponent
 AVisTrap = {}
+
+
+
+---@class AVisUnderworldModule : AVisActor
+---@field ArrowComponent UArrowComponent
+AVisUnderworldModule = {}
+
+
+
+---@class AVisUnderworldModuleDynamic : AVisUnderworldModule
+---@field DynamicPrefabDataComponent UDynamicPrefabDataComponent
+---@field SpawnedDynamicPrefab ADynamicPrefab
+AVisUnderworldModuleDynamic = {}
 
 
 
@@ -808,6 +836,7 @@ FAutoMoveState = {}
 ---@field Nails int16
 ---@field Mortar int16
 ---@field Gravel int16
+---@field AnimalRope int16
 FBuildSiteCostData = {}
 
 
@@ -902,6 +931,14 @@ FDeleteProfileResponse = {}
 
 
 
+---@class FDeploymentFoodItem
+---@field ItemBase FGridItem
+---@field Count int32
+---@field bIsWildSpawn boolean
+FDeploymentFoodItem = {}
+
+
+
 ---@class FEquipmentData : FTableRowBase
 ---@field DurabilityLossPerUse float
 ---@field DamageRadius float
@@ -911,9 +948,14 @@ FDeleteProfileResponse = {}
 ---@field ShieldDurabilityLossMultiplier float
 ---@field GuardMeterCostPerHit float
 ---@field ArmorMitigation uint8
+---@field StabilityDamage float
 ---@field ToolEffectiveness float
 ---@field AimMovementSpeedModifier float
 ---@field AimRotationSpeedModifier float
+---@field PrimaryMovementSpeedModifier float
+---@field SecondaryMovementSpeedModifier float
+---@field PrimaryChanceToPenetrateGuard float
+---@field SecondaryChanceToPenetrateGuard float
 FEquipmentData = {}
 
 
@@ -980,12 +1022,11 @@ FLoreData = {}
 ---@class FMapData
 ---@field MapId EAnvilMapId
 ---@field bIsSecondaryWorld boolean
----@field WorldSize FVector2D
+---@field PlayableWorldSize FVector2D
 ---@field WorldOrigin FVector2D
----@field CapturePadding FVector2D
+---@field GridDimension FIntPoint
+---@field Scale float
 ---@field MapImage UTexture2D
----@field MapTerritoryMask UTexture2D
----@field MapTreeLayerImage UTexture2D
 FMapData = {}
 
 
@@ -1491,6 +1532,12 @@ function UCentralMarketplaceWidget:OnPlaceOrderTabButtonClicked() end
 function UCentralMarketplaceWidget:OnBuySellTabButtonClicked() end
 function UCentralMarketplaceWidget:OnActiveOrdersTabButtonClicked() end
 ---@return boolean
+function UCentralMarketplaceWidget:IsSelectedOrderItemQuantityEditableTextBoxEnabled() end
+---@return boolean
+function UCentralMarketplaceWidget:IsSelectedOrderItemPriceEditableTextBoxEnabled() end
+---@return boolean
+function UCentralMarketplaceWidget:IsSelectedOrderItemMinQualityComboBoxEnabled() end
+---@return boolean
 function UCentralMarketplaceWidget:IsSelectedItemPlaceOrderButtonEnabled() end
 ---@return boolean
 function UCentralMarketplaceWidget:IsPlaceOrderTabButtonEnabled() end
@@ -1612,6 +1659,28 @@ UDeathMarketMapIcon = {}
 function UDeathMarketMapIcon:OnLastDeathLocationChanged(OldVal, NewVal) end
 
 
+---@class UDeploymentFoodItemGridWidget : UGridPanelWidget
+UDeploymentFoodItemGridWidget = {}
+
+
+---@class UDeploymentFoodItemWidget : UGridItemWidget
+---@field WildSpawnIcon UTexture2D
+---@field ItemQuantityText UTextBlock
+UDeploymentFoodItemWidget = {}
+
+
+
+---@class UDeploymentFoodWidget : UUserWidget
+---@field TooltipImage UImage
+---@field DeploymentFoodItemGridWidget UDeploymentFoodItemGridWidget
+---@field DeploymentUnavailableText UTextBlock
+---@field CancelButton UAnvilButtonWidget
+---@field ParentDeploymentScreen UDeploymentScreen
+UDeploymentFoodWidget = {}
+
+function UDeploymentFoodWidget:OnCancelButtonClicked() end
+
+
 ---@class UDeploymentMapWidget : UMapWidgetBase
 UDeploymentMapWidget = {}
 
@@ -1631,6 +1700,7 @@ function UDeploymentPointMapIcon:GetDeploymentPointVisibility() end
 ---@field MapWidget UDeploymentMapWidget
 ---@field LogoutButton UAnvilButtonWidget
 ---@field DeploymentInstructionOrSpawnTimerText UTextBlock
+---@field DeploymentFoodWidget UDeploymentFoodWidget
 UDeploymentScreen = {}
 
 function UDeploymentScreen:OnLogoutButtonClicked() end
@@ -1736,6 +1806,7 @@ UFamilyMarkerMapIcon = {}
 
 
 ---@class UFamilyMemberListItemWidget : UUserWidget
+---@field OnlineStatusIcon UImage
 ---@field PlayerNameText UTextBlock
 ---@field RoleComboBoxSizeBox USizeBox
 ---@field RoleComboBox UComboBoxString
@@ -1784,12 +1855,12 @@ UFooterContainer = {}
 
 
 ---@class UGameplayOverlay : UUserWidget
+---@field AlertsContainerWidget UAlertsContainerWidget
 ---@field ChatWidget UChatWidget
 ---@field NotificationText UTextBlock
 ---@field SecondaryNotificationText UTextBlock
 ---@field PrimaryPromptText UTextBlock
 ---@field SecondaryPromptText UTextBlock
----@field AlertsContainerWidget UAlertsContainerWidget
 UGameplayOverlay = {}
 
 ---@return ESlateVisibility
@@ -1859,12 +1930,15 @@ function UHUDHintWidget:OnHintMaximizeClicked() end
 ---@field TargetVisActor AVisActor
 ---@field NameText UTextBlock
 ---@field LocalChatText UTextBlock
+---@field ReinforcementIcon UImage
 ---@field LocalChatTextLimit int32
 ---@field NameTypeColourList FSlateColor
 UHUDNameWidget = {}
 
 ---@return ESlateVisibility
 function UHUDNameWidget:GetWidgetVisibility() end
+---@return ESlateVisibility
+function UHUDNameWidget:GetReinforcementIconVisibility() end
 ---@return ESlateVisibility
 function UHUDNameWidget:GetPlayerNameVisibility() end
 ---@return FText
@@ -1895,8 +1969,8 @@ UHUDStatsWidget = {}
 ---@field OpenedHUDWindow UHUDWindow
 ---@field Compass UImage
 ---@field CompassPlayerArrow UImage
----@field PrimaryHeldItem UInventoryItemWidget
----@field SecondaryHeldItem UInventoryItemWidget
+---@field PrimaryHeldItem UInventoryItemHUDWidget
+---@field SecondaryHeldItem UInventoryItemHUDWidget
 ---@field PrimaryEquipmentItem UInventoryItemHUDWidget
 ---@field SecondaryEquipmentItem UInventoryItemHUDWidget
 ---@field GuardBar UProgressBar
@@ -1904,8 +1978,6 @@ UHUDStatsWidget = {}
 ---@field GuardStrengthLeftIcon UImage
 ---@field GuardStrengthCenterIcon UImage
 ---@field GuardStrengthRightIcon UImage
----@field EncumbranceIcon UImage
----@field EncumbranceText UTextBlock
 ---@field PlayerStatusText UTextBlock
 ---@field WinConditionCanvas UCanvasPanel
 ---@field WinConditionText UTextBlock
@@ -1925,6 +1997,7 @@ UHUDStatsWidget = {}
 ---@field InteractionProgressBar2 UProgressBar
 ---@field WeatherStatsText UTextBlock
 ---@field BorderRegionIndicatorText UTextBlock
+---@field ReinforcementStatus UWidget
 ---@field NewLocalMessages TArray<UChatMessage>
 UHUDWidget = {}
 
@@ -2159,8 +2232,6 @@ UMapWidget = {}
 
 ---@return ESlateVisibility
 function UMapWidget:GetObjectiveBorderVisibility() end
----@param MapImageTexture UTexture2D
-function UMapWidget:BP_OnMapImageSet(MapImageTexture) end
 
 
 ---@class UMapWidgetBase : UUserWidget
@@ -2377,9 +2448,7 @@ function UPledgedPlayerBox:OnVoteChecked(bIsChecked, PlayerId) end
 ---@field PlayerSilverText UTextBlock
 ---@field VoteButton UCheckBox
 ---@field OnlineStatusIcon UImage
----@field OnlineStatusIconMap TMap<EAnvilPledgedOnlineStatus, UTexture2D>
----@field OnlineStatusColorMap TMap<EAnvilPledgedOnlineStatus, FSlateColor>
----@field OnlineStatusSilverColorMap TMap<EAnvilPledgedOnlineStatus, FSlateColor>
+---@field OnlineStatusSilverColorMap TMap<EAnvilPlayerOnlineStatus, FSlateColor>
 UPledgedPlayerListItem = {}
 
 ---@param bIsChecked boolean
@@ -2551,6 +2620,16 @@ UStructureWindow = {}
 ---@field SubHeaderSlot0 UNamedSlot
 USubHeaderContainer = {}
 
+
+
+---@class UTemperatureStatusWidget : UUserWidget
+---@field IconFillImage UImage
+---@field TemperatureWarmColour FLinearColor
+---@field TemperatureColdColour FLinearColor
+UTemperatureStatusWidget = {}
+
+---@return ESlateVisibility
+function UTemperatureStatusWidget:GetIconVisibility() end
 
 
 ---@class UTooltipWidget : UUserWidget
@@ -2736,6 +2815,7 @@ UVisInstancedStockpileComponent = {}
 ---@field AnimationIndex int32
 ---@field ActivityStateMontageMap TMap<EAnvilSimActivityState, UAnimMontage>
 ---@field AttackChainMontages TArray<UAnimMontage>
+---@field SecondaryLaunchingProjectileOverride UAnimMontage
 ---@field TransferSoundCue USoundCue
 ---@field ArmingSoundCue USoundCue
 UVisItem = {}
@@ -2794,6 +2874,8 @@ UVisMultiItemStockpileComponent = {}
 ---@field AimYaw float
 ---@field bPriming boolean
 ---@field bSecondaryMode boolean
+---@field bSecondaryShieldMode boolean
+---@field bCombatMode boolean
 UVisPlayerAnimInstance = {}
 
 
@@ -2896,9 +2978,6 @@ UVisTeamMeshComponent = {}
 ---@field TeamDecalNovan UMaterialInterface
 UVisTownAreaMarkerDecalComponent = {}
 
----@param FactionId EAnvilFactionId
----@param Radius float
-function UVisTownAreaMarkerDecalComponent:SetRangeParameters(FactionId, Radius) end
 
 
 ---@class UVisVehicleAnimInstance : UAnimInstance
@@ -2922,9 +3001,7 @@ UVisWeatherIndicatorAnimInstance = {}
 ---@field HealthBar UProgressBar
 ---@field StaminaOverlay UOverlay
 ---@field StaminaBar UProgressBar
----@field TemperatureBar UProgressBar
----@field TemperatureWarmColour FLinearColor
----@field TemperatureColdColour FLinearColor
+---@field StabilityBar UProgressBar
 UVitalityStatusWidget = {}
 
 

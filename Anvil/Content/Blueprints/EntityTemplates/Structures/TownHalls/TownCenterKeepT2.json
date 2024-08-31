@@ -136,27 +136,7 @@
           "BackgroundType": "EAnvilItemSlotBackgroundType::None"
         },
         {
-          "ProxyRepeat": 1,
-          "bOr": false,
-          "HeldItem": null,
-          "Count": 0,
-          "StackLimit": 10000,
-          "bAllowWithdrawal": false,
-          "bIsPlayerEquipmentSlot": false,
-          "AcceptedTags": [],
-          "RequiredTags": [],
-          "ProhibitedTags": [],
-          "DedicatedItemType": {
-            "ObjectName": "BlueprintGeneratedClass'ReinforcementSupplies_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Upkeep/ReinforcementSupplies.0"
-          },
-          "DedicatedUnderlyingItemType": null,
-          "bCheckDedicatedUnderlyingItem": true,
-          "RequiredEnablingItem": null,
-          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
-        },
-        {
-          "ProxyRepeat": 22,
+          "ProxyRepeat": 23,
           "bOr": false,
           "HeldItem": null,
           "Count": 0,
@@ -189,6 +169,12 @@
     }
   },
   {
+    "Type": "MeshVisibilityProxyComponent",
+    "Name": "MeshVisibilityProxyComponent_0",
+    "Outer": "Default__TownCenterKeepT2_C",
+    "Class": "UScriptClass'MeshVisibilityProxyComponent'"
+  },
+  {
     "Type": "PlayerSpawnerProxyComponent",
     "Name": "PlayerSpawnerProxyComponent_0",
     "Outer": "Default__TownCenterKeepT2_C",
@@ -211,26 +197,6 @@
     "Template": {
       "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
-    }
-  },
-  {
-    "Type": "ResourceSpawnerProxyComponent",
-    "Name": "ResourceSpawnerProxyComponent_0",
-    "Outer": "Default__TownCenterKeepT2_C",
-    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
-    "Properties": {
-      "SpawnedResource": {
-        "ObjectName": "BlueprintGeneratedClass'Rabbit_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Rabbit.2"
-      },
-      "SpawnRadius": 6000.0,
-      "MinimumSpawnRadius": 1500.0,
-      "SpawnInterval": 120.0,
-      "SpawnQuantity": 20,
-      "MaxSpawn": 40,
-      "ResourceReserveInitial": -1,
-      "MinDistanceBetweenSpawns": 500.0,
-      "CompatibleSurfaceTypes": 57348
     }
   },
   {
@@ -291,7 +257,7 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__TownCenterKeepT2_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__TownCenterKeepT2_C:StructureProxyComponent_0'",
@@ -316,11 +282,11 @@
       },
       "CodeNameString": "TownCenterKeepT2",
       "CodeName": 1602690178,
-      "RelevancyDistSqr": 3.025E+09,
+      "RelevancyDistSqr": 900000000.0,
       "bShowOnMap": true,
       "bGenerateMeshCollisionsFromVisActor": true,
       "GenerateMeshCollisionMask": 18882560,
-      "GenerateMeshCollisionStepAngle": 50.0,
+      "GenerateMeshCollisionStepAngle": 65.0,
       "Components": [
         {
           "ObjectName": "TownHallProxyComponent'Default__TownCenterKeepT2_C:TownHallProxyComponent_0'",
@@ -335,15 +301,15 @@
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.16"
         },
         {
-          "ObjectName": "ResourceSpawnerProxyComponent'Default__TownCenterKeepT2_C:ResourceSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.10"
-        },
-        {
           "ObjectName": "BeaconTowerProxyComponent'Default__TownCenterKeepT2_C:BeaconTowerProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.0"
         },
         {
           "ObjectName": "PlayerSpawnerProxyComponent'Default__TownCenterKeepT2_C:PlayerSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.9"
+        },
+        {
+          "ObjectName": "MeshVisibilityProxyComponent'Default__TownCenterKeepT2_C:MeshVisibilityProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.8"
         }
       ],

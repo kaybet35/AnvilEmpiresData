@@ -17,12 +17,12 @@ class UImage;
 class UInteractionIconWidget;
 class UInventoryHUDWidget;
 class UInventoryItemHUDWidget;
-class UInventoryItemWidget;
 class UPanelWidget;
 class UProgressBar;
 class UTextBlock;
 class UTexture2D;
 class UVitalityStatusWidget;
+class UWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UHUDWidget : public UUserWidget {
@@ -69,10 +69,10 @@ protected:
     UImage* CompassPlayerArrow;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UInventoryItemWidget* PrimaryHeldItem;
+    UInventoryItemHUDWidget* PrimaryHeldItem;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UInventoryItemWidget* SecondaryHeldItem;
+    UInventoryItemHUDWidget* SecondaryHeldItem;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UInventoryItemHUDWidget* PrimaryEquipmentItem;
@@ -94,12 +94,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UImage* GuardStrengthRightIcon;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UImage* EncumbranceIcon;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* EncumbranceText;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* PlayerStatusText;
@@ -157,6 +151,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* BorderRegionIndicatorText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UWidget* ReinforcementStatus;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

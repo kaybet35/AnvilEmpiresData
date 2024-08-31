@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "BasicItemAndPayloadCount.h"
 #include "WorldEntityTownHallData.generated.h"
 
 USTRUCT(BlueprintType)
@@ -31,10 +32,10 @@ public:
     int32 NumUnclaimedTents;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 NumReinforcementSupplies;
+    int32 NumPledgedPlayers;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 NumPledgedPlayers;
+    TArray<FBasicItemAndPayloadCount> StoredFoodCounts;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bTownUnderAttack;

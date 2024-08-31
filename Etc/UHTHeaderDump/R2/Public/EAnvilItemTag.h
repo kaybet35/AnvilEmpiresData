@@ -31,6 +31,7 @@ enum class EAnvilItemTag : uint8 {
     DryingRackStorage,
     NotAllowedInMarket,
     MountedWeapon,
+    HeavyTool,
     NumTypes,
 };
 

@@ -36,7 +36,7 @@ public:
     bool bIsDisabled;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bTooEncumberedToEquip;
+    bool bCantArmDueToHeavyItem;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilItemSlotBackgroundType BackgroundType;

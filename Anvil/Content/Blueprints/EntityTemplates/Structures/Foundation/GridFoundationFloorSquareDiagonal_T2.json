@@ -159,6 +159,9 @@
     "Template": {
       "ObjectName": "HealthProxyComponent'Default__BPBaseFoundationModularEntity_C:HealthComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationModularEntity.7"
+    },
+    "Properties": {
+      "MaxHealth": 150.0
     }
   },
   {
@@ -191,7 +194,8 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationModularEntity.10"
     },
     "Properties": {
-      "bRequireSupport": true
+      "bRequireSupport": true,
+      "StructureType": "EAnvilBuildStructureType::FoundationCeiling"
     }
   },
   {
@@ -214,7 +218,17 @@
         "ObjectName": "BlueprintGeneratedClass'GridFoundationFloorSquareDiagonal_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationFloorSquareDiagonal.0"
       },
-      "TierPrerequisite": 3
+      "TierPrerequisite": 3,
+      "MaterialRequirements": [
+        {
+          "CodeName": -879937657,
+          "Count": 2
+        },
+        {
+          "CodeName": -274270847,
+          "Count": 1
+        }
+      ]
     }
   }
 ]

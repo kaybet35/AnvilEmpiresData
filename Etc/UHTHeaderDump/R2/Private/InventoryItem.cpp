@@ -8,7 +8,7 @@ FInventoryItem::FInventoryItem() {
     this->Payload = 0;
     this->StackLimit = 0;
     this->bIsDisabled = false;
-    this->bTooEncumberedToEquip = false;
+    this->bCantArmDueToHeavyItem = false;
     this->BackgroundType = EAnvilItemSlotBackgroundType::None;
 }
 

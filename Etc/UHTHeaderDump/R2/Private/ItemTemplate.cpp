@@ -8,7 +8,6 @@ UItemTemplate::UItemTemplate() {
     this->ItemDestroyedEffect = NULL;
     this->ItemInvokedEffect = NULL;
     this->ItemHitEffect = NULL;
-    this->Encumberance = 0;
     this->ArmedDurabilityLossPerSec = 0.00f;
     this->bRearmAfterConsumption = false;
     this->bRearmSkipsEquipActivity = false;
@@ -16,6 +15,7 @@ UItemTemplate::UItemTemplate() {
     this->CooledItem = NULL;
     this->bRanged = false;
     this->bHasAlt = false;
+    this->bAltIsRanged = false;
     this->DamageOffsetCount = 1;
     this->AmmoType = NULL;
     this->ProjectileEntity = NULL;
@@ -31,12 +31,15 @@ UItemTemplate::UItemTemplate() {
     this->FoodType = EAnvilFoodType::None;
     this->bDoesSpoil = false;
     this->SpoilageDurabilityLossPerSec = 0.00f;
+    this->bDoesNotArmWithHeavyItem = false;
+    this->bDoesNotArmWithHeavyArmour = false;
+    this->bIsHeavyArmour = false;
+    this->AltTransitionTime = 1.00f;
     this->RequiredStance = EAnvilCharacterStance::Standing;
     this->bIsDeployable = false;
     this->DeployedBuildSite = NULL;
     this->NightShroudLightRadius = 0.00f;
     this->bAllowCameraPan = true;
-    this->MaxEncumbranceforAction = 1.00f;
     this->StunChance = 0.00f;
     this->StunDuration = 0.00f;
     this->StunThrowDistance = 0.00f;
@@ -57,9 +60,14 @@ UItemTemplate::UItemTemplate() {
     this->ShieldDurabilityLossMultiplier = 1.00f;
     this->GuardMeterCostPerHit = 0.00f;
     this->ArmorMitigation = 0;
+    this->StabilityDamage = 0.05f;
     this->ToolEffectiveness = 1.00f;
     this->AimMovementSpeedModifier = 0.00f;
     this->AimRotationSpeedModifier = 1.00f;
+    this->PrimaryMovementSpeedModifier = 1.00f;
+    this->SecondaryMovementSpeedModifier = 1.00f;
+    this->PrimaryChanceToPenetrateGuard = 0.00f;
+    this->SecondaryChanceToPenetrateGuard = 0.00f;
 }
 
 

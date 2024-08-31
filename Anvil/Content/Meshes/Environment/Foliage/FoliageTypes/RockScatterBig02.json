@@ -8,20 +8,20 @@
         "ObjectName": "StaticMesh'RockAScatterBig02'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/Scatter/RockAScatterBig02.2"
       },
-      "UpdateGuid": "8D617BD2-49F730EE-38B03A93-1268508D",
+      "UpdateGuid": "20F43FE2-49899733-996150BE-5DA233BA",
       "ZOffset": {
-        "Min": -50.0,
-        "Max": -10.0
+        "Min": -300.0,
+        "Max": -100.0
       },
-      "AlignToNormal": false,
-      "AverageNormalSingleComponent": false,
-      "RandomYaw": false,
+      "AverageNormal": true,
+      "AlignMaxAngle": 55.0,
+      "RandomPitchAngle": 22.0,
       "GroundSlopeAngle": {
-        "Max": 15.0
+        "Min": 35.0
       },
       "LandscapeLayers": [
-        "H",
-        "D"
+        "A",
+        "F"
       ],
       "MinimumLayerWeight": 0.1,
       "ExclusionLandscapeLayers": [
@@ -45,6 +45,10 @@
         "Y": -12.093278,
         "Z": 56.759933
       },
+      "CullDistance": {
+        "Max": 50000
+      },
+      "bReceivesDecals": true,
       "BodyInstance": {
         "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
         "CollisionProfileName": "BlockAll",
@@ -55,14 +59,16 @@
       "CollisionRadius": 200.0,
       "ShadeRadius": 300.0,
       "NumSteps": 1,
-      "InitialSeedDensity": 2.0,
       "AverageSpreadDistance": 150.0,
       "SpreadVariance": 300.0,
       "SeedsPerStep": 1,
       "DistributionSeed": 1,
+      "bCanGrowInShade": true,
+      "bSpawnsInShade": true,
       "MaxInitialAge": 1.0,
       "ProceduralScale": {
-        "Max": 2.0
+        "Min": 0.83,
+        "Max": 1.257925
       },
       "ScaleCurve": {
         "EditorCurveData": {}
@@ -107,8 +113,7 @@
             ]
           }
         }
-      },
-      "bEnableDensityScaling": true
+      }
     }
   }
 ]

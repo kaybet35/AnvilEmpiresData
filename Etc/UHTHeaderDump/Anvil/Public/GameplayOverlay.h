@@ -12,6 +12,9 @@ UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UGameplayOverlay : public UUserWidget {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAlertsContainerWidget* AlertsContainerWidget;
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UChatWidget* ChatWidget;
@@ -27,9 +30,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* SecondaryPromptText;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UAlertsContainerWidget* AlertsContainerWidget;
     
 public:
     UGameplayOverlay();

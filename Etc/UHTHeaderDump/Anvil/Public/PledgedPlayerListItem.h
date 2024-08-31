@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilPledgedOnlineStatus -FallbackName=EAnvilPledgedOnlineStatus
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilPlayerOnlineStatus -FallbackName=EAnvilPlayerOnlineStatus
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateColor -FallbackName=SlateColor
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
 #include "PledgedPlayerListItem.generated.h"
@@ -8,7 +8,6 @@
 class UCheckBox;
 class UImage;
 class UTextBlock;
-class UTexture2D;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UPledgedPlayerListItem : public UUserWidget {
@@ -31,13 +30,7 @@ protected:
     UImage* OnlineStatusIcon;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<EAnvilPledgedOnlineStatus, UTexture2D*> OnlineStatusIconMap;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<EAnvilPledgedOnlineStatus, FSlateColor> OnlineStatusColorMap;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<EAnvilPledgedOnlineStatus, FSlateColor> OnlineStatusSilverColorMap;
+    TMap<EAnvilPlayerOnlineStatus, FSlateColor> OnlineStatusSilverColorMap;
     
 public:
     UPledgedPlayerListItem();

@@ -3,6 +3,7 @@
 #include "MapMarkerComponent.h"
 
 AVisController::AVisController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->bNoCheckOnCeilVisibility = true;
     this->PlayerControllerDataComponent = CreateDefaultSubobject<UPlayerControllerDataComponent>(TEXT("PlayerControllerDataComponent"));
     this->DeathMarker = CreateDefaultSubobject<UMapMarkerComponent>(TEXT("DeathMarker"));
 }

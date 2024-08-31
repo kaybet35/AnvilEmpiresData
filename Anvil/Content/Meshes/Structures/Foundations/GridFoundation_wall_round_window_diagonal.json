@@ -1358,19 +1358,19 @@
         "CollisionProfileName": "BlockAll"
       }
     },
-    "BodySetupGuid": "6619B1784CD84F006C1C029FD50F4741",
+    "BodySetupGuid": "C33D51F34929B409071DB9A0E88431BF",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 22312,
-        "SizeOnDisk": 22312,
-        "OffsetInFile": "0xCFEB"
+        "ElementCount": 58460,
+        "SizeOnDisk": 58460,
+        "OffsetInFile": "0x1EFAD"
       }
     }
   },
   {
     "Type": "NavCollision",
-    "Name": "NavCollision_1",
+    "Name": "NavCollision_2",
     "Outer": "GridFoundation_wall_round_window_diagonal",
     "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
@@ -1378,7 +1378,7 @@
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 4233,
         "SizeOnDisk": 4233,
-        "OffsetInFile": "0x12755"
+        "OffsetInFile": "0x2D44B"
       }
     }
   },
@@ -1390,22 +1390,38 @@
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant'FortFoundationBricksTilingDiagonal'",
-            "ObjectPath": "Anvil/Content/Materials/Structures/FortFoundationBricksTilingDiagonal.0"
+            "ObjectName": "MaterialInstanceConstant'FortFoundationBricksTiling'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/FortFoundationBricksTiling.0"
           },
           "MaterialSlotName": "FortFoundationBricksTiling",
           "ImportedMaterialSlotName": "FortFoundationBricksTiling",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 160.03174,
-            "LocalUVDensities": 927.47437,
-            "LocalUVDensities": 707.9039,
+            "LocalUVDensities": 162.6016,
+            "LocalUVDensities": 928.5715,
+            "LocalUVDensities": 944.38916,
+            "LocalUVDensities": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'FortFoundationStoneBricksT3_01'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/FortFoundationStoneBricksT3_01.0"
+          },
+          "MaterialSlotName": "FortFoundationStoneBricksT3_01",
+          "ImportedMaterialSlotName": "FortFoundationStoneBricksT3_01",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 661.75946,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 943.5454,
             "LocalUVDensities": 0.0
           }
         }
       ],
-      "LightmapUVDensity": 707.9039,
+      "LightmapUVDensity": 944.013,
       "LightMapResolution": 64,
       "LightMapCoordinateIndex": 2,
       "ExtendedBounds": {
@@ -1415,11 +1431,11 @@
           "Z": 150.5
         },
         "BoxExtent": {
-          "X": 227.2244,
+          "X": 227.22438,
           "Y": 227.22443,
           "Z": 150.50003
         },
-        "SphereRadius": 348.971331416002
+        "SphereRadius": 348.9713314160028
       }
     },
     "BodySetup": {
@@ -1427,10 +1443,10 @@
       "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/GridFoundation_wall_round_window_diagonal.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision'GridFoundation_wall_round_window_diagonal:NavCollision_1'",
+      "ObjectName": "NavCollision'GridFoundation_wall_round_window_diagonal:NavCollision_2'",
       "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/GridFoundation_wall_round_window_diagonal.1"
     },
-    "LightingGuid": "745CD83A-4019A1E2-1EEDC4AC-4BE8452A",
+    "LightingGuid": "3320F04D-470ED924-583E76B8-CB3852C9",
     "RenderData": {
       "LODs": [
         {
@@ -1438,9 +1454,20 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 204,
+              "NumTriangles": 256,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 211,
+              "MaxVertexIndex": 325,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 768,
+              "NumTriangles": 664,
+              "MinVertexIndex": 326,
+              "MaxVertexIndex": 835,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -1450,11 +1477,11 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 212
+            "NumVertices": 836
           },
           "VertexBuffer": {
             "NumTexCoords": 3,
-            "NumVertices": 212,
+            "NumVertices": 836,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
@@ -1466,12 +1493,12 @@
           "CardRepresentationData": {
             "Bounds": {
               "Min": {
-                "X": -228.13202,
+                "X": -228.132,
                 "Y": -228.13208,
                 "Z": -1.0000305
               },
               "Max": {
-                "X": 228.31677,
+                "X": 228.31676,
                 "Y": 228.31677,
                 "Z": 302.00003
               },
@@ -1565,7 +1592,7 @@
                     "Z": 150.5
                   },
                   "Extent": {
-                    "X": 228.2244,
+                    "X": 228.22437,
                     "Y": 149.77228,
                     "Z": 228.22443
                   }
@@ -1591,12 +1618,12 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": -7.039627,
+                    "X": -7.039612,
                     "Y": 71.412476,
                     "Z": 150.5
                   },
                   "Extent": {
-                    "X": 221.09239,
+                    "X": 221.09238,
                     "Y": 149.77228,
                     "Z": 164.03632
                   }
@@ -1624,12 +1651,12 @@
                   "Origin": {
                     "X": 0.09237671,
                     "Y": 0.09234619,
-                    "Z": 200.4241
+                    "Z": 193.29208
                   },
                   "Extent": {
-                    "X": 228.2244,
+                    "X": 228.22437,
                     "Y": 228.22443,
-                    "Z": 106.9802
+                    "Z": 114.11221
                   }
                 },
                 "LODLevel": 0,
@@ -1655,12 +1682,12 @@
                   "Origin": {
                     "X": 0.09237671,
                     "Y": 0.09234619,
-                    "Z": 293.14026
+                    "Z": 207.5561
                   },
                   "Extent": {
-                    "X": 228.2244,
+                    "X": 228.22437,
                     "Y": 228.22443,
-                    "Z": 14.264027
+                    "Z": 99.84819
                   }
                 },
                 "LODLevel": 0,
@@ -1676,7 +1703,7 @@
           "BulkDataFlags": "BULKDATA_None",
           "ElementCount": 0,
           "SizeOnDisk": 0,
-          "OffsetInFile": "0x16717"
+          "OffsetInFile": "0x3A583"
         },
         "ImposterAtlas": [],
         "HierarchyNodes": [],
@@ -1701,7 +1728,7 @@
           "Z": 150.5
         },
         "BoxExtent": {
-          "X": 227.2244,
+          "X": 227.22438,
           "Y": 227.22443,
           "Z": 150.50003
         },

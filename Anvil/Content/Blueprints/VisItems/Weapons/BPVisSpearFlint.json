@@ -32,14 +32,14 @@
       "NameText": {
         "Namespace": "",
         "Key": "BC31BE864BF934AF9FEB0C8C808032F2",
-        "SourceString": "Flint Spear",
-        "LocalizedString": "Flint Spear"
+        "SourceString": "Stone Spear",
+        "LocalizedString": "Stone Spear"
       },
       "DescriptionText": {
         "Namespace": "",
         "Key": "F305E7364B7889F258298B8ACE96B0FD",
-        "SourceString": "A makeshift melee and ranged weapon.",
-        "LocalizedString": "A makeshift melee and ranged weapon."
+        "SourceString": "A makeshift melee and ranged weapon with a Stone tip.",
+        "LocalizedString": "A makeshift melee and ranged weapon with a Stone tip."
       },
       "Icon": {
         "ObjectName": "Texture2D'IconSpearStone'",
@@ -77,9 +77,40 @@
         {
           "Key": "EAnvilSimActivityState::Attacking",
           "Value": {
-            "ObjectName": "AnimMontage'Pilum_Melee'",
-            "ObjectPath": "Anvil/Content/Animations/Prototype/Pilum_Melee.0"
+            "ObjectName": "AnimMontage'Spear_PrimaryAttack1_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Spear_PrimaryAttack1_Montage.0"
           }
+        },
+        {
+          "Key": "EAnvilSimActivityState::EnteringAltAttackMode",
+          "Value": {
+            "ObjectName": "AnimMontage'Spear_enterSecondary'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Spear_enterSecondary.0"
+          }
+        },
+        {
+          "Key": "EAnvilSimActivityState::ExitingAltAttackMode",
+          "Value": {
+            "ObjectName": "AnimMontage'Spear_exitSecondary'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Spear_exitSecondary.0"
+          }
+        },
+        {
+          "Key": "EAnvilSimActivityState::LaunchingProjectile",
+          "Value": {
+            "ObjectName": "AnimMontage'Spear_Secondary_Attack'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Spear_Secondary_Attack.0"
+          }
+        }
+      ],
+      "AttackChainMontages": [
+        {
+          "ObjectName": "AnimMontage'Spear_PrimaryAttack2_Montage'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Spear_PrimaryAttack2_Montage.0"
+        },
+        {
+          "ObjectName": "AnimMontage'Spear_PrimaryAttack3_Montage'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Spear_PrimaryAttack3_Montage.0"
         }
       ],
       "TransferSoundCue": {

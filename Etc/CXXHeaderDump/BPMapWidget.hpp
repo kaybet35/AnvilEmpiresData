@@ -12,7 +12,6 @@ class UBPMapWidget_C : public UMapWidget
     class UMaterialInstanceDynamic* DynamicMaterialInstance;                          // 0x0498 (size: 0x8)
 
     void Tick(FGeometry MyGeometry, float InDeltaTime);
-    void BP_OnMapImageSet(class UTexture2D* MapImageTexture);
     void ExecuteUbergraph_BPMapWidget(int32 EntryPoint);
 }; // Size: 0x4A0
 

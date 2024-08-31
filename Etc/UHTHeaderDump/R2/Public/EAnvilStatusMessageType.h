@@ -40,9 +40,6 @@ enum class EAnvilStatusMessageType : uint8 {
     RepairMaterialsRequired,
     RepairOnFire,
     Repairing,
-    TooEncumberedForActivity,
-    TooEncumberedToArm,
-    TooEncumberedItemDisarmed,
     NotEnoughStamina,
     WrongStance,
     MissingResource,
@@ -82,6 +79,7 @@ enum class EAnvilStatusMessageType : uint8 {
     AccessDeniedFamilyDestroyed,
     AccessDeniedTownDestroyed,
     AccessDeniedCannotUseInVehicle,
+    AccessDeniedReinforcings,
     MustBeFamilyMemberToAccessInventory,
     DismantleNoPermission,
     DismantleMustBeEmpty,
@@ -137,6 +135,10 @@ enum class EAnvilStatusMessageType : uint8 {
     VehicleCannotWorldEntranceTravel,
     MustBeResetBeforeFiring,
     NoProjectileLoaded,
+    CantArmDueToHeavyTool,
+    ItemDisarmedDueToHeavyTool,
+    CantArmDueToHeavyArmour,
+    ItemDisarmedDueToHeavyArmour,
     NumTypes,
 };
 

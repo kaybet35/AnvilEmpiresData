@@ -4,6 +4,12 @@
     "Name": "Sword_QueueAttack3_Montage",
     "Class": "UScriptClass'AnimMontage'",
     "Properties": {
+      "BlendIn": {
+        "BlendTime": 0.05
+      },
+      "BlendOut": {
+        "BlendTime": 0.1
+      },
       "CompositeSections": [
         {
           "SectionName": "Default",
@@ -64,6 +70,86 @@
             "ObjectName": "AnimSequence'SwordAndShield_SlashSequence_01toIdle'",
             "ObjectPath": "Anvil/Content/Animations/Prototype/SwordAndShield_SlashSequence_01toIdle.0"
           }
+        },
+        {
+          "SectionName": "loop2",
+          "NextSectionName": "None",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Sword_QueueAttack3_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Sword_QueueAttack3_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 1.1999998,
+          "SegmentLength": 0.5,
+          "LinkValue": 1.680416,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SwordAndShield_SlashSequence_01toIdle'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/SwordAndShield_SlashSequence_01toIdle.0"
+          }
+        },
+        {
+          "SectionName": "Alt",
+          "NextSectionName": "loop3",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Sword_QueueAttack3_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Sword_QueueAttack3_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 2,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 1.6999998,
+          "SegmentLength": 0.96666664,
+          "LinkValue": 1.6999998,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SwordAndShield_SecondaryAttack_thrust03'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/SwordAndShield_SecondaryAttack_thrust03.0"
+          }
+        },
+        {
+          "SectionName": "loop3",
+          "NextSectionName": "loop3",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Sword_QueueAttack3_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Sword_QueueAttack3_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 2,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 1.6999998,
+          "SegmentLength": 0.96666664,
+          "LinkValue": 2.6333334,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SwordAndShield_SecondaryAttack_thrust03'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/SwordAndShield_SecondaryAttack_thrust03.0"
+          }
+        },
+        {
+          "SectionName": "Alt_endToIdle",
+          "NextSectionName": "None",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Sword_QueueAttack3_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Sword_QueueAttack3_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 3,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 2.6666665,
+          "SegmentLength": 0.96666664,
+          "LinkValue": 2.6666665,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SwordAndShield_SecondaryAttack_exit_attack01-03toIdle'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/SwordAndShield_SecondaryAttack_exit_attack01-03toIdle.0"
+          }
         }
       ],
       "SlotAnimTracks": [
@@ -90,6 +176,28 @@
                 "StartPos": 1.1999998,
                 "AnimStartTime": 0.0,
                 "AnimEndTime": 0.5,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'SwordAndShield_SecondaryAttack_thrust03'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/SwordAndShield_SecondaryAttack_thrust03.0"
+                },
+                "StartPos": 1.6999998,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 0.96666664,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'SwordAndShield_SecondaryAttack_exit_attack01-03toIdle'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/SwordAndShield_SecondaryAttack_exit_attack01-03toIdle.0"
+                },
+                "StartPos": 2.6666665,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 0.96666664,
                 "AnimPlayRate": 1.0,
                 "LoopingCount": 1
               }
@@ -143,9 +251,55 @@
             "ObjectName": "AnimSequence'SwordAndShield_SlashSequence'",
             "ObjectPath": "Anvil/Content/Animations/Prototype/SwordAndShield_SlashSequence.0"
           }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'Sword_QueueAttack3_Montage:AnimNotify_PlaySound_1'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Sword_QueueAttack3_Montage.2"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.900539,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Sword_QueueAttack3_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Sword_QueueAttack3_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 2,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 1.6999998,
+          "SegmentLength": 0.96666664,
+          "LinkValue": 2.3121386,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SwordAndShield_SecondaryAttack_thrust03'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/SwordAndShield_SecondaryAttack_thrust03.0"
+          }
         }
       ],
-      "SequenceLength": 1.6999998,
+      "SequenceLength": 3.6333332,
       "Skeleton": {
         "ObjectName": "Skeleton'PrototypeChar_Skeleton'",
         "ObjectPath": "Anvil/Content/Animations/Prototype/PrototypeChar_Skeleton.8"
@@ -156,6 +310,20 @@
   {
     "Type": "AnimNotify_PlaySound",
     "Name": "AnimNotify_PlaySound_0",
+    "Outer": "Sword_QueueAttack3_Montage",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Sword1HASwipe_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Melee/Sword/Sword1HASwipe_Cue.0"
+      },
+      "bFollow": true,
+      "AttachName": "hand_r"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_1",
     "Outer": "Sword_QueueAttack3_Montage",
     "Class": "UScriptClass'AnimNotify_PlaySound'",
     "Properties": {

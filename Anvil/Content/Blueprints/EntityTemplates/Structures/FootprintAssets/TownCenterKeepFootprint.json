@@ -6,7 +6,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'TownCenterKeepFootprint_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.6"
       }
     },
     "SuperStruct": {
@@ -35,7 +35,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "TownCenterKeepFootprint_C'Default__TownCenterKeepFootprint_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.6"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.7"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -53,11 +53,31 @@
         "Z": 300.0
       },
       "Extents": {
-        "X": 600.0,
+        "X": 450.0,
         "Y": 450.0,
         "Z": 300.0
       },
       "CollisionMask": 32768
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_1",
+    "Outer": "Default__TownCenterKeepFootprint_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 900.0
+      },
+      "Extents": {
+        "X": 450.0,
+        "Y": 450.0,
+        "Z": 300.0
+      },
+      "CollisionMask": 32768,
+      "Tags": 1
     }
   },
   {
@@ -84,7 +104,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'TownCenterKeepFootprint_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.4"
       },
       "VariableGuid": "C7214B1C-4D01FAEC-C76C83A9-C82685B7",
       "InternalVariableName": "DefaultSceneRoot"
@@ -99,18 +119,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'TownCenterKeepFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.4"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.5"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'TownCenterKeepFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.4"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.5"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'TownCenterKeepFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.5"
       }
     }
   },
@@ -121,23 +141,23 @@
     "Properties": {
       "bShowMesh": true,
       "Position": {
-        "X": 0.0,
-        "Y": 1.5258789E-05,
-        "Z": 350.001
+        "X": 6.1035156E-05,
+        "Y": 222.49988,
+        "Z": 615.00104
       },
       "Extents": {
-        "X": 615.201,
-        "Y": 465.201,
-        "Z": 350.001
+        "X": 532.777,
+        "Y": 737.50116,
+        "Z": 615.00104
       },
       "StructureTiers": [
         {
           "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/TownCenterKeepBuildSite.TownCenterKeepBuildSite_C'",
-          "Value": true
+          "Value": false
         },
         {
           "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.TownCenterKeepT1_C'",
-          "Value": true
+          "Value": false
         },
         {
           "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.TownCenterKeepT2_C'",
@@ -145,14 +165,14 @@
         },
         {
           "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT3.TownCenterKeepT3_C'",
-          "Value": true
+          "Value": false
         }
       ],
       "FootprintSharedComponents": [
         {
           "Comp": {
             "ObjectName": "MeshVisibilityProxyComponent'Default__TownCenterKeepFootprint_C:MeshVisibilityProxyComponent_0'",
-            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.2"
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.3"
           },
           "bHighlight": false,
           "bHide": false,
@@ -162,6 +182,15 @@
           "Comp": {
             "ObjectName": "BoxCollisionProxyComponent'Default__TownCenterKeepFootprint_C:BoxCollisionProxyComponent_0'",
             "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.1"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": true
+        },
+        {
+          "Comp": {
+            "ObjectName": "BoxCollisionProxyComponent'Default__TownCenterKeepFootprint_C:BoxCollisionProxyComponent_1'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterKeepFootprint.2"
           },
           "bHighlight": false,
           "bHide": false,

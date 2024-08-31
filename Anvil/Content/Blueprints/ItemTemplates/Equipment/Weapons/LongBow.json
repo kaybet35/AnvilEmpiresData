@@ -1,0 +1,102 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "LongBow_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "LongBow_C'Default__LongBow_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/LongBow.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "LongBow_C",
+    "Name": "Default__LongBow_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/LongBow.LongBow_C'",
+    "Properties": {
+      "CodeNameString": "LongBow",
+      "CodeName": 911279597,
+      "ItemTags": [
+        "EAnvilItemTag::PrimaryTool",
+        "EAnvilItemTag::WeaponStorage",
+        "EAnvilItemTag::TwoHanded",
+        "EAnvilItemTag::HeavyTool"
+      ],
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "bRanged": true,
+      "bHasAlt": true,
+      "DamageOffset": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "FireOffset": {
+        "X": 80.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "AmmoType": {
+        "ObjectName": "BlueprintGeneratedClass'Arrows_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Arrows.1"
+      },
+      "ProjectileEntity": {
+        "ObjectName": "BlueprintGeneratedClass'LongBowArrowProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/LongBowArrowProjectile.0"
+      },
+      "ProjectileIndirectEntity": {
+        "ObjectName": "BlueprintGeneratedClass'LongBowArrowIndirectProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/LongBowArrowIndirectProjectile.0"
+      },
+      "bStaggersWielder": true,
+      "bDoesNotArmWithHeavyArmour": true,
+      "StanceOverride": [
+        {
+          "Key": "EAnvilCharacterStance::InHoarding",
+          "Value": {
+            "ObjectName": "BlueprintGeneratedClass'HoardingBow_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/HoardingBow.0"
+          }
+        }
+      ],
+      "DefaultActivity": {
+        "Delay": 0.7,
+        "Duration": 1.1
+      },
+      "RangedActivity": {
+        "State": "EAnvilSimActivityState::LaunchingProjectile",
+        "Delay": 0.1,
+        "Duration": 2.5,
+        "bRepeatable": false,
+        "StaminaCost": 10.0,
+        "AimedStaminaCost": 5.0
+      },
+      "BuildActivity": {
+        "bRepeatable": false
+      },
+      "Damage": 25,
+      "DefaultMarketplaceValue": 10,
+      "DurabilityLossPerUse": 1.2,
+      "AimMovementSpeedModifier": 0.5,
+      "AimRotationSpeedModifier": 2.5,
+      "PrimaryMovementSpeedModifier": 0.4,
+      "SecondaryMovementSpeedModifier": 0.3,
+      "SecondaryChanceToPenetrateGuard": 0.15
+    }
+  }
+]

@@ -26,6 +26,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString OfflineCharacterServerName;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsOfflineAtFamilyCenter;
+    
     R2_API FPlayerAgeDeployData();
 };
 

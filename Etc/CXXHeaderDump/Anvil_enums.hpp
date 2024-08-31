@@ -31,7 +31,8 @@ enum class EAlertType {
     General = 0,
     QueueStatus = 1,
     Reinforcement = 2,
-    EAlertType_MAX = 3,
+    ClearReinforcement = 3,
+    EAlertType_MAX = 4,
 };
 
 enum class EAnvilScreenType {
@@ -164,16 +165,16 @@ enum class EFishingBobberState {
 enum class EGameplayHint {
     Homestead1 = 0,
     Homestead2 = 1,
-    HomesteadComplete = 2,
-    HomesteadUpgrade1 = 3,
-    HomesteadUpgrade2 = 4,
-    HomesteadUpgrade3 = 5,
-    HomesteadUpgradeComplete = 6,
-    Town1 = 7,
-    Town2 = 8,
-    Town3 = 9,
-    Town4 = 10,
-    Town5 = 11,
+    Homestead3 = 2,
+    HomesteadComplete = 3,
+    HomesteadUpgrade1 = 4,
+    HomesteadUpgrade2 = 5,
+    HomesteadUpgrade3 = 6,
+    HomesteadUpgradeComplete = 7,
+    Town1 = 8,
+    Town2 = 9,
+    Town3 = 10,
+    Town4 = 11,
     TownComplete = 12,
     Part2 = 13,
     NumGameplayHintTypes = 14,
@@ -304,7 +305,15 @@ enum class ESimpleTooltip {
     Decay = 9,
     Stamina = 10,
     AnimalHealth = 11,
-    ESimpleTooltip_MAX = 12,
+    DeploymentFood = 12,
+    ESimpleTooltip_MAX = 13,
+};
+
+enum class ETemperatureChangeType {
+    NoChange = 0,
+    Increasing = 1,
+    Decreasing = 2,
+    ETemperatureChangeType_MAX = 3,
 };
 
 enum class EUnarmedItemMeshLocation {

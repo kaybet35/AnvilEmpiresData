@@ -1,8 +1,9 @@
 ---@meta
 
 ---@class ABPVisGridFoundationCeilingCornerRoundStraight_T2_C : AVisStructure
----@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field VisStaticMesh1 UVisStaticMeshComponent
+---@field Scene USceneComponent
+---@field MeshVisibilityData UMeshVisibilityDataComponent
 ABPVisGridFoundationCeilingCornerRoundStraight_T2_C = {}
 
 

@@ -53,5 +53,6 @@ enum class EAnvilInputEventType : uint8 {
     RequestFamilyListSync,
     PledgeToTown,
     AltAttack,
+    AltShield,
 };
 

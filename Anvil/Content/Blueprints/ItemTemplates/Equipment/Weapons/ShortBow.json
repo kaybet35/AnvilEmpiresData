@@ -32,13 +32,13 @@
       "ItemTags": [
         "EAnvilItemTag::PrimaryTool",
         "EAnvilItemTag::WeaponStorage",
-        "EAnvilItemTag::TwoHanded"
+        "EAnvilItemTag::TwoHanded",
+        "EAnvilItemTag::HeavyTool"
       ],
       "ItemDestroyedEffect": {
         "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
       },
-      "Encumberance": 50,
       "bRanged": true,
       "bHasAlt": true,
       "DamageOffset": {
@@ -64,6 +64,7 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/ArrowIndirectProjectile.1"
       },
       "bStaggersWielder": true,
+      "bDoesNotArmWithHeavyArmour": true,
       "StanceOverride": [
         {
           "Key": "EAnvilCharacterStance::InHoarding",
@@ -88,12 +89,14 @@
       "BuildActivity": {
         "bRepeatable": false
       },
-      "MaxEncumbranceforAction": 0.5,
       "Damage": 15,
       "DefaultMarketplaceValue": 10,
       "DurabilityLossPerUse": 1.2,
       "AimMovementSpeedModifier": 0.5,
-      "AimRotationSpeedModifier": 2.5
+      "AimRotationSpeedModifier": 2.5,
+      "PrimaryMovementSpeedModifier": 0.8,
+      "SecondaryMovementSpeedModifier": 0.6,
+      "SecondaryChanceToPenetrateGuard": 0.05
     }
   }
 ]

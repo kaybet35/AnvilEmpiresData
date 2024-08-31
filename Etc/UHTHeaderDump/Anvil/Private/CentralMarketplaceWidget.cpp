@@ -34,6 +34,18 @@ void UCentralMarketplaceWidget::OnBuySellTabButtonClicked() {
 void UCentralMarketplaceWidget::OnActiveOrdersTabButtonClicked() {
 }
 
+bool UCentralMarketplaceWidget::IsSelectedOrderItemQuantityEditableTextBoxEnabled() {
+    return false;
+}
+
+bool UCentralMarketplaceWidget::IsSelectedOrderItemPriceEditableTextBoxEnabled() {
+    return false;
+}
+
+bool UCentralMarketplaceWidget::IsSelectedOrderItemMinQualityComboBoxEnabled() {
+    return false;
+}
+
 bool UCentralMarketplaceWidget::IsSelectedItemPlaceOrderButtonEnabled() {
     return false;
 }

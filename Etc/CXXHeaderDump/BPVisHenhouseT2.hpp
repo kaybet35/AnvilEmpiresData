@@ -3,19 +3,19 @@
 
 class ABPVisHenhouseT2_C : public AVisLivestockStructure
 {
-    class UBPVisFamilyMeshComponent_C* BPVisFamilyMeshComponent;                      // 0x04E0 (size: 0x8)
-    class UDecalComponent* Decal1;                                                    // 0x04E8 (size: 0x8)
-    class UVisStaticMeshComponent* AnimalFeedPile2;                                   // 0x04F0 (size: 0x8)
-    class UVisStaticMeshComponent* AnimalFeedPile1;                                   // 0x04F8 (size: 0x8)
-    class UVisStaticMeshComponent* AnimalFeedPile;                                    // 0x0500 (size: 0x8)
-    class UVisStaticMeshComponent* Egg2;                                              // 0x0508 (size: 0x8)
-    class UVisStaticMeshComponent* Egg4;                                              // 0x0510 (size: 0x8)
-    class UVisStaticMeshComponent* Egg3;                                              // 0x0518 (size: 0x8)
-    class UVisStaticMeshComponent* Egg1;                                              // 0x0520 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh1;                                    // 0x0528 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0530 (size: 0x8)
-    class UDecalComponent* Decal;                                                     // 0x0538 (size: 0x8)
+    class UBPVisFamilyMeshComponent_C* BPVisFamilyMeshComponent;                      // 0x0530 (size: 0x8)
+    class UDecalComponent* Decal1;                                                    // 0x0538 (size: 0x8)
+    class UVisStaticMeshComponent* AnimalFeedPile2;                                   // 0x0540 (size: 0x8)
+    class UVisStaticMeshComponent* AnimalFeedPile1;                                   // 0x0548 (size: 0x8)
+    class UVisStaticMeshComponent* AnimalFeedPile;                                    // 0x0550 (size: 0x8)
+    class UVisStaticMeshComponent* Egg2;                                              // 0x0558 (size: 0x8)
+    class UVisStaticMeshComponent* Egg4;                                              // 0x0560 (size: 0x8)
+    class UVisStaticMeshComponent* Egg3;                                              // 0x0568 (size: 0x8)
+    class UVisStaticMeshComponent* Egg1;                                              // 0x0570 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh1;                                    // 0x0578 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0580 (size: 0x8)
+    class UDecalComponent* Decal;                                                     // 0x0588 (size: 0x8)
 
-}; // Size: 0x540
+}; // Size: 0x590
 
 #endif

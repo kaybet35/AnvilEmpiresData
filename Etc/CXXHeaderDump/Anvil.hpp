@@ -15,7 +15,7 @@ struct FAnvilAssetManager
     TArray<class AVisBuildSite*> BuildSiteList;                                       // 0x0018 (size: 0x10)
     TArray<class UVisItem*> VisItemList;                                              // 0x0028 (size: 0x10)
 
-}; // Size: 0x178
+}; // Size: 0x1C8
 
 struct FAnvilDataTableManager
 {
@@ -89,6 +89,7 @@ struct FBuildSiteCostData : public FTableRowBase
     int16 Nails;                                                                      // 0x0020 (size: 0x2)
     int16 Mortar;                                                                     // 0x0022 (size: 0x2)
     int16 Gravel;                                                                     // 0x0024 (size: 0x2)
+    int16 AnimalRope;                                                                 // 0x0026 (size: 0x2)
 
 }; // Size: 0x28
 
@@ -182,6 +183,14 @@ struct FDeleteProfileResponse
 
 }; // Size: 0x10
 
+struct FDeploymentFoodItem
+{
+    FGridItem ItemBase;                                                               // 0x0000 (size: 0xC)
+    int32 Count;                                                                      // 0x000C (size: 0x4)
+    bool bIsWildSpawn;                                                                // 0x0010 (size: 0x1)
+
+}; // Size: 0x14
+
 struct FEquipmentData : public FTableRowBase
 {
     float DurabilityLossPerUse;                                                       // 0x0008 (size: 0x4)
@@ -192,11 +201,16 @@ struct FEquipmentData : public FTableRowBase
     float ShieldDurabilityLossMultiplier;                                             // 0x001C (size: 0x4)
     float GuardMeterCostPerHit;                                                       // 0x0020 (size: 0x4)
     uint8 ArmorMitigation;                                                            // 0x0024 (size: 0x1)
-    float ToolEffectiveness;                                                          // 0x0028 (size: 0x4)
-    float AimMovementSpeedModifier;                                                   // 0x002C (size: 0x4)
-    float AimRotationSpeedModifier;                                                   // 0x0030 (size: 0x4)
+    float StabilityDamage;                                                            // 0x0028 (size: 0x4)
+    float ToolEffectiveness;                                                          // 0x002C (size: 0x4)
+    float AimMovementSpeedModifier;                                                   // 0x0030 (size: 0x4)
+    float AimRotationSpeedModifier;                                                   // 0x0034 (size: 0x4)
+    float PrimaryMovementSpeedModifier;                                               // 0x0038 (size: 0x4)
+    float SecondaryMovementSpeedModifier;                                             // 0x003C (size: 0x4)
+    float PrimaryChanceToPenetrateGuard;                                              // 0x0040 (size: 0x4)
+    float SecondaryChanceToPenetrateGuard;                                            // 0x0044 (size: 0x4)
 
-}; // Size: 0x38
+}; // Size: 0x48
 
 struct FFactionLockResponse
 {
@@ -261,14 +275,13 @@ struct FMapData
 {
     EAnvilMapId MapId;                                                                // 0x0000 (size: 0x1)
     bool bIsSecondaryWorld;                                                           // 0x0001 (size: 0x1)
-    FVector2D WorldSize;                                                              // 0x0008 (size: 0x10)
+    FVector2D PlayableWorldSize;                                                      // 0x0008 (size: 0x10)
     FVector2D WorldOrigin;                                                            // 0x0018 (size: 0x10)
-    FVector2D CapturePadding;                                                         // 0x0028 (size: 0x10)
+    FIntPoint GridDimension;                                                          // 0x0028 (size: 0x8)
+    float Scale;                                                                      // 0x0030 (size: 0x4)
     class UTexture2D* MapImage;                                                       // 0x0038 (size: 0x8)
-    class UTexture2D* MapTerritoryMask;                                               // 0x0040 (size: 0x8)
-    class UTexture2D* MapTreeLayerImage;                                              // 0x0048 (size: 0x8)
 
-}; // Size: 0x50
+}; // Size: 0x40
 
 struct FMapIconInstanceProperty
 {
@@ -474,7 +487,7 @@ class AAnvilPlayerController : public APlayerController
 {
     class UAnvilRootWidget* RootWidget;                                               // 0x0850 (size: 0x8)
 
-}; // Size: 0x940
+}; // Size: 0x948
 
 class ADayNightManager : public AActor
 {
@@ -497,9 +510,9 @@ class AGameplayGameMode : public AAnvilGameModeBase
 
 class AGameplayPlayerController : public AAnvilPlayerController
 {
-    class USoundCue* CallForReinforcementsCue;                                        // 0x0940 (size: 0x8)
+    class USoundCue* CallForReinforcementsCue;                                        // 0x0948 (size: 0x8)
 
-}; // Size: 0x960
+}; // Size: 0x968
 
 class AMainMenuGameMode : public AAnvilGameModeBase
 {
@@ -507,15 +520,17 @@ class AMainMenuGameMode : public AAnvilGameModeBase
 
 class AMainMenuPlayerController : public AAnvilPlayerController
 {
-}; // Size: 0x940
+}; // Size: 0x948
 
 class AMapBorderActor : public ACameraActor
 {
-    bool bPreCapture;                                                                 // 0x09A0 (size: 0x1)
-    bool bCapture;                                                                    // 0x09A1 (size: 0x1)
-    class UStaticMeshComponent* BoxVisualizer;                                        // 0x09A8 (size: 0x8)
+    FIntPoint CaptureChunkCoordinate;                                                 // 0x09A0 (size: 0x8)
+    bool bContinueFromGivenChunk;                                                     // 0x09A8 (size: 0x1)
+    bool bCaptureWholeGrid;                                                           // 0x09A9 (size: 0x1)
+    bool bCapture;                                                                    // 0x09AA (size: 0x1)
+    class UStaticMeshComponent* BoxVisualizer;                                        // 0x09B0 (size: 0x8)
 
-}; // Size: 0x9B0
+}; // Size: 0x9C0
 
 class AMapEditorNote : public AActor
 {
@@ -583,181 +598,192 @@ class AUIGlobals : public AInfo
     TMap<class EMapIconType, class FMapIconTypeProperty> IconTemplates;               // 0x02C8 (size: 0x50)
     TMap<class EAnvilWorldEntityType, class TSubclassOf<UWorldEntityMapIcon>> WorldEntityIconClasses; // 0x0318 (size: 0x50)
     TMap<class EAnvilItemQualityType, class UTexture2D*> QualityIconTextures;         // 0x0368 (size: 0x50)
+    TMap<class EAnvilPlayerOnlineStatus, class UTexture2D*> OnlineStatusIconMap;      // 0x03B8 (size: 0x50)
+    TMap<class EAnvilPlayerOnlineStatus, class FSlateColor> OnlineStatusColorMap;     // 0x0408 (size: 0x50)
 
-}; // Size: 0x3B8
+}; // Size: 0x458
+
+class AUnderworldModuleDynamicPrefab : public ADynamicPrefab
+{
+}; // Size: 0x2B0
 
 class AVisActor : public AVisActorBase
 {
-    FText VisDisplayName;                                                             // 0x0290 (size: 0x18)
-    FText Description;                                                                // 0x02A8 (size: 0x18)
-    FText DescriptionFooter;                                                          // 0x02C0 (size: 0x18)
-    FMapIconInstanceProperty MapIconProperty;                                         // 0x02D8 (size: 0x88)
-    EHUDWindowType UseWindowType;                                                     // 0x0360 (size: 0x1)
-    FText UseDisclaimerText;                                                          // 0x0368 (size: 0x18)
-    bool bUseForceCameraZoom;                                                         // 0x0380 (size: 0x1)
-    TArray<EActionButtonType> AdditionalActionButtons;                                // 0x0388 (size: 0x10)
-    uint8 bNightVisibility;                                                           // 0x0398 (size: 0x1)
-    uint8 bUseInteractionOutline;                                                     // 0x0398 (size: 0x1)
-    class UTexture2D* InteractionIcon;                                                // 0x03A0 (size: 0x8)
-    float AnimSpeed;                                                                  // 0x03A8 (size: 0x4)
-    FRotator AnimRotationalSpeed;                                                     // 0x03B0 (size: 0x18)
-    FVector AnimVelocity;                                                             // 0x03C8 (size: 0x18)
-    class UEntityTemplate* TemplateCDO;                                               // 0x03E8 (size: 0x8)
-    class UMeshVisibilityDataComponent* MeshVisibilityDataComponent;                  // 0x03F0 (size: 0x8)
-    float PositionSmoothSpeed;                                                        // 0x03F8 (size: 0x4)
-    float RotationSmoothSpeed;                                                        // 0x03FC (size: 0x4)
-    float ClientMovementSmoothingDistance;                                            // 0x0400 (size: 0x4)
-    bool bHasLandscapeCollisions;                                                     // 0x0404 (size: 0x1)
-    bool bUseDepthStencilForInteractionHighlight;                                     // 0x0405 (size: 0x1)
-    TArray<class USceneComponent*> ToggleVisibilityComponents;                        // 0x0408 (size: 0x10)
+    FMapIconInstanceProperty MapIconProperty;                                         // 0x0290 (size: 0x88)
+    EHUDWindowType UseWindowType;                                                     // 0x0318 (size: 0x1)
+    FText UseDisclaimerText;                                                          // 0x0320 (size: 0x18)
+    bool bUseForceCameraZoom;                                                         // 0x0338 (size: 0x1)
+    TArray<EActionButtonType> AdditionalActionButtons;                                // 0x0340 (size: 0x10)
+    uint8 bNightVisibility;                                                           // 0x0350 (size: 0x1)
+    uint8 bNoCheckOnCeilVisibility;                                                   // 0x0350 (size: 0x1)
+    uint8 bUseInteractionOutline;                                                     // 0x0350 (size: 0x1)
+    class UTexture2D* InteractionIcon;                                                // 0x0358 (size: 0x8)
+    float AnimSpeed;                                                                  // 0x0360 (size: 0x4)
+    FRotator AnimRotationalSpeed;                                                     // 0x0368 (size: 0x18)
+    FVector AnimVelocity;                                                             // 0x0380 (size: 0x18)
+    class UEntityTemplate* TemplateCDO;                                               // 0x03A0 (size: 0x8)
+    FText VisDisplayName;                                                             // 0x03A8 (size: 0x18)
+    FText Description;                                                                // 0x03C0 (size: 0x18)
+    FText DescriptionFooter;                                                          // 0x03D8 (size: 0x18)
+    bool bGenerateFoundationDescription;                                              // 0x03F0 (size: 0x1)
+    FText FoundationShapeName;                                                        // 0x03F8 (size: 0x18)
+    FText FoundationGroupName;                                                        // 0x0410 (size: 0x18)
+    FText FoundationVariantName;                                                      // 0x0428 (size: 0x18)
+    class UMeshVisibilityDataComponent* MeshVisibilityDataComponent;                  // 0x0440 (size: 0x8)
+    float PositionSmoothSpeed;                                                        // 0x0448 (size: 0x4)
+    float RotationSmoothSpeed;                                                        // 0x044C (size: 0x4)
+    float ClientMovementSmoothingDistance;                                            // 0x0450 (size: 0x4)
+    bool bHasLandscapeCollisions;                                                     // 0x0454 (size: 0x1)
+    bool bUseDepthStencilForInteractionHighlight;                                     // 0x0455 (size: 0x1)
+    TArray<class USceneComponent*> ToggleVisibilityComponents;                        // 0x0458 (size: 0x10)
 
-}; // Size: 0x450
+}; // Size: 0x4A0
 
 class AVisAnimal : public AVisActor
 {
-    class UAnimalAIDataComponent* AnimalAIDataComponent;                              // 0x0450 (size: 0x8)
-    class UHealthDataComponent* HealthDataComponent;                                  // 0x0458 (size: 0x8)
-    class UCapsuleComponent* Capsule;                                                 // 0x0460 (size: 0x8)
-    class USkeletalMeshComponent* Mesh;                                               // 0x0468 (size: 0x8)
-    TMap<class EAnvilAnimalState, class UAnimMontage*> CurrentStateMontageMap;        // 0x0470 (size: 0x50)
+    class UAnimalAIDataComponent* AnimalAIDataComponent;                              // 0x04A0 (size: 0x8)
+    class UHealthDataComponent* HealthDataComponent;                                  // 0x04A8 (size: 0x8)
+    class UCapsuleComponent* Capsule;                                                 // 0x04B0 (size: 0x8)
+    class USkeletalMeshComponent* Mesh;                                               // 0x04B8 (size: 0x8)
+    TMap<class EAnvilAnimalState, class UAnimMontage*> CurrentStateMontageMap;        // 0x04C0 (size: 0x50)
 
-}; // Size: 0x4C8
+}; // Size: 0x518
 
 class AVisAnvilStructure : public AVisStructure
 {
-    class UAnvilDataComponent* AnvilDataComponent;                                    // 0x04C8 (size: 0x8)
-    class USkeletalMeshComponent* ConvertedItemMeshComponent;                         // 0x04D0 (size: 0x8)
-    TMap<class FString, class USkeletalMesh*> ConvertedItemMeshMap;                   // 0x04D8 (size: 0x50)
-    class USceneComponent* HitVFXLocation;                                            // 0x0528 (size: 0x8)
-    class UNiagaraSystem* HitSuccessVFX;                                              // 0x0530 (size: 0x8)
-    class UNiagaraSystem* HitFailVFX;                                                 // 0x0538 (size: 0x8)
-    class USoundCue* HitSuccessSoundCue;                                              // 0x0540 (size: 0x8)
-    class USoundCue* HitFailSoundCue;                                                 // 0x0548 (size: 0x8)
+    class UAnvilDataComponent* AnvilDataComponent;                                    // 0x0518 (size: 0x8)
+    class USkeletalMeshComponent* ConvertedItemMeshComponent;                         // 0x0520 (size: 0x8)
+    TMap<class FString, class USkeletalMesh*> ConvertedItemMeshMap;                   // 0x0528 (size: 0x50)
+    class USceneComponent* HitVFXLocation;                                            // 0x0578 (size: 0x8)
+    class UNiagaraSystem* HitSuccessVFX;                                              // 0x0580 (size: 0x8)
+    class UNiagaraSystem* HitFailVFX;                                                 // 0x0588 (size: 0x8)
+    class USoundCue* HitSuccessSoundCue;                                              // 0x0590 (size: 0x8)
+    class USoundCue* HitFailSoundCue;                                                 // 0x0598 (size: 0x8)
 
     void OnHitCounterChanged(const float& Old, const float& New);
-}; // Size: 0x560
+}; // Size: 0x5B0
 
 class AVisBeaconTower : public AVisStructure
 {
-    class UBeaconTowerDataComponent* BeaconTowerDataComponent;                        // 0x04C8 (size: 0x8)
+    class UBeaconTowerDataComponent* BeaconTowerDataComponent;                        // 0x0518 (size: 0x8)
 
-}; // Size: 0x4D0
+}; // Size: 0x520
 
 class AVisBuildSite : public AVisActor
 {
-    class UVisBuildGhostComponent* VisBuildGhostComponent;                            // 0x0450 (size: 0x8)
-    class UBuildSiteDataComponent* BuildSiteDataComponent;                            // 0x0458 (size: 0x8)
-    class UStructureDataComponent* StructureDataComponent;                            // 0x0460 (size: 0x8)
-    class UTexture2D* Icon;                                                           // 0x0468 (size: 0x8)
-    EBuildSiteCategory Category;                                                      // 0x0470 (size: 0x1)
-    int32 Order;                                                                      // 0x0474 (size: 0x4)
-    EBuildSiteVisibility BuildSiteVisibility;                                         // 0x0478 (size: 0x1)
-    class UArrowComponent* ArrowComponent;                                            // 0x0480 (size: 0x8)
-    class UStaticMeshComponent* Mesh;                                                 // 0x0488 (size: 0x8)
-    class UDecalComponent* BuildCollisionDecalComponent;                              // 0x0490 (size: 0x8)
-    class UMaterialInterface* BuildSiteMaterial;                                      // 0x0498 (size: 0x8)
+    class UVisBuildGhostComponent* VisBuildGhostComponent;                            // 0x04A0 (size: 0x8)
+    class UBuildSiteDataComponent* BuildSiteDataComponent;                            // 0x04A8 (size: 0x8)
+    class UStructureDataComponent* StructureDataComponent;                            // 0x04B0 (size: 0x8)
+    class UTexture2D* Icon;                                                           // 0x04B8 (size: 0x8)
+    EBuildSiteCategory Category;                                                      // 0x04C0 (size: 0x1)
+    int32 Order;                                                                      // 0x04C4 (size: 0x4)
+    EBuildSiteVisibility BuildSiteVisibility;                                         // 0x04C8 (size: 0x1)
+    class UArrowComponent* ArrowComponent;                                            // 0x04D0 (size: 0x8)
+    class UStaticMeshComponent* Mesh;                                                 // 0x04D8 (size: 0x8)
+    class UDecalComponent* BuildCollisionDecalComponent;                              // 0x04E0 (size: 0x8)
+    class UMaterialInterface* BuildSiteMaterial;                                      // 0x04E8 (size: 0x8)
 
-}; // Size: 0x4C0
+}; // Size: 0x510
 
 class AVisCart : public AVisVehicle
 {
-    class UHungerDataComponent* HungerDataComponent;                                  // 0x0478 (size: 0x8)
-    class UStaminaDataComponent* StaminaDataComponent;                                // 0x0480 (size: 0x8)
-    class UAnimalAIDataComponent* AnimalAIDataComponent;                              // 0x0488 (size: 0x8)
-    FName SeatSocketName;                                                             // 0x0490 (size: 0x8)
-    class USkeletalMeshComponent* Mesh;                                               // 0x0498 (size: 0x8)
-    class USkeletalMeshComponent* SaddleMesh;                                         // 0x04A0 (size: 0x8)
-    class USkeletalMeshComponent* HalterHeadMesh;                                     // 0x04A8 (size: 0x8)
-    class USkeletalMeshComponent* HalterBodyMesh;                                     // 0x04B0 (size: 0x8)
-    TArray<class USkeletalMesh*> SaddleMeshes;                                        // 0x04B8 (size: 0x10)
+    class UHungerDataComponent* HungerDataComponent;                                  // 0x04C8 (size: 0x8)
+    class UStaminaDataComponent* StaminaDataComponent;                                // 0x04D0 (size: 0x8)
+    class UAnimalAIDataComponent* AnimalAIDataComponent;                              // 0x04D8 (size: 0x8)
+    FName SeatSocketName;                                                             // 0x04E0 (size: 0x8)
+    class USkeletalMeshComponent* Mesh;                                               // 0x04E8 (size: 0x8)
+    class USkeletalMeshComponent* SaddleMesh;                                         // 0x04F0 (size: 0x8)
+    class USkeletalMeshComponent* HalterHeadMesh;                                     // 0x04F8 (size: 0x8)
+    class USkeletalMeshComponent* HalterBodyMesh;                                     // 0x0500 (size: 0x8)
+    TArray<class USkeletalMesh*> SaddleMeshes;                                        // 0x0508 (size: 0x10)
 
-}; // Size: 0x4C8
+}; // Size: 0x518
 
 class AVisCentralMarketplace : public AVisStructure
 {
-    class UCentralMarketplaceDataComponent* CentralMarketplaceDataComponent;          // 0x04C8 (size: 0x8)
+    class UCentralMarketplaceDataComponent* CentralMarketplaceDataComponent;          // 0x0518 (size: 0x8)
 
-}; // Size: 0x4D0
+}; // Size: 0x520
 
 class AVisController : public AVisActor
 {
-    class UPlayerControllerDataComponent* PlayerControllerDataComponent;              // 0x0450 (size: 0x8)
-    class UMapMarkerComponent* DeathMarker;                                           // 0x0458 (size: 0x8)
+    class UPlayerControllerDataComponent* PlayerControllerDataComponent;              // 0x04A0 (size: 0x8)
+    class UMapMarkerComponent* DeathMarker;                                           // 0x04A8 (size: 0x8)
 
-}; // Size: 0x460
+}; // Size: 0x4B0
 
 class AVisCookingStructure : public AVisStructure
 {
-    bool bShowCheatSheet;                                                             // 0x04D9 (size: 0x1)
-    class UCookingDataComponent* CookingDataComponent;                                // 0x04E0 (size: 0x8)
-    TMap<class TSubclassOf<UItemTemplate>, class UMaterialInterface*> WaterMeshMaterialMap; // 0x04E8 (size: 0x50)
-    class UStaticMeshComponent* WaterLevelMesh;                                       // 0x0538 (size: 0x8)
-    class UCurveFloat* WaterHeightCurve;                                              // 0x0540 (size: 0x8)
-    class UCurveVector* WaterScaleCurve;                                              // 0x0548 (size: 0x8)
-    class UAudioComponent* BoilingTemperatureHighAudio;                               // 0x0550 (size: 0x8)
-    class UAudioComponent* BoilingTemperatureLowAudio;                                // 0x0558 (size: 0x8)
+    bool bShowCheatSheet;                                                             // 0x0529 (size: 0x1)
+    class UCookingDataComponent* CookingDataComponent;                                // 0x0530 (size: 0x8)
+    TMap<class TSubclassOf<UItemTemplate>, class UMaterialInterface*> WaterMeshMaterialMap; // 0x0538 (size: 0x50)
+    class UStaticMeshComponent* WaterLevelMesh;                                       // 0x0588 (size: 0x8)
+    class UCurveFloat* WaterHeightCurve;                                              // 0x0590 (size: 0x8)
+    class UCurveVector* WaterScaleCurve;                                              // 0x0598 (size: 0x8)
+    class UAudioComponent* BoilingTemperatureHighAudio;                               // 0x05A0 (size: 0x8)
+    class UAudioComponent* BoilingTemperatureLowAudio;                                // 0x05A8 (size: 0x8)
 
-}; // Size: 0x568
+}; // Size: 0x5B8
 
 class AVisCraftingStructure : public AVisStructure
 {
-    class UCraftingDataComponent* CraftingDataComponent;                              // 0x04C8 (size: 0x8)
+    class UCraftingDataComponent* CraftingDataComponent;                              // 0x0518 (size: 0x8)
 
-}; // Size: 0x4D0
+}; // Size: 0x520
 
 class AVisDryingRack : public AVisStructure
 {
-    class UStaticMeshComponent* BaseMesh;                                             // 0x04C8 (size: 0x8)
-    class UStaticMeshComponent* DryingItemMesh;                                       // 0x04D0 (size: 0x8)
-    class UDryingRackProxyComponent* DryingRackProxy;                                 // 0x04D8 (size: 0x8)
-    class UMaterialInstanceDynamic* DryingItemMeshMaterial;                           // 0x04E0 (size: 0x8)
+    class UStaticMeshComponent* BaseMesh;                                             // 0x0518 (size: 0x8)
+    class UStaticMeshComponent* DryingItemMesh;                                       // 0x0520 (size: 0x8)
+    class UDryingRackProxyComponent* DryingRackProxy;                                 // 0x0528 (size: 0x8)
+    class UMaterialInstanceDynamic* DryingItemMeshMaterial;                           // 0x0530 (size: 0x8)
 
-}; // Size: 0x4E8
+}; // Size: 0x538
 
 class AVisEffect : public AVisActor
 {
-    class UArrowComponent* ArrowComponent;                                            // 0x0450 (size: 0x8)
-    class UAudioComponent* AudioComponent;                                            // 0x0458 (size: 0x8)
-    class UNiagaraComponent* NiagaraComponent;                                        // 0x0460 (size: 0x8)
-    class USkeletalMeshComponent* Mesh;                                               // 0x0468 (size: 0x8)
-    class ULifetimeDataComponent* LifetimeDataComponent;                              // 0x0470 (size: 0x8)
-    bool bSeekAudioComponent;                                                         // 0x0478 (size: 0x1)
-
-}; // Size: 0x480
-
-class AVisEntityPrefab : public AVisActor
-{
-    class UArrowComponent* ArrowComponent;                                            // 0x0450 (size: 0x8)
-    class UBoxComponent* MeshVisibilityArea;                                          // 0x0458 (size: 0x8)
-
-}; // Size: 0x460
-
-class AVisFamilyCenter : public AVisFamilyMarkerArea
-{
-    class UFamilyCenterDataComponent* FamilyCenterDataComponent;                      // 0x04D0 (size: 0x8)
-    class UDecalComponent* BuildAreaDecalComponent;                                   // 0x04D8 (size: 0x8)
-
-}; // Size: 0x4E0
-
-class AVisFamilyInventory : public AVisStructure
-{
-}; // Size: 0x4C8
-
-class AVisFamilyMarkerArea : public AVisStructure
-{
-    class UFamilyAreaMarkerDataComponent* FamilyAreaMarkerDataComponent;              // 0x04C8 (size: 0x8)
+    class UArrowComponent* ArrowComponent;                                            // 0x04A0 (size: 0x8)
+    class UAudioComponent* AudioComponent;                                            // 0x04A8 (size: 0x8)
+    class UNiagaraComponent* NiagaraComponent;                                        // 0x04B0 (size: 0x8)
+    class USkeletalMeshComponent* Mesh;                                               // 0x04B8 (size: 0x8)
+    class ULifetimeDataComponent* LifetimeDataComponent;                              // 0x04C0 (size: 0x8)
+    bool bSeekAudioComponent;                                                         // 0x04C8 (size: 0x1)
 
 }; // Size: 0x4D0
 
+class AVisEntityPrefab : public AVisActor
+{
+    class UArrowComponent* ArrowComponent;                                            // 0x04A0 (size: 0x8)
+    class UBoxComponent* MeshVisibilityArea;                                          // 0x04A8 (size: 0x8)
+
+}; // Size: 0x4B0
+
+class AVisFamilyCenter : public AVisFamilyMarkerArea
+{
+    class UFamilyCenterDataComponent* FamilyCenterDataComponent;                      // 0x0520 (size: 0x8)
+    class UDecalComponent* BuildAreaDecalComponent;                                   // 0x0528 (size: 0x8)
+
+}; // Size: 0x530
+
+class AVisFamilyInventory : public AVisStructure
+{
+}; // Size: 0x518
+
+class AVisFamilyMarkerArea : public AVisStructure
+{
+    class UFamilyAreaMarkerDataComponent* FamilyAreaMarkerDataComponent;              // 0x0518 (size: 0x8)
+
+}; // Size: 0x520
+
 class AVisFarm : public AVisStructure
 {
-    class UDecalComponent* FarmDecalComponent;                                        // 0x04C8 (size: 0x8)
-    class UDecalComponent* FertilizeDecalComponent;                                   // 0x04D0 (size: 0x8)
-    float RoughnessStart;                                                             // 0x04D8 (size: 0x4)
-    float RoughnessEnd;                                                               // 0x04DC (size: 0x4)
-    class UFarmDataComponent* FarmDataComponent;                                      // 0x04E0 (size: 0x8)
+    class UDecalComponent* FarmDecalComponent;                                        // 0x0518 (size: 0x8)
+    class UDecalComponent* FertilizeDecalComponent;                                   // 0x0520 (size: 0x8)
+    float RoughnessStart;                                                             // 0x0528 (size: 0x4)
+    float RoughnessEnd;                                                               // 0x052C (size: 0x4)
+    class UFarmDataComponent* FarmDataComponent;                                      // 0x0530 (size: 0x8)
 
-}; // Size: 0x4E8
+}; // Size: 0x538
 
 class AVisFishingBobber : public AActor
 {
@@ -788,170 +814,170 @@ class AVisFishingIndicator : public AActor
 
 class AVisGate : public AVisStructure
 {
-    class UGateDataComponent* GateDataComponent;                                      // 0x04C8 (size: 0x8)
-    class USkeletalMeshComponent* Mesh;                                               // 0x04D0 (size: 0x8)
+    class UGateDataComponent* GateDataComponent;                                      // 0x0518 (size: 0x8)
+    class USkeletalMeshComponent* Mesh;                                               // 0x0520 (size: 0x8)
 
-}; // Size: 0x4D8
+}; // Size: 0x528
 
 class AVisHeatingStructure : public AVisStructure
 {
-    class UHeatingDataComponent* HeatingDataComponent;                                // 0x04F8 (size: 0x8)
+    class UHeatingDataComponent* HeatingDataComponent;                                // 0x0548 (size: 0x8)
 
-}; // Size: 0x500
+}; // Size: 0x550
 
 class AVisHitConverterStructure : public AVisStructure
 {
-    class UHitConverterDataComponent* HitConverterDataComponent;                      // 0x04C8 (size: 0x8)
-    class UStaticMeshComponent* ConvertedItemMeshComponent;                           // 0x04D0 (size: 0x8)
-    TMap<class FString, class FHitConverterItemMeshInfo> ItemMeshInfoMap;             // 0x04D8 (size: 0x50)
-    class USceneComponent* HitVFXLocation;                                            // 0x0528 (size: 0x8)
-    class UNiagaraSystem* HitSuccessVFX;                                              // 0x0530 (size: 0x8)
-    class UNiagaraSystem* HitFailVFX;                                                 // 0x0538 (size: 0x8)
-    class USoundCue* HitSuccessSoundCue;                                              // 0x0540 (size: 0x8)
-    class USoundCue* HitFailSoundCue;                                                 // 0x0548 (size: 0x8)
+    class UHitConverterDataComponent* HitConverterDataComponent;                      // 0x0518 (size: 0x8)
+    class UStaticMeshComponent* ConvertedItemMeshComponent;                           // 0x0520 (size: 0x8)
+    TMap<class FString, class FHitConverterItemMeshInfo> ItemMeshInfoMap;             // 0x0528 (size: 0x50)
+    class USceneComponent* HitVFXLocation;                                            // 0x0578 (size: 0x8)
+    class UNiagaraSystem* HitSuccessVFX;                                              // 0x0580 (size: 0x8)
+    class UNiagaraSystem* HitFailVFX;                                                 // 0x0588 (size: 0x8)
+    class USoundCue* HitSuccessSoundCue;                                              // 0x0590 (size: 0x8)
+    class USoundCue* HitFailSoundCue;                                                 // 0x0598 (size: 0x8)
 
     void OnHitConverterCounterChanged(const float& Old, const float& New);
-}; // Size: 0x558
+}; // Size: 0x5A8
 
 class AVisHouse : public AVisStructure
 {
-    class UHousingDataComponent* HousingDataComponent;                                // 0x04C8 (size: 0x8)
-    class UPlayerSpawnerDataComponent* PlayerSpawnerDataComponent;                    // 0x04D0 (size: 0x8)
+    class UHousingDataComponent* HousingDataComponent;                                // 0x0518 (size: 0x8)
+    class UPlayerSpawnerDataComponent* PlayerSpawnerDataComponent;                    // 0x0520 (size: 0x8)
 
-}; // Size: 0x4D8
+}; // Size: 0x528
 
 class AVisImpactEffect : public AVisActor
 {
-    TSubclassOf<class AActor> HitEffectActors;                                        // 0x0450 (size: 0x88)
-    class UArrowComponent* ArrowComponent;                                            // 0x04D8 (size: 0x8)
-    class UImpactSurfaceDataComponent* ImpactSurfaceDataComponent;                    // 0x04E0 (size: 0x8)
+    TSubclassOf<class AActor> HitEffectActors;                                        // 0x04A0 (size: 0x88)
+    class UArrowComponent* ArrowComponent;                                            // 0x0528 (size: 0x8)
+    class UImpactSurfaceDataComponent* ImpactSurfaceDataComponent;                    // 0x0530 (size: 0x8)
 
-}; // Size: 0x4F0
+}; // Size: 0x540
 
 class AVisItemStash : public AVisActor
 {
-    class UArrowComponent* ArrowComponent;                                            // 0x0450 (size: 0x8)
-    class UNiagaraComponent* LootMarkerVFXComponent;                                  // 0x0458 (size: 0x8)
+    class UArrowComponent* ArrowComponent;                                            // 0x04A0 (size: 0x8)
+    class UNiagaraComponent* LootMarkerVFXComponent;                                  // 0x04A8 (size: 0x8)
 
-}; // Size: 0x460
+}; // Size: 0x4B0
 
 class AVisLivestockStructure : public AVisStructure
 {
-    TSubclassOf<class UItemTemplate> FoodItem;                                        // 0x04C8 (size: 0x8)
-    TSubclassOf<class UItemTemplate> ProducedItem;                                    // 0x04D0 (size: 0x8)
+    TSubclassOf<class UItemTemplate> FoodItem;                                        // 0x0518 (size: 0x8)
+    TSubclassOf<class UItemTemplate> ProducedItem;                                    // 0x0520 (size: 0x8)
 
-}; // Size: 0x4E0
+}; // Size: 0x530
 
 class AVisMapInfo : public AVisActor
 {
-    class UTweakableDataComponent* TweakableDataComponent;                            // 0x0450 (size: 0x8)
+    class UTweakableDataComponent* TweakableDataComponent;                            // 0x04A0 (size: 0x8)
 
-}; // Size: 0x458
+}; // Size: 0x4A8
 
 class AVisMapPost : public AVisActor
 {
-    class UMapPostDataComponent* MapPostDataComponent;                                // 0x0450 (size: 0x8)
+    class UMapPostDataComponent* MapPostDataComponent;                                // 0x04A0 (size: 0x8)
 
-}; // Size: 0x458
+}; // Size: 0x4A8
 
 class AVisMarketShop : public AVisStructure
 {
-    class UMarketShopDataComponent* MarketShopDataComponent;                          // 0x04C8 (size: 0x8)
+    class UMarketShopDataComponent* MarketShopDataComponent;                          // 0x0518 (size: 0x8)
 
-}; // Size: 0x4D0
+}; // Size: 0x520
 
 class AVisMine : public AVisStructure
 {
-}; // Size: 0x4C8
+}; // Size: 0x518
 
 class AVisMobileWeapon : public AVisVehicle
 {
-    class UMountedWeaponDataComponent* MountedWeaponDataComponent;                    // 0x0478 (size: 0x8)
-    class USkeletalMeshComponent* VehicleMesh;                                        // 0x0480 (size: 0x8)
-    class USkeletalMeshComponent* AmmoMesh;                                           // 0x0488 (size: 0x8)
+    class UMountedWeaponDataComponent* MountedWeaponDataComponent;                    // 0x04C8 (size: 0x8)
+    class USkeletalMeshComponent* VehicleMesh;                                        // 0x04D0 (size: 0x8)
+    class USkeletalMeshComponent* AmmoMesh;                                           // 0x04D8 (size: 0x8)
 
-}; // Size: 0x490
+}; // Size: 0x4E0
 
 class AVisOfflineCharacter : public AVisActor
 {
-    class UOfflineCharacterDataComponent* OfflineCharacterDataComponent;              // 0x0450 (size: 0x8)
-    class USoundCue* DeathCue;                                                        // 0x0458 (size: 0x8)
-    class UCapsuleComponent* Capsule;                                                 // 0x0460 (size: 0x8)
-    class USkeletalMeshComponent* Mesh;                                               // 0x0468 (size: 0x8)
-    class USkeletalMeshComponent* Head;                                               // 0x0470 (size: 0x8)
-    class UVisPlayerVisualsComponent* PlayerVisualsComponent;                         // 0x0478 (size: 0x8)
-    class UHealthDataComponent* HealthDataComponent;                                  // 0x0480 (size: 0x8)
-    class UTeamDataComponent* TeamDataComponent;                                      // 0x0488 (size: 0x8)
-    class UArmorDataComponent* ArmourDataComponent;                                   // 0x0490 (size: 0x8)
+    class UOfflineCharacterDataComponent* OfflineCharacterDataComponent;              // 0x04A0 (size: 0x8)
+    class USoundCue* DeathCue;                                                        // 0x04A8 (size: 0x8)
+    class UCapsuleComponent* Capsule;                                                 // 0x04B0 (size: 0x8)
+    class USkeletalMeshComponent* Mesh;                                               // 0x04B8 (size: 0x8)
+    class USkeletalMeshComponent* Head;                                               // 0x04C0 (size: 0x8)
+    class UVisPlayerVisualsComponent* PlayerVisualsComponent;                         // 0x04C8 (size: 0x8)
+    class UHealthDataComponent* HealthDataComponent;                                  // 0x04D0 (size: 0x8)
+    class UTeamDataComponent* TeamDataComponent;                                      // 0x04D8 (size: 0x8)
+    class UArmorDataComponent* ArmourDataComponent;                                   // 0x04E0 (size: 0x8)
 
-}; // Size: 0x498
+}; // Size: 0x4E8
 
 class AVisPickupItem : public AVisActor
 {
-    class UPickupDataComponent* PickupDataComponent;                                  // 0x0450 (size: 0x8)
-    class UStaticMeshComponent* Mesh;                                                 // 0x0458 (size: 0x8)
-    class UArrowComponent* ArrowComponent;                                            // 0x0460 (size: 0x8)
-    class UNiagaraComponent* LootMarkerVFXComponent;                                  // 0x0468 (size: 0x8)
+    class UPickupDataComponent* PickupDataComponent;                                  // 0x04A0 (size: 0x8)
+    class UStaticMeshComponent* Mesh;                                                 // 0x04A8 (size: 0x8)
+    class UArrowComponent* ArrowComponent;                                            // 0x04B0 (size: 0x8)
+    class UNiagaraComponent* LootMarkerVFXComponent;                                  // 0x04B8 (size: 0x8)
 
-}; // Size: 0x470
+}; // Size: 0x4C0
 
 class AVisPlayer : public AVisActor
 {
-    class UVisSpringArmComponent* SpringArm;                                          // 0x0450 (size: 0x8)
-    class USimPlayerDataComponent* SimPlayerDataComponent;                            // 0x0458 (size: 0x8)
-    class UPlayerInputDataComponent* PlayerInputDataComponent;                        // 0x0460 (size: 0x8)
-    class UHealthDataComponent* HealthDataComponent;                                  // 0x0468 (size: 0x8)
-    class UHungerDataComponent* HungerDataComponent;                                  // 0x0470 (size: 0x8)
-    class UStaminaDataComponent* StaminaDataComponent;                                // 0x0478 (size: 0x8)
-    class UTemperatureDataComponent* TemperatureDataComponent;                        // 0x0480 (size: 0x8)
-    class UAdminEnvDataComponent* AdminEnvDataComponent;                              // 0x0488 (size: 0x8)
-    class UPlayerStatusDataComponent* PlayerStatusDataComponent;                      // 0x0490 (size: 0x8)
-    class USkeletalMeshComponent* ItemMeshComponent;                                  // 0x0498 (size: 0x8)
-    class USkeletalMeshComponent* ItemSecondaryMeshComponent;                         // 0x04A0 (size: 0x8)
-    class USkeletalMeshComponent* UnarmedItemMeshComponent;                           // 0x04A8 (size: 0x8)
-    class USkeletalMeshComponent* UnarmedItemSecondaryMeshComponent;                  // 0x04B0 (size: 0x8)
-    class UPostProcessComponent* PostProcessComponent;                                // 0x04B8 (size: 0x8)
-    TSubclassOf<class ARuntimeVirtualTextureVolume> LandscapeCullVirtualTextureVolumeClass; // 0x04C0 (size: 0x8)
-    float RotationAmount;                                                             // 0x04E0 (size: 0x4)
-    float CameraRotationLerpSpeed;                                                    // 0x04E4 (size: 0x4)
-    float AimMeshLength;                                                              // 0x04E8 (size: 0x4)
-    float YawSpeed;                                                                   // 0x05C8 (size: 0x4)
-    class USoundCue* DeathCue;                                                        // 0x05D0 (size: 0x8)
-    class UCapsuleComponent* Capsule;                                                 // 0x05D8 (size: 0x8)
-    class USkeletalMeshComponent* Mesh;                                               // 0x05E0 (size: 0x8)
-    class USkeletalMeshComponent* Head;                                               // 0x05E8 (size: 0x8)
-    class UStaticMeshComponent* AimMeshComponent;                                     // 0x05F0 (size: 0x8)
-    class UMaterialInstanceDynamic* AimMeshMaterial;                                  // 0x05F8 (size: 0x8)
-    class UStaticMeshComponent* MeleeAimMeshComponent;                                // 0x0600 (size: 0x8)
-    class UStaticMeshComponent* MeleeAimMeshTargetComponent;                          // 0x0608 (size: 0x8)
-    TSubclassOf<class AVisFishingIndicator> FishingAimMeshClass;                      // 0x0610 (size: 0x8)
-    TSubclassOf<class AVisFishingBobber> FishingBobberClass;                          // 0x0620 (size: 0x8)
-    class UVisPlayerVisualsComponent* PlayerVisualsComponent;                         // 0x0628 (size: 0x8)
-    class UMapMarkerComponent* MapMarker;                                             // 0x0630 (size: 0x8)
-    class UMapMarkerComponent* FamilyMarkerMapMarker;                                 // 0x0638 (size: 0x8)
-    TMap<class EAnvilSimActivityState, class UAnimMontage*> ActivityStateMontageMap;  // 0x0640 (size: 0x50)
-    class UArmorDataComponent* ArmourDataComponent;                                   // 0x0690 (size: 0x8)
-    class UBillboardComponent* VoiceIndicator;                                        // 0x0698 (size: 0x8)
-    class UNiagaraComponent* TorchVFXComponent;                                       // 0x06A0 (size: 0x8)
-    class UAudioComponent* TorchAudioComponent;                                       // 0x06A8 (size: 0x8)
-    class UNiagaraComponent* RainVFXComponent;                                        // 0x06B0 (size: 0x8)
-    class UNiagaraComponent* SnowVFXComponent;                                        // 0x06B8 (size: 0x8)
-    class UNiagaraComponent* BreathFogVFXComponent;                                   // 0x06C0 (size: 0x8)
-    class UAudioComponent* RainLowAudioComponent;                                     // 0x06C8 (size: 0x8)
-    class UAudioComponent* RainMidAudioComponent;                                     // 0x06D0 (size: 0x8)
-    class UAudioComponent* RainHighAudioComponent;                                    // 0x06D8 (size: 0x8)
-    class UAudioComponent* SnowLowAudioComponent;                                     // 0x06E0 (size: 0x8)
-    class UAudioComponent* SnowMidAudioComponent;                                     // 0x06E8 (size: 0x8)
-    class UAudioComponent* SnowHighAudioComponent;                                    // 0x06F0 (size: 0x8)
-    class UAudioComponent* WindLowAudioComponent;                                     // 0x06F8 (size: 0x8)
-    class UAudioComponent* WindMidAudioComponent;                                     // 0x0700 (size: 0x8)
-    class UAudioComponent* WindHighAudioComponent;                                    // 0x0708 (size: 0x8)
-    class USoundCue* RepairItemSoundCue;                                              // 0x0710 (size: 0x8)
-    class UMaterialParameterCollection* PostProcessMaterialParameterCollection;       // 0x0718 (size: 0x8)
-    class UMaterialParameterCollection* PositionPostProcessMaterialParameterCollection; // 0x0720 (size: 0x8)
-    class AVisActor* CurrentUsableVisActor;                                           // 0x0790 (size: 0x8)
-    class AVisActor* CurrentMountableVisActor;                                        // 0x0798 (size: 0x8)
-    class AActor* CurrentUEUsableActor;                                               // 0x07A0 (size: 0x8)
+    class UVisSpringArmComponent* SpringArm;                                          // 0x04A0 (size: 0x8)
+    class USimPlayerDataComponent* SimPlayerDataComponent;                            // 0x04A8 (size: 0x8)
+    class UPlayerInputDataComponent* PlayerInputDataComponent;                        // 0x04B0 (size: 0x8)
+    class UHealthDataComponent* HealthDataComponent;                                  // 0x04B8 (size: 0x8)
+    class UHungerDataComponent* HungerDataComponent;                                  // 0x04C0 (size: 0x8)
+    class UStaminaDataComponent* StaminaDataComponent;                                // 0x04C8 (size: 0x8)
+    class UTemperatureDataComponent* TemperatureDataComponent;                        // 0x04D0 (size: 0x8)
+    class UAdminEnvDataComponent* AdminEnvDataComponent;                              // 0x04D8 (size: 0x8)
+    class UPlayerStatusDataComponent* PlayerStatusDataComponent;                      // 0x04E0 (size: 0x8)
+    class USkeletalMeshComponent* ItemMeshComponent;                                  // 0x04E8 (size: 0x8)
+    class USkeletalMeshComponent* ItemSecondaryMeshComponent;                         // 0x04F0 (size: 0x8)
+    class USkeletalMeshComponent* UnarmedItemMeshComponent;                           // 0x04F8 (size: 0x8)
+    class USkeletalMeshComponent* UnarmedItemSecondaryMeshComponent;                  // 0x0500 (size: 0x8)
+    class UPostProcessComponent* PostProcessComponent;                                // 0x0508 (size: 0x8)
+    TSubclassOf<class ARuntimeVirtualTextureVolume> LandscapeCullVirtualTextureVolumeClass; // 0x0510 (size: 0x8)
+    float RotationAmount;                                                             // 0x0530 (size: 0x4)
+    float CameraRotationLerpSpeed;                                                    // 0x0534 (size: 0x4)
+    float AimMeshLength;                                                              // 0x0538 (size: 0x4)
+    float YawSpeed;                                                                   // 0x0618 (size: 0x4)
+    class USoundCue* DeathCue;                                                        // 0x0620 (size: 0x8)
+    class UCapsuleComponent* Capsule;                                                 // 0x0628 (size: 0x8)
+    class USkeletalMeshComponent* Mesh;                                               // 0x0630 (size: 0x8)
+    class USkeletalMeshComponent* Head;                                               // 0x0638 (size: 0x8)
+    class UStaticMeshComponent* AimMeshComponent;                                     // 0x0640 (size: 0x8)
+    class UMaterialInstanceDynamic* AimMeshMaterial;                                  // 0x0648 (size: 0x8)
+    class UStaticMeshComponent* MeleeAimMeshComponent;                                // 0x0650 (size: 0x8)
+    class UStaticMeshComponent* MeleeAimMeshTargetComponent;                          // 0x0658 (size: 0x8)
+    TSubclassOf<class AVisFishingIndicator> FishingAimMeshClass;                      // 0x0660 (size: 0x8)
+    TSubclassOf<class AVisFishingBobber> FishingBobberClass;                          // 0x0670 (size: 0x8)
+    class UVisPlayerVisualsComponent* PlayerVisualsComponent;                         // 0x0678 (size: 0x8)
+    class UMapMarkerComponent* MapMarker;                                             // 0x0680 (size: 0x8)
+    class UMapMarkerComponent* FamilyMarkerMapMarker;                                 // 0x0688 (size: 0x8)
+    TMap<class EAnvilSimActivityState, class UAnimMontage*> ActivityStateMontageMap;  // 0x0690 (size: 0x50)
+    class UArmorDataComponent* ArmourDataComponent;                                   // 0x06E0 (size: 0x8)
+    class UBillboardComponent* VoiceIndicator;                                        // 0x06E8 (size: 0x8)
+    class UNiagaraComponent* TorchVFXComponent;                                       // 0x06F0 (size: 0x8)
+    class UAudioComponent* TorchAudioComponent;                                       // 0x06F8 (size: 0x8)
+    class UNiagaraComponent* RainVFXComponent;                                        // 0x0700 (size: 0x8)
+    class UNiagaraComponent* SnowVFXComponent;                                        // 0x0708 (size: 0x8)
+    class UNiagaraComponent* BreathFogVFXComponent;                                   // 0x0710 (size: 0x8)
+    class UAudioComponent* RainLowAudioComponent;                                     // 0x0718 (size: 0x8)
+    class UAudioComponent* RainMidAudioComponent;                                     // 0x0720 (size: 0x8)
+    class UAudioComponent* RainHighAudioComponent;                                    // 0x0728 (size: 0x8)
+    class UAudioComponent* SnowLowAudioComponent;                                     // 0x0730 (size: 0x8)
+    class UAudioComponent* SnowMidAudioComponent;                                     // 0x0738 (size: 0x8)
+    class UAudioComponent* SnowHighAudioComponent;                                    // 0x0740 (size: 0x8)
+    class UAudioComponent* WindLowAudioComponent;                                     // 0x0748 (size: 0x8)
+    class UAudioComponent* WindMidAudioComponent;                                     // 0x0750 (size: 0x8)
+    class UAudioComponent* WindHighAudioComponent;                                    // 0x0758 (size: 0x8)
+    class USoundCue* RepairItemSoundCue;                                              // 0x0760 (size: 0x8)
+    class UMaterialParameterCollection* PostProcessMaterialParameterCollection;       // 0x0768 (size: 0x8)
+    class UMaterialParameterCollection* PositionPostProcessMaterialParameterCollection; // 0x0770 (size: 0x8)
+    class AVisActor* CurrentUsableVisActor;                                           // 0x07E0 (size: 0x8)
+    class AVisActor* CurrentMountableVisActor;                                        // 0x07E8 (size: 0x8)
+    class AActor* CurrentUEUsableActor;                                               // 0x07F0 (size: 0x8)
 
     float GetVelocityHeadingDegrees();
     FString GetPlayerName();
@@ -961,136 +987,151 @@ class AVisPlayer : public AVisActor
     void BP_UpdateNightShroudMaterials();
     void BP_OnHeldItemChanged();
     FVector AnimGetVelocity();
-}; // Size: 0x7B8
+}; // Size: 0x808
 
 class AVisPowerMill : public AVisStructure
 {
-    class UPowerMillDataComponent* PowerMillDataComponent;                            // 0x04C8 (size: 0x8)
-    class USkeletalMeshComponent* SKMesh;                                             // 0x04D0 (size: 0x8)
-    class UVisPowerUnitAnimInstance* AnimInst;                                        // 0x04D8 (size: 0x8)
+    class UPowerMillDataComponent* PowerMillDataComponent;                            // 0x0518 (size: 0x8)
+    class USkeletalMeshComponent* SKMesh;                                             // 0x0520 (size: 0x8)
+    class UVisPowerUnitAnimInstance* AnimInst;                                        // 0x0528 (size: 0x8)
 
-}; // Size: 0x560
+}; // Size: 0x5B0
 
 class AVisRefinery : public AVisStructure
 {
-    class URefineResourceDataComponent* RefineResourceDataComponent;                  // 0x04C8 (size: 0x8)
+    class URefineResourceDataComponent* RefineResourceDataComponent;                  // 0x0518 (size: 0x8)
 
-}; // Size: 0x4D0
+}; // Size: 0x520
 
 class AVisRelicTechCenter : public AVisStructure
 {
-    class URelicTechCenterDataComponent* RelicTechCenterDataComponent;                // 0x04C8 (size: 0x8)
+    class URelicTechCenterDataComponent* RelicTechCenterDataComponent;                // 0x0518 (size: 0x8)
 
-}; // Size: 0x4D0
+}; // Size: 0x520
 
 class AVisResource : public AVisActor
 {
-    class UResourceDataComponent* ResourceDataComponent;                              // 0x0450 (size: 0x8)
-    class UPlantGrowthDataComponent* PlantGrowthComponent;                            // 0x0458 (size: 0x8)
-    TArray<class UStaticMesh*> StageMeshes;                                           // 0x0460 (size: 0x10)
-    bool bApplyIdBasedRandomRotation;                                                 // 0x0470 (size: 0x1)
-    class UArrowComponent* ArrowComponent;                                            // 0x0478 (size: 0x8)
-    class UStaticMeshComponent* Mesh;                                                 // 0x0480 (size: 0x8)
-    class UCurveVector* ShakeCurve;                                                   // 0x0488 (size: 0x8)
+    class UResourceDataComponent* ResourceDataComponent;                              // 0x04A0 (size: 0x8)
+    class UPlantGrowthDataComponent* PlantGrowthComponent;                            // 0x04A8 (size: 0x8)
+    TArray<class UStaticMesh*> StageMeshes;                                           // 0x04B0 (size: 0x10)
+    bool bApplyIdBasedRandomRotation;                                                 // 0x04C0 (size: 0x1)
+    bool bProjectAndRotateToLandscape;                                                // 0x04C1 (size: 0x1)
+    class UArrowComponent* ArrowComponent;                                            // 0x04C8 (size: 0x8)
+    class UStaticMeshComponent* Mesh;                                                 // 0x04D0 (size: 0x8)
+    class UCurveVector* ShakeCurve;                                                   // 0x04D8 (size: 0x8)
 
-}; // Size: 0x4A0
+}; // Size: 0x4F0
 
 class AVisRichSoil : public AVisActor
 {
-    class UArrowComponent* ArrowComponent;                                            // 0x0450 (size: 0x8)
-    class UDecalComponent* RichSoilDecal;                                             // 0x0458 (size: 0x8)
-    class URichSoilDataComponent* RichSoilDataComponent;                              // 0x0460 (size: 0x8)
+    class UArrowComponent* ArrowComponent;                                            // 0x04A0 (size: 0x8)
+    class UDecalComponent* RichSoilDecal;                                             // 0x04A8 (size: 0x8)
+    class URichSoilDataComponent* RichSoilDataComponent;                              // 0x04B0 (size: 0x8)
 
-}; // Size: 0x470
+}; // Size: 0x4C0
 
 class AVisSpawnPoint : public AVisActor
 {
-    class UPlayerSpawnerDataComponent* PlayerSpawnerDataComponent;                    // 0x0450 (size: 0x8)
+    class UPlayerSpawnerDataComponent* PlayerSpawnerDataComponent;                    // 0x04A0 (size: 0x8)
 
-}; // Size: 0x458
+}; // Size: 0x4A8
 
 class AVisSpline : public AVisStructure
 {
-    class UVisSplineComponent* SplineComponent;                                       // 0x04C8 (size: 0x8)
-    class UVisSplineComponent* SplineScaffoldingComponent;                            // 0x04D0 (size: 0x8)
+    class UVisSplineComponent* SplineComponent;                                       // 0x0518 (size: 0x8)
+    class UVisSplineComponent* SplineScaffoldingComponent;                            // 0x0520 (size: 0x8)
 
-}; // Size: 0x4D8
+}; // Size: 0x528
 
 class AVisSplineBuildSite : public AVisBuildSite
 {
-    class UVisSplineComponent* SplineComponent;                                       // 0x04C0 (size: 0x8)
+    class UVisSplineComponent* SplineComponent;                                       // 0x0510 (size: 0x8)
 
-}; // Size: 0x4C8
+}; // Size: 0x518
 
 class AVisStaticTorch : public AVisStructure
 {
-    class UStaticTorchDataComponent* StaticTorchDataComponent;                        // 0x04C8 (size: 0x8)
+    class UStaticTorchDataComponent* StaticTorchDataComponent;                        // 0x0518 (size: 0x8)
 
-}; // Size: 0x4D0
+}; // Size: 0x520
 
 class AVisStructure : public AVisActor
 {
-    class UVisScaffoldingComponent* ScaffoldingComponent;                             // 0x0450 (size: 0x8)
-    class UTexture2D* StructureIcon;                                                  // 0x0458 (size: 0x8)
-    EBuildSiteCategory BuildSiteCategory;                                             // 0x0460 (size: 0x1)
-    int32 BuildSiteOrder;                                                             // 0x0464 (size: 0x4)
-    EBuildSiteVisibility BuildSiteVisibility;                                         // 0x0468 (size: 0x1)
-    class UUpgradeDataComponent* UpgradeDataComponent;                                // 0x0470 (size: 0x8)
-    class UHealthDataComponent* HealthDataComponent;                                  // 0x0478 (size: 0x8)
-    class UTeamDataComponent* TeamDataComponent;                                      // 0x0480 (size: 0x8)
-    class UStructureDataComponent* StructureDataComponent;                            // 0x0488 (size: 0x8)
-    class UScorchDataComponent* ScorchDataComponent;                                  // 0x0490 (size: 0x8)
-    class UArrowComponent* ArrowComponent;                                            // 0x0498 (size: 0x8)
-    class UDecalComponent* UseVolumeDecalComponent;                                   // 0x04A0 (size: 0x8)
-    class UGrassRemovalVolumeComponent* GrassRemovalVolume;                           // 0x04A8 (size: 0x8)
-    int32 GeneratedScorchEffects;                                                     // 0x04B0 (size: 0x4)
-    TArray<class UNiagaraSystem*> ScorchEffectAssets;                                 // 0x04B8 (size: 0x10)
+    class UVisScaffoldingComponent* ScaffoldingComponent;                             // 0x04A0 (size: 0x8)
+    class UTexture2D* StructureIcon;                                                  // 0x04A8 (size: 0x8)
+    EBuildSiteCategory BuildSiteCategory;                                             // 0x04B0 (size: 0x1)
+    int32 BuildSiteOrder;                                                             // 0x04B4 (size: 0x4)
+    EBuildSiteVisibility BuildSiteVisibility;                                         // 0x04B8 (size: 0x1)
+    class UUpgradeDataComponent* UpgradeDataComponent;                                // 0x04C0 (size: 0x8)
+    class UHealthDataComponent* HealthDataComponent;                                  // 0x04C8 (size: 0x8)
+    class UTeamDataComponent* TeamDataComponent;                                      // 0x04D0 (size: 0x8)
+    class UStructureDataComponent* StructureDataComponent;                            // 0x04D8 (size: 0x8)
+    class UScorchDataComponent* ScorchDataComponent;                                  // 0x04E0 (size: 0x8)
+    class UArrowComponent* ArrowComponent;                                            // 0x04E8 (size: 0x8)
+    class UDecalComponent* UseVolumeDecalComponent;                                   // 0x04F0 (size: 0x8)
+    class UGrassRemovalVolumeComponent* GrassRemovalVolume;                           // 0x04F8 (size: 0x8)
+    int32 GeneratedScorchEffects;                                                     // 0x0500 (size: 0x4)
+    TArray<class UNiagaraSystem*> ScorchEffectAssets;                                 // 0x0508 (size: 0x10)
 
     void UpdateVisualComponentsByTag(const FName Tag, const bool bIsVisible);
-}; // Size: 0x4C8
+}; // Size: 0x518
 
 class AVisTownCenter : public AVisStructure
 {
-    class UTownHallDataComponent* TownHallDataComponent;                              // 0x04C8 (size: 0x8)
+    class UTownHallDataComponent* TownHallDataComponent;                              // 0x0518 (size: 0x8)
+    class UVisTownAreaMarkerDecalComponent* TownAreaMarkerDecal;                      // 0x0520 (size: 0x8)
 
-}; // Size: 0x4D0
+}; // Size: 0x528
 
 class AVisTrap : public AVisActor
 {
-    class UArrowComponent* ArrowComponent;                                            // 0x0450 (size: 0x8)
-    class USkeletalMeshComponent* Mesh;                                               // 0x0458 (size: 0x8)
-    class UAnimationAsset* TriggeredAnimation;                                        // 0x0460 (size: 0x8)
-    class UTrapDataComponent* TrapDataComponent;                                      // 0x0468 (size: 0x8)
+    class UArrowComponent* ArrowComponent;                                            // 0x04A0 (size: 0x8)
+    class USkeletalMeshComponent* Mesh;                                               // 0x04A8 (size: 0x8)
+    class UAnimationAsset* TriggeredAnimation;                                        // 0x04B0 (size: 0x8)
+    class UTrapDataComponent* TrapDataComponent;                                      // 0x04B8 (size: 0x8)
 
-}; // Size: 0x470
+}; // Size: 0x4C0
+
+class AVisUnderworldModule : public AVisActor
+{
+    class UArrowComponent* ArrowComponent;                                            // 0x04A0 (size: 0x8)
+
+}; // Size: 0x4A8
+
+class AVisUnderworldModuleDynamic : public AVisUnderworldModule
+{
+    class UDynamicPrefabDataComponent* DynamicPrefabDataComponent;                    // 0x04A8 (size: 0x8)
+    class ADynamicPrefab* SpawnedDynamicPrefab;                                       // 0x04B0 (size: 0x8)
+
+}; // Size: 0x4B8
 
 class AVisVehicle : public AVisActor
 {
-    class UVehicleMovementDataComponent* VehicleMovementDataComponent;                // 0x0450 (size: 0x8)
-    class UAudioComponent* MoveLoopAudioComponent;                                    // 0x0458 (size: 0x8)
-    class UNiagaraComponent* MoveLoopParticleSystem;                                  // 0x0460 (size: 0x8)
-    class UHealthDataComponent* HealthDataComponent;                                  // 0x0468 (size: 0x8)
-    class UArrowComponent* ArrowComponent;                                            // 0x0470 (size: 0x8)
+    class UVehicleMovementDataComponent* VehicleMovementDataComponent;                // 0x04A0 (size: 0x8)
+    class UAudioComponent* MoveLoopAudioComponent;                                    // 0x04A8 (size: 0x8)
+    class UNiagaraComponent* MoveLoopParticleSystem;                                  // 0x04B0 (size: 0x8)
+    class UHealthDataComponent* HealthDataComponent;                                  // 0x04B8 (size: 0x8)
+    class UArrowComponent* ArrowComponent;                                            // 0x04C0 (size: 0x8)
 
-}; // Size: 0x478
+}; // Size: 0x4C8
 
 class AVisWindMill : public AVisStructure
 {
-    class UWindMillDataComponent* WindMillDataComponent;                              // 0x04C8 (size: 0x8)
-    class UPowerUnitDataComponent* PowerUnitDataComponent;                            // 0x04D0 (size: 0x8)
-    class UEntityAttachableDataComponent* SlotData;                                   // 0x04D8 (size: 0x8)
-    class USkeletalMeshComponent* SKMesh;                                             // 0x04E0 (size: 0x8)
-    class UVisPowerUnitAnimInstance* AnimInst;                                        // 0x04E8 (size: 0x8)
-    float IsRefiningPercentageCurrentMin;                                             // 0x04F0 (size: 0x4)
+    class UWindMillDataComponent* WindMillDataComponent;                              // 0x0518 (size: 0x8)
+    class UPowerUnitDataComponent* PowerUnitDataComponent;                            // 0x0520 (size: 0x8)
+    class UEntityAttachableDataComponent* SlotData;                                   // 0x0528 (size: 0x8)
+    class USkeletalMeshComponent* SKMesh;                                             // 0x0530 (size: 0x8)
+    class UVisPowerUnitAnimInstance* AnimInst;                                        // 0x0538 (size: 0x8)
+    float IsRefiningPercentageCurrentMin;                                             // 0x0540 (size: 0x4)
 
-}; // Size: 0x530
+}; // Size: 0x580
 
 class AVisWorldEntrance : public AVisActor
 {
-    class UArrowComponent* ArrowComponent;                                            // 0x0450 (size: 0x8)
-    class UGrassRemovalVolumeComponent* GrassRemovalVolume;                           // 0x0458 (size: 0x8)
+    class UArrowComponent* ArrowComponent;                                            // 0x04A0 (size: 0x8)
+    class UGrassRemovalVolumeComponent* GrassRemovalVolume;                           // 0x04A8 (size: 0x8)
 
-}; // Size: 0x460
+}; // Size: 0x4B0
 
 class AVisualGlobals : public AInfo
 {
@@ -1100,7 +1141,7 @@ class AVisualGlobals : public AInfo
 
 class AvisLadder : public AVisStructure
 {
-}; // Size: 0x4C8
+}; // Size: 0x518
 
 class UActionButtonWidget : public UUserWidget
 {
@@ -1162,7 +1203,7 @@ class UAlertWidget : public UUserWidget
 
     void OnDeclineClicked();
     void OnAcceptClicked();
-}; // Size: 0x2C8
+}; // Size: 0x2D0
 
 class UAlertsContainerWidget : public UUserWidget
 {
@@ -1243,25 +1284,25 @@ class UAnvilGameInstance : public UGameInstance
     class UMapWidget* MapWidget;                                                      // 0x0248 (size: 0x8)
     class UHUDWidget* HUDWidget;                                                      // 0x0250 (size: 0x8)
     class UWorldEntityPoolManager* WorldEntityPoolManager;                            // 0x0258 (size: 0x8)
-    FString TravelAddress;                                                            // 0x02E0 (size: 0x10)
-    TArray<uint8> ConnectTokenBuffer;                                                 // 0x02F0 (size: 0x10)
-    class UAnvilCharacterSave* CharacterSave;                                         // 0x0300 (size: 0x8)
-    class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x0308 (size: 0x8)
-    FAnvilAssetManager AssetManager;                                                  // 0x0310 (size: 0x178)
-    FWeatherManager WeatherManager;                                                   // 0x0488 (size: 0x88)
-    FAnvilOptionsManager OptionsManager;                                              // 0x0510 (size: 0x1A0)
-    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x06B0 (size: 0x8)
-    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x06B8 (size: 0x10)
-    TArray<class AVisActor*> VisActorList;                                            // 0x06C8 (size: 0x10)
-    TArray<class AVisActor*> TravelVisActorList;                                      // 0x06D8 (size: 0x10)
-    FClientConfigManager ClientConfigManager;                                         // 0x06E8 (size: 0x38)
+    FString TravelAddress;                                                            // 0x02F8 (size: 0x10)
+    TArray<uint8> ConnectTokenBuffer;                                                 // 0x0308 (size: 0x10)
+    class UAnvilCharacterSave* CharacterSave;                                         // 0x0318 (size: 0x8)
+    class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x0320 (size: 0x8)
+    FAnvilAssetManager AssetManager;                                                  // 0x0328 (size: 0x1C8)
+    FWeatherManager WeatherManager;                                                   // 0x04F0 (size: 0x88)
+    FAnvilOptionsManager OptionsManager;                                              // 0x0578 (size: 0x1A0)
+    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x0718 (size: 0x8)
+    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x0720 (size: 0x10)
+    TArray<class AVisActor*> VisActorList;                                            // 0x0730 (size: 0x10)
+    TArray<class AVisActor*> TravelVisActorList;                                      // 0x0740 (size: 0x10)
+    FClientConfigManager ClientConfigManager;                                         // 0x0750 (size: 0x38)
 
     void GetVisActors(TArray<class AVisActor*>& OutVisActorList);
     void GetVersion(int32& OutMajor, int32& OutMinor, int32& OutPatch, int32& OutCL);
     void GetTimeOfDay(int32& OutHours, int32& OutMinutes, int32& OutSeconds);
     void GetDayCurrentSeconds(int32& OutSeconds);
     void DumpProperties(FString OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter);
-}; // Size: 0x1748
+}; // Size: 0x17B0
 
 class UAnvilKeyEntryWidget : public UUserWidget
 {
@@ -1437,6 +1478,9 @@ class UCentralMarketplaceWidget : public UUserWidget
     void OnPlaceOrderTabButtonClicked();
     void OnBuySellTabButtonClicked();
     void OnActiveOrdersTabButtonClicked();
+    bool IsSelectedOrderItemQuantityEditableTextBoxEnabled();
+    bool IsSelectedOrderItemPriceEditableTextBoxEnabled();
+    bool IsSelectedOrderItemMinQualityComboBoxEnabled();
     bool IsSelectedItemPlaceOrderButtonEnabled();
     bool IsPlaceOrderTabButtonEnabled();
     bool IsBuySellTabButtonEnabled();
@@ -1537,6 +1581,28 @@ class UDeathMarketMapIcon : public UMapIcon
     void OnLastDeathLocationChanged(const FVector& OldVal, const FVector& NewVal);
 }; // Size: 0x3A0
 
+class UDeploymentFoodItemGridWidget : public UGridPanelWidget
+{
+}; // Size: 0x1B8
+
+class UDeploymentFoodItemWidget : public UGridItemWidget
+{
+    class UTexture2D* WildSpawnIcon;                                                  // 0x0310 (size: 0x8)
+    class UTextBlock* ItemQuantityText;                                               // 0x0318 (size: 0x8)
+
+}; // Size: 0x320
+
+class UDeploymentFoodWidget : public UUserWidget
+{
+    class UImage* TooltipImage;                                                       // 0x0278 (size: 0x8)
+    class UDeploymentFoodItemGridWidget* DeploymentFoodItemGridWidget;                // 0x0280 (size: 0x8)
+    class UTextBlock* DeploymentUnavailableText;                                      // 0x0288 (size: 0x8)
+    class UAnvilButtonWidget* CancelButton;                                           // 0x0290 (size: 0x8)
+    class UDeploymentScreen* ParentDeploymentScreen;                                  // 0x0298 (size: 0x8)
+
+    void OnCancelButtonClicked();
+}; // Size: 0x2B0
+
 class UDeploymentMapWidget : public UMapWidgetBase
 {
 }; // Size: 0x328
@@ -1555,10 +1621,11 @@ class UDeploymentScreen : public UAnvilScreen
     class UDeploymentMapWidget* MapWidget;                                            // 0x0290 (size: 0x8)
     class UAnvilButtonWidget* LogoutButton;                                           // 0x0298 (size: 0x8)
     class UTextBlock* DeploymentInstructionOrSpawnTimerText;                          // 0x02A0 (size: 0x8)
+    class UDeploymentFoodWidget* DeploymentFoodWidget;                                // 0x02A8 (size: 0x8)
 
     void OnLogoutButtonClicked();
     FText GetDeploymentInstructionOrSpawnTimerText();
-}; // Size: 0x2B8
+}; // Size: 0x2C0
 
 class UDisclaimerWidget : public UUserWidget
 {
@@ -1642,12 +1709,13 @@ class UFamilyMarkerMapIcon : public UMapIcon
 
 class UFamilyMemberListItemWidget : public UUserWidget
 {
-    class UTextBlock* PlayerNameText;                                                 // 0x0278 (size: 0x8)
-    class USizeBox* RoleComboBoxSizeBox;                                              // 0x0280 (size: 0x8)
-    class UComboBoxString* RoleComboBox;                                              // 0x0288 (size: 0x8)
-    class USizeBox* RoleTextSizeBox;                                                  // 0x0290 (size: 0x8)
-    class UTextBlock* RoleTextBlock;                                                  // 0x0298 (size: 0x8)
-    class UButton* KickButton;                                                        // 0x02A0 (size: 0x8)
+    class UImage* OnlineStatusIcon;                                                   // 0x0278 (size: 0x8)
+    class UTextBlock* PlayerNameText;                                                 // 0x0280 (size: 0x8)
+    class USizeBox* RoleComboBoxSizeBox;                                              // 0x0288 (size: 0x8)
+    class UComboBoxString* RoleComboBox;                                              // 0x0290 (size: 0x8)
+    class USizeBox* RoleTextSizeBox;                                                  // 0x0298 (size: 0x8)
+    class UTextBlock* RoleTextBlock;                                                  // 0x02A0 (size: 0x8)
+    class UButton* KickButton;                                                        // 0x02A8 (size: 0x8)
 
     void OnKickButtonClicked();
     void OnFamilyRoleSelectionChanged(FString SelectedItem, const TEnumAsByte<ESelectInfo::Type> SelectionType);
@@ -1656,7 +1724,7 @@ class UFamilyMemberListItemWidget : public UUserWidget
     ESlateVisibility GetRoleComboBoxVisibility();
     FText GetPlayerNameText();
     ESlateVisibility GetKickButtonVisibility();
-}; // Size: 0x2D8
+}; // Size: 0x2E0
 
 class UFoodCooldownIconWidget : public UUserWidget
 {
@@ -1683,12 +1751,12 @@ class UFooterContainer : public UUserWidget
 
 class UGameplayOverlay : public UUserWidget
 {
-    class UChatWidget* ChatWidget;                                                    // 0x0278 (size: 0x8)
-    class UTextBlock* NotificationText;                                               // 0x0280 (size: 0x8)
-    class UTextBlock* SecondaryNotificationText;                                      // 0x0288 (size: 0x8)
-    class UTextBlock* PrimaryPromptText;                                              // 0x0290 (size: 0x8)
-    class UTextBlock* SecondaryPromptText;                                            // 0x0298 (size: 0x8)
-    class UAlertsContainerWidget* AlertsContainerWidget;                              // 0x02A0 (size: 0x8)
+    class UAlertsContainerWidget* AlertsContainerWidget;                              // 0x0278 (size: 0x8)
+    class UChatWidget* ChatWidget;                                                    // 0x0280 (size: 0x8)
+    class UTextBlock* NotificationText;                                               // 0x0288 (size: 0x8)
+    class UTextBlock* SecondaryNotificationText;                                      // 0x0290 (size: 0x8)
+    class UTextBlock* PrimaryPromptText;                                              // 0x0298 (size: 0x8)
+    class UTextBlock* SecondaryPromptText;                                            // 0x02A0 (size: 0x8)
 
     ESlateVisibility GetHUDWidgetVisibility();
 }; // Size: 0x2C8
@@ -1756,15 +1824,17 @@ class UHUDNameWidget : public UUserWidget
     class AVisActor* TargetVisActor;                                                  // 0x0278 (size: 0x8)
     class UTextBlock* NameText;                                                       // 0x0288 (size: 0x8)
     class UTextBlock* LocalChatText;                                                  // 0x0290 (size: 0x8)
-    int32 LocalChatTextLimit;                                                         // 0x0298 (size: 0x4)
-    FSlateColor NameTypeColourList;                                                   // 0x029C (size: 0x64)
+    class UImage* ReinforcementIcon;                                                  // 0x0298 (size: 0x8)
+    int32 LocalChatTextLimit;                                                         // 0x02A0 (size: 0x4)
+    FSlateColor NameTypeColourList;                                                   // 0x02A4 (size: 0x64)
 
     ESlateVisibility GetWidgetVisibility();
+    ESlateVisibility GetReinforcementIconVisibility();
     ESlateVisibility GetPlayerNameVisibility();
     FText GetPlayerNameText();
     FSlateColor GetPlayerNameColour();
     ESlateVisibility GetLocalChatTextVisibility();
-}; // Size: 0x300
+}; // Size: 0x308
 
 class UHUDStatsWidget : public UUserWidget
 {
@@ -1787,8 +1857,8 @@ class UHUDWidget : public UUserWidget
     class UHUDWindow* OpenedHUDWindow;                                                // 0x0310 (size: 0x8)
     class UImage* Compass;                                                            // 0x0318 (size: 0x8)
     class UImage* CompassPlayerArrow;                                                 // 0x0320 (size: 0x8)
-    class UInventoryItemWidget* PrimaryHeldItem;                                      // 0x0328 (size: 0x8)
-    class UInventoryItemWidget* SecondaryHeldItem;                                    // 0x0330 (size: 0x8)
+    class UInventoryItemHUDWidget* PrimaryHeldItem;                                   // 0x0328 (size: 0x8)
+    class UInventoryItemHUDWidget* SecondaryHeldItem;                                 // 0x0330 (size: 0x8)
     class UInventoryItemHUDWidget* PrimaryEquipmentItem;                              // 0x0338 (size: 0x8)
     class UInventoryItemHUDWidget* SecondaryEquipmentItem;                            // 0x0340 (size: 0x8)
     class UProgressBar* GuardBar;                                                     // 0x0348 (size: 0x8)
@@ -1796,28 +1866,27 @@ class UHUDWidget : public UUserWidget
     class UImage* GuardStrengthLeftIcon;                                              // 0x0358 (size: 0x8)
     class UImage* GuardStrengthCenterIcon;                                            // 0x0360 (size: 0x8)
     class UImage* GuardStrengthRightIcon;                                             // 0x0368 (size: 0x8)
-    class UImage* EncumbranceIcon;                                                    // 0x0370 (size: 0x8)
-    class UTextBlock* EncumbranceText;                                                // 0x0378 (size: 0x8)
-    class UTextBlock* PlayerStatusText;                                               // 0x0380 (size: 0x8)
-    class UCanvasPanel* WinConditionCanvas;                                           // 0x0388 (size: 0x8)
-    class UTextBlock* WinConditionText;                                               // 0x0390 (size: 0x8)
-    class UImage* WinConditionLogo;                                                   // 0x0398 (size: 0x8)
-    class UVitalityStatusWidget* PlayerVitality;                                      // 0x03A0 (size: 0x8)
-    class UVitalityStatusWidget* HorseVitality;                                       // 0x03A8 (size: 0x8)
-    class UInventoryHUDWidget* InventoryHUD;                                          // 0x03B0 (size: 0x8)
-    class UCanvasPanel* DisclaimerCanvas;                                             // 0x03B8 (size: 0x8)
-    class UTextBlock* DisclaimerText;                                                 // 0x03C0 (size: 0x8)
-    class UTexture2D* AranicLogo;                                                     // 0x03C8 (size: 0x8)
-    class UTexture2D* MirrishLogo;                                                    // 0x03D0 (size: 0x8)
-    class UTexture2D* NovanLogo;                                                      // 0x03D8 (size: 0x8)
-    FSlateBrush GuardStrengthEmptyIcon;                                               // 0x03E0 (size: 0xD0)
-    FSlateBrush GuardStrengthFillIcon;                                                // 0x04B0 (size: 0xD0)
-    float LocalChatDisplayTime;                                                       // 0x0580 (size: 0x4)
-    class UProgressBar* InteractionProgressBar1;                                      // 0x0588 (size: 0x8)
-    class UProgressBar* InteractionProgressBar2;                                      // 0x0590 (size: 0x8)
-    class UTextBlock* WeatherStatsText;                                               // 0x0598 (size: 0x8)
-    class UTextBlock* BorderRegionIndicatorText;                                      // 0x05A0 (size: 0x8)
-    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05B0 (size: 0x10)
+    class UTextBlock* PlayerStatusText;                                               // 0x0370 (size: 0x8)
+    class UCanvasPanel* WinConditionCanvas;                                           // 0x0378 (size: 0x8)
+    class UTextBlock* WinConditionText;                                               // 0x0380 (size: 0x8)
+    class UImage* WinConditionLogo;                                                   // 0x0388 (size: 0x8)
+    class UVitalityStatusWidget* PlayerVitality;                                      // 0x0390 (size: 0x8)
+    class UVitalityStatusWidget* HorseVitality;                                       // 0x0398 (size: 0x8)
+    class UInventoryHUDWidget* InventoryHUD;                                          // 0x03A0 (size: 0x8)
+    class UCanvasPanel* DisclaimerCanvas;                                             // 0x03A8 (size: 0x8)
+    class UTextBlock* DisclaimerText;                                                 // 0x03B0 (size: 0x8)
+    class UTexture2D* AranicLogo;                                                     // 0x03B8 (size: 0x8)
+    class UTexture2D* MirrishLogo;                                                    // 0x03C0 (size: 0x8)
+    class UTexture2D* NovanLogo;                                                      // 0x03C8 (size: 0x8)
+    FSlateBrush GuardStrengthEmptyIcon;                                               // 0x03D0 (size: 0xD0)
+    FSlateBrush GuardStrengthFillIcon;                                                // 0x04A0 (size: 0xD0)
+    float LocalChatDisplayTime;                                                       // 0x0570 (size: 0x4)
+    class UProgressBar* InteractionProgressBar1;                                      // 0x0578 (size: 0x8)
+    class UProgressBar* InteractionProgressBar2;                                      // 0x0580 (size: 0x8)
+    class UTextBlock* WeatherStatsText;                                               // 0x0588 (size: 0x8)
+    class UTextBlock* BorderRegionIndicatorText;                                      // 0x0590 (size: 0x8)
+    class UWidget* ReinforcementStatus;                                               // 0x0598 (size: 0x8)
+    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05A8 (size: 0x10)
 
     void PlayWinConditionAnimation();
     ESlateVisibility GetWeatherStatsTextVisibility();
@@ -2037,7 +2106,6 @@ class UMapWidget : public UMapWidgetBase
     TArray<class UMapIcon*> DisplayedBeaconTowerPlayerInfos;                          // 0x0430 (size: 0x10)
 
     ESlateVisibility GetObjectiveBorderVisibility();
-    void BP_OnMapImageSet(class UTexture2D* MapImageTexture);
 }; // Size: 0x468
 
 class UMapWidgetBase : public UUserWidget
@@ -2241,12 +2309,10 @@ class UPledgedPlayerListItem : public UUserWidget
     class UTextBlock* PlayerSilverText;                                               // 0x0298 (size: 0x8)
     class UCheckBox* VoteButton;                                                      // 0x02A0 (size: 0x8)
     class UImage* OnlineStatusIcon;                                                   // 0x02A8 (size: 0x8)
-    TMap<class EAnvilPledgedOnlineStatus, class UTexture2D*> OnlineStatusIconMap;     // 0x02B0 (size: 0x50)
-    TMap<class EAnvilPledgedOnlineStatus, class FSlateColor> OnlineStatusColorMap;    // 0x0300 (size: 0x50)
-    TMap<class EAnvilPledgedOnlineStatus, class FSlateColor> OnlineStatusSilverColorMap; // 0x0350 (size: 0x50)
+    TMap<class EAnvilPlayerOnlineStatus, class FSlateColor> OnlineStatusSilverColorMap; // 0x02B0 (size: 0x50)
 
     void OnVoteChecked(bool bIsChecked);
-}; // Size: 0x3A8
+}; // Size: 0x308
 
 class UQuenchingWindow : public UStructureWindow
 {
@@ -2407,6 +2473,15 @@ class USubHeaderContainer : public UUserWidget
     class UNamedSlot* SubHeaderSlot0;                                                 // 0x0288 (size: 0x8)
 
 }; // Size: 0x290
+
+class UTemperatureStatusWidget : public UUserWidget
+{
+    class UImage* IconFillImage;                                                      // 0x0278 (size: 0x8)
+    FLinearColor TemperatureWarmColour;                                               // 0x0280 (size: 0x10)
+    FLinearColor TemperatureColdColour;                                               // 0x0290 (size: 0x10)
+
+    ESlateVisibility GetIconVisibility();
+}; // Size: 0x2A8
 
 class UTooltipWidget : public UUserWidget
 {
@@ -2589,10 +2664,11 @@ class UVisItem : public UObject
     int32 AnimationIndex;                                                             // 0x01CC (size: 0x4)
     TMap<class EAnvilSimActivityState, class UAnimMontage*> ActivityStateMontageMap;  // 0x01D0 (size: 0x50)
     TArray<class UAnimMontage*> AttackChainMontages;                                  // 0x0220 (size: 0x10)
-    class USoundCue* TransferSoundCue;                                                // 0x0230 (size: 0x8)
-    class USoundCue* ArmingSoundCue;                                                  // 0x0238 (size: 0x8)
+    class UAnimMontage* SecondaryLaunchingProjectileOverride;                         // 0x0230 (size: 0x8)
+    class USoundCue* TransferSoundCue;                                                // 0x0238 (size: 0x8)
+    class USoundCue* ArmingSoundCue;                                                  // 0x0240 (size: 0x8)
 
-}; // Size: 0x240
+}; // Size: 0x248
 
 class UVisLadderVehicleAnimInstance : public UAnimInstance
 {
@@ -2647,6 +2723,8 @@ class UVisPlayerAnimInstance : public UAnimInstance
     float AimYaw;                                                                     // 0x0368 (size: 0x4)
     bool bPriming;                                                                    // 0x036C (size: 0x1)
     bool bSecondaryMode;                                                              // 0x036D (size: 0x1)
+    bool bSecondaryShieldMode;                                                        // 0x036E (size: 0x1)
+    bool bCombatMode;                                                                 // 0x036F (size: 0x1)
 
 }; // Size: 0x390
 
@@ -2748,7 +2826,6 @@ class UVisTownAreaMarkerDecalComponent : public UDecalComponent
     class UMaterialInterface* TeamDecalMirrish;                                       // 0x02F8 (size: 0x8)
     class UMaterialInterface* TeamDecalNovan;                                         // 0x0300 (size: 0x8)
 
-    void SetRangeParameters(const EAnvilFactionId FactionId, float Radius);
 }; // Size: 0x310
 
 class UVisVehicleAnimInstance : public UAnimInstance
@@ -2773,11 +2850,9 @@ class UVitalityStatusWidget : public UUserWidget
     class UProgressBar* HealthBar;                                                    // 0x0288 (size: 0x8)
     class UOverlay* StaminaOverlay;                                                   // 0x0290 (size: 0x8)
     class UProgressBar* StaminaBar;                                                   // 0x0298 (size: 0x8)
-    class UProgressBar* TemperatureBar;                                               // 0x02A0 (size: 0x8)
-    FLinearColor TemperatureWarmColour;                                               // 0x02A8 (size: 0x10)
-    FLinearColor TemperatureColdColour;                                               // 0x02B8 (size: 0x10)
+    class UProgressBar* StabilityBar;                                                 // 0x02A0 (size: 0x8)
 
-}; // Size: 0x2F0
+}; // Size: 0x2C8
 
 class UWildSpawnPointMapIcon : public UMapIcon
 {
@@ -2793,7 +2868,7 @@ class UWorldEntityHandle : public UObject
 {
     class URegionEntry* RegionEntry;                                                  // 0x0028 (size: 0x8)
 
-}; // Size: 0xB0
+}; // Size: 0xE0
 
 class UWorldEntityMapIcon : public UMapIconBase
 {

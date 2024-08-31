@@ -20,6 +20,15 @@
                   "bAutomaticRemainingTimeRule": false,
                   "SyncGroupNameToRequireValidMarkersRule": "None",
                   "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
                 }
               ],
               "StateRootNodeIndex": 3,
@@ -38,9 +47,9 @@
               "StateName": "Priming",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 12,
+                  "CanTakeDelegateIndex": 13,
                   "CustomResultNodeIndex": -1,
-                  "TransitionIndex": 1,
+                  "TransitionIndex": 2,
                   "bDesiredTransitionReturnValue": true,
                   "bAutomaticRemainingTimeRule": false,
                   "SyncGroupNameToRequireValidMarkersRule": "None",
@@ -63,9 +72,9 @@
               "StateName": "Primed",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 13,
+                  "CanTakeDelegateIndex": 14,
                   "CustomResultNodeIndex": -1,
-                  "TransitionIndex": 2,
+                  "TransitionIndex": 3,
                   "bDesiredTransitionReturnValue": true,
                   "bAutomaticRemainingTimeRule": false,
                   "SyncGroupNameToRequireValidMarkersRule": "None",
@@ -88,9 +97,9 @@
               "StateName": "Firing",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 14,
+                  "CanTakeDelegateIndex": 15,
                   "CustomResultNodeIndex": -1,
-                  "TransitionIndex": 3,
+                  "TransitionIndex": 4,
                   "bDesiredTransitionReturnValue": true,
                   "bAutomaticRemainingTimeRule": false,
                   "SyncGroupNameToRequireValidMarkersRule": "None",
@@ -111,6 +120,19 @@
             }
           ],
           "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
             {
               "PreviousState": 0,
               "NextState": 1,
@@ -262,6 +284,20 @@
             10,
             10,
             10,
+            4294967295
+          ],
+          "NodeIndex": 5,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Catapult_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/Catapult/Catapult_ABP.0"
+          },
+          "Entries": [
+            10,
+            10,
+            10,
             4294967295,
             4294967295,
             4294967295,
@@ -280,7 +316,7 @@
             15,
             15
           ],
-          "NodeIndex": 5,
+          "NodeIndex": 6,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -297,7 +333,7 @@
             18,
             2
           ],
-          "NodeIndex": 6,
+          "NodeIndex": 7,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -327,7 +363,7 @@
             11,
             15
           ],
-          "NodeIndex": 7,
+          "NodeIndex": 8,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -344,7 +380,7 @@
             18,
             4
           ],
-          "NodeIndex": 8,
+          "NodeIndex": 9,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -374,7 +410,7 @@
             15,
             15
           ],
-          "NodeIndex": 9,
+          "NodeIndex": 10,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -391,7 +427,7 @@
             18,
             6
           ],
-          "NodeIndex": 10,
+          "NodeIndex": 11,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -421,7 +457,7 @@
             11,
             15
           ],
-          "NodeIndex": 11,
+          "NodeIndex": 12,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -437,26 +473,6 @@
             8,
             18,
             9
-          ],
-          "NodeIndex": 12,
-          "Flags": "EAnimNodeDataFlags::None"
-        },
-        {
-          "AnimClassInterface": {
-            "ObjectName": "AnimBlueprintGeneratedClass'Catapult_ABP_C'",
-            "ObjectPath": "Anvil/Content/Animations/Vehicles/Catapult/Catapult_ABP.0"
-          },
-          "Entries": [
-            10,
-            10,
-            10,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295
           ],
           "NodeIndex": 13,
           "Flags": "EAnimNodeDataFlags::None"
@@ -476,6 +492,26 @@
             4294967295,
             4294967295,
             4294967295,
+            4294967295
+          ],
+          "NodeIndex": 14,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Catapult_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/Catapult/Catapult_ABP.0"
+          },
+          "Entries": [
+            10,
+            10,
+            10,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
             4294967295,
             4294967295,
             4294967295,
@@ -485,7 +521,7 @@
             4294967295,
             4294967295
           ],
-          "NodeIndex": 14,
+          "NodeIndex": 15,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -515,7 +551,7 @@
             11,
             15
           ],
-          "NodeIndex": 15,
+          "NodeIndex": 16,
           "Flags": "EAnimNodeDataFlags::None"
         }
       ],
@@ -1022,6 +1058,16 @@
       },
       {
         "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
         "Name": "AnimGraphNode_TransitionResult_3",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 160,
@@ -1217,8 +1263,11 @@
       "AnimBlueprintExtension_Base": {},
       "AnimGraphNode_Root": {
         "Result": {
-          "LinkID": 14
+          "LinkID": 15
         }
+      },
+      "AnimGraphNode_TransitionResult_4": {
+        "bCanEnterTransition": false
       },
       "AnimGraphNode_TransitionResult_3": {
         "bCanEnterTransition": false
@@ -1243,7 +1292,7 @@
       },
       "AnimGraphNode_StateResult_3": {
         "Result": {
-          "LinkID": 5
+          "LinkID": 6
         }
       },
       "AnimGraphNode_SequencePlayer_3": {
@@ -1257,7 +1306,7 @@
       },
       "AnimGraphNode_StateResult_2": {
         "Result": {
-          "LinkID": 7
+          "LinkID": 8
         }
       },
       "AnimGraphNode_SequencePlayer_2": {
@@ -1271,7 +1320,7 @@
       },
       "AnimGraphNode_StateResult_1": {
         "Result": {
-          "LinkID": 9
+          "LinkID": 10
         }
       },
       "AnimGraphNode_SequencePlayer_1": {
@@ -1285,7 +1334,7 @@
       },
       "AnimGraphNode_StateResult": {
         "Result": {
-          "LinkID": 11
+          "LinkID": 12
         }
       },
       "AnimGraphNode_StateMachine": {
@@ -1299,11 +1348,11 @@
       },
       "AnimGraphNode_LayeredBoneBlend": {
         "BasePose": {
-          "LinkID": 13
+          "LinkID": 14
         },
         "BlendPoses": [
           {
-            "LinkID": 15
+            "LinkID": 16
           }
         ],
         "BlendMode": "ELayeredBoneBlendMode::BranchFilter",
@@ -1468,12 +1517,6 @@
         "ElementSize": 4
       },
       {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
         "Type": "BoolProperty",
         "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue",
         "Flags": "RF_Public",
@@ -1487,7 +1530,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue_1",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -1498,8 +1541,14 @@
         "bIsNativeBool": true
       },
       {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
         "Type": "BoolProperty",
-        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue_1",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,

@@ -3,8 +3,8 @@
 
 class ABPVisResinPile_C : public AVisResource
 {
-    class UStaticMeshComponent* Mesh1;                                                // 0x04A0 (size: 0x8)
+    class UStaticMeshComponent* Mesh1;                                                // 0x04F0 (size: 0x8)
 
-}; // Size: 0x4A8
+}; // Size: 0x4F8
 
 #endif

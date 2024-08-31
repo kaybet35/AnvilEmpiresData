@@ -1,7 +1,12 @@
 #include "SimPlayerProxyComponent.h"
 
 USimPlayerProxyComponent::USimPlayerProxyComponent() {
-    this->GuardAngleTolerance = 120.00f;
+    this->GuardAngleToleranceYaw = 120.00f;
+    this->GuardAngleTolerancePitchMin = -60.00f;
+    this->GuardAngleTolerancePitchMax = 60.00f;
+    this->GuardAngleToleranceYawAlt = 120.00f;
+    this->GuardAngleTolerancePitchMinAlt = -60.00f;
+    this->GuardAngleTolerancePitchMaxAlt = 60.00f;
     this->GuardMeterRegenCD = 3.00f;
     this->GuardMeterEmptyRegenCD = 6.00f;
     this->GuardMeterRegenSpeed = 10.00f;

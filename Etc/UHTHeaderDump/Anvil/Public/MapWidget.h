@@ -44,9 +44,5 @@ private:
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetObjectiveBorderVisibility();
     
-protected:
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void BP_OnMapImageSet(UTexture2D* MapImageTexture);
-    
 };
 

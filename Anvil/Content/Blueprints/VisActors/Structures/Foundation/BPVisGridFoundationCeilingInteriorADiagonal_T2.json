@@ -22,17 +22,6 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "MeshVisibilityData",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'MeshVisibilityDataComponent'",
-          "ObjectPath": "/Script/R2"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "VisStaticMesh1",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -40,6 +29,17 @@
         "PropertyClass": {
           "ObjectName": "Class'VisStaticMeshComponent'",
           "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MeshVisibilityData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MeshVisibilityDataComponent'",
+          "ObjectPath": "/Script/R2"
         }
       }
     ],
@@ -107,6 +107,7 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInteriorADiagonal_T2.4"
       },
       "GeneratedScorchEffects": 8,
+      "UseWindowType": "EHUDWindowType::GenericStructure",
       "VisDisplayName": {
         "Namespace": "",
         "Key": "4589B549470B71D39F0C309A17740917",
@@ -125,7 +126,6 @@
         "SourceString": "Use mouse to raise and lower this structure",
         "LocalizedString": "Use mouse to raise and lower this structure"
       },
-      "UseWindowType": "EHUDWindowType::GenericStructure",
       "bHasLandscapeCollisions": true,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationCeilingInteriorADiagonal_T2_C:ArrowComponent'",
@@ -210,26 +210,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisStaticMeshComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisGridFoundationCeilingInteriorADiagonal_T2_C:VisStaticMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInteriorADiagonal_T2.18"
-      },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "011229F7-4C949998-E81662A4-C278BB1C",
-      "InternalVariableName": "VisStaticMesh1"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_2",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -247,6 +227,26 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisGridFoundationCeilingInteriorADiagonal_T2_C:VisStaticMesh1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInteriorADiagonal_T2.18"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "93C9957C-41747CEA-6CEF068D-EFD91B09",
+      "InternalVariableName": "VisStaticMesh1"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPVisGridFoundationCeilingInteriorADiagonal_T2_C",
@@ -254,21 +254,21 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInteriorADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInteriorADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInteriorADiagonal_T2.10"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInteriorADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInteriorADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInteriorADiagonal_T2.11"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInteriorADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInteriorADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInteriorADiagonal_T2.10"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInteriorADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingInteriorADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingInteriorADiagonal_T2.11"
         }
       ],
@@ -332,12 +332,12 @@
           "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
         },
         {
-          "ObjectName": "MaterialInstanceConstant'LDGrid03'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGrid03.0"
+          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
+          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
         },
         {
-          "ObjectName": "MaterialInstanceConstant'LDGrid04'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGrid04.0"
+          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
+          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
         }
       ],
       "ComponentTags": [

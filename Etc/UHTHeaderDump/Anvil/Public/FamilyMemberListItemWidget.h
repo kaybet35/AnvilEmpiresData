@@ -7,6 +7,7 @@
 
 class UButton;
 class UComboBoxString;
+class UImage;
 class USizeBox;
 class UTextBlock;
 
@@ -14,6 +15,9 @@ UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UFamilyMemberListItemWidget : public UUserWidget {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UImage* OnlineStatusIcon;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* PlayerNameText;
     

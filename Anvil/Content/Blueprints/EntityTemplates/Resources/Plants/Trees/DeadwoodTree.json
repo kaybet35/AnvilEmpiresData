@@ -1,0 +1,119 @@
+[
+  {
+    "Type": "AnimalRopeSlotProxyComponent",
+    "Name": "AnimalRopeSlotProxyComponent_0",
+    "Outer": "Default__DeadwoodTree_C",
+    "Class": "UScriptClass'AnimalRopeSlotProxyComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "DeadwoodTree_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DeadwoodTree_C'Default__DeadwoodTree_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/DeadwoodTree.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__DeadwoodTree_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 600.0
+      },
+      "Extents": {
+        "X": 35.0,
+        "Y": 35.0,
+        "Z": 600.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Wood",
+      "CollisionMask": 8210
+    }
+  },
+  {
+    "Type": "DeadwoodTree_C",
+    "Name": "Default__DeadwoodTree_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/DeadwoodTree.DeadwoodTree_C'",
+    "Properties": {
+      "CodeNameString": "DeadwoodTree",
+      "CodeName": 1654665,
+      "bUseScale": true,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__DeadwoodTree_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/DeadwoodTree.2"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__DeadwoodTree_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/DeadwoodTree.5"
+        },
+        {
+          "ObjectName": "FootprintCollisionProxyComponent'Default__DeadwoodTree_C:FootprintCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/DeadwoodTree.4"
+        },
+        {
+          "ObjectName": "AnimalRopeSlotProxyComponent'Default__DeadwoodTree_C:AnimalRopeSlotProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/DeadwoodTree.0"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisDeadwoodTree_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisDeadwoodTree.1"
+      }
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__DeadwoodTree_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'DeadwoodTreeFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/FootprintAssets/DeadwoodTreeFootprint.0"
+      },
+      "CollisionMask": 256
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__DeadwoodTree_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilResourceType::ChoppedTree",
+      "HitPoints": 10,
+      "RequiredTool": "EAnvilToolType::AxeT2",
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'WoodHardPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/WoodHardPickup.0"
+      },
+      "HuskEntity": {
+        "ObjectName": "BlueprintGeneratedClass'DeadwoodTreeFall_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/Trees/DeadwoodTreeFall.0"
+      },
+      "DestructionEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectRavenDenFall01_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectRavenDenFall01.0"
+      }
+    }
+  }
+]

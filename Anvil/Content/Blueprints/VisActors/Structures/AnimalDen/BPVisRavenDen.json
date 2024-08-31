@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisRavenDen_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.25"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.27"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "GrassRemovalVolume",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'GrassRemovalVolumeComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "VisRandomMeshDecor13",
@@ -219,11 +230,11 @@
     "Properties": {
       "ResourceDataComponent": {
         "ObjectName": "ResourceDataComponent'Default__BPVisRavenDen_C:ResourceDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.6"
       },
       "PlantGrowthComponent": {
         "ObjectName": "PlantGrowthDataComponent'Default__BPVisRavenDen_C:PlantGrowthComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.5"
       },
       "bApplyIdBasedRandomRotation": true,
       "ArrowComponent": {
@@ -232,7 +243,7 @@
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisRavenDen_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.26"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.29"
       },
       "ShakeCurve": {
         "ObjectName": "CurveVector'HorizontalShakeAnimCurve'",
@@ -258,13 +269,13 @@
     "Class": "UScriptClass'DecalComponent'",
     "Properties": {
       "DecalMaterial": {
-        "ObjectName": "MaterialInstanceConstant'TreeDirtPatch'",
-        "ObjectPath": "Anvil/Content/Materials/Decals/TreeDirtPatch.0"
+        "ObjectName": "MaterialInstanceConstant'DecalDirtFaint'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/DecalDirtFaint.0"
       },
       "DecalSize": {
-        "X": 64.0,
-        "Y": 150.0,
-        "Z": 150.0
+        "X": 256.0,
+        "Y": 1000.0,
+        "Z": 1000.0
       },
       "RelativeLocation": {
         "X": -0.000164,
@@ -275,6 +286,23 @@
         "Pitch": -90.0,
         "Yaw": 0.0,
         "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "GrassRemovalVolumeComponent",
+    "Name": "GrassRemovalVolume_GEN_VARIABLE",
+    "Outer": "BPVisRavenDen_C",
+    "Class": "UScriptClass'GrassRemovalVolumeComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 1000.0,
+        "Y": 1000.0,
+        "Z": 500.0
+      },
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'BPVisRavenDen_C:GrassRemovalVolume_GEN_VARIABLE.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.28"
       }
     }
   },
@@ -314,10 +342,30 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisRavenDen_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.8"
       },
       "VariableGuid": "7570D798-4A6BD46B-92534389-D81AF058",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'GrassRemovalVolumeComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GrassRemovalVolumeComponent'BPVisRavenDen_C:GrassRemovalVolume_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.4"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "3B17F154-419B2E25-CBD52DBB-20B7182D",
+      "InternalVariableName": "GrassRemovalVolume"
     }
   },
   {
@@ -332,7 +380,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisRavenDen_C:VisRandomMeshDecor2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.32"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.35"
       },
       "VariableGuid": "674BBE10-40A130C3-CAA06BA8-1EAB2ECE",
       "InternalVariableName": "VisRandomMeshDecor2"
@@ -350,7 +398,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisRavenDen_C:VisRandomMeshDecor3_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.33"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.36"
       },
       "VariableGuid": "29988A60-41E8F5D3-7EE776B7-C842E885",
       "InternalVariableName": "VisRandomMeshDecor3"
@@ -368,7 +416,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisRavenDen_C:VisRandomMeshDecor4_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.34"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.37"
       },
       "VariableGuid": "06C76D9A-42D80C3B-B63376A9-57FE85D9",
       "InternalVariableName": "VisRandomMeshDecor4"
@@ -386,7 +434,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisRavenDen_C:VisRandomMeshDecor5_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.35"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.38"
       },
       "VariableGuid": "E0F2D44B-4EAB25AE-3D1052B7-8590EEAF",
       "InternalVariableName": "VisRandomMeshDecor5"
@@ -404,7 +452,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisRavenDen_C:VisRandomMeshDecor6_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.36"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.39"
       },
       "VariableGuid": "E7A82764-46189FFA-C43A67B6-9DF0DD4F",
       "InternalVariableName": "VisRandomMeshDecor6"
@@ -422,7 +470,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisRavenDen_C:VisRandomMeshDecor7_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.37"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.40"
       },
       "VariableGuid": "F2892B42-42990297-B962F193-C62775DD",
       "InternalVariableName": "VisRandomMeshDecor7"
@@ -440,7 +488,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisRavenDen_C:VisRandomMeshDecor8_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.38"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.41"
       },
       "VariableGuid": "5D1B6732-46DED029-1F1FEA98-7722B5BA",
       "InternalVariableName": "VisRandomMeshDecor8"
@@ -458,7 +506,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisRavenDen_C:VisRandomMeshDecor9_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.39"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.42"
       },
       "VariableGuid": "2349261D-46AC0A55-E5535680-A607C2DA",
       "InternalVariableName": "VisRandomMeshDecor9"
@@ -476,7 +524,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisRavenDen_C:VisRandomMeshDecor10_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.27"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.30"
       },
       "VariableGuid": "7445DE95-4131C38B-D485A498-7BA84B40",
       "InternalVariableName": "VisRandomMeshDecor10"
@@ -494,7 +542,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisRavenDen_C:VisRandomMeshDecor11_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.28"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.31"
       },
       "VariableGuid": "9B13206F-474DF6D6-9A672E95-B919D560",
       "InternalVariableName": "VisRandomMeshDecor11"
@@ -532,7 +580,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisRavenDen_C:VisRandomMeshDecor12_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.29"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.32"
       },
       "VariableGuid": "D162DDED-4D514F1E-F7D86FA0-6761F601",
       "InternalVariableName": "VisRandomMeshDecor12"
@@ -550,7 +598,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisRavenDen_C:VisRandomMeshDecor13_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.30"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.33"
       },
       "VariableGuid": "5731BD10-4D587AC7-2DD2F281-2A18CDBC",
       "InternalVariableName": "VisRandomMeshDecor13"
@@ -568,66 +616,66 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisRavenDen_C:Decors_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.7"
       },
       "ParentComponentOrVariableName": "Mesh",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.23"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.25"
         },
         {
           "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.24"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.26"
         },
         {
           "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.9"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.10"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.11"
         },
         {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.12"
         },
         {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_13'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.14"
         },
         {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_14'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.15"
         },
         {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_15'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.16"
         },
         {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_16'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.17"
         },
         {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_25'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_17'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.18"
         },
         {
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.20"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.21"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.23"
         }
       ],
       "VariableGuid": "04C99C7D-4F851062-40AF01B4-D52BDE51",
@@ -646,7 +694,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisRavenDen_C:VisRandomMeshDecor_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.40"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.43"
       },
       "VariableGuid": "822C5256-4FDD95FE-B964B7AA-282F2904",
       "InternalVariableName": "VisRandomMeshDecor"
@@ -664,7 +712,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisRavenDen_C:VisRandomMeshDecor1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.31"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.34"
       },
       "VariableGuid": "3C91A576-44BD3669-0AA2C295-D3A44F69",
       "InternalVariableName": "VisRandomMeshDecor1"
@@ -679,84 +727,98 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.19"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.21"
         },
         {
           "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_33'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.22"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.10"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.19"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.21"
         },
         {
           "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_33'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.22"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_9'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.24"
         },
         {
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.26"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.9"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.10"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.11"
         },
         {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.12"
         },
         {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_13'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.14"
         },
         {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_14'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.15"
         },
         {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_15'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.16"
         },
         {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_16'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.17"
         },
         {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_25'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_17'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.18"
         },
         {
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.20"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.21"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.10"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisRavenDen_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/AnimalDen/BPVisRavenDen.9"
       }
     }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "GrassRemovalVolume_GEN_VARIABLE",
+    "Class": "UScriptClass'SplineDataComponent'"
   },
   {
     "Type": "StaticMeshComponent",

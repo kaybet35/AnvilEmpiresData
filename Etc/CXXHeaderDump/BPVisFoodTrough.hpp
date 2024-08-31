@@ -3,11 +3,11 @@
 
 class ABPVisFoodTrough_C : public AVisStructure
 {
-    class UInstancedStaticMeshComponent* ProcessedAnimalFeedHorse;                    // 0x04C8 (size: 0x8)
-    class UVisInstancedStockpileComponent* VisInstancedStockpile;                     // 0x04D0 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x04D8 (size: 0x8)
-    class UDecalComponent* Decal;                                                     // 0x04E0 (size: 0x8)
+    class UInstancedStaticMeshComponent* ProcessedAnimalFeedHorse;                    // 0x0518 (size: 0x8)
+    class UVisInstancedStockpileComponent* VisInstancedStockpile;                     // 0x0520 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0528 (size: 0x8)
+    class UDecalComponent* Decal;                                                     // 0x0530 (size: 0x8)
 
-}; // Size: 0x4E8
+}; // Size: 0x538
 
 #endif

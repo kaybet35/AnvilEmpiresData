@@ -2,7 +2,9 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Info -FallbackName=Info
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilItemQualityType -FallbackName=EAnvilItemQualityType
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilPlayerOnlineStatus -FallbackName=EAnvilPlayerOnlineStatus
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilWorldEntityType -FallbackName=EAnvilWorldEntityType
+//CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateColor -FallbackName=SlateColor
 #include "EMapIconType.h"
 #include "MapIconTypeProperty.h"
 #include "Templates/SubclassOf.h"
@@ -36,6 +38,12 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EAnvilItemQualityType, UTexture2D*> QualityIconTextures;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<EAnvilPlayerOnlineStatus, UTexture2D*> OnlineStatusIconMap;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<EAnvilPlayerOnlineStatus, FSlateColor> OnlineStatusColorMap;
     
     AUIGlobals(const FObjectInitializer& ObjectInitializer);
 

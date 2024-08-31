@@ -3,11 +3,11 @@
 
 class ABPVisFarmArea_C : public AVisFarm
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x04E8 (size: 0x8)
-    class UDecalComponent* FertilizerDecal02;                                         // 0x04F0 (size: 0x8)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0538 (size: 0x8)
+    class UDecalComponent* FertilizerDecal02;                                         // 0x0540 (size: 0x8)
 
     void ReceiveBeginPlay();
     void ExecuteUbergraph_BPVisFarmArea(int32 EntryPoint);
-}; // Size: 0x4F8
+}; // Size: 0x548
 
 #endif

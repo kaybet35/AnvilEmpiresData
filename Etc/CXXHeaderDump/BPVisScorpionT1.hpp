@@ -3,6 +3,6 @@
 
 class ABPVisScorpionT1_C : public AVisMobileWeapon
 {
-}; // Size: 0x490
+}; // Size: 0x4E0
 
 #endif

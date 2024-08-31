@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisRavenDen_C : AVisResource
+---@field GrassRemovalVolume UGrassRemovalVolumeComponent
 ---@field VisRandomMeshDecor13 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor11 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor12 UVisRandomMeshDecorComponent

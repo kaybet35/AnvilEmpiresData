@@ -138,6 +138,7 @@
       },
       "CodeNameString": "GridFoundationQuarterCeilingDiagonalT2",
       "CodeName": 1869469614,
+      "GenerateMeshCollisionMask": 16785410,
       "bGenerateMeshCollisionVaultable": true,
       "Components": [
         {
@@ -159,6 +160,9 @@
     "Template": {
       "ObjectName": "HealthProxyComponent'Default__BPBaseFoundationModularEntity_C:HealthComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationModularEntity.7"
+    },
+    "Properties": {
+      "MaxHealth": 75.0
     }
   },
   {
@@ -191,7 +195,8 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationModularEntity.10"
     },
     "Properties": {
-      "bRequireSupport": true
+      "bRequireSupport": true,
+      "StructureType": "EAnvilBuildStructureType::FoundationCeiling"
     }
   },
   {
@@ -214,7 +219,17 @@
         "ObjectName": "BlueprintGeneratedClass'GridFoundationQuarterCeilingDiagonal_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationQuarterCeilingDiagonal.0"
       },
-      "TierPrerequisite": 3
+      "TierPrerequisite": 3,
+      "MaterialRequirements": [
+        {
+          "CodeName": -879937657,
+          "Count": 3
+        },
+        {
+          "CodeName": -274270847,
+          "Count": 1
+        }
+      ]
     }
   }
 ]

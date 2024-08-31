@@ -19,6 +19,8 @@ UVisPlayerAnimInstance::UVisPlayerAnimInstance() {
     this->AimYaw = 0.00f;
     this->bPriming = false;
     this->bSecondaryMode = false;
+    this->bSecondaryShieldMode = false;
+    this->bCombatMode = false;
 }
 
 

@@ -3,8 +3,8 @@
 
 class ABPVisGateT2_C : public AVisGate
 {
-    class UStaticMeshComponent* Scaffolding;                                          // 0x04D8 (size: 0x8)
+    class UStaticMeshComponent* Scaffolding;                                          // 0x0528 (size: 0x8)
 
-}; // Size: 0x4E0
+}; // Size: 0x530
 
 #endif

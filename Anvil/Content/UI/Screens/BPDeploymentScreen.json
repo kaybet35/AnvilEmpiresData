@@ -22,7 +22,7 @@
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.7"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.8"
       }
     }
   },
@@ -40,7 +40,7 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPDeploymentScreen_C:WidgetTree.DeploymentInstructionOrSpawnTimerText'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.9"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.11"
       }
     }
   },
@@ -62,7 +62,23 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPDeploymentScreen_C:WidgetTree.VerticalBox_38.VerticalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.11"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.13"
+      }
+    }
+  },
+  {
+    "Type": "BPDeploymentFoodWidget_C",
+    "Name": "DeploymentFoodWidget",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.BPDeploymentFoodWidget_C'",
+    "Template": {
+      "ObjectName": "BPDeploymentFoodWidget_C'Default__BPDeploymentFoodWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.3"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.9"
       }
     }
   },
@@ -78,7 +94,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.6"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.7"
       }
     }
   },
@@ -100,15 +116,19 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.6"
-        },
-        {
-          "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
           "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.7"
         },
         {
-          "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_7'",
+          "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
           "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_7'",
+          "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.9"
         }
       ]
     }
@@ -133,11 +153,11 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.5"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.6"
       },
       "Content": {
         "ObjectName": "BPDeploymentMapWidget_C'BPDeploymentScreen_C:WidgetTree.MapWidget'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.3"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.4"
       }
     }
   },
@@ -171,11 +191,43 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.5"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.6"
       },
       "Content": {
         "ObjectName": "Border'BPDeploymentScreen_C:WidgetTree.TextBorder'",
         "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.0"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Outer": "CanvasPanel_0",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.6"
+      },
+      "Content": {
+        "ObjectName": "BPDeploymentFoodWidget_C'BPDeploymentScreen_C:WidgetTree.DeploymentFoodWidget'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.3"
       }
     }
   },
@@ -207,11 +259,11 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.5"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.6"
       },
       "Content": {
         "ObjectName": "VerticalBox'BPDeploymentScreen_C:WidgetTree.VerticalBox_38'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.10"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.12"
       }
     }
   },
@@ -250,12 +302,12 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPDeploymentScreen_C:WidgetTree.VerticalBox_38.VerticalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.11"
+          "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.13"
         }
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_7'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.8"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.10"
       }
     }
   },
@@ -267,7 +319,7 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPDeploymentScreen_C:WidgetTree.VerticalBox_38'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.10"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.12"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPDeploymentScreen_C:WidgetTree.LogoutButton'",
@@ -282,7 +334,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPDeploymentScreen_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.13"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.15"
       },
       "bClassRequiresNativeTick": true
     },
@@ -299,7 +351,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPDeploymentScreen_C'Default__BPDeploymentScreen_C'",
-      "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.4"
+      "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.5"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -313,7 +365,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "CanvasPanel'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.5"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.6"
       }
     }
   }

@@ -1,0 +1,100 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "MountedJavelin_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "MountedJavelin_C'Default__MountedJavelin_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/MountedJavelin.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "MountedJavelin_C",
+    "Name": "Default__MountedJavelin_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/MountedJavelin.MountedJavelin_C'",
+    "Properties": {
+      "CodeNameString": "MountedJavelin",
+      "CodeName": 173648260,
+      "ItemTags": [
+        "EAnvilItemTag::PrimaryTool",
+        "EAnvilItemTag::WeaponStorage",
+        "EAnvilItemTag::TwoHanded",
+        "EAnvilItemTag::NotAllowedInMarket"
+      ],
+      "ItemPayloadType": "EAnvilItemPayloadType::Quality",
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "ItemHitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectSpearImpact_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectSpearImpact.0"
+      },
+      "bRearmAfterConsumption": true,
+      "bRearmSkipsEquipActivity": true,
+      "bHasAlt": true,
+      "bAltIsRanged": true,
+      "DamageOffset": {
+        "X": 80.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "FireOffset": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "AmmoType": {
+        "ObjectName": "BlueprintGeneratedClass'Javelin_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Javelin.0"
+      },
+      "ProjectileEntity": {
+        "ObjectName": "BlueprintGeneratedClass'JavelinProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/JavelinProjectile.0"
+      },
+      "DamageType": "EAnvilDamageType::Piercing",
+      "bDoesNotArmWithHeavyArmour": true,
+      "RequiredStance": "EAnvilCharacterStance::OnHorse",
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 0.5,
+        "Duration": 1.1,
+        "RotationSpeedModifier": 3.5,
+        "StaminaCost": 10.0
+      },
+      "AltActivity": {
+        "State": "EAnvilSimActivityState::LaunchingProjectile",
+        "Delay": 0.7,
+        "Duration": 1.1,
+        "bRepeatable": false,
+        "StaminaCost": 10.0
+      },
+      "BuildActivity": {
+        "bRepeatable": false
+      },
+      "Damage": 15,
+      "DurabilityLossPerUse": 2.0,
+      "DamageRadius": 128.0,
+      "AimMovementSpeedModifier": 0.5,
+      "AimRotationSpeedModifier": 3.5,
+      "PrimaryMovementSpeedModifier": 0.75,
+      "SecondaryMovementSpeedModifier": 0.75,
+      "PrimaryChanceToPenetrateGuard": 0.15,
+      "SecondaryChanceToPenetrateGuard": 0.25
+    }
+  }
+]

@@ -1,0 +1,206 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisLongBowArrowProjectile_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Audio_GEN_VARIABLE",
+    "Outer": "BPVisLongBowArrowProjectile_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'ArrowFlyBy_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/BowArrow/ArrowFlyBy_Cue.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisLongBowArrowProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisLongBowArrowProjectile_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisPickupItem'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Audio",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisLongBowArrowProjectile_C'Default__BPVisLongBowArrowProjectile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisLongBowArrowProjectile_C",
+    "Name": "Default__BPVisLongBowArrowProjectile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.BPVisLongBowArrowProjectile_C'",
+    "Properties": {
+      "PickupDataComponent": {
+        "ObjectName": "PickupDataComponent'Default__BPVisLongBowArrowProjectile_C:PickupDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.5"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisLongBowArrowProjectile_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.10"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisLongBowArrowProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.0"
+      },
+      "LootMarkerVFXComponent": {
+        "ObjectName": "NiagaraComponent'Default__BPVisLongBowArrowProjectile_C:LootMarkerVFX'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.4"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "CCC64B5D489E48D6FDC09FAD79B46723",
+        "SourceString": "Arrow",
+        "LocalizedString": "Arrow"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisLongBowArrowProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.0"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "LootMarkerVFX",
+    "Outer": "Default__BPVisLongBowArrowProjectile_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisLongBowArrowProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.0"
+      }
+    }
+  },
+  {
+    "Type": "PickupDataComponent",
+    "Name": "PickupDataComponent",
+    "Outer": "Default__BPVisLongBowArrowProjectile_C",
+    "Class": "UScriptClass'PickupDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisLongBowArrowProjectile_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisLongBowArrowProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.6"
+      },
+      "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'BPVisLongBowArrowProjectile_C:Audio_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.1"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "3143BCD8-4CB4E03C-3C964587-B716C3E1",
+      "InternalVariableName": "Audio"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisLongBowArrowProjectile_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisLongBowArrowProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisLongBowArrowProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.8"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisLongBowArrowProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.7"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisLongBowArrowProjectile_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'LongBowArrow_SM'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/LongBowArrow_SM.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisLongBowArrowProjectile_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.0"
+      },
+      "RelativeRotation": {
+        "Pitch": 2.862499E-14,
+        "Yaw": -90.0,
+        "Roll": -90.0
+      }
+    }
+  }
+]

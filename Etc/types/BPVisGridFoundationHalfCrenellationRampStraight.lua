@@ -1,9 +1,10 @@
 ---@meta
 
 ---@class ABPVisGridFoundationHalfCrenellationRampStraight_C : AVisStructure
+---@field StaticMesh UStaticMeshComponent
 ---@field VisFoundationFillerMeshDecor UVisFoundationFillerMeshDecorComponent
 ---@field VisFoundationFillerMeshDecor1 UVisFoundationFillerMeshDecorComponent
----@field StaticMesh UStaticMeshComponent
+---@field Scene USceneComponent
 ABPVisGridFoundationHalfCrenellationRampStraight_C = {}
 
 

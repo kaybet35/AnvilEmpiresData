@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "EAnvilDamageType.h"
 #include "ProxyComponent.h"
 #include "Templates/SubclassOf.h"
 #include "AnimalAttackProxyComponent.generated.h"
@@ -52,6 +53,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 AttackDamage;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EAnvilDamageType AttackDamageType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bDoesFirstAttackFail;

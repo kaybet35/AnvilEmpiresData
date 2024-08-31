@@ -3,9 +3,9 @@
 
 class ABPVisCarvingStation_C : public AVisHitConverterStructure
 {
-    class UBPVisFamilyMeshComponent_C* BPVisFamilyMeshComponent;                      // 0x0558 (size: 0x8)
-    class UVisStaticMeshComponent* CarvingStationMesh;                                // 0x0560 (size: 0x8)
+    class UBPVisFamilyMeshComponent_C* BPVisFamilyMeshComponent;                      // 0x05A8 (size: 0x8)
+    class UVisStaticMeshComponent* CarvingStationMesh;                                // 0x05B0 (size: 0x8)
 
-}; // Size: 0x568
+}; // Size: 0x5B8
 
 #endif

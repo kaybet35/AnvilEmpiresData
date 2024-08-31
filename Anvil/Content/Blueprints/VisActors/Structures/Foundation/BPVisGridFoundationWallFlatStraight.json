@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.22"
       }
     },
     "SuperStruct": {
@@ -22,12 +22,89 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
+        "Name": "ChildActor2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ChildActor1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "StaticMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
           "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisFoundationEdgeMeshDecor3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisFoundationEdgeMeshDecor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisFoundationEdgeMeshDecor2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisFoundationEdgeMeshDecor1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Scene",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
           "ObjectPath": "/Script/Engine"
         }
       }
@@ -54,7 +131,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisGridFoundationWallFlatStraight_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.36"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconGridFoundation_wallStraight'",
@@ -64,23 +141,23 @@
       "BuildSiteOrder": 20,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisGridFoundationWallFlatStraight_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.31"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisGridFoundationWallFlatStraight_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.9"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisGridFoundationWallFlatStraight_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.30"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisGridFoundationWallFlatStraight_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.29"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisGridFoundationWallFlatStraight_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.12"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationWallFlatStraight_C:ArrowComponent'",
@@ -88,13 +165,14 @@
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisGridFoundationWallFlatStraight_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.5"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisGridFoundationWallFlatStraight_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.8"
       },
       "GeneratedScorchEffects": 8,
+      "UseWindowType": "EHUDWindowType::GenericStructure",
       "VisDisplayName": {
         "Namespace": "",
         "Key": "1FDB84AC493092175918AAB6B0D92664",
@@ -113,11 +191,57 @@
         "SourceString": "Use mouse to raise and lower this structure",
         "LocalizedString": "Use mouse to raise and lower this structure"
       },
-      "UseWindowType": "EHUDWindowType::GenericStructure",
       "bHasLandscapeCollisions": true,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationWallFlatStraight_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.0"
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "ChildActor1_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationWallFlatStraight_C",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'FaceBrickTemplate300_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/FaceBrickTemplate300.0"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "FaceBrickTemplate300_C'BPVisGridFoundationWallFlatStraight_C:ChildActor1_GEN_VARIABLE.ChildActor1_GEN_VARIABLE_FaceBrickTemplate300_C_CAT'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.6"
+      },
+      "RelativeLocation": {
+        "X": -1.939792E-06,
+        "Y": 16.36031,
+        "Z": 222.54247
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "ChildActor2_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationWallFlatStraight_C",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'FaceBrickTemplate300_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/FaceBrickTemplate300.0"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "FaceBrickTemplate300_C'BPVisGridFoundationWallFlatStraight_C:ChildActor2_GEN_VARIABLE.ChildActor2_GEN_VARIABLE_FaceBrickTemplate300_C_CAT'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.7"
+      },
+      "RelativeLocation": {
+        "X": -10.500437,
+        "Y": -16.044197,
+        "Z": 222.54247
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
       }
     }
   },
@@ -138,6 +262,26 @@
     }
   },
   {
+    "Type": "FaceBrickTemplate300_C",
+    "Name": "ChildActor1_GEN_VARIABLE_FaceBrickTemplate300_C_CAT",
+    "Outer": "ChildActor1_GEN_VARIABLE",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Foundation/FaceBrickTemplate300.FaceBrickTemplate300_C'",
+    "Template": {
+      "ObjectName": "FaceBrickTemplate300_C'Default__FaceBrickTemplate300_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/FaceBrickTemplate300.1"
+    }
+  },
+  {
+    "Type": "FaceBrickTemplate300_C",
+    "Name": "ChildActor2_GEN_VARIABLE_FaceBrickTemplate300_C_CAT",
+    "Outer": "ChildActor2_GEN_VARIABLE",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Foundation/FaceBrickTemplate300.FaceBrickTemplate300_C'",
+    "Template": {
+      "ObjectName": "FaceBrickTemplate300_C'Default__FaceBrickTemplate300_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/FaceBrickTemplate300.1"
+    }
+  },
+  {
     "Type": "GrassRemovalVolumeComponent",
     "Name": "GrassRemovalVolume",
     "Outer": "Default__BPVisGridFoundationWallFlatStraight_C",
@@ -145,7 +289,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisGridFoundationWallFlatStraight_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.23"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationWallFlatStraight_C:ArrowComponent'",
@@ -162,6 +306,12 @@
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationWallFlatStraight_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Scene_GEN_VARIABLE",
     "Outer": "BPVisGridFoundationWallFlatStraight_C",
     "Class": "UScriptClass'SceneComponent'"
   },
@@ -183,10 +333,82 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisGridFoundationWallFlatStraight_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.10"
       },
       "VariableGuid": "4AE59C32-4E7C4C48-88CE61B9-68337C23",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationWallFlatStraight_C:VisFoundationEdgeMeshDecor_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.35"
+      },
+      "VariableGuid": "A290510C-4AA84956-1B8EA1BB-8C381066",
+      "InternalVariableName": "VisFoundationEdgeMeshDecor"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationWallFlatStraight_C:VisFoundationEdgeMeshDecor3_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.34"
+      },
+      "VariableGuid": "805A1C10-42B93277-E909A9A9-867F102D",
+      "InternalVariableName": "VisFoundationEdgeMeshDecor3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_22",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BPVisGridFoundationWallFlatStraight_C:ChildActor1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.3"
+      },
+      "VariableGuid": "A85AB22F-47B27993-4C077980-8979E007",
+      "InternalVariableName": "ChildActor1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_23",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BPVisGridFoundationWallFlatStraight_C:ChildActor2_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.4"
+      },
+      "VariableGuid": "FCCBD93B-435B4EA7-B20E2085-767ED8B5",
+      "InternalVariableName": "ChildActor2"
     }
   },
   {
@@ -201,12 +423,96 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationWallFlatStraight_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.24"
+      },
+      "VariableGuid": "596D0A2D-458A060B-2554BEB2-CC3D9D8C",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisGridFoundationWallFlatStraight_C:Scene_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.11"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
-      "VariableGuid": "596D0A2D-458A060B-2554BEB2-CC3D9D8C",
-      "InternalVariableName": "StaticMesh"
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.17"
+        }
+      ],
+      "VariableGuid": "804D6F26-43A5A060-5EBFE5B6-AE360F6F",
+      "InternalVariableName": "Scene"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationWallFlatStraight_C:VisFoundationEdgeMeshDecor1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.32"
+      },
+      "VariableGuid": "F401C1CA-4B2450CC-DA023182-DD0290B8",
+      "InternalVariableName": "VisFoundationEdgeMeshDecor1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationWallFlatStraight_C:VisFoundationEdgeMeshDecor2_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.33"
+      },
+      "VariableGuid": "34D36EBE-49188BDC-4A97F980-8DDDCEAD",
+      "InternalVariableName": "VisFoundationEdgeMeshDecor2"
     }
   },
   {
@@ -217,19 +523,47 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.9"
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.19"
         }
       ],
       "AllNodes": [
         {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.15"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.17"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisGridFoundationWallFlatStraight_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.13"
       }
     }
   },
@@ -260,6 +594,94 @@
     }
   },
   {
+    "Type": "StaticMeshComponent",
+    "Name": "EdgeMeshComp",
+    "Outer": "VisFoundationEdgeMeshDecor1_GEN_VARIABLE",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundationDecoration_wallcorner_300'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_wallcorner_300.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -300.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "EdgeMeshComp",
+    "Outer": "VisFoundationEdgeMeshDecor2_GEN_VARIABLE",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundationDecoration_WallCorner02_300'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_WallCorner02_300.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -300.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "EdgeMeshComp",
+    "Outer": "VisFoundationEdgeMeshDecor3_GEN_VARIABLE",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundationDecoration_wallcorner_300'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_wallcorner_300.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -300.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 49.707996,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "EdgeMeshComp",
+    "Outer": "VisFoundationEdgeMeshDecor_GEN_VARIABLE",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundationDecoration_WallCorner02_300'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_WallCorner02_300.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -300.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
     "Type": "StructureDataComponent",
     "Name": "StructureDataComponent",
     "Outer": "Default__BPVisGridFoundationWallFlatStraight_C",
@@ -276,6 +698,150 @@
     "Name": "UpgradeDataComponent",
     "Outer": "Default__BPVisGridFoundationWallFlatStraight_C",
     "Class": "UScriptClass'UpgradeDataComponent'"
+  },
+  {
+    "Type": "VisFoundationEdgeMeshDecorComponent",
+    "Name": "VisFoundationEdgeMeshDecor1_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationWallFlatStraight_C",
+    "Class": "UScriptClass'VisFoundationEdgeMeshDecorComponent'",
+    "Properties": {
+      "EdgeMesh": {
+        "ObjectName": "StaticMesh'GridFoundationDecoration_wallcorner_300'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_wallcorner_300.2"
+      },
+      "EdgeMeshOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -300.0
+      },
+      "EdgeMeshRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
+      },
+      "EdgeMeshComp": {
+        "ObjectName": "StaticMeshComponent'BPVisGridFoundationWallFlatStraight_C:VisFoundationEdgeMeshDecor1_GEN_VARIABLE.EdgeMeshComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.25"
+      },
+      "RelativeLocation": {
+        "X": 165.0,
+        "Y": -15.0,
+        "Z": 300.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 135.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "VisFoundationEdgeMeshDecorComponent",
+    "Name": "VisFoundationEdgeMeshDecor2_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationWallFlatStraight_C",
+    "Class": "UScriptClass'VisFoundationEdgeMeshDecorComponent'",
+    "Properties": {
+      "EdgeMesh": {
+        "ObjectName": "StaticMesh'GridFoundationDecoration_WallCorner02_300'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_WallCorner02_300.2"
+      },
+      "EdgeMeshOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -300.0
+      },
+      "EdgeMeshRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
+      },
+      "EdgeMeshComp": {
+        "ObjectName": "StaticMeshComponent'BPVisGridFoundationWallFlatStraight_C:VisFoundationEdgeMeshDecor2_GEN_VARIABLE.EdgeMeshComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.26"
+      },
+      "RelativeLocation": {
+        "X": 165.0,
+        "Y": 15.0,
+        "Z": 300.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 225.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "VisFoundationEdgeMeshDecorComponent",
+    "Name": "VisFoundationEdgeMeshDecor3_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationWallFlatStraight_C",
+    "Class": "UScriptClass'VisFoundationEdgeMeshDecorComponent'",
+    "Properties": {
+      "EdgeMesh": {
+        "ObjectName": "StaticMesh'GridFoundationDecoration_wallcorner_300'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_wallcorner_300.2"
+      },
+      "EdgeMeshOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -300.0
+      },
+      "EdgeMeshRotation": {
+        "Pitch": 0.0,
+        "Yaw": 49.707996,
+        "Roll": 0.0
+      },
+      "EdgeMeshComp": {
+        "ObjectName": "StaticMeshComponent'BPVisGridFoundationWallFlatStraight_C:VisFoundationEdgeMeshDecor3_GEN_VARIABLE.EdgeMeshComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.27"
+      },
+      "RelativeLocation": {
+        "X": -165.0,
+        "Y": 15.0,
+        "Z": 300.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -45.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "VisFoundationEdgeMeshDecorComponent",
+    "Name": "VisFoundationEdgeMeshDecor_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationWallFlatStraight_C",
+    "Class": "UScriptClass'VisFoundationEdgeMeshDecorComponent'",
+    "Properties": {
+      "EdgeMesh": {
+        "ObjectName": "StaticMesh'GridFoundationDecoration_WallCorner02_300'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_WallCorner02_300.2"
+      },
+      "EdgeMeshOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -300.0
+      },
+      "EdgeMeshRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
+      },
+      "EdgeMeshComp": {
+        "ObjectName": "StaticMeshComponent'BPVisGridFoundationWallFlatStraight_C:VisFoundationEdgeMeshDecor_GEN_VARIABLE.EdgeMeshComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallFlatStraight.28"
+      },
+      "RelativeLocation": {
+        "X": -165.0,
+        "Y": -15.0,
+        "Z": 300.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": -0.0
+      }
+    }
   },
   {
     "Type": "VisScaffoldingComponent",

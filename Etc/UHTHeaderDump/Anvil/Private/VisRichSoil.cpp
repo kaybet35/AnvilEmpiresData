@@ -5,6 +5,7 @@
 
 AVisRichSoil::AVisRichSoil(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RootComponent = CreateDefaultSubobject<UArrowComponent>(TEXT("ArrowComponent"));
+    this->bNoCheckOnCeilVisibility = true;
     this->ArrowComponent = (UArrowComponent*)RootComponent;
     this->RichSoilDecal = CreateDefaultSubobject<UDecalComponent>(TEXT("RichSoilDecal"));
     this->RichSoilDataComponent = CreateDefaultSubobject<URichSoilDataComponent>(TEXT("RichSoilDataComponent"));

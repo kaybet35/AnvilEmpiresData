@@ -3,6 +3,6 @@
 
 class ABPVisFortStairsShortBuildSite_C : public AVisBuildSite
 {
-}; // Size: 0x4C0
+}; // Size: 0x510
 
 #endif

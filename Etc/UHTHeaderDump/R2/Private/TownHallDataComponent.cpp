@@ -9,7 +9,6 @@ UTownHallDataComponent::UTownHallDataComponent(const FObjectInitializer& ObjectI
     this->NumUnclaimedHouses = 0;
     this->NumTotalTents = 0;
     this->NumUnclaimedTents = 0;
-    this->NumReinforcementSupplies = 0;
     this->NumMarketplaces = 0;
     this->TownNameId = 0;
     this->TownNameOrdinal = 0;

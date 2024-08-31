@@ -3,6 +3,6 @@
 
 class UBPVisItemLeather_C : public UVisItem
 {
-}; // Size: 0x240
+}; // Size: 0x248
 
 #endif

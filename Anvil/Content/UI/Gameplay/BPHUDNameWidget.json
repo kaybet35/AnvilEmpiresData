@@ -54,6 +54,86 @@
     }
   },
   {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_68",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPHUDNameWidget_C:WidgetTree.HorizontalBox_68.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.3"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPHUDNameWidget_C:WidgetTree.HorizontalBox_68.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.2"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPHUDNameWidget_C:WidgetTree.VerticalBox_160.VerticalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_68",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPHUDNameWidget_C:WidgetTree.HorizontalBox_68'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.1"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPHUDNameWidget_C:WidgetTree.NameText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.6"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_68",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPHUDNameWidget_C:WidgetTree.HorizontalBox_68'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.1"
+      },
+      "Content": {
+        "ObjectName": "Image'BPHUDNameWidget_C:WidgetTree.ReinforcementIcon'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.4"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "ReinforcementIcon",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 20.0,
+          "Y": 20.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'MapIconMilitia'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Map/MapIconMilitia.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPHUDNameWidget_C:WidgetTree.HorizontalBox_68.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.3"
+      }
+    }
+  },
+  {
     "Type": "TextBlock",
     "Name": "LocalChatText",
     "Outer": "WidgetTree",
@@ -95,7 +175,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPHUDNameWidget_C:WidgetTree.VerticalBox_160.VerticalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.5"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.9"
       }
     }
   },
@@ -142,8 +222,8 @@
       },
       "Justification": "ETextJustify::Center",
       "Slot": {
-        "ObjectName": "VerticalBoxSlot'BPHUDNameWidget_C:WidgetTree.VerticalBox_160.VerticalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.4"
+        "ObjectName": "HorizontalBoxSlot'BPHUDNameWidget_C:WidgetTree.HorizontalBox_68.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.2"
       }
     }
   },
@@ -156,28 +236,29 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPHUDNameWidget_C:WidgetTree.VerticalBox_160.VerticalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.5"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.9"
         },
         {
-          "ObjectName": "VerticalBoxSlot'BPHUDNameWidget_C:WidgetTree.VerticalBox_160.VerticalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.4"
+          "ObjectName": "VerticalBoxSlot'BPHUDNameWidget_C:WidgetTree.VerticalBox_160.VerticalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.8"
         }
       ]
     }
   },
   {
     "Type": "VerticalBoxSlot",
-    "Name": "VerticalBoxSlot_0",
+    "Name": "VerticalBoxSlot_1",
     "Outer": "VerticalBox_160",
     "Class": "UScriptClass'VerticalBoxSlot'",
     "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPHUDNameWidget_C:WidgetTree.VerticalBox_160'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.3"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.7"
       },
       "Content": {
-        "ObjectName": "TextBlock'BPHUDNameWidget_C:WidgetTree.NameText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.2"
+        "ObjectName": "HorizontalBox'BPHUDNameWidget_C:WidgetTree.HorizontalBox_68'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.1"
       }
     }
   },
@@ -189,11 +270,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPHUDNameWidget_C:WidgetTree.VerticalBox_160'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.3"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.7"
       },
       "Content": {
         "ObjectName": "TextBlock'BPHUDNameWidget_C:WidgetTree.LocalChatText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.1"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.5"
       }
     }
   },
@@ -204,7 +285,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPHUDNameWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.7"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.11"
       },
       "bClassRequiresNativeTick": true
     },
@@ -235,7 +316,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "VerticalBox'BPHUDNameWidget_C:WidgetTree.VerticalBox_160'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.3"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDNameWidget.7"
       }
     }
   }

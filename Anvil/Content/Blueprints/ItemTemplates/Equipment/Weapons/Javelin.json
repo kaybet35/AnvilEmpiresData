@@ -1,0 +1,162 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Javelin_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Javelin_C'Default__Javelin_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Javelin.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Javelin_C",
+    "Name": "Default__Javelin_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Javelin.Javelin_C'",
+    "Properties": {
+      "CodeNameString": "Javelin",
+      "CodeName": -1532938670,
+      "ItemTags": [
+        "EAnvilItemTag::PrimaryTool",
+        "EAnvilItemTag::WeaponStorage",
+        "EAnvilItemTag::TwoHanded"
+      ],
+      "ItemPayloadType": "EAnvilItemPayloadType::Quality",
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "ItemHitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectSpearImpact_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectSpearImpact.0"
+      },
+      "bRearmAfterConsumption": true,
+      "bRearmSkipsEquipActivity": true,
+      "bHasAlt": true,
+      "bAltIsRanged": true,
+      "DamageOffset": {
+        "X": 131.0,
+        "Y": 18.0,
+        "Z": 93.0
+      },
+      "AdditionalDamageOffsets": [
+        {
+          "X": 182.0,
+          "Y": 10.0,
+          "Z": 49.0
+        },
+        {
+          "X": 219.0,
+          "Y": 0.0,
+          "Z": -7.0
+        },
+        {
+          "X": 110.0,
+          "Y": 24.0,
+          "Z": 102.0
+        },
+        {
+          "X": 168.0,
+          "Y": 17.0,
+          "Z": 82.0
+        },
+        {
+          "X": 213.0,
+          "Y": 8.0,
+          "Z": 37.0
+        },
+        {
+          "X": 131.0,
+          "Y": 18.0,
+          "Z": 93.0
+        },
+        {
+          "X": 182.0,
+          "Y": 10.0,
+          "Z": 49.0
+        },
+        {
+          "X": 219.0,
+          "Y": 0.0,
+          "Z": -7.0
+        }
+      ],
+      "DamageOffsetCount": 3,
+      "FireOffset": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "AmmoType": {
+        "ObjectName": "BlueprintGeneratedClass'Javelin_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Javelin.0"
+      },
+      "ProjectileEntity": {
+        "ObjectName": "BlueprintGeneratedClass'JavelinProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/JavelinProjectile.0"
+      },
+      "bStaggersWielder": true,
+      "DamageType": "EAnvilDamageType::Piercing",
+      "bDoesNotArmWithHeavyArmour": true,
+      "StanceOverride": [
+        {
+          "Key": "EAnvilCharacterStance::OnHorse",
+          "Value": {
+            "ObjectName": "BlueprintGeneratedClass'MountedJavelin_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/MountedJavelin.0"
+          }
+        }
+      ],
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "bChainable": true,
+        "Delay": 0.15,
+        "AdditionalDelays": 0.21,
+        "AdditionalDelays": 0.25,
+        "AttackChainDelays": 0.74,
+        "AttackChainDelays": 0.79,
+        "AttackChainDelays": 0.83,
+        "AttackChainDelays": 0.74,
+        "AttackChainDelays": 0.8,
+        "AttackChainDelays": 0.84,
+        "Duration": 1.0,
+        "AttackChainDurations": 1.0,
+        "AttackChainDurations": 1.0,
+        "RotationSpeedModifier": 3.5,
+        "StaminaCost": 10.0
+      },
+      "AltActivity": {
+        "State": "EAnvilSimActivityState::LaunchingProjectile",
+        "Delay": 0.7,
+        "Duration": 1.1,
+        "bRepeatable": false,
+        "StaminaCost": 10.0
+      },
+      "BuildActivity": {
+        "bRepeatable": false
+      },
+      "Damage": 15,
+      "DurabilityLossPerUse": 2.0,
+      "DamageRadius": 32.0,
+      "AimMovementSpeedModifier": 0.5,
+      "AimRotationSpeedModifier": 3.5,
+      "PrimaryMovementSpeedModifier": 0.75,
+      "SecondaryMovementSpeedModifier": 0.75,
+      "PrimaryChanceToPenetrateGuard": 0.15,
+      "SecondaryChanceToPenetrateGuard": 0.25
+    }
+  }
+]

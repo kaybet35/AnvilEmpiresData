@@ -1,0 +1,103 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "LatticeChunk2_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "LatticeChunk2_C'Default__LatticeChunk2_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/LatticeChunk2.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__LatticeChunk2_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 125.0,
+        "Y": 125.0,
+        "Z": 125.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Stone",
+      "CollisionMask": 2097168
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_1",
+    "Outer": "Default__LatticeChunk2_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "Extents": {
+        "X": 125.0,
+        "Y": 125.0,
+        "Z": 125.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Stone",
+      "CollisionMask": 64
+    }
+  },
+  {
+    "Type": "LatticeChunk2_C",
+    "Name": "Default__LatticeChunk2_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/LatticeChunk2.LatticeChunk2_C'",
+    "Properties": {
+      "CodeNameString": "LatticeChunk2",
+      "CodeName": -395051361,
+      "Components": [
+        {
+          "ObjectName": "ResourceProxyComponent'Default__LatticeChunk2_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/LatticeChunk2.4"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__LatticeChunk2_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/LatticeChunk2.1"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__LatticeChunk2_C:BoxCollisionProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/LatticeChunk2.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisLatticeMineChunk2_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunk2.0"
+      }
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__LatticeChunk2_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "HitPoints": 1,
+      "RequiredTool": "EAnvilToolType::Pickaxe",
+      "bInventoryTransferToPlayer": false,
+      "DroppedResourceAmount": 1,
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'StoneFragmentsPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/StoneFragmentsPickup.0"
+      }
+    }
+  }
+]

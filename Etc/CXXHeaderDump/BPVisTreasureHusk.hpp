@@ -3,10 +3,10 @@
 
 class ABPVisTreasureHusk_C : public AVisEffect
 {
-    class UStaticMeshComponent* TreasureMesh3;                                        // 0x0480 (size: 0x8)
-    class UStaticMeshComponent* TreasureMesh2;                                        // 0x0488 (size: 0x8)
-    class UStaticMeshComponent* TreasureMesh1;                                        // 0x0490 (size: 0x8)
+    class UStaticMeshComponent* TreasureMesh3;                                        // 0x04D0 (size: 0x8)
+    class UStaticMeshComponent* TreasureMesh2;                                        // 0x04D8 (size: 0x8)
+    class UStaticMeshComponent* TreasureMesh1;                                        // 0x04E0 (size: 0x8)
 
-}; // Size: 0x498
+}; // Size: 0x4E8
 
 #endif

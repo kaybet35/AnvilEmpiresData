@@ -138,6 +138,7 @@
       },
       "CodeNameString": "GridFoundationQuarterCeilingInclineStraightT2",
       "CodeName": 1014920370,
+      "GenerateMeshCollisionMask": 16785410,
       "bGenerateMeshCollisionVaultable": true,
       "Components": [
         {
@@ -161,7 +162,7 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationModularEntity.7"
     },
     "Properties": {
-      "MaxHealth": 50.0
+      "MaxHealth": 75.0
     }
   },
   {
@@ -194,7 +195,8 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationModularEntity.10"
     },
     "Properties": {
-      "bRequireSupport": true
+      "bRequireSupport": true,
+      "StructureType": "EAnvilBuildStructureType::FoundationCeiling"
     }
   },
   {
@@ -217,7 +219,17 @@
         "ObjectName": "BlueprintGeneratedClass'GridFoundationQuarterCeilingInclineStraight_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationQuarterCeilingInclineStraight.0"
       },
-      "TierPrerequisite": 3
+      "TierPrerequisite": 3,
+      "MaterialRequirements": [
+        {
+          "CodeName": -879937657,
+          "Count": 3
+        },
+        {
+          "CodeName": -274270847,
+          "Count": 1
+        }
+      ]
     }
   }
 ]

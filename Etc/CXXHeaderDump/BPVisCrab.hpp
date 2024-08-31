@@ -3,6 +3,6 @@
 
 class ABPVisCrab_C : public AVisAnimal
 {
-}; // Size: 0x4C8
+}; // Size: 0x518
 
 #endif

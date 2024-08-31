@@ -3,10 +3,11 @@
 
 class ABPVisGridFoundationHalfCrenellationDiagonal_C : public AVisStructure
 {
-    class UVisFoundationFillerMeshDecorComponent* VisFoundationFillerMeshDecor;       // 0x04C8 (size: 0x8)
-    class UVisFoundationFillerMeshDecorComponent* VisFoundationFillerMeshDecor1;      // 0x04D0 (size: 0x8)
-    class UStaticMeshComponent* StaticMesh;                                           // 0x04D8 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh;                                           // 0x0518 (size: 0x8)
+    class UVisFoundationFillerMeshDecorComponent* VisFoundationFillerMeshDecor;       // 0x0520 (size: 0x8)
+    class UVisFoundationFillerMeshDecorComponent* VisFoundationFillerMeshDecor1;      // 0x0528 (size: 0x8)
+    class USceneComponent* Scene;                                                     // 0x0530 (size: 0x8)
 
-}; // Size: 0x4E0
+}; // Size: 0x538
 
 #endif

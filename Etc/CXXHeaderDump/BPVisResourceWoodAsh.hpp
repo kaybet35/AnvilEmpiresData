@@ -3,8 +3,8 @@
 
 class ABPVisResourceWoodAsh_C : public AVisPickupItem
 {
-    class UDecalComponent* Decal;                                                     // 0x0470 (size: 0x8)
+    class UDecalComponent* Decal;                                                     // 0x04C0 (size: 0x8)
 
-}; // Size: 0x478
+}; // Size: 0x4C8
 
 #endif

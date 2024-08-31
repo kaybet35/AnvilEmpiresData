@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisGridFoundationCeilingEdgeADiagonal_T2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.14"
       }
     },
     "SuperStruct": {
@@ -22,17 +22,6 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "MeshVisibilityData",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'MeshVisibilityDataComponent'",
-          "ObjectPath": "/Script/R2"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "VisStaticMesh1",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -40,6 +29,28 @@
         "PropertyClass": {
           "ObjectName": "Class'VisStaticMeshComponent'",
           "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Scene",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MeshVisibilityData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MeshVisibilityDataComponent'",
+          "ObjectPath": "/Script/R2"
         }
       }
     ],
@@ -65,7 +76,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisGridFoundationCeilingEdgeADiagonal_T2_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.19"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconGridFoundation_CeilignEdgeA'",
@@ -76,7 +87,7 @@
       "BuildSiteVisibility": "EBuildSiteVisibility::Never",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisGridFoundationCeilingEdgeADiagonal_T2_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.18"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisGridFoundationCeilingEdgeADiagonal_T2_C:HealthDataComponent'",
@@ -84,15 +95,15 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisGridFoundationCeilingEdgeADiagonal_T2_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.17"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisGridFoundationCeilingEdgeADiagonal_T2_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.16"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisGridFoundationCeilingEdgeADiagonal_T2_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.9"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationCeilingEdgeADiagonal_T2_C:ArrowComponent'",
@@ -107,6 +118,7 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.4"
       },
       "GeneratedScorchEffects": 8,
+      "UseWindowType": "EHUDWindowType::GenericStructure",
       "VisDisplayName": {
         "Namespace": "",
         "Key": "C6AF0BE14EECCC535D54DB8058B1DE00",
@@ -125,7 +137,6 @@
         "SourceString": "Use mouse to raise and lower this structure",
         "LocalizedString": "Use mouse to raise and lower this structure"
       },
-      "UseWindowType": "EHUDWindowType::GenericStructure",
       "bHasLandscapeCollisions": true,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationCeilingEdgeADiagonal_T2_C:ArrowComponent'",
@@ -158,7 +169,7 @@
       "bDeferGrassUpdate": true,
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisGridFoundationCeilingEdgeADiagonal_T2_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.15"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationCeilingEdgeADiagonal_T2_C:ArrowComponent'",
@@ -181,6 +192,12 @@
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationCeilingEdgeADiagonal_T2_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Scene_GEN_VARIABLE",
     "Outer": "BPVisGridFoundationCeilingEdgeADiagonal_T2_C",
     "Class": "UScriptClass'SceneComponent'"
   },
@@ -210,26 +227,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisStaticMeshComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisGridFoundationCeilingEdgeADiagonal_T2_C:VisStaticMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.18"
-      },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "011229F7-4C949998-E81662A4-C278BB1C",
-      "InternalVariableName": "VisStaticMesh1"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_2",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -247,6 +244,50 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisGridFoundationCeilingEdgeADiagonal_T2_C:Scene_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.8"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingEdgeADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.13"
+        }
+      ],
+      "VariableGuid": "530EB802-4AD2FD39-3CB1AD82-D6EE9189",
+      "InternalVariableName": "Scene"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisGridFoundationCeilingEdgeADiagonal_T2_C:VisStaticMesh1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.20"
+      },
+      "VariableGuid": "F529739E-4BF513CE-EEA95B96-31C58FA3",
+      "InternalVariableName": "VisStaticMesh1"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPVisGridFoundationCeilingEdgeADiagonal_T2_C",
@@ -254,27 +295,31 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingEdgeADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.10"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisGridFoundationCeilingEdgeADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingEdgeADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.12"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingEdgeADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.10"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisGridFoundationCeilingEdgeADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingEdgeADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingEdgeADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.13"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisGridFoundationCeilingEdgeADiagonal_T2_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingEdgeADiagonal_T2.10"
       }
     }
   },
@@ -332,23 +377,22 @@
           "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
         },
         {
-          "ObjectName": "MaterialInstanceConstant'LDGrid03'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGrid03.0"
+          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
+          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
         },
         {
-          "ObjectName": "MaterialInstanceConstant'LDGrid03'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGrid03.0"
+          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
+          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
         },
         {
-          "ObjectName": "MaterialInstanceConstant'LDGrid04'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGrid04.0"
+          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
+          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
+          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
         }
       ],
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 300.0
-      },
       "ComponentTags": [
         "ToggleVisibility",
         "Structure",

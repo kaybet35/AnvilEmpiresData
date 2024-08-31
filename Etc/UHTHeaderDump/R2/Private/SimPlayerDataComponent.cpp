@@ -3,8 +3,8 @@
 USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GuardStrength = 0;
     this->TeamId = 0;
-    this->Encumbrance = 0;
     this->GuardMeter = 0.00f;
+    this->Stability = 0.00f;
     this->CurrentActivitySpeedModifier = 0.00f;
     this->CurrentActivityChainIndex = 0;
     this->ActivityState = EAnvilSimActivityState::None;
@@ -20,13 +20,16 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->NobleVoteId = 0;
     this->TrappedTimer = 0.00f;
     this->StaggerTimer = 0.00f;
+    this->bStaggered = false;
     this->bIsAiming = false;
     this->bIsGuarding = false;
     this->bIsAdmin = false;
     this->bPriming = false;
     this->bInTravelZone = false;
     this->bAltAttackMode = false;
+    this->bAltShieldMode = false;
     this->bIsMeshHidden = false;
+    this->bIsReinforcing = false;
     this->SecondsUntilFullDecay = 0.00f;
     this->HeldItemLightSourceRadius = 0.00f;
     this->FoodTypesOnCooldownBits = 0;

@@ -3,8 +3,8 @@
 
 class ABPVisFlintPile_C : public AVisResource
 {
-    class UGrassRemovalVolumeComponent* GrassRemovalVolume;                           // 0x04A0 (size: 0x8)
+    class UGrassRemovalVolumeComponent* GrassRemovalVolume;                           // 0x04F0 (size: 0x8)
 
-}; // Size: 0x4A8
+}; // Size: 0x4F8
 
 #endif

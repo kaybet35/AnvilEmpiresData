@@ -43,20 +43,62 @@
         "ObjectName": "BlueprintGeneratedClass'Effect2HAxeImpact_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/Effect2HAxeImpact.0"
       },
-      "Encumberance": 5,
+      "bHasAlt": true,
       "DamageOffset": {
-        "X": 80.0,
-        "Y": 0.0,
-        "Z": 0.0
+        "X": 135.0,
+        "Y": 18.0,
+        "Z": 96.0
       },
+      "AdditionalDamageOffsets": [
+        {
+          "X": 137.0,
+          "Y": -43.0,
+          "Z": 67.0
+        },
+        {
+          "X": 103.0,
+          "Y": -102.0,
+          "Z": 47.0
+        },
+        {
+          "X": 203.0,
+          "Y": 0.0,
+          "Z": 114.0
+        },
+        {
+          "X": 226.0,
+          "Y": 0.0,
+          "Z": 52.0
+        },
+        {
+          "X": 229.0,
+          "Y": 0.0,
+          "Z": -18.0
+        }
+      ],
+      "DamageOffsetCount": 3,
       "bStaggersWielder": true,
       "DamageType": "EAnvilDamageType::Slashing",
       "ToolType": "EAnvilToolType::AxeT2",
+      "bDoesNotArmWithHeavyItem": true,
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
-        "Delay": 0.2,
-        "Duration": 1.1,
+        "Delay": 0.13,
+        "AdditionalDelays": 0.15,
+        "AdditionalDelays": 0.18,
+        "Duration": 1.0,
         "StaminaCost": 10.0
+      },
+      "AltActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 1.11,
+        "AdditionalDelays": 1.13,
+        "AdditionalDelays": 1.15,
+        "Duration": 2.0,
+        "MovementSpeedModifier": 0.0,
+        "RotationSpeedModifier": 0.0,
+        "StaminaCost": 15.0,
+        "AimedStaminaCost": 15.0
       },
       "RangedActivity": {
         "bRepeatable": false
@@ -72,8 +114,9 @@
       },
       "bAllowCameraPan": false,
       "Damage": 25,
+      "DefaultMarketplaceValue": 30,
       "DurabilityLossPerUse": 0.5,
-      "DamageRadius": 125.0,
+      "DamageRadius": 48.0,
       "GuardMeterReductionMultiplier": 3.0,
       "ShieldDurabilityLossMultiplier": 20.0,
       "AimMovementSpeedModifier": 0.5

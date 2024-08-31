@@ -3,6 +3,6 @@
 
 class ABPVisRoadT1_C : public AVisSpline
 {
-}; // Size: 0x4D8
+}; // Size: 0x528
 
 #endif

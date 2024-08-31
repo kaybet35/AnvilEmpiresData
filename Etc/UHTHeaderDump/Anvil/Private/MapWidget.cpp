@@ -13,4 +13,3 @@ ESlateVisibility UMapWidget::GetObjectiveBorderVisibility() {
 }
 
 
-

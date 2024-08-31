@@ -1,0 +1,249 @@
+[
+  {
+    "Type": "AnimMontage",
+    "Name": "CombatAxe_Attack1_montage",
+    "Class": "UScriptClass'AnimMontage'",
+    "Properties": {
+      "BlendIn": {
+        "BlendTime": 0.05
+      },
+      "BlendOut": {
+        "BlendTime": 0.08
+      },
+      "CompositeSections": [
+        {
+          "SectionName": "Default",
+          "NextSectionName": "loop",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'CombatAxe_Attack1_montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/CombatAxe_Attack1_montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.3,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Axe_TwoHand_Slash_followThrough'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Axe_TwoHand_Slash_followThrough.0"
+          }
+        },
+        {
+          "SectionName": "Alt",
+          "NextSectionName": "Alt_loop",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'CombatAxe_Attack1_montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/CombatAxe_Attack1_montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 3,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.9666666,
+          "SegmentLength": 1.3333334,
+          "LinkValue": 0.96666664,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'CombatAxe_secondary_attack01'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/CombatAxe_secondary_attack01.0"
+          }
+        }
+      ],
+      "SlotAnimTracks": [
+        {
+          "SlotName": "UpperBodySlot",
+          "AnimTrack": {
+            "AnimSegments": [
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'Axe_TwoHand_Slash_followThrough'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Axe_TwoHand_Slash_followThrough.0"
+                },
+                "StartPos": 0.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 0.3,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'Axe_TwoHand_Slash_followThrough'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Axe_TwoHand_Slash_followThrough.0"
+                },
+                "StartPos": 0.3,
+                "AnimStartTime": 0.3,
+                "AnimEndTime": 0.35,
+                "AnimPlayRate": 0.2,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'Axe_TwoHand_Slash_followThrough'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Axe_TwoHand_Slash_followThrough.0"
+                },
+                "StartPos": 0.54999995,
+                "AnimStartTime": 0.35,
+                "AnimEndTime": 0.76666665,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'CombatAxe_secondary_attack01'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/CombatAxe_secondary_attack01.0"
+                },
+                "StartPos": 0.9666666,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 1.3333334,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'CombatAxe_secondary_attack01toIdleInCombat'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/CombatAxe_secondary_attack01toIdleInCombat.0"
+                },
+                "StartPos": 2.3,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 0.6666667,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              }
+            ]
+          }
+        }
+      ],
+      "Notifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'CombatAxe_Attack1_montage:AnimNotify_PlaySound_1'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/CombatAxe_Attack1_montage.2"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.15993087,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'CombatAxe_Attack1_montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/CombatAxe_Attack1_montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.3,
+          "LinkValue": 0.15993087,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Axe_TwoHand_Slash_followThrough'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Axe_TwoHand_Slash_followThrough.0"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'CombatAxe_Attack1_montage:AnimNotify_PlaySound_0'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/CombatAxe_Attack1_montage.1"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 1.8843863,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'CombatAxe_Attack1_montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/CombatAxe_Attack1_montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 3,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.9666666,
+          "SegmentLength": 1.3333334,
+          "LinkValue": 1.8843863,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'CombatAxe_secondary_attack01'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/CombatAxe_secondary_attack01.0"
+          }
+        }
+      ],
+      "SequenceLength": 2.9666667,
+      "Skeleton": {
+        "ObjectName": "Skeleton'PrototypeChar_Skeleton'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/PrototypeChar_Skeleton.8"
+      }
+    },
+    "SkeletonGuid": "F597442D-46D412D3-CA2395A2-A90680CA"
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_0",
+    "Outer": "CombatAxe_Attack1_montage",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Axe2HSwing_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Axe2H/Axe2HSwing_Cue.0"
+      },
+      "bFollow": true,
+      "AttachName": "hand_r"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_1",
+    "Outer": "CombatAxe_Attack1_montage",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Axe2HSwing_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Axe2H/Axe2HSwing_Cue.0"
+      },
+      "bFollow": true,
+      "AttachName": "hand_r"
+    }
+  }
+]

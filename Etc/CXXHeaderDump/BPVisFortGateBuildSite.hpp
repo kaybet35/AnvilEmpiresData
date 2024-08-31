@@ -3,8 +3,8 @@
 
 class ABPVisFortGateBuildSite_C : public AVisBuildSite
 {
-    class UStaticMeshComponent* StaticMesh;                                           // 0x04C0 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh;                                           // 0x0510 (size: 0x8)
 
-}; // Size: 0x4C8
+}; // Size: 0x518
 
 #endif

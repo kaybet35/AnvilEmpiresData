@@ -3,14 +3,14 @@
 
 class ABPVisHouseModule_T1_R_Door_C : public AVisStructure
 {
-    class UVisStaticMeshComponent* Pillar09;                                          // 0x04C8 (size: 0x8)
-    class UVisStaticMeshComponent* Pillar07;                                          // 0x04D0 (size: 0x8)
-    class UVisStaticMeshComponent* Pillar06;                                          // 0x04D8 (size: 0x8)
-    class UVisStaticMeshComponent* Pillar05;                                          // 0x04E0 (size: 0x8)
-    class UVisStaticMeshComponent* Pillar04;                                          // 0x04E8 (size: 0x8)
-    class UMeshVisibilityDataComponent* MeshVisibilityData;                           // 0x04F0 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh_Roof;                                // 0x04F8 (size: 0x8)
+    class UVisStaticMeshComponent* Pillar09;                                          // 0x0518 (size: 0x8)
+    class UVisStaticMeshComponent* Pillar07;                                          // 0x0520 (size: 0x8)
+    class UVisStaticMeshComponent* Pillar06;                                          // 0x0528 (size: 0x8)
+    class UVisStaticMeshComponent* Pillar05;                                          // 0x0530 (size: 0x8)
+    class UVisStaticMeshComponent* Pillar04;                                          // 0x0538 (size: 0x8)
+    class UMeshVisibilityDataComponent* MeshVisibilityData;                           // 0x0540 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh_Roof;                                // 0x0548 (size: 0x8)
 
-}; // Size: 0x500
+}; // Size: 0x550
 
 #endif

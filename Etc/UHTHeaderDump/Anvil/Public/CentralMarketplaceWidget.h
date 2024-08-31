@@ -102,6 +102,15 @@ private:
     void OnActiveOrdersTabButtonClicked();
     
     UFUNCTION(BlueprintCallable)
+    bool IsSelectedOrderItemQuantityEditableTextBoxEnabled();
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsSelectedOrderItemPriceEditableTextBoxEnabled();
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsSelectedOrderItemMinQualityComboBoxEnabled();
+    
+    UFUNCTION(BlueprintCallable)
     bool IsSelectedItemPlaceOrderButtonEnabled();
     
     UFUNCTION(BlueprintCallable)

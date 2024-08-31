@@ -177,7 +177,7 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationModularEntity.7"
     },
     "Properties": {
-      "MaxHealth": 150.0
+      "MaxHealth": 75.0
     }
   },
   {
@@ -208,6 +208,9 @@
     "Template": {
       "ObjectName": "StructureProxyComponent'Default__BPBaseFoundationModularEntity_C:StructureProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationModularEntity.10"
+    },
+    "Properties": {
+      "StructureType": "EAnvilBuildStructureType::FoundationWall"
     }
   },
   {
@@ -230,7 +233,17 @@
         "ObjectName": "BlueprintGeneratedClass'GridFoundationQuarterWallInclineDiagonal_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationQuarterWallInclineDiagonal.0"
       },
-      "TierPrerequisite": 3
+      "TierPrerequisite": 3,
+      "MaterialRequirements": [
+        {
+          "CodeName": -879937657,
+          "Count": 2
+        },
+        {
+          "CodeName": -274270847,
+          "Count": 1
+        }
+      ]
     }
   }
 ]

@@ -1,0 +1,65 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "LongBowArrowProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "LongBowArrowProjectile_C'Default__LongBowArrowProjectile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/LongBowArrowProjectile.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "LongBowArrowProjectile_C",
+    "Name": "Default__LongBowArrowProjectile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Items/LongBowArrowProjectile.LongBowArrowProjectile_C'",
+    "Properties": {
+      "CodeNameString": "LongBowArrowProjectile",
+      "CodeName": -1044496609,
+      "bStatic": false,
+      "bSkipPersist": true,
+      "Components": [
+        {
+          "ObjectName": "ProjectileMovementProxyComponent'Default__LongBowArrowProjectile_C:ProjectileMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/LongBowArrowProjectile.2"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisLongBowArrowProjectile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.2"
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementProxyComponent",
+    "Name": "ProjectileMovementProxyComponent_0",
+    "Outer": "Default__LongBowArrowProjectile_C",
+    "Class": "UScriptClass'ProjectileMovementProxyComponent'",
+    "Properties": {
+      "HitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectArrow_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectArrow.0"
+      },
+      "Speed": 5000.0,
+      "MaxRange": 1000.0,
+      "DamageAmount": 20,
+      "DamageType": "EAnvilDamageType::Missile",
+      "Radius": 10.0,
+      "HeadingTolerance": 45.0,
+      "RandomRadius": 200.0
+    }
+  }
+]

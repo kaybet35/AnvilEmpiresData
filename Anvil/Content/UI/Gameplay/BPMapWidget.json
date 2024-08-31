@@ -261,7 +261,7 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPMapWidget_C:WidgetTree.ObjectiveText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.31"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.30"
       }
     }
   },
@@ -296,7 +296,7 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPMapWidget_C:WidgetTree.ObjectiveHeaderText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.30"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.29"
       }
     }
   },
@@ -331,7 +331,7 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPMapWidget_C:WidgetTree.TimeOfDayText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.32"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.31"
       }
     }
   },
@@ -405,7 +405,7 @@
       },
       "Content": {
         "ObjectName": "HorizontalBox'BPMapWidget_C:WidgetTree.BottomButtonsHorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.24"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.23"
       }
     }
   },
@@ -434,7 +434,7 @@
       },
       "Content": {
         "ObjectName": "ScaleBox'BPMapWidget_C:WidgetTree.ScaleBox_100'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.28"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.27"
       }
     }
   },
@@ -497,7 +497,7 @@
       },
       "Content": {
         "ObjectName": "Image'BPMapWidget_C:WidgetTree.frame'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.26"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.25"
       }
     }
   },
@@ -601,33 +601,9 @@
       },
       "Content": {
         "ObjectName": "Image'BPMapWidget_C:WidgetTree.MapImage'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.27"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.26"
       }
     }
-  },
-  {
-    "Type": "Function",
-    "Name": "BP_OnMapImageSet",
-    "Outer": "BPMapWidget_C",
-    "Class": "UScriptClass'Function'",
-    "SuperStruct": {
-      "ObjectName": "Function'MapWidget:BP_OnMapImageSet'",
-      "ObjectPath": "/Script/Anvil"
-    },
-    "ChildProperties": [
-      {
-        "Type": "ObjectProperty",
-        "Name": "MapImageTexture",
-        "Flags": "RF_Public",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
-        "PropertyClass": {
-          "ObjectName": "Class'Texture2D'",
-          "ObjectPath": "/Script/Engine"
-        }
-      }
-    ],
-    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
   },
   {
     "Type": "Function",
@@ -641,16 +617,6 @@
         "Flags": "RF_Public",
         "ElementSize": 4,
         "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "K2Node_Event_MapImageTexture",
-        "Flags": "RF_Public",
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class'Texture2D'",
-          "ObjectPath": "/Script/Engine"
-        }
       },
       {
         "Type": "StructProperty",
@@ -719,6 +685,12 @@
         "ElementSize": 4
       },
       {
+        "Type": "Int64Property",
+        "Name": "CallFunc_Conv_IntToInt64_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
         "Type": "TextProperty",
         "Name": "CallFunc_Conv_IntToText_ReturnValue",
         "Flags": "RF_Public",
@@ -735,50 +707,12 @@
         }
       },
       {
-        "Type": "Int64Property",
-        "Name": "CallFunc_Conv_IntToInt64_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "K2Node_DynamicCast_AsMaterial_Interface",
-        "Flags": "RF_Public",
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class'MaterialInterface'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "K2Node_DynamicCast_bSuccess_1",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
         "Type": "StructProperty",
         "Name": "K2Node_MakeStruct_FormatArgumentData_1",
         "Flags": "RF_Public",
         "ElementSize": 80,
         "Struct": {
           "ObjectName": "ScriptStruct'FormatArgumentData'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class'MaterialInstanceDynamic'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -804,16 +738,6 @@
         "Name": "CallFunc_Format_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 24
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "K2Node_MakeStruct_SlateBrush",
-        "Flags": "RF_Public",
-        "ElementSize": 224,
-        "Struct": {
-          "ObjectName": "ScriptStruct'SlateBrush'",
-          "ObjectPath": "/Script/SlateCore"
-        }
       }
     ],
     "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
@@ -879,7 +803,7 @@
       },
       "Slot": {
         "ObjectName": "ScaleBoxSlot'BPMapWidget_C:WidgetTree.ScaleBox_100.ScaleBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.29"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.28"
       }
     }
   },
@@ -946,7 +870,7 @@
       "Slots": [
         {
           "ObjectName": "ScaleBoxSlot'BPMapWidget_C:WidgetTree.ScaleBox_100.ScaleBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.29"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.28"
         }
       ],
       "Slot": {
@@ -963,11 +887,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "ScaleBox'BPMapWidget_C:WidgetTree.ScaleBox_100'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.28"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.27"
       },
       "Content": {
         "ObjectName": "Image'BPMapWidget_C:WidgetTree.background'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.25"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.24"
       }
     }
   },
@@ -1089,12 +1013,12 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPMapWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.34"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.33"
       },
       "bClassRequiresNativeTick": true,
       "UberGraphFunction": {
         "ObjectName": "Function'BPMapWidget_C:ExecuteUbergraph_BPMapWidget'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.22"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.21"
       }
     },
     "SuperStruct": {
@@ -1104,15 +1028,11 @@
     "Children": [
       {
         "ObjectName": "Function'BPMapWidget_C:Tick'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.23"
-      },
-      {
-        "ObjectName": "Function'BPMapWidget_C:BP_OnMapImageSet'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.21"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.22"
       },
       {
         "ObjectName": "Function'BPMapWidget_C:ExecuteUbergraph_BPMapWidget'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.22"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.21"
       }
     ],
     "ChildProperties": [
@@ -1197,15 +1117,11 @@
     "FuncMap": {
       "ExecuteUbergraph_BPMapWidget": {
         "ObjectName": "Function'BPMapWidget_C:ExecuteUbergraph_BPMapWidget'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.22"
-      },
-      "BP_OnMapImageSet": {
-        "ObjectName": "Function'BPMapWidget_C:BP_OnMapImageSet'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.21"
       },
       "Tick": {
         "ObjectName": "Function'BPMapWidget_C:Tick'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.23"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.22"
       }
     },
     "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",

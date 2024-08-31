@@ -4,10 +4,15 @@ UHUDNameWidget::UHUDNameWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->TargetVisActor = NULL;
     this->NameText = NULL;
     this->LocalChatText = NULL;
+    this->ReinforcementIcon = NULL;
     this->LocalChatTextLimit = 45;
 }
 
 ESlateVisibility UHUDNameWidget::GetWidgetVisibility() {
+    return ESlateVisibility::Visible;
+}
+
+ESlateVisibility UHUDNameWidget::GetReinforcementIconVisibility() {
     return ESlateVisibility::Visible;
 }
 

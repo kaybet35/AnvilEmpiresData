@@ -11,7 +11,6 @@
 ---@field Fire USceneComponent
 ---@field VisTeamMesh UVisTeamMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
----@field VisTownAreaMarkerDecal UVisTownAreaMarkerDecalComponent
 ABPVisCampTownCenterT1_C = {}
 
 ---@param DeltaSeconds float

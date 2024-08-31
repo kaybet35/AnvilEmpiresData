@@ -10,6 +10,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIsVisible;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bGroup2IsVisible;
+    
     UMeshVisibilityDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };

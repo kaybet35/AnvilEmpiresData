@@ -105,6 +105,9 @@ public:
     TArray<UAnimMontage*> AttackChainMontages;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UAnimMontage* SecondaryLaunchingProjectileOverride;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* TransferSoundCue;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

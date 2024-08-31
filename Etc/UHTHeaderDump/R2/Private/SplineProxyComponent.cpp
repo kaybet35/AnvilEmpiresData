@@ -7,7 +7,6 @@ USplineProxyComponent::USplineProxyComponent() {
     this->MaxSplineLength = 2000.00f;
     this->SlopeMax = 1.00f;
     this->FlatSlope = 0.10f;
-    this->bScaleCost = false;
     this->bPlatformMode = false;
     this->bBridgeMode = false;
     this->MidPieceZOffset = 0.00f;
@@ -16,6 +15,7 @@ USplineProxyComponent::USplineProxyComponent() {
     this->SnappingChannel = EAnvilSnappingChannelType::General;
     this->SurfaceType = EAnvilPhysicalSurfaceType::Default;
     this->CollisionMask = 0;
+    this->Tags = 0;
     this->StepAngle = 0.00f;
     this->bVaultable = true;
 }

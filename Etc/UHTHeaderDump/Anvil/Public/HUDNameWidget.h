@@ -6,6 +6,7 @@
 #include "HUDNameWidget.generated.h"
 
 class AVisActor;
+class UImage;
 class UTextBlock;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -22,6 +23,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* LocalChatText;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UImage* ReinforcementIcon;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 LocalChatTextLimit;
     
@@ -34,6 +38,9 @@ public:
 protected:
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetWidgetVisibility();
+    
+    UFUNCTION(BlueprintCallable)
+    ESlateVisibility GetReinforcementIconVisibility();
     
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetPlayerNameVisibility();

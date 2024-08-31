@@ -6,7 +6,7 @@ UVitalityStatusWidget::UVitalityStatusWidget() : UUserWidget(FObjectInitializer:
     this->HealthBar = NULL;
     this->StaminaOverlay = NULL;
     this->StaminaBar = NULL;
-    this->TemperatureBar = NULL;
+    this->StabilityBar = NULL;
 }
 
 

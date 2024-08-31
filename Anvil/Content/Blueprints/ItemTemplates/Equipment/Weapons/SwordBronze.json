@@ -42,26 +42,103 @@
         "ObjectName": "BlueprintGeneratedClass'EffectSwordImpact_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectSwordImpact.0"
       },
-      "Encumberance": 40,
+      "bHasAlt": true,
       "DamageOffset": {
-        "X": 145.0,
-        "Y": 0.0,
-        "Z": 45.0
+        "X": 158.0,
+        "Y": 35.0,
+        "Z": 52.0
       },
       "AdditionalDamageOffsets": [
         {
           "X": 153.0,
-          "Y": 13.0,
+          "Y": -65.0,
+          "Z": 36.0
+        },
+        {
+          "X": 83.0,
+          "Y": -127.0,
+          "Z": 42.0
+        },
+        {
+          "X": 104.0,
+          "Y": -86.0,
+          "Z": 19.0
+        },
+        {
+          "X": 180.0,
+          "Y": 0.0,
+          "Z": 18.0
+        },
+        {
+          "X": 152.0,
+          "Y": 93.0,
           "Z": 15.0
         },
         {
-          "X": 161.0,
+          "X": 131.0,
+          "Y": 81.0,
+          "Z": 25.0
+        },
+        {
+          "X": 180.0,
           "Y": 0.0,
+          "Z": 42.0
+        },
+        {
+          "X": 160.0,
+          "Y": -80.0,
+          "Z": 48.0
+        },
+        {
+          "X": 169.0,
+          "Y": 26.0,
+          "Z": 20.0
+        },
+        {
+          "X": 252.0,
+          "Y": 20.0,
+          "Z": 20.0
+        },
+        {
+          "X": 321.0,
+          "Y": 9.0,
+          "Z": 35.0
+        },
+        {
+          "X": 122.0,
+          "Y": 18.0,
+          "Z": 19.0
+        },
+        {
+          "X": 214.0,
+          "Y": 20.0,
+          "Z": 20.0
+        },
+        {
+          "X": 295.0,
+          "Y": 20.0,
+          "Z": 27.0
+        },
+        {
+          "X": 122.0,
+          "Y": 18.0,
+          "Z": 20.0
+        },
+        {
+          "X": 214.0,
+          "Y": 20.0,
+          "Z": 20.0
+        },
+        {
+          "X": 305.0,
+          "Y": 7.0,
           "Z": 42.0
         }
       ],
+      "DamageOffsetCount": 3,
       "bStaggersWielder": true,
       "DamageType": "EAnvilDamageType::Slashing",
+      "bDoesNotArmWithHeavyItem": true,
       "StanceOverride": [
         {
           "Key": "EAnvilCharacterStance::OnHorse",
@@ -76,16 +153,35 @@
         "bChainable": true,
         "Delay": 0.95,
         "AdditionalDelays": 1.0,
-        "AdditionalDelays": 1.08,
+        "AdditionalDelays": 1.1,
         "AttackChainDelays": 0.9,
         "AttackChainDelays": 0.94,
         "AttackChainDelays": 0.97,
-        "AttackChainDelays": 0.83,
-        "AttackChainDelays": 0.9,
-        "AttackChainDelays": 1.0,
+        "AttackChainDelays": 0.85,
+        "AttackChainDelays": 0.89,
+        "AttackChainDelays": 0.96,
         "Duration": 1.2,
         "AttackChainDurations": 1.2,
         "AttackChainDurations": 1.2,
+        "RotationSpeedModifier": 4.0,
+        "StaminaCost": 20.0,
+        "AimedStaminaCost": 20.0
+      },
+      "AltActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "bChainable": true,
+        "Delay": 0.6,
+        "AdditionalDelays": 0.65,
+        "AdditionalDelays": 0.68,
+        "AttackChainDelays": 0.45,
+        "AttackChainDelays": 0.49,
+        "AttackChainDelays": 0.53,
+        "AttackChainDelays": 0.53,
+        "AttackChainDelays": 0.58,
+        "AttackChainDelays": 0.63,
+        "Duration": 1.3,
+        "AttackChainDurations": 1.3,
+        "AttackChainDurations": 1.3,
         "RotationSpeedModifier": 4.0,
         "StaminaCost": 20.0,
         "AimedStaminaCost": 20.0
@@ -97,9 +193,12 @@
       "Damage": 30,
       "DefaultMarketplaceValue": 10,
       "DurabilityLossPerUse": 2.0,
-      "DamageRadius": 125.0,
+      "DamageRadius": 55.0,
       "AimMovementSpeedModifier": 0.45,
-      "AimRotationSpeedModifier": 4.0
+      "AimRotationSpeedModifier": 4.0,
+      "PrimaryMovementSpeedModifier": 0.8,
+      "SecondaryMovementSpeedModifier": 0.4,
+      "SecondaryChanceToPenetrateGuard": 0.3
     }
   }
 ]

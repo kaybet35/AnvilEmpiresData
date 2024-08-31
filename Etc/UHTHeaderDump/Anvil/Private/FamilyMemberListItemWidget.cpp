@@ -1,6 +1,7 @@
 #include "FamilyMemberListItemWidget.h"
 
 UFamilyMemberListItemWidget::UFamilyMemberListItemWidget() : UUserWidget(FObjectInitializer::Get()) {
+    this->OnlineStatusIcon = NULL;
     this->PlayerNameText = NULL;
     this->RoleComboBoxSizeBox = NULL;
     this->RoleComboBox = NULL;

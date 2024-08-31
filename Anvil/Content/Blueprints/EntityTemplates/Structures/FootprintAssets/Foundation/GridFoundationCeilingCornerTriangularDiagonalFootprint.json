@@ -6,7 +6,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'GridFoundationCeilingCornerTriangularDiagonalFootprint_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationCeilingCornerTriangularDiagonalFootprint.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationCeilingCornerTriangularDiagonalFootprint.7"
       }
     },
     "SuperStruct": {
@@ -48,14 +48,14 @@
     "Properties": {
       "bShowMesh": true,
       "Position": {
-        "X": -7.6293945E-06,
-        "Y": -2.842171E-14,
-        "Z": 725.001
+        "X": 0.0,
+        "Y": -7.6293945E-06,
+        "Z": 575.001
       },
       "Extents": {
-        "X": 227.13303,
-        "Y": 227.13306,
-        "Z": 725.001
+        "X": 227.13306,
+        "Y": 227.13303,
+        "Z": 575.001
       },
       "StructureTiers": [
         {
@@ -84,11 +84,20 @@
         {
           "Comp": {
             "ObjectName": "MeshVisibilityProxyComponent'Default__GridFoundationCeilingCornerTriangularDiagonalFootprint_C:MeshVisibilityProxyComponent_0'",
-            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationCeilingCornerTriangularDiagonalFootprint.3"
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationCeilingCornerTriangularDiagonalFootprint.4"
           },
           "bHighlight": false,
           "bHide": false,
           "bNoCopyToBuildSite": true
+        },
+        {
+          "Comp": {
+            "ObjectName": "MeshCollisionProxyComponent'Default__GridFoundationCeilingCornerTriangularDiagonalFootprint_C:MeshCollisionProxyComponent_0'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationCeilingCornerTriangularDiagonalFootprint.3"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": false
         }
       ]
     }
@@ -190,6 +199,19 @@
     }
   },
   {
+    "Type": "MeshCollisionProxyComponent",
+    "Name": "MeshCollisionProxyComponent_0",
+    "Outer": "Default__GridFoundationCeilingCornerTriangularDiagonalFootprint_C",
+    "Class": "UScriptClass'MeshCollisionProxyComponent'",
+    "Properties": {
+      "PhysicsAssetName": {
+        "ObjectName": "StaticMesh'GridFoundation_ceiling_triangular_diagonal_footprintBox'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/GridFoundation_ceiling_triangular_diagonal_footprintBox.2"
+      },
+      "CollisionMask": 256
+    }
+  },
+  {
     "Type": "MeshVisibilityProxyComponent",
     "Name": "MeshVisibilityProxyComponent_0",
     "Outer": "Default__GridFoundationCeilingCornerTriangularDiagonalFootprint_C",
@@ -213,7 +235,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'GridFoundationCeilingCornerTriangularDiagonalFootprint_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationCeilingCornerTriangularDiagonalFootprint.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationCeilingCornerTriangularDiagonalFootprint.5"
       },
       "VariableGuid": "63737328-4E4C639E-1502D0A7-02F545C9",
       "InternalVariableName": "DefaultSceneRoot"
@@ -228,18 +250,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'GridFoundationCeilingCornerTriangularDiagonalFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationCeilingCornerTriangularDiagonalFootprint.5"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationCeilingCornerTriangularDiagonalFootprint.6"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'GridFoundationCeilingCornerTriangularDiagonalFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationCeilingCornerTriangularDiagonalFootprint.5"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationCeilingCornerTriangularDiagonalFootprint.6"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'GridFoundationCeilingCornerTriangularDiagonalFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationCeilingCornerTriangularDiagonalFootprint.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationCeilingCornerTriangularDiagonalFootprint.6"
       }
     }
   }

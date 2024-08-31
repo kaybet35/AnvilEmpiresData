@@ -3,6 +3,6 @@
 
 class UResourceFibre_C : public UItemTemplate
 {
-}; // Size: 0x310
+}; // Size: 0x368
 
 #endif

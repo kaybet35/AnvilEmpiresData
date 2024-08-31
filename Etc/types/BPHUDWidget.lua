@@ -6,6 +6,8 @@
 ---@field BPFoodCooldownWidget_1 UBPFoodCooldownWidget_C
 ---@field BPHUDHintWidget UBPHUDHintWidget_C
 ---@field BPRestedStatusWidget UBPRestedStatusWidget_C
+---@field BPTemperatureStatusWidget UBPTemperatureStatusWidget_C
+---@field Image UImage
 ---@field PreAlphaBadge UImage
 UBPHUDWidget_C = {}
 
