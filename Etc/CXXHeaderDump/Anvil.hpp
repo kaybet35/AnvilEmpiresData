@@ -89,9 +89,10 @@ struct FBuildSiteCostData : public FTableRowBase
     int16 Nails;                                                                      // 0x0020 (size: 0x2)
     int16 Mortar;                                                                     // 0x0022 (size: 0x2)
     int16 Gravel;                                                                     // 0x0024 (size: 0x2)
-    int16 AnimalRope;                                                                 // 0x0026 (size: 0x2)
+    int16 ProcessedSteel;                                                             // 0x0026 (size: 0x2)
+    int16 ResourceFibreHeavy;                                                         // 0x0028 (size: 0x2)
 
-}; // Size: 0x28
+}; // Size: 0x30
 
 struct FCachedCameraState
 {
@@ -202,15 +203,16 @@ struct FEquipmentData : public FTableRowBase
     float GuardMeterCostPerHit;                                                       // 0x0020 (size: 0x4)
     uint8 ArmorMitigation;                                                            // 0x0024 (size: 0x1)
     float StabilityDamage;                                                            // 0x0028 (size: 0x4)
-    float ToolEffectiveness;                                                          // 0x002C (size: 0x4)
-    float AimMovementSpeedModifier;                                                   // 0x0030 (size: 0x4)
-    float AimRotationSpeedModifier;                                                   // 0x0034 (size: 0x4)
-    float PrimaryMovementSpeedModifier;                                               // 0x0038 (size: 0x4)
-    float SecondaryMovementSpeedModifier;                                             // 0x003C (size: 0x4)
-    float PrimaryChanceToPenetrateGuard;                                              // 0x0040 (size: 0x4)
-    float SecondaryChanceToPenetrateGuard;                                            // 0x0044 (size: 0x4)
+    uint8 StabilityMitigationPercent;                                                 // 0x002C (size: 0x1)
+    float ToolEffectiveness;                                                          // 0x0030 (size: 0x4)
+    float AimMovementSpeedModifier;                                                   // 0x0034 (size: 0x4)
+    float AimRotationSpeedModifier;                                                   // 0x0038 (size: 0x4)
+    float PrimaryMovementSpeedModifier;                                               // 0x003C (size: 0x4)
+    float SecondaryMovementSpeedModifier;                                             // 0x0040 (size: 0x4)
+    float PrimaryChanceToPenetrateGuard;                                              // 0x0044 (size: 0x4)
+    float SecondaryChanceToPenetrateGuard;                                            // 0x0048 (size: 0x4)
 
-}; // Size: 0x48
+}; // Size: 0x50
 
 struct FFactionLockResponse
 {
@@ -1100,10 +1102,11 @@ class AVisUnderworldModule : public AVisActor
 
 class AVisUnderworldModuleDynamic : public AVisUnderworldModule
 {
-    class UDynamicPrefabDataComponent* DynamicPrefabDataComponent;                    // 0x04A8 (size: 0x8)
-    class ADynamicPrefab* SpawnedDynamicPrefab;                                       // 0x04B0 (size: 0x8)
+    class UChildActorComponent* DynamicPrefabChildActor;                              // 0x04A8 (size: 0x8)
+    class UDynamicPrefabDataComponent* DynamicPrefabDataComponent;                    // 0x04B0 (size: 0x8)
+    class ADynamicPrefab* SpawnedDynamicPrefab;                                       // 0x04B8 (size: 0x8)
 
-}; // Size: 0x4B8
+}; // Size: 0x4C0
 
 class AVisVehicle : public AVisActor
 {
@@ -1284,25 +1287,25 @@ class UAnvilGameInstance : public UGameInstance
     class UMapWidget* MapWidget;                                                      // 0x0248 (size: 0x8)
     class UHUDWidget* HUDWidget;                                                      // 0x0250 (size: 0x8)
     class UWorldEntityPoolManager* WorldEntityPoolManager;                            // 0x0258 (size: 0x8)
-    FString TravelAddress;                                                            // 0x02F8 (size: 0x10)
-    TArray<uint8> ConnectTokenBuffer;                                                 // 0x0308 (size: 0x10)
-    class UAnvilCharacterSave* CharacterSave;                                         // 0x0318 (size: 0x8)
-    class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x0320 (size: 0x8)
-    FAnvilAssetManager AssetManager;                                                  // 0x0328 (size: 0x1C8)
-    FWeatherManager WeatherManager;                                                   // 0x04F0 (size: 0x88)
-    FAnvilOptionsManager OptionsManager;                                              // 0x0578 (size: 0x1A0)
-    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x0718 (size: 0x8)
-    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x0720 (size: 0x10)
-    TArray<class AVisActor*> VisActorList;                                            // 0x0730 (size: 0x10)
-    TArray<class AVisActor*> TravelVisActorList;                                      // 0x0740 (size: 0x10)
-    FClientConfigManager ClientConfigManager;                                         // 0x0750 (size: 0x38)
+    FString TravelAddress;                                                            // 0x0318 (size: 0x10)
+    TArray<uint8> ConnectTokenBuffer;                                                 // 0x0328 (size: 0x10)
+    class UAnvilCharacterSave* CharacterSave;                                         // 0x0338 (size: 0x8)
+    class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x0340 (size: 0x8)
+    FAnvilAssetManager AssetManager;                                                  // 0x0348 (size: 0x1C8)
+    FWeatherManager WeatherManager;                                                   // 0x0510 (size: 0x88)
+    FAnvilOptionsManager OptionsManager;                                              // 0x0598 (size: 0x1A0)
+    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x0738 (size: 0x8)
+    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x0740 (size: 0x10)
+    TArray<class AVisActor*> VisActorList;                                            // 0x0750 (size: 0x10)
+    TArray<class AVisActor*> TravelVisActorList;                                      // 0x0760 (size: 0x10)
+    FClientConfigManager ClientConfigManager;                                         // 0x0770 (size: 0x38)
 
     void GetVisActors(TArray<class AVisActor*>& OutVisActorList);
     void GetVersion(int32& OutMajor, int32& OutMinor, int32& OutPatch, int32& OutCL);
     void GetTimeOfDay(int32& OutHours, int32& OutMinutes, int32& OutSeconds);
     void GetDayCurrentSeconds(int32& OutSeconds);
     void DumpProperties(FString OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter);
-}; // Size: 0x17B0
+}; // Size: 0x17D0
 
 class UAnvilKeyEntryWidget : public UUserWidget
 {
@@ -1664,6 +1667,8 @@ class UFactionSelectScreen : public UAnvilScreen
     class UThrobber* DownloadingThrobber;                                             // 0x02B0 (size: 0x8)
     class UCheckBox* ServerBrowserCheckBox;                                           // 0x02B8 (size: 0x8)
     class UHorizontalBox* ServerBrowserHorizontalBox;                                 // 0x02C0 (size: 0x8)
+    class UCheckBox* EditorSpawnCheckBox;                                             // 0x02C8 (size: 0x8)
+    class UHorizontalBox* EditorSpawnHorizontalBox;                                   // 0x02D0 (size: 0x8)
 
     void OnFactionNovanButtonClicked();
     void OnFactionMirrishButtonClicked();
@@ -1674,9 +1679,9 @@ class UFactionSelectScreen : public UAnvilScreen
     bool IsFactionAranicButtonEnabled();
     bool IsDeleteProfileButtonEnabled();
     ESlateVisibility GetThrobberVisibility();
-    ESlateVisibility GetServerBrowserCheckBoxVisibility();
+    ESlateVisibility GetDevModeWidgetVisibility();
     ESlateVisibility GetDeleteProfileButtonVisibility();
-}; // Size: 0x2C8
+}; // Size: 0x2D8
 
 class UFamilyAreaMarkerWindow : public UStructureWindow
 {
@@ -2000,7 +2005,9 @@ class UInventoryHUDWidget : public UGridPanelWidget
 
 class UInventoryItemHUDWidget : public UInventoryItemWidget
 {
-}; // Size: 0x3E0
+    bool bShowDurabilityBar;                                                          // 0x03E0 (size: 0x1)
+
+}; // Size: 0x3E8
 
 class UInventoryItemWidget : public UGridItemWidget
 {
@@ -2725,6 +2732,7 @@ class UVisPlayerAnimInstance : public UAnimInstance
     bool bSecondaryMode;                                                              // 0x036D (size: 0x1)
     bool bSecondaryShieldMode;                                                        // 0x036E (size: 0x1)
     bool bCombatMode;                                                                 // 0x036F (size: 0x1)
+    bool bIsPushing;                                                                  // 0x0370 (size: 0x1)
 
 }; // Size: 0x390
 

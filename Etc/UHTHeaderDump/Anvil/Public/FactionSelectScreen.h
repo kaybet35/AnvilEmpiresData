@@ -36,6 +36,12 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UHorizontalBox* ServerBrowserHorizontalBox;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCheckBox* EditorSpawnCheckBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UHorizontalBox* EditorSpawnHorizontalBox;
+    
 public:
     UFactionSelectScreen();
 
@@ -68,7 +74,7 @@ protected:
     ESlateVisibility GetThrobberVisibility();
     
     UFUNCTION(BlueprintCallable)
-    ESlateVisibility GetServerBrowserCheckBoxVisibility();
+    ESlateVisibility GetDevModeWidgetVisibility();
     
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetDeleteProfileButtonVisibility();

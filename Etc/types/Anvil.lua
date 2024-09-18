@@ -707,6 +707,7 @@ AVisUnderworldModule = {}
 
 
 ---@class AVisUnderworldModuleDynamic : AVisUnderworldModule
+---@field DynamicPrefabChildActor UChildActorComponent
 ---@field DynamicPrefabDataComponent UDynamicPrefabDataComponent
 ---@field SpawnedDynamicPrefab ADynamicPrefab
 AVisUnderworldModuleDynamic = {}
@@ -836,7 +837,8 @@ FAutoMoveState = {}
 ---@field Nails int16
 ---@field Mortar int16
 ---@field Gravel int16
----@field AnimalRope int16
+---@field ProcessedSteel int16
+---@field ResourceFibreHeavy int16
 FBuildSiteCostData = {}
 
 
@@ -949,6 +951,7 @@ FDeploymentFoodItem = {}
 ---@field GuardMeterCostPerHit float
 ---@field ArmorMitigation uint8
 ---@field StabilityDamage float
+---@field StabilityMitigationPercent uint8
 ---@field ToolEffectiveness float
 ---@field AimMovementSpeedModifier float
 ---@field AimRotationSpeedModifier float
@@ -1746,6 +1749,8 @@ UEntityActorRootComponent = {}
 ---@field DownloadingThrobber UThrobber
 ---@field ServerBrowserCheckBox UCheckBox
 ---@field ServerBrowserHorizontalBox UHorizontalBox
+---@field EditorSpawnCheckBox UCheckBox
+---@field EditorSpawnHorizontalBox UHorizontalBox
 UFactionSelectScreen = {}
 
 function UFactionSelectScreen:OnFactionNovanButtonClicked() end
@@ -1763,7 +1768,7 @@ function UFactionSelectScreen:IsDeleteProfileButtonEnabled() end
 ---@return ESlateVisibility
 function UFactionSelectScreen:GetThrobberVisibility() end
 ---@return ESlateVisibility
-function UFactionSelectScreen:GetServerBrowserCheckBoxVisibility() end
+function UFactionSelectScreen:GetDevModeWidgetVisibility() end
 ---@return ESlateVisibility
 function UFactionSelectScreen:GetDeleteProfileButtonVisibility() end
 
@@ -2122,7 +2127,9 @@ UInventoryHUDWidget = {}
 
 
 ---@class UInventoryItemHUDWidget : UInventoryItemWidget
+---@field bShowDurabilityBar boolean
 UInventoryItemHUDWidget = {}
+
 
 
 ---@class UInventoryItemWidget : UGridItemWidget
@@ -2876,6 +2883,7 @@ UVisMultiItemStockpileComponent = {}
 ---@field bSecondaryMode boolean
 ---@field bSecondaryShieldMode boolean
 ---@field bCombatMode boolean
+---@field bIsPushing boolean
 UVisPlayerAnimInstance = {}
 
 

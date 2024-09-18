@@ -17,6 +17,9 @@ UVehicleMovementProxyComponent::UVehicleMovementProxyComponent() {
     this->RammingDamage = 480.00f;
     this->RammingVelocityFactor = 0.00f;
     this->RammingDamageType = EAnvilDamageType::Default;
+    this->RammingStabilityDamage = 0.00f;
+    this->RammingStabilitySplashDamage = 0.00f;
+    this->RammingStabilitySplashDamageRadius = 0.00f;
     this->bDoAxleRaycasts = true;
     this->bWaterVehicle = false;
     this->bUsePitch = true;

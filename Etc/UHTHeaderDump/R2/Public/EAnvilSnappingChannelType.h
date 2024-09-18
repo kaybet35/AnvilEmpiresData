@@ -10,6 +10,8 @@ enum class EAnvilSnappingChannelType : uint8 {
     RoadSide,
     Platform,
     Foundation,
+    RampSpiralTop,
+    RampSpiralBottom,
     WaterStart,
     WaterEnd,
     CanalStart,
@@ -28,6 +30,5 @@ enum class EAnvilSnappingChannelType : uint8 {
     NaturalWaterOptional,
     PowerConvertedWoodChoppingStationStart,
     PowerConvertedWoodChoppingStationEnd,
-    PropertyArea,
 };
 

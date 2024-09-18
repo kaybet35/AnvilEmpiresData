@@ -4,10 +4,10 @@
 
 UENUM(BlueprintType)
 enum class EAnvilUnderworldModuleEdgeType : uint8 {
-    Left,
-    Up,
-    Right,
-    Down,
+    NegativeY,
+    PositiveX,
+    PositiveY,
+    NegativeX,
     NumTypes,
 };
 

@@ -1,15 +1,15 @@
 ---@meta
 
 ---@class ABPVisGridFoundationQuarterDiagonal_T2_C : AVisStructure
+---@field FloorPlanking1 UStaticMeshComponent
+---@field FloorPlanking2 UStaticMeshComponent
+---@field FloorPlanking3 UStaticMeshComponent
+---@field VisFoundationEdgeMeshDecor4 UVisFoundationEdgeMeshDecorComponent
+---@field VisFoundationEdgeMeshDecor6 UVisFoundationEdgeMeshDecorComponent
+---@field VisFoundationEdgeMeshDecor5 UVisFoundationEdgeMeshDecorComponent
 ---@field ChildActor7 UChildActorComponent
----@field VisRandomMeshDecor4 UVisRandomMeshDecorComponent
----@field VerticalEdge08 UVisFoundationEdgeMeshDecorComponent
 ---@field ChildActor5 UChildActorComponent
----@field VerticalEdge05 UVisFoundationEdgeMeshDecorComponent
----@field VisRandomMeshDecor2 UVisRandomMeshDecorComponent
----@field VerticalEdge06 UVisFoundationEdgeMeshDecorComponent
 ---@field ChildActor6 UChildActorComponent
----@field VisRandomMeshDecor1 UVisRandomMeshDecorComponent
 ---@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor2 UVisFoundationEdgeMeshDecorComponent
 ---@field ChildActor UChildActorComponent

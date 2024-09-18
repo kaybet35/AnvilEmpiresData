@@ -1,6 +1,9 @@
 ---@meta
 
 ---@class ABPVisGridFoundationQuarterDiagonal_C : AVisStructure
+---@field VisFoundationEdgeMeshDecor5 UVisFoundationEdgeMeshDecorComponent
+---@field VisFoundationEdgeMeshDecor4 UVisFoundationEdgeMeshDecorComponent
+---@field VisFoundationEdgeMeshDecor6 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
 ---@field VerticalEdge05 UVisFoundationEdgeMeshDecorComponent
 ---@field VisRandomMeshDecor4 UVisRandomMeshDecorComponent
@@ -11,9 +14,6 @@
 ---@field VerticalEdge06 UVisFoundationEdgeMeshDecorComponent
 ---@field ChildActor6 UChildActorComponent
 ---@field VisRandomMeshDecor1 UVisRandomMeshDecorComponent
----@field VisFoundationEdgeMeshDecor5 UVisFoundationEdgeMeshDecorComponent
----@field VisFoundationEdgeMeshDecor6 UVisFoundationEdgeMeshDecorComponent
----@field VisFoundationEdgeMeshDecor4 UVisFoundationEdgeMeshDecorComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field VisFoundationEdgeMeshDecor UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent

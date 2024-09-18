@@ -1,12 +1,21 @@
 [
   {
+    "Type": "AdvancedSnappingProxyComponent",
+    "Name": "AdvancedSnappingProxyComponent_0",
+    "Outer": "Default__GridFoundationRampSpiralCompactDiagonalFootprint_C",
+    "Class": "UScriptClass'AdvancedSnappingProxyComponent'",
+    "Properties": {
+      "MaxOverlapDistOverride": 450.0
+    }
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "GridFoundationRampSpiralCompactDiagonalFootprint_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'GridFoundationRampSpiralCompactDiagonalFootprint_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.7"
       }
     },
     "SuperStruct": {
@@ -35,10 +44,29 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "GridFoundationRampSpiralCompactDiagonalFootprint_C'Default__GridFoundationRampSpiralCompactDiagonalFootprint_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.1"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.3"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__GridFoundationRampSpiralCompactDiagonalFootprint_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 150.0
+      },
+      "Extents": {
+        "X": 10.0,
+        "Y": 10.0,
+        "Z": 150.0
+      },
+      "CollisionMask": 2097152
     }
   },
   {
@@ -74,26 +102,17 @@
       "FootprintSharedComponents": [
         {
           "Comp": {
-            "ObjectName": "SnapPointProxyComponent'Default__GridFoundationRampSpiralCompactDiagonalFootprint_C:SnapPointProxyComponent_2'",
-            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.7"
+            "ObjectName": "BoxCollisionProxyComponent'Default__GridFoundationRampSpiralCompactDiagonalFootprint_C:BoxCollisionProxyComponent_0'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.2"
           },
           "bHighlight": false,
           "bHide": false,
-          "bNoCopyToBuildSite": false
+          "bNoCopyToBuildSite": true
         },
         {
           "Comp": {
-            "ObjectName": "SnapPointProxyComponent'Default__GridFoundationRampSpiralCompactDiagonalFootprint_C:SnapPointProxyComponent_1'",
-            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.6"
-          },
-          "bHighlight": false,
-          "bHide": false,
-          "bNoCopyToBuildSite": false
-        },
-        {
-          "Comp": {
-            "ObjectName": "SnapPointProxyComponent'Default__GridFoundationRampSpiralCompactDiagonalFootprint_C:SnapPointProxyComponent_3'",
-            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.8"
+            "ObjectName": "GroundCheckBoxProxyComponent'Default__GridFoundationRampSpiralCompactDiagonalFootprint_C:GroundCheckBoxProxyComponent_0'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.4"
           },
           "bHighlight": false,
           "bHide": false,
@@ -102,11 +121,54 @@
         {
           "Comp": {
             "ObjectName": "SnapPointProxyComponent'Default__GridFoundationRampSpiralCompactDiagonalFootprint_C:SnapPointProxyComponent_0'",
-            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.5"
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.8"
           },
           "bHighlight": false,
           "bHide": false,
           "bNoCopyToBuildSite": false
+        },
+        {
+          "Comp": {
+            "ObjectName": "SnapPointProxyComponent'Default__GridFoundationRampSpiralCompactDiagonalFootprint_C:SnapPointProxyComponent_1'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.9"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": false
+        },
+        {
+          "Comp": {
+            "ObjectName": "AdvancedSnappingProxyComponent'Default__GridFoundationRampSpiralCompactDiagonalFootprint_C:AdvancedSnappingProxyComponent_0'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.0"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": false
+        }
+      ]
+    }
+  },
+  {
+    "Type": "GroundCheckBoxProxyComponent",
+    "Name": "GroundCheckBoxProxyComponent_0",
+    "Outer": "Default__GridFoundationRampSpiralCompactDiagonalFootprint_C",
+    "Class": "UScriptClass'GroundCheckBoxProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 150.0
+      },
+      "Extents": {
+        "X": 10.0,
+        "Y": 10.0,
+        "Z": 150.0
+      },
+      "GroundCheckPoints": [
+        {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
         }
       ]
     }
@@ -129,7 +191,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'GridFoundationRampSpiralCompactDiagonalFootprint_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.5"
       },
       "VariableGuid": "718B1823-4575C5B4-4725C2A5-6173B08F",
       "InternalVariableName": "DefaultSceneRoot"
@@ -144,18 +206,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'GridFoundationRampSpiralCompactDiagonalFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.3"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.6"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'GridFoundationRampSpiralCompactDiagonalFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.3"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.6"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'GridFoundationRampSpiralCompactDiagonalFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationRampSpiralCompactDiagonalFootprint.6"
       }
     }
   },
@@ -166,16 +228,16 @@
     "Class": "UScriptClass'SnapPointProxyComponent'",
     "Properties": {
       "Position": {
-        "X": 212.13304,
-        "Y": -212.13304,
-        "Z": 150.0
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 300.0
       },
       "Extents": {
         "X": 30.0,
         "Y": 30.0,
-        "Z": 150.0
+        "Z": 30.0
       },
-      "SnappingChannel": "EAnvilSnappingChannelType::Foundation"
+      "SnappingChannel": "EAnvilSnappingChannelType::RampSpiralTop"
     }
   },
   {
@@ -184,65 +246,12 @@
     "Outer": "Default__GridFoundationRampSpiralCompactDiagonalFootprint_C",
     "Class": "UScriptClass'SnapPointProxyComponent'",
     "Properties": {
-      "Position": {
-        "X": 212.13304,
-        "Y": 212.13304,
-        "Z": 150.0
-      },
       "Extents": {
         "X": 30.0,
         "Y": 30.0,
-        "Z": 150.0
+        "Z": 30.0
       },
-      "SnappingChannel": "EAnvilSnappingChannelType::Foundation"
-    }
-  },
-  {
-    "Type": "SnapPointProxyComponent",
-    "Name": "SnapPointProxyComponent_2",
-    "Outer": "Default__GridFoundationRampSpiralCompactDiagonalFootprint_C",
-    "Class": "UScriptClass'SnapPointProxyComponent'",
-    "Properties": {
-      "Position": {
-        "X": -212.13304,
-        "Y": 212.13304,
-        "Z": 150.0
-      },
-      "Rotation": {
-        "Pitch": 0.0,
-        "Yaw": 180.0,
-        "Roll": 0.0
-      },
-      "Extents": {
-        "X": 30.0,
-        "Y": 30.0,
-        "Z": 150.0
-      },
-      "SnappingChannel": "EAnvilSnappingChannelType::Foundation"
-    }
-  },
-  {
-    "Type": "SnapPointProxyComponent",
-    "Name": "SnapPointProxyComponent_3",
-    "Outer": "Default__GridFoundationRampSpiralCompactDiagonalFootprint_C",
-    "Class": "UScriptClass'SnapPointProxyComponent'",
-    "Properties": {
-      "Position": {
-        "X": -212.13304,
-        "Y": -212.13304,
-        "Z": 150.0
-      },
-      "Rotation": {
-        "Pitch": 0.0,
-        "Yaw": 180.0,
-        "Roll": 0.0
-      },
-      "Extents": {
-        "X": 30.0,
-        "Y": 30.0,
-        "Z": 150.0
-      },
-      "SnappingChannel": "EAnvilSnappingChannelType::Foundation"
+      "SnappingChannel": "EAnvilSnappingChannelType::RampSpiralBottom"
     }
   }
 ]

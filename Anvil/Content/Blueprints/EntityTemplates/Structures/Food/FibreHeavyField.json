@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "FibreHeavyField_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FibreHeavyField_C'Default__FibreHeavyField_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/FibreHeavyField.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__FibreHeavyField_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "Extents": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 16
+    }
+  },
+  {
+    "Type": "FibreHeavyField_C",
+    "Name": "Default__FibreHeavyField_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Food/FibreHeavyField.FibreHeavyField_C'",
+    "Properties": {
+      "CodeNameString": "FibreHeavyField",
+      "CodeName": -1674677448,
+      "Components": [
+        {
+          "ObjectName": "PlantGrowthProxyComponent'Default__FibreHeavyField_C:PlantGrowthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/FibreHeavyField.3"
+        },
+        null,
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__FibreHeavyField_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/FibreHeavyField.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisFibreHeavyField_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisFibreHeavyField.1"
+      }
+    }
+  },
+  {
+    "Type": "PlantGrowthProxyComponent",
+    "Name": "PlantGrowthProxyComponent_0",
+    "Outer": "Default__FibreHeavyField_C",
+    "Class": "UScriptClass'PlantGrowthProxyComponent'",
+    "Properties": {
+      "MaturePlant": {
+        "ObjectName": "BlueprintGeneratedClass'FibreHeavyPlant_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/FibreHeavyPlant.0"
+      },
+      "RequiredSeedType": {
+        "ObjectName": "BlueprintGeneratedClass'ResourceFibreHeavySeed_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibreHeavySeed.0"
+      },
+      "StageTime": 3600.0,
+      "RequiredTemperature": 0.51,
+      "GrowthStage": 3
+    }
+  }
+]

@@ -10,6 +10,7 @@ FEquipmentData::FEquipmentData() {
     this->GuardMeterCostPerHit = 0.00f;
     this->ArmorMitigation = 0;
     this->StabilityDamage = 0.00f;
+    this->StabilityMitigationPercent = 0;
     this->ToolEffectiveness = 0.00f;
     this->AimMovementSpeedModifier = 0.00f;
     this->AimRotationSpeedModifier = 0.00f;

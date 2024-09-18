@@ -8,7 +8,7 @@
         "ObjectName": "StaticMesh'RockAScatterFlat010'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/Scatter/RockAScatterFlat010.2"
       },
-      "UpdateGuid": "4FCB38D9-4126C5DC-B977FCBE-994089D5",
+      "UpdateGuid": "DDA56E1B-4726C846-A9517FBE-E16E723E",
       "AverageNormal": true,
       "AverageNormalSingleComponent": false,
       "GroundSlopeAngle": {
@@ -48,13 +48,18 @@
         "Z": 41.28265
       },
       "CullDistance": {
-        "Max": 8000
+        "Max": 15000
       },
       "BodyInstance": {
         "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
-        "CollisionProfileName": "BlockAll",
+        "CollisionProfileName": "BlockingFoliage",
         "CollisionResponses": {
-          "ResponseArray": []
+          "ResponseArray": [
+            {
+              "Channel": "_Reserved",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
         }
       },
       "CollisionRadius": 44.0,

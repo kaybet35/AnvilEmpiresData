@@ -24,6 +24,8 @@ enum class EAnvilPlacementStatus : uint8 {
     TooCloseToTownCenter,
     TooCloseToEnemy,
     TooCloseToOtherWell,
+    TooCloseToCave,
+    TooCloseToWorldRoad,
     TooFarFromPlayer,
     NotAtCorrectBuildLocationType,
     RequiresDeployable,

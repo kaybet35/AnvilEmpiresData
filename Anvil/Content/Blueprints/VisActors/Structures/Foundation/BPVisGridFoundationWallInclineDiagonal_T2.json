@@ -218,17 +218,21 @@
       },
       "GeneratedScorchEffects": 8,
       "UseWindowType": "EHUDWindowType::GenericStructure",
+      "InteractionIcon": {
+        "ObjectName": "Texture2D'IconGridFoundation_wallIncline'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconGridFoundation_wallIncline.0"
+      },
       "VisDisplayName": {
         "Namespace": "",
-        "Key": "54A35384452E446CA2CC89B23F657AB2",
-        "SourceString": "Grid Foundation Wall Incline DIAGONAL",
-        "LocalizedString": "Grid Foundation Wall Incline DIAGONAL"
+        "Key": "137AC221433EA08775A5799F56D45B17",
+        "SourceString": "Triangular Bottom Wall DIAGONAL",
+        "LocalizedString": "Triangular Bottom Wall DIAGONAL"
       },
       "Description": {
         "Namespace": "",
-        "Key": "69A2FB80457573BBFA9C01B1C0AE3B00",
-        "SourceString": "TODO",
-        "LocalizedString": "TODO"
+        "Key": "2961184E4D1B47109F4D79835B8E7A49",
+        "SourceString": "A module used in the construction of Forts. Fort modules can be snapped, rotated, and elevated.",
+        "LocalizedString": "A module used in the construction of Forts. Fort modules can be snapped, rotated, and elevated."
       },
       "DescriptionFooter": {
         "Namespace": "",
@@ -671,8 +675,8 @@
       },
       "OverrideMaterials": [
         {
-          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
+          "ObjectName": "MaterialInstanceConstant'FortFoundationBricksTilingT2Diagonal'",
+          "ObjectPath": "Anvil/Content/Materials/Structures/FortFoundationBricksTilingT2Diagonal.0"
         }
       ],
       "bReceivesDecals": false,
@@ -689,13 +693,8 @@
     "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
       "StaticMesh": {
-        "ObjectName": "StaticMesh'GridFoundationDecoration_wallcorner_300'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_wallcorner_300.2"
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -300.0
+        "ObjectName": "StaticMesh'GridFoundationDecoration_SquareCornerT2_300'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_SquareCornerT2_300.2"
       },
       "RelativeRotation": {
         "Pitch": 0.0,
@@ -711,13 +710,8 @@
     "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
       "StaticMesh": {
-        "ObjectName": "StaticMesh'GridFoundationDecoration_WallCorner02_300'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_WallCorner02_300.2"
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -300.0
+        "ObjectName": "StaticMesh'GridFoundationDecoration_SquareCornerT2_300'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_SquareCornerT2_300.2"
       },
       "RelativeRotation": {
         "Pitch": 0.0,
@@ -751,13 +745,8 @@
     "Class": "UScriptClass'VisFoundationEdgeMeshDecorComponent'",
     "Properties": {
       "EdgeMesh": {
-        "ObjectName": "StaticMesh'GridFoundationDecoration_wallcorner_300'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_wallcorner_300.2"
-      },
-      "EdgeMeshOffset": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -300.0
+        "ObjectName": "StaticMesh'GridFoundationDecoration_SquareCornerT2_300'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_SquareCornerT2_300.2"
       },
       "EdgeMeshRotation": {
         "Pitch": 0.0,
@@ -787,13 +776,8 @@
     "Class": "UScriptClass'VisFoundationEdgeMeshDecorComponent'",
     "Properties": {
       "EdgeMesh": {
-        "ObjectName": "StaticMesh'GridFoundationDecoration_WallCorner02_300'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_WallCorner02_300.2"
-      },
-      "EdgeMeshOffset": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -300.0
+        "ObjectName": "StaticMesh'GridFoundationDecoration_SquareCornerT2_300'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_SquareCornerT2_300.2"
       },
       "EdgeMeshRotation": {
         "Pitch": 0.0,
@@ -824,14 +808,12 @@
     "Properties": {
       "VisibilityChance": 0.4,
       "StaticMesh": {
-        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFace_04'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFace_04.2"
+        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFaceT2_04'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFaceT2_04.2"
       },
       "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
-        }
+        null,
+        null
       ],
       "RelativeLocation": {
         "X": 120.66391,
@@ -848,19 +830,17 @@
     "Properties": {
       "VisibilityChance": 0.4,
       "StaticMesh": {
-        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFace_06'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFace_06.2"
+        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFaceT2_04'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFaceT2_04.2"
       },
       "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
-        }
+        null,
+        null
       ],
       "RelativeLocation": {
-        "X": -31.983437,
+        "X": 11.904708,
         "Y": 0.0,
-        "Z": -43.38693
+        "Z": 10.196001
       }
     }
   },
@@ -872,14 +852,12 @@
     "Properties": {
       "VisibilityChance": 0.4,
       "StaticMesh": {
-        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFace_04'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFace_04.2"
+        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFaceT2_04'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFaceT2_04.2"
       },
       "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
-        }
+        null,
+        null
       ],
       "RelativeLocation": {
         "X": 111.558945,
@@ -901,14 +879,12 @@
     "Properties": {
       "VisibilityChance": 0.4,
       "StaticMesh": {
-        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFace_11'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFace_11.2"
+        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFaceT2_04'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFaceT2_04.2"
       },
       "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
-        }
+        null,
+        null
       ],
       "RelativeLocation": {
         "X": -28.248753,
@@ -925,19 +901,17 @@
     "Properties": {
       "VisibilityChance": 0.4,
       "StaticMesh": {
-        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFace_04'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFace_04.2"
+        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFaceT2_06'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFaceT2_06.2"
       },
       "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
-        }
+        null,
+        null
       ],
       "RelativeLocation": {
-        "X": 10.145128,
+        "X": 52.39133,
         "Y": 0.0,
-        "Z": 107.14228
+        "Z": 136.7447
       }
     }
   },
@@ -949,14 +923,12 @@
     "Properties": {
       "VisibilityChance": 0.4,
       "StaticMesh": {
-        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFace_11'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFace_11.2"
+        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFaceT2_04'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFaceT2_04.2"
       },
       "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
-        }
+        null,
+        null
       ],
       "RelativeLocation": {
         "X": 10.485486,
@@ -973,19 +945,17 @@
     "Properties": {
       "VisibilityChance": 0.4,
       "StaticMesh": {
-        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFace_06'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFace_06.2"
+        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFaceT2_04'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFaceT2_04.2"
       },
       "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
-        }
+        null,
+        null
       ],
       "RelativeLocation": {
-        "X": 156.67642,
-        "Y": 0.0,
-        "Z": -43.386936
+        "X": 37.983578,
+        "Y": 6.1236454E-13,
+        "Z": -14.53367
       }
     }
   },
@@ -997,19 +967,17 @@
     "Properties": {
       "VisibilityChance": 0.4,
       "StaticMesh": {
-        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFace_04'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFace_04.2"
+        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFaceT2_04'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFaceT2_04.2"
       },
       "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'LDGridT2'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGridT2.0"
-        }
+        null,
+        null
       ],
       "RelativeLocation": {
-        "X": -19.338749,
-        "Y": 0.0,
-        "Z": 107.46273
+        "X": -49.54761,
+        "Y": -2.433585E-21,
+        "Z": 55.269184
       }
     }
   },

@@ -1,18 +1,14 @@
 ---@meta
 
 ---@class ABPVisGridFoundationHalfSquareStraight_T2_C : AVisStructure
----@field VisRandomMeshDecor2 UVisRandomMeshDecorComponent
----@field VisRandomMeshDecor1 UVisRandomMeshDecorComponent
+---@field FloorPlanking UStaticMeshComponent
+---@field FloorPlanking2 UStaticMeshComponent
+---@field FloorPlanking1 UStaticMeshComponent
+---@field FloorPlanking3 UStaticMeshComponent
 ---@field ChildActor6 UChildActorComponent
----@field VerticalEdge06 UVisFoundationEdgeMeshDecorComponent
----@field VerticalEdge09 UVisFoundationEdgeMeshDecorComponent
 ---@field ChildActor5 UChildActorComponent
 ---@field ChildActor7 UChildActorComponent
 ---@field ChildActor8 UChildActorComponent
----@field VerticalEdge08 UVisFoundationEdgeMeshDecorComponent
----@field VisRandomMeshDecor3 UVisRandomMeshDecorComponent
----@field VerticalEdge05 UVisFoundationEdgeMeshDecorComponent
----@field VisRandomMeshDecor4 UVisRandomMeshDecorComponent
 ---@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor5 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor4 UVisFoundationEdgeMeshDecorComponent

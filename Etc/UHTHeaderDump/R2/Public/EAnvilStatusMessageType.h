@@ -139,6 +139,8 @@ enum class EAnvilStatusMessageType : uint8 {
     ItemDisarmedDueToHeavyTool,
     CantArmDueToHeavyArmour,
     ItemDisarmedDueToHeavyArmour,
+    TemperatureTooLowToGather,
+    TemperatureTooLowToPlant,
     NumTypes,
 };
 

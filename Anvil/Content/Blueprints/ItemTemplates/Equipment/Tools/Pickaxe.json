@@ -44,14 +44,29 @@
         "ObjectName": "BlueprintGeneratedClass'EffectPickAxeImpact_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectPickAxeImpact.0"
       },
+      "bHasAlt": true,
       "DamageOffset": {
         "X": 50.0,
         "Y": 0.0,
         "Z": 0.0
       },
+      "AdditionalDamageOffsets": [
+        {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -50.0
+        }
+      ],
       "DamageType": "EAnvilDamageType::Slashing",
       "ToolType": "EAnvilToolType::PickaxeT2",
+      "AltTransitionTime": 0.5,
       "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 0.5,
+        "Duration": 1.1,
+        "StaminaCost": 10.0
+      },
+      "AltActivity": {
         "State": "EAnvilSimActivityState::Attacking",
         "Delay": 0.5,
         "Duration": 1.1,

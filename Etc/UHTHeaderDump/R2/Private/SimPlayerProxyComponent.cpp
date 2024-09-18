@@ -25,6 +25,8 @@ USimPlayerProxyComponent::USimPlayerProxyComponent() {
     this->MovementAcceleration = 5000.00f;
     this->SprintStaminaDrain = 15.00f;
     this->ClimbStaminaCost = 20.00f;
+    this->RammingVelocityFactor = 0.95f;
+    this->RammingStabilityDamage = 0.30f;
 }
 
 

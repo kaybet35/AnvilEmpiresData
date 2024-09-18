@@ -8,7 +8,7 @@
         "ObjectName": "StaticMesh'PineBroken01'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Trees/PineBroken01.2"
       },
-      "UpdateGuid": "CECABBD6-43FF7E6D-2EE961BF-BD7B0BA7",
+      "UpdateGuid": "4C574E82-44F7944F-2217BD82-23B1BD68",
       "Density": 200.0,
       "ScaleX": {
         "Min": 2.0,
@@ -49,13 +49,18 @@
         "Z": 103.49382
       },
       "CullDistance": {
-        "Max": 10000
+        "Max": 20000
       },
       "BodyInstance": {
         "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
-        "CollisionProfileName": "BlockAll",
+        "CollisionProfileName": "BlockingFoliage",
         "CollisionResponses": {
-          "ResponseArray": []
+          "ResponseArray": [
+            {
+              "Channel": "_Reserved",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
         }
       },
       "CollisionRadius": 222.0,

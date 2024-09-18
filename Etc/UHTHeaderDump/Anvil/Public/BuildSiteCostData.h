@@ -53,7 +53,10 @@ public:
     int16 Gravel;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    int16 AnimalRope;
+    int16 ProcessedSteel;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ResourceFibreHeavy;
     
     ANVIL_API FBuildSiteCostData();
 };

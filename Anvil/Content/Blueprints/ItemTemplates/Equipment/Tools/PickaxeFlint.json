@@ -42,16 +42,31 @@
         "ObjectName": "BlueprintGeneratedClass'EffectAxeImpact_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectAxeImpact.0"
       },
+      "bHasAlt": true,
       "DamageOffset": {
         "X": 50.0,
         "Y": 0.0,
         "Z": 0.0
       },
+      "AdditionalDamageOffsets": [
+        {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -50.0
+        }
+      ],
       "DamageType": "EAnvilDamageType::Slashing",
       "ToolType": "EAnvilToolType::Pickaxe",
+      "AltTransitionTime": 0.5,
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
         "Delay": 0.2,
+        "Duration": 1.1,
+        "StaminaCost": 10.0
+      },
+      "AltActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 0.5,
         "Duration": 1.1,
         "StaminaCost": 10.0
       },
@@ -67,7 +82,9 @@
         "StaminaCost": 12.25,
         "AimedStaminaCost": 3.0
       },
-      "DurabilityLossPerUse": 1.25,
+      "Damage": 6,
+      "DefaultMarketplaceValue": 8,
+      "DurabilityLossPerUse": 1.0,
       "DamageRadius": 80.0,
       "ToolEffectiveness": 0.5,
       "AimMovementSpeedModifier": 0.5

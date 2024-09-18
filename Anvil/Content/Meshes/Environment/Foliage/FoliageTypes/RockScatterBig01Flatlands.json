@@ -8,7 +8,7 @@
         "ObjectName": "StaticMesh'RockAScatterBig01'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/Scatter/RockAScatterBig01.2"
       },
-      "UpdateGuid": "08523C8F-4008E853-5010F79C-12F46149",
+      "UpdateGuid": "8D98C467-4CDB62BD-3B9335B5-BF8D833F",
       "ZOffset": {
         "Min": -300.0,
         "Max": -200.0
@@ -47,14 +47,19 @@
         "Z": 45.144924
       },
       "CullDistance": {
-        "Max": 8000
+        "Max": 20000
       },
       "bReceivesDecals": true,
       "BodyInstance": {
         "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
-        "CollisionProfileName": "BlockAll",
+        "CollisionProfileName": "BlockingFoliage",
         "CollisionResponses": {
-          "ResponseArray": []
+          "ResponseArray": [
+            {
+              "Channel": "_Reserved",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
         }
       },
       "CollisionRadius": 111.0,

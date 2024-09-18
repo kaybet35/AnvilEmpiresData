@@ -8,7 +8,7 @@
         "ObjectName": "StaticMesh'RockAScatterMed02'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/Scatter/RockAScatterMed02.2"
       },
-      "UpdateGuid": "8434756A-48D71CC0-A543D899-3AB8553B",
+      "UpdateGuid": "5B161326-4D2AB5E8-D67D8CB0-ADF90542",
       "ZOffset": {
         "Min": -100.0,
         "Max": -50.0
@@ -53,13 +53,18 @@
         "Z": 120.50374
       },
       "CullDistance": {
-        "Max": 8000
+        "Max": 20000
       },
       "BodyInstance": {
         "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
-        "CollisionProfileName": "BlockAll",
+        "CollisionProfileName": "BlockingFoliage",
         "CollisionResponses": {
-          "ResponseArray": []
+          "ResponseArray": [
+            {
+              "Channel": "_Reserved",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
         }
       },
       "CollisionRadius": 300.0,

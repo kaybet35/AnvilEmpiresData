@@ -4,6 +4,7 @@ UResourceProxyComponent::UResourceProxyComponent() {
     this->Type = EAnvilResourceType::Default;
     this->HitPoints = 0;
     this->RequiredTool = EAnvilToolType::None;
+    this->RequiredTemperature = 0.00f;
     this->bInventoryTransferToPlayer = true;
     this->DroppedResourceAmount = 0;
     this->DroppedResourceEntity = NULL;

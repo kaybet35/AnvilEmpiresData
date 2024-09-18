@@ -1,0 +1,395 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisLatticeMineChunkStone_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisLatticeMineChunkStone_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.12"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BPVisLatticeMineChunkStone_C:ExecuteUbergraph_BPVisLatticeMineChunkStone'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisActor'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BPVisLatticeMineChunkStone_C:ReceiveBeginPlay'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.4"
+      },
+      {
+        "ObjectName": "Function'BPVisLatticeMineChunkStone_C:ExecuteUbergraph_BPVisLatticeMineChunkStone'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MeshVisibilityData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MeshVisibilityDataComponent'",
+          "ObjectPath": "/Script/R2"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BPVisLatticeMineChunkStone": {
+        "ObjectName": "Function'BPVisLatticeMineChunkStone_C:ExecuteUbergraph_BPVisLatticeMineChunkStone'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.3"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BPVisLatticeMineChunkStone_C:ReceiveBeginPlay'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisLatticeMineChunkStone_C'Default__BPVisLatticeMineChunkStone_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BPVisLatticeMineChunkStone_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 125.0,
+        "Y": 125.0,
+        "Z": 125.0
+      }
+    }
+  },
+  {
+    "Type": "BPVisLatticeMineChunkStone_C",
+    "Name": "Default__BPVisLatticeMineChunkStone_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.BPVisLatticeMineChunkStone_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bNoCheckOnCeilVisibility": true
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPVisLatticeMineChunkStone",
+    "Outer": "BPVisLatticeMineChunkStone_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_RandomRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 240,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BPVisLatticeMineChunkStone_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "MeshVisibilityDataComponent",
+    "Name": "MeshVisibilityData_GEN_VARIABLE",
+    "Outer": "BPVisLatticeMineChunkStone_C",
+    "Class": "UScriptClass'MeshVisibilityDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisLatticeMineChunkStone_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisLatticeMineChunkStone_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.6"
+      },
+      "VariableGuid": "B164F127-41EC8365-58838DB5-4FC66D3A",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisLatticeMineChunkStone_C:VisStaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.14"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisLatticeMineChunkStone_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.11"
+        }
+      ],
+      "VariableGuid": "24486890-40B9BB81-29BE859C-948A404E",
+      "InternalVariableName": "VisStaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPVisLatticeMineChunkStone_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.1"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisLatticeMineChunkStone_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.8"
+        }
+      ],
+      "VariableGuid": "66297AB5-46D450C1-2D84C9A8-2BE9DFF3",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MeshVisibilityDataComponent'",
+        "ObjectPath": "/Script/R2"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MeshVisibilityDataComponent'BPVisLatticeMineChunkStone_C:MeshVisibilityData_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.5"
+      },
+      "VariableGuid": "89C14C49-4A014BDA-E896C9AC-01AA904F",
+      "InternalVariableName": "MeshVisibilityData"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisLatticeMineChunkStone_C:VisStaticMesh1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.13"
+      },
+      "VariableGuid": "2433E354-47C0461E-AA3C9BAF-95AE2A0B",
+      "InternalVariableName": "VisStaticMesh1"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisLatticeMineChunkStone_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisLatticeMineChunkStone_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisLatticeMineChunkStone_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisLatticeMineChunkStone_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisLatticeMineChunkStone_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisLatticeMineChunkStone_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisLatticeMineChunkStone_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisLatticeMineChunkStone_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMineChunkStone.7"
+      }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh1_GEN_VARIABLE",
+    "Outer": "BPVisLatticeMineChunkStone_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'ResourceStoneSmall_50pLarger'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/ResourceStoneSmall_50pLarger.2"
+      },
+      "RelativeLocation": {
+        "X": -7.864793E-16,
+        "Y": 4.0,
+        "Z": -17.333334
+      },
+      "RelativeRotation": {
+        "Pitch": 7.016709E-15,
+        "Yaw": 0.0,
+        "Roll": 180.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "ToggleVisibility"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh_GEN_VARIABLE",
+    "Outer": "BPVisLatticeMineChunkStone_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'ResourceStoneSmall_50pLarger'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/ResourceStoneSmall_50pLarger.2"
+      },
+      "RelativeLocation": {
+        "X": 10.0,
+        "Y": -9.0,
+        "Z": 10.0
+      },
+      "RelativeScale3D": {
+        "X": 1.3,
+        "Y": 1.0,
+        "Z": 1.5
+      },
+      "ComponentTags": [
+        "Structure",
+        "ToggleVisibility"
+      ]
+    }
+  }
+]

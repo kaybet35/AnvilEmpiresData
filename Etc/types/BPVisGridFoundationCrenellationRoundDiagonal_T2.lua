@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ABPVisGridFoundationCrenellationRoundDiagonal_T2_C : AVisStructure
+---@field VisRandomMeshDecor24 UVisRandomMeshDecorComponent
+---@field VisRandomMeshDecor35 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor23 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor30 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor34 UVisRandomMeshDecorComponent

@@ -1,0 +1,122 @@
+---@meta
+
+---@class ABPUnderworldDynamicModuleBranch01_C : ABPUnderworldModuleDynamicPrefab_C
+---@field LatticeMineCoal1 UChildActorComponent
+---@field LatticeMineIron3 UChildActorComponent
+---@field LatticeMineIron2 UChildActorComponent
+---@field LatticeMineIron1 UChildActorComponent
+---@field Wall086 UStaticMeshComponent
+---@field Wall085 UStaticMeshComponent
+---@field Wall084 UStaticMeshComponent
+---@field Wall083 UStaticMeshComponent
+---@field Wall082 UStaticMeshComponent
+---@field Wall081 UStaticMeshComponent
+---@field Wall080 UStaticMeshComponent
+---@field Wall079 UStaticMeshComponent
+---@field Wall078 UStaticMeshComponent
+---@field Wall077 UStaticMeshComponent
+---@field Wall076 UStaticMeshComponent
+---@field Wall075 UStaticMeshComponent
+---@field Wall074 UStaticMeshComponent
+---@field Wall073 UStaticMeshComponent
+---@field Wall072 UStaticMeshComponent
+---@field Wall071 UStaticMeshComponent
+---@field Wall070 UStaticMeshComponent
+---@field Wall069 UStaticMeshComponent
+---@field Wall068 UStaticMeshComponent
+---@field Wall067 UStaticMeshComponent
+---@field Wall066 UStaticMeshComponent
+---@field Wall065 UStaticMeshComponent
+---@field Wall064 UStaticMeshComponent
+---@field Wall063 UStaticMeshComponent
+---@field Wall062 UStaticMeshComponent
+---@field Wall061 UStaticMeshComponent
+---@field Wall060 UStaticMeshComponent
+---@field Wall059 UStaticMeshComponent
+---@field Wall058 UStaticMeshComponent
+---@field Wall057 UStaticMeshComponent
+---@field Wall056 UStaticMeshComponent
+---@field Wall055 UStaticMeshComponent
+---@field Wall054 UStaticMeshComponent
+---@field Wall053 UStaticMeshComponent
+---@field Wall052 UStaticMeshComponent
+---@field Wall051 UStaticMeshComponent
+---@field Wall050 UStaticMeshComponent
+---@field Wall049 UStaticMeshComponent
+---@field Wall048 UStaticMeshComponent
+---@field Wall047 UStaticMeshComponent
+---@field Wall046 UStaticMeshComponent
+---@field Wall045 UStaticMeshComponent
+---@field Wall044 UStaticMeshComponent
+---@field Wall043 UStaticMeshComponent
+---@field Wall042 UStaticMeshComponent
+---@field Wall041 UStaticMeshComponent
+---@field Wall040 UStaticMeshComponent
+---@field Wall039 UStaticMeshComponent
+---@field Wall038 UStaticMeshComponent
+---@field Wall037 UStaticMeshComponent
+---@field Wall036 UStaticMeshComponent
+---@field Wall033 UStaticMeshComponent
+---@field Wall032 UStaticMeshComponent
+---@field Wall031 UStaticMeshComponent
+---@field Wall030 UStaticMeshComponent
+---@field Wall029 UStaticMeshComponent
+---@field Wall028 UStaticMeshComponent
+---@field Wall027 UStaticMeshComponent
+---@field Wall026 UStaticMeshComponent
+---@field Wall025 UStaticMeshComponent
+---@field Wall024 UStaticMeshComponent
+---@field Wall023 UStaticMeshComponent
+---@field Wall022 UStaticMeshComponent
+---@field Wall021 UStaticMeshComponent
+---@field Wall020 UStaticMeshComponent
+---@field Wall019 UStaticMeshComponent
+---@field Wall018 UStaticMeshComponent
+---@field Wall017 UStaticMeshComponent
+---@field Wall016 UStaticMeshComponent
+---@field Wall014 UStaticMeshComponent
+---@field Wall013 UStaticMeshComponent
+---@field Wall012 UStaticMeshComponent
+---@field Wall011 UStaticMeshComponent
+---@field Wall010 UStaticMeshComponent
+---@field Wall09 UStaticMeshComponent
+---@field Wall08 UStaticMeshComponent
+---@field Wall07 UStaticMeshComponent
+---@field Wall06 UStaticMeshComponent
+---@field Wall05 UStaticMeshComponent
+---@field Wall04 UStaticMeshComponent
+---@field Wall03 UStaticMeshComponent
+---@field Wall02 UStaticMeshComponent
+---@field Wall01 UStaticMeshComponent
+---@field StaticMesh8 UStaticMeshComponent
+---@field StaticMesh7 UStaticMeshComponent
+---@field StaticMesh6 UStaticMeshComponent
+---@field StaticMesh5 UStaticMeshComponent
+---@field StaticMesh4 UStaticMeshComponent
+---@field StaticMesh3 UStaticMeshComponent
+---@field StaticMesh2 UStaticMeshComponent
+---@field StaticMesh1 UStaticMeshComponent
+---@field StaticMesh UStaticMeshComponent
+---@field Entrance3 UStaticMeshComponent
+---@field Entrance1 UStaticMeshComponent
+---@field Entrance2 UStaticMeshComponent
+---@field Water USceneComponent
+---@field Props USceneComponent
+---@field Walls USceneComponent
+---@field ['Custom Components'] USceneComponent
+---@field AmbientUnderworld01_cue UAudioComponent
+---@field Audio USceneComponent
+---@field Dust UNiagaraComponent
+---@field ['Visual FX'] USceneComponent
+---@field ['Static Meshes'] USceneComponent
+---@field ['-X Marker'] UArrowComponent
+---@field ['+X Marker'] UArrowComponent
+---@field ['-Y Marker'] UArrowComponent
+---@field NavigationModifierBox UBoxComponent
+---@field CustomHeightmap UCustomHeightmapComponent
+---@field Floor UStaticMeshComponent
+---@field Pivot USceneComponent
+ABPUnderworldDynamicModuleBranch01_C = {}
+
+
+

@@ -4,6 +4,7 @@
 #include "VisUnderworldModuleDynamic.generated.h"
 
 class ADynamicPrefab;
+class UChildActorComponent;
 class UDynamicPrefabDataComponent;
 
 UCLASS(Blueprintable)
@@ -11,6 +12,9 @@ class ANVIL_API AVisUnderworldModuleDynamic : public AVisUnderworldModule {
     GENERATED_BODY()
 public:
 private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UChildActorComponent* DynamicPrefabChildActor;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDynamicPrefabDataComponent* DynamicPrefabDataComponent;
     

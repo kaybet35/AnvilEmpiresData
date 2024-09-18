@@ -1,16 +1,14 @@
 ---@meta
 
 ---@class ABPVisGridFoundationRoundDiagonal_T2_C : AVisStructure
----@field VerticalEdge05 UVisFoundationEdgeMeshDecorComponent
+---@field FloorPlanking UStaticMeshComponent
+---@field FloorPlanking2 UStaticMeshComponent
+---@field VisRandomMeshDecor59 UVisRandomMeshDecorComponent
 ---@field ChildActor5 UChildActorComponent
 ---@field ChildActor11 UChildActorComponent
----@field VerticalEdge08 UVisFoundationEdgeMeshDecorComponent
----@field VisRandomMeshDecor60 UVisRandomMeshDecorComponent
 ---@field ChildActor6 UChildActorComponent
----@field VerticalEdge09 UVisFoundationEdgeMeshDecorComponent
 ---@field VisRandomMeshDecor4 UVisRandomMeshDecorComponent
 ---@field ChildActor8 UChildActorComponent
----@field VisRandomMeshDecor3 UVisRandomMeshDecorComponent
 ---@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
 ---@field VisRandomMeshDecor33 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor7 UVisRandomMeshDecorComponent
@@ -58,19 +56,6 @@
 ---@field VisRandomMeshDecor31 UVisRandomMeshDecorComponent
 ---@field ChildActor3 UChildActorComponent
 ---@field ChildActor1 UChildActorComponent
----@field VisRandomMeshDecor52 UVisRandomMeshDecorComponent
----@field VisRandomMeshDecor51 UVisRandomMeshDecorComponent
----@field VisRandomMeshDecor48 UVisRandomMeshDecorComponent
----@field VisRandomMeshDecor50 UVisRandomMeshDecorComponent
----@field VisRandomMeshDecor49 UVisRandomMeshDecorComponent
----@field VisRandomMeshDecor2 UVisRandomMeshDecorComponent
----@field VisRandomMeshDecor56 UVisRandomMeshDecorComponent
----@field VisRandomMeshDecor55 UVisRandomMeshDecorComponent
----@field VisRandomMeshDecor54 UVisRandomMeshDecorComponent
----@field VisRandomMeshDecor53 UVisRandomMeshDecorComponent
----@field VisRandomMeshDecor57 UVisRandomMeshDecorComponent
----@field VisRandomMeshDecor58 UVisRandomMeshDecorComponent
----@field VisRandomMeshDecor47 UVisRandomMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor2 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor UVisFoundationEdgeMeshDecorComponent

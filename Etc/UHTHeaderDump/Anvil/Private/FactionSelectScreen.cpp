@@ -8,6 +8,8 @@ UFactionSelectScreen::UFactionSelectScreen() {
     this->DownloadingThrobber = NULL;
     this->ServerBrowserCheckBox = NULL;
     this->ServerBrowserHorizontalBox = NULL;
+    this->EditorSpawnCheckBox = NULL;
+    this->EditorSpawnHorizontalBox = NULL;
 }
 
 void UFactionSelectScreen::OnFactionNovanButtonClicked() {
@@ -42,7 +44,7 @@ ESlateVisibility UFactionSelectScreen::GetThrobberVisibility() {
     return ESlateVisibility::Visible;
 }
 
-ESlateVisibility UFactionSelectScreen::GetServerBrowserCheckBoxVisibility() {
+ESlateVisibility UFactionSelectScreen::GetDevModeWidgetVisibility() {
     return ESlateVisibility::Visible;
 }
 

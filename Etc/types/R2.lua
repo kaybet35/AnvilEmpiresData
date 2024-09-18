@@ -50,6 +50,10 @@ AFootprint = {}
 
 
 
+---@class ATemplate : AActor
+ATemplate = {}
+
+
 ---@class AUnderworldModulePrefab : AAnvilPrefab
 ---@field ArrowComponent UArrowComponent
 ---@field ModuleFootprint UBoxComponent
@@ -475,6 +479,7 @@ FStatusMessage = {}
 ---@class FStructureStats
 ---@field CodeName TSubclassOf<UEntityTemplate>
 ---@field CodeNameVisVar int32
+---@field EntityId int64
 ---@field WorldPosition FVector
 ---@field MaxHealth float
 ---@field Health float
@@ -500,6 +505,7 @@ FStatusMessage = {}
 ---@field CookCurrentTemperature float
 ---@field WorldEntranceDestinationMapId uint8
 ---@field WorldEntranceId int32
+---@field ModuleEdgeList TArray<EAnvilUnderworldModuleEdgeType>
 FStructureStats = {}
 
 
@@ -1405,6 +1411,7 @@ UInventoryProxyComponent = {}
 ---@field GuardMeterCostPerHit float
 ---@field ArmorMitigation uint8
 ---@field StabilityDamage float
+---@field StabilityMitigationPercent uint8
 ---@field ToolEffectiveness float
 ---@field AimMovementSpeedModifier float
 ---@field AimRotationSpeedModifier float
@@ -1604,6 +1611,7 @@ UPlantGrowthDataComponent = {}
 ---@field MaturePlant TSubclassOf<UEntityTemplate>
 ---@field RequiredSeedType TSubclassOf<UItemTemplate>
 ---@field StageTime float
+---@field RequiredTemperature float
 ---@field GrowthStage uint8
 ---@field bCanGrow boolean
 UPlantGrowthProxyComponent = {}
@@ -1841,6 +1849,7 @@ UResourceDataComponent = {}
 ---@field Type EAnvilResourceType
 ---@field HitPoints uint8
 ---@field RequiredTool EAnvilToolType
+---@field RequiredTemperature float
 ---@field bInventoryTransferToPlayer boolean
 ---@field DroppedResourceAmount uint8
 ---@field DroppedResourceEntity TSubclassOf<UEntityTemplate>
@@ -1949,6 +1958,7 @@ USeekerProxyComponent = {}
 ---@field bInTravelZone boolean
 ---@field bAltAttackMode boolean
 ---@field bAltShieldMode boolean
+---@field bIsPushing boolean
 ---@field bIsMeshHidden boolean
 ---@field bIsReinforcing boolean
 ---@field SecondsUntilFullDecay float
@@ -1989,6 +1999,8 @@ USimPlayerDataComponent = {}
 ---@field ClimbStaminaCost float
 ---@field FallingDistRange FR2FloatRange
 ---@field FallingDamageRange FR2FloatRange
+---@field RammingVelocityFactor float
+---@field RammingStabilityDamage float
 USimPlayerProxyComponent = {}
 
 
@@ -2151,6 +2163,13 @@ UTemperatureProxyComponent = {}
 
 
 
+---@class UTemplateComponent : USceneComponent
+---@field TemplateActor TSubclassOf<ATemplate>
+---@field SpawnedComponents TArray<UActorComponent>
+UTemplateComponent = {}
+
+
+
 ---@class UTownHallDataComponent : UDataComponent
 ---@field Tier uint8
 ---@field bIsSmallCamp boolean
@@ -2258,6 +2277,9 @@ UVehicleMovementDataComponent = {}
 ---@field RammingDamage float
 ---@field RammingVelocityFactor float
 ---@field RammingDamageType EAnvilDamageType
+---@field RammingStabilityDamage float
+---@field RammingStabilitySplashDamage float
+---@field RammingStabilitySplashDamageRadius float
 ---@field bDoAxleRaycasts boolean
 ---@field bWaterVehicle boolean
 ---@field bUsePitch boolean

@@ -28,6 +28,7 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->bInTravelZone = false;
     this->bAltAttackMode = false;
     this->bAltShieldMode = false;
+    this->bIsPushing = false;
     this->bIsMeshHidden = false;
     this->bIsReinforcing = false;
     this->SecondsUntilFullDecay = 0.00f;

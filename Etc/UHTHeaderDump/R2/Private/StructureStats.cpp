@@ -3,6 +3,7 @@
 FStructureStats::FStructureStats() {
     this->CodeName = NULL;
     this->CodeNameVisVar = 0;
+    this->EntityId = 0;
     this->MaxHealth = 0.00f;
     this->Health = 0.00f;
     this->DamageTargetType = EAnvilDamageTargetType::Default;
