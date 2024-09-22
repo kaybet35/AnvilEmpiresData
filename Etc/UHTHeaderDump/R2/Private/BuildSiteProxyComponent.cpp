@@ -4,6 +4,8 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->BuiltStructureEntity = NULL;
     this->BuildLocation = 0;
     this->CompatibleSurfaceTypes = 0;
+    this->AllowedBuildAreas = 0;
+    this->DisallowedBuildAreas = 0;
     this->RequiredTool = EAnvilToolType::None;
     this->bRequiresTownHall = false;
     this->bRequiresCamp = false;

@@ -465,6 +465,16 @@ EAnvilPhysicalSurfaceType = {
     EAnvilPhysicalSurfaceType_MAX = 18,
 }
 
+---@enum EAnvilPlacementArea
+EAnvilPlacementArea = {
+    Anywhere = 0,
+    TownArea = 1,
+    CampArea = 2,
+    HomesteadArea = 3,
+    NumTypes = 4,
+    EAnvilPlacementArea_MAX = 5,
+}
+
 ---@enum EAnvilPlacementInfoFlag
 EAnvilPlacementInfoFlag = {
     ContextNone = 0,

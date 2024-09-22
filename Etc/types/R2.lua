@@ -874,6 +874,8 @@ UBuildSiteDataComponent = {}
 ---@field BuiltStructureEntity TSubclassOf<UEntityTemplate>
 ---@field BuildLocation int32
 ---@field CompatibleSurfaceTypes int32
+---@field AllowedBuildAreas int32
+---@field DisallowedBuildAreas int32
 ---@field RequiredTool EAnvilToolType
 ---@field bRequiresTownHall boolean
 ---@field bRequiresCamp boolean
