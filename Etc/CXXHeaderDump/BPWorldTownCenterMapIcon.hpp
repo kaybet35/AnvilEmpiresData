@@ -3,6 +3,6 @@
 
 class UBPWorldTownCenterMapIcon_C : public UWorldTownCenterMapIcon
 {
-}; // Size: 0x410
+}; // Size: 0x408
 
 #endif

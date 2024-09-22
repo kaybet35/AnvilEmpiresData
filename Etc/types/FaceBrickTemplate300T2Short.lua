@@ -8,7 +8,6 @@
 ---@field VisRandomMeshDecor5 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor4 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor3 UVisRandomMeshDecorComponent
----@field VisRandomMeshDecor2 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor1 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor UVisRandomMeshDecorComponent
 AFaceBrickTemplate300T2Short_C = {}

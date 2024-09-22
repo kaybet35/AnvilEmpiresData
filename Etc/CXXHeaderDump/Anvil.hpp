@@ -2911,19 +2911,18 @@ class UWorldMarketShopMapIcon : public UWorldEntityMapIcon
 
 class UWorldTownCenterMapIcon : public UDeploymentPointMapIcon
 {
-    class USizeBox* IconNudgeBox;                                                     // 0x03A8 (size: 0x8)
-    class UPanelWidget* MainElements;                                                 // 0x03B0 (size: 0x8)
-    class UVerticalBox* TownStatusVerticalBox;                                        // 0x03B8 (size: 0x8)
-    class UBorder* TownNameBorder;                                                    // 0x03C0 (size: 0x8)
-    class UTextBlock* TownNameText;                                                   // 0x03C8 (size: 0x8)
-    class UBorder* TownStatusBorder;                                                  // 0x03D0 (size: 0x8)
-    class UStatusWidget* NumPledgedStatus;                                            // 0x03D8 (size: 0x8)
-    class UStatusWidget* NumTentsStatus;                                              // 0x03E0 (size: 0x8)
-    class UStatusWidget* NumReinforcementSuppliesStatus;                              // 0x03E8 (size: 0x8)
-    class UTextBlock* TownWarningText;                                                // 0x03F0 (size: 0x8)
-    class UImage* DetectionRangeCircle;                                               // 0x03F8 (size: 0x8)
-    float FlashingFrequency;                                                          // 0x0400 (size: 0x4)
-    float FlashingMinOpacity;                                                         // 0x0404 (size: 0x4)
+    class UPanelWidget* MainElements;                                                 // 0x03A8 (size: 0x8)
+    class UVerticalBox* TownStatusVerticalBox;                                        // 0x03B0 (size: 0x8)
+    class UBorder* TownNameBorder;                                                    // 0x03B8 (size: 0x8)
+    class UTextBlock* TownNameText;                                                   // 0x03C0 (size: 0x8)
+    class UBorder* TownStatusBorder;                                                  // 0x03C8 (size: 0x8)
+    class UStatusWidget* NumPledgedStatus;                                            // 0x03D0 (size: 0x8)
+    class UStatusWidget* NumTentsStatus;                                              // 0x03D8 (size: 0x8)
+    class UStatusWidget* NumReinforcementSuppliesStatus;                              // 0x03E0 (size: 0x8)
+    class UTextBlock* TownWarningText;                                                // 0x03E8 (size: 0x8)
+    class UImage* DetectionRangeCircle;                                               // 0x03F0 (size: 0x8)
+    float FlashingFrequency;                                                          // 0x03F8 (size: 0x4)
+    float FlashingMinOpacity;                                                         // 0x03FC (size: 0x4)
 
     ESlateVisibility GetTownWarningTextVisibility();
     FText GetTownWarningText();
@@ -2934,6 +2933,6 @@ class UWorldTownCenterMapIcon : public UDeploymentPointMapIcon
     FText GetNumReinforcementSuppliesText();
     ESlateVisibility GetNumPledgedVisibility();
     FText GetNumPledgedText();
-}; // Size: 0x410
+}; // Size: 0x408
 
 #endif

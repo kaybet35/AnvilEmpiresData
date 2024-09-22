@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ABPVisGridFoundationSquareDiagonal_T2_C : AVisStructure
----@field VerticalEdge09 UVisFoundationEdgeMeshDecorComponent
 ---@field FloorPlanking1 UStaticMeshComponent
 ---@field FloorPlanking2 UStaticMeshComponent
 ---@field FloorPlanking3 UStaticMeshComponent
 ---@field FloorPlanking UStaticMeshComponent
+---@field VerticalEdge09 UVisFoundationEdgeMeshDecorComponent
 ---@field ChildActor7 UChildActorComponent
 ---@field ChildActor8 UChildActorComponent
 ---@field VerticalEdge05 UVisFoundationEdgeMeshDecorComponent

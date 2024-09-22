@@ -3,9 +3,9 @@
 
 class ABPVisGridFoundationSquareStraight_T2_C : public AVisStructure
 {
-    class UStaticMeshComponent* FloorPlanking3;                                       // 0x0518 (size: 0x8)
-    class UStaticMeshComponent* FloorPlanking2;                                       // 0x0520 (size: 0x8)
-    class UStaticMeshComponent* FloorPlanking1;                                       // 0x0528 (size: 0x8)
+    class UStaticMeshComponent* FloorPlanking2;                                       // 0x0518 (size: 0x8)
+    class UStaticMeshComponent* FloorPlanking1;                                       // 0x0520 (size: 0x8)
+    class UStaticMeshComponent* FloorPlanking3;                                       // 0x0528 (size: 0x8)
     class UStaticMeshComponent* FloorPlanking;                                        // 0x0530 (size: 0x8)
     class UChildActorComponent* ChildActor2;                                          // 0x0538 (size: 0x8)
     class UChildActorComponent* ChildActor8;                                          // 0x0540 (size: 0x8)

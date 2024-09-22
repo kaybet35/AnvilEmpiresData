@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class ABPVisGridFoundationHalfSquareStraight_T2_C : AVisStructure
----@field FloorPlanking UStaticMeshComponent
+---@field FloorPlanking3 UStaticMeshComponent
 ---@field FloorPlanking2 UStaticMeshComponent
 ---@field FloorPlanking1 UStaticMeshComponent
----@field FloorPlanking3 UStaticMeshComponent
+---@field FloorPlanking UStaticMeshComponent
 ---@field ChildActor6 UChildActorComponent
 ---@field ChildActor5 UChildActorComponent
 ---@field ChildActor7 UChildActorComponent

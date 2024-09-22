@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class ABPVisGridFoundationTriangularStraight_T2_C : AVisStructure
----@field FloorPlanking UStaticMeshComponent
 ---@field FloorPlanking2 UStaticMeshComponent
 ---@field FloorPlanking3 UStaticMeshComponent
+---@field FloorPlanking UStaticMeshComponent
 ---@field ChildActor9 UChildActorComponent
 ---@field VisFoundationEdgeMeshDecor8 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor9 UVisFoundationEdgeMeshDecorComponent

@@ -22,7 +22,7 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "FloorPlanking",
+        "Name": "FloorPlanking2",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -33,7 +33,7 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "FloorPlanking2",
+        "Name": "FloorPlanking",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -297,12 +297,6 @@
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationFloorRoundStraight_T2_C:FloorPlanking_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.22"
       },
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.18"
-        }
-      ],
       "VariableGuid": "32C621DC-46BF6199-C4A81C99-6F84B6D1",
       "InternalVariableName": "FloorPlanking"
     }
@@ -357,10 +351,6 @@
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.17"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.11"
         }
       ],
       "VariableGuid": "B7661D3D-40BDAD31-F0AC829C-EA118331",
@@ -399,6 +389,16 @@
         "ObjectName": "VisStaticMeshComponent'BPVisGridFoundationFloorRoundStraight_T2_C:VisStaticMesh2_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.33"
       },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.18"
+        }
+      ],
       "VariableGuid": "9B32640B-4DE087AF-4B7D1DB9-61340AD6",
       "InternalVariableName": "VisStaticMesh2"
     }
@@ -499,12 +499,12 @@
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.17"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.18"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.18"
         }
       ],
       "DefaultSceneRootNode": {
@@ -529,15 +529,16 @@
         "ObjectName": "StaticMesh'PlankT2_300_02'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/PlankT2_300_02.2"
       },
+      "bReceivesDecals": false,
       "RelativeLocation": {
-        "X": 150.0,
+        "X": 0.0,
         "Y": -150.0,
-        "Z": 0.0
+        "Z": 901.1124
       },
       "RelativeRotation": {
         "Pitch": 0.0,
         "Yaw": 90.0,
-        "Roll": 0.0
+        "Roll": -0.0
       },
       "ComponentTags": [
         "ExcludeFromVisActorTemplate"
@@ -554,10 +555,11 @@
         "ObjectName": "StaticMesh'PlankT2_300_01'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/PlankT2_300_01.2"
       },
+      "bReceivesDecals": false,
       "RelativeLocation": {
         "X": -150.0,
         "Y": -3E-06,
-        "Z": 901.0
+        "Z": 901.0562
       },
       "ComponentTags": [
         "ExcludeFromVisActorTemplate"

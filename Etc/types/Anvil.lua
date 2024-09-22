@@ -3062,7 +3062,6 @@ function UWorldMarketShopMapIcon:OnIconClicked() end
 
 
 ---@class UWorldTownCenterMapIcon : UDeploymentPointMapIcon
----@field IconNudgeBox USizeBox
 ---@field MainElements UPanelWidget
 ---@field TownStatusVerticalBox UVerticalBox
 ---@field TownNameBorder UBorder
