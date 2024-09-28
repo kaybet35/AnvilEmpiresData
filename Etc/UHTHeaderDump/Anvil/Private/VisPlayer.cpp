@@ -2,6 +2,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AudioComponent -FallbackName=AudioComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BillboardComponent -FallbackName=BillboardComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CapsuleComponent -FallbackName=CapsuleComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DecalComponent -FallbackName=DecalComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PostProcessComponent -FallbackName=PostProcessComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SkeletalMeshComponent -FallbackName=SkeletalMeshComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=StaticMeshComponent -FallbackName=StaticMeshComponent
@@ -71,9 +72,19 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->WindMidAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("WindMidAudioComponent"));
     this->WindHighAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("WindHighAudioComponent"));
     this->RepairItemSoundCue = NULL;
+    this->PushIndicatorDecalComponent = CreateDefaultSubobject<UDecalComponent>(TEXT("PushIndicatorDecalComponent"));
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
     this->CurrentUEUsableActor = NULL;
+    this->WindMidAudioComponent->SetupAttachment(SpringArm);
+    this->WindHighAudioComponent->SetupAttachment(SpringArm);
+    this->PushIndicatorDecalComponent->SetupAttachment(RootComponent);
+    this->UnarmedItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->Mesh->SetupAttachment(RootComponent);
+    this->Head->SetupAttachment(Mesh);
+    this->AimMeshComponent->SetupAttachment(RootComponent);
+    this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
+    this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
     this->VoiceIndicator->SetupAttachment(RootComponent);
     this->TorchVFXComponent->SetupAttachment(Mesh);
     this->TorchAudioComponent->SetupAttachment(Mesh);
@@ -87,18 +98,10 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->SnowMidAudioComponent->SetupAttachment(SpringArm);
     this->SnowHighAudioComponent->SetupAttachment(SpringArm);
     this->WindLowAudioComponent->SetupAttachment(SpringArm);
-    this->WindMidAudioComponent->SetupAttachment(SpringArm);
-    this->WindHighAudioComponent->SetupAttachment(SpringArm);
     this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->UnarmedItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->Mesh->SetupAttachment(RootComponent);
-    this->Head->SetupAttachment(Mesh);
-    this->AimMeshComponent->SetupAttachment(RootComponent);
-    this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
-    this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
 }
 
 float AVisPlayer::GetVelocityHeadingDegrees() {

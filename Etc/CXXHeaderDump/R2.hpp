@@ -132,6 +132,13 @@ struct FEntityFloatPair
 
 }; // Size: 0x10
 
+struct FEntityHandle
+{
+    uint64 ID;                                                                        // 0x0000 (size: 0x8)
+    class AVisActorBase* CachedPtr;                                                   // 0x0008 (size: 0x8)
+
+}; // Size: 0x10
+
 struct FExplorationSpawnedEntityAvoidInfo
 {
     TSubclassOf<class UEntityTemplate> EntityTypeToAvoid;                             // 0x0000 (size: 0x8)
@@ -618,7 +625,9 @@ class AUnderworldModulePrefab : public AAnvilPrefab
 
 class AVisActorBase : public AActor
 {
-}; // Size: 0x290
+    class UEntityTemplate* TemplateCDO;                                               // 0x0298 (size: 0x8)
+
+}; // Size: 0x2A0
 
 class UAIStimulusProxyComponent : public UProxyComponent
 {
@@ -655,9 +664,8 @@ class UAdvancedSnappingProxyComponent : public UProxyComponent
 class UAnimalAIDataComponent : public UDataComponent
 {
     EAnvilAnimalState CurrentState;                                                   // 0x00A8 (size: 0x1)
-    int64 AttachedTarget;                                                             // 0x00C8 (size: 0x8)
 
-}; // Size: 0xE8
+}; // Size: 0xC8
 
 class UAnimalAIProxyComponent : public UProxyComponent
 {
@@ -723,9 +731,9 @@ class UAnimalLivestockProxyComponent : public UProxyComponent
 
 class UAnimalRopeAttachableDataComponent : public UDataComponent
 {
-    int64 AttachedTarget;                                                             // 0x00A8 (size: 0x8)
+    FEntityHandle AttachedTarget;                                                     // 0x00A8 (size: 0x10)
 
-}; // Size: 0xC8
+}; // Size: 0xD0
 
 class UAnimalRopeAttachableProxyComponent : public UProxyComponent
 {
@@ -735,9 +743,9 @@ class UAnimalRopeAttachableProxyComponent : public UProxyComponent
 
 class UAnimalRopeSlotDataComponent : public UDataComponent
 {
-    int64 AttachedTarget;                                                             // 0x00A8 (size: 0x8)
+    FEntityHandle AttachedTarget;                                                     // 0x00A8 (size: 0x10)
 
-}; // Size: 0xC8
+}; // Size: 0xD0
 
 class UAnimalRopeSlotProxyComponent : public UProxyComponent
 {
@@ -1070,9 +1078,10 @@ class UEditorSpawnerProxyComponent : public UProxyComponent
 
 class UEntityAttachableDataComponent : public UDataComponent
 {
-    int64 AttachedEntity;                                                             // 0x00A8 (size: 0x8)
+    FEntityHandle AttachedChildEntity;                                                // 0x00A8 (size: 0x10)
+    FEntityHandle AttachedParentEntity;                                               // 0x00D0 (size: 0x10)
 
-}; // Size: 0xC8
+}; // Size: 0xF8
 
 class UEntityAttachableProxyComponent : public UProxyComponent
 {
@@ -1084,6 +1093,7 @@ class UEntityAttachableProxyComponent : public UProxyComponent
     float AngleTolerance;                                                             // 0x0068 (size: 0x4)
     float DistanceTolerance;                                                          // 0x006C (size: 0x4)
     float DetachMaxZDelta;                                                            // 0x0070 (size: 0x4)
+    bool bMirrorDetachLocation;                                                       // 0x0074 (size: 0x1)
     TArray<class TSubclassOf<UEntityTemplate>> TargetEntityTypes;                     // 0x0078 (size: 0x10)
     TArray<class TSubclassOf<UItemTemplate>> RequiredEquipments;                      // 0x0088 (size: 0x10)
 
@@ -1414,16 +1424,17 @@ class UItemTemplate : public UObject
     float GuardMeterCostPerHit;                                                       // 0x033C (size: 0x4)
     uint8 ArmorMitigation;                                                            // 0x0340 (size: 0x1)
     float StabilityDamage;                                                            // 0x0344 (size: 0x4)
-    uint8 StabilityMitigationPercent;                                                 // 0x0348 (size: 0x1)
-    float ToolEffectiveness;                                                          // 0x034C (size: 0x4)
-    float AimMovementSpeedModifier;                                                   // 0x0350 (size: 0x4)
-    float AimRotationSpeedModifier;                                                   // 0x0354 (size: 0x4)
-    float PrimaryMovementSpeedModifier;                                               // 0x0358 (size: 0x4)
-    float SecondaryMovementSpeedModifier;                                             // 0x035C (size: 0x4)
-    float PrimaryChanceToPenetrateGuard;                                              // 0x0360 (size: 0x4)
-    float SecondaryChanceToPenetrateGuard;                                            // 0x0364 (size: 0x4)
+    float SecondaryStabilityDamage;                                                   // 0x0348 (size: 0x4)
+    uint8 StabilityMitigationPercent;                                                 // 0x034C (size: 0x1)
+    float ToolEffectiveness;                                                          // 0x0350 (size: 0x4)
+    float AimMovementSpeedModifier;                                                   // 0x0354 (size: 0x4)
+    float AimRotationSpeedModifier;                                                   // 0x0358 (size: 0x4)
+    float PrimaryMovementSpeedModifier;                                               // 0x035C (size: 0x4)
+    float SecondaryMovementSpeedModifier;                                             // 0x0360 (size: 0x4)
+    float PrimaryChanceToPenetrateGuard;                                              // 0x0364 (size: 0x4)
+    float SecondaryChanceToPenetrateGuard;                                            // 0x0368 (size: 0x4)
 
-}; // Size: 0x368
+}; // Size: 0x370
 
 class ULadderProxyComponent : public UProxyComponent
 {
@@ -2236,8 +2247,9 @@ class UUnderworldModuleProxyComponent : public UProxyComponent
     TArray<EAnvilUnderworldModuleEdgeType> EdgeList;                                  // 0x0030 (size: 0x10)
     int32 NumDynamicModulesMin;                                                       // 0x0040 (size: 0x4)
     int32 NumDynamicModulesMax;                                                       // 0x0044 (size: 0x4)
+    int32 MaxNumDynamicModuleSpawnDistance;                                           // 0x0048 (size: 0x4)
 
-}; // Size: 0x48
+}; // Size: 0x50
 
 class UUpgradeDataComponent : public UDataComponent
 {
@@ -2272,20 +2284,22 @@ class UVehicleMovementProxyComponent : public UProxyComponent
     float SprintStaminaDrain;                                                         // 0x003C (size: 0x4)
     float WalkStaminaDrain;                                                           // 0x0040 (size: 0x4)
     float RoadFactor;                                                                 // 0x0044 (size: 0x4)
-    bool bGroupVehicle;                                                               // 0x0048 (size: 0x1)
-    bool bYawInPlace;                                                                 // 0x0049 (size: 0x1)
-    bool bLadderMovement;                                                             // 0x004A (size: 0x1)
-    bool bCanWorldEntranceTravel;                                                     // 0x004B (size: 0x1)
-    TSubclassOf<class UEntityTemplate> CollisionEffect;                               // 0x0050 (size: 0x8)
-    float RammingDamage;                                                              // 0x0058 (size: 0x4)
-    float RammingVelocityFactor;                                                      // 0x005C (size: 0x4)
-    EAnvilDamageType RammingDamageType;                                               // 0x0060 (size: 0x1)
-    float RammingStabilityDamage;                                                     // 0x0064 (size: 0x4)
-    float RammingStabilitySplashDamage;                                               // 0x0068 (size: 0x4)
-    float RammingStabilitySplashDamageRadius;                                         // 0x006C (size: 0x4)
-    bool bDoAxleRaycasts;                                                             // 0x0070 (size: 0x1)
-    bool bWaterVehicle;                                                               // 0x0071 (size: 0x1)
-    bool bUsePitch;                                                                   // 0x0072 (size: 0x1)
+    float WindFactor;                                                                 // 0x0048 (size: 0x4)
+    bool bGroupVehicle;                                                               // 0x004C (size: 0x1)
+    bool bYawInPlace;                                                                 // 0x004D (size: 0x1)
+    bool bLadderMovement;                                                             // 0x004E (size: 0x1)
+    bool bCanWorldEntranceTravel;                                                     // 0x004F (size: 0x1)
+    bool bWaterVehicle;                                                               // 0x0050 (size: 0x1)
+    bool bSailBoat;                                                                   // 0x0051 (size: 0x1)
+    bool bDoAxleRaycasts;                                                             // 0x0052 (size: 0x1)
+    bool bUsePitch;                                                                   // 0x0053 (size: 0x1)
+    TSubclassOf<class UEntityTemplate> CollisionEffect;                               // 0x0058 (size: 0x8)
+    float RammingDamage;                                                              // 0x0060 (size: 0x4)
+    float RammingVelocityFactor;                                                      // 0x0064 (size: 0x4)
+    EAnvilDamageType RammingDamageType;                                               // 0x0068 (size: 0x1)
+    float RammingStabilityDamage;                                                     // 0x006C (size: 0x4)
+    float RammingStabilitySplashDamage;                                               // 0x0070 (size: 0x4)
+    float RammingStabilitySplashDamageRadius;                                         // 0x0074 (size: 0x4)
     FVector FrontAxleOffset;                                                          // 0x0078 (size: 0x18)
     FVector RearAxleOffset;                                                           // 0x0090 (size: 0x18)
     FR2FloatRange FallingDistRange;                                                   // 0x00A8 (size: 0x8)
@@ -2298,18 +2312,20 @@ class UVehicleSeatProxyComponent : public UProxyComponent
     EAnvilCharacterStance MountedStance;                                              // 0x0028 (size: 0x1)
     FVector PlayerOffset;                                                             // 0x0030 (size: 0x18)
     FVector PlayerExitOffset;                                                         // 0x0048 (size: 0x18)
-    bool bIsDriver;                                                                   // 0x0060 (size: 0x1)
-    bool bIsLeft;                                                                     // 0x0061 (size: 0x1)
-    bool bUseMountedWeapon;                                                           // 0x0062 (size: 0x1)
-    bool bPrimeMountedWeapon;                                                         // 0x0063 (size: 0x1)
-    bool bUseDeployable;                                                              // 0x0064 (size: 0x1)
-    bool bMustNearExitToMount;                                                        // 0x0065 (size: 0x1)
-    bool bRevertRequiredEquipments;                                                   // 0x0066 (size: 0x1)
-    int32 AnimationIndex;                                                             // 0x0068 (size: 0x4)
-    float MountedAttackDamageMultiplier;                                              // 0x006C (size: 0x4)
-    TArray<class TSubclassOf<UItemTemplate>> RequiredEquipments;                      // 0x0070 (size: 0x10)
+    float DismountMaxDelta;                                                           // 0x0060 (size: 0x4)
+    bool bIsDriver;                                                                   // 0x0064 (size: 0x1)
+    bool bIsLeft;                                                                     // 0x0065 (size: 0x1)
+    bool bUseMountedWeapon;                                                           // 0x0066 (size: 0x1)
+    bool bPrimeMountedWeapon;                                                         // 0x0067 (size: 0x1)
+    bool bUseDeployable;                                                              // 0x0068 (size: 0x1)
+    bool bMustNearExitToMount;                                                        // 0x0069 (size: 0x1)
+    bool bRevertRequiredEquipments;                                                   // 0x006A (size: 0x1)
+    bool bMirrorDetachLocation;                                                       // 0x006B (size: 0x1)
+    int32 AnimationIndex;                                                             // 0x006C (size: 0x4)
+    float MountedAttackDamageMultiplier;                                              // 0x0070 (size: 0x4)
+    TArray<class TSubclassOf<UItemTemplate>> RequiredEquipments;                      // 0x0078 (size: 0x10)
 
-}; // Size: 0x80
+}; // Size: 0x88
 
 class UVisStaticMeshComponentBase : public UStaticMeshComponent
 {

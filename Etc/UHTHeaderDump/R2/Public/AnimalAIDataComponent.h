@@ -11,9 +11,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilAnimalState CurrentState;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    int64 AttachedTarget;
-    
     UAnimalAIDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };

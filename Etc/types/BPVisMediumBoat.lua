@@ -1,11 +1,10 @@
 ---@meta
 
----@class ABPVisMediumBoat_C : AVisVehicle
+---@class ABPVisMediumBoat_C : AVisBoat
 ---@field WaterStatic UNiagaraComponent
 ---@field CullVolume UStaticMeshComponent
----@field ResourceFishR1 UInstancedStaticMeshComponent
 ---@field SkeletalMesh USkeletalMeshComponent
----@field Idle UAudioComponent
+---@field idle UAudioComponent
 ---@field Arrow UArrowComponent
 ABPVisMediumBoat_C = {}
 

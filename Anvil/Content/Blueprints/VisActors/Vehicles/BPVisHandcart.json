@@ -34,7 +34,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisHandcart_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.14"
       }
     },
     "SuperStruct": {
@@ -98,7 +98,11 @@
     "Properties": {
       "VehicleMovementDataComponent": {
         "ObjectName": "VehicleMovementDataComponent'Default__BPVisHandcart_C:VehicleMovementDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.16"
+      },
+      "EntityAttachableDataComponent": {
+        "ObjectName": "EntityAttachableDataComponent'Default__BPVisHandcart_C:EntityAttachableDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.6"
       },
       "MoveLoopAudioComponent": {
         "ObjectName": "AudioComponent'Default__BPVisHandcart_C:MovementAudioComponent'",
@@ -106,11 +110,11 @@
       },
       "MoveLoopParticleSystem": {
         "ObjectName": "NiagaraComponent'Default__BPVisHandcart_C:MovementParticleSystem'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.8"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisHandcart_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.7"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisHandcart_C:ArrowComponent'",
@@ -154,6 +158,12 @@
     }
   },
   {
+    "Type": "EntityAttachableDataComponent",
+    "Name": "EntityAttachableDataComponent",
+    "Outer": "Default__BPVisHandcart_C",
+    "Class": "UScriptClass'EntityAttachableDataComponent'"
+  },
+  {
     "Type": "HealthDataComponent",
     "Name": "HealthDataComponent",
     "Outer": "Default__BPVisHandcart_C",
@@ -190,7 +200,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisHandcart_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.9"
       },
       "VariableGuid": "D82AE2A8-4A510B7D-C2FEF0B1-49C05F96",
       "InternalVariableName": "DefaultSceneRoot"
@@ -208,12 +218,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisHandcart_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.15"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.12"
         }
       ],
       "VariableGuid": "CCFAEB4B-428069DF-1DB160AA-175C147B",
@@ -232,7 +242,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisMultiItemStockpileComponent'BPVisHandcart_C:VisMultiItemStockpile_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.17"
       },
       "AttachToName": "S_CartContainer",
       "VariableGuid": "701F7646-4CF4B3B7-1E1679AF-FE170A79",
@@ -258,7 +268,7 @@
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.11"
         }
       ],
       "VariableGuid": "19AAC428-40A09598-388ABC86-EC5BED89",
@@ -274,26 +284,26 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.13"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.13"
         },
         {
           "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.11"
         },
         {
           "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.12"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.10"
       }
     }
   },

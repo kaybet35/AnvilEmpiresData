@@ -51,7 +51,13 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.0"
       },
       "BuildLocation": 136,
-      "RequiredTool": "EAnvilToolType::Hammer"
+      "RequiredTool": "EAnvilToolType::Hammer",
+      "MaterialRequirements": [
+        {
+          "CodeName": 1175186297,
+          "Count": 5
+        }
+      ]
     }
   },
   {
@@ -90,9 +96,6 @@
     "Template": {
       "ObjectName": "HealthProxyComponent'Default__BPBaseBuildSiteEntity_C:HealthProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.6"
-    },
-    "Properties": {
-      "MaxHealth": 100.0
     }
   },
   {
@@ -134,6 +137,7 @@
       },
       "CodeNameString": "MediumBoatBuildSite",
       "CodeName": 695024013,
+      "GenerateMeshCollisionMask": 16785410,
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisMediumBoatBuildSite_C'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisMediumBoatBuildSite.1"

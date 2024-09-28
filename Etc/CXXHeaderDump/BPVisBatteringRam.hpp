@@ -3,8 +3,8 @@
 
 class ABPVisBatteringRam_C : public AVisVehicle
 {
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x04C8 (size: 0x8)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x04D8 (size: 0x8)
 
-}; // Size: 0x4D0
+}; // Size: 0x4E0
 
 #endif

@@ -1,24 +1,24 @@
 ---@meta
 
 ---@class FAnimBlueprintGeneratedConstantData : FAnimBlueprintConstantData
----@field __NameProperty_104 FName
----@field __NameProperty_105 FName
----@field __IntProperty_106 int32
 ---@field __NameProperty_107 FName
----@field __IntProperty_108 int32
----@field __NameProperty_109 FName
----@field __IntProperty_110 int32
----@field __BoolProperty_111 boolean
----@field __StructProperty_112 FInputScaleBiasClampConstants
----@field __FloatProperty_113 float
----@field __FloatProperty_114 float
----@field __BoolProperty_115 boolean
----@field __EnumProperty_116 EAnimSyncMethod
----@field __ByteProperty_117 EAnimGroupRole::Type
----@field __NameProperty_118 FName
----@field __NameProperty_119 FName
----@field __IntProperty_120 int32
----@field __StructProperty_121 FAnimNodeFunctionRef
+---@field __NameProperty_108 FName
+---@field __IntProperty_109 int32
+---@field __NameProperty_110 FName
+---@field __IntProperty_111 int32
+---@field __NameProperty_112 FName
+---@field __IntProperty_113 int32
+---@field __BoolProperty_114 boolean
+---@field __StructProperty_115 FInputScaleBiasClampConstants
+---@field __FloatProperty_116 float
+---@field __FloatProperty_117 float
+---@field __BoolProperty_118 boolean
+---@field __EnumProperty_119 EAnimSyncMethod
+---@field __ByteProperty_120 EAnimGroupRole::Type
+---@field __NameProperty_121 FName
+---@field __NameProperty_122 FName
+---@field __IntProperty_123 int32
+---@field __StructProperty_124 FAnimNodeFunctionRef
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
 FAnimBlueprintGeneratedConstantData = {}
@@ -41,6 +41,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_BlendSpacePlayer_1 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendSpacePlayer FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_LayeredBoneBlend FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_TransitionResult_4 FAnimNode_TransitionResult
 ---@field AnimGraphNode_TransitionResult_3 FAnimNode_TransitionResult
 ---@field AnimGraphNode_TransitionResult_2 FAnimNode_TransitionResult
 ---@field AnimGraphNode_TransitionResult_1 FAnimNode_TransitionResult

@@ -54,7 +54,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisDonkey_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.17"
       }
     },
     "SuperStruct": {
@@ -107,11 +107,11 @@
     "Properties": {
       "HungerDataComponent": {
         "ObjectName": "HungerDataComponent'Default__BPVisDonkey_C:HungerDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.11"
       },
       "StaminaDataComponent": {
         "ObjectName": "StaminaDataComponent'Default__BPVisDonkey_C:StaminaDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.22"
       },
       "AnimalAIDataComponent": {
         "ObjectName": "AnimalAIDataComponent'Default__BPVisDonkey_C:AnimalAIDataComponent'",
@@ -120,19 +120,19 @@
       "SeatSocketName": "S_Seat",
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.20"
       },
       "SaddleMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:SaddleMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.21"
       },
       "HalterHeadMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:HalterHeadMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.19"
       },
       "HalterBodyMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:HalterBodyMesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.18"
       },
       "SaddleMeshes": [
         {
@@ -146,7 +146,11 @@
       ],
       "VehicleMovementDataComponent": {
         "ObjectName": "VehicleMovementDataComponent'Default__BPVisDonkey_C:VehicleMovementDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.23"
+      },
+      "EntityAttachableDataComponent": {
+        "ObjectName": "EntityAttachableDataComponent'Default__BPVisDonkey_C:EntityAttachableDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.9"
       },
       "MoveLoopAudioComponent": {
         "ObjectName": "AudioComponent'Default__BPVisDonkey_C:MovementAudioComponent'",
@@ -154,11 +158,11 @@
       },
       "MoveLoopParticleSystem": {
         "ObjectName": "NiagaraComponent'Default__BPVisDonkey_C:MovementParticleSystem'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.12"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisDonkey_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.10"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",
@@ -166,8 +170,8 @@
       },
       "UseWindowType": "EHUDWindowType::InventoryStructure",
       "AdditionalActionButtons": [
-        "EActionButtonType::AttachAnimal",
-        "EActionButtonType::DetachAnimal"
+        "EActionButtonType::AttachVehicle",
+        "EActionButtonType::DetachVehicle"
       ],
       "VisDisplayName": {
         "Namespace": "",
@@ -214,11 +218,17 @@
       "bGenerateOverlapEvents": false,
       "AttachParent": {
         "ObjectName": "VisRopeComponent'BPVisDonkey_C:VisRope_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.24"
       },
       "bVisible": true,
       "bCanEverAffectNavigation": false
     }
+  },
+  {
+    "Type": "EntityAttachableDataComponent",
+    "Name": "EntityAttachableDataComponent",
+    "Outer": "Default__BPVisDonkey_C",
+    "Class": "UScriptClass'EntityAttachableDataComponent'"
   },
   {
     "Type": "HealthDataComponent",
@@ -263,7 +273,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisDonkey_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.13"
       },
       "VariableGuid": "EB6DB83B-4628ED71-EA4EC794-F7B15235",
       "InternalVariableName": "DefaultSceneRoot"
@@ -301,7 +311,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRopeComponent'BPVisDonkey_C:VisRope_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.24"
       },
       "AttachToName": "S_Rope",
       "ParentComponentOrVariableName": "Mesh",
@@ -319,26 +329,26 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisDonkey_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.16"
         },
         {
           "ObjectName": "SCS_Node'BPVisDonkey_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.15"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisDonkey_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.16"
         },
         {
           "ObjectName": "SCS_Node'BPVisDonkey_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.15"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisDonkey_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.14"
       }
     }
   },
@@ -358,7 +368,7 @@
       },
       "LeaderPoseComponent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.20"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",
@@ -382,7 +392,7 @@
       },
       "LeaderPoseComponent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.20"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",
@@ -422,7 +432,7 @@
     "Properties": {
       "LeaderPoseComponent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisDonkey_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.20"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisDonkey_C:ArrowComponent'",

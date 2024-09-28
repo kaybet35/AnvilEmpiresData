@@ -62,7 +62,9 @@ AUnderworldModulePrefab = {}
 
 
 ---@class AVisActorBase : AActor
+---@field TemplateCDO UEntityTemplate
 AVisActorBase = {}
+
 
 
 ---@class FAcceptedFood
@@ -191,6 +193,13 @@ FDryingRackRecipe = {}
 ---@field CodeNameVisVar int32
 ---@field Value float
 FEntityFloatPair = {}
+
+
+
+---@class FEntityHandle
+---@field ID uint64
+---@field CachedPtr AVisActorBase
+FEntityHandle = {}
 
 
 
@@ -651,7 +660,6 @@ UAdvancedSnappingProxyComponent = {}
 
 ---@class UAnimalAIDataComponent : UDataComponent
 ---@field CurrentState EAnvilAnimalState
----@field AttachedTarget int64
 UAnimalAIDataComponent = {}
 
 
@@ -719,7 +727,7 @@ UAnimalLivestockProxyComponent = {}
 
 
 ---@class UAnimalRopeAttachableDataComponent : UDataComponent
----@field AttachedTarget int64
+---@field AttachedTarget FEntityHandle
 UAnimalRopeAttachableDataComponent = {}
 
 
@@ -731,7 +739,7 @@ UAnimalRopeAttachableProxyComponent = {}
 
 
 ---@class UAnimalRopeSlotDataComponent : UDataComponent
----@field AttachedTarget int64
+---@field AttachedTarget FEntityHandle
 UAnimalRopeSlotDataComponent = {}
 
 
@@ -1066,7 +1074,8 @@ UEditorSpawnerProxyComponent = {}
 
 
 ---@class UEntityAttachableDataComponent : UDataComponent
----@field AttachedEntity int64
+---@field AttachedChildEntity FEntityHandle
+---@field AttachedParentEntity FEntityHandle
 UEntityAttachableDataComponent = {}
 
 
@@ -1080,6 +1089,7 @@ UEntityAttachableDataComponent = {}
 ---@field AngleTolerance float
 ---@field DistanceTolerance float
 ---@field DetachMaxZDelta float
+---@field bMirrorDetachLocation boolean
 ---@field TargetEntityTypes TArray<TSubclassOf<UEntityTemplate>>
 ---@field RequiredEquipments TArray<TSubclassOf<UItemTemplate>>
 UEntityAttachableProxyComponent = {}
@@ -1413,6 +1423,7 @@ UInventoryProxyComponent = {}
 ---@field GuardMeterCostPerHit float
 ---@field ArmorMitigation uint8
 ---@field StabilityDamage float
+---@field SecondaryStabilityDamage float
 ---@field StabilityMitigationPercent uint8
 ---@field ToolEffectiveness float
 ---@field AimMovementSpeedModifier float
@@ -2235,6 +2246,7 @@ UTweakableProxyComponent = {}
 ---@field EdgeList TArray<EAnvilUnderworldModuleEdgeType>
 ---@field NumDynamicModulesMin int32
 ---@field NumDynamicModulesMax int32
+---@field MaxNumDynamicModuleSpawnDistance int32
 UUnderworldModuleProxyComponent = {}
 
 
@@ -2271,10 +2283,15 @@ UVehicleMovementDataComponent = {}
 ---@field SprintStaminaDrain float
 ---@field WalkStaminaDrain float
 ---@field RoadFactor float
+---@field WindFactor float
 ---@field bGroupVehicle boolean
 ---@field bYawInPlace boolean
 ---@field bLadderMovement boolean
 ---@field bCanWorldEntranceTravel boolean
+---@field bWaterVehicle boolean
+---@field bSailBoat boolean
+---@field bDoAxleRaycasts boolean
+---@field bUsePitch boolean
 ---@field CollisionEffect TSubclassOf<UEntityTemplate>
 ---@field RammingDamage float
 ---@field RammingVelocityFactor float
@@ -2282,9 +2299,6 @@ UVehicleMovementDataComponent = {}
 ---@field RammingStabilityDamage float
 ---@field RammingStabilitySplashDamage float
 ---@field RammingStabilitySplashDamageRadius float
----@field bDoAxleRaycasts boolean
----@field bWaterVehicle boolean
----@field bUsePitch boolean
 ---@field FrontAxleOffset FVector
 ---@field RearAxleOffset FVector
 ---@field FallingDistRange FR2FloatRange
@@ -2297,6 +2311,7 @@ UVehicleMovementProxyComponent = {}
 ---@field MountedStance EAnvilCharacterStance
 ---@field PlayerOffset FVector
 ---@field PlayerExitOffset FVector
+---@field DismountMaxDelta float
 ---@field bIsDriver boolean
 ---@field bIsLeft boolean
 ---@field bUseMountedWeapon boolean
@@ -2304,6 +2319,7 @@ UVehicleMovementProxyComponent = {}
 ---@field bUseDeployable boolean
 ---@field bMustNearExitToMount boolean
 ---@field bRevertRequiredEquipments boolean
+---@field bMirrorDetachLocation boolean
 ---@field AnimationIndex int32
 ---@field MountedAttackDamageMultiplier float
 ---@field RequiredEquipments TArray<TSubclassOf<UItemTemplate>>

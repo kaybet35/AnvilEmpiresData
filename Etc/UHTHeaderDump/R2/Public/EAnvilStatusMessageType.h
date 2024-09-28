@@ -33,6 +33,7 @@ enum class EAnvilStatusMessageType : uint8 {
     ItemTransfer_NotPublic,
     Blocked,
     Vehicle_ExitBlocked,
+    InvalidDetachLocation,
     BuildSiteObstructed,
     GatheringResource,
     NoRepairNeeded,

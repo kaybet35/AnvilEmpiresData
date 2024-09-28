@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ABPVisMediumBoatBuildSite_C : AVisBuildSite
----@field SkeletalMesh USkeletalMeshComponent
+---@field VisStaticMesh UVisStaticMeshComponent
 ABPVisMediumBoatBuildSite_C = {}
 
 

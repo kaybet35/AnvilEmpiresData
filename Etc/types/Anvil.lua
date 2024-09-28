@@ -215,7 +215,6 @@ AUnderworldModuleDynamicPrefab = {}
 ---@field AnimSpeed float
 ---@field AnimRotationalSpeed FRotator
 ---@field AnimVelocity FVector
----@field TemplateCDO UEntityTemplate
 ---@field VisDisplayName FText
 ---@field Description FText
 ---@field DescriptionFooter FText
@@ -263,6 +262,12 @@ function AVisAnvilStructure:OnHitCounterChanged(Old, New) end
 ---@class AVisBeaconTower : AVisStructure
 ---@field BeaconTowerDataComponent UBeaconTowerDataComponent
 AVisBeaconTower = {}
+
+
+
+---@class AVisBoat : AVisVehicle
+---@field Slots TMap<UEntityAttachableProxyComponent, UEntityAttachableDataComponent>
+AVisBoat = {}
 
 
 
@@ -460,6 +465,19 @@ AVisItemStash = {}
 
 
 
+---@class AVisLatticeMine : AVisActor
+---@field LatticeArea UBoxComponent
+AVisLatticeMine = {}
+
+
+
+---@class AVisLatticeMineChunk : AVisActor
+---@field ArrowComponent UArrowComponent
+---@field ChunkMesh UStaticMeshComponent
+AVisLatticeMineChunk = {}
+
+
+
 ---@class AVisLivestockStructure : AVisStructure
 ---@field FoodItem TSubclassOf<UItemTemplate>
 ---@field ProducedItem TSubclassOf<UItemTemplate>
@@ -571,6 +589,7 @@ AVisPickupItem = {}
 ---@field WindMidAudioComponent UAudioComponent
 ---@field WindHighAudioComponent UAudioComponent
 ---@field RepairItemSoundCue USoundCue
+---@field PushIndicatorDecalComponent UDecalComponent
 ---@field PostProcessMaterialParameterCollection UMaterialParameterCollection
 ---@field PositionPostProcessMaterialParameterCollection UMaterialParameterCollection
 ---@field CurrentUsableVisActor AVisActor
@@ -716,6 +735,7 @@ AVisUnderworldModuleDynamic = {}
 
 ---@class AVisVehicle : AVisActor
 ---@field VehicleMovementDataComponent UVehicleMovementDataComponent
+---@field EntityAttachableDataComponent UEntityAttachableDataComponent
 ---@field MoveLoopAudioComponent UAudioComponent
 ---@field MoveLoopParticleSystem UNiagaraComponent
 ---@field HealthDataComponent UHealthDataComponent
@@ -951,6 +971,7 @@ FDeploymentFoodItem = {}
 ---@field GuardMeterCostPerHit float
 ---@field ArmorMitigation uint8
 ---@field StabilityDamage float
+---@field SecondaryStabilityDamage float
 ---@field StabilityMitigationPercent uint8
 ---@field ToolEffectiveness float
 ---@field AimMovementSpeedModifier float
@@ -2993,6 +3014,7 @@ UVisTownAreaMarkerDecalComponent = {}
 ---@field NativeHorizontalMovement float
 ---@field NativeVerticalMovement float
 ---@field bIsOccupied boolean
+---@field bShouldAnimateMoving boolean
 UVisVehicleAnimInstance = {}
 
 

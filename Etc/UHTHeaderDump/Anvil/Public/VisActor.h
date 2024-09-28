@@ -8,7 +8,6 @@
 #include "MapIconInstanceProperty.h"
 #include "VisActor.generated.h"
 
-class UEntityTemplate;
 class UMeshVisibilityDataComponent;
 class USceneComponent;
 class UTexture2D;
@@ -52,9 +51,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector AnimVelocity;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UEntityTemplate* TemplateCDO;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

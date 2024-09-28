@@ -20,6 +20,15 @@
                   "bAutomaticRemainingTimeRule": false,
                   "SyncGroupNameToRequireValidMarkersRule": "None",
                   "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
                 }
               ],
               "StateRootNodeIndex": 1,
@@ -38,9 +47,9 @@
               "StateName": "Priming",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 10,
+                  "CanTakeDelegateIndex": 11,
                   "CustomResultNodeIndex": -1,
-                  "TransitionIndex": 1,
+                  "TransitionIndex": 2,
                   "bDesiredTransitionReturnValue": true,
                   "bAutomaticRemainingTimeRule": false,
                   "SyncGroupNameToRequireValidMarkersRule": "None",
@@ -63,9 +72,9 @@
               "StateName": "Primed",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 11,
+                  "CanTakeDelegateIndex": 12,
                   "CustomResultNodeIndex": -1,
-                  "TransitionIndex": 2,
+                  "TransitionIndex": 3,
                   "bDesiredTransitionReturnValue": true,
                   "bAutomaticRemainingTimeRule": false,
                   "SyncGroupNameToRequireValidMarkersRule": "None",
@@ -88,9 +97,9 @@
               "StateName": "Firing",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 12,
+                  "CanTakeDelegateIndex": 13,
                   "CustomResultNodeIndex": -1,
-                  "TransitionIndex": 3,
+                  "TransitionIndex": 4,
                   "bDesiredTransitionReturnValue": true,
                   "bAutomaticRemainingTimeRule": false,
                   "SyncGroupNameToRequireValidMarkersRule": "None",
@@ -111,6 +120,19 @@
             }
           ],
           "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
             {
               "PreviousState": 0,
               "NextState": 1,
@@ -175,8 +197,8 @@
           "Key": "AnimGraph",
           "Value": {
             "PlayerNodeIndices": [
-              14,
-              15
+              15,
+              16
             ]
           }
         }
@@ -348,6 +370,20 @@
             17,
             17,
             17,
+            4294967295
+          ],
+          "NodeIndex": 8,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Scorpion_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Scorpion/Scorpion_ABP.0"
+          },
+          "Entries": [
+            17,
+            17,
+            17,
             4294967295,
             4294967295,
             4294967295,
@@ -366,7 +402,7 @@
             11,
             11
           ],
-          "NodeIndex": 8,
+          "NodeIndex": 9,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -383,7 +419,7 @@
             14,
             2
           ],
-          "NodeIndex": 9,
+          "NodeIndex": 10,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -413,7 +449,7 @@
             7,
             11
           ],
-          "NodeIndex": 10,
+          "NodeIndex": 11,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -430,7 +466,7 @@
             14,
             4
           ],
-          "NodeIndex": 11,
+          "NodeIndex": 12,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -460,7 +496,7 @@
             11,
             11
           ],
-          "NodeIndex": 12,
+          "NodeIndex": 13,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -477,7 +513,7 @@
             14,
             6
           ],
-          "NodeIndex": 13,
+          "NodeIndex": 14,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -507,7 +543,7 @@
             7,
             11
           ],
-          "NodeIndex": 14,
+          "NodeIndex": 15,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -524,7 +560,7 @@
             14,
             16
           ],
-          "NodeIndex": 15,
+          "NodeIndex": 16,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -544,7 +580,7 @@
             4294967295,
             4294967295
           ],
-          "NodeIndex": 16,
+          "NodeIndex": 17,
           "Flags": "EAnimNodeDataFlags::None"
         }
       ],
@@ -1209,6 +1245,16 @@
       },
       {
         "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
         "Name": "AnimGraphNode_TransitionResult_3",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 160,
@@ -1430,26 +1476,8 @@
         "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Not_PreBool_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
         "Type": "FloatProperty",
         "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_1",
         "Flags": "RF_Public",
         "ElementSize": 4
       },
@@ -1467,7 +1495,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue_1",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -1479,7 +1507,25 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue_1",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -1584,7 +1630,7 @@
             "LinkID": 2
           },
           {
-            "LinkID": 16
+            "LinkID": 17
           }
         ],
         "BlendMode": "ELayeredBoneBlendMode::BranchFilter",
@@ -1685,6 +1731,9 @@
         "SkeletonGuid": "F0389FF5-48BC9732-A067DE98-04EB4154",
         "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
       },
+      "AnimGraphNode_TransitionResult_4": {
+        "bCanEnterTransition": false
+      },
       "AnimGraphNode_TransitionResult_3": {
         "bCanEnterTransition": false
       },
@@ -1708,7 +1757,7 @@
       },
       "AnimGraphNode_StateResult_3": {
         "Result": {
-          "LinkID": 8
+          "LinkID": 9
         }
       },
       "AnimGraphNode_SequencePlayer_2": {
@@ -1722,7 +1771,7 @@
       },
       "AnimGraphNode_StateResult_2": {
         "Result": {
-          "LinkID": 10
+          "LinkID": 11
         }
       },
       "AnimGraphNode_SequencePlayer_1": {
@@ -1736,7 +1785,7 @@
       },
       "AnimGraphNode_StateResult_1": {
         "Result": {
-          "LinkID": 12
+          "LinkID": 13
         }
       },
       "AnimGraphNode_SequencePlayer": {
@@ -1750,7 +1799,7 @@
       },
       "AnimGraphNode_StateResult": {
         "Result": {
-          "LinkID": 14
+          "LinkID": 15
         }
       },
       "AnimGraphNode_StateMachine": {

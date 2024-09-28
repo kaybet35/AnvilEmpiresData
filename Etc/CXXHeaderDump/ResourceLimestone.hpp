@@ -3,6 +3,6 @@
 
 class UResourceLimestone_C : public UItemTemplate
 {
-}; // Size: 0x368
+}; // Size: 0x370
 
 #endif

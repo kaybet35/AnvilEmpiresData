@@ -24,7 +24,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisCaravan_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.12"
       }
     },
     "SuperStruct": {
@@ -77,7 +77,11 @@
     "Properties": {
       "VehicleMovementDataComponent": {
         "ObjectName": "VehicleMovementDataComponent'Default__BPVisCaravan_C:VehicleMovementDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.14"
+      },
+      "EntityAttachableDataComponent": {
+        "ObjectName": "EntityAttachableDataComponent'Default__BPVisCaravan_C:EntityAttachableDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.5"
       },
       "MoveLoopAudioComponent": {
         "ObjectName": "AudioComponent'Default__BPVisCaravan_C:MovementAudioComponent'",
@@ -85,11 +89,11 @@
       },
       "MoveLoopParticleSystem": {
         "ObjectName": "NiagaraComponent'Default__BPVisCaravan_C:MovementParticleSystem'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.7"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisCaravan_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.6"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisCaravan_C:ArrowComponent'",
@@ -98,7 +102,8 @@
       "UseWindowType": "EHUDWindowType::InventoryStructure",
       "AdditionalActionButtons": [
         "EActionButtonType::DeployCamp",
-        "EActionButtonType::DetachAnimal"
+        "EActionButtonType::DetachVehicle",
+        "EActionButtonType::AttachVehicle"
       ],
       "InteractionIcon": {
         "ObjectName": "Texture2D'CaravanIcon'",
@@ -133,6 +138,12 @@
     "Type": "EntityAttachableDataComponent",
     "Name": "EntityAttachableData_GEN_VARIABLE",
     "Outer": "BPVisCaravan_C",
+    "Class": "UScriptClass'EntityAttachableDataComponent'"
+  },
+  {
+    "Type": "EntityAttachableDataComponent",
+    "Name": "EntityAttachableDataComponent",
+    "Outer": "Default__BPVisCaravan_C",
     "Class": "UScriptClass'EntityAttachableDataComponent'"
   },
   {
@@ -172,7 +183,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisCaravan_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.8"
       },
       "VariableGuid": "38687822-4436412C-95AE6194-9A9237C7",
       "InternalVariableName": "DefaultSceneRoot"
@@ -190,7 +201,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisCaravan_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.13"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -225,26 +236,26 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisCaravan_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.10"
         },
         {
           "ObjectName": "SCS_Node'BPVisCaravan_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.11"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisCaravan_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.10"
         },
         {
           "ObjectName": "SCS_Node'BPVisCaravan_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.11"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisCaravan_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.9"
       }
     }
   },

@@ -5,7 +5,7 @@
 ---@field CullVolume UStaticMeshComponent
 ---@field ResourceFishR1 UInstancedStaticMeshComponent
 ---@field SkeletalMesh USkeletalMeshComponent
----@field Idle UAudioComponent
+---@field idle UAudioComponent
 ---@field Arrow UArrowComponent
 ABPVisSmallBoat_C = {}
 

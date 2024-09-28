@@ -46,7 +46,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisSmallBoat_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.19"
       }
     },
     "SuperStruct": {
@@ -143,7 +143,11 @@
     "Properties": {
       "VehicleMovementDataComponent": {
         "ObjectName": "VehicleMovementDataComponent'Default__BPVisSmallBoat_C:VehicleMovementDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.22"
+      },
+      "EntityAttachableDataComponent": {
+        "ObjectName": "EntityAttachableDataComponent'Default__BPVisSmallBoat_C:EntityAttachableDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.6"
       },
       "MoveLoopAudioComponent": {
         "ObjectName": "AudioComponent'Default__BPVisSmallBoat_C:MovementAudioComponent'",
@@ -151,11 +155,11 @@
       },
       "MoveLoopParticleSystem": {
         "ObjectName": "NiagaraComponent'Default__BPVisSmallBoat_C:MovementParticleSystem'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.10"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisSmallBoat_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.7"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisSmallBoat_C:ArrowComponent'",
@@ -180,6 +184,12 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.1"
       }
     }
+  },
+  {
+    "Type": "EntityAttachableDataComponent",
+    "Name": "EntityAttachableDataComponent",
+    "Outer": "Default__BPVisSmallBoat_C",
+    "Class": "UScriptClass'EntityAttachableDataComponent'"
   },
   {
     "Type": "HealthDataComponent",
@@ -271,7 +281,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisSmallBoat_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.11"
       },
       "VariableGuid": "690B95D8-416343C9-7F4AE48C-9E824020",
       "InternalVariableName": "DefaultSceneRoot"
@@ -314,11 +324,11 @@
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.13"
         },
         {
           "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.15"
         }
       ],
       "VariableGuid": "2FEB4BB8-460E61C6-A39CB281-84749DB1",
@@ -337,20 +347,20 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisSmallBoat_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.20"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.17"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.18"
         },
         {
           "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.16"
         },
         {
           "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.16"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.17"
         }
       ],
       "VariableGuid": "1F604717-4FA9A0F3-7D6A6694-B64C675A",
@@ -369,7 +379,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisSmallBoat_C:CullVolume_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.21"
       },
       "VariableGuid": "C786FF73-4D803441-0A7FD6B5-A1D936DA",
       "InternalVariableName": "CullVolume"
@@ -387,7 +397,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisSmallBoat_C:WaterStatic_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.9"
       },
       "VariableGuid": "D325D4D8-45AC5C06-5E9CBEB9-924B73A0",
       "InternalVariableName": "WaterStatic"
@@ -405,7 +415,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "InstancedStaticMeshComponent'BPVisSmallBoat_C:ResourceFishR1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.8"
       },
       "VariableGuid": "D8CF5BBE-4A26DB3F-57EAABA9-93DA8309",
       "InternalVariableName": "ResourceFishR1"
@@ -420,38 +430,38 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.14"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.13"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.12"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.14"
         },
         {
-          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.17"
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.15"
         },
         {
-          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.17"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.12"
       }
     }
   },

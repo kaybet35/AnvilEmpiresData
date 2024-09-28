@@ -16,7 +16,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "MediumBoat_C'Default__MediumBoat_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.7"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.9"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -30,13 +30,13 @@
     "Properties": {
       "Position": {
         "X": 0.0,
-        "Y": 0.0,
-        "Z": 45.0
+        "Y": 1.651215,
+        "Z": 197.003
       },
       "Extents": {
-        "X": 385.0,
-        "Y": 90.0,
-        "Z": 45.0
+        "X": 1093.0,
+        "Y": 350.0,
+        "Z": 197.0
       },
       "SurfaceType": "EAnvilPhysicalSurfaceType::Wood",
       "CollisionMask": 16801856
@@ -50,9 +50,9 @@
     "Properties": {
       "ExtendFootprint": true,
       "Extents": {
-        "X": 100.0,
-        "Y": 100.0,
-        "Z": 100.0
+        "X": 200.0,
+        "Y": 200.0,
+        "Z": 200.0
       },
       "CollisionMask": 8
     }
@@ -67,6 +67,95 @@
         "ObjectName": "BlueprintGeneratedClass'MediumBoatHusk_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Husks/MediumBoatHusk.0"
       }
+    }
+  },
+  {
+    "Type": "EntityAttachableProxyComponent",
+    "Name": "EntityAttachableProxyComponent_0",
+    "Outer": "Default__MediumBoat_C",
+    "Class": "UScriptClass'EntityAttachableProxyComponent'",
+    "Properties": {
+      "SlotOffset": {
+        "X": 0.0,
+        "Y": 200.0,
+        "Z": 100.0
+      },
+      "DetachLocation": {
+        "X": 0.0,
+        "Y": 600.0,
+        "Z": 0.0
+      },
+      "AngleTolerance": 360.0,
+      "DistanceTolerance": 500.0,
+      "DetachMaxZDelta": 400.0,
+      "bMirrorDetachLocation": true,
+      "TargetEntityTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'Cart_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Handcart_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Handcart.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Caravan_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Caravan.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Horse_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.3"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Donkey_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EntityAttachableProxyComponent",
+    "Name": "EntityAttachableProxyComponent_1",
+    "Outer": "Default__MediumBoat_C",
+    "Class": "UScriptClass'EntityAttachableProxyComponent'",
+    "Properties": {
+      "SlotId": 1,
+      "SlotOffset": {
+        "X": 0.0,
+        "Y": -200.0,
+        "Z": 100.0
+      },
+      "DetachLocation": {
+        "X": 0.0,
+        "Y": 600.0,
+        "Z": 0.0
+      },
+      "AngleTolerance": 360.0,
+      "DistanceTolerance": 500.0,
+      "DetachMaxZDelta": 400.0,
+      "bMirrorDetachLocation": true,
+      "TargetEntityTypes": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'Cart_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Handcart_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Handcart.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Caravan_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Caravan.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Horse_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.3"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'Donkey_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Donkey.4"
+        }
+      ]
     }
   },
   {
@@ -88,7 +177,6 @@
     "Outer": "Default__MediumBoat_C",
     "Class": "UScriptClass'HealthProxyComponent'",
     "Properties": {
-      "MaxHealth": 50.0,
       "TargetType": "EAnvilDamageTargetType::Structure"
     }
   },
@@ -131,15 +219,15 @@
       "Components": [
         {
           "ObjectName": "VehicleMovementProxyComponent'Default__MediumBoat_C:VehicleMovementProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.11"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__MediumBoat_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.6"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.8"
         },
         {
           "ObjectName": "HealthProxyComponent'Default__MediumBoat_C:HealthProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.5"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.7"
         },
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__MediumBoat_C:BoxCollisionProxyComponent_1'",
@@ -155,23 +243,47 @@
         },
         {
           "ObjectName": "FootprintCollisionProxyComponent'Default__MediumBoat_C:FootprintCollisionProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.4"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.6"
         },
         {
           "ObjectName": "RepairProxyComponent'Default__MediumBoat_C:RepairProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.8"
-        },
-        {
-          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.10"
         },
         {
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.12"
+        },
+        {
           "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.11"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.13"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.15"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.16"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.17"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.18"
         },
         {
           "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.12"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.14"
+        },
+        {
+          "ObjectName": "EntityAttachableProxyComponent'Default__MediumBoat_C:EntityAttachableProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.4"
+        },
+        {
+          "ObjectName": "EntityAttachableProxyComponent'Default__MediumBoat_C:EntityAttachableProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.5"
         }
       ],
       "VisActorClass": {
@@ -199,8 +311,9 @@
       "SprintRotationalSpeedFactor": 0.5,
       "SprintStaminaDrain": 4.0,
       "bYawInPlace": true,
-      "bDoAxleRaycasts": false,
-      "bWaterVehicle": true
+      "bWaterVehicle": true,
+      "bSailBoat": true,
+      "bDoAxleRaycasts": false
     }
   },
   {
@@ -211,16 +324,18 @@
     "Properties": {
       "MountedStance": "EAnvilCharacterStance::Sitting",
       "PlayerOffset": {
-        "X": -145.0,
-        "Y": 0.0,
-        "Z": 100.0
-      },
-      "PlayerExitOffset": {
-        "X": -165.0,
+        "X": -600.0,
         "Y": 0.0,
         "Z": 200.0
       },
-      "bIsDriver": true
+      "PlayerExitOffset": {
+        "X": -600.0,
+        "Y": 600.0,
+        "Z": 0.0
+      },
+      "DismountMaxDelta": 400.0,
+      "bIsDriver": true,
+      "bMirrorDetachLocation": true
     }
   },
   {
@@ -237,9 +352,11 @@
       },
       "PlayerExitOffset": {
         "X": 20.0,
-        "Y": 0.0,
-        "Z": 200.0
-      }
+        "Y": 600.0,
+        "Z": 0.0
+      },
+      "DismountMaxDelta": 400.0,
+      "bMirrorDetachLocation": true
     }
   },
   {
@@ -256,9 +373,95 @@
       },
       "PlayerExitOffset": {
         "X": 200.0,
+        "Y": 600.0,
+        "Z": 0.0
+      },
+      "DismountMaxDelta": 400.0,
+      "bMirrorDetachLocation": true
+    }
+  },
+  {
+    "Type": "VehicleSeatProxyComponent",
+    "Name": "VehicleSeatProxyComponent_3",
+    "Outer": "Default__MediumBoat_C",
+    "Class": "UScriptClass'VehicleSeatProxyComponent'",
+    "Properties": {
+      "MountedStance": "EAnvilCharacterStance::Sitting",
+      "PlayerOffset": {
+        "X": 225.0,
         "Y": 0.0,
-        "Z": 200.0
-      }
+        "Z": 100.0
+      },
+      "PlayerExitOffset": {
+        "X": 200.0,
+        "Y": 600.0,
+        "Z": 0.0
+      },
+      "DismountMaxDelta": 400.0,
+      "bMirrorDetachLocation": true
+    }
+  },
+  {
+    "Type": "VehicleSeatProxyComponent",
+    "Name": "VehicleSeatProxyComponent_4",
+    "Outer": "Default__MediumBoat_C",
+    "Class": "UScriptClass'VehicleSeatProxyComponent'",
+    "Properties": {
+      "MountedStance": "EAnvilCharacterStance::Sitting",
+      "PlayerOffset": {
+        "X": 225.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "PlayerExitOffset": {
+        "X": 200.0,
+        "Y": 600.0,
+        "Z": 0.0
+      },
+      "DismountMaxDelta": 400.0,
+      "bMirrorDetachLocation": true
+    }
+  },
+  {
+    "Type": "VehicleSeatProxyComponent",
+    "Name": "VehicleSeatProxyComponent_5",
+    "Outer": "Default__MediumBoat_C",
+    "Class": "UScriptClass'VehicleSeatProxyComponent'",
+    "Properties": {
+      "MountedStance": "EAnvilCharacterStance::Sitting",
+      "PlayerOffset": {
+        "X": 225.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "PlayerExitOffset": {
+        "X": 200.0,
+        "Y": 600.0,
+        "Z": 0.0
+      },
+      "DismountMaxDelta": 400.0,
+      "bMirrorDetachLocation": true
+    }
+  },
+  {
+    "Type": "VehicleSeatProxyComponent",
+    "Name": "VehicleSeatProxyComponent_6",
+    "Outer": "Default__MediumBoat_C",
+    "Class": "UScriptClass'VehicleSeatProxyComponent'",
+    "Properties": {
+      "MountedStance": "EAnvilCharacterStance::Sitting",
+      "PlayerOffset": {
+        "X": 225.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "PlayerExitOffset": {
+        "X": 200.0,
+        "Y": 600.0,
+        "Z": 0.0
+      },
+      "DismountMaxDelta": 400.0,
+      "bMirrorDetachLocation": true
     }
   }
 ]

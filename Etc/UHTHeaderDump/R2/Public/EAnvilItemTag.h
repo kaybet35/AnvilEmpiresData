@@ -16,6 +16,7 @@ enum class EAnvilItemTag : uint8 {
     Silver,
     LeftHand,
     RightHand,
+    Tool,
     Quenchable,
     Resource,
     IngredientsStorage,

@@ -17,6 +17,7 @@ class UArmorDataComponent;
 class UAudioComponent;
 class UBillboardComponent;
 class UCapsuleComponent;
+class UDecalComponent;
 class UHealthDataComponent;
 class UHungerDataComponent;
 class UMapMarkerComponent;
@@ -190,6 +191,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* RepairItemSoundCue;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UDecalComponent* PushIndicatorDecalComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialParameterCollection* PostProcessMaterialParameterCollection;

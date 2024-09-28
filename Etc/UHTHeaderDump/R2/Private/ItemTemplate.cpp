@@ -61,6 +61,7 @@ UItemTemplate::UItemTemplate() {
     this->GuardMeterCostPerHit = 0.00f;
     this->ArmorMitigation = 0;
     this->StabilityDamage = 0.05f;
+    this->SecondaryStabilityDamage = 0.00f;
     this->StabilityMitigationPercent = 0;
     this->ToolEffectiveness = 1.00f;
     this->AimMovementSpeedModifier = 0.00f;

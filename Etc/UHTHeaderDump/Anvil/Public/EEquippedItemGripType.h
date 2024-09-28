@@ -10,6 +10,7 @@ enum class EEquippedItemGripType : uint8 {
     OneHandedItem,
     TwoHandedItem,
     Spear,
+    Spear2Handed,
     CrateBarrel,
     Torch,
     LargeBoulder,

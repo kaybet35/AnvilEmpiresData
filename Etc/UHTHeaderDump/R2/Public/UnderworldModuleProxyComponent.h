@@ -20,6 +20,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumDynamicModulesMax;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 MaxNumDynamicModuleSpawnDistance;
+    
     UUnderworldModuleProxyComponent();
 
 };

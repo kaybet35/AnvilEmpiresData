@@ -203,14 +203,15 @@ struct FEquipmentData : public FTableRowBase
     float GuardMeterCostPerHit;                                                       // 0x0020 (size: 0x4)
     uint8 ArmorMitigation;                                                            // 0x0024 (size: 0x1)
     float StabilityDamage;                                                            // 0x0028 (size: 0x4)
-    uint8 StabilityMitigationPercent;                                                 // 0x002C (size: 0x1)
-    float ToolEffectiveness;                                                          // 0x0030 (size: 0x4)
-    float AimMovementSpeedModifier;                                                   // 0x0034 (size: 0x4)
-    float AimRotationSpeedModifier;                                                   // 0x0038 (size: 0x4)
-    float PrimaryMovementSpeedModifier;                                               // 0x003C (size: 0x4)
-    float SecondaryMovementSpeedModifier;                                             // 0x0040 (size: 0x4)
-    float PrimaryChanceToPenetrateGuard;                                              // 0x0044 (size: 0x4)
-    float SecondaryChanceToPenetrateGuard;                                            // 0x0048 (size: 0x4)
+    float SecondaryStabilityDamage;                                                   // 0x002C (size: 0x4)
+    uint8 StabilityMitigationPercent;                                                 // 0x0030 (size: 0x1)
+    float ToolEffectiveness;                                                          // 0x0034 (size: 0x4)
+    float AimMovementSpeedModifier;                                                   // 0x0038 (size: 0x4)
+    float AimRotationSpeedModifier;                                                   // 0x003C (size: 0x4)
+    float PrimaryMovementSpeedModifier;                                               // 0x0040 (size: 0x4)
+    float SecondaryMovementSpeedModifier;                                             // 0x0044 (size: 0x4)
+    float PrimaryChanceToPenetrateGuard;                                              // 0x0048 (size: 0x4)
+    float SecondaryChanceToPenetrateGuard;                                            // 0x004C (size: 0x4)
 
 }; // Size: 0x50
 
@@ -431,19 +432,19 @@ class AAnvilHUD : public AHUD
 
 class AAnvilMovieCharacter : public AVisActorBase
 {
-    class USimPlayerDataComponent* SimPlayerDataComponent;                            // 0x0290 (size: 0x8)
-    class USkeletalMeshComponent* ItemMeshComponent;                                  // 0x0298 (size: 0x8)
-    class USkeletalMeshComponent* ItemSecondaryMeshComponent;                         // 0x02A0 (size: 0x8)
-    class USkeletalMeshComponent* UnarmedItemMeshComponent;                           // 0x02A8 (size: 0x8)
-    class USkeletalMeshComponent* UnarmedItemSecondaryMeshComponent;                  // 0x02B0 (size: 0x8)
-    EAnvilVehicleInputState VehicleInputState;                                        // 0x02B8 (size: 0x1)
-    class UCapsuleComponent* Capsule;                                                 // 0x02C0 (size: 0x8)
-    class USkeletalMeshComponent* Mesh;                                               // 0x02C8 (size: 0x8)
-    class USkeletalMeshComponent* Head;                                               // 0x02D0 (size: 0x8)
-    class UVisPlayerVisualsComponent* PlayerVisualsComponent;                         // 0x02D8 (size: 0x8)
-    class UNiagaraComponent* TorchVFXComponent;                                       // 0x02E0 (size: 0x8)
+    class USimPlayerDataComponent* SimPlayerDataComponent;                            // 0x02A0 (size: 0x8)
+    class USkeletalMeshComponent* ItemMeshComponent;                                  // 0x02A8 (size: 0x8)
+    class USkeletalMeshComponent* ItemSecondaryMeshComponent;                         // 0x02B0 (size: 0x8)
+    class USkeletalMeshComponent* UnarmedItemMeshComponent;                           // 0x02B8 (size: 0x8)
+    class USkeletalMeshComponent* UnarmedItemSecondaryMeshComponent;                  // 0x02C0 (size: 0x8)
+    EAnvilVehicleInputState VehicleInputState;                                        // 0x02C8 (size: 0x1)
+    class UCapsuleComponent* Capsule;                                                 // 0x02D0 (size: 0x8)
+    class USkeletalMeshComponent* Mesh;                                               // 0x02D8 (size: 0x8)
+    class USkeletalMeshComponent* Head;                                               // 0x02E0 (size: 0x8)
+    class UVisPlayerVisualsComponent* PlayerVisualsComponent;                         // 0x02E8 (size: 0x8)
+    class UNiagaraComponent* TorchVFXComponent;                                       // 0x02F0 (size: 0x8)
 
-}; // Size: 0x300
+}; // Size: 0x310
 
 class AAnvilMovieCharacterDirector : public AActor
 {
@@ -611,19 +612,18 @@ class AUnderworldModuleDynamicPrefab : public ADynamicPrefab
 
 class AVisActor : public AVisActorBase
 {
-    FMapIconInstanceProperty MapIconProperty;                                         // 0x0290 (size: 0x88)
-    EHUDWindowType UseWindowType;                                                     // 0x0318 (size: 0x1)
-    FText UseDisclaimerText;                                                          // 0x0320 (size: 0x18)
-    bool bUseForceCameraZoom;                                                         // 0x0338 (size: 0x1)
-    TArray<EActionButtonType> AdditionalActionButtons;                                // 0x0340 (size: 0x10)
-    uint8 bNightVisibility;                                                           // 0x0350 (size: 0x1)
-    uint8 bNoCheckOnCeilVisibility;                                                   // 0x0350 (size: 0x1)
-    uint8 bUseInteractionOutline;                                                     // 0x0350 (size: 0x1)
-    class UTexture2D* InteractionIcon;                                                // 0x0358 (size: 0x8)
-    float AnimSpeed;                                                                  // 0x0360 (size: 0x4)
-    FRotator AnimRotationalSpeed;                                                     // 0x0368 (size: 0x18)
-    FVector AnimVelocity;                                                             // 0x0380 (size: 0x18)
-    class UEntityTemplate* TemplateCDO;                                               // 0x03A0 (size: 0x8)
+    FMapIconInstanceProperty MapIconProperty;                                         // 0x02A0 (size: 0x88)
+    EHUDWindowType UseWindowType;                                                     // 0x0328 (size: 0x1)
+    FText UseDisclaimerText;                                                          // 0x0330 (size: 0x18)
+    bool bUseForceCameraZoom;                                                         // 0x0348 (size: 0x1)
+    TArray<EActionButtonType> AdditionalActionButtons;                                // 0x0350 (size: 0x10)
+    uint8 bNightVisibility;                                                           // 0x0360 (size: 0x1)
+    uint8 bNoCheckOnCeilVisibility;                                                   // 0x0360 (size: 0x1)
+    uint8 bUseInteractionOutline;                                                     // 0x0360 (size: 0x1)
+    class UTexture2D* InteractionIcon;                                                // 0x0368 (size: 0x8)
+    float AnimSpeed;                                                                  // 0x0370 (size: 0x4)
+    FRotator AnimRotationalSpeed;                                                     // 0x0378 (size: 0x18)
+    FVector AnimVelocity;                                                             // 0x0390 (size: 0x18)
     FText VisDisplayName;                                                             // 0x03A8 (size: 0x18)
     FText Description;                                                                // 0x03C0 (size: 0x18)
     FText DescriptionFooter;                                                          // 0x03D8 (size: 0x18)
@@ -671,6 +671,12 @@ class AVisBeaconTower : public AVisStructure
 
 }; // Size: 0x520
 
+class AVisBoat : public AVisVehicle
+{
+    TMap<class UEntityAttachableProxyComponent*, class UEntityAttachableDataComponent*> Slots; // 0x04D8 (size: 0x50)
+
+}; // Size: 0x528
+
 class AVisBuildSite : public AVisActor
 {
     class UVisBuildGhostComponent* VisBuildGhostComponent;                            // 0x04A0 (size: 0x8)
@@ -689,17 +695,17 @@ class AVisBuildSite : public AVisActor
 
 class AVisCart : public AVisVehicle
 {
-    class UHungerDataComponent* HungerDataComponent;                                  // 0x04C8 (size: 0x8)
-    class UStaminaDataComponent* StaminaDataComponent;                                // 0x04D0 (size: 0x8)
-    class UAnimalAIDataComponent* AnimalAIDataComponent;                              // 0x04D8 (size: 0x8)
-    FName SeatSocketName;                                                             // 0x04E0 (size: 0x8)
-    class USkeletalMeshComponent* Mesh;                                               // 0x04E8 (size: 0x8)
-    class USkeletalMeshComponent* SaddleMesh;                                         // 0x04F0 (size: 0x8)
-    class USkeletalMeshComponent* HalterHeadMesh;                                     // 0x04F8 (size: 0x8)
-    class USkeletalMeshComponent* HalterBodyMesh;                                     // 0x0500 (size: 0x8)
-    TArray<class USkeletalMesh*> SaddleMeshes;                                        // 0x0508 (size: 0x10)
+    class UHungerDataComponent* HungerDataComponent;                                  // 0x04D8 (size: 0x8)
+    class UStaminaDataComponent* StaminaDataComponent;                                // 0x04E0 (size: 0x8)
+    class UAnimalAIDataComponent* AnimalAIDataComponent;                              // 0x04E8 (size: 0x8)
+    FName SeatSocketName;                                                             // 0x04F0 (size: 0x8)
+    class USkeletalMeshComponent* Mesh;                                               // 0x04F8 (size: 0x8)
+    class USkeletalMeshComponent* SaddleMesh;                                         // 0x0500 (size: 0x8)
+    class USkeletalMeshComponent* HalterHeadMesh;                                     // 0x0508 (size: 0x8)
+    class USkeletalMeshComponent* HalterBodyMesh;                                     // 0x0510 (size: 0x8)
+    TArray<class USkeletalMesh*> SaddleMeshes;                                        // 0x0518 (size: 0x10)
 
-}; // Size: 0x518
+}; // Size: 0x528
 
 class AVisCentralMarketplace : public AVisStructure
 {
@@ -863,6 +869,19 @@ class AVisItemStash : public AVisActor
 
 }; // Size: 0x4B0
 
+class AVisLatticeMine : public AVisActor
+{
+    class UBoxComponent* LatticeArea;                                                 // 0x04A0 (size: 0x8)
+
+}; // Size: 0x4A8
+
+class AVisLatticeMineChunk : public AVisActor
+{
+    class UArrowComponent* ArrowComponent;                                            // 0x04A0 (size: 0x8)
+    class UStaticMeshComponent* ChunkMesh;                                            // 0x04A8 (size: 0x8)
+
+}; // Size: 0x4B0
+
 class AVisLivestockStructure : public AVisStructure
 {
     TSubclassOf<class UItemTemplate> FoodItem;                                        // 0x0518 (size: 0x8)
@@ -894,11 +913,11 @@ class AVisMine : public AVisStructure
 
 class AVisMobileWeapon : public AVisVehicle
 {
-    class UMountedWeaponDataComponent* MountedWeaponDataComponent;                    // 0x04C8 (size: 0x8)
-    class USkeletalMeshComponent* VehicleMesh;                                        // 0x04D0 (size: 0x8)
-    class USkeletalMeshComponent* AmmoMesh;                                           // 0x04D8 (size: 0x8)
+    class UMountedWeaponDataComponent* MountedWeaponDataComponent;                    // 0x04D8 (size: 0x8)
+    class USkeletalMeshComponent* VehicleMesh;                                        // 0x04E0 (size: 0x8)
+    class USkeletalMeshComponent* AmmoMesh;                                           // 0x04E8 (size: 0x8)
 
-}; // Size: 0x4E0
+}; // Size: 0x4F0
 
 class AVisOfflineCharacter : public AVisActor
 {
@@ -975,11 +994,12 @@ class AVisPlayer : public AVisActor
     class UAudioComponent* WindMidAudioComponent;                                     // 0x0750 (size: 0x8)
     class UAudioComponent* WindHighAudioComponent;                                    // 0x0758 (size: 0x8)
     class USoundCue* RepairItemSoundCue;                                              // 0x0760 (size: 0x8)
-    class UMaterialParameterCollection* PostProcessMaterialParameterCollection;       // 0x0768 (size: 0x8)
-    class UMaterialParameterCollection* PositionPostProcessMaterialParameterCollection; // 0x0770 (size: 0x8)
-    class AVisActor* CurrentUsableVisActor;                                           // 0x07E0 (size: 0x8)
-    class AVisActor* CurrentMountableVisActor;                                        // 0x07E8 (size: 0x8)
-    class AActor* CurrentUEUsableActor;                                               // 0x07F0 (size: 0x8)
+    class UDecalComponent* PushIndicatorDecalComponent;                               // 0x0768 (size: 0x8)
+    class UMaterialParameterCollection* PostProcessMaterialParameterCollection;       // 0x0770 (size: 0x8)
+    class UMaterialParameterCollection* PositionPostProcessMaterialParameterCollection; // 0x0778 (size: 0x8)
+    class AVisActor* CurrentUsableVisActor;                                           // 0x07E8 (size: 0x8)
+    class AVisActor* CurrentMountableVisActor;                                        // 0x07F0 (size: 0x8)
+    class AActor* CurrentUEUsableActor;                                               // 0x07F8 (size: 0x8)
 
     float GetVelocityHeadingDegrees();
     FString GetPlayerName();
@@ -989,7 +1009,7 @@ class AVisPlayer : public AVisActor
     void BP_UpdateNightShroudMaterials();
     void BP_OnHeldItemChanged();
     FVector AnimGetVelocity();
-}; // Size: 0x808
+}; // Size: 0x810
 
 class AVisPowerMill : public AVisStructure
 {
@@ -1111,12 +1131,13 @@ class AVisUnderworldModuleDynamic : public AVisUnderworldModule
 class AVisVehicle : public AVisActor
 {
     class UVehicleMovementDataComponent* VehicleMovementDataComponent;                // 0x04A0 (size: 0x8)
-    class UAudioComponent* MoveLoopAudioComponent;                                    // 0x04A8 (size: 0x8)
-    class UNiagaraComponent* MoveLoopParticleSystem;                                  // 0x04B0 (size: 0x8)
-    class UHealthDataComponent* HealthDataComponent;                                  // 0x04B8 (size: 0x8)
-    class UArrowComponent* ArrowComponent;                                            // 0x04C0 (size: 0x8)
+    class UEntityAttachableDataComponent* EntityAttachableDataComponent;              // 0x04A8 (size: 0x8)
+    class UAudioComponent* MoveLoopAudioComponent;                                    // 0x04B0 (size: 0x8)
+    class UNiagaraComponent* MoveLoopParticleSystem;                                  // 0x04B8 (size: 0x8)
+    class UHealthDataComponent* HealthDataComponent;                                  // 0x04C0 (size: 0x8)
+    class UArrowComponent* ArrowComponent;                                            // 0x04D0 (size: 0x8)
 
-}; // Size: 0x4C8
+}; // Size: 0x4D8
 
 class AVisWindMill : public AVisStructure
 {
@@ -2842,6 +2863,7 @@ class UVisVehicleAnimInstance : public UAnimInstance
     float NativeHorizontalMovement;                                                   // 0x034C (size: 0x4)
     float NativeVerticalMovement;                                                     // 0x0350 (size: 0x4)
     bool bIsOccupied;                                                                 // 0x0354 (size: 0x1)
+    bool bShouldAnimateMoving;                                                        // 0x0355 (size: 0x1)
 
 }; // Size: 0x360
 
