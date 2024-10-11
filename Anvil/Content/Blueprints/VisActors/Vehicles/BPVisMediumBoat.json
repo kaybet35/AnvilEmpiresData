@@ -46,7 +46,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisMediumBoat_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.18"
       }
     },
     "SuperStruct": {
@@ -54,6 +54,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sail_Mesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "WaterStatic",
@@ -132,7 +143,7 @@
     "Properties": {
       "VehicleMovementDataComponent": {
         "ObjectName": "VehicleMovementDataComponent'Default__BPVisMediumBoat_C:VehicleMovementDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.22"
       },
       "EntityAttachableDataComponent": {
         "ObjectName": "EntityAttachableDataComponent'Default__BPVisMediumBoat_C:EntityAttachableDataComponent'",
@@ -161,8 +172,8 @@
       "VisDisplayName": {
         "Namespace": "",
         "Key": "03BE918E444D897E328F2C958828A15F",
-        "SourceString": "Transport Boat",
-        "LocalizedString": "Transport Boat"
+        "SourceString": "Cargo Ship",
+        "LocalizedString": "Cargo Ship"
       },
       "Description": {
         "Namespace": "",
@@ -319,7 +330,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisMediumBoat_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.20"
       },
       "ChildNodes": [
         {
@@ -329,6 +340,10 @@
         {
           "ObjectName": "SCS_Node'BPVisMediumBoat_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisMediumBoat_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.17"
         }
       ],
       "VariableGuid": "1F604717-4FA9A0F3-7D6A6694-B64C675A",
@@ -347,7 +362,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisMediumBoat_C:CullVolume_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.21"
       },
       "VariableGuid": "C786FF73-4D803441-0A7FD6B5-A1D936DA",
       "InternalVariableName": "CullVolume"
@@ -369,6 +384,24 @@
       },
       "VariableGuid": "D325D4D8-45AC5C06-5E9CBEB9-924B73A0",
       "InternalVariableName": "WaterStatic"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisMediumBoat_C:Sail_Mesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.19"
+      },
+      "VariableGuid": "D7A3C966-4489EF3E-52EF20B6-4CA228B1",
+      "InternalVariableName": "Sail_Mesh"
     }
   },
   {
@@ -403,11 +436,35 @@
         {
           "ObjectName": "SCS_Node'BPVisMediumBoat_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisMediumBoat_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.17"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisMediumBoat_C:SimpleConstructionScript_0.SCS_Node_0'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.11"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Sail_Mesh_GEN_VARIABLE",
+    "Outer": "BPVisMediumBoat_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'MediumBoat_Sail_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/MediumBoat_Sail_ABP.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'MediumBoat_Sail_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/MediumBoat_Sail_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'MediumBoat_Sail_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/MediumBoat_Sail_SK.0"
       }
     }
   },
@@ -422,12 +479,12 @@
         "ObjectPath": "/Script/ClothingSystemRuntimeNv"
       },
       "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'MediumBoat_SK'",
-        "ObjectPath": "Anvil/Content/Meshes/Vehicles/MediumBoat_SK.3"
+        "ObjectName": "SkeletalMesh'MediumBoat_Hull_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/MediumBoat_Hull_SK.0"
       },
       "SkinnedAsset": {
-        "ObjectName": "SkeletalMesh'MediumBoat_SK'",
-        "ObjectPath": "Anvil/Content/Meshes/Vehicles/MediumBoat_SK.3"
+        "ObjectName": "SkeletalMesh'MediumBoat_Hull_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/MediumBoat_Hull_SK.0"
       }
     }
   },

@@ -3,6 +3,6 @@
 
 class UBPFamilyMarkerMapIcon_C : public UFamilyMarkerMapIcon
 {
-}; // Size: 0x3A0
+}; // Size: 0x398
 
 #endif

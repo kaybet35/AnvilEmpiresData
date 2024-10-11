@@ -1,0 +1,55 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "UWCollapseRumbleLoop_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'UWCollapseRumbleLoop_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Underworld/UWCollapseRumbleLoop_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 13200.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'AmbientLarge'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/AmbientLarge.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "UWCollapseRumbleLoop_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'UWCollapseRumbleLoop_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Underworld/UWCollapseRumbleLoop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "UWCollapseRumbleLoop_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Underworld/UWCollapseRumbleLoop01.UWCollapseRumbleLoop01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'UWCollapseRumbleLoop01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Underworld/UWCollapseRumbleLoop01.0"
+    }
+  }
+]

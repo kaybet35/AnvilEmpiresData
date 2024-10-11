@@ -29,5 +29,6 @@ enum class EActionButtonType : uint8 {
     StopPowerMill,
     ClaimFamilyInventory,
     PledgeToTown,
+    ReinforceStructure,
 };
 

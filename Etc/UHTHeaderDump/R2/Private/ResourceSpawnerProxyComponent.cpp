@@ -4,7 +4,7 @@ UResourceSpawnerProxyComponent::UResourceSpawnerProxyComponent() {
     this->SpawnedResource = NULL;
     this->SpawnRadius = 0.00f;
     this->MinimumSpawnRadius = 0.00f;
-    this->SpawnInterval = 0.00f;
+    this->SpawnInterval = 60.00f;
     this->SpawnQuantity = 0;
     this->SpawnWaveCountMultiplier = 1.00f;
     this->MaxSpawn = 0;

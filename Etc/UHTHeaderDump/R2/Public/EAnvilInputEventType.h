@@ -54,5 +54,7 @@ enum class EAnvilInputEventType : uint8 {
     PledgeToTown,
     AltAttack,
     AltShield,
+    ReinforceStructure,
+    SwitchSeat,
 };
 

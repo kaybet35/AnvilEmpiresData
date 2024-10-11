@@ -16,10 +16,42 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "WorldEntranceSandboxUnderworld_C'Default__WorldEntranceSandboxUnderworld_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntranceSandboxUnderworld.2"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntranceSandboxUnderworld.4"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__WorldEntranceSandboxUnderworld_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 300.0
+      },
+      "Extents": {
+        "X": 200.0,
+        "Y": 200.0,
+        "Z": 300.0
+      },
+      "CollisionMask": 16777224,
+      "bVaultable": false
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableProxyComponent_0",
+    "Outer": "Default__WorldEntranceSandboxUnderworld_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Properties": {
+      "DestructionEffectEntity": {
+        "ObjectName": "BlueprintGeneratedClass'EffectStructureDestroy_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectStructureDestroy.0"
+      }
     }
   },
   {
@@ -28,18 +60,8 @@
     "Outer": "Default__WorldEntranceSandboxUnderworld_C",
     "Class": "UScriptClass'WorldEntranceProxyComponent'",
     "Properties": {
-      "DeparturePosition": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 300.0
-      },
-      "DepartureExtents": {
-        "X": 100.0,
-        "Y": 100.0,
-        "Z": 300.0
-      },
       "ArrivalPosition": {
-        "X": 500.0,
+        "X": 0.0,
         "Y": 0.0,
         "Z": 300.0
       },
@@ -57,7 +79,15 @@
       "Components": [
         {
           "ObjectName": "WorldEntranceProxyComponent'Default__WorldEntranceSandboxUnderworld_C:WorldEntranceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntranceSandboxUnderworld.3"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__WorldEntranceSandboxUnderworld_C:BoxCollisionProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntranceSandboxUnderworld.1"
+        },
+        {
+          "ObjectName": "DestroyableProxyComponent'Default__WorldEntranceSandboxUnderworld_C:DestroyableProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntranceSandboxUnderworld.2"
         }
       ],
       "VisActorClass": {

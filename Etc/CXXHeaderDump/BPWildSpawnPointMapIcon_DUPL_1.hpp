@@ -3,6 +3,6 @@
 
 class UBPWildSpawnPointMapIcon_C : public UWildSpawnPointMapIcon
 {
-}; // Size: 0x3A8
+}; // Size: 0x3A0
 
 #endif

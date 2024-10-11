@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisWorldEntranceCave_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.30"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.31"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,28 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "flatstones1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EntranceVisualizer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "rockmed4",
@@ -100,28 +122,6 @@
       {
         "Type": "ObjectProperty",
         "Name": "rocksflat1",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStaticMeshComponent'",
-          "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "flatstones1",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStaticMeshComponent'",
-          "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "rockmed2",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -283,10 +283,28 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisWorldEntranceCave_C'Default__BPVisWorldEntranceCave_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.2"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.3"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "EntranceVisualizer_GEN_VARIABLE",
+    "Outer": "BPVisWorldEntranceCave_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 200.0,
+        "Y": 200.0,
+        "Z": 300.0
+      },
+      "RelativeLocation": {
+        "X": -175.0,
+        "Y": 100.0,
+        "Z": 0.0
+      }
     }
   },
   {
@@ -300,7 +318,7 @@
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisWorldEntranceCave_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.5"
       },
       "MapIconProperty": {
         "Icon": {
@@ -308,6 +326,12 @@
           "ObjectPath": "Anvil/Content/Textures/UI/Map/MapIconSilverMine.0"
         },
         "MapActorType": "EMapIconType::Mine"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "7781BA244198CF165B1596AFD205C605",
+        "SourceString": "entrance to Underworld",
+        "LocalizedString": "entrance to Underworld"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisWorldEntranceCave_C:ArrowComponent'",
@@ -356,7 +380,7 @@
       },
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisWorldEntranceCave_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.31"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.32"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisWorldEntranceCave_C:ArrowComponent'",
@@ -392,7 +416,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisWorldEntranceCave_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.6"
       },
       "VariableGuid": "935F3F43-4AEE527C-D635D095-2C4FA633",
       "InternalVariableName": "DefaultSceneRoot"
@@ -417,19 +441,19 @@
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.26"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.27"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.29"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.30"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.14"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_18'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.16"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_21'",
@@ -453,7 +477,11 @@
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_30'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.25"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.18"
         }
       ],
       "VariableGuid": "DC2E4A52-453FA9E3-2803DF89-FD95476D",
@@ -472,7 +500,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWorldEntranceCave_C:rock5_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.41"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.42"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -492,7 +520,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWorldEntranceCave_C:rock2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.39"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.40"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -512,7 +540,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWorldEntranceCave_C:rock1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.38"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.39"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -532,7 +560,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWorldEntranceCave_C:rockbig1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.42"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.43"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -590,7 +618,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWorldEntranceCave_C:flatstones2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.33"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.34"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -628,7 +656,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWorldEntranceCave_C:rockmed1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.43"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.44"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -648,32 +676,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWorldEntranceCave_C:flatstones1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.32"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.33"
       },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
       "VariableGuid": "8DE4DC77-4FD2EFBC-4D72ACA8-5A61866C",
       "InternalVariableName": "flatstones1"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_20",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisStaticMeshComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisWorldEntranceCave_C:rockmed2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.44"
-      },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "D0EAD17D-46C27751-797D08BF-F0FDF99D",
-      "InternalVariableName": "rockmed2"
     }
   },
   {
@@ -706,7 +712,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWorldEntranceCave_C:rock3_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.40"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.41"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -726,7 +732,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWorldEntranceCave_C:grass_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.37"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.38"
       },
       "VariableGuid": "E26EA81F-4545B74F-350F02BC-E2221055",
       "InternalVariableName": "grass"
@@ -744,7 +750,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWorldEntranceCave_C:grass2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.35"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.36"
       },
       "VariableGuid": "7EC77D53-45C2E3CC-0B67F590-4735FD9F",
       "InternalVariableName": "grass2"
@@ -780,10 +786,30 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWorldEntranceCave_C:grass1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.34"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.35"
       },
       "VariableGuid": "92DB7503-42589279-F4D4D9B0-7AC7AE62",
       "InternalVariableName": "grass1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPVisWorldEntranceCave_C:EntranceVisualizer_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.2"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "02E371EF-44F0EEB2-7021B28B-41A558C8",
+      "InternalVariableName": "EntranceVisualizer"
     }
   },
   {
@@ -798,7 +824,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWorldEntranceCave_C:grass4_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.36"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.37"
       },
       "VariableGuid": "5B398D51-4DECA8C1-BBD46F88-DECF7C51",
       "InternalVariableName": "grass4"
@@ -816,7 +842,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPVisWorldEntranceCave_C:CaveEntrance_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.4"
       },
       "VariableGuid": "A017D81C-419497D6-4117329B-8F5FF70D",
       "InternalVariableName": "CaveEntrance"
@@ -889,43 +915,35 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.8"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.11"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.16"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_20'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.18"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.17"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.13"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.10"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.12"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.8"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.9"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_23'",
@@ -933,33 +951,37 @@
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.27"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.28"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.28"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.25"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.8"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.26"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.27"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.29"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.30"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.14"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_18'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.16"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_21'",
@@ -983,43 +1005,35 @@
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_30'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.25"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.26"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.11"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.16"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_20'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.18"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.17"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.13"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.10"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.12"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.8"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.9"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_23'",
@@ -1027,16 +1041,24 @@
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.27"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.28"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.28"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.18"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisWorldEntranceCave_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntranceCave.7"
       }
     }
   },
@@ -1052,7 +1074,7 @@
     "Outer": "BPVisWorldEntranceCave_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
     "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "VisMeshProfile": "EVisMeshProfile::Structure",
       "StaticMesh": {
         "ObjectName": "StaticMesh'RockAScatterFlat01'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/Scatter/RockAScatterFlat01.2"
@@ -1069,9 +1091,7 @@
         "Z": 0.0
       },
       "ComponentTags": [
-        "Structure",
-        "Collision",
-        "ProjectToLandscape"
+        "Structure"
       ]
     }
   },
@@ -1277,9 +1297,9 @@
         "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/Scatter/RockACaveBig02.2"
       },
       "RelativeLocation": {
-        "X": -10.905514,
-        "Y": -793.2437,
-        "Z": 2.3351582E-13
+        "X": 19.206194,
+        "Y": -611.3281,
+        "Z": 10.0
       },
       "RelativeRotation": {
         "Pitch": -0.0,
@@ -1407,34 +1427,6 @@
   },
   {
     "Type": "VisStaticMeshComponent",
-    "Name": "rockmed2_GEN_VARIABLE",
-    "Outer": "BPVisWorldEntranceCave_C",
-    "Class": "UScriptClass'VisStaticMeshComponent'",
-    "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'RockACaveMed01'",
-        "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/Scatter/RockACaveMed01.2"
-      },
-      "RelativeLocation": {
-        "X": -355.64722,
-        "Y": -183.88432,
-        "Z": 0.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 170.0,
-        "Roll": -0.0
-      },
-      "ComponentTags": [
-        "Structure",
-        "Collision",
-        "ProjectToLandscape"
-      ]
-    }
-  },
-  {
-    "Type": "VisStaticMeshComponent",
     "Name": "rockmed3_GEN_VARIABLE",
     "Outer": "BPVisWorldEntranceCave_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
@@ -1445,8 +1437,8 @@
         "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/Scatter/RockACaveMed04.2"
       },
       "RelativeLocation": {
-        "X": -283.1418,
-        "Y": -402.00565,
+        "X": -212.70023,
+        "Y": -408.16852,
         "Z": 0.0
       },
       "RelativeRotation": {

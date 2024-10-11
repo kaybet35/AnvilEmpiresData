@@ -15,7 +15,6 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->SecondaryHeldUnderlyingCodeName = 0;
     this->UnarmedPrimaryHeldItemCodeName = 0;
     this->UnarmedSecondaryHeldItemCodeName = 0;
-    this->CurrentMountedEntity = 0;
     this->PlayerUniqueID = 0;
     this->NobleVoteId = 0;
     this->TrappedTimer = 0.00f;

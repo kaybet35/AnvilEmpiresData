@@ -26,6 +26,7 @@ class UMaterialParameterCollection;
 class UNiagaraComponent;
 class UPlayerInputDataComponent;
 class UPlayerStatusDataComponent;
+class UPointLightComponent;
 class UPostProcessComponent;
 class USimPlayerDataComponent;
 class USkeletalMeshComponent;
@@ -151,6 +152,12 @@ private:
     UNiagaraComponent* TorchVFXComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UNiagaraComponent* TorchVFX2Component;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPointLightComponent* TorchPointLightComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAudioComponent* TorchAudioComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -189,6 +196,9 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAudioComponent* WindHighAudioComponent;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UNiagaraComponent* UnderworldCollapseFXComponent;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* RepairItemSoundCue;
     
@@ -200,6 +210,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialParameterCollection* PositionPostProcessMaterialParameterCollection;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UMaterialParameterCollection* UnderworldCollapseMaterialParameterCollection;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AVisActor* CurrentUsableVisActor;

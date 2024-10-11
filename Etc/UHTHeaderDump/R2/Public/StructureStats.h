@@ -100,6 +100,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<EAnvilUnderworldModuleEdgeType> ModuleEdgeList;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float RemainingTimeUntilCollapse_Sec;
+    
     R2_API FStructureStats();
 };
 

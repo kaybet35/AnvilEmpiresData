@@ -63,6 +63,15 @@
                   "bAutomaticRemainingTimeRule": false,
                   "SyncGroupNameToRequireValidMarkersRule": "None",
                   "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
                 }
               ],
               "StateRootNodeIndex": 3,
@@ -81,9 +90,18 @@
               "StateName": "Galop",
               "Transitions": [
                 {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                },
+                {
                   "CanTakeDelegateIndex": 13,
                   "CustomResultNodeIndex": -1,
-                  "TransitionIndex": 4,
+                  "TransitionIndex": 6,
                   "bDesiredTransitionReturnValue": true,
                   "bAutomaticRemainingTimeRule": false,
                   "SyncGroupNameToRequireValidMarkersRule": "None",
@@ -106,9 +124,18 @@
               "StateName": "Walk back",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 14,
+                  "CanTakeDelegateIndex": 15,
                   "CustomResultNodeIndex": -1,
-                  "TransitionIndex": 5,
+                  "TransitionIndex": 7,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 8,
                   "bDesiredTransitionReturnValue": true,
                   "bAutomaticRemainingTimeRule": false,
                   "SyncGroupNameToRequireValidMarkersRule": "None",
@@ -157,6 +184,19 @@
             },
             {
               "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
               "NextState": 0,
               "CrossfadeDuration": 0.2,
               "StartNotify": -1,
@@ -170,7 +210,7 @@
             },
             {
               "PreviousState": 1,
-              "NextState": 2,
+              "NextState": 0,
               "CrossfadeDuration": 0.2,
               "StartNotify": -1,
               "EndNotify": -1,
@@ -184,6 +224,32 @@
             {
               "PreviousState": 2,
               "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
               "CrossfadeDuration": 0.2,
               "StartNotify": -1,
               "EndNotify": -1,
@@ -324,6 +390,20 @@
             20,
             20,
             20,
+            4294967295
+          ],
+          "NodeIndex": 7,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Donkey_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_ABP.0"
+          },
+          "Entries": [
+            20,
+            20,
+            20,
             4294967295,
             4294967295,
             4294967295,
@@ -342,7 +422,7 @@
             9,
             14
           ],
-          "NodeIndex": 7,
+          "NodeIndex": 8,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -359,7 +439,7 @@
             17,
             2
           ],
-          "NodeIndex": 8,
+          "NodeIndex": 9,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -389,7 +469,7 @@
             9,
             14
           ],
-          "NodeIndex": 9,
+          "NodeIndex": 10,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -406,7 +486,7 @@
             17,
             5
           ],
-          "NodeIndex": 10,
+          "NodeIndex": 11,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -436,7 +516,7 @@
             9,
             14
           ],
-          "NodeIndex": 11,
+          "NodeIndex": 12,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -453,7 +533,7 @@
             17,
             8
           ],
-          "NodeIndex": 12,
+          "NodeIndex": 13,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -483,7 +563,7 @@
             9,
             14
           ],
-          "NodeIndex": 13,
+          "NodeIndex": 14,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -500,7 +580,7 @@
             17,
             19
           ],
-          "NodeIndex": 14,
+          "NodeIndex": 15,
           "Flags": "EAnimNodeDataFlags::None"
         },
         {
@@ -520,7 +600,7 @@
             4294967295,
             4294967295
           ],
-          "NodeIndex": 15,
+          "NodeIndex": 16,
           "Flags": "EAnimNodeDataFlags::None"
         }
       ],
@@ -893,12 +973,12 @@
         "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_ABP.3"
       },
       {
-        "ObjectName": "Function'Donkey_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Donkey_ABP_AnimGraphNode_TransitionResult_23C641F44B2EA740F5051E9BD68C2330'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_ABP.4"
-      },
-      {
         "ObjectName": "Function'Donkey_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Donkey_ABP_AnimGraphNode_TransitionResult_A41B114A42AE4F7C4BB58FA4CD307164'",
         "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_ABP.6"
+      },
+      {
+        "ObjectName": "Function'Donkey_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Donkey_ABP_AnimGraphNode_TransitionResult_23C641F44B2EA740F5051E9BD68C2330'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_ABP.4"
       },
       {
         "ObjectName": "Function'Donkey_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Donkey_ABP_AnimGraphNode_TransitionResult_962C48CD477643DEFBF5509AE3CCE953'",
@@ -962,6 +1042,16 @@
         "ElementSize": 184,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -1129,13 +1219,13 @@
         "ObjectName": "Function'Donkey_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Donkey_ABP_AnimGraphNode_TransitionResult_962C48CD477643DEFBF5509AE3CCE953'",
         "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_ABP.5"
       },
-      "EvaluateGraphExposedInputs_ExecuteUbergraph_Donkey_ABP_AnimGraphNode_TransitionResult_A41B114A42AE4F7C4BB58FA4CD307164": {
-        "ObjectName": "Function'Donkey_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Donkey_ABP_AnimGraphNode_TransitionResult_A41B114A42AE4F7C4BB58FA4CD307164'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_ABP.6"
-      },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_Donkey_ABP_AnimGraphNode_TransitionResult_23C641F44B2EA740F5051E9BD68C2330": {
         "ObjectName": "Function'Donkey_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Donkey_ABP_AnimGraphNode_TransitionResult_23C641F44B2EA740F5051E9BD68C2330'",
         "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_ABP.4"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Donkey_ABP_AnimGraphNode_TransitionResult_A41B114A42AE4F7C4BB58FA4CD307164": {
+        "ObjectName": "Function'Donkey_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Donkey_ABP_AnimGraphNode_TransitionResult_A41B114A42AE4F7C4BB58FA4CD307164'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_ABP.6"
       },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_Donkey_ABP_AnimGraphNode_TransitionResult_23A820A147B402CBF90C9F80D1912CF0": {
         "ObjectName": "Function'Donkey_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Donkey_ABP_AnimGraphNode_TransitionResult_23A820A147B402CBF90C9F80D1912CF0'",
@@ -1250,6 +1340,18 @@
       },
       {
         "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
         "Name": "CallFunc_Greater_DoubleDouble_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 1,
@@ -1274,7 +1376,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue",
+        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue_2",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -1286,7 +1388,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue_2",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -1310,6 +1412,18 @@
       },
       {
         "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
         "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue_2",
         "Flags": "RF_Public",
         "ElementSize": 1,
@@ -1322,6 +1436,12 @@
       },
       {
         "Type": "DoubleProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
         "Name": "CallFunc_Greater_DoubleDouble_A_ImplicitCast",
         "Flags": "RF_Public",
         "ElementSize": 8
@@ -1329,12 +1449,6 @@
       {
         "Type": "DoubleProperty",
         "Name": "CallFunc_Greater_DoubleDouble_A_ImplicitCast_1",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_LessEqual_DoubleDouble_A_ImplicitCast",
         "Flags": "RF_Public",
         "ElementSize": 8
       },

@@ -16,7 +16,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "WorldEntrance_C'Default__WorldEntrance_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntrance.3"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntrance.5"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -29,17 +29,44 @@
     "Class": "UScriptClass'BoxCollisionProxyComponent'",
     "Properties": {
       "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 100.0
+        "X": -175.0,
+        "Y": 100.0,
+        "Z": 0.0
       },
       "Extents": {
         "X": 200.0,
         "Y": 200.0,
-        "Z": 100.0
+        "Z": 300.0
+      },
+      "CollisionMask": 16777224,
+      "bVaultable": false
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_1",
+    "Outer": "Default__WorldEntrance_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Extents": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
       },
       "CollisionMask": 8194,
       "bVaultable": false
+    }
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableProxyComponent_0",
+    "Outer": "Default__WorldEntrance_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Properties": {
+      "DestructionEffectEntity": {
+        "ObjectName": "BlueprintGeneratedClass'EffectStructureDestroy_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectStructureDestroy.0"
+      }
     }
   },
   {
@@ -59,7 +86,6 @@
       },
       "SpawnRadius": 1600.0,
       "MinimumSpawnRadius": 800.0,
-      "SpawnInterval": 60.0,
       "SpawnQuantity": 2,
       "MaxSpawn": 2,
       "ResourceReserveInitial": 2,
@@ -86,7 +112,11 @@
       "Components": [
         {
           "ObjectName": "WorldEntranceProxyComponent'Default__WorldEntrance_C:WorldEntranceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntrance.4"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntrance.6"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__WorldEntrance_C:BoxCollisionProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntrance.2"
         },
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__WorldEntrance_C:BoxCollisionProxyComponent_0'",
@@ -94,7 +124,11 @@
         },
         {
           "ObjectName": "ResourceSpawnerProxyComponent'Default__WorldEntrance_C:ResourceSpawnerProxyComponent_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntrance.2"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntrance.4"
+        },
+        {
+          "ObjectName": "DestroyableProxyComponent'Default__WorldEntrance_C:DestroyableProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/WorldEntrance.3"
         }
       ],
       "VisActorClass": {
@@ -109,19 +143,9 @@
     "Outer": "Default__WorldEntrance_C",
     "Class": "UScriptClass'WorldEntranceProxyComponent'",
     "Properties": {
-      "DeparturePosition": {
+      "ArrivalPosition": {
         "X": -300.0,
         "Y": 100.0,
-        "Z": 0.0
-      },
-      "DepartureExtents": {
-        "X": 100.0,
-        "Y": 100.0,
-        "Z": 400.0
-      },
-      "ArrivalPosition": {
-        "X": -600.0,
-        "Y": 200.0,
         "Z": 300.0
       }
     }

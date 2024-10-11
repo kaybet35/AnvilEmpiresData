@@ -4,6 +4,7 @@
 #include "DataComponent.h"
 #include "EAnvilCharacterStance.h"
 #include "EAnvilSimActivityState.h"
+#include "EntityHandle.h"
 #include "NightShroudLightSource.h"
 #include "SimPlayerDataComponent.generated.h"
 
@@ -59,8 +60,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 UnarmedSecondaryHeldItemCodeName;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    int64 CurrentMountedEntity;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FEntityHandle CurrentMountedEntity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector CurrentMountedSeatOffset;

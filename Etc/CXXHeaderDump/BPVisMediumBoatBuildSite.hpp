@@ -3,8 +3,6 @@
 
 class ABPVisMediumBoatBuildSite_C : public AVisBuildSite
 {
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0510 (size: 0x8)
-
-}; // Size: 0x518
+}; // Size: 0x510
 
 #endif

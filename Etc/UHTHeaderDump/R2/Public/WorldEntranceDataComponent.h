@@ -9,12 +9,6 @@ class R2_API UWorldEntranceDataComponent : public UDataComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FVector DeparturePosition;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FVector DepartureExtents;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector ArrivalPosition;
     
     UWorldEntranceDataComponent(const FObjectInitializer& ObjectInitializer);

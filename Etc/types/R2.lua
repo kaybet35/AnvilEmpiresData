@@ -515,6 +515,7 @@ FStatusMessage = {}
 ---@field WorldEntranceDestinationMapId uint8
 ---@field WorldEntranceId int32
 ---@field ModuleEdgeList TArray<EAnvilUnderworldModuleEdgeType>
+---@field RemainingTimeUntilCollapse_Sec float
 FStructureStats = {}
 
 
@@ -1298,8 +1299,8 @@ UHitConverterProxyComponent = {}
 ---@class UHousingDataComponent : UDataComponent
 ---@field PlayerCapacity uint8
 ---@field AllowPublicPledging boolean
----@field IsForCampsOnly boolean
 ---@field IsGroupHouse boolean
+---@field bIsTownTent boolean
 ---@field PledgedPlayerIds FHousePledgedPlayerArray
 UHousingDataComponent = {}
 
@@ -1307,9 +1308,9 @@ UHousingDataComponent = {}
 
 ---@class UHousingProxyComponent : UProxyComponent
 ---@field PlayerCapacity uint8
----@field IsForCampsOnly boolean
 ---@field IsGroupHouse boolean
 ---@field bRequiresCeilingCheck boolean
+---@field bIsTownTent boolean
 UHousingProxyComponent = {}
 
 
@@ -1956,7 +1957,7 @@ USeekerProxyComponent = {}
 ---@field SecondaryHeldUnderlyingCodeName int32
 ---@field UnarmedPrimaryHeldItemCodeName int32
 ---@field UnarmedSecondaryHeldItemCodeName int32
----@field CurrentMountedEntity int64
+---@field CurrentMountedEntity FEntityHandle
 ---@field CurrentMountedSeatOffset FVector
 ---@field PlayerName FString
 ---@field PlayerUniqueID int64
@@ -2099,6 +2100,11 @@ UStaticTorchProxyComponent = {}
 ---@field bIsCollapsed boolean
 ---@field bIsFamilyDestroyed boolean
 ---@field bIsTownDestroyed boolean
+---@field bCanBeReinforced boolean
+---@field bReinforcing boolean
+---@field bReinforced boolean
+---@field ReinforcingFinishTime int32
+---@field ReinforcingTime int32
 ---@field StructureType EAnvilBuildStructureType
 ---@field BuilderId int64
 ---@field TownFamilyAreaId int32
@@ -2118,8 +2124,11 @@ UStructureProtectionProxyComponent = {}
 ---@field bCanCollapse boolean
 ---@field bIsAlwaysEnclosed boolean
 ---@field IgnoreMeshVisbilityChanges boolean
+---@field bCanBeReinforced boolean
+---@field ReinforcingTime int32
 ---@field CrenellationLevel uint8
 ---@field StructureType EAnvilBuildStructureType
+---@field ReinforcementCosts TArray<FBasicItemCount>
 UStructureProxyComponent = {}
 
 
@@ -2247,6 +2256,11 @@ UTweakableProxyComponent = {}
 ---@field NumDynamicModulesMin int32
 ---@field NumDynamicModulesMax int32
 ---@field MaxNumDynamicModuleSpawnDistance int32
+---@field TimeUntilCollapseMin_Hrs float
+---@field TimeUntilCollapseMax_Hrs float
+---@field TelegraphEventStartTimeBeforeCollapse_Hrs float
+---@field TelegraphEventIntervalMin_Sec float
+---@field TelegraphEventIntervalMax_Sec float
 UUnderworldModuleProxyComponent = {}
 
 
@@ -2291,6 +2305,7 @@ UVehicleMovementDataComponent = {}
 ---@field bWaterVehicle boolean
 ---@field bSailBoat boolean
 ---@field bDoAxleRaycasts boolean
+---@field bAllowSwitchSeat boolean
 ---@field bUsePitch boolean
 ---@field CollisionEffect TSubclassOf<UEntityTemplate>
 ---@field RammingDamage float
@@ -2379,16 +2394,12 @@ UWindMillProxyComponent = {}
 
 
 ---@class UWorldEntranceDataComponent : UDataComponent
----@field DeparturePosition FVector
----@field DepartureExtents FVector
 ---@field ArrivalPosition FVector
 UWorldEntranceDataComponent = {}
 
 
 
 ---@class UWorldEntranceProxyComponent : UProxyComponent
----@field DeparturePosition FVector
----@field DepartureExtents FVector
 ---@field ArrivalPosition FVector
 ---@field DestinationMapId EAnvilMapId
 UWorldEntranceProxyComponent = {}

@@ -15,10 +15,10 @@ public:
     bool AllowPublicPledging;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool IsForCampsOnly;
+    bool IsGroupHouse;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool IsGroupHouse;
+    bool bIsTownTent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHousePledgedPlayerArray PledgedPlayerIds;

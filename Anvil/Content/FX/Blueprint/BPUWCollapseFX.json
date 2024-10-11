@@ -1,0 +1,119 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPUWCollapseFX_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BPUWCollapseFX_C:ExecuteUbergraph_BPUWCollapseFX'",
+        "ObjectPath": "Anvil/Content/FX/Blueprint/BPUWCollapseFX.2"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SceneComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BPUWCollapseFX_C:ReceiveBeginPlay'",
+        "ObjectPath": "Anvil/Content/FX/Blueprint/BPUWCollapseFX.3"
+      },
+      {
+        "ObjectName": "Function'BPUWCollapseFX_C:ExecuteUbergraph_BPUWCollapseFX'",
+        "ObjectPath": "Anvil/Content/FX/Blueprint/BPUWCollapseFX.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BPUWCollapseFX": {
+        "ObjectName": "Function'BPUWCollapseFX_C:ExecuteUbergraph_BPUWCollapseFX'",
+        "ObjectPath": "Anvil/Content/FX/Blueprint/BPUWCollapseFX.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BPUWCollapseFX_C:ReceiveBeginPlay'",
+        "ObjectPath": "Anvil/Content/FX/Blueprint/BPUWCollapseFX.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPUWCollapseFX_C'Default__BPUWCollapseFX_C'",
+      "ObjectPath": "Anvil/Content/FX/Blueprint/BPUWCollapseFX.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPUWCollapseFX_C",
+    "Name": "Default__BPUWCollapseFX_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/FX/Blueprint/BPUWCollapseFX.BPUWCollapseFX_C'",
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPUWCollapseFX",
+    "Outer": "BPUWCollapseFX_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCameraManager_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCameraManager'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BPUWCollapseFX_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'ActorComponent:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  }
+]

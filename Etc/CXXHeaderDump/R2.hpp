@@ -452,8 +452,9 @@ struct FStructureStats
     uint8 WorldEntranceDestinationMapId;                                              // 0x0094 (size: 0x1)
     int32 WorldEntranceId;                                                            // 0x0098 (size: 0x4)
     TArray<EAnvilUnderworldModuleEdgeType> ModuleEdgeList;                            // 0x00A0 (size: 0x10)
+    float RemainingTimeUntilCollapse_Sec;                                             // 0x00B0 (size: 0x4)
 
-}; // Size: 0xB0
+}; // Size: 0xB8
 
 struct FTavernBuffConfig
 {
@@ -1299,8 +1300,8 @@ class UHousingDataComponent : public UDataComponent
 {
     uint8 PlayerCapacity;                                                             // 0x00A8 (size: 0x1)
     bool AllowPublicPledging;                                                         // 0x00C8 (size: 0x1)
-    bool IsForCampsOnly;                                                              // 0x00E8 (size: 0x1)
-    bool IsGroupHouse;                                                                // 0x0108 (size: 0x1)
+    bool IsGroupHouse;                                                                // 0x00E8 (size: 0x1)
+    bool bIsTownTent;                                                                 // 0x0108 (size: 0x1)
     FHousePledgedPlayerArray PledgedPlayerIds;                                        // 0x0128 (size: 0x10)
 
 }; // Size: 0x138
@@ -1308,9 +1309,9 @@ class UHousingDataComponent : public UDataComponent
 class UHousingProxyComponent : public UProxyComponent
 {
     uint8 PlayerCapacity;                                                             // 0x0028 (size: 0x1)
-    bool IsForCampsOnly;                                                              // 0x0029 (size: 0x1)
-    bool IsGroupHouse;                                                                // 0x002A (size: 0x1)
-    bool bRequiresCeilingCheck;                                                       // 0x002B (size: 0x1)
+    bool IsGroupHouse;                                                                // 0x0029 (size: 0x1)
+    bool bRequiresCeilingCheck;                                                       // 0x002A (size: 0x1)
+    bool bIsTownTent;                                                                 // 0x002B (size: 0x1)
 
 }; // Size: 0x30
 
@@ -1957,33 +1958,33 @@ class USimPlayerDataComponent : public UDataComponent
     int32 SecondaryHeldUnderlyingCodeName;                                            // 0x0268 (size: 0x4)
     int32 UnarmedPrimaryHeldItemCodeName;                                             // 0x0288 (size: 0x4)
     int32 UnarmedSecondaryHeldItemCodeName;                                           // 0x02A8 (size: 0x4)
-    int64 CurrentMountedEntity;                                                       // 0x02C8 (size: 0x8)
-    FVector CurrentMountedSeatOffset;                                                 // 0x02E8 (size: 0x18)
-    FString PlayerName;                                                               // 0x0318 (size: 0x10)
-    int64 PlayerUniqueID;                                                             // 0x0340 (size: 0x8)
-    int64 NobleVoteId;                                                                // 0x0360 (size: 0x8)
-    float TrappedTimer;                                                               // 0x0380 (size: 0x4)
-    float StaggerTimer;                                                               // 0x03A0 (size: 0x4)
-    bool bStaggered;                                                                  // 0x03C0 (size: 0x1)
-    bool bIsAiming;                                                                   // 0x03E0 (size: 0x1)
-    bool bIsGuarding;                                                                 // 0x0400 (size: 0x1)
-    bool bIsAdmin;                                                                    // 0x0420 (size: 0x1)
-    bool bPriming;                                                                    // 0x0440 (size: 0x1)
-    bool bInTravelZone;                                                               // 0x0460 (size: 0x1)
-    bool bAltAttackMode;                                                              // 0x0480 (size: 0x1)
-    bool bAltShieldMode;                                                              // 0x04A0 (size: 0x1)
-    bool bIsPushing;                                                                  // 0x04C0 (size: 0x1)
-    bool bIsMeshHidden;                                                               // 0x04E0 (size: 0x1)
-    bool bIsReinforcing;                                                              // 0x0500 (size: 0x1)
-    float SecondsUntilFullDecay;                                                      // 0x0520 (size: 0x4)
-    float HeldItemLightSourceRadius;                                                  // 0x0540 (size: 0x4)
-    TArray<FNightShroudLightSource> LightSourceData;                                  // 0x0560 (size: 0x10)
-    uint8 FoodTypesOnCooldownBits;                                                    // 0x0570 (size: 0x1)
-    float AimYaw;                                                                     // 0x0590 (size: 0x4)
-    float AimPitch;                                                                   // 0x05B0 (size: 0x4)
-    float LastIncomingAttackAngle;                                                    // 0x05D0 (size: 0x4)
+    FEntityHandle CurrentMountedEntity;                                               // 0x02C8 (size: 0x10)
+    FVector CurrentMountedSeatOffset;                                                 // 0x02F0 (size: 0x18)
+    FString PlayerName;                                                               // 0x0320 (size: 0x10)
+    int64 PlayerUniqueID;                                                             // 0x0348 (size: 0x8)
+    int64 NobleVoteId;                                                                // 0x0368 (size: 0x8)
+    float TrappedTimer;                                                               // 0x0388 (size: 0x4)
+    float StaggerTimer;                                                               // 0x03A8 (size: 0x4)
+    bool bStaggered;                                                                  // 0x03C8 (size: 0x1)
+    bool bIsAiming;                                                                   // 0x03E8 (size: 0x1)
+    bool bIsGuarding;                                                                 // 0x0408 (size: 0x1)
+    bool bIsAdmin;                                                                    // 0x0428 (size: 0x1)
+    bool bPriming;                                                                    // 0x0448 (size: 0x1)
+    bool bInTravelZone;                                                               // 0x0468 (size: 0x1)
+    bool bAltAttackMode;                                                              // 0x0488 (size: 0x1)
+    bool bAltShieldMode;                                                              // 0x04A8 (size: 0x1)
+    bool bIsPushing;                                                                  // 0x04C8 (size: 0x1)
+    bool bIsMeshHidden;                                                               // 0x04E8 (size: 0x1)
+    bool bIsReinforcing;                                                              // 0x0508 (size: 0x1)
+    float SecondsUntilFullDecay;                                                      // 0x0528 (size: 0x4)
+    float HeldItemLightSourceRadius;                                                  // 0x0548 (size: 0x4)
+    TArray<FNightShroudLightSource> LightSourceData;                                  // 0x0568 (size: 0x10)
+    uint8 FoodTypesOnCooldownBits;                                                    // 0x0578 (size: 0x1)
+    float AimYaw;                                                                     // 0x0598 (size: 0x4)
+    float AimPitch;                                                                   // 0x05B8 (size: 0x4)
+    float LastIncomingAttackAngle;                                                    // 0x05D8 (size: 0x4)
 
-}; // Size: 0x5F0
+}; // Size: 0x5F8
 
 class USimPlayerProxyComponent : public UProxyComponent
 {
@@ -2100,11 +2101,16 @@ class UStructureDataComponent : public UDataComponent
     bool bIsCollapsed;                                                                // 0x00E8 (size: 0x1)
     bool bIsFamilyDestroyed;                                                          // 0x0108 (size: 0x1)
     bool bIsTownDestroyed;                                                            // 0x0128 (size: 0x1)
-    EAnvilBuildStructureType StructureType;                                           // 0x0148 (size: 0x1)
-    int64 BuilderId;                                                                  // 0x0168 (size: 0x8)
-    int32 TownFamilyAreaId;                                                           // 0x0188 (size: 0x4)
+    bool bCanBeReinforced;                                                            // 0x0148 (size: 0x1)
+    bool bReinforcing;                                                                // 0x0168 (size: 0x1)
+    bool bReinforced;                                                                 // 0x0188 (size: 0x1)
+    int32 ReinforcingFinishTime;                                                      // 0x01A8 (size: 0x4)
+    int32 ReinforcingTime;                                                            // 0x01C8 (size: 0x4)
+    EAnvilBuildStructureType StructureType;                                           // 0x01E8 (size: 0x1)
+    int64 BuilderId;                                                                  // 0x0208 (size: 0x8)
+    int32 TownFamilyAreaId;                                                           // 0x0228 (size: 0x4)
 
-}; // Size: 0x1A8
+}; // Size: 0x248
 
 class UStructureProtectionProxyComponent : public UProxyComponent
 {
@@ -2119,10 +2125,13 @@ class UStructureProxyComponent : public UProxyComponent
     bool bCanCollapse;                                                                // 0x002A (size: 0x1)
     bool bIsAlwaysEnclosed;                                                           // 0x002B (size: 0x1)
     bool IgnoreMeshVisbilityChanges;                                                  // 0x002C (size: 0x1)
-    uint8 CrenellationLevel;                                                          // 0x002D (size: 0x1)
-    EAnvilBuildStructureType StructureType;                                           // 0x002E (size: 0x1)
+    bool bCanBeReinforced;                                                            // 0x002D (size: 0x1)
+    int32 ReinforcingTime;                                                            // 0x0030 (size: 0x4)
+    uint8 CrenellationLevel;                                                          // 0x0034 (size: 0x1)
+    EAnvilBuildStructureType StructureType;                                           // 0x0035 (size: 0x1)
+    TArray<FBasicItemCount> ReinforcementCosts;                                       // 0x0038 (size: 0x10)
 
-}; // Size: 0x30
+}; // Size: 0x48
 
 class UTavernDataComponent : public UDataComponent
 {
@@ -2248,8 +2257,13 @@ class UUnderworldModuleProxyComponent : public UProxyComponent
     int32 NumDynamicModulesMin;                                                       // 0x0040 (size: 0x4)
     int32 NumDynamicModulesMax;                                                       // 0x0044 (size: 0x4)
     int32 MaxNumDynamicModuleSpawnDistance;                                           // 0x0048 (size: 0x4)
+    float TimeUntilCollapseMin_Hrs;                                                   // 0x004C (size: 0x4)
+    float TimeUntilCollapseMax_Hrs;                                                   // 0x0050 (size: 0x4)
+    float TelegraphEventStartTimeBeforeCollapse_Hrs;                                  // 0x0054 (size: 0x4)
+    float TelegraphEventIntervalMin_Sec;                                              // 0x0058 (size: 0x4)
+    float TelegraphEventIntervalMax_Sec;                                              // 0x005C (size: 0x4)
 
-}; // Size: 0x50
+}; // Size: 0x60
 
 class UUpgradeDataComponent : public UDataComponent
 {
@@ -2292,7 +2306,8 @@ class UVehicleMovementProxyComponent : public UProxyComponent
     bool bWaterVehicle;                                                               // 0x0050 (size: 0x1)
     bool bSailBoat;                                                                   // 0x0051 (size: 0x1)
     bool bDoAxleRaycasts;                                                             // 0x0052 (size: 0x1)
-    bool bUsePitch;                                                                   // 0x0053 (size: 0x1)
+    bool bAllowSwitchSeat;                                                            // 0x0053 (size: 0x1)
+    bool bUsePitch;                                                                   // 0x0054 (size: 0x1)
     TSubclassOf<class UEntityTemplate> CollisionEffect;                               // 0x0058 (size: 0x8)
     float RammingDamage;                                                              // 0x0060 (size: 0x4)
     float RammingVelocityFactor;                                                      // 0x0064 (size: 0x4)
@@ -2380,19 +2395,15 @@ class UWindMillProxyComponent : public UProxyComponent
 
 class UWorldEntranceDataComponent : public UDataComponent
 {
-    FVector DeparturePosition;                                                        // 0x00A8 (size: 0x18)
-    FVector DepartureExtents;                                                         // 0x00D8 (size: 0x18)
-    FVector ArrivalPosition;                                                          // 0x0108 (size: 0x18)
+    FVector ArrivalPosition;                                                          // 0x00A8 (size: 0x18)
 
-}; // Size: 0x138
+}; // Size: 0xD8
 
 class UWorldEntranceProxyComponent : public UProxyComponent
 {
-    FVector DeparturePosition;                                                        // 0x0028 (size: 0x18)
-    FVector DepartureExtents;                                                         // 0x0040 (size: 0x18)
-    FVector ArrivalPosition;                                                          // 0x0058 (size: 0x18)
-    EAnvilMapId DestinationMapId;                                                     // 0x0070 (size: 0x1)
+    FVector ArrivalPosition;                                                          // 0x0028 (size: 0x18)
+    EAnvilMapId DestinationMapId;                                                     // 0x0040 (size: 0x1)
 
-}; // Size: 0x78
+}; // Size: 0x48
 
 #endif

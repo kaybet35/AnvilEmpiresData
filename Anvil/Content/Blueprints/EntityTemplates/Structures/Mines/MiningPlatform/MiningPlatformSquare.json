@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "MiningPlatformSquare_C'Default__MiningPlatformSquare_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.12"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.6"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -37,36 +37,6 @@
     }
   },
   {
-    "Type": "BoxCollisionProxyComponent",
-    "Name": "BoxCollisionProxyComponent_1",
-    "Outer": "Default__MiningPlatformSquare_C",
-    "Class": "UScriptClass'BoxCollisionProxyComponent'",
-    "Properties": {
-      "ExtendFootprint": true,
-      "Extents": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 100.0
-      },
-      "CollisionMask": 64
-    }
-  },
-  {
-    "Type": "BoxCollisionProxyComponent",
-    "Name": "BoxCollisionProxyComponent_2",
-    "Outer": "Default__MiningPlatformSquare_C",
-    "Class": "UScriptClass'BoxCollisionProxyComponent'",
-    "Properties": {
-      "ExtendFootprint": true,
-      "Extents": {
-        "X": 100.0,
-        "Y": 100.0,
-        "Z": 100.0
-      },
-      "CollisionMask": 8
-    }
-  },
-  {
     "Type": "DecayProxyComponent",
     "Name": "DecayProxyComponent_0",
     "Outer": "Default__MiningPlatformSquare_C",
@@ -77,12 +47,6 @@
     }
   },
   {
-    "Type": "DecayProxyComponent",
-    "Name": "DecayProxyComponent_1",
-    "Outer": "Default__MiningPlatformSquare_C",
-    "Class": "UScriptClass'DecayProxyComponent'"
-  },
-  {
     "Type": "DestroyableProxyComponent",
     "Name": "DestroyableComp",
     "Outer": "Default__MiningPlatformSquare_C",
@@ -90,18 +54,6 @@
     "Template": {
       "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
-    }
-  },
-  {
-    "Type": "DestroyableProxyComponent",
-    "Name": "DestroyableProxyComponent_0",
-    "Outer": "Default__MiningPlatformSquare_C",
-    "Class": "UScriptClass'DestroyableProxyComponent'",
-    "Properties": {
-      "DestructionEffectEntity": {
-        "ObjectName": "BlueprintGeneratedClass'EffectStructureDestroy_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectStructureDestroy.0"
-      }
     }
   },
   {
@@ -115,20 +67,6 @@
     }
   },
   {
-    "Type": "FootprintCollisionProxyComponent",
-    "Name": "FootprintCollisionProxyComponent_1",
-    "Outer": "Default__MiningPlatformSquare_C",
-    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
-    "Properties": {
-      "Box": {
-        "ObjectName": "BlueprintGeneratedClass'MiningPlatformSquareFootprint_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/MiningPlatformSquareFootprint.1"
-      },
-      "bAddToNavMesh": true,
-      "CollisionMask": 256
-    }
-  },
-  {
     "Type": "HealthProxyComponent",
     "Name": "HealthComp",
     "Outer": "Default__MiningPlatformSquare_C",
@@ -136,15 +74,6 @@
     "Template": {
       "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
-    }
-  },
-  {
-    "Type": "HealthProxyComponent",
-    "Name": "HealthProxyComponent_0",
-    "Outer": "Default__MiningPlatformSquare_C",
-    "Class": "UScriptClass'HealthProxyComponent'",
-    "Properties": {
-      "TargetType": "EAnvilDamageTargetType::Structure"
     }
   },
   {
@@ -156,46 +85,18 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
     },
     "Properties": {
-      "TeamComp": {
-        "ObjectName": "TeamProxyComponent'Default__MiningPlatformSquare_C:TeamProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.19"
-      },
-      "HealthComp": {
-        "ObjectName": "HealthProxyComponent'Default__MiningPlatformSquare_C:HealthProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.11"
-      },
-      "RepairComp": {
-        "ObjectName": "RepairProxyComponent'Default__MiningPlatformSquare_C:RepairProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.14"
-      },
+      "TeamComp": null,
+      "HealthComp": null,
+      "RepairComp": null,
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__MiningPlatformSquare_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.17"
-      },
-      "DestroyableComp": {
-        "ObjectName": "DestroyableProxyComponent'Default__MiningPlatformSquare_C:DestroyableProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.7"
-      },
-      "FootprintComp": {
-        "ObjectName": "FootprintCollisionProxyComponent'Default__MiningPlatformSquare_C:FootprintCollisionProxyComponent_1'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.9"
       },
-      "UseBoxComp": {
-        "ObjectName": "BoxCollisionProxyComponent'Default__MiningPlatformSquare_C:BoxCollisionProxyComponent_2'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.3"
-      },
-      "ActionBoxComp": {
-        "ObjectName": "BoxCollisionProxyComponent'Default__MiningPlatformSquare_C:BoxCollisionProxyComponent_1'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.2"
-      },
-      "DecayComp": {
-        "ObjectName": "DecayProxyComponent'Default__MiningPlatformSquare_C:DecayProxyComponent_1'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.5"
-      },
-      "ScorchComp": {
-        "ObjectName": "ScorchProxyComponent'Default__MiningPlatformSquare_C:ScorchProxyComponent_1'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.16"
-      },
+      "DestroyableComp": null,
+      "FootprintComp": null,
+      "UseBoxComp": null,
+      "DecayComp": null,
+      "ScorchComp": null,
       "CodeNameString": "MiningPlatformSquare",
       "CodeName": -197479457,
       "bGenerateMeshCollisionsFromVisActor": true,
@@ -217,12 +118,6 @@
     }
   },
   {
-    "Type": "RepairProxyComponent",
-    "Name": "RepairProxyComponent_0",
-    "Outer": "Default__MiningPlatformSquare_C",
-    "Class": "UScriptClass'RepairProxyComponent'"
-  },
-  {
     "Type": "ScorchProxyComponent",
     "Name": "ScorchProxyComponent_0",
     "Outer": "Default__MiningPlatformSquare_C",
@@ -231,12 +126,6 @@
       "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
     }
-  },
-  {
-    "Type": "ScorchProxyComponent",
-    "Name": "ScorchProxyComponent_1",
-    "Outer": "Default__MiningPlatformSquare_C",
-    "Class": "UScriptClass'ScorchProxyComponent'"
   },
   {
     "Type": "StructureProxyComponent",
@@ -259,15 +148,6 @@
     "Template": {
       "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
-    }
-  },
-  {
-    "Type": "TeamProxyComponent",
-    "Name": "TeamProxyComponent_0",
-    "Outer": "Default__MiningPlatformSquare_C",
-    "Class": "UScriptClass'TeamProxyComponent'",
-    "Properties": {
-      "Accessibility": "EAnvilAccessibilityType::AllCanUse"
     }
   }
 ]

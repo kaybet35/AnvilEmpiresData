@@ -14,6 +14,7 @@
 ---@field BPGotoSleepActionButton UBPGotoSleepActionButton_C
 ---@field BPPledgeToTownActionButton UBPPledgeToTownActionButton_C
 ---@field BPPushLadderActionButton UBPPushLadderActionButton_C
+---@field BPReinforceStructureActionButton UBPReinforceStructureActionButton_C
 ---@field BPRestrictedModeOffActionButton UBPRestrictedModeOffActionButton_C
 ---@field BPRestrictedModeOnActionButton UBPRestrictedModeOnActionButton_C
 ---@field BPRetractLadderActionButton UBPRetractLadderActionButton_C

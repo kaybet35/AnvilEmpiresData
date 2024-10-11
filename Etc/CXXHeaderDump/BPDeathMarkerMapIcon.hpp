@@ -3,6 +3,6 @@
 
 class UBPDeathMarkerMapIcon_C : public UDeathMarketMapIcon
 {
-}; // Size: 0x3A0
+}; // Size: 0x398
 
 #endif

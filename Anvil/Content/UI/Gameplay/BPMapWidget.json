@@ -260,7 +260,7 @@
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.6"
       },
       "Content": {
-        "ObjectName": "TextBlock'BPMapWidget_C:WidgetTree.ObjectiveText'",
+        "ObjectName": "TextBlock'BPMapWidget_C:WidgetTree.SeasonText'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapWidget.30"
       }
     }
@@ -633,111 +633,6 @@
         "Name": "K2Node_Event_InDeltaTime",
         "Flags": "RF_Public",
         "ElementSize": 4
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_GetGameInstance_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class'GameInstance'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "K2Node_DynamicCast_AsAnvil_Game_Instance",
-        "Flags": "RF_Public",
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class'AnvilGameInstance'",
-          "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "K2Node_DynamicCast_bSuccess",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_GetTimeOfDay_OutHours",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_GetTimeOfDay_OutMinutes",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_GetTimeOfDay_OutSeconds",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "Int64Property",
-        "Name": "CallFunc_Conv_IntToInt64_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "TextProperty",
-        "Name": "CallFunc_Conv_IntToText_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 24
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "K2Node_MakeStruct_FormatArgumentData",
-        "Flags": "RF_Public",
-        "ElementSize": 80,
-        "Struct": {
-          "ObjectName": "ScriptStruct'FormatArgumentData'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "K2Node_MakeStruct_FormatArgumentData_1",
-        "Flags": "RF_Public",
-        "ElementSize": 80,
-        "Struct": {
-          "ObjectName": "ScriptStruct'FormatArgumentData'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ArrayProperty",
-        "Name": "K2Node_MakeArray_Array",
-        "Flags": "RF_Public",
-        "ElementSize": 16,
-        "PropertyFlags": "ReferenceParm",
-        "Inner": {
-          "Type": "StructProperty",
-          "Name": "K2Node_MakeArray_Array",
-          "Flags": "RF_Public",
-          "ElementSize": 80,
-          "Struct": {
-            "ObjectName": "ScriptStruct'FormatArgumentData'",
-            "ObjectPath": "/Script/Engine"
-          }
-        }
-      },
-      {
-        "Type": "TextProperty",
-        "Name": "CallFunc_Format_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 24
       }
     ],
     "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
@@ -904,8 +799,8 @@
       "Text": {
         "Namespace": "",
         "Key": "6D49C56F4378113D37D8FF8B6CF3AEA2",
-        "SourceString": "Objective",
-        "LocalizedString": "Objective"
+        "SourceString": "CALLIGO",
+        "LocalizedString": "CALLIGO"
       },
       "ColorAndOpacity": {
         "SpecifiedColor": {
@@ -934,7 +829,7 @@
   },
   {
     "Type": "TextBlock",
-    "Name": "ObjectiveText",
+    "Name": "SeasonText",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'TextBlock'",
     "Properties": {
@@ -1072,28 +967,6 @@
       {
         "Type": "ObjectProperty",
         "Name": "ObjectiveHeaderText",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
-        "PropertyClass": {
-          "ObjectName": "Class'TextBlock'",
-          "ObjectPath": "/Script/UMG"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ObjectiveText",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
-        "PropertyClass": {
-          "ObjectName": "Class'TextBlock'",
-          "ObjectPath": "/Script/UMG"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "TimeOfDayText",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",

@@ -5,8 +5,6 @@
 ---@field Background UImage
 ---@field Frame UImage
 ---@field ObjectiveHeaderText UTextBlock
----@field ObjectiveText UTextBlock
----@field TimeOfDayText UTextBlock
 ---@field DynamicMaterialInstance UMaterialInstanceDynamic
 UBPMapWidget_C = {}
 

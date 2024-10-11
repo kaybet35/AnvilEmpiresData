@@ -6,6 +6,8 @@ UStructureProxyComponent::UStructureProxyComponent() {
     this->bCanCollapse = false;
     this->bIsAlwaysEnclosed = false;
     this->IgnoreMeshVisbilityChanges = false;
+    this->bCanBeReinforced = false;
+    this->ReinforcingTime = 43200;
     this->CrenellationLevel = 0;
     this->StructureType = EAnvilBuildStructureType::Monolithic;
 }

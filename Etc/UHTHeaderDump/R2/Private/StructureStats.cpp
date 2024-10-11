@@ -28,5 +28,6 @@ FStructureStats::FStructureStats() {
     this->CookCurrentTemperature = 0.00f;
     this->WorldEntranceDestinationMapId = 0;
     this->WorldEntranceId = 0;
+    this->RemainingTimeUntilCollapse_Sec = 0.00f;
 }
 

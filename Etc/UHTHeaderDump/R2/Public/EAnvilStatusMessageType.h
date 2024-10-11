@@ -9,6 +9,7 @@ enum class EAnvilStatusMessageType : uint8 {
     RequiresTool,
     HouseClaimed,
     TentClaimed,
+    TownTentClaimed,
     HouseAlreadyClaimed,
     CannotReinforceAtPledgedTown,
     NoRoomToDeployAtBed,
@@ -31,6 +32,7 @@ enum class EAnvilStatusMessageType : uint8 {
     ItemTransfer_HouseNotYours,
     ItemTransfer_WithdrawalRestricted,
     ItemTransfer_NotPublic,
+    ItemTransfer_HeavyToolFull,
     Blocked,
     Vehicle_ExitBlocked,
     InvalidDetachLocation,
@@ -142,6 +144,8 @@ enum class EAnvilStatusMessageType : uint8 {
     ItemDisarmedDueToHeavyArmour,
     TemperatureTooLowToGather,
     TemperatureTooLowToPlant,
+    TooSoonToTravel,
+    OutOfAmmunition,
     NumTypes,
 };
 

@@ -25,7 +25,8 @@ EActionButtonType = {
     StopPowerMill = 22,
     ClaimFamilyInventory = 23,
     PledgeToTown = 24,
-    EActionButtonType_MAX = 25,
+    ReinforceStructure = 25,
+    EActionButtonType_MAX = 26,
 }
 
 ---@enum EAlertType

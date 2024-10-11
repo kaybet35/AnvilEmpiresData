@@ -15,5 +15,6 @@ enum class EAnvilCharacterStance : uint8 {
     InHoarding,
     HoldingLadderFront,
     HoldingLadderRear,
+    OnHandcart,
 };
 

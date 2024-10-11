@@ -6,6 +6,11 @@ UStructureDataComponent::UStructureDataComponent(const FObjectInitializer& Objec
     this->bIsCollapsed = false;
     this->bIsFamilyDestroyed = false;
     this->bIsTownDestroyed = false;
+    this->bCanBeReinforced = false;
+    this->bReinforcing = false;
+    this->bReinforced = false;
+    this->ReinforcingFinishTime = 0;
+    this->ReinforcingTime = 0;
     this->StructureType = EAnvilBuildStructureType::Monolithic;
     this->BuilderId = 0;
     this->TownFamilyAreaId = 0;

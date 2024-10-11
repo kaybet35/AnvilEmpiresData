@@ -129,7 +129,7 @@ AMapList = {}
 
 
 ---@class AMapMarkerActor : AActor
----@field Marker UMapMarkerComponent
+---@field MapIconProperty FMapIconInstanceProperty
 AMapMarkerActor = {}
 
 
@@ -575,6 +575,8 @@ AVisPickupItem = {}
 ---@field ArmourDataComponent UArmorDataComponent
 ---@field VoiceIndicator UBillboardComponent
 ---@field TorchVFXComponent UNiagaraComponent
+---@field TorchVFX2Component UNiagaraComponent
+---@field TorchPointLightComponent UPointLightComponent
 ---@field TorchAudioComponent UAudioComponent
 ---@field RainVFXComponent UNiagaraComponent
 ---@field SnowVFXComponent UNiagaraComponent
@@ -588,10 +590,12 @@ AVisPickupItem = {}
 ---@field WindLowAudioComponent UAudioComponent
 ---@field WindMidAudioComponent UAudioComponent
 ---@field WindHighAudioComponent UAudioComponent
+---@field UnderworldCollapseFXComponent UNiagaraComponent
 ---@field RepairItemSoundCue USoundCue
 ---@field PushIndicatorDecalComponent UDecalComponent
 ---@field PostProcessMaterialParameterCollection UMaterialParameterCollection
 ---@field PositionPostProcessMaterialParameterCollection UMaterialParameterCollection
+---@field UnderworldCollapseMaterialParameterCollection UMaterialParameterCollection
 ---@field CurrentUsableVisActor AVisActor
 ---@field CurrentMountableVisActor AVisActor
 ---@field CurrentUEUsableActor AActor
@@ -1051,6 +1055,7 @@ FLoreData = {}
 ---@field GridDimension FIntPoint
 ---@field Scale float
 ---@field MapImage UTexture2D
+---@field Locations TArray<FMapLocationInstance>
 FMapData = {}
 
 
@@ -1079,6 +1084,13 @@ FMapIconInstanceProperty = {}
 ---@field UpdateRange float
 ---@field IconClass TSubclassOf<UMapIcon>
 FMapIconTypeProperty = {}
+
+
+
+---@class FMapLocationInstance
+---@field Location FVector
+---@field Property FMapIconInstanceProperty
+FMapLocationInstance = {}
 
 
 
@@ -2255,6 +2267,8 @@ UMapPostMapIcon = {}
 ---@field ObjectiveBorder UBorder
 ---@field CentralMarketplaceWidgetBorder UBorder
 ---@field CentralMarketplaceWidget UCentralMarketplaceWidget
+---@field SeasonText UTextBlock
+---@field TimeOfDayText UTextBlock
 ---@field DisplayedBeaconTowerPlayerInfos TArray<UMapIcon>
 UMapWidget = {}
 
@@ -2637,6 +2651,7 @@ UStatusWidget = {}
 ---@field HungerStatus UStatusWidget
 ---@field StaminaStatus UStatusWidget
 ---@field DecayStatus UStatusWidget
+---@field ReinforcingStatus UStatusWidget
 UStructureWindow = {}
 
 

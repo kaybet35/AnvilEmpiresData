@@ -6,6 +6,7 @@ UStructureWindow::UStructureWindow() {
     this->HungerStatus = NULL;
     this->StaminaStatus = NULL;
     this->DecayStatus = NULL;
+    this->ReinforcingStatus = NULL;
 }
 
 

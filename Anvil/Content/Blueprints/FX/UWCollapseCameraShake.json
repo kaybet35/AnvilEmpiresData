@@ -1,0 +1,54 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "UWCollapseCameraShake_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'CameraShakeBase'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "UWCollapseCameraShake_C'Default__UWCollapseCameraShake_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/FX/UWCollapseCameraShake.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "PerlinNoiseCameraShakePattern",
+    "Name": "PerlinNoiseCameraShakePattern_0",
+    "Outer": "Default__UWCollapseCameraShake_C",
+    "Class": "UScriptClass'PerlinNoiseCameraShakePattern'",
+    "Properties": {
+      "LocationAmplitudeMultiplier": 10.0,
+      "LocationFrequencyMultiplier": 5.0,
+      "FOV": {
+        "Amplitude": 0.2,
+        "Frequency": 5.0
+      },
+      "Duration": 3.0,
+      "BlendInTime": 0.5,
+      "BlendOutTime": 0.5
+    }
+  },
+  {
+    "Type": "UWCollapseCameraShake_C",
+    "Name": "Default__UWCollapseCameraShake_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/FX/UWCollapseCameraShake.UWCollapseCameraShake_C'",
+    "Properties": {
+      "bSingleInstance": true,
+      "RootShakePattern": {
+        "ObjectName": "PerlinNoiseCameraShakePattern'Default__UWCollapseCameraShake_C:PerlinNoiseCameraShakePattern_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/FX/UWCollapseCameraShake.1"
+      }
+    }
+  }
+]

@@ -8,6 +8,7 @@
 class UBorder;
 class UCentralMarketplaceWidget;
 class UMapIcon;
+class UTextBlock;
 class UTexture2D;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -32,6 +33,12 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCentralMarketplaceWidget* CentralMarketplaceWidget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* SeasonText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* TimeOfDayText;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

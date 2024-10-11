@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ABPVisWorldEntranceCave_C : AVisWorldEntrance
+---@field flatstones1 UVisStaticMeshComponent
+---@field EntranceVisualizer UBoxComponent
 ---@field rockmed4 UVisStaticMeshComponent
 ---@field rockmed3 UVisStaticMeshComponent
 ---@field rock3 UVisStaticMeshComponent
@@ -9,8 +11,6 @@
 ---@field flatstones2 UVisStaticMeshComponent
 ---@field rock2 UVisStaticMeshComponent
 ---@field rocksflat1 UVisStaticMeshComponent
----@field flatstones1 UVisStaticMeshComponent
----@field rockmed2 UVisStaticMeshComponent
 ---@field rockmed1 UVisStaticMeshComponent
 ---@field rock1 UVisStaticMeshComponent
 ---@field grass4 UVisStaticMeshComponent
