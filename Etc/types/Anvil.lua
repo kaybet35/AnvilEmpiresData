@@ -194,6 +194,7 @@ AServerPartition = {}
 ---@field QualityIconTextures TMap<EAnvilItemQualityType, UTexture2D>
 ---@field OnlineStatusIconMap TMap<EAnvilPlayerOnlineStatus, UTexture2D>
 ---@field OnlineStatusColorMap TMap<EAnvilPlayerOnlineStatus, FSlateColor>
+---@field UnderworldModuleDebugBoxTextureMap TMap<FString, UTexture2D>
 AUIGlobals = {}
 
 
@@ -372,9 +373,7 @@ AVisFamilyInventory = {}
 
 
 ---@class AVisFamilyMarkerArea : AVisStructure
----@field FamilyAreaMarkerDataComponent UFamilyAreaMarkerDataComponent
 AVisFamilyMarkerArea = {}
-
 
 
 ---@class AVisFarm : AVisStructure
@@ -643,7 +642,7 @@ AVisRelicTechCenter = {}
 ---@field PlantGrowthComponent UPlantGrowthDataComponent
 ---@field StageMeshes TArray<UStaticMesh>
 ---@field bApplyIdBasedRandomRotation boolean
----@field bProjectAndRotateToLandscape boolean
+---@field bProjectToLandscape boolean
 ---@field ArrowComponent UArrowComponent
 ---@field Mesh UStaticMeshComponent
 ---@field ShakeCurve UCurveVector
@@ -2652,8 +2651,12 @@ UStatusWidget = {}
 ---@field StaminaStatus UStatusWidget
 ---@field DecayStatus UStatusWidget
 ---@field ReinforcingStatus UStatusWidget
+---@field FamilyAccessLevel UComboBoxString
 UStructureWindow = {}
 
+---@param SelectedItem FString
+---@param SelectionType ESelectInfo::Type
+function UStructureWindow:OnFamilyAccessLevelSelectionChanged(SelectedItem, SelectionType) end
 
 
 ---@class USubHeaderContainer : UUserWidget

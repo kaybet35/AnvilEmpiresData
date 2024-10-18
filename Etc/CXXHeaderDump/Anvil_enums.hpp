@@ -262,7 +262,8 @@ enum class EMapIconType {
     BeaconTowerPlayerInfo = 16,
     FamilyMarker = 17,
     FamilyCenter = 18,
-    EMapIconType_MAX = 19,
+    WorldEntrance = 19,
+    EMapIconType_MAX = 20,
 };
 
 enum class EMapMode {

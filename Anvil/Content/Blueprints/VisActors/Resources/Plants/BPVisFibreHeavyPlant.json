@@ -1,42 +1,24 @@
 [
   {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisFibreHeavyPlant_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BPVisFibreHeavyPlant_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisFibreHeavyPlant_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.7"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisActor'",
+      "ObjectName": "Class'VisResource'",
       "ObjectPath": "/Script/Anvil"
     },
-    "ChildProperties": [
-      {
-        "Type": "ObjectProperty",
-        "Name": "StaticMesh",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "DefaultSceneRoot",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'SceneComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      }
-    ],
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -46,7 +28,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisFibreHeavyPlant_C'Default__BPVisFibreHeavyPlant_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.1"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.2"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -55,7 +37,42 @@
   {
     "Type": "BPVisFibreHeavyPlant_C",
     "Name": "Default__BPVisFibreHeavyPlant_C",
-    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.BPVisFibreHeavyPlant_C'"
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.BPVisFibreHeavyPlant_C'",
+    "Properties": {
+      "ResourceDataComponent": {
+        "ObjectName": "ResourceDataComponent'Default__BPVisFibreHeavyPlant_C:ResourceDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.4"
+      },
+      "PlantGrowthComponent": {
+        "ObjectName": "PlantGrowthDataComponent'Default__BPVisFibreHeavyPlant_C:PlantGrowthComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.3"
+      },
+      "bProjectToLandscape": true,
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFibreHeavyPlant_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.0"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisFibreHeavyPlant_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.8"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFibreHeavyPlant_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.0"
+      }
+    }
+  },
+  {
+    "Type": "PlantGrowthDataComponent",
+    "Name": "PlantGrowthComponent",
+    "Outer": "Default__BPVisFibreHeavyPlant_C",
+    "Class": "UScriptClass'PlantGrowthDataComponent'"
+  },
+  {
+    "Type": "ResourceDataComponent",
+    "Name": "ResourceDataComponent",
+    "Outer": "Default__BPVisFibreHeavyPlant_C",
+    "Class": "UScriptClass'ResourceDataComponent'"
   },
   {
     "Type": "SceneComponent",
@@ -75,34 +92,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisFibreHeavyPlant_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.5"
       },
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisFibreHeavyPlant_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.4"
-        }
-      ],
       "VariableGuid": "E121B32B-4A6808E6-3504609B-689F731E",
       "InternalVariableName": "DefaultSceneRoot"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisFibreHeavyPlant_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.6"
-      },
-      "VariableGuid": "B319BA97-422C91FE-DE805E80-AA96FF72",
-      "InternalVariableName": "StaticMesh"
     }
   },
   {
@@ -111,39 +104,26 @@
     "Outer": "BPVisFibreHeavyPlant_C",
     "Class": "UScriptClass'SimpleConstructionScript'",
     "Properties": {
-      "RootNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisFibreHeavyPlant_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.3"
-        }
-      ],
-      "AllNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisFibreHeavyPlant_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.3"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFibreHeavyPlant_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.4"
-        }
-      ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisFibreHeavyPlant_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.6"
       }
     }
   },
   {
     "Type": "StaticMeshComponent",
-    "Name": "StaticMesh_GEN_VARIABLE",
-    "Outer": "BPVisFibreHeavyPlant_C",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisFibreHeavyPlant_C",
     "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
       "StaticMesh": {
         "ObjectName": "StaticMesh'FibreHeavyHemp04'",
         "ObjectPath": "Anvil/Content/Meshes/Resources/FibreHeavyHemp04.2"
       },
-      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisFibreHeavyPlant_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/BPVisFibreHeavyPlant.0"
+      },
       "RelativeLocation": {
         "X": 0.0,
         "Y": 0.0,

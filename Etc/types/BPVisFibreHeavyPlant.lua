@@ -1,9 +1,6 @@
 ---@meta
 
----@class ABPVisFibreHeavyPlant_C : AVisActor
----@field StaticMesh UStaticMeshComponent
----@field DefaultSceneRoot USceneComponent
+---@class ABPVisFibreHeavyPlant_C : AVisResource
 ABPVisFibreHeavyPlant_C = {}
-
 
 

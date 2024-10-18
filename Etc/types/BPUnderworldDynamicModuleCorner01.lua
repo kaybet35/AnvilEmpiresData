@@ -1,6 +1,13 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleCorner01_C : ABPUnderworldModuleDynamicPrefab_C
+---@field Decal054 UDecalComponent
+---@field Decal053 UDecalComponent
+---@field RockWallUnderworldPlatform15x47 UStaticMeshComponent
+---@field Props015 UStaticMeshComponent
+---@field Props034 UStaticMeshComponent
+---@field Props033 UStaticMeshComponent
+---@field Props048 UStaticMeshComponent
 ---@field Decal052 UDecalComponent
 ---@field Decal051 UDecalComponent
 ---@field Props047 UStaticMeshComponent
@@ -22,8 +29,6 @@
 ---@field Decal046 UDecalComponent
 ---@field Props036 UStaticMeshComponent
 ---@field Props035 UStaticMeshComponent
----@field Props034 UStaticMeshComponent
----@field Props033 UStaticMeshComponent
 ---@field Props032 UStaticMeshComponent
 ---@field Props031 UStaticMeshComponent
 ---@field Props030 UStaticMeshComponent
@@ -54,10 +59,7 @@
 ---@field Prop09 UChildActorComponent
 ---@field Prop08 UChildActorComponent
 ---@field Prop07 UChildActorComponent
----@field Props018 UStaticMeshComponent
 ---@field Props017 UStaticMeshComponent
----@field Props016 UStaticMeshComponent
----@field Props015 UStaticMeshComponent
 ---@field Props014 UStaticMeshComponent
 ---@field Decal01 UDecalComponent
 ---@field Decal041 UDecalComponent

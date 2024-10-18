@@ -124,6 +124,15 @@ struct FDryingRackRecipe
 
 }; // Size: 0x20
 
+struct FDynamicPrefabSpawnInfo
+{
+    TSubclassOf<class ADynamicPrefab> CodeName;                                       // 0x0000 (size: 0x8)
+    int32 CodeNameVisVar;                                                             // 0x0008 (size: 0x4)
+    float SpawnWeight;                                                                // 0x000C (size: 0x4)
+    float SpawnWeightVisVar;                                                          // 0x0010 (size: 0x4)
+
+}; // Size: 0x18
+
 struct FEntityFloatPair
 {
     TSubclassOf<class UEntityTemplate> CodeName;                                      // 0x0000 (size: 0x8)
@@ -473,6 +482,23 @@ struct FTestStruct
     int32 Num;                                                                        // 0x0000 (size: 0x4)
 
 }; // Size: 0x4
+
+struct FUnderworldModuleDebugInfo
+{
+    TArray<FUnderworldModuleDebugInfoEntry> Modules;                                  // 0x0000 (size: 0x10)
+
+}; // Size: 0x10
+
+struct FUnderworldModuleDebugInfoEntry
+{
+    TSubclassOf<class UEntityTemplate> CodeName;                                      // 0x0000 (size: 0x8)
+    int32 CodeNameVisVar;                                                             // 0x0008 (size: 0x4)
+    float PositionX;                                                                  // 0x000C (size: 0x4)
+    float PositionY;                                                                  // 0x0010 (size: 0x4)
+    uint8 NumRotations;                                                               // 0x0014 (size: 0x1)
+    int32 SpawnedPrefabCodeName;                                                      // 0x0018 (size: 0x4)
+
+}; // Size: 0x20
 
 struct FVisvarPowerConnection
 {
@@ -1063,15 +1089,15 @@ class UDryingRackProxyComponent : public UProxyComponent
 
 class UDynamicPrefabDataComponent : public UDataComponent
 {
-    int32 PrefabCodeName;                                                             // 0x00A8 (size: 0x4)
+    int32 SpawnedPrefabCodeName;                                                      // 0x00A8 (size: 0x4)
 
 }; // Size: 0xC8
 
 class UDynamicPrefabProxyComponent : public UProxyComponent
 {
-    TSubclassOf<class ADynamicPrefab> PrefabCodeName;                                 // 0x0028 (size: 0x8)
+    TArray<FDynamicPrefabSpawnInfo> PrefabSpawnList;                                  // 0x0028 (size: 0x10)
 
-}; // Size: 0x30
+}; // Size: 0x38
 
 class UEditorSpawnerProxyComponent : public UProxyComponent
 {
@@ -1136,22 +1162,13 @@ class UExplorationSpawnerProxyComponent : public UProxyComponent
 
 }; // Size: 0x38
 
-class UFamilyAreaMarkerDataComponent : public UDataComponent
-{
-    bool AllowPublicPledging;                                                         // 0x00A8 (size: 0x1)
-    bool bHasMembers;                                                                 // 0x00C8 (size: 0x1)
-
-}; // Size: 0xE8
-
-class UFamilyAreaMarkerProxyComponent : public UProxyComponent
-{
-}; // Size: 0x28
-
 class UFamilyCenterDataComponent : public UDataComponent
 {
     float FamilyAreaRadius;                                                           // 0x00A8 (size: 0x4)
+    bool AllowPublicPledging;                                                         // 0x00C8 (size: 0x1)
+    bool bHasMembers;                                                                 // 0x00E8 (size: 0x1)
 
-}; // Size: 0xC8
+}; // Size: 0x108
 
 class UFamilyCenterProxyComponent : public UProxyComponent
 {
@@ -2101,16 +2118,18 @@ class UStructureDataComponent : public UDataComponent
     bool bIsCollapsed;                                                                // 0x00E8 (size: 0x1)
     bool bIsFamilyDestroyed;                                                          // 0x0108 (size: 0x1)
     bool bIsTownDestroyed;                                                            // 0x0128 (size: 0x1)
-    bool bCanBeReinforced;                                                            // 0x0148 (size: 0x1)
-    bool bReinforcing;                                                                // 0x0168 (size: 0x1)
-    bool bReinforced;                                                                 // 0x0188 (size: 0x1)
-    int32 ReinforcingFinishTime;                                                      // 0x01A8 (size: 0x4)
-    int32 ReinforcingTime;                                                            // 0x01C8 (size: 0x4)
-    EAnvilBuildStructureType StructureType;                                           // 0x01E8 (size: 0x1)
-    int64 BuilderId;                                                                  // 0x0208 (size: 0x8)
-    int32 TownFamilyAreaId;                                                           // 0x0228 (size: 0x4)
+    bool bCanOverrideFamilyAccessLevel;                                               // 0x0148 (size: 0x1)
+    bool bCanBeReinforced;                                                            // 0x0168 (size: 0x1)
+    bool bReinforcing;                                                                // 0x0188 (size: 0x1)
+    bool bReinforced;                                                                 // 0x01A8 (size: 0x1)
+    int32 ReinforcingFinishTime;                                                      // 0x01C8 (size: 0x4)
+    int32 ReinforcingTime;                                                            // 0x01E8 (size: 0x4)
+    EAnvilBuildStructureType StructureType;                                           // 0x0208 (size: 0x1)
+    int64 BuilderId;                                                                  // 0x0228 (size: 0x8)
+    int32 TownFamilyAreaId;                                                           // 0x0248 (size: 0x4)
+    EAnvilR2FamilyRoleType FamilyAccessLevel;                                         // 0x0268 (size: 0x1)
 
-}; // Size: 0x248
+}; // Size: 0x288
 
 class UStructureProtectionProxyComponent : public UProxyComponent
 {
@@ -2125,7 +2144,8 @@ class UStructureProxyComponent : public UProxyComponent
     bool bCanCollapse;                                                                // 0x002A (size: 0x1)
     bool bIsAlwaysEnclosed;                                                           // 0x002B (size: 0x1)
     bool IgnoreMeshVisbilityChanges;                                                  // 0x002C (size: 0x1)
-    bool bCanBeReinforced;                                                            // 0x002D (size: 0x1)
+    bool bCanOverrideFamilyAccessLevel;                                               // 0x002D (size: 0x1)
+    bool bCanBeReinforced;                                                            // 0x002E (size: 0x1)
     int32 ReinforcingTime;                                                            // 0x0030 (size: 0x4)
     uint8 CrenellationLevel;                                                          // 0x0034 (size: 0x1)
     EAnvilBuildStructureType StructureType;                                           // 0x0035 (size: 0x1)

@@ -135,7 +135,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPInventoryStructureSplitWindow_C:WidgetTree.HorizontalBox_62.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.17"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.19"
       }
     }
   },
@@ -167,7 +167,7 @@
           "Name": "MainAreaSlot0",
           "Content": {
             "ObjectName": "HorizontalBox'BPInventoryStructureSplitWindow_C:WidgetTree.HorizontalBox_62'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.15"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.16"
           }
         }
       ]
@@ -207,7 +207,7 @@
       "SimpleTooltip": "ESimpleTooltip::Health",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPInventoryStructureSplitWindow_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.16"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.18"
       }
     }
   },
@@ -227,7 +227,7 @@
           "Name": "SubHeaderSlot0",
           "Content": {
             "ObjectName": "HorizontalBox'BPInventoryStructureSplitWindow_C:WidgetTree.HorizontalBox_3'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.14"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.15"
           }
         }
       ]
@@ -323,6 +323,222 @@
     }
   },
   {
+    "Type": "ComboBoxString",
+    "Name": "FamilyAccessLevel",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'ComboBoxString'",
+    "Properties": {
+      "SelectedOption": "0",
+      "WidgetStyle": {
+        "ComboButtonStyle": {
+          "ButtonStyle": {
+            "Normal": {
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "ImageSize": {
+                "X": 64.0,
+                "Y": 64.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 0.114583,
+                  "G": 0.098549,
+                  "B": 0.085341,
+                  "A": 1.0,
+                  "Hex": "5F5852"
+                }
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FlatBG'",
+                "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+              }
+            },
+            "Hovered": {
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "ImageSize": {
+                "X": 64.0,
+                "Y": 64.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 0.730461,
+                  "G": 0.491021,
+                  "B": 0.124772,
+                  "A": 1.0,
+                  "Hex": "DEBA63"
+                }
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FlatBG'",
+                "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+              }
+            },
+            "Pressed": {
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "ImageSize": {
+                "X": 64.0,
+                "Y": 64.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 0.046665,
+                  "G": 0.042311,
+                  "B": 0.035601,
+                  "A": 1.0,
+                  "Hex": "3D3A35"
+                }
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FlatBG'",
+                "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+              }
+            },
+            "Disabled": {
+              "DrawAs": "ESlateBrushDrawType::Image"
+            }
+          },
+          "MenuBorderBrush": {
+            "ImageSize": {
+              "X": 64.0,
+              "Y": 64.0
+            },
+            "TintColor": {
+              "SpecifiedColor": {
+                "R": 0.098958,
+                "G": 0.096532,
+                "B": 0.087104,
+                "A": 1.0,
+                "Hex": "585753"
+              }
+            },
+            "ResourceObject": {
+              "ObjectName": "Texture2D'FlatBG'",
+              "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+            }
+          },
+          "ContentPadding": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          },
+          "DownArrowPadding": {
+            "Left": 10.0
+          }
+        },
+        "ContentPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 5.0,
+          "Bottom": 0.0
+        }
+      },
+      "ItemStyle": {
+        "SelectorFocusedBrush": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.533277,
+              "G": 0.417885,
+              "B": 0.242281,
+              "A": 1.0,
+              "Hex": "C1AD87"
+            }
+          }
+        },
+        "ActiveHoveredBrush": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.533277,
+              "G": 0.417885,
+              "B": 0.242281,
+              "A": 1.0,
+              "Hex": "C1AD87"
+            }
+          }
+        },
+        "ActiveBrush": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.730461,
+              "G": 0.491021,
+              "B": 0.124772,
+              "A": 1.0,
+              "Hex": "DEBA63"
+            }
+          }
+        },
+        "TextColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          }
+        },
+        "SelectedTextColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "000000"
+          }
+        },
+        "DropIndicator_Above": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.730461,
+              "G": 0.491021,
+              "B": 0.124772,
+              "A": 1.0,
+              "Hex": "DEBA63"
+            }
+          }
+        },
+        "DropIndicator_Onto": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.730461,
+              "G": 0.491021,
+              "B": 0.124772,
+              "A": 1.0,
+              "Hex": "DEBA63"
+            }
+          }
+        },
+        "DropIndicator_Below": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.730461,
+              "G": 0.491021,
+              "B": 0.124772,
+              "A": 1.0,
+              "Hex": "DEBA63"
+            }
+          }
+        }
+      },
+      "ContentPadding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 12
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPInventoryStructureSplitWindow_C:WidgetTree.RoleComboBoxSizeBox.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.21"
+      }
+    }
+  },
+  {
     "Type": "HorizontalBox",
     "Name": "HorizontalBox_3",
     "Outer": "WidgetTree",
@@ -331,7 +547,11 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPInventoryStructureSplitWindow_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.16"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.18"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPInventoryStructureSplitWindow_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.17"
         }
       ]
     }
@@ -345,9 +565,30 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPInventoryStructureSplitWindow_C:WidgetTree.HorizontalBox_62.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.17"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.19"
         }
       ]
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_3",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPInventoryStructureSplitWindow_C:WidgetTree.HorizontalBox_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.15"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPInventoryStructureSplitWindow_C:WidgetTree.RoleComboBoxSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.20"
+      }
     }
   },
   {
@@ -360,7 +601,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPInventoryStructureSplitWindow_C:WidgetTree.HorizontalBox_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.14"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.15"
       },
       "Content": {
         "ObjectName": "BPStatusWidget_C'BPInventoryStructureSplitWindow_C:WidgetTree.HealthStatus'",
@@ -380,11 +621,47 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPInventoryStructureSplitWindow_C:WidgetTree.HorizontalBox_62'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.15"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.16"
       },
       "Content": {
         "ObjectName": "BPInventoryContainerWidget_C'BPInventoryStructureSplitWindow_C:WidgetTree.StructureInventoryContainerWidget'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.5"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "RoleComboBoxSizeBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "HeightOverride": 25.0,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPInventoryStructureSplitWindow_C:WidgetTree.RoleComboBoxSizeBox.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.21"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPInventoryStructureSplitWindow_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.17"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "RoleComboBoxSizeBox",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPInventoryStructureSplitWindow_C:WidgetTree.RoleComboBoxSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.20"
+      },
+      "Content": {
+        "ObjectName": "ComboBoxString'BPInventoryStructureSplitWindow_C:WidgetTree.FamilyAccessLevel'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.14"
       }
     }
   },
@@ -395,7 +672,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPInventoryStructureSplitWindow_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.19"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPInventoryStructureSplitWindow.23"
       },
       "bClassRequiresNativeTick": true
     },

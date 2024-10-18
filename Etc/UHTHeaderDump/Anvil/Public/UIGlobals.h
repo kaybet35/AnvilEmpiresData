@@ -45,6 +45,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EAnvilPlayerOnlineStatus, FSlateColor> OnlineStatusColorMap;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<FString, UTexture2D*> UnderworldModuleDebugBoxTextureMap;
+    
     AUIGlobals(const FObjectInitializer& ObjectInitializer);
 
 };

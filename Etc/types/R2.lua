@@ -188,6 +188,15 @@ FDryingRackRecipe = {}
 
 
 
+---@class FDynamicPrefabSpawnInfo
+---@field CodeName TSubclassOf<ADynamicPrefab>
+---@field CodeNameVisVar int32
+---@field SpawnWeight float
+---@field SpawnWeightVisVar float
+FDynamicPrefabSpawnInfo = {}
+
+
+
 ---@class FEntityFloatPair
 ---@field CodeName TSubclassOf<UEntityTemplate>
 ---@field CodeNameVisVar int32
@@ -535,6 +544,23 @@ FTechItem = {}
 ---@class FTestStruct
 ---@field Num int32
 FTestStruct = {}
+
+
+
+---@class FUnderworldModuleDebugInfo
+---@field Modules TArray<FUnderworldModuleDebugInfoEntry>
+FUnderworldModuleDebugInfo = {}
+
+
+
+---@class FUnderworldModuleDebugInfoEntry
+---@field CodeName TSubclassOf<UEntityTemplate>
+---@field CodeNameVisVar int32
+---@field PositionX float
+---@field PositionY float
+---@field NumRotations uint8
+---@field SpawnedPrefabCodeName int32
+FUnderworldModuleDebugInfoEntry = {}
 
 
 
@@ -1059,13 +1085,13 @@ UDryingRackProxyComponent = {}
 
 
 ---@class UDynamicPrefabDataComponent : UDataComponent
----@field PrefabCodeName int32
+---@field SpawnedPrefabCodeName int32
 UDynamicPrefabDataComponent = {}
 
 
 
 ---@class UDynamicPrefabProxyComponent : UProxyComponent
----@field PrefabCodeName TSubclassOf<ADynamicPrefab>
+---@field PrefabSpawnList TArray<FDynamicPrefabSpawnInfo>
 UDynamicPrefabProxyComponent = {}
 
 
@@ -1136,19 +1162,10 @@ UExplorationSpawnerProxyComponent = {}
 
 
 
----@class UFamilyAreaMarkerDataComponent : UDataComponent
----@field AllowPublicPledging boolean
----@field bHasMembers boolean
-UFamilyAreaMarkerDataComponent = {}
-
-
-
----@class UFamilyAreaMarkerProxyComponent : UProxyComponent
-UFamilyAreaMarkerProxyComponent = {}
-
-
 ---@class UFamilyCenterDataComponent : UDataComponent
 ---@field FamilyAreaRadius float
+---@field AllowPublicPledging boolean
+---@field bHasMembers boolean
 UFamilyCenterDataComponent = {}
 
 
@@ -2100,6 +2117,7 @@ UStaticTorchProxyComponent = {}
 ---@field bIsCollapsed boolean
 ---@field bIsFamilyDestroyed boolean
 ---@field bIsTownDestroyed boolean
+---@field bCanOverrideFamilyAccessLevel boolean
 ---@field bCanBeReinforced boolean
 ---@field bReinforcing boolean
 ---@field bReinforced boolean
@@ -2108,6 +2126,7 @@ UStaticTorchProxyComponent = {}
 ---@field StructureType EAnvilBuildStructureType
 ---@field BuilderId int64
 ---@field TownFamilyAreaId int32
+---@field FamilyAccessLevel EAnvilR2FamilyRoleType
 UStructureDataComponent = {}
 
 
@@ -2124,6 +2143,7 @@ UStructureProtectionProxyComponent = {}
 ---@field bCanCollapse boolean
 ---@field bIsAlwaysEnclosed boolean
 ---@field IgnoreMeshVisbilityChanges boolean
+---@field bCanOverrideFamilyAccessLevel boolean
 ---@field bCanBeReinforced boolean
 ---@field ReinforcingTime int32
 ---@field CrenellationLevel uint8

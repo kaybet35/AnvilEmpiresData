@@ -23,5 +23,6 @@ enum class EMapIconType : uint8 {
     BeaconTowerPlayerInfo,
     FamilyMarker,
     FamilyCenter,
+    WorldEntrance,
 };
 

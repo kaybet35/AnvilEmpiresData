@@ -6,6 +6,7 @@ UStructureProxyComponent::UStructureProxyComponent() {
     this->bCanCollapse = false;
     this->bIsAlwaysEnclosed = false;
     this->IgnoreMeshVisbilityChanges = false;
+    this->bCanOverrideFamilyAccessLevel = false;
     this->bCanBeReinforced = false;
     this->ReinforcingTime = 43200;
     this->CrenellationLevel = 0;

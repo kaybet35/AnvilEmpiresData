@@ -6,6 +6,8 @@
 ---@field BPFooterContainer UBPFooterContainer_C
 ---@field BPHeaderContainer UBPHeaderContainer_C
 ---@field BPMainAreaContainer UBPMainAreaContainer_C
+---@field BPSubHeaderContainer UBPSubHeaderContainer_C
+---@field HeaderContainer UBPHeaderContainer_C
 UBPCentralMarketplaceWindow_C = {}
 
 

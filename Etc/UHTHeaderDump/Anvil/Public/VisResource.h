@@ -28,7 +28,7 @@ protected:
     bool bApplyIdBasedRandomRotation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bProjectAndRotateToLandscape;
+    bool bProjectToLandscape;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

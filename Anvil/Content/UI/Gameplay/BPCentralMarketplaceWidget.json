@@ -370,21 +370,21 @@
           "Name": "AnvilPanelSlot0",
           "Content": {
             "ObjectName": "BPHeaderContainer_C'BPCentralMarketplaceWidget_C:WidgetTree.HeaderContainer'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.22"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.23"
           }
         },
         {
           "Name": "AnvilPanelSlot1",
           "Content": {
-            "ObjectName": "BPSubHeaderContainer_C'BPCentralMarketplaceWidget_C:WidgetTree.BPSubHeaderContainer'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.24"
+            "ObjectName": "BPFooterContainer_C'BPCentralMarketplaceWidget_C:WidgetTree.BPFooterContainer_C_1'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.22"
           }
         },
         {
           "Name": "AnvilPanelSlot2",
           "Content": {
             "ObjectName": "BPMainAreaContainer_C'BPCentralMarketplaceWidget_C:WidgetTree.BPMainAreaContainer'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.23"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.24"
           }
         },
         {
@@ -566,6 +566,28 @@
     }
   },
   {
+    "Type": "BPFooterContainer_C",
+    "Name": "BPFooterContainer_C_1",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPFooterContainer.BPFooterContainer_C'",
+    "Template": {
+      "ObjectName": "BPFooterContainer_C'Default__BPFooterContainer_C'",
+      "ObjectPath": "Anvil/Content/UI/BPFooterContainer.2"
+    },
+    "Properties": {
+      "FooterWidth": 850.0,
+      "NamedSlotBindings": [
+        {
+          "Name": "FooterSlot0",
+          "Content": {
+            "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.ItemCategoryButtonHorizontalBox'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.37"
+          }
+        }
+      ]
+    }
+  },
+  {
     "Type": "BPHeaderContainer_C",
     "Name": "HeaderContainer",
     "Outer": "WidgetTree",
@@ -606,28 +628,6 @@
           "Content": {
             "ObjectName": "WidgetSwitcher'BPCentralMarketplaceWidget_C:WidgetTree.MarketTabSwitcher'",
             "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.161"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "Type": "BPSubHeaderContainer_C",
-    "Name": "BPSubHeaderContainer",
-    "Outer": "WidgetTree",
-    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPSubHeaderContainer.BPSubHeaderContainer_C'",
-    "Template": {
-      "ObjectName": "BPSubHeaderContainer_C'Default__BPSubHeaderContainer_C'",
-      "ObjectPath": "Anvil/Content/UI/BPSubHeaderContainer.2"
-    },
-    "Properties": {
-      "SubHeaderWidth": 850.0,
-      "NamedSlotBindings": [
-        {
-          "Name": "SubHeaderSlot0",
-          "Content": {
-            "ObjectName": "HorizontalBox'BPCentralMarketplaceWidget_C:WidgetTree.ItemCategoryButtonHorizontalBox'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/BPCentralMarketplaceWidget.37"
           }
         }
       ]
@@ -4068,6 +4068,17 @@
       },
       {
         "Type": "ObjectProperty",
+        "Name": "BPFooterContainer_C_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPFooterContainer_C'",
+          "ObjectPath": "Anvil/Content/UI/BPFooterContainer.10"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "BPMainAreaContainer",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -4075,17 +4086,6 @@
         "PropertyClass": {
           "ObjectName": "WidgetBlueprintGeneratedClass'BPMainAreaContainer_C'",
           "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.20"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "BPSubHeaderContainer",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
-        "PropertyClass": {
-          "ObjectName": "WidgetBlueprintGeneratedClass'BPSubHeaderContainer_C'",
-          "ObjectPath": "Anvil/Content/UI/BPSubHeaderContainer.10"
         }
       },
       {
