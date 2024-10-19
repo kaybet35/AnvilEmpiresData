@@ -188,15 +188,6 @@ FDryingRackRecipe = {}
 
 
 
----@class FDynamicPrefabSpawnInfo
----@field CodeName TSubclassOf<ADynamicPrefab>
----@field CodeNameVisVar int32
----@field SpawnWeight float
----@field SpawnWeightVisVar float
-FDynamicPrefabSpawnInfo = {}
-
-
-
 ---@class FEntityFloatPair
 ---@field CodeName TSubclassOf<UEntityTemplate>
 ---@field CodeNameVisVar int32
@@ -559,7 +550,6 @@ FUnderworldModuleDebugInfo = {}
 ---@field PositionX float
 ---@field PositionY float
 ---@field NumRotations uint8
----@field SpawnedPrefabCodeName int32
 FUnderworldModuleDebugInfoEntry = {}
 
 
@@ -1085,13 +1075,13 @@ UDryingRackProxyComponent = {}
 
 
 ---@class UDynamicPrefabDataComponent : UDataComponent
----@field SpawnedPrefabCodeName int32
+---@field PrefabCodeName int32
 UDynamicPrefabDataComponent = {}
 
 
 
 ---@class UDynamicPrefabProxyComponent : UProxyComponent
----@field PrefabSpawnList TArray<FDynamicPrefabSpawnInfo>
+---@field PrefabCodeName TSubclassOf<ADynamicPrefab>
 UDynamicPrefabProxyComponent = {}
 
 

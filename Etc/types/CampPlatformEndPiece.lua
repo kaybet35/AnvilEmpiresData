@@ -1,8 +1,6 @@
 ---@meta
 
----@class ACampPlatformEndPiece_C : AFootprint
----@field DefaultSceneRoot USceneComponent
-ACampPlatformEndPiece_C = {}
-
+---@class UCampPlatformEndPiece_C : UEntityTemplate
+UCampPlatformEndPiece_C = {}
 
 

@@ -24,9 +24,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 NumRotations;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 SpawnedPrefabCodeName;
-    
     R2_API FUnderworldModuleDebugInfoEntry();
 };
 

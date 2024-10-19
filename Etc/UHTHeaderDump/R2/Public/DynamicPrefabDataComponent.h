@@ -8,7 +8,7 @@ class R2_API UDynamicPrefabDataComponent : public UDataComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 SpawnedPrefabCodeName;
+    int32 PrefabCodeName;
     
     UDynamicPrefabDataComponent(const FObjectInitializer& ObjectInitializer);
 

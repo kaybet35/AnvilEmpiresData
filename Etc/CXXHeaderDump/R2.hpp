@@ -124,15 +124,6 @@ struct FDryingRackRecipe
 
 }; // Size: 0x20
 
-struct FDynamicPrefabSpawnInfo
-{
-    TSubclassOf<class ADynamicPrefab> CodeName;                                       // 0x0000 (size: 0x8)
-    int32 CodeNameVisVar;                                                             // 0x0008 (size: 0x4)
-    float SpawnWeight;                                                                // 0x000C (size: 0x4)
-    float SpawnWeightVisVar;                                                          // 0x0010 (size: 0x4)
-
-}; // Size: 0x18
-
 struct FEntityFloatPair
 {
     TSubclassOf<class UEntityTemplate> CodeName;                                      // 0x0000 (size: 0x8)
@@ -496,9 +487,8 @@ struct FUnderworldModuleDebugInfoEntry
     float PositionX;                                                                  // 0x000C (size: 0x4)
     float PositionY;                                                                  // 0x0010 (size: 0x4)
     uint8 NumRotations;                                                               // 0x0014 (size: 0x1)
-    int32 SpawnedPrefabCodeName;                                                      // 0x0018 (size: 0x4)
 
-}; // Size: 0x20
+}; // Size: 0x18
 
 struct FVisvarPowerConnection
 {
@@ -1089,15 +1079,15 @@ class UDryingRackProxyComponent : public UProxyComponent
 
 class UDynamicPrefabDataComponent : public UDataComponent
 {
-    int32 SpawnedPrefabCodeName;                                                      // 0x00A8 (size: 0x4)
+    int32 PrefabCodeName;                                                             // 0x00A8 (size: 0x4)
 
 }; // Size: 0xC8
 
 class UDynamicPrefabProxyComponent : public UProxyComponent
 {
-    TArray<FDynamicPrefabSpawnInfo> PrefabSpawnList;                                  // 0x0028 (size: 0x10)
+    TSubclassOf<class ADynamicPrefab> PrefabCodeName;                                 // 0x0028 (size: 0x8)
 
-}; // Size: 0x38
+}; // Size: 0x30
 
 class UEditorSpawnerProxyComponent : public UProxyComponent
 {
