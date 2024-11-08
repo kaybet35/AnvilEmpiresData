@@ -1,6 +1,11 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleCross01_C : ABPUnderworldModuleDynamicPrefab_C
+---@field ChildActorWolfElite UChildActorComponent
+---@field ChildActorStonePile UChildActorComponent
+---@field ChildActorIronPile UChildActorComponent
+---@field ChildActorBat UChildActorComponent
+---@field CustomNavmeshVolume UCustomNavmeshVolumeComponent
 ---@field Decal030 UDecalComponent
 ---@field Wall0156 UStaticMeshComponent
 ---@field Wall0155 UStaticMeshComponent
@@ -275,7 +280,6 @@
 ---@field ['+X Marker'] UArrowComponent
 ---@field ['+Y Marker'] UArrowComponent
 ---@field ['-Y Marker'] UArrowComponent
----@field NavigationModifierBox UBoxComponent
 ---@field CustomHeightmap UCustomHeightmapComponent
 ---@field Floor UStaticMeshComponent
 ---@field Pivot USceneComponent

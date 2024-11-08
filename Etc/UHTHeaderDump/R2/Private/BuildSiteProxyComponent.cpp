@@ -17,6 +17,7 @@ UBuildSiteProxyComponent::UBuildSiteProxyComponent() {
     this->bBuildableInEnemyTerritory = false;
     this->bBuildableNearEnemies = false;
     this->bIsBuildableUnderground = false;
+    this->bOnlyBuildableUnderground = false;
     this->bAllowRapidBuild = false;
     this->CanBuildTownStructureWithoutPledge = false;
     this->bBuildsInstantly = false;

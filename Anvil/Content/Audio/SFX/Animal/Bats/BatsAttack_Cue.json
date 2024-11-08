@@ -1,0 +1,128 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "BatsAttack_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'BatsAttack_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsAttack_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'VoiceConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/VoiceConcurrency.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 128,
+        "VolumeScale": 0.5
+      },
+      "Duration": 1.9139688,
+      "MaxDistance": 11600.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Voice'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Voice.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "BatsAttack_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.8,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'BatsAttack_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsAttack_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "BatsAttack_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'BatsAttack_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsAttack_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'BatsAttack_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsAttack_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'BatsAttack_Cue:SoundNodeWavePlayer_5'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsAttack_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "BatsAttack_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Bats/BatsAttack01.BatsAttack01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BatsAttack01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsAttack01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "BatsAttack_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Bats/BatsAttack02.BatsAttack02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BatsAttack02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsAttack02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "BatsAttack_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Bats/BatsAttack03.BatsAttack03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BatsAttack03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsAttack03.0"
+    }
+  }
+]

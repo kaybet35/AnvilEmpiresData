@@ -38,6 +38,9 @@ public:
     bool bAvoidRoads;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsTrappable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HomingDistance;
     
     UAnimalAIProxyComponent();

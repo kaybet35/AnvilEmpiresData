@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "MiningPlatformStairs_C'Default__MiningPlatformStairs_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.12"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.10"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -77,12 +77,6 @@
     }
   },
   {
-    "Type": "DecayProxyComponent",
-    "Name": "DecayProxyComponent_1",
-    "Outer": "Default__MiningPlatformStairs_C",
-    "Class": "UScriptClass'DecayProxyComponent'"
-  },
-  {
     "Type": "DestroyableProxyComponent",
     "Name": "DestroyableComp",
     "Outer": "Default__MiningPlatformStairs_C",
@@ -90,18 +84,6 @@
     "Template": {
       "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
-    }
-  },
-  {
-    "Type": "DestroyableProxyComponent",
-    "Name": "DestroyableProxyComponent_0",
-    "Outer": "Default__MiningPlatformStairs_C",
-    "Class": "UScriptClass'DestroyableProxyComponent'",
-    "Properties": {
-      "DestructionEffectEntity": {
-        "ObjectName": "BlueprintGeneratedClass'EffectStructureDestroy_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectStructureDestroy.0"
-      }
     }
   },
   {
@@ -144,6 +126,7 @@
     "Outer": "Default__MiningPlatformStairs_C",
     "Class": "UScriptClass'HealthProxyComponent'",
     "Properties": {
+      "MaxHealth": 30.0,
       "TargetType": "EAnvilDamageTargetType::Structure"
     }
   },
@@ -158,27 +141,27 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__MiningPlatformStairs_C:TeamProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.19"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.15"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__MiningPlatformStairs_C:HealthProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.9"
       },
       "RepairComp": {
-        "ObjectName": "RepairProxyComponent'Default__MiningPlatformStairs_C:RepairProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.14"
+        "ObjectName": "RepairProxyComponent'Default__MiningPlatformStairs_C:RepairComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.11"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__MiningPlatformStairs_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.17"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.13"
       },
       "DestroyableComp": {
-        "ObjectName": "DestroyableProxyComponent'Default__MiningPlatformStairs_C:DestroyableProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.7"
+        "ObjectName": "DestroyableProxyComponent'Default__MiningPlatformStairs_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.5"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__MiningPlatformStairs_C:FootprintCollisionProxyComponent_1'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.7"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__MiningPlatformStairs_C:BoxCollisionProxyComponent_2'",
@@ -189,12 +172,12 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.2"
       },
       "DecayComp": {
-        "ObjectName": "DecayProxyComponent'Default__MiningPlatformStairs_C:DecayProxyComponent_1'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.5"
+        "ObjectName": "DecayProxyComponent'Default__MiningPlatformStairs_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.4"
       },
       "ScorchComp": {
-        "ObjectName": "ScorchProxyComponent'Default__MiningPlatformStairs_C:ScorchProxyComponent_1'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.16"
+        "ObjectName": "ScorchProxyComponent'Default__MiningPlatformStairs_C:ScorchProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformStairs.12"
       },
       "CodeNameString": "MiningPlatformStairs",
       "CodeName": 1173659199,
@@ -218,12 +201,6 @@
     }
   },
   {
-    "Type": "RepairProxyComponent",
-    "Name": "RepairProxyComponent_0",
-    "Outer": "Default__MiningPlatformStairs_C",
-    "Class": "UScriptClass'RepairProxyComponent'"
-  },
-  {
     "Type": "ScorchProxyComponent",
     "Name": "ScorchProxyComponent_0",
     "Outer": "Default__MiningPlatformStairs_C",
@@ -232,12 +209,6 @@
       "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
     }
-  },
-  {
-    "Type": "ScorchProxyComponent",
-    "Name": "ScorchProxyComponent_1",
-    "Outer": "Default__MiningPlatformStairs_C",
-    "Class": "UScriptClass'ScorchProxyComponent'"
   },
   {
     "Type": "StructureProxyComponent",

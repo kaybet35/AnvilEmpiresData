@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_FamilyCenterFoundationTriangularStraightBuildSite_HPP
+#define UE4SS_SDK_FamilyCenterFoundationTriangularStraightBuildSite_HPP
+
+class UFamilyCenterFoundationTriangularStraightBuildSite_C : public UBPBaseFoundationBuildSiteEntity_C
+{
+}; // Size: 0xC8
+
+#endif

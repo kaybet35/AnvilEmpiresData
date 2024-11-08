@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_FamilyCenterPerimeterWallFlatDiagonalBuildSite_HPP
+#define UE4SS_SDK_FamilyCenterPerimeterWallFlatDiagonalBuildSite_HPP
+
+class UFamilyCenterPerimeterWallFlatDiagonalBuildSite_C : public UBPBaseFoundationModularBuildSiteEntity_C
+{
+}; // Size: 0xC8
+
+#endif

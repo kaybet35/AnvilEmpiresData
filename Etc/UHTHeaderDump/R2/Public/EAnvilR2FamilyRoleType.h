@@ -8,5 +8,6 @@ enum class EAnvilR2FamilyRoleType : uint8 {
     Member,
     Manager,
     Founder,
+    NumTypes,
 };
 

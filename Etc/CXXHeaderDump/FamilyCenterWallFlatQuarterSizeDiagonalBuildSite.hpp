@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_FamilyCenterWallFlatQuarterSizeDiagonalBuildSite_HPP
+#define UE4SS_SDK_FamilyCenterWallFlatQuarterSizeDiagonalBuildSite_HPP
+
+class UFamilyCenterWallFlatQuarterSizeDiagonalBuildSite_C : public UBPBaseFoundationModularBuildSiteEntity_C
+{
+}; // Size: 0xC8
+
+#endif

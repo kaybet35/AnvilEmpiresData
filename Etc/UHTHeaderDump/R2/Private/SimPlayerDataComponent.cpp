@@ -3,6 +3,7 @@
 USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GuardStrength = 0;
     this->TeamId = 0;
+    this->CurrentMovementMode = EAnvilMovementMode::Walking;
     this->GuardMeter = 0.00f;
     this->Stability = 0.00f;
     this->CurrentActivitySpeedModifier = 0.00f;

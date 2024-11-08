@@ -2,6 +2,7 @@
 
 ---@class ABpVisTownCenterKeepT3_C : AVisTownCenter
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field VisRandomMeshDecor61 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor60 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor59 UVisRandomMeshDecorComponent

@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_FamilyCenterCeilingCornerTriangularStraightBuildsite_HPP
+#define UE4SS_SDK_FamilyCenterCeilingCornerTriangularStraightBuildsite_HPP
+
+class UFamilyCenterCeilingCornerTriangularStraightBuildsite_C : public UBPBaseFoundationModularBuildSiteEntity_C
+{
+}; // Size: 0xC8
+
+#endif

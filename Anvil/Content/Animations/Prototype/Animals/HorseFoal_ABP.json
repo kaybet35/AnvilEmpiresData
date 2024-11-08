@@ -2118,19 +2118,1017 @@
     "Name": "Default__HorseFoal_ABP_C",
     "Class": "AnimBlueprintGeneratedClass'Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.HorseFoal_ABP_C'",
     "Properties": {
-      "UberGraphFrame": {}
+      "UberGraphFrame": {},
+      "__AnimBlueprintMutables[1]": {
+        "__FloatProperty": 1.0,
+        "__FloatProperty_0[1]": 1.0,
+        "__FloatProperty_1[2]": 1.0,
+        "__FloatProperty_2[3]": 0.0
+      },
+      "AnimBlueprintExtension_PropertyAccess[2]": {},
+      "AnimBlueprintExtension_Base[3]": {},
+      "AnimGraphNode_Root[4]": {
+        "Result": {
+          "LinkID": 17
+        }
+      },
+      "AnimGraphNode_TransitionResult_7[5]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_6[6]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_5[7]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_4[8]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_3[9]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_2[10]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_3[11]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Horse_Anim_walk'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_walk.4"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_5[12]": {
+        "Result": {
+          "LinkID": 7
+        }
+      },
+      "AnimGraphNode_SequencePlayer_2[13]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Horse_Anim_walk'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_walk.4"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_4[14]": {
+        "Result": {
+          "LinkID": 9
+        }
+      },
+      "AnimGraphNode_SequencePlayer_1[15]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Horse_Anim_walk'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_walk.4"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3[16]": {
+        "Result": {
+          "LinkID": 11
+        }
+      },
+      "AnimGraphNode_RandomPlayer[17]": {
+        "Entries": [
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence'Horse_Anim_idle'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_idle.0"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "CustomCurve": null,
+              "BlendTime": 0.2,
+              "BlendOption": "EAlphaBlendOption::Linear"
+            }
+          },
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence'Horse_Anim_headBob'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_headBob.0"
+            },
+            "ChanceToPlay": 0.2,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "CustomCurve": null,
+              "BlendTime": 0.2,
+              "BlendOption": "EAlphaBlendOption::Linear"
+            }
+          }
+        ],
+        "BlendWeight": 0.0,
+        "bShuffleMode": false
+      },
+      "AnimGraphNode_StateResult_2[18]": {
+        "Result": {
+          "LinkID": 13
+        }
+      },
+      "AnimGraphNode_StateMachine_1[19]": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "AnimGraphNode_RotationOffsetBlendSpace[20]": {
+        "BasePose": {
+          "LinkID": 15
+        },
+        "LODThreshold": -1,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": false,
+        "BlendSpace": {
+          "ObjectName": "AimOffsetBlendSpace1D'Horse_TurnInPlace'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_TurnInPlace.0"
+        },
+        "PreviousBlendSpace": null,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_ApplyMeshSpaceAdditive[21]": {
+        "Base": {
+          "LinkID": 16
+        },
+        "Additive": {
+          "LinkID": 23
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "Alpha": 1.0,
+        "bAlphaBoolEnabled": true,
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "LODThreshold": -1
+      },
+      "AnimGraphNode_TransitionResult_1[22]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult[23]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer[24]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Horse_anim_HitEffect'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_anim_HitEffect.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1[25]": {
+        "Result": {
+          "LinkID": 20
+        }
+      },
+      "AnimGraphNode_StateResult[26]": {
+        "Result": {
+          "LinkID": -1
+        }
+      },
+      "AnimGraphNode_StateMachine[27]": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      }
+    },
+    "SerializedSparseClassDataStruct": "ScriptStruct'Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.HorseFoal_ABP_C:AnimBlueprintGeneratedConstantData'",
+    "SerializedSparseClassData": {
+      "__NameProperty_116": "AnimGraph",
+      "__NameProperty_117[1]": "Walk back",
+      "__IntProperty_118[2]": 3,
+      "__FloatProperty_119[3]": 600.0,
+      "__NameProperty_120[4]": "Galop",
+      "__IntProperty_121[5]": 2,
+      "__FloatProperty_122[6]": 200.0,
+      "__NameProperty_123[7]": "Trotting",
+      "__NameProperty_124[8]": "Idle",
+      "__BoolProperty_125[9]": true,
+      "__FloatProperty_126[10]": 0.0,
+      "__StructProperty_127[11]": {
+        "bMapRange": false,
+        "bClampResult": false,
+        "bInterpResult": false,
+        "InRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "OutRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "Scale": 1.0,
+        "Bias": 0.0,
+        "ClampMin": 0.0,
+        "ClampMax": 1.0,
+        "InterpSpeedIncreasing": 10.0,
+        "InterpSpeedDecreasing": 10.0
+      },
+      "__FloatProperty_128[12]": 1.0,
+      "__BoolProperty_129[13]": false,
+      "__EnumProperty_130[14]": "EAnimSyncMethod::DoNotSync",
+      "__ByteProperty_131[15]": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_132[16]": "HitEffect",
+      "__IntProperty_133[17]": 1,
+      "__NameProperty_134[18]": "None",
+      "__NameProperty_135[19]": "entry",
+      "__IntProperty_136[20]": 0,
+      "__StructProperty_137[21]": {
+        "ClassName": "None",
+        "FunctionName": "None"
+      },
+      "AnimBlueprintExtension_PropertyAccess[22]": {
+        "Library": {
+          "PathSegments": [
+            {
+              "Name": "Yaw",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Yaw"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'HorseFoal_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'HorseFoal_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.14"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'HorseFoal_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty_2",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty_2"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'HorseFoal_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.14"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "IsReceivingIncomingAttack",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "IsReceivingIncomingAttack"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisAnimalAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'HorseFoal_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "Speed",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Speed"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'HorseFoal_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'HorseFoal_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.14"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'HorseFoal_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty_0",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty_0"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'HorseFoal_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.14"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "Speed",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Speed"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'HorseFoal_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'HorseFoal_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.14"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'HorseFoal_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'HorseFoal_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.14"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            }
+          ],
+          "SrcPaths": [
+            {
+              "PathSegmentStartIndex": 0,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 3,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 6,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 9,
+              "PathSegmentCount": 1
+            }
+          ],
+          "DestPaths": [
+            {
+              "PathSegmentStartIndex": 1,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 4,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 7,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 10,
+              "PathSegmentCount": 2
+            }
+          ],
+          "CopyBatchArray": [
+            {
+              "Copies": [
+                {
+                  "AccessIndex": 0,
+                  "DestAccessStartIndex": 0,
+                  "DestAccessEndIndex": 1,
+                  "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
+                },
+                {
+                  "AccessIndex": 1,
+                  "DestAccessStartIndex": 1,
+                  "DestAccessEndIndex": 2,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 2,
+                  "DestAccessStartIndex": 2,
+                  "DestAccessEndIndex": 3,
+                  "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
+                },
+                {
+                  "AccessIndex": 3,
+                  "DestAccessStartIndex": 3,
+                  "DestAccessEndIndex": 4,
+                  "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "AnimBlueprintExtension_Base[23]": {
+        "ExposedValueHandlers": [
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'HorseFoal_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_TransitionResult_D0D50C6A4BA147EF10B2E4873458C5B9'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.8"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_TransitionResult_D0D50C6A4BA147EF10B2E4873458C5B9"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'HorseFoal_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_TransitionResult_EF41C07440E9591DB40F93AB29559992'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.10"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_TransitionResult_EF41C07440E9591DB40F93AB29559992"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'HorseFoal_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_TransitionResult_7D0F807745710906BB4388920B8E9868'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.7"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_TransitionResult_7D0F807745710906BB4388920B8E9868"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'HorseFoal_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_TransitionResult_5EE97E6E45ACA16CF35CF48FDF00285B'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.4"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_TransitionResult_5EE97E6E45ACA16CF35CF48FDF00285B"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'HorseFoal_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_TransitionResult_6DDB40194454342EADCBEA9CECAD16C2'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.6"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_TransitionResult_6DDB40194454342EADCBEA9CECAD16C2"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'HorseFoal_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_TransitionResult_6B97B59844671EFC9F33349B7AD6AC55'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.5"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_TransitionResult_6B97B59844671EFC9F33349B7AD6AC55"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 3,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 2,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'HorseFoal_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_SequencePlayer_10AAB0B54FD30248739ECC82A26C2F57'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.3"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_SequencePlayer_10AAB0B54FD30248739ECC82A26C2F57"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 0,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'HorseFoal_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_TransitionResult_E39B3FB148B08A9759B8F8BCF32CFA87'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseFoal_ABP.9"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_HorseFoal_ABP_AnimGraphNode_TransitionResult_E39B3FB148B08A9759B8F8BCF32CFA87"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 1,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          }
+        ]
+      }
     }
   },
   {
     "Type": "ScriptStruct",
     "Name": "AnimBlueprintGeneratedConstantData",
     "Outer": "HorseFoal_ABP_C",
-    "Class": "UScriptClass'ScriptStruct'"
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintConstantData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_116",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_117",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_118",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_119",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_120",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_121",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_122",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_123",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_124",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_125",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_126",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_127",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_128",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_129",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_130",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_131",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_132",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_133",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_134",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_135",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_136",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_137",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNodeFunctionRef'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_Base'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ]
   },
   {
     "Type": "ScriptStruct",
     "Name": "AnimBlueprintGeneratedMutableData",
     "Outer": "HorseFoal_ABP_C",
-    "Class": "UScriptClass'ScriptStruct'"
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintMutableData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      }
+    ]
   }
 ]

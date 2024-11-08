@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "MiningPlatformSquare_C'Default__MiningPlatformSquare_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.6"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.8"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -34,6 +34,21 @@
     "Template": {
       "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_1",
+    "Outer": "Default__MiningPlatformSquare_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "ExtendFootprint": true,
+      "Extents": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 64
     }
   },
   {
@@ -64,6 +79,12 @@
     "Template": {
       "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'MiningPlatformSquareFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/MiningPlatformSquareFootprint.1"
+      }
     }
   },
   {
@@ -77,6 +98,16 @@
     }
   },
   {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_0",
+    "Outer": "Default__MiningPlatformSquare_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Properties": {
+      "MaxHealth": 30.0,
+      "TargetType": "EAnvilDamageTargetType::Structure"
+    }
+  },
+  {
     "Type": "MiningPlatformSquare_C",
     "Name": "Default__MiningPlatformSquare_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.MiningPlatformSquare_C'",
@@ -85,21 +116,50 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
     },
     "Properties": {
-      "TeamComp": null,
-      "HealthComp": null,
-      "RepairComp": null,
-      "StructureComp": {
-        "ObjectName": "StructureProxyComponent'Default__MiningPlatformSquare_C:StructureProxyComponent_0'",
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__MiningPlatformSquare_C:TeamProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.13"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__MiningPlatformSquare_C:HealthProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.7"
+      },
+      "RepairComp": {
+        "ObjectName": "RepairProxyComponent'Default__MiningPlatformSquare_C:RepairComp'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.9"
       },
-      "DestroyableComp": null,
-      "FootprintComp": null,
-      "UseBoxComp": null,
-      "DecayComp": null,
-      "ScorchComp": null,
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__MiningPlatformSquare_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.11"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__MiningPlatformSquare_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.4"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__MiningPlatformSquare_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.5"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__MiningPlatformSquare_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.1"
+      },
+      "ActionBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__MiningPlatformSquare_C:BoxCollisionProxyComponent_1'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.2"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__MiningPlatformSquare_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.3"
+      },
+      "ScorchComp": {
+        "ObjectName": "ScorchProxyComponent'Default__MiningPlatformSquare_C:ScorchProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Mines/MiningPlatform/MiningPlatformSquare.10"
+      },
       "CodeNameString": "MiningPlatformSquare",
       "CodeName": -197479457,
       "bGenerateMeshCollisionsFromVisActor": true,
+      "GenerateMeshCollisionMask": 18882560,
       "bGenerateMeshCollisionVaultable": true,
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisMiningPlatformSquare_C'",
@@ -148,6 +208,15 @@
     "Template": {
       "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamProxyComponent_0",
+    "Outer": "Default__MiningPlatformSquare_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Properties": {
+      "Accessibility": "EAnvilAccessibilityType::AllCanUse"
     }
   }
 ]

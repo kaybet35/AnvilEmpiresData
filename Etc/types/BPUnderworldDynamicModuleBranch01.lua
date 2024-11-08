@@ -1,6 +1,11 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleBranch01_C : ABPUnderworldModuleDynamicPrefab_C
+---@field ChildActorWolfElite UChildActorComponent
+---@field ChildActorStonePile UChildActorComponent
+---@field ChildActorIronPile UChildActorComponent
+---@field ChildActorBat UChildActorComponent
+---@field CustomNavmeshVolume UCustomNavmeshVolumeComponent
 ---@field Decal42 UDecalComponent
 ---@field StaticMesh17 UStaticMeshComponent
 ---@field Decal41 UDecalComponent
@@ -269,7 +274,6 @@
 ---@field ['-X Marker'] UArrowComponent
 ---@field ['+X Marker'] UArrowComponent
 ---@field ['-Y Marker'] UArrowComponent
----@field NavigationModifierBox UBoxComponent
 ---@field CustomHeightmap UCustomHeightmapComponent
 ---@field Floor UStaticMeshComponent
 ---@field Pivot USceneComponent

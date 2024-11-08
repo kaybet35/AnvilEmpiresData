@@ -22,6 +22,7 @@ UVisPlayerAnimInstance::UVisPlayerAnimInstance() {
     this->bSecondaryShieldMode = false;
     this->bCombatMode = false;
     this->bIsPushing = false;
+    this->bIsSwimming = false;
 }
 
 

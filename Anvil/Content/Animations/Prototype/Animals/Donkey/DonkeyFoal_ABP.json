@@ -1170,7 +1170,475 @@
     "Name": "Default__DonkeyFoal_ABP_C",
     "Class": "AnimBlueprintGeneratedClass'Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.DonkeyFoal_ABP_C'",
     "Properties": {
-      "UberGraphFrame": {}
+      "UberGraphFrame": {},
+      "__AnimBlueprintMutables[1]": {
+        "__FloatProperty": 1.0,
+        "__FloatProperty_0[1]": 1.0,
+        "__FloatProperty_1[2]": 1.0
+      },
+      "AnimBlueprintExtension_PropertyAccess[2]": {},
+      "AnimBlueprintExtension_Base[3]": {},
+      "AnimGraphNode_Root[4]": {
+        "Result": {
+          "LinkID": 15
+        }
+      },
+      "AnimGraphNode_TransitionResult_5[5]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_4[6]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_3[7]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_2[8]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1[9]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult[10]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_3[11]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Donkey_walk150_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_walk150_Anim.4"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3[12]": {
+        "Result": {
+          "LinkID": 7
+        }
+      },
+      "AnimGraphNode_SequencePlayer_2[13]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Donkey_run450_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_run450_Anim.4"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2[14]": {
+        "Result": {
+          "LinkID": 9
+        }
+      },
+      "AnimGraphNode_SequencePlayer_1[15]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Donkey_walk150_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_walk150_Anim.4"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1[16]": {
+        "Result": {
+          "LinkID": 11
+        }
+      },
+      "AnimGraphNode_SequencePlayer[17]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Donkey_idle_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_idle_Anim.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult[18]": {
+        "Result": {
+          "LinkID": 13
+        }
+      },
+      "AnimGraphNode_StateMachine[19]": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      }
+    },
+    "SerializedSparseClassDataStruct": "ScriptStruct'Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.DonkeyFoal_ABP_C:AnimBlueprintGeneratedConstantData'",
+    "SerializedSparseClassData": {
+      "__NameProperty_77": "AnimGraph",
+      "__NameProperty_78[1]": "Walk back",
+      "__IntProperty_79[2]": 3,
+      "__FloatProperty_80[3]": 450.0,
+      "__NameProperty_81[4]": "Galop",
+      "__IntProperty_82[5]": 2,
+      "__FloatProperty_83[6]": 150.0,
+      "__NameProperty_84[7]": "Trotting",
+      "__IntProperty_85[8]": 1,
+      "__BoolProperty_86[9]": true,
+      "__FloatProperty_87[10]": 0.0,
+      "__StructProperty_88[11]": {
+        "bMapRange": false,
+        "bClampResult": false,
+        "bInterpResult": false,
+        "InRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "OutRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "Scale": 1.0,
+        "Bias": 0.0,
+        "ClampMin": 0.0,
+        "ClampMax": 1.0,
+        "InterpSpeedIncreasing": 10.0,
+        "InterpSpeedDecreasing": 10.0
+      },
+      "__FloatProperty_89[12]": 0.5,
+      "__FloatProperty_90[13]": 1.0,
+      "__BoolProperty_91[14]": false,
+      "__EnumProperty_92[15]": "EAnimSyncMethod::DoNotSync",
+      "__ByteProperty_93[16]": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_94[17]": "None",
+      "__NameProperty_95[18]": "Idle",
+      "__IntProperty_96[19]": 0,
+      "__StructProperty_97[20]": {
+        "ClassName": "None",
+        "FunctionName": "None"
+      },
+      "AnimBlueprintExtension_PropertyAccess[21]": {
+        "Library": {
+          "PathSegments": [
+            {
+              "Name": "NativeSpeed",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "NativeSpeed"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisAnimalAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'DonkeyFoal_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.11"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'DonkeyFoal_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty_1",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty_1"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'DonkeyFoal_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.11"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "NativeSpeed",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "NativeSpeed"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisAnimalAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'DonkeyFoal_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.11"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'DonkeyFoal_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty_0",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty_0"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'DonkeyFoal_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.11"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "NativeSpeed",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "NativeSpeed"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisAnimalAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'DonkeyFoal_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.11"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'DonkeyFoal_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'DonkeyFoal_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.11"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            }
+          ],
+          "SrcPaths": [
+            {
+              "PathSegmentStartIndex": 0,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 3,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 6,
+              "PathSegmentCount": 1
+            }
+          ],
+          "DestPaths": [
+            {
+              "PathSegmentStartIndex": 1,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 4,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 7,
+              "PathSegmentCount": 2
+            }
+          ],
+          "CopyBatchArray": [
+            {
+              "Copies": [
+                {
+                  "AccessIndex": 0,
+                  "DestAccessStartIndex": 0,
+                  "DestAccessEndIndex": 1,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                },
+                {
+                  "AccessIndex": 1,
+                  "DestAccessStartIndex": 1,
+                  "DestAccessEndIndex": 2,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                },
+                {
+                  "AccessIndex": 2,
+                  "DestAccessStartIndex": 2,
+                  "DestAccessEndIndex": 3,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "AnimBlueprintExtension_Base[22]": {
+        "ExposedValueHandlers": [
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'DonkeyFoal_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_DonkeyFoal_ABP_AnimGraphNode_TransitionResult_1C3D6FA34C39B48D7BFAE4B6E5046443'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.3"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_DonkeyFoal_ABP_AnimGraphNode_TransitionResult_1C3D6FA34C39B48D7BFAE4B6E5046443"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'DonkeyFoal_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_DonkeyFoal_ABP_AnimGraphNode_TransitionResult_AD77DDF24D6775B223237B954EA6BE11'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.6"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_DonkeyFoal_ABP_AnimGraphNode_TransitionResult_AD77DDF24D6775B223237B954EA6BE11"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'DonkeyFoal_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_DonkeyFoal_ABP_AnimGraphNode_TransitionResult_3768D9444DC8E82B4CEC08811B540FBC'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.4"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_DonkeyFoal_ABP_AnimGraphNode_TransitionResult_3768D9444DC8E82B4CEC08811B540FBC"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'DonkeyFoal_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_DonkeyFoal_ABP_AnimGraphNode_TransitionResult_F1F8F4F84069D65E0DEFBA94473D2048'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.7"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_DonkeyFoal_ABP_AnimGraphNode_TransitionResult_F1F8F4F84069D65E0DEFBA94473D2048"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'DonkeyFoal_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_DonkeyFoal_ABP_AnimGraphNode_TransitionResult_F2153B56477E509A7FC2998A31BC3132'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.8"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_DonkeyFoal_ABP_AnimGraphNode_TransitionResult_F2153B56477E509A7FC2998A31BC3132"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'DonkeyFoal_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_DonkeyFoal_ABP_AnimGraphNode_TransitionResult_4E6411C4438F8232EDEDA09CCB264404'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/DonkeyFoal_ABP.5"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_DonkeyFoal_ABP_AnimGraphNode_TransitionResult_4E6411C4438F8232EDEDA09CCB264404"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 2,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 1,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 0,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          }
+        ]
+      }
     }
   },
   {
@@ -1363,12 +1831,247 @@
     "Type": "ScriptStruct",
     "Name": "AnimBlueprintGeneratedConstantData",
     "Outer": "DonkeyFoal_ABP_C",
-    "Class": "UScriptClass'ScriptStruct'"
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintConstantData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_77",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_78",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_79",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_80",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_81",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_82",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_83",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_84",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_85",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_86",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_87",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_88",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_89",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_90",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_91",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_92",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_93",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_94",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_95",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_96",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_97",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNodeFunctionRef'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_Base'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ]
   },
   {
     "Type": "ScriptStruct",
     "Name": "AnimBlueprintGeneratedMutableData",
     "Outer": "DonkeyFoal_ABP_C",
-    "Class": "UScriptClass'ScriptStruct'"
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintMutableData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      }
+    ]
   }
 ]

@@ -1,0 +1,163 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "BatsWingFlap01_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'BatsWingFlap01_Cue:SoundNodeModulator_1'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsWingFlap01_Cue.2"
+      },
+      "VolumeMultiplier": 0.25,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'VoiceConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/VoiceConcurrency.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 128,
+        "VolumeScale": 0.5
+      },
+      "Duration": 1.4076875,
+      "MaxDistance": 11600.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Voice'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Voice.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "BatsWingFlap01_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        0.5
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'BatsWingFlap01_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsWingFlap01_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "BatsWingFlap01_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "VolumeMin": 0.8,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'BatsWingFlap01_Cue:SoundNodeRandom_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsWingFlap01_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Outer": "BatsWingFlap01_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeMixer'BatsWingFlap01_Cue:SoundNodeMixer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsWingFlap01_Cue.1"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'BatsWingFlap01_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsWingFlap01_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'BatsWingFlap01_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsWingFlap01_Cue.6"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'BatsWingFlap01_Cue:SoundNodeWavePlayer_6'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsWingFlap01_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "BatsWingFlap01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Bats/BatsWingFlap01.BatsWingFlap01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BatsWingFlap01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsWingFlap01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "BatsWingFlap01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Bats/BatsWingFlap02.BatsWingFlap02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BatsWingFlap02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsWingFlap02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "BatsWingFlap01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Bats/BatsWingFlap03.BatsWingFlap03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BatsWingFlap03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsWingFlap03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "BatsWingFlap01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Animal/Bats/BatsWingFlap04.BatsWingFlap04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BatsWingFlap04'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Bats/BatsWingFlap04.0"
+    }
+  }
+]

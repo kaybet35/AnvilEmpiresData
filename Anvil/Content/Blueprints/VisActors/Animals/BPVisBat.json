@@ -1,0 +1,164 @@
+[
+  {
+    "Type": "AnimalAIDataComponent",
+    "Name": "AnimalAIDataComponent",
+    "Outer": "Default__BPVisBat_C",
+    "Class": "UScriptClass'AnimalAIDataComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisBat_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisBat_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBat.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisAnimal'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisBat_C'Default__BPVisBat_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBat.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisBat_C",
+    "Name": "Default__BPVisBat_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Animals/BPVisBat.BPVisBat_C'",
+    "Properties": {
+      "AnimalAIDataComponent": {
+        "ObjectName": "AnimalAIDataComponent'Default__BPVisBat_C:AnimalAIDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBat.0"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisBat_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBat.4"
+      },
+      "Capsule": {
+        "ObjectName": "CapsuleComponent'Default__BPVisBat_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBat.3"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisBat_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBat.8"
+      },
+      "CurrentStateMontageMap": [
+        {
+          "Key": "EAnvilAnimalState::EAnvilAnimalState_MAX",
+          "Value": {
+            "ObjectName": "AnimMontage'Wolf_trapped_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Wolf_trapped_Montage.0"
+          }
+        }
+      ],
+      "bNightVisibility": true,
+      "PositionSmoothSpeed": 8.0,
+      "RotationSmoothSpeed": 4.0,
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BPVisBat_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBat.3"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule",
+    "Outer": "Default__BPVisBat_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Properties": {
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisBat_C",
+    "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisBat_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisBat_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBat.5"
+      },
+      "VariableGuid": "90A79A14-452C59A4-730B32AD-811C92BE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisBat_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisBat_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBat.6"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisBat_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Bat_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Animals/Bat/Bat_ABP.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Bat_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Bat_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Bat_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Bat_SK.0"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPVisBat_C:Capsule'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBat.3"
+      },
+      "RelativeScale3D": {
+        "X": 0.8,
+        "Y": 0.8,
+        "Z": 0.8
+      }
+    }
+  }
+]

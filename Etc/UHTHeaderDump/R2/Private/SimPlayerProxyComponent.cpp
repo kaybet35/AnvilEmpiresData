@@ -20,10 +20,13 @@ USimPlayerProxyComponent::USimPlayerProxyComponent() {
     this->MaxSprintVelocity = 350.00f;
     this->MaxVelocityCeiling = 1200.00f;
     this->MaxFlyVelocity = 500.00f;
+    this->MaxSwimVelocity = 200.00f;
     this->BreakDeceleration = 3000.00f;
     this->RotationSpeed = 350.00f;
     this->MovementAcceleration = 5000.00f;
+    this->SwimMovementAcceleration = 1000.00f;
     this->SprintStaminaDrain = 15.00f;
+    this->SwimStaminaDrain = 1.00f;
     this->ClimbStaminaCost = 20.00f;
     this->RammingVelocityFactor = 0.95f;
     this->RammingStabilityDamage = 0.30f;

@@ -4,6 +4,8 @@
 ---@field Action UBPAnvilKeyEntryWidget_C
 ---@field Action_1 UBPAnvilKeyEntryWidget_C
 ---@field Aim UBPAnvilKeyEntryWidget_C
+---@field AltAttack UBPAnvilKeyEntryWidget_C
+---@field AltShield UBPAnvilKeyEntryWidget_C
 ---@field ArmPrimaryItem UBPAnvilKeyEntryWidget_C
 ---@field ArmSecondaryItem UBPAnvilKeyEntryWidget_C
 ---@field BuildMenu UBPAnvilKeyEntryWidget_C
@@ -22,6 +24,7 @@
 ---@field MoveForward UBPAnvilKeyEntryWidget_C
 ---@field MoveLeft UBPAnvilKeyEntryWidget_C
 ---@field MoveRight UBPAnvilKeyEntryWidget_C
+---@field Push UBPAnvilKeyEntryWidget_C
 ---@field PushtoTalk UBPAnvilKeyEntryWidget_C
 ---@field Reload UBPAnvilKeyEntryWidget_C
 ---@field RotateCamera UBPAnvilKeyEntryWidget_C

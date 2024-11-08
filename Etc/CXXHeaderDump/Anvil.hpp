@@ -147,10 +147,6 @@ struct FConnectToServerResponse
 
 }; // Size: 0x40
 
-struct FContextfulPlacementStatus
-{
-}; // Size: 0x8
-
 struct FDayNightKeyFrame
 {
     FString Label;                                                                    // 0x0000 (size: 0x10)
@@ -778,7 +774,7 @@ class AVisEntityPrefab : public AVisActor
 class AVisFamilyCenter : public AVisFamilyMarkerArea
 {
     class UFamilyCenterDataComponent* FamilyCenterDataComponent;                      // 0x0518 (size: 0x8)
-    class UDecalComponent* BuildAreaDecalComponent;                                   // 0x0520 (size: 0x8)
+    class UVisTownAreaMarkerDecalComponent* TownAreaMarkerDecal;                      // 0x0520 (size: 0x8)
 
 }; // Size: 0x528
 
@@ -1004,13 +1000,17 @@ class AVisPlayer : public AVisActor
     class UAudioComponent* WindHighAudioComponent;                                    // 0x0768 (size: 0x8)
     class UNiagaraComponent* UnderworldCollapseFXComponent;                           // 0x0770 (size: 0x8)
     class USoundCue* RepairItemSoundCue;                                              // 0x0778 (size: 0x8)
-    class UDecalComponent* PushIndicatorDecalComponent;                               // 0x0780 (size: 0x8)
-    class UMaterialParameterCollection* PostProcessMaterialParameterCollection;       // 0x0788 (size: 0x8)
-    class UMaterialParameterCollection* PositionPostProcessMaterialParameterCollection; // 0x0790 (size: 0x8)
-    class UMaterialParameterCollection* UnderworldCollapseMaterialParameterCollection; // 0x0798 (size: 0x8)
-    class AVisActor* CurrentUsableVisActor;                                           // 0x0808 (size: 0x8)
-    class AVisActor* CurrentMountableVisActor;                                        // 0x0810 (size: 0x8)
-    class AActor* CurrentUEUsableActor;                                               // 0x0818 (size: 0x8)
+    class UNiagaraComponent* EnterSwimmingVFXComponent;                               // 0x0780 (size: 0x8)
+    class UNiagaraComponent* SwimmingLoopVFXComponent;                                // 0x0788 (size: 0x8)
+    class USoundCue* EnterSwimmingSoundCue;                                           // 0x0790 (size: 0x8)
+    class UAudioComponent* SwimmingLoopAudioComponent;                                // 0x0798 (size: 0x8)
+    class UDecalComponent* PushIndicatorDecalComponent;                               // 0x07A0 (size: 0x8)
+    class UMaterialParameterCollection* PostProcessMaterialParameterCollection;       // 0x07A8 (size: 0x8)
+    class UMaterialParameterCollection* PositionPostProcessMaterialParameterCollection; // 0x07B0 (size: 0x8)
+    class UMaterialParameterCollection* UnderworldCollapseMaterialParameterCollection; // 0x07B8 (size: 0x8)
+    class AVisActor* CurrentUsableVisActor;                                           // 0x0828 (size: 0x8)
+    class AVisActor* CurrentMountableVisActor;                                        // 0x0830 (size: 0x8)
+    class AActor* CurrentUEUsableActor;                                               // 0x0838 (size: 0x8)
 
     float GetVelocityHeadingDegrees();
     FString GetPlayerName();
@@ -1020,7 +1020,7 @@ class AVisPlayer : public AVisActor
     void BP_UpdateNightShroudMaterials();
     void BP_OnHeldItemChanged();
     FVector AnimGetVelocity();
-}; // Size: 0x830
+}; // Size: 0x850
 
 class AVisPowerMill : public AVisStructure
 {
@@ -1171,8 +1171,9 @@ class AVisWorldEntrance : public AVisActor
 class AVisualGlobals : public AInfo
 {
     float FoundationDecorSnapRange;                                                   // 0x0290 (size: 0x4)
+    TArray<class UStaticMesh*> AutoCreateDynamicInstancedMeshGroup;                   // 0x0298 (size: 0x10)
 
-}; // Size: 0x298
+}; // Size: 0x2A8
 
 class AvisLadder : public AVisStructure
 {
@@ -2637,6 +2638,12 @@ class UVisCartAnimInstance : public UVisVehicleAnimInstance
 {
 }; // Size: 0x360
 
+class UVisDynamicInstancedMeshGroupComponent : public USceneComponent
+{
+    TMap<class UStaticMesh*, class UInstancedStaticMeshComponent*> InstancedMeshes;   // 0x02A0 (size: 0x50)
+
+}; // Size: 0x2F0
+
 class UVisFamilyMeshComponent : public UStaticMeshComponent
 {
     int32 FamilyVisualsMaterialIndex;                                                 // 0x05F0 (size: 0x4)
@@ -2770,6 +2777,7 @@ class UVisPlayerAnimInstance : public UAnimInstance
     bool bSecondaryShieldMode;                                                        // 0x036E (size: 0x1)
     bool bCombatMode;                                                                 // 0x036F (size: 0x1)
     bool bIsPushing;                                                                  // 0x0370 (size: 0x1)
+    bool bIsSwimming;                                                                 // 0x0371 (size: 0x1)
 
 }; // Size: 0x390
 

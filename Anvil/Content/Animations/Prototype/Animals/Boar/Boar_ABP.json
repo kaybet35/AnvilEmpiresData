@@ -2096,7 +2096,686 @@
     "Name": "Default__Boar_ABP_C",
     "Class": "AnimBlueprintGeneratedClass'Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.Boar_ABP_C'",
     "Properties": {
-      "UberGraphFrame": {}
+      "UberGraphFrame": {},
+      "__AnimBlueprintMutables[1]": {
+        "__FloatProperty": 0.0,
+        "__FloatProperty_0[1]": 1.0,
+        "__FloatProperty_1[2]": 1.0
+      },
+      "AnimBlueprintExtension_PropertyAccess[2]": {},
+      "AnimBlueprintExtension_Base[3]": {},
+      "AnimGraphNode_Root[4]": {
+        "Result": {
+          "LinkID": 19
+        }
+      },
+      "AnimGraphNode_TransitionResult_8[5]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_7[6]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_6[7]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_RandomPlayer[8]": {
+        "Entries": [
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence'Boar_anim_posturing'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_anim_posturing.1"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "CustomCurve": null,
+              "BlendTime": 0.3,
+              "BlendOption": "EAlphaBlendOption::Linear"
+            }
+          },
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence'Boar_Anim_attack'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_Anim_attack.1"
+            },
+            "ChanceToPlay": 0.1,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 1,
+            "MinPlayRate": 0.7,
+            "MaxPlayRate": 1.15,
+            "BlendIn": {
+              "CustomCurve": null,
+              "BlendTime": 0.15,
+              "BlendOption": "EAlphaBlendOption::Linear"
+            }
+          }
+        ],
+        "BlendWeight": 0.0,
+        "bShuffleMode": false
+      },
+      "AnimGraphNode_StateResult_7[9]": {
+        "Result": {
+          "LinkID": 4
+        }
+      },
+      "AnimGraphNode_SequencePlayer_3[10]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Boar_Anim_attack'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_Anim_attack.1"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_6[11]": {
+        "Result": {
+          "LinkID": 6
+        }
+      },
+      "AnimGraphNode_BlendSpacePlayer[12]": {
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'Boar_movement_BS'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_movement_BS.0"
+        },
+        "PreviousBlendSpace": null,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_5[13]": {
+        "Result": {
+          "LinkID": 8
+        }
+      },
+      "AnimGraphNode_StateMachine_2[14]": {
+        "StateMachineIndexInClass": 2,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "AnimGraphNode_Slot[15]": {
+        "Source": {
+          "LinkID": 10
+        },
+        "SlotName": "DefaultSlot",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_ApplyMeshSpaceAdditive_1[16]": {
+        "Base": {
+          "LinkID": 11
+        },
+        "Additive": {
+          "LinkID": 18
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "Alpha": 1.0,
+        "bAlphaBoolEnabled": true,
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "LODThreshold": -1
+      },
+      "AnimGraphNode_TransitionResult_5[17]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_4[18]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_2[19]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Boar_Anim_HitEffect'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_Anim_HitEffect.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_4[20]": {
+        "Result": {
+          "LinkID": 15
+        }
+      },
+      "AnimGraphNode_StateResult_3[21]": {
+        "Result": {
+          "LinkID": -1
+        }
+      },
+      "AnimGraphNode_StateMachine_1[22]": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "AnimGraphNode_ApplyMeshSpaceAdditive[23]": {
+        "Base": {
+          "LinkID": 12
+        },
+        "Additive": {
+          "LinkID": 29
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "Alpha": 1.0,
+        "bAlphaBoolEnabled": true,
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "LODThreshold": -1
+      },
+      "AnimGraphNode_TransitionResult_3[24]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_2[25]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1[26]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult[27]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_1[28]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Boar_anim_turnInPlace_45right'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_anim_turnInPlace_45right.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2[29]": {
+        "Result": {
+          "LinkID": 24
+        }
+      },
+      "AnimGraphNode_SequencePlayer[30]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Boar_anim_turnInPlace_45left'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_anim_turnInPlace_45left.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1[31]": {
+        "Result": {
+          "LinkID": 26
+        }
+      },
+      "AnimGraphNode_StateResult[32]": {
+        "Result": {
+          "LinkID": -1
+        }
+      },
+      "AnimGraphNode_StateMachine[33]": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      }
+    },
+    "SerializedSparseClassDataStruct": "ScriptStruct'Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.Boar_ABP_C:AnimBlueprintGeneratedConstantData'",
+    "SerializedSparseClassData": {
+      "__NameProperty_140": "AnimGraph",
+      "__NameProperty_141[1]": "Posturing",
+      "__NameProperty_142[2]": "Attack",
+      "__NameProperty_143[3]": "movement",
+      "__FloatProperty_144[4]": 1.0,
+      "__NameProperty_145[5]": "HitEffect",
+      "__NameProperty_146[6]": "entry",
+      "__FloatProperty_147[7]": 90.0,
+      "__NameProperty_148[8]": "turn Right",
+      "__IntProperty_149[9]": 2,
+      "__BoolProperty_150[10]": true,
+      "__FloatProperty_151[11]": 0.0,
+      "__StructProperty_152[12]": {
+        "bMapRange": false,
+        "bClampResult": false,
+        "bInterpResult": false,
+        "InRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "OutRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "Scale": 1.0,
+        "Bias": 0.0,
+        "ClampMin": 0.0,
+        "ClampMax": 1.0,
+        "InterpSpeedIncreasing": 10.0,
+        "InterpSpeedDecreasing": 10.0
+      },
+      "__FloatProperty_153[13]": -90.0,
+      "__BoolProperty_154[14]": false,
+      "__EnumProperty_155[15]": "EAnimSyncMethod::DoNotSync",
+      "__ByteProperty_156[16]": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_157[17]": "turn Left",
+      "__IntProperty_158[18]": 1,
+      "__NameProperty_159[19]": "None",
+      "__NameProperty_160[20]": "neutral",
+      "__IntProperty_161[21]": 0,
+      "__StructProperty_162[22]": {
+        "ClassName": "None",
+        "FunctionName": "None"
+      },
+      "AnimBlueprintExtension_PropertyAccess[23]": {
+        "Library": {
+          "PathSegments": [
+            {
+              "Name": "IsReceivingIncomingAttack",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "IsReceivingIncomingAttack"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisAnimalAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_4",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_4"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'Boar_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "NativeSpeed",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "NativeSpeed"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisAnimalAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'Boar_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.17"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'Boar_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'Boar_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.17"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            }
+          ],
+          "SrcPaths": [
+            {
+              "PathSegmentStartIndex": 0,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 3,
+              "PathSegmentCount": 1
+            }
+          ],
+          "DestPaths": [
+            {
+              "PathSegmentStartIndex": 1,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 4,
+              "PathSegmentCount": 2
+            }
+          ],
+          "CopyBatchArray": [
+            {
+              "Copies": [
+                {
+                  "AccessIndex": 0,
+                  "DestAccessStartIndex": 0,
+                  "DestAccessEndIndex": 1,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 1,
+                  "DestAccessStartIndex": 1,
+                  "DestAccessEndIndex": 2,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "AnimBlueprintExtension_Base[24]": {
+        "ExposedValueHandlers": [
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Boar_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_99B54A324D6931A465CCDAAC6A11B14A'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.10"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_99B54A324D6931A465CCDAAC6A11B14A"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Boar_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_AE8E5E0D46605550BAE9A79EAF66E966'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.11"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_AE8E5E0D46605550BAE9A79EAF66E966"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Boar_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_DC429C27478079B3FE44C9AA53C24D5D'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.14"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_DC429C27478079B3FE44C9AA53C24D5D"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 1,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Boar_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_88CE49DC406605189A6E42B11EBA1481'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.9"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_88CE49DC406605189A6E42B11EBA1481"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 0,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Boar_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_05A6961C4044B3E0A49FC6A9E9E7A58F'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.7"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_05A6961C4044B3E0A49FC6A9E9E7A58F"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Boar_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_38C2F88542451EBBD0D8F3A3DF90B44E'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.8"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_38C2F88542451EBBD0D8F3A3DF90B44E"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Boar_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_AEC398124D56E3557684AD8E49E35854'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.12"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_AEC398124D56E3557684AD8E49E35854"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Boar_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_B7AF77FD4605FA277A9A0CB553C99B91'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.13"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_TransitionResult_B7AF77FD4605FA277A9A0CB553C99B91"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Boar_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_SequencePlayer_48110F994887293CBF92A7A00E63AA40'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.6"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_SequencePlayer_48110F994887293CBF92A7A00E63AA40"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Boar_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_SequencePlayer_2A7125954AD339959504009D1A537F23'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Boar/Boar_ABP.5"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Boar_ABP_AnimGraphNode_SequencePlayer_2A7125954AD339959504009D1A537F23"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          }
+        ]
+      }
     }
   },
   {
@@ -2518,12 +3197,261 @@
     "Type": "ScriptStruct",
     "Name": "AnimBlueprintGeneratedConstantData",
     "Outer": "Boar_ABP_C",
-    "Class": "UScriptClass'ScriptStruct'"
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintConstantData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_140",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_141",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_142",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_143",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_144",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_145",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_146",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_147",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_148",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_149",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_150",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_151",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_152",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_153",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_154",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_155",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_156",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_157",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_158",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_159",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_160",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_161",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_162",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNodeFunctionRef'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_Base'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ]
   },
   {
     "Type": "ScriptStruct",
     "Name": "AnimBlueprintGeneratedMutableData",
     "Outer": "Boar_ABP_C",
-    "Class": "UScriptClass'ScriptStruct'"
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintMutableData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      }
+    ]
   }
 ]

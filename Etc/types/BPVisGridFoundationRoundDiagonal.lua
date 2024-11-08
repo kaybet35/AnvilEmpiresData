@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisGridFoundationRoundDiagonal_C : AVisStructure
+---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
 ---@field VisRandomMeshDecor31 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor47 UVisRandomMeshDecorComponent

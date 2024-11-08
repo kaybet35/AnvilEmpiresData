@@ -1,0 +1,96 @@
+[
+  {
+    "Type": "BatHusk_C",
+    "Name": "Default__BatHusk_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/BatHusk.BatHusk_C'",
+    "Properties": {
+      "CodeNameString": "BatHusk",
+      "CodeName": 933526844,
+      "Components": [
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__BatHusk_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/BatHusk.3"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__BatHusk_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/BatHusk.2"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__BatHusk_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/BatHusk.4"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisBatHusk_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisBatHusk.2"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BatHusk_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BatHusk_C'Default__BatHusk_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Husk/BatHusk.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__BatHusk_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "Extents": {
+        "X": 75.0,
+        "Y": 75.0,
+        "Z": 50.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Flesh",
+      "CollisionMask": 16
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__BatHusk_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 180.0
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__BatHusk_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "HitPoints": 2,
+      "RequiredTool": "EAnvilToolType::Knife",
+      "DroppedResourceAmount": 1,
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'MeatSmallPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/MeatSmallPickup.0"
+      }
+    }
+  }
+]

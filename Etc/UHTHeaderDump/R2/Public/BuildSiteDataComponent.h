@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ContextfulPlacementStatus.h"
 #include "DataComponent.h"
 #include "BuildSiteDataComponent.generated.h"
 
@@ -13,8 +14,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> MaterialSubmissions;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    int64 BuildGhostPlacementStatus;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FContextfulPlacementStatus BuildGhostPlacementStatus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PlacementInfoFlags;

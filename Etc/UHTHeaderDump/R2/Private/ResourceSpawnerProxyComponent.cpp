@@ -19,6 +19,7 @@ UResourceSpawnerProxyComponent::UResourceSpawnerProxyComponent() {
     this->bDontSpawnInSettlements = false;
     this->bIsRare = false;
     this->bDontSpawnNearPlayers = false;
+    this->bAvoidSlopes = false;
     this->bWalkBackToSpawner = false;
     this->CompatibleSurfaceTypes = 0;
 }

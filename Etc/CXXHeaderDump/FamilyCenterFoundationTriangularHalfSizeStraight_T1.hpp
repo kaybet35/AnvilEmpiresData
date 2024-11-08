@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_FamilyCenterFoundationTriangularHalfSizeStraight_T1_HPP
+#define UE4SS_SDK_FamilyCenterFoundationTriangularHalfSizeStraight_T1_HPP
+
+class UFamilyCenterFoundationTriangularHalfSizeStraight_T1_C : public UBPBaseFoundationEntity_C
+{
+}; // Size: 0xD8
+
+#endif

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisGridFoundationTriangularDiagonal_C : AVisStructure
+---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
 ---@field VerticalEdge09 UVisFoundationEdgeMeshDecorComponent
 ---@field ChildActor7 UChildActorComponent

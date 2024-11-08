@@ -3,7 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "BasicCount.h"
 #include "EAnvilToolType.h"
-#include "EntityFloatPair.h"
+#include "MinDistBetweenStructsEntry.h"
 #include "ProxyComponent.h"
 #include "Templates/SubclassOf.h"
 #include "BuildSiteProxyComponent.generated.h"
@@ -64,6 +64,9 @@ public:
     bool bIsBuildableUnderground;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bOnlyBuildableUnderground;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAllowRapidBuild;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -94,7 +97,7 @@ public:
     float AdditionalMaxHeightShift;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FEntityFloatPair> KeepDistanceWithStructures;
+    TArray<FMinDistBetweenStructsEntry> MinDistBetweenStructs;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEntityTemplate> GridDiagonalPair;

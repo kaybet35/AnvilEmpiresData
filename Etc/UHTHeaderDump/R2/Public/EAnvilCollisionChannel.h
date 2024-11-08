@@ -34,5 +34,6 @@ enum class EAnvilCollisionChannel : uint8 {
     FamilyArea,
     House,
     AnvilCollisionFoliage,
+    LatticeMine,
 };
 

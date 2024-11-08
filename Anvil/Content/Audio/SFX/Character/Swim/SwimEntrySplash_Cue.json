@@ -1,0 +1,109 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SwimEntrySplash_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'SwimEntrySplash_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Character/Swim/SwimEntrySplash_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "Duration": 2.0955207,
+      "MaxDistance": 7900.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Foley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "SwimEntrySplash_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'SwimEntrySplash_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Character/Swim/SwimEntrySplash_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "SwimEntrySplash_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SwimEntrySplash_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Character/Swim/SwimEntrySplash_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SwimEntrySplash_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Character/Swim/SwimEntrySplash_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SwimEntrySplash_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Character/Swim/SwimEntrySplash_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "SwimEntrySplash_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Character/Swim/SwimEntrySplash01.SwimEntrySplash01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'SwimEntrySplash01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Character/Swim/SwimEntrySplash01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "SwimEntrySplash_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Character/Swim/SwimEntrySplash02.SwimEntrySplash02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'SwimEntrySplash02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Character/Swim/SwimEntrySplash02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "SwimEntrySplash_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Character/Swim/SwimEntrySplash03.SwimEntrySplash03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'SwimEntrySplash03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Character/Swim/SwimEntrySplash03.0"
+    }
+  }
+]

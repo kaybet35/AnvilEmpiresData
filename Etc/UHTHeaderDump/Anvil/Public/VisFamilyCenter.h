@@ -3,8 +3,8 @@
 #include "VisFamilyMarkerArea.h"
 #include "VisFamilyCenter.generated.h"
 
-class UDecalComponent;
 class UFamilyCenterDataComponent;
+class UVisTownAreaMarkerDecalComponent;
 
 UCLASS(Blueprintable)
 class ANVIL_API AVisFamilyCenter : public AVisFamilyMarkerArea {
@@ -15,7 +15,7 @@ public:
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UDecalComponent* BuildAreaDecalComponent;
+    UVisTownAreaMarkerDecalComponent* TownAreaMarkerDecal;
     
 public:
     AVisFamilyCenter(const FObjectInitializer& ObjectInitializer);

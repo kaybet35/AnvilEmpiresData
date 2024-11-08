@@ -6,5 +6,6 @@ FUnderworldModuleDebugInfoEntry::FUnderworldModuleDebugInfoEntry() {
     this->PositionX = 0.00f;
     this->PositionY = 0.00f;
     this->NumRotations = 0;
+    this->SpawnedPrefabCodeName = 0;
 }
 

@@ -17,5 +17,6 @@ enum class ESimpleTooltip : uint8 {
     Stamina,
     AnimalHealth,
     DeploymentFood,
+    Reinforced,
 };
 

@@ -4,7 +4,510 @@
     "Name": "Default__ABP_Handcart_C",
     "Class": "AnimBlueprintGeneratedClass'Anvil/Content/Animations/Handcart/ABP_Handcart.ABP_Handcart_C'",
     "Properties": {
-      "UberGraphFrame": {}
+      "UberGraphFrame": {},
+      "__AnimBlueprintMutables[1]": {
+        "__BoolProperty": false,
+        "__FloatProperty_0[1]": 1.0,
+        "__FloatProperty_1[2]": 1.0
+      },
+      "AnimBlueprintExtension_PropertyAccess[2]": {},
+      "AnimBlueprintExtension_Base[3]": {},
+      "AnimGraphNode_Root[4]": {
+        "Result": {
+          "LinkID": 12
+        }
+      },
+      "AnimGraphNode_TransitionResult_1[5]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult[6]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_4[7]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Handcart_Resting_POSE'",
+          "ObjectPath": "Anvil/Content/Animations/Handcart/Handcart_Resting_POSE.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_3[8]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Handcart_Neutral_POSE'",
+          "ObjectPath": "Anvil/Content/Animations/Handcart/Handcart_Neutral_POSE.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool[9]": {
+        "BlendPose": [
+          {
+            "LinkID": 4
+          },
+          {
+            "LinkID": 3
+          }
+        ]
+      },
+      "AnimGraphNode_SequencePlayer_2[10]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Handcart_425_115_WheelLeft_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Handcart/Handcart_425_115_WheelLeft_Anim.1"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_1[11]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Handcart_425_115_WheelRight_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Handcart/Handcart_425_115_WheelRight_Anim.1"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend[12]": {
+        "BasePose": {
+          "LinkID": 5
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 6
+          },
+          {
+            "LinkID": 7
+          }
+        ],
+        "BlendMode": "ELayeredBoneBlendMode::BranchFilter",
+        "BlendMasks": [],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "WheelLeft",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "WheelRight",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::Override",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "F9520106-402635A4-476E808B-1CBD4200",
+        "VirtualBoneGuid": "25ED0671-4471C69A-8CE18DA3-CE97677E"
+      },
+      "AnimGraphNode_StateResult_1[13]": {
+        "Result": {
+          "LinkID": 8
+        }
+      },
+      "AnimGraphNode_SequencePlayer[14]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Handcart_Resting_POSE'",
+          "ObjectPath": "Anvil/Content/Animations/Handcart/Handcart_Resting_POSE.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult[15]": {
+        "Result": {
+          "LinkID": 10
+        }
+      },
+      "AnimGraphNode_StateMachine[16]": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "WheelAxleRadius[17]": 67.765531
+    },
+    "SerializedSparseClassDataStruct": "ScriptStruct'Anvil/Content/Animations/Handcart/ABP_Handcart.ABP_Handcart_C:AnimBlueprintGeneratedConstantData'",
+    "SerializedSparseClassData": {
+      "__NameProperty_80": "AnimGraph",
+      "__BlendProfile_81[1]": null,
+      "__CurveFloat_82[2]": null,
+      "__EnumProperty_83[3]": "EAlphaBlendOption::Linear",
+      "__EnumProperty_84[4]": "EBlendListTransitionType::StandardBlend",
+      "__ArrayProperty_85[5]": [
+        0.1,
+        0.1
+      ],
+      "__FloatProperty_86[6]": 425.115,
+      "__NameProperty_87[7]": "inUse",
+      "__IntProperty_88[8]": 1,
+      "__BoolProperty_89[9]": true,
+      "__StructProperty_90[10]": {
+        "bMapRange": false,
+        "bClampResult": false,
+        "bInterpResult": false,
+        "InRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "OutRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "Scale": 1.0,
+        "Bias": 0.0,
+        "ClampMin": 0.0,
+        "ClampMax": 1.0,
+        "InterpSpeedIncreasing": 10.0,
+        "InterpSpeedDecreasing": 10.0
+      },
+      "__FloatProperty_91[11]": 0.0,
+      "__FloatProperty_92[12]": 1.0,
+      "__BoolProperty_93[13]": false,
+      "__EnumProperty_94[14]": "EAnimSyncMethod::DoNotSync",
+      "__ByteProperty_95[15]": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_96[16]": "None",
+      "__NameProperty_97[17]": "idle (state)",
+      "__IntProperty_98[18]": 0,
+      "__StructProperty_99[19]": {
+        "ClassName": "None",
+        "FunctionName": "None"
+      },
+      "AnimBlueprintExtension_PropertyAccess[20]": {
+        "Library": {
+          "PathSegments": [
+            {
+              "Name": "bIsOccupied",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bIsOccupied"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisVehicleAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_1",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_1"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'ABP_Handcart_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Handcart/ABP_Handcart.1"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "bIsOccupied",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bIsOccupied"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisVehicleAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'ABP_Handcart_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Handcart/ABP_Handcart.1"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "bIsOccupied",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bIsOccupied"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisVehicleAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'ABP_Handcart_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Handcart/ABP_Handcart.7"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'ABP_Handcart_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Handcart/ABP_Handcart.1"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__BoolProperty",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__BoolProperty"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'ABP_Handcart_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Handcart/ABP_Handcart.7"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            }
+          ],
+          "SrcPaths": [
+            {
+              "PathSegmentStartIndex": 0,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 3,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 6,
+              "PathSegmentCount": 1
+            }
+          ],
+          "DestPaths": [
+            {
+              "PathSegmentStartIndex": 1,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 4,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 7,
+              "PathSegmentCount": 2
+            }
+          ],
+          "CopyBatchArray": [
+            {
+              "Copies": [
+                {
+                  "AccessIndex": 0,
+                  "DestAccessStartIndex": 0,
+                  "DestAccessEndIndex": 1,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 1,
+                  "DestAccessStartIndex": 1,
+                  "DestAccessEndIndex": 2,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 2,
+                  "DestAccessStartIndex": 2,
+                  "DestAccessEndIndex": 3,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "AnimBlueprintExtension_Base[21]": {
+        "ExposedValueHandlers": [
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 0,
+                "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 1,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 2,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'ABP_Handcart_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Handcart_AnimGraphNode_SequencePlayer_6E9A13BA4538B62D480EE3AC73761D3B'",
+              "ObjectPath": "Anvil/Content/Animations/Handcart/ABP_Handcart.4"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Handcart_AnimGraphNode_SequencePlayer_6E9A13BA4538B62D480EE3AC73761D3B"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'ABP_Handcart_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Handcart_AnimGraphNode_SequencePlayer_42E3E674410949D745C49CB93716648D'",
+              "ObjectPath": "Anvil/Content/Animations/Handcart/ABP_Handcart.3"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Handcart_AnimGraphNode_SequencePlayer_42E3E674410949D745C49CB93716648D"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          }
+        ]
+      }
     }
   },
   {
@@ -1285,12 +1788,282 @@
     "Type": "ScriptStruct",
     "Name": "AnimBlueprintGeneratedConstantData",
     "Outer": "ABP_Handcart_C",
-    "Class": "UScriptClass'ScriptStruct'"
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintConstantData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_80",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "__BlendProfile_81",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'BlendProfile'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "__CurveFloat_82",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'CurveFloat'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_83",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAlphaBlendOption'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_84",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EBlendListTransitionType'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "__ArrayProperty_85",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | EditFixedSize",
+        "Inner": {
+          "Type": "FloatProperty",
+          "Name": "__ArrayProperty_85",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_86",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_87",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_88",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_89",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_90",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_91",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_92",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_93",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_94",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_95",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_96",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_97",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_98",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_99",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNodeFunctionRef'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_Base'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ]
   },
   {
     "Type": "ScriptStruct",
     "Name": "AnimBlueprintGeneratedMutableData",
     "Outer": "ABP_Handcart_C",
-    "Class": "UScriptClass'ScriptStruct'"
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintMutableData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      }
+    ]
   }
 ]

@@ -363,7 +363,7 @@ AVisEntityPrefab = {}
 
 ---@class AVisFamilyCenter : AVisFamilyMarkerArea
 ---@field FamilyCenterDataComponent UFamilyCenterDataComponent
----@field BuildAreaDecalComponent UDecalComponent
+---@field TownAreaMarkerDecal UVisTownAreaMarkerDecalComponent
 AVisFamilyCenter = {}
 
 
@@ -591,6 +591,10 @@ AVisPickupItem = {}
 ---@field WindHighAudioComponent UAudioComponent
 ---@field UnderworldCollapseFXComponent UNiagaraComponent
 ---@field RepairItemSoundCue USoundCue
+---@field EnterSwimmingVFXComponent UNiagaraComponent
+---@field SwimmingLoopVFXComponent UNiagaraComponent
+---@field EnterSwimmingSoundCue USoundCue
+---@field SwimmingLoopAudioComponent UAudioComponent
 ---@field PushIndicatorDecalComponent UDecalComponent
 ---@field PostProcessMaterialParameterCollection UMaterialParameterCollection
 ---@field PositionPostProcessMaterialParameterCollection UMaterialParameterCollection
@@ -767,6 +771,7 @@ AVisWorldEntrance = {}
 
 ---@class AVisualGlobals : AInfo
 ---@field FoundationDecorSnapRange float
+---@field AutoCreateDynamicInstancedMeshGroup TArray<UStaticMesh>
 AVisualGlobals = {}
 
 
@@ -917,10 +922,6 @@ FClientConnectionRequest = {}
 ---@field QueuePosition int32
 FConnectToServerResponse = {}
 
-
-
----@class FContextfulPlacementStatus
-FContextfulPlacementStatus = {}
 
 
 ---@class FDayNightKeyFrame
@@ -2791,6 +2792,12 @@ function UVisCanalWaterControllerComponent:OnCurrentUpdate() end
 UVisCartAnimInstance = {}
 
 
+---@class UVisDynamicInstancedMeshGroupComponent : USceneComponent
+---@field InstancedMeshes TMap<UStaticMesh, UInstancedStaticMeshComponent>
+UVisDynamicInstancedMeshGroupComponent = {}
+
+
+
 ---@class UVisFamilyMeshComponent : UStaticMeshComponent
 ---@field FamilyVisualsMaterialIndex int32
 ---@field ColourTable TArray<FLinearColor>
@@ -2923,6 +2930,7 @@ UVisMultiItemStockpileComponent = {}
 ---@field bSecondaryShieldMode boolean
 ---@field bCombatMode boolean
 ---@field bIsPushing boolean
+---@field bIsSwimming boolean
 UVisPlayerAnimInstance = {}
 
 

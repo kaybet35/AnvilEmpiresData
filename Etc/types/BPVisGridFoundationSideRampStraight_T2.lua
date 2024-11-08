@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisGridFoundationSideRampStraight_T2_C : AVisStructure
+---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field ChildActor UChildActorComponent
 ---@field ChildActor5 UChildActorComponent
 ---@field ChildActor6 UChildActorComponent

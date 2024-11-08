@@ -1,6 +1,11 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleStraight01_C : ABPUnderworldModuleDynamicPrefab_C
+---@field ChildActorWolfElite UChildActorComponent
+---@field ChildActorIronPile UChildActorComponent
+---@field ChildActorBat UChildActorComponent
+---@field ChildActorStonePile UChildActorComponent
+---@field CustomNavmeshVolume UCustomNavmeshVolumeComponent
 ---@field Decal45 UDecalComponent
 ---@field Decal44 UDecalComponent
 ---@field Decal43 UDecalComponent
@@ -216,7 +221,7 @@
 ---@field LatticeMineIron1 UChildActorComponent
 ---@field LatticeMineIron3 UChildActorComponent
 ---@field LatticeMineIron2 UChildActorComponent
----@field LatticeMineCoal1 UChildActorComponent
+---@field LatticeMineIron4 UChildActorComponent
 ---@field ['Custom Components'] USceneComponent
 ---@field Dust UNiagaraComponent
 ---@field FX USceneComponent
@@ -331,7 +336,6 @@
 ---@field RockWallUnderworld20x10x60A4 UStaticMeshComponent
 ---@field ['Rock Walls'] USceneComponent
 ---@field AmbientUnderworld01_cue UAudioComponent
----@field NavigationModifierBox UBoxComponent
 ---@field CustomHeightmap UCustomHeightmapComponent
 ---@field ['Static Meshes'] USceneComponent
 ABPUnderworldDynamicModuleStraight01_C = {}

@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_FamilyCenterInteriorStairSquareStraightBuildSite_HPP
+#define UE4SS_SDK_FamilyCenterInteriorStairSquareStraightBuildSite_HPP
+
+class UFamilyCenterInteriorStairSquareStraightBuildSite_C : public UBPBaseModularBuildSiteEntity_C
+{
+}; // Size: 0xC8
+
+#endif

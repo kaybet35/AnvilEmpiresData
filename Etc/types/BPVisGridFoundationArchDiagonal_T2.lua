@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisGridFoundationArchDiagonal_T2_C : AVisStructure
+---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field ChildActor18 UChildActorComponent
 ---@field ChildActor17 UChildActorComponent
 ---@field ChildActor6 UChildActorComponent

@@ -1141,7 +1141,477 @@
     "Name": "Default__BatteringRam_ABP_C",
     "Class": "AnimBlueprintGeneratedClass'Anvil/Content/Animations/BatteringRam/BatteringRam_ABP.BatteringRam_ABP_C'",
     "Properties": {
-      "UberGraphFrame": {}
+      "UberGraphFrame": {},
+      "__AnimBlueprintMutables[1]": {
+        "__FloatProperty": 1.0,
+        "__FloatProperty_0[1]": 0.0,
+        "__FloatProperty_1[2]": 1.0
+      },
+      "AnimBlueprintExtension_PropertyAccess[2]": {},
+      "AnimBlueprintExtension_Base[3]": {},
+      "AnimGraphNode_Root[4]": {
+        "Result": {
+          "LinkID": 10
+        }
+      },
+      "AnimGraphNode_TransitionResult_1[5]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult[6]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_2[7]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'BatteringRam_speed561_71_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/BatteringRam/BatteringRam_speed561_71_Anim.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer[8]": {
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BatteringRam_tilt'",
+          "ObjectPath": "Anvil/Content/Animations/BatteringRam/BatteringRam_tilt.0"
+        },
+        "PreviousBlendSpace": null,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend[9]": {
+        "BasePose": {
+          "LinkID": 6
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 3
+          },
+          {
+            "LinkID": 4
+          }
+        ],
+        "BlendMode": "ELayeredBoneBlendMode::BranchFilter",
+        "BlendMasks": [],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "wheel_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "tilt_pivot",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::Override",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "0139C32C-414ED875-9AC5FC99-999D1CA9",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_SequencePlayer_1[10]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'BatteringRam_speed561_71_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/BatteringRam/BatteringRam_speed561_71_Anim.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1[11]": {
+        "Result": {
+          "LinkID": 5
+        }
+      },
+      "AnimGraphNode_SequencePlayer[12]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'BatteringRam_resting_POSE'",
+          "ObjectPath": "Anvil/Content/Animations/BatteringRam/BatteringRam_resting_POSE.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult[13]": {
+        "Result": {
+          "LinkID": 8
+        }
+      },
+      "AnimGraphNode_StateMachine[14]": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "Wheel Axle Radius[17]": 98.690002
+    },
+    "SerializedSparseClassDataStruct": "ScriptStruct'Anvil/Content/Animations/BatteringRam/BatteringRam_ABP.BatteringRam_ABP_C:AnimBlueprintGeneratedConstantData'",
+    "SerializedSparseClassData": {
+      "__NameProperty_62": "AnimGraph",
+      "__FloatProperty_63[1]": 561.71,
+      "__NameProperty_64[2]": "inUse",
+      "__IntProperty_65[3]": 1,
+      "__BoolProperty_66[4]": true,
+      "__FloatProperty_67[5]": 0.0,
+      "__StructProperty_68[6]": {
+        "bMapRange": false,
+        "bClampResult": false,
+        "bInterpResult": false,
+        "InRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "OutRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "Scale": 1.0,
+        "Bias": 0.0,
+        "ClampMin": 0.0,
+        "ClampMax": 1.0,
+        "InterpSpeedIncreasing": 10.0,
+        "InterpSpeedDecreasing": 10.0
+      },
+      "__FloatProperty_69[7]": 1.0,
+      "__BoolProperty_70[8]": false,
+      "__EnumProperty_71[9]": "EAnimSyncMethod::DoNotSync",
+      "__ByteProperty_72[10]": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_73[11]": "None",
+      "__NameProperty_74[12]": "idle",
+      "__IntProperty_75[13]": 0,
+      "__StructProperty_76[14]": {
+        "ClassName": "None",
+        "FunctionName": "None"
+      },
+      "AnimBlueprintExtension_PropertyAccess[15]": {
+        "Library": {
+          "PathSegments": [
+            {
+              "Name": "bIsOccupied",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bIsOccupied"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisVehicleAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_1",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_1"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BatteringRam_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/BatteringRam/BatteringRam_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "bIsOccupied",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bIsOccupied"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisVehicleAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BatteringRam_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/BatteringRam/BatteringRam_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "tiltAngle_Pitch",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "tiltAngle_Pitch"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BatteringRam_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/BatteringRam/BatteringRam_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'BatteringRam_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/BatteringRam/BatteringRam_ABP.8"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BatteringRam_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/BatteringRam/BatteringRam_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty_0",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty_0"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'BatteringRam_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/BatteringRam/BatteringRam_ABP.8"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            }
+          ],
+          "SrcPaths": [
+            {
+              "PathSegmentStartIndex": 0,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 3,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 6,
+              "PathSegmentCount": 1
+            }
+          ],
+          "DestPaths": [
+            {
+              "PathSegmentStartIndex": 1,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 4,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 7,
+              "PathSegmentCount": 2
+            }
+          ],
+          "CopyBatchArray": [
+            {
+              "Copies": [
+                {
+                  "AccessIndex": 0,
+                  "DestAccessStartIndex": 0,
+                  "DestAccessEndIndex": 1,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 1,
+                  "DestAccessStartIndex": 1,
+                  "DestAccessEndIndex": 2,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 2,
+                  "DestAccessStartIndex": 2,
+                  "DestAccessEndIndex": 3,
+                  "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "AnimBlueprintExtension_Base[16]": {
+        "ExposedValueHandlers": [
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 0,
+                "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 1,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'BatteringRam_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_BatteringRam_ABP_AnimGraphNode_SequencePlayer_5C6820B04A67569FC4D2F78B719C752C'",
+              "ObjectPath": "Anvil/Content/Animations/BatteringRam/BatteringRam_ABP.4"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_BatteringRam_ABP_AnimGraphNode_SequencePlayer_5C6820B04A67569FC4D2F78B719C752C"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 2,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'BatteringRam_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_BatteringRam_ABP_AnimGraphNode_SequencePlayer_A8A86E2A4021D63719F0FEA30F4F4CB1'",
+              "ObjectPath": "Anvil/Content/Animations/BatteringRam/BatteringRam_ABP.5"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_BatteringRam_ABP_AnimGraphNode_SequencePlayer_A8A86E2A4021D63719F0FEA30F4F4CB1"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          }
+        ]
+      }
     }
   },
   {
@@ -1290,12 +1760,205 @@
     "Type": "ScriptStruct",
     "Name": "AnimBlueprintGeneratedConstantData",
     "Outer": "BatteringRam_ABP_C",
-    "Class": "UScriptClass'ScriptStruct'"
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintConstantData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_62",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_63",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_64",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_65",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_66",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_67",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_68",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_69",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_70",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_71",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_72",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_73",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_74",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_75",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_76",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNodeFunctionRef'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_Base'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ]
   },
   {
     "Type": "ScriptStruct",
     "Name": "AnimBlueprintGeneratedMutableData",
     "Outer": "BatteringRam_ABP_C",
-    "Class": "UScriptClass'ScriptStruct'"
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintMutableData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      }
+    ]
   }
 ]

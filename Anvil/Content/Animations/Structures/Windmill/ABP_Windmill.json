@@ -5,18 +5,18 @@
     "Class": "AnimBlueprintGeneratedClass'Anvil/Content/Animations/Structures/Windmill/ABP_Windmill.ABP_Windmill_C'",
     "Properties": {
       "UberGraphFrame": {},
-      "__AnimBlueprintMutables": {
+      "__AnimBlueprintMutables[1]": {
         "__FloatProperty": 1.0,
-        "__FloatProperty_0": 0.0
+        "__FloatProperty_0[1]": 0.0
       },
-      "AnimBlueprintExtension_PropertyAccess": {},
-      "AnimBlueprintExtension_Base": {},
-      "AnimGraphNode_Root": {
+      "AnimBlueprintExtension_PropertyAccess[2]": {},
+      "AnimBlueprintExtension_Base[3]": {},
+      "AnimGraphNode_Root[4]": {
         "Result": {
           "LinkID": 1
         }
       },
-      "AnimGraphNode_LayeredBoneBlend": {
+      "AnimGraphNode_LayeredBoneBlend[5]": {
         "BasePose": {
           "LinkID": 3
         },
@@ -78,7 +78,7 @@
         "SkeletonGuid": "C4203AAE-48E12137-4A0011A3-26ECE842",
         "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
       },
-      "AnimGraphNode_SequencePlayer": {
+      "AnimGraphNode_SequencePlayer[6]": {
         "Sequence": {
           "ObjectName": "AnimSequence'Windmill_GearTurning_Anim'",
           "ObjectPath": "Anvil/Content/Animations/Structures/Windmill/Windmill_GearTurning_Anim.0"
@@ -87,7 +87,7 @@
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
       },
-      "AnimGraphNode_BlendSpacePlayer": {
+      "AnimGraphNode_BlendSpacePlayer[7]": {
         "BlendSpace": {
           "ObjectName": "BlendSpace1D'BS_WIndmill_HorizontalTurn'",
           "ObjectPath": "Anvil/Content/Animations/Structures/Windmill/BS_WIndmill_HorizontalTurn.0"
@@ -96,7 +96,80 @@
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
       },
-      "LERP interval": 3.0
+      "LERP interval[9]": 3.0
+    },
+    "SerializedSparseClassDataStruct": "ScriptStruct'Anvil/Content/Animations/Structures/Windmill/ABP_Windmill.ABP_Windmill_C:AnimBlueprintGeneratedConstantData'",
+    "SerializedSparseClassData": {
+      "__NameProperty_20": "AnimGraph",
+      "__StructProperty_21[1]": {
+        "bMapRange": false,
+        "bClampResult": false,
+        "bInterpResult": false,
+        "InRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "OutRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "Scale": 1.0,
+        "Bias": 0.0,
+        "ClampMin": 0.0,
+        "ClampMax": 1.0,
+        "InterpSpeedIncreasing": 10.0,
+        "InterpSpeedDecreasing": 10.0
+      },
+      "__FloatProperty_22[2]": 1.75,
+      "__StructProperty_23[3]": {
+        "ClassName": "None",
+        "FunctionName": "None"
+      },
+      "__BoolProperty_24[4]": true,
+      "__FloatProperty_25[5]": 1.0,
+      "__FloatProperty_26[6]": 0.0,
+      "__BoolProperty_27[7]": false,
+      "__EnumProperty_28[8]": "EAnimSyncMethod::DoNotSync",
+      "__ByteProperty_29[9]": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_30[10]": "None",
+      "AnimBlueprintExtension_PropertyAccess[11]": {
+        "Library": {
+          "PathSegments": [],
+          "SrcPaths": [],
+          "DestPaths": [],
+          "CopyBatchArray": []
+        }
+      },
+      "AnimBlueprintExtension_Base[12]": {
+        "ExposedValueHandlers": [
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'ABP_Windmill_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Windmill_AnimGraphNode_SequencePlayer_50B9A81344B4863AAAF0A0A9669EDD36'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Windmill/ABP_Windmill.5"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Windmill_AnimGraphNode_SequencePlayer_50B9A81344B4863AAAF0A0A9669EDD36"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'ABP_Windmill_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Windmill_AnimGraphNode_BlendSpacePlayer_B1D53D9C4FDAFB9397FF11B21061A26D'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Windmill/ABP_Windmill.4"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Windmill_AnimGraphNode_BlendSpacePlayer_B1D53D9C4FDAFB9397FF11B21061A26D"
+          }
+        ]
+      }
     }
   },
   {
@@ -998,12 +1071,170 @@
     "Type": "ScriptStruct",
     "Name": "AnimBlueprintGeneratedConstantData",
     "Outer": "ABP_Windmill_C",
-    "Class": "UScriptClass'ScriptStruct'"
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintConstantData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_20",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_21",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_22",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_23",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNodeFunctionRef'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_24",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_25",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_26",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_27",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_28",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_29",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_30",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_Base'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ]
   },
   {
     "Type": "ScriptStruct",
     "Name": "AnimBlueprintGeneratedMutableData",
     "Outer": "ABP_Windmill_C",
-    "Class": "UScriptClass'ScriptStruct'"
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintMutableData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      }
+    ]
   }
 ]

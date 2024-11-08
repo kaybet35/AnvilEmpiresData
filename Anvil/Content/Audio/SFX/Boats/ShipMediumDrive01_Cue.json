@@ -1,0 +1,474 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'ShipMediumDrive01_Cue:SoundNodeMixer_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.9"
+      },
+      "VolumeMultiplier": 1.0,
+      "bHasDelayNode": true,
+      "Duration": 10000.0,
+      "MaxDistance": 7900.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Foley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 5.0,
+      "DelayMax": 15.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'ShipMediumDrive01_Cue:SoundNodeRandom_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_1",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 5.0,
+      "DelayMax": 15.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'ShipMediumDrive01_Cue:SoundNodeRandom_4'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_2",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 5.0,
+      "DelayMax": 15.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'ShipMediumDrive01_Cue:SoundNodeRandom_5'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_3",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 5.0,
+      "DelayMax": 15.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'ShipMediumDrive01_Cue:SoundNodeRandom_6'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.13"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'ShipMediumDrive01_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_1",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'ShipMediumDrive01_Cue:SoundNodeDelay_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_2",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'ShipMediumDrive01_Cue:SoundNodeDelay_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_3",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'ShipMediumDrive01_Cue:SoundNodeDelay_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        0.35,
+        0.45,
+        0.25,
+        0.6
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ShipMediumDrive01_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.14"
+        },
+        {
+          "ObjectName": "SoundNodeLooping'ShipMediumDrive01_Cue:SoundNodeLooping_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeLooping'ShipMediumDrive01_Cue:SoundNodeLooping_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.6"
+        },
+        {
+          "ObjectName": "SoundNodeLooping'ShipMediumDrive01_Cue:SoundNodeLooping_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.7"
+        },
+        {
+          "ObjectName": "SoundNodeLooping'ShipMediumDrive01_Cue:SoundNodeLooping_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_3",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ShipMediumDrive01_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.15"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ShipMediumDrive01_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.18"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ShipMediumDrive01_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.19"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_4",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ShipMediumDrive01_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.20"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ShipMediumDrive01_Cue:SoundNodeWavePlayer_5'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.21"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ShipMediumDrive01_Cue:SoundNodeWavePlayer_6'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.22"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_5",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ShipMediumDrive01_Cue:SoundNodeWavePlayer_7'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.23"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ShipMediumDrive01_Cue:SoundNodeWavePlayer_8'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.24"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ShipMediumDrive01_Cue:SoundNodeWavePlayer_9'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.25"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_6",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ShipMediumDrive01_Cue:SoundNodeWavePlayer_10'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.16"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ShipMediumDrive01_Cue:SoundNodeWavePlayer_11'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMediumDrive01_Cue.17"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Boats/ShipMedDrive01.ShipMedDrive01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ShipMedDrive01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipMedDrive01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Boats/ShipAmbienceRopeAccent01.ShipAmbienceRopeAccent01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ShipAmbienceRopeAccent01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipAmbienceRopeAccent01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_10",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Boats/ShipAmbienceWaterAccent01.ShipAmbienceWaterAccent01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ShipAmbienceWaterAccent01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipAmbienceWaterAccent01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_11",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Boats/ShipAmbienceWaterAccent02.ShipAmbienceWaterAccent02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ShipAmbienceWaterAccent02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipAmbienceWaterAccent02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Boats/ShipAmbienceRopeAccent02.ShipAmbienceRopeAccent02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ShipAmbienceRopeAccent02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipAmbienceRopeAccent02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Boats/ShipAmbienceRopeAccent03.ShipAmbienceRopeAccent03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ShipAmbienceRopeAccent03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipAmbienceRopeAccent03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Boats/ShipAmbienceSailAccent01.ShipAmbienceSailAccent01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ShipAmbienceSailAccent01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipAmbienceSailAccent01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Boats/ShipAmbienceSailAccent02.ShipAmbienceSailAccent02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ShipAmbienceSailAccent02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipAmbienceSailAccent02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Boats/ShipAmbienceSailAccent03.ShipAmbienceSailAccent03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ShipAmbienceSailAccent03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipAmbienceSailAccent03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Boats/ShipAmbienceWoodAccent01.ShipAmbienceWoodAccent01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ShipAmbienceWoodAccent01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipAmbienceWoodAccent01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Boats/ShipAmbienceWoodAccent02.ShipAmbienceWoodAccent02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ShipAmbienceWoodAccent02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipAmbienceWoodAccent02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_9",
+    "Outer": "ShipMediumDrive01_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Boats/ShipAmbienceWoodAccent03.ShipAmbienceWoodAccent03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ShipAmbienceWoodAccent03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Boats/ShipAmbienceWoodAccent03.0"
+    }
+  }
+]

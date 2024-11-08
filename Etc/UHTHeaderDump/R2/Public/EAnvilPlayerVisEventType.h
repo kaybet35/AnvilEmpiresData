@@ -6,6 +6,7 @@ UENUM(BlueprintType)
 enum class EAnvilPlayerVisEventType : uint8 {
     OnDeath,
     StatusMessage,
+    PlacementStatus,
     ForceActivityState,
     ConfirmFamilyPledgeDialog,
     ConfirmHousePledgeDialog,

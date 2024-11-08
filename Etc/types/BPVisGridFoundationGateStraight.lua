@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisGridFoundationGateStraight_C : AVisGate
+---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field VisFoundationEdgeMeshDecor10 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor11 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor7 UVisFoundationEdgeMeshDecorComponent

@@ -11,6 +11,6 @@ enum class EAnvilMapPostType : uint8 {
     NeedHelp,
     NeedSupplies,
     LookHere,
-    Count,
+    NumTypes,
 };
 

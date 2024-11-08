@@ -1,0 +1,51 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SwimMove_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'SwimMove_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Character/Swim/SwimMove_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "Duration": 10000.0,
+      "MaxDistance": 7900.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Foley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "SwimMove_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SwimMove_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Character/Swim/SwimMove_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "SwimMove_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Character/Swim/SwimMoveLoop.SwimMoveLoop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'SwimMoveLoop'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Character/Swim/SwimMoveLoop.0"
+    }
+  }
+]

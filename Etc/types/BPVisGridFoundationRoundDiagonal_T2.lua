@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisGridFoundationRoundDiagonal_T2_C : AVisStructure
+---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field FloorPlanking2 UStaticMeshComponent
 ---@field FloorPlanking UStaticMeshComponent
 ---@field VisRandomMeshDecor59 UVisRandomMeshDecorComponent

@@ -1873,7 +1873,1353 @@
     "Name": "Default__Caravan_ABP_C",
     "Class": "AnimBlueprintGeneratedClass'Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.Caravan_ABP_C'",
     "Properties": {
-      "UberGraphFrame": {}
+      "UberGraphFrame": {},
+      "__AnimBlueprintMutables[1]": {
+        "__FloatProperty": 1.0,
+        "__FloatProperty_0[1]": 1.0,
+        "__FloatProperty_1[2]": 1.0,
+        "__FloatProperty_2[3]": 0.0,
+        "__FloatProperty_3[4]": 0.0,
+        "__FloatProperty_4[5]": 1.0,
+        "__FloatProperty_5[6]": 0.0,
+        "__BoolProperty_6[7]": false
+      },
+      "AnimBlueprintExtension_PropertyAccess[2]": {},
+      "AnimBlueprintExtension_Base[3]": {},
+      "AnimGraphNode_Root[4]": {
+        "Result": {
+          "LinkID": 21
+        }
+      },
+      "AnimGraphNode_TransitionResult_5[5]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_4[6]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_3[7]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_2[8]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1[9]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult[10]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_3[11]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Horse_Anim_walk'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_walk.4"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3[12]": {
+        "Result": {
+          "LinkID": 7
+        }
+      },
+      "AnimGraphNode_SequencePlayer_2[13]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Horse_Anim_gallop'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_gallop.8"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2[14]": {
+        "Result": {
+          "LinkID": 9
+        }
+      },
+      "AnimGraphNode_SequencePlayer_1[15]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Horse_Anim_walk'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_walk.4"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1[16]": {
+        "Result": {
+          "LinkID": 11
+        }
+      },
+      "AnimGraphNode_RandomPlayer[17]": {
+        "Entries": [
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence'Horse_Anim_idle'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_idle.0"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "CustomCurve": null,
+              "BlendTime": 0.2,
+              "BlendOption": "EAlphaBlendOption::Linear"
+            }
+          },
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence'Horse_Anim_headBob'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_Anim_headBob.0"
+            },
+            "ChanceToPlay": 0.2,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "CustomCurve": null,
+              "BlendTime": 0.2,
+              "BlendOption": "EAlphaBlendOption::Linear"
+            }
+          }
+        ],
+        "BlendWeight": 0.0,
+        "bShuffleMode": false
+      },
+      "AnimGraphNode_StateResult[18]": {
+        "Result": {
+          "LinkID": 13
+        }
+      },
+      "AnimGraphNode_StateMachine[19]": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "AnimGraphNode_LayeredBoneBlend_1[20]": {
+        "BasePose": {
+          "LinkID": 20
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 17
+          }
+        ],
+        "BlendMode": "ELayeredBoneBlendMode::BranchFilter",
+        "BlendMasks": [],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "wagon_root",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::Override",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "DEF7D201-4FAB980E-661DF0A7-2D8A26FA",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_LayeredBoneBlend[21]": {
+        "BasePose": {
+          "LinkID": 18
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 19
+          }
+        ],
+        "BlendMode": "ELayeredBoneBlendMode::BranchFilter",
+        "BlendMasks": [],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "wagon_axle_pivot",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::Override",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "DEF7D201-4FAB980E-661DF0A7-2D8A26FA",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendSpacePlayer[22]": {
+        "BlendSpace": {
+          "ObjectName": "BlendSpace'HorseWagon_WagonMovement'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseWagon_WagonMovement.0"
+        },
+        "PreviousBlendSpace": null,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer[23]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'HorseWagon_Anim_wheelSpeed_535_7259'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/HorseWagon_Anim_wheelSpeed_535_7259.4"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_RotationOffsetBlendSpace[24]": {
+        "BasePose": {
+          "LinkID": 15
+        },
+        "LODThreshold": -1,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": false,
+        "BlendSpace": {
+          "ObjectName": "AimOffsetBlendSpace1D'Horse_TurnInPlace'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Horse_TurnInPlace.0"
+        },
+        "PreviousBlendSpace": null,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool[25]": {
+        "BlendPose": [
+          {
+            "LinkID": 16
+          },
+          {
+            "LinkID": -1
+          }
+        ]
+      }
+    },
+    "SerializedSparseClassDataStruct": "ScriptStruct'Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.Caravan_ABP_C:AnimBlueprintGeneratedConstantData'",
+    "SerializedSparseClassData": {
+      "__NameProperty_113": "AnimGraph",
+      "__NameProperty_114[1]": "Walk back",
+      "__IntProperty_115[2]": 3,
+      "__FloatProperty_116[3]": 600.0,
+      "__NameProperty_117[4]": "Galop",
+      "__IntProperty_118[5]": 2,
+      "__FloatProperty_119[6]": 200.0,
+      "__NameProperty_120[7]": "Trotting",
+      "__IntProperty_121[8]": 1,
+      "__NameProperty_122[9]": "Idle",
+      "__IntProperty_123[10]": 0,
+      "__StructProperty_124[11]": {
+        "bMapRange": false,
+        "bClampResult": false,
+        "bInterpResult": false,
+        "InRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "OutRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "Scale": 1.0,
+        "Bias": 0.0,
+        "ClampMin": 0.0,
+        "ClampMax": 1.0,
+        "InterpSpeedIncreasing": 10.0,
+        "InterpSpeedDecreasing": 10.0
+      },
+      "__FloatProperty_125[12]": 535.7259,
+      "__BoolProperty_126[13]": true,
+      "__FloatProperty_127[14]": 1.0,
+      "__FloatProperty_128[15]": 0.0,
+      "__EnumProperty_129[16]": "EAnimSyncMethod::DoNotSync",
+      "__ByteProperty_130[17]": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_131[18]": "None",
+      "__StructProperty_132[19]": {
+        "ClassName": "None",
+        "FunctionName": "None"
+      },
+      "__BlendProfile_133[20]": null,
+      "__CurveFloat_134[21]": null,
+      "__BoolProperty_135[22]": false,
+      "__EnumProperty_136[23]": "EAlphaBlendOption::Linear",
+      "__EnumProperty_137[24]": "EBlendListTransitionType::StandardBlend",
+      "__ArrayProperty_138[25]": [
+        0.1,
+        0.1
+      ],
+      "AnimBlueprintExtension_PropertyAccess[26]": {
+        "Library": {
+          "PathSegments": [
+            {
+              "Name": "bIsOccupied",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bIsOccupied"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisVehicleAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'Caravan_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.13"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'Caravan_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__BoolProperty_6",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__BoolProperty_6"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'Caravan_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.13"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "NativeHorizontalMovement",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "NativeHorizontalMovement"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisVehicleAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'Caravan_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.13"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'Caravan_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty_5",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty_5"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'Caravan_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.13"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "NativeSpeed",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "NativeSpeed"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisVehicleAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'Caravan_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.13"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'Caravan_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty_4",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty_4"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'Caravan_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.13"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "NativeHorizontalMovement",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "NativeHorizontalMovement"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisVehicleAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'Caravan_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.13"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'Caravan_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty_3",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty_3"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'Caravan_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.13"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "NativeVerticalMovement",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "NativeVerticalMovement"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisVehicleAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'Caravan_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.13"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'Caravan_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty_2",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty_2"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'Caravan_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.13"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "NativeSpeed",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "NativeSpeed"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisVehicleAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'Caravan_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.13"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'Caravan_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty_0",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty_0"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'Caravan_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.13"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "NativeSpeed",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "NativeSpeed"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisVehicleAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'Caravan_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.13"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'Caravan_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'Caravan_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.13"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            }
+          ],
+          "SrcPaths": [
+            {
+              "PathSegmentStartIndex": 0,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 3,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 6,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 9,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 12,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 15,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 18,
+              "PathSegmentCount": 1
+            }
+          ],
+          "DestPaths": [
+            {
+              "PathSegmentStartIndex": 1,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 4,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 7,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 10,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 13,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 16,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 19,
+              "PathSegmentCount": 2
+            }
+          ],
+          "CopyBatchArray": [
+            {
+              "Copies": [
+                {
+                  "AccessIndex": 0,
+                  "DestAccessStartIndex": 0,
+                  "DestAccessEndIndex": 1,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 1,
+                  "DestAccessStartIndex": 1,
+                  "DestAccessEndIndex": 2,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                },
+                {
+                  "AccessIndex": 2,
+                  "DestAccessStartIndex": 2,
+                  "DestAccessEndIndex": 3,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                },
+                {
+                  "AccessIndex": 3,
+                  "DestAccessStartIndex": 3,
+                  "DestAccessEndIndex": 4,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                },
+                {
+                  "AccessIndex": 4,
+                  "DestAccessStartIndex": 4,
+                  "DestAccessEndIndex": 5,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                },
+                {
+                  "AccessIndex": 5,
+                  "DestAccessStartIndex": 5,
+                  "DestAccessEndIndex": 6,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                },
+                {
+                  "AccessIndex": 6,
+                  "DestAccessStartIndex": 6,
+                  "DestAccessEndIndex": 7,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "AnimBlueprintExtension_Base[27]": {
+        "ExposedValueHandlers": [
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Caravan_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_TransitionResult_4D19B82C429BBA49DD5A2B9F2BE05C55'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.7"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_TransitionResult_4D19B82C429BBA49DD5A2B9F2BE05C55"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Caravan_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_TransitionResult_0D401B2D436459DF5038B9B335CED12A'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.5"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_TransitionResult_0D401B2D436459DF5038B9B335CED12A"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Caravan_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_TransitionResult_9F016AE74528CB0DCD02E68B93F37CD1'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.8"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_TransitionResult_9F016AE74528CB0DCD02E68B93F37CD1"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Caravan_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_TransitionResult_498FD60A4BD69E60076FF9A7314D6813'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.6"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_TransitionResult_498FD60A4BD69E60076FF9A7314D6813"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Caravan_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_TransitionResult_FF87FDDC4A0C73C0C31B739C017EBF2C'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.10"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_TransitionResult_FF87FDDC4A0C73C0C31B739C017EBF2C"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Caravan_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_TransitionResult_F1E07D6A4F0C4EA076BFA1B0034765E5'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.9"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_TransitionResult_F1E07D6A4F0C4EA076BFA1B0034765E5"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 6,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 5,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Caravan_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_SequencePlayer_FE6B22714877ED6B8D515CA60FB1F5DD'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Caravan_ABP.4"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_SequencePlayer_FE6B22714877ED6B8D515CA60FB1F5DD"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 3,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              },
+              {
+                "CopyIndex": 4,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 2,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 1,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 0,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          }
+        ]
+      }
     }
   },
   {
@@ -2117,12 +3463,359 @@
     "Type": "ScriptStruct",
     "Name": "AnimBlueprintGeneratedConstantData",
     "Outer": "Caravan_ABP_C",
-    "Class": "UScriptClass'ScriptStruct'"
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintConstantData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_113",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_114",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_115",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_116",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_117",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_118",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_119",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_120",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_121",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_122",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_123",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_124",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_125",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_126",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_127",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_128",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_129",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_130",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_131",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_132",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNodeFunctionRef'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "__BlendProfile_133",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'BlendProfile'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "__CurveFloat_134",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'CurveFloat'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_135",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_136",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAlphaBlendOption'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_137",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EBlendListTransitionType'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "__ArrayProperty_138",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | EditFixedSize",
+        "Inner": {
+          "Type": "FloatProperty",
+          "Name": "__ArrayProperty_138",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_Base'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ]
   },
   {
     "Type": "ScriptStruct",
     "Name": "AnimBlueprintGeneratedMutableData",
     "Outer": "Caravan_ABP_C",
-    "Class": "UScriptClass'ScriptStruct'"
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintMutableData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ]
   }
 ]

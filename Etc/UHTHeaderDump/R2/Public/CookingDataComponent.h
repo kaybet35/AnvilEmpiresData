@@ -3,6 +3,7 @@
 #include "CookingRecipe.h"
 #include "DataComponent.h"
 #include "EAnvilCookingType.h"
+#include "FuelType.h"
 #include "CookingDataComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -11,6 +12,9 @@ class R2_API UCookingDataComponent : public UDataComponent {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilCookingType CookType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FFuelType> FuelList;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCookingRecipe> RecipeList;

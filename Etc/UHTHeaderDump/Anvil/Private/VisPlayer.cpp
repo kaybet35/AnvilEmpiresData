@@ -6,6 +6,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PointLightComponent -FallbackName=PointLightComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PostProcessComponent -FallbackName=PostProcessComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SkeletalMeshComponent -FallbackName=SkeletalMeshComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SoundCue -FallbackName=SoundCue
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=StaticMeshComponent -FallbackName=StaticMeshComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Niagara -ObjectName=NiagaraComponent -FallbackName=NiagaraComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=AdminEnvDataComponent -FallbackName=AdminEnvDataComponent
@@ -76,17 +77,35 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->WindHighAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("WindHighAudioComponent"));
     this->UnderworldCollapseFXComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("UnderworldCollapseFXComponent"));
     this->RepairItemSoundCue = NULL;
+    this->EnterSwimmingVFXComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("EnterSwimmingVFXComponent"));
+    this->SwimmingLoopVFXComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("SwimmingLoopVFXComponent"));
+    this->EnterSwimmingSoundCue = CreateDefaultSubobject<USoundCue>(TEXT("EnterSwimmingSoundCue"));
+    this->SwimmingLoopAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("SwimmingLoopAudioComponent"));
     this->PushIndicatorDecalComponent = CreateDefaultSubobject<UDecalComponent>(TEXT("PushIndicatorDecalComponent"));
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
     this->CurrentUEUsableActor = NULL;
+    this->TorchPointLightComponent->SetupAttachment(Mesh);
+    this->TorchAudioComponent->SetupAttachment(Mesh);
+    this->RainVFXComponent->SetupAttachment(SpringArm);
+    this->SnowVFXComponent->SetupAttachment(SpringArm);
+    this->BreathFogVFXComponent->SetupAttachment(Mesh);
+    this->RainLowAudioComponent->SetupAttachment(SpringArm);
+    this->RainMidAudioComponent->SetupAttachment(SpringArm);
+    this->RainHighAudioComponent->SetupAttachment(SpringArm);
+    this->SnowLowAudioComponent->SetupAttachment(SpringArm);
     this->SnowMidAudioComponent->SetupAttachment(SpringArm);
     this->SnowHighAudioComponent->SetupAttachment(SpringArm);
     this->WindLowAudioComponent->SetupAttachment(SpringArm);
     this->WindMidAudioComponent->SetupAttachment(SpringArm);
     this->WindHighAudioComponent->SetupAttachment(SpringArm);
     this->UnderworldCollapseFXComponent->SetupAttachment(SpringArm);
+    this->EnterSwimmingVFXComponent->SetupAttachment(Mesh);
+    this->SwimmingLoopVFXComponent->SetupAttachment(Mesh);
+    this->SwimmingLoopAudioComponent->SetupAttachment(Mesh);
     this->PushIndicatorDecalComponent->SetupAttachment(RootComponent);
+    this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->ItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->Mesh->SetupAttachment(RootComponent);
@@ -97,18 +116,7 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->VoiceIndicator->SetupAttachment(RootComponent);
     this->TorchVFXComponent->SetupAttachment(Mesh);
     this->TorchVFX2Component->SetupAttachment(Mesh);
-    this->TorchPointLightComponent->SetupAttachment(Mesh);
-    this->TorchAudioComponent->SetupAttachment(Mesh);
-    this->RainVFXComponent->SetupAttachment(SpringArm);
-    this->SnowVFXComponent->SetupAttachment(SpringArm);
-    this->BreathFogVFXComponent->SetupAttachment(Mesh);
-    this->RainLowAudioComponent->SetupAttachment(SpringArm);
-    this->RainMidAudioComponent->SetupAttachment(SpringArm);
-    this->RainHighAudioComponent->SetupAttachment(SpringArm);
-    this->SnowLowAudioComponent->SetupAttachment(SpringArm);
     this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->ItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 float AVisPlayer::GetVelocityHeadingDegrees() {

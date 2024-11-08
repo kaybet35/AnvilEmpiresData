@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_FamilyCenterFoundationSquareHalfSizeStraightBuildSite_HPP
+#define UE4SS_SDK_FamilyCenterFoundationSquareHalfSizeStraightBuildSite_HPP
+
+class UFamilyCenterFoundationSquareHalfSizeStraightBuildSite_C : public UBPBaseFoundationBuildSiteEntity_C
+{
+}; // Size: 0xC8
+
+#endif

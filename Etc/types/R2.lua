@@ -151,6 +151,23 @@ FCentralMarketplaceUserData = {}
 
 
 
+---@class FCompressedTileLayerDataInfo
+---@field X int32
+---@field Y int32
+---@field Layer int32
+---@field DataSize uint32
+---@field DataIndex int32
+FCompressedTileLayerDataInfo = {}
+
+
+
+---@class FContextfulPlacementStatus
+---@field Status EAnvilPlacementStatus
+---@field Context int32
+FContextfulPlacementStatus = {}
+
+
+
 ---@class FCookingRecipe
 ---@field InputItems TArray<FBasicItemCount>
 ---@field OutputItems TArray<FBasicItemCount>
@@ -188,11 +205,12 @@ FDryingRackRecipe = {}
 
 
 
----@class FEntityFloatPair
----@field CodeName TSubclassOf<UEntityTemplate>
+---@class FDynamicPrefabSpawnInfo
+---@field CodeName TSubclassOf<ADynamicPrefab>
 ---@field CodeNameVisVar int32
----@field Value float
-FEntityFloatPair = {}
+---@field SpawnWeight float
+---@field SpawnWeightVisVar float
+FDynamicPrefabSpawnInfo = {}
 
 
 
@@ -289,6 +307,18 @@ FHitConverterOutput = {}
 
 
 
+---@class FHitInfo
+---@field Mask int32
+---@field HitPosition FVector
+---@field Normal FVector
+---@field Distance float
+---@field Time float
+---@field Surface EAnvilPhysicalSurfaceType
+---@field bInitialOverlap boolean
+FHitInfo = {}
+
+
+
 ---@class FHousePledgedPlayerArray
 ---@field WrappedArray TArray<int64>
 FHousePledgedPlayerArray = {}
@@ -369,6 +399,24 @@ FLootTableItem = {}
 ---@field Price int32
 ---@field DefaultPrice int32
 FMarketShopItem = {}
+
+
+
+---@class FMinDistBetweenStructsEntry
+---@field CodeName TSubclassOf<UEntityTemplate>
+---@field CodeNameVisVar int32
+---@field Range float
+---@field NumLimit uint8
+FMinDistBetweenStructsEntry = {}
+
+
+
+---@class FNavMeshTri
+---@field Verts FVector
+---@field NumVerts int32
+---@field bWalkable boolean
+---@field Layer int32
+FNavMeshTri = {}
 
 
 
@@ -464,6 +512,13 @@ FR2WeatherEventConfig = {}
 
 
 
+---@class FRayCastResult
+---@field bHasBlockingHit boolean
+---@field BlockingHit FHitInfo
+FRayCastResult = {}
+
+
+
 ---@class FRefineQueueItem
 ---@field Index uint8
 ---@field Resources TArray<FItemCount>
@@ -550,6 +605,7 @@ FUnderworldModuleDebugInfo = {}
 ---@field PositionX float
 ---@field PositionY float
 ---@field NumRotations uint8
+---@field SpawnedPrefabCodeName int32
 FUnderworldModuleDebugInfoEntry = {}
 
 
@@ -692,6 +748,7 @@ UAnimalAIDataComponent = {}
 ---@field WalkingTime float
 ---@field bHoming boolean
 ---@field bAvoidRoads boolean
+---@field bIsTrappable boolean
 ---@field HomingDistance float
 UAnimalAIProxyComponent = {}
 
@@ -889,7 +946,7 @@ UBoxCollisionProxyComponent = {}
 ---@class UBuildSiteDataComponent : UDataComponent
 ---@field NearbyPlayersRequired int32
 ---@field MaterialSubmissions TArray<int32>
----@field BuildGhostPlacementStatus int64
+---@field BuildGhostPlacementStatus FContextfulPlacementStatus
 ---@field PlacementInfoFlags int32
 UBuildSiteDataComponent = {}
 
@@ -912,6 +969,7 @@ UBuildSiteDataComponent = {}
 ---@field bBuildableInEnemyTerritory boolean
 ---@field bBuildableNearEnemies boolean
 ---@field bIsBuildableUnderground boolean
+---@field bOnlyBuildableUnderground boolean
 ---@field bAllowRapidBuild boolean
 ---@field CanBuildTownStructureWithoutPledge boolean
 ---@field bBuildsInstantly boolean
@@ -922,7 +980,7 @@ UBuildSiteDataComponent = {}
 ---@field LevelCheckRayOffset FVector
 ---@field MaxHeightShift float
 ---@field AdditionalMaxHeightShift float
----@field KeepDistanceWithStructures TArray<FEntityFloatPair>
+---@field MinDistBetweenStructs TArray<FMinDistBetweenStructsEntry>
 ---@field GridDiagonalPair TSubclassOf<UEntityTemplate>
 ---@field NearbyPlayersRequired int32
 ---@field MaterialRequirements TArray<FBasicCount>
@@ -992,6 +1050,7 @@ UConstructionFacilityProxyComponent = {}
 
 ---@class UCookingDataComponent : UDataComponent
 ---@field CookType EAnvilCookingType
+---@field FuelList TArray<FFuelType>
 ---@field RecipeList TArray<FCookingRecipe>
 ---@field WaterDurationPerUnitItemAtMaxTempSecVisVar float
 ---@field FuelExpiryTimestampAgeSec int32
@@ -1038,6 +1097,10 @@ UCraftingProxyComponent = {}
 UCustomHeightmapComponent = {}
 
 
+---@class UCustomNavmeshVolumeComponent : USceneComponent
+UCustomNavmeshVolumeComponent = {}
+
+
 ---@class UDataComponent : UActorComponent
 UDataComponent = {}
 
@@ -1075,13 +1138,13 @@ UDryingRackProxyComponent = {}
 
 
 ---@class UDynamicPrefabDataComponent : UDataComponent
----@field PrefabCodeName int32
+---@field SpawnedPrefabCodeName int32
 UDynamicPrefabDataComponent = {}
 
 
 
 ---@class UDynamicPrefabProxyComponent : UProxyComponent
----@field PrefabCodeName TSubclassOf<ADynamicPrefab>
+---@field PrefabSpawnList TArray<FDynamicPrefabSpawnInfo>
 UDynamicPrefabProxyComponent = {}
 
 
@@ -1905,6 +1968,7 @@ UResourceProxyComponent = {}
 ---@field bDontSpawnInSettlements boolean
 ---@field bIsRare boolean
 ---@field bDontSpawnNearPlayers boolean
+---@field bAvoidSlopes boolean
 ---@field bWalkBackToSpawner boolean
 ---@field CompatibleSurfaceTypes int32
 ---@field OtherResourcesToAvoid TArray<TSubclassOf<UEntityTemplate>>
@@ -1951,6 +2015,7 @@ USeekerProxyComponent = {}
 ---@field Velocity FVector
 ---@field GuardStrength uint8
 ---@field TeamId uint8
+---@field CurrentMovementMode EAnvilMovementMode
 ---@field GuardMeter float
 ---@field Stability float
 ---@field CurrentActivitySpeedModifier float
@@ -2013,10 +2078,13 @@ USimPlayerDataComponent = {}
 ---@field MaxSprintVelocity float
 ---@field MaxVelocityCeiling float
 ---@field MaxFlyVelocity float
+---@field MaxSwimVelocity float
 ---@field BreakDeceleration float
 ---@field RotationSpeed float
 ---@field MovementAcceleration float
+---@field SwimMovementAcceleration float
 ---@field SprintStaminaDrain float
+---@field SwimStaminaDrain float
 ---@field ClimbStaminaCost float
 ---@field FallingDistRange FR2FloatRange
 ---@field FallingDamageRange FR2FloatRange

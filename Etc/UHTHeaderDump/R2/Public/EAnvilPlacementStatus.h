@@ -21,7 +21,6 @@ enum class EAnvilPlacementStatus : uint8 {
     TooShort,
     TooHigh,
     TooLow,
-    TooCloseToTownCenter,
     TooCloseToEnemy,
     TooCloseToOtherWell,
     TooCloseToCave,
@@ -60,5 +59,6 @@ enum class EAnvilPlacementStatus : uint8 {
     MustBeUniquePerTown,
     RequiresTerritoryOwnership,
     CantBeBuiltUnderground,
+    MustBeBuiltUnderground,
 };
 

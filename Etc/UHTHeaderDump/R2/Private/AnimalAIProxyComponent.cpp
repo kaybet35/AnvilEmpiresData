@@ -11,6 +11,7 @@ UAnimalAIProxyComponent::UAnimalAIProxyComponent() {
     this->WalkingTime = 5.00f;
     this->bHoming = false;
     this->bAvoidRoads = false;
+    this->bIsTrappable = false;
     this->HomingDistance = 0.00f;
 }
 

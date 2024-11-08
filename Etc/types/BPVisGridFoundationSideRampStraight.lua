@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisGridFoundationSideRampStraight_C : AVisStructure
+---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field VisFoundationEdgeMeshDecor17 UVisFoundationEdgeMeshDecorComponent
 ---@field VisRandomMeshDecor112 UVisRandomMeshDecorComponent
 ---@field VisFoundationBottomMeshDecor1 UVisFoundationBottomMeshDecorComponent

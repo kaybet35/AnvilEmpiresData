@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleEnd03_C : ABPUnderworldModuleDynamicPrefab_C
+---@field CustomNavmeshVolume UCustomNavmeshVolumeComponent
 ---@field DirtDecal043 UDecalComponent
 ---@field PropActor09 UChildActorComponent
 ---@field PropActor08 UChildActorComponent

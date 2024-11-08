@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_FamilyCenterFoundationTriangularHalfSizeDiagonalBuildSite_HPP
+#define UE4SS_SDK_FamilyCenterFoundationTriangularHalfSizeDiagonalBuildSite_HPP
+
+class UFamilyCenterFoundationTriangularHalfSizeDiagonalBuildSite_C : public UBPBaseFoundationBuildSiteEntity_C
+{
+}; // Size: 0xC8
+
+#endif

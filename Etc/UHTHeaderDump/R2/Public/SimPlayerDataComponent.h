@@ -3,6 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "DataComponent.h"
 #include "EAnvilCharacterStance.h"
+#include "EAnvilMovementMode.h"
 #include "EAnvilSimActivityState.h"
 #include "EntityHandle.h"
 #include "NightShroudLightSource.h"
@@ -20,6 +21,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TeamId;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EAnvilMovementMode CurrentMovementMode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float GuardMeter;

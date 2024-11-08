@@ -334,7 +334,8 @@ ESimpleTooltip = {
     Stamina = 10,
     AnimalHealth = 11,
     DeploymentFood = 12,
-    ESimpleTooltip_MAX = 13,
+    Reinforced = 13,
+    ESimpleTooltip_MAX = 14,
 }
 
 ---@enum ETemperatureChangeType
