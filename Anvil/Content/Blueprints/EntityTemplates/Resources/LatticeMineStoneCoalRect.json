@@ -16,30 +16,10 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "LatticeMineStoneCoalRect_C'Default__LatticeMineStoneCoalRect_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/LatticeMineStoneCoalRect.3"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/LatticeMineStoneCoalRect.2"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
-    }
-  },
-  {
-    "Type": "BoxCollisionProxyComponent",
-    "Name": "BoxCollisionProxyComponent_0",
-    "Outer": "Default__LatticeMineStoneCoalRect_C",
-    "Class": "UScriptClass'BoxCollisionProxyComponent'",
-    "Properties": {
-      "Position": {
-        "X": 1750.0,
-        "Y": 1125.0,
-        "Z": 875.0
-      },
-      "Extents": {
-        "X": 1875.0,
-        "Y": 1250.0,
-        "Z": 1000.0
-      },
-      "CollisionMask": 1073741824,
-      "bVaultable": false
     }
   },
   {
@@ -48,28 +28,32 @@
     "Outer": "Default__LatticeMineStoneCoalRect_C",
     "Class": "UScriptClass'LatticeMineProxyComponent'",
     "Properties": {
-      "Data": {
-        "ChunkExtents": {
-          "X": 125.0,
-          "Y": 125.0,
-          "Z": 125.0
+      "ChunkExtents": {
+        "X": 150.0,
+        "Y": 150.0,
+        "Z": 125.0
+      },
+      "ChunkSpacing": {
+        "X": 125.0,
+        "Y": 125.0,
+        "Z": 125.0
+      },
+      "GridDimensions": {
+        "X": 15.0,
+        "Y": 10.0,
+        "Z": 8.0
+      },
+      "ChunkTypes": [
+        {
+          "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/LatticeChunkStone.LatticeChunkStone_C'",
+          "Value": 1.0
         },
-        "GridDimensions": {
-          "X": 15.0,
-          "Y": 10.0,
-          "Z": 8.0
-        },
-        "ChunkTypes": [
-          {
-            "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/LatticeChunkStone.LatticeChunkStone_C'",
-            "Value": 1.0
-          },
-          {
-            "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/LatticeChunkCoal.LatticeChunkCoal_C'",
-            "Value": 0.1
-          }
-        ]
-      }
+        {
+          "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/LatticeChunkCoal.LatticeChunkCoal_C'",
+          "Value": 0.1
+        }
+      ],
+      "CollisionMask": 2129936
     }
   },
   {
@@ -79,19 +63,16 @@
     "Properties": {
       "CodeNameString": "LatticeMineStoneCoalRect",
       "CodeName": -1419091532,
+      "RelevancyDistSqr": 49000000.0,
       "Components": [
         {
           "ObjectName": "LatticeMineProxyComponent'Default__LatticeMineStoneCoalRect_C:LatticeMineProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/LatticeMineStoneCoalRect.2"
-        },
-        {
-          "ObjectName": "BoxCollisionProxyComponent'Default__LatticeMineStoneCoalRect_C:BoxCollisionProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/LatticeMineStoneCoalRect.1"
         }
       ],
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisLatticeMine_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisLatticeMine.0"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.0"
       }
     }
   }

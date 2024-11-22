@@ -2,7 +2,9 @@
 
 ---@class ABpVisTownCenterKeepT1_C : AVisTownCenter
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
+---@field CollapsedMeshRoof UVisStaticMeshComponent
+---@field CollapsedMeshFF UVisStaticMeshComponent
+---@field CollapsedMeshSF UVisStaticMeshComponent
 ---@field StaticMesh15 UStaticMeshComponent
 ---@field StaticMesh14 UStaticMeshComponent
 ---@field StaticMesh13 UStaticMeshComponent

@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_FamilyCenterFoundationWaterConnectorStraightBuildSite_HPP
+#define UE4SS_SDK_FamilyCenterFoundationWaterConnectorStraightBuildSite_HPP
+
+class UFamilyCenterFoundationWaterConnectorStraightBuildSite_C : public UBPBaseFoundationBuildSiteEntity_C
+{
+}; // Size: 0xC8
+
+#endif

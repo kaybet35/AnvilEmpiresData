@@ -1,0 +1,383 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisLatticeMine_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisLatticeMine_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.12"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisLatticeMine'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LatticeChunkCoal",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'InstancedStaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LatticeChunkStone",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'InstancedStaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LatticeChunkIron",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'InstancedStaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisLatticeMine_C'Default__BPVisLatticeMine_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "MeshVisibilityArea",
+    "Outer": "Default__BPVisLatticeMine_C",
+    "Class": "UScriptClass'BoxComponent'"
+  },
+  {
+    "Type": "BPVisLatticeMine_C",
+    "Name": "Default__BPVisLatticeMine_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.BPVisLatticeMine_C'",
+    "Properties": {
+      "LatticeAreaVisualizer": {
+        "ObjectName": "BoxComponent'Default__BPVisLatticeMine_C:MeshVisibilityArea'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.1"
+      },
+      "LatticeMineDataComponent": {
+        "ObjectName": "LatticeMineDataComponent'Default__BPVisLatticeMine_C:LatticeMineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.6"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BPVisLatticeMine_C:MeshVisibilityArea'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.1"
+      }
+    }
+  },
+  {
+    "Type": "InstancedStaticMeshComponent",
+    "Name": "LatticeChunkCoal_GEN_VARIABLE",
+    "Outer": "BPVisLatticeMine_C",
+    "Class": "UScriptClass'InstancedStaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'LatticeMiningCubeA'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Underworld/LatticeMeshes/LatticeMiningCubeA.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'TerrainUnderworldLatticeCoal_A'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Underworld/LatticeMeshes/TerrainUnderworldLatticeCoal_A.0"
+        }
+      ],
+      "bReceivesDecals": false,
+      "bHasPerInstanceHitProxies": true,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -25.0
+      },
+      "RelativeScale3D": {
+        "X": 3.0,
+        "Y": 3.0,
+        "Z": 3.0
+      }
+    },
+    "PerInstanceSMData": [
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 0.99830717,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.25,
+            "Y": 1.25,
+            "Z": 1.25
+          },
+          "IsRotationNormalized": true
+        }
+      }
+    ]
+  },
+  {
+    "Type": "InstancedStaticMeshComponent",
+    "Name": "LatticeChunkIron_GEN_VARIABLE",
+    "Outer": "BPVisLatticeMine_C",
+    "Class": "UScriptClass'InstancedStaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'LatticeMiningCubeA'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Underworld/LatticeMeshes/LatticeMiningCubeA.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'TerrainUnderworldLatticeIron_A'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Underworld/LatticeMeshes/TerrainUnderworldLatticeIron_A.0"
+        }
+      ],
+      "bReceivesDecals": false,
+      "bHasPerInstanceHitProxies": true,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -25.0
+      },
+      "RelativeScale3D": {
+        "X": 3.0,
+        "Y": 3.0,
+        "Z": 3.0
+      }
+    },
+    "PerInstanceSMData": [
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 0.99830717,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 125.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.25,
+            "Y": 1.25,
+            "Z": 1.25
+          },
+          "IsRotationNormalized": true
+        }
+      }
+    ]
+  },
+  {
+    "Type": "InstancedStaticMeshComponent",
+    "Name": "LatticeChunkStone_GEN_VARIABLE",
+    "Outer": "BPVisLatticeMine_C",
+    "Class": "UScriptClass'InstancedStaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'LatticeMiningCubeA'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Underworld/LatticeMeshes/LatticeMiningCubeA.2"
+      },
+      "bReceivesDecals": false,
+      "bHasPerInstanceHitProxies": true,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -25.0
+      },
+      "RelativeScale3D": {
+        "X": 3.0,
+        "Y": 3.0,
+        "Z": 3.0
+      }
+    },
+    "PerInstanceSMData": [
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": 0.99830717,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": -125.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.25,
+            "Y": 1.25,
+            "Z": 1.25
+          },
+          "IsRotationNormalized": true
+        }
+      }
+    ]
+  },
+  {
+    "Type": "LatticeMineDataComponent",
+    "Name": "LatticeMineDataComponent",
+    "Outer": "Default__BPVisLatticeMine_C",
+    "Class": "UScriptClass'LatticeMineDataComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisLatticeMine_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisLatticeMine_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.7"
+      },
+      "VariableGuid": "EFE74BA6-4618D88C-B7F8338F-9AA5B3A9",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'InstancedStaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "InstancedStaticMeshComponent'BPVisLatticeMine_C:LatticeChunkStone_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.5"
+      },
+      "ParentComponentOrVariableName": "MeshVisibilityArea",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "096D03A2-4DD75704-80E2108B-C0B076B3",
+      "InternalVariableName": "LatticeChunkStone"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'InstancedStaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "InstancedStaticMeshComponent'BPVisLatticeMine_C:LatticeChunkCoal_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.3"
+      },
+      "ParentComponentOrVariableName": "MeshVisibilityArea",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "EAC41024-44DFAB7D-8CA583A0-0F6D236D",
+      "InternalVariableName": "LatticeChunkCoal"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'InstancedStaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "InstancedStaticMeshComponent'BPVisLatticeMine_C:LatticeChunkIron_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.4"
+      },
+      "ParentComponentOrVariableName": "MeshVisibilityArea",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6C098F5D-4CA43BC1-E62ADCAB-ABCEB2CC",
+      "InternalVariableName": "LatticeChunkIron"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisLatticeMine_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisLatticeMine_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisLatticeMine_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisLatticeMine_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisLatticeMine_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisLatticeMine_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisLatticeMine_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisLatticeMine_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLatticeMine.8"
+      }
+    }
+  }
+]

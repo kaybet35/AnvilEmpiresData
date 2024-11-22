@@ -11,6 +11,10 @@
 ---@field BPDeployLadderActionButton UBPDeployLadderActionButton_C
 ---@field BPDetachActionButton UBPDetachActionButton_C
 ---@field BPDismantleActionButton UBPDismantleActionButton_C
+---@field BPFamilyInviteToJoinActionButton UBPFamilyInviteToJoinActionButton_C
+---@field BPFamilyLockActionButton UBPFamilyLockActionButton_C
+---@field BPFamilyRequestJoinActionButton UBPFamilyRequestJoinActionButton_C
+---@field BPFamilyUnlockActionButton UBPFamilyUnlockActionButton_C
 ---@field BPGotoSleepActionButton UBPGotoSleepActionButton_C
 ---@field BPPledgeToTownActionButton UBPPledgeToTownActionButton_C
 ---@field BPPushLadderActionButton UBPPushLadderActionButton_C

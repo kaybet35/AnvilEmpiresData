@@ -24,7 +24,7 @@ enum class EAnvilCollisionChannel : uint8 {
     LargeRock,
     Water,
     Animal,
-    MarketArea,
+    UNUSED,
     Foundation,
     Snapping,
     Fire,
@@ -34,6 +34,5 @@ enum class EAnvilCollisionChannel : uint8 {
     FamilyArea,
     House,
     AnvilCollisionFoliage,
-    LatticeMine,
 };
 

@@ -374,14 +374,6 @@ FItemSlot = {}
 
 
 
----@class FLatticeMineProxyData
----@field ChunkExtents FVector
----@field GridDimensions FVector
----@field ChunkTypes TMap<TSubclassOf<UEntityTemplate>, float>
-FLatticeMineProxyData = {}
-
-
-
 ---@class FLootTableItem
 ---@field ItemToDrop FItemCount
 ---@field NormalizedChanceToDrop float
@@ -391,23 +383,19 @@ FLootTableItem = {}
 
 
 
----@class FMarketShopItem
----@field Base FGridItem
----@field Count int32
----@field Durability float
----@field Payload uint8
----@field Price int32
----@field DefaultPrice int32
-FMarketShopItem = {}
-
-
-
 ---@class FMinDistBetweenStructsEntry
 ---@field CodeName TSubclassOf<UEntityTemplate>
 ---@field CodeNameVisVar int32
 ---@field Range float
 ---@field NumLimit uint8
 FMinDistBetweenStructsEntry = {}
+
+
+
+---@class FMineChunk
+---@field TypeIdx int32
+---@field WorldPosition FVector
+FMineChunk = {}
 
 
 
@@ -488,6 +476,24 @@ FR2FamilyMember = {}
 ---@field Min float
 ---@field Max float
 FR2FloatRange = {}
+
+
+
+---@class FR2InviteToJoinFamilyRequest
+---@field TargetFamilyMarkerEntityId int64
+---@field InviterOnlineId int64
+---@field InviterPlayerName FString
+FR2InviteToJoinFamilyRequest = {}
+
+
+
+---@class FR2RequestToJoinFamilyRequest
+---@field TargetMarkerEntityId int64
+---@field TargetMarkerMapHash int32
+---@field RequesterOnlineId int64
+---@field RequesterPlayerName FString
+---@field RequesterTeamId uint8
+FR2RequestToJoinFamilyRequest = {}
 
 
 
@@ -1238,6 +1244,10 @@ UFamilyInventoryProxyComponent = {}
 UFamilyListProxyComponent = {}
 
 
+---@class UFamilyLockProxyComponent : UProxyComponent
+UFamilyLockProxyComponent = {}
+
+
 ---@class UFamilyUserProxyComponent : UProxyComponent
 UFamilyUserProxyComponent = {}
 
@@ -1477,7 +1487,6 @@ UInventoryProxyComponent = {}
 ---@field StunDuration float
 ---@field StunThrowDistance float
 ---@field Damage uint8
----@field DefaultMarketplaceValue uint16
 ---@field DurabilityLossPerSec float
 ---@field StockPileWithdrawalValue float
 ---@field QuantityPerCrate uint16
@@ -1522,8 +1531,23 @@ ULadderProxyComponent = {}
 
 
 
+---@class ULatticeMineDataComponent : UDataComponent
+---@field MeshVisibilityLevel int32
+---@field MineChunks TArray<FMineChunk>
+ULatticeMineDataComponent = {}
+
+
+
 ---@class ULatticeMineProxyComponent : UProxyComponent
----@field Data FLatticeMineProxyData
+---@field ChunkExtents FVector
+---@field ChunkSpacing FVector
+---@field GridDimensions FVector
+---@field ChunkTypes TMap<TSubclassOf<UEntityTemplate>, float>
+---@field SurfaceType EAnvilPhysicalSurfaceType
+---@field CollisionMask int32
+---@field Tags int32
+---@field StepAngle float
+---@field bVaultable boolean
 ULatticeMineProxyComponent = {}
 
 
@@ -1566,23 +1590,6 @@ UMapPostDataComponent = {}
 
 ---@class UMapPostProxyComponent : UProxyComponent
 UMapPostProxyComponent = {}
-
-
----@class UMarketShopDataComponent : UDataComponent
----@field PriceList TArray<int32>
----@field DefaultPriceList TArray<int32>
----@field SilverStored int32
----@field OwnerPlayerName FString
----@field MinItemPrice int32
----@field MaxItemPrice int32
-UMarketShopDataComponent = {}
-
-
-
----@class UMarketShopProxyComponent : UProxyComponent
----@field AutoBuySeconds int32
-UMarketShopProxyComponent = {}
-
 
 
 ---@class UMeshCollisionProxyComponent : UProxyComponent
@@ -2012,12 +2019,12 @@ USeekerProxyComponent = {}
 
 
 ---@class USimPlayerDataComponent : UDataComponent
----@field Velocity FVector
 ---@field GuardStrength uint8
 ---@field TeamId uint8
 ---@field CurrentMovementMode EAnvilMovementMode
 ---@field GuardMeter float
 ---@field Stability float
+---@field StabilityGuardThreshold float
 ---@field CurrentActivitySpeedModifier float
 ---@field CurrentActivityChainIndex uint8
 ---@field ActivityState EAnvilSimActivityState
@@ -2090,6 +2097,9 @@ USimPlayerDataComponent = {}
 ---@field FallingDamageRange FR2FloatRange
 ---@field RammingVelocityFactor float
 ---@field RammingStabilityDamage float
+---@field AutoPushMaxDistance float
+---@field AutoPushMinDistance float
+---@field AutoPushConeHalfAngleCosine float
 USimPlayerProxyComponent = {}
 
 
@@ -2199,6 +2209,7 @@ UStructureProtectionProxyComponent = {}
 ---@field bCannotBeDismantled boolean
 ---@field bRequireSupport boolean
 ---@field bCanCollapse boolean
+---@field bEnemyCanConvert boolean
 ---@field bIsAlwaysEnclosed boolean
 ---@field IgnoreMeshVisbilityChanges boolean
 ---@field bCanOverrideFamilyAccessLevel boolean
@@ -2314,8 +2325,6 @@ UTrapProxyComponent = {}
 ---@class UTweakableDataComponent : UDataComponent
 ---@field PopulationRequirementT2 uint8
 ---@field PopulationRequirementT3 uint8
----@field MarketplaceRequirementT2 uint8
----@field MarketplaceRequirementT3 uint8
 ---@field TentRequirementT2 uint8
 ---@field TentRequirementT3 uint8
 ---@field TownCenterRequiredBuilders uint8

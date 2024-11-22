@@ -77,6 +77,7 @@ class UCaravan_ABP_C : public UVisCartAnimInstance
     FAnimNode_BlendListByBool AnimGraphNode_BlendListByBool;                          // 0x0AD8 (size: 0x48)
 
     void AnimGraph(FPoseLink& AnimGraph);
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_BlendListByBool_F821511F4D0BA60F4E20E085E5126A4A();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_SequencePlayer_FE6B22714877ED6B8D515CA60FB1F5DD();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_TransitionResult_F1E07D6A4F0C4EA076BFA1B0034765E5();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_Caravan_ABP_AnimGraphNode_TransitionResult_FF87FDDC4A0C73C0C31B739C017EBF2C();

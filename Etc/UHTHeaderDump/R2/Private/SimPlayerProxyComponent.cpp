@@ -30,6 +30,9 @@ USimPlayerProxyComponent::USimPlayerProxyComponent() {
     this->ClimbStaminaCost = 20.00f;
     this->RammingVelocityFactor = 0.95f;
     this->RammingStabilityDamage = 0.30f;
+    this->AutoPushMaxDistance = 750.00f;
+    this->AutoPushMinDistance = 110.00f;
+    this->AutoPushConeHalfAngleCosine = 0.71f;
 }
 
 

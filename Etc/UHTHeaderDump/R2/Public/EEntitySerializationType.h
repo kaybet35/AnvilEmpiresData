@@ -7,6 +7,5 @@ enum EEntitySerializationType {
     SerializationTypeDefault,
     SerializationTypePlayer,
     SerializationTypeController,
-    SerializationTypeMarketplace = 4,
 };
 

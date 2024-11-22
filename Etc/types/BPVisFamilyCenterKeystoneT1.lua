@@ -2,11 +2,11 @@
 
 ---@class ABPVisFamilyCenterKeystoneT1_C : AVisFamilyCenter
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field CollapsedMesh UVisStaticMeshComponent
----@field VisTeamMesh1 UVisTeamMeshComponent
----@field BPVisFamilyMeshComponent1 UBPVisFamilyMeshComponent_C
+---@field StaticMesh1 UStaticMeshComponent
+---@field StaticMesh UStaticMeshComponent
 ---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
 ---@field VisTeamMesh UVisTeamMeshComponent
+---@field CollapsedMesh UVisStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field HouseMesh UVisStaticMeshComponent
 ---@field GrassRemovalFamilyArea UGrassRemovalVolumeComponent

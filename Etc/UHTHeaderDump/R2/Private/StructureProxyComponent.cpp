@@ -4,6 +4,7 @@ UStructureProxyComponent::UStructureProxyComponent() {
     this->bCannotBeDismantled = false;
     this->bRequireSupport = false;
     this->bCanCollapse = false;
+    this->bEnemyCanConvert = false;
     this->bIsAlwaysEnclosed = false;
     this->IgnoreMeshVisbilityChanges = false;
     this->bCanOverrideFamilyAccessLevel = false;

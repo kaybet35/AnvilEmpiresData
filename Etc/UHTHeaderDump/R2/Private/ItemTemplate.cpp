@@ -44,7 +44,6 @@ UItemTemplate::UItemTemplate() {
     this->StunDuration = 0.00f;
     this->StunThrowDistance = 0.00f;
     this->Damage = 0;
-    this->DefaultMarketplaceValue = 1;
     this->DurabilityLossPerSec = 0.00f;
     this->StockPileWithdrawalValue = 1.00f;
     this->QuantityPerCrate = 10;

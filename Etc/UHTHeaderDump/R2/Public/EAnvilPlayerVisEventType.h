@@ -10,5 +10,7 @@ enum class EAnvilPlayerVisEventType : uint8 {
     ForceActivityState,
     ConfirmFamilyPledgeDialog,
     ConfirmHousePledgeDialog,
+    RequestToJoinFamily,
+    InviteToJoinFamily,
 };
 

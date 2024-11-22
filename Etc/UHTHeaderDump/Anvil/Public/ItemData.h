@@ -10,9 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 Damage;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint16 DefaultMarketplaceValue;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DurabilityLossPerSec;
     

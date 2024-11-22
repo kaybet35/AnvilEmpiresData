@@ -9,12 +9,12 @@
       "bUsedWithParticleSprites": true,
       "bUsedWithNiagaraSprites": true,
       "bCanMaskedBeAssumedOpaque": true,
-      "StateId": "D9A22CA2-45A422EF-DC2EFFB3-2461602C",
+      "StateId": "EDBC8B12-44DD471D-6E751390-C72B3653",
       "TextureStreamingData": [
         {
           "SamplingScale": 1.0,
           "UVChannelIndex": 0,
-          "TextureName": "DecalBasicShapes"
+          "TextureName": "Decal02"
         }
       ]
     },
@@ -34,6 +34,11 @@
           },
           {
             "Name": "Param3",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Detail 1 Mask Tiling",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           }
@@ -57,7 +62,13 @@
         "ParameterInfoSet": []
       },
       "RuntimeEntries[3]": {
-        "ParameterInfoSet": []
+        "ParameterInfoSet": [
+          {
+            "Name": "Mask 1",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          }
+        ]
       },
       "RuntimeEntries[4]": {
         "ParameterInfoSet": []
@@ -66,6 +77,7 @@
         "ParameterInfoSet": []
       },
       "ScalarPrimitiveDataIndexValues": [
+        -1,
         -1,
         -1,
         -1
@@ -77,7 +89,8 @@
       "ScalarValues": [
         0.75,
         2.0,
-        3.0
+        3.0,
+        1.0
       ],
       "VectorValues": [
         {
@@ -96,17 +109,52 @@
         }
       ],
       "DoubleVectorValues": [],
-      "TextureValues": [],
+      "TextureValues": [
+        {
+          "AssetPathName": "/Game/FX/Textures/NoiseMasks/AverageNoises01.AverageNoises01",
+          "SubPathString": ""
+        }
+      ],
       "FontValues": [],
       "FontPageValues": [],
       "RuntimeVirtualTextureValues": [],
       "ReferencedTextures": [
         {
-          "ObjectName": "Texture2D'DecalBasicShapes'",
-          "ObjectPath": "Anvil/Content/Textures/Decal/DecalBasicShapes.0"
+          "ObjectName": "Texture2D'Decal02'",
+          "ObjectPath": "Anvil/Content/Textures/Decal/Decal02.0"
+        },
+        {
+          "ObjectName": "Texture2D'AverageNoises01'",
+          "ObjectPath": "Anvil/Content/FX/Textures/NoiseMasks/AverageNoises01.0"
+        },
+        {
+          "ObjectName": "Texture2D'DefaultDiffuse'",
+          "ObjectPath": "Engine/Content/EngineMaterials/DefaultDiffuse.0"
         }
       ],
-      "FunctionInfos": [],
+      "FunctionInfos": [
+        {
+          "StateId": "127A25CC-4BE0E6F9-0A2D99BF-43C74E15",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat4Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat4Components.0"
+          }
+        },
+        {
+          "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
+          "Function": {
+            "ObjectName": "MaterialFunction'AppendMany'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
+          }
+        },
+        {
+          "StateId": "02793978-4983EA7E-FB4E9DB3-5FB350AE",
+          "Function": {
+            "ObjectName": "MaterialFunction'WorldSpaceSmall'",
+            "ObjectPath": "Anvil/Content/Materials/MaterialFunctions/WorldSpaceSmall.0"
+          }
+        }
+      ],
       "ParameterCollectionInfos": [],
       "GrassTypes": [],
       "MaterialLayers": {
@@ -130,8 +178,16 @@
     },
     "ReferencedTextures": [
       {
-        "ObjectName": "Texture2D'DecalBasicShapes'",
-        "ObjectPath": "Anvil/Content/Textures/Decal/DecalBasicShapes.0"
+        "ObjectName": "Texture2D'DefaultDiffuse'",
+        "ObjectPath": "Engine/Content/EngineMaterials/DefaultDiffuse.0"
+      },
+      {
+        "ObjectName": "Texture2D'AverageNoises01'",
+        "ObjectPath": "Anvil/Content/FX/Textures/NoiseMasks/AverageNoises01.0"
+      },
+      {
+        "ObjectName": "Texture2D'Decal02'",
+        "ObjectPath": "Anvil/Content/Textures/Decal/Decal02.0"
       }
     ]
   }

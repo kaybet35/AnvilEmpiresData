@@ -1,13 +1,14 @@
 #include "FamilyAreaMarkerWindow.h"
 
 UFamilyAreaMarkerWindow::UFamilyAreaMarkerWindow() {
+    this->FamilyMemberListItemWidgetType = NULL;
     this->FamilyMembersScrollBox = NULL;
     this->AlliedFamiliesScrollBox = NULL;
     this->UpkeepIcon = NULL;
     this->UpkeepTextBlock = NULL;
-    this->FamilyMemberListItemWidgetType = NULL;
     this->FamilyAreaRestrictedCheckBox = NULL;
     this->FamilyAreaAllianceButton = NULL;
+    this->FamilyInviteDialogWidget = NULL;
 }
 
 void UFamilyAreaMarkerWindow::OnRemoveAlliedFamilyClicked(const uint64 AlliedFamilyFounderOnlineId) {

@@ -30,5 +30,9 @@ enum class EActionButtonType : uint8 {
     ClaimFamilyInventory,
     PledgeToTown,
     ReinforceStructure,
+    FamilyRequestToJoin,
+    FamilyInviteToJoin,
+    FamilyLock,
+    FamilyUnlock,
 };
 

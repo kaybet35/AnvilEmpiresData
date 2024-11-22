@@ -9,7 +9,7 @@ enum class EAnvilBuildLocationType : uint8 {
     LargeRock,
     Water,
     _Unused,
-    Marketplace,
+    _Unused_1,
     Industry,
     Shore,
     RequresCeiling,

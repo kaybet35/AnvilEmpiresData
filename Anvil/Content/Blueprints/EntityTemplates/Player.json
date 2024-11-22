@@ -400,7 +400,7 @@
           "SpawnedEntityVisVar": 0,
           "MinDistFromFamilyArea": 30000.0,
           "ChanceToSpawnPerMin": 1.0,
-          "MinDistanceBetweenSpawns": 10000.0,
+          "MinDistanceBetweenSpawns": 15000.0,
           "MaxNumInRadius": 1,
           "bRequiresNavmesh": true,
           "bConsiderAllFamilyAreas": false,
@@ -537,6 +537,73 @@
           "CompatibleSurfaceTypes": 0,
           "ForbiddenSurfaceTypes": 32768,
           "OtherResourcesToAvoidByDistance": []
+        },
+        {
+          "SpawnedEntity": {
+            "ObjectName": "BlueprintGeneratedClass'Bear_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Bear.3"
+          },
+          "SpawnedEntityVisVar": 0,
+          "MinDistFromFamilyArea": 75000.0,
+          "ChanceToSpawnPerMin": 0.5,
+          "MinDistanceBetweenSpawns": 15000.0,
+          "MaxNumInRadius": 1,
+          "bRequiresNavmesh": true,
+          "bConsiderAllFamilyAreas": false,
+          "bDontSpawnInSettlements": true,
+          "bDoExpensiveForbiddenSurfaceCheck": true,
+          "CompatibleSurfaceTypes": 0,
+          "ForbiddenSurfaceTypes": 32768,
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Wolf_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Wolf.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 6000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'WolfElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/WolfElite.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 6000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Boar_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Boar.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 6000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'BoarElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BoarElite.2"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 6000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'Bear_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Bear.3"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 6000.0
+            },
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'BearElite_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/BearElite.3"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 6000.0
+            }
+          ]
         }
       ]
     }
@@ -893,7 +960,8 @@
         "Min": 10.0,
         "Max": 100.0
       },
-      "RammingStabilityDamage": 0.5
+      "RammingStabilityDamage": 0.5,
+      "AutoPushMaxDistance": 250.0
     }
   },
   {

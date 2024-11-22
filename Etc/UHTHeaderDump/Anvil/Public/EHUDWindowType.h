@@ -16,7 +16,6 @@ enum class EHUDWindowType : uint8 {
     Stable,
     ItemStash,
     Treasury,
-    MarketShop,
     RepairStation,
     RelicTechCenter,
     Cooking,

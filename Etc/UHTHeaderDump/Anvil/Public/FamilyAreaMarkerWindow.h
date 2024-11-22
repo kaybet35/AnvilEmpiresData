@@ -8,6 +8,7 @@
 
 class UButton;
 class UCheckBox;
+class UFamilyInviteDialogWidget;
 class UFamilyMemberListItemWidget;
 class UImage;
 class UScrollBox;
@@ -18,6 +19,9 @@ class ANVIL_API UFamilyAreaMarkerWindow : public UStructureWindow {
     GENERATED_BODY()
 public:
 private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UFamilyMemberListItemWidget> FamilyMemberListItemWidgetType;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UScrollBox* FamilyMembersScrollBox;
     
@@ -30,14 +34,14 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* UpkeepTextBlock;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<UFamilyMemberListItemWidget> FamilyMemberListItemWidgetType;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCheckBox* FamilyAreaRestrictedCheckBox;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UButton* FamilyAreaAllianceButton;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UFamilyInviteDialogWidget* FamilyInviteDialogWidget;
     
 public:
     UFamilyAreaMarkerWindow();

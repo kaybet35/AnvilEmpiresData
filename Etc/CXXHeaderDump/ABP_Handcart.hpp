@@ -58,8 +58,10 @@ class UABP_Handcart_C : public UVisVehicleAnimInstance
     double WheelAxleRadius;                                                           // 0x0790 (size: 0x8)
 
     void AnimGraph(FPoseLink& AnimGraph);
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Handcart_AnimGraphNode_TransitionResult_7A75FBD74964DF4D08EFCB847F6607A8();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Handcart_AnimGraphNode_SequencePlayer_6E9A13BA4538B62D480EE3AC73761D3B();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Handcart_AnimGraphNode_SequencePlayer_42E3E674410949D745C49CB93716648D();
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Handcart_AnimGraphNode_TransitionResult_7695EF56476BF08CCB684297FD3C463B();
     void ExecuteUbergraph_ABP_Handcart(int32 EntryPoint);
 }; // Size: 0x798
 

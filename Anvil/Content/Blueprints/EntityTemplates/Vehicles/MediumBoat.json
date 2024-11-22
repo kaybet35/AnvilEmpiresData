@@ -16,7 +16,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "MediumBoat_C'Default__MediumBoat_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.11"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.12"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -208,6 +208,12 @@
     }
   },
   {
+    "Type": "FamilyLockProxyComponent",
+    "Name": "FamilyLockProxyComponent_0",
+    "Outer": "Default__MediumBoat_C",
+    "Class": "UScriptClass'FamilyLockProxyComponent'"
+  },
+  {
     "Type": "FootprintCollisionProxyComponent",
     "Name": "FootprintCollisionProxyComponent_0",
     "Outer": "Default__MediumBoat_C",
@@ -226,6 +232,7 @@
     "Outer": "Default__MediumBoat_C",
     "Class": "UScriptClass'HealthProxyComponent'",
     "Properties": {
+      "MaxHealth": 150.0,
       "TargetType": "EAnvilDamageTargetType::Structure"
     }
   },
@@ -271,15 +278,15 @@
       "Components": [
         {
           "ObjectName": "VehicleMovementProxyComponent'Default__MediumBoat_C:VehicleMovementProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.13"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.14"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__MediumBoat_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.10"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.11"
         },
         {
           "ObjectName": "HealthProxyComponent'Default__MediumBoat_C:HealthProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.10"
         },
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__MediumBoat_C:BoxCollisionProxyComponent_1'",
@@ -295,43 +302,43 @@
         },
         {
           "ObjectName": "FootprintCollisionProxyComponent'Default__MediumBoat_C:FootprintCollisionProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.9"
         },
         {
           "ObjectName": "RepairProxyComponent'Default__MediumBoat_C:RepairProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.12"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.13"
         },
         {
           "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.14"
-        },
-        {
-          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_1'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.15"
         },
         {
-          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.17"
-        },
-        {
-          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.18"
-        },
-        {
-          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.19"
-        },
-        {
-          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.20"
-        },
-        {
-          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_2'",
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_1'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.16"
         },
         {
-          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_7'",
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.18"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.19"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.20"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_6'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.21"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.17"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.22"
         },
         {
           "ObjectName": "EntityAttachableProxyComponent'Default__MediumBoat_C:EntityAttachableProxyComponent_0'",
@@ -348,6 +355,10 @@
         {
           "ObjectName": "EntityAttachableProxyComponent'Default__MediumBoat_C:EntityAttachableProxyComponent_3'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.7"
+        },
+        {
+          "ObjectName": "FamilyLockProxyComponent'Default__MediumBoat_C:FamilyLockProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.8"
         }
       ],
       "VisActorClass": {

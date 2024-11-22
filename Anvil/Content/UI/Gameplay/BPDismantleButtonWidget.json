@@ -1,5 +1,65 @@
 [
   {
+    "Type": "Border",
+    "Name": "Border_79",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "ImageSize": {
+          "X": 40.0,
+          "Y": 40.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'IconBackground'",
+          "ObjectPath": "Anvil/Content/Textures/UI/IconBackground.0"
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPDismantleButtonWidget_C:WidgetTree.Border_79.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.1"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPDismantleButtonWidget_C:WidgetTree.HorizontalBox_20.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.6"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_79",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Border'BPDismantleButtonWidget_C:WidgetTree.Border_79'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.0"
+      },
+      "Content": {
+        "ObjectName": "Image'BPDismantleButtonWidget_C:WidgetTree.StructureIconImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.7"
+      }
+    }
+  },
+  {
     "Type": "BPDismantleButtonWidget_C",
     "Name": "Default__BPDismantleButtonWidget_C",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.BPDismantleButtonWidget_C'",
@@ -16,18 +76,30 @@
     "Properties": {
       "WidgetStyle": {
         "Normal": {
+          "ImageSize": {
+            "X": 40.0,
+            "Y": 40.0
+          },
           "ResourceObject": {
             "ObjectName": "Texture2D'ActionButtons_Dismantle'",
             "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Dismantle.0"
           }
         },
         "Hovered": {
+          "ImageSize": {
+            "X": 40.0,
+            "Y": 40.0
+          },
           "ResourceObject": {
             "ObjectName": "Texture2D'ActionButtons_Dismantle'",
             "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Dismantle.0"
           }
         },
         "Pressed": {
+          "ImageSize": {
+            "X": 40.0,
+            "Y": 40.0
+          },
           "ResourceObject": {
             "ObjectName": "Texture2D'ActionButtons_Dismantle'",
             "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Dismantle.0"
@@ -36,8 +108,8 @@
         "Disabled": {
           "DrawAs": "ESlateBrushDrawType::Image",
           "ImageSize": {
-            "X": 32.0,
-            "Y": 32.0
+            "X": 40.0,
+            "Y": 40.0
           },
           "ResourceObject": {
             "ObjectName": "Texture2D'ActionButtons_Dismantle'",
@@ -47,7 +119,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPDismantleButtonWidget_C:WidgetTree.HorizontalBox_20.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.3"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.5"
       }
     }
   },
@@ -60,15 +132,11 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPDismantleButtonWidget_C:WidgetTree.HorizontalBox_20.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.3"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPDismantleButtonWidget_C:WidgetTree.HorizontalBox_20.HorizontalBoxSlot_2'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.5"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPDismantleButtonWidget_C:WidgetTree.HorizontalBox_20.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.4"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.6"
         }
       ]
     }
@@ -83,11 +151,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPDismantleButtonWidget_C:WidgetTree.HorizontalBox_20'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.2"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.4"
       },
       "Content": {
         "ObjectName": "Button'BPDismantleButtonWidget_C:WidgetTree.DismantleButton'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.1"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.3"
       }
     }
   },
@@ -101,78 +169,29 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPDismantleButtonWidget_C:WidgetTree.HorizontalBox_20'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.2"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.4"
       },
       "Content": {
-        "ObjectName": "TextBlock'BPDismantleButtonWidget_C:WidgetTree.StructureName'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.7"
+        "ObjectName": "Border'BPDismantleButtonWidget_C:WidgetTree.Border_79'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.0"
       }
     }
   },
   {
-    "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_2",
-    "Outer": "HorizontalBox_20",
-    "Class": "UScriptClass'HorizontalBoxSlot'",
-    "Properties": {
-      "Parent": {
-        "ObjectName": "HorizontalBox'BPDismantleButtonWidget_C:WidgetTree.HorizontalBox_20'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.2"
-      },
-      "Content": {
-        "ObjectName": "Spacer'BPDismantleButtonWidget_C:WidgetTree.Spacer_36'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.6"
-      }
-    }
-  },
-  {
-    "Type": "Spacer",
-    "Name": "Spacer_36",
+    "Type": "Image",
+    "Name": "StructureIconImage",
     "Outer": "WidgetTree",
-    "Class": "UScriptClass'Spacer'",
+    "Class": "UScriptClass'Image'",
     "Properties": {
-      "Size": {
-        "X": 8.0,
-        "Y": 1.0
-      },
-      "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPDismantleButtonWidget_C:WidgetTree.HorizontalBox_20.HorizontalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.5"
-      }
-    }
-  },
-  {
-    "Type": "TextBlock",
-    "Name": "StructureName",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'TextBlock'",
-    "Properties": {
-      "Text": {
-        "Namespace": "",
-        "Key": "88830C654FCBBF8707B128B97F58CBDD",
-        "SourceString": "Structure",
-        "LocalizedString": "Structure"
-      },
-      "ColorAndOpacity": {
-        "SpecifiedColor": {
-          "R": 0.708376,
-          "G": 0.64448,
-          "B": 0.552011,
-          "A": 1.0,
-          "Hex": "DBD2C4"
+      "Brush": {
+        "ImageSize": {
+          "X": 40.0,
+          "Y": 40.0
         }
       },
-      "Font": {
-        "FontObject": {
-          "ObjectName": "Font'Renner-Book_Font'",
-          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
-        },
-        "TypefaceFontName": "Default",
-        "Size": 16
-      },
       "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPDismantleButtonWidget_C:WidgetTree.HorizontalBox_20.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.4"
+        "ObjectName": "BorderSlot'BPDismantleButtonWidget_C:WidgetTree.Border_79.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.1"
       }
     }
   },
@@ -200,7 +219,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPDismantleButtonWidget_C'Default__BPDismantleButtonWidget_C'",
-      "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.0"
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.2"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -214,7 +233,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "HorizontalBox'BPDismantleButtonWidget_C:WidgetTree.HorizontalBox_20'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.2"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDismantleButtonWidget.4"
       }
     }
   }

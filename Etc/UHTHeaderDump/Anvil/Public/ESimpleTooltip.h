@@ -12,7 +12,6 @@ enum class ESimpleTooltip : uint8 {
     Labourers,
     Tax,
     PledgedStatus,
-    MarketSilverStored,
     Decay,
     Stamina,
     AnimalHealth,

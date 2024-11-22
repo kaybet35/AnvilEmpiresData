@@ -465,15 +465,11 @@ AVisItemStash = {}
 
 
 ---@class AVisLatticeMine : AVisActor
----@field LatticeArea UBoxComponent
+---@field LatticeAreaVisualizer UBoxComponent
+---@field LatticeMineProxyComponent ULatticeMineProxyComponent
+---@field LatticeMineDataComponent ULatticeMineDataComponent
+---@field MappedMeshes TArray<UInstancedStaticMeshComponent>
 AVisLatticeMine = {}
-
-
-
----@class AVisLatticeMineChunk : AVisActor
----@field ArrowComponent UArrowComponent
----@field ChunkMesh UStaticMeshComponent
-AVisLatticeMineChunk = {}
 
 
 
@@ -493,12 +489,6 @@ AVisMapInfo = {}
 ---@class AVisMapPost : AVisActor
 ---@field MapPostDataComponent UMapPostDataComponent
 AVisMapPost = {}
-
-
-
----@class AVisMarketShop : AVisStructure
----@field MarketShopDataComponent UMarketShopDataComponent
-AVisMarketShop = {}
 
 
 
@@ -595,7 +585,6 @@ AVisPickupItem = {}
 ---@field SwimmingLoopVFXComponent UNiagaraComponent
 ---@field EnterSwimmingSoundCue USoundCue
 ---@field SwimmingLoopAudioComponent UAudioComponent
----@field PushIndicatorDecalComponent UDecalComponent
 ---@field PostProcessMaterialParameterCollection UMaterialParameterCollection
 ---@field PositionPostProcessMaterialParameterCollection UMaterialParameterCollection
 ---@field UnderworldCollapseMaterialParameterCollection UMaterialParameterCollection
@@ -1029,7 +1018,6 @@ FHitConverterItemMeshInfo = {}
 
 ---@class FItemData : FTableRowBase
 ---@field Damage uint8
----@field DefaultMarketplaceValue uint16
 ---@field DurabilityLossPerSec float
 ---@field StockPileWithdrawalValue float
 ---@field QuantityPerCrate uint16
@@ -1764,7 +1752,7 @@ function UDisclaimerWidget:IsAcceptTextBoxEnabled() end
 
 ---@class UDismantleButtonWidget : UUserWidget
 ---@field DismantleButton UButton
----@field StructureName UTextBlock
+---@field StructureIconImage UImage
 UDismantleButtonWidget = {}
 
 function UDismantleButtonWidget:OnClicked() end
@@ -1807,13 +1795,14 @@ function UFactionSelectScreen:GetDeleteProfileButtonVisibility() end
 
 
 ---@class UFamilyAreaMarkerWindow : UStructureWindow
+---@field FamilyMemberListItemWidgetType TSubclassOf<UFamilyMemberListItemWidget>
 ---@field FamilyMembersScrollBox UScrollBox
 ---@field AlliedFamiliesScrollBox UScrollBox
 ---@field UpkeepIcon UImage
 ---@field UpkeepTextBlock UTextBlock
----@field FamilyMemberListItemWidgetType TSubclassOf<UFamilyMemberListItemWidget>
 ---@field FamilyAreaRestrictedCheckBox UCheckBox
 ---@field FamilyAreaAllianceButton UButton
+---@field FamilyInviteDialogWidget UFamilyInviteDialogWidget
 UFamilyAreaMarkerWindow = {}
 
 ---@param AlliedFamilyFounderOnlineId uint64
@@ -1837,6 +1826,25 @@ function UFamilyAreaMarkerWindow:GetFamilyAreaRestrictedCheckedState() end
 
 ---@class UFamilyHouseWindow : UStructureWindow
 UFamilyHouseWindow = {}
+
+
+---@class UFamilyInviteDialogPlayerListEntryWidget : UUserWidget
+---@field PlayerNameText UTextBlock
+---@field InviteButton UButton
+UFamilyInviteDialogPlayerListEntryWidget = {}
+
+function UFamilyInviteDialogPlayerListEntryWidget:OnInviteClicked() end
+---@return FText
+function UFamilyInviteDialogPlayerListEntryWidget:GetPlayerNameText() end
+
+
+---@class UFamilyInviteDialogWidget : UUserWidget
+---@field PlayerListEntryWidgetType TSubclassOf<UFamilyInviteDialogPlayerListEntryWidget>
+---@field PlayerListScrollBox UScrollBox
+---@field CloseButton UAnvilButtonWidget
+UFamilyInviteDialogWidget = {}
+
+function UFamilyInviteDialogWidget:OnCloseButtonClicked() end
 
 
 ---@class UFamilyMarkerMapIcon : UMapIcon
@@ -2290,63 +2298,8 @@ UMapWidgetBase = {}
 
 
 
----@class UMarketItemGridWidget : UGridPanelWidget
-UMarketItemGridWidget = {}
-
-
----@class UMarketItemWidget : UGridItemWidget
----@field PriceUpButton UButton
----@field PriceDownButton UButton
----@field ItemQuantityText UTextBlock
----@field PriceText UTextBlock
----@field PriceEditableText UEditableTextBox
----@field PriceTextSizeBox USizeBox
----@field PriceEditableTextSizeBox USizeBox
----@field DurabilityBar UProgressBar
----@field BelowDefaultValueColour FColor
----@field AboveDefaultValueColour FColor
-UMarketItemWidget = {}
-
-function UMarketItemWidget:OnPriceUpClicked() end
----@param Text FText
----@param CommitMethod ETextCommit::Type
-function UMarketItemWidget:OnPriceTextCommitted(Text, CommitMethod) end
-function UMarketItemWidget:OnPriceDownClicked() end
----@return boolean
-function UMarketItemWidget:IsPriceUpEnabled() end
----@return boolean
-function UMarketItemWidget:IsPriceDownEnabled() end
-
-
 ---@class UMarketShopMapIcon : UMapIcon
 UMarketShopMapIcon = {}
-
-
----@class UMarketShopMapTooltip : UUserWidget
----@field HeaderContainer UHeaderContainer
----@field MarketItemRowsVerticalBox UVerticalBox
----@field MarketTooltipRowType TSubclassOf<UMarketShopMapTooltipRow>
-UMarketShopMapTooltip = {}
-
-
-
----@class UMarketShopMapTooltipRow : UUserWidget
----@field ItemWidget UGridItemWidget
----@field ItemCountText UTextBlock
----@field PriceText UTextBlock
-UMarketShopMapTooltipRow = {}
-
-
-
----@class UMarketShopWindow : UStructureWindow
----@field MarketItemGrid UMarketItemGridWidget
----@field SilverStatus UStatusWidget
-UMarketShopWindow = {}
-
----@return ESlateVisibility
-function UMarketShopWindow:GetSilverAmountVisibility() end
----@return FText
-function UMarketShopWindow:GetSilverAmountText() end
 
 
 ---@class UNextTestWidget : UUserWidget
@@ -2929,6 +2882,7 @@ UVisMultiItemStockpileComponent = {}
 ---@field bSecondaryMode boolean
 ---@field bSecondaryShieldMode boolean
 ---@field bCombatMode boolean
+---@field bWantsToPush boolean
 ---@field bIsPushing boolean
 ---@field bIsSwimming boolean
 UVisPlayerAnimInstance = {}

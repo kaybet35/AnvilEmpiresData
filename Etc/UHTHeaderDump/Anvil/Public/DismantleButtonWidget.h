@@ -4,7 +4,7 @@
 #include "DismantleButtonWidget.generated.h"
 
 class UButton;
-class UTextBlock;
+class UImage;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UDismantleButtonWidget : public UUserWidget {
@@ -15,7 +15,7 @@ protected:
     UButton* DismantleButton;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* StructureName;
+    UImage* StructureIconImage;
     
 public:
     UDismantleButtonWidget();

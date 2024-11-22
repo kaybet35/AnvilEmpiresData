@@ -2,7 +2,7 @@
 
 UDismantleButtonWidget::UDismantleButtonWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->DismantleButton = NULL;
-    this->StructureName = NULL;
+    this->StructureIconImage = NULL;
 }
 
 void UDismantleButtonWidget::OnClicked() {

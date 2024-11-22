@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "FamilyCenterKeystoneBuildSite_C'Default__FamilyCenterKeystoneBuildSite_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.4"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.5"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -44,6 +44,21 @@
     }
   },
   {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_1",
+    "Outer": "Default__FamilyCenterKeystoneBuildSite_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "ExtendFootprint": true,
+      "Extents": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 64
+    }
+  },
+  {
     "Type": "BuildSiteProxyComponent",
     "Name": "BuildSiteProxyComponent_0",
     "Outer": "Default__FamilyCenterKeystoneBuildSite_C",
@@ -59,6 +74,8 @@
       },
       "RequiredTool": "EAnvilToolType::Hands",
       "bRequiresTerritoryOwnership": true,
+      "MaxHeightShift": 300.0,
+      "AdditionalMaxHeightShift": 300.0,
       "MinDistBetweenStructs": [
         {
           "CodeName": {
@@ -73,7 +90,7 @@
       "MaterialRequirements": [
         {
           "CodeName": 1175186297,
-          "Count": 10
+          "Count": 2
         }
       ]
     }
@@ -99,31 +116,37 @@
     "Properties": {
       "BuildSiteComp": {
         "ObjectName": "BuildSiteProxyComponent'Default__FamilyCenterKeystoneBuildSite_C:BuildSiteProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.3"
       },
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__FamilyCenterKeystoneBuildSite_C:TeamProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.9"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__FamilyCenterKeystoneBuildSite_C:HealthProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.7"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__FamilyCenterKeystoneBuildSite_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.6"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__FamilyCenterKeystoneBuildSite_C:BoxCollisionProxyComponent_0'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.1"
       },
+      "ActionBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__FamilyCenterKeystoneBuildSite_C:BoxCollisionProxyComponent_1'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.2"
+      },
       "DecayComp": null,
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__FamilyCenterKeystoneBuildSite_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.8"
       },
       "CodeNameString": "FamilyCenterKeystoneBuildSite",
       "CodeName": 441255770,
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "GenerateMeshCollisionMask": 16785664,
       "VisActorClass": {
         "ObjectName": "Class'VisBuildSite'",
         "ObjectPath": "/Script/Anvil"
@@ -148,8 +171,7 @@
         "ObjectName": "BlueprintGeneratedClass'FamilyCenterKeystoneFootprint_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyCenterKeystoneFootprint.0"
       },
-      "bAddToNavMesh": false,
-      "CollisionMask": 16785728
+      "CollisionMask": 64
     }
   },
   {
@@ -160,6 +182,9 @@
     "Template": {
       "ObjectName": "HealthProxyComponent'Default__BPBaseBuildSiteEntity_C:HealthProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.6"
+    },
+    "Properties": {
+      "MaxHealth": 50.0
     }
   },
   {
@@ -170,6 +195,9 @@
     "Template": {
       "ObjectName": "StructureProxyComponent'Default__BPBaseBuildSiteEntity_C:StructureProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.7"
+    },
+    "Properties": {
+      "StructureType": "EAnvilBuildStructureType::Foundations"
     }
   },
   {

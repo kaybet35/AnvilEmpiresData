@@ -7133,19 +7133,19 @@
         "CollisionProfileName": "BlockAll"
       }
     },
-    "BodySetupGuid": "C31292694D001DA3FC448DAA462D2467",
+    "BodySetupGuid": "9F90472E41B8807386C575BBC8C3A153",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 14831586,
-        "SizeOnDisk": 14831586,
-        "OffsetInFile": "0x20EE46F"
+        "ElementCount": 27282144,
+        "SizeOnDisk": 27282144,
+        "OffsetInFile": "0x408904F"
       }
     }
   },
   {
     "Type": "NavCollision",
-    "Name": "NavCollision_1",
+    "Name": "NavCollision_6",
     "Outer": "T2KeepFirstFloor",
     "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
@@ -7153,7 +7153,7 @@
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 23565,
         "SizeOnDisk": 23565,
-        "OffsetInFile": "0x2F13493"
+        "OffsetInFile": "0x5A8DB71"
       }
     }
   },
@@ -7169,7 +7169,7 @@
             "ObjectPath": "Anvil/Content/Materials/Structures/FortFoundationFloorT2.0"
           },
           "MaterialSlotName": "T2 Floor tilling",
-          "ImportedMaterialSlotName": "T2 Floor tilling",
+          "ImportedMaterialSlotName": "T2 Floor tilling_002",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
@@ -7185,7 +7185,7 @@
             "ObjectPath": "Anvil/Content/Materials/Structures/FortFoundationWoodPlanksT2.0"
           },
           "MaterialSlotName": "T2 Floor tilling plank",
-          "ImportedMaterialSlotName": "T2 Floor tilling plank",
+          "ImportedMaterialSlotName": "T2 Floor tilling plank_002",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
@@ -7201,7 +7201,7 @@
             "ObjectPath": "Anvil/Content/Materials/Structures/FortFoundationBricksTilingT2.0"
           },
           "MaterialSlotName": "T2 FoundationBrick Tile",
-          "ImportedMaterialSlotName": "T2 FoundationBrick Tile",
+          "ImportedMaterialSlotName": "T2 FoundationBrick Tile_002",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
@@ -7217,7 +7217,7 @@
             "ObjectPath": "Anvil/Content/Materials/Structures/FortFoundationStoneBricksT2.0"
           },
           "MaterialSlotName": "T2 FoundationBrick",
-          "ImportedMaterialSlotName": "T2 FoundationBrick",
+          "ImportedMaterialSlotName": "T2 FoundationBrick_002",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
@@ -7233,7 +7233,7 @@
             "ObjectPath": "Anvil/Content/Materials/Structures/FortFoundationTrimWood.0"
           },
           "MaterialSlotName": "T3 Fort Wood Trim",
-          "ImportedMaterialSlotName": "T3 Fort Wood Trim",
+          "ImportedMaterialSlotName": "T3 Fort Wood Trim_004",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
@@ -7249,11 +7249,27 @@
             "ObjectPath": "Anvil/Content/Materials/Structures/FortFoundationBricksTilingT2Bricks02.0"
           },
           "MaterialSlotName": "T2 Foundation Brick 02 tile",
-          "ImportedMaterialSlotName": "T2 Foundation Brick 02 tile",
+          "ImportedMaterialSlotName": "T2 Foundation Brick 02 tile_002",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
             "LocalUVDensities": 149.90872,
+            "LocalUVDensities[1]": 0.0,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'FortFoundationBricksTiling02'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/FortFoundationBricksTiling02.0"
+          },
+          "MaterialSlotName": "FortFoundationBricksTilingT2Bricks02",
+          "ImportedMaterialSlotName": "FortFoundationBricksTilingT2Bricks02",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 241.91573,
             "LocalUVDensities[1]": 0.0,
             "LocalUVDensities[2]": 0.0,
             "LocalUVDensities[3]": 0.0
@@ -7281,10 +7297,10 @@
       "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T2KeepFirstFloor.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision'T2KeepFirstFloor:NavCollision_1'",
+      "ObjectName": "NavCollision'T2KeepFirstFloor:NavCollision_6'",
       "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T2KeepFirstFloor.1"
     },
-    "LightingGuid": "4BB0EC0D-43E34030-70D5269F-3C70D13B",
+    "LightingGuid": "CE480578-4847D2AE-BC3A2CAD-3819F579",
     "RenderData": {
       "LODs": [
         {
@@ -7354,16 +7370,27 @@
               "bCastShadow": true,
               "bForceOpaque": false,
               "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 6,
+              "FirstIndex": 802500,
+              "NumTriangles": 215361,
+              "MinVertexIndex": 188098,
+              "MaxVertexIndex": 475623,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
             }
           ],
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 188098
+            "NumVertices": 475624
           },
           "VertexBuffer": {
             "NumTexCoords": 4,
-            "NumVertices": 188098,
+            "NumVertices": 475624,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
@@ -7585,7 +7612,7 @@
           "BulkDataFlags": "BULKDATA_None",
           "ElementCount": 0,
           "SizeOnDisk": 0,
-          "OffsetInFile": "0x41CD351"
+          "OffsetInFile": "0x8102809"
         },
         "ImposterAtlas": [],
         "HierarchyNodes": [],

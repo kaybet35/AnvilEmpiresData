@@ -6,6 +6,7 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->CurrentMovementMode = EAnvilMovementMode::Walking;
     this->GuardMeter = 0.00f;
     this->Stability = 0.00f;
+    this->StabilityGuardThreshold = 0.00f;
     this->CurrentActivitySpeedModifier = 0.00f;
     this->CurrentActivityChainIndex = 0;
     this->ActivityState = EAnvilSimActivityState::None;

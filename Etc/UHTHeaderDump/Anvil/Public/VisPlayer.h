@@ -17,7 +17,6 @@ class UArmorDataComponent;
 class UAudioComponent;
 class UBillboardComponent;
 class UCapsuleComponent;
-class UDecalComponent;
 class UHealthDataComponent;
 class UHungerDataComponent;
 class UMapMarkerComponent;
@@ -213,9 +212,6 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAudioComponent* SwimmingLoopAudioComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UDecalComponent* PushIndicatorDecalComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialParameterCollection* PostProcessMaterialParameterCollection;

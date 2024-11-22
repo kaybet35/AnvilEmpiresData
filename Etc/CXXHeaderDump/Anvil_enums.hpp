@@ -25,7 +25,11 @@ enum class EActionButtonType {
     ClaimFamilyInventory = 23,
     PledgeToTown = 24,
     ReinforceStructure = 25,
-    EActionButtonType_MAX = 26,
+    FamilyRequestToJoin = 26,
+    FamilyInviteToJoin = 27,
+    FamilyLock = 28,
+    FamilyUnlock = 29,
+    EActionButtonType_MAX = 30,
 };
 
 enum class EAlertType {
@@ -110,7 +114,8 @@ enum class EClientConnectToServerResponseType {
     AllowedToJoin = 4,
     PromptToJoinAdminQueue = 5,
     VersionMismatch = 6,
-    EClientConnectToServerResponseType_MAX = 7,
+    InvalidParams = 7,
+    EClientConnectToServerResponseType_MAX = 8,
 };
 
 enum class EConnectionFailedReason {
@@ -118,8 +123,10 @@ enum class EConnectionFailedReason {
     AnvilServiceConnectTokenResponseError = 1,
     AnvilServiceNotQueued = 2,
     R2ServerConnectionError = 3,
-    AnvilServiceVersionMismatch = 4,
-    EConnectionFailedReason_MAX = 5,
+    R2ServerNotConnected = 4,
+    AnvilServiceVersionMismatch = 5,
+    AnvilServiceLoginInvalidParams = 6,
+    EConnectionFailedReason_MAX = 7,
 };
 
 enum class EDeploymentPointTooltipType {
@@ -207,23 +214,22 @@ enum class EHUDWindowType {
     Stable = 9,
     ItemStash = 10,
     Treasury = 11,
-    MarketShop = 12,
-    RepairStation = 13,
-    RelicTechCenter = 14,
-    Cooking = 15,
-    Heating = 16,
-    HitConversion = 17,
-    Quenching = 18,
-    Housing = 19,
-    Crafting = 20,
-    Packing = 21,
-    Anvil = 22,
-    FamilyAreaMarker = 23,
-    FamilyHouse = 24,
-    Lore = 25,
-    CentralMarket = 26,
-    Count = 27,
-    EHUDWindowType_MAX = 28,
+    RepairStation = 12,
+    RelicTechCenter = 13,
+    Cooking = 14,
+    Heating = 15,
+    HitConversion = 16,
+    Quenching = 17,
+    Housing = 18,
+    Crafting = 19,
+    Packing = 20,
+    Anvil = 21,
+    FamilyAreaMarker = 22,
+    FamilyHouse = 23,
+    Lore = 24,
+    CentralMarket = 25,
+    Count = 26,
+    EHUDWindowType_MAX = 27,
 };
 
 enum class EIncomingAttackDirection {
@@ -305,13 +311,12 @@ enum class ESimpleTooltip {
     Labourers = 5,
     Tax = 6,
     PledgedStatus = 7,
-    MarketSilverStored = 8,
-    Decay = 9,
-    Stamina = 10,
-    AnimalHealth = 11,
-    DeploymentFood = 12,
-    Reinforced = 13,
-    ESimpleTooltip_MAX = 14,
+    Decay = 8,
+    Stamina = 9,
+    AnimalHealth = 10,
+    DeploymentFood = 11,
+    Reinforced = 12,
+    ESimpleTooltip_MAX = 13,
 };
 
 enum class ETemperatureChangeType {
