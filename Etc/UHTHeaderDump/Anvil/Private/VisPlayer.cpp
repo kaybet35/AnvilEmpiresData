@@ -83,6 +83,10 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
     this->CurrentUEUsableActor = NULL;
+    this->SwimmingLoopAudioComponent->SetupAttachment(Mesh);
+    this->Mesh->SetupAttachment(RootComponent);
+    this->Head->SetupAttachment(Mesh);
+    this->AimMeshComponent->SetupAttachment(RootComponent);
     this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
     this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
     this->VoiceIndicator->SetupAttachment(RootComponent);
@@ -105,15 +109,11 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->UnderworldCollapseFXComponent->SetupAttachment(SpringArm);
     this->EnterSwimmingVFXComponent->SetupAttachment(Mesh);
     this->SwimmingLoopVFXComponent->SetupAttachment(Mesh);
-    this->SwimmingLoopAudioComponent->SetupAttachment(Mesh);
     this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->Mesh->SetupAttachment(RootComponent);
-    this->Head->SetupAttachment(Mesh);
-    this->AimMeshComponent->SetupAttachment(RootComponent);
 }
 
 float AVisPlayer::GetVelocityHeadingDegrees() {
