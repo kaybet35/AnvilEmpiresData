@@ -1,6 +1,19 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleStraight02_C : ABPUnderworldModuleDynamicPrefab_C
+---@field ['Fill Light 011'] UPointLightComponent
+---@field ['Fill Light 06'] UPointLightComponent
+---@field ['Fill Light 05'] UPointLightComponent
+---@field ['Fill Light 04'] UPointLightComponent
+---@field ['Fill Light 010'] UPointLightComponent
+---@field ['Fill Light 09'] UPointLightComponent
+---@field ['Fill Light 08'] UPointLightComponent
+---@field ['Fill Light 07'] UPointLightComponent
+---@field Floor043 UStaticMeshComponent
+---@field Wall0134 UStaticMeshComponent
+---@field Wall0133 UStaticMeshComponent
+---@field Wall0132 UStaticMeshComponent
+---@field CustomNavmeshVolume UCustomNavmeshVolumeComponent
 ---@field LatticeMineIron2 UChildActorComponent
 ---@field LatticeMineIron4 UChildActorComponent
 ---@field LatticeMineIron3 UChildActorComponent

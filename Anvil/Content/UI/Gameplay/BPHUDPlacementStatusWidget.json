@@ -1,0 +1,137 @@
+[
+  {
+    "Type": "Border",
+    "Name": "Border",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Padding": {
+        "Left": 5.0,
+        "Top": 5.0,
+        "Right": 5.0,
+        "Bottom": 5.0
+      },
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.7,
+            "Hex": "B3000000"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPHUDPlacementStatusWidget_C:WidgetTree.Border.BorderSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDPlacementStatusWidget.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_1",
+    "Outer": "Border",
+    "Class": "UScriptClass'BorderSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 5.0,
+        "Top": 5.0,
+        "Right": 5.0,
+        "Bottom": 5.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Border'BPHUDPlacementStatusWidget_C:WidgetTree.Border'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDPlacementStatusWidget.0"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPHUDPlacementStatusWidget_C:WidgetTree.StatusText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDPlacementStatusWidget.3"
+      }
+    }
+  },
+  {
+    "Type": "BPHUDPlacementStatusWidget_C",
+    "Name": "Default__BPHUDPlacementStatusWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPHUDPlacementStatusWidget.BPHUDPlacementStatusWidget_C'",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "StatusText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "UMG",
+        "Key": "TextBlockDefaultValue",
+        "SourceString": "Text Block",
+        "LocalizedString": "Text Block"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 12
+      },
+      "MinDesiredWidth": 200.0,
+      "Slot": {
+        "ObjectName": "BorderSlot'BPHUDPlacementStatusWidget_C:WidgetTree.Border.BorderSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDPlacementStatusWidget.1"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPHUDPlacementStatusWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPHUDPlacementStatusWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDPlacementStatusWidget.5"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'HUDPlacementStatusWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPHUDPlacementStatusWidget_C'Default__BPHUDPlacementStatusWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDPlacementStatusWidget.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPHUDPlacementStatusWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Border'BPHUDPlacementStatusWidget_C:WidgetTree.Border'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDPlacementStatusWidget.0"
+      }
+    }
+  }
+]

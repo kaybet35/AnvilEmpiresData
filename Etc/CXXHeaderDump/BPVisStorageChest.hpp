@@ -3,8 +3,9 @@
 
 class ABPVisStorageChest_C : public AVisStructure
 {
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0518 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh1;                                    // 0x0518 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0520 (size: 0x8)
 
-}; // Size: 0x520
+}; // Size: 0x528
 
 #endif

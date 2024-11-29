@@ -73,6 +73,10 @@
         "ObjectName": "DecalComponent'Default__BPVisCampWallBuildSite_C:BuildCollisionDecalComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampWallBuildSite.4"
       },
+      "InteractionIcon": {
+        "ObjectName": "Texture2D'IconCampWall'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconCampWall.0"
+      },
       "VisDisplayName": {
         "Namespace": "",
         "Key": "5778F53B4B009E9CAE1F6FB6E992DACD",
@@ -85,6 +89,7 @@
         "SourceString": "Built exclusively in camps. Slows down your enemies, and protects whatever is inside.",
         "LocalizedString": "Built exclusively in camps. Slows down your enemies, and protects whatever is inside."
       },
+      "TemplateCDO": null,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisCampWallBuildSite_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampWallBuildSite.0"
@@ -332,7 +337,13 @@
     "Type": "VisBuildGhostComponent",
     "Name": "VisBuildGhostComponent",
     "Outer": "Default__BPVisCampWallBuildSite_C",
-    "Class": "UScriptClass'VisBuildGhostComponent'"
+    "Class": "UScriptClass'VisBuildGhostComponent'",
+    "Properties": {
+      "BuildSiteDataComponent": {
+        "ObjectName": "BuildSiteDataComponent'Default__BPVisCampWallBuildSite_C:BuildSiteDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BuildSites/BPVisCampWallBuildSite.3"
+      }
+    }
   },
   {
     "Type": "VisSplineComponent",

@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisStorageChest_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.11"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisStaticMesh1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "VisStaticMesh",
@@ -54,7 +65,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisStorageChest_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.16"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconStorageChest'",
@@ -63,7 +74,7 @@
       "BuildSiteOrder": 5,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisStorageChest_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.15"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisStorageChest_C:HealthDataComponent'",
@@ -71,11 +82,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisStorageChest_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.14"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisStorageChest_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.13"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisStorageChest_C:ScorchDataComponent'",
@@ -142,7 +153,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisStorageChest_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.12"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisStorageChest_C:ArrowComponent'",
@@ -188,6 +199,26 @@
   },
   {
     "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisStorageChest_C:VisStaticMesh1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.17"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A79D38D7-45FF4F8A-CBA458BB-FD0F2C3C",
+      "InternalVariableName": "VisStaticMesh1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
     "Name": "SCS_Node_2",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -198,7 +229,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisStorageChest_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.18"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -215,12 +246,20 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisStorageChest_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisStorageChest_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.9"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisStorageChest_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisStorageChest_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.9"
         }
       ],
@@ -264,6 +303,28 @@
         "ObjectName": "ArrowComponent'Default__BPVisStorageChest_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisStorageChest.0"
       }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh1_GEN_VARIABLE",
+    "Outer": "BPVisStorageChest_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Arrow_SM'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/Arrow_SM.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 60.0,
+        "Z": 0.0
+      },
+      "bVisible": false,
+      "ComponentTags": [
+        "Structure"
+      ]
     }
   },
   {

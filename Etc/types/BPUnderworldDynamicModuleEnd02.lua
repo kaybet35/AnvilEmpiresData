@@ -1,8 +1,67 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleEnd02_C : ABPUnderworldModuleDynamicPrefab_C
+---@field DirtDecal012 UDecalComponent
+---@field Props021 UStaticMeshComponent
+---@field Props020 UStaticMeshComponent
+---@field Props019 UStaticMeshComponent
+---@field Props018 UStaticMeshComponent
+---@field Props017 UStaticMeshComponent
+---@field Props016 UStaticMeshComponent
+---@field Props015 UStaticMeshComponent
+---@field Props014 UStaticMeshComponent
+---@field Props013 UStaticMeshComponent
+---@field Props012 UStaticMeshComponent
+---@field Props011 UStaticMeshComponent
+---@field Props010 UStaticMeshComponent
+---@field Props09 UStaticMeshComponent
+---@field Props08 UStaticMeshComponent
+---@field Props07 UStaticMeshComponent
+---@field Props06 UStaticMeshComponent
+---@field Props05 UStaticMeshComponent
+---@field Props04 UStaticMeshComponent
+---@field Props03 UStaticMeshComponent
+---@field Props02 UStaticMeshComponent
+---@field Props01 UStaticMeshComponent
+---@field DirtDecal011 UDecalComponent
+---@field DirtDecal010 UDecalComponent
+---@field DirtDecal09 UDecalComponent
+---@field DirtDecal08 UDecalComponent
+---@field GrassDecal05 UDecalComponent
+---@field GrassDecal04 UDecalComponent
+---@field GrassDecal03 UDecalComponent
+---@field GrassDecal02 UDecalComponent
+---@field GrassDecal01 UDecalComponent
+---@field DirtDecal07 UDecalComponent
+---@field DirtDecal04 UDecalComponent
 ---@field DirtDecal06 UDecalComponent
+---@field DirtDecal01 UDecalComponent
+---@field DirtDecal02 UDecalComponent
 ---@field DirtDecal05 UDecalComponent
+---@field DirtDecal03 UDecalComponent
+---@field Wall0147 UStaticMeshComponent
+---@field Wall0146 UStaticMeshComponent
+---@field Wall0145 UStaticMeshComponent
+---@field Wall018 UStaticMeshComponent
+---@field Wall0144 UStaticMeshComponent
+---@field Wall0143 UStaticMeshComponent
+---@field Wall0142 UStaticMeshComponent
+---@field Wall0141 UStaticMeshComponent
+---@field Wall0140 UStaticMeshComponent
+---@field Wall0139 UStaticMeshComponent
+---@field Wall0126 UStaticMeshComponent
+---@field Wall0125 UStaticMeshComponent
+---@field Wall0138 UStaticMeshComponent
+---@field ['Fill Light 011'] UPointLightComponent
+---@field ['Fill Light 010'] UPointLightComponent
+---@field ['Fill Light 06'] UPointLightComponent
+---@field ['Fill Light 05'] UPointLightComponent
+---@field ['Fill Light 04'] UPointLightComponent
+---@field ['Fill Light 09'] UPointLightComponent
+---@field ['Fill Light 08'] UPointLightComponent
+---@field ['Fill Light 07'] UPointLightComponent
+---@field Wall0137 UStaticMeshComponent
+---@field CustomNavmeshVolume UCustomNavmeshVolumeComponent
 ---@field Wall0136 UStaticMeshComponent
 ---@field LatticeMineIron4 UChildActorComponent
 ---@field Wall0135 UStaticMeshComponent
@@ -13,10 +72,6 @@
 ---@field ChildActorBat UChildActorComponent
 ---@field ChildActorStonePile UChildActorComponent
 ---@field ChildActorWolfElite UChildActorComponent
----@field DirtDecal04 UDecalComponent
----@field DirtDecal03 UDecalComponent
----@field DirtDecal02 UDecalComponent
----@field DirtDecal01 UDecalComponent
 ---@field Wall0134 UStaticMeshComponent
 ---@field Wall0133 UStaticMeshComponent
 ---@field Wall0132 UStaticMeshComponent
@@ -25,8 +80,6 @@
 ---@field Wall0129 UStaticMeshComponent
 ---@field Wall0128 UStaticMeshComponent
 ---@field Wall0127 UStaticMeshComponent
----@field Wall0126 UStaticMeshComponent
----@field Wall0125 UStaticMeshComponent
 ---@field Wall0124 UStaticMeshComponent
 ---@field Wall0123 UStaticMeshComponent
 ---@field Wall0122 UStaticMeshComponent

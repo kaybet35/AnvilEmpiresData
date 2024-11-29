@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.16"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,39 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LandscapeCullBalljointMid",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PoolWater",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PoolWaterLevel",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisCanalWaterControllerComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "StaticMesh1",
@@ -65,17 +98,18 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.26"
       },
       "StructureIcon": {
-        "ObjectName": "Texture2D'IconIndustryCanalAqueductConnection'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconIndustryCanalAqueductConnection.0"
+        "ObjectName": "Texture2D'FamilyCenterFoundationWaterConnectorIcon'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/FamilyCenterFoundationWaterConnectorIcon.0"
       },
       "BuildSiteCategory": "EBuildSiteCategory::Housing",
-      "BuildSiteOrder": 20,
+      "BuildSiteOrder": 29,
+      "BuildSiteVisibility": "EBuildSiteVisibility::Never",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.24"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:HealthDataComponent'",
@@ -83,15 +117,15 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.23"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.22"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.9"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:ArrowComponent'",
@@ -106,10 +140,10 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.4"
       },
       "GeneratedScorchEffects": 8,
-      "UseWindowType": "EHUDWindowType::GenericStructure",
+      "UseWindowType": "EHUDWindowType::InventoryStructure",
       "InteractionIcon": {
-        "ObjectName": "Texture2D'TempIcon'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Items/TempIcon.0"
+        "ObjectName": "Texture2D'FamilyCenterFoundationWaterConnectorIcon'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/FamilyCenterFoundationWaterConnectorIcon.0"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -160,7 +194,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.18"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:ArrowComponent'",
@@ -173,6 +207,12 @@
     "Name": "HealthDataComponent",
     "Outer": "Default__BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C",
     "Class": "UScriptClass'HealthDataComponent'"
+  },
+  {
+    "Type": "PowerUnitDataComponent",
+    "Name": "PowerUnitDataComponent",
+    "Outer": "PoolWaterLevel_GEN_VARIABLE",
+    "Class": "UScriptClass'PowerUnitDataComponent'"
   },
   {
     "Type": "SceneComponent",
@@ -204,7 +244,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.7"
       },
       "VariableGuid": "4AE59C32-4E7C4C48-88CE61B9-68337C23",
       "InternalVariableName": "DefaultSceneRoot"
@@ -222,14 +262,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:Scene_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.8"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.12"
         }
       ],
       "VariableGuid": "D2B12C81-4DC1FAE8-9E4636B2-149D7C85",
@@ -248,10 +288,74 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:StaticMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.21"
       },
       "VariableGuid": "EB3A74CD-41251946-497A4486-8C4F1671",
       "InternalVariableName": "StaticMesh1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisCanalWaterControllerComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisCanalWaterControllerComponent'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:PoolWaterLevel_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.25"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.14"
+        }
+      ],
+      "VariableGuid": "B3393A4F-48C1554D-DC339F97-E5F4461D",
+      "InternalVariableName": "PoolWaterLevel"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:PoolWater_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.20"
+      },
+      "VariableGuid": "F2DB21F4-4F2715E1-2EE1619E-03D0372C",
+      "InternalVariableName": "PoolWater"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:LandscapeCullBalljointMid_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.19"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "3AA82800-4D98FC57-B40F05A5-33CD31C1",
+      "InternalVariableName": "LandscapeCullBalljointMid"
     }
   },
   {
@@ -263,30 +367,119 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.15"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.11"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.15"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.10"
       }
     }
   },
   {
     "Type": "SplineDataComponent",
     "Name": "SplineDataComponent",
+    "Outer": "PoolWaterLevel_GEN_VARIABLE",
+    "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
     "Outer": "GrassRemovalVolume",
     "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "LandscapeCullBalljointMid_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Cube'",
+        "ObjectPath": "Engine/Content/BasicShapes/Cube.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'RVT_LandscapeCullMaterial'",
+          "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCullMaterial.0"
+        }
+      ],
+      "bVisibleInReflectionCaptures": false,
+      "bVisibleInRealTimeSkyCaptures": false,
+      "bVisibleInRayTracing": false,
+      "bReceivesDecals": false,
+      "bUseAsOccluder": false,
+      "bRenderCustomDepth": true,
+      "RuntimeVirtualTextures": [
+        {
+          "ObjectName": "RuntimeVirtualTexture'RVT_LandscapeCull'",
+          "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCull.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -0.0,
+        "Z": 218.44751
+      },
+      "RelativeScale3D": {
+        "X": 3.0,
+        "Y": 3.0,
+        "Z": 2.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "PoolWater_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_StorageWater'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_StorageWater.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'WaterCanalFlat'",
+          "ObjectPath": "Anvil/Content/Materials/WaterCanalFlat.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 160.0
+      }
+    }
   },
   {
     "Type": "StaticMeshComponent",
@@ -331,6 +524,28 @@
     "Class": "UScriptClass'UpgradeDataComponent'"
   },
   {
+    "Type": "VisCanalWaterControllerComponent",
+    "Name": "PoolWaterLevel_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C",
+    "Class": "UScriptClass'VisCanalWaterControllerComponent'",
+    "Properties": {
+      "ShiftDelta": 130.0,
+      "bIsWell": true,
+      "PowerUnitDataComponent": {
+        "ObjectName": "PowerUnitDataComponent'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:PoolWaterLevel_GEN_VARIABLE.PowerUnitDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.6"
+      },
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:PoolWaterLevel_GEN_VARIABLE.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.17"
+      },
+      "WellDataComponent": {
+        "ObjectName": "WellDataComponent'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C:PoolWaterLevel_GEN_VARIABLE.WellDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.27"
+      }
+    }
+  },
+  {
     "Type": "VisScaffoldingComponent",
     "Name": "ScaffoldingComponent",
     "Outer": "Default__BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C",
@@ -341,5 +556,11 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.0"
       }
     }
+  },
+  {
+    "Type": "WellDataComponent",
+    "Name": "WellDataComponent",
+    "Outer": "PoolWaterLevel_GEN_VARIABLE",
+    "Class": "UScriptClass'WellDataComponent'"
   }
 ]

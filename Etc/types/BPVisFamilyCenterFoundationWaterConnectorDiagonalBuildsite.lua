@@ -1,9 +1,7 @@
 ---@meta
 
----@class ABPVisFamilyCenterFoundationWaterConnectorDiagonalBuildsite_C : AVisStructure
+---@class ABPVisFamilyCenterFoundationWaterConnectorDiagonalBuildsite_C : AVisBuildSite
 ---@field StaticMesh UStaticMeshComponent
----@field StaticMesh1 UStaticMeshComponent
----@field Scene USceneComponent
 ABPVisFamilyCenterFoundationWaterConnectorDiagonalBuildsite_C = {}
 
 

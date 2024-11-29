@@ -11,9 +11,9 @@ AVisCookingStructure::AVisCookingStructure(const FObjectInitializer& ObjectIniti
     this->WaterScaleCurve = NULL;
     this->BoilingTemperatureHighAudio = CreateDefaultSubobject<UAudioComponent>(TEXT("BoilingTemperatureHighAudio"));
     this->BoilingTemperatureLowAudio = CreateDefaultSubobject<UAudioComponent>(TEXT("BoilingTemperatureLowAudio"));
+    this->WaterLevelMesh->SetupAttachment(RootComponent);
     this->BoilingTemperatureHighAudio->SetupAttachment(RootComponent);
     this->BoilingTemperatureLowAudio->SetupAttachment(RootComponent);
-    this->WaterLevelMesh->SetupAttachment(RootComponent);
 }
 
 

@@ -1,6 +1,120 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleCorner02_C : ABPUnderworldModuleDynamicPrefab_C
+---@field Props034 UStaticMeshComponent
+---@field Props037 UChildActorComponent
+---@field Props036 UChildActorComponent
+---@field Props035 UChildActorComponent
+---@field RockWallUnderworld10x20x60A139 UStaticMeshComponent
+---@field RockWallUnderworld10x20x60A138 UStaticMeshComponent
+---@field Decal089 UDecalComponent
+---@field Decal088 UDecalComponent
+---@field FloorChunk034 UStaticMeshComponent
+---@field Props033 UStaticMeshComponent
+---@field Props032 UStaticMeshComponent
+---@field Props031 UStaticMeshComponent
+---@field Decal087 UDecalComponent
+---@field Props030 UStaticMeshComponent
+---@field Props029 UStaticMeshComponent
+---@field Props028 UStaticMeshComponent
+---@field Props027 UStaticMeshComponent
+---@field Decal086 UDecalComponent
+---@field Props026 UStaticMeshComponent
+---@field Props025 UStaticMeshComponent
+---@field Decal085 UDecalComponent
+---@field Props024 UStaticMeshComponent
+---@field Props023 UStaticMeshComponent
+---@field Decal084 UDecalComponent
+---@field Decal083 UDecalComponent
+---@field Decal082 UDecalComponent
+---@field Props022 UStaticMeshComponent
+---@field Decal081 UDecalComponent
+---@field Decal080 UDecalComponent
+---@field Decal079 UDecalComponent
+---@field Decal078 UDecalComponent
+---@field Decal077 UDecalComponent
+---@field Decal076 UDecalComponent
+---@field Props021 UStaticMeshComponent
+---@field Props020 UStaticMeshComponent
+---@field Props019 UStaticMeshComponent
+---@field Props018 UStaticMeshComponent
+---@field Props017 UStaticMeshComponent
+---@field Decal075 UDecalComponent
+---@field Decal074 UDecalComponent
+---@field Decal073 UDecalComponent
+---@field Decal072 UDecalComponent
+---@field Props016 UStaticMeshComponent
+---@field Props015 UStaticMeshComponent
+---@field Decal071 UDecalComponent
+---@field Gobo02 UStaticMeshComponent
+---@field ['Support Light2'] USpotLightComponent
+---@field Decal070 UDecalComponent
+---@field Decal069 UDecalComponent
+---@field Decal068 UDecalComponent
+---@field Props014 UStaticMeshComponent
+---@field Props013 UStaticMeshComponent
+---@field Decal067 UDecalComponent
+---@field Props012 UStaticMeshComponent
+---@field Props011 UStaticMeshComponent
+---@field Props010 UStaticMeshComponent
+---@field ['Fill Light 07'] UPointLightComponent
+---@field ['Fill Light 08'] UPointLightComponent
+---@field ['Fill Light 05'] UPointLightComponent
+---@field ['Fill Light 09'] UPointLightComponent
+---@field ['Fill Light 06'] UPointLightComponent
+---@field ['Fill Light 04'] UPointLightComponent
+---@field ['Fill Light 02'] UPointLightComponent
+---@field ['Fill Light 03'] UPointLightComponent
+---@field ['Fill Light 010'] UPointLightComponent
+---@field RockWallUnderworld10x20x60A137 UStaticMeshComponent
+---@field RockWallUnderworld10x20x60A136 UStaticMeshComponent
+---@field RockWallUnderworld10x20x60A135 UStaticMeshComponent
+---@field RockWallUnderworld10x20x60A134 UStaticMeshComponent
+---@field RockWallUnderworld10x20x60A133 UStaticMeshComponent
+---@field RockWallUnderworld10x20x60A132 UStaticMeshComponent
+---@field RockWallUnderworld10x20x60A131 UStaticMeshComponent
+---@field RockWallUnderworld10x20x60A130 UStaticMeshComponent
+---@field RockWallUnderworld10x20x60A42 UStaticMeshComponent
+---@field RockWallUnderworld10x20x60A129 UStaticMeshComponent
+---@field Gobo01 UStaticMeshComponent
+---@field ['Support Light'] USpotLightComponent
+---@field FloorChunk033 UStaticMeshComponent
+---@field FloorChunk032 UStaticMeshComponent
+---@field Props09 UStaticMeshComponent
+---@field Decal066 UDecalComponent
+---@field Decal065 UDecalComponent
+---@field Decal064 UDecalComponent
+---@field Decal063 UDecalComponent
+---@field Decal062 UDecalComponent
+---@field Decal061 UDecalComponent
+---@field Decal060 UDecalComponent
+---@field FloorChunk031 UStaticMeshComponent
+---@field FloorChunk030 UStaticMeshComponent
+---@field FloorChunk029 UStaticMeshComponent
+---@field FloorChunk028 UStaticMeshComponent
+---@field FloorChunk027 UStaticMeshComponent
+---@field FloorChunk026 UStaticMeshComponent
+---@field FloorChunk025 UStaticMeshComponent
+---@field FloorChunk024 UStaticMeshComponent
+---@field FloorChunk023 UStaticMeshComponent
+---@field FloorChunk022 UStaticMeshComponent
+---@field FloorChunk021 UStaticMeshComponent
+---@field FloorChunk020 UStaticMeshComponent
+---@field FloorChunk019 UStaticMeshComponent
+---@field FloorChunk018 UStaticMeshComponent
+---@field Decal059 UDecalComponent
+---@field Decal058 UDecalComponent
+---@field Decal057 UDecalComponent
+---@field Decal056 UDecalComponent
+---@field Props08 UStaticMeshComponent
+---@field Props07 UStaticMeshComponent
+---@field Props06 UStaticMeshComponent
+---@field Props05 UStaticMeshComponent
+---@field Props04 UStaticMeshComponent
+---@field Props03 UStaticMeshComponent
+---@field Props02 UStaticMeshComponent
+---@field Props01 UStaticMeshComponent
+---@field CustomNavmeshVolume UCustomNavmeshVolumeComponent
 ---@field Decal055 UDecalComponent
 ---@field Decal054 UDecalComponent
 ---@field Decal053 UDecalComponent
@@ -125,7 +239,6 @@
 ---@field RockWallUnderworld10x20x60A45 UStaticMeshComponent
 ---@field RockWallUnderworld10x20x60A44 UStaticMeshComponent
 ---@field RockWallUnderworld10x20x60A43 UStaticMeshComponent
----@field RockWallUnderworld10x20x60A42 UStaticMeshComponent
 ---@field RockWallUnderworld10x20x60A41 UStaticMeshComponent
 ---@field RockWallUnderworld10x20x60A40 UStaticMeshComponent
 ---@field RockWallUnderworld10x20x60A39 UStaticMeshComponent

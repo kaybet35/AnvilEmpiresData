@@ -4,14 +4,30 @@
     "Name": "M_Black_01",
     "Class": "UScriptClass'Material'",
     "Properties": {
+      "BlendMode": "EBlendMode::BLEND_Masked",
       "bUsedWithStaticLighting": true,
-      "bCanMaskedBeAssumedOpaque": true,
-      "StateId": "1BA3A345-423B0CB0-AC1F9CAF-6320DEDC"
+      "StateId": "022C0BBF-491E7CAA-77A2C9B3-87E98032"
     },
     "LoadedMaterialResources": [],
     "CachedExpressionData": {
       "RuntimeEntries": {
-        "ParameterInfoSet": []
+        "ParameterInfoSet": [
+          {
+            "Name": "Camera Fade Length",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Camera Fade Offset",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Camera Depth Power",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          }
+        ]
       },
       "RuntimeEntries[1]": {
         "ParameterInfoSet": []
@@ -28,17 +44,52 @@
       "RuntimeEntries[5]": {
         "ParameterInfoSet": []
       },
-      "ScalarPrimitiveDataIndexValues": [],
+      "ScalarPrimitiveDataIndexValues": [
+        -1,
+        -1,
+        -1
+      ],
       "VectorPrimitiveDataIndexValues": [],
-      "ScalarValues": [],
+      "ScalarValues": [
+        5000.0,
+        64.0,
+        2.0
+      ],
       "VectorValues": [],
       "DoubleVectorValues": [],
       "TextureValues": [],
       "FontValues": [],
       "FontPageValues": [],
       "RuntimeVirtualTextureValues": [],
-      "ReferencedTextures": [],
-      "FunctionInfos": [],
+      "ReferencedTextures": [
+        {
+          "ObjectName": "Texture2D'Good64x64TilingNoiseHighFreq'",
+          "ObjectPath": "Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.0"
+        }
+      ],
+      "FunctionInfos": [
+        {
+          "StateId": "71028A8D-47BF4037-3A3A0B8A-D7B60E53",
+          "Function": {
+            "ObjectName": "MaterialFunction'ScreenAlignedPixelToPixelUVs'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.0"
+          }
+        },
+        {
+          "StateId": "22D58D0F-45CC84AB-89A3628B-351D83C8",
+          "Function": {
+            "ObjectName": "MaterialFunction'DitherTemporalAA'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.0"
+          }
+        },
+        {
+          "StateId": "DB3E993F-4E2E98B3-05AD13B9-2D8C5DA5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CameraDepthFade'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.0"
+          }
+        }
+      ],
       "ParameterCollectionInfos": [],
       "GrassTypes": [],
       "MaterialLayers": {
@@ -58,7 +109,13 @@
       "bHasPerInstanceCustomData": false,
       "bHasPerInstanceRandom": false,
       "bHasVertexInterpolator": false,
-      "PropertyConnectedBitmask": 480
-    }
+      "PropertyConnectedBitmask": 484
+    },
+    "ReferencedTextures": [
+      {
+        "ObjectName": "Texture2D'Good64x64TilingNoiseHighFreq'",
+        "ObjectPath": "Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.0"
+      }
+    ]
   }
 ]

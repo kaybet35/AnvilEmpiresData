@@ -9,6 +9,7 @@ class UArrowComponent;
 class UBuildSiteDataComponent;
 class UDecalComponent;
 class UMaterialInterface;
+class UPoseableMeshComponent;
 class UStaticMeshComponent;
 class UStructureDataComponent;
 class UTexture2D;
@@ -51,6 +52,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* BuildSiteMaterial;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPoseableMeshComponent* VisualGuideMeshComponent;
     
 public:
     AVisBuildSite(const FObjectInitializer& ObjectInitializer);

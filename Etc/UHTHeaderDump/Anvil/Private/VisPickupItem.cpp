@@ -11,8 +11,8 @@ AVisPickupItem::AVisPickupItem(const FObjectInitializer& ObjectInitializer) : Su
     this->Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
     this->ArrowComponent = (UArrowComponent*)RootComponent;
     this->LootMarkerVFXComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("LootMarkerVFX"));
-    this->Mesh->SetupAttachment(RootComponent);
     this->LootMarkerVFXComponent->SetupAttachment(RootComponent);
+    this->Mesh->SetupAttachment(RootComponent);
 }
 
 

@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisGridFoundationCeilingCornerTriangularStraight_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.14"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PoseableMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PoseableMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "MeshVisibilityData",
@@ -65,7 +76,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisGridFoundationCeilingCornerTriangularStraight_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.19"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconGridFoundation_CeilignCornerTriangular'",
@@ -75,7 +86,7 @@
       "BuildSiteOrder": 55,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisGridFoundationCeilingCornerTriangularStraight_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.18"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisGridFoundationCeilingCornerTriangularStraight_C:HealthDataComponent'",
@@ -83,15 +94,15 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisGridFoundationCeilingCornerTriangularStraight_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.17"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisGridFoundationCeilingCornerTriangularStraight_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.16"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisGridFoundationCeilingCornerTriangularStraight_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.9"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationCeilingCornerTriangularStraight_C:ArrowComponent'",
@@ -161,7 +172,7 @@
       "bDeferGrassUpdate": true,
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisGridFoundationCeilingCornerTriangularStraight_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.15"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationCeilingCornerTriangularStraight_C:ArrowComponent'",
@@ -180,6 +191,36 @@
     "Name": "MeshVisibilityData_GEN_VARIABLE",
     "Outer": "BPVisGridFoundationCeilingCornerTriangularStraight_C",
     "Class": "UScriptClass'MeshVisibilityDataComponent'"
+  },
+  {
+    "Type": "PoseableMeshComponent",
+    "Name": "PoseableMesh_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationCeilingCornerTriangularStraight_C",
+    "Class": "UScriptClass'PoseableMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'BuildSiteVisual_TriangularStraight'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/BuildSiteVisuals/BuildSiteVisual_TriangularStraight.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'BuildSiteVisual_TriangularStraight'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/BuildSiteVisuals/BuildSiteVisual_TriangularStraight.0"
+      },
+      "bReceivesDecals": false,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 850.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "BuildSiteVisualGuide"
+      ]
+    }
   },
   {
     "Type": "SceneComponent",
@@ -205,7 +246,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisGridFoundationCeilingCornerTriangularStraight_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.8"
       },
       "VariableGuid": "4AE59C32-4E7C4C48-88CE61B9-68337C23",
       "InternalVariableName": "DefaultSceneRoot"
@@ -223,7 +264,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisGridFoundationCeilingCornerTriangularStraight_C:VisStaticMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.20"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -250,6 +291,26 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PoseableMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PoseableMeshComponent'BPVisGridFoundationCeilingCornerTriangularStraight_C:PoseableMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.7"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E0256A8E-4B8E3E05-50CA1DAA-15A3B5C6",
+      "InternalVariableName": "PoseableMesh"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPVisGridFoundationCeilingCornerTriangularStraight_C",
@@ -258,26 +319,34 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationCeilingCornerTriangularStraight_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.11"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationCeilingCornerTriangularStraight_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingCornerTriangularStraight_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.13"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationCeilingCornerTriangularStraight_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.11"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationCeilingCornerTriangularStraight_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationCeilingCornerTriangularStraight_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.13"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisGridFoundationCeilingCornerTriangularStraight_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationCeilingCornerTriangularStraight.10"
       }
     }
   },

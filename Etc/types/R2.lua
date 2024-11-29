@@ -952,8 +952,11 @@ UBoxCollisionProxyComponent = {}
 ---@class UBuildSiteDataComponent : UDataComponent
 ---@field NearbyPlayersRequired int32
 ---@field MaterialSubmissions TArray<int32>
----@field BuildGhostPlacementStatus FContextfulPlacementStatus
+---@field BuildGhostPlacementErrors TArray<FContextfulPlacementStatus>
 ---@field PlacementInfoFlags int32
+---@field PlacementInfoPayload int32
+---@field VisualGuideTraceHitLocation FVector
+---@field VisualGuideStatus EAnvilPlacementStatus
 UBuildSiteDataComponent = {}
 
 
@@ -962,8 +965,6 @@ UBuildSiteDataComponent = {}
 ---@field BuiltStructureEntity TSubclassOf<UEntityTemplate>
 ---@field BuildLocation int32
 ---@field CompatibleSurfaceTypes int32
----@field AllowedBuildAreas int32
----@field DisallowedBuildAreas int32
 ---@field RequiredTool EAnvilToolType
 ---@field bRequiresTownHall boolean
 ---@field bRequiresCamp boolean
@@ -990,6 +991,7 @@ UBuildSiteDataComponent = {}
 ---@field GridDiagonalPair TSubclassOf<UEntityTemplate>
 ---@field NearbyPlayersRequired int32
 ---@field MaterialRequirements TArray<FBasicCount>
+---@field VisualGuideMinDistance float
 UBuildSiteProxyComponent = {}
 
 
@@ -1123,7 +1125,7 @@ UDecayProxyComponent = {}
 ---@class UDeployProxyComponent : UProxyComponent
 ---@field bRequireMounted boolean
 ---@field bCopyHealthPercentage boolean
----@field DeployedBuildSite TSubclassOf<UEntityTemplate>
+---@field DeployableBuildSites TArray<TSubclassOf<UEntityTemplate>>
 UDeployProxyComponent = {}
 
 
@@ -1743,7 +1745,6 @@ UPlayerControllerProxyComponent = {}
 ---@field PrimaryUsePromptMessage FStatusMessage
 ---@field UsePrompt int32
 ---@field VehicleInput EAnvilVehicleInputState
----@field CurrentBuildGhostEntityId int64
 ---@field CameraCurrentPosition FVector
 UPlayerInputDataComponent = {}
 
@@ -2053,6 +2054,7 @@ USeekerProxyComponent = {}
 ---@field bAltShieldMode boolean
 ---@field bIsPushing boolean
 ---@field bIsMeshHidden boolean
+---@field bMouseSelectCeiling boolean
 ---@field bIsReinforcing boolean
 ---@field SecondsUntilFullDecay float
 ---@field HeldItemLightSourceRadius float
@@ -2329,6 +2331,7 @@ UTrapProxyComponent = {}
 ---@field TentRequirementT3 uint8
 ---@field TownCenterRequiredBuilders uint8
 ---@field TownMapDisableSize uint8
+---@field UpkeepCostReinforced float
 UTweakableDataComponent = {}
 
 

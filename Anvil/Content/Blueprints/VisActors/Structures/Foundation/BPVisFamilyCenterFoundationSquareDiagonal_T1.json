@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisFamilyCenterFoundationSquareDiagonal_T1_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.13"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "StaticMesh1",
@@ -65,7 +76,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisFamilyCenterFoundationSquareDiagonal_T1_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.20"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'FamilyCenterFoundationSquareIcon'",
@@ -76,7 +87,7 @@
       "BuildSiteVisibility": "EBuildSiteVisibility::Never",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisFamilyCenterFoundationSquareDiagonal_T1_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.19"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisFamilyCenterFoundationSquareDiagonal_T1_C:HealthDataComponent'",
@@ -84,11 +95,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisFamilyCenterFoundationSquareDiagonal_T1_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.18"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisFamilyCenterFoundationSquareDiagonal_T1_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.17"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisFamilyCenterFoundationSquareDiagonal_T1_C:ScorchDataComponent'",
@@ -161,7 +172,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisFamilyCenterFoundationSquareDiagonal_T1_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.14"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyCenterFoundationSquareDiagonal_T1_C:ArrowComponent'",
@@ -213,6 +224,24 @@
   },
   {
     "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisFamilyCenterFoundationSquareDiagonal_T1_C:StaticMesh2_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.16"
+      },
+      "VariableGuid": "A8ABAC50-4B6D7C5E-84E1BAA3-FE03A8E7",
+      "InternalVariableName": "StaticMesh2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
     "Name": "SCS_Node_15",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -230,7 +259,11 @@
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationSquareDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationSquareDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.10"
         }
       ],
       "VariableGuid": "7542435A-4C473082-9984149F-7F28DC93",
@@ -249,7 +282,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisFamilyCenterFoundationSquareDiagonal_T1_C:StaticMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.15"
       },
       "VariableGuid": "7CDBC122-4877DB2E-82E53C9E-3EAE636E",
       "InternalVariableName": "StaticMesh1"
@@ -264,17 +297,21 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationSquareDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.11"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationSquareDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.11"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationSquareDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterFoundationSquareDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationSquareDiagonal_T1.10"
         }
       ],
       "DefaultSceneRootNode": {
@@ -303,6 +340,36 @@
         null
       ],
       "bReceivesDecals": false,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 300.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh2_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterFoundationSquareDiagonal_T1_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'HomesteadModule_foundation_square_diagonal'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_square_diagonal.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "bReceivesDecals": false,
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      },
       "ComponentTags": [
         "Structure",
         "Collision"

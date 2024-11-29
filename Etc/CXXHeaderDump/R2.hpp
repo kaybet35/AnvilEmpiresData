@@ -956,44 +956,46 @@ class UBuildSiteDataComponent : public UDataComponent
 {
     int32 NearbyPlayersRequired;                                                      // 0x00A8 (size: 0x4)
     TArray<int32> MaterialSubmissions;                                                // 0x00C8 (size: 0x10)
-    FContextfulPlacementStatus BuildGhostPlacementStatus;                             // 0x00F0 (size: 0x8)
-    int32 PlacementInfoFlags;                                                         // 0x0110 (size: 0x4)
+    TArray<FContextfulPlacementStatus> BuildGhostPlacementErrors;                     // 0x00F0 (size: 0x10)
+    int32 PlacementInfoFlags;                                                         // 0x0118 (size: 0x4)
+    int32 PlacementInfoPayload;                                                       // 0x0138 (size: 0x4)
+    FVector VisualGuideTraceHitLocation;                                              // 0x0158 (size: 0x18)
+    EAnvilPlacementStatus VisualGuideStatus;                                          // 0x0188 (size: 0x1)
 
-}; // Size: 0x130
+}; // Size: 0x1A8
 
 class UBuildSiteProxyComponent : public UProxyComponent
 {
     TSubclassOf<class UEntityTemplate> BuiltStructureEntity;                          // 0x0028 (size: 0x8)
     int32 BuildLocation;                                                              // 0x0030 (size: 0x4)
     int32 CompatibleSurfaceTypes;                                                     // 0x0034 (size: 0x4)
-    int32 AllowedBuildAreas;                                                          // 0x0038 (size: 0x4)
-    int32 DisallowedBuildAreas;                                                       // 0x003C (size: 0x4)
-    EAnvilToolType RequiredTool;                                                      // 0x0040 (size: 0x1)
-    bool bRequiresTownHall;                                                           // 0x0041 (size: 0x1)
-    bool bRequiresCamp;                                                               // 0x0042 (size: 0x1)
-    bool bRequiresSmallCamp;                                                          // 0x0043 (size: 0x1)
-    bool bRequiresClaimedFamilyHouse;                                                 // 0x0044 (size: 0x1)
-    bool bRequiresTerritoryOwnership;                                                 // 0x0045 (size: 0x1)
-    bool bBuildableOverRoads;                                                         // 0x0046 (size: 0x1)
-    bool bBuildableNearSpawnPoint;                                                    // 0x0047 (size: 0x1)
-    bool bBuildableInEnemyTerritory;                                                  // 0x0048 (size: 0x1)
-    bool bBuildableNearEnemies;                                                       // 0x0049 (size: 0x1)
-    bool bIsBuildableUnderground;                                                     // 0x004A (size: 0x1)
-    bool bOnlyBuildableUnderground;                                                   // 0x004B (size: 0x1)
-    bool bAllowRapidBuild;                                                            // 0x004C (size: 0x1)
-    bool CanBuildTownStructureWithoutPledge;                                          // 0x004D (size: 0x1)
-    bool bBuildsInstantly;                                                            // 0x004E (size: 0x1)
-    bool bMinDistanceCheckIgnoreEnemyStructures;                                      // 0x004F (size: 0x1)
-    bool bIsGridDiagonalPiece;                                                        // 0x0050 (size: 0x1)
-    uint8 TierPrerequisite;                                                           // 0x0051 (size: 0x1)
-    TSubclassOf<class UItemTemplate> RequiredDeployable;                              // 0x0058 (size: 0x8)
-    FVector LevelCheckRayOffset;                                                      // 0x0060 (size: 0x18)
-    float MaxHeightShift;                                                             // 0x0078 (size: 0x4)
-    float AdditionalMaxHeightShift;                                                   // 0x007C (size: 0x4)
-    TArray<FMinDistBetweenStructsEntry> MinDistBetweenStructs;                        // 0x0080 (size: 0x10)
-    TSubclassOf<class UEntityTemplate> GridDiagonalPair;                              // 0x0090 (size: 0x8)
-    int32 NearbyPlayersRequired;                                                      // 0x0098 (size: 0x4)
-    TArray<FBasicCount> MaterialRequirements;                                         // 0x00A0 (size: 0x10)
+    EAnvilToolType RequiredTool;                                                      // 0x0038 (size: 0x1)
+    bool bRequiresTownHall;                                                           // 0x0039 (size: 0x1)
+    bool bRequiresCamp;                                                               // 0x003A (size: 0x1)
+    bool bRequiresSmallCamp;                                                          // 0x003B (size: 0x1)
+    bool bRequiresClaimedFamilyHouse;                                                 // 0x003C (size: 0x1)
+    bool bRequiresTerritoryOwnership;                                                 // 0x003D (size: 0x1)
+    bool bBuildableOverRoads;                                                         // 0x003E (size: 0x1)
+    bool bBuildableNearSpawnPoint;                                                    // 0x003F (size: 0x1)
+    bool bBuildableInEnemyTerritory;                                                  // 0x0040 (size: 0x1)
+    bool bBuildableNearEnemies;                                                       // 0x0041 (size: 0x1)
+    bool bIsBuildableUnderground;                                                     // 0x0042 (size: 0x1)
+    bool bOnlyBuildableUnderground;                                                   // 0x0043 (size: 0x1)
+    bool bAllowRapidBuild;                                                            // 0x0044 (size: 0x1)
+    bool CanBuildTownStructureWithoutPledge;                                          // 0x0045 (size: 0x1)
+    bool bBuildsInstantly;                                                            // 0x0046 (size: 0x1)
+    bool bMinDistanceCheckIgnoreEnemyStructures;                                      // 0x0047 (size: 0x1)
+    bool bIsGridDiagonalPiece;                                                        // 0x0048 (size: 0x1)
+    uint8 TierPrerequisite;                                                           // 0x0049 (size: 0x1)
+    TSubclassOf<class UItemTemplate> RequiredDeployable;                              // 0x0050 (size: 0x8)
+    FVector LevelCheckRayOffset;                                                      // 0x0058 (size: 0x18)
+    float MaxHeightShift;                                                             // 0x0070 (size: 0x4)
+    float AdditionalMaxHeightShift;                                                   // 0x0074 (size: 0x4)
+    TArray<FMinDistBetweenStructsEntry> MinDistBetweenStructs;                        // 0x0078 (size: 0x10)
+    TSubclassOf<class UEntityTemplate> GridDiagonalPair;                              // 0x0088 (size: 0x8)
+    int32 NearbyPlayersRequired;                                                      // 0x0090 (size: 0x4)
+    TArray<FBasicCount> MaterialRequirements;                                         // 0x0098 (size: 0x10)
+    float VisualGuideMinDistance;                                                     // 0x00A8 (size: 0x4)
 
 }; // Size: 0xB0
 
@@ -1127,9 +1129,9 @@ class UDeployProxyComponent : public UProxyComponent
 {
     bool bRequireMounted;                                                             // 0x0028 (size: 0x1)
     bool bCopyHealthPercentage;                                                       // 0x0029 (size: 0x1)
-    TSubclassOf<class UEntityTemplate> DeployedBuildSite;                             // 0x0030 (size: 0x8)
+    TArray<class TSubclassOf<UEntityTemplate>> DeployableBuildSites;                  // 0x0030 (size: 0x10)
 
-}; // Size: 0x38
+}; // Size: 0x40
 
 class UDestroyableProxyComponent : public UProxyComponent
 {
@@ -1744,10 +1746,9 @@ class UPlayerInputDataComponent : public UDataComponent
     FStatusMessage PrimaryUsePromptMessage;                                           // 0x02A8 (size: 0x20)
     int32 UsePrompt;                                                                  // 0x02E0 (size: 0x4)
     EAnvilVehicleInputState VehicleInput;                                             // 0x0300 (size: 0x1)
-    int64 CurrentBuildGhostEntityId;                                                  // 0x0320 (size: 0x8)
-    FVector CameraCurrentPosition;                                                    // 0x0340 (size: 0x18)
+    FVector CameraCurrentPosition;                                                    // 0x0320 (size: 0x18)
 
-}; // Size: 0x370
+}; // Size: 0x350
 
 class UPlayerInputProxyComponent : public UProxyComponent
 {
@@ -2054,16 +2055,17 @@ class USimPlayerDataComponent : public UDataComponent
     bool bAltShieldMode;                                                              // 0x04B8 (size: 0x1)
     bool bIsPushing;                                                                  // 0x04D8 (size: 0x1)
     bool bIsMeshHidden;                                                               // 0x04F8 (size: 0x1)
-    bool bIsReinforcing;                                                              // 0x0518 (size: 0x1)
-    float SecondsUntilFullDecay;                                                      // 0x0538 (size: 0x4)
-    float HeldItemLightSourceRadius;                                                  // 0x0558 (size: 0x4)
-    TArray<FNightShroudLightSource> LightSourceData;                                  // 0x0578 (size: 0x10)
-    uint8 FoodTypesOnCooldownBits;                                                    // 0x05A0 (size: 0x1)
-    float AimYaw;                                                                     // 0x05C0 (size: 0x4)
-    float AimPitch;                                                                   // 0x05E0 (size: 0x4)
-    float LastIncomingAttackAngle;                                                    // 0x0600 (size: 0x4)
+    bool bMouseSelectCeiling;                                                         // 0x0518 (size: 0x1)
+    bool bIsReinforcing;                                                              // 0x0538 (size: 0x1)
+    float SecondsUntilFullDecay;                                                      // 0x0558 (size: 0x4)
+    float HeldItemLightSourceRadius;                                                  // 0x0578 (size: 0x4)
+    TArray<FNightShroudLightSource> LightSourceData;                                  // 0x0598 (size: 0x10)
+    uint8 FoodTypesOnCooldownBits;                                                    // 0x05C0 (size: 0x1)
+    float AimYaw;                                                                     // 0x05E0 (size: 0x4)
+    float AimPitch;                                                                   // 0x0600 (size: 0x4)
+    float LastIncomingAttackAngle;                                                    // 0x0620 (size: 0x4)
 
-}; // Size: 0x620
+}; // Size: 0x640
 
 class USimPlayerProxyComponent : public UProxyComponent
 {
@@ -2330,8 +2332,9 @@ class UTweakableDataComponent : public UDataComponent
     uint8 TentRequirementT3;                                                          // 0x0108 (size: 0x1)
     uint8 TownCenterRequiredBuilders;                                                 // 0x0128 (size: 0x1)
     uint8 TownMapDisableSize;                                                         // 0x0148 (size: 0x1)
+    float UpkeepCostReinforced;                                                       // 0x0168 (size: 0x4)
 
-}; // Size: 0x168
+}; // Size: 0x188
 
 class UTweakableProxyComponent : public UProxyComponent
 {

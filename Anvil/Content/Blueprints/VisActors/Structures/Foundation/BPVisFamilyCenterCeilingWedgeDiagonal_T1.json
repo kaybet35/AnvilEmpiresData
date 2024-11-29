@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.16"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PoseableMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PoseableMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "VisStaticMesh1",
@@ -76,7 +87,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.21"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'FamilyCenterCeilingHalfWedgeIcon'",
@@ -87,7 +98,7 @@
       "BuildSiteVisibility": "EBuildSiteVisibility::Never",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.20"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:HealthDataComponent'",
@@ -95,15 +106,15 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.19"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.18"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.10"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:ArrowComponent'",
@@ -173,7 +184,7 @@
       "bDeferGrassUpdate": true,
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.17"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:ArrowComponent'",
@@ -192,6 +203,41 @@
     "Name": "MeshVisibilityData_GEN_VARIABLE",
     "Outer": "BPVisFamilyCenterCeilingWedgeDiagonal_T1_C",
     "Class": "UScriptClass'MeshVisibilityDataComponent'"
+  },
+  {
+    "Type": "PoseableMeshComponent",
+    "Name": "PoseableMesh_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterCeilingWedgeDiagonal_T1_C",
+    "Class": "UScriptClass'PoseableMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'BuildSiteVisual_HalfWedgeBStraight'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/BuildSiteVisuals/BuildSiteVisual_HalfWedgeBStraight.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'BuildSiteVisual_HalfWedgeBStraight'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/BuildSiteVisuals/BuildSiteVisual_HalfWedgeBStraight.0"
+      },
+      "bReceivesDecals": false,
+      "RelativeLocation": {
+        "X": -25.0,
+        "Y": 24.000004,
+        "Z": 600.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -135.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.9151472,
+        "Y": 0.8585786,
+        "Z": 1.0
+      },
+      "ComponentTags": [
+        "BuildSiteVisualGuide"
+      ]
+    }
   },
   {
     "Type": "SceneComponent",
@@ -223,7 +269,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.8"
       },
       "VariableGuid": "4AE59C32-4E7C4C48-88CE61B9-68337C23",
       "InternalVariableName": "DefaultSceneRoot"
@@ -241,7 +287,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:VisStaticMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.22"
       },
       "VariableGuid": "011229F7-4C949998-E81662A4-C278BB1C",
       "InternalVariableName": "VisStaticMesh1"
@@ -277,18 +323,38 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:Scene_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.9"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.12"
         }
       ],
       "VariableGuid": "6AAF2518-49B8968C-9EFFAB9C-0B262803",
       "InternalVariableName": "Scene"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PoseableMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PoseableMeshComponent'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:PoseableMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.7"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "51BD17E7-4B5746BF-03E16F82-3D34D799",
+      "InternalVariableName": "PoseableMesh"
     }
   },
   {
@@ -300,30 +366,38 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.13"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.15"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.12"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.13"
         },
         {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.14"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.15"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisFamilyCenterCeilingWedgeDiagonal_T1_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCeilingWedgeDiagonal_T1.11"
       }
     }
   },
@@ -383,6 +457,11 @@
         "X": 0.0,
         "Y": 0.0,
         "Z": 300.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
       },
       "ComponentTags": [
         "ToggleVisibility",

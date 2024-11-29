@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisGridFoundationQuarterFloorStraight_T2_C : AVisStructure
+---@field PoseableMesh UPoseableMeshComponent
 ---@field FloorPlanking2 UStaticMeshComponent
 ---@field FloorPlanking3 UStaticMeshComponent
 ---@field FloorPlanking1 UStaticMeshComponent

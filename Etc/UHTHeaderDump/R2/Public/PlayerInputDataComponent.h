@@ -63,9 +63,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilVehicleInputState VehicleInput;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    int64 CurrentBuildGhostEntityId;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector CameraCurrentPosition;
     

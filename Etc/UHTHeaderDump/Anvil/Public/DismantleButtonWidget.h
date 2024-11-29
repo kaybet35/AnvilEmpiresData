@@ -5,6 +5,7 @@
 
 class UButton;
 class UImage;
+class UWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UDismantleButtonWidget : public UUserWidget {
@@ -16,6 +17,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UImage* StructureIconImage;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UWidget* ReinforcedIconContainer;
     
 public:
     UDismantleButtonWidget();

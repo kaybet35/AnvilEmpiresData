@@ -11,5 +11,6 @@ FUpgradeCostData::FUpgradeCostData() {
     this->ProcessedLeather = 0;
     this->Mortar = 0;
     this->Gravel = 0;
+    this->ResourceFibre = 0;
 }
 

@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.20"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PoseableMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PoseableMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "VisStaticMesh1",
@@ -120,7 +131,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisGridFoundationFloorSquareDiagonal_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.31"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.33"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconGridFoundation_floorSquare'",
@@ -131,7 +142,7 @@
       "BuildSiteVisibility": "EBuildSiteVisibility::Never",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisGridFoundationFloorSquareDiagonal_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.26"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.28"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisGridFoundationFloorSquareDiagonal_C:HealthDataComponent'",
@@ -139,15 +150,15 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisGridFoundationFloorSquareDiagonal_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.25"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.27"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisGridFoundationFloorSquareDiagonal_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.26"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisGridFoundationFloorSquareDiagonal_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.10"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationFloorSquareDiagonal_C:ArrowComponent'",
@@ -217,7 +228,7 @@
       "bDeferGrassUpdate": true,
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisGridFoundationFloorSquareDiagonal_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.21"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationFloorSquareDiagonal_C:ArrowComponent'",
@@ -236,6 +247,31 @@
     "Name": "MeshVisibilityData_GEN_VARIABLE",
     "Outer": "BPVisGridFoundationFloorSquareDiagonal_C",
     "Class": "UScriptClass'MeshVisibilityDataComponent'"
+  },
+  {
+    "Type": "PoseableMeshComponent",
+    "Name": "PoseableMesh_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationFloorSquareDiagonal_C",
+    "Class": "UScriptClass'PoseableMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'BuildSiteVisual_SquareDiagonal'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/BuildSiteVisuals/BuildSiteVisual_SquareDiagonal.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'BuildSiteVisual_SquareDiagonal'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/BuildSiteVisuals/BuildSiteVisual_SquareDiagonal.0"
+      },
+      "bReceivesDecals": false,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 898.0
+      },
+      "ComponentTags": [
+        "BuildSiteVisualGuide"
+      ]
+    }
   },
   {
     "Type": "SceneComponent",
@@ -267,7 +303,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisGridFoundationFloorSquareDiagonal_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.8"
       },
       "VariableGuid": "4AE59C32-4E7C4C48-88CE61B9-68337C23",
       "InternalVariableName": "DefaultSceneRoot"
@@ -285,7 +321,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisGridFoundationFloorSquareDiagonal_C:VisStaticMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.32"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.34"
       },
       "VariableGuid": "011229F7-4C949998-E81662A4-C278BB1C",
       "InternalVariableName": "VisStaticMesh1"
@@ -321,30 +357,34 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisGridFoundationFloorSquareDiagonal_C:Scene_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.9"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.14"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.15"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.16"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.17"
         },
         {
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.18"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.19"
         }
       ],
       "VariableGuid": "38E8F55A-4C5F5DAF-C5ED64B9-77FE920C",
@@ -363,7 +403,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationFloorSquareDiagonal_C:VisFoundationEdgeMeshDecor5_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.29"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.31"
       },
       "VariableGuid": "38FFB7D3-4068E884-9D0DCAB9-2E0A4D62",
       "InternalVariableName": "VisFoundationEdgeMeshDecor5"
@@ -381,7 +421,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationFloorSquareDiagonal_C:VisFoundationEdgeMeshDecor4_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.28"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.30"
       },
       "VariableGuid": "9AA819B1-40E76A26-DA46E49B-A1B8D57B",
       "InternalVariableName": "VisFoundationEdgeMeshDecor4"
@@ -399,7 +439,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationFloorSquareDiagonal_C:VisFoundationEdgeMeshDecor3_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.27"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.29"
       },
       "VariableGuid": "2D1ED38B-4D354CD3-75B145A7-6A6F29DA",
       "InternalVariableName": "VisFoundationEdgeMeshDecor3"
@@ -417,10 +457,28 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationFloorSquareDiagonal_C:VisFoundationEdgeMeshDecor6_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.30"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.32"
       },
       "VariableGuid": "0DE55742-4BA8065C-EFB66F91-D184E622",
       "InternalVariableName": "VisFoundationEdgeMeshDecor6"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PoseableMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PoseableMeshComponent'BPVisGridFoundationFloorSquareDiagonal_C:PoseableMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.7"
+      },
+      "VariableGuid": "8EBD3E1F-4A1E2CF8-1CFCCAB4-D98AD60D",
+      "InternalVariableName": "PoseableMesh"
     }
   },
   {
@@ -432,46 +490,50 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.13"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.14"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.12"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.14"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.15"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.16"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.17"
         },
         {
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.18"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.19"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisGridFoundationFloorSquareDiagonal_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.11"
       }
     }
   },
@@ -584,7 +646,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationFloorSquareDiagonal_C:VisFoundationEdgeMeshDecor3_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.22"
       },
       "RelativeLocation": {
         "X": 0.0,
@@ -615,7 +677,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationFloorSquareDiagonal_C:VisFoundationEdgeMeshDecor4_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.23"
       },
       "RelativeLocation": {
         "X": 0.0,
@@ -646,7 +708,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationFloorSquareDiagonal_C:VisFoundationEdgeMeshDecor5_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.24"
       },
       "RelativeLocation": {
         "X": 232.74176,
@@ -677,7 +739,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationFloorSquareDiagonal_C:VisFoundationEdgeMeshDecor6_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorSquareDiagonal.25"
       },
       "RelativeLocation": {
         "X": -232.81177,

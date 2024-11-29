@@ -387,6 +387,7 @@ struct FUpgradeCostData : public FTableRowBase
     int16 ProcessedLeather;                                                           // 0x0016 (size: 0x2)
     int16 Mortar;                                                                     // 0x0018 (size: 0x2)
     int16 Gravel;                                                                     // 0x001A (size: 0x2)
+    int16 ResourceFibre;                                                              // 0x001C (size: 0x2)
 
 }; // Size: 0x20
 
@@ -607,8 +608,11 @@ class AUIGlobals : public AInfo
     TMap<class EAnvilPlayerOnlineStatus, class UTexture2D*> OnlineStatusIconMap;      // 0x03B8 (size: 0x50)
     TMap<class EAnvilPlayerOnlineStatus, class FSlateColor> OnlineStatusColorMap;     // 0x0408 (size: 0x50)
     TMap<class FString, class UTexture2D*> UnderworldModuleDebugBoxTextureMap;        // 0x0458 (size: 0x50)
+    FLinearColor BuildSiteVisualGuideValidColour;                                     // 0x04A8 (size: 0x10)
+    FLinearColor BuildSiteVisualGuideInvalidColour;                                   // 0x04B8 (size: 0x10)
+    FLinearColor BuildSiteVisualGuideObstructedColour;                                // 0x04C8 (size: 0x10)
 
-}; // Size: 0x4A8
+}; // Size: 0x4D8
 
 class AUnderworldModuleDynamicPrefab : public ADynamicPrefab
 {
@@ -694,8 +698,9 @@ class AVisBuildSite : public AVisActor
     class UStaticMeshComponent* Mesh;                                                 // 0x04D8 (size: 0x8)
     class UDecalComponent* BuildCollisionDecalComponent;                              // 0x04E0 (size: 0x8)
     class UMaterialInterface* BuildSiteMaterial;                                      // 0x04E8 (size: 0x8)
+    class UPoseableMeshComponent* VisualGuideMeshComponent;                           // 0x04F0 (size: 0x8)
 
-}; // Size: 0x510
+}; // Size: 0x518
 
 class AVisCart : public AVisVehicle
 {
@@ -1066,9 +1071,9 @@ class AVisSpline : public AVisStructure
 
 class AVisSplineBuildSite : public AVisBuildSite
 {
-    class UVisSplineComponent* SplineComponent;                                       // 0x0510 (size: 0x8)
+    class UVisSplineComponent* SplineComponent;                                       // 0x0518 (size: 0x8)
 
-}; // Size: 0x518
+}; // Size: 0x520
 
 class AVisStaticTorch : public AVisStructure
 {
@@ -1671,9 +1676,10 @@ class UDismantleButtonWidget : public UUserWidget
 {
     class UButton* DismantleButton;                                                   // 0x0278 (size: 0x8)
     class UImage* StructureIconImage;                                                 // 0x0280 (size: 0x8)
+    class UWidget* ReinforcedIconContainer;                                           // 0x0288 (size: 0x8)
 
     void OnClicked();
-}; // Size: 0x290
+}; // Size: 0x298
 
 class UEntityActorRootComponent : public USceneComponent
 {
@@ -1881,6 +1887,12 @@ class UHUDNameWidget : public UUserWidget
     ESlateVisibility GetLocalChatTextVisibility();
 }; // Size: 0x308
 
+class UHUDPlacementStatusWidget : public UUserWidget
+{
+    class UTextBlock* StatusText;                                                     // 0x0278 (size: 0x8)
+
+}; // Size: 0x280
+
 class UHUDStatsWidget : public UUserWidget
 {
     class UTextBlock* StatsText;                                                      // 0x0278 (size: 0x8)
@@ -1920,24 +1932,25 @@ class UHUDWidget : public UUserWidget
     class UInventoryHUDWidget* InventoryHUD;                                          // 0x03A0 (size: 0x8)
     class UCanvasPanel* DisclaimerCanvas;                                             // 0x03A8 (size: 0x8)
     class UTextBlock* DisclaimerText;                                                 // 0x03B0 (size: 0x8)
-    class UTexture2D* AranicLogo;                                                     // 0x03B8 (size: 0x8)
-    class UTexture2D* MirrishLogo;                                                    // 0x03C0 (size: 0x8)
-    class UTexture2D* NovanLogo;                                                      // 0x03C8 (size: 0x8)
-    FSlateBrush GuardStrengthEmptyIcon;                                               // 0x03D0 (size: 0xD0)
-    FSlateBrush GuardStrengthFillIcon;                                                // 0x04A0 (size: 0xD0)
-    float LocalChatDisplayTime;                                                       // 0x0570 (size: 0x4)
-    class UProgressBar* InteractionProgressBar1;                                      // 0x0578 (size: 0x8)
-    class UProgressBar* InteractionProgressBar2;                                      // 0x0580 (size: 0x8)
-    class UTextBlock* WeatherStatsText;                                               // 0x0588 (size: 0x8)
-    class UTextBlock* BorderRegionIndicatorText;                                      // 0x0590 (size: 0x8)
-    class UWidget* ReinforcementStatus;                                               // 0x0598 (size: 0x8)
-    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05A8 (size: 0x10)
+    class UHUDPlacementStatusWidget* PlacementStatusWidget;                           // 0x03B8 (size: 0x8)
+    class UTexture2D* AranicLogo;                                                     // 0x03C0 (size: 0x8)
+    class UTexture2D* MirrishLogo;                                                    // 0x03C8 (size: 0x8)
+    class UTexture2D* NovanLogo;                                                      // 0x03D0 (size: 0x8)
+    FSlateBrush GuardStrengthEmptyIcon;                                               // 0x03E0 (size: 0xD0)
+    FSlateBrush GuardStrengthFillIcon;                                                // 0x04B0 (size: 0xD0)
+    float LocalChatDisplayTime;                                                       // 0x0580 (size: 0x4)
+    class UProgressBar* InteractionProgressBar1;                                      // 0x0588 (size: 0x8)
+    class UProgressBar* InteractionProgressBar2;                                      // 0x0590 (size: 0x8)
+    class UTextBlock* WeatherStatsText;                                               // 0x0598 (size: 0x8)
+    class UTextBlock* BorderRegionIndicatorText;                                      // 0x05A0 (size: 0x8)
+    class UWidget* ReinforcementStatus;                                               // 0x05A8 (size: 0x8)
+    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05B8 (size: 0x10)
 
     void PlayWinConditionAnimation();
     ESlateVisibility GetWeatherStatsTextVisibility();
     FText GetWeatherStatsText();
     ESlateVisibility GetHUDWidgetVisibility();
-}; // Size: 0x5D0
+}; // Size: 0x5E0
 
 class UHUDWindow : public UUserWidget
 {
@@ -2570,11 +2583,12 @@ class UVisBalljointComponent : public USceneComponent
 
 class UVisBuildGhostComponent : public UActorComponent
 {
-    FLinearColor ValidPlacementColour;                                                // 0x00A0 (size: 0x10)
-    FLinearColor InvalidPlacementColour;                                              // 0x00C0 (size: 0x10)
-    class UDecalComponent* BuildCollisionDecalComponent;                              // 0x00E0 (size: 0x8)
+    class UBuildSiteDataComponent* BuildSiteDataComponent;                            // 0x00A0 (size: 0x8)
+    FLinearColor ValidPlacementColour;                                                // 0x00A8 (size: 0x10)
+    FLinearColor InvalidPlacementColour;                                              // 0x00C8 (size: 0x10)
+    class UDecalComponent* BuildCollisionDecalComponent;                              // 0x00D8 (size: 0x8)
 
-}; // Size: 0xE8
+}; // Size: 0xE0
 
 class UVisCanalWaterControllerComponent : public USceneComponent
 {

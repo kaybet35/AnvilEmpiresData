@@ -3,8 +3,8 @@
 
 class ABPVisHandcartBuildSite_C : public AVisBuildSite
 {
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0510 (size: 0x8)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0518 (size: 0x8)
 
-}; // Size: 0x518
+}; // Size: 0x520
 
 #endif

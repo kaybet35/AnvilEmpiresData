@@ -20,6 +20,7 @@ AVisBuildSite::AVisBuildSite(const FObjectInitializer& ObjectInitializer) : Supe
     this->ArrowComponent = (UArrowComponent*)RootComponent;
     this->Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
     this->BuildCollisionDecalComponent = CreateDefaultSubobject<UDecalComponent>(TEXT("BuildCollisionDecalComponent"));
+    this->VisualGuideMeshComponent = NULL;
     this->Mesh->SetupAttachment(RootComponent);
     this->BuildCollisionDecalComponent->SetupAttachment(RootComponent);
 }

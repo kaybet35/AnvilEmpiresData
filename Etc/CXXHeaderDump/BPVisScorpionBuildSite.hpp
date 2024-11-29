@@ -3,6 +3,6 @@
 
 class ABPVisScorpionBuildSite_C : public AVisBuildSite
 {
-}; // Size: 0x510
+}; // Size: 0x518
 
 #endif

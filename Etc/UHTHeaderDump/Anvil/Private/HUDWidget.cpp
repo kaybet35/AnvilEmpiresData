@@ -31,6 +31,7 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->InventoryHUD = NULL;
     this->DisclaimerCanvas = NULL;
     this->DisclaimerText = NULL;
+    this->PlacementStatusWidget = NULL;
     this->AranicLogo = NULL;
     this->MirrishLogo = NULL;
     this->NovanLogo = NULL;

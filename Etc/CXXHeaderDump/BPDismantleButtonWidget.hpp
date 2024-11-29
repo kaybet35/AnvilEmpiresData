@@ -3,6 +3,8 @@
 
 class UBPDismantleButtonWidget_C : public UDismantleButtonWidget
 {
-}; // Size: 0x290
+    class UImage* ReinforcedIconImage;                                                // 0x0298 (size: 0x8)
+
+}; // Size: 0x2A0
 
 #endif

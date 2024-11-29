@@ -13,7 +13,6 @@ UPlayerInputDataComponent::UPlayerInputDataComponent(const FObjectInitializer& O
     this->CurrentCollectableResourceType = 0;
     this->UsePrompt = 0;
     this->VehicleInput = EAnvilVehicleInputState::Idle;
-    this->CurrentBuildGhostEntityId = 0;
 }
 
 

@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.21"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PoseableMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PoseableMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "FloorPlanking2",
@@ -131,7 +142,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisGridFoundationFloorRoundStraight_T2_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.32"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.34"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconGridFoundation_floorRound'",
@@ -141,7 +152,7 @@
       "BuildSiteOrder": 32,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisGridFoundationFloorRoundStraight_T2_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.28"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.30"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisGridFoundationFloorRoundStraight_T2_C:HealthDataComponent'",
@@ -149,15 +160,15 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisGridFoundationFloorRoundStraight_T2_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.27"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.29"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisGridFoundationFloorRoundStraight_T2_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.26"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.28"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisGridFoundationFloorRoundStraight_T2_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.10"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationFloorRoundStraight_T2_C:ArrowComponent'",
@@ -227,7 +238,7 @@
       "bDeferGrassUpdate": true,
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisGridFoundationFloorRoundStraight_T2_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.22"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationFloorRoundStraight_T2_C:ArrowComponent'",
@@ -246,6 +257,31 @@
     "Name": "MeshVisibilityData_GEN_VARIABLE",
     "Outer": "BPVisGridFoundationFloorRoundStraight_T2_C",
     "Class": "UScriptClass'MeshVisibilityDataComponent'"
+  },
+  {
+    "Type": "PoseableMeshComponent",
+    "Name": "PoseableMesh_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationFloorRoundStraight_T2_C",
+    "Class": "UScriptClass'PoseableMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'BuildSiteVisual_RoundStraight'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/BuildSiteVisuals/BuildSiteVisual_RoundStraight.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'BuildSiteVisual_RoundStraight'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/BuildSiteVisuals/BuildSiteVisual_RoundStraight.0"
+      },
+      "bReceivesDecals": false,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 898.0
+      },
+      "ComponentTags": [
+        "BuildSiteVisualGuide"
+      ]
+    }
   },
   {
     "Type": "SceneComponent",
@@ -277,7 +313,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisGridFoundationFloorRoundStraight_T2_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.8"
       },
       "VariableGuid": "4AE59C32-4E7C4C48-88CE61B9-68337C23",
       "InternalVariableName": "DefaultSceneRoot"
@@ -295,7 +331,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationFloorRoundStraight_T2_C:FloorPlanking_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.24"
       },
       "VariableGuid": "32C621DC-46BF6199-C4A81C99-6F84B6D1",
       "InternalVariableName": "FloorPlanking"
@@ -331,26 +367,30 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisGridFoundationFloorRoundStraight_T2_C:Scene_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.9"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.14"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.15"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.16"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.20"
         }
       ],
       "VariableGuid": "B7661D3D-40BDAD31-F0AC829C-EA118331",
@@ -369,7 +409,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationFloorRoundStraight_T2_C:VisFoundationEdgeMeshDecor6_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.31"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.33"
       },
       "VariableGuid": "9BAD2B7A-47DE9B4B-6ACBD5AB-851A6732",
       "InternalVariableName": "VisFoundationEdgeMeshDecor6"
@@ -387,16 +427,16 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisGridFoundationFloorRoundStraight_T2_C:VisStaticMesh2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.33"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.35"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.12"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.18"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.19"
         }
       ],
       "VariableGuid": "9B32640B-4DE087AF-4B7D1DB9-61340AD6",
@@ -415,7 +455,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationFloorRoundStraight_T2_C:VisFoundationEdgeMeshDecor5_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.30"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.32"
       },
       "VariableGuid": "C034631C-405D12C1-EC22BDB9-947BA26F",
       "InternalVariableName": "VisFoundationEdgeMeshDecor5"
@@ -433,7 +473,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationFloorRoundStraight_T2_C:VisFoundationEdgeMeshDecor4_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.29"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.31"
       },
       "VariableGuid": "26308425-426679CB-6C83619D-4E2DA6A0",
       "InternalVariableName": "VisFoundationEdgeMeshDecor4"
@@ -451,10 +491,28 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationFloorRoundStraight_T2_C:FloorPlanking2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.23"
       },
       "VariableGuid": "AFE0CFC1-4B034F0E-ED07B691-95AB78FD",
       "InternalVariableName": "FloorPlanking2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PoseableMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PoseableMeshComponent'BPVisGridFoundationFloorRoundStraight_T2_C:PoseableMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.7"
+      },
+      "VariableGuid": "E35A07C5-4A2A463F-BCABB486-C3F646ED",
+      "InternalVariableName": "PoseableMesh"
     }
   },
   {
@@ -466,50 +524,54 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.13"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.14"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.12"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.14"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.15"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.16"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.17"
         },
         {
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.18"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.12"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.18"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.20"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisGridFoundationFloorRoundStraight_T2_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.11"
       }
     }
   },
@@ -652,7 +714,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationFloorRoundStraight_T2_C:VisFoundationEdgeMeshDecor4_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.25"
       },
       "RelativeLocation": {
         "X": 0.0,
@@ -683,7 +745,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationFloorRoundStraight_T2_C:VisFoundationEdgeMeshDecor5_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.26"
       },
       "RelativeLocation": {
         "X": 66.0,
@@ -714,7 +776,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationFloorRoundStraight_T2_C:VisFoundationEdgeMeshDecor6_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.25"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationFloorRoundStraight_T2.27"
       },
       "RelativeLocation": {
         "X": -164.64764,

@@ -37,6 +37,9 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int16 Gravel;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ResourceFibre;
+    
     ANVIL_API FUpgradeCostData();
 };
 

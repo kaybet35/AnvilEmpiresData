@@ -17,7 +17,7 @@ public:
     bool bCopyHealthPercentage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<UEntityTemplate> DeployedBuildSite;
+    TArray<TSubclassOf<UEntityTemplate>> DeployableBuildSites;
     
     UDeployProxyComponent();
 

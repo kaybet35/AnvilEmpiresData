@@ -1,25 +1,11 @@
 ---@meta
 
 ---@class ABPVisStoneRefineryT2_C : AVisRefinery
----@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
----@field VisStaticMesh17 UVisStaticMeshComponent
----@field VisStaticMesh2 UVisStaticMeshComponent
----@field Populated USceneComponent
 ---@field Audio UAudioComponent
----@field VisStaticMesh15 UVisStaticMeshComponent
----@field VisStaticMesh12 UVisStaticMeshComponent
----@field VisStaticMesh11 UVisStaticMeshComponent
 ---@field VisStaticMesh10 UVisStaticMeshComponent
----@field VisStaticMesh9 UVisStaticMeshComponent
----@field VisStaticMesh8 UVisStaticMeshComponent
----@field VisStaticMesh7 UVisStaticMeshComponent
----@field VisStaticMesh6 UVisStaticMeshComponent
----@field VisStaticMesh5 UVisStaticMeshComponent
----@field VisStaticMesh4 UVisStaticMeshComponent
----@field VisStaticMesh3 UVisStaticMeshComponent
+---@field Populated USceneComponent
+---@field VisStaticMesh11 UVisStaticMeshComponent
 ---@field VisStaticMesh1 UVisStaticMeshComponent
----@field VisTeamMesh UVisTeamMeshComponent
----@field VisStaticMesh UVisStaticMeshComponent
 ---@field ScorchEffect1 UScorchEffectComponent
 ---@field ScorchEffect9 UScorchEffectComponent
 ---@field ScorchEffect7 UScorchEffectComponent

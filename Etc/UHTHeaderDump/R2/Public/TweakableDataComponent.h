@@ -25,6 +25,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TownMapDisableSize;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float UpkeepCostReinforced;
+    
     UTweakableDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };

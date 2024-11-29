@@ -80,7 +80,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__FamilyCenterFoundationWaterConnectorStraight_T2_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FamilyCenterFoundationWaterConnectorStraight_T2.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FamilyCenterFoundationWaterConnectorStraight_T2.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__FamilyCenterFoundationWaterConnectorStraight_T2_C:HealthComp'",
@@ -88,11 +88,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__FamilyCenterFoundationWaterConnectorStraight_T2_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FamilyCenterFoundationWaterConnectorStraight_T2.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FamilyCenterFoundationWaterConnectorStraight_T2.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__FamilyCenterFoundationWaterConnectorStraight_T2_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FamilyCenterFoundationWaterConnectorStraight_T2.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FamilyCenterFoundationWaterConnectorStraight_T2.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__FamilyCenterFoundationWaterConnectorStraight_T2_C:DestroyableComp'",
@@ -116,11 +116,25 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__FamilyCenterFoundationWaterConnectorStraight_T2_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FamilyCenterFoundationWaterConnectorStraight_T2.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FamilyCenterFoundationWaterConnectorStraight_T2.11"
       },
       "CodeNameString": "FamilyCenterFoundationWaterConnectorStraightT2",
       "CodeName": 298688189,
       "bGenerateMeshCollisionVaultable": true,
+      "Components": [
+        {
+          "ObjectName": "WellProxyComponent'Default__FamilyCenterFoundationWaterConnectorStraight_T2_C:WellProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FamilyCenterFoundationWaterConnectorStraight_T2.14"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__FamilyCenterFoundationWaterConnectorStraight_T2_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FamilyCenterFoundationWaterConnectorStraight_T2.8"
+        },
+        {
+          "ObjectName": "PowerUnitProxyComponent'Default__FamilyCenterFoundationWaterConnectorStraight_T2_C:PowerUnitProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/FamilyCenterFoundationWaterConnectorStraight_T2.9"
+        }
+      ],
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisFamilyCenterFoundationWaterConnectorStraight_T2_C'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterFoundationWaterConnectorStraight_T2.1"
@@ -151,6 +165,49 @@
     "Template": {
       "ObjectName": "HealthProxyComponent'Default__BPBaseFoundationEntity_C:HealthComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationEntity.7"
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__FamilyCenterFoundationWaterConnectorStraight_T2_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": null,
+          "Count": 0,
+          "StackLimit": 5,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceWater_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWater.0"
+          },
+          "DedicatedUnderlyingItemType": null,
+          "bCheckDedicatedUnderlyingItem": true,
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
+        }
+      ],
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
+    }
+  },
+  {
+    "Type": "PowerUnitProxyComponent",
+    "Name": "PowerUnitProxyComponent_0",
+    "Outer": "Default__FamilyCenterFoundationWaterConnectorStraight_T2_C",
+    "Class": "UScriptClass'PowerUnitProxyComponent'",
+    "Properties": {
+      "Type": "EAnvilPowerUnitType::Sink",
+      "CurrentMax": 20.0,
+      "InnerWidth": 25.0,
+      "OuterWidth": 25.0
     }
   },
   {
@@ -194,6 +251,15 @@
     "Template": {
       "ObjectName": "TeamProxyComponent'Default__BPBaseFoundationEntity_C:TeamComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationEntity.11"
+    }
+  },
+  {
+    "Type": "WellProxyComponent",
+    "Name": "WellProxyComponent_0",
+    "Outer": "Default__FamilyCenterFoundationWaterConnectorStraight_T2_C",
+    "Class": "UScriptClass'WellProxyComponent'",
+    "Properties": {
+      "WaterGenerationTimeSec": 15
     }
   }
 ]

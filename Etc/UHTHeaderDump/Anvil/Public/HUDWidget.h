@@ -11,6 +11,7 @@ class UCanvasPanel;
 class UChatMessage;
 class UDismantleButtonWidget;
 class UHUDNameWidget;
+class UHUDPlacementStatusWidget;
 class UHUDStatsWidget;
 class UHUDWindow;
 class UImage;
@@ -121,6 +122,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* DisclaimerText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UHUDPlacementStatusWidget* PlacementStatusWidget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* AranicLogo;

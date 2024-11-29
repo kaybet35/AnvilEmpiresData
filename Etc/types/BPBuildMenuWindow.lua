@@ -3,7 +3,6 @@
 ---@class UBPBuildMenuWindow_C : UBuildMenuWindow
 ---@field BPAnvilPanel UBPAnvilPanel_C
 ---@field BPBuildMenuTabButton UBPBuildMenuTabButton_C
----@field BPHeaderContainer UBPHeaderContainer_C
 ---@field BPMainAreaContainer UBPMainAreaContainer_C
 UBPBuildMenuWindow_C = {}
 

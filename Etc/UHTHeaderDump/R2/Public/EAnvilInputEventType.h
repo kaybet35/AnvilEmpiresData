@@ -36,6 +36,7 @@ enum class EAnvilInputEventType : uint8 {
     AttachVehicle,
     DetachVehicle,
     MouseSelect,
+    MouseSelectCeiling,
     DisableSnapping,
     SetTownName,
     Reload,

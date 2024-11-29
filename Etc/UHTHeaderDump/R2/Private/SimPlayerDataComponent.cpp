@@ -31,6 +31,7 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->bAltShieldMode = false;
     this->bIsPushing = false;
     this->bIsMeshHidden = false;
+    this->bMouseSelectCeiling = false;
     this->bIsReinforcing = false;
     this->SecondsUntilFullDecay = 0.00f;
     this->HeldItemLightSourceRadius = 0.00f;

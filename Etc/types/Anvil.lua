@@ -195,6 +195,9 @@ AServerPartition = {}
 ---@field OnlineStatusIconMap TMap<EAnvilPlayerOnlineStatus, UTexture2D>
 ---@field OnlineStatusColorMap TMap<EAnvilPlayerOnlineStatus, FSlateColor>
 ---@field UnderworldModuleDebugBoxTextureMap TMap<FString, UTexture2D>
+---@field BuildSiteVisualGuideValidColour FLinearColor
+---@field BuildSiteVisualGuideInvalidColour FLinearColor
+---@field BuildSiteVisualGuideObstructedColour FLinearColor
 AUIGlobals = {}
 
 
@@ -284,6 +287,7 @@ AVisBoat = {}
 ---@field Mesh UStaticMeshComponent
 ---@field BuildCollisionDecalComponent UDecalComponent
 ---@field BuildSiteMaterial UMaterialInterface
+---@field VisualGuideMeshComponent UPoseableMeshComponent
 AVisBuildSite = {}
 
 
@@ -1152,6 +1156,7 @@ FShardConfig = {}
 ---@field ProcessedLeather int16
 ---@field Mortar int16
 ---@field Gravel int16
+---@field ResourceFibre int16
 FUpgradeCostData = {}
 
 
@@ -1753,6 +1758,7 @@ function UDisclaimerWidget:IsAcceptTextBoxEnabled() end
 ---@class UDismantleButtonWidget : UUserWidget
 ---@field DismantleButton UButton
 ---@field StructureIconImage UImage
+---@field ReinforcedIconContainer UWidget
 UDismantleButtonWidget = {}
 
 function UDismantleButtonWidget:OnClicked() end
@@ -1995,6 +2001,12 @@ function UHUDNameWidget:GetPlayerNameColour() end
 function UHUDNameWidget:GetLocalChatTextVisibility() end
 
 
+---@class UHUDPlacementStatusWidget : UUserWidget
+---@field StatusText UTextBlock
+UHUDPlacementStatusWidget = {}
+
+
+
 ---@class UHUDStatsWidget : UUserWidget
 ---@field StatsText UTextBlock
 UHUDStatsWidget = {}
@@ -2033,6 +2045,7 @@ UHUDStatsWidget = {}
 ---@field InventoryHUD UInventoryHUDWidget
 ---@field DisclaimerCanvas UCanvasPanel
 ---@field DisclaimerText UTextBlock
+---@field PlacementStatusWidget UHUDPlacementStatusWidget
 ---@field AranicLogo UTexture2D
 ---@field MirrishLogo UTexture2D
 ---@field NovanLogo UTexture2D
@@ -2718,6 +2731,7 @@ UVisBalljointComponent = {}
 
 
 ---@class UVisBuildGhostComponent : UActorComponent
+---@field BuildSiteDataComponent UBuildSiteDataComponent
 ---@field ValidPlacementColour FLinearColor
 ---@field InvalidPlacementColour FLinearColor
 ---@field BuildCollisionDecalComponent UDecalComponent
