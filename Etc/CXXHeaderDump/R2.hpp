@@ -959,10 +959,9 @@ class UBuildSiteDataComponent : public UDataComponent
     TArray<FContextfulPlacementStatus> BuildGhostPlacementErrors;                     // 0x00F0 (size: 0x10)
     int32 PlacementInfoFlags;                                                         // 0x0118 (size: 0x4)
     int32 PlacementInfoPayload;                                                       // 0x0138 (size: 0x4)
-    FVector VisualGuideTraceHitLocation;                                              // 0x0158 (size: 0x18)
-    EAnvilPlacementStatus VisualGuideStatus;                                          // 0x0188 (size: 0x1)
+    float VisualGuideMinDistance;                                                     // 0x0158 (size: 0x4)
 
-}; // Size: 0x1A8
+}; // Size: 0x178
 
 class UBuildSiteProxyComponent : public UProxyComponent
 {

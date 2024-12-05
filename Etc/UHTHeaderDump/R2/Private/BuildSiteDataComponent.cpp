@@ -4,7 +4,7 @@ UBuildSiteDataComponent::UBuildSiteDataComponent(const FObjectInitializer& Objec
     this->NearbyPlayersRequired = 0;
     this->PlacementInfoFlags = 0;
     this->PlacementInfoPayload = 0;
-    this->VisualGuideStatus = EAnvilPlacementStatus::Valid;
+    this->VisualGuideMinDistance = 0.00f;
 }
 
 

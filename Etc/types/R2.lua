@@ -955,8 +955,7 @@ UBoxCollisionProxyComponent = {}
 ---@field BuildGhostPlacementErrors TArray<FContextfulPlacementStatus>
 ---@field PlacementInfoFlags int32
 ---@field PlacementInfoPayload int32
----@field VisualGuideTraceHitLocation FVector
----@field VisualGuideStatus EAnvilPlacementStatus
+---@field VisualGuideMinDistance float
 UBuildSiteDataComponent = {}
 
 

@@ -29,11 +29,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.26"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.28"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BPVisFamilyCenterKeystoneT3_C:ExecuteUbergraph_BPVisFamilyCenterKeystoneT3'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.6"
       }
     },
     "SuperStruct": {
@@ -43,15 +43,15 @@
     "Children": [
       {
         "ObjectName": "Function'BPVisFamilyCenterKeystoneT3_C:ReceiveBeginPlay'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.7"
       },
       {
         "ObjectName": "Function'BPVisFamilyCenterKeystoneT3_C:ReceiveTick'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.8"
       },
       {
         "ObjectName": "Function'BPVisFamilyCenterKeystoneT3_C:ExecuteUbergraph_BPVisFamilyCenterKeystoneT3'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.6"
       }
     ],
     "ChildProperties": [
@@ -68,46 +68,68 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "StaticMesh1",
+        "Name": "VisFamilyMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "StaticMesh",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "VisTeamMesh",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisTeamMeshComponent'",
+          "ObjectName": "Class'VisFamilyMeshComponent'",
           "ObjectPath": "/Script/Anvil"
         }
       },
       {
         "Type": "ObjectProperty",
-        "Name": "BPVisFamilyMeshComponent",
+        "Name": "CollapsedMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
-          "ObjectName": "BlueprintGeneratedClass'BPVisFamilyMeshComponent_C'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.0"
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VerticalEdge04",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VerticalEdge03",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VerticalEdge01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VerticalEdge02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
         }
       },
       {
@@ -123,13 +145,13 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "CollapsedMesh",
+        "Name": "Scene",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
-          "ObjectName": "Class'VisStaticMeshComponent'",
-          "ObjectPath": "/Script/Anvil"
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
         }
       },
       {
@@ -182,15 +204,15 @@
     "FuncMap": {
       "ExecuteUbergraph_BPVisFamilyCenterKeystoneT3": {
         "ObjectName": "Function'BPVisFamilyCenterKeystoneT3_C:ExecuteUbergraph_BPVisFamilyCenterKeystoneT3'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.6"
       },
       "ReceiveTick": {
         "ObjectName": "Function'BPVisFamilyCenterKeystoneT3_C:ReceiveTick'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.8"
       },
       "ReceiveBeginPlay": {
         "ObjectName": "Function'BPVisFamilyCenterKeystoneT3_C:ReceiveBeginPlay'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.7"
       }
     },
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -216,15 +238,15 @@
       "UberGraphFrame": {},
       "FamilyCenterDataComponent": {
         "ObjectName": "FamilyCenterDataComponent'Default__BPVisFamilyCenterKeystoneT3_C:FamilyCenterDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.5"
       },
       "TownAreaMarkerDecal": {
         "ObjectName": "VisTownAreaMarkerDecalComponent'Default__BPVisFamilyCenterKeystoneT3_C:TownAreaMarkerDecal'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.38"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.46"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisFamilyCenterKeystoneT3_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.34"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.43"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'FamilyCenterKeystoneIcon'",
@@ -233,19 +255,19 @@
       "BuildSiteOrder": 1,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisFamilyCenterKeystoneT3_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.33"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.37"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisFamilyCenterKeystoneT3_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.11"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisFamilyCenterKeystoneT3_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.32"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.36"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisFamilyCenterKeystoneT3_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.31"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.35"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisFamilyCenterKeystoneT3_C:ScorchDataComponent'",
@@ -257,11 +279,11 @@
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisFamilyCenterKeystoneT3_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.4"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisFamilyCenterKeystoneT3_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.10"
       },
       "GeneratedScorchEffects": 10,
       "MapIconProperty": {
@@ -309,33 +331,6 @@
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyCenterKeystoneT3_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.0"
-      }
-    }
-  },
-  {
-    "Type": "BPVisFamilyMeshComponent_C",
-    "Name": "BPVisFamilyMeshComponent_GEN_VARIABLE",
-    "Outer": "BPVisFamilyCenterKeystoneT3_C",
-    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.BPVisFamilyMeshComponent_C'",
-    "Template": {
-      "ObjectName": "BPVisFamilyMeshComponent_C'Default__BPVisFamilyMeshComponent_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.1"
-    },
-    "Properties": {
-      "RelativeLocation": {
-        "X": -60.000004,
-        "Y": 90.0,
-        "Z": 310.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": -180.0,
-        "Roll": -91.68295
-      },
-      "RelativeScale3D": {
-        "X": 1.5,
-        "Y": 1.5,
-        "Z": 1.5
       }
     }
   },
@@ -428,7 +423,7 @@
       },
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'BPVisFamilyCenterKeystoneT3_C:GrassRemovalFamilyArea_GEN_VARIABLE.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.27"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.29"
       }
     }
   },
@@ -445,7 +440,7 @@
       },
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisFamilyCenterKeystoneT3_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.28"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.30"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyCenterKeystoneT3_C:ArrowComponent'",
@@ -472,6 +467,19 @@
     "Class": "UScriptClass'SceneComponent'"
   },
   {
+    "Type": "SceneComponent",
+    "Name": "Scene_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterKeystoneT3_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 2.5444438E-14,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
     "Type": "ScorchDataComponent",
     "Name": "ScorchDataComponent",
     "Outer": "Default__BPVisFamilyCenterKeystoneT3_C",
@@ -489,7 +497,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisFamilyCenterKeystoneT3_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.13"
       },
       "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -502,15 +510,35 @@
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisFamilyCenterKeystoneT3_C:StaticMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.29"
+        "ObjectName": "VisStaticMeshComponent'BPVisFamilyCenterKeystoneT3_C:CollapsedMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.44"
       },
-      "VariableGuid": "95B58AA3-41627A4C-5222E9A8-39928F9C",
-      "InternalVariableName": "StaticMesh1"
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A5F8CA1E-434873F4-B56C4CB9-AAF2811E",
+      "InternalVariableName": "CollapsedMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisFamilyCenterKeystoneT3_C:VerticalEdge02_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.40"
+      },
+      "VariableGuid": "1A1BB438-4CF63BBA-DA2C2191-A59B7B9C",
+      "InternalVariableName": "VerticalEdge02"
     }
   },
   {
@@ -525,10 +553,64 @@
       },
       "ComponentTemplate": {
         "ObjectName": "MeshVisibilityDataComponent'BPVisFamilyCenterKeystoneT3_C:MeshVisibilityData_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.12"
       },
       "VariableGuid": "D38424A3-410FB42C-FC7DF188-14F2BE86",
       "InternalVariableName": "MeshVisibilityData"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisFamilyCenterKeystoneT3_C:VerticalEdge01_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.39"
+      },
+      "VariableGuid": "E555500A-4305C7CD-BC8EAA92-1C153123",
+      "InternalVariableName": "VerticalEdge01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisFamilyCenterKeystoneT3_C:VerticalEdge03_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.41"
+      },
+      "VariableGuid": "2C370F32-45FFE929-DF3B3A92-CE598A5B",
+      "InternalVariableName": "VerticalEdge03"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_14",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisFamilyCenterKeystoneT3_C:VerticalEdge04_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.42"
+      },
+      "VariableGuid": "EB6C54E7-414CA134-392FA094-6035DA94",
+      "InternalVariableName": "VerticalEdge04"
     }
   },
   {
@@ -538,23 +620,15 @@
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectName": "Class'VisFamilyMeshComponent'",
         "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisFamilyCenterKeystoneT3_C:CollapsedMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.35"
+        "ObjectName": "VisFamilyMeshComponent'BPVisFamilyCenterKeystoneT3_C:VisFamilyMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.38"
       },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.17"
-        }
-      ],
-      "VariableGuid": "423A0F2E-4674E857-F0F947B7-C7C35927",
-      "InternalVariableName": "CollapsedMesh"
+      "VariableGuid": "2346A797-48B235D5-41703186-10C4B65F",
+      "InternalVariableName": "VisFamilyMesh"
     }
   },
   {
@@ -569,7 +643,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "GrassRemovalVolumeComponent'BPVisFamilyCenterKeystoneT3_C:GrassRemovalFamilyArea_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.9"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -609,22 +683,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFamilyCenterKeystoneT3_C:HouseMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.36"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.45"
       },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
       "ChildNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.25"
         }
       ],
       "VariableGuid": "891AB9B8-4480805F-EB00BB9E-4FA714E7",
@@ -633,56 +697,44 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_6",
+    "Name": "SCS_Node_9",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "BlueprintGeneratedClass'BPVisFamilyMeshComponent_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.0"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "BPVisFamilyMeshComponent_C'BPVisFamilyCenterKeystoneT3_C:BPVisFamilyMeshComponent_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.4"
-      },
-      "VariableGuid": "64BA1C57-4365C4FC-F86BC29B-155B11D3",
-      "InternalVariableName": "BPVisFamilyMeshComponent"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_7",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisTeamMeshComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisTeamMeshComponent'BPVisFamilyCenterKeystoneT3_C:VisTeamMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.37"
-      },
-      "VariableGuid": "88A716B7-4D8C71E1-8ECF4595-D085E177",
-      "InternalVariableName": "VisTeamMesh"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_8",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectName": "Class'SceneComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisFamilyCenterKeystoneT3_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.30"
+        "ObjectName": "SceneComponent'BPVisFamilyCenterKeystoneT3_C:Scene_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.14"
       },
-      "VariableGuid": "392E7FF6-437DE3B9-10713BAA-3D054639",
-      "InternalVariableName": "StaticMesh"
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.22"
+        }
+      ],
+      "VariableGuid": "2727E4E8-47894EAE-C6F1A0B2-8CECC08F",
+      "InternalVariableName": "Scene"
     }
   },
   {
@@ -694,61 +746,69 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.21"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.25"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.20"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.24"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.18"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.19"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.22"
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.17"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.21"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.25"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.18"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.19"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.22"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.24"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.25"
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.22"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT3_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.23"
         }
       ],
       "DefaultSceneRootNode": {
@@ -771,54 +831,89 @@
   },
   {
     "Type": "StaticMeshComponent",
-    "Name": "StaticMesh1_GEN_VARIABLE",
-    "Outer": "BPVisFamilyCenterKeystoneT3_C",
+    "Name": "EdgeMeshComp",
+    "Outer": "VerticalEdge01_GEN_VARIABLE",
     "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
       "StaticMesh": {
-        "ObjectName": "StaticMesh'HomesteadModule_keystone_cellar_mesh_SM'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_keystone_cellar_mesh_SM.2"
+        "ObjectName": "StaticMesh'HomesteadModule_foundation_keystonePillarT3'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_keystonePillarT3.2"
       },
-      "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'LDGrid_Cave2'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGrid_Cave2.0"
-        }
-      ],
-      "bReceivesDecals": false,
       "RelativeLocation": {
         "X": 0.0,
         "Y": 0.0,
-        "Z": 300.0
+        "Z": -150.0
       },
-      "ComponentTags": [
-        "Collapsed",
-        "Structure",
-        "ExcludeFromVisActorTemplate"
-      ]
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
+      }
     }
   },
   {
     "Type": "StaticMeshComponent",
-    "Name": "StaticMesh_GEN_VARIABLE",
-    "Outer": "BPVisFamilyCenterKeystoneT3_C",
+    "Name": "EdgeMeshComp",
+    "Outer": "VerticalEdge02_GEN_VARIABLE",
     "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
       "StaticMesh": {
-        "ObjectName": "StaticMesh'HomesteadModule_keystone_cellar_mesh_SM'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_keystone_cellar_mesh_SM.2"
+        "ObjectName": "StaticMesh'HomesteadModule_foundation_keystonePillarT3'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_keystonePillarT3.2"
       },
-      "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'LDGrid_Cave2'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGrid_Cave2.0"
-        }
-      ],
-      "bReceivesDecals": false,
       "RelativeLocation": {
         "X": 0.0,
         "Y": 0.0,
-        "Z": 300.0
+        "Z": -150.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "EdgeMeshComp",
+    "Outer": "VerticalEdge03_GEN_VARIABLE",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'HomesteadModule_foundation_keystonePillarT3'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_keystonePillarT3.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -150.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "EdgeMeshComp",
+    "Outer": "VerticalEdge04_GEN_VARIABLE",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'HomesteadModule_foundation_keystonePillarT3'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_keystonePillarT3.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -150.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
       }
     }
   },
@@ -841,6 +936,307 @@
     "Class": "UScriptClass'UpgradeDataComponent'"
   },
   {
+    "Type": "VisFamilyMeshComponent",
+    "Name": "VisFamilyMesh_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterKeystoneT3_C",
+    "Class": "UScriptClass'VisFamilyMeshComponent'",
+    "Properties": {
+      "ColourTable": [
+        {
+          "R": 0.0,
+          "G": 0.019608,
+          "B": 0.019608,
+          "A": 1.0,
+          "Hex": "002626"
+        },
+        {
+          "R": 0.015686,
+          "G": 0.019608,
+          "B": 0.011765,
+          "A": 1.0,
+          "Hex": "21261C"
+        },
+        {
+          "R": 0.019608,
+          "G": 0.015686,
+          "B": 0.003922,
+          "A": 1.0,
+          "Hex": "26210C"
+        },
+        {
+          "R": 0.007843,
+          "G": 0.019608,
+          "B": 0.035294,
+          "A": 1.0,
+          "Hex": "152634"
+        },
+        {
+          "R": 0.019608,
+          "G": 0.007843,
+          "B": 0.015686,
+          "A": 1.0,
+          "Hex": "261521"
+        },
+        {
+          "R": 0.019608,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "260000"
+        },
+        {
+          "R": 0.011765,
+          "G": 0.003922,
+          "B": 0.019608,
+          "A": 1.0,
+          "Hex": "1C0C26"
+        },
+        {
+          "R": 0.015686,
+          "G": 0.019608,
+          "B": 0.019608,
+          "A": 1.0,
+          "Hex": "212626"
+        },
+        {
+          "R": 0.031373,
+          "G": 0.019608,
+          "B": 0.011765,
+          "A": 1.0,
+          "Hex": "31261C"
+        },
+        {
+          "R": 0.007843,
+          "G": 0.011765,
+          "B": 0.031373,
+          "A": 1.0,
+          "Hex": "151C31"
+        },
+        {
+          "R": 0.003922,
+          "G": 0.003922,
+          "B": 0.003922,
+          "A": 1.0,
+          "Hex": "0C0C0C"
+        },
+        {
+          "R": 0.019608,
+          "G": 0.047059,
+          "B": 0.058824,
+          "A": 1.0,
+          "Hex": "263D44"
+        },
+        {
+          "R": 0.058824,
+          "G": 0.035294,
+          "B": 0.058824,
+          "A": 1.0,
+          "Hex": "443444"
+        },
+        {
+          "R": 0.058824,
+          "G": 0.023529,
+          "B": 0.031373,
+          "A": 1.0,
+          "Hex": "442A31"
+        },
+        {
+          "R": 0.05098,
+          "G": 0.035294,
+          "B": 0.011765,
+          "A": 1.0,
+          "Hex": "40341C"
+        },
+        {
+          "R": 0.035294,
+          "G": 0.05098,
+          "B": 0.023529,
+          "A": 1.0,
+          "Hex": "34402A"
+        },
+        {
+          "R": 0.031373,
+          "G": 0.023529,
+          "B": 0.05098,
+          "A": 1.0,
+          "Hex": "312A40"
+        },
+        {
+          "R": 0.031373,
+          "G": 0.007843,
+          "B": 0.003922,
+          "A": 1.0,
+          "Hex": "31150C"
+        },
+        {
+          "R": 0.0,
+          "G": 0.019608,
+          "B": 0.031373,
+          "A": 1.0,
+          "Hex": "002631"
+        },
+        {
+          "R": 0.007843,
+          "G": 0.011765,
+          "B": 0.003922,
+          "A": 1.0,
+          "Hex": "151C0C"
+        }
+      ],
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'HomesteadModule_foundation_keystoneT3'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_keystoneT3.2"
+      },
+      "ComponentTags": [
+        "UnCollapsed"
+      ]
+    }
+  },
+  {
+    "Type": "VisFoundationEdgeMeshDecorComponent",
+    "Name": "VerticalEdge01_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterKeystoneT3_C",
+    "Class": "UScriptClass'VisFoundationEdgeMeshDecorComponent'",
+    "Properties": {
+      "EdgeMesh": {
+        "ObjectName": "StaticMesh'HomesteadModule_foundation_keystonePillarT3'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_keystonePillarT3.2"
+      },
+      "EdgeMeshOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -150.0
+      },
+      "EdgeMeshRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
+      },
+      "EdgeMeshComp": {
+        "ObjectName": "StaticMeshComponent'BPVisFamilyCenterKeystoneT3_C:VerticalEdge01_GEN_VARIABLE.EdgeMeshComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.31"
+      },
+      "RelativeLocation": {
+        "X": -150.0,
+        "Y": 150.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -45.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "VisFoundationEdgeMeshDecorComponent",
+    "Name": "VerticalEdge02_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterKeystoneT3_C",
+    "Class": "UScriptClass'VisFoundationEdgeMeshDecorComponent'",
+    "Properties": {
+      "EdgeMesh": {
+        "ObjectName": "StaticMesh'HomesteadModule_foundation_keystonePillarT3'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_keystonePillarT3.2"
+      },
+      "EdgeMeshOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -150.0
+      },
+      "EdgeMeshRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
+      },
+      "EdgeMeshComp": {
+        "ObjectName": "StaticMeshComponent'BPVisFamilyCenterKeystoneT3_C:VerticalEdge02_GEN_VARIABLE.EdgeMeshComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.32"
+      },
+      "RelativeLocation": {
+        "X": 150.0,
+        "Y": 150.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -135.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "VisFoundationEdgeMeshDecorComponent",
+    "Name": "VerticalEdge03_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterKeystoneT3_C",
+    "Class": "UScriptClass'VisFoundationEdgeMeshDecorComponent'",
+    "Properties": {
+      "EdgeMesh": {
+        "ObjectName": "StaticMesh'HomesteadModule_foundation_keystonePillarT3'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_keystonePillarT3.2"
+      },
+      "EdgeMeshOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -150.0
+      },
+      "EdgeMeshRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
+      },
+      "EdgeMeshComp": {
+        "ObjectName": "StaticMeshComponent'BPVisFamilyCenterKeystoneT3_C:VerticalEdge03_GEN_VARIABLE.EdgeMeshComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.33"
+      },
+      "RelativeLocation": {
+        "X": 150.0,
+        "Y": -150.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 135.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "VisFoundationEdgeMeshDecorComponent",
+    "Name": "VerticalEdge04_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterKeystoneT3_C",
+    "Class": "UScriptClass'VisFoundationEdgeMeshDecorComponent'",
+    "Properties": {
+      "EdgeMesh": {
+        "ObjectName": "StaticMesh'HomesteadModule_foundation_keystonePillarT3'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_keystonePillarT3.2"
+      },
+      "EdgeMeshOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -150.0
+      },
+      "EdgeMeshRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": 0.0
+      },
+      "EdgeMeshComp": {
+        "ObjectName": "StaticMeshComponent'BPVisFamilyCenterKeystoneT3_C:VerticalEdge04_GEN_VARIABLE.EdgeMeshComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT3.34"
+      },
+      "RelativeLocation": {
+        "X": -150.0,
+        "Y": -150.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
     "Type": "VisScaffoldingComponent",
     "Name": "ScaffoldingComponent",
     "Outer": "Default__BPVisFamilyCenterKeystoneT3_C",
@@ -860,8 +1256,8 @@
     "Properties": {
       "VisMeshProfile": "EVisMeshProfile::Structure",
       "StaticMesh": {
-        "ObjectName": "StaticMesh'HomesteadModule_foundation_square_straight'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_square_straight.2"
+        "ObjectName": "StaticMesh'HomesteadModule_foundation_square_straightT2'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_square_straightT2.2"
       },
       "OverrideMaterials": [
         {
@@ -882,6 +1278,7 @@
         "Y": 0.0,
         "Z": -150.0
       },
+      "bVisible": false,
       "ComponentTags": [
         "Collapsed",
         "Structure",
@@ -897,37 +1294,24 @@
     "Properties": {
       "VisMeshProfile": "EVisMeshProfile::StructureCollision",
       "StaticMesh": {
-        "ObjectName": "StaticMesh'HomesteadModule_foundation_square_straight'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_square_straight.2"
+        "ObjectName": "StaticMesh'HomesteadModule_foundation_square_straightT3'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_square_straightT3.2"
       },
       "RelativeLocation": {
         "X": 0.0,
         "Y": 0.0,
         "Z": -150.0
       },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -2.5444438E-14,
+        "Roll": 0.0
+      },
       "ComponentTags": [
         "Structure",
         "Collision",
         "UnCollapsed"
       ]
-    }
-  },
-  {
-    "Type": "VisTeamMeshComponent",
-    "Name": "VisTeamMesh_GEN_VARIABLE",
-    "Outer": "BPVisFamilyCenterKeystoneT3_C",
-    "Class": "UScriptClass'VisTeamMeshComponent'",
-    "Properties": {
-      "RelativeLocation": {
-        "X": 60.000004,
-        "Y": 90.0,
-        "Z": 310.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": -180.0,
-        "Roll": -91.68295
-      }
     }
   },
   {

@@ -1,6 +1,62 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleStraight02_C : ABPUnderworldModuleDynamicPrefab_C
+---@field Props018 UStaticMeshComponent
+---@field Props017 UStaticMeshComponent
+---@field Props026 UChildActorComponent
+---@field Props025 UChildActorComponent
+---@field Props016 UStaticMeshComponent
+---@field Props015 UStaticMeshComponent
+---@field Props014 UStaticMeshComponent
+---@field Props013 UStaticMeshComponent
+---@field Props012 UStaticMeshComponent
+---@field Wall0141 UStaticMeshComponent
+---@field Wall0140 UStaticMeshComponent
+---@field Wall0139 UStaticMeshComponent
+---@field Props024 UChildActorComponent
+---@field Wall0138 UStaticMeshComponent
+---@field Decal87 UDecalComponent
+---@field Decal86 UDecalComponent
+---@field Decal85 UDecalComponent
+---@field Props023 UChildActorComponent
+---@field Props022 UChildActorComponent
+---@field Props021 UChildActorComponent
+---@field Decal84 UDecalComponent
+---@field Decal83 UDecalComponent
+---@field Props020 UChildActorComponent
+---@field Props011 UStaticMeshComponent
+---@field Props010 UStaticMeshComponent
+---@field Props09 UStaticMeshComponent
+---@field Wall0137 UStaticMeshComponent
+---@field Wall0136 UStaticMeshComponent
+---@field Wall0135 UStaticMeshComponent
+---@field Wall044 UStaticMeshComponent
+---@field Decal82 UDecalComponent
+---@field Decal81 UDecalComponent
+---@field Decal80 UDecalComponent
+---@field Decal79 UDecalComponent
+---@field Decal78 UDecalComponent
+---@field Decal77 UDecalComponent
+---@field Decal76 UDecalComponent
+---@field Decal75 UDecalComponent
+---@field Props08 UStaticMeshComponent
+---@field Props07 UStaticMeshComponent
+---@field Props06 UStaticMeshComponent
+---@field Props05 UStaticMeshComponent
+---@field Decal74 UDecalComponent
+---@field Decal73 UDecalComponent
+---@field Decal72 UDecalComponent
+---@field Decal71 UDecalComponent
+---@field Decal70 UDecalComponent
+---@field Decal69 UDecalComponent
+---@field Decal68 UDecalComponent
+---@field Decal67 UDecalComponent
+---@field Decal66 UDecalComponent
+---@field Decal65 UDecalComponent
+---@field Props04 UStaticMeshComponent
+---@field Props03 UStaticMeshComponent
+---@field Props02 UStaticMeshComponent
+---@field Props01 UStaticMeshComponent
 ---@field ['Fill Light 011'] UPointLightComponent
 ---@field ['Fill Light 06'] UPointLightComponent
 ---@field ['Fill Light 05'] UPointLightComponent

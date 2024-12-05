@@ -11,8 +11,13 @@
       "bUsedWithSplineMeshes": true,
       "bUsedWithInstancedStaticMeshes": true,
       "bUsedWithClothing": true,
-      "StateId": "439F7F52-4125178F-C743908A-9589DAC6",
+      "StateId": "77485048-4312CF57-DA417EA1-8E5E3466",
       "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "FamilyCenterKeystoneA"
+        },
         {
           "SamplingScale": 2.0,
           "UVChannelIndex": 0,
@@ -32,11 +37,6 @@
           "SamplingScale": 0.5,
           "UVChannelIndex": 0,
           "TextureName": "Snow_N"
-        },
-        {
-          "SamplingScale": 1.0,
-          "UVChannelIndex": 0,
-          "TextureName": "WoodShingleA"
         },
         {
           "SamplingScale": 1.0,
@@ -433,6 +433,11 @@
             "Name": "Reinforce",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
+          },
+          {
+            "Name": "Param",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
           }
         ]
       },
@@ -490,6 +495,16 @@
           },
           {
             "Name": "Reinforce Colour",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Colour 1",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Colour 2",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           }
@@ -669,9 +684,12 @@
         -1,
         -1,
         -1,
+        -1,
         -1
       ],
       "VectorPrimitiveDataIndexValues": [
+        -1,
+        -1,
         -1,
         -1,
         -1,
@@ -713,7 +731,7 @@
         2.418043,
         19.467302,
         0.0,
-        1.5,
+        1.0,
         0.609524,
         0.0,
         1.0,
@@ -760,7 +778,8 @@
         0.6,
         3.0,
         1.15,
-        0.0
+        0.0,
+        0.5
       ],
       "VectorValues": [
         {
@@ -839,6 +858,20 @@
           "B": 1.0,
           "A": 1.0,
           "Hex": "CDE6FF"
+        },
+        {
+          "R": 0.119538,
+          "G": 0.004025,
+          "B": 0.005605,
+          "A": 1.0,
+          "Hex": "610D11"
+        },
+        {
+          "R": 0.005317,
+          "G": 0.057127,
+          "B": 0.145833,
+          "A": 1.0,
+          "Hex": "10436B"
         }
       ],
       "DoubleVectorValues": [],
@@ -852,7 +885,7 @@
           "SubPathString": ""
         },
         {
-          "AssetPathName": "/Game/Textures/Structures/WoodShingleA.WoodShingleA",
+          "AssetPathName": "/Game/Textures/Structures/FamilyCenterKeystoneA.FamilyCenterKeystoneA",
           "SubPathString": ""
         },
         {
@@ -925,8 +958,8 @@
           "ObjectPath": "Anvil/Content/Textures/Structures/WoodShingleM.0"
         },
         {
-          "ObjectName": "Texture2D'WoodShingleA'",
-          "ObjectPath": "Anvil/Content/Textures/Structures/WoodShingleA.0"
+          "ObjectName": "Texture2D'FamilyCenterKeystoneA'",
+          "ObjectPath": "Anvil/Content/Textures/Structures/FamilyCenterKeystoneA.0"
         },
         {
           "ObjectName": "Texture2D'T_CliffRock_03_N'",
@@ -967,6 +1000,10 @@
         {
           "ObjectName": "Texture2D'AshM'",
           "ObjectPath": "Anvil/Content/Textures/Environment/AshM.0"
+        },
+        {
+          "ObjectName": "Texture2D'WoodShingleA'",
+          "ObjectPath": "Anvil/Content/Textures/Structures/WoodShingleA.0"
         },
         {
           "ObjectName": "Texture2D'WoodInteriorM'",
@@ -1888,6 +1925,20 @@
             "ObjectName": "MaterialFunction'WorldSpaceSmall'",
             "ObjectPath": "Anvil/Content/Materials/MaterialFunctions/WorldSpaceSmall.0"
           }
+        },
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction'LinearGradient'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "62DC688F-43F7E16F-0CF5F486-8458FADB",
+          "Function": {
+            "ObjectName": "MaterialFunction'ValueStep'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ValueStep.0"
+          }
         }
       ],
       "ParameterCollectionInfos": [
@@ -1999,6 +2050,10 @@
       {
         "ObjectName": "Texture2D'WoodInteriorN'",
         "ObjectPath": "Anvil/Content/Textures/Resources/WoodInteriorN.0"
+      },
+      {
+        "ObjectName": "Texture2D'FamilyCenterKeystoneA'",
+        "ObjectPath": "Anvil/Content/Textures/Structures/FamilyCenterKeystoneA.0"
       },
       {
         "ObjectName": "Texture2D'FortFoundationTilingBrickT2M'",

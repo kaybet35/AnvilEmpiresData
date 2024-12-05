@@ -1,6 +1,9 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleStraight01_C : ABPUnderworldModuleDynamicPrefab_C
+---@field ['Fill Light 010'] UPointLightComponent
+---@field ['Fill Light 09'] UPointLightComponent
+---@field ['Fill Light 08'] UPointLightComponent
 ---@field ChildActorWolfElite UChildActorComponent
 ---@field ChildActorIronPile UChildActorComponent
 ---@field ChildActorBat UChildActorComponent

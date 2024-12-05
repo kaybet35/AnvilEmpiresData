@@ -2,13 +2,15 @@
 
 ---@class ABPVisFamilyCenterKeystoneT1_C : AVisFamilyCenter
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field StaticMesh1 UStaticMeshComponent
----@field StaticMesh UStaticMeshComponent
----@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
----@field VisTeamMesh UVisTeamMeshComponent
 ---@field CollapsedMesh UVisStaticMeshComponent
----@field MeshVisibilityData UMeshVisibilityDataComponent
+---@field VisFamilyMesh UVisFamilyMeshComponent
+---@field VerticalEdge02 UVisFoundationEdgeMeshDecorComponent
+---@field VerticalEdge01 UVisFoundationEdgeMeshDecorComponent
+---@field VerticalEdge03 UVisFoundationEdgeMeshDecorComponent
+---@field VerticalEdge04 UVisFoundationEdgeMeshDecorComponent
 ---@field HouseMesh UVisStaticMeshComponent
+---@field Scene USceneComponent
+---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field GrassRemovalFamilyArea UGrassRemovalVolumeComponent
 ---@field Audio UAudioComponent
 ---@field RangeMarkerVisibility boolean

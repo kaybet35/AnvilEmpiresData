@@ -24,7 +24,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisWorldEntrance_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.10"
       }
     },
     "SuperStruct": {
@@ -32,6 +32,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BarrierVisualizer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "Arrow",
@@ -75,10 +86,28 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisWorldEntrance_C'Default__BPVisWorldEntrance_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.3"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.4"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BarrierVisualizer_GEN_VARIABLE",
+    "Outer": "BPVisWorldEntrance_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 100.0,
+        "Y": 1000.0,
+        "Z": 300.0
+      },
+      "RelativeLocation": {
+        "X": -500.0,
+        "Y": 0.0,
+        "Z": 300.0
+      }
     }
   },
   {
@@ -88,8 +117,8 @@
     "Class": "UScriptClass'BoxComponent'",
     "Properties": {
       "BoxExtent": {
-        "X": 200.0,
-        "Y": 200.0,
+        "X": 400.0,
+        "Y": 600.0,
         "Z": 300.0
       },
       "RelativeLocation": {
@@ -137,16 +166,38 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisWorldEntrance_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.5"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWorldEntrance_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWorldEntrance_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.7"
         }
       ],
       "VariableGuid": "935F3F43-4AEE527C-D635D095-2C4FA633",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPVisWorldEntrance_C:BarrierVisualizer_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.2"
+      },
+      "VariableGuid": "BE985183-4A3D3256-0D49E488-F42FC2B8",
+      "InternalVariableName": "BarrierVisualizer"
     }
   },
   {
@@ -179,12 +230,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BoxComponent'BPVisWorldEntrance_C:EntranceVisualizer_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.3"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWorldEntrance_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.6"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.8"
         }
       ],
       "VariableGuid": "9C548C2D-46F50A4F-904529AC-DF5F24E2",
@@ -200,26 +251,30 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWorldEntrance_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.5"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.6"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWorldEntrance_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.5"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.6"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntrance_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.9"
         },
         {
           "ObjectName": "SCS_Node'BPVisWorldEntrance_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.6"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWorldEntrance_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.7"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisWorldEntrance_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisWorldEntrance.6"
       }
     }
   }
