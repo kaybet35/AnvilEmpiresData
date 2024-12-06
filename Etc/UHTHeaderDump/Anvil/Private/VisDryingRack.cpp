@@ -6,8 +6,8 @@ AVisDryingRack::AVisDryingRack(const FObjectInitializer& ObjectInitializer) : Su
     this->DryingItemMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("DryingItemMesh"));
     this->DryingRackProxy = NULL;
     this->DryingItemMeshMaterial = NULL;
-    this->BaseMesh->SetupAttachment(RootComponent);
     this->DryingItemMesh->SetupAttachment(BaseMesh);
+    this->BaseMesh->SetupAttachment(RootComponent);
 }
 
 
