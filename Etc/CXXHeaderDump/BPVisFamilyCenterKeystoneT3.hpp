@@ -4,8 +4,8 @@
 class ABPVisFamilyCenterKeystoneT3_C : public AVisFamilyCenter
 {
     FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0528 (size: 0x8)
-    class UVisFamilyMeshComponent* VisFamilyMesh;                                     // 0x0530 (size: 0x8)
-    class UVisStaticMeshComponent* CollapsedMesh;                                     // 0x0538 (size: 0x8)
+    class UVisStaticMeshComponent* CollapsedMesh;                                     // 0x0530 (size: 0x8)
+    class UVisFamilyMeshComponent* VisFamilyMesh;                                     // 0x0538 (size: 0x8)
     class UVisFoundationEdgeMeshDecorComponent* VerticalEdge04;                       // 0x0540 (size: 0x8)
     class UVisFoundationEdgeMeshDecorComponent* VerticalEdge03;                       // 0x0548 (size: 0x8)
     class UVisFoundationEdgeMeshDecorComponent* VerticalEdge01;                       // 0x0550 (size: 0x8)

@@ -2,8 +2,8 @@
 
 ---@class ABPVisFamilyCenterKeystoneT3_C : AVisFamilyCenter
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field VisFamilyMesh UVisFamilyMeshComponent
 ---@field CollapsedMesh UVisStaticMeshComponent
+---@field VisFamilyMesh UVisFamilyMeshComponent
 ---@field VerticalEdge04 UVisFoundationEdgeMeshDecorComponent
 ---@field VerticalEdge03 UVisFoundationEdgeMeshDecorComponent
 ---@field VerticalEdge01 UVisFoundationEdgeMeshDecorComponent

@@ -11,8 +11,6 @@ UWorldTownCenterMapIcon::UWorldTownCenterMapIcon() {
     this->NumReinforcementSuppliesStatus = NULL;
     this->TownWarningText = NULL;
     this->DetectionRangeCircle = NULL;
-    this->FlashingFrequency = 0.00f;
-    this->FlashingMinOpacity = 0.00f;
 }
 
 ESlateVisibility UWorldTownCenterMapIcon::GetTownWarningTextVisibility() {

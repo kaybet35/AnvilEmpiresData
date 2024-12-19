@@ -1,0 +1,64 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "GraveThrushIdle_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'GraveThrushIdle_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/GraveThrush/GraveThrushIdle_Cue.1"
+      },
+      "VolumeMultiplier": 1.2,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'A-B'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX_Master/A-B.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'AmbientConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/AmbientConcurrency.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 3
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 3800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'AmbientPositional'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/AmbientPositional.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "GraveThrushIdle_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'GraveThrushIdle_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/GraveThrush/GraveThrushIdle_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "GraveThrushIdle_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Ambient/GraveThrush/GraveThrushIdle01.GraveThrushIdle01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'GraveThrushIdle01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/GraveThrush/GraveThrushIdle01.0"
+    }
+  }
+]

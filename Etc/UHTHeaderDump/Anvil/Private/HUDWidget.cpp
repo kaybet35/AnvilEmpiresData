@@ -18,6 +18,7 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->PrimaryEquipmentItem = NULL;
     this->SecondaryEquipmentItem = NULL;
     this->GuardBar = NULL;
+    this->GuardBarMaxSlider = NULL;
     this->GuardStatusWidget = NULL;
     this->GuardStrengthLeftIcon = NULL;
     this->GuardStrengthCenterIcon = NULL;

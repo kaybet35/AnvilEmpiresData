@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "GridFoundationWallDoorDiagonal_C'Default__GridFoundationWallDoorDiagonal_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal.7"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal.8"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -104,6 +104,19 @@
     }
   },
   {
+    "Type": "GateProxyComponent",
+    "Name": "GateProxyComponent_0",
+    "Outer": "Default__GridFoundationWallDoorDiagonal_C",
+    "Class": "UScriptClass'GateProxyComponent'",
+    "Properties": {
+      "AutoCloseRange": 700.0,
+      "BreachProbCurve": {
+        "ObjectName": "CurveFloat'GateBreachProbT3'",
+        "ObjectPath": "Anvil/Content/Blueprints/Data/Curves/GateBreachProbT3.0"
+      }
+    }
+  },
+  {
     "Type": "GridFoundationWallDoorDiagonal_C",
     "Name": "Default__GridFoundationWallDoorDiagonal_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal.GridFoundationWallDoorDiagonal_C'",
@@ -114,19 +127,19 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__GridFoundationWallDoorDiagonal_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__GridFoundationWallDoorDiagonal_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal.9"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__GridFoundationWallDoorDiagonal_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__GridFoundationWallDoorDiagonal_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__GridFoundationWallDoorDiagonal_C:DestroyableComp'",
@@ -150,11 +163,17 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__GridFoundationWallDoorDiagonal_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal.11"
       },
       "CodeNameString": "GridFoundationWallDoorDiagonal",
       "CodeName": -5548419,
       "bGenerateMeshCollisionVaultable": true,
+      "Components": [
+        {
+          "ObjectName": "GateProxyComponent'Default__GridFoundationWallDoorDiagonal_C:GateProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal.7"
+        }
+      ],
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisGridFoundationWallDoorDiagonal_C'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorDiagonal.1"
@@ -228,6 +247,7 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationModularEntity.11"
     },
     "Properties": {
+      "Accessibility": "EAnvilAccessibilityType::FriendlyOnly",
       "bAlwaysAllowAccessWhenScorched": false
     }
   }

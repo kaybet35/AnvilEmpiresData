@@ -1,7 +1,7 @@
 [
   {
     "Type": "BodySetup",
-    "Name": "BodySetup_0",
+    "Name": "BodySetup_1",
     "Outer": "HomesteadModuleCeilingInteriorBranchStraight",
     "Class": "UScriptClass'BodySetup'",
     "Properties": {
@@ -275,19 +275,19 @@
         "CollisionProfileName": "BlockAll"
       }
     },
-    "BodySetupGuid": "33A96DCF44BB5510987110810211EFFE",
+    "BodySetupGuid": "65ED2E174F75A4CFFA78FEB5058F7E06",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 838354,
-        "SizeOnDisk": 838354,
-        "OffsetInFile": "0x256B27"
+        "ElementCount": 1101050,
+        "SizeOnDisk": 1101050,
+        "OffsetInFile": "0x3FCD6F"
       }
     }
   },
   {
     "Type": "NavCollision",
-    "Name": "NavCollision_1",
+    "Name": "NavCollision_2",
     "Outer": "HomesteadModuleCeilingInteriorBranchStraight",
     "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
@@ -295,7 +295,7 @@
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1041,
         "SizeOnDisk": 1041,
-        "OffsetInFile": "0x32363B"
+        "OffsetInFile": "0x509AAB"
       }
     }
   },
@@ -307,31 +307,15 @@
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant'HomesteadWoodRoofT1'",
-            "ObjectPath": "Anvil/Content/Materials/Structures/HomesteadWoodRoofT1.0"
+            "ObjectName": "MaterialInstanceConstant'HomesteadPlankAndStone'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/HomesteadPlankAndStone.0"
           },
-          "MaterialSlotName": "HomesteadRoofT1",
-          "ImportedMaterialSlotName": "HomesteadRoofT1",
+          "MaterialSlotName": "HomesteadPlank_003",
+          "ImportedMaterialSlotName": "HomesteadPlank_003",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 256.75992,
-            "LocalUVDensities[1]": 0.0,
-            "LocalUVDensities[2]": 0.0,
-            "LocalUVDensities[3]": 0.0
-          }
-        },
-        {
-          "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant'HomesteadPlankT1'",
-            "ObjectPath": "Anvil/Content/Materials/Structures/HomesteadPlankT1.0"
-          },
-          "MaterialSlotName": "HomesteadWoodPlankT1_005",
-          "ImportedMaterialSlotName": "HomesteadWoodPlankT1_005",
-          "UVChannelData": {
-            "bInitialized": true,
-            "bOverrideDensities": false,
-            "LocalUVDensities": 2494.5425,
+            "LocalUVDensities": 345.41272,
             "LocalUVDensities[1]": 0.0,
             "LocalUVDensities[2]": 0.0,
             "LocalUVDensities[3]": 0.0
@@ -342,12 +326,12 @@
             "ObjectName": "MaterialInstanceConstant'HomesteadLogT1'",
             "ObjectPath": "Anvil/Content/Materials/Structures/HomesteadLogT1.0"
           },
-          "MaterialSlotName": "HomesteadLogT1_004",
-          "ImportedMaterialSlotName": "HomesteadLogT1_004",
+          "MaterialSlotName": "HomesteadLogT1",
+          "ImportedMaterialSlotName": "HomesteadLogT1",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 180.3895,
+            "LocalUVDensities": 189.75105,
             "LocalUVDensities[1]": 0.0,
             "LocalUVDensities[2]": 0.0,
             "LocalUVDensities[3]": 0.0
@@ -355,15 +339,31 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant'HomesteadPlankAndStone'",
-            "ObjectPath": "Anvil/Content/Materials/Structures/HomesteadPlankAndStone.0"
+            "ObjectName": "MaterialInstanceConstant'HomesteadLogEndT1'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/HomesteadLogEndT1.0"
           },
-          "MaterialSlotName": "HomesteadPlank_003",
-          "ImportedMaterialSlotName": "HomesteadPlank_003",
+          "MaterialSlotName": "HomesteadLogendT1_001",
+          "ImportedMaterialSlotName": "HomesteadLogendT1_001",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 344.41458,
+            "LocalUVDensities": 196.85895,
+            "LocalUVDensities[1]": 0.0,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'HomesteadShinglesT1'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/HomesteadShinglesT1.0"
+          },
+          "MaterialSlotName": "HomesteadShingles",
+          "ImportedMaterialSlotName": "HomesteadShingles",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 304.49817,
             "LocalUVDensities[1]": 0.0,
             "LocalUVDensities[2]": 0.0,
             "LocalUVDensities[3]": 0.0
@@ -374,27 +374,27 @@
       "LightMapCoordinateIndex": 1,
       "ExtendedBounds": {
         "Origin": {
-          "X": 0.0,
-          "Y": -16.423622,
-          "Z": 292.65585
+          "X": 0.3998413,
+          "Y": -14.641251,
+          "Z": 275.34503
         },
         "BoxExtent": {
-          "X": 177.4047,
-          "Y": 193.82822,
-          "Z": 292.80783
+          "X": 177.85637,
+          "Y": 192.09769,
+          "Z": 275.497
         },
-        "SphereRadius": 371.83840496387296
+        "SphereRadius": 357.9032943473749
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup'HomesteadModuleCeilingInteriorBranchStraight:BodySetup_0'",
+      "ObjectName": "BodySetup'HomesteadModuleCeilingInteriorBranchStraight:BodySetup_1'",
       "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModuleCeilingInteriorBranchStraight.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision'HomesteadModuleCeilingInteriorBranchStraight:NavCollision_1'",
+      "ObjectName": "NavCollision'HomesteadModuleCeilingInteriorBranchStraight:NavCollision_2'",
       "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModuleCeilingInteriorBranchStraight.1"
     },
-    "LightingGuid": "1F0B86CB-4F4F4574-14474593-58BFFB90",
+    "LightingGuid": "A742BC1A-4001DDB9-E601B2B2-A8ECE5EA",
     "RenderData": {
       "LODs": [
         {
@@ -402,9 +402,9 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 51,
+              "NumTriangles": 14102,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 92,
+              "MaxVertexIndex": 10989,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -412,10 +412,10 @@
             },
             {
               "MaterialIndex": 1,
-              "FirstIndex": 153,
-              "NumTriangles": 6,
-              "MinVertexIndex": 93,
-              "MaxVertexIndex": 110,
+              "FirstIndex": 42306,
+              "NumTriangles": 1856,
+              "MinVertexIndex": 10990,
+              "MaxVertexIndex": 12303,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -423,10 +423,10 @@
             },
             {
               "MaterialIndex": 2,
-              "FirstIndex": 171,
-              "NumTriangles": 2644,
-              "MinVertexIndex": 111,
-              "MaxVertexIndex": 2146,
+              "FirstIndex": 47874,
+              "NumTriangles": 1558,
+              "MinVertexIndex": 10991,
+              "MaxVertexIndex": 13980,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -434,10 +434,10 @@
             },
             {
               "MaterialIndex": 3,
-              "FirstIndex": 8103,
-              "NumTriangles": 14102,
-              "MinVertexIndex": 2147,
-              "MaxVertexIndex": 13136,
+              "FirstIndex": 52548,
+              "NumTriangles": 4108,
+              "MinVertexIndex": 13981,
+              "MaxVertexIndex": 21580,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -447,11 +447,11 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 13137
+            "NumVertices": 21581
           },
           "VertexBuffer": {
-            "NumTexCoords": 2,
-            "NumVertices": 13137,
+            "NumTexCoords": 5,
+            "NumVertices": 21581,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
@@ -463,14 +463,14 @@
           "CardRepresentationData": {
             "Bounds": {
               "Min": {
-                "X": -178.4047,
-                "Y": -211.25183,
+                "X": -178.45653,
+                "Y": -207.73894,
                 "Z": -1.1519775
               },
               "Max": {
-                "X": 178.4047,
-                "Y": 178.4046,
-                "Z": 586.4637
+                "X": 179.25621,
+                "Y": 178.45644,
+                "Z": 551.84204
               },
               "IsValid": 1
             },
@@ -495,14 +495,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": -11.568893,
-                    "Y": -16.423615,
-                    "Z": 292.65585
+                    "X": 0.3998413,
+                    "Y": -14.641251,
+                    "Z": 275.34503
                   },
                   "Extent": {
-                    "X": 194.82822,
-                    "Y": 293.80783,
-                    "Z": 176.83578
+                    "X": 190.09169,
+                    "Y": 276.497,
+                    "Z": 188.85635
                   }
                 },
                 "LODLevel": 0,
@@ -526,14 +526,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": 11.568893,
-                    "Y": -16.423615,
-                    "Z": 292.65585
+                    "X": 0.3998413,
+                    "Y": -14.641251,
+                    "Z": 275.34503
                   },
                   "Extent": {
-                    "X": 194.82822,
-                    "Y": 293.80783,
-                    "Z": 176.83578
+                    "X": 190.09169,
+                    "Y": 276.497,
+                    "Z": 188.85635
                   }
                 },
                 "LODLevel": 0,
@@ -557,14 +557,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": 1.5258789E-05,
-                    "Y": -27.022781,
-                    "Z": 292.65585
+                    "X": 0.3998413,
+                    "Y": -14.641235,
+                    "Z": 275.34503
                   },
                   "Extent": {
-                    "X": 178.4047,
-                    "Y": 293.80783,
-                    "Z": 194.22905
+                    "X": 172.81064,
+                    "Y": 276.497,
+                    "Z": 203.09769
                   }
                 },
                 "LODLevel": 0,
@@ -588,14 +588,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": 1.5258789E-05,
-                    "Y": 49.26451,
-                    "Z": 292.65585
+                    "X": 0.3998413,
+                    "Y": 0.5022888,
+                    "Z": 275.34503
                   },
                   "Extent": {
-                    "X": 178.4047,
-                    "Y": 293.80783,
-                    "Z": 139.14009
+                    "X": 172.81064,
+                    "Y": 276.497,
+                    "Z": 187.95416
                   }
                 },
                 "LODLevel": 0,
@@ -619,14 +619,14 @@
                     "Z": -1.0
                   },
                   "Origin": {
-                    "X": 1.5258789E-05,
-                    "Y": -16.423615,
-                    "Z": 278.47437
+                    "X": 0.3998413,
+                    "Y": -14.641251,
+                    "Z": 261.7045
                   },
                   "Extent": {
-                    "X": 178.4047,
-                    "Y": 194.82822,
-                    "Z": 289.62634
+                    "X": 172.81064,
+                    "Y": 190.09169,
+                    "Z": 272.85648
                   }
                 },
                 "LODLevel": 0,
@@ -650,14 +650,14 @@
                     "Z": 1.0
                   },
                   "Origin": {
-                    "X": 1.5258789E-05,
-                    "Y": -16.423615,
-                    "Z": 435.3783
+                    "X": 0.3998413,
+                    "Y": -14.641251,
+                    "Z": 427.23407
                   },
                   "Extent": {
-                    "X": 178.4047,
-                    "Y": 194.82822,
-                    "Z": 161.0854
+                    "X": 172.81064,
+                    "Y": 190.09169,
+                    "Z": 134.60797
                   }
                 },
                 "LODLevel": 0,
@@ -671,9 +671,9 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 46,
+              "NumTriangles": 6223,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 88,
+              "MaxVertexIndex": 6556,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -681,10 +681,10 @@
             },
             {
               "MaterialIndex": 1,
-              "FirstIndex": 138,
-              "NumTriangles": 6,
-              "MinVertexIndex": 89,
-              "MaxVertexIndex": 106,
+              "FirstIndex": 18669,
+              "NumTriangles": 296,
+              "MinVertexIndex": 6557,
+              "MaxVertexIndex": 6912,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -692,10 +692,10 @@
             },
             {
               "MaterialIndex": 2,
-              "FirstIndex": 156,
-              "NumTriangles": 886,
-              "MinVertexIndex": 107,
-              "MaxVertexIndex": 1096,
+              "FirstIndex": 19557,
+              "NumTriangles": 801,
+              "MinVertexIndex": 6570,
+              "MaxVertexIndex": 8023,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -703,24 +703,24 @@
             },
             {
               "MaterialIndex": 3,
-              "FirstIndex": 2814,
-              "NumTriangles": 7464,
-              "MinVertexIndex": 1097,
-              "MaxVertexIndex": 8460,
+              "FirstIndex": 21960,
+              "NumTriangles": 3492,
+              "MinVertexIndex": 8024,
+              "MaxVertexIndex": 15007,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
               "bVisibleInRayTracing": true
             }
           ],
-          "MaxDeviation": 15.867236,
+          "MaxDeviation": 20.394667,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 8461
+            "NumVertices": 15008
           },
           "VertexBuffer": {
-            "NumTexCoords": 2,
-            "NumVertices": 8461,
+            "NumTexCoords": 5,
+            "NumVertices": 15008,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
@@ -735,9 +735,9 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 39,
+              "NumTriangles": 1631,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 81,
+              "MaxVertexIndex": 2510,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -745,10 +745,10 @@
             },
             {
               "MaterialIndex": 1,
-              "FirstIndex": 117,
-              "NumTriangles": 6,
-              "MinVertexIndex": 82,
-              "MaxVertexIndex": 99,
+              "FirstIndex": 4893,
+              "NumTriangles": 163,
+              "MinVertexIndex": 2511,
+              "MaxVertexIndex": 2733,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -756,10 +756,10 @@
             },
             {
               "MaterialIndex": 2,
-              "FirstIndex": 135,
-              "NumTriangles": 542,
-              "MinVertexIndex": 100,
-              "MaxVertexIndex": 760,
+              "FirstIndex": 5382,
+              "NumTriangles": 204,
+              "MinVertexIndex": 2512,
+              "MaxVertexIndex": 3047,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -767,24 +767,24 @@
             },
             {
               "MaterialIndex": 3,
-              "FirstIndex": 1761,
-              "NumTriangles": 3613,
-              "MinVertexIndex": 761,
-              "MaxVertexIndex": 5451,
+              "FirstIndex": 5994,
+              "NumTriangles": 3408,
+              "MinVertexIndex": 3048,
+              "MaxVertexIndex": 9947,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
               "bVisibleInRayTracing": true
             }
           ],
-          "MaxDeviation": 35.390347,
+          "MaxDeviation": 138.92589,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 5452
+            "NumVertices": 9948
           },
           "VertexBuffer": {
-            "NumTexCoords": 2,
-            "NumVertices": 5452,
+            "NumTexCoords": 5,
+            "NumVertices": 9948,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
@@ -799,9 +799,9 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 36,
+              "NumTriangles": 621,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 74,
+              "MaxVertexIndex": 1058,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -809,10 +809,10 @@
             },
             {
               "MaterialIndex": 1,
-              "FirstIndex": 108,
-              "NumTriangles": 6,
-              "MinVertexIndex": 75,
-              "MaxVertexIndex": 92,
+              "FirstIndex": 1863,
+              "NumTriangles": 120,
+              "MinVertexIndex": 1059,
+              "MaxVertexIndex": 1238,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -820,10 +820,10 @@
             },
             {
               "MaterialIndex": 2,
-              "FirstIndex": 126,
-              "NumTriangles": 231,
-              "MinVertexIndex": 93,
-              "MaxVertexIndex": 437,
+              "FirstIndex": 2223,
+              "NumTriangles": 96,
+              "MinVertexIndex": 1060,
+              "MaxVertexIndex": 1410,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -831,24 +831,24 @@
             },
             {
               "MaterialIndex": 3,
-              "FirstIndex": 819,
-              "NumTriangles": 1827,
-              "MinVertexIndex": 438,
-              "MaxVertexIndex": 3230,
+              "FirstIndex": 2511,
+              "NumTriangles": 1866,
+              "MinVertexIndex": 1411,
+              "MaxVertexIndex": 5896,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
               "bVisibleInRayTracing": true
             }
           ],
-          "MaxDeviation": 126.19673,
+          "MaxDeviation": 337.48627,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 3231
+            "NumVertices": 5897
           },
           "VertexBuffer": {
-            "NumTexCoords": 2,
-            "NumVertices": 3231,
+            "NumTexCoords": 5,
+            "NumVertices": 5897,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
@@ -865,7 +865,7 @@
           "BulkDataFlags": "BULKDATA_None",
           "ElementCount": 0,
           "SizeOnDisk": 0,
-          "OffsetInFile": "0x4ABACD"
+          "OffsetInFile": "0x7F7F91"
         },
         "ImposterAtlas": [],
         "HierarchyNodes": [],
@@ -885,23 +885,23 @@
       },
       "Bounds": {
         "Origin": {
-          "X": 0.0,
-          "Y": -16.423622,
-          "Z": 292.65585
+          "X": 0.3998413,
+          "Y": -14.641251,
+          "Z": 275.34503
         },
         "BoxExtent": {
-          "X": 177.4047,
-          "Y": 193.82822,
-          "Z": 292.80783
+          "X": 177.85637,
+          "Y": 192.09769,
+          "Z": 275.497
         },
-        "SphereRadius": 371.8384
+        "SphereRadius": 357.9033
       },
       "bLODsShareStaticLighting": true,
       "ScreenSize": [
         2.0,
-        0.34881982,
-        0.17537579,
-        0.052939907,
+        0.2747538,
+        0.046460915,
+        0.019424262,
         0.0,
         0.0,
         0.0,

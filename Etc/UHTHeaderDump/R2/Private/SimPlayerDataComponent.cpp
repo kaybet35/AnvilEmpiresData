@@ -6,7 +6,9 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->CurrentMovementMode = EAnvilMovementMode::Walking;
     this->GuardMeter = 0.00f;
     this->Stability = 0.00f;
+    this->StabilityTarget = 0.00f;
     this->StabilityGuardThreshold = 0.00f;
+    this->bIsStabilityCooldownActive = 0;
     this->CurrentActivitySpeedModifier = 0.00f;
     this->CurrentActivityChainIndex = 0;
     this->ActivityState = EAnvilSimActivityState::None;
@@ -33,6 +35,7 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->bIsMeshHidden = false;
     this->bMouseSelectCeiling = false;
     this->bIsReinforcing = false;
+    this->bIsFalling = false;
     this->SecondsUntilFullDecay = 0.00f;
     this->HeldItemLightSourceRadius = 0.00f;
     this->FoodTypesOnCooldownBits = 0;

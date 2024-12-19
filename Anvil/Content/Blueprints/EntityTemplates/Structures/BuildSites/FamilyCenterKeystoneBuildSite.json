@@ -72,21 +72,19 @@
         "ObjectName": "BlueprintGeneratedClass'FamilyCenterKeystoneT1_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT1.0"
       },
+      "BuildArea": {
+        "TownArea": true,
+        "SmallCampArea": true,
+        "LargeCampArea": true,
+        "HomesteadArea": true,
+        "WildernessAreaFriendlyRequired": true
+      },
+      "BuildRules": {
+        "bBuildableInWildernessWithoutPledge": true
+      },
       "RequiredTool": "EAnvilToolType::Hands",
-      "bRequiresTerritoryOwnership": true,
       "MaxHeightShift": 300.0,
       "AdditionalMaxHeightShift": 300.0,
-      "MinDistBetweenStructs": [
-        {
-          "CodeName": {
-            "ObjectName": "BlueprintGeneratedClass'FamilyCenterKeystoneBuildSite_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyCenterKeystoneBuildSite.0"
-          },
-          "CodeNameVisVar": 0,
-          "Range": 9000.0,
-          "NumLimit": 0
-        }
-      ],
       "MaterialRequirements": [
         {
           "CodeName": 1175186297,
@@ -182,9 +180,6 @@
     "Template": {
       "ObjectName": "HealthProxyComponent'Default__BPBaseBuildSiteEntity_C:HealthProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.6"
-    },
-    "Properties": {
-      "MaxHealth": 50.0
     }
   },
   {
@@ -195,9 +190,6 @@
     "Template": {
       "ObjectName": "StructureProxyComponent'Default__BPBaseBuildSiteEntity_C:StructureProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.7"
-    },
-    "Properties": {
-      "StructureType": "EAnvilBuildStructureType::Foundations"
     }
   },
   {

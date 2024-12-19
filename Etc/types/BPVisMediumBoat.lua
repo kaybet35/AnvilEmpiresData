@@ -7,7 +7,7 @@
 ---@field WaterStatic UNiagaraComponent
 ---@field CullVolume UStaticMeshComponent
 ---@field SkeletalMesh USkeletalMeshComponent
----@field Idle UAudioComponent
+---@field idle UAudioComponent
 ---@field Arrow UArrowComponent
 ABPVisMediumBoat_C = {}
 

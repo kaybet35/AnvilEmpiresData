@@ -1,10 +1,11 @@
 #include "AdminEnvDataComponent.h"
 
 UAdminEnvDataComponent::UAdminEnvDataComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->bDebugDrawHook = false;
-    this->bShowStructureStatsHook = false;
-    this->bShowWeatherStatsHook = false;
-    this->bFastReinforcementsAlertCooldown = false;
+    this->bFreeBuild = false;
+    this->bDebugDraw = false;
+    this->bGodMode = false;
+    this->bShowStructureStats = false;
+    this->bShowWeatherStats = false;
 }
 
 

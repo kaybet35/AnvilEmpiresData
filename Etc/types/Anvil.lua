@@ -1200,7 +1200,6 @@ FWeatherManager = {}
 ---@field CallForReinforcementsCue USoundCue
 UActionButtonWidget = {}
 
-function UActionButtonWidget:OnHovered() end
 function UActionButtonWidget:OnClicked() end
 ---@return boolean
 function UActionButtonWidget:IsActionButtonEnabled() end
@@ -1354,6 +1353,7 @@ function UAnvilDropdownEntryWidget:OnOptionSelected(SelectedItem, SelectionType)
 ---@field WeatherManager FWeatherManager
 ---@field OptionsManager FAnvilOptionsManager
 ---@field UIGlobalsClass TSubclassOf<AUIGlobals>
+---@field R2ConfigClass TSubclassOf<UEntityTemplate>
 ---@field DirtyLandscapeProxies TArray<ALandscapeProxy>
 ---@field VisActorList TArray<AVisActor>
 ---@field TravelVisActorList TArray<AVisActor>
@@ -1480,8 +1480,6 @@ UBeaconTowerPlayerInfoMapIcon = {}
 
 
 ---@class UBuildMenuStructureButton : UGridItemWidget
----@field TownAreaIconImage UImage
----@field FamilyAreaIconImage UImage
 UBuildMenuStructureButton = {}
 
 ---@param ItemSlot UGridItemWidget
@@ -1499,7 +1497,6 @@ UBuildMenuTabButton = {}
 ---@field StructureButtonGrid UGridPanelWidget
 ---@field TabButtonClass TSubclassOf<UBuildMenuTabButton>
 ---@field TabButtonIcons TMap<EBuildSiteCategory, UTexture2D>
----@field BuildLocation int32
 UBuildMenuWindow = {}
 
 
@@ -1654,8 +1651,12 @@ function UConnectScreen:GetThrobberVisibility() end
 ---@field FuelDurationText UTextBlock
 ---@field CheatSheetCanvasPanel UCanvasPanel
 ---@field CheatSheetTextBlock URichTextBlock
+---@field StartCookingButton UButton
+---@field StartCookingButtonImage UImage
+---@field InvalidRecipeIcon FSlateBrush
 UCookingWindow = {}
 
+function UCookingWindow:OnStartCookingButtonClicked() end
 ---@return ESlateVisibility
 function UCookingWindow:GetFuelDurationTextVisibility() end
 ---@return FText
@@ -1716,6 +1717,8 @@ UDeploymentMapWidget = {}
 
 ---@class UDeploymentPointMapIcon : UWorldEntityMapIcon
 ---@field MapItemButton UButton
+---@field FlashingFrequency float
+---@field FlashingMinOpacity float
 UDeploymentPointMapIcon = {}
 
 function UDeploymentPointMapIcon:OnDeploymentPointClicked() end
@@ -2032,6 +2035,7 @@ UHUDStatsWidget = {}
 ---@field PrimaryEquipmentItem UInventoryItemHUDWidget
 ---@field SecondaryEquipmentItem UInventoryItemHUDWidget
 ---@field GuardBar UProgressBar
+---@field GuardBarMaxSlider USlider
 ---@field GuardStatusWidget UPanelWidget
 ---@field GuardStrengthLeftIcon UImage
 ---@field GuardStrengthCenterIcon UImage
@@ -2660,8 +2664,6 @@ UTooltipWidget = {}
 
 ---@class UTownCenterMapIcon : UMapIcon
 ---@field TownCenter AVisTownCenter
----@field FlashingFrequency float
----@field FlashingMinOpacity float
 ---@field IconButton UButton
 ---@field TownName UTextBlock
 ---@field TownNameBorder UBorder
@@ -2899,6 +2901,7 @@ UVisMultiItemStockpileComponent = {}
 ---@field bWantsToPush boolean
 ---@field bIsPushing boolean
 ---@field bIsSwimming boolean
+---@field bNativeIsFalling boolean
 UVisPlayerAnimInstance = {}
 
 
@@ -3088,8 +3091,6 @@ function UWorldMarketShopMapIcon:OnIconClicked() end
 ---@field NumReinforcementSuppliesStatus UStatusWidget
 ---@field TownWarningText UTextBlock
 ---@field DetectionRangeCircle UImage
----@field FlashingFrequency float
----@field FlashingMinOpacity float
 UWorldTownCenterMapIcon = {}
 
 ---@return ESlateVisibility
@@ -3110,5 +3111,9 @@ function UWorldTownCenterMapIcon:GetNumReinforcementSuppliesText() end
 function UWorldTownCenterMapIcon:GetNumPledgedVisibility() end
 ---@return FText
 function UWorldTownCenterMapIcon:GetNumPledgedText() end
+
+
+---@class UWorldWildSpawnMapIcon : UDeploymentPointMapIcon
+UWorldWildSpawnMapIcon = {}
 
 

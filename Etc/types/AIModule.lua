@@ -58,8 +58,8 @@ function AAIController:MoveToLocation(Dest, AcceptanceRadius, bStopOnOverlap, bU
 function AAIController:MoveToActor(Goal, AcceptanceRadius, bStopOnOverlap, bUsePathfinding, bCanStrafe, FilterClass, bAllowPartialPath) end
 ---@param NewFocus AActor
 function AAIController:K2_SetFocus(NewFocus) end
----@param FP FVector
-function AAIController:K2_SetFocalPoint(FP) end
+---@param Fp FVector
+function AAIController:K2_SetFocalPoint(Fp) end
 function AAIController:K2_ClearFocus() end
 ---@return boolean
 function AAIController:HasPartialPath() end

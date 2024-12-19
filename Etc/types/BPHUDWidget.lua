@@ -7,6 +7,7 @@
 ---@field BPHUDHintWidget UBPHUDHintWidget_C
 ---@field BPRestedStatusWidget UBPRestedStatusWidget_C
 ---@field BPTemperatureStatusWidget UBPTemperatureStatusWidget_C
+---@field GuardThresholdIndicator UImage
 ---@field Image UImage
 ---@field PreAlphaBadge UImage
 UBPHUDWidget_C = {}

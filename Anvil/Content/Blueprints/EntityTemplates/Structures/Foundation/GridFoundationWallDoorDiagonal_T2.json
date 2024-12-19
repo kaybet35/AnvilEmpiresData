@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "GridFoundationWallDoorDiagonal_T2_C'Default__GridFoundationWallDoorDiagonal_T2_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.7"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.8"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -104,6 +104,19 @@
     }
   },
   {
+    "Type": "GateProxyComponent",
+    "Name": "GateProxyComponent_0",
+    "Outer": "Default__GridFoundationWallDoorDiagonal_T2_C",
+    "Class": "UScriptClass'GateProxyComponent'",
+    "Properties": {
+      "AutoCloseRange": 700.0,
+      "BreachProbCurve": {
+        "ObjectName": "CurveFloat'GateBreachProbT2'",
+        "ObjectPath": "Anvil/Content/Blueprints/Data/Curves/GateBreachProbT2.0"
+      }
+    }
+  },
+  {
     "Type": "GridFoundationWallDoorDiagonal_T2_C",
     "Name": "Default__GridFoundationWallDoorDiagonal_T2_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.GridFoundationWallDoorDiagonal_T2_C'",
@@ -114,19 +127,19 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__GridFoundationWallDoorDiagonal_T2_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__GridFoundationWallDoorDiagonal_T2_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.9"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__GridFoundationWallDoorDiagonal_T2_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__GridFoundationWallDoorDiagonal_T2_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__GridFoundationWallDoorDiagonal_T2_C:DestroyableComp'",
@@ -150,7 +163,7 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__GridFoundationWallDoorDiagonal_T2_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.11"
       },
       "CodeNameString": "GridFoundationWallDoorDiagonalT2",
       "CodeName": 13224720,
@@ -158,7 +171,11 @@
       "Components": [
         {
           "ObjectName": "UpgradeProxyComponent'Default__GridFoundationWallDoorDiagonal_T2_C:UpgradeProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.13"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.14"
+        },
+        {
+          "ObjectName": "GateProxyComponent'Default__GridFoundationWallDoorDiagonal_T2_C:GateProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationWallDoorDiagonal_T2.7"
         }
       ],
       "VisActorClass": {
@@ -223,6 +240,7 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationModularEntity.11"
     },
     "Properties": {
+      "Accessibility": "EAnvilAccessibilityType::FriendlyOnly",
       "bAlwaysAllowAccessWhenScorched": false
     }
   },

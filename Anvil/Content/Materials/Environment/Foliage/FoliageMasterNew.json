@@ -12,7 +12,7 @@
       "TwoSided": true,
       "bUsedWithNiagaraMeshParticles": true,
       "bUsedWithInstancedStaticMeshes": true,
-      "StateId": "5C0A0BC0-469D47C6-7EB79C95-31B1E9E2"
+      "StateId": "792BB22E-4FF14DC0-CF9C188C-3ACF2C74"
     },
     "LoadedMaterialResources": [],
     "CachedExpressionData": {
@@ -157,6 +157,36 @@
             "Name": "Rain Roughness Adjust",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
+          },
+          {
+            "Name": "From Cam Fade",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Roughness Hack Contrast",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Roughness Hack Grey Blend",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Roughness Hack Levels",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "From Cam Fade Levels",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "From Cam Fade Tighten",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
           }
         ]
       },
@@ -235,6 +265,12 @@
         -1,
         -1,
         -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
         -1
       ],
       "VectorPrimitiveDataIndexValues": [
@@ -270,7 +306,13 @@
         15.0,
         0.1,
         10.0,
-        0.15
+        0.15,
+        1000.0,
+        0.44,
+        0.5,
+        2.0,
+        1.0,
+        1.0
       ],
       "VectorValues": [
         {
@@ -365,6 +407,14 @@
         {
           "ObjectName": "Texture2D'RainDropMap'",
           "ObjectPath": "Anvil/Content/FX/Textures/RainDropMap.0"
+        },
+        {
+          "ObjectName": "Texture2D'Good64x64TilingNoiseHighFreq'",
+          "ObjectPath": "Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.0"
+        },
+        {
+          "ObjectName": "Texture2D'TreePineTrunk_N'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Trees/Textures/TreePineTrunk_N.0"
         }
       ],
       "FunctionInfos": [
@@ -605,6 +655,48 @@
             "ObjectName": "MaterialFunction'RainDrop'",
             "ObjectPath": "Anvil/Content/FX/Functions/RainDrop.0"
           }
+        },
+        {
+          "StateId": "DB3E993F-4E2E98B3-05AD13B9-2D8C5DA5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CameraDepthFade'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.0"
+          }
+        },
+        {
+          "StateId": "71028A8D-47BF4037-3A3A0B8A-D7B60E53",
+          "Function": {
+            "ObjectName": "MaterialFunction'ScreenAlignedPixelToPixelUVs'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.0"
+          }
+        },
+        {
+          "StateId": "22D58D0F-45CC84AB-89A3628B-351D83C8",
+          "Function": {
+            "ObjectName": "MaterialFunction'DitherTemporalAA'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.0"
+          }
+        },
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction'LinearGradient'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CheapContrast'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+          }
+        },
+        {
+          "StateId": "F1A8C6A9-4D37E691-BD787485-98A34AB8",
+          "Function": {
+            "ObjectName": "MaterialFunction'RemapValueRange'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions03/Math/RemapValueRange.0"
+          }
         }
       ],
       "ParameterCollectionInfos": [
@@ -649,6 +741,10 @@
         "ObjectPath": "Engine/Content/EngineMaterials/DefaultDiffuse.0"
       },
       {
+        "ObjectName": "Texture2D'Good64x64TilingNoiseHighFreq'",
+        "ObjectPath": "Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.0"
+      },
+      {
         "ObjectName": "Texture2D'AverageNoises01'",
         "ObjectPath": "Anvil/Content/FX/Textures/NoiseMasks/AverageNoises01.0"
       },
@@ -663,6 +759,10 @@
       {
         "ObjectName": "Texture2D'RippleUVs'",
         "ObjectPath": "Anvil/Content/FX/Textures/RippleUVs.0"
+      },
+      {
+        "ObjectName": "Texture2D'TreePineTrunk_N'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Trees/Textures/TreePineTrunk_N.0"
       },
       {
         "ObjectName": "Texture2D'BasketGrassA'",

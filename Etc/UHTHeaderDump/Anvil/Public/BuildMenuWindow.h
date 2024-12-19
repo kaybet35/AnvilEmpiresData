@@ -27,9 +27,6 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EBuildSiteCategory, UTexture2D*> TabButtonIcons;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 BuildLocation;
-    
 public:
     UBuildMenuWindow();
 

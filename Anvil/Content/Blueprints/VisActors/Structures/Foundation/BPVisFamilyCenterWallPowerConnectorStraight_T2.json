@@ -12,14 +12,39 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.18"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:ExecuteUbergraph_BPVisFamilyCenterWallPowerConnectorStraight_T2'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.4"
       }
     },
     "SuperStruct": {
       "ObjectName": "Class'VisStructure'",
       "ObjectPath": "/Script/Anvil"
     },
+    "Children": [
+      {
+        "ObjectName": "Function'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:ReceiveTick'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.5"
+      },
+      {
+        "ObjectName": "Function'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:ExecuteUbergraph_BPVisFamilyCenterWallPowerConnectorStraight_T2'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.4"
+      }
+    ],
     "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "PowerUnitData",
@@ -76,6 +101,16 @@
         }
       }
     ],
+    "FuncMap": {
+      "ExecuteUbergraph_BPVisFamilyCenterWallPowerConnectorStraight_T2": {
+        "ObjectName": "Function'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:ExecuteUbergraph_BPVisFamilyCenterWallPowerConnectorStraight_T2'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.4"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:ReceiveTick'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.5"
+      }
+    },
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -96,9 +131,10 @@
     "Name": "Default__BPVisFamilyCenterWallPowerConnectorStraight_T2_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.BPVisFamilyCenterWallPowerConnectorStraight_T2_C'",
     "Properties": {
+      "UberGraphFrame": {},
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisFamilyCenterWallPowerConnectorStraight_T2_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.26"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'FamilyCenterWallPowerConnectorIcon'",
@@ -108,23 +144,23 @@
       "BuildSiteOrder": 34,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisFamilyCenterWallPowerConnectorStraight_T2_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.25"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisFamilyCenterWallPowerConnectorStraight_T2_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.7"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisFamilyCenterWallPowerConnectorStraight_T2_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.24"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisFamilyCenterWallPowerConnectorStraight_T2_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.23"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisFamilyCenterWallPowerConnectorStraight_T2_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.11"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyCenterWallPowerConnectorStraight_T2_C:ArrowComponent'",
@@ -136,7 +172,7 @@
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisFamilyCenterWallPowerConnectorStraight_T2_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.6"
       },
       "GeneratedScorchEffects": 8,
       "UseWindowType": "EHUDWindowType::GenericStructure",
@@ -186,6 +222,48 @@
     }
   },
   {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPVisFamilyCenterWallPowerConnectorStraight_T2",
+    "Outer": "BPVisFamilyCenterWallPowerConnectorStraight_T2_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BPVisFamilyCenterWallPowerConnectorStraight_T2_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
     "Type": "GrassRemovalVolumeComponent",
     "Name": "GrassRemovalVolume",
     "Outer": "Default__BPVisFamilyCenterWallPowerConnectorStraight_T2_C",
@@ -193,7 +271,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisFamilyCenterWallPowerConnectorStraight_T2_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.20"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyCenterWallPowerConnectorStraight_T2_C:ArrowComponent'",
@@ -243,7 +321,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.9"
       },
       "VariableGuid": "4AE59C32-4E7C4C48-88CE61B9-68337C23",
       "InternalVariableName": "DefaultSceneRoot"
@@ -261,22 +339,22 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:Scene_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.10"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.14"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.16"
         }
       ],
       "VariableGuid": "D2B12C81-4DC1FAE8-9E4636B2-149D7C85",
@@ -295,7 +373,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:StaticMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.21"
       },
       "VariableGuid": "EB3A74CD-41251946-497A4486-8C4F1671",
       "InternalVariableName": "StaticMesh1"
@@ -313,7 +391,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:StaticMesh2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.22"
       },
       "VariableGuid": "20E8CC01-425080BC-EC97F4B8-5A0BDEA4",
       "InternalVariableName": "StaticMesh2"
@@ -331,7 +409,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.19"
       },
       "VariableGuid": "FEDD4681-404057CE-5E366CB6-566FE419",
       "InternalVariableName": "SkeletalMesh"
@@ -349,7 +427,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "PowerUnitDataComponent'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:PowerUnitData_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.8"
       },
       "VariableGuid": "875DEF9C-4C6AA9B7-95C7BDA9-3A704B14",
       "InternalVariableName": "PowerUnitData"
@@ -364,38 +442,38 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.13"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.17"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.11"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.12"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.14"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.17"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisFamilyCenterWallPowerConnectorStraight_T2_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterWallPowerConnectorStraight_T2.12"
       }
     }
   },

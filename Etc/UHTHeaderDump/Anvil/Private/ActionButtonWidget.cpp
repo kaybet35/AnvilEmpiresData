@@ -6,9 +6,6 @@ UActionButtonWidget::UActionButtonWidget() : UUserWidget(FObjectInitializer::Get
     this->CallForReinforcementsCue = NULL;
 }
 
-void UActionButtonWidget::OnHovered() {
-}
-
 void UActionButtonWidget::OnClicked() {
 }
 

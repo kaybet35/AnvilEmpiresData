@@ -11,7 +11,7 @@
       "bUsedWithSplineMeshes": true,
       "bUsedWithInstancedStaticMeshes": true,
       "bUsedWithClothing": true,
-      "StateId": "77485048-4312CF57-DA417EA1-8E5E3466",
+      "StateId": "3354A9C8-4FC35A74-06CFE9A2-F8B26F5D",
       "TextureStreamingData": [
         {
           "SamplingScale": 1.0,
@@ -435,7 +435,17 @@
             "Index": -1
           },
           {
-            "Name": "Param",
+            "Name": "Colour Mask Contast",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Paint Mask Alpha Contrast",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Paint Mask Alpha Value Adjust",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           }
@@ -685,6 +695,8 @@
         -1,
         -1,
         -1,
+        -1,
+        -1,
         -1
       ],
       "VectorPrimitiveDataIndexValues": [
@@ -779,6 +791,8 @@
         3.0,
         1.15,
         0.0,
+        5.0,
+        0.5,
         0.5
       ],
       "VectorValues": [
@@ -1934,10 +1948,24 @@
           }
         },
         {
-          "StateId": "62DC688F-43F7E16F-0CF5F486-8458FADB",
+          "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
           "Function": {
-            "ObjectName": "MaterialFunction'ValueStep'",
-            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ValueStep.0"
+            "ObjectName": "MaterialFunction'CheapContrast'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+          }
+        },
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction'LinearGradient'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CheapContrast'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
           }
         }
       ],

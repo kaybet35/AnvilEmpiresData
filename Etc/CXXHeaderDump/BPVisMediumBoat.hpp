@@ -9,7 +9,7 @@ class ABPVisMediumBoat_C : public AVisBoat
     class UNiagaraComponent* WaterStatic;                                             // 0x0540 (size: 0x8)
     class UStaticMeshComponent* CullVolume;                                           // 0x0548 (size: 0x8)
     class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0550 (size: 0x8)
-    class UAudioComponent* Idle;                                                      // 0x0558 (size: 0x8)
+    class UAudioComponent* idle;                                                      // 0x0558 (size: 0x8)
     class UArrowComponent* Arrow;                                                     // 0x0560 (size: 0x8)
 
 }; // Size: 0x568

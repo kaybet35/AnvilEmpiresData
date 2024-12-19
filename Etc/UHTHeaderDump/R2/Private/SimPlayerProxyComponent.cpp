@@ -13,6 +13,7 @@ USimPlayerProxyComponent::USimPlayerProxyComponent() {
     this->GuardMeterDecaySpeed = 20.00f;
     this->StaggerDuration = 3.50f;
     this->StaggerAmount = 0.50f;
+    this->StabilityRegenCD = 3.00f;
     this->Radius = 30.00f;
     this->HalfHeight = 60.00f;
     this->CrouchedHalfHeight = 35.00f;

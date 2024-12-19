@@ -2,5 +2,6 @@
 
 FWorldEntityWildSpawnData::FWorldEntityWildSpawnData() {
     this->bIsActiveWildSpawn = false;
+    this->bIsWildSpawnNearTown = false;
 }
 

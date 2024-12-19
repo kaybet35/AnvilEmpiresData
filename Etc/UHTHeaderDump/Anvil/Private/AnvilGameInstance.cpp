@@ -7,6 +7,7 @@ UAnvilGameInstance::UAnvilGameInstance() {
     this->CharacterSave = NULL;
     this->AnvilClientVoiceClient = NULL;
     this->UIGlobalsClass = NULL;
+    this->R2ConfigClass = NULL;
 }
 
 void UAnvilGameInstance::GetVisActors(TArray<AVisActor*>& OutVisActorList) {

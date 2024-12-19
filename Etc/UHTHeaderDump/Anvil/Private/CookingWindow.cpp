@@ -10,6 +10,11 @@ UCookingWindow::UCookingWindow() {
     this->FuelDurationText = NULL;
     this->CheatSheetCanvasPanel = NULL;
     this->CheatSheetTextBlock = NULL;
+    this->StartCookingButton = NULL;
+    this->StartCookingButtonImage = NULL;
+}
+
+void UCookingWindow::OnStartCookingButtonClicked() {
 }
 
 ESlateVisibility UCookingWindow::GetFuelDurationTextVisibility() {

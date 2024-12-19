@@ -24,6 +24,7 @@ UVisPlayerAnimInstance::UVisPlayerAnimInstance() {
     this->bWantsToPush = false;
     this->bIsPushing = false;
     this->bIsSwimming = false;
+    this->bNativeIsFalling = false;
 }
 
 

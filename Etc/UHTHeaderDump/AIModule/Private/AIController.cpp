@@ -52,7 +52,7 @@ TEnumAsByte<EPathFollowingRequestResult::Type> AAIController::MoveToActor(AActor
 void AAIController::K2_SetFocus(AActor* NewFocus) {
 }
 
-void AAIController::K2_SetFocalPoint(FVector FP) {
+void AAIController::K2_SetFocalPoint(FVector Fp) {
 }
 
 void AAIController::K2_ClearFocus() {

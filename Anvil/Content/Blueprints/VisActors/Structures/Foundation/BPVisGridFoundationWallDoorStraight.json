@@ -12,11 +12,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.30"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.31"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisStructure'",
+      "ObjectName": "Class'VisGate'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
@@ -261,35 +261,43 @@
     "Name": "Default__BPVisGridFoundationWallDoorStraight_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.BPVisGridFoundationWallDoorStraight_C'",
     "Properties": {
+      "GateDataComponent": {
+        "ObjectName": "GateDataComponent'Default__BPVisGridFoundationWallDoorStraight_C:GateDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.4"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisGridFoundationWallDoorStraight_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.32"
+      },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisGridFoundationWallDoorStraight_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.58"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.60"
       },
       "StructureIcon": {
-        "ObjectName": "Texture2D'IconGridFoundation_wallStraightDoor'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconGridFoundation_wallStraightDoor.0"
+        "ObjectName": "Texture2D'IconGridFoundation_wall_Door'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconGridFoundation_wall_Door.0"
       },
       "BuildSiteCategory": "EBuildSiteCategory::Foundations",
       "BuildSiteOrder": 26,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisGridFoundationWallDoorStraight_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.39"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.41"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisGridFoundationWallDoorStraight_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.6"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisGridFoundationWallDoorStraight_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.38"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.40"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisGridFoundationWallDoorStraight_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.37"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.39"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisGridFoundationWallDoorStraight_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.9"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationWallDoorStraight_C:ArrowComponent'",
@@ -301,13 +309,13 @@
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisGridFoundationWallDoorStraight_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.5"
       },
       "GeneratedScorchEffects": 8,
       "UseWindowType": "EHUDWindowType::GenericStructure",
       "InteractionIcon": {
-        "ObjectName": "Texture2D'IconGridFoundation_wallStraightDoor'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconGridFoundation_wallStraightDoor.0"
+        "ObjectName": "Texture2D'IconGridFoundation_wall_Door'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconGridFoundation_wall_Door.0"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -351,6 +359,12 @@
     }
   },
   {
+    "Type": "GateDataComponent",
+    "Name": "GateDataComponent",
+    "Outer": "Default__BPVisGridFoundationWallDoorStraight_C",
+    "Class": "UScriptClass'GateDataComponent'"
+  },
+  {
     "Type": "GrassRemovalVolumeComponent",
     "Name": "GrassRemovalVolume",
     "Outer": "Default__BPVisGridFoundationWallDoorStraight_C",
@@ -358,7 +372,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisGridFoundationWallDoorStraight_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.31"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.33"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationWallDoorStraight_C:ArrowComponent'",
@@ -402,7 +416,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisGridFoundationWallDoorStraight_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.7"
       },
       "VariableGuid": "4AE59C32-4E7C4C48-88CE61B9-68337C23",
       "InternalVariableName": "DefaultSceneRoot"
@@ -420,38 +434,38 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisGridFoundationWallDoorStraight_C:Scene_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.8"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.27"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.28"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.29"
         },
         {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.30"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_23'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.18"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.19"
         }
       ],
       "VariableGuid": "2189E6F8-49B367F1-6ED6309C-FB1EF5F3",
@@ -470,7 +484,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisRandomMeshDecor20_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.46"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.48"
       },
       "VariableGuid": "80D1D711-4637E80D-B93C3989-4BBCF7CF",
       "InternalVariableName": "VisRandomMeshDecor20"
@@ -488,7 +502,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisRandomMeshDecor21_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.47"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.49"
       },
       "VariableGuid": "F77929B0-4F28B7B8-172372A2-C7CDCBE1",
       "InternalVariableName": "VisRandomMeshDecor21"
@@ -506,7 +520,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisRandomMeshDecor22_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.48"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.50"
       },
       "VariableGuid": "2CA87662-4866909A-EB501ABA-00A0E8ED",
       "InternalVariableName": "VisRandomMeshDecor22"
@@ -524,7 +538,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisFoundationEdgeMeshDecor3_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.42"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.44"
       },
       "VariableGuid": "6E6FC34E-46262BA3-BD8F6CBD-7CFCEA1D",
       "InternalVariableName": "VisFoundationEdgeMeshDecor3"
@@ -542,7 +556,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisRandomMeshDecor23_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.49"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.51"
       },
       "VariableGuid": "EE4DCAB7-4E57038B-1A26A48D-5BC651F7",
       "InternalVariableName": "VisRandomMeshDecor23"
@@ -560,7 +574,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisRandomMeshDecor24_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.50"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.52"
       },
       "VariableGuid": "8DC000A5-4D7783E1-2FED75A6-BE10B548",
       "InternalVariableName": "VisRandomMeshDecor24"
@@ -578,7 +592,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisRandomMeshDecor25_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.51"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.53"
       },
       "VariableGuid": "940B2A45-4D642E40-3A278892-F5A0431C",
       "InternalVariableName": "VisRandomMeshDecor25"
@@ -596,32 +610,32 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisRandomMeshDecor12_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.45"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.47"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_24'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.19"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_25'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.20"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_25'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.21"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_27'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_26'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.22"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_28'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_27'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.23"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_29'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_28'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_29'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.25"
         }
       ],
       "VariableGuid": "625594DC-48C4AC6E-1E2435BD-7F104388",
@@ -640,7 +654,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisRandomMeshDecor26_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.52"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.54"
       },
       "VariableGuid": "E91F895D-43A32FD5-19DDF694-88402D68",
       "InternalVariableName": "VisRandomMeshDecor26"
@@ -658,7 +672,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisRandomMeshDecor27_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.53"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.55"
       },
       "VariableGuid": "9D928B8A-4DAB0486-01E25793-EB23C11F",
       "InternalVariableName": "VisRandomMeshDecor27"
@@ -676,7 +690,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisRandomMeshDecor28_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.54"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.56"
       },
       "VariableGuid": "A333ABCD-454402F7-BA8E568E-3B9FC480",
       "InternalVariableName": "VisRandomMeshDecor28"
@@ -694,7 +708,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisRandomMeshDecor29_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.55"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.57"
       },
       "VariableGuid": "FB470ED1-4B4D090E-4D3917BF-D6C0C7D1",
       "InternalVariableName": "VisRandomMeshDecor29"
@@ -712,7 +726,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisRandomMeshDecor30_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.56"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.58"
       },
       "VariableGuid": "E73811B2-4C67B3BD-BED1AB9F-8EA0650E",
       "InternalVariableName": "VisRandomMeshDecor30"
@@ -730,7 +744,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisRandomMeshDecor31_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.57"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.59"
       },
       "VariableGuid": "20F0845E-41A45A60-2A3D3CA0-6DF07099",
       "InternalVariableName": "VisRandomMeshDecor31"
@@ -748,7 +762,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationWallDoorStraight_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.32"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.34"
       },
       "VariableGuid": "596D0A2D-458A060B-2554BEB2-CC3D9D8C",
       "InternalVariableName": "StaticMesh"
@@ -766,7 +780,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisFoundationEdgeMeshDecor_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.43"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.45"
       },
       "VariableGuid": "E7036AAB-49890AAB-5907A9AC-0EF624D3",
       "InternalVariableName": "VisFoundationEdgeMeshDecor"
@@ -784,7 +798,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisFoundationEdgeMeshDecor2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.41"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.43"
       },
       "VariableGuid": "99BD6FC5-40BDB043-7199B18D-3D3CECB2",
       "InternalVariableName": "VisFoundationEdgeMeshDecor2"
@@ -802,7 +816,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisFoundationEdgeMeshDecor1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.40"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.42"
       },
       "VariableGuid": "71BF9F35-4DF7D5C2-C0133C81-B27AD25F",
       "InternalVariableName": "VisFoundationEdgeMeshDecor1"
@@ -820,32 +834,32 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationWallDoorStraight_C:VisRandomMeshDecor11_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.44"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.46"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.11"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_18'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.12"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_18'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_20'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.15"
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.14"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_20'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.16"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_21'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.18"
         }
       ],
       "VariableGuid": "83D7A3C3-44666481-B557B097-B6B1EB9A",
@@ -861,94 +875,118 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.11"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.10"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.14"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.28"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.29"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_17'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.11"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_18'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.12"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.13"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.15"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_20'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.16"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_21'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.17"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_24'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.19"
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.18"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_24'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.20"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_25'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.21"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_27'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_26'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.22"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_28'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_27'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.23"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_29'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_28'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.24"
         },
         {
+          "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_29'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.25"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_23'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.18"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.19"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisGridFoundationWallDoorStraight_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPVisGridFoundationWallDoorStraight_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'GridFoundation_wall_door_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Foundations/GridFoundation_wall_door_ABP.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'GridFoundation_wall_door_T2_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/GridFoundation_wall_door_T2_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'GridFoundation_wall_door_T2_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/GridFoundation_wall_door_T2_SK.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisGridFoundationWallDoorStraight_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.0"
       }
     }
   },
@@ -1106,7 +1144,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationWallDoorStraight_C:VisFoundationEdgeMeshDecor1_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.33"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.35"
       },
       "RelativeLocation": {
         "X": 165.0,
@@ -1142,7 +1180,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationWallDoorStraight_C:VisFoundationEdgeMeshDecor2_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.34"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.36"
       },
       "RelativeLocation": {
         "X": 165.0,
@@ -1178,7 +1216,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationWallDoorStraight_C:VisFoundationEdgeMeshDecor3_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.35"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.37"
       },
       "RelativeLocation": {
         "X": -165.0,
@@ -1214,7 +1252,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationWallDoorStraight_C:VisFoundationEdgeMeshDecor_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.36"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationWallDoorStraight.38"
       },
       "RelativeLocation": {
         "X": -165.0,

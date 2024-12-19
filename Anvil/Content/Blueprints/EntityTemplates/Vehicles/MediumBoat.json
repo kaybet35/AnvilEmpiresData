@@ -39,7 +39,7 @@
         "Z": 100.0
       },
       "SurfaceType": "EAnvilPhysicalSurfaceType::Wood",
-      "CollisionMask": 16448
+      "CollisionMask": 64
     }
   },
   {
@@ -278,7 +278,7 @@
       "Components": [
         {
           "ObjectName": "VehicleMovementProxyComponent'Default__MediumBoat_C:VehicleMovementProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.14"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.17"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__MediumBoat_C:InventoryProxyComponent_0'",
@@ -306,39 +306,39 @@
         },
         {
           "ObjectName": "RepairProxyComponent'Default__MediumBoat_C:RepairProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.13"
-        },
-        {
-          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.15"
         },
         {
-          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.16"
-        },
-        {
-          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_3'",
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.18"
         },
         {
-          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_4'",
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_1'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.19"
         },
         {
-          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.20"
-        },
-        {
-          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_6'",
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_3'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.21"
         },
         {
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.22"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.23"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.24"
+        },
+        {
           "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.17"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.20"
         },
         {
           "ObjectName": "VehicleSeatProxyComponent'Default__MediumBoat_C:VehicleSeatProxyComponent_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.22"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.25"
         },
         {
           "ObjectName": "EntityAttachableProxyComponent'Default__MediumBoat_C:EntityAttachableProxyComponent_0'",
@@ -359,11 +359,57 @@
         {
           "ObjectName": "FamilyLockProxyComponent'Default__MediumBoat_C:FamilyLockProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.8"
+        },
+        {
+          "ObjectName": "PhysMovementProxyComponent'Default__MediumBoat_C:PhysMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.14"
+        },
+        {
+          "ObjectName": "MeshCollisionProxyComponent'Default__MediumBoat_C:MeshCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.13"
+        },
+        {
+          "ObjectName": "ShipMovementProxyComponent'Default__MediumBoat_C:ShipMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.16"
         }
       ],
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisMediumBoat_C'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.4"
+      }
+    }
+  },
+  {
+    "Type": "MeshCollisionProxyComponent",
+    "Name": "MeshCollisionProxyComponent_0",
+    "Outer": "Default__MediumBoat_C",
+    "Class": "UScriptClass'MeshCollisionProxyComponent'",
+    "Properties": {
+      "PhysicsAssetName": {
+        "ObjectName": "StaticMesh'MediumBoatHull'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/Collisions/MediumBoatHull.2"
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Wood",
+      "CollisionMask": 16801856
+    }
+  },
+  {
+    "Type": "PhysMovementProxyComponent",
+    "Name": "PhysMovementProxyComponent_0",
+    "Outer": "Default__MediumBoat_C",
+    "Class": "UScriptClass'PhysMovementProxyComponent'",
+    "Properties": {
+      "Mass": 15000.0,
+      "CuboidTensorExtents": {
+        "X": 1100.0,
+        "Y": 550.0,
+        "Z": 300.0
+      },
+      "EngineForce": 20000.0,
+      "EngineForcePosition": {
+        "X": -800.0,
+        "Y": 0.0,
+        "Z": 0.0
       }
     }
   },
@@ -374,19 +420,51 @@
     "Class": "UScriptClass'RepairProxyComponent'"
   },
   {
+    "Type": "ShipMovementProxyComponent",
+    "Name": "ShipMovementProxyComponent_0",
+    "Outer": "Default__MediumBoat_C",
+    "Class": "UScriptClass'ShipMovementProxyComponent'",
+    "Properties": {
+      "BuoyancyMeshCollisionAssetName": {
+        "ObjectName": "StaticMesh'MediumBoatHull'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/Collisions/MediumBoatHull.2"
+      },
+      "MaxRudderAngle": 45.0,
+      "DragReferenceSpeed": 5.0,
+      "Fp": 0.3,
+      "Fs": 0.3,
+      "Cpd1": 1500.0,
+      "Cpd2": 3000.0,
+      "Csd1": 1500.0,
+      "Csd2": 3000.0,
+      "SlammingPower": 2.0,
+      "GammaMax": 5.0,
+      "Rudder": {
+        "Pivot": {
+          "X": -800.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "DimensionX": 600.0,
+        "DimensionYZ": 600.0,
+        "bVertical": true
+      },
+      "ThrustVectoringPercent": 0.6
+    }
+  },
+  {
     "Type": "VehicleMovementProxyComponent",
     "Name": "VehicleMovementProxyComponent_0",
     "Outer": "Default__MediumBoat_C",
     "Class": "UScriptClass'VehicleMovementProxyComponent'",
     "Properties": {
-      "Acceleration": 500.0,
-      "MaxVelocity": 600.0,
+      "Acceleration": 20.0,
+      "MaxVelocity": 175.0,
       "RotationalSpeed": 15.0,
       "SprintFactor": 2.0,
       "SprintRotationalSpeedFactor": 0.5,
       "SprintStaminaDrain": 4.0,
-      "WindFactor": 1500.0,
-      "bYawInPlace": true,
+      "WindFactor": 500.0,
       "bWaterVehicle": true,
       "bSailBoat": true,
       "bDoAxleRaycasts": false,
@@ -408,7 +486,7 @@
       "PlayerExitOffset": {
         "X": -650.0,
         "Y": 130.0,
-        "Z": 300.0
+        "Z": 350.0
       },
       "DismountMaxDelta": 400.0,
       "bIsDriver": true
@@ -429,7 +507,7 @@
       "PlayerExitOffset": {
         "X": -650.0,
         "Y": -130.0,
-        "Z": 300.0
+        "Z": 350.0
       },
       "DismountMaxDelta": 400.0
     }
@@ -449,7 +527,7 @@
       "PlayerExitOffset": {
         "X": 670.0,
         "Y": 150.0,
-        "Z": 300.0
+        "Z": 350.0
       },
       "DismountMaxDelta": 400.0
     }
@@ -469,7 +547,7 @@
       "PlayerExitOffset": {
         "X": -450.0,
         "Y": 190.0,
-        "Z": 300.0
+        "Z": 350.0
       },
       "DismountMaxDelta": 400.0
     }
@@ -489,7 +567,7 @@
       "PlayerExitOffset": {
         "X": -450.0,
         "Y": -190.0,
-        "Z": 300.0
+        "Z": 350.0
       },
       "DismountMaxDelta": 400.0
     }
@@ -509,7 +587,7 @@
       "PlayerExitOffset": {
         "X": 470.0,
         "Y": 190.0,
-        "Z": 300.0
+        "Z": 350.0
       },
       "DismountMaxDelta": 400.0
     }
@@ -529,7 +607,7 @@
       "PlayerExitOffset": {
         "X": 470.0,
         "Y": -190.0,
-        "Z": 300.0
+        "Z": 350.0
       },
       "DismountMaxDelta": 400.0
     }
@@ -549,7 +627,7 @@
       "PlayerExitOffset": {
         "X": 670.0,
         "Y": -150.0,
-        "Z": 300.0
+        "Z": 350.0
       },
       "DismountMaxDelta": 400.0
     }

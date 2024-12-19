@@ -3,6 +3,6 @@
 
 class UBPTownCenterButtonIcon_C : public UTownCenterMapIcon
 {
-}; // Size: 0x3E0
+}; // Size: 0x3D8
 
 #endif

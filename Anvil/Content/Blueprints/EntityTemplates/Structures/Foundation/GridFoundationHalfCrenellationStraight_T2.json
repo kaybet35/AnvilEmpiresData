@@ -173,6 +173,9 @@
     "Template": {
       "ObjectName": "HealthProxyComponent'Default__BPBaseModularEntity_C:HealthComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseModularEntity.7"
+    },
+    "Properties": {
+      "MaxHealth": 50.0
     }
   },
   {
@@ -205,6 +208,7 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseModularEntity.10"
     },
     "Properties": {
+      "bEnemyCanConvert": true,
       "CrenellationLevel": 2
     }
   },
@@ -228,7 +232,13 @@
         "ObjectName": "BlueprintGeneratedClass'GridFoundationHalfCrenellationStraight_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationHalfCrenellationStraight.0"
       },
-      "TierPrerequisite": 3
+      "TierPrerequisite": 3,
+      "MaterialRequirements": [
+        {
+          "CodeName": -879937657,
+          "Count": 1
+        }
+      ]
     }
   }
 ]

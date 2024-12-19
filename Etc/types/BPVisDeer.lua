@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ABPVisDeer_C : AVisAnimal
----@field Idle UAudioComponent
+---@field idle UAudioComponent
 ABPVisDeer_C = {}
 
 

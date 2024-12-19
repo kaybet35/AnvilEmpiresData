@@ -27,9 +27,6 @@ public:
 
 private:
     UFUNCTION(BlueprintCallable)
-    void OnHovered();
-    
-    UFUNCTION(BlueprintCallable)
     void OnClicked();
     
     UFUNCTION(BlueprintCallable)

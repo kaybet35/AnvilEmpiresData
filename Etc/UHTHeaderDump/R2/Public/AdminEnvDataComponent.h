@@ -8,16 +8,19 @@ class R2_API UAdminEnvDataComponent : public UDataComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bDebugDrawHook;
+    bool bFreeBuild;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bShowStructureStatsHook;
+    bool bDebugDraw;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bShowWeatherStatsHook;
+    bool bGodMode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bFastReinforcementsAlertCooldown;
+    bool bShowStructureStats;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bShowWeatherStats;
     
     UAdminEnvDataComponent(const FObjectInitializer& ObjectInitializer);
 

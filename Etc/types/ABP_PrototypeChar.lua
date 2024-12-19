@@ -1,21 +1,22 @@
 ---@meta
 
 ---@class FAnimBlueprintGeneratedConstantData : FAnimBlueprintConstantData
----@field __NameProperty_2418 FName
----@field __ArrayProperty_2419 TArray<float>
----@field __ArrayProperty_2420 TArray<int32>
----@field __ArrayProperty_2421 TArray<float>
----@field __ArrayProperty_2422 TArray<int32>
----@field __NameProperty_2423 FName
----@field __FloatProperty_2424 float
----@field __ArrayProperty_2425 TArray<int32>
+---@field __NameProperty_2417 FName
+---@field __ArrayProperty_2418 TArray<float>
+---@field __ArrayProperty_2419 TArray<int32>
+---@field __ArrayProperty_2420 TArray<float>
+---@field __ArrayProperty_2421 TArray<int32>
+---@field __NameProperty_2422 FName
+---@field __FloatProperty_2423 float
+---@field __ArrayProperty_2424 TArray<int32>
+---@field __NameProperty_2425 FName
 ---@field __NameProperty_2426 FName
 ---@field __NameProperty_2427 FName
 ---@field __NameProperty_2428 FName
 ---@field __NameProperty_2429 FName
 ---@field __NameProperty_2430 FName
 ---@field __NameProperty_2431 FName
----@field __NameProperty_2432 FName
+---@field __ArrayProperty_2432 TArray<float>
 ---@field __NameProperty_2433 FName
 ---@field __NameProperty_2434 FName
 ---@field __NameProperty_2435 FName
@@ -79,16 +80,16 @@ FAnimBlueprintGeneratedConstantData = {}
 ---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
 ---@field __ByteProperty uint8
 ---@field __BoolProperty_0 boolean
----@field __BoolProperty_1 boolean
+---@field __FloatProperty_1 float
 ---@field __FloatProperty_2 float
 ---@field __FloatProperty_3 float
----@field __FloatProperty_4 float
----@field __ByteProperty_5 uint8
----@field __BoolProperty_6 boolean
----@field __ByteProperty_7 uint8
----@field __BoolProperty_8 boolean
+---@field __ByteProperty_4 uint8
+---@field __BoolProperty_5 boolean
+---@field __ByteProperty_6 uint8
+---@field __BoolProperty_7 boolean
+---@field __FloatProperty_8 float
 ---@field __FloatProperty_9 float
----@field __FloatProperty_10 float
+---@field __BoolProperty_10 boolean
 ---@field __FloatProperty_11 float
 ---@field __ByteProperty_12 uint8
 ---@field __FloatProperty_13 float
@@ -154,7 +155,6 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_SaveCachedPose_4 FAnimNode_SaveCachedPose
 ---@field AnimGraphNode_TwoWayBlend FAnimNode_TwoWayBlend
 ---@field AnimGraphNode_Slot_3 FAnimNode_Slot
----@field AnimGraphNode_SequencePlayer_84 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_LayeredBoneBlend_7 FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_UseCachedPose_16 FAnimNode_UseCachedPose
 ---@field AnimGraphNode_SaveCachedPose_3 FAnimNode_SaveCachedPose
@@ -162,15 +162,15 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_UseCachedPose_14 FAnimNode_UseCachedPose
 ---@field AnimGraphNode_UseCachedPose_13 FAnimNode_UseCachedPose
 ---@field AnimGraphNode_BlendListByEnum_6 FAnimNode_BlendListByEnum
+---@field AnimGraphNode_SequencePlayer_84 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer_83 FAnimNode_SequencePlayer
----@field AnimGraphNode_BlendListByBool_25 FAnimNode_BlendListByBool
 ---@field AnimGraphNode_Slot_2 FAnimNode_Slot
 ---@field AnimGraphNode_TransitionResult_92 FAnimNode_TransitionResult
 ---@field AnimGraphNode_TransitionResult_91 FAnimNode_TransitionResult
 ---@field AnimGraphNode_SequencePlayer_82 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_68 FAnimNode_StateResult
 ---@field AnimGraphNode_SequencePlayer_81 FAnimNode_SequencePlayer
----@field AnimGraphNode_BlendListByBool_24 FAnimNode_BlendListByBool
+---@field AnimGraphNode_BlendListByBool_25 FAnimNode_BlendListByBool
 ---@field AnimGraphNode_BlendSpacePlayer_15 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_StateResult_67 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_24 FAnimNode_StateMachine
@@ -210,7 +210,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_SequencePlayer_70 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_60 FAnimNode_StateResult
 ---@field AnimGraphNode_SequencePlayer_69 FAnimNode_SequencePlayer
----@field AnimGraphNode_BlendListByBool_23 FAnimNode_BlendListByBool
+---@field AnimGraphNode_BlendListByBool_24 FAnimNode_BlendListByBool
 ---@field AnimGraphNode_UseCachedPose_12 FAnimNode_UseCachedPose
 ---@field AnimGraphNode_StateResult_59 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_21 FAnimNode_StateMachine
@@ -221,7 +221,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_BlendListByEnum_4 FAnimNode_BlendListByEnum
 ---@field AnimGraphNode_StateResult_58 FAnimNode_StateResult
 ---@field AnimGraphNode_SequencePlayer_66 FAnimNode_SequencePlayer
----@field AnimGraphNode_BlendListByBool_22 FAnimNode_BlendListByBool
+---@field AnimGraphNode_BlendListByBool_23 FAnimNode_BlendListByBool
 ---@field AnimGraphNode_BlendSpacePlayer_14 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_StateResult_57 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_20 FAnimNode_StateMachine
@@ -233,6 +233,7 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_StateResult_55 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_19 FAnimNode_StateMachine
 ---@field AnimGraphNode_LayeredBoneBlend_5 FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_BlendListByBool_22 FAnimNode_BlendListByBool
 ---@field AnimGraphNode_TransitionResult_74 FAnimNode_TransitionResult
 ---@field AnimGraphNode_TransitionResult_73 FAnimNode_TransitionResult
 ---@field AnimGraphNode_SequencePlayer_64 FAnimNode_SequencePlayer
@@ -517,7 +518,6 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field shouldTurnLeft boolean
 ---@field shouldTurnRight boolean
 ---@field staticYaw_Rotator FRotator
----@field IsFalling boolean
 UABP_PrototypeChar_C = {}
 
 ---@param AnimGraph FPoseLink

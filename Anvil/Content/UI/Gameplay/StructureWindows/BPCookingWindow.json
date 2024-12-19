@@ -30,7 +30,7 @@
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPCookingWindow_C:WidgetTree.CheatSheetCanvasPanel.CanvasPanelSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.20"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.22"
       }
     }
   },
@@ -52,7 +52,7 @@
       },
       "Content": {
         "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.66"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.73"
       }
     }
   },
@@ -129,7 +129,7 @@
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPCookingWindow_C:WidgetTree.CanvasPanel_28.CanvasPanelSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.18"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.20"
       }
     }
   },
@@ -138,6 +138,12 @@
     "Name": "Default__BPCookingWindow_C",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.BPCookingWindow_C'",
     "Properties": {
+      "InvalidRecipeIcon": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'HelpTooltipIcon'",
+          "ObjectPath": "Anvil/Content/Textures/UI/HelpTooltipIcon.0"
+        }
+      },
       "bHasScriptImplementedTick": false,
       "bHasScriptImplementedPaint": false
     }
@@ -225,12 +231,13 @@
       "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.2"
     },
     "Properties": {
+      "HeightOverride": 280.0,
       "NamedSlotBindings": [
         {
           "Name": "MainAreaSlot0",
           "Content": {
             "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox_134'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.22"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.24"
           }
         }
       ]
@@ -251,7 +258,7 @@
           "Name": "MainAreaSlot0",
           "Content": {
             "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.21"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.23"
           }
         }
       ]
@@ -269,7 +276,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPCookingWindow_C:WidgetTree.CanvasPanel_28.CanvasPanelSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.17"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.19"
       }
     }
   },
@@ -290,7 +297,7 @@
       "SimpleTooltip": "ESimpleTooltip::Decay",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_90.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.35"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.37"
       }
     }
   },
@@ -311,7 +318,7 @@
       "SimpleTooltip": "ESimpleTooltip::Health",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_90.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.34"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.36"
       }
     }
   },
@@ -331,10 +338,139 @@
           "Name": "SubHeaderSlot0",
           "Content": {
             "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox_90'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.23"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.25"
           }
         }
       ]
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "StartCookingButton",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Button'",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 82.0,
+            "Y": 82.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.7,
+              "G": 0.7,
+              "B": 0.7,
+              "A": 1.0,
+              "Hex": "DADADA"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'Tech_BG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/Tech_BG.0"
+          }
+        },
+        "Hovered": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 82.0,
+            "Y": 82.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'Tech_BG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/Tech_BG.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "Pressed": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 82.0,
+            "Y": 82.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.333,
+              "G": 0.333,
+              "B": 0.333,
+              "A": 1.0,
+              "Hex": "9C9C9C"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'Tech_BG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/Tech_BG.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 82.0,
+            "Y": 82.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.1,
+              "G": 0.1,
+              "B": 0.1,
+              "A": 1.0,
+              "Hex": "595959"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'Tech_BG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/Tech_BG.0"
+          }
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'BPCookingWindow_C:WidgetTree.StartCookingButton.ButtonSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPCookingWindow_C:WidgetTree.SizeBox_5.SizeBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.62"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Outer": "StartCookingButton",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Button'BPCookingWindow_C:WidgetTree.StartCookingButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.15"
+      },
+      "Content": {
+        "ObjectName": "Overlay'BPCookingWindow_C:WidgetTree.Overlay_45'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.46"
+      }
     }
   },
   {
@@ -346,15 +482,15 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPCookingWindow_C:WidgetTree.CanvasPanel_28.CanvasPanelSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.17"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.19"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPCookingWindow_C:WidgetTree.CanvasPanel_28.CanvasPanelSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.18"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.20"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPCookingWindow_C:WidgetTree.CanvasPanel_28.CanvasPanelSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.19"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.21"
         }
       ]
     }
@@ -368,12 +504,12 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPCookingWindow_C:WidgetTree.CheatSheetCanvasPanel.CanvasPanelSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.20"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.22"
         }
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPCookingWindow_C:WidgetTree.CanvasPanel_28.CanvasPanelSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.19"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.21"
       },
       "Visibility": "ESlateVisibility::Collapsed"
     }
@@ -403,7 +539,7 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPCookingWindow_C:WidgetTree.CanvasPanel_28'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.15"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.17"
       },
       "Content": {
         "ObjectName": "BPPlayerInventoryWidget_C'BPCookingWindow_C:WidgetTree.PlayerInventoryPanel'",
@@ -440,7 +576,7 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPCookingWindow_C:WidgetTree.CanvasPanel_28'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.15"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.17"
       },
       "Content": {
         "ObjectName": "BPAnvilPanel_C'BPCookingWindow_C:WidgetTree.BPAnvilPanel'",
@@ -476,11 +612,11 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPCookingWindow_C:WidgetTree.CanvasPanel_28'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.15"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.17"
       },
       "Content": {
         "ObjectName": "CanvasPanel'BPCookingWindow_C:WidgetTree.CheatSheetCanvasPanel'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.16"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.18"
       }
     }
   },
@@ -493,7 +629,7 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPCookingWindow_C:WidgetTree.CheatSheetCanvasPanel'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.16"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.18"
       },
       "Content": {
         "ObjectName": "Border'BPCookingWindow_C:WidgetTree.Border'",
@@ -510,23 +646,23 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.27"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.29"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.24"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.25"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_3'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.26"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_6'",
+          "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.27"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_3'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.28"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.30"
         }
       ]
     }
@@ -540,23 +676,23 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.32"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.34"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.29"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.30"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_3'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.31"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_6'",
+          "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.32"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_3'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.33"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.35"
         }
       ]
     }
@@ -570,11 +706,11 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_90.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.34"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.36"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_90.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.35"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.37"
         }
       ]
     }
@@ -589,11 +725,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.21"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.23"
       },
       "Content": {
         "ObjectName": "InventoryWidget'BPCookingWindow_C:WidgetTree.FuelInputItemGrid'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.38"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.41"
       }
     }
   },
@@ -611,11 +747,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.21"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.23"
       },
       "Content": {
         "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.45"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.50"
       }
     }
   },
@@ -629,11 +765,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.21"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.23"
       },
       "Content": {
         "ObjectName": "InventoryWidget'BPCookingWindow_C:WidgetTree.FuelOutputItemGrid'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.42"
       }
     }
   },
@@ -645,11 +781,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.21"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.23"
       },
       "Content": {
         "ObjectName": "Spacer'BPCookingWindow_C:WidgetTree.Spacer_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.64"
       }
     }
   },
@@ -661,11 +797,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.21"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.23"
       },
       "Content": {
         "ObjectName": "Spacer'BPCookingWindow_C:WidgetTree.Spacer_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.59"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.66"
       }
     }
   },
@@ -679,11 +815,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox_134'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.22"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.24"
       },
       "Content": {
         "ObjectName": "InventoryWidget'BPCookingWindow_C:WidgetTree.RecipeInputItemGrid'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.40"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.43"
       }
     }
   },
@@ -698,14 +834,14 @@
         "Right": 20.0
       },
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
-      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox_134'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.22"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.24"
       },
       "Content": {
         "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.65"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.72"
       }
     }
   },
@@ -719,11 +855,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox_134'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.22"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.24"
       },
       "Content": {
         "ObjectName": "InventoryWidget'BPCookingWindow_C:WidgetTree.RecipeOutputItemGrid'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.41"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.44"
       }
     }
   },
@@ -735,11 +871,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox_134'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.22"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.24"
       },
       "Content": {
         "ObjectName": "Spacer'BPCookingWindow_C:WidgetTree.Spacer_177'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.58"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.65"
       }
     }
   },
@@ -751,11 +887,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox_134'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.22"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.24"
       },
       "Content": {
         "ObjectName": "Spacer'BPCookingWindow_C:WidgetTree.Spacer'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.56"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.63"
       }
     }
   },
@@ -769,7 +905,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox_90'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.23"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.25"
       },
       "Content": {
         "ObjectName": "BPStatusWidget_C'BPCookingWindow_C:WidgetTree.HealthStatus'",
@@ -787,7 +923,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPCookingWindow_C:WidgetTree.HorizontalBox_90'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.23"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.25"
       },
       "Content": {
         "ObjectName": "BPStatusWidget_C'BPCookingWindow_C:WidgetTree.DecayStatus'",
@@ -809,7 +945,7 @@
       },
       "Slot": {
         "ObjectName": "SizeBoxSlot'BPCookingWindow_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.52"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.58"
       }
     }
   },
@@ -827,8 +963,31 @@
       },
       "Slot": {
         "ObjectName": "SizeBoxSlot'BPCookingWindow_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.50"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.56"
       }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "StartCookingButtonImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 40.0,
+          "Y": 40.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'InvalidTooltipIcon'",
+          "ObjectPath": "Anvil/Content/Textures/UI/InvalidTooltipIcon.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'BPCookingWindow_C:WidgetTree.Overlay_45.OverlaySlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.47"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
     }
   },
   {
@@ -854,7 +1013,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.24"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.26"
       }
     }
   },
@@ -881,7 +1040,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.26"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.28"
       }
     }
   },
@@ -908,7 +1067,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.29"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.31"
       }
     }
   },
@@ -935,7 +1094,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.31"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.33"
       }
     }
   },
@@ -956,7 +1115,49 @@
       "PreviewItemCount": 1,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.71"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.78"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_45",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'BPCookingWindow_C:WidgetTree.Overlay_45.OverlaySlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.47"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ButtonSlot'BPCookingWindow_C:WidgetTree.StartCookingButton.ButtonSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.16"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "Overlay_45",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 5.0,
+        "Top": 5.0,
+        "Right": 5.0,
+        "Bottom": 5.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'BPCookingWindow_C:WidgetTree.Overlay_45'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.46"
+      },
+      "Content": {
+        "ObjectName": "Image'BPCookingWindow_C:WidgetTree.StartCookingButtonImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.40"
       }
     }
   },
@@ -1009,7 +1210,7 @@
       "Justification": "ETextJustify::Right",
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.73"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.81"
       }
     }
   },
@@ -1026,12 +1227,12 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'BPCookingWindow_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.50"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.56"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox.VerticalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.68"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.75"
       }
     }
   },
@@ -1046,12 +1247,12 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'BPCookingWindow_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.51"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.57"
         }
       ],
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.25"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.27"
       }
     }
   },
@@ -1068,12 +1269,12 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'BPCookingWindow_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.52"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.58"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_54.VerticalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.75"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.83"
       }
     }
   },
@@ -1088,12 +1289,12 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'BPCookingWindow_C:WidgetTree.SizeBox_2.SizeBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.53"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.59"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.70"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.77"
       }
     }
   },
@@ -1108,12 +1309,12 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'BPCookingWindow_C:WidgetTree.SizeBox_3.SizeBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.54"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.60"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.69"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.76"
       }
     }
   },
@@ -1128,12 +1329,34 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'BPCookingWindow_C:WidgetTree.SizeBox_4.SizeBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.55"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.61"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_54.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.76"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.84"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_5",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 75.0,
+      "HeightOverride": 75.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPCookingWindow_C:WidgetTree.SizeBox_5.SizeBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.62"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.79"
       }
     }
   },
@@ -1145,11 +1368,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.44"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.49"
       },
       "Content": {
         "ObjectName": "Image'BPCookingWindow_C:WidgetTree.Arrow_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.37"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.39"
       }
     }
   },
@@ -1161,11 +1384,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.45"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.50"
       },
       "Content": {
         "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.64"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.71"
       }
     }
   },
@@ -1177,11 +1400,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.46"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.51"
       },
       "Content": {
         "ObjectName": "Image'BPCookingWindow_C:WidgetTree.Arrow'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.36"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.38"
       }
     }
   },
@@ -1193,11 +1416,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.47"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.52"
       },
       "Content": {
         "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox_54'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.67"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.74"
       }
     }
   },
@@ -1211,11 +1434,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.48"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.53"
       },
       "Content": {
         "ObjectName": "TextBlock'BPCookingWindow_C:WidgetTree.FuelDurationText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.63"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.70"
       }
     }
   },
@@ -1229,11 +1452,27 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.49"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.54"
       },
       "Content": {
         "ObjectName": "TextBlock'BPCookingWindow_C:WidgetTree.CookingDurationText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.62"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.69"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Outer": "SizeBox_5",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox_5'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.55"
+      },
+      "Content": {
+        "ObjectName": "Button'BPCookingWindow_C:WidgetTree.StartCookingButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.15"
       }
     }
   },
@@ -1249,7 +1488,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_6'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.33"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.35"
       }
     }
   },
@@ -1265,7 +1504,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.27"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.29"
       }
     }
   },
@@ -1281,7 +1520,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.32"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.34"
       }
     }
   },
@@ -1297,7 +1536,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_6'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.28"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.30"
       }
     }
   },
@@ -1313,7 +1552,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.74"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.82"
       }
     }
   },
@@ -1339,7 +1578,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.72"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.80"
       }
     }
   },
@@ -1363,9 +1602,10 @@
         "TypefaceFontName": "Default",
         "Size": 14
       },
+      "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "SizeBoxSlot'BPCookingWindow_C:WidgetTree.SizeBox_4.SizeBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.55"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.61"
       }
     }
   },
@@ -1391,7 +1631,7 @@
       },
       "Slot": {
         "ObjectName": "SizeBoxSlot'BPCookingWindow_C:WidgetTree.SizeBox_3.SizeBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.54"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.60"
       }
     }
   },
@@ -1404,16 +1644,16 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox.VerticalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.68"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.75"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.69"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.76"
         }
       ],
       "Slot": {
         "ObjectName": "SizeBoxSlot'BPCookingWindow_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.51"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.57"
       }
     }
   },
@@ -1425,17 +1665,21 @@
     "Properties": {
       "Slots": [
         {
+          "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.79"
+        },
+        {
           "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.70"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.77"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.71"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.78"
         }
       ],
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPCookingWindow_C:WidgetTree.HorizontalBox_134.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.30"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.32"
       }
     }
   },
@@ -1448,15 +1692,15 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.72"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.80"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.74"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.82"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.73"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.81"
         }
       ],
       "Slot": {
@@ -1474,15 +1718,51 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_54.VerticalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.75"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.83"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPCookingWindow_C:WidgetTree.VerticalBox_54.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.76"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.84"
         }
       ],
       "Slot": {
         "ObjectName": "SizeBoxSlot'BPCookingWindow_C:WidgetTree.SizeBox_2.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.59"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.71"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.49"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.71"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox_3'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.53"
       }
     }
@@ -1490,55 +1770,19 @@
   {
     "Type": "VerticalBoxSlot",
     "Name": "VerticalBoxSlot_0",
-    "Outer": "VerticalBox",
-    "Class": "UScriptClass'VerticalBoxSlot'",
-    "Properties": {
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
-      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
-      "Parent": {
-        "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.64"
-      },
-      "Content": {
-        "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.44"
-      }
-    }
-  },
-  {
-    "Type": "VerticalBoxSlot",
-    "Name": "VerticalBoxSlot_1",
-    "Outer": "VerticalBox",
-    "Class": "UScriptClass'VerticalBoxSlot'",
-    "Properties": {
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
-      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
-      "Parent": {
-        "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.64"
-      },
-      "Content": {
-        "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.48"
-      }
-    }
-  },
-  {
-    "Type": "VerticalBoxSlot",
-    "Name": "VerticalBoxSlot_0",
     "Outer": "VerticalBox_0",
     "Class": "UScriptClass'VerticalBoxSlot'",
     "Properties": {
       "Padding": {
-        "Top": 80.0
+        "Top": 1.0
       },
       "Parent": {
         "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.65"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.72"
       },
       "Content": {
         "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.47"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.52"
       }
     }
   },
@@ -1549,18 +1793,39 @@
     "Class": "UScriptClass'VerticalBoxSlot'",
     "Properties": {
       "Padding": {
-        "Top": 10.0,
+        "Top": 12.0,
         "Bottom": 6.0
       },
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.65"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.72"
       },
       "Content": {
         "ObjectName": "InventoryWidget'BPCookingWindow_C:WidgetTree.WaterInputItemGrid'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.42"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.45"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.72"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox_5'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.55"
       }
     }
   },
@@ -1574,11 +1839,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.66"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.73"
       },
       "Content": {
         "ObjectName": "TextBlock'BPCookingWindow_C:WidgetTree.CheatSheetHeaderTextBlock'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.61"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.68"
       }
     }
   },
@@ -1590,11 +1855,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.66"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.73"
       },
       "Content": {
         "ObjectName": "RichTextBlock'BPCookingWindow_C:WidgetTree.CheatSheetTextBlock'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.43"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.48"
       }
     }
   },
@@ -1606,11 +1871,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.66"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.73"
       },
       "Content": {
         "ObjectName": "Spacer'BPCookingWindow_C:WidgetTree.Spacer_94'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.60"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.67"
       }
     }
   },
@@ -1624,11 +1889,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox_54'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.67"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.74"
       },
       "Content": {
         "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.46"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.51"
       }
     }
   },
@@ -1642,11 +1907,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPCookingWindow_C:WidgetTree.VerticalBox_54'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.67"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.74"
       },
       "Content": {
         "ObjectName": "SizeBox'BPCookingWindow_C:WidgetTree.SizeBox_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.49"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.54"
       }
     }
   },
@@ -1657,7 +1922,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPCookingWindow_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.78"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.86"
       },
       "bClassRequiresNativeTick": true
     },
@@ -1800,7 +2065,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "CanvasPanel'BPCookingWindow_C:WidgetTree.CanvasPanel_28'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.15"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPCookingWindow.17"
       }
     }
   }

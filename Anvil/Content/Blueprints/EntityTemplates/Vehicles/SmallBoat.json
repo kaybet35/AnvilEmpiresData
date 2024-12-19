@@ -16,30 +16,10 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "SmallBoat_C'Default__SmallBoat_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.9"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.11"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
-    }
-  },
-  {
-    "Type": "BoxCollisionProxyComponent",
-    "Name": "BoxCollisionProxyComponent_0",
-    "Outer": "Default__SmallBoat_C",
-    "Class": "UScriptClass'BoxCollisionProxyComponent'",
-    "Properties": {
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 45.0
-      },
-      "Extents": {
-        "X": 385.0,
-        "Y": 90.0,
-        "Z": 45.0
-      },
-      "SurfaceType": "EAnvilPhysicalSurfaceType::Wood",
-      "CollisionMask": 16801856
     }
   },
   {
@@ -127,10 +107,77 @@
     }
   },
   {
+    "Type": "MeshCollisionProxyComponent",
+    "Name": "MeshCollisionProxyComponent_0",
+    "Outer": "Default__SmallBoat_C",
+    "Class": "UScriptClass'MeshCollisionProxyComponent'",
+    "Properties": {
+      "PhysicsAssetName": {
+        "ObjectName": "StaticMesh'SmallBoatHull'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/Collisions/SmallBoatHull.2"
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Wood",
+      "CollisionMask": 16801856
+    }
+  },
+  {
+    "Type": "PhysMovementProxyComponent",
+    "Name": "PhysMovementProxyComponent_0",
+    "Outer": "Default__SmallBoat_C",
+    "Class": "UScriptClass'PhysMovementProxyComponent'",
+    "Properties": {
+      "Mass": 2000.0,
+      "CuboidTensorExtents": {
+        "X": 400.0,
+        "Y": 210.0,
+        "Z": 100.0
+      },
+      "EngineForce": 5000.0,
+      "EngineForcePosition": {
+        "X": -200.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
     "Type": "RepairProxyComponent",
     "Name": "RepairProxyComponent_0",
     "Outer": "Default__SmallBoat_C",
     "Class": "UScriptClass'RepairProxyComponent'"
+  },
+  {
+    "Type": "ShipMovementProxyComponent",
+    "Name": "ShipMovementProxyComponent_0",
+    "Outer": "Default__SmallBoat_C",
+    "Class": "UScriptClass'ShipMovementProxyComponent'",
+    "Properties": {
+      "BuoyancyMeshCollisionAssetName": {
+        "ObjectName": "StaticMesh'SmallBoatHull'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/Collisions/SmallBoatHull.2"
+      },
+      "MaxRudderAngle": 45.0,
+      "DragReferenceSpeed": 3.0,
+      "Fp": 0.3,
+      "Fs": 0.3,
+      "Cpd1": 2000.0,
+      "Cpd2": 4000.0,
+      "Csd1": 2000.0,
+      "Csd2": 4000.0,
+      "SlammingPower": 2.0,
+      "GammaMax": 5.0,
+      "Rudder": {
+        "Pivot": {
+          "X": -300.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "DimensionX": 300.0,
+        "DimensionYZ": 300.0,
+        "bVertical": true
+      },
+      "ThrustVectoringPercent": 1.0
+    }
   },
   {
     "Type": "SmallBoat_C",
@@ -143,51 +190,59 @@
       "Components": [
         {
           "ObjectName": "VehicleMovementProxyComponent'Default__SmallBoat_C:VehicleMovementProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.10"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.12"
         },
         {
           "ObjectName": "VehicleSeatProxyComponent'Default__SmallBoat_C:VehicleSeatProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.11"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.13"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__SmallBoat_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.7"
-        },
-        {
-          "ObjectName": "HealthProxyComponent'Default__SmallBoat_C:HealthProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.6"
         },
         {
-          "ObjectName": "BoxCollisionProxyComponent'Default__SmallBoat_C:BoxCollisionProxyComponent_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.2"
+          "ObjectName": "HealthProxyComponent'Default__SmallBoat_C:HealthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.5"
         },
         {
-          "ObjectName": "BoxCollisionProxyComponent'Default__SmallBoat_C:BoxCollisionProxyComponent_0'",
+          "ObjectName": "BoxCollisionProxyComponent'Default__SmallBoat_C:BoxCollisionProxyComponent_1'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.1"
         },
         {
           "ObjectName": "DestroyableProxyComponent'Default__SmallBoat_C:DestroyableProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.3"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.2"
         },
         {
           "ObjectName": "FootprintCollisionProxyComponent'Default__SmallBoat_C:FootprintCollisionProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.5"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.4"
         },
         {
           "ObjectName": "VehicleSeatProxyComponent'Default__SmallBoat_C:VehicleSeatProxyComponent_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.12"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.14"
         },
         {
           "ObjectName": "VehicleSeatProxyComponent'Default__SmallBoat_C:VehicleSeatProxyComponent_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.13"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.15"
         },
         {
           "ObjectName": "RepairProxyComponent'Default__SmallBoat_C:RepairProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.9"
         },
         {
           "ObjectName": "FamilyLockProxyComponent'Default__SmallBoat_C:FamilyLockProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.4"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.3"
+        },
+        {
+          "ObjectName": "PhysMovementProxyComponent'Default__SmallBoat_C:PhysMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.8"
+        },
+        {
+          "ObjectName": "MeshCollisionProxyComponent'Default__SmallBoat_C:MeshCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.7"
+        },
+        {
+          "ObjectName": "ShipMovementProxyComponent'Default__SmallBoat_C:ShipMovementProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/SmallBoat.10"
         }
       ],
       "VisActorClass": {
@@ -202,8 +257,8 @@
     "Outer": "Default__SmallBoat_C",
     "Class": "UScriptClass'VehicleMovementProxyComponent'",
     "Properties": {
-      "Acceleration": 4000.0,
-      "MaxVelocity": 550.0,
+      "Acceleration": 20.0,
+      "MaxVelocity": 175.0,
       "RotationalSpeed": 15.0,
       "SprintFactor": 2.0,
       "SprintRotationalSpeedFactor": 0.5,

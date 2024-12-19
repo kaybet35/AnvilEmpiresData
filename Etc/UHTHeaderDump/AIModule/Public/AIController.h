@@ -116,7 +116,7 @@ public:
     void K2_SetFocus(AActor* NewFocus);
     
     UFUNCTION(BlueprintCallable)
-    void K2_SetFocalPoint(FVector FP);
+    void K2_SetFocalPoint(FVector Fp);
     
     UFUNCTION(BlueprintCallable)
     void K2_ClearFocus();

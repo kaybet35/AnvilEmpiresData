@@ -20,6 +20,7 @@ class UInventoryHUDWidget;
 class UInventoryItemHUDWidget;
 class UPanelWidget;
 class UProgressBar;
+class USlider;
 class UTextBlock;
 class UTexture2D;
 class UVitalityStatusWidget;
@@ -83,6 +84,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UProgressBar* GuardBar;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    USlider* GuardBarMaxSlider;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPanelWidget* GuardStatusWidget;

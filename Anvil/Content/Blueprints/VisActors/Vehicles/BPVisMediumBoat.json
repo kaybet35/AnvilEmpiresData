@@ -247,7 +247,7 @@
       "RelativeLocation": {
         "X": -1.5119346E-07,
         "Y": 2.0459925E-07,
-        "Z": 30.228699
+        "Z": 30.0
       }
     }
   },
@@ -269,7 +269,7 @@
       "RelativeLocation": {
         "X": 0.0,
         "Y": 0.0,
-        "Z": 30.328697
+        "Z": 30.0
       },
       "RelativeRotation": {
         "Pitch": 0.0,
@@ -621,7 +621,24 @@
       "bReceivesDecals": false,
       "bUseAsOccluder": false,
       "CastShadow": false,
-      "bRenderCustomDepth": true
+      "bRenderCustomDepth": true,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      }
     }
   },
   {
@@ -641,11 +658,28 @@
         "ObjectName": "StaticMesh'MediumBoat'",
         "ObjectPath": "Anvil/Content/Meshes/Vehicles/MediumBoat.2"
       },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
       "bVisible": false,
       "bHiddenInGame": true,
       "ComponentTags": [
         "Structure",
-        "Collision"
+        "CollisionDISABLED"
       ]
     }
   }

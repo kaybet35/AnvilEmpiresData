@@ -3,7 +3,7 @@
 
 class ABPVisFoal_C : public AVisAnimal
 {
-    class UAudioComponent* Idle;                                                      // 0x0518 (size: 0x8)
+    class UAudioComponent* idle;                                                      // 0x0518 (size: 0x8)
 
 }; // Size: 0x520
 

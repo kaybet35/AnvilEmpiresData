@@ -14,9 +14,6 @@ public:
     bool IsGroupHouse;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bRequiresCeilingCheck;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIsTownTent;
     
     UHousingProxyComponent();

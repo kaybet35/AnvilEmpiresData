@@ -2,8 +2,6 @@
 
 UTownCenterMapIcon::UTownCenterMapIcon() {
     this->TownCenter = NULL;
-    this->FlashingFrequency = 0.00f;
-    this->FlashingMinOpacity = 0.00f;
     this->IconButton = NULL;
     this->TownName = NULL;
     this->TownNameBorder = NULL;

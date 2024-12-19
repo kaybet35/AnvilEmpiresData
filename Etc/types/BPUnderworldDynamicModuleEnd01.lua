@@ -1,18 +1,50 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleEnd01_C : ABPUnderworldModuleDynamicPrefab_C
+---@field LoreStatue UChildActorComponent
+---@field VisLoreVolume UVisLoreVolumeComponent
+---@field RockWallUnderworldSpike15 UStaticMeshComponent
+---@field RockWallUnderworldSpike14 UStaticMeshComponent
+---@field RockWallUnderworldSpike13 UStaticMeshComponent
+---@field RockWallUnderworldSpike12 UStaticMeshComponent
+---@field GraveThrush2 UNiagaraComponent
+---@field GraveThrush1 UNiagaraComponent
+---@field GraveThrush UNiagaraComponent
+---@field AmbientUnderworld01_cue1 UAudioComponent
+---@field ['Fill Light 013'] UPointLightComponent
+---@field GraveThrushIdle01 UAudioComponent
+---@field LatticeMineCoal1 UChildActorComponent
+---@field LatticeMineIron3 UChildActorComponent
+---@field LatticeMineIron1 UChildActorComponent
+---@field LatticeMineIron2 UChildActorComponent
+---@field ['Custom Components'] USceneComponent
+---@field Props084 UStaticMeshComponent
+---@field Props083 UStaticMeshComponent
+---@field Props082 UStaticMeshComponent
+---@field Props081 UStaticMeshComponent
+---@field Props080 UStaticMeshComponent
+---@field Props079 UStaticMeshComponent
+---@field Props078 UStaticMeshComponent
+---@field Props077 UStaticMeshComponent
+---@field Props076 UStaticMeshComponent
+---@field Props075 UStaticMeshComponent
+---@field Props074 UStaticMeshComponent
+---@field Props073 UStaticMeshComponent
+---@field Props072 UStaticMeshComponent
+---@field Props071 UStaticMeshComponent
+---@field Props070 UStaticMeshComponent
+---@field Props069 UStaticMeshComponent
+---@field Props040 UStaticMeshComponent
 ---@field ['Fill Light 012'] UPointLightComponent
 ---@field ['Fill Light 011'] UPointLightComponent
 ---@field ['Fill Light 010'] UPointLightComponent
 ---@field ['Fill Light 09'] UPointLightComponent
 ---@field RockFloor030 UStaticMeshComponent
 ---@field RockFloor029 UStaticMeshComponent
----@field VisLoreVolume UVisLoreVolumeComponent
 ---@field RockWallUnderworldSpike11 UStaticMeshComponent
 ---@field RockWallUnderworldSpike10 UStaticMeshComponent
 ---@field RockWallUnderworldSpike9 UStaticMeshComponent
 ---@field RockWallUnderworldSpike8 UStaticMeshComponent
----@field Scene USceneComponent
 ---@field CustomNavmeshVolume UCustomNavmeshVolumeComponent
 ---@field Decal049 UDecalComponent
 ---@field Props068 UStaticMeshComponent
@@ -207,10 +239,6 @@
 ---@field RockFloor019 UStaticMeshComponent
 ---@field RockFloor018 UStaticMeshComponent
 ---@field RockWall079 UStaticMeshComponent
----@field LatticeMineIron1 UChildActorComponent
----@field LatticeMineIron3 UChildActorComponent
----@field LatticeMineIron2 UChildActorComponent
----@field LatticeMineCoal1 UChildActorComponent
 ---@field RockWallUnderworldSpike7 UStaticMeshComponent
 ---@field RockWallUnderworldSpike6 UStaticMeshComponent
 ---@field RockWallUnderworldSpike5 UStaticMeshComponent

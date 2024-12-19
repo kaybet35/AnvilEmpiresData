@@ -1,6 +1,6 @@
 ---@meta
 
----@class UBPWildSpawnPointMapIcon_C : UDeploymentPointMapIcon
+---@class UBPWildSpawnPointMapIcon_C : UWorldWildSpawnMapIcon
 UBPWildSpawnPointMapIcon_C = {}
 
 

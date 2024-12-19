@@ -387,7 +387,7 @@ class AAIController : public AController
     TEnumAsByte<EPathFollowingRequestResult::Type> MoveToLocation(const FVector& Dest, float AcceptanceRadius, bool bStopOnOverlap, bool bUsePathfinding, bool bProjectDestinationToNavigation, bool bCanStrafe, TSubclassOf<class UNavigationQueryFilter> FilterClass, bool bAllowPartialPath);
     TEnumAsByte<EPathFollowingRequestResult::Type> MoveToActor(class AActor* Goal, float AcceptanceRadius, bool bStopOnOverlap, bool bUsePathfinding, bool bCanStrafe, TSubclassOf<class UNavigationQueryFilter> FilterClass, bool bAllowPartialPath);
     void K2_SetFocus(class AActor* NewFocus);
-    void K2_SetFocalPoint(FVector FP);
+    void K2_SetFocalPoint(FVector Fp);
     void K2_ClearFocus();
     bool HasPartialPath();
     class UPathFollowingComponent* GetPathFollowingComponent();

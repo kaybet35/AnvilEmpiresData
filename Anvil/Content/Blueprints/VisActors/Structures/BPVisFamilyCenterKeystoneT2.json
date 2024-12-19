@@ -68,6 +68,17 @@
       },
       {
         "Type": "ObjectProperty",
+        "Name": "CollapsedMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "VisFamilyMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -141,17 +152,6 @@
         "PropertyClass": {
           "ObjectName": "Class'SceneComponent'",
           "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CollapsedMesh",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStaticMeshComponent'",
-          "ObjectPath": "/Script/Anvil"
         }
       },
       {
@@ -575,6 +575,10 @@
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT2_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT2.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT2.22"
         }
       ],
       "VariableGuid": "2E7E62DA-4995B269-B0651397-880E6C19",
@@ -631,8 +635,6 @@
         "ObjectName": "VisStaticMeshComponent'BPVisFamilyCenterKeystoneT2_C:CollapsedMesh_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT2.44"
       },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
       "VariableGuid": "423A0F2E-4674E857-F0F947B7-C7C35927",
       "InternalVariableName": "CollapsedMesh"
     }
@@ -757,10 +759,6 @@
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT2.18"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT2.22"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT2_C:SimpleConstructionScript_0.SCS_Node_13'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT2.19"
         }
@@ -777,10 +775,6 @@
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT2_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT2.18"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT2.22"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT2_C:SimpleConstructionScript_0.SCS_Node_13'",
@@ -809,6 +803,10 @@
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT2_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT2.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterKeystoneT2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT2.22"
         }
       ],
       "DefaultSceneRootNode": {
@@ -1087,6 +1085,12 @@
         "ObjectName": "StaticMesh'HomesteadModule_foundation_keystoneT2'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_keystoneT2.2"
       },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "bVisible": false,
       "ComponentTags": [
         "UnCollapsed"
       ]
@@ -1251,29 +1255,25 @@
     "Properties": {
       "VisMeshProfile": "EVisMeshProfile::Structure",
       "StaticMesh": {
-        "ObjectName": "StaticMesh'HomesteadModule_foundation_square_straightT2'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_square_straightT2.2"
+        "ObjectName": "StaticMesh'HomesteadModule_foundation_keystone_Collapsed_T2'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_foundation_keystone_Collapsed_T2.2"
       },
       "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'LDGrid04'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGrid04.0"
-        },
-        {
-          "ObjectName": "MaterialInstanceConstant'LDGrid04'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGrid04.0"
-        },
-        {
-          "ObjectName": "MaterialInstanceConstant'LDGrid04'",
-          "ObjectPath": "Anvil/Content/Materials/Engine/LDGrid04.0"
-        }
+        null,
+        null,
+        null,
+        null
       ],
       "RelativeLocation": {
         "X": 0.0,
         "Y": 0.0,
         "Z": -150.0
       },
-      "bVisible": false,
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 45.0,
+        "Roll": -0.0
+      },
       "ComponentTags": [
         "Collapsed",
         "Structure",
@@ -1302,6 +1302,7 @@
         "Yaw": 45.0,
         "Roll": -0.0
       },
+      "bVisible": false,
       "ComponentTags": [
         "Structure",
         "Collision",
@@ -1315,6 +1316,18 @@
     "Outer": "Default__BPVisFamilyCenterKeystoneT2_C",
     "Class": "UScriptClass'VisTownAreaMarkerDecalComponent'",
     "Properties": {
+      "TeamDecalAranic": {
+        "ObjectName": "MaterialInstanceConstant'HomesteadRange_GridFoundation_A'",
+        "ObjectPath": "Anvil/Content/FX/Materials/HomesteadRange_GridFoundation_A.0"
+      },
+      "TeamDecalMirrish": {
+        "ObjectName": "MaterialInstanceConstant'HomesteadRange_GridFoundation_M'",
+        "ObjectPath": "Anvil/Content/FX/Materials/HomesteadRange_GridFoundation_M.0"
+      },
+      "TeamDecalNovan": {
+        "ObjectName": "MaterialInstanceConstant'HomesteadRange_GridFoundation_N'",
+        "ObjectPath": "Anvil/Content/FX/Materials/HomesteadRange_GridFoundation_N.0"
+      },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyCenterKeystoneT2_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFamilyCenterKeystoneT2.0"

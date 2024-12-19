@@ -10,6 +10,7 @@ enum class EAnvilDamageTargetType : uint8 {
     Structure,
     Fire,
     Vehicle,
+    LightStructure,
     NumTypes,
 };
 

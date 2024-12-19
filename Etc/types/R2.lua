@@ -125,6 +125,33 @@ FBasicItemCount = {}
 
 
 
+---@class FBuildAreaInfo
+---@field TownArea boolean
+---@field TownAreaPledgeRequired boolean
+---@field SmallCampArea boolean
+---@field LargeCampArea boolean
+---@field HomesteadArea boolean
+---@field HomesteadAreaPledgeRequired boolean
+---@field UndergroundArea boolean
+---@field WildernessArea boolean
+---@field WildernessAreaFriendlyRequired boolean
+FBuildAreaInfo = {}
+
+
+
+---@class FBuildRuleInfo
+---@field RequiresEnclosure boolean
+---@field bBuildableOverRoads boolean
+---@field bBuildableNearSpawnPoint boolean
+---@field bBuildableInEnemyArea boolean
+---@field bBuildableNearEnemies boolean
+---@field NearbyPlayersRequired int32
+---@field TierPrerequisite uint8
+---@field bBuildableInWildernessWithoutPledge boolean
+FBuildRuleInfo = {}
+
+
+
 ---@class FCentralMarketplaceListing
 ---@field ListingId int32
 ---@field Item FItemCount
@@ -165,6 +192,16 @@ FCompressedTileLayerDataInfo = {}
 ---@field Status EAnvilPlacementStatus
 ---@field Context int32
 FContextfulPlacementStatus = {}
+
+
+
+---@class FControlSurface
+---@field Pivot FVector
+---@field DimensionX float
+---@field DimensionYZ float
+---@field bVertical boolean
+---@field bInvertedControls boolean
+FControlSurface = {}
 
 
 
@@ -383,15 +420,6 @@ FLootTableItem = {}
 
 
 
----@class FMinDistBetweenStructsEntry
----@field CodeName TSubclassOf<UEntityTemplate>
----@field CodeNameVisVar int32
----@field Range float
----@field NumLimit uint8
-FMinDistBetweenStructsEntry = {}
-
-
-
 ---@class FMineChunk
 ---@field TypeIdx int32
 ---@field WorldPosition FVector
@@ -448,6 +476,25 @@ FPledgedPlayer = {}
 ---@field OutputCount uint8
 ---@field bRequiresResearch boolean
 FProducableItem = {}
+
+
+
+---@class FR2ConfigBuildSite
+---@field BuildSiteDistanceRules TArray<FR2ConfigBuildSiteDistanceRule>
+---@field FamilyStructureWorldEntranceAvoidDist float
+---@field MaxFamilyCenterRadius float
+FR2ConfigBuildSite = {}
+
+
+
+---@class FR2ConfigBuildSiteDistanceRule
+---@field BuildSites TArray<TSubclassOf<UEntityTemplate>>
+---@field Range float
+---@field bWithinTownRange boolean
+---@field NeighbourLimit uint8
+---@field FriendlyTeam EAnvilTrinaryRequirement
+---@field ErrorCode EAnvilPlacementStatus
+FR2ConfigBuildSiteDistanceRule = {}
 
 
 
@@ -701,6 +748,7 @@ FWorldEntityTownHallData = {}
 
 ---@class FWorldEntityWildSpawnData
 ---@field bIsActiveWildSpawn boolean
+---@field bIsWildSpawnNearTown boolean
 FWorldEntityWildSpawnData = {}
 
 
@@ -713,10 +761,11 @@ UAIStimulusProxyComponent = {}
 
 
 ---@class UAdminEnvDataComponent : UDataComponent
----@field bDebugDrawHook boolean
----@field bShowStructureStatsHook boolean
----@field bShowWeatherStatsHook boolean
----@field bFastReinforcementsAlertCooldown boolean
+---@field bFreeBuild boolean
+---@field bDebugDraw boolean
+---@field bGodMode boolean
+---@field bShowStructureStats boolean
+---@field bShowWeatherStats boolean
 UAdminEnvDataComponent = {}
 
 
@@ -950,7 +999,6 @@ UBoxCollisionProxyComponent = {}
 
 
 ---@class UBuildSiteDataComponent : UDataComponent
----@field NearbyPlayersRequired int32
 ---@field MaterialSubmissions TArray<int32>
 ---@field BuildGhostPlacementErrors TArray<FContextfulPlacementStatus>
 ---@field PlacementInfoFlags int32
@@ -963,32 +1011,19 @@ UBuildSiteDataComponent = {}
 ---@class UBuildSiteProxyComponent : UProxyComponent
 ---@field BuiltStructureEntity TSubclassOf<UEntityTemplate>
 ---@field BuildLocation int32
+---@field BuildArea FBuildAreaInfo
+---@field BuildRules FBuildRuleInfo
 ---@field CompatibleSurfaceTypes int32
 ---@field RequiredTool EAnvilToolType
----@field bRequiresTownHall boolean
----@field bRequiresCamp boolean
----@field bRequiresSmallCamp boolean
----@field bRequiresClaimedFamilyHouse boolean
----@field bRequiresTerritoryOwnership boolean
----@field bBuildableOverRoads boolean
----@field bBuildableNearSpawnPoint boolean
----@field bBuildableInEnemyTerritory boolean
----@field bBuildableNearEnemies boolean
----@field bIsBuildableUnderground boolean
----@field bOnlyBuildableUnderground boolean
 ---@field bAllowRapidBuild boolean
----@field CanBuildTownStructureWithoutPledge boolean
 ---@field bBuildsInstantly boolean
----@field bMinDistanceCheckIgnoreEnemyStructures boolean
 ---@field bIsGridDiagonalPiece boolean
----@field TierPrerequisite uint8
+---@field bDisableRotationSnap boolean
 ---@field RequiredDeployable TSubclassOf<UItemTemplate>
 ---@field LevelCheckRayOffset FVector
 ---@field MaxHeightShift float
 ---@field AdditionalMaxHeightShift float
----@field MinDistBetweenStructs TArray<FMinDistBetweenStructsEntry>
 ---@field GridDiagonalPair TSubclassOf<UEntityTemplate>
----@field NearbyPlayersRequired int32
 ---@field MaterialRequirements TArray<FBasicCount>
 ---@field VisualGuideMinDistance float
 UBuildSiteProxyComponent = {}
@@ -1047,11 +1082,15 @@ UCollisionVisualizerComponent = {}
 
 
 
----@class UConstructionFacilityProxyComponent : UProxyComponent
----@field LocationType EAnvilBuildLocationType
----@field BuildSiteSpawnOffset FVector
----@field BuildSiteSpawnRotation FRotator
-UConstructionFacilityProxyComponent = {}
+---@class UConvexCollisionProxyComponent : UProxyComponent
+---@field Position FVector
+---@field Rotation FRotator
+---@field SurfaceType EAnvilPhysicalSurfaceType
+---@field CollisionMask int32
+---@field Tags int32
+---@field StepAngle float
+---@field bVaultable boolean
+UConvexCollisionProxyComponent = {}
 
 
 
@@ -1390,7 +1429,6 @@ UHousingDataComponent = {}
 ---@class UHousingProxyComponent : UProxyComponent
 ---@field PlayerCapacity uint8
 ---@field IsGroupHouse boolean
----@field bRequiresCeilingCheck boolean
 ---@field bIsTownTent boolean
 UHousingProxyComponent = {}
 
@@ -1404,6 +1442,7 @@ UHungerDataComponent = {}
 
 ---@class UHungerProxyComponent : UProxyComponent
 ---@field HungerPerTick float
+---@field bSlowHungerWhenLow boolean
 UHungerProxyComponent = {}
 
 
@@ -1642,6 +1681,7 @@ UMountedWeaponDataComponent = {}
 ---@field bHighArc boolean
 ---@field bFixedAim boolean
 ---@field bRequirePrimedLoad boolean
+---@field bShowAimMesh boolean
 ---@field PrimingTime float
 ---@field Weapon TSubclassOf<UItemTemplate>
 UMountedWeaponProxyComponent = {}
@@ -1678,6 +1718,17 @@ UPackingProxyComponent = {}
 ---@field Frequency float
 ---@field DamageType EAnvilDamageType
 UPassiveDamageProxyComponent = {}
+
+
+
+---@class UPhysMovementProxyComponent : UProxyComponent
+---@field Cad float
+---@field Mass float
+---@field CoGOffset FVector
+---@field CuboidTensorExtents FVector
+---@field EngineForce float
+---@field EngineForcePosition FVector
+UPhysMovementProxyComponent = {}
 
 
 
@@ -1879,6 +1930,12 @@ UQuenchingProxyComponent = {}
 
 
 
+---@class UR2ConfigProxyComponent : UProxyComponent
+---@field BuildSite FR2ConfigBuildSite
+UR2ConfigProxyComponent = {}
+
+
+
 ---@class URareResourceAreaMarkerProxyComponent : UProxyComponent
 ---@field RareResourceAreaType EAnvilRareResourceAreaType
 ---@field AreaRadius float
@@ -2018,13 +2075,40 @@ UScorchProxyComponent = {}
 USeekerProxyComponent = {}
 
 
+---@class UShipMovementDataComponent : UDataComponent
+---@field RudderAngle float
+UShipMovementDataComponent = {}
+
+
+
+---@class UShipMovementProxyComponent : UProxyComponent
+---@field BuoyancyMeshCollisionAssetName UStaticMesh
+---@field MaxRudderAngle float
+---@field RudderTurnRate float
+---@field DragReferenceSpeed float
+---@field Fp float
+---@field Fs float
+---@field Cpd1 float
+---@field Cpd2 float
+---@field Csd1 float
+---@field Csd2 float
+---@field SlammingPower float
+---@field GammaMax float
+---@field Rudder FControlSurface
+---@field ThrustVectoringPercent float
+UShipMovementProxyComponent = {}
+
+
+
 ---@class USimPlayerDataComponent : UDataComponent
 ---@field GuardStrength uint8
 ---@field TeamId uint8
 ---@field CurrentMovementMode EAnvilMovementMode
 ---@field GuardMeter float
 ---@field Stability float
+---@field StabilityTarget float
 ---@field StabilityGuardThreshold float
+---@field bIsStabilityCooldownActive uint8
 ---@field CurrentActivitySpeedModifier float
 ---@field CurrentActivityChainIndex uint8
 ---@field ActivityState EAnvilSimActivityState
@@ -2055,6 +2139,7 @@ USeekerProxyComponent = {}
 ---@field bIsMeshHidden boolean
 ---@field bMouseSelectCeiling boolean
 ---@field bIsReinforcing boolean
+---@field bIsFalling boolean
 ---@field SecondsUntilFullDecay float
 ---@field HeldItemLightSourceRadius float
 ---@field LightSourceData TArray<FNightShroudLightSource>
@@ -2079,6 +2164,7 @@ USimPlayerDataComponent = {}
 ---@field GuardMeterDecaySpeed float
 ---@field StaggerDuration float
 ---@field StaggerAmount float
+---@field StabilityRegenCD float
 ---@field Radius float
 ---@field HalfHeight float
 ---@field CrouchedHalfHeight float

@@ -33,6 +33,7 @@ enum class EAnvilStatusMessageType : uint8 {
     ItemTransfer_WithdrawalRestricted,
     ItemTransfer_NotPublic,
     ItemTransfer_HeavyToolFull,
+    ItemTransfer_CannotRemoveFood,
     Blocked,
     Vehicle_ExitBlocked,
     InvalidDetachLocation,
@@ -143,6 +144,7 @@ enum class EAnvilStatusMessageType : uint8 {
     OutOfAmmunition,
     NotValidSupportToReinforce,
     OccupantMustbeMounted,
+    RopeDetachFailed_HandsFull,
     NumTypes,
 };
 

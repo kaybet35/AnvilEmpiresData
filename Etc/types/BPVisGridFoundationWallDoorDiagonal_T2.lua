@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABPVisGridFoundationWallDoorDiagonal_T2_C : AVisStructure
+---@class ABPVisGridFoundationWallDoorDiagonal_T2_C : AVisGate
 ---@field VisRandomMeshDecor26 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor29 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor30 UVisRandomMeshDecorComponent

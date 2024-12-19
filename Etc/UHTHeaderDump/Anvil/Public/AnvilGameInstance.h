@@ -13,6 +13,7 @@ class AUIGlobals;
 class AVisActor;
 class UAnvilCharacterSave;
 class UAnvilClientVoiceClient;
+class UEntityTemplate;
 class UHUDWidget;
 class UMapWidget;
 class UWorldEntityPoolManager;
@@ -54,6 +55,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AUIGlobals> UIGlobalsClass;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UEntityTemplate> R2ConfigClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ALandscapeProxy*> DirtyLandscapeProxies;
