@@ -1,5 +1,17 @@
 [
   {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_0",
+    "Outer": "Pickaxe_primary_attack01",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'AxeSwing_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Axe/AxeSwing_Cue.0"
+      }
+    }
+  },
+  {
     "Type": "AnimSequence",
     "Name": "Pickaxe_primary_attack01",
     "Class": "UScriptClass'AnimSequence'",
@@ -15,6 +27,51 @@
       "TargetFrameRate": {
         "Numerator": 30
       },
+      "Notifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'Pickaxe_primary_attack01:AnimNotify_PlaySound_0'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Pickaxe_primary_attack01.0"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.18878691,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.18878691,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Pickaxe_primary_attack01'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Pickaxe_primary_attack01.1"
+          }
+        }
+      ],
       "SequenceLength": 1.0,
       "Skeleton": {
         "ObjectName": "Skeleton'PrototypeChar_Skeleton'",

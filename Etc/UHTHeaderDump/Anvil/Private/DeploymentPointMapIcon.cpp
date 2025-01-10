@@ -2,8 +2,8 @@
 
 UDeploymentPointMapIcon::UDeploymentPointMapIcon() {
     this->MapItemButton = NULL;
-    this->FlashingFrequency = 0.00f;
-    this->FlashingMinOpacity = 0.00f;
+    this->FlashingFrequency = 2.00f;
+    this->FlashingMinOpacity = 0.20f;
 }
 
 void UDeploymentPointMapIcon::OnDeploymentPointClicked() {

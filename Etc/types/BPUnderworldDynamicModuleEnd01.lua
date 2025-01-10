@@ -1,6 +1,14 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleEnd01_C : ABPUnderworldModuleDynamicPrefab_C
+---@field RockWall0151 UStaticMeshComponent
+---@field RockWall0150 UStaticMeshComponent
+---@field RockWall0149 UStaticMeshComponent
+---@field RockWall0148 UStaticMeshComponent
+---@field RockWall0147 UStaticMeshComponent
+---@field RockWall0146 UStaticMeshComponent
+---@field RockWall0145 UStaticMeshComponent
+---@field RockWall0144 UStaticMeshComponent
 ---@field LoreStatue UChildActorComponent
 ---@field VisLoreVolume UVisLoreVolumeComponent
 ---@field RockWallUnderworldSpike15 UStaticMeshComponent

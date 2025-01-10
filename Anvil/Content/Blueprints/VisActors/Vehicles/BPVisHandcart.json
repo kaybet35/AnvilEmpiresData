@@ -34,14 +34,58 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisHandcart_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.18"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisVehicle'",
+      "ObjectName": "Class'VisCart'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisPointLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisPointLightComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Arrow",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ArrowComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SK_Torch",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "VisMultiItemStockpile",
@@ -61,17 +105,6 @@
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
           "ObjectName": "Class'SkeletalMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Arrow",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'ArrowComponent'",
           "ObjectPath": "/Script/Engine"
         }
       }
@@ -98,7 +131,7 @@
     "Properties": {
       "VehicleMovementDataComponent": {
         "ObjectName": "VehicleMovementDataComponent'Default__BPVisHandcart_C:VehicleMovementDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.21"
       },
       "EntityAttachableDataComponent": {
         "ObjectName": "EntityAttachableDataComponent'Default__BPVisHandcart_C:EntityAttachableDataComponent'",
@@ -110,7 +143,7 @@
       },
       "MoveLoopParticleSystem": {
         "ObjectName": "NiagaraComponent'Default__BPVisHandcart_C:MovementParticleSystem'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.9"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisHandcart_C:HealthDataComponent'",
@@ -175,6 +208,73 @@
   },
   {
     "Type": "NiagaraComponent",
+    "Name": "Niagara_GEN_VARIABLE",
+    "Outer": "BPVisHandcart_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'TorchFire2'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/TorchFire2.32"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RandomRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.RandomRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": 1.01745115E-07,
+        "Y": -8.526513E-14,
+        "Z": 71.33989
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
     "Name": "MovementParticleSystem",
     "Outer": "Default__BPVisHandcart_C",
     "Class": "UScriptClass'NiagaraComponent'",
@@ -204,7 +304,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisHandcart_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.10"
       },
       "VariableGuid": "D82AE2A8-4A510B7D-C2FEF0B1-49C05F96",
       "InternalVariableName": "DefaultSceneRoot"
@@ -222,16 +322,48 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisHandcart_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.20"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.13"
         }
       ],
       "VariableGuid": "CCFAEB4B-428069DF-1DB160AA-175C147B",
       "InternalVariableName": "SkeletalMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisHandcart_C:SK_Torch_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.19"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.17"
+        }
+      ],
+      "VariableGuid": "A56C170C-4928E457-5B9B9EBC-77C463EB",
+      "InternalVariableName": "SK_Torch"
     }
   },
   {
@@ -246,7 +378,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisMultiItemStockpileComponent'BPVisHandcart_C:VisMultiItemStockpile_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.22"
       },
       "AttachToName": "S_CartContainer",
       "VariableGuid": "701F7646-4CF4B3B7-1E1679AF-FE170A79",
@@ -267,16 +399,52 @@
         "ObjectName": "ArrowComponent'BPVisHandcart_C:Arrow_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.0"
       },
-      "ParentComponentOrVariableName": "MovementAudioComponent",
+      "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.12"
         }
       ],
       "VariableGuid": "19AAC428-40A09598-388ABC86-EC5BED89",
       "InternalVariableName": "Arrow"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisHandcart_C:Niagara_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.8"
+      },
+      "VariableGuid": "28A0435A-41F5C4F6-68485095-C53DD0DB",
+      "InternalVariableName": "Niagara"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisPointLightComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisPointLightComponent'BPVisHandcart_C:VisPointLight_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.23"
+      },
+      "VariableGuid": "3612C20A-4D30D86D-E9B87D8C-426998C5",
+      "InternalVariableName": "VisPointLight"
     }
   },
   {
@@ -288,27 +456,63 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.15"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.13"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.12"
         },
         {
           "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.17"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisHandcart_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.11"
       }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SK_Torch_GEN_VARIABLE",
+    "Outer": "BPVisHandcart_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Torch'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/SK_Torch.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SK_Torch'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/SK_Torch.0"
+      },
+      "RelativeLocation": {
+        "X": 110.0,
+        "Y": 50.0,
+        "Z": 120.0
+      },
+      "ComponentTags": [
+        "Refining"
+      ]
     }
   },
   {
@@ -367,6 +571,32 @@
         "Yaw": 0.0,
         "Roll": 0.0
       }
+    }
+  },
+  {
+    "Type": "VisPointLightComponent",
+    "Name": "VisPointLight_GEN_VARIABLE",
+    "Outer": "BPVisHandcart_C",
+    "Class": "UScriptClass'VisPointLightComponent'",
+    "Properties": {
+      "SourceRadius": 20.0,
+      "IntensityUnits": "ELightUnits::Candelas",
+      "Temperature": 4275.1997,
+      "bUseTemperature": true,
+      "LightFunctionMaterial": {
+        "ObjectName": "MaterialInstanceConstant'TorchLightFunction01'",
+        "ObjectPath": "Anvil/Content/Materials/LightFunction/TorchLightFunction01.0"
+      },
+      "Intensity": 130.0,
+      "VolumetricScatteringIntensity": 0.0,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 300.0
+      },
+      "ComponentTags": [
+        "Refining"
+      ]
     }
   }
 ]

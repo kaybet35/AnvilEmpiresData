@@ -75,7 +75,7 @@ public:
     UAnvilGameInstance();
 
     UFUNCTION(BlueprintCallable)
-    void GetVisActors(TArray<AVisActor*>& OutVisActorList);
+    void GetVisActors(TArray<AVisActor*>& OutVisActorList) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetVersion(int32& OutMajor, int32& OutMinor, int32& OutPatch, int32& OutCL) const;

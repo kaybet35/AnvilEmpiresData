@@ -247,6 +247,20 @@ AVisAnimal = {}
 
 
 
+---@class AVisAnimalVehicle : AVisVehicle
+---@field HungerDataComponent UHungerDataComponent
+---@field StaminaDataComponent UStaminaDataComponent
+---@field AnimalAIDataComponent UAnimalAIDataComponent
+---@field SeatSocketName FName
+---@field Mesh USkeletalMeshComponent
+---@field SaddleMesh USkeletalMeshComponent
+---@field HalterHeadMesh USkeletalMeshComponent
+---@field HalterBodyMesh USkeletalMeshComponent
+---@field SaddleMeshes TArray<USkeletalMesh>
+AVisAnimalVehicle = {}
+
+
+
 ---@class AVisAnvilStructure : AVisStructure
 ---@field AnvilDataComponent UAnvilDataComponent
 ---@field ConvertedItemMeshComponent USkeletalMeshComponent
@@ -293,17 +307,7 @@ AVisBuildSite = {}
 
 
 ---@class AVisCart : AVisVehicle
----@field HungerDataComponent UHungerDataComponent
----@field StaminaDataComponent UStaminaDataComponent
----@field AnimalAIDataComponent UAnimalAIDataComponent
----@field SeatSocketName FName
----@field Mesh USkeletalMeshComponent
----@field SaddleMesh USkeletalMeshComponent
----@field HalterHeadMesh USkeletalMeshComponent
----@field HalterBodyMesh USkeletalMeshComponent
----@field SaddleMeshes TArray<USkeletalMesh>
 AVisCart = {}
-
 
 
 ---@class AVisCentralMarketplace : AVisStructure
@@ -570,6 +574,7 @@ AVisPickupItem = {}
 ---@field TorchVFXComponent UNiagaraComponent
 ---@field TorchVFX2Component UNiagaraComponent
 ---@field TorchPointLightComponent UPointLightComponent
+---@field TorchVisPointLightComponent UVisPointLightComponent
 ---@field TorchAudioComponent UAudioComponent
 ---@field RainVFXComponent UNiagaraComponent
 ---@field SnowVFXComponent UNiagaraComponent
@@ -589,6 +594,7 @@ AVisPickupItem = {}
 ---@field SwimmingLoopVFXComponent UNiagaraComponent
 ---@field EnterSwimmingSoundCue USoundCue
 ---@field SwimmingLoopAudioComponent UAudioComponent
+---@field NumDynamicShadowCastingLights int32
 ---@field PostProcessMaterialParameterCollection UMaterialParameterCollection
 ---@field PositionPostProcessMaterialParameterCollection UMaterialParameterCollection
 ---@field UnderworldCollapseMaterialParameterCollection UMaterialParameterCollection
@@ -2908,6 +2914,10 @@ UVisPlayerAnimInstance = {}
 
 ---@class UVisPlayerVisualsComponent : UActorComponent
 UVisPlayerVisualsComponent = {}
+
+
+---@class UVisPointLightComponent : UPointLightComponent
+UVisPointLightComponent = {}
 
 
 ---@class UVisPowerUnitAnimInstance : UAnimInstance

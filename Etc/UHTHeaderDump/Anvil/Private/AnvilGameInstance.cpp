@@ -10,7 +10,7 @@ UAnvilGameInstance::UAnvilGameInstance() {
     this->R2ConfigClass = NULL;
 }
 
-void UAnvilGameInstance::GetVisActors(TArray<AVisActor*>& OutVisActorList) {
+void UAnvilGameInstance::GetVisActors(TArray<AVisActor*>& OutVisActorList) const {
 }
 
 void UAnvilGameInstance::GetVersion(int32& OutMajor, int32& OutMinor, int32& OutPatch, int32& OutCL) const {

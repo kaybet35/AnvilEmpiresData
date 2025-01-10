@@ -34,6 +34,7 @@ class UStaminaDataComponent;
 class UStaticMeshComponent;
 class UTemperatureDataComponent;
 class UVisPlayerVisualsComponent;
+class UVisPointLightComponent;
 class UVisSpringArmComponent;
 
 UCLASS(Blueprintable)
@@ -157,6 +158,9 @@ private:
     UPointLightComponent* TorchPointLightComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UVisPointLightComponent* TorchVisPointLightComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAudioComponent* TorchAudioComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -212,6 +216,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAudioComponent* SwimmingLoopAudioComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 NumDynamicShadowCastingLights;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialParameterCollection* PostProcessMaterialParameterCollection;

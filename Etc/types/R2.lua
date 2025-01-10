@@ -395,6 +395,7 @@ FItemCount = {}
 ---@field ProxyRepeat int32
 ---@field bOr boolean
 ---@field HeldItem TSubclassOf<UItemTemplate>
+---@field bIsHeldItemPublic boolean
 ---@field Count int32
 ---@field StackLimit int32
 ---@field bAllowWithdrawal boolean

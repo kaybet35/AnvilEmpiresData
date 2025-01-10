@@ -4,6 +4,7 @@ FItemSlot::FItemSlot() {
     this->ProxyRepeat = 0;
     this->bOr = false;
     this->HeldItem = NULL;
+    this->bIsHeldItemPublic = false;
     this->Count = 0;
     this->StackLimit = 0;
     this->bAllowWithdrawal = false;

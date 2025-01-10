@@ -659,6 +659,20 @@ class AVisAnimal : public AVisActor
 
 }; // Size: 0x518
 
+class AVisAnimalVehicle : public AVisVehicle
+{
+    class UHungerDataComponent* HungerDataComponent;                                  // 0x04D8 (size: 0x8)
+    class UStaminaDataComponent* StaminaDataComponent;                                // 0x04E0 (size: 0x8)
+    class UAnimalAIDataComponent* AnimalAIDataComponent;                              // 0x04E8 (size: 0x8)
+    FName SeatSocketName;                                                             // 0x04F0 (size: 0x8)
+    class USkeletalMeshComponent* Mesh;                                               // 0x04F8 (size: 0x8)
+    class USkeletalMeshComponent* SaddleMesh;                                         // 0x0500 (size: 0x8)
+    class USkeletalMeshComponent* HalterHeadMesh;                                     // 0x0508 (size: 0x8)
+    class USkeletalMeshComponent* HalterBodyMesh;                                     // 0x0510 (size: 0x8)
+    TArray<class USkeletalMesh*> SaddleMeshes;                                        // 0x0518 (size: 0x10)
+
+}; // Size: 0x528
+
 class AVisAnvilStructure : public AVisStructure
 {
     class UAnvilDataComponent* AnvilDataComponent;                                    // 0x0518 (size: 0x8)
@@ -704,17 +718,7 @@ class AVisBuildSite : public AVisActor
 
 class AVisCart : public AVisVehicle
 {
-    class UHungerDataComponent* HungerDataComponent;                                  // 0x04D8 (size: 0x8)
-    class UStaminaDataComponent* StaminaDataComponent;                                // 0x04E0 (size: 0x8)
-    class UAnimalAIDataComponent* AnimalAIDataComponent;                              // 0x04E8 (size: 0x8)
-    FName SeatSocketName;                                                             // 0x04F0 (size: 0x8)
-    class USkeletalMeshComponent* Mesh;                                               // 0x04F8 (size: 0x8)
-    class USkeletalMeshComponent* SaddleMesh;                                         // 0x0500 (size: 0x8)
-    class USkeletalMeshComponent* HalterHeadMesh;                                     // 0x0508 (size: 0x8)
-    class USkeletalMeshComponent* HalterBodyMesh;                                     // 0x0510 (size: 0x8)
-    TArray<class USkeletalMesh*> SaddleMeshes;                                        // 0x0518 (size: 0x10)
-
-}; // Size: 0x528
+}; // Size: 0x4D8
 
 class AVisCentralMarketplace : public AVisStructure
 {
@@ -979,31 +983,33 @@ class AVisPlayer : public AVisActor
     class UNiagaraComponent* TorchVFXComponent;                                       // 0x06F0 (size: 0x8)
     class UNiagaraComponent* TorchVFX2Component;                                      // 0x06F8 (size: 0x8)
     class UPointLightComponent* TorchPointLightComponent;                             // 0x0700 (size: 0x8)
-    class UAudioComponent* TorchAudioComponent;                                       // 0x0708 (size: 0x8)
-    class UNiagaraComponent* RainVFXComponent;                                        // 0x0710 (size: 0x8)
-    class UNiagaraComponent* SnowVFXComponent;                                        // 0x0718 (size: 0x8)
-    class UNiagaraComponent* BreathFogVFXComponent;                                   // 0x0720 (size: 0x8)
-    class UAudioComponent* RainLowAudioComponent;                                     // 0x0728 (size: 0x8)
-    class UAudioComponent* RainMidAudioComponent;                                     // 0x0730 (size: 0x8)
-    class UAudioComponent* RainHighAudioComponent;                                    // 0x0738 (size: 0x8)
-    class UAudioComponent* SnowLowAudioComponent;                                     // 0x0740 (size: 0x8)
-    class UAudioComponent* SnowMidAudioComponent;                                     // 0x0748 (size: 0x8)
-    class UAudioComponent* SnowHighAudioComponent;                                    // 0x0750 (size: 0x8)
-    class UAudioComponent* WindLowAudioComponent;                                     // 0x0758 (size: 0x8)
-    class UAudioComponent* WindMidAudioComponent;                                     // 0x0760 (size: 0x8)
-    class UAudioComponent* WindHighAudioComponent;                                    // 0x0768 (size: 0x8)
-    class UNiagaraComponent* UnderworldCollapseFXComponent;                           // 0x0770 (size: 0x8)
-    class USoundCue* RepairItemSoundCue;                                              // 0x0778 (size: 0x8)
-    class UNiagaraComponent* EnterSwimmingVFXComponent;                               // 0x0780 (size: 0x8)
-    class UNiagaraComponent* SwimmingLoopVFXComponent;                                // 0x0788 (size: 0x8)
-    class USoundCue* EnterSwimmingSoundCue;                                           // 0x0790 (size: 0x8)
-    class UAudioComponent* SwimmingLoopAudioComponent;                                // 0x0798 (size: 0x8)
-    class UMaterialParameterCollection* PostProcessMaterialParameterCollection;       // 0x07A0 (size: 0x8)
-    class UMaterialParameterCollection* PositionPostProcessMaterialParameterCollection; // 0x07A8 (size: 0x8)
-    class UMaterialParameterCollection* UnderworldCollapseMaterialParameterCollection; // 0x07B0 (size: 0x8)
-    class AVisActor* CurrentUsableVisActor;                                           // 0x0820 (size: 0x8)
-    class AVisActor* CurrentMountableVisActor;                                        // 0x0828 (size: 0x8)
-    class AActor* CurrentUEUsableActor;                                               // 0x0830 (size: 0x8)
+    class UVisPointLightComponent* TorchVisPointLightComponent;                       // 0x0708 (size: 0x8)
+    class UAudioComponent* TorchAudioComponent;                                       // 0x0710 (size: 0x8)
+    class UNiagaraComponent* RainVFXComponent;                                        // 0x0718 (size: 0x8)
+    class UNiagaraComponent* SnowVFXComponent;                                        // 0x0720 (size: 0x8)
+    class UNiagaraComponent* BreathFogVFXComponent;                                   // 0x0728 (size: 0x8)
+    class UAudioComponent* RainLowAudioComponent;                                     // 0x0730 (size: 0x8)
+    class UAudioComponent* RainMidAudioComponent;                                     // 0x0738 (size: 0x8)
+    class UAudioComponent* RainHighAudioComponent;                                    // 0x0740 (size: 0x8)
+    class UAudioComponent* SnowLowAudioComponent;                                     // 0x0748 (size: 0x8)
+    class UAudioComponent* SnowMidAudioComponent;                                     // 0x0750 (size: 0x8)
+    class UAudioComponent* SnowHighAudioComponent;                                    // 0x0758 (size: 0x8)
+    class UAudioComponent* WindLowAudioComponent;                                     // 0x0760 (size: 0x8)
+    class UAudioComponent* WindMidAudioComponent;                                     // 0x0768 (size: 0x8)
+    class UAudioComponent* WindHighAudioComponent;                                    // 0x0770 (size: 0x8)
+    class UNiagaraComponent* UnderworldCollapseFXComponent;                           // 0x0778 (size: 0x8)
+    class USoundCue* RepairItemSoundCue;                                              // 0x0780 (size: 0x8)
+    class UNiagaraComponent* EnterSwimmingVFXComponent;                               // 0x0788 (size: 0x8)
+    class UNiagaraComponent* SwimmingLoopVFXComponent;                                // 0x0790 (size: 0x8)
+    class USoundCue* EnterSwimmingSoundCue;                                           // 0x0798 (size: 0x8)
+    class UAudioComponent* SwimmingLoopAudioComponent;                                // 0x07A0 (size: 0x8)
+    int32 NumDynamicShadowCastingLights;                                              // 0x07A8 (size: 0x4)
+    class UMaterialParameterCollection* PostProcessMaterialParameterCollection;       // 0x07B0 (size: 0x8)
+    class UMaterialParameterCollection* PositionPostProcessMaterialParameterCollection; // 0x07B8 (size: 0x8)
+    class UMaterialParameterCollection* UnderworldCollapseMaterialParameterCollection; // 0x07C0 (size: 0x8)
+    class AVisActor* CurrentUsableVisActor;                                           // 0x0830 (size: 0x8)
+    class AVisActor* CurrentMountableVisActor;                                        // 0x0838 (size: 0x8)
+    class AActor* CurrentUEUsableActor;                                               // 0x0840 (size: 0x8)
 
     float GetVelocityHeadingDegrees();
     FString GetPlayerName();
@@ -1013,7 +1019,7 @@ class AVisPlayer : public AVisActor
     void BP_UpdateNightShroudMaterials();
     void BP_OnHeldItemChanged();
     FVector AnimGetVelocity();
-}; // Size: 0x848
+}; // Size: 0x858
 
 class AVisPowerMill : public AVisStructure
 {
@@ -2760,6 +2766,10 @@ class UVisPlayerAnimInstance : public UAnimInstance
 class UVisPlayerVisualsComponent : public UActorComponent
 {
 }; // Size: 0xA0
+
+class UVisPointLightComponent : public UPointLightComponent
+{
+}; // Size: 0x420
 
 class UVisPowerUnitAnimInstance : public UAnimInstance
 {

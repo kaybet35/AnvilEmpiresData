@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "FamilyCenterKeystoneT3_C'Default__FamilyCenterKeystoneT3_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.4"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.5"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -46,6 +46,21 @@
         "Y": 50.0,
         "Z": 400.0
       }
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_1",
+    "Outer": "Default__FamilyCenterKeystoneT3_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "ExtendFootprint": true,
+      "Extents": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 64
     }
   },
   {
@@ -82,39 +97,43 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__FamilyCenterKeystoneT3_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.14"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__FamilyCenterKeystoneT3_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.8"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__FamilyCenterKeystoneT3_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.11"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__FamilyCenterKeystoneT3_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.13"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__FamilyCenterKeystoneT3_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.4"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__FamilyCenterKeystoneT3_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.7"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__FamilyCenterKeystoneT3_C:BoxCollisionProxyComponent_0'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.1"
       },
+      "ActionBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__FamilyCenterKeystoneT3_C:BoxCollisionProxyComponent_1'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.2"
+      },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__FamilyCenterKeystoneT3_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.3"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__FamilyCenterKeystoneT3_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.12"
       },
       "CodeNameString": "FamilyCenterKeystoneT3",
       "CodeName": -978478065,
@@ -127,15 +146,15 @@
       "Components": [
         {
           "ObjectName": "FamilyCenterProxyComponent'Default__FamilyCenterKeystoneT3_C:FamilyCenterProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.5"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.6"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__FamilyCenterKeystoneT3_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.9"
         },
         {
           "ObjectName": "PlayerSpawnerProxyComponent'Default__FamilyCenterKeystoneT3_C:PlayerSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FamilyCenterKeystoneT3.10"
         }
       ],
       "VisActorClass": {
@@ -194,6 +213,7 @@
           "ProxyRepeat": 1,
           "bOr": false,
           "HeldItem": null,
+          "bIsHeldItemPublic": true,
           "Count": 0,
           "StackLimit": 30000,
           "bAllowWithdrawal": true,
@@ -213,9 +233,36 @@
           "BackgroundType": "EAnvilItemSlotBackgroundType::None"
         },
         {
+          "ProxyRepeat": 1,
+          "bOr": false,
+          "HeldItem": {
+            "ObjectName": "BlueprintGeneratedClass'FoodStarter_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodStarter.0"
+          },
+          "bIsHeldItemPublic": false,
+          "Count": 20,
+          "StackLimit": 30,
+          "bAllowWithdrawal": false,
+          "bIsPlayerEquipmentSlot": false,
+          "AcceptedTags": [
+            "EAnvilItemTag::StorableFoodT1"
+          ],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": {
+            "ObjectName": "BlueprintGeneratedClass'FoodStarter_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Consumables/FoodStarter.0"
+          },
+          "DedicatedUnderlyingItemType": null,
+          "bCheckDedicatedUnderlyingItem": true,
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
+        },
+        {
           "ProxyRepeat": 14,
           "bOr": false,
           "HeldItem": null,
+          "bIsHeldItemPublic": true,
           "Count": 0,
           "StackLimit": 30,
           "bAllowWithdrawal": true,

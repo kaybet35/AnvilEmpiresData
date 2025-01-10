@@ -19,6 +19,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=TemperatureDataComponent -FallbackName=TemperatureDataComponent
 #include "MapMarkerComponent.h"
 #include "VisPlayerVisualsComponent.h"
+#include "VisPointLightComponent.h"
 #include "VisSpringArmComponent.h"
 
 AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -61,6 +62,7 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->TorchVFXComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("TorchVFXComponent"));
     this->TorchVFX2Component = CreateDefaultSubobject<UNiagaraComponent>(TEXT("TorchVFXUnderworldComponent"));
     this->TorchPointLightComponent = CreateDefaultSubobject<UPointLightComponent>(TEXT("TorchPointLightComponent"));
+    this->TorchVisPointLightComponent = CreateDefaultSubobject<UVisPointLightComponent>(TEXT("TorchVisPointLightComponent"));
     this->TorchAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("TorchAudioComponent"));
     this->RainVFXComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("RainVFXComponent"));
     this->SnowVFXComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("SnowVFXComponent"));
@@ -80,9 +82,12 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->SwimmingLoopVFXComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("SwimmingLoopVFXComponent"));
     this->EnterSwimmingSoundCue = CreateDefaultSubobject<USoundCue>(TEXT("EnterSwimmingSoundCue"));
     this->SwimmingLoopAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("SwimmingLoopAudioComponent"));
+    this->NumDynamicShadowCastingLights = 3;
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
     this->CurrentUEUsableActor = NULL;
+    this->WindHighAudioComponent->SetupAttachment(SpringArm);
+    this->UnderworldCollapseFXComponent->SetupAttachment(SpringArm);
     this->EnterSwimmingVFXComponent->SetupAttachment(Mesh);
     this->SwimmingLoopVFXComponent->SetupAttachment(Mesh);
     this->SwimmingLoopAudioComponent->SetupAttachment(Mesh);
@@ -95,6 +100,7 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->TorchVFXComponent->SetupAttachment(Mesh);
     this->TorchVFX2Component->SetupAttachment(Mesh);
     this->TorchPointLightComponent->SetupAttachment(Mesh);
+    this->TorchVisPointLightComponent->SetupAttachment(Mesh);
     this->TorchAudioComponent->SetupAttachment(Mesh);
     this->RainVFXComponent->SetupAttachment(SpringArm);
     this->SnowVFXComponent->SetupAttachment(SpringArm);
@@ -107,8 +113,6 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->SnowHighAudioComponent->SetupAttachment(SpringArm);
     this->WindLowAudioComponent->SetupAttachment(SpringArm);
     this->WindMidAudioComponent->SetupAttachment(SpringArm);
-    this->WindHighAudioComponent->SetupAttachment(SpringArm);
-    this->UnderworldCollapseFXComponent->SetupAttachment(SpringArm);
     this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
