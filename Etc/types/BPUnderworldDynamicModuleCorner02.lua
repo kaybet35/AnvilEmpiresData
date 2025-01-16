@@ -1,6 +1,12 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleCorner02_C : ABPUnderworldModuleDynamicPrefab_C
+---@field RockWallUnderworld10x20x60A144 UStaticMeshComponent
+---@field ['Exterior Light Plane'] UStaticMeshComponent
+---@field RockWallUnderworld10x20x60A143 UStaticMeshComponent
+---@field RockWallUnderworld10x20x60A142 UStaticMeshComponent
+---@field RockWallUnderworld10x20x60A141 UStaticMeshComponent
+---@field RockWallUnderworld10x20x60A140 UStaticMeshComponent
 ---@field Props034 UStaticMeshComponent
 ---@field Props037 UChildActorComponent
 ---@field Props036 UChildActorComponent
@@ -196,9 +202,7 @@
 ---@field FloorChunk013 UStaticMeshComponent
 ---@field FloorChunk012 UStaticMeshComponent
 ---@field FloorChunk011 UStaticMeshComponent
----@field StaticMesh1 UStaticMeshComponent
 ---@field ['Key Light'] USpotLightComponent
----@field ['Exterior Light Plane'] UStaticMeshComponent
 ---@field RockWallUnderworld10x20x60A67 UStaticMeshComponent
 ---@field RockWallUnderworld10x20x60A66 UStaticMeshComponent
 ---@field RockWallUnderworld10x20x60A65 UStaticMeshComponent

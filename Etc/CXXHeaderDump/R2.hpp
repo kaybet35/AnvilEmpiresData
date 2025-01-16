@@ -1168,6 +1168,7 @@ class UDeployProxyComponent : public UProxyComponent
 {
     bool bRequireMounted;                                                             // 0x0028 (size: 0x1)
     bool bCopyHealthPercentage;                                                       // 0x0029 (size: 0x1)
+    bool bForceShowBuildMenu;                                                         // 0x002A (size: 0x1)
     TArray<class TSubclassOf<UEntityTemplate>> DeployableBuildSites;                  // 0x0030 (size: 0x10)
 
 }; // Size: 0x40

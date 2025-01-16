@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleEnd02_C : ABPUnderworldModuleDynamicPrefab_C
+---@field Wall096 UStaticMeshComponent
+---@field Wall0148 UStaticMeshComponent
 ---@field DirtDecal012 UDecalComponent
 ---@field Props021 UStaticMeshComponent
 ---@field Props020 UStaticMeshComponent
@@ -108,7 +110,6 @@
 ---@field Wall099 UStaticMeshComponent
 ---@field Wall098 UStaticMeshComponent
 ---@field Wall097 UStaticMeshComponent
----@field Wall096 UStaticMeshComponent
 ---@field Wall095 UStaticMeshComponent
 ---@field Wall094 UStaticMeshComponent
 ---@field Wall093 UStaticMeshComponent
@@ -118,7 +119,6 @@
 ---@field Wall089 UStaticMeshComponent
 ---@field Wall088 UStaticMeshComponent
 ---@field Wall087 UStaticMeshComponent
----@field StaticMesh UStaticMeshComponent
 ---@field Wall086 UStaticMeshComponent
 ---@field ['Exterior Light Plane'] UStaticMeshComponent
 ---@field ['Key Light'] USpotLightComponent

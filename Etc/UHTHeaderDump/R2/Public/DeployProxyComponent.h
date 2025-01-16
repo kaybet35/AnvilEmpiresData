@@ -17,6 +17,9 @@ public:
     bool bCopyHealthPercentage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bForceShowBuildMenu;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UEntityTemplate>> DeployableBuildSites;
     
     UDeployProxyComponent();

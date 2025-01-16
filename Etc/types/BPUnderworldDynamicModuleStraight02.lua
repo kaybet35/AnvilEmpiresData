@@ -1,6 +1,11 @@
 ---@meta
 
 ---@class ABPUnderworldDynamicModuleStraight02_C : ABPUnderworldModuleDynamicPrefab_C
+---@field Wall0143 UStaticMeshComponent
+---@field Wall0131 UStaticMeshComponent
+---@field Wall0134 UStaticMeshComponent
+---@field Wall0133 UStaticMeshComponent
+---@field Wall0142 UStaticMeshComponent
 ---@field Props018 UStaticMeshComponent
 ---@field Props017 UStaticMeshComponent
 ---@field Props026 UChildActorComponent
@@ -66,8 +71,6 @@
 ---@field ['Fill Light 08'] UPointLightComponent
 ---@field ['Fill Light 07'] UPointLightComponent
 ---@field Floor043 UStaticMeshComponent
----@field Wall0134 UStaticMeshComponent
----@field Wall0133 UStaticMeshComponent
 ---@field Wall0132 UStaticMeshComponent
 ---@field CustomNavmeshVolume UCustomNavmeshVolumeComponent
 ---@field LatticeMineIron2 UChildActorComponent
@@ -78,7 +81,6 @@
 ---@field ChildActorBat UChildActorComponent
 ---@field ChildActorIronPile UChildActorComponent
 ---@field ChildActorWolfElite UChildActorComponent
----@field Wall0131 UStaticMeshComponent
 ---@field Wall0130 UStaticMeshComponent
 ---@field Wall0129 UStaticMeshComponent
 ---@field Wall0128 UStaticMeshComponent
@@ -130,7 +132,6 @@
 ---@field Wall082 UStaticMeshComponent
 ---@field ['Key Light'] USpotLightComponent
 ---@field EntranceCollision UBoxComponent
----@field StaticMesh UStaticMeshComponent
 ---@field ['Exterior Light Plane'] UStaticMeshComponent
 ---@field Wall081 UStaticMeshComponent
 ---@field Wall080 UStaticMeshComponent

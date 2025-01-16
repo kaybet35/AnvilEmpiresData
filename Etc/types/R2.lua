@@ -1164,6 +1164,7 @@ UDecayProxyComponent = {}
 ---@class UDeployProxyComponent : UProxyComponent
 ---@field bRequireMounted boolean
 ---@field bCopyHealthPercentage boolean
+---@field bForceShowBuildMenu boolean
 ---@field DeployableBuildSites TArray<TSubclassOf<UEntityTemplate>>
 UDeployProxyComponent = {}
 

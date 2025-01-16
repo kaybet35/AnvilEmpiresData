@@ -175,9 +175,6 @@
     "Template": {
       "ObjectName": "HealthProxyComponent'Default__BPBaseFoundationModularEntity_C:HealthComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationModularEntity.7"
-    },
-    "Properties": {
-      "MaxHealth": 50.0
     }
   },
   {
@@ -208,6 +205,9 @@
     "Template": {
       "ObjectName": "StructureProxyComponent'Default__BPBaseFoundationModularEntity_C:StructureProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationModularEntity.10"
+    },
+    "Properties": {
+      "bCanBeReinforced": true
     }
   },
   {
@@ -230,7 +230,17 @@
         "ObjectName": "BlueprintGeneratedClass'GridFoundationHalfHeightDiagonal_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationHalfHeightDiagonal.0"
       },
-      "TierPrerequisite": 3
+      "TierPrerequisite": 3,
+      "MaterialRequirements": [
+        {
+          "CodeName": -879937657,
+          "Count": 2
+        },
+        {
+          "CodeName": -274270847,
+          "Count": 1
+        }
+      ]
     }
   }
 ]
