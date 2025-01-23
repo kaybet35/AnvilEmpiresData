@@ -3,11 +3,11 @@
 
 class ABPVisForge_C : public AVisHeatingStructure
 {
-    class UAudioComponent* Audio;                                                     // 0x0550 (size: 0x8)
-    class UNiagaraComponent* Niagara;                                                 // 0x0558 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh2;                                    // 0x0560 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0568 (size: 0x8)
+    class UAudioComponent* Audio;                                                     // 0x0528 (size: 0x8)
+    class UNiagaraComponent* Niagara;                                                 // 0x0530 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh2;                                    // 0x0538 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0540 (size: 0x8)
 
-}; // Size: 0x570
+}; // Size: 0x548
 
 #endif

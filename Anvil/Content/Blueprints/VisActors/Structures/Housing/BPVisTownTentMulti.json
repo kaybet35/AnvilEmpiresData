@@ -117,6 +117,7 @@
       },
       "BuildSiteCategory": "EBuildSiteCategory::Settlement",
       "BuildSiteOrder": -1,
+      "BuildSiteVisibility": "EBuildSiteVisibility::Never",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisTownTentMulti_C:UpgradeDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisTownTentMulti.21"
@@ -482,16 +483,14 @@
     "Outer": "BPVisTownTentMulti_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
     "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscapeRotate",
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
       "StaticMesh": {
         "ObjectName": "StaticMesh'Bed'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Bed.2"
       },
       "ComponentTags": [
         "Structure",
-        "Collision",
-        "ProjectToLandscape",
-        "RotateToLandscape"
+        "Collision"
       ]
     }
   },

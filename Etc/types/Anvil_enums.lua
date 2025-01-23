@@ -244,8 +244,9 @@ EHUDWindowType = {
     FamilyHouse = 23,
     Lore = 24,
     CentralMarket = 25,
-    Count = 26,
-    EHUDWindowType_MAX = 27,
+    Combustion = 26,
+    Count = 27,
+    EHUDWindowType_MAX = 28,
 }
 
 ---@enum EIncomingAttackDirection

@@ -1,0 +1,74 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BranchSpawner_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BranchSpawner_C'Default__BranchSpawner_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/BranchSpawner.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BranchSpawner_C",
+    "Name": "Default__BranchSpawner_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/BranchSpawner.BranchSpawner_C'",
+    "Properties": {
+      "CodeNameString": "BranchSpawner",
+      "CodeName": -230872883,
+      "Components": [
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__BranchSpawner_C:ResourceSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/BranchSpawner.3"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__BranchSpawner_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/BranchSpawner.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__BranchSpawner_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "LifeSpan": 60.0
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_0",
+    "Outer": "Default__BranchSpawner_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'BranchPile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/BranchPile.0"
+      },
+      "SpawnRadius": 1500.0,
+      "SpawnInterval": 120.0,
+      "SpawnQuantity": 10,
+      "MaxSpawn": 10,
+      "ResourceReserveInitial": 10,
+      "MinDistanceBetweenSpawns": 50.0,
+      "bDontSpawnInSettlements": true,
+      "bDontSpawnNearPlayers": true,
+      "CompatibleSurfaceTypes": 1028
+    }
+  }
+]

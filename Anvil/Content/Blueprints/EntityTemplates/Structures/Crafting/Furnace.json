@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "Furnace_C'Default__Furnace_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.6"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.7"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -37,40 +37,17 @@
     }
   },
   {
+    "Type": "CombustionProxyComponent",
+    "Name": "CombustionProxyComponent_0",
+    "Outer": "Default__Furnace_C",
+    "Class": "UScriptClass'CombustionProxyComponent'"
+  },
+  {
     "Type": "CookingProxyComponent",
     "Name": "CookingProxyComponent_0",
     "Outer": "Default__Furnace_C",
     "Class": "UScriptClass'CookingProxyComponent'",
     "Properties": {
-      "FuelList": [
-        {
-          "FuelItem": {
-            "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
-          },
-          "FuelItemVisVar": 0,
-          "BurnDurationSec": 180.0,
-          "NormalizedTemperature": 0.0
-        },
-        {
-          "FuelItem": {
-            "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
-          },
-          "FuelItemVisVar": 0,
-          "BurnDurationSec": 60.0,
-          "NormalizedTemperature": 0.0
-        },
-        {
-          "FuelItem": {
-            "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
-          },
-          "FuelItemVisVar": 0,
-          "BurnDurationSec": 60.0,
-          "NormalizedTemperature": 0.0
-        }
-      ],
       "RecipeList": [
         {
           "InputItems": [
@@ -215,27 +192,27 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__Furnace_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.15"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.12"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__Furnace_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.8"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__Furnace_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.9"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__Furnace_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.14"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.11"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__Furnace_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.5"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__Furnace_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.6"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__Furnace_C:BoxCollisionProxyComponent_0'",
@@ -243,35 +220,23 @@
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__Furnace_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.4"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__Furnace_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.10"
       },
       "CodeNameString": "Furnace",
       "CodeName": 826653602,
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
-          "ObjectName": "CookingProxyComponent'Default__Furnace_C:CookingProxyComponent_0'",
+          "ObjectName": "CombustionProxyComponent'Default__Furnace_C:CombustionProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.2"
         },
         {
-          "ObjectName": "InventoryProxyComponent'Default__Furnace_C:InventoryProxyComponent_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.8"
-        },
-        {
-          "ObjectName": "InventoryProxyComponent'Default__Furnace_C:InventoryProxyComponent_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.11"
-        },
-        {
-          "ObjectName": "InventoryProxyComponent'Default__Furnace_C:InventoryProxyComponent_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.10"
-        },
-        {
-          "ObjectName": "InventoryProxyComponent'Default__Furnace_C:InventoryProxyComponent_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.9"
+          "ObjectName": "CookingProxyComponent'Default__Furnace_C:CookingProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/Furnace.3"
         }
       ],
       "VisActorClass": {
@@ -291,42 +256,6 @@
     },
     "Properties": {
       "MaxHealth": 120.0
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_4",
-    "Outer": "Default__Furnace_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_5",
-    "Outer": "Default__Furnace_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_6",
-    "Outer": "Default__Furnace_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_7",
-    "Outer": "Default__Furnace_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems"
     }
   },
   {

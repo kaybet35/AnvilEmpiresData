@@ -30,6 +30,7 @@ enum class EHUDWindowType : uint8 {
     FamilyHouse,
     Lore,
     CentralMarket,
+    Combustion,
     Count,
 };
 

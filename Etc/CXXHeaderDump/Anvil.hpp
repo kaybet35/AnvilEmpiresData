@@ -377,17 +377,18 @@ struct FShardConfig
 
 struct FUpgradeCostData : public FTableRowBase
 {
-    int16 ProcessedWood;                                                              // 0x0008 (size: 0x2)
-    int16 ProcessedStone;                                                             // 0x000A (size: 0x2)
-    int16 ProcessedIron;                                                              // 0x000C (size: 0x2)
-    int16 Silver;                                                                     // 0x000E (size: 0x2)
-    int16 ReinforcedWood;                                                             // 0x0010 (size: 0x2)
-    int16 AnimalFat;                                                                  // 0x0012 (size: 0x2)
-    int16 AnimalBones;                                                                // 0x0014 (size: 0x2)
-    int16 ProcessedLeather;                                                           // 0x0016 (size: 0x2)
-    int16 Mortar;                                                                     // 0x0018 (size: 0x2)
-    int16 Gravel;                                                                     // 0x001A (size: 0x2)
-    int16 ResourceFibre;                                                              // 0x001C (size: 0x2)
+    int16 ResourceBranches;                                                           // 0x0008 (size: 0x2)
+    int16 ProcessedWood;                                                              // 0x000A (size: 0x2)
+    int16 ProcessedStone;                                                             // 0x000C (size: 0x2)
+    int16 ProcessedIron;                                                              // 0x000E (size: 0x2)
+    int16 Silver;                                                                     // 0x0010 (size: 0x2)
+    int16 ReinforcedWood;                                                             // 0x0012 (size: 0x2)
+    int16 AnimalFat;                                                                  // 0x0014 (size: 0x2)
+    int16 AnimalBones;                                                                // 0x0016 (size: 0x2)
+    int16 ProcessedLeather;                                                           // 0x0018 (size: 0x2)
+    int16 Mortar;                                                                     // 0x001A (size: 0x2)
+    int16 Gravel;                                                                     // 0x001C (size: 0x2)
+    int16 ResourceFibre;                                                              // 0x001E (size: 0x2)
 
 }; // Size: 0x20
 
@@ -690,8 +691,9 @@ class AVisAnvilStructure : public AVisStructure
 class AVisBeaconTower : public AVisStructure
 {
     class UBeaconTowerDataComponent* BeaconTowerDataComponent;                        // 0x0518 (size: 0x8)
+    class UCombustionDataComponent* CombustionDataComponent;                          // 0x0520 (size: 0x8)
 
-}; // Size: 0x520
+}; // Size: 0x528
 
 class AVisBoat : public AVisVehicle
 {
@@ -735,16 +737,17 @@ class AVisController : public AVisActor
 
 class AVisCookingStructure : public AVisStructure
 {
-    bool bShowCheatSheet;                                                             // 0x052B (size: 0x1)
-    class UCookingDataComponent* CookingDataComponent;                                // 0x0530 (size: 0x8)
-    TMap<class TSubclassOf<UItemTemplate>, class UMaterialInterface*> WaterMeshMaterialMap; // 0x0538 (size: 0x50)
-    class UStaticMeshComponent* WaterLevelMesh;                                       // 0x0588 (size: 0x8)
-    class UCurveFloat* WaterHeightCurve;                                              // 0x0590 (size: 0x8)
-    class UCurveVector* WaterScaleCurve;                                              // 0x0598 (size: 0x8)
-    class UAudioComponent* BoilingTemperatureHighAudio;                               // 0x05A0 (size: 0x8)
-    class UAudioComponent* BoilingTemperatureLowAudio;                                // 0x05A8 (size: 0x8)
+    bool bShowCheatSheet;                                                             // 0x051B (size: 0x1)
+    class UCookingDataComponent* CookingDataComponent;                                // 0x0520 (size: 0x8)
+    class UCombustionDataComponent* CombustionDataComponent;                          // 0x0528 (size: 0x8)
+    TMap<class TSubclassOf<UItemTemplate>, class UMaterialInterface*> WaterMeshMaterialMap; // 0x0530 (size: 0x50)
+    class UStaticMeshComponent* WaterLevelMesh;                                       // 0x0580 (size: 0x8)
+    class UCurveFloat* WaterHeightCurve;                                              // 0x0588 (size: 0x8)
+    class UCurveVector* WaterScaleCurve;                                              // 0x0590 (size: 0x8)
+    class UAudioComponent* BoilingTemperatureHighAudio;                               // 0x0598 (size: 0x8)
+    class UAudioComponent* BoilingTemperatureLowAudio;                                // 0x05A0 (size: 0x8)
 
-}; // Size: 0x5B8
+}; // Size: 0x5B0
 
 class AVisCraftingStructure : public AVisStructure
 {
@@ -840,9 +843,10 @@ class AVisGate : public AVisStructure
 
 class AVisHeatingStructure : public AVisStructure
 {
-    class UHeatingDataComponent* HeatingDataComponent;                                // 0x0548 (size: 0x8)
+    class UHeatingDataComponent* HeatingDataComponent;                                // 0x0518 (size: 0x8)
+    class UCombustionDataComponent* CombustionDataComponent;                          // 0x0520 (size: 0x8)
 
-}; // Size: 0x550
+}; // Size: 0x528
 
 class AVisHitConverterStructure : public AVisStructure
 {
@@ -1046,8 +1050,7 @@ class AVisResource : public AVisActor
     class UResourceDataComponent* ResourceDataComponent;                              // 0x04A0 (size: 0x8)
     class UPlantGrowthDataComponent* PlantGrowthComponent;                            // 0x04A8 (size: 0x8)
     TArray<class UStaticMesh*> StageMeshes;                                           // 0x04B0 (size: 0x10)
-    bool bApplyIdBasedRandomRotation;                                                 // 0x04C0 (size: 0x1)
-    bool bProjectToLandscape;                                                         // 0x04C1 (size: 0x1)
+    bool bProjectToLandscape;                                                         // 0x04C0 (size: 0x1)
     class UArrowComponent* ArrowComponent;                                            // 0x04C8 (size: 0x8)
     class UStaticMeshComponent* Mesh;                                                 // 0x04D0 (size: 0x8)
     class UCurveVector* ShakeCurve;                                                   // 0x04D8 (size: 0x8)
@@ -1083,7 +1086,7 @@ class AVisSplineBuildSite : public AVisBuildSite
 
 class AVisStaticTorch : public AVisStructure
 {
-    class UStaticTorchDataComponent* StaticTorchDataComponent;                        // 0x0518 (size: 0x8)
+    class UCombustionDataComponent* CombustionDataComponent;                          // 0x0518 (size: 0x8)
 
 }; // Size: 0x520
 
@@ -1123,6 +1126,15 @@ class AVisTrap : public AVisActor
     class UTrapDataComponent* TrapDataComponent;                                      // 0x04B8 (size: 0x8)
 
 }; // Size: 0x4C0
+
+class AVisTreeFall : public AVisActor
+{
+    class UArrowComponent* ArrowComponent;                                            // 0x04A0 (size: 0x8)
+    class UStaticMeshComponent* TreeTop;                                              // 0x04A8 (size: 0x8)
+    class UCurveFloat* FallCurve;                                                     // 0x04B0 (size: 0x8)
+    class UTreeFallDataComponent* TreeFallDataComponent;                              // 0x04B8 (size: 0x8)
+
+}; // Size: 0x4C8
 
 class AVisUnderworldModule : public AVisActor
 {
@@ -1318,26 +1330,27 @@ class UAnvilGameInstance : public UGameInstance
     class UMapWidget* MapWidget;                                                      // 0x0248 (size: 0x8)
     class UHUDWidget* HUDWidget;                                                      // 0x0250 (size: 0x8)
     class UWorldEntityPoolManager* WorldEntityPoolManager;                            // 0x0258 (size: 0x8)
-    FString TravelAddress;                                                            // 0x0328 (size: 0x10)
-    TArray<uint8> ConnectTokenBuffer;                                                 // 0x0338 (size: 0x10)
-    class UAnvilCharacterSave* CharacterSave;                                         // 0x0348 (size: 0x8)
-    class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x0350 (size: 0x8)
-    FAnvilAssetManager AssetManager;                                                  // 0x0358 (size: 0x1C8)
-    FWeatherManager WeatherManager;                                                   // 0x0520 (size: 0x88)
-    FAnvilOptionsManager OptionsManager;                                              // 0x05A8 (size: 0x1A0)
-    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x0748 (size: 0x8)
-    TSubclassOf<class UEntityTemplate> R2ConfigClass;                                 // 0x0750 (size: 0x8)
-    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x0758 (size: 0x10)
-    TArray<class AVisActor*> VisActorList;                                            // 0x0768 (size: 0x10)
-    TArray<class AVisActor*> TravelVisActorList;                                      // 0x0778 (size: 0x10)
-    FClientConfigManager ClientConfigManager;                                         // 0x0788 (size: 0x38)
+    TArray<class UChatMessage*> ChatMessages;                                         // 0x02E0 (size: 0x10)
+    FString TravelAddress;                                                            // 0x0338 (size: 0x10)
+    TArray<uint8> ConnectTokenBuffer;                                                 // 0x0348 (size: 0x10)
+    class UAnvilCharacterSave* CharacterSave;                                         // 0x0358 (size: 0x8)
+    class UAnvilClientVoiceClient* AnvilClientVoiceClient;                            // 0x0360 (size: 0x8)
+    FAnvilAssetManager AssetManager;                                                  // 0x0368 (size: 0x1C8)
+    FWeatherManager WeatherManager;                                                   // 0x0530 (size: 0x88)
+    FAnvilOptionsManager OptionsManager;                                              // 0x05B8 (size: 0x1A0)
+    TSubclassOf<class AUIGlobals> UIGlobalsClass;                                     // 0x0758 (size: 0x8)
+    TSubclassOf<class UEntityTemplate> R2ConfigClass;                                 // 0x0760 (size: 0x8)
+    TArray<class ALandscapeProxy*> DirtyLandscapeProxies;                             // 0x0768 (size: 0x10)
+    TArray<class AVisActor*> VisActorList;                                            // 0x0778 (size: 0x10)
+    TArray<class AVisActor*> TravelVisActorList;                                      // 0x0788 (size: 0x10)
+    FClientConfigManager ClientConfigManager;                                         // 0x0798 (size: 0x38)
 
     void GetVisActors(TArray<class AVisActor*>& OutVisActorList);
     void GetVersion(int32& OutMajor, int32& OutMinor, int32& OutPatch, int32& OutCL);
     void GetTimeOfDay(int32& OutHours, int32& OutMinutes, int32& OutSeconds);
     void GetDayCurrentSeconds(int32& OutSeconds);
     void DumpProperties(FString OutputFileName, const UClass* Type, const TArray<FString>& PropertyNameFilter);
-}; // Size: 0x17E8
+}; // Size: 0x17F8
 
 class UAnvilKeyEntryWidget : public UUserWidget
 {
@@ -1558,6 +1571,15 @@ class UChatWidget : public UUserWidget
     void OnEntryChanged(const FText& Text);
 }; // Size: 0x368
 
+class UCombustionPanelWidget : public UUserWidget
+{
+    class UTextBlock* FuelDurationText;                                               // 0x0278 (size: 0x8)
+    class UCombustionDataComponent* CombustionDataComponent;                          // 0x0280 (size: 0x8)
+    class UInventoryWidget* FuelInputItemGrid;                                        // 0x0288 (size: 0x8)
+    class UInventoryWidget* FuelOutputItemGrid;                                       // 0x0290 (size: 0x8)
+
+}; // Size: 0x298
+
 class UConnectScreen : public UAnvilScreen
 {
     class UAnvilButtonWidget* BackButton;                                             // 0x0290 (size: 0x8)
@@ -1579,23 +1601,18 @@ class UCookingWindow : public UStructureWindow
 {
     class UInventoryWidget* RecipeInputItemGrid;                                      // 0x02F0 (size: 0x8)
     class UInventoryWidget* RecipeOutputItemGrid;                                     // 0x02F8 (size: 0x8)
-    class UInventoryWidget* FuelInputItemGrid;                                        // 0x0300 (size: 0x8)
-    class UInventoryWidget* FuelOutputItemGrid;                                       // 0x0308 (size: 0x8)
-    class UInventoryWidget* WaterInputItemGrid;                                       // 0x0310 (size: 0x8)
-    class UTextBlock* CookingDurationText;                                            // 0x0318 (size: 0x8)
-    class UTextBlock* FuelDurationText;                                               // 0x0320 (size: 0x8)
-    class UCanvasPanel* CheatSheetCanvasPanel;                                        // 0x0328 (size: 0x8)
-    class URichTextBlock* CheatSheetTextBlock;                                        // 0x0330 (size: 0x8)
-    class UButton* StartCookingButton;                                                // 0x0338 (size: 0x8)
-    class UImage* StartCookingButtonImage;                                            // 0x0340 (size: 0x8)
-    FSlateBrush InvalidRecipeIcon;                                                    // 0x0350 (size: 0xD0)
+    class UInventoryWidget* WaterInputItemGrid;                                       // 0x0300 (size: 0x8)
+    class UTextBlock* CookingDurationText;                                            // 0x0308 (size: 0x8)
+    class UCanvasPanel* CheatSheetCanvasPanel;                                        // 0x0310 (size: 0x8)
+    class URichTextBlock* CheatSheetTextBlock;                                        // 0x0318 (size: 0x8)
+    class UButton* StartCookingButton;                                                // 0x0320 (size: 0x8)
+    class UImage* StartCookingButtonImage;                                            // 0x0328 (size: 0x8)
+    FSlateBrush InvalidRecipeIcon;                                                    // 0x0330 (size: 0xD0)
 
     void OnStartCookingButtonClicked();
-    ESlateVisibility GetFuelDurationTextVisibility();
-    FText GetFuelDurationText();
     ESlateVisibility GetCookingDurationTextVisibility();
     FText GetCookingDurationText();
-}; // Size: 0x420
+}; // Size: 0x400
 
 class UCraftingRecipeListWidget : public UGridPanelWidget
 {
@@ -1994,13 +2011,8 @@ class UHeaderContainer : public UUserWidget
 class UHeatingWindow : public UStructureWindow
 {
     class UInventoryWidget* ItemsItemGrid;                                            // 0x02F0 (size: 0x8)
-    class UInventoryWidget* FuelInputItemGrid;                                        // 0x02F8 (size: 0x8)
-    class UInventoryWidget* FuelOutputItemGrid;                                       // 0x0300 (size: 0x8)
-    class UTextBlock* FuelDurationText;                                               // 0x0308 (size: 0x8)
 
-    ESlateVisibility GetFuelDurationTextVisibility();
-    FText GetFuelDurationText();
-}; // Size: 0x310
+}; // Size: 0x2F8
 
 class UHelpScreen : public UAnvilScreen
 {
@@ -2025,7 +2037,7 @@ class UHousePlayerInventoryListItem : public UUserWidget
     class UTextBlock* PlayerNameText;                                                 // 0x0278 (size: 0x8)
     class UInventoryWidget* InventoryWidget;                                          // 0x0280 (size: 0x8)
 
-}; // Size: 0x298
+}; // Size: 0x290
 
 class UHousePlayerInventoryWidgetBox : public UScrollBox
 {

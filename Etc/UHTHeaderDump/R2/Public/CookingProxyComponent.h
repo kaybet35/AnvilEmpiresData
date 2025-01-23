@@ -2,7 +2,6 @@
 #include "CoreMinimal.h"
 #include "CookingRecipe.h"
 #include "EAnvilCookingType.h"
-#include "FuelType.h"
 #include "ProxyComponent.h"
 #include "CookingProxyComponent.generated.h"
 
@@ -12,9 +11,6 @@ class R2_API UCookingProxyComponent : public UProxyComponent {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilCookingType CookType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FFuelType> FuelList;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCookingRecipe> RecipeList;

@@ -5,5 +5,6 @@ FFuelType::FFuelType() {
     this->FuelItemVisVar = 0;
     this->BurnDurationSec = 0.00f;
     this->NormalizedTemperature = 0.00f;
+    this->AshGenerated = 0;
 }
 

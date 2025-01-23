@@ -70,7 +70,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__FamilyBed_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBed.14"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBed.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__FamilyBed_C:HealthComp'",
@@ -78,19 +78,15 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__FamilyBed_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBed.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBed.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__FamilyBed_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBed.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBed.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__FamilyBed_C:DestroyableComp'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBed.3"
-      },
-      "MeshCollisionComp": {
-        "ObjectName": "MeshCollisionProxyComponent'Default__FamilyBed_C:MeshCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBed.9"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__FamilyBed_C:FootprintCollisionProxyComponent_0'",
@@ -106,15 +102,20 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__FamilyBed_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBed.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBed.11"
       },
       "CodeNameString": "FamilyBed",
       "CodeName": 342941559,
+      "bGenerateMeshCollisionsFromVisActor": true,
       "bGenerateMeshCollisionVaultable": true,
       "Components": [
         {
+          "ObjectName": "UpgradeProxyComponent'Default__FamilyBed_C:UpgradeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBed.14"
+        },
+        {
           "ObjectName": "PlayerSpawnerProxyComponent'Default__FamilyBed_C:PlayerSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBed.10"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBed.9"
         },
         {
           "ObjectName": "HousingProxyComponent'Default__FamilyBed_C:HousingProxyComponent_0'",
@@ -221,19 +222,6 @@
     }
   },
   {
-    "Type": "MeshCollisionProxyComponent",
-    "Name": "MeshCollisionProxyComponent_0",
-    "Outer": "Default__FamilyBed_C",
-    "Class": "UScriptClass'MeshCollisionProxyComponent'",
-    "Properties": {
-      "PhysicsAssetName": {
-        "ObjectName": "StaticMesh'Bed'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Bed.2"
-      },
-      "CollisionMask": 16785410
-    }
-  },
-  {
     "Type": "PlayerSpawnerProxyComponent",
     "Name": "PlayerSpawnerProxyComponent_0",
     "Outer": "Default__FamilyBed_C",
@@ -290,6 +278,18 @@
     "Template": {
       "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    }
+  },
+  {
+    "Type": "UpgradeProxyComponent",
+    "Name": "UpgradeProxyComponent_0",
+    "Outer": "Default__FamilyBed_C",
+    "Class": "UScriptClass'UpgradeProxyComponent'",
+    "Properties": {
+      "UpgradeTarget": {
+        "ObjectName": "BlueprintGeneratedClass'FamilyBedMulti_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBedMulti.0"
+      }
     }
   }
 ]

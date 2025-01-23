@@ -13,6 +13,7 @@ class AUIGlobals;
 class AVisActor;
 class UAnvilCharacterSave;
 class UAnvilClientVoiceClient;
+class UChatMessage;
 class UEntityTemplate;
 class UHUDWidget;
 class UMapWidget;
@@ -30,6 +31,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWorldEntityPoolManager* WorldEntityPoolManager;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<UChatMessage*> ChatMessages;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

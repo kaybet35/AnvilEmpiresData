@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_FamilyCenterCeilingEdgeToEdge_B_halfHeight_Straight_T1_HPP
+#define UE4SS_SDK_FamilyCenterCeilingEdgeToEdge_B_halfHeight_Straight_T1_HPP
+
+class UFamilyCenterCeilingEdgeToEdge_B_halfHeight_Straight_T1_C : public UBPBaseFoundationModularEntity_C
+{
+}; // Size: 0xD8
+
+#endif

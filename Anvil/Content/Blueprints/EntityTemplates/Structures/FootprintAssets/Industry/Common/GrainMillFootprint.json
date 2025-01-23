@@ -1,0 +1,151 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GrainMillFootprint_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'GrainMillFootprint_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/GrainMillFootprint.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Footprint'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GrainMillFootprint_C'Default__GrainMillFootprint_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/GrainMillFootprint.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GrainMillFootprint_C",
+    "Name": "Default__GrainMillFootprint_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/GrainMillFootprint.GrainMillFootprint_C'",
+    "Properties": {
+      "bShowMesh": true,
+      "Position": {
+        "X": 0.0,
+        "Y": -31.960117,
+        "Z": 102.25983
+      },
+      "Extents": {
+        "X": 91.245316,
+        "Y": 147.58609,
+        "Z": 102.25983
+      },
+      "StructureTiers": [
+        {
+          "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Industry/Common/GrainMillBuildSite.GrainMillBuildSite_C'",
+          "Value": true
+        },
+        {
+          "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/GrainMill.GrainMill_C'",
+          "Value": true
+        }
+      ],
+      "FootprintSharedComponents": [
+        {
+          "Comp": {
+            "ObjectName": "SnapPointProxyComponent'Default__GrainMillFootprint_C:SnapPointProxyComponent_0'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/GrainMillFootprint.5"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": false
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "GrainMillFootprint_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'GrainMillFootprint_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/GrainMillFootprint.2"
+      },
+      "VariableGuid": "4804B943-40347BA1-5037A49D-2852A039",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "GrainMillFootprint_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'GrainMillFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/GrainMillFootprint.3"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'GrainMillFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/GrainMillFootprint.3"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'GrainMillFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/GrainMillFootprint.3"
+      }
+    }
+  },
+  {
+    "Type": "SnapPointProxyComponent",
+    "Name": "SnapPointProxyComponent_0",
+    "Outer": "Default__GrainMillFootprint_C",
+    "Class": "UScriptClass'SnapPointProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 98.99284
+      },
+      "Extents": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 50.0
+      },
+      "SnappingChannel": "EAnvilSnappingChannelType::PowerConvertedWoodChoppingStationStart",
+      "bPointOnLine": true
+    }
+  }
+]

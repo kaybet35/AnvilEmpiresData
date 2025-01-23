@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "Oven_C'Default__Oven_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.11"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.8"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -37,40 +37,17 @@
     }
   },
   {
+    "Type": "CombustionProxyComponent",
+    "Name": "CombustionProxyComponent_0",
+    "Outer": "Default__Oven_C",
+    "Class": "UScriptClass'CombustionProxyComponent'"
+  },
+  {
     "Type": "CookingProxyComponent",
     "Name": "CookingProxyComponent_0",
     "Outer": "Default__Oven_C",
     "Class": "UScriptClass'CookingProxyComponent'",
     "Properties": {
-      "FuelList": [
-        {
-          "FuelItem": {
-            "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
-          },
-          "FuelItemVisVar": 0,
-          "BurnDurationSec": 180.0,
-          "NormalizedTemperature": 0.0
-        },
-        {
-          "FuelItem": {
-            "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
-          },
-          "FuelItemVisVar": 0,
-          "BurnDurationSec": 60.0,
-          "NormalizedTemperature": 0.0
-        },
-        {
-          "FuelItem": {
-            "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
-          },
-          "FuelItemVisVar": 0,
-          "BurnDurationSec": 60.0,
-          "NormalizedTemperature": 0.0
-        }
-      ],
       "RecipeList": [
         {
           "InputItems": [
@@ -454,46 +431,6 @@
     }
   },
   {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_4",
-    "Outer": "Default__Oven_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
-      "NormalizedSpoilageFactor": 0.0
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_5",
-    "Outer": "Default__Oven_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
-      "NormalizedSpoilageFactor": 0.0
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_6",
-    "Outer": "Default__Oven_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
-      "NormalizedSpoilageFactor": 0.0
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_7",
-    "Outer": "Default__Oven_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
-      "NormalizedSpoilageFactor": 0.0
-    }
-  },
-  {
     "Type": "Oven_C",
     "Name": "Default__Oven_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.Oven_C'",
@@ -504,27 +441,27 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__Oven_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.15"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.12"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__Oven_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.7"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__Oven_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.9"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__Oven_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.14"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.11"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__Oven_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.5"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__Oven_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.6"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__Oven_C:BoxCollisionProxyComponent_0'",
@@ -532,35 +469,23 @@
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__Oven_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.4"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__Oven_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.10"
       },
       "CodeNameString": "Oven",
       "CodeName": -1736242491,
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
-          "ObjectName": "CookingProxyComponent'Default__Oven_C:CookingProxyComponent_0'",
+          "ObjectName": "CombustionProxyComponent'Default__Oven_C:CombustionProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.2"
         },
         {
-          "ObjectName": "InventoryProxyComponent'Default__Oven_C:InventoryProxyComponent_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.7"
-        },
-        {
-          "ObjectName": "InventoryProxyComponent'Default__Oven_C:InventoryProxyComponent_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.10"
-        },
-        {
-          "ObjectName": "InventoryProxyComponent'Default__Oven_C:InventoryProxyComponent_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.9"
-        },
-        {
-          "ObjectName": "InventoryProxyComponent'Default__Oven_C:InventoryProxyComponent_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.8"
+          "ObjectName": "CookingProxyComponent'Default__Oven_C:CookingProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Oven.3"
         }
       ],
       "VisActorClass": {

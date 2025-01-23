@@ -12,6 +12,7 @@ enum class EAnvilDamageType : uint8 {
     Water,
     Hands,
     Unmitigated,
+    Animal,
     Bleed,
     Decay,
     Admin,

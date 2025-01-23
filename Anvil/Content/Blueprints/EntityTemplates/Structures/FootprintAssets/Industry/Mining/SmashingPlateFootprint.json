@@ -1,0 +1,150 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SmashingPlateFootprint_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'SmashingPlateFootprint_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Mining/SmashingPlateFootprint.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Footprint'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SmashingPlateFootprint_C'Default__SmashingPlateFootprint_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Mining/SmashingPlateFootprint.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "SmashingPlateFootprint_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'SmashingPlateFootprint_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Mining/SmashingPlateFootprint.1"
+      },
+      "VariableGuid": "4804B943-40347BA1-5037A49D-2852A039",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "SmashingPlateFootprint_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'SmashingPlateFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Mining/SmashingPlateFootprint.2"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'SmashingPlateFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Mining/SmashingPlateFootprint.2"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'SmashingPlateFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Mining/SmashingPlateFootprint.2"
+      }
+    }
+  },
+  {
+    "Type": "SmashingPlateFootprint_C",
+    "Name": "Default__SmashingPlateFootprint_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Mining/SmashingPlateFootprint.SmashingPlateFootprint_C'",
+    "Properties": {
+      "bShowMesh": true,
+      "Position": {
+        "X": 7.6293945E-06,
+        "Y": -0.19142914,
+        "Z": 53.772346
+      },
+      "Extents": {
+        "X": 143.045,
+        "Y": 43.474377,
+        "Z": 53.772346
+      },
+      "StructureTiers": [
+        {
+          "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Industry/Mining/SmashingPlateBuildSite.SmashingPlateBuildSite_C'",
+          "Value": true
+        },
+        {
+          "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Mining/SmashingPlate.SmashingPlate_C'",
+          "Value": false
+        }
+      ],
+      "FootprintSharedComponents": [
+        {
+          "Comp": {
+            "ObjectName": "SnapPointProxyComponent'Default__SmashingPlateFootprint_C:SnapPointProxyComponent_0'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Mining/SmashingPlateFootprint.5"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": false
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SnapPointProxyComponent",
+    "Name": "SnapPointProxyComponent_0",
+    "Outer": "Default__SmashingPlateFootprint_C",
+    "Class": "UScriptClass'SnapPointProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 98.99284
+      },
+      "Extents": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 50.0
+      },
+      "SnappingChannel": "EAnvilSnappingChannelType::PowerConvertedWoodChoppingStationStart"
+    }
+  }
+]
