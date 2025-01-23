@@ -3,7 +3,7 @@
 #include "VisStructure.h"
 #include "VisStaticTorch.generated.h"
 
-class UCombustionDataComponent;
+class UStaticTorchDataComponent;
 
 UCLASS(Blueprintable)
 class ANVIL_API AVisStaticTorch : public AVisStructure {
@@ -11,7 +11,7 @@ class ANVIL_API AVisStaticTorch : public AVisStructure {
 public:
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UCombustionDataComponent* CombustionDataComponent;
+    UStaticTorchDataComponent* StaticTorchDataComponent;
     
 public:
     AVisStaticTorch(const FObjectInitializer& ObjectInitializer);

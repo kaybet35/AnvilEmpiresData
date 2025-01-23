@@ -5,7 +5,6 @@
 #include "VisCookingStructure.generated.h"
 
 class UAudioComponent;
-class UCombustionDataComponent;
 class UCookingDataComponent;
 class UCurveFloat;
 class UCurveVector;
@@ -22,9 +21,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCookingDataComponent* CookingDataComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UCombustionDataComponent* CombustionDataComponent;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -62,7 +62,7 @@
       "MaterialRequirements": [
         {
           "CodeName": 1175186297,
-          "Count": 1
+          "Count": 3
         },
         {
           "CodeName": -1087500394,
@@ -96,11 +96,15 @@
       },
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__FamilyBedBuildsite_C:TeamProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedBuildsite.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedBuildsite.9"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__FamilyBedBuildsite_C:HealthProxyComponent_0'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedBuildsite.6"
+      },
+      "MeshCollisionComp": {
+        "ObjectName": "MeshCollisionProxyComponent'Default__FamilyBedBuildsite_C:MeshCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedBuildsite.7"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__FamilyBedBuildsite_C:FootprintCollisionProxyComponent_0'",
@@ -116,11 +120,10 @@
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__FamilyBedBuildsite_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedBuildsite.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedBuildsite.8"
       },
       "CodeNameString": "FamilyBedBuildSite",
       "CodeName": 1999255161,
-      "bGenerateMeshCollisionsFromVisActor": true,
       "VisActorClass": {
         "ObjectName": "Class'VisBuildSite'",
         "ObjectPath": "/Script/Anvil"
@@ -158,6 +161,19 @@
     },
     "Properties": {
       "MaxHealth": 15.0
+    }
+  },
+  {
+    "Type": "MeshCollisionProxyComponent",
+    "Name": "MeshCollisionProxyComponent_0",
+    "Outer": "Default__FamilyBedBuildsite_C",
+    "Class": "UScriptClass'MeshCollisionProxyComponent'",
+    "Properties": {
+      "PhysicsAssetName": {
+        "ObjectName": "StaticMesh'Bed'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Bed.2"
+      },
+      "CollisionMask": 16785408
     }
   },
   {

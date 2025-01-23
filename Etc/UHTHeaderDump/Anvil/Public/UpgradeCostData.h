@@ -8,9 +8,6 @@ struct FUpgradeCostData : public FTableRowBase {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    int16 ResourceBranches;
-    
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int16 ProcessedWood;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))

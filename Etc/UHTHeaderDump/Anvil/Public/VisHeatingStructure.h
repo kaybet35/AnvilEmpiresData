@@ -3,19 +3,17 @@
 #include "VisStructure.h"
 #include "VisHeatingStructure.generated.h"
 
-class UCombustionDataComponent;
 class UHeatingDataComponent;
 
 UCLASS(Blueprintable)
 class ANVIL_API AVisHeatingStructure : public AVisStructure {
     GENERATED_BODY()
 public:
+private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UHeatingDataComponent* HeatingDataComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UCombustionDataComponent* CombustionDataComponent;
-    
+public:
     AVisHeatingStructure(const FObjectInitializer& ObjectInitializer);
 
 };

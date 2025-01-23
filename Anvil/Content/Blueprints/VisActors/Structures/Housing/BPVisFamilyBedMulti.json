@@ -116,7 +116,6 @@
         "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconFoundationBedMulti.0"
       },
       "BuildSiteOrder": 5,
-      "BuildSiteVisibility": "EBuildSiteVisibility::Never",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisFamilyBedMulti_C:UpgradeDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBedMulti.21"
@@ -477,14 +476,16 @@
     "Outer": "BPVisFamilyBedMulti_C",
     "Class": "UScriptClass'VisStaticMeshComponent'",
     "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscapeRotate",
       "StaticMesh": {
         "ObjectName": "StaticMesh'Bed'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Bed.2"
       },
       "ComponentTags": [
         "Structure",
-        "Collision"
+        "Collision",
+        "ProjectToLandscape",
+        "RotateToLandscape"
       ]
     }
   },

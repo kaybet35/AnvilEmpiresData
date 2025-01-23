@@ -6,8 +6,8 @@ AVisMobileWeapon::AVisMobileWeapon(const FObjectInitializer& ObjectInitializer) 
     this->MountedWeaponDataComponent = CreateDefaultSubobject<UMountedWeaponDataComponent>(TEXT("MountedWeaponDataComponent"));
     this->VehicleMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("VehicleMesh"));
     this->AmmoMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("AmmoMesh"));
-    this->AmmoMesh->SetupAttachment(VehicleMesh);
     this->VehicleMesh->SetupAttachment(RootComponent);
+    this->AmmoMesh->SetupAttachment(VehicleMesh);
 }
 
 

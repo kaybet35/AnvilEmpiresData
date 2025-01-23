@@ -1,7 +1,6 @@
 #include "UpgradeCostData.h"
 
 FUpgradeCostData::FUpgradeCostData() {
-    this->ResourceBranches = 0;
     this->ProcessedWood = 0;
     this->ProcessedStone = 0;
     this->ProcessedIron = 0;

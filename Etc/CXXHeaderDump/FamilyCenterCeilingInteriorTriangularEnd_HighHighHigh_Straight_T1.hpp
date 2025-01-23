@@ -1,8 +1,0 @@
-#ifndef UE4SS_SDK_FamilyCenterCeilingInteriorTriangularEnd_HighHighHigh_Straight_T1_HPP
-#define UE4SS_SDK_FamilyCenterCeilingInteriorTriangularEnd_HighHighHigh_Straight_T1_HPP
-
-class UFamilyCenterCeilingInteriorTriangularEnd_HighHighHigh_Straight_T1_C : public UBPBaseFoundationModularEntity_C
-{
-}; // Size: 0xD8
-
-#endif

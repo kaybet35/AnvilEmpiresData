@@ -1,0 +1,199 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "FamilyBedMultiBuildsite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseBuildSiteEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseBuildSiteEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FamilyBedMultiBuildsite_C'Default__FamilyBedMultiBuildsite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedMultiBuildsite.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__FamilyBedMultiBuildsite_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseBuildSiteEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.1"
+    }
+  },
+  {
+    "Type": "BuildSiteProxyComponent",
+    "Name": "BuildSiteProxyComponent_0",
+    "Outer": "Default__FamilyBedMultiBuildsite_C",
+    "Class": "UScriptClass'BuildSiteProxyComponent'",
+    "Template": {
+      "ObjectName": "BuildSiteProxyComponent'Default__BPBaseBuildSiteEntity_C:BuildSiteProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.3"
+    },
+    "Properties": {
+      "BuiltStructureEntity": {
+        "ObjectName": "BlueprintGeneratedClass'FamilyBedMulti_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FamilyBedMulti.0"
+      },
+      "BuildLocation": 1,
+      "BuildArea": {
+        "HomesteadArea": true,
+        "WildernessArea": false
+      },
+      "BuildRules": {
+        "RequiresEnclosure": true
+      },
+      "RequiredTool": "EAnvilToolType::Hands",
+      "MaterialRequirements": [
+        {
+          "CodeName": 1175186297,
+          "Count": 20
+        },
+        {
+          "CodeName": -1087500394,
+          "Count": 6
+        }
+      ]
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__FamilyBedMultiBuildsite_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseBuildSiteEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.4"
+    }
+  },
+  {
+    "Type": "FamilyBedMultiBuildsite_C",
+    "Name": "Default__FamilyBedMultiBuildsite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedMultiBuildsite.FamilyBedMultiBuildsite_C'",
+    "Template": {
+      "ObjectName": "BPBaseBuildSiteEntity_C'Default__BPBaseBuildSiteEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.2"
+    },
+    "Properties": {
+      "BuildSiteComp": {
+        "ObjectName": "BuildSiteProxyComponent'Default__FamilyBedMultiBuildsite_C:BuildSiteProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedMultiBuildsite.2"
+      },
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__FamilyBedMultiBuildsite_C:TeamProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedMultiBuildsite.9"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__FamilyBedMultiBuildsite_C:HealthProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedMultiBuildsite.6"
+      },
+      "MeshCollisionComp": {
+        "ObjectName": "MeshCollisionProxyComponent'Default__FamilyBedMultiBuildsite_C:MeshCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedMultiBuildsite.7"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__FamilyBedMultiBuildsite_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedMultiBuildsite.5"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__FamilyBedMultiBuildsite_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedMultiBuildsite.1"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__FamilyBedMultiBuildsite_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedMultiBuildsite.3"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__FamilyBedMultiBuildsite_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/FamilyBedMultiBuildsite.8"
+      },
+      "CodeNameString": "FamilyBedMultiBuildSite",
+      "CodeName": -814969475,
+      "VisActorClass": {
+        "ObjectName": "Class'VisBuildSite'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "VisActorTemplateClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisFamilyBedMulti_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBedMulti.1"
+      }
+    }
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__FamilyBedMultiBuildsite_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseBuildSiteEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.5"
+    },
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'FamilyBedMultiFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FamilyBedMultiFootprint.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_0",
+    "Outer": "Default__FamilyBedMultiBuildsite_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseBuildSiteEntity_C:HealthProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.6"
+    },
+    "Properties": {
+      "MaxHealth": 15.0
+    }
+  },
+  {
+    "Type": "MeshCollisionProxyComponent",
+    "Name": "MeshCollisionProxyComponent_0",
+    "Outer": "Default__FamilyBedMultiBuildsite_C",
+    "Class": "UScriptClass'MeshCollisionProxyComponent'",
+    "Properties": {
+      "PhysicsAssetName": {
+        "ObjectName": "StaticMesh'Bed'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Bed.2"
+      },
+      "CollisionMask": 16785408
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__FamilyBedMultiBuildsite_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseBuildSiteEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.7"
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamProxyComponent_0",
+    "Outer": "Default__FamilyBedMultiBuildsite_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseBuildSiteEntity_C:TeamProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.8"
+    }
+  }
+]

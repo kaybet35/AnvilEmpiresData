@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CompHandleData.h"
 #include "CookingRecipe.h"
 #include "DataComponent.h"
 #include "EAnvilCookingType.h"
+#include "FuelType.h"
 #include "CookingDataComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -14,16 +14,16 @@ public:
     EAnvilCookingType CookType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FFuelType> FuelList;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FCookingRecipe> RecipeList;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FCompHandleData RecipeInputInventory;
+    float WaterDurationPerUnitItemAtMaxTempSecVisVar;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FCompHandleData RecipeOutputInventory;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FCompHandleData WaterInputInventory;
+    int32 FuelExpiryTimestampAgeSec;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CookCompleteTimestampAgeSec;
@@ -39,6 +39,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bCanCookWithExistingOutputs;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsFueled;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIsFoodBurning;

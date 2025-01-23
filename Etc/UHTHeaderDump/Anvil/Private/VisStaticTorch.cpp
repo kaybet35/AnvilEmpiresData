@@ -1,8 +1,8 @@
 #include "VisStaticTorch.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=CombustionDataComponent -FallbackName=CombustionDataComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=StaticTorchDataComponent -FallbackName=StaticTorchDataComponent
 
 AVisStaticTorch::AVisStaticTorch(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->CombustionDataComponent = CreateDefaultSubobject<UCombustionDataComponent>(TEXT("CombustionDataComponent"));
+    this->StaticTorchDataComponent = CreateDefaultSubobject<UStaticTorchDataComponent>(TEXT("StaticTorchDataComponent"));
 }
 
 

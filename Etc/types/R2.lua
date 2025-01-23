@@ -178,13 +178,6 @@ FCentralMarketplaceUserData = {}
 
 
 
----@class FCompHandleData
----@field ID int64
----@field Index int32
-FCompHandleData = {}
-
-
-
 ---@class FCompressedTileLayerDataInfo
 ---@field X int32
 ---@field Y int32
@@ -313,7 +306,6 @@ FFootprintSharedCompEntry = {}
 ---@field FuelItemVisVar int32
 ---@field BurnDurationSec float
 ---@field NormalizedTemperature float
----@field AshGenerated int32
 FFuelType = {}
 
 
@@ -323,6 +315,13 @@ FFuelType = {}
 ---@field UnderlyingCodeName int32
 ---@field Payload uint8
 FGridItem = {}
+
+
+
+---@class FHeatingFuel
+---@field FuelItem TSubclassOf<UItemTemplate>
+---@field BurnDurationSec float
+FHeatingFuel = {}
 
 
 
@@ -497,12 +496,6 @@ FR2ConfigBuildSite = {}
 ---@field FriendlyTeam EAnvilTrinaryRequirement
 ---@field ErrorCode EAnvilPlacementStatus
 FR2ConfigBuildSiteDistanceRule = {}
-
-
-
----@class FR2ConfigCombustion
----@field FuelList TArray<FFuelType>
-FR2ConfigCombustion = {}
 
 
 
@@ -986,8 +979,8 @@ UBeaconTowerDataComponent = {}
 ---@field DetectionRangeMinMax FR2FloatRange
 ---@field AltitudeDeltaMinMax FR2FloatRange
 ---@field AltitudeCheckRadius float
----@field DetectionFuelTimeMultiplier float
----@field InformingFuelTimeMultiplier float
+---@field DetectionFuelCostPerHour float
+---@field InformingFuelCostPerHour float
 UBeaconTowerProxyComponent = {}
 
 
@@ -1090,24 +1083,6 @@ UCollisionVisualizerComponent = {}
 
 
 
----@class UCombustionDataComponent : UDataComponent
----@field bIsFueled boolean
----@field StartTimeStamp int32
----@field TotalFuelTime float
----@field InputInventory FCompHandleData
----@field OutputInventory FCompHandleData
-UCombustionDataComponent = {}
-
-
-
----@class UCombustionProxyComponent : UProxyComponent
----@field bGenerateAsh boolean
----@field OverrideAcceptableFuels TArray<TSubclassOf<UItemTemplate>>
----@field FuelTimeMultiplier float
-UCombustionProxyComponent = {}
-
-
-
 ---@class UConvexCollisionProxyComponent : UProxyComponent
 ---@field Position FVector
 ---@field Rotation FRotator
@@ -1122,15 +1097,16 @@ UConvexCollisionProxyComponent = {}
 
 ---@class UCookingDataComponent : UDataComponent
 ---@field CookType EAnvilCookingType
+---@field FuelList TArray<FFuelType>
 ---@field RecipeList TArray<FCookingRecipe>
----@field RecipeInputInventory FCompHandleData
----@field RecipeOutputInventory FCompHandleData
----@field WaterInputInventory FCompHandleData
+---@field WaterDurationPerUnitItemAtMaxTempSecVisVar float
+---@field FuelExpiryTimestampAgeSec int32
 ---@field CookCompleteTimestampAgeSec int32
 ---@field CurrentRecipeIndex int32
 ---@field NormalizedWaterLevel float
 ---@field EffectiveNormalizedTemp float
 ---@field bCanCookWithExistingOutputs uint8
+---@field bIsFueled boolean
 ---@field bIsFoodBurning boolean
 ---@field bIsWatered boolean
 UCookingDataComponent = {}
@@ -1139,6 +1115,7 @@ UCookingDataComponent = {}
 
 ---@class UCookingProxyComponent : UProxyComponent
 ---@field CookType EAnvilCookingType
+---@field FuelList TArray<FFuelType>
 ---@field RecipeList TArray<FCookingRecipe>
 ---@field FoodBurnDurationSec float
 ---@field WaterDurationPerUnitItemAtMaxTempSec float
@@ -1412,13 +1389,15 @@ UHealthProxyComponent = {}
 
 
 ---@class UHeatingDataComponent : UDataComponent
+---@field FuelExpiryTimestampAgeSec int32
+---@field bIsFueled boolean
 ---@field bIsBellowBoosted boolean
----@field ItemInventory FCompHandleData
 UHeatingDataComponent = {}
 
 
 
 ---@class UHeatingProxyComponent : UProxyComponent
+---@field FuelList TArray<FHeatingFuel>
 ---@field NumItems int32
 UHeatingProxyComponent = {}
 
@@ -1955,7 +1934,6 @@ UQuenchingProxyComponent = {}
 
 ---@class UR2ConfigProxyComponent : UProxyComponent
 ---@field BuildSite FR2ConfigBuildSite
----@field Combustion FR2ConfigCombustion
 UR2ConfigProxyComponent = {}
 
 
@@ -2125,7 +2103,6 @@ UShipMovementProxyComponent = {}
 
 
 ---@class USimPlayerDataComponent : UDataComponent
----@field Velocity FVector
 ---@field GuardStrength uint8
 ---@field TeamId uint8
 ---@field CurrentMovementMode EAnvilMovementMode
@@ -2165,7 +2142,6 @@ UShipMovementProxyComponent = {}
 ---@field bMouseSelectCeiling boolean
 ---@field bIsReinforcing boolean
 ---@field bIsFalling boolean
----@field bBasedMovement boolean
 ---@field SecondsUntilFullDecay float
 ---@field HeldItemLightSourceRadius float
 ---@field LightSourceData TArray<FNightShroudLightSource>
@@ -2279,7 +2255,14 @@ UStaminaProxyComponent = {}
 
 
 
+---@class UStaticTorchDataComponent : UDataComponent
+---@field bIsTorchActive boolean
+UStaticTorchDataComponent = {}
+
+
+
 ---@class UStaticTorchProxyComponent : UProxyComponent
+---@field ActiveSecondsPerUnitFuel float
 ---@field NightShroudRadius float
 UStaticTorchProxyComponent = {}
 
@@ -2426,16 +2409,6 @@ UTrapDataComponent = {}
 ---@field MissEffect TSubclassOf<UEntityTemplate>
 UTrapProxyComponent = {}
 
-
-
----@class UTreeFallDataComponent : UDataComponent
----@field FallingDir float
-UTreeFallDataComponent = {}
-
-
-
----@class UTreeFallProxyComponent : UProxyComponent
-UTreeFallProxyComponent = {}
 
 
 ---@class UTweakableDataComponent : UDataComponent

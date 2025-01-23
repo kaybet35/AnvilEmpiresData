@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "Hearth_C'Default__Hearth_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.8"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.7"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -37,17 +37,40 @@
     }
   },
   {
-    "Type": "CombustionProxyComponent",
-    "Name": "CombustionProxyComponent_0",
-    "Outer": "Default__Hearth_C",
-    "Class": "UScriptClass'CombustionProxyComponent'"
-  },
-  {
     "Type": "CookingProxyComponent",
     "Name": "CookingProxyComponent_0",
     "Outer": "Default__Hearth_C",
     "Class": "UScriptClass'CookingProxyComponent'",
     "Properties": {
+      "FuelList": [
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+          },
+          "FuelItemVisVar": 0,
+          "BurnDurationSec": 180.0,
+          "NormalizedTemperature": 0.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
+          },
+          "FuelItemVisVar": 0,
+          "BurnDurationSec": 60.0,
+          "NormalizedTemperature": 0.0
+        },
+        {
+          "FuelItem": {
+            "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+          },
+          "FuelItemVisVar": 0,
+          "BurnDurationSec": 60.0,
+          "NormalizedTemperature": 0.0
+        }
+      ],
       "RecipeList": [
         {
           "InputItems": [
@@ -257,27 +280,27 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__Hearth_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.15"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__Hearth_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.6"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__Hearth_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.12"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__Hearth_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.14"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__Hearth_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.4"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__Hearth_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.5"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__Hearth_C:BoxCollisionProxyComponent_0'",
@@ -285,29 +308,81 @@
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__Hearth_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.3"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__Hearth_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.13"
       },
       "CodeNameString": "Hearth",
       "CodeName": 606960504,
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
-          "ObjectName": "CombustionProxyComponent'Default__Hearth_C:CombustionProxyComponent_0'",
+          "ObjectName": "CookingProxyComponent'Default__Hearth_C:CookingProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.2"
         },
         {
-          "ObjectName": "CookingProxyComponent'Default__Hearth_C:CookingProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.3"
+          "ObjectName": "InventoryProxyComponent'Default__Hearth_C:InventoryProxyComponent_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.8"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Hearth_C:InventoryProxyComponent_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.11"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Hearth_C:InventoryProxyComponent_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.10"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__Hearth_C:InventoryProxyComponent_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Refineries/Hearth.9"
         }
       ],
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisHearth_C'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisHearth.5"
       }
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_4",
+    "Outer": "Default__Hearth_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "NormalizedSpoilageFactor": 0.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_5",
+    "Outer": "Default__Hearth_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "NormalizedSpoilageFactor": 0.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_6",
+    "Outer": "Default__Hearth_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "NormalizedSpoilageFactor": 0.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_7",
+    "Outer": "Default__Hearth_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Properties": {
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "NormalizedSpoilageFactor": 0.0
     }
   },
   {

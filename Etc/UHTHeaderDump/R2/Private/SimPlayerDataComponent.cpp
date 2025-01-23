@@ -36,7 +36,6 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->bMouseSelectCeiling = false;
     this->bIsReinforcing = false;
     this->bIsFalling = false;
-    this->bBasedMovement = false;
     this->SecondsUntilFullDecay = 0.00f;
     this->HeldItemLightSourceRadius = 0.00f;
     this->FoodTypesOnCooldownBits = 0;

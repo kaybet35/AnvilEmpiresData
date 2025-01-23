@@ -279,7 +279,6 @@ function AVisAnvilStructure:OnHitCounterChanged(Old, New) end
 
 ---@class AVisBeaconTower : AVisStructure
 ---@field BeaconTowerDataComponent UBeaconTowerDataComponent
----@field CombustionDataComponent UCombustionDataComponent
 AVisBeaconTower = {}
 
 
@@ -327,7 +326,6 @@ AVisController = {}
 ---@class AVisCookingStructure : AVisStructure
 ---@field bShowCheatSheet boolean
 ---@field CookingDataComponent UCookingDataComponent
----@field CombustionDataComponent UCombustionDataComponent
 ---@field WaterMeshMaterialMap TMap<TSubclassOf<UItemTemplate>, UMaterialInterface>
 ---@field WaterLevelMesh UStaticMeshComponent
 ---@field WaterHeightCurve UCurveFloat
@@ -432,7 +430,6 @@ AVisGate = {}
 
 ---@class AVisHeatingStructure : AVisStructure
 ---@field HeatingDataComponent UHeatingDataComponent
----@field CombustionDataComponent UCombustionDataComponent
 AVisHeatingStructure = {}
 
 
@@ -647,6 +644,7 @@ AVisRelicTechCenter = {}
 ---@field ResourceDataComponent UResourceDataComponent
 ---@field PlantGrowthComponent UPlantGrowthDataComponent
 ---@field StageMeshes TArray<UStaticMesh>
+---@field bApplyIdBasedRandomRotation boolean
 ---@field bProjectToLandscape boolean
 ---@field ArrowComponent UArrowComponent
 ---@field Mesh UStaticMeshComponent
@@ -683,7 +681,7 @@ AVisSplineBuildSite = {}
 
 
 ---@class AVisStaticTorch : AVisStructure
----@field CombustionDataComponent UCombustionDataComponent
+---@field StaticTorchDataComponent UStaticTorchDataComponent
 AVisStaticTorch = {}
 
 
@@ -724,15 +722,6 @@ AVisTownCenter = {}
 ---@field TriggeredAnimation UAnimationAsset
 ---@field TrapDataComponent UTrapDataComponent
 AVisTrap = {}
-
-
-
----@class AVisTreeFall : AVisActor
----@field ArrowComponent UArrowComponent
----@field TreeTop UStaticMeshComponent
----@field FallCurve UCurveFloat
----@field TreeFallDataComponent UTreeFallDataComponent
-AVisTreeFall = {}
 
 
 
@@ -1163,7 +1152,6 @@ FShardConfig = {}
 
 
 ---@class FUpgradeCostData : FTableRowBase
----@field ResourceBranches int16
 ---@field ProcessedWood int16
 ---@field ProcessedStone int16
 ---@field ProcessedIron int16
@@ -1363,7 +1351,6 @@ function UAnvilDropdownEntryWidget:OnOptionSelected(SelectedItem, SelectionType)
 ---@field MapWidget UMapWidget
 ---@field HUDWidget UHUDWidget
 ---@field WorldEntityPoolManager UWorldEntityPoolManager
----@field ChatMessages TArray<UChatMessage>
 ---@field TravelAddress FString
 ---@field ConnectTokenBuffer TArray<uint8>
 ---@field CharacterSave UAnvilCharacterSave
@@ -1639,15 +1626,6 @@ function UChatWidget:OnEntryCommitted(Text, Method) end
 function UChatWidget:OnEntryChanged(Text) end
 
 
----@class UCombustionPanelWidget : UUserWidget
----@field FuelDurationText UTextBlock
----@field CombustionDataComponent UCombustionDataComponent
----@field FuelInputItemGrid UInventoryWidget
----@field FuelOutputItemGrid UInventoryWidget
-UCombustionPanelWidget = {}
-
-
-
 ---@class UConnectScreen : UAnvilScreen
 ---@field BackButton UAnvilButtonWidget
 ---@field RefreshButton UAnvilButtonWidget
@@ -1672,8 +1650,11 @@ function UConnectScreen:GetThrobberVisibility() end
 ---@class UCookingWindow : UStructureWindow
 ---@field RecipeInputItemGrid UInventoryWidget
 ---@field RecipeOutputItemGrid UInventoryWidget
+---@field FuelInputItemGrid UInventoryWidget
+---@field FuelOutputItemGrid UInventoryWidget
 ---@field WaterInputItemGrid UInventoryWidget
 ---@field CookingDurationText UTextBlock
+---@field FuelDurationText UTextBlock
 ---@field CheatSheetCanvasPanel UCanvasPanel
 ---@field CheatSheetTextBlock URichTextBlock
 ---@field StartCookingButton UButton
@@ -1682,6 +1663,10 @@ function UConnectScreen:GetThrobberVisibility() end
 UCookingWindow = {}
 
 function UCookingWindow:OnStartCookingButtonClicked() end
+---@return ESlateVisibility
+function UCookingWindow:GetFuelDurationTextVisibility() end
+---@return FText
+function UCookingWindow:GetFuelDurationText() end
 ---@return ESlateVisibility
 function UCookingWindow:GetCookingDurationTextVisibility() end
 ---@return FText
@@ -2125,8 +2110,15 @@ function UHeaderContainer:OnCloseButtonClicked() end
 
 ---@class UHeatingWindow : UStructureWindow
 ---@field ItemsItemGrid UInventoryWidget
+---@field FuelInputItemGrid UInventoryWidget
+---@field FuelOutputItemGrid UInventoryWidget
+---@field FuelDurationText UTextBlock
 UHeatingWindow = {}
 
+---@return ESlateVisibility
+function UHeatingWindow:GetFuelDurationTextVisibility() end
+---@return FText
+function UHeatingWindow:GetFuelDurationText() end
 
 
 ---@class UHelpScreen : UAnvilScreen

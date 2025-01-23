@@ -9,6 +9,7 @@ AVisResource::AVisResource(const FObjectInitializer& ObjectInitializer) : Super(
     this->bNoCheckOnCeilVisibility = true;
     this->ResourceDataComponent = CreateDefaultSubobject<UResourceDataComponent>(TEXT("ResourceDataComponent"));
     this->PlantGrowthComponent = CreateDefaultSubobject<UPlantGrowthDataComponent>(TEXT("PlantGrowthComponent"));
+    this->bApplyIdBasedRandomRotation = false;
     this->bProjectToLandscape = false;
     this->ArrowComponent = (UArrowComponent*)RootComponent;
     this->Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));

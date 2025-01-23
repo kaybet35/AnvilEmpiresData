@@ -228,9 +228,8 @@ enum class EHUDWindowType {
     FamilyHouse = 23,
     Lore = 24,
     CentralMarket = 25,
-    Combustion = 26,
-    Count = 27,
-    EHUDWindowType_MAX = 28,
+    Count = 26,
+    EHUDWindowType_MAX = 27,
 };
 
 enum class EIncomingAttackDirection {

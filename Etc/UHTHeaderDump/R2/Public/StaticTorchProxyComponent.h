@@ -8,6 +8,9 @@ class R2_API UStaticTorchProxyComponent : public UProxyComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float ActiveSecondsPerUnitFuel;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float NightShroudRadius;
     
     UStaticTorchProxyComponent();
