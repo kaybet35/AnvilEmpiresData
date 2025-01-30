@@ -9,8 +9,8 @@ ACameraRig_Rail::ACameraRig_Rail(const FObjectInitializer& ObjectInitializer) : 
     this->TransformComponent = (USceneComponent*)RootComponent;
     this->RailSplineComponent = CreateDefaultSubobject<USplineComponent>(TEXT("RailSplineComponent"));
     this->RailCameraMount = CreateDefaultSubobject<USceneComponent>(TEXT("RailCameraMount"));
-    this->RailCameraMount->SetupAttachment(RailSplineComponent);
     this->RailSplineComponent->SetupAttachment(RootComponent);
+    this->RailCameraMount->SetupAttachment(RailSplineComponent);
 }
 
 USplineComponent* ACameraRig_Rail::GetRailSplineComponent() {
