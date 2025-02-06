@@ -11,7 +11,7 @@
       "bUsedWithSplineMeshes": true,
       "bUsedWithInstancedStaticMeshes": true,
       "bUsedWithClothing": true,
-      "StateId": "3354A9C8-4FC35A74-06CFE9A2-F8B26F5D",
+      "StateId": "D95E16B9-4CE7691D-DFC12B9C-BD63F2C0",
       "TextureStreamingData": [
         {
           "SamplingScale": 1.0,
@@ -448,6 +448,16 @@
             "Name": "Paint Mask Alpha Value Adjust",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
+          },
+          {
+            "Name": "DitherRandom",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Alpha Contrast",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
           }
         ]
       },
@@ -697,6 +707,8 @@
         -1,
         -1,
         -1,
+        -1,
+        -1,
         -1
       ],
       "VectorPrimitiveDataIndexValues": [
@@ -749,7 +761,7 @@
         1.0,
         1.0,
         1.0,
-        0.5,
+        0.75,
         0.0,
         64.0,
         512.0,
@@ -793,7 +805,9 @@
         0.0,
         5.0,
         0.5,
-        0.5
+        0.5,
+        1.0,
+        0.0
       ],
       "VectorValues": [
         {
@@ -1062,6 +1076,10 @@
         {
           "ObjectName": "Texture2D'FortFoundationTilingBrickT2M'",
           "ObjectPath": "Anvil/Content/Textures/Structures/FortFoundationTilingBrickT2M.0"
+        },
+        {
+          "ObjectName": "Texture2D'Good64x64TilingNoiseHighFreq'",
+          "ObjectPath": "Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.0"
         }
       ],
       "FunctionInfos": [
@@ -1967,6 +1985,34 @@
             "ObjectName": "MaterialFunction'CheapContrast'",
             "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
           }
+        },
+        {
+          "StateId": "71028A8D-47BF4037-3A3A0B8A-D7B60E53",
+          "Function": {
+            "ObjectName": "MaterialFunction'ScreenAlignedPixelToPixelUVs'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.0"
+          }
+        },
+        {
+          "StateId": "22D58D0F-45CC84AB-89A3628B-351D83C8",
+          "Function": {
+            "ObjectName": "MaterialFunction'DitherTemporalAA'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.0"
+          }
+        },
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction'LinearGradient'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CheapContrast'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+          }
         }
       ],
       "ParameterCollectionInfos": [
@@ -2002,6 +2048,10 @@
       {
         "ObjectName": "Texture2D'DefaultDiffuse'",
         "ObjectPath": "Engine/Content/EngineMaterials/DefaultDiffuse.0"
+      },
+      {
+        "ObjectName": "Texture2D'Good64x64TilingNoiseHighFreq'",
+        "ObjectPath": "Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.0"
       },
       {
         "ObjectName": "Texture2D'AverageNoises01'",

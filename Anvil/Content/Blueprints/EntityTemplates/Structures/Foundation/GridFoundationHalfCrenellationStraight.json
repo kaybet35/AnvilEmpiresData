@@ -69,9 +69,6 @@
     "Template": {
       "ObjectName": "DecayProxyComponent'Default__BPBaseModularEntity_C:DecayProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseModularEntity.4"
-    },
-    "Properties": {
-      "DecayTimeHours": 48.0
     }
   },
   {
@@ -111,7 +108,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__GridFoundationHalfCrenellationStraight_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationHalfCrenellationStraight.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationHalfCrenellationStraight.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__GridFoundationHalfCrenellationStraight_C:HealthComp'",
@@ -123,7 +120,7 @@
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__GridFoundationHalfCrenellationStraight_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationHalfCrenellationStraight.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationHalfCrenellationStraight.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__GridFoundationHalfCrenellationStraight_C:DestroyableComp'",
@@ -141,15 +138,18 @@
         "ObjectName": "BoxCollisionProxyComponent'Default__GridFoundationHalfCrenellationStraight_C:BoxCollisionProxyComponent_2'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationHalfCrenellationStraight.3"
       },
-      "DecayComp": {
-        "ObjectName": "DecayProxyComponent'Default__GridFoundationHalfCrenellationStraight_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationHalfCrenellationStraight.4"
-      },
+      "DecayComp": null,
       "ScorchComp": null,
       "CodeNameString": "GridFoundationHalfCrenellationStraight",
       "CodeName": -167893396,
       "GenerateMeshCollisionStepAngle": 50.0,
       "bGenerateMeshCollisionVaultable": true,
+      "Components": [
+        {
+          "ObjectName": "StructureProtectionProxyComponent'Default__GridFoundationHalfCrenellationStraight_C:StructureProtectionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationHalfCrenellationStraight.11"
+        }
+      ],
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisGridFoundationHalfCrenellationStraight_C'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationHalfCrenellationStraight.1"
@@ -187,6 +187,15 @@
     "Template": {
       "ObjectName": "ScorchProxyComponent'Default__BPBaseModularEntity_C:ScorchProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseModularEntity.9"
+    }
+  },
+  {
+    "Type": "StructureProtectionProxyComponent",
+    "Name": "StructureProtectionProxyComponent_0",
+    "Outer": "Default__GridFoundationHalfCrenellationStraight_C",
+    "Class": "UScriptClass'StructureProtectionProxyComponent'",
+    "Properties": {
+      "SnappedFoundationDamageMitigation": 0.05
     }
   },
   {

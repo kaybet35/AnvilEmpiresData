@@ -3,13 +3,13 @@
 
 class ABPVisCanalEndPiece_C : public AVisStructure
 {
-    class UVisStaticMeshComponent* AngleBase;                                         // 0x0518 (size: 0x8)
-    class UVisStaticMeshComponent* BalljointTrim;                                     // 0x0520 (size: 0x8)
-    class UVisStaticMeshComponent* AngleTrimLeft;                                     // 0x0528 (size: 0x8)
-    class UVisStaticMeshComponent* AngleTrimRight;                                    // 0x0530 (size: 0x8)
-    class UVisStaticMeshComponent* BalljointBase;                                     // 0x0538 (size: 0x8)
-    class USceneComponent* Base;                                                      // 0x0540 (size: 0x8)
+    class UVisStaticMeshComponent* AngleBase;                                         // 0x0520 (size: 0x8)
+    class UVisStaticMeshComponent* BalljointTrim;                                     // 0x0528 (size: 0x8)
+    class UVisStaticMeshComponent* AngleTrimLeft;                                     // 0x0530 (size: 0x8)
+    class UVisStaticMeshComponent* AngleTrimRight;                                    // 0x0538 (size: 0x8)
+    class UVisStaticMeshComponent* BalljointBase;                                     // 0x0540 (size: 0x8)
+    class USceneComponent* Base;                                                      // 0x0548 (size: 0x8)
 
-}; // Size: 0x548
+}; // Size: 0x550
 
 #endif

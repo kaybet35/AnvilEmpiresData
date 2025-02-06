@@ -30,5 +30,7 @@ enum class EAnvilSnappingChannelType : uint8 {
     NaturalWaterOptional,
     PowerConvertedWoodChoppingStationStart,
     PowerConvertedWoodChoppingStationEnd,
+    PowerConvertedSmashingPlateStart,
+    PowerConvertedSmashingPlateEnd,
 };
 

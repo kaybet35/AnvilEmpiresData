@@ -34,5 +34,10 @@ enum class EActionButtonType : uint8 {
     FamilyInviteToJoin,
     FamilyLock,
     FamilyUnlock,
+    Upvote,
+    Upvoted,
+    Downvote,
+    Downvoted,
+    EditSignPost,
 };
 

@@ -24,10 +24,10 @@ public:
     float AltitudeCheckRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float DetectionFuelCostPerHour;
+    float DetectionFuelTimeMultiplier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float InformingFuelCostPerHour;
+    float InformingFuelTimeMultiplier;
     
     UBeaconTowerProxyComponent();
 

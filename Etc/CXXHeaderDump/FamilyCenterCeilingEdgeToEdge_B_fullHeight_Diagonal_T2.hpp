@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_FamilyCenterCeilingEdgeToEdge_B_fullHeight_Diagonal_T2_HPP
+#define UE4SS_SDK_FamilyCenterCeilingEdgeToEdge_B_fullHeight_Diagonal_T2_HPP
+
+class UFamilyCenterCeilingEdgeToEdge_B_fullHeight_Diagonal_T2_C : public UBPBaseFoundationModularEntity_C
+{
+}; // Size: 0xD8
+
+#endif

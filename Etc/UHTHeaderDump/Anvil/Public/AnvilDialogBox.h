@@ -6,6 +6,7 @@
 class UAnvilButtonWidget;
 class UComboBoxString;
 class UEditableTextBox;
+class UMultiLineEditableText;
 class USlider;
 class UTextBlock;
 class UThrobber;
@@ -46,6 +47,12 @@ protected:
     UEditableTextBox* TextInputEditableTextBox;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* LargeTextInputLabelTextBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UMultiLineEditableText* LargeTextInputEditableTextBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAnvilButtonWidget* LeftButton;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -56,10 +63,16 @@ public:
 
 private:
     UFUNCTION(BlueprintCallable)
+    void OnTextInputEditableTextChanged(const FText& Text);
+    
+    UFUNCTION(BlueprintCallable)
     void OnRightButtonClicked();
     
     UFUNCTION(BlueprintCallable)
     void OnLeftButtonClicked();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnLargeTextInputEditableTextChanged(const FText& Text);
     
     UFUNCTION(BlueprintCallable)
     FText GetSliderCurrentValueText();

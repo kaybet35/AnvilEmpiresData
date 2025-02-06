@@ -215,6 +215,7 @@ AUnderworldModuleDynamicPrefab = {}
 ---@field bNightVisibility boolean
 ---@field bNoCheckOnCeilVisibility boolean
 ---@field bUseInteractionOutline boolean
+---@field bUseVicActorPool boolean
 ---@field InteractionIcon UTexture2D
 ---@field AnimSpeed float
 ---@field AnimRotationalSpeed FRotator
@@ -279,11 +280,13 @@ function AVisAnvilStructure:OnHitCounterChanged(Old, New) end
 
 ---@class AVisBeaconTower : AVisStructure
 ---@field BeaconTowerDataComponent UBeaconTowerDataComponent
+---@field CombustionDataComponent UCombustionDataComponent
 AVisBeaconTower = {}
 
 
 
 ---@class AVisBoat : AVisVehicle
+---@field IsInWaterCheckRange float
 ---@field Slots TMap<UEntityAttachableProxyComponent, UEntityAttachableDataComponent>
 AVisBoat = {}
 
@@ -326,6 +329,7 @@ AVisController = {}
 ---@class AVisCookingStructure : AVisStructure
 ---@field bShowCheatSheet boolean
 ---@field CookingDataComponent UCookingDataComponent
+---@field CombustionDataComponent UCombustionDataComponent
 ---@field WaterMeshMaterialMap TMap<TSubclassOf<UItemTemplate>, UMaterialInterface>
 ---@field WaterLevelMesh UStaticMeshComponent
 ---@field WaterHeightCurve UCurveFloat
@@ -430,6 +434,7 @@ AVisGate = {}
 
 ---@class AVisHeatingStructure : AVisStructure
 ---@field HeatingDataComponent UHeatingDataComponent
+---@field CombustionDataComponent UCombustionDataComponent
 AVisHeatingStructure = {}
 
 
@@ -603,8 +608,6 @@ AVisPickupItem = {}
 ---@field CurrentUEUsableActor AActor
 AVisPlayer = {}
 
----@return float
-function AVisPlayer:GetVelocityHeadingDegrees() end
 ---@return FString
 function AVisPlayer:GetPlayerName() end
 ---@return float
@@ -616,8 +619,6 @@ function AVisPlayer:GetNightShroudLightSourcePositionAndRadius(Index) end
 function AVisPlayer:GetCameraVelocity() end
 function AVisPlayer:BP_UpdateNightShroudMaterials() end
 function AVisPlayer:BP_OnHeldItemChanged() end
----@return FVector
-function AVisPlayer:AnimGetVelocity() end
 
 
 ---@class AVisPowerMill : AVisStructure
@@ -644,7 +645,6 @@ AVisRelicTechCenter = {}
 ---@field ResourceDataComponent UResourceDataComponent
 ---@field PlantGrowthComponent UPlantGrowthDataComponent
 ---@field StageMeshes TArray<UStaticMesh>
----@field bApplyIdBasedRandomRotation boolean
 ---@field bProjectToLandscape boolean
 ---@field ArrowComponent UArrowComponent
 ---@field Mesh UStaticMeshComponent
@@ -658,6 +658,16 @@ AVisResource = {}
 ---@field RichSoilDecal UDecalComponent
 ---@field RichSoilDataComponent URichSoilDataComponent
 AVisRichSoil = {}
+
+
+
+---@class AVisSignPost : AVisStructure
+---@field SignPostDataComponent USignPostDataComponent
+---@field LifetimeDataComponent ULifetimeDataComponent
+---@field VisualNameMap TMap<EAnvilSignPostVisualType, FText>
+---@field VisualMap TMap<EAnvilSignPostVisualType, UStaticMesh>
+---@field Mesh UVisStaticMeshComponent
+AVisSignPost = {}
 
 
 
@@ -681,7 +691,7 @@ AVisSplineBuildSite = {}
 
 
 ---@class AVisStaticTorch : AVisStructure
----@field StaticTorchDataComponent UStaticTorchDataComponent
+---@field CombustionDataComponent UCombustionDataComponent
 AVisStaticTorch = {}
 
 
@@ -722,6 +732,15 @@ AVisTownCenter = {}
 ---@field TriggeredAnimation UAnimationAsset
 ---@field TrapDataComponent UTrapDataComponent
 AVisTrap = {}
+
+
+
+---@class AVisTreeFall : AVisActor
+---@field ArrowComponent UArrowComponent
+---@field TreeTop UStaticMeshComponent
+---@field FallCurve UCurveFloat
+---@field TreeFallDataComponent UTreeFallDataComponent
+AVisTreeFall = {}
 
 
 
@@ -901,7 +920,7 @@ FClientConfigManager = {}
 
 
 ---@class FClientConnectionRequest
----@field OnlineId uint64
+---@field OnlineId FJsonSafeUint64
 ---@field ProtocolId uint64
 ---@field TargetServerName FString
 ---@field SelectedFactionId uint8
@@ -920,6 +939,14 @@ FClientConnectionRequest = {}
 ---@field ServerAddressToJoin FString
 ---@field QueuePosition int32
 FConnectToServerResponse = {}
+
+
+
+---@class FCreateMapPostRequest
+---@field CreatorFactionId uint8
+---@field Text FString
+---@field GlobalPosition FVector
+FCreateMapPostRequest = {}
 
 
 
@@ -946,6 +973,12 @@ FDayNightKeyFrame = {}
 ---@field StartDelayHours float
 ---@field DecayTimeHours float
 FDecayData = {}
+
+
+
+---@class FDeleteMapPostResponse
+---@field DeletedPostOwnerOnlineId FJsonSafeUint64
+FDeleteMapPostResponse = {}
 
 
 
@@ -1003,6 +1036,13 @@ FFoodData = {}
 
 
 
+---@class FGetMapPostsResponse
+---@field MapPostList TArray<FMapPost>
+---@field bOriginalOperationSuccess boolean
+FGetMapPostsResponse = {}
+
+
+
 ---@class FGlobalShardConfig
 ---@field DiscordRoleServerUrl FString
 FGlobalShardConfig = {}
@@ -1032,6 +1072,13 @@ FHitConverterItemMeshInfo = {}
 ---@field StockPileWithdrawalValue float
 ---@field QuantityPerCrate uint16
 FItemData = {}
+
+
+
+---@class FJsonSafeUint64
+---@field High uint32
+---@field Low uint32
+FJsonSafeUint64 = {}
 
 
 
@@ -1092,8 +1139,30 @@ FMapLocationInstance = {}
 
 
 
+---@class FMapPost
+---@field OriginalEntry FMapPostEntry
+---@field ReplyList TArray<FMapPostEntry>
+---@field NetVoteCount int32
+---@field LocalVoteType EMapPostVoteType
+---@field GlobalPosition FVector
+---@field Rank int32
+FMapPost = {}
+
+
+
+---@class FMapPostEntry
+---@field PosterOnlineId FJsonSafeUint64
+---@field Text FString
+---@field UnixTimestamp int64
+FMapPostEntry = {}
+
+
+
+---@class FMapPostManager
+FMapPostManager = {}
+
+
 ---@class FProfileInfoResponse
----@field OnlineId uint64
 ---@field Timestamp int64
 ---@field AgeDeployData FString
 FProfileInfoResponse = {}
@@ -1112,6 +1181,14 @@ FQueueStatusResponse = {}
 ---@field Base FGridItem
 ---@field bCanCancel boolean
 FRefineryQueueItem = {}
+
+
+
+---@class FReplyToMapPostRequest
+---@field OriginalPosterOnlineId FJsonSafeUint64
+---@field RequesterFactionId uint8
+---@field ReplyText FString
+FReplyToMapPostRequest = {}
 
 
 
@@ -1152,6 +1229,7 @@ FShardConfig = {}
 
 
 ---@class FUpgradeCostData : FTableRowBase
+---@field ResourceBranches int16
 ---@field ProcessedWood int16
 ---@field ProcessedStone int16
 ---@field ProcessedIron int16
@@ -1202,6 +1280,8 @@ FWeatherManager = {}
 
 ---@class UActionButtonWidget : UUserWidget
 ---@field ActionButtonType EActionButtonType
+---@field EntityActionType EAnvilEntityActionType
+---@field ButtonImageOverride UTexture2D
 ---@field ActionButton UButton
 ---@field CallForReinforcementsCue USoundCue
 UActionButtonWidget = {}
@@ -1323,12 +1403,18 @@ function UAnvilClientVoiceClient:Reconnect() end
 ---@field SliderMaxValueText UTextBlock
 ---@field TextInputLabelTextBox UTextBlock
 ---@field TextInputEditableTextBox UEditableTextBox
+---@field LargeTextInputLabelTextBox UTextBlock
+---@field LargeTextInputEditableTextBox UMultiLineEditableText
 ---@field LeftButton UAnvilButtonWidget
 ---@field RightButton UAnvilButtonWidget
 UAnvilDialogBox = {}
 
+---@param Text FText
+function UAnvilDialogBox:OnTextInputEditableTextChanged(Text) end
 function UAnvilDialogBox:OnRightButtonClicked() end
 function UAnvilDialogBox:OnLeftButtonClicked() end
+---@param Text FText
+function UAnvilDialogBox:OnLargeTextInputEditableTextChanged(Text) end
 ---@return FText
 function UAnvilDialogBox:GetSliderCurrentValueText() end
 ---@param Value float
@@ -1351,6 +1437,7 @@ function UAnvilDropdownEntryWidget:OnOptionSelected(SelectedItem, SelectionType)
 ---@field MapWidget UMapWidget
 ---@field HUDWidget UHUDWidget
 ---@field WorldEntityPoolManager UWorldEntityPoolManager
+---@field ChatMessages TArray<UChatMessage>
 ---@field TravelAddress FString
 ---@field ConnectTokenBuffer TArray<uint8>
 ---@field CharacterSave UAnvilCharacterSave
@@ -1358,12 +1445,14 @@ function UAnvilDropdownEntryWidget:OnOptionSelected(SelectedItem, SelectionType)
 ---@field AssetManager FAnvilAssetManager
 ---@field WeatherManager FWeatherManager
 ---@field OptionsManager FAnvilOptionsManager
+---@field MapPostManager FMapPostManager
 ---@field UIGlobalsClass TSubclassOf<AUIGlobals>
 ---@field R2ConfigClass TSubclassOf<UEntityTemplate>
 ---@field DirtyLandscapeProxies TArray<ALandscapeProxy>
 ---@field VisActorList TArray<AVisActor>
 ---@field TravelVisActorList TArray<AVisActor>
 ---@field ClientConfigManager FClientConfigManager
+---@field VisActorPool TArray<AVisActor>
 UAnvilGameInstance = {}
 
 ---@param OutVisActorList TArray<AVisActor>
@@ -1626,6 +1715,15 @@ function UChatWidget:OnEntryCommitted(Text, Method) end
 function UChatWidget:OnEntryChanged(Text) end
 
 
+---@class UCombustionPanelWidget : UUserWidget
+---@field FuelDurationText UTextBlock
+---@field CombustionDataComponent UCombustionDataComponent
+---@field FuelInputItemGrid UInventoryWidget
+---@field FuelOutputItemGrid UInventoryWidget
+UCombustionPanelWidget = {}
+
+
+
 ---@class UConnectScreen : UAnvilScreen
 ---@field BackButton UAnvilButtonWidget
 ---@field RefreshButton UAnvilButtonWidget
@@ -1650,11 +1748,8 @@ function UConnectScreen:GetThrobberVisibility() end
 ---@class UCookingWindow : UStructureWindow
 ---@field RecipeInputItemGrid UInventoryWidget
 ---@field RecipeOutputItemGrid UInventoryWidget
----@field FuelInputItemGrid UInventoryWidget
----@field FuelOutputItemGrid UInventoryWidget
 ---@field WaterInputItemGrid UInventoryWidget
 ---@field CookingDurationText UTextBlock
----@field FuelDurationText UTextBlock
 ---@field CheatSheetCanvasPanel UCanvasPanel
 ---@field CheatSheetTextBlock URichTextBlock
 ---@field StartCookingButton UButton
@@ -1663,10 +1758,6 @@ function UConnectScreen:GetThrobberVisibility() end
 UCookingWindow = {}
 
 function UCookingWindow:OnStartCookingButtonClicked() end
----@return ESlateVisibility
-function UCookingWindow:GetFuelDurationTextVisibility() end
----@return FText
-function UCookingWindow:GetFuelDurationText() end
 ---@return ESlateVisibility
 function UCookingWindow:GetCookingDurationTextVisibility() end
 ---@return FText
@@ -1973,6 +2064,15 @@ UGridPanelWidget = {}
 
 
 
+---@class UHUDEntityBillboardWidget : UUserWidget
+---@field Target AActor
+---@field WorldZOffset float
+---@field Canvas UCanvasPanel
+---@field CanvasSlot UCanvasPanelSlot
+UHUDEntityBillboardWidget = {}
+
+
+
 ---@class UHUDHintWidget : UUserWidget
 ---@field PrimaryHintTextBlock URichTextBlock
 ---@field PrimaryHintCanvas UCanvasPanel
@@ -1987,8 +2087,8 @@ function UHUDHintWidget:OnHintMinimizeClicked() end
 function UHUDHintWidget:OnHintMaximizeClicked() end
 
 
----@class UHUDNameWidget : UUserWidget
----@field TargetVisActor AVisActor
+---@class UHUDNameWidget : UHUDEntityBillboardWidget
+---@field LocalChatDisplayTime float
 ---@field NameText UTextBlock
 ---@field LocalChatText UTextBlock
 ---@field ReinforcementIcon UImage
@@ -2016,6 +2116,13 @@ UHUDPlacementStatusWidget = {}
 
 
 
+---@class UHUDSignPostWidget : UHUDEntityBillboardWidget
+---@field MessageDisplayRange float
+---@field MessageWidget USignPostMessageWidget
+UHUDSignPostWidget = {}
+
+
+
 ---@class UHUDStatsWidget : UUserWidget
 ---@field StatsText UTextBlock
 UHUDStatsWidget = {}
@@ -2026,11 +2133,13 @@ UHUDStatsWidget = {}
 ---@field InteractionIcon UInteractionIconWidget
 ---@field HUDCanvas UCanvasPanel
 ---@field NameCanvas UCanvasPanel
+---@field SignPostMessageCanvas UCanvasPanel
 ---@field StatsCanvas UCanvasPanel
 ---@field DismantleButtonsCanvas UCanvasPanel
 ---@field TravelIndicatorCanvas UCanvasPanel
 ---@field HUDWindowWidgets TMap<EHUDWindowType, UHUDWindow>
 ---@field HUDNameWidgetClass TSubclassOf<UHUDNameWidget>
+---@field HUDSignPostWidgetClass TSubclassOf<UHUDSignPostWidget>
 ---@field HUDStatsWidgetClass TSubclassOf<UHUDStatsWidget>
 ---@field DismantleButtonWidgetClass TSubclassOf<UDismantleButtonWidget>
 ---@field OpenedHUDWindow UHUDWindow
@@ -2061,7 +2170,6 @@ UHUDStatsWidget = {}
 ---@field NovanLogo UTexture2D
 ---@field GuardStrengthEmptyIcon FSlateBrush
 ---@field GuardStrengthFillIcon FSlateBrush
----@field LocalChatDisplayTime float
 ---@field InteractionProgressBar1 UProgressBar
 ---@field InteractionProgressBar2 UProgressBar
 ---@field WeatherStatsText UTextBlock
@@ -2110,15 +2218,8 @@ function UHeaderContainer:OnCloseButtonClicked() end
 
 ---@class UHeatingWindow : UStructureWindow
 ---@field ItemsItemGrid UInventoryWidget
----@field FuelInputItemGrid UInventoryWidget
----@field FuelOutputItemGrid UInventoryWidget
----@field FuelDurationText UTextBlock
 UHeatingWindow = {}
 
----@return ESlateVisibility
-function UHeatingWindow:GetFuelDurationTextVisibility() end
----@return FText
-function UHeatingWindow:GetFuelDurationText() end
 
 
 ---@class UHelpScreen : UAnvilScreen
@@ -2287,8 +2388,75 @@ UMapMarkerComponent = {}
 
 
 
+---@class UMapPostContainerWidget : UUserWidget
+---@field MapPostWidgetClass TSubclassOf<UMapPostWidget>
+---@field MapPostCanvas UCanvasPanel
+UMapPostContainerWidget = {}
+
+
+
 ---@class UMapPostMapIcon : UMapIcon
 UMapPostMapIcon = {}
+
+
+---@class UMapPostReplyWidget : UUserWidget
+---@field ReplyPosterNameTextBlock UTextBlock
+---@field ReplyTextBlock UTextBlock
+---@field TimeTextBlock UTextBlock
+UMapPostReplyWidget = {}
+
+---@return FText
+function UMapPostReplyWidget:GetTimeSinceReplyText() end
+---@return FText
+function UMapPostReplyWidget:GetReplyPosterNameText() end
+
+
+---@class UMapPostWidget : UUserWidget
+---@field MapPostReplyWidgetClass TSubclassOf<UMapPostReplyWidget>
+---@field OriginalTextWidth float
+---@field UpVoteButtonStyle FButtonStyle
+---@field UpVoteButtonVotedStyle FButtonStyle
+---@field DownVoteButtonStyle FButtonStyle
+---@field DownVoteButtonVotedStyle FButtonStyle
+---@field ExpandedMapPostBorder UBorder
+---@field HeaderBorder UBorder
+---@field OriginalTextSizeBox USizeBox
+---@field OriginalPostTextBlock UTextBlock
+---@field OriginalPosterNameTextBlock UTextBlock
+---@field RankTextBlock UTextBlock
+---@field UpVoteButton UButton
+---@field DownVoteButton UButton
+---@field NetVoteCountTextBlock UTextBlock
+---@field TimeSinceOriginalPostTextBlock UTextBlock
+---@field RepliesSizeBox USizeBox
+---@field RepliesVerticalBox UVerticalBox
+---@field ReplyInputTextBox UEditableTextBox
+---@field ReplyButton UButton
+---@field RenderStateSwitcher UWidgetSwitcher
+UMapPostWidget = {}
+
+function UMapPostWidget:OnUpVoteButtonClicked() end
+---@param ReplyText FText
+---@param CommitMethod ETextCommit::Type
+function UMapPostWidget:OnReplyInputTextCommitted(ReplyText, CommitMethod) end
+---@param Text FText
+function UMapPostWidget:OnReplyInputTextChanged(Text) end
+function UMapPostWidget:OnReplyButtonClicked() end
+---@param MyGeometry FGeometry
+---@param MouseEvent FPointerEvent
+---@return FEventReply
+function UMapPostWidget:OnHeaderClicked(MyGeometry, MouseEvent) end
+function UMapPostWidget:OnDownVoteButtonClicked() end
+---@return boolean
+function UMapPostWidget:IsVoteButtonEnabled() end
+---@return FText
+function UMapPostWidget:GetTimeSinceOriginalPostText() end
+---@return FText
+function UMapPostWidget:GetRankText() end
+---@return FText
+function UMapPostWidget:GetOriginalPosterNameText() end
+---@return FText
+function UMapPostWidget:GetNetVoteCountText() end
 
 
 ---@class UMapWidget : UMapWidgetBase
@@ -2300,6 +2468,7 @@ UMapPostMapIcon = {}
 ---@field CentralMarketplaceWidget UCentralMarketplaceWidget
 ---@field SeasonText UTextBlock
 ---@field TimeOfDayText UTextBlock
+---@field MapPostContainerWidget UMapPostContainerWidget
 ---@field DisplayedBeaconTowerPlayerInfos TArray<UMapIcon>
 UMapWidget = {}
 
@@ -2610,6 +2779,23 @@ function UServerSelectScreen:IsRefreshButtonEnabled() end
 function UServerSelectScreen:GetThrobberVisibility() end
 
 
+---@class USignPostMessageWidget : UUserWidget
+---@field MessageBox UTextBlock
+---@field LifetimeBox UTextBlock
+---@field BuilderNameBox UTextBlock
+---@field BuilderNameButton UButton
+---@field Context AActor
+USignPostMessageWidget = {}
+
+function USignPostMessageWidget:CopyBuilderId() end
+
+
+---@class USignPostWindow : UStructureWindow
+---@field MessageWidget USignPostMessageWidget
+USignPostWindow = {}
+
+
+
 ---@class UStatusWidget : UUserWidget
 ---@field IconTexture UTexture2D
 ---@field SimpleTooltip ESimpleTooltip
@@ -2825,6 +3011,7 @@ UVisInstancedStockpileComponent = {}
 ---@field Category EVisItemCategory
 ---@field Mesh USkeletalMesh
 ---@field StockpileMesh UStaticMesh
+---@field SingleItemStockpileMesh UStaticMesh
 ---@field bAutoSetStockpileExtents boolean
 ---@field StockpileExtents FVector
 ---@field bStockpileCanFlip boolean

@@ -3,8 +3,8 @@
 
 class AVisKnifeImpactShieldBreak_C : public AVisEffect
 {
-    class UAudioComponent* Audio;                                                     // 0x04D0 (size: 0x8)
+    class UAudioComponent* Audio;                                                     // 0x04D8 (size: 0x8)
 
-}; // Size: 0x4D8
+}; // Size: 0x4E0
 
 #endif

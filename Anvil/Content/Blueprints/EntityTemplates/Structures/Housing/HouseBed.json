@@ -99,7 +99,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__HouseBed_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseBed.14"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseBed.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__HouseBed_C:HealthComp'",
@@ -107,19 +107,15 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__HouseBed_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseBed.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseBed.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__HouseBed_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseBed.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseBed.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__HouseBed_C:DestroyableComp'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseBed.3"
-      },
-      "MeshCollisionComp": {
-        "ObjectName": "MeshCollisionProxyComponent'Default__HouseBed_C:MeshCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseBed.9"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__HouseBed_C:FootprintCollisionProxyComponent_0'",
@@ -135,15 +131,20 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__HouseBed_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseBed.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseBed.11"
       },
       "CodeNameString": "HouseBed",
       "CodeName": -847257084,
+      "bGenerateMeshCollisionsFromVisActor": true,
       "bGenerateMeshCollisionVaultable": true,
       "Components": [
         {
+          "ObjectName": "UpgradeProxyComponent'Default__HouseBed_C:UpgradeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseBed.14"
+        },
+        {
           "ObjectName": "PlayerSpawnerProxyComponent'Default__HouseBed_C:PlayerSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseBed.10"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseBed.9"
         },
         {
           "ObjectName": "HousingProxyComponent'Default__HouseBed_C:HousingProxyComponent_0'",
@@ -197,7 +198,8 @@
           "DedicatedUnderlyingItemType": null,
           "bCheckDedicatedUnderlyingItem": true,
           "RequiredEnablingItem": null,
-          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
         },
         {
           "ProxyRepeat": 4,
@@ -215,22 +217,10 @@
           "DedicatedUnderlyingItemType": null,
           "bCheckDedicatedUnderlyingItem": true,
           "RequiredEnablingItem": null,
-          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
         }
       ]
-    }
-  },
-  {
-    "Type": "MeshCollisionProxyComponent",
-    "Name": "MeshCollisionProxyComponent_0",
-    "Outer": "Default__HouseBed_C",
-    "Class": "UScriptClass'MeshCollisionProxyComponent'",
-    "Properties": {
-      "PhysicsAssetName": {
-        "ObjectName": "StaticMesh'Bed'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Bed.2"
-      },
-      "CollisionMask": 16785410
     }
   },
   {
@@ -290,6 +280,18 @@
     "Template": {
       "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    }
+  },
+  {
+    "Type": "UpgradeProxyComponent",
+    "Name": "UpgradeProxyComponent_0",
+    "Outer": "Default__HouseBed_C",
+    "Class": "UScriptClass'UpgradeProxyComponent'",
+    "Properties": {
+      "UpgradeTarget": {
+        "ObjectName": "BlueprintGeneratedClass'HouseBedMulti_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/HouseBedMulti.0"
+      }
     }
   }
 ]

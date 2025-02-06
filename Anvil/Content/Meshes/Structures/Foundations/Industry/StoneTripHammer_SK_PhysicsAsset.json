@@ -1,0 +1,202 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "StoneTripHammer_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'StoneTripHammer_SK_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/StoneTripHammer_SK_PhysicsAsset.3"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'StoneTripHammer_SK_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/StoneTripHammer_SK_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'StoneTripHammer_SK_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/StoneTripHammer_SK_PhysicsAsset.5"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'StoneTripHammer_SK_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/StoneTripHammer_SK_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'StoneTripHammer_SK_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/StoneTripHammer_SK_PhysicsAsset.2"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "StoneTripHammer_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "PrimaryGear",
+        "ConstraintBone1": "PrimaryGear",
+        "ConstraintBone2": "Root1",
+        "Pos2": {
+          "X": 2.4049997,
+          "Y": -6.7920103E-15,
+          "Z": 0.36410055
+        },
+        "PriAxis2": {
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": -3.8941437E-07
+        },
+        "SecAxis2": {
+          "X": 1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "StoneTripHammer_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "Body",
+        "ConstraintBone1": "Body",
+        "ConstraintBone2": "Root1",
+        "Pos2": {
+          "X": -0.2431578,
+          "Y": -0.5485438,
+          "Z": -0.57957095
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "StoneTripHammer_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.10269707,
+              "Y": -1.7646213,
+              "Z": 0.03160341
+            },
+            "Rotation": {
+              "Pitch": 13.338569,
+              "Yaw": 32.84942,
+              "Roll": -90.0
+            },
+            "Radius": 3.5706,
+            "Length": 3.9387689,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "Root1",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "25B7ECE54AC2A31D433EF1964A3AB3FF"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "StoneTripHammer_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.07945773,
+              "Y": -0.010812091,
+              "Z": 0.0021579023
+            },
+            "Rotation": {
+              "Pitch": 3.1805547E-15,
+              "Yaw": 89.64472,
+              "Roll": -89.86808
+            },
+            "Radius": 0.6072503,
+            "Length": 1.2964919,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "PrimaryGear",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "84CB369F460D66E5274840ADD47E8C3A"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "StoneTripHammer_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.2148182,
+              "Y": -0.98573434,
+              "Z": 0.9477414
+            },
+            "Rotation": {
+              "Pitch": 3.1805547E-15,
+              "Yaw": 90.44044,
+              "Roll": -88.090515
+            },
+            "Radius": 0.735672,
+            "Length": 1.9939314,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "Body",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "5F4740EA40F1BDD31923F98D27898A91"
+  }
+]

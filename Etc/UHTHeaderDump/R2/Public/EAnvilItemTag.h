@@ -33,6 +33,7 @@ enum class EAnvilItemTag : uint8 {
     NotAllowedInMarket,
     MountedWeapon,
     HeavyTool,
+    ShieldStorage,
     NumTypes,
 };
 

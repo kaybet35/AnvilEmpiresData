@@ -7,9 +7,6 @@ struct FProfileInfoResponse {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint64 OnlineId;
-    
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 Timestamp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

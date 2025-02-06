@@ -6,6 +6,7 @@ UVisItem::UVisItem() {
     this->Category = EVisItemCategory::None;
     this->Mesh = NULL;
     this->StockpileMesh = NULL;
+    this->SingleItemStockpileMesh = NULL;
     this->bAutoSetStockpileExtents = false;
     this->bStockpileCanFlip = true;
     this->StockpileOrder = 0;

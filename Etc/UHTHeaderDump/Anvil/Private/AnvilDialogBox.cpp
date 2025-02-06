@@ -11,14 +11,22 @@ UAnvilDialogBox::UAnvilDialogBox() : UUserWidget(FObjectInitializer::Get()) {
     this->SliderMaxValueText = NULL;
     this->TextInputLabelTextBox = NULL;
     this->TextInputEditableTextBox = NULL;
+    this->LargeTextInputLabelTextBox = NULL;
+    this->LargeTextInputEditableTextBox = NULL;
     this->LeftButton = NULL;
     this->RightButton = NULL;
+}
+
+void UAnvilDialogBox::OnTextInputEditableTextChanged(const FText& Text) {
 }
 
 void UAnvilDialogBox::OnRightButtonClicked() {
 }
 
 void UAnvilDialogBox::OnLeftButtonClicked() {
+}
+
+void UAnvilDialogBox::OnLargeTextInputEditableTextChanged(const FText& Text) {
 }
 
 FText UAnvilDialogBox::GetSliderCurrentValueText() {

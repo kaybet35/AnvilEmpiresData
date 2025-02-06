@@ -8,6 +8,7 @@
 class UBorder;
 class UCentralMarketplaceWidget;
 class UMapIcon;
+class UMapPostContainerWidget;
 class UTextBlock;
 class UTexture2D;
 
@@ -39,6 +40,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* TimeOfDayText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UMapPostContainerWidget* MapPostContainerWidget;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

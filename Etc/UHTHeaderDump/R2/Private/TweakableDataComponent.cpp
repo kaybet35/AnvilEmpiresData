@@ -8,6 +8,7 @@ UTweakableDataComponent::UTweakableDataComponent(const FObjectInitializer& Objec
     this->TownCenterRequiredBuilders = 0;
     this->TownMapDisableSize = 0;
     this->UpkeepCostReinforced = 0.00f;
+    this->bClientsUseVisActorPool = false;
 }
 
 

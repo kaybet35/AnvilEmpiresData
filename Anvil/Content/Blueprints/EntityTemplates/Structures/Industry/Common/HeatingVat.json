@@ -20,7 +20,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "HeatingVat_C'Default__HeatingVat_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.7"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.8"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -37,41 +37,18 @@
     }
   },
   {
+    "Type": "CombustionProxyComponent",
+    "Name": "CombustionProxyComponent_0",
+    "Outer": "Default__HeatingVat_C",
+    "Class": "UScriptClass'CombustionProxyComponent'"
+  },
+  {
     "Type": "CookingProxyComponent",
     "Name": "CookingProxyComponent_1",
     "Outer": "Default__HeatingVat_C",
     "Class": "UScriptClass'CookingProxyComponent'",
     "Properties": {
       "CookType": "EAnvilCookingType::Boiled",
-      "FuelList": [
-        {
-          "FuelItem": {
-            "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
-          },
-          "FuelItemVisVar": 0,
-          "BurnDurationSec": 180.0,
-          "NormalizedTemperature": 0.6
-        },
-        {
-          "FuelItem": {
-            "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
-          },
-          "FuelItemVisVar": 0,
-          "BurnDurationSec": 30.0,
-          "NormalizedTemperature": 0.45
-        },
-        {
-          "FuelItem": {
-            "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
-          },
-          "FuelItemVisVar": 0,
-          "BurnDurationSec": 60.0,
-          "NormalizedTemperature": 0.25
-        }
-      ],
       "RecipeList": [
         {
           "InputItems": [
@@ -381,27 +358,27 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__HeatingVat_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.19"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.15"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__HeatingVat_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.7"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__HeatingVat_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.15"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.11"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__HeatingVat_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.18"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.14"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__HeatingVat_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.5"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__HeatingVat_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.6"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__HeatingVat_C:BoxCollisionProxyComponent_0'",
@@ -409,103 +386,37 @@
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__HeatingVat_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.4"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__HeatingVat_C:ScorchProxyComponent_1'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.17"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.13"
       },
       "CodeNameString": "HeatingVat",
       "CodeName": 117850078,
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
-          "ObjectName": "CookingProxyComponent'Default__HeatingVat_C:CookingProxyComponent_1'",
+          "ObjectName": "CombustionProxyComponent'Default__HeatingVat_C:CombustionProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.2"
         },
         {
+          "ObjectName": "CookingProxyComponent'Default__HeatingVat_C:CookingProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.3"
+        },
+        {
           "ObjectName": "PowerToActionConverterProxyComponent'Default__HeatingVat_C:PowerToActionConverterProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.13"
-        },
-        {
-          "ObjectName": "PowerUnitProxyComponent'Default__HeatingVat_C:PowerUnitProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.14"
-        },
-        {
-          "ObjectName": "InventoryProxyComponent'Default__HeatingVat_C:InventoryProxyComponent_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.11"
-        },
-        {
-          "ObjectName": "InventoryProxyComponent'Default__HeatingVat_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.8"
-        },
-        {
-          "ObjectName": "InventoryProxyComponent'Default__HeatingVat_C:InventoryProxyComponent_1'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.9"
         },
         {
-          "ObjectName": "InventoryProxyComponent'Default__HeatingVat_C:InventoryProxyComponent_2'",
+          "ObjectName": "PowerUnitProxyComponent'Default__HeatingVat_C:PowerUnitProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.10"
-        },
-        {
-          "ObjectName": "InventoryProxyComponent'Default__HeatingVat_C:InventoryProxyComponent_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Common/HeatingVat.12"
         }
       ],
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisHeatingVat_C'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisHeatingVat.3"
       }
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_0",
-    "Outer": "Default__HeatingVat_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
-      "NormalizedSpoilageFactor": 0.0
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_1",
-    "Outer": "Default__HeatingVat_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
-      "NormalizedSpoilageFactor": 0.0
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_2",
-    "Outer": "Default__HeatingVat_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
-      "NormalizedSpoilageFactor": 0.0
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_4",
-    "Outer": "Default__HeatingVat_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
-      "NormalizedSpoilageFactor": 0.0
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_5",
-    "Outer": "Default__HeatingVat_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
-      "NormalizedSpoilageFactor": 0.0
     }
   },
   {

@@ -3,6 +3,6 @@
 
 class UBPHUDNameWidget_C : public UHUDNameWidget
 {
-}; // Size: 0x308
+}; // Size: 0x320
 
 #endif

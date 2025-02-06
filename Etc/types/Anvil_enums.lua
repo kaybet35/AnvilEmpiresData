@@ -30,7 +30,12 @@ EActionButtonType = {
     FamilyInviteToJoin = 27,
     FamilyLock = 28,
     FamilyUnlock = 29,
-    EActionButtonType_MAX = 30,
+    Upvote = 30,
+    Upvoted = 31,
+    Downvote = 32,
+    Downvoted = 33,
+    EditSignPost = 34,
+    EActionButtonType_MAX = 35,
 }
 
 ---@enum EAlertType
@@ -244,8 +249,10 @@ EHUDWindowType = {
     FamilyHouse = 23,
     Lore = 24,
     CentralMarket = 25,
-    Count = 26,
-    EHUDWindowType_MAX = 27,
+    Combustion = 26,
+    SignPost = 27,
+    Count = 28,
+    EHUDWindowType_MAX = 29,
 }
 
 ---@enum EIncomingAttackDirection
@@ -298,6 +305,23 @@ EMapMode = {
     MilitiaDeployment = 2,
     BugScreenshot = 3,
     EMapMode_MAX = 4,
+}
+
+---@enum EMapPostCreationResponse
+EMapPostCreationResponse = {
+    Success = 0,
+    AlreadyExists = 1,
+    TooSoon = 2,
+    Error = 3,
+    EMapPostCreationResponse_MAX = 4,
+}
+
+---@enum EMapPostVoteType
+EMapPostVoteType = {
+    None = 0,
+    Up = 1,
+    Down = 2,
+    EMapPostVoteType_MAX = 3,
 }
 
 ---@enum ENotificationDuration

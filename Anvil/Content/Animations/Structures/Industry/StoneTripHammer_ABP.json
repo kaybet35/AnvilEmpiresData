@@ -1,0 +1,4734 @@
+[
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Frame Jump",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Start",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Frame jump 1",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 4,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                5
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Frame jump 2",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 6,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                7
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Frame jump 3/reset",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 8,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                9
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.005,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.005,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 3,
+              "CrossfadeDuration": 0.005,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.005,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "Leg 3",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Raise leg 3",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 21,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 18,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                19
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Leg 3 fall",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 22,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 16,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                17
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "wait",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 23,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 20,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "Leg 2",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Raise leg 2",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 30,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 27,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                28
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Leg 2 fall",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 31,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 25,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                26
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "wait",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 32,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 29,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "Leg 1",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Raise leg 1",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 40,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 37,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                38
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Leg 1 fall",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 41,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 35,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                36
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "wait",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 42,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 39,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'StoneTripHammer_SK_Skeleton'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Industry/StoneTripHammer_SK_Skeleton.0"
+      },
+      "SyncGroupNames": [
+        "Leg1"
+      ],
+      "GraphAssetPlayerInformation": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "PlayerNodeIndices": [
+              43
+            ]
+          }
+        }
+      ],
+      "AnimNodeData": [
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            0,
+            30
+          ],
+          "NodeIndex": 0,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            12,
+            1,
+            10,
+            25,
+            4294967295,
+            24,
+            2147483648,
+            23,
+            4294967295,
+            22,
+            14,
+            25
+          ],
+          "NodeIndex": 1,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295
+          ],
+          "NodeIndex": 2,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295
+          ],
+          "NodeIndex": 3,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295
+          ],
+          "NodeIndex": 4,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            2,
+            30,
+            21
+          ],
+          "NodeIndex": 5,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            12,
+            11,
+            10,
+            25,
+            4294967295,
+            24,
+            2147483649,
+            23,
+            4294967295,
+            22,
+            14,
+            25
+          ],
+          "NodeIndex": 6,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            3,
+            30,
+            32
+          ],
+          "NodeIndex": 7,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            30,
+            27,
+            26,
+            25,
+            4294967295,
+            24,
+            24,
+            23,
+            4294967295,
+            4,
+            14,
+            25
+          ],
+          "NodeIndex": 8,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            5,
+            30,
+            29
+          ],
+          "NodeIndex": 9,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 10,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 11,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295
+          ],
+          "NodeIndex": 12,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295
+          ],
+          "NodeIndex": 13,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295
+          ],
+          "NodeIndex": 14,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            9,
+            30,
+            21
+          ],
+          "NodeIndex": 15,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            12,
+            11,
+            10,
+            25,
+            4294967295,
+            24,
+            2147483650,
+            23,
+            4294967295,
+            22,
+            14,
+            25
+          ],
+          "NodeIndex": 16,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            6,
+            30,
+            32
+          ],
+          "NodeIndex": 17,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            30,
+            27,
+            26,
+            25,
+            4294967295,
+            24,
+            24,
+            23,
+            4294967295,
+            7,
+            25,
+            25
+          ],
+          "NodeIndex": 18,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            8,
+            30,
+            29
+          ],
+          "NodeIndex": 19,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 20,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295
+          ],
+          "NodeIndex": 21,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295
+          ],
+          "NodeIndex": 22,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295
+          ],
+          "NodeIndex": 23,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            9,
+            30,
+            21
+          ],
+          "NodeIndex": 24,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            12,
+            11,
+            10,
+            25,
+            4294967295,
+            24,
+            2147483651,
+            23,
+            4294967295,
+            22,
+            14,
+            25
+          ],
+          "NodeIndex": 25,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            13,
+            30,
+            32
+          ],
+          "NodeIndex": 26,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            30,
+            27,
+            26,
+            25,
+            4294967295,
+            24,
+            24,
+            16,
+            4294967295,
+            15,
+            14,
+            25
+          ],
+          "NodeIndex": 27,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            17,
+            30,
+            29
+          ],
+          "NodeIndex": 28,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 29,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            25,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 30,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295
+          ],
+          "NodeIndex": 31,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295
+          ],
+          "NodeIndex": 32,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295
+          ],
+          "NodeIndex": 33,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295
+          ],
+          "NodeIndex": 34,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            30,
+            27,
+            26,
+            25,
+            4294967295,
+            24,
+            24,
+            23,
+            4294967295,
+            22,
+            25,
+            25
+          ],
+          "NodeIndex": 35,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            18,
+            30,
+            19
+          ],
+          "NodeIndex": 36,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            30,
+            27,
+            26,
+            25,
+            4294967295,
+            24,
+            24,
+            23,
+            4294967295,
+            22,
+            25,
+            25
+          ],
+          "NodeIndex": 37,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            20,
+            30,
+            21
+          ],
+          "NodeIndex": 38,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            30,
+            27,
+            26,
+            25,
+            4294967295,
+            24,
+            24,
+            23,
+            4294967295,
+            22,
+            25,
+            25
+          ],
+          "NodeIndex": 39,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            28,
+            30,
+            29
+          ],
+          "NodeIndex": 40,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            31,
+            30,
+            32
+          ],
+          "NodeIndex": 41,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 42,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 43,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+          },
+          "Entries": [
+            33,
+            33,
+            33,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 44,
+          "Flags": "EAnimNodeDataFlags::None"
+        }
+      ],
+      "NodeTypeMap": [
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_ApplyAdditive'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Base",
+                "Value": 3
+              },
+              {
+                "Key": "Additive",
+                "Value": 4
+              },
+              {
+                "Key": "Alpha",
+                "Value": 5
+              },
+              {
+                "Key": "AlphaScaleBias",
+                "Value": 6
+              },
+              {
+                "Key": "LODThreshold",
+                "Value": 7
+              },
+              {
+                "Key": "AlphaBoolBlend",
+                "Value": 8
+              },
+              {
+                "Key": "AlphaCurveName",
+                "Value": 9
+              },
+              {
+                "Key": "AlphaScaleBiasClamp",
+                "Value": 10
+              },
+              {
+                "Key": "AlphaInputType",
+                "Value": 11
+              },
+              {
+                "Key": "bAlphaBoolEnabled",
+                "Value": 12
+              }
+            ],
+            "NumProperties": 13
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_Base'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_StateMachine'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "StateMachineIndexInClass",
+                "Value": 3
+              },
+              {
+                "Key": "MaxTransitionsPerFrame",
+                "Value": 4
+              },
+              {
+                "Key": "MaxTransitionsRequests",
+                "Value": 5
+              },
+              {
+                "Key": "bSkipFirstUpdateTransition",
+                "Value": 6
+              },
+              {
+                "Key": "bReinitializeOnBecomingRelevant",
+                "Value": 7
+              },
+              {
+                "Key": "bCreateNotifyMetaData",
+                "Value": 8
+              },
+              {
+                "Key": "bAllowConduitEntryStates",
+                "Value": 9
+              }
+            ],
+            "NumProperties": 10
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_StateResult'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Result",
+                "Value": 3
+              },
+              {
+                "Key": "Name",
+                "Value": 4
+              },
+              {
+                "Key": "Group",
+                "Value": 5
+              },
+              {
+                "Key": "StateIndex",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_Root'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Result",
+                "Value": 3
+              },
+              {
+                "Key": "Name",
+                "Value": 4
+              },
+              {
+                "Key": "Group",
+                "Value": 5
+              }
+            ],
+            "NumProperties": 6
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_SequencePlayer'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              },
+              {
+                "Key": "PlayRateScaleBiasClampState",
+                "Value": 7
+              },
+              {
+                "Key": "GroupName",
+                "Value": 8
+              },
+              {
+                "Key": "GroupRole",
+                "Value": 9
+              },
+              {
+                "Key": "Method",
+                "Value": 10
+              },
+              {
+                "Key": "bIgnoreForRelevancyTest",
+                "Value": 11
+              },
+              {
+                "Key": "Sequence",
+                "Value": 12
+              },
+              {
+                "Key": "PlayRateBasis",
+                "Value": 13
+              },
+              {
+                "Key": "PlayRate",
+                "Value": 14
+              },
+              {
+                "Key": "PlayRateScaleBiasClampConstants",
+                "Value": 15
+              },
+              {
+                "Key": "PlayRateScaleBiasClamp",
+                "Value": 16
+              },
+              {
+                "Key": "StartPosition",
+                "Value": 17
+              },
+              {
+                "Key": "bLoopAnimation",
+                "Value": 18
+              },
+              {
+                "Key": "bStartFromMatchingPose",
+                "Value": 19
+              }
+            ],
+            "NumProperties": 20
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_SequencePlayerBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              },
+              {
+                "Key": "PlayRateScaleBiasClampState",
+                "Value": 7
+              }
+            ],
+            "NumProperties": 8
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerRelevancyBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_TransitionResult'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "bCanEnterTransition",
+                "Value": 3
+              }
+            ],
+            "NumProperties": 4
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_RandomPlayer'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Entries",
+                "Value": 3
+              },
+              {
+                "Key": "bIgnoreForRelevancyTest",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "bShuffleMode",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_LayeredBoneBlend'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "BasePose",
+                "Value": 3
+              },
+              {
+                "Key": "BlendPoses",
+                "Value": 4
+              },
+              {
+                "Key": "BlendMode",
+                "Value": 5
+              },
+              {
+                "Key": "BlendMasks",
+                "Value": 6
+              },
+              {
+                "Key": "LayerSetup",
+                "Value": 7
+              },
+              {
+                "Key": "BlendWeights",
+                "Value": 8
+              },
+              {
+                "Key": "bMeshSpaceRotationBlend",
+                "Value": 9
+              },
+              {
+                "Key": "bMeshSpaceScaleBlend",
+                "Value": 10
+              },
+              {
+                "Key": "CurveBlendOption",
+                "Value": 11
+              },
+              {
+                "Key": "bBlendRootMotionBasedOnRootBone",
+                "Value": 12
+              },
+              {
+                "Key": "LODThreshold",
+                "Value": 13
+              },
+              {
+                "Key": "PerBoneBlendWeights",
+                "Value": 14
+              },
+              {
+                "Key": "SkeletonGuid",
+                "Value": 15
+              },
+              {
+                "Key": "VirtualBoneGuid",
+                "Value": 16
+              }
+            ],
+            "NumProperties": 17
+          }
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:ExecuteUbergraph_StoneTripHammer_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.16"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisPowerUnitAnimInstance'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:AnimGraph'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.1"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_ApplyAdditive_475D57C64ACE011A8AC986A7989BB8E9'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.2"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_20684E9849C08B039831818F67723FC8'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.5"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_DB93FB954533184A8511BAB884E968DD'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.14"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_9BF946054084AE150AC639996A8A54E0'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.12"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_B368F5634DD90BA2465E908DA7CE2E97'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.13"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_3E446FD348F4190F99AB808A68C00DB4'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.6"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_856A938044DF5D9D9927F2AE5E54A0A8'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.10"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_5B23ECA74C37C14817BA98AE13415B64'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.8"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_71A18D2A43610BF6A0DD70B205FB3851'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.9"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_130E8AB04C3885972ABB899DC2EDEC21'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.4"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_8A34200D4C68D8B8BA3C4390F36EFE99'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.11"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_40E0023C48938634BB050DB29C82841E'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.7"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_017AEFE14725441B3EDDD5A9ABE2A974'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.3"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_F07BFD1742BCDB27CE244B8023908770'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.15"
+      },
+      {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:ExecuteUbergraph_StoneTripHammer_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.16"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__AnimBlueprintMutables",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 20,
+        "Struct": {
+          "ObjectName": "ScriptStruct'StoneTripHammer_ABP_C:AnimBlueprintGeneratedMutableData'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.18"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_9",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_12",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_11",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_10",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_12",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_8",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_11",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_10",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_LayeredBoneBlend",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 352,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_9",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_8",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_9",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_8",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_RandomPlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 248,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_RandomPlayer'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_ApplyAdditive_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 344,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_ApplyAdditive'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_ApplyAdditive",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 344,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_ApplyAdditive'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_StoneTripHammer_ABP": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:ExecuteUbergraph_StoneTripHammer_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.16"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_F07BFD1742BCDB27CE244B8023908770": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_F07BFD1742BCDB27CE244B8023908770'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.15"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_017AEFE14725441B3EDDD5A9ABE2A974": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_017AEFE14725441B3EDDD5A9ABE2A974'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.3"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_40E0023C48938634BB050DB29C82841E": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_40E0023C48938634BB050DB29C82841E'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.7"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_8A34200D4C68D8B8BA3C4390F36EFE99": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_8A34200D4C68D8B8BA3C4390F36EFE99'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.11"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_130E8AB04C3885972ABB899DC2EDEC21": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_130E8AB04C3885972ABB899DC2EDEC21'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.4"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_71A18D2A43610BF6A0DD70B205FB3851": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_71A18D2A43610BF6A0DD70B205FB3851'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.9"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_5B23ECA74C37C14817BA98AE13415B64": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_5B23ECA74C37C14817BA98AE13415B64'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.8"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_856A938044DF5D9D9927F2AE5E54A0A8": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_856A938044DF5D9D9927F2AE5E54A0A8'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.10"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_3E446FD348F4190F99AB808A68C00DB4": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_3E446FD348F4190F99AB808A68C00DB4'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.6"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_B368F5634DD90BA2465E908DA7CE2E97": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_B368F5634DD90BA2465E908DA7CE2E97'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.13"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_9BF946054084AE150AC639996A8A54E0": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_9BF946054084AE150AC639996A8A54E0'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.12"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_DB93FB954533184A8511BAB884E968DD": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_DB93FB954533184A8511BAB884E968DD'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.14"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_20684E9849C08B039831818F67723FC8": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_20684E9849C08B039831818F67723FC8'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_ApplyAdditive_475D57C64ACE011A8AC986A7989BB8E9": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_ApplyAdditive_475D57C64ACE011A8AC986A7989BB8E9'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.2"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'StoneTripHammer_ABP_C:AnimGraph'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.1"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "StoneTripHammer_ABP_C'Default__StoneTripHammer_ABP_C'",
+      "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.19"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraph",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PoseLink'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_ApplyAdditive_475D57C64ACE011A8AC986A7989BB8E9",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_017AEFE14725441B3EDDD5A9ABE2A974",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_130E8AB04C3885972ABB899DC2EDEC21",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_20684E9849C08B039831818F67723FC8",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_3E446FD348F4190F99AB808A68C00DB4",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_40E0023C48938634BB050DB29C82841E",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_5B23ECA74C37C14817BA98AE13415B64",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_71A18D2A43610BF6A0DD70B205FB3851",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_856A938044DF5D9D9927F2AE5E54A0A8",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_8A34200D4C68D8B8BA3C4390F36EFE99",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_9BF946054084AE150AC639996A8A54E0",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_B368F5634DD90BA2465E908DA7CE2E97",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_DB93FB954533184A8511BAB884E968DD",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_F07BFD1742BCDB27CE244B8023908770",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_StoneTripHammer_ABP",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetInstanceAssetPlayerTimeFraction_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetInstanceAssetPlayerTimeFraction_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSyncGroupPosition_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 28,
+        "Struct": {
+          "ObjectName": "ScriptStruct'MarkerSyncAnimPosition'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetInstanceAssetPlayerTimeFraction_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetInstanceAssetPlayerTimeFraction_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetInstanceAssetPlayerTime_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSyncGroupPosition_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 28,
+        "Struct": {
+          "ObjectName": "ScriptStruct'MarkerSyncAnimPosition'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSyncGroupPosition_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 28,
+        "Struct": {
+          "ObjectName": "ScriptStruct'MarkerSyncAnimPosition'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_DoubleDouble_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSyncGroupPosition_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 28,
+        "Struct": {
+          "ObjectName": "ScriptStruct'MarkerSyncAnimPosition'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSyncGroupPosition_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 28,
+        "Struct": {
+          "ObjectName": "ScriptStruct'MarkerSyncAnimPosition'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSyncGroupPosition_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 28,
+        "Struct": {
+          "ObjectName": "ScriptStruct'MarkerSyncAnimPosition'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSyncGroupPosition_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 28,
+        "Struct": {
+          "ObjectName": "ScriptStruct'MarkerSyncAnimPosition'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FClamp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetInstanceAssetPlayerTimeFraction_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Less_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_A_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Less_DoubleDouble_A_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_A_ImplicitCast_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_A_ImplicitCast_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Less_DoubleDouble_A_ImplicitCast_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_A_ImplicitCast_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Less_DoubleDouble_A_ImplicitCast_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_A_ImplicitCast_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_A_ImplicitCast_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_A_ImplicitCast_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FClamp_Value_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_StructMemberSet_Alpha_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedConstantData",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintConstantData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_238",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_239",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_240",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_241",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_242",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_243",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_244",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_245",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_246",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_247",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_248",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_249",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_250",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_251",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_252",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_253",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_254",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_255",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_256",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_257",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_258",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_259",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_260",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_261",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_262",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_263",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_264",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_265",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_266",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_267",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_268",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_269",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_270",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_271",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNodeFunctionRef'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_Base'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ]
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedMutableData",
+    "Outer": "StoneTripHammer_ABP_C",
+    "Class": "UScriptClass'ScriptStruct'",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintMutableData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      }
+    ]
+  },
+  {
+    "Type": "StoneTripHammer_ABP_C",
+    "Name": "Default__StoneTripHammer_ABP_C",
+    "Class": "AnimBlueprintGeneratedClass'Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.StoneTripHammer_ABP_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "__AnimBlueprintMutables[1]": {
+        "__FloatProperty": 1.0,
+        "__FloatProperty_0[1]": 1.0,
+        "__FloatProperty_1[2]": 1.0,
+        "__FloatProperty_2[3]": 1.0
+      },
+      "AnimBlueprintExtension_PropertyAccess[2]": {},
+      "AnimBlueprintExtension_Base[3]": {},
+      "AnimGraphNode_Root[4]": {
+        "Result": {
+          "LinkID": 44
+        }
+      },
+      "AnimGraphNode_SequencePlayer_9[5]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'StoneTripHammer_Operation_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_Operation_Anim.3"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_12[6]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_11[7]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_10[8]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_StateResult_12[9]": {
+        "Result": {
+          "LinkID": -1
+        }
+      },
+      "AnimGraphNode_SequencePlayer_8[10]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'StoneTripHammer_Operation_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_Operation_Anim.3"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_11[11]": {
+        "Result": {
+          "LinkID": 6
+        }
+      },
+      "AnimGraphNode_SequencePlayer_7[12]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'StoneTripHammer_Operation_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_Operation_Anim.3"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_10[13]": {
+        "Result": {
+          "LinkID": 8
+        }
+      },
+      "AnimGraphNode_StateMachine_3[14]": {
+        "StateMachineIndexInClass": 3,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "AnimGraphNode_LayeredBoneBlend[15]": {
+        "BasePose": {
+          "LinkID": 1
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 10
+          },
+          {
+            "LinkID": 20
+          },
+          {
+            "LinkID": 29
+          }
+        ],
+        "BlendMode": "ELayeredBoneBlendMode::BranchFilter",
+        "BlendMasks": [],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Arm01",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Arm02",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Arm03",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::Override",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "4CAEDC24-4DD7A0CB-20C72481-5C10D497",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_TransitionResult_9[16]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_8[17]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_7[18]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_StateResult_9[19]": {
+        "Result": {
+          "LinkID": -1
+        }
+      },
+      "AnimGraphNode_SequencePlayer_6[20]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'StoneTripHammer_Operation_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_Operation_Anim.3"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_8[21]": {
+        "Result": {
+          "LinkID": 16
+        }
+      },
+      "AnimGraphNode_SequencePlayer_5[22]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'StoneTripHammer_Operation_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_Operation_Anim.3"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_7[23]": {
+        "Result": {
+          "LinkID": 18
+        }
+      },
+      "AnimGraphNode_StateMachine_2[24]": {
+        "StateMachineIndexInClass": 2,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "AnimGraphNode_TransitionResult_6[25]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_5[26]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_4[27]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_StateResult_6[28]": {
+        "Result": {
+          "LinkID": -1
+        }
+      },
+      "AnimGraphNode_SequencePlayer_4[29]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'StoneTripHammer_Operation_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_Operation_Anim.3"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_5[30]": {
+        "Result": {
+          "LinkID": 25
+        }
+      },
+      "AnimGraphNode_SequencePlayer_3[31]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'StoneTripHammer_Operation_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_Operation_Anim.3"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_4[32]": {
+        "Result": {
+          "LinkID": 27
+        }
+      },
+      "AnimGraphNode_StateMachine_1[33]": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "AnimGraphNode_RandomPlayer[34]": {
+        "Entries": [
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence'StoneTripHammer_NoiseJitter_Anim'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_NoiseJitter_Anim.0"
+            },
+            "ChanceToPlay": 0.5,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 2,
+            "MinPlayRate": 0.6,
+            "MaxPlayRate": 1.2,
+            "BlendIn": {
+              "CustomCurve": null,
+              "BlendTime": 0.2,
+              "BlendOption": "EAlphaBlendOption::Linear"
+            }
+          },
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence'StoneTripHammer_NoiseJitter_Anim02'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_NoiseJitter_Anim02.0"
+            },
+            "ChanceToPlay": 0.5,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 2,
+            "MinPlayRate": 0.6,
+            "MaxPlayRate": 1.2,
+            "BlendIn": {
+              "CustomCurve": null,
+              "BlendTime": 0.2,
+              "BlendOption": "EAlphaBlendOption::Linear"
+            }
+          }
+        ],
+        "BlendWeight": 0.0,
+        "bShuffleMode": false
+      },
+      "AnimGraphNode_TransitionResult_3[35]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_2[36]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1[37]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult[38]": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_2[39]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'StoneTripHammer_SmashingImpact_Anim01'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_SmashingImpact_Anim01.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3[40]": {
+        "Result": {
+          "LinkID": 35
+        }
+      },
+      "AnimGraphNode_SequencePlayer_1[41]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'StoneTripHammer_SmashingImpact_Anim02'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_SmashingImpact_Anim02.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2[42]": {
+        "Result": {
+          "LinkID": 37
+        }
+      },
+      "AnimGraphNode_SequencePlayer[43]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'StoneTripHammer_SmashingImpact_Anim01'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_SmashingImpact_Anim01.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1[44]": {
+        "Result": {
+          "LinkID": 39
+        }
+      },
+      "AnimGraphNode_StateResult[45]": {
+        "Result": {
+          "LinkID": -1
+        }
+      },
+      "AnimGraphNode_StateMachine[46]": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "AnimGraphNode_ApplyAdditive_1[47]": {
+        "Base": {
+          "LinkID": 11
+        },
+        "Additive": {
+          "LinkID": 30
+        },
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "LODThreshold": -1,
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true
+      },
+      "AnimGraphNode_ApplyAdditive[48]": {
+        "Base": {
+          "LinkID": 43
+        },
+        "Additive": {
+          "LinkID": 42
+        },
+        "Alpha": 0.3,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "LODThreshold": -1,
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true
+      }
+    },
+    "SerializedSparseClassDataStruct": "ScriptStruct'Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.StoneTripHammer_ABP_C:AnimBlueprintGeneratedConstantData'",
+    "SerializedSparseClassData": {
+      "__NameProperty_238": "AnimGraph",
+      "__ByteProperty_239[1]": "EAnimGroupRole::AlwaysLeader",
+      "__NameProperty_240[2]": "wait",
+      "__NameProperty_241[3]": "Raise leg 1",
+      "__FloatProperty_242[4]": 0.87,
+      "__NameProperty_243[5]": "Leg 1 fall",
+      "__NameProperty_244[6]": "Raise leg 2",
+      "__FloatProperty_245[7]": 0.23,
+      "__NameProperty_246[8]": "Leg 2 fall",
+      "__NameProperty_247[9]": "wait",
+      "__EnumProperty_248[10]": "EAnimSyncMethod::SyncGroup",
+      "__ByteProperty_249[11]": "EAnimGroupRole::AlwaysFollower",
+      "__NameProperty_250[12]": "Leg1",
+      "__NameProperty_251[13]": "Raise leg 3",
+      "__BoolProperty_252[14]": true,
+      "__FloatProperty_253[15]": 0.56,
+      "__StructProperty_254[16]": {
+        "bMapRange": false,
+        "bClampResult": false,
+        "bInterpResult": false,
+        "InRange": {
+          "Min": 0.87,
+          "Max": 1.0
+        },
+        "OutRange": {
+          "Min": 0.9,
+          "Max": 0.13
+        },
+        "Scale": 1.0,
+        "Bias": 0.0,
+        "ClampMin": 0.9,
+        "ClampMax": 0.13,
+        "InterpSpeedIncreasing": 10.0,
+        "InterpSpeedDecreasing": 10.0
+      },
+      "__NameProperty_255[17]": "Leg 3 fall",
+      "__NameProperty_256[18]": "Frame jump 3/reset",
+      "__IntProperty_257[19]": 3,
+      "__NameProperty_258[20]": "Frame jump 2",
+      "__IntProperty_259[21]": 2,
+      "__FloatProperty_260[22]": 0.0,
+      "__StructProperty_261[23]": {
+        "bMapRange": false,
+        "bClampResult": false,
+        "bInterpResult": false,
+        "InRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "OutRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "Scale": 1.0,
+        "Bias": 0.0,
+        "ClampMin": 0.0,
+        "ClampMax": 1.0,
+        "InterpSpeedIncreasing": 10.0,
+        "InterpSpeedDecreasing": 10.0
+      },
+      "__FloatProperty_262[24]": 1.0,
+      "__BoolProperty_263[25]": false,
+      "__EnumProperty_264[26]": "EAnimSyncMethod::DoNotSync",
+      "__ByteProperty_265[27]": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_266[28]": "Frame jump 1",
+      "__IntProperty_267[29]": 1,
+      "__NameProperty_268[30]": "None",
+      "__NameProperty_269[31]": "Start",
+      "__IntProperty_270[32]": 0,
+      "__StructProperty_271[33]": {
+        "ClassName": "None",
+        "FunctionName": "None"
+      },
+      "AnimBlueprintExtension_PropertyAccess[34]": {
+        "Library": {
+          "PathSegments": [
+            {
+              "Name": "PercentageCurrent",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "PercentageCurrent"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisPowerUnitAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'StoneTripHammer_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.18"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'StoneTripHammer_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.18"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "PercentageCurrent",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "PercentageCurrent"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisPowerUnitAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'StoneTripHammer_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.18"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty_2",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty_2"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'StoneTripHammer_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.18"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "PercentageCurrent",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "PercentageCurrent"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisPowerUnitAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'StoneTripHammer_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.18"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty_1",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty_1"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'StoneTripHammer_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.18"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "PercentageCurrent",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "PercentageCurrent"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisPowerUnitAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'StoneTripHammer_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.18"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'StoneTripHammer_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty_0",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty_0"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'StoneTripHammer_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.18"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            }
+          ],
+          "SrcPaths": [
+            {
+              "PathSegmentStartIndex": 0,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 3,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 6,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 9,
+              "PathSegmentCount": 1
+            }
+          ],
+          "DestPaths": [
+            {
+              "PathSegmentStartIndex": 1,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 4,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 7,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 10,
+              "PathSegmentCount": 2
+            }
+          ],
+          "CopyBatchArray": [
+            {
+              "Copies": [
+                {
+                  "AccessIndex": 0,
+                  "DestAccessStartIndex": 0,
+                  "DestAccessEndIndex": 1,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                },
+                {
+                  "AccessIndex": 1,
+                  "DestAccessStartIndex": 1,
+                  "DestAccessEndIndex": 2,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                },
+                {
+                  "AccessIndex": 2,
+                  "DestAccessStartIndex": 2,
+                  "DestAccessEndIndex": 3,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                },
+                {
+                  "AccessIndex": 3,
+                  "DestAccessStartIndex": 3,
+                  "DestAccessEndIndex": 4,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "AnimBlueprintExtension_Base[35]": {
+        "ExposedValueHandlers": [
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 0,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_DB93FB954533184A8511BAB884E968DD'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.14"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_DB93FB954533184A8511BAB884E968DD"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_5B23ECA74C37C14817BA98AE13415B64'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.8"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_5B23ECA74C37C14817BA98AE13415B64"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_017AEFE14725441B3EDDD5A9ABE2A974'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.3"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_017AEFE14725441B3EDDD5A9ABE2A974"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 3,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_F07BFD1742BCDB27CE244B8023908770'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.15"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_F07BFD1742BCDB27CE244B8023908770"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_40E0023C48938634BB050DB29C82841E'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.7"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_40E0023C48938634BB050DB29C82841E"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_8A34200D4C68D8B8BA3C4390F36EFE99'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.11"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_8A34200D4C68D8B8BA3C4390F36EFE99"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 2,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_130E8AB04C3885972ABB899DC2EDEC21'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.4"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_130E8AB04C3885972ABB899DC2EDEC21"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_71A18D2A43610BF6A0DD70B205FB3851'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.9"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_71A18D2A43610BF6A0DD70B205FB3851"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_856A938044DF5D9D9927F2AE5E54A0A8'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.10"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_856A938044DF5D9D9927F2AE5E54A0A8"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 1,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_3E446FD348F4190F99AB808A68C00DB4'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.6"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_3E446FD348F4190F99AB808A68C00DB4"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_B368F5634DD90BA2465E908DA7CE2E97'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.13"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_B368F5634DD90BA2465E908DA7CE2E97"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_9BF946054084AE150AC639996A8A54E0'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.12"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_9BF946054084AE150AC639996A8A54E0"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_20684E9849C08B039831818F67723FC8'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.5"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_TransitionResult_20684E9849C08B039831818F67723FC8"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'StoneTripHammer_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_ApplyAdditive_475D57C64ACE011A8AC986A7989BB8E9'",
+              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/StoneTripHammer_ABP.2"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_StoneTripHammer_ABP_AnimGraphNode_ApplyAdditive_475D57C64ACE011A8AC986A7989BB8E9"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          }
+        ]
+      }
+    }
+  }
+]

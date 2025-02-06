@@ -3,6 +3,6 @@
 
 class ABPVisCampPlatform_C : public AVisSpline
 {
-}; // Size: 0x528
+}; // Size: 0x530
 
 #endif

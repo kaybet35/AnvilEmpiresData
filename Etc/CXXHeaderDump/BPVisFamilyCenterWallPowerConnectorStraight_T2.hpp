@@ -3,15 +3,15 @@
 
 class ABPVisFamilyCenterWallPowerConnectorStraight_T2_C : public AVisStructure
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0518 (size: 0x8)
-    class UPowerUnitDataComponent* PowerUnitData;                                     // 0x0520 (size: 0x8)
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0528 (size: 0x8)
-    class UStaticMeshComponent* StaticMesh2;                                          // 0x0530 (size: 0x8)
-    class UStaticMeshComponent* StaticMesh1;                                          // 0x0538 (size: 0x8)
-    class USceneComponent* Scene;                                                     // 0x0540 (size: 0x8)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0520 (size: 0x8)
+    class UPowerUnitDataComponent* PowerUnitData;                                     // 0x0528 (size: 0x8)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0530 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh2;                                          // 0x0538 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh1;                                          // 0x0540 (size: 0x8)
+    class USceneComponent* Scene;                                                     // 0x0548 (size: 0x8)
 
     void ReceiveTick(float DeltaSeconds);
     void ExecuteUbergraph_BPVisFamilyCenterWallPowerConnectorStraight_T2(int32 EntryPoint);
-}; // Size: 0x548
+}; // Size: 0x550
 
 #endif

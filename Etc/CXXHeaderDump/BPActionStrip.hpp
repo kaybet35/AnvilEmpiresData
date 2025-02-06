@@ -30,7 +30,12 @@ class UBPActionStrip_C : public UActionStrip
     class UBPStopPowerMillActionButton_C* BPStopPowerMillActionButton;                // 0x0340 (size: 0x8)
     class UBPUpgradeActionButton_C* BPUpgradeActionButton;                            // 0x0348 (size: 0x8)
     class UBPWithdrawSilverActionButton_C* BPWithdrawSilverActionButton;              // 0x0350 (size: 0x8)
+    class UBPBaseActionButton_C* DownVote;                                            // 0x0358 (size: 0x8)
+    class UBPBaseActionButton_C* DownVoted;                                           // 0x0360 (size: 0x8)
+    class UBPBaseActionButton_C* EditSignPost;                                        // 0x0368 (size: 0x8)
+    class UBPBaseActionButton_C* Upvote;                                              // 0x0370 (size: 0x8)
+    class UBPBaseActionButton_C* Upvoted;                                             // 0x0378 (size: 0x8)
 
-}; // Size: 0x358
+}; // Size: 0x380
 
 #endif

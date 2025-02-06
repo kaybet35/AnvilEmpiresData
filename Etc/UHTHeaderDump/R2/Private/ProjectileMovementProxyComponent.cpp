@@ -11,6 +11,7 @@ UProjectileMovementProxyComponent::UProjectileMovementProxyComponent() {
     this->BleedTime = 0.00f;
     this->DamageAmount = 0;
     this->DamageType = EAnvilDamageType::Default;
+    this->SplashDamageRadius = 0.00f;
     this->Radius = 0.00f;
     this->HeadingTolerance = 0.00f;
     this->NozzleYawDelta = 45.00f;

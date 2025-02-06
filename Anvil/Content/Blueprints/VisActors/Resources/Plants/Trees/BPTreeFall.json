@@ -1,55 +1,25 @@
 [
   {
+    "Type": "ArrowComponent",
+    "Name": "CreateDefaultSubobject",
+    "Outer": "Default__BPTreeFall_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BPTreeFall_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPTreeFall_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.10"
-      },
-      "UberGraphFunction": {
-        "ObjectName": "Function'BPTreeFall_C:ExecuteUbergraph_BPTreeFall'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.8"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisActor'",
+      "ObjectName": "Class'VisTreeFall'",
       "ObjectPath": "/Script/Anvil"
     },
-    "Children": [
-      {
-        "ObjectName": "Function'BPTreeFall_C:ReceiveTick'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.4"
-      },
-      {
-        "ObjectName": "Function'BPTreeFall_C:ExecuteUbergraph_BPTreeFall'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.3"
-      }
-    ],
     "ChildProperties": [
-      {
-        "Type": "StructProperty",
-        "Name": "UberGraphFrame",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 16,
-        "PropertyFlags": "Transient | DuplicateTransient",
-        "Struct": {
-          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Top",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
       {
         "Type": "ObjectProperty",
         "Name": "Stump",
@@ -71,47 +41,8 @@
           "ObjectName": "Class'DecalComponent'",
           "ObjectPath": "/Script/Engine"
         }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "DefaultSceneRoot",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'SceneComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Curve",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "Edit | BlueprintVisible",
-        "PropertyClass": {
-          "ObjectName": "Class'CurveFloat'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "Treefall",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "Edit | BlueprintVisible"
       }
     ],
-    "FuncMap": {
-      "ExecuteUbergraph_BPTreeFall": {
-        "ObjectName": "Function'BPTreeFall_C:ExecuteUbergraph_BPTreeFall'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.3"
-      },
-      "ReceiveTick": {
-        "ObjectName": "Function'BPTreeFall_C:ReceiveTick'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.4"
-      }
-    },
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -121,7 +52,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPTreeFall_C'Default__BPTreeFall_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.1"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.2"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -132,12 +63,26 @@
     "Name": "Default__BPTreeFall_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.BPTreeFall_C'",
     "Properties": {
-      "UberGraphFrame": {},
-      "Curve[5]": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPTreeFall_C:CreateDefaultSubobject'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.0"
+      },
+      "TreeTop": {
+        "ObjectName": "StaticMeshComponent'Default__BPTreeFall_C:TreeTop'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.10"
+      },
+      "FallCurve": {
         "ObjectName": "CurveFloat'TreeFallCurve'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Trees/TreeFallCurve.0"
       },
-      "bNoCheckOnCeilVisibility": true
+      "TreeFallDataComponent": {
+        "ObjectName": "TreeFallDataComponent'Default__BPTreeFall_C:TreeFallDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.11"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPTreeFall_C:CreateDefaultSubobject'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.0"
+      }
     }
   },
   {
@@ -168,111 +113,6 @@
     }
   },
   {
-    "Type": "Function",
-    "Name": "ExecuteUbergraph_BPTreeFall",
-    "Outer": "BPTreeFall_C",
-    "Class": "UScriptClass'Function'",
-    "ChildProperties": [
-      {
-        "Type": "IntProperty",
-        "Name": "EntryPoint",
-        "Flags": "RF_Public",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "K2Node_Event_DeltaSeconds",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_GetFloatValue_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_MakeRotator_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 24,
-        "Struct": {
-          "ObjectName": "ScriptStruct'Rotator'",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_K2_SetRelativeRotation_SweepHitResult",
-        "Flags": "RF_Public",
-        "ElementSize": 240,
-        "PropertyFlags": "ContainsInstancedReference",
-        "Struct": {
-          "ObjectName": "ScriptStruct'HitResult'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Add_DoubleDouble_A_ImplicitCast",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_GetFloatValue_InTime_ImplicitCast",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Add_DoubleDouble_A_ImplicitCast_1",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_MakeRotator_Pitch_ImplicitCast",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      }
-    ],
-    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
-  },
-  {
-    "Type": "Function",
-    "Name": "ReceiveTick",
-    "Outer": "BPTreeFall_C",
-    "Class": "UScriptClass'Function'",
-    "SuperStruct": {
-      "ObjectName": "Function'Actor:ReceiveTick'",
-      "ObjectPath": "/Script/Engine"
-    },
-    "ChildProperties": [
-      {
-        "Type": "FloatProperty",
-        "Name": "DeltaSeconds",
-        "Flags": "RF_Public",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
-      }
-    ],
-    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
-  },
-  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPTreeFall_C",
@@ -290,22 +130,8 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPTreeFall_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.4"
       },
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.7"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.8"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.9"
-        }
-      ],
       "VariableGuid": "52079A59-427EE6CC-3587A3BD-D639A69E",
       "InternalVariableName": "DefaultSceneRoot"
     }
@@ -322,8 +148,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPTreeFall_C:Decal_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.2"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.3"
       },
+      "ParentComponentOrVariableName": "CreateDefaultSubobject",
+      "bIsParentComponentNative": true,
       "VariableGuid": "523F25B8-4A37731D-A3C08F91-B794B1EB",
       "InternalVariableName": "Decal"
     }
@@ -340,28 +168,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPTreeFall_C:Stump_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.9"
       },
+      "ParentComponentOrVariableName": "CreateDefaultSubobject",
+      "bIsParentComponentNative": true,
       "VariableGuid": "6FFFCBC3-47BF83E0-0E94258E-FADCBFA4",
       "InternalVariableName": "Stump"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_5",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPTreeFall_C:Top_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.12"
-      },
-      "VariableGuid": "20145687-4CE93803-37D0CCBF-82645B20",
-      "InternalVariableName": "Top"
     }
   },
   {
@@ -372,31 +184,27 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.6"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.7"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.6"
         },
         {
-          "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.7"
-        },
-        {
           "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.8"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.7"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.5"
       }
     }
   },
@@ -415,20 +223,20 @@
   },
   {
     "Type": "StaticMeshComponent",
-    "Name": "Top_GEN_VARIABLE",
-    "Outer": "BPTreeFall_C",
+    "Name": "TreeTop",
+    "Outer": "Default__BPTreeFall_C",
     "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'BirchTree01Top'",
-        "ObjectPath": "Anvil/Content/Meshes/Environment/Trees/BirchTree01Top.2"
-      },
-      "bReceivesDecals": false,
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 85.0
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPTreeFall_C:CreateDefaultSubobject'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.0"
       }
     }
+  },
+  {
+    "Type": "TreeFallDataComponent",
+    "Name": "TreeFallDataComponent",
+    "Outer": "Default__BPTreeFall_C",
+    "Class": "UScriptClass'TreeFallDataComponent'"
   }
 ]

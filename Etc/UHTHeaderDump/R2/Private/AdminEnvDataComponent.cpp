@@ -6,6 +6,7 @@ UAdminEnvDataComponent::UAdminEnvDataComponent(const FObjectInitializer& ObjectI
     this->bGodMode = false;
     this->bShowStructureStats = false;
     this->bShowWeatherStats = false;
+    this->bDebugHud = false;
 }
 
 

@@ -58,7 +58,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisBeaconTowerT1_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.20"
       }
     },
     "SuperStruct": {
@@ -146,9 +146,13 @@
         "ObjectName": "BeaconTowerDataComponent'Default__BPVisBeaconTowerT1_C:BeaconTowerDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.3"
       },
+      "CombustionDataComponent": {
+        "ObjectName": "CombustionDataComponent'Default__BPVisBeaconTowerT1_C:CombustionDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.6"
+      },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisBeaconTowerT1_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.25"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconBeaconTower'",
@@ -158,23 +162,23 @@
       "BuildSiteOrder": 1,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisBeaconTowerT1_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.24"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisBeaconTowerT1_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.9"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisBeaconTowerT1_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.23"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisBeaconTowerT1_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.22"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisBeaconTowerT1_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.13"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisBeaconTowerT1_C:ArrowComponent'",
@@ -182,11 +186,11 @@
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisBeaconTowerT1_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.7"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisBeaconTowerT1_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.8"
       },
       "MapIconProperty": {
         "Icon": {
@@ -195,7 +199,7 @@
         },
         "MapActorType": "EMapIconType::BeaconTower"
       },
-      "UseWindowType": "EHUDWindowType::InventoryStructure",
+      "UseWindowType": "EHUDWindowType::Combustion",
       "InteractionIcon": {
         "ObjectName": "Texture2D'IconBeaconTower'",
         "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconBeaconTower.0"
@@ -225,6 +229,12 @@
     }
   },
   {
+    "Type": "CombustionDataComponent",
+    "Name": "CombustionDataComponent",
+    "Outer": "Default__BPVisBeaconTowerT1_C",
+    "Class": "UScriptClass'CombustionDataComponent'"
+  },
+  {
     "Type": "DecalComponent",
     "Name": "UseVolumeDecalComponent",
     "Outer": "Default__BPVisBeaconTowerT1_C",
@@ -249,7 +259,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisBeaconTowerT1_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.21"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisBeaconTowerT1_C:ArrowComponent'",
@@ -429,7 +439,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisBeaconTowerT1_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.12"
       },
       "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -447,18 +457,18 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisBeaconTowerT1_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.25"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.26"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.16"
         },
         {
           "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.18"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.19"
         }
       ],
       "VariableGuid": "557BA3C8-426F3916-EE5D1B80-75CF96BF",
@@ -477,12 +487,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisBeaconTowerT1_C:LargeFire_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.10"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.16"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.17"
         }
       ],
       "VariableGuid": "090FB245-4FB69BB4-0257E2B5-349572BB",
@@ -537,12 +547,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisBeaconTowerT1_C:Smoke1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.11"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.17"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.18"
         }
       ],
       "VariableGuid": "3E10F42A-4153F6AE-5955C490-4C75B6AD",
@@ -558,34 +568,34 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.15"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.14"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.15"
         },
         {
+          "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.16"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.18"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.19"
         },
         {
           "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.17"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.18"
         },
         {
           "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.16"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.17"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisBeaconTowerT1_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisBeaconTowerT1.14"
       }
     }
   },

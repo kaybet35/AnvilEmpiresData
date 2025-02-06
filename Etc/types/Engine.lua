@@ -5792,7 +5792,7 @@ FFunctionExpressionOutput = {}
 ---@field OrbitOffsetRange FVector
 ---@field InvMaxSize FVector2D
 ---@field InvRotationRateScale float
----@field MaxLifetime float
+---@field MaxLifeTime float
 ---@field MaxParticleCount int32
 ---@field ScreenAlignment EParticleScreenAlignment
 ---@field LockAxisFlag EParticleAxisLock

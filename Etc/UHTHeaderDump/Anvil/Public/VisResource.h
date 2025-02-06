@@ -25,9 +25,6 @@ protected:
     TArray<UStaticMesh*> StageMeshes;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bApplyIdBasedRandomRotation;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bProjectToLandscape;
     
 private:

@@ -24,19 +24,10 @@ private:
     UInventoryWidget* RecipeOutputItemGrid;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UInventoryWidget* FuelInputItemGrid;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UInventoryWidget* FuelOutputItemGrid;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UInventoryWidget* WaterInputItemGrid;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* CookingDurationText;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* FuelDurationText;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCanvasPanel* CheatSheetCanvasPanel;
@@ -59,12 +50,6 @@ public:
 private:
     UFUNCTION(BlueprintCallable)
     void OnStartCookingButtonClicked();
-    
-    UFUNCTION(BlueprintCallable)
-    ESlateVisibility GetFuelDurationTextVisibility();
-    
-    UFUNCTION(BlueprintCallable)
-    FText GetFuelDurationText();
     
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetCookingDurationTextVisibility();

@@ -3,8 +3,8 @@
 
 class ABPVisResinPileHusk_C : public AVisEffect
 {
-    class UStaticMeshComponent* StaticMesh;                                           // 0x04D0 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh;                                           // 0x04D8 (size: 0x8)
 
-}; // Size: 0x4D8
+}; // Size: 0x4E0
 
 #endif

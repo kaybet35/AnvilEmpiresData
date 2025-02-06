@@ -241,9 +241,6 @@ private:
 public:
     AVisPlayer(const FObjectInitializer& ObjectInitializer);
 
-    UFUNCTION(BlueprintCallable)
-    float GetVelocityHeadingDegrees();
-    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetPlayerName() const;
     
@@ -261,9 +258,6 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BP_OnHeldItemChanged();
-    
-    UFUNCTION(BlueprintCallable)
-    FVector AnimGetVelocity();
     
 };
 

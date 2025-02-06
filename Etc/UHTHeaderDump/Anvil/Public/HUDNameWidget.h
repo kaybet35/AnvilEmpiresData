@@ -2,19 +2,18 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateColor -FallbackName=SlateColor
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
+#include "HUDEntityBillboardWidget.h"
 #include "HUDNameWidget.generated.h"
 
-class AVisActor;
 class UImage;
 class UTextBlock;
 
 UCLASS(Blueprintable, EditInlineNew)
-class ANVIL_API UHUDNameWidget : public UUserWidget {
+class ANVIL_API UHUDNameWidget : public UHUDEntityBillboardWidget {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    AVisActor* TargetVisActor;
+    float LocalChatDisplayTime;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

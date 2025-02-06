@@ -12,6 +12,7 @@ class UChatMessage;
 class UDismantleButtonWidget;
 class UHUDNameWidget;
 class UHUDPlacementStatusWidget;
+class UHUDSignPostWidget;
 class UHUDStatsWidget;
 class UHUDWindow;
 class UImage;
@@ -41,6 +42,9 @@ protected:
     UCanvasPanel* NameCanvas;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCanvasPanel* SignPostMessageCanvas;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCanvasPanel* StatsCanvas;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -54,6 +58,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UHUDNameWidget> HUDNameWidgetClass;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UHUDSignPostWidget> HUDSignPostWidgetClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UHUDStatsWidget> HUDStatsWidgetClass;
@@ -144,9 +151,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSlateBrush GuardStrengthFillIcon;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float LocalChatDisplayTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UProgressBar* InteractionProgressBar1;

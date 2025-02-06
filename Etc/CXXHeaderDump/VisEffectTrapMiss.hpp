@@ -3,6 +3,6 @@
 
 class AVisEffectTrapMiss_C : public AVisEffect
 {
-}; // Size: 0x4D0
+}; // Size: 0x4D8
 
 #endif

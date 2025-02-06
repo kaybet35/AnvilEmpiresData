@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABPVisSmallBoat_C : AVisVehicle
+---@class ABPVisSmallBoat_C : AVisBoat
 ---@field WaterStatic UNiagaraComponent
 ---@field CullVolume UStaticMeshComponent
 ---@field ResourceFishR1 UInstancedStaticMeshComponent

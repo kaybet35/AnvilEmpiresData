@@ -37,6 +37,16 @@
     }
   },
   {
+    "Type": "CombustionProxyComponent",
+    "Name": "CombustionProxyComponent_0",
+    "Outer": "Default__TorchStaticT1_C",
+    "Class": "UScriptClass'CombustionProxyComponent'",
+    "Properties": {
+      "bGenerateAsh": false,
+      "FuelTimeMultiplier": 7.5
+    }
+  },
+  {
     "Type": "DecayProxyComponent",
     "Name": "DecayProxyComponent_0",
     "Outer": "Default__TorchStaticT1_C",
@@ -84,37 +94,6 @@
     "Properties": {
       "MaxHealth": 20.0,
       "TargetType": "EAnvilDamageTargetType::LightStructure"
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_0",
-    "Outer": "Default__TorchStaticT1_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "Slots": [
-        {
-          "ProxyRepeat": 1,
-          "bOr": false,
-          "HeldItem": null,
-          "bIsHeldItemPublic": true,
-          "Count": 0,
-          "StackLimit": 30,
-          "bAllowWithdrawal": true,
-          "bIsPlayerEquipmentSlot": false,
-          "AcceptedTags": [],
-          "RequiredTags": [],
-          "ProhibitedTags": [],
-          "DedicatedItemType": {
-            "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
-          },
-          "DedicatedUnderlyingItemType": null,
-          "bCheckDedicatedUnderlyingItem": true,
-          "RequiredEnablingItem": null,
-          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
-        }
-      ]
     }
   },
   {
@@ -194,7 +173,7 @@
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__TorchStaticT1_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/TorchStaticT1.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/TorchStaticT1.6"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__TorchStaticT1_C:RepairComp'",
@@ -206,7 +185,7 @@
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__TorchStaticT1_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/TorchStaticT1.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/TorchStaticT1.4"
       },
       "MeshCollisionComp": {
         "ObjectName": "MeshCollisionProxyComponent'Default__TorchStaticT1_C:MeshCollisionProxyComponent_0'",
@@ -214,7 +193,7 @@
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__TorchStaticT1_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/TorchStaticT1.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/TorchStaticT1.5"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__TorchStaticT1_C:BoxCollisionProxyComponent_0'",
@@ -222,7 +201,7 @@
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__TorchStaticT1_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/TorchStaticT1.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/TorchStaticT1.3"
       },
       "ScorchComp": null,
       "CodeNameString": "TorchStaticT1",
@@ -233,8 +212,8 @@
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/TorchStaticT1.10"
         },
         {
-          "ObjectName": "InventoryProxyComponent'Default__TorchStaticT1_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/TorchStaticT1.6"
+          "ObjectName": "CombustionProxyComponent'Default__TorchStaticT1_C:CombustionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/TorchStaticT1.2"
         }
       ],
       "VisActorClass": {

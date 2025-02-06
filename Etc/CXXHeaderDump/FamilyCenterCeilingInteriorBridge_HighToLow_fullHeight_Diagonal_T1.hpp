@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_FamilyCenterCeilingInteriorBridge_HighToLow_fullHeight_Diagonal_T1_HPP
+#define UE4SS_SDK_FamilyCenterCeilingInteriorBridge_HighToLow_fullHeight_Diagonal_T1_HPP
+
+class UFamilyCenterCeilingInteriorBridge_HighToLow_fullHeight_Diagonal_T1_C : public UBPBaseFoundationModularEntity_C
+{
+}; // Size: 0xD8
+
+#endif

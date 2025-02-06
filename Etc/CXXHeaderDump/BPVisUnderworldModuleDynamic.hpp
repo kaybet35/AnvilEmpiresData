@@ -3,6 +3,6 @@
 
 class ABPVisUnderworldModuleDynamic_C : public AVisUnderworldModuleDynamic
 {
-}; // Size: 0x4C0
+}; // Size: 0x4C8
 
 #endif

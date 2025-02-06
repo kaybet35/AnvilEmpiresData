@@ -3,8 +3,8 @@
 
 class ABPVisClayMine_C : public AVisMine
 {
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0518 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0520 (size: 0x8)
 
-}; // Size: 0x520
+}; // Size: 0x528
 
 #endif

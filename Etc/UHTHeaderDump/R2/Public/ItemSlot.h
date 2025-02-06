@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "CustomStackLimit.h"
 #include "EAnvilItemSlotBackgroundType.h"
 #include "EAnvilItemTag.h"
 #include "Templates/SubclassOf.h"
@@ -58,6 +59,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilItemSlotBackgroundType BackgroundType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FCustomStackLimit> CustomStackLimits;
     
     R2_API FItemSlot();
 };

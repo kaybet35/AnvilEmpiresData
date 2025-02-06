@@ -14,5 +14,6 @@ enum class EAnvilItemSlotBackgroundType : uint8 {
     Belt,
     AnimalEquipment,
     HeavyTool,
+    Shield,
 };
 

@@ -3,8 +3,8 @@
 
 class UBPHousePlayerInventoryListItem_C : public UHousePlayerInventoryListItem
 {
-    class UImage* HouseOccupantIcon;                                                  // 0x0298 (size: 0x8)
+    class UImage* HouseOccupantIcon;                                                  // 0x0290 (size: 0x8)
 
-}; // Size: 0x2A0
+}; // Size: 0x298
 
 #endif

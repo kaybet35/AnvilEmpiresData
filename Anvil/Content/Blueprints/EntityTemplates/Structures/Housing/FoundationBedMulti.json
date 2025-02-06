@@ -44,6 +44,9 @@
     "Template": {
       "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    },
+    "Properties": {
+      "DecayTimeHours": 48.0
     }
   },
   {
@@ -67,8 +70,8 @@
     },
     "Properties": {
       "Box": {
-        "ObjectName": "BlueprintGeneratedClass'FoundationBedMultiFootprint_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/FoundationBedMultiFootprint.0"
+        "ObjectName": "BlueprintGeneratedClass'FoundationBedFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/FoundationBedFootprint.0"
       }
     }
   },
@@ -83,7 +86,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__FoundationBedMulti_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FoundationBedMulti.17"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FoundationBedMulti.16"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__FoundationBedMulti_C:HealthComp'",
@@ -91,19 +94,15 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__FoundationBedMulti_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FoundationBedMulti.14"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FoundationBedMulti.13"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__FoundationBedMulti_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FoundationBedMulti.16"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FoundationBedMulti.15"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__FoundationBedMulti_C:DestroyableComp'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FoundationBedMulti.3"
-      },
-      "MeshCollisionComp": {
-        "ObjectName": "MeshCollisionProxyComponent'Default__FoundationBedMulti_C:MeshCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FoundationBedMulti.12"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__FoundationBedMulti_C:FootprintCollisionProxyComponent_0'",
@@ -119,15 +118,16 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__FoundationBedMulti_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FoundationBedMulti.15"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FoundationBedMulti.14"
       },
       "CodeNameString": "FoundationBedMulti",
       "CodeName": -1262766768,
+      "bGenerateMeshCollisionsFromVisActor": true,
       "bGenerateMeshCollisionVaultable": true,
       "Components": [
         {
           "ObjectName": "PlayerSpawnerProxyComponent'Default__FoundationBedMulti_C:PlayerSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FoundationBedMulti.13"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/FoundationBedMulti.12"
         },
         {
           "ObjectName": "HousingProxyComponent'Default__FoundationBedMulti_C:HousingProxyComponent_0'",
@@ -164,6 +164,9 @@
     "Template": {
       "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
+    },
+    "Properties": {
+      "MaxHealth": 50.0
     }
   },
   {
@@ -198,7 +201,8 @@
           "DedicatedUnderlyingItemType": null,
           "bCheckDedicatedUnderlyingItem": true,
           "RequiredEnablingItem": null,
-          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
         }
       ]
     }
@@ -226,7 +230,8 @@
           "DedicatedUnderlyingItemType": null,
           "bCheckDedicatedUnderlyingItem": true,
           "RequiredEnablingItem": null,
-          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
         }
       ]
     }
@@ -254,7 +259,8 @@
           "DedicatedUnderlyingItemType": null,
           "bCheckDedicatedUnderlyingItem": true,
           "RequiredEnablingItem": null,
-          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
         }
       ]
     }
@@ -282,22 +288,10 @@
           "DedicatedUnderlyingItemType": null,
           "bCheckDedicatedUnderlyingItem": true,
           "RequiredEnablingItem": null,
-          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
         }
       ]
-    }
-  },
-  {
-    "Type": "MeshCollisionProxyComponent",
-    "Name": "MeshCollisionProxyComponent_0",
-    "Outer": "Default__FoundationBedMulti_C",
-    "Class": "UScriptClass'MeshCollisionProxyComponent'",
-    "Properties": {
-      "PhysicsAssetName": {
-        "ObjectName": "StaticMesh'Bed'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Bed.2"
-      },
-      "CollisionMask": 16785410
     }
   },
   {

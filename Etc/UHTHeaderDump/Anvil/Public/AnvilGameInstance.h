@@ -4,6 +4,7 @@
 #include "AnvilAssetManager.h"
 #include "AnvilOptionsManager.h"
 #include "ClientConfigManager.h"
+#include "MapPostManager.h"
 #include "Templates/SubclassOf.h"
 #include "WeatherManager.h"
 #include "AnvilGameInstance.generated.h"
@@ -13,6 +14,7 @@ class AUIGlobals;
 class AVisActor;
 class UAnvilCharacterSave;
 class UAnvilClientVoiceClient;
+class UChatMessage;
 class UEntityTemplate;
 class UHUDWidget;
 class UMapWidget;
@@ -30,6 +32,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWorldEntityPoolManager* WorldEntityPoolManager;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<UChatMessage*> ChatMessages;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -54,6 +59,9 @@ private:
     FAnvilOptionsManager OptionsManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FMapPostManager MapPostManager;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AUIGlobals> UIGlobalsClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -70,6 +78,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FClientConfigManager ClientConfigManager;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<AVisActor*> VisActorPool;
     
 public:
     UAnvilGameInstance();

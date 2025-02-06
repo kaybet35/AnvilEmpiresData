@@ -17,8 +17,8 @@
         "Max": 1000.0
       },
       "AltitudeCheckRadius": 1750.0,
-      "DetectionFuelCostPerHour": 1.0,
-      "InformingFuelCostPerHour": 0.5
+      "DetectionFuelTimeMultiplier": 60.0,
+      "InformingFuelTimeMultiplier": 120.0
     }
   },
   {
@@ -36,7 +36,7 @@
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__BeaconTowerT1_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/BeaconTowerT1.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/BeaconTowerT1.8"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__BeaconTowerT1_C:RepairComp'",
@@ -48,11 +48,11 @@
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__BeaconTowerT1_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/BeaconTowerT1.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/BeaconTowerT1.6"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__BeaconTowerT1_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/BeaconTowerT1.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/BeaconTowerT1.7"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__BeaconTowerT1_C:BoxCollisionProxyComponent_0'",
@@ -60,7 +60,7 @@
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__BeaconTowerT1_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/BeaconTowerT1.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/BeaconTowerT1.5"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__BeaconTowerT1_C:ScorchProxyComponent_0'",
@@ -73,12 +73,12 @@
       "bGenerateMeshCollisionsFromVisActor": true,
       "Components": [
         {
-          "ObjectName": "InventoryProxyComponent'Default__BeaconTowerT1_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/BeaconTowerT1.8"
-        },
-        {
           "ObjectName": "BeaconTowerProxyComponent'Default__BeaconTowerT1_C:BeaconTowerProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/BeaconTowerT1.0"
+        },
+        {
+          "ObjectName": "CombustionProxyComponent'Default__BeaconTowerT1_C:CombustionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/misc/BeaconTowerT1.4"
         }
       ],
       "VisActorClass": {
@@ -122,6 +122,21 @@
     "Template": {
       "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    }
+  },
+  {
+    "Type": "CombustionProxyComponent",
+    "Name": "CombustionProxyComponent_0",
+    "Outer": "Default__BeaconTowerT1_C",
+    "Class": "UScriptClass'CombustionProxyComponent'",
+    "Properties": {
+      "bGenerateAsh": false,
+      "OverrideAcceptableFuels": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+        }
+      ]
     }
   },
   {
@@ -171,37 +186,6 @@
     "Template": {
       "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
-    }
-  },
-  {
-    "Type": "InventoryProxyComponent",
-    "Name": "InventoryProxyComponent_0",
-    "Outer": "Default__BeaconTowerT1_C",
-    "Class": "UScriptClass'InventoryProxyComponent'",
-    "Properties": {
-      "Slots": [
-        {
-          "ProxyRepeat": 1,
-          "bOr": false,
-          "HeldItem": null,
-          "bIsHeldItemPublic": true,
-          "Count": 0,
-          "StackLimit": 100,
-          "bAllowWithdrawal": true,
-          "bIsPlayerEquipmentSlot": false,
-          "AcceptedTags": [],
-          "RequiredTags": [],
-          "ProhibitedTags": [],
-          "DedicatedItemType": {
-            "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
-          },
-          "DedicatedUnderlyingItemType": null,
-          "bCheckDedicatedUnderlyingItem": true,
-          "RequiredEnablingItem": null,
-          "BackgroundType": "EAnvilItemSlotBackgroundType::None"
-        }
-      ]
     }
   },
   {

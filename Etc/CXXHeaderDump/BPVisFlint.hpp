@@ -3,8 +3,8 @@
 
 class ABPVisFlint_C : public AVisPickupItem
 {
-    class UGrassRemovalVolumeComponent* GrassRemovalVolume;                           // 0x04C0 (size: 0x8)
+    class UGrassRemovalVolumeComponent* GrassRemovalVolume;                           // 0x04C8 (size: 0x8)
 
-}; // Size: 0x4C8
+}; // Size: 0x4D0
 
 #endif

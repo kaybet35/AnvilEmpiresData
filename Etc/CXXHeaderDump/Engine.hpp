@@ -2928,7 +2928,7 @@ struct FGPUSpriteEmitterInfo
     FVector OrbitOffsetRange;                                                         // 0x01D0 (size: 0x18)
     FVector2D InvMaxSize;                                                             // 0x01E8 (size: 0x10)
     float InvRotationRateScale;                                                       // 0x01F8 (size: 0x4)
-    float MaxLifetime;                                                                // 0x01FC (size: 0x4)
+    float MaxLifeTime;                                                                // 0x01FC (size: 0x4)
     int32 MaxParticleCount;                                                           // 0x0200 (size: 0x4)
     TEnumAsByte<EParticleScreenAlignment> ScreenAlignment;                            // 0x0204 (size: 0x1)
     TEnumAsByte<EParticleAxisLock> LockAxisFlag;                                      // 0x0205 (size: 0x1)

@@ -1,13 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "JsonSafeUint64.h"
 #include "ClientConnectionRequest.generated.h"
 
 USTRUCT(BlueprintType)
 struct FClientConnectionRequest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint64 OnlineId;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FJsonSafeUint64 OnlineId;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint64 ProtocolId;

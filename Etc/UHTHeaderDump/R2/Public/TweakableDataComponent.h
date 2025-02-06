@@ -28,6 +28,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float UpkeepCostReinforced;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bClientsUseVisActorPool;
+    
     UTweakableDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };

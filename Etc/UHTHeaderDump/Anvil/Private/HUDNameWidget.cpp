@@ -1,7 +1,7 @@
 #include "HUDNameWidget.h"
 
-UHUDNameWidget::UHUDNameWidget() : UUserWidget(FObjectInitializer::Get()) {
-    this->TargetVisActor = NULL;
+UHUDNameWidget::UHUDNameWidget() {
+    this->LocalChatDisplayTime = 3.00f;
     this->NameText = NULL;
     this->LocalChatText = NULL;
     this->ReinforcementIcon = NULL;

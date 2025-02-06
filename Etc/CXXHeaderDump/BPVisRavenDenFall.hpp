@@ -3,6 +3,6 @@
 
 class ABPVisRavenDenFall_C : public ABPTreeFall_C
 {
-}; // Size: 0x4D8
+}; // Size: 0x4E0
 
 #endif

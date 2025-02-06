@@ -28,6 +28,11 @@
 ---@field BPStopPowerMillActionButton UBPStopPowerMillActionButton_C
 ---@field BPUpgradeActionButton UBPUpgradeActionButton_C
 ---@field BPWithdrawSilverActionButton UBPWithdrawSilverActionButton_C
+---@field DownVote UBPBaseActionButton_C
+---@field DownVoted UBPBaseActionButton_C
+---@field EditSignPost UBPBaseActionButton_C
+---@field Upvote UBPBaseActionButton_C
+---@field Upvoted UBPBaseActionButton_C
 UBPActionStrip_C = {}
 
 

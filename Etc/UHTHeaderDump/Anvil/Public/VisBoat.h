@@ -10,6 +10,9 @@ UCLASS(Blueprintable)
 class ANVIL_API AVisBoat : public AVisVehicle {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float IsInWaterCheckRange;
+    
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TMap<UEntityAttachableProxyComponent*, UEntityAttachableDataComponent*> Slots;

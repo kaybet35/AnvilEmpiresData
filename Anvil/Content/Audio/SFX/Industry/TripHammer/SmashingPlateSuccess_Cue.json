@@ -1,0 +1,142 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SmashingPlateSuccess_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'SmashingPlateSuccess_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Industry/TripHammer/SmashingPlateSuccess_Cue.2"
+      },
+      "VolumeMultiplier": 0.4,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'IndustryConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/IndustryConcurrency.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 128,
+        "VolumeScale": 0.5
+      },
+      "Duration": 1.4507396,
+      "MaxDistance": 7900.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Foley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "SmashingPlateSuccess_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        0.3
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SmashingPlateSuccess_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Industry/TripHammer/SmashingPlateSuccess_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "SmashingPlateSuccess_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'SmashingPlateSuccess_Cue:SoundNodeRandom_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Industry/TripHammer/SmashingPlateSuccess_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Outer": "SmashingPlateSuccess_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SmashingPlateSuccess_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Industry/TripHammer/SmashingPlateSuccess_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeMixer'SmashingPlateSuccess_Cue:SoundNodeMixer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Industry/TripHammer/SmashingPlateSuccess_Cue.1"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SmashingPlateSuccess_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Industry/TripHammer/SmashingPlateSuccess_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "SmashingPlateSuccess_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Industry/TripHammer/HammerStoneCrumble01.HammerStoneCrumble01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'HammerStoneCrumble01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Industry/TripHammer/HammerStoneCrumble01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "SmashingPlateSuccess_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Industry/TripHammer/HammerStoneCrumble02.HammerStoneCrumble02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'HammerStoneCrumble02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Industry/TripHammer/HammerStoneCrumble02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "SmashingPlateSuccess_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Industry/TripHammer/HammerStoneCrumble03.HammerStoneCrumble03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'HammerStoneCrumble03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Industry/TripHammer/HammerStoneCrumble03.0"
+    }
+  }
+]

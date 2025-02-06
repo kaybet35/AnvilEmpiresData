@@ -178,6 +178,13 @@ FCentralMarketplaceUserData = {}
 
 
 
+---@class FCompHandleData
+---@field ID int64
+---@field Index int32
+FCompHandleData = {}
+
+
+
 ---@class FCompressedTileLayerDataInfo
 ---@field X int32
 ---@field Y int32
@@ -221,6 +228,13 @@ FCookingRecipe = {}
 ---@field QualityIngredient TSubclassOf<UItemTemplate>
 ---@field QualityIngredientVisVar int32
 FCraftingRecipe = {}
+
+
+
+---@class FCustomStackLimit
+---@field Item TSubclassOf<UItemTemplate>
+---@field StackLimit uint16
+FCustomStackLimit = {}
 
 
 
@@ -306,6 +320,7 @@ FFootprintSharedCompEntry = {}
 ---@field FuelItemVisVar int32
 ---@field BurnDurationSec float
 ---@field NormalizedTemperature float
+---@field AshGenerated int32
 FFuelType = {}
 
 
@@ -318,19 +333,13 @@ FGridItem = {}
 
 
 
----@class FHeatingFuel
----@field FuelItem TSubclassOf<UItemTemplate>
----@field BurnDurationSec float
-FHeatingFuel = {}
-
-
-
 ---@class FHitConverterInput
 ---@field InputCodeName TSubclassOf<UItemTemplate>
 ---@field InputCodeNameVisVar int32
 ---@field OutputStackSize int32
 ---@field OutputStackSizeVisVar int32
 ---@field NumHitsToConvert int32
+---@field bOutputScalesWithInputStackSize boolean
 FHitConverterInput = {}
 
 
@@ -408,6 +417,7 @@ FItemCount = {}
 ---@field bCheckDedicatedUnderlyingItem boolean
 ---@field RequiredEnablingItem TSubclassOf<UItemTemplate>
 ---@field BackgroundType EAnvilItemSlotBackgroundType
+---@field CustomStackLimits TArray<FCustomStackLimit>
 FItemSlot = {}
 
 
@@ -491,11 +501,27 @@ FR2ConfigBuildSite = {}
 ---@class FR2ConfigBuildSiteDistanceRule
 ---@field BuildSites TArray<TSubclassOf<UEntityTemplate>>
 ---@field Range float
+---@field LevelDistance float
 ---@field bWithinTownRange boolean
 ---@field NeighbourLimit uint8
 ---@field FriendlyTeam EAnvilTrinaryRequirement
 ---@field ErrorCode EAnvilPlacementStatus
 FR2ConfigBuildSiteDistanceRule = {}
+
+
+
+---@class FR2ConfigCombustion
+---@field FuelList TArray<FFuelType>
+FR2ConfigCombustion = {}
+
+
+
+---@class FR2ConfigSignPost
+---@field MaxMessageLen int32
+---@field MaxLifeTime float
+---@field LifeTimeChangeByUpvote float
+---@field LifeTimeChangeByDownvote float
+FR2ConfigSignPost = {}
 
 
 
@@ -767,6 +793,7 @@ UAIStimulusProxyComponent = {}
 ---@field bGodMode boolean
 ---@field bShowStructureStats boolean
 ---@field bShowWeatherStats boolean
+---@field bDebugHud boolean
 UAdminEnvDataComponent = {}
 
 
@@ -979,8 +1006,8 @@ UBeaconTowerDataComponent = {}
 ---@field DetectionRangeMinMax FR2FloatRange
 ---@field AltitudeDeltaMinMax FR2FloatRange
 ---@field AltitudeCheckRadius float
----@field DetectionFuelCostPerHour float
----@field InformingFuelCostPerHour float
+---@field DetectionFuelTimeMultiplier float
+---@field InformingFuelTimeMultiplier float
 UBeaconTowerProxyComponent = {}
 
 
@@ -1083,6 +1110,24 @@ UCollisionVisualizerComponent = {}
 
 
 
+---@class UCombustionDataComponent : UDataComponent
+---@field bIsFueled boolean
+---@field StartTimeStamp int32
+---@field TotalFuelTime float
+---@field InputInventory FCompHandleData
+---@field OutputInventory FCompHandleData
+UCombustionDataComponent = {}
+
+
+
+---@class UCombustionProxyComponent : UProxyComponent
+---@field bGenerateAsh boolean
+---@field OverrideAcceptableFuels TArray<TSubclassOf<UItemTemplate>>
+---@field FuelTimeMultiplier float
+UCombustionProxyComponent = {}
+
+
+
 ---@class UConvexCollisionProxyComponent : UProxyComponent
 ---@field Position FVector
 ---@field Rotation FRotator
@@ -1097,16 +1142,15 @@ UConvexCollisionProxyComponent = {}
 
 ---@class UCookingDataComponent : UDataComponent
 ---@field CookType EAnvilCookingType
----@field FuelList TArray<FFuelType>
 ---@field RecipeList TArray<FCookingRecipe>
----@field WaterDurationPerUnitItemAtMaxTempSecVisVar float
----@field FuelExpiryTimestampAgeSec int32
+---@field RecipeInputInventory FCompHandleData
+---@field RecipeOutputInventory FCompHandleData
+---@field WaterInputInventory FCompHandleData
 ---@field CookCompleteTimestampAgeSec int32
 ---@field CurrentRecipeIndex int32
 ---@field NormalizedWaterLevel float
 ---@field EffectiveNormalizedTemp float
 ---@field bCanCookWithExistingOutputs uint8
----@field bIsFueled boolean
 ---@field bIsFoodBurning boolean
 ---@field bIsWatered boolean
 UCookingDataComponent = {}
@@ -1115,7 +1159,6 @@ UCookingDataComponent = {}
 
 ---@class UCookingProxyComponent : UProxyComponent
 ---@field CookType EAnvilCookingType
----@field FuelList TArray<FFuelType>
 ---@field RecipeList TArray<FCookingRecipe>
 ---@field FoodBurnDurationSec float
 ---@field WaterDurationPerUnitItemAtMaxTempSec float
@@ -1178,7 +1221,6 @@ UDestroyableProxyComponent = {}
 
 ---@class UDryingRackProxyComponent : UProxyComponent
 ---@field Recipes TArray<FDryingRackRecipe>
----@field DesiredWetRange FR2FloatRange
 ---@field DesiredTempRange FR2FloatRange
 ---@field QualityChangeTime float
 UDryingRackProxyComponent = {}
@@ -1389,15 +1431,13 @@ UHealthProxyComponent = {}
 
 
 ---@class UHeatingDataComponent : UDataComponent
----@field FuelExpiryTimestampAgeSec int32
----@field bIsFueled boolean
 ---@field bIsBellowBoosted boolean
+---@field ItemInventory FCompHandleData
 UHeatingDataComponent = {}
 
 
 
 ---@class UHeatingProxyComponent : UProxyComponent
----@field FuelList TArray<FHeatingFuel>
 ---@field NumItems int32
 UHeatingProxyComponent = {}
 
@@ -1596,14 +1636,15 @@ ULatticeMineProxyComponent = {}
 
 ---@class ULifetimeDataComponent : UDataComponent
 ---@field Age float
+---@field LifeSpan float
 ULifetimeDataComponent = {}
 
 
 
 ---@class ULifetimeProxyComponent : UProxyComponent
----@field LifeSpan float
 ---@field DropResourceOnDeath boolean
 ---@field ResetIfObserved boolean
+---@field LifeSpan float
 ULifetimeProxyComponent = {}
 
 
@@ -1898,6 +1939,7 @@ UPowerUnitProxyComponent = {}
 ---@field BleedTime float
 ---@field DamageAmount int32
 ---@field DamageType EAnvilDamageType
+---@field SplashDamageRadius float
 ---@field Radius float
 ---@field HeadingTolerance float
 ---@field NozzleYawDelta float
@@ -1934,6 +1976,8 @@ UQuenchingProxyComponent = {}
 
 ---@class UR2ConfigProxyComponent : UProxyComponent
 ---@field BuildSite FR2ConfigBuildSite
+---@field Combustion FR2ConfigCombustion
+---@field SignPost FR2ConfigSignPost
 UR2ConfigProxyComponent = {}
 
 
@@ -1998,6 +2042,7 @@ UResourceDataComponent = {}
 ---@class UResourceProxyComponent : UProxyComponent
 ---@field Type EAnvilResourceType
 ---@field HitPoints uint8
+---@field bShouldDestroyOnCollect boolean
 ---@field RequiredTool EAnvilToolType
 ---@field RequiredTemperature float
 ---@field bInventoryTransferToPlayer boolean
@@ -2030,6 +2075,7 @@ UResourceProxyComponent = {}
 ---@field MinDistanceBetweenSpawns float
 ---@field bWaterOnly boolean
 ---@field bRequiresNavmesh boolean
+---@field bRequiresPathBackOnNavmesh boolean
 ---@field bTrackSpawnedEntity boolean
 ---@field bDontSpawnInSettlements boolean
 ---@field bIsRare boolean
@@ -2102,7 +2148,22 @@ UShipMovementProxyComponent = {}
 
 
 
+---@class USignPostDataComponent : UDataComponent
+---@field Message FString
+---@field VisualType EAnvilSignPostVisualType
+---@field ClientVote EAnvilVoteType
+USignPostDataComponent = {}
+
+
+
+---@class USignPostProxyComponent : UProxyComponent
+---@field VisualType EAnvilSignPostVisualType
+USignPostProxyComponent = {}
+
+
+
 ---@class USimPlayerDataComponent : UDataComponent
+---@field Velocity FVector
 ---@field GuardStrength uint8
 ---@field TeamId uint8
 ---@field CurrentMovementMode EAnvilMovementMode
@@ -2142,6 +2203,7 @@ UShipMovementProxyComponent = {}
 ---@field bMouseSelectCeiling boolean
 ---@field bIsReinforcing boolean
 ---@field bIsFalling boolean
+---@field bBasedMovement boolean
 ---@field SecondsUntilFullDecay float
 ---@field HeldItemLightSourceRadius float
 ---@field LightSourceData TArray<FNightShroudLightSource>
@@ -2255,14 +2317,7 @@ UStaminaProxyComponent = {}
 
 
 
----@class UStaticTorchDataComponent : UDataComponent
----@field bIsTorchActive boolean
-UStaticTorchDataComponent = {}
-
-
-
 ---@class UStaticTorchProxyComponent : UProxyComponent
----@field ActiveSecondsPerUnitFuel float
 ---@field NightShroudRadius float
 UStaticTorchProxyComponent = {}
 
@@ -2411,6 +2466,16 @@ UTrapProxyComponent = {}
 
 
 
+---@class UTreeFallDataComponent : UDataComponent
+---@field FallingDir float
+UTreeFallDataComponent = {}
+
+
+
+---@class UTreeFallProxyComponent : UProxyComponent
+UTreeFallProxyComponent = {}
+
+
 ---@class UTweakableDataComponent : UDataComponent
 ---@field PopulationRequirementT2 uint8
 ---@field PopulationRequirementT3 uint8
@@ -2419,6 +2484,7 @@ UTrapProxyComponent = {}
 ---@field TownCenterRequiredBuilders uint8
 ---@field TownMapDisableSize uint8
 ---@field UpkeepCostReinforced float
+---@field bClientsUseVisActorPool boolean
 UTweakableDataComponent = {}
 
 

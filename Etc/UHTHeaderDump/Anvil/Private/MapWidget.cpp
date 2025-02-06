@@ -8,6 +8,7 @@ UMapWidget::UMapWidget() {
     this->CentralMarketplaceWidget = NULL;
     this->SeasonText = NULL;
     this->TimeOfDayText = NULL;
+    this->MapPostContainerWidget = NULL;
 }
 
 ESlateVisibility UMapWidget::GetObjectiveBorderVisibility() {

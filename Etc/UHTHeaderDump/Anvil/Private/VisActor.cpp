@@ -6,6 +6,7 @@ AVisActor::AVisActor(const FObjectInitializer& ObjectInitializer) : Super(Object
     this->bNightVisibility = false;
     this->bNoCheckOnCeilVisibility = false;
     this->bUseInteractionOutline = false;
+    this->bUseVicActorPool = false;
     this->InteractionIcon = NULL;
     this->AnimSpeed = 0.00f;
     this->bGenerateFoundationDescription = false;

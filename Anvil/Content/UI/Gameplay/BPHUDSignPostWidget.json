@@ -1,0 +1,109 @@
+[
+  {
+    "Type": "BPHUDSignPostWidget_C",
+    "Name": "Default__BPHUDSignPostWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPHUDSignPostWidget.BPHUDSignPostWidget_C'",
+    "Properties": {
+      "MessageDisplayRange": 750.0,
+      "WorldZOffset": 200.0,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "BPSignPostMessageWidget_C",
+    "Name": "MessageWidget",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPSignPostMessageWidget.BPSignPostMessageWidget_C'",
+    "Template": {
+      "ObjectName": "BPSignPostMessageWidget_C'Default__BPSignPostMessageWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPSignPostMessageWidget.4"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPHUDSignPostWidget_C:WidgetTree.SizeBox_26.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDSignPostWidget.3"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_26",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 500.0,
+      "HeightOverride": 300.0,
+      "MinDesiredWidth": 300.0,
+      "MinDesiredHeight": 25.0,
+      "MaxDesiredWidth": 300.0,
+      "bOverride_MinDesiredWidth": true,
+      "bOverride_MinDesiredHeight": true,
+      "bOverride_MaxDesiredWidth": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPHUDSignPostWidget_C:WidgetTree.SizeBox_26.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDSignPostWidget.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_26",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPHUDSignPostWidget_C:WidgetTree.SizeBox_26'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDSignPostWidget.2"
+      },
+      "Content": {
+        "ObjectName": "BPSignPostMessageWidget_C'BPHUDSignPostWidget_C:WidgetTree.MessageWidget'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDSignPostWidget.1"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPHUDSignPostWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPHUDSignPostWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDSignPostWidget.5"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'HUDSignPostWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPHUDSignPostWidget_C'Default__BPHUDSignPostWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDSignPostWidget.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPHUDSignPostWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox'BPHUDSignPostWidget_C:WidgetTree.SizeBox_26'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDSignPostWidget.2"
+      }
+    }
+  }
+]

@@ -15,6 +15,7 @@ UResourceSpawnerProxyComponent::UResourceSpawnerProxyComponent() {
     this->MinDistanceBetweenSpawns = 0.00f;
     this->bWaterOnly = false;
     this->bRequiresNavmesh = false;
+    this->bRequiresPathBackOnNavmesh = false;
     this->bTrackSpawnedEntity = false;
     this->bDontSpawnInSettlements = false;
     this->bIsRare = false;

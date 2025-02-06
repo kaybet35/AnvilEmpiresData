@@ -4,10 +4,12 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->InteractionIcon = NULL;
     this->HUDCanvas = NULL;
     this->NameCanvas = NULL;
+    this->SignPostMessageCanvas = NULL;
     this->StatsCanvas = NULL;
     this->DismantleButtonsCanvas = NULL;
     this->TravelIndicatorCanvas = NULL;
     this->HUDNameWidgetClass = NULL;
+    this->HUDSignPostWidgetClass = NULL;
     this->HUDStatsWidgetClass = NULL;
     this->DismantleButtonWidgetClass = NULL;
     this->OpenedHUDWindow = NULL;
@@ -36,7 +38,6 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->AranicLogo = NULL;
     this->MirrishLogo = NULL;
     this->NovanLogo = NULL;
-    this->LocalChatDisplayTime = 3.00f;
     this->InteractionProgressBar1 = NULL;
     this->InteractionProgressBar2 = NULL;
     this->WeatherStatsText = NULL;

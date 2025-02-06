@@ -18,7 +18,7 @@ UVehicleMovementProxyComponent::UVehicleMovementProxyComponent() {
     this->bSailBoat = false;
     this->bDoAxleRaycasts = true;
     this->bAllowSwitchSeat = false;
-    this->bUsePitch = false;
+    this->bUsePitch = true;
     this->CollisionEffect = NULL;
     this->RammingDamage = 480.00f;
     this->RammingVelocityFactor = 0.00f;

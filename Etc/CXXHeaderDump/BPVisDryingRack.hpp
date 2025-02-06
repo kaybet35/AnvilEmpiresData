@@ -3,6 +3,6 @@
 
 class ABPVisDryingRack_C : public AVisDryingRack
 {
-}; // Size: 0x538
+}; // Size: 0x540
 
 #endif

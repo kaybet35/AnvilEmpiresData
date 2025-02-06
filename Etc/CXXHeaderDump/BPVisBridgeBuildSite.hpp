@@ -3,6 +3,6 @@
 
 class ABPVisBridgeBuildSite_C : public AVisSplineBuildSite
 {
-}; // Size: 0x520
+}; // Size: 0x528
 
 #endif

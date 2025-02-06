@@ -1,0 +1,133 @@
+[
+  {
+    "Type": "BPMapPostContainerWidget_C",
+    "Name": "Default__BPMapPostContainerWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPMapPostContainerWidget.BPMapPostContainerWidget_C'",
+    "Properties": {
+      "MapPostWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'BPMapPostWidget_C'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapPostWidget.81"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "BPMapPostWidget_C",
+    "Name": "BPMapPostWidget",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPMapPostWidget.BPMapPostWidget_C'",
+    "Template": {
+      "ObjectName": "BPMapPostWidget_C'Default__BPMapPostWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapPostWidget.9"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPMapPostContainerWidget_C:WidgetTree.MapPostCanvas.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapPostContainerWidget.3"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "MapPostCanvas",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPMapPostContainerWidget_C:WidgetTree.MapPostCanvas.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapPostContainerWidget.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "MapPostCanvas",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPMapPostContainerWidget_C:WidgetTree.MapPostCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapPostContainerWidget.2"
+      },
+      "Content": {
+        "ObjectName": "BPMapPostWidget_C'BPMapPostContainerWidget_C:WidgetTree.BPMapPostWidget'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapPostContainerWidget.1"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPMapPostContainerWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPMapPostContainerWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapPostContainerWidget.5"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'MapPostContainerWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPMapPostWidget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPMapPostWidget_C'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapPostWidget.81"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPMapPostContainerWidget_C'Default__BPMapPostContainerWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapPostContainerWidget.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPMapPostContainerWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPMapPostContainerWidget_C:WidgetTree.MapPostCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapPostContainerWidget.2"
+      }
+    }
+  }
+]
