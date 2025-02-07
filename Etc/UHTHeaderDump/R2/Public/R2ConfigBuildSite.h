@@ -14,6 +14,12 @@ public:
     float FamilyStructureWorldEntranceAvoidDist;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float FamilyCenterRadiusDistanceFactor;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float MinFamilyCenterRadius;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxFamilyCenterRadius;
     
     R2_API FR2ConfigBuildSite();

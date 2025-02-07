@@ -430,9 +430,11 @@ struct FR2ConfigBuildSite
 {
     TArray<FR2ConfigBuildSiteDistanceRule> BuildSiteDistanceRules;                    // 0x0000 (size: 0x10)
     float FamilyStructureWorldEntranceAvoidDist;                                      // 0x0010 (size: 0x4)
-    float MaxFamilyCenterRadius;                                                      // 0x0014 (size: 0x4)
+    float FamilyCenterRadiusDistanceFactor;                                           // 0x0014 (size: 0x4)
+    float MinFamilyCenterRadius;                                                      // 0x0018 (size: 0x4)
+    float MaxFamilyCenterRadius;                                                      // 0x001C (size: 0x4)
 
-}; // Size: 0x18
+}; // Size: 0x20
 
 struct FR2ConfigBuildSiteDistanceRule
 {
@@ -1315,8 +1317,7 @@ class UFamilyCenterDataComponent : public UDataComponent
 
 class UFamilyCenterProxyComponent : public UProxyComponent
 {
-    float FamilyAreaRadius;                                                           // 0x0028 (size: 0x4)
-    uint8 Tier;                                                                       // 0x002C (size: 0x1)
+    uint8 Tier;                                                                       // 0x0028 (size: 0x1)
 
 }; // Size: 0x30
 
@@ -1976,11 +1977,11 @@ class UQuenchingProxyComponent : public UProxyComponent
 
 class UR2ConfigProxyComponent : public UProxyComponent
 {
-    FR2ConfigBuildSite BuildSite;                                                     // 0x0028 (size: 0x18)
-    FR2ConfigCombustion Combustion;                                                   // 0x0040 (size: 0x10)
-    FR2ConfigSignPost SignPost;                                                       // 0x0050 (size: 0x10)
+    FR2ConfigBuildSite BuildSite;                                                     // 0x0028 (size: 0x20)
+    FR2ConfigCombustion Combustion;                                                   // 0x0048 (size: 0x10)
+    FR2ConfigSignPost SignPost;                                                       // 0x0058 (size: 0x10)
 
-}; // Size: 0x60
+}; // Size: 0x68
 
 class URareResourceAreaMarkerProxyComponent : public UProxyComponent
 {

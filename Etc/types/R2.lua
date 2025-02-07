@@ -493,6 +493,8 @@ FProducableItem = {}
 ---@class FR2ConfigBuildSite
 ---@field BuildSiteDistanceRules TArray<FR2ConfigBuildSiteDistanceRule>
 ---@field FamilyStructureWorldEntranceAvoidDist float
+---@field FamilyCenterRadiusDistanceFactor float
+---@field MinFamilyCenterRadius float
 ---@field MaxFamilyCenterRadius float
 FR2ConfigBuildSite = {}
 
@@ -1314,7 +1316,6 @@ UFamilyCenterDataComponent = {}
 
 
 ---@class UFamilyCenterProxyComponent : UProxyComponent
----@field FamilyAreaRadius float
 ---@field Tier uint8
 UFamilyCenterProxyComponent = {}
 

@@ -91,6 +91,7 @@ struct FBuildSiteCostData : public FTableRowBase
     int16 Gravel;                                                                     // 0x0024 (size: 0x2)
     int16 ProcessedSteel;                                                             // 0x0026 (size: 0x2)
     int16 ResourceFibreHeavy;                                                         // 0x0028 (size: 0x2)
+    int16 ProcessedBronze;                                                            // 0x002A (size: 0x2)
 
 }; // Size: 0x30
 

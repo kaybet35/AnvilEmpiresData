@@ -885,6 +885,7 @@ FAutoMoveState = {}
 ---@field Gravel int16
 ---@field ProcessedSteel int16
 ---@field ResourceFibreHeavy int16
+---@field ProcessedBronze int16
 FBuildSiteCostData = {}
 
 

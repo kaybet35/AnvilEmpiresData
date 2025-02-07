@@ -8,9 +8,6 @@ class R2_API UFamilyCenterProxyComponent : public UProxyComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float FamilyAreaRadius;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 Tier;
     
     UFamilyCenterProxyComponent();

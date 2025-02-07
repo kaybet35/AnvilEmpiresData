@@ -58,6 +58,9 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int16 ResourceFibreHeavy;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ProcessedBronze;
+    
     ANVIL_API FBuildSiteCostData();
 };
 
