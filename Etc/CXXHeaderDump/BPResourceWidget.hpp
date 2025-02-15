@@ -3,6 +3,6 @@
 
 class UBPResourceWidget_C : public UResourceWidget
 {
-}; // Size: 0x288
+}; // Size: 0x290
 
 #endif

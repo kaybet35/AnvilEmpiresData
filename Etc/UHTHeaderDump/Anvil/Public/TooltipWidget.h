@@ -5,10 +5,10 @@
 #include "TooltipWidget.generated.h"
 
 class UBorder;
-class UHorizontalBox;
 class UResourceWidget;
 class URichTextBlock;
 class UTextBlock;
+class UVerticalBox;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UTooltipWidget : public UUserWidget {
@@ -38,7 +38,7 @@ private:
     TArray<UResourceWidget*> ResourceWidgets;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UHorizontalBox* ResourcesContainer;
+    UVerticalBox* ResourcesContainer;
     
 public:
     UTooltipWidget();

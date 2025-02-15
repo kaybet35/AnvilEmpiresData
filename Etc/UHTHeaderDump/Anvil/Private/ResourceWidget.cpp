@@ -2,7 +2,8 @@
 
 UResourceWidget::UResourceWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->ResourceIcon = NULL;
-    this->ResourceText = NULL;
+    this->ResourceCostText = NULL;
+    this->ResourceNameText = NULL;
 }
 
 

@@ -22,6 +22,17 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
+        "Name": "VisMultiItemStockpile",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisMultiItemStockpileComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "BPVisFamilyMeshComponent1",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -40,17 +51,6 @@
         "PropertyClass": {
           "ObjectName": "BlueprintGeneratedClass'BPVisFamilyMeshComponent_C'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisFamilyMeshComponent.0"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "VisStockpile",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStockpileComponent'",
-          "ObjectPath": "/Script/Anvil"
         }
       },
       {
@@ -126,7 +126,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisResourceStockpileT1_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.22"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconResourceStockpile'",
@@ -192,13 +192,13 @@
   {
     "Type": "CollisionVisualizerComponent",
     "Name": "BoxVisualizer",
-    "Outer": "VisStockpile_GEN_VARIABLE",
+    "Outer": "VisMultiItemStockpile_GEN_VARIABLE",
     "Class": "UScriptClass'CollisionVisualizerComponent'",
     "Properties": {
       "Extents": {
         "X": 210.0,
         "Y": 135.0,
-        "Z": 60.0
+        "Z": 90.0
       }
     }
   },
@@ -268,6 +268,24 @@
   },
   {
     "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisMultiItemStockpileComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisMultiItemStockpileComponent'BPVisResourceStockpileT1_C:VisMultiItemStockpile_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.21"
+      },
+      "VariableGuid": "63BEADD6-4FAE21C6-35FCC886-7C8EC0CD",
+      "InternalVariableName": "VisMultiItemStockpile"
+    }
+  },
+  {
+    "Type": "SCS_Node",
     "Name": "SCS_Node_16",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -278,22 +296,22 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisResourceStockpileT1_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.23"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT1_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.15"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisResourceStockpileT1_C:SimpleConstructionScript_0.SCS_Node_31'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.14"
         },
         {
           "ObjectName": "SCS_Node'BPVisResourceStockpileT1_C:SimpleConstructionScript_0.SCS_Node_33'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisResourceStockpileT1_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.12"
         }
       ],
       "VariableGuid": "3CC88775-4C43A525-527B08A7-3EA65DD5",
@@ -337,24 +355,6 @@
     }
   },
   {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_6",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisStockpileComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisStockpileComponent'BPVisResourceStockpileT1_C:VisStockpile_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.23"
-      },
-      "VariableGuid": "8CD4A95F-4603626B-9F8014A7-6F457A42",
-      "InternalVariableName": "VisStockpile"
-    }
-  },
-  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPVisResourceStockpileT1_C",
@@ -363,25 +363,25 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisResourceStockpileT1_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.13"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisResourceStockpileT1_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.12"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT1_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.15"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT1_C:SimpleConstructionScript_0.SCS_Node_31'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisResourceStockpileT1_C:SimpleConstructionScript_0.SCS_Node_33'",
+          "ObjectName": "SCS_Node'BPVisResourceStockpileT1_C:SimpleConstructionScript_0.SCS_Node_31'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisResourceStockpileT1_C:SimpleConstructionScript_0.SCS_Node_33'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisResourceStockpileT1_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.12"
         }
       ],
       "DefaultSceneRootNode": {
@@ -415,6 +415,29 @@
     "Class": "UScriptClass'UpgradeDataComponent'"
   },
   {
+    "Type": "VisMultiItemStockpileComponent",
+    "Name": "VisMultiItemStockpile_GEN_VARIABLE",
+    "Outer": "BPVisResourceStockpileT1_C",
+    "Class": "UScriptClass'VisMultiItemStockpileComponent'",
+    "Properties": {
+      "StockpileExtents": {
+        "X": 210.0,
+        "Y": 135.0,
+        "Z": 90.0
+      },
+      "bForceShowIndividualItems": true,
+      "BoxVisualizer": {
+        "ObjectName": "CollisionVisualizerComponent'BPVisResourceStockpileT1_C:VisMultiItemStockpile_GEN_VARIABLE.BoxVisualizer'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.5"
+      },
+      "RelativeLocation": {
+        "X": 6.7915255E-07,
+        "Y": 0.0,
+        "Z": 132.79881
+      }
+    }
+  },
+  {
     "Type": "VisScaffoldingComponent",
     "Name": "ScaffoldingComponent",
     "Outer": "Default__BPVisResourceStockpileT1_C",
@@ -443,28 +466,6 @@
         "ProjectToLandscape",
         "RotateToLandscape"
       ]
-    }
-  },
-  {
-    "Type": "VisStockpileComponent",
-    "Name": "VisStockpile_GEN_VARIABLE",
-    "Outer": "BPVisResourceStockpileT1_C",
-    "Class": "UScriptClass'VisStockpileComponent'",
-    "Properties": {
-      "StockpileExtents": {
-        "X": 210.0,
-        "Y": 135.0,
-        "Z": 60.0
-      },
-      "BoxVisualizer": {
-        "ObjectName": "CollisionVisualizerComponent'BPVisResourceStockpileT1_C:VisStockpile_GEN_VARIABLE.BoxVisualizer'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisResourceStockpileT1.5"
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 90.0
-      }
     }
   }
 ]

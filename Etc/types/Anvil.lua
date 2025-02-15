@@ -2720,7 +2720,8 @@ function URepairStationWindow:OnRepairClicked() end
 
 ---@class UResourceWidget : UUserWidget
 ---@field ResourceIcon UImage
----@field ResourceText UTextBlock
+---@field ResourceCostText UTextBlock
+---@field ResourceNameText UTextBlock
 UResourceWidget = {}
 
 
@@ -2850,7 +2851,7 @@ function UTemperatureStatusWidget:GetIconVisibility() end
 ---@field FooterText URichTextBlock
 ---@field ResourceBar UBorder
 ---@field ResourceWidgets TArray<UResourceWidget>
----@field ResourcesContainer UHorizontalBox
+---@field ResourcesContainer UVerticalBox
 UTooltipWidget = {}
 
 
@@ -3065,6 +3066,7 @@ UVisMobileWeaponAnimInstance = {}
 
 ---@class UVisMultiItemStockpileComponent : USceneComponent
 ---@field StockpileExtents FVector
+---@field bForceShowIndividualItems boolean
 ---@field DisplayedMeshes TArray<UStaticMeshComponent>
 ---@field BoxVisualizer UCollisionVisualizerComponent
 UVisMultiItemStockpileComponent = {}

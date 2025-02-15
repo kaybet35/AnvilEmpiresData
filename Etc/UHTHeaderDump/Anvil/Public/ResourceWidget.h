@@ -15,7 +15,10 @@ protected:
     UImage* ResourceIcon;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* ResourceText;
+    UTextBlock* ResourceCostText;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* ResourceNameText;
     
 public:
     UResourceWidget();

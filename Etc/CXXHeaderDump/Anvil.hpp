@@ -2572,9 +2572,10 @@ class URepairStationWindow : public UStructureWindow
 class UResourceWidget : public UUserWidget
 {
     class UImage* ResourceIcon;                                                       // 0x0278 (size: 0x8)
-    class UTextBlock* ResourceText;                                                   // 0x0280 (size: 0x8)
+    class UTextBlock* ResourceCostText;                                               // 0x0280 (size: 0x8)
+    class UTextBlock* ResourceNameText;                                               // 0x0288 (size: 0x8)
 
-}; // Size: 0x288
+}; // Size: 0x290
 
 class URestedStatusWidget : public UUserWidget
 {
@@ -2696,7 +2697,7 @@ class UTooltipWidget : public UUserWidget
     class URichTextBlock* FooterText;                                                 // 0x0298 (size: 0x8)
     class UBorder* ResourceBar;                                                       // 0x02A0 (size: 0x8)
     TArray<class UResourceWidget*> ResourceWidgets;                                   // 0x02A8 (size: 0x10)
-    class UHorizontalBox* ResourcesContainer;                                         // 0x02B8 (size: 0x8)
+    class UVerticalBox* ResourcesContainer;                                           // 0x02B8 (size: 0x8)
 
 }; // Size: 0x2C0
 
@@ -2908,10 +2909,11 @@ class UVisMobileWeaponAnimInstance : public UAnimInstance
 class UVisMultiItemStockpileComponent : public USceneComponent
 {
     FVector StockpileExtents;                                                         // 0x02A0 (size: 0x18)
-    TArray<class UStaticMeshComponent*> DisplayedMeshes;                              // 0x02B8 (size: 0x10)
-    class UCollisionVisualizerComponent* BoxVisualizer;                               // 0x02C8 (size: 0x8)
+    bool bForceShowIndividualItems;                                                   // 0x02B8 (size: 0x1)
+    TArray<class UStaticMeshComponent*> DisplayedMeshes;                              // 0x02C0 (size: 0x10)
+    class UCollisionVisualizerComponent* BoxVisualizer;                               // 0x02D0 (size: 0x8)
 
-}; // Size: 0x2E0
+}; // Size: 0x2F0
 
 class UVisPlayerAnimInstance : public UAnimInstance
 {

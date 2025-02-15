@@ -52,15 +52,23 @@
     "Properties": {
       "Slots": [
         {
+          "ObjectName": "HorizontalBoxSlot'BPResourceWidget_C:WidgetTree.HorizontalBox_26.HorizontalBoxSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/BPResourceWidget.7"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPResourceWidget_C:WidgetTree.HorizontalBox_26.HorizontalBoxSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/BPResourceWidget.8"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPResourceWidget_C:WidgetTree.HorizontalBox_26.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPResourceWidget.5"
+        },
+        {
           "ObjectName": "HorizontalBoxSlot'BPResourceWidget_C:WidgetTree.HorizontalBox_26.HorizontalBoxSlot_0'",
           "ObjectPath": "Anvil/Content/UI/BPResourceWidget.4"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPResourceWidget_C:WidgetTree.HorizontalBox_26.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPResourceWidget.5"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPResourceWidget_C:WidgetTree.HorizontalBox_26.HorizontalBoxSlot_2'",
+          "ObjectName": "HorizontalBoxSlot'BPResourceWidget_C:WidgetTree.HorizontalBox_26.HorizontalBoxSlot_4'",
           "ObjectPath": "Anvil/Content/UI/BPResourceWidget.6"
         }
       ],
@@ -82,23 +90,6 @@
       },
       "Content": {
         "ObjectName": "Image'BPResourceWidget_C:WidgetTree.ResourceIcon'",
-        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.7"
-      }
-    }
-  },
-  {
-    "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_1",
-    "Outer": "HorizontalBox_26",
-    "Class": "UScriptClass'HorizontalBoxSlot'",
-    "Properties": {
-      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
-      "Parent": {
-        "ObjectName": "HorizontalBox'BPResourceWidget_C:WidgetTree.HorizontalBox_26'",
-        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.3"
-      },
-      "Content": {
-        "ObjectName": "TextBlock'BPResourceWidget_C:WidgetTree.ResourceText'",
         "ObjectPath": "Anvil/Content/UI/BPResourceWidget.9"
       }
     }
@@ -115,7 +106,58 @@
       },
       "Content": {
         "ObjectName": "Spacer'BPResourceWidget_C:WidgetTree.Spacer_50'",
-        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.8"
+        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.10"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Outer": "HorizontalBox_26",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPResourceWidget_C:WidgetTree.HorizontalBox_26'",
+        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.3"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPResourceWidget_C:WidgetTree.ResourceNameText'",
+        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.13"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Outer": "HorizontalBox_26",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPResourceWidget_C:WidgetTree.HorizontalBox_26'",
+        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.3"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPResourceWidget_C:WidgetTree.ResourceCostText'",
+        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.11"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Outer": "HorizontalBox_26",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPResourceWidget_C:WidgetTree.HorizontalBox_26'",
+        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.3"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPResourceWidget_C:WidgetTree.ResourceCostX'",
+        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.12"
       }
     }
   },
@@ -148,18 +190,18 @@
     "Class": "UScriptClass'Spacer'",
     "Properties": {
       "Size": {
-        "X": 10.0,
+        "X": 2.0,
         "Y": 1.0
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPResourceWidget_C:WidgetTree.HorizontalBox_26.HorizontalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.6"
+        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.5"
       }
     }
   },
   {
     "Type": "TextBlock",
-    "Name": "ResourceText",
+    "Name": "ResourceCostText",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'TextBlock'",
     "Properties": {
@@ -178,8 +220,69 @@
         "Size": 12
       },
       "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPResourceWidget_C:WidgetTree.HorizontalBox_26.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.5"
+        "ObjectName": "HorizontalBoxSlot'BPResourceWidget_C:WidgetTree.HorizontalBox_26.HorizontalBoxSlot_5'",
+        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.7"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "ResourceCostX",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "6D1535D340827951C6CB1D9526129E9A",
+        "SourceString": "x",
+        "LocalizedString": "x"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 12
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPResourceWidget_C:WidgetTree.HorizontalBox_26.HorizontalBoxSlot_6'",
+        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "ResourceNameText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "2D028E6A47E28B3EFF29599E334CCDD4",
+        "SourceString": "Resource Name",
+        "LocalizedString": "Resource Name"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.890196,
+          "G": 0.827451,
+          "B": 0.662745,
+          "A": 1.0,
+          "Hex": "F3EBD5"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 12
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPResourceWidget_C:WidgetTree.HorizontalBox_26.HorizontalBoxSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.6"
       }
     }
   },
@@ -190,7 +293,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPResourceWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.11"
+        "ObjectPath": "Anvil/Content/UI/BPResourceWidget.15"
       },
       "bClassRequiresNativeTick": true
     },

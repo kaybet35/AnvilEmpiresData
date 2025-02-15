@@ -7,6 +7,7 @@ enum class EGameplayHint : uint8 {
     Homestead1,
     Homestead2,
     Homestead3,
+    Homestead4,
     HomesteadComplete,
     HomesteadUpgrade1,
     HomesteadUpgrade2,
