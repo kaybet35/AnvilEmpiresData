@@ -1831,9 +1831,14 @@ function UDeploymentPointMapIcon:GetDeploymentPointVisibility() end
 ---@field LogoutButton UAnvilButtonWidget
 ---@field DeploymentInstructionOrSpawnTimerText UTextBlock
 ---@field DeploymentFoodWidget UDeploymentFoodWidget
+---@field FamilyCenterDeployButton UButton
+---@field FamilyCenterDeployWidget UVerticalBox
 UDeploymentScreen = {}
 
 function UDeploymentScreen:OnLogoutButtonClicked() end
+function UDeploymentScreen:OnFamilyCenterDeployButtonClicked() end
+---@return ESlateVisibility
+function UDeploymentScreen:GetFamilyCenterDeployWidgetVisibility() end
 ---@return FText
 function UDeploymentScreen:GetDeploymentInstructionOrSpawnTimerText() end
 

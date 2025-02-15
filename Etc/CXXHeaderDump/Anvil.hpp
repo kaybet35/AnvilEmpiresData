@@ -1388,7 +1388,7 @@ class UAnvilDialogBox : public UUserWidget
     void OnLargeTextInputEditableTextChanged(const FText& Text);
     FText GetSliderCurrentValueText();
     void FOnSliderValueChanged(const float Value);
-}; // Size: 0x328
+}; // Size: 0x330
 
 class UAnvilDropdownEntryWidget : public UUserWidget
 {
@@ -1754,10 +1754,14 @@ class UDeploymentScreen : public UAnvilScreen
     class UAnvilButtonWidget* LogoutButton;                                           // 0x0298 (size: 0x8)
     class UTextBlock* DeploymentInstructionOrSpawnTimerText;                          // 0x02A0 (size: 0x8)
     class UDeploymentFoodWidget* DeploymentFoodWidget;                                // 0x02A8 (size: 0x8)
+    class UButton* FamilyCenterDeployButton;                                          // 0x02B0 (size: 0x8)
+    class UVerticalBox* FamilyCenterDeployWidget;                                     // 0x02B8 (size: 0x8)
 
     void OnLogoutButtonClicked();
+    void OnFamilyCenterDeployButtonClicked();
+    ESlateVisibility GetFamilyCenterDeployWidgetVisibility();
     FText GetDeploymentInstructionOrSpawnTimerText();
-}; // Size: 0x2C0
+}; // Size: 0x2D0
 
 class UDisclaimerWidget : public UUserWidget
 {

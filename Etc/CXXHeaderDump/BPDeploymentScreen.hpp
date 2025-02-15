@@ -3,6 +3,8 @@
 
 class UBPDeploymentScreen_C : public UDeploymentScreen
 {
-}; // Size: 0x2C0
+    class UTextBlock* FamilyCenterDeployHeaderText;                                   // 0x02D0 (size: 0x8)
+
+}; // Size: 0x2D8
 
 #endif
