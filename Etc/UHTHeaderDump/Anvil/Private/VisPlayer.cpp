@@ -86,6 +86,12 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
     this->CurrentUEUsableActor = NULL;
+    this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
+    this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
+    this->VoiceIndicator->SetupAttachment(RootComponent);
+    this->TorchVFXComponent->SetupAttachment(Mesh);
+    this->TorchVFX2Component->SetupAttachment(Mesh);
+    this->TorchPointLightComponent->SetupAttachment(Mesh);
     this->TorchVisPointLightComponent->SetupAttachment(Mesh);
     this->TorchAudioComponent->SetupAttachment(Mesh);
     this->RainVFXComponent->SetupAttachment(SpringArm);
@@ -104,6 +110,7 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->EnterSwimmingVFXComponent->SetupAttachment(Mesh);
     this->SwimmingLoopVFXComponent->SetupAttachment(Mesh);
     this->SwimmingLoopAudioComponent->SetupAttachment(Mesh);
+    this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
@@ -111,13 +118,6 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->Mesh->SetupAttachment(RootComponent);
     this->Head->SetupAttachment(Mesh);
     this->AimMeshComponent->SetupAttachment(RootComponent);
-    this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
-    this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
-    this->VoiceIndicator->SetupAttachment(RootComponent);
-    this->TorchVFXComponent->SetupAttachment(Mesh);
-    this->TorchVFX2Component->SetupAttachment(Mesh);
-    this->TorchPointLightComponent->SetupAttachment(Mesh);
-    this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 FString AVisPlayer::GetPlayerName() const {
