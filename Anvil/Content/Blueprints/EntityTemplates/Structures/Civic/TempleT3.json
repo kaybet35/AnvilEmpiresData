@@ -34,13 +34,6 @@
     "Template": {
       "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
-    },
-    "Properties": {
-      "Extents": {
-        "X": 200.0,
-        "Y": 200.0,
-        "Z": 400.0
-      }
     }
   },
   {
@@ -93,7 +86,7 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
     },
     "Properties": {
-      "MaxHealth": 840.0
+      "MaxHealth": 720.0
     }
   },
   {
@@ -101,40 +94,6 @@
     "Name": "MeshVisibilityProxyComponent_2",
     "Outer": "Default__TempleT3_C",
     "Class": "UScriptClass'MeshVisibilityProxyComponent'"
-  },
-  {
-    "Type": "RelicTechCenterProxyComponent",
-    "Name": "RelicTechCenterProxyComponent_0",
-    "Outer": "Default__TempleT3_C",
-    "Class": "UScriptClass'RelicTechCenterProxyComponent'",
-    "Properties": {
-      "RelicTechCosts": [
-        {
-          "CodeName": {
-            "ObjectName": "BlueprintGeneratedClass'CombatAxeRelic_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/CombatAxeRelic.0"
-          },
-          "CodeNameVisVar": 0,
-          "Count": 10
-        },
-        {
-          "CodeName": {
-            "ObjectName": "BlueprintGeneratedClass'SwordRelic_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SwordRelic.0"
-          },
-          "CodeNameVisVar": 0,
-          "Count": 10
-        },
-        {
-          "CodeName": {
-            "ObjectName": "BlueprintGeneratedClass'SpearRelic_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SpearRelic.0"
-          },
-          "CodeNameVisVar": 0,
-          "Count": 10
-        }
-      ]
-    }
   },
   {
     "Type": "RepairProxyComponent",
@@ -174,7 +133,16 @@
     "Template": {
       "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    },
+    "Properties": {
+      "Accessibility": "EAnvilAccessibilityType::FriendlyOnly"
     }
+  },
+  {
+    "Type": "TempleProxyComponent",
+    "Name": "TempleProxyComponent_0",
+    "Outer": "Default__TempleT3_C",
+    "Class": "UScriptClass'TempleProxyComponent'"
   },
   {
     "Type": "TempleT3_C",
@@ -187,7 +155,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__TempleT3_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Civic/TempleT3.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Civic/TempleT3.10"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__TempleT3_C:HealthComp'",
@@ -195,11 +163,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__TempleT3_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Civic/TempleT3.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Civic/TempleT3.7"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__TempleT3_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Civic/TempleT3.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Civic/TempleT3.9"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__TempleT3_C:DestroyableComp'",
@@ -219,20 +187,21 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__TempleT3_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Civic/TempleT3.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Civic/TempleT3.8"
       },
       "CodeNameString": "TempleT3",
       "CodeName": -353154934,
       "bShowOnMap": true,
       "bGenerateMeshCollisionsFromVisActor": true,
+      "GenerateMeshCollisionStepAngle": 51.0,
       "Components": [
         {
           "ObjectName": "MeshVisibilityProxyComponent'Default__TempleT3_C:MeshVisibilityProxyComponent_2'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Civic/TempleT3.6"
         },
         {
-          "ObjectName": "RelicTechCenterProxyComponent'Default__TempleT3_C:RelicTechCenterProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Civic/TempleT3.7"
+          "ObjectName": "TempleProxyComponent'Default__TempleT3_C:TempleProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Civic/TempleT3.11"
         }
       ],
       "VisActorClass": {

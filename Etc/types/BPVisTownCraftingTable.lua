@@ -1,15 +1,6 @@
 ---@meta
 
 ---@class ABPVisTownCraftingTable_C : AVisRefinery
----@field ScorchEffect7 UScorchEffectComponent
----@field ScorchEffect8 UScorchEffectComponent
----@field ScorchEffect1 UScorchEffectComponent
----@field ScorchEffect6 UScorchEffectComponent
----@field ScorchEffect5 UScorchEffectComponent
----@field ScorchEffect10 UScorchEffectComponent
----@field ScorchEffect4 UScorchEffectComponent
----@field ScorchEffect9 UScorchEffectComponent
----@field Fire USceneComponent
 ---@field VisStaticMesh4 UVisStaticMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ---@field WorkshopFire UNiagaraComponent

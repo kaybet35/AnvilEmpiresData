@@ -12,7 +12,6 @@
 ---@field Scene USceneComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field GrassRemovalFamilyArea UGrassRemovalVolumeComponent
----@field Audio UAudioComponent
 ---@field RangeMarkerVisibility boolean
 ABPVisFamilyCenterKeystoneT3_C = {}
 

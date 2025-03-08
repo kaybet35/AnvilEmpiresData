@@ -5,6 +5,7 @@ UTownHallProxyComponent::UTownHallProxyComponent() {
     this->bIsSmallCamp = false;
     this->bLocalReinforcementOnly = false;
     this->AbandonedStartTime = 2700.00f;
+    this->OriginalOwnerTeamId = 0;
 }
 
 

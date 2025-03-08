@@ -1,0 +1,113 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisMace_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'VisItem'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisMace_C'Default__BPVisMace_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisItems/Weapons/BPVisMace.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisMace_C",
+    "Name": "Default__BPVisMace_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisItems/Weapons/BPVisMace.BPVisMace_C'",
+    "Properties": {
+      "CodeNameString": "Mace",
+      "CodeName": -1139614195,
+      "NameText": {
+        "Namespace": "",
+        "Key": "E41CBAA04F542175CD2880BEF5724196",
+        "SourceString": "Iron Mace",
+        "LocalizedString": "Iron Mace"
+      },
+      "DescriptionText": {
+        "Namespace": "",
+        "Key": "BC4439C4485F78BE63BF4DB25D951B04",
+        "SourceString": "An iron spiked club that is effective and knocking enemies off balance. Significantly reduces enemy Stability on impact.",
+        "LocalizedString": "An iron spiked club that is effective and knocking enemies off balance. Significantly reduces enemy Stability on impact."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'IconMace'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Items/IconMace.0"
+      },
+      "Category": "EVisItemCategory::WeaponShield",
+      "Mesh": {
+        "ObjectName": "SkeletalMesh'Mace_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/Mace_SK.0"
+      },
+      "StockpileMesh": {
+        "ObjectName": "StaticMesh'Mace_SM'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/Mace_SM.2"
+      },
+      "GripType": "EEquippedItemGripType::Axe",
+      "MeshRotation": {
+        "Pitch": 90.0,
+        "Yaw": 0.0,
+        "Roll": -90.0
+      },
+      "UnarmedMeshLocation": "EUnarmedItemMeshLocation::MidLeft",
+      "UnarmedMeshRotation": {
+        "Pitch": 90.0,
+        "Yaw": 0.0,
+        "Roll": -90.0
+      },
+      "AnimationIndex": 3,
+      "ActivityStateMontageMap": [
+        {
+          "Key": "EAnvilSimActivityState::Attacking",
+          "Value": {
+            "ObjectName": "AnimMontage'Mace_QueueAttack1_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Mace_QueueAttack1_Montage.0"
+          }
+        },
+        {
+          "Key": "EAnvilSimActivityState::EnteringAltAttackMode",
+          "Value": {
+            "ObjectName": "AnimMontage'Mace_enterSecondary'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Mace_enterSecondary.0"
+          }
+        },
+        {
+          "Key": "EAnvilSimActivityState::ExitingAltAttackMode",
+          "Value": {
+            "ObjectName": "AnimMontage'Mace_exitSecondary'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Mace_exitSecondary.0"
+          }
+        }
+      ],
+      "AttackChainMontages": [
+        {
+          "ObjectName": "AnimMontage'Mace_QueueAttack2_Montage'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Mace_QueueAttack2_Montage.0"
+        },
+        {
+          "ObjectName": "AnimMontage'Mace_QueueAttack3_Montage'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Mace_QueueAttack3_Montage.0"
+        }
+      ],
+      "TransferSoundCue": {
+        "ObjectName": "SoundCue'UITransferMetal01_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/UI/Transfer/UITransferMetal01_Cue.0"
+      },
+      "ArmingSoundCue": {
+        "ObjectName": "SoundCue'Sword1HAArming_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Melee/Sword/Sword1HAArming_Cue.0"
+      }
+    }
+  }
+]

@@ -8,7 +8,7 @@ class R2_API UFamilyCenterDataComponent : public UDataComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float FamilyAreaRadius;
+    float FamilyAreaExtent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool AllowPublicPledging;

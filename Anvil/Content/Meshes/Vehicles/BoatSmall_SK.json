@@ -18,9 +18,9 @@
           "LODHysteresis": 0.02,
           "LODMaterialMap": [],
           "BuildSettings": {
-            "bRecomputeNormals": true,
+            "bRecomputeNormals": false,
             "bRecomputeTangents": true,
-            "bUseMikkTSpace": true,
+            "bUseMikkTSpace": false,
             "bComputeWeightedNormals": true,
             "bRemoveDegenerates": true,
             "bUseHighPrecisionTangentBasis": false,
@@ -70,6 +70,7 @@
           "bSupportUniformlyDistributedSampling": false
         }
       ],
+      "bHasVertexColors": true,
       "PhysicsAsset": {
         "ObjectName": "PhysicsAsset'BoatSmall_SK_PhysicsAsset'",
         "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK_PhysicsAsset.0"
@@ -90,30 +91,30 @@
     },
     "ImportedBounds": {
       "Origin": {
-        "X": -1.9407654,
-        "Y": 0.0,
-        "Z": 63.175194
+        "X": -1.5258789E-05,
+        "Y": -0.00016403198,
+        "Z": 47.774845
       },
       "BoxExtent": {
-        "X": 446.98914,
-        "Y": 112.8696,
-        "Z": 73.18743
+        "X": 431.43286,
+        "Y": 115.5589,
+        "Z": 77.3488
       },
-      "SphereRadius": 466.7925
+      "SphereRadius": 453.28912
     },
     "SkeletalMaterials": [
       {
-        "MaterialSlotName": "FoundationSiding",
+        "MaterialSlotName": "Rope",
         "Material": {
-          "ObjectName": "MaterialInstanceConstant'FoundationSiding'",
-          "ObjectPath": "Anvil/Content/Materials/Structures/FoundationSiding.0"
+          "ObjectName": "MaterialInstanceConstant'RopeBoat'",
+          "ObjectPath": "Anvil/Content/Materials/Props/RopeBoat.0"
         },
         "ImportedMaterialSlotName": null,
         "UVChannelData": {
           "bInitialized": true,
           "bOverrideDensities": false,
           "LocalUVDensities": [
-            184.3665,
+            19.33678,
             0.0,
             0.0,
             0.0
@@ -121,17 +122,17 @@
         }
       },
       {
-        "MaterialSlotName": "FoundationTrim",
+        "MaterialSlotName": "MediumBoat",
         "Material": {
-          "ObjectName": "MaterialInstanceConstant'FoundationTrim'",
-          "ObjectPath": "Anvil/Content/Materials/Structures/FoundationTrim.0"
+          "ObjectName": "MaterialInstanceConstant'MediumBoat'",
+          "ObjectPath": "Anvil/Content/Materials/Vehicles/MediumBoat.0"
         },
         "ImportedMaterialSlotName": null,
         "UVChannelData": {
           "bInitialized": true,
           "bOverrideDensities": false,
           "LocalUVDensities": [
-            328.9016,
+            463.788,
             0.0,
             0.0,
             0.0
@@ -145,15 +146,15 @@
           {
             "MaterialIndex": 0,
             "BaseIndex": 0,
-            "NumTriangles": 3192,
+            "NumTriangles": 288,
             "bRecomputeTangent": false,
-            "RecomputeTangentsVertexMaskChannel": "Green",
+            "RecomputeTangentsVertexMaskChannel": "Alpha",
             "bCastShadow": true,
             "bVisibleInRayTracing": true,
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
             "BaseVertexIndex": 0,
-            "NumVertices": 1991,
+            "NumVertices": 210,
             "MaxBoneInfluences": 1,
             "bUse16BitBoneIndex": false,
             "CorrespondClothAssetIndex": -1,
@@ -164,16 +165,16 @@
           },
           {
             "MaterialIndex": 1,
-            "BaseIndex": 9576,
-            "NumTriangles": 8440,
+            "BaseIndex": 864,
+            "NumTriangles": 3152,
             "bRecomputeTangent": false,
-            "RecomputeTangentsVertexMaskChannel": "Green",
+            "RecomputeTangentsVertexMaskChannel": "Alpha",
             "bCastShadow": true,
             "bVisibleInRayTracing": true,
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
-            "BaseVertexIndex": 1991,
-            "NumVertices": 4971,
+            "BaseVertexIndex": 210,
+            "NumVertices": 2727,
             "MaxBoneInfluences": 1,
             "bUse16BitBoneIndex": false,
             "CorrespondClothAssetIndex": -1,
@@ -183,7 +184,7 @@
             "ChunkedParentSectionIndex": -1
           }
         ],
-        "NumVertices": 6962,
+        "NumVertices": 2937,
         "NumTexCoords": 1,
         "VertexBufferGPUSkin": {
           "NumTexCoords": 0,

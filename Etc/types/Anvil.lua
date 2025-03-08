@@ -432,6 +432,16 @@ AVisGate = {}
 
 
 
+---@class AVisGrainMill : AVisStructure
+---@field GrainMillDataComponent UGrainMillDataComponent
+---@field CrankHandleMesh USkeletalMeshComponent
+---@field GrainMillMesh USkeletalMeshComponent
+---@field CrankHandleAnimInst UVisPowerUnitAnimInstance
+---@field GrainMillAnimInst UVisGrainMillAnimInstance
+AVisGrainMill = {}
+
+
+
 ---@class AVisHeatingStructure : AVisStructure
 ---@field HeatingDataComponent UHeatingDataComponent
 ---@field CombustionDataComponent UCombustionDataComponent
@@ -707,10 +717,10 @@ AVisStaticTorch = {}
 ---@field TeamDataComponent UTeamDataComponent
 ---@field StructureDataComponent UStructureDataComponent
 ---@field ScorchDataComponent UScorchDataComponent
+---@field DecayDataComponent UDecayDataComponent
 ---@field ArrowComponent UArrowComponent
 ---@field UseVolumeDecalComponent UDecalComponent
 ---@field GrassRemovalVolume UGrassRemovalVolumeComponent
----@field GeneratedScorchEffects int32
 ---@field ScorchEffectAssets TArray<UNiagaraSystem>
 AVisStructure = {}
 
@@ -790,6 +800,8 @@ AVisWorldEntrance = {}
 ---@class AVisualGlobals : AInfo
 ---@field FoundationDecorSnapRange float
 ---@field AutoCreateDynamicInstancedMeshGroup TArray<UStaticMesh>
+---@field TownAreaDecalMap TMap<EAnvilFactionId, UMaterialInterface>
+---@field FamilyAreaDecalMap TMap<EAnvilFactionId, UMaterialInterface>
 AVisualGlobals = {}
 
 
@@ -886,6 +898,9 @@ FAutoMoveState = {}
 ---@field ProcessedSteel int16
 ---@field ResourceFibreHeavy int16
 ---@field ProcessedBronze int16
+---@field ProcessedFlax int16
+---@field ProcessedLead int16
+---@field ProcessedResin int16
 FBuildSiteCostData = {}
 
 
@@ -1007,6 +1022,8 @@ FDeploymentFoodItem = {}
 ---@field ShieldDurabilityLossMultiplier float
 ---@field GuardMeterCostPerHit float
 ---@field ArmorMitigation uint8
+---@field ArmourDamageMultiplier float
+---@field SecondaryArmourDamageMultiplier float
 ---@field StabilityDamage float
 ---@field SecondaryStabilityDamage float
 ---@field StabilityMitigationPercent uint8
@@ -1063,6 +1080,7 @@ FHealthData = {}
 ---@class FHitConverterItemMeshInfo
 ---@field Meshes TArray<UStaticMesh>
 ---@field MaterialOverrides TArray<UMaterialInterface>
+---@field Offset FVector
 FHitConverterItemMeshInfo = {}
 
 
@@ -1279,6 +1297,19 @@ FWeatherManager = {}
 
 
 
+---@class FWinConditionStateResponse
+---@field StateVersion uint32
+---@field VictoryInfoList FVictoryInfo
+---@field FactionTotalNumCapturedKeeps uint16
+---@field FactionTotalNumTemples uint16
+---@field FactionUnixTimestampCultureVictoryStarted int64
+---@field NumCapturedKeepsForMilitaryVictory uint16
+---@field NumTemplesForCultureVictory uint16
+---@field CultureVictoryTimeRequiredSec uint32
+FWinConditionStateResponse = {}
+
+
+
 ---@class UActionButtonWidget : UUserWidget
 ---@field ActionButtonType EActionButtonType
 ---@field EntityActionType EAnvilEntityActionType
@@ -1310,6 +1341,7 @@ UAdminPlayerListItemData = {}
 ---@field SteamIdBox UAnvilButtonWidget
 ---@field TeleportToButton UAnvilButtonWidget
 ---@field BanButton UAnvilButtonWidget
+---@field SilverAllowanceText UTextBlock
 UAdminPlayerListItemWidget = {}
 
 function UAdminPlayerListItemWidget:OnTeleportToClicked() end
@@ -1599,10 +1631,13 @@ UBuildMenuWindow = {}
 
 ---@class UCentralMarketplaceListEntryWidget : UUserWidget
 ---@field CancelButton UButton
+---@field ItemImageSizeBox USizeBox
 ---@field ItemImage UImage
+---@field SubItemImage UImage
 ---@field QualityIconImage UImage
 ---@field ItemNameTextBlock UTextBlock
 ---@field BuyerSellerTextBlock UTextBlock
+---@field QuantityCrateSizeBox USizeBox
 ---@field QuantityTextBlock UTextBlock
 ---@field PriceTextBlock UTextBlock
 ---@field BuyFulfillButton UAnvilButtonWidget
@@ -1642,6 +1677,9 @@ UCentralMarketplaceOrderItemWidget = {}
 ---@field OrderGridPanelWidget UCentralMarketplaceOrderGridPanelWidget
 ---@field SelectedOrderItemNameText UTextBlock
 ---@field SelectedOrderItemImage UImage
+---@field SelectedOrderCrateImage UImage
+---@field SelectedOrderCrateCheckBox UCheckBox
+---@field OrderCratesTextBlock UTextBlock
 ---@field SelectedOrderItemQuantityEditableTextBox UEditableTextBox
 ---@field SelectedOrderItemPriceEditableTextBox UEditableTextBox
 ---@field SelectedOrderItemMinQualityComboBox UComboBoxString
@@ -1649,6 +1687,8 @@ UCentralMarketplaceOrderItemWidget = {}
 ---@field SelectedItemPlaceOrderButton UAnvilButtonWidget
 UCentralMarketplaceWidget = {}
 
+---@param bIsChecked boolean
+function UCentralMarketplaceWidget:OnSelectedOrderCrateCheckBoxStateChanged(bIsChecked) end
 function UCentralMarketplaceWidget:OnSelectedItemPlaceOrderButtonClicked() end
 function UCentralMarketplaceWidget:OnPlaceOrderTabButtonClicked() end
 function UCentralMarketplaceWidget:OnBuySellTabButtonClicked() end
@@ -1659,6 +1699,8 @@ function UCentralMarketplaceWidget:IsSelectedOrderItemQuantityEditableTextBoxEna
 function UCentralMarketplaceWidget:IsSelectedOrderItemPriceEditableTextBoxEnabled() end
 ---@return boolean
 function UCentralMarketplaceWidget:IsSelectedOrderItemMinQualityComboBoxEnabled() end
+---@return boolean
+function UCentralMarketplaceWidget:IsSelectedOrderCrateCheckBoxEnabled() end
 ---@return boolean
 function UCentralMarketplaceWidget:IsSelectedItemPlaceOrderButtonEnabled() end
 ---@return boolean
@@ -1837,6 +1879,8 @@ UDeploymentScreen = {}
 
 function UDeploymentScreen:OnLogoutButtonClicked() end
 function UDeploymentScreen:OnFamilyCenterDeployButtonClicked() end
+---@return boolean
+function UDeploymentScreen:IsFamilyCenterDeployButtonEnabled() end
 ---@return ESlateVisibility
 function UDeploymentScreen:GetFamilyCenterDeployWidgetVisibility() end
 ---@return FText
@@ -2035,6 +2079,15 @@ UGameplayScreen = {}
 
 
 
+---@class UGrainMillWindow : UStructureWindow
+---@field InputItemGrid UInventoryWidget
+---@field OutputItemGrid UInventoryWidget
+---@field RecipePreviewImage UImage
+---@field InvalidRecipeIcon FSlateBrush
+UGrainMillWindow = {}
+
+
+
 ---@class UGrassRemovalVolumeComponent : USceneComponent
 ---@field Extents FVector
 ---@field bDeferGrassUpdate boolean
@@ -2067,6 +2120,14 @@ function UGridItemWidget:OnClicked() end
 ---@field ItemSlotWidgetType TSubclassOf<UGridItemWidget>
 ---@field PreviewItemCount int32
 UGridPanelWidget = {}
+
+
+
+---@class UHUDBuildSiteWidget : UUserWidget
+---@field ResourceWidgetClass TSubclassOf<UResourceWidget>
+---@field RequiredToolText UTextBlock
+---@field ResourcesContainer UVerticalBox
+UHUDBuildSiteWidget = {}
 
 
 
@@ -2163,17 +2224,21 @@ UHUDStatsWidget = {}
 ---@field GuardStrengthRightIcon UImage
 ---@field PlayerStatusText UTextBlock
 ---@field WinConditionCanvas UCanvasPanel
----@field WinConditionText UTextBlock
 ---@field WinConditionLogo UImage
+---@field VictoryTypeLogo UImage
 ---@field PlayerVitality UVitalityStatusWidget
 ---@field HorseVitality UVitalityStatusWidget
 ---@field InventoryHUD UInventoryHUDWidget
 ---@field DisclaimerCanvas UCanvasPanel
 ---@field DisclaimerText UTextBlock
+---@field BuildSiteCanvas UCanvasPanel
 ---@field PlacementStatusWidget UHUDPlacementStatusWidget
+---@field BuildSiteWidget UHUDBuildSiteWidget
 ---@field AranicLogo UTexture2D
 ---@field MirrishLogo UTexture2D
 ---@field NovanLogo UTexture2D
+---@field MilitaryVictoryLogo UTexture2D
+---@field CultureVictoryLogo UTexture2D
 ---@field GuardStrengthEmptyIcon FSlateBrush
 ---@field GuardStrengthFillIcon FSlateBrush
 ---@field InteractionProgressBar1 UProgressBar
@@ -2185,6 +2250,7 @@ UHUDStatsWidget = {}
 UHUDWidget = {}
 
 function UHUDWidget:PlayWinConditionAnimation() end
+function UHUDWidget:PlayBlackoutAnimation() end
 ---@return ESlateVisibility
 function UHUDWidget:GetWeatherStatsTextVisibility() end
 ---@return FText
@@ -2475,9 +2541,16 @@ function UMapPostWidget:GetNetVoteCountText() end
 ---@field SeasonText UTextBlock
 ---@field TimeOfDayText UTextBlock
 ---@field MapPostContainerWidget UMapPostContainerWidget
+---@field WinConditionWidget UWinConditionWidget
 ---@field DisplayedBeaconTowerPlayerInfos TArray<UMapIcon>
 UMapWidget = {}
 
+---@return FText
+function UMapWidget:GetTimeOfDayText() end
+---@return ESlateVisibility
+function UMapWidget:GetSeasonTextVisibility() end
+---@return FText
+function UMapWidget:GetSeasonText() end
 ---@return ESlateVisibility
 function UMapWidget:GetObjectiveBorderVisibility() end
 
@@ -2622,8 +2695,18 @@ function UPauseScreen:OnCodeOfConductButtonClicked() end
 ---@class UPlayerInventoryWidget : UUserWidget
 ---@field PlayerInventory UInventoryWidget
 ---@field Header UHeaderContainer
+---@field bShowAvatarSubmitButton boolean
+---@field SubmitAvatarButton UButton
+---@field AvatarHeader UHeaderContainer
+---@field AvatarImage UImage
+---@field AvatarQualityImage UImage
+---@field AvatarNameText UTextBlock
+---@field AvatarDescriptionText UTextBlock
 UPlayerInventoryWidget = {}
 
+function UPlayerInventoryWidget:OnSubmitAvatarClicked() end
+---@return boolean
+function UPlayerInventoryWidget:IsSubmitAvatarButtonEnabled() end
 
 
 ---@class UPledgedPlayerBox : UScrollBox
@@ -2638,7 +2721,6 @@ function UPledgedPlayerBox:OnVoteChecked(bIsChecked, PlayerId) end
 ---@class UPledgedPlayerListItem : UUserWidget
 ---@field PlayerNameText UTextBlock
 ---@field PlayerStatusText UTextBlock
----@field PlayerSilverText UTextBlock
 ---@field VoteButton UCheckBox
 ---@field OnlineStatusIcon UImage
 ---@field OnlineStatusSilverColorMap TMap<EAnvilPlayerOnlineStatus, FSlateColor>
@@ -3001,6 +3083,13 @@ UVisGateAnimInstance = {}
 
 
 
+---@class UVisGrainMillAnimInstance : UAnimInstance
+---@field CurrentCoarseness float
+---@field Power float
+UVisGrainMillAnimInstance = {}
+
+
+
 ---@class UVisInstancedStockpileComponent : UInstancedStaticMeshComponent
 ---@field CurrentInstancedMesh UInstancedStaticMeshComponent
 ---@field ItemCodeNameInstancedMeshMap TMap<int32, UInstancedStaticMeshComponent>
@@ -3204,11 +3293,7 @@ UVisTeamMeshComponent = {}
 
 
 ---@class UVisTownAreaMarkerDecalComponent : UDecalComponent
----@field TeamDecalAranic UMaterialInterface
----@field TeamDecalMirrish UMaterialInterface
----@field TeamDecalNovan UMaterialInterface
 UVisTownAreaMarkerDecalComponent = {}
-
 
 
 ---@class UVisVehicleAnimInstance : UAnimInstance
@@ -3242,6 +3327,72 @@ UVitalityStatusWidget = {}
 ---@field IconButton UButton
 UWildSpawnPointMapIcon = {}
 
+
+
+---@class UWinConditionWidget : UUserWidget
+---@field HeaderContainer UHeaderContainer
+---@field Faction0MilitaryProgressBar UProgressBar
+---@field Faction1MilitaryProgressBar UProgressBar
+---@field Faction2MilitaryProgressBar UProgressBar
+---@field Faction0MilitaryTextBox UTextBlock
+---@field Faction1MilitaryTextBox UTextBlock
+---@field Faction2MilitaryTextBox UTextBlock
+---@field Faction0CultureProgressBar UProgressBar
+---@field Faction1CultureProgressBar UProgressBar
+---@field Faction2CultureProgressBar UProgressBar
+---@field Faction0CultureTextBox UTextBlock
+---@field Faction1CultureTextBox UTextBlock
+---@field Faction2CultureTextBox UTextBlock
+---@field Faction0CultureTimerProgressBar UProgressBar
+---@field Faction1CultureTimerProgressBar UProgressBar
+---@field Faction2CultureTimerProgressBar UProgressBar
+---@field ProgressBarNormalColour FLinearColor
+---@field ProgressBarVictoryAchievedColour FLinearColor
+---@field CachedWinConditionTooltip UTooltipWidget
+UWinConditionWidget = {}
+
+---@return FText
+function UWinConditionWidget:GetFaction2MilitaryText() end
+---@return FLinearColor
+function UWinConditionWidget:GetFaction2MilitaryProgressBarColour() end
+---@return float
+function UWinConditionWidget:GetFaction2MilitaryProgress() end
+---@return float
+function UWinConditionWidget:GetFaction2CultureTimerProgress() end
+---@return FText
+function UWinConditionWidget:GetFaction2CultureText() end
+---@return FLinearColor
+function UWinConditionWidget:GetFaction2CultureProgressBarColour() end
+---@return float
+function UWinConditionWidget:GetFaction2CultureProgress() end
+---@return FText
+function UWinConditionWidget:GetFaction1MilitaryText() end
+---@return FLinearColor
+function UWinConditionWidget:GetFaction1MilitaryProgressBarColour() end
+---@return float
+function UWinConditionWidget:GetFaction1MilitaryProgress() end
+---@return float
+function UWinConditionWidget:GetFaction1CultureTimerProgress() end
+---@return FText
+function UWinConditionWidget:GetFaction1CultureText() end
+---@return FLinearColor
+function UWinConditionWidget:GetFaction1CultureProgressBarColour() end
+---@return float
+function UWinConditionWidget:GetFaction1CultureProgress() end
+---@return FText
+function UWinConditionWidget:GetFaction0MilitaryText() end
+---@return FLinearColor
+function UWinConditionWidget:GetFaction0MilitaryProgressBarColour() end
+---@return float
+function UWinConditionWidget:GetFaction0MilitaryProgress() end
+---@return float
+function UWinConditionWidget:GetFaction0CultureTimerProgress() end
+---@return FText
+function UWinConditionWidget:GetFaction0CultureText() end
+---@return FLinearColor
+function UWinConditionWidget:GetFaction0CultureProgressBarColour() end
+---@return float
+function UWinConditionWidget:GetFaction0CultureProgress() end
 
 
 ---@class UWorldBeaconTowerMapIcon : UWorldEntityMapIcon

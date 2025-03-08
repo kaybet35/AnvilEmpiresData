@@ -15,11 +15,17 @@ UCentralMarketplaceWidget::UCentralMarketplaceWidget() : UUserWidget(FObjectInit
     this->OrderGridPanelWidget = NULL;
     this->SelectedOrderItemNameText = NULL;
     this->SelectedOrderItemImage = NULL;
+    this->SelectedOrderCrateImage = NULL;
+    this->SelectedOrderCrateCheckBox = NULL;
+    this->OrderCratesTextBlock = NULL;
     this->SelectedOrderItemQuantityEditableTextBox = NULL;
     this->SelectedOrderItemPriceEditableTextBox = NULL;
     this->SelectedOrderItemMinQualityComboBox = NULL;
     this->SelectedOrderItemTotalPriceTextBlock = NULL;
     this->SelectedItemPlaceOrderButton = NULL;
+}
+
+void UCentralMarketplaceWidget::OnSelectedOrderCrateCheckBoxStateChanged(const bool bIsChecked) {
 }
 
 void UCentralMarketplaceWidget::OnSelectedItemPlaceOrderButtonClicked() {
@@ -43,6 +49,10 @@ bool UCentralMarketplaceWidget::IsSelectedOrderItemPriceEditableTextBoxEnabled()
 }
 
 bool UCentralMarketplaceWidget::IsSelectedOrderItemMinQualityComboBoxEnabled() {
+    return false;
+}
+
+bool UCentralMarketplaceWidget::IsSelectedOrderCrateCheckBoxEnabled() {
     return false;
 }
 

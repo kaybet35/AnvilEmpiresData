@@ -3,6 +3,6 @@
 
 class ABPVisualGlobals_C : public AVisualGlobals
 {
-}; // Size: 0x2A8
+}; // Size: 0x348
 
 #endif

@@ -41,16 +41,28 @@ public:
     int32 TownHallId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UEntityTemplate> TownTradeResource;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 TownTradeResourceVisVar;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MarkerFamilyId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 StructureFamilyId;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int64 PledgedPlayerId;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float RemainingTimeUntilCollapse_Sec;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bShouldDecay;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bCanDecayBePrevented;
+    bool bDecaying;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TimeUntilDecaySec;
@@ -76,9 +88,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 MaxLivestockCount;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    int64 PledgedPlayerId;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FarmWaterDuration;
     
@@ -101,7 +110,16 @@ public:
     TArray<EAnvilUnderworldModuleEdgeType> ModuleEdgeList;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float RemainingTimeUntilCollapse_Sec;
+    bool bIsGrainMill;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float CurrentCoarseness;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float ProductionSpeed;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float ProductionTime;
     
     R2_API FStructureStats();
 };

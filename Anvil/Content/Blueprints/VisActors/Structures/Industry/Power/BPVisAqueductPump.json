@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisAqueductPump_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.27"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.28"
       }
     },
     "SuperStruct": {
@@ -197,7 +197,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisAqueductPump_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.40"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.41"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconIndustryAqueductWaterpump'",
@@ -206,23 +206,27 @@
       "BuildSiteCategory": "EBuildSiteCategory::Water",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisAqueductPump_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.37"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.38"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisAqueductPump_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.6"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisAqueductPump_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.36"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.37"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisAqueductPump_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.35"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.36"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisAqueductPump_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.12"
+      },
+      "DecayDataComponent": {
+        "ObjectName": "DecayDataComponent'Default__BPVisAqueductPump_C:DecayDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.4"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisAqueductPump_C:ArrowComponent'",
@@ -234,7 +238,7 @@
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisAqueductPump_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.5"
       },
       "UseWindowType": "EHUDWindowType::GenericStructure",
       "InteractionIcon": {
@@ -278,6 +282,12 @@
     }
   },
   {
+    "Type": "DecayDataComponent",
+    "Name": "DecayDataComponent",
+    "Outer": "Default__BPVisAqueductPump_C",
+    "Class": "UScriptClass'DecayDataComponent'"
+  },
+  {
     "Type": "GrassRemovalVolumeComponent",
     "Name": "GrassRemovalVolume",
     "Outer": "Default__BPVisAqueductPump_C",
@@ -285,7 +295,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisAqueductPump_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.30"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.31"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisAqueductPump_C:ArrowComponent'",
@@ -391,7 +401,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisAqueductPump_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.11"
       },
       "VariableGuid": "17C46D67-470034C9-D210D5B4-D87F5328",
       "InternalVariableName": "DefaultSceneRoot"
@@ -409,26 +419,26 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisBalljointComponent'BPVisAqueductPump_C:VisBalljointEnd_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.38"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.39"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.20"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.21"
         },
         {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.22"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.23"
         },
         {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.25"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.26"
         },
         {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.26"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.27"
         }
       ],
       "VariableGuid": "30816C29-4B2E423E-0F525DA8-AAD2CB8F",
@@ -447,7 +457,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisAqueductPump_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.28"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.29"
       },
       "VariableGuid": "5DC1CE9F-4507DA44-43084E95-7BA35285",
       "InternalVariableName": "SkeletalMesh"
@@ -465,14 +475,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisAqueductPump_C:WaterFall_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.34"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.35"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.18"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.19"
         }
       ],
       "VariableGuid": "9F602D4B-45EB4DEB-4190C3BF-CD31A893",
@@ -491,7 +501,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisAqueductPump_C:IndustryAqueduct_WaterPump_WaterFall_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.32"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.33"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -511,7 +521,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisAqueductPump_C:Niagara_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.8"
       },
       "VariableGuid": "263CD495-49E306EA-A739B485-52573285",
       "InternalVariableName": "Niagara"
@@ -529,7 +539,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisAqueductPump_C:Niagara1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.7"
       },
       "VariableGuid": "24E83DFE-4C9A3E9E-FCBFBEB6-179F835A",
       "InternalVariableName": "Niagara1"
@@ -547,14 +557,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisAqueductPump_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.45"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.46"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.15"
         }
       ],
       "VariableGuid": "4AD526A6-4723BCBC-83390695-154B23DF",
@@ -573,7 +583,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisAqueductPump_C:BalljointBase_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.41"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.42"
       },
       "VariableGuid": "1605D14E-44DACBD6-85EED6A5-03B28763",
       "InternalVariableName": "BalljointBase"
@@ -591,22 +601,22 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisCanalWaterControllerComponent'BPVisAqueductPump_C:VisCanalWaterController_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.39"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.40"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.24"
         },
         {
+          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.25"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.17"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.18"
         }
       ],
       "VariableGuid": "70EF09E2-4DB157CE-ED95C589-DC121791",
@@ -625,7 +635,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisAqueductPump_C:BalljointTrim_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.42"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.43"
       },
       "VariableGuid": "88A513BF-44B966BA-6F3006B0-EB3A18FE",
       "InternalVariableName": "BalljointTrim"
@@ -643,7 +653,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisAqueductPump_C:MidMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.33"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.34"
       },
       "VariableGuid": "B978C62E-4395863D-F71DCFBF-8C9A64F8",
       "InternalVariableName": "MidMesh"
@@ -661,7 +671,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisAqueductPump_C:EndMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.31"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.32"
       },
       "VariableGuid": "E925241E-421446A6-860DA0B9-D9664349",
       "InternalVariableName": "EndMesh"
@@ -679,7 +689,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisAqueductPump_C:LeftTrim_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.43"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.44"
       },
       "VariableGuid": "471943CD-433E8B6F-A0686884-EF1BA2F1",
       "InternalVariableName": "LeftTrim"
@@ -697,7 +707,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisAqueductPump_C:RightTrim_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.44"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.45"
       },
       "VariableGuid": "A0822883-476366B6-15364FA4-9FDF2D64",
       "InternalVariableName": "RightTrim"
@@ -712,86 +722,86 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.19"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.20"
         },
         {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.21"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.22"
         },
         {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.14"
         },
         {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.16"
         },
         {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.16"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.17"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.19"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.21"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.13"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.20"
         },
         {
-          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.22"
         },
         {
-          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.25"
         },
         {
-          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.14"
         },
         {
-          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.15"
         },
         {
-          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.16"
         },
         {
+          "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.17"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.18"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.19"
         },
         {
           "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.17"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.18"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisAqueductPump_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.13"
       }
     }
   },
@@ -921,7 +931,7 @@
     "Properties": {
       "PowerUnitDataComponent": {
         "ObjectName": "PowerUnitDataComponent'BPVisAqueductPump_C:VisBalljointEnd_GEN_VARIABLE.PowerUnitDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.9"
       },
       "RelativeLocation": {
         "X": 0.0,
@@ -944,15 +954,15 @@
       "ShiftDelta": 16.0,
       "PowerUnitDataComponent": {
         "ObjectName": "PowerUnitDataComponent'BPVisAqueductPump_C:VisCanalWaterController_GEN_VARIABLE.PowerUnitDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.10"
       },
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'BPVisAqueductPump_C:VisCanalWaterController_GEN_VARIABLE.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.29"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.30"
       },
       "WellDataComponent": {
         "ObjectName": "WellDataComponent'BPVisAqueductPump_C:VisCanalWaterController_GEN_VARIABLE.WellDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.46"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisAqueductPump.47"
       },
       "RelativeLocation": {
         "X": 0.0,

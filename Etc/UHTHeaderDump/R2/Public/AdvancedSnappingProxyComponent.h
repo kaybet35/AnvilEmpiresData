@@ -17,7 +17,7 @@ public:
     bool bNoOverlap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bOverrideAngleOverlapMin;
+    uint8 OverridedAngleOverlapPriority;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OverridedAngleOverlapMin;

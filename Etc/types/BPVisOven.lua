@@ -12,12 +12,6 @@
 ---@field RefiningAssets UVisStaticMeshComponent
 ---@field RefiningAssets1 UVisStaticMeshComponent
 ---@field Fire USceneComponent
----@field ScorchEffect5 UScorchEffectComponent
----@field ScorchEffect4 UScorchEffectComponent
----@field ScorchEffect1 UScorchEffectComponent
----@field ScorchEffect7 UScorchEffectComponent
----@field ScorchEffect8 UScorchEffectComponent
----@field ScorchEffect6 UScorchEffectComponent
 ---@field VisTeamMesh UVisTeamMeshComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
 ABPVisOven_C = {}

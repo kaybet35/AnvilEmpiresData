@@ -1,12 +1,21 @@
 [
   {
+    "Type": "AdvancedSnappingProxyComponent",
+    "Name": "AdvancedSnappingProxyComponent_0",
+    "Outer": "Default__HandcrankAdapterFootprint_C",
+    "Class": "UScriptClass'AdvancedSnappingProxyComponent'",
+    "Properties": {
+      "OverridedAngleOverlapMin": 90.0
+    }
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "HandcrankAdapterFootprint_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'HandcrankAdapterFootprint_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.5"
       }
     },
     "SuperStruct": {
@@ -35,7 +44,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "HandcrankAdapterFootprint_C'Default__HandcrankAdapterFootprint_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.1"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.2"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -71,7 +80,7 @@
         {
           "Comp": {
             "ObjectName": "SnapPointProxyComponent'Default__HandcrankAdapterFootprint_C:SnapPointProxyComponent_1'",
-            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.6"
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.7"
           },
           "bHighlight": false,
           "bHide": false,
@@ -80,7 +89,16 @@
         {
           "Comp": {
             "ObjectName": "SnapPointProxyComponent'Default__HandcrankAdapterFootprint_C:SnapPointProxyComponent_0'",
-            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.5"
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.6"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": false
+        },
+        {
+          "Comp": {
+            "ObjectName": "AdvancedSnappingProxyComponent'Default__HandcrankAdapterFootprint_C:AdvancedSnappingProxyComponent_0'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.0"
           },
           "bHighlight": false,
           "bHide": false,
@@ -107,7 +125,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'HandcrankAdapterFootprint_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.3"
       },
       "VariableGuid": "4804B943-40347BA1-5037A49D-2852A039",
       "InternalVariableName": "DefaultSceneRoot"
@@ -122,18 +140,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'HandcrankAdapterFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.3"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.4"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'HandcrankAdapterFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.3"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.4"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'HandcrankAdapterFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/HandcrankAdapterFootprint.4"
       }
     }
   },
@@ -147,6 +165,11 @@
         "X": 0.0,
         "Y": 0.0,
         "Z": 100.0
+      },
+      "Rotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
       },
       "Extents": {
         "X": 30.0,
@@ -166,11 +189,11 @@
       "Position": {
         "X": 0.0,
         "Y": 0.0,
-        "Z": 65.0
+        "Z": 50.0
       },
       "Rotation": {
         "Pitch": 0.0,
-        "Yaw": 180.0,
+        "Yaw": 90.0,
         "Roll": 0.0
       },
       "Extents": {
@@ -178,7 +201,8 @@
         "Y": 30.0,
         "Z": 30.0
       },
-      "SnappingChannel": "EAnvilSnappingChannelType::PowerStart"
+      "SnappingChannel": "EAnvilSnappingChannelType::PowerStart",
+      "bPointOnLine": true
     }
   }
 ]

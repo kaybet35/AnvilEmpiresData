@@ -38,6 +38,14 @@ EAnvilArmourType = {
     EAnvilArmourType_MAX = 4,
 }
 
+---@enum EAnvilAvatarType
+EAnvilAvatarType = {
+    Default = 0,
+    Soldier = 1,
+    NumTypes = 2,
+    EAnvilAvatarType_MAX = 3,
+}
+
 ---@enum EAnvilBuildAreaType
 EAnvilBuildAreaType = {
     TownArea = 0,
@@ -62,8 +70,9 @@ EAnvilBuildLocationType = {
     Shore = 7,
     Deployed = 8,
     AdditionalCollisionAllowWater = 9,
-    NumTypes = 10,
-    EAnvilBuildLocationType_MAX = 11,
+    RequiresEnclosure = 10,
+    NumTypes = 11,
+    EAnvilBuildLocationType_MAX = 12,
 }
 
 ---@enum EAnvilBuildStructureType
@@ -92,7 +101,10 @@ EAnvilCharacterStance = {
     HoldingLadderFront = 9,
     HoldingLadderRear = 10,
     OnHandcart = 11,
-    EAnvilCharacterStance_MAX = 12,
+    OnHandCrank = 12,
+    OnCoarsenessKnob = 13,
+    NumTypes = 14,
+    EAnvilCharacterStance_MAX = 15,
 }
 
 ---@enum EAnvilChatType
@@ -192,11 +204,14 @@ EAnvilDamageType = {
     Hands = 6,
     Unmitigated = 7,
     Animal = 8,
-    Bleed = 9,
-    Decay = 10,
-    Admin = 11,
-    NumTypes = 12,
-    EAnvilDamageType_MAX = 13,
+    Cleaving = 9,
+    Crushing = 10,
+    Burning = 11,
+    Bleed = 12,
+    Decay = 13,
+    Admin = 14,
+    NumTypes = 15,
+    EAnvilDamageType_MAX = 16,
 }
 
 ---@enum EAnvilDismantleStatus
@@ -315,7 +330,8 @@ EAnvilInputEventType = {
     ReinforceStructure = 55,
     SwitchSeat = 56,
     StartCooking = 57,
-    EAnvilInputEventType_MAX = 58,
+    SubmitAvatar = 58,
+    EAnvilInputEventType_MAX = 59,
 }
 
 ---@enum EAnvilInputResponseType
@@ -340,11 +356,10 @@ EAnvilInventoryStackRule = {
 
 ---@enum EAnvilItemDurabilityType
 EAnvilItemDurabilityType = {
-    None = 0,
-    Default = 1,
-    Heat = 2,
-    DryingProgress = 3,
-    EAnvilItemDurabilityType_MAX = 4,
+    Default = 0,
+    Heat = 1,
+    Avatar = 2,
+    EAnvilItemDurabilityType_MAX = 3,
 }
 
 ---@enum EAnvilItemFlag
@@ -393,7 +408,8 @@ EAnvilItemSlotBackgroundType = {
     AnimalEquipment = 8,
     HeavyTool = 9,
     Shield = 10,
-    EAnvilItemSlotBackgroundType_MAX = 11,
+    Avatar = 11,
+    EAnvilItemSlotBackgroundType_MAX = 12,
 }
 
 ---@enum EAnvilItemTag
@@ -428,8 +444,9 @@ EAnvilItemTag = {
     MountedWeapon = 27,
     HeavyTool = 28,
     ShieldStorage = 29,
-    NumTypes = 30,
-    EAnvilItemTag_MAX = 31,
+    Avatar = 30,
+    NumTypes = 31,
+    EAnvilItemTag_MAX = 32,
 }
 
 ---@enum EAnvilMapId
@@ -493,32 +510,6 @@ EAnvilPhysicalSurfaceType = {
     EAnvilPhysicalSurfaceType_MAX = 18,
 }
 
----@enum EAnvilPlacementInfoFlag
-EAnvilPlacementInfoFlag = {
-    ContextNone = 0,
-    InRichSoil = 1,
-    BeaconTowerLink = 2,
-    BeaconTowerTownHallLink = 3,
-    InFamilyArea = 4,
-    ProximityToRoad = 5,
-    DistanceToTown = 6,
-    RareFoodArea_Begin = 7,
-    InRareFoodArea_Deer = 8,
-    InRareFoodArea_Boar = 9,
-    InRareFoodArea_Wheat = 10,
-    InRareFoodArea_Cabbage = 11,
-    InRareFoodArea_Coal = 12,
-    InRareFoodArea_Clay = 13,
-    InRareFoodArea_None = 14,
-    RareFoodArea_End = 15,
-    BeaconDetectionRangeNormal = 16,
-    BeaconDetectionRangeHigh = 17,
-    BeaconDetectionRangeVeryHigh = 18,
-    BeaconDetectionRangeHighest = 19,
-    NumTypes = 20,
-    EAnvilPlacementInfoFlag_MAX = 21,
-}
-
 ---@enum EAnvilPlacementStatus
 EAnvilPlacementStatus = {
     Valid = 0,
@@ -542,32 +533,33 @@ EAnvilPlacementStatus = {
     TooFarFromPlayer = 18,
     NotAtCorrectBuildLocationType = 19,
     RequiresDeployable = 20,
-    RequiresFamilyArea = 21,
-    RequiresFamily = 22,
-    OnlyOneFamilyCenterPerTown = 23,
-    TooCloseTogether = 24,
-    TooCloseToWildSpawn = 25,
-    TooCloseToWater = 26,
-    VehicleMustBeEmpty = 27,
-    RequiresEnclosure = 28,
-    RequiresValidSupport = 29,
-    RequiresFoundation = 30,
-    RequiresLandscape = 31,
-    RequiresWater = 32,
-    RequiresSnappping = 33,
-    YouMustBelongToFamily = 34,
-    NotAtFullHealth = 35,
-    CantBuildBorderRegion = 36,
-    TooCloseToBorder = 37,
-    MustBePledgedToTown = 38,
-    RequiresNearbyPlayers = 39,
-    RequiresMorePopulation = 40,
-    RequiresMoreTents = 41,
-    AreaMustBeEmpty = 42,
-    MustBeUniquePerTown = 43,
-    RequiresTerritoryOwnership = 44,
-    RequiresPledgeToBuildInWilderness = 45,
-    EAnvilPlacementStatus_MAX = 46,
+    RequiresFamily = 21,
+    OnlyOneFamilyCenterPerTown = 22,
+    TooCloseTogether = 23,
+    TooCloseToWildSpawn = 24,
+    TooCloseToWater = 25,
+    VehicleMustBeEmpty = 26,
+    RequiresEnclosure = 27,
+    RequiresValidSupport = 28,
+    RequiresFoundation = 29,
+    RequiresLandscape = 30,
+    RequiresWater = 31,
+    RequiresSnappping = 32,
+    YouMustBelongToFamily = 33,
+    NotAtFullHealth = 34,
+    CantBuildBorderRegion = 35,
+    TooCloseToBorder = 36,
+    MustBePledgedToTown = 37,
+    RequiresNearbyPlayers = 38,
+    RequiresMorePopulation = 39,
+    RequiresMoreTents = 40,
+    AreaMustBeEmpty = 41,
+    MustBeUniquePerTown = 42,
+    RequiresTerritoryOwnership = 43,
+    RequiresPledgeToBuildInWilderness = 44,
+    LimitTouchingGroupCountReached = 45,
+    RequiresAgeTime = 46,
+    EAnvilPlacementStatus_MAX = 47,
 }
 
 ---@enum EAnvilPlayerAimMeshType
@@ -613,7 +605,8 @@ EAnvilPlayerVisEventType = {
     RequestToJoinFamily = 6,
     InviteToJoinFamily = 7,
     CreateDebugMapPost = 8,
-    EAnvilPlayerVisEventType_MAX = 9,
+    VictoryInfoUpdate = 9,
+    EAnvilPlayerVisEventType_MAX = 10,
 }
 
 ---@enum EAnvilPledgedPlayerStatus
@@ -634,8 +627,7 @@ EAnvilPowerUnitType = {
     Pipe = 0,
     Source = 1,
     Sink = 2,
-    Extern = 3,
-    EAnvilPowerUnitType_MAX = 4,
+    EAnvilPowerUnitType_MAX = 3,
 }
 
 ---@enum EAnvilProfileNameCheckType
@@ -685,6 +677,14 @@ EAnvilRareResourceAreaType = {
     EAnvilRareResourceAreaType_MAX = 8,
 }
 
+---@enum EAnvilReservationTimeoutType
+EAnvilReservationTimeoutType = {
+    Login = 0,
+    BorderTravelReturn = 1,
+    UnderworldTravelReturn = 2,
+    EAnvilReservationTimeoutType_MAX = 3,
+}
+
 ---@enum EAnvilResourceType
 EAnvilResourceType = {
     Default = 0,
@@ -699,7 +699,8 @@ EAnvilScorchState = {
     OnFire = 1,
     OnFireGrowing = 2,
     Cooling = 3,
-    EAnvilScorchState_MAX = 4,
+    NumTypes = 4,
+    EAnvilScorchState_MAX = 5,
 }
 
 ---@enum EAnvilSignPostVisualType
@@ -728,26 +729,27 @@ EAnvilSimActivityState = {
     FiringCannon = 12,
     UsingHandTool = 13,
     BuildingWithHandTool = 14,
-    Plundering = 15,
-    HorseRiding = 16,
-    Eating = 17,
-    Feeding = 18,
-    Farming = 19,
-    AttachRope = 20,
-    FishingWaiting = 21,
-    FishingHooked = 22,
-    FishingSuccess = 23,
-    FishingFailed = 24,
-    StunnedOnGround = 25,
-    StunnedGettingUp = 26,
-    EnteringAltAttackMode = 27,
-    ExitingAltAttackMode = 28,
-    EnteringAltShieldMode = 29,
-    ExitingAltShieldMode = 30,
-    Drowning = 31,
-    ChainedAttackRecovery = 32,
-    NumStates = 33,
-    EAnvilSimActivityState_MAX = 34,
+    Winding = 15,
+    Plundering = 16,
+    HorseRiding = 17,
+    Eating = 18,
+    Feeding = 19,
+    Farming = 20,
+    AttachRope = 21,
+    FishingWaiting = 22,
+    FishingHooked = 23,
+    FishingSuccess = 24,
+    FishingFailed = 25,
+    StunnedOnGround = 26,
+    StunnedGettingUp = 27,
+    EnteringAltAttackMode = 28,
+    ExitingAltAttackMode = 29,
+    EnteringAltShieldMode = 30,
+    ExitingAltShieldMode = 31,
+    Drowning = 32,
+    ChainedAttackRecovery = 33,
+    NumStates = 34,
+    EAnvilSimActivityState_MAX = 35,
 }
 
 ---@enum EAnvilSnappingChannelType
@@ -769,18 +771,21 @@ EAnvilSnappingChannelType = {
     PowerEnd = 14,
     PowerRopeStart = 15,
     PowerRopeEnd = 16,
-    PowerConvertedAnvilStart = 17,
-    PowerConvertedAnvilEnd = 18,
-    PowerConvertedHeatStart = 19,
-    PowerConvertedHeatEnd = 20,
-    DebugPowerSource = 21,
-    NaturalWaterRequired = 22,
-    NaturalWaterOptional = 23,
-    PowerConvertedWoodChoppingStationStart = 24,
-    PowerConvertedWoodChoppingStationEnd = 25,
-    PowerConvertedSmashingPlateStart = 26,
-    PowerConvertedSmashingPlateEnd = 27,
-    EAnvilSnappingChannelType_MAX = 28,
+    PowerRopeIgnore = 17,
+    PowerConvertedAnvilStart = 18,
+    PowerConvertedAnvilEnd = 19,
+    PowerConvertedHeatStart = 20,
+    PowerConvertedHeatEnd = 21,
+    DebugPowerSource = 22,
+    NaturalWaterRequired = 23,
+    NaturalWaterOptional = 24,
+    PowerConvertedWoodChoppingStationStart = 25,
+    PowerConvertedWoodChoppingStationEnd = 26,
+    PowerConvertedSmashingPlateStart = 27,
+    PowerConvertedSmashingPlateEnd = 28,
+    PowerConvertedHandCrankStart = 29,
+    PowerConvertedHandCrankEnd = 30,
+    EAnvilSnappingChannelType_MAX = 31,
 }
 
 ---@enum EAnvilSpawnType
@@ -884,47 +889,47 @@ EAnvilStatusMessageType = {
     BedAlreadyClaimed = 84,
     BedMustHaveHouseAtTown = 85,
     BedClaimCleared = 86,
-    BedNotEnclosed = 87,
-    HorseNotHungry = 88,
-    NoItemsForPacking = 89,
-    TooManyOrFewItemsForPacking = 90,
-    NoContainerForPacking = 91,
-    NotAllowedInBorderZone = 92,
-    SlotOccupied = 93,
-    NotEnoughSilver = 94,
-    TravelDestinationUnavailable = 95,
-    UnableToIncreaseStatusUsingSilver = 96,
-    RemovedFromFamily = 97,
-    MustBeFamilyLeader = 98,
-    FamilyLockExpiry = 99,
-    TargetInUse = 100,
-    ItemInUse = 101,
-    MissingEquipment = 102,
-    TooSoonToUse = 103,
-    HitConverterOutputNotSupported = 104,
-    OnlyOnePerFamily = 105,
-    TargetImmuneFriendlyFire = 106,
-    TargetImmuneEveryone = 107,
-    ToolTierTooLow = 108,
-    ToolBroke = 109,
-    StructureIsBurnt = 110,
-    InventoryMustBeEmpty = 111,
-    PlayerDeploying = 112,
-    BedNotInYourFamilyHouse = 113,
-    PledgedToTown = 114,
-    VehicleCannotWorldEntranceTravel = 115,
-    MustBeResetBeforeFiring = 116,
-    NoProjectileLoaded = 117,
-    CantArmDueToHeavyTool = 118,
-    ItemDisarmedDueToHeavyTool = 119,
-    CantArmDueToHeavyArmour = 120,
-    TemperatureTooLowToGather = 121,
-    TemperatureTooLowToPlant = 122,
-    TooSoonToTravel = 123,
-    OutOfAmmunition = 124,
-    NotValidSupportToReinforce = 125,
-    OccupantMustbeMounted = 126,
-    RopeDetachFailed_HandsFull = 127,
+    HorseNotHungry = 87,
+    NoItemsForPacking = 88,
+    TooManyOrFewItemsForPacking = 89,
+    NoContainerForPacking = 90,
+    NotAllowedInBorderZone = 91,
+    SlotOccupied = 92,
+    NotEnoughSilver = 93,
+    TravelDestinationUnavailable = 94,
+    UnableToIncreaseStatusUsingSilver = 95,
+    RemovedFromFamily = 96,
+    MustBeFamilyLeader = 97,
+    FamilyLockExpiry = 98,
+    TargetInUse = 99,
+    ItemInUse = 100,
+    MissingEquipment = 101,
+    TooSoonToUse = 102,
+    HitConverterOutputNotSupported = 103,
+    OnlyOnePerFamily = 104,
+    TargetImmuneFriendlyFire = 105,
+    TargetImmuneEveryone = 106,
+    ToolTierTooLow = 107,
+    ToolBroke = 108,
+    StructureIsBurnt = 109,
+    InventoryMustBeEmpty = 110,
+    PlayerDeploying = 111,
+    BedNotInYourFamilyHouse = 112,
+    PledgedToTown = 113,
+    VehicleCannotWorldEntranceTravel = 114,
+    MustBeResetBeforeFiring = 115,
+    NoProjectileLoaded = 116,
+    CantArmDueToHeavyTool = 117,
+    ItemDisarmedDueToHeavyTool = 118,
+    CantArmDueToHeavyArmour = 119,
+    TemperatureTooLowToGather = 120,
+    TemperatureTooLowToPlant = 121,
+    TooSoonToTravel = 122,
+    OutOfAmmunition = 123,
+    NotValidSupportToReinforce = 124,
+    OccupantMustbeMounted = 125,
+    RopeDetachFailed_HandsFull = 126,
+    AvatarSubmitted = 127,
     NumTypes = 128,
     EAnvilStatusMessageType_MAX = 129,
 }
@@ -1020,6 +1025,14 @@ EAnvilVehicleInputState = {
     StrafeLeft = 4,
     StrafeRight = 5,
     EAnvilVehicleInputState_MAX = 6,
+}
+
+---@enum EAnvilVictoryType
+EAnvilVictoryType = {
+    Military = 0,
+    Culture = 1,
+    NumTypes = 2,
+    EAnvilVictoryType_MAX = 3,
 }
 
 ---@enum EAnvilVoteType

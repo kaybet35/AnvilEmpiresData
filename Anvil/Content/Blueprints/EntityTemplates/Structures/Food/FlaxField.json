@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "FlaxField_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FlaxField_C'Default__FlaxField_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/FlaxField.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__FlaxField_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "Extents": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 100.0
+      },
+      "CollisionMask": 16
+    }
+  },
+  {
+    "Type": "FlaxField_C",
+    "Name": "Default__FlaxField_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Food/FlaxField.FlaxField_C'",
+    "Properties": {
+      "CodeNameString": "FlaxField",
+      "CodeName": -883798874,
+      "Components": [
+        {
+          "ObjectName": "PlantGrowthProxyComponent'Default__FlaxField_C:PlantGrowthProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/FlaxField.3"
+        },
+        null,
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__FlaxField_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Food/FlaxField.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisFlaxField_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisFlaxField.1"
+      }
+    }
+  },
+  {
+    "Type": "PlantGrowthProxyComponent",
+    "Name": "PlantGrowthProxyComponent_0",
+    "Outer": "Default__FlaxField_C",
+    "Class": "UScriptClass'PlantGrowthProxyComponent'",
+    "Properties": {
+      "MaturePlant": {
+        "ObjectName": "BlueprintGeneratedClass'FlaxPlant_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Plants/FlaxPlant.0"
+      },
+      "RequiredSeedType": {
+        "ObjectName": "BlueprintGeneratedClass'FlaxSeed_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/FlaxSeed.0"
+      },
+      "StageTime": 2400.0,
+      "RequiredTemperature": 0.25,
+      "GrowthStage": 3
+    }
+  }
+]

@@ -1,7 +1,8 @@
 ---@meta
 
----@class ABPVisTempleT3_C : AVisRelicTechCenter
+---@class ABPVisTempleT3_C : AVisStructure
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field VisTeamMesh UVisTeamMeshComponent
 ---@field Populate1 UVisStaticMeshComponent
 ---@field VisRoof UVisStaticMeshComponent

@@ -42,15 +42,8 @@ class ABPVisCentralMarketplace_C : public AVisCentralMarketplace
     class UVisStaticMeshComponent* VisStaticMesh6;                                    // 0x0648 (size: 0x8)
     class UVisStaticMeshComponent* BigBoxes;                                          // 0x0650 (size: 0x8)
     class UBPVisFamilyMeshComponent_C* BPVisFamilyMeshComponent;                      // 0x0658 (size: 0x8)
-    class USceneComponent* Fire;                                                      // 0x0660 (size: 0x8)
-    class UVisStaticMeshComponent* Structure;                                         // 0x0668 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect5;                                      // 0x0670 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect4;                                      // 0x0678 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect1;                                      // 0x0680 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect7;                                      // 0x0688 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect8;                                      // 0x0690 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect6;                                      // 0x0698 (size: 0x8)
+    class UVisStaticMeshComponent* Structure;                                         // 0x0660 (size: 0x8)
 
-}; // Size: 0x6A0
+}; // Size: 0x668
 
 #endif

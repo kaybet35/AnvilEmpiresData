@@ -15,6 +15,10 @@ void UDeploymentScreen::OnLogoutButtonClicked() {
 void UDeploymentScreen::OnFamilyCenterDeployButtonClicked() {
 }
 
+bool UDeploymentScreen::IsFamilyCenterDeployButtonEnabled() {
+    return false;
+}
+
 ESlateVisibility UDeploymentScreen::GetFamilyCenterDeployWidgetVisibility() {
     return ESlateVisibility::Visible;
 }

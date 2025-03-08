@@ -19,6 +19,7 @@ enum class EAnvilSimActivityState : uint8 {
     FiringCannon,
     UsingHandTool,
     BuildingWithHandTool,
+    Winding,
     Plundering,
     HorseRiding,
     Eating,

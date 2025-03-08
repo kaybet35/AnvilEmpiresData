@@ -1,8 +1,9 @@
 ---@meta
 
 ---@class FAnimBlueprintGeneratedConstantData : FAnimBlueprintConstantData
----@field __NameProperty_21 FName
----@field __StructProperty_22 FInputScaleBiasClampConstants
+---@field __NameProperty_20 FName
+---@field __StructProperty_21 FInputScaleBiasClampConstants
+---@field __FloatProperty_22 float
 ---@field __StructProperty_23 FAnimNodeFunctionRef
 ---@field __BoolProperty_24 boolean
 ---@field __FloatProperty_25 float
@@ -24,7 +25,7 @@ FAnimBlueprintGeneratedMutableData = {}
 
 
 
----@class UGrainMill_ABP_C : UVisPowerUnitAnimInstance
+---@class UGrainMill_ABP_C : UVisGrainMillAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field __AnimBlueprintMutables FAnimBlueprintGeneratedMutableData
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -33,7 +34,6 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
 ---@field AnimGraphNode_LayeredBoneBlend FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_BlendSpacePlayer FAnimNode_BlendSpacePlayer
----@field QualityAdjustment double
 UGrainMill_ABP_C = {}
 
 ---@param AnimGraph FPoseLink

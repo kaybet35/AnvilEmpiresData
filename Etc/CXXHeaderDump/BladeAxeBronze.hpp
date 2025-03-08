@@ -3,6 +3,6 @@
 
 class UBladeAxeBronze_C : public UItemTemplate
 {
-}; // Size: 0x370
+}; // Size: 0x378
 
 #endif

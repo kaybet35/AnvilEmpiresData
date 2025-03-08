@@ -61,6 +61,15 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int16 ProcessedBronze;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ProcessedFlax;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ProcessedLead;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ProcessedResin;
+    
     ANVIL_API FBuildSiteCostData();
 };
 

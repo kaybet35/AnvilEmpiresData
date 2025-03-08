@@ -15,11 +15,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisWaterWheel_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.16"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BPVisWaterWheel_C:ExecuteUbergraph_BPVisWaterWheel'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.5"
       }
     },
     "SuperStruct": {
@@ -29,11 +29,11 @@
     "Children": [
       {
         "ObjectName": "Function'BPVisWaterWheel_C:ReceiveTick'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.6"
       },
       {
         "ObjectName": "Function'BPVisWaterWheel_C:ExecuteUbergraph_BPVisWaterWheel'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.5"
       }
     ],
     "ChildProperties": [
@@ -85,11 +85,11 @@
     "FuncMap": {
       "ExecuteUbergraph_BPVisWaterWheel": {
         "ObjectName": "Function'BPVisWaterWheel_C:ExecuteUbergraph_BPVisWaterWheel'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.5"
       },
       "ReceiveTick": {
         "ObjectName": "Function'BPVisWaterWheel_C:ReceiveTick'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.6"
       }
     },
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -115,7 +115,7 @@
       "UberGraphFrame": {},
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisWaterWheel_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.22"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconIndustryWaterwheel'",
@@ -124,23 +124,27 @@
       "BuildSiteCategory": "EBuildSiteCategory::Water",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisWaterWheel_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.21"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisWaterWheel_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.8"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisWaterWheel_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.20"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisWaterWheel_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.19"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisWaterWheel_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.11"
+      },
+      "DecayDataComponent": {
+        "ObjectName": "DecayDataComponent'Default__BPVisWaterWheel_C:DecayDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.4"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisWaterWheel_C:ArrowComponent'",
@@ -152,9 +156,8 @@
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisWaterWheel_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.7"
       },
-      "GeneratedScorchEffects": 6,
       "UseWindowType": "EHUDWindowType::GenericStructure",
       "VisDisplayName": {
         "Namespace": "",
@@ -196,6 +199,12 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.0"
       }
     }
+  },
+  {
+    "Type": "DecayDataComponent",
+    "Name": "DecayDataComponent",
+    "Outer": "Default__BPVisWaterWheel_C",
+    "Class": "UScriptClass'DecayDataComponent'"
   },
   {
     "Type": "Function",
@@ -247,7 +256,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisWaterWheel_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.18"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisWaterWheel_C:ArrowComponent'",
@@ -291,7 +300,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisWaterWheel_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.10"
       },
       "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -309,7 +318,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisWaterWheel_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.17"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -329,7 +338,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWaterWheel_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.23"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -349,7 +358,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "PowerUnitDataComponent'BPVisWaterWheel_C:PowerUnitData_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.9"
       },
       "VariableGuid": "EDC67DB3-4E8040EA-FFB7CCB8-4D4E9B5C",
       "InternalVariableName": "PowerUnitData"
@@ -364,34 +373,34 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.12"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.15"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.12"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.15"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisWaterWheel_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisWaterWheel.12"
       }
     }
   },

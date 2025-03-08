@@ -1,13 +1,14 @@
 #include "BuildRuleInfo.h"
 
 FBuildRuleInfo::FBuildRuleInfo() {
-    this->RequiresEnclosure = false;
     this->bBuildableOverRoads = false;
     this->bBuildableNearSpawnPoint = false;
     this->bBuildableInEnemyArea = false;
     this->bBuildableNearEnemies = false;
+    this->bBuildableInWildernessWithoutPledge = false;
+    this->LimitTouchingGroupCount = false;
+    this->RequiredAgeSeconds = 0.00f;
     this->NearbyPlayersRequired = 0;
     this->TierPrerequisite = 0;
-    this->bBuildableInWildernessWithoutPledge = false;
 }
 

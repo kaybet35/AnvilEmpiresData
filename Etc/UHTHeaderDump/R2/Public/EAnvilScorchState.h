@@ -8,5 +8,6 @@ enum class EAnvilScorchState : uint8 {
     OnFire,
     OnFireGrowing,
     Cooling,
+    NumTypes,
 };
 

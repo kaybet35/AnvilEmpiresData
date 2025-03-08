@@ -12,17 +12,11 @@ class ABPVisHearth_C : public AVisCookingStructure
     class UVisStaticMeshComponent* FireWood;                                          // 0x05E8 (size: 0x8)
     class USceneComponent* Scene;                                                     // 0x05F0 (size: 0x8)
     class UVisStaticMeshComponent* RefiningAssets;                                    // 0x05F8 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect5;                                      // 0x0600 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect4;                                      // 0x0608 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect1;                                      // 0x0610 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect7;                                      // 0x0618 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect8;                                      // 0x0620 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect6;                                      // 0x0628 (size: 0x8)
-    class UVisTeamMeshComponent* VisTeamMesh;                                         // 0x0630 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0638 (size: 0x8)
+    class UVisTeamMeshComponent* VisTeamMesh;                                         // 0x0600 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0608 (size: 0x8)
 
     void ReceiveBeginPlay();
     void ExecuteUbergraph_BPVisHearth(int32 EntryPoint);
-}; // Size: 0x640
+}; // Size: 0x610
 
 #endif

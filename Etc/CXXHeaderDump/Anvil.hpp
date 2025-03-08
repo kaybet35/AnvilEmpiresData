@@ -92,8 +92,11 @@ struct FBuildSiteCostData : public FTableRowBase
     int16 ProcessedSteel;                                                             // 0x0026 (size: 0x2)
     int16 ResourceFibreHeavy;                                                         // 0x0028 (size: 0x2)
     int16 ProcessedBronze;                                                            // 0x002A (size: 0x2)
+    int16 ProcessedFlax;                                                              // 0x002C (size: 0x2)
+    int16 ProcessedLead;                                                              // 0x002E (size: 0x2)
+    int16 ProcessedResin;                                                             // 0x0030 (size: 0x2)
 
-}; // Size: 0x30
+}; // Size: 0x38
 
 struct FCachedCameraState
 {
@@ -213,18 +216,20 @@ struct FEquipmentData : public FTableRowBase
     float ShieldDurabilityLossMultiplier;                                             // 0x001C (size: 0x4)
     float GuardMeterCostPerHit;                                                       // 0x0020 (size: 0x4)
     uint8 ArmorMitigation;                                                            // 0x0024 (size: 0x1)
-    float StabilityDamage;                                                            // 0x0028 (size: 0x4)
-    float SecondaryStabilityDamage;                                                   // 0x002C (size: 0x4)
-    uint8 StabilityMitigationPercent;                                                 // 0x0030 (size: 0x1)
-    float ToolEffectiveness;                                                          // 0x0034 (size: 0x4)
-    float AimMovementSpeedModifier;                                                   // 0x0038 (size: 0x4)
-    float AimRotationSpeedModifier;                                                   // 0x003C (size: 0x4)
-    float PrimaryMovementSpeedModifier;                                               // 0x0040 (size: 0x4)
-    float SecondaryMovementSpeedModifier;                                             // 0x0044 (size: 0x4)
-    float PrimaryChanceToPenetrateGuard;                                              // 0x0048 (size: 0x4)
-    float SecondaryChanceToPenetrateGuard;                                            // 0x004C (size: 0x4)
+    float ArmourDamageMultiplier;                                                     // 0x0028 (size: 0x4)
+    float SecondaryArmourDamageMultiplier;                                            // 0x002C (size: 0x4)
+    float StabilityDamage;                                                            // 0x0030 (size: 0x4)
+    float SecondaryStabilityDamage;                                                   // 0x0034 (size: 0x4)
+    uint8 StabilityMitigationPercent;                                                 // 0x0038 (size: 0x1)
+    float ToolEffectiveness;                                                          // 0x003C (size: 0x4)
+    float AimMovementSpeedModifier;                                                   // 0x0040 (size: 0x4)
+    float AimRotationSpeedModifier;                                                   // 0x0044 (size: 0x4)
+    float PrimaryMovementSpeedModifier;                                               // 0x0048 (size: 0x4)
+    float SecondaryMovementSpeedModifier;                                             // 0x004C (size: 0x4)
+    float PrimaryChanceToPenetrateGuard;                                              // 0x0050 (size: 0x4)
+    float SecondaryChanceToPenetrateGuard;                                            // 0x0054 (size: 0x4)
 
-}; // Size: 0x50
+}; // Size: 0x58
 
 struct FFactionLockResponse
 {
@@ -269,8 +274,9 @@ struct FHitConverterItemMeshInfo
 {
     TArray<class UStaticMesh*> Meshes;                                                // 0x0000 (size: 0x10)
     TArray<class UMaterialInterface*> MaterialOverrides;                              // 0x0010 (size: 0x10)
+    FVector Offset;                                                                   // 0x0020 (size: 0x18)
 
-}; // Size: 0x20
+}; // Size: 0x38
 
 struct FItemData : public FTableRowBase
 {
@@ -484,6 +490,19 @@ struct FWeatherManager
 
 }; // Size: 0x88
 
+struct FWinConditionStateResponse
+{
+    uint32 StateVersion;                                                              // 0x0000 (size: 0x4)
+    FVictoryInfo VictoryInfoList;                                                     // 0x0008 (size: 0x20)
+    uint16 FactionTotalNumCapturedKeeps;                                              // 0x0028 (size: 0x6)
+    uint16 FactionTotalNumTemples;                                                    // 0x002E (size: 0x6)
+    int64 FactionUnixTimestampCultureVictoryStarted;                                  // 0x0038 (size: 0x18)
+    uint16 NumCapturedKeepsForMilitaryVictory;                                        // 0x0050 (size: 0x2)
+    uint16 NumTemplesForCultureVictory;                                               // 0x0052 (size: 0x2)
+    uint32 CultureVictoryTimeRequiredSec;                                             // 0x0054 (size: 0x4)
+
+}; // Size: 0x58
+
 class AAnvilGameModeBase : public AGameModeBase
 {
 }; // Size: 0x330
@@ -579,7 +598,7 @@ class AGameplayPlayerController : public AAnvilPlayerController
 {
     class USoundCue* CallForReinforcementsCue;                                        // 0x0948 (size: 0x8)
 
-}; // Size: 0x968
+}; // Size: 0x960
 
 class AMainMenuGameMode : public AAnvilGameModeBase
 {
@@ -646,7 +665,7 @@ class AProxyPawn : public ADefaultPawn
     void ChangeHeight(float Adjust);
     void AutoMoveOff();
     void AutoMove(FString Arg, bool bIsSprint);
-}; // Size: 0x3B0
+}; // Size: 0x3B8
 
 class AServerPartition : public AActor
 {
@@ -901,6 +920,16 @@ class AVisGate : public AVisStructure
     class USkeletalMeshComponent* Mesh;                                               // 0x0528 (size: 0x8)
 
 }; // Size: 0x530
+
+class AVisGrainMill : public AVisStructure
+{
+    class UGrainMillDataComponent* GrainMillDataComponent;                            // 0x0520 (size: 0x8)
+    class USkeletalMeshComponent* CrankHandleMesh;                                    // 0x0528 (size: 0x8)
+    class USkeletalMeshComponent* GrainMillMesh;                                      // 0x0530 (size: 0x8)
+    class UVisPowerUnitAnimInstance* CrankHandleAnimInst;                             // 0x0538 (size: 0x8)
+    class UVisGrainMillAnimInstance* GrainMillAnimInst;                               // 0x0540 (size: 0x8)
+
+}; // Size: 0x548
 
 class AVisHeatingStructure : public AVisStructure
 {
@@ -1171,10 +1200,10 @@ class AVisStructure : public AVisActor
     class UTeamDataComponent* TeamDataComponent;                                      // 0x04D8 (size: 0x8)
     class UStructureDataComponent* StructureDataComponent;                            // 0x04E0 (size: 0x8)
     class UScorchDataComponent* ScorchDataComponent;                                  // 0x04E8 (size: 0x8)
-    class UArrowComponent* ArrowComponent;                                            // 0x04F0 (size: 0x8)
-    class UDecalComponent* UseVolumeDecalComponent;                                   // 0x04F8 (size: 0x8)
-    class UGrassRemovalVolumeComponent* GrassRemovalVolume;                           // 0x0500 (size: 0x8)
-    int32 GeneratedScorchEffects;                                                     // 0x0508 (size: 0x4)
+    class UDecayDataComponent* DecayDataComponent;                                    // 0x04F0 (size: 0x8)
+    class UArrowComponent* ArrowComponent;                                            // 0x04F8 (size: 0x8)
+    class UDecalComponent* UseVolumeDecalComponent;                                   // 0x0500 (size: 0x8)
+    class UGrassRemovalVolumeComponent* GrassRemovalVolume;                           // 0x0508 (size: 0x8)
     TArray<class UNiagaraSystem*> ScorchEffectAssets;                                 // 0x0510 (size: 0x10)
 
     void UpdateVisualComponentsByTag(const FName Tag, const bool bIsVisible);
@@ -1252,8 +1281,10 @@ class AVisualGlobals : public AInfo
 {
     float FoundationDecorSnapRange;                                                   // 0x0290 (size: 0x4)
     TArray<class UStaticMesh*> AutoCreateDynamicInstancedMeshGroup;                   // 0x0298 (size: 0x10)
+    TMap<class EAnvilFactionId, class UMaterialInterface*> TownAreaDecalMap;          // 0x02A8 (size: 0x50)
+    TMap<class EAnvilFactionId, class UMaterialInterface*> FamilyAreaDecalMap;        // 0x02F8 (size: 0x50)
 
-}; // Size: 0x2A8
+}; // Size: 0x348
 
 class AvisLadder : public AVisStructure
 {
@@ -1280,7 +1311,7 @@ class UActionStrip : public UUserWidget
 
 class UAdminPlayerListItemData : public UObject
 {
-}; // Size: 0x50
+}; // Size: 0x58
 
 class UAdminPlayerListItemWidget : public UUserWidget
 {
@@ -1289,11 +1320,12 @@ class UAdminPlayerListItemWidget : public UUserWidget
     class UAnvilButtonWidget* SteamIdBox;                                             // 0x0290 (size: 0x8)
     class UAnvilButtonWidget* TeleportToButton;                                       // 0x0298 (size: 0x8)
     class UAnvilButtonWidget* BanButton;                                              // 0x02A0 (size: 0x8)
+    class UTextBlock* SilverAllowanceText;                                            // 0x02A8 (size: 0x8)
 
     void OnTeleportToClicked();
     void OnBanClicked();
     void CopySteamId();
-}; // Size: 0x2C8
+}; // Size: 0x2D0
 
 class UAdminScreen : public UAnvilScreen
 {
@@ -1548,18 +1580,21 @@ class UBuildMenuWindow : public UHUDWindow
 class UCentralMarketplaceListEntryWidget : public UUserWidget
 {
     class UButton* CancelButton;                                                      // 0x0278 (size: 0x8)
-    class UImage* ItemImage;                                                          // 0x0280 (size: 0x8)
-    class UImage* QualityIconImage;                                                   // 0x0288 (size: 0x8)
-    class UTextBlock* ItemNameTextBlock;                                              // 0x0290 (size: 0x8)
-    class UTextBlock* BuyerSellerTextBlock;                                           // 0x0298 (size: 0x8)
-    class UTextBlock* QuantityTextBlock;                                              // 0x02A0 (size: 0x8)
-    class UTextBlock* PriceTextBlock;                                                 // 0x02A8 (size: 0x8)
-    class UAnvilButtonWidget* BuyFulfillButton;                                       // 0x02B0 (size: 0x8)
+    class USizeBox* ItemImageSizeBox;                                                 // 0x0280 (size: 0x8)
+    class UImage* ItemImage;                                                          // 0x0288 (size: 0x8)
+    class UImage* SubItemImage;                                                       // 0x0290 (size: 0x8)
+    class UImage* QualityIconImage;                                                   // 0x0298 (size: 0x8)
+    class UTextBlock* ItemNameTextBlock;                                              // 0x02A0 (size: 0x8)
+    class UTextBlock* BuyerSellerTextBlock;                                           // 0x02A8 (size: 0x8)
+    class USizeBox* QuantityCrateSizeBox;                                             // 0x02B0 (size: 0x8)
+    class UTextBlock* QuantityTextBlock;                                              // 0x02B8 (size: 0x8)
+    class UTextBlock* PriceTextBlock;                                                 // 0x02C0 (size: 0x8)
+    class UAnvilButtonWidget* BuyFulfillButton;                                       // 0x02C8 (size: 0x8)
 
     void OnCancelButtonClicked();
     void OnBuySellButtonClicked();
     FText GetPlayerNameText();
-}; // Size: 0x308
+}; // Size: 0x320
 
 class UCentralMarketplaceMapTooltip : public UUserWidget
 {
@@ -1590,12 +1625,16 @@ class UCentralMarketplaceWidget : public UUserWidget
     class UCentralMarketplaceOrderGridPanelWidget* OrderGridPanelWidget;              // 0x0320 (size: 0x8)
     class UTextBlock* SelectedOrderItemNameText;                                      // 0x0328 (size: 0x8)
     class UImage* SelectedOrderItemImage;                                             // 0x0330 (size: 0x8)
-    class UEditableTextBox* SelectedOrderItemQuantityEditableTextBox;                 // 0x0338 (size: 0x8)
-    class UEditableTextBox* SelectedOrderItemPriceEditableTextBox;                    // 0x0340 (size: 0x8)
-    class UComboBoxString* SelectedOrderItemMinQualityComboBox;                       // 0x0348 (size: 0x8)
-    class UTextBlock* SelectedOrderItemTotalPriceTextBlock;                           // 0x0350 (size: 0x8)
-    class UAnvilButtonWidget* SelectedItemPlaceOrderButton;                           // 0x0358 (size: 0x8)
+    class UImage* SelectedOrderCrateImage;                                            // 0x0338 (size: 0x8)
+    class UCheckBox* SelectedOrderCrateCheckBox;                                      // 0x0340 (size: 0x8)
+    class UTextBlock* OrderCratesTextBlock;                                           // 0x0348 (size: 0x8)
+    class UEditableTextBox* SelectedOrderItemQuantityEditableTextBox;                 // 0x0350 (size: 0x8)
+    class UEditableTextBox* SelectedOrderItemPriceEditableTextBox;                    // 0x0358 (size: 0x8)
+    class UComboBoxString* SelectedOrderItemMinQualityComboBox;                       // 0x0360 (size: 0x8)
+    class UTextBlock* SelectedOrderItemTotalPriceTextBlock;                           // 0x0368 (size: 0x8)
+    class UAnvilButtonWidget* SelectedItemPlaceOrderButton;                           // 0x0370 (size: 0x8)
 
+    void OnSelectedOrderCrateCheckBoxStateChanged(const bool bIsChecked);
     void OnSelectedItemPlaceOrderButtonClicked();
     void OnPlaceOrderTabButtonClicked();
     void OnBuySellTabButtonClicked();
@@ -1603,6 +1642,7 @@ class UCentralMarketplaceWidget : public UUserWidget
     bool IsSelectedOrderItemQuantityEditableTextBoxEnabled();
     bool IsSelectedOrderItemPriceEditableTextBoxEnabled();
     bool IsSelectedOrderItemMinQualityComboBoxEnabled();
+    bool IsSelectedOrderCrateCheckBoxEnabled();
     bool IsSelectedItemPlaceOrderButtonEnabled();
     bool IsPlaceOrderTabButtonEnabled();
     bool IsBuySellTabButtonEnabled();
@@ -1610,7 +1650,7 @@ class UCentralMarketplaceWidget : public UUserWidget
     ESlateVisibility GetSelectedOrderItemTotalPriceTextVisibility();
     FText GetSelectedOrderItemTotalPriceText();
     ESlateVisibility GetItemCategoryButtonPanelVisibility();
-}; // Size: 0x388
+}; // Size: 0x3A0
 
 class UCentralMarketplaceWindow : public UStructureWindow
 {
@@ -1759,6 +1799,7 @@ class UDeploymentScreen : public UAnvilScreen
 
     void OnLogoutButtonClicked();
     void OnFamilyCenterDeployButtonClicked();
+    bool IsFamilyCenterDeployButtonEnabled();
     ESlateVisibility GetFamilyCenterDeployWidgetVisibility();
     FText GetDeploymentInstructionOrSpawnTimerText();
 }; // Size: 0x2D0
@@ -1929,6 +1970,15 @@ class UGameplayScreen : public UAnvilScreen
 
 }; // Size: 0x2B8
 
+class UGrainMillWindow : public UStructureWindow
+{
+    class UInventoryWidget* InputItemGrid;                                            // 0x02F0 (size: 0x8)
+    class UInventoryWidget* OutputItemGrid;                                           // 0x02F8 (size: 0x8)
+    class UImage* RecipePreviewImage;                                                 // 0x0300 (size: 0x8)
+    FSlateBrush InvalidRecipeIcon;                                                    // 0x0310 (size: 0xD0)
+
+}; // Size: 0x3E0
+
 class UGrassRemovalVolumeComponent : public USceneComponent
 {
     FVector Extents;                                                                  // 0x02A0 (size: 0x18)
@@ -1962,6 +2012,14 @@ class UGridPanelWidget : public UUniformGridPanel
     int32 PreviewItemCount;                                                           // 0x01A0 (size: 0x4)
 
 }; // Size: 0x1A8
+
+class UHUDBuildSiteWidget : public UUserWidget
+{
+    TSubclassOf<class UResourceWidget> ResourceWidgetClass;                           // 0x0278 (size: 0x8)
+    class UTextBlock* RequiredToolText;                                               // 0x0280 (size: 0x8)
+    class UVerticalBox* ResourcesContainer;                                           // 0x0288 (size: 0x8)
+
+}; // Size: 0x298
 
 class UHUDEntityBillboardWidget : public UUserWidget
 {
@@ -2051,31 +2109,36 @@ class UHUDWidget : public UUserWidget
     class UImage* GuardStrengthRightIcon;                                             // 0x0380 (size: 0x8)
     class UTextBlock* PlayerStatusText;                                               // 0x0388 (size: 0x8)
     class UCanvasPanel* WinConditionCanvas;                                           // 0x0390 (size: 0x8)
-    class UTextBlock* WinConditionText;                                               // 0x0398 (size: 0x8)
-    class UImage* WinConditionLogo;                                                   // 0x03A0 (size: 0x8)
+    class UImage* WinConditionLogo;                                                   // 0x0398 (size: 0x8)
+    class UImage* VictoryTypeLogo;                                                    // 0x03A0 (size: 0x8)
     class UVitalityStatusWidget* PlayerVitality;                                      // 0x03A8 (size: 0x8)
     class UVitalityStatusWidget* HorseVitality;                                       // 0x03B0 (size: 0x8)
     class UInventoryHUDWidget* InventoryHUD;                                          // 0x03B8 (size: 0x8)
     class UCanvasPanel* DisclaimerCanvas;                                             // 0x03C0 (size: 0x8)
     class UTextBlock* DisclaimerText;                                                 // 0x03C8 (size: 0x8)
-    class UHUDPlacementStatusWidget* PlacementStatusWidget;                           // 0x03D0 (size: 0x8)
-    class UTexture2D* AranicLogo;                                                     // 0x03D8 (size: 0x8)
-    class UTexture2D* MirrishLogo;                                                    // 0x03E0 (size: 0x8)
-    class UTexture2D* NovanLogo;                                                      // 0x03E8 (size: 0x8)
-    FSlateBrush GuardStrengthEmptyIcon;                                               // 0x03F0 (size: 0xD0)
-    FSlateBrush GuardStrengthFillIcon;                                                // 0x04C0 (size: 0xD0)
-    class UProgressBar* InteractionProgressBar1;                                      // 0x0590 (size: 0x8)
-    class UProgressBar* InteractionProgressBar2;                                      // 0x0598 (size: 0x8)
-    class UTextBlock* WeatherStatsText;                                               // 0x05A0 (size: 0x8)
-    class UTextBlock* BorderRegionIndicatorText;                                      // 0x05A8 (size: 0x8)
-    class UWidget* ReinforcementStatus;                                               // 0x05B0 (size: 0x8)
-    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05C0 (size: 0x10)
+    class UCanvasPanel* BuildSiteCanvas;                                              // 0x03D0 (size: 0x8)
+    class UHUDPlacementStatusWidget* PlacementStatusWidget;                           // 0x03D8 (size: 0x8)
+    class UHUDBuildSiteWidget* BuildSiteWidget;                                       // 0x03E0 (size: 0x8)
+    class UTexture2D* AranicLogo;                                                     // 0x03E8 (size: 0x8)
+    class UTexture2D* MirrishLogo;                                                    // 0x03F0 (size: 0x8)
+    class UTexture2D* NovanLogo;                                                      // 0x03F8 (size: 0x8)
+    class UTexture2D* MilitaryVictoryLogo;                                            // 0x0400 (size: 0x8)
+    class UTexture2D* CultureVictoryLogo;                                             // 0x0408 (size: 0x8)
+    FSlateBrush GuardStrengthEmptyIcon;                                               // 0x0410 (size: 0xD0)
+    FSlateBrush GuardStrengthFillIcon;                                                // 0x04E0 (size: 0xD0)
+    class UProgressBar* InteractionProgressBar1;                                      // 0x05B0 (size: 0x8)
+    class UProgressBar* InteractionProgressBar2;                                      // 0x05B8 (size: 0x8)
+    class UTextBlock* WeatherStatsText;                                               // 0x05C0 (size: 0x8)
+    class UTextBlock* BorderRegionIndicatorText;                                      // 0x05C8 (size: 0x8)
+    class UWidget* ReinforcementStatus;                                               // 0x05D0 (size: 0x8)
+    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05E0 (size: 0x10)
 
     void PlayWinConditionAnimation();
+    void PlayBlackoutAnimation();
     ESlateVisibility GetWeatherStatsTextVisibility();
     FText GetWeatherStatsText();
     ESlateVisibility GetHUDWidgetVisibility();
-}; // Size: 0x5E0
+}; // Size: 0x600
 
 class UHUDWindow : public UUserWidget
 {
@@ -2340,10 +2403,14 @@ class UMapWidget : public UMapWidgetBase
     class UTextBlock* SeasonText;                                                     // 0x0368 (size: 0x8)
     class UTextBlock* TimeOfDayText;                                                  // 0x0370 (size: 0x8)
     class UMapPostContainerWidget* MapPostContainerWidget;                            // 0x0378 (size: 0x8)
-    TArray<class UMapIcon*> DisplayedBeaconTowerPlayerInfos;                          // 0x03E0 (size: 0x10)
+    class UWinConditionWidget* WinConditionWidget;                                    // 0x0380 (size: 0x8)
+    TArray<class UMapIcon*> DisplayedBeaconTowerPlayerInfos;                          // 0x03E8 (size: 0x10)
 
+    FText GetTimeOfDayText();
+    ESlateVisibility GetSeasonTextVisibility();
+    FText GetSeasonText();
     ESlateVisibility GetObjectiveBorderVisibility();
-}; // Size: 0x430
+}; // Size: 0x438
 
 class UMapWidgetBase : public UUserWidget
 {
@@ -2480,8 +2547,17 @@ class UPlayerInventoryWidget : public UUserWidget
 {
     class UInventoryWidget* PlayerInventory;                                          // 0x0278 (size: 0x8)
     class UHeaderContainer* Header;                                                   // 0x0280 (size: 0x8)
+    bool bShowAvatarSubmitButton;                                                     // 0x0288 (size: 0x1)
+    class UButton* SubmitAvatarButton;                                                // 0x0290 (size: 0x8)
+    class UHeaderContainer* AvatarHeader;                                             // 0x0298 (size: 0x8)
+    class UImage* AvatarImage;                                                        // 0x02A0 (size: 0x8)
+    class UImage* AvatarQualityImage;                                                 // 0x02A8 (size: 0x8)
+    class UTextBlock* AvatarNameText;                                                 // 0x02B0 (size: 0x8)
+    class UTextBlock* AvatarDescriptionText;                                          // 0x02B8 (size: 0x8)
 
-}; // Size: 0x288
+    void OnSubmitAvatarClicked();
+    bool IsSubmitAvatarButtonEnabled();
+}; // Size: 0x2D0
 
 class UPledgedPlayerBox : public UScrollBox
 {
@@ -2494,13 +2570,12 @@ class UPledgedPlayerListItem : public UUserWidget
 {
     class UTextBlock* PlayerNameText;                                                 // 0x0288 (size: 0x8)
     class UTextBlock* PlayerStatusText;                                               // 0x0290 (size: 0x8)
-    class UTextBlock* PlayerSilverText;                                               // 0x0298 (size: 0x8)
-    class UCheckBox* VoteButton;                                                      // 0x02A0 (size: 0x8)
-    class UImage* OnlineStatusIcon;                                                   // 0x02A8 (size: 0x8)
-    TMap<class EAnvilPlayerOnlineStatus, class FSlateColor> OnlineStatusSilverColorMap; // 0x02B0 (size: 0x50)
+    class UCheckBox* VoteButton;                                                      // 0x0298 (size: 0x8)
+    class UImage* OnlineStatusIcon;                                                   // 0x02A0 (size: 0x8)
+    TMap<class EAnvilPlayerOnlineStatus, class FSlateColor> OnlineStatusSilverColorMap; // 0x02A8 (size: 0x50)
 
     void OnVoteChecked(bool bIsChecked);
-}; // Size: 0x308
+}; // Size: 0x300
 
 class UQuenchingWindow : public UStructureWindow
 {
@@ -2842,6 +2917,13 @@ class UVisGateAnimInstance : public UAnimInstance
 
 }; // Size: 0x350
 
+class UVisGrainMillAnimInstance : public UAnimInstance
+{
+    float CurrentCoarseness;                                                          // 0x0348 (size: 0x4)
+    float Power;                                                                      // 0x034C (size: 0x4)
+
+}; // Size: 0x350
+
 class UVisInstancedStockpileComponent : public UInstancedStaticMeshComponent
 {
     class UInstancedStaticMeshComponent* CurrentInstancedMesh;                        // 0x0738 (size: 0x8)
@@ -3046,11 +3128,7 @@ class UVisTeamMeshComponent : public UStaticMeshComponent
 
 class UVisTownAreaMarkerDecalComponent : public UDecalComponent
 {
-    class UMaterialInterface* TeamDecalAranic;                                        // 0x02F0 (size: 0x8)
-    class UMaterialInterface* TeamDecalMirrish;                                       // 0x02F8 (size: 0x8)
-    class UMaterialInterface* TeamDecalNovan;                                         // 0x0300 (size: 0x8)
-
-}; // Size: 0x310
+}; // Size: 0x300
 
 class UVisVehicleAnimInstance : public UAnimInstance
 {
@@ -3084,6 +3162,51 @@ class UWildSpawnPointMapIcon : public UMapIcon
     class UButton* IconButton;                                                        // 0x0398 (size: 0x8)
 
 }; // Size: 0x3A0
+
+class UWinConditionWidget : public UUserWidget
+{
+    class UHeaderContainer* HeaderContainer;                                          // 0x0278 (size: 0x8)
+    class UProgressBar* Faction0MilitaryProgressBar;                                  // 0x0280 (size: 0x8)
+    class UProgressBar* Faction1MilitaryProgressBar;                                  // 0x0288 (size: 0x8)
+    class UProgressBar* Faction2MilitaryProgressBar;                                  // 0x0290 (size: 0x8)
+    class UTextBlock* Faction0MilitaryTextBox;                                        // 0x0298 (size: 0x8)
+    class UTextBlock* Faction1MilitaryTextBox;                                        // 0x02A0 (size: 0x8)
+    class UTextBlock* Faction2MilitaryTextBox;                                        // 0x02A8 (size: 0x8)
+    class UProgressBar* Faction0CultureProgressBar;                                   // 0x02B0 (size: 0x8)
+    class UProgressBar* Faction1CultureProgressBar;                                   // 0x02B8 (size: 0x8)
+    class UProgressBar* Faction2CultureProgressBar;                                   // 0x02C0 (size: 0x8)
+    class UTextBlock* Faction0CultureTextBox;                                         // 0x02C8 (size: 0x8)
+    class UTextBlock* Faction1CultureTextBox;                                         // 0x02D0 (size: 0x8)
+    class UTextBlock* Faction2CultureTextBox;                                         // 0x02D8 (size: 0x8)
+    class UProgressBar* Faction0CultureTimerProgressBar;                              // 0x02E0 (size: 0x8)
+    class UProgressBar* Faction1CultureTimerProgressBar;                              // 0x02E8 (size: 0x8)
+    class UProgressBar* Faction2CultureTimerProgressBar;                              // 0x02F0 (size: 0x8)
+    FLinearColor ProgressBarNormalColour;                                             // 0x02F8 (size: 0x10)
+    FLinearColor ProgressBarVictoryAchievedColour;                                    // 0x0308 (size: 0x10)
+    class UTooltipWidget* CachedWinConditionTooltip;                                  // 0x0318 (size: 0x8)
+
+    FText GetFaction2MilitaryText();
+    FLinearColor GetFaction2MilitaryProgressBarColour();
+    float GetFaction2MilitaryProgress();
+    float GetFaction2CultureTimerProgress();
+    FText GetFaction2CultureText();
+    FLinearColor GetFaction2CultureProgressBarColour();
+    float GetFaction2CultureProgress();
+    FText GetFaction1MilitaryText();
+    FLinearColor GetFaction1MilitaryProgressBarColour();
+    float GetFaction1MilitaryProgress();
+    float GetFaction1CultureTimerProgress();
+    FText GetFaction1CultureText();
+    FLinearColor GetFaction1CultureProgressBarColour();
+    float GetFaction1CultureProgress();
+    FText GetFaction0MilitaryText();
+    FLinearColor GetFaction0MilitaryProgressBarColour();
+    float GetFaction0MilitaryProgress();
+    float GetFaction0CultureTimerProgress();
+    FText GetFaction0CultureText();
+    FLinearColor GetFaction0CultureProgressBarColour();
+    float GetFaction0CultureProgress();
+}; // Size: 0x398
 
 class UWorldBeaconTowerMapIcon : public UWorldEntityMapIcon
 {

@@ -21,13 +21,6 @@
 ---@field Skirt UVisStaticMeshComponent
 ---@field FF UVisStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
----@field ScorchEffect6 UScorchEffectComponent
----@field ScorchEffect1 UScorchEffectComponent
----@field ScorchEffect7 UScorchEffectComponent
----@field ScorchEffect4 UScorchEffectComponent
----@field ScorchEffect5 UScorchEffectComponent
----@field ScorchEffect2 UScorchEffectComponent
----@field Fire USceneComponent
 ---@field DebugSphere UStaticMeshComponent
 ABpVisTownCenterKeepT3_C = {}
 

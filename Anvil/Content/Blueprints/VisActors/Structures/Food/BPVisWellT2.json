@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisWellT2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.17"
       }
     },
     "SuperStruct": {
@@ -120,7 +120,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisWellT2_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.27"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.28"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconWell'",
@@ -129,23 +129,27 @@
       "BuildSiteCategory": "EBuildSiteCategory::Water",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisWellT2_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.26"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.27"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisWellT2_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.6"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisWellT2_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.25"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.26"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisWellT2_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.25"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisWellT2_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.8"
+      },
+      "DecayDataComponent": {
+        "ObjectName": "DecayDataComponent'Default__BPVisWellT2_C:DecayDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.4"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisWellT2_C:ArrowComponent'",
@@ -157,9 +161,8 @@
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisWellT2_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.5"
       },
-      "GeneratedScorchEffects": 6,
       "UseWindowType": "EHUDWindowType::InventoryStructure",
       "UseDisclaimerText": {
         "Namespace": "",
@@ -202,6 +205,12 @@
     }
   },
   {
+    "Type": "DecayDataComponent",
+    "Name": "DecayDataComponent",
+    "Outer": "Default__BPVisWellT2_C",
+    "Class": "UScriptClass'DecayDataComponent'"
+  },
+  {
     "Type": "GrassRemovalVolumeComponent",
     "Name": "GrassRemovalVolume",
     "Outer": "Default__BPVisWellT2_C",
@@ -209,7 +218,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisWellT2_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.18"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisWellT2_C:ArrowComponent'",
@@ -247,7 +256,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisWellT2_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.7"
       },
       "VariableGuid": "F7C000FE-4589380F-8EE52E9C-353C24BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -265,30 +274,30 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisWellT2_C:Shallow Well_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.20"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.12"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.14"
         },
         {
-          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_8'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.15"
         },
         {
+          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.16"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.12"
         }
       ],
       "VariableGuid": "6825B53E-415A48CE-34C8F1A1-3EFD6209",
@@ -307,7 +316,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisWellT2_C:BucketProp_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.19"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -327,7 +336,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisWellT2_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.28"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.29"
       },
       "VariableGuid": "2B39DF4F-40CF26D2-03E6DE96-6AD6E072",
       "InternalVariableName": "VisStaticMesh"
@@ -345,7 +354,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisWellT2_C:StaticMesh2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.21"
       },
       "VariableGuid": "E2E55650-42666F6A-A5383DAC-54D55A49",
       "InternalVariableName": "StaticMesh2"
@@ -363,7 +372,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisWellT2_C:StaticMesh3_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.22"
       },
       "VariableGuid": "44CAC057-47FABAB2-138880B0-6E345955",
       "InternalVariableName": "StaticMesh3"
@@ -381,7 +390,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisWellT2_C:StaticMesh4_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.23"
       },
       "VariableGuid": "B228F2DF-4C8BDCB8-64BCEC9C-7617EF94",
       "InternalVariableName": "StaticMesh4"
@@ -399,7 +408,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisWellT2_C:StaticMesh5_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.24"
       },
       "VariableGuid": "94E8F909-4018200C-EFC3BA91-6B82FFB6",
       "InternalVariableName": "StaticMesh5"
@@ -414,46 +423,46 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.10"
         },
         {
           "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.11"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.9"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.10"
         },
         {
-          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.12"
+          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.11"
         },
         {
-          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.14"
         },
         {
-          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_8'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.15"
         },
         {
+          "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.16"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.12"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisWellT2_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Food/BPVisWellT2.9"
       }
     }
   },

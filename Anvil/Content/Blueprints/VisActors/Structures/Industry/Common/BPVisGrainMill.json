@@ -12,11 +12,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisGrainMill_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.16"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisHitConverterStructure'",
+      "ObjectName": "Class'VisGrainMill'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
@@ -40,28 +40,6 @@
         "PropertyClass": {
           "ObjectName": "Class'NiagaraComponent'",
           "ObjectPath": "/Script/Niagara"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "SkeletalMesh1",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'SkeletalMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "SkeletalMesh",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'SkeletalMeshComponent'",
-          "ObjectPath": "/Script/Engine"
         }
       },
       {
@@ -118,178 +96,21 @@
     "Name": "Default__BPVisGrainMill_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.BPVisGrainMill_C'",
     "Properties": {
-      "HitConverterDataComponent": {
-        "ObjectName": "HitConverterDataComponent'Default__BPVisGrainMill_C:HitConverterDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.7"
+      "GrainMillDataComponent": {
+        "ObjectName": "GrainMillDataComponent'Default__BPVisGrainMill_C:GrainMillDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.6"
       },
-      "ConvertedItemMeshComponent": {
-        "ObjectName": "StaticMeshComponent'Default__BPVisGrainMill_C:ConvertedItemMeshComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.22"
+      "CrankHandleMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisGrainMill_C:CrankHandleMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.17"
       },
-      "ItemMeshInfoMap": [
-        {
-          "Key": "ResourceWood01",
-          "Value": {
-            "Meshes": [
-              {
-                "ObjectName": "StaticMesh'IndustryWoodSaw_State01'",
-                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State01.2"
-              },
-              {
-                "ObjectName": "StaticMesh'IndustryWoodSaw_State02'",
-                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State02.2"
-              },
-              {
-                "ObjectName": "StaticMesh'IndustryWoodSaw_State03'",
-                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State03.2"
-              }
-            ],
-            "MaterialOverrides": [
-              null,
-              null,
-              {
-                "ObjectName": "MaterialInstanceConstant'BirchBark'",
-                "ObjectPath": "Anvil/Content/Materials/Resources/BirchBark.0"
-              }
-            ]
-          }
-        },
-        {
-          "Key": "ResourceWood02",
-          "Value": {
-            "Meshes": [
-              {
-                "ObjectName": "StaticMesh'IndustryWoodSaw_State01'",
-                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State01.2"
-              },
-              {
-                "ObjectName": "StaticMesh'IndustryWoodSaw_State02'",
-                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State02.2"
-              },
-              {
-                "ObjectName": "StaticMesh'IndustryWoodSaw_State03'",
-                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State03.2"
-              }
-            ],
-            "MaterialOverrides": [
-              null,
-              null,
-              {
-                "ObjectName": "MaterialInstanceConstant'ScotsPineBark'",
-                "ObjectPath": "Anvil/Content/Materials/Resources/ScotsPineBark.0"
-              }
-            ]
-          }
-        },
-        {
-          "Key": "ResourceWood03",
-          "Value": {
-            "Meshes": [
-              {
-                "ObjectName": "StaticMesh'IndustryWoodSaw_State01'",
-                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State01.2"
-              },
-              {
-                "ObjectName": "StaticMesh'IndustryWoodSaw_State02'",
-                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State02.2"
-              },
-              {
-                "ObjectName": "StaticMesh'IndustryWoodSaw_State03'",
-                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State03.2"
-              }
-            ],
-            "MaterialOverrides": [
-              null,
-              null,
-              {
-                "ObjectName": "MaterialInstanceConstant'BeechBark'",
-                "ObjectPath": "Anvil/Content/Materials/Resources/BeechBark.0"
-              }
-            ]
-          }
-        },
-        {
-          "Key": "ProcessedWood",
-          "Value": {
-            "Meshes": [
-              {
-                "ObjectName": "StaticMesh'ResourceStockpileProcessedWood'",
-                "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileProcessedWood.2"
-              }
-            ],
-            "MaterialOverrides": []
-          }
-        },
-        {
-          "Key": "ResourceBranches",
-          "Value": {
-            "Meshes": [
-              {
-                "ObjectName": "StaticMesh'ResourceStockpileResourceBranches'",
-                "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileResourceBranches.2"
-              }
-            ],
-            "MaterialOverrides": []
-          }
-        },
-        {
-          "Key": "ResourceWoodHard",
-          "Value": {
-            "Meshes": [
-              {
-                "ObjectName": "StaticMesh'IndustryWoodSaw_State01'",
-                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State01.2"
-              },
-              {
-                "ObjectName": "StaticMesh'IndustryWoodSaw_State02'",
-                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State02.2"
-              },
-              {
-                "ObjectName": "StaticMesh'IndustryWoodSaw_State03'",
-                "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State03.2"
-              }
-            ],
-            "MaterialOverrides": [
-              {
-                "ObjectName": "MaterialInstanceConstant'DeadTreeBark'",
-                "ObjectPath": "Anvil/Content/Materials/Resources/DeadTreeBark.0"
-              },
-              {
-                "ObjectName": "MaterialInstanceConstant'WoodEndHard'",
-                "ObjectPath": "Anvil/Content/Materials/Resources/WoodEndHard.0"
-              },
-              null
-            ]
-          }
-        },
-        {
-          "Key": "ProcessedWoodHard",
-          "Value": {
-            "Meshes": [
-              {
-                "ObjectName": "StaticMesh'ResourceStockpileProcessedWoodHard'",
-                "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileProcessedWoodHard.2"
-              }
-            ],
-            "MaterialOverrides": []
-          }
-        }
-      ],
-      "HitVFXLocation": {
-        "ObjectName": "SceneComponent'Default__BPVisGrainMill_C:HitVFXLocation'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.10"
-      },
-      "HitSuccessVFX": {
-        "ObjectName": "NiagaraSystem'SawdustBurst03'",
-        "ObjectPath": "Anvil/Content/FX/Niagara/SawdustBurst03.17"
-      },
-      "HitSuccessSoundCue": {
-        "ObjectName": "SoundCue'AxeTreeCut_Cue'",
-        "ObjectPath": "Anvil/Content/Audio/SFX/Axe/AxeTreeCut_Cue.0"
+      "GrainMillMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPVisGrainMill_C:GrainMillMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.18"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisGrainMill_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.26"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.23"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconGrainMill'",
@@ -297,26 +118,29 @@
       },
       "BuildSiteCategory": "EBuildSiteCategory::Farming",
       "BuildSiteOrder": 10,
-      "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisGrainMill_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.25"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.22"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisGrainMill_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.8"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisGrainMill_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.21"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisGrainMill_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.20"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisGrainMill_C:ScorchDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.11"
+      },
+      "DecayDataComponent": {
+        "ObjectName": "DecayDataComponent'Default__BPVisGrainMill_C:DecayDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.5"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGrainMill_C:ArrowComponent'",
@@ -328,13 +152,13 @@
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisGrainMill_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.7"
       },
-      "UseWindowType": "EHUDWindowType::HitConversion",
+      "UseWindowType": "EHUDWindowType::GrainMill",
       "bUseForceCameraZoom": true,
       "InteractionIcon": {
-        "ObjectName": "Texture2D'TempIcon'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Items/TempIcon.0"
+        "ObjectName": "Texture2D'IconGrainMill'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconGrainMill.0"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -345,14 +169,14 @@
       "Description": {
         "Namespace": "",
         "Key": "5F10068747AD43D15A655BAD9F04AD1C",
-        "SourceString": "TODO",
-        "LocalizedString": "TODO"
+        "SourceString": "A device used to grind raw resources like Wheat into processed ingredients like Flour.\r\n\r\nA lever at the side of the mill is used to control the coarseness of the final product.",
+        "LocalizedString": "A device used to grind raw resources like Wheat into processed ingredients like Flour.\r\n\r\nA lever at the side of the mill is used to control the coarseness of the final product."
       },
       "DescriptionFooter": {
         "Namespace": "",
-        "Key": "D4FD87AE4BE1B20ABC7A029B7AA63385",
-        "SourceString": "Must be built in Workshop areas.",
-        "LocalizedString": "Must be built in Workshop areas."
+        "Key": "41FF9C214E435493666D73A78EB5F389",
+        "SourceString": "A Powered Handcrank Adapter can be attached to this structure",
+        "LocalizedString": "A Powered Handcrank Adapter can be attached to this structure"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGrainMill_C:ArrowComponent'",
@@ -373,6 +197,18 @@
     }
   },
   {
+    "Type": "DecayDataComponent",
+    "Name": "DecayDataComponent",
+    "Outer": "Default__BPVisGrainMill_C",
+    "Class": "UScriptClass'DecayDataComponent'"
+  },
+  {
+    "Type": "GrainMillDataComponent",
+    "Name": "GrainMillDataComponent",
+    "Outer": "Default__BPVisGrainMill_C",
+    "Class": "UScriptClass'GrainMillDataComponent'"
+  },
+  {
     "Type": "GrassRemovalVolumeComponent",
     "Name": "GrassRemovalVolume",
     "Outer": "Default__BPVisGrainMill_C",
@@ -380,7 +216,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisGrainMill_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.19"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisGrainMill_C:ArrowComponent'",
@@ -393,12 +229,6 @@
     "Name": "HealthDataComponent",
     "Outer": "Default__BPVisGrainMill_C",
     "Class": "UScriptClass'HealthDataComponent'"
-  },
-  {
-    "Type": "HitConverterDataComponent",
-    "Name": "HitConverterDataComponent",
-    "Outer": "Default__BPVisGrainMill_C",
-    "Class": "UScriptClass'HitConverterDataComponent'"
   },
   {
     "Type": "NiagaraComponent",
@@ -433,23 +263,6 @@
     "Class": "UScriptClass'SceneComponent'"
   },
   {
-    "Type": "SceneComponent",
-    "Name": "HitVFXLocation",
-    "Outer": "Default__BPVisGrainMill_C",
-    "Class": "UScriptClass'SceneComponent'",
-    "Properties": {
-      "AttachParent": {
-        "ObjectName": "ArrowComponent'Default__BPVisGrainMill_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.0"
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 100.0
-      }
-    }
-  },
-  {
     "Type": "ScorchDataComponent",
     "Name": "ScorchDataComponent",
     "Outer": "Default__BPVisGrainMill_C",
@@ -467,7 +280,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisGrainMill_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.10"
       },
       "VariableGuid": "D82C2CC7-4AB252F5-8E1ED9A8-F54408F4",
       "InternalVariableName": "DefaultSceneRoot"
@@ -485,48 +298,22 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisGrainMill_C:WoodChoppingStationMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.27"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.24"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisGrainMill_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.14"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGrainMill_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.16"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisGrainMill_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.17"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisGrainMill_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.14"
         }
       ],
       "VariableGuid": "078D6C4F-4D0617D7-5AAE87BF-CC443993",
       "InternalVariableName": "WoodChoppingStationMesh"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_2",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'SkeletalMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "SkeletalMeshComponent'BPVisGrainMill_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.20"
-      },
-      "VariableGuid": "D7190764-485BAA27-2339CABC-55348D8F",
-      "InternalVariableName": "SkeletalMesh"
     }
   },
   {
@@ -549,24 +336,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_4",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'SkeletalMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "SkeletalMeshComponent'BPVisGrainMill_C:SkeletalMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.19"
-      },
-      "VariableGuid": "DB45FAEE-464101D6-E42DB8A9-066E40BB",
-      "InternalVariableName": "SkeletalMesh1"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_5",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -577,7 +346,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisGrainMill_C:Niagara1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.9"
       },
       "VariableGuid": "42AE2306-44708F8D-AE1C5AA9-97822D2C",
       "InternalVariableName": "Niagara1"
@@ -601,20 +370,12 @@
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGrainMill_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.14"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGrainMill_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.16"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisGrainMill_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.17"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisGrainMill_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.14"
         }
       ],
       "DefaultSceneRootNode": {
@@ -625,8 +386,8 @@
   },
   {
     "Type": "SkeletalMeshComponent",
-    "Name": "SkeletalMesh1_GEN_VARIABLE",
-    "Outer": "BPVisGrainMill_C",
+    "Name": "CrankHandleMesh",
+    "Outer": "Default__BPVisGrainMill_C",
     "Class": "UScriptClass'SkeletalMeshComponent'",
     "Properties": {
       "AnimClass": {
@@ -641,17 +402,21 @@
         "ObjectName": "SkeletalMesh'IndustryHandcrank_SK'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/IndustryHandcrank_SK.0"
       },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisGrainMill_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.0"
+      },
       "RelativeLocation": {
-        "X": 1.7711137E-07,
+        "X": 0.0,
         "Y": 150.0,
-        "Z": -1.3521131E-06
+        "Z": 0.0
       }
     }
   },
   {
     "Type": "SkeletalMeshComponent",
-    "Name": "SkeletalMesh_GEN_VARIABLE",
-    "Outer": "BPVisGrainMill_C",
+    "Name": "GrainMillMesh",
+    "Outer": "Default__BPVisGrainMill_C",
     "Class": "UScriptClass'SkeletalMeshComponent'",
     "Properties": {
       "AnimClass": {
@@ -665,6 +430,10 @@
       "SkinnedAsset": {
         "ObjectName": "SkeletalMesh'GrainMill_SK'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/GrainMill_SK.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisGrainMill_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.0"
       }
     }
   },
@@ -673,33 +442,6 @@
     "Name": "SplineDataComponent",
     "Outer": "GrassRemovalVolume",
     "Class": "UScriptClass'SplineDataComponent'"
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "ConvertedItemMeshComponent",
-    "Outer": "Default__BPVisGrainMill_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'IndustryWoodSaw_State01'",
-        "ObjectPath": "Anvil/Content/Meshes/Items/IndustryWoodSaw_State01.2"
-      },
-      "AttachParent": {
-        "ObjectName": "ArrowComponent'Default__BPVisGrainMill_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisGrainMill.0"
-      },
-      "RelativeLocation": {
-        "X": -4.7704532E-08,
-        "Y": -1.3244884E-15,
-        "Z": 151.89308
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 90.0,
-        "Roll": 0.0
-      },
-      "bVisible": false
-    }
   },
   {
     "Type": "StructureDataComponent",

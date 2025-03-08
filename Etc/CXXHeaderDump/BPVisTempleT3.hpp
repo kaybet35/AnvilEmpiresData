@@ -1,9 +1,10 @@
 #ifndef UE4SS_SDK_BPVisTempleT3_HPP
 #define UE4SS_SDK_BPVisTempleT3_HPP
 
-class ABPVisTempleT3_C : public AVisRelicTechCenter
+class ABPVisTempleT3_C : public AVisStructure
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0528 (size: 0x8)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0520 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh1;                                    // 0x0528 (size: 0x8)
     class UVisTeamMeshComponent* VisTeamMesh;                                         // 0x0530 (size: 0x8)
     class UVisStaticMeshComponent* Populate1;                                         // 0x0538 (size: 0x8)
     class UVisStaticMeshComponent* VisRoof;                                           // 0x0540 (size: 0x8)

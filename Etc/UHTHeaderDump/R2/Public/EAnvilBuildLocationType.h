@@ -14,6 +14,7 @@ enum class EAnvilBuildLocationType : uint8 {
     Shore,
     Deployed,
     AdditionalCollisionAllowWater,
+    RequiresEnclosure,
     NumTypes,
 };
 

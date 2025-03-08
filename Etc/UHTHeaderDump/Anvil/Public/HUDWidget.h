@@ -10,6 +10,7 @@
 class UCanvasPanel;
 class UChatMessage;
 class UDismantleButtonWidget;
+class UHUDBuildSiteWidget;
 class UHUDNameWidget;
 class UHUDPlacementStatusWidget;
 class UHUDSignPostWidget;
@@ -114,10 +115,10 @@ protected:
     UCanvasPanel* WinConditionCanvas;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTextBlock* WinConditionText;
+    UImage* WinConditionLogo;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UImage* WinConditionLogo;
+    UImage* VictoryTypeLogo;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UVitalityStatusWidget* PlayerVitality;
@@ -135,7 +136,13 @@ protected:
     UTextBlock* DisclaimerText;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCanvasPanel* BuildSiteCanvas;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UHUDPlacementStatusWidget* PlacementStatusWidget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UHUDBuildSiteWidget* BuildSiteWidget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* AranicLogo;
@@ -145,6 +152,12 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* NovanLogo;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UTexture2D* MilitaryVictoryLogo;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UTexture2D* CultureVictoryLogo;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSlateBrush GuardStrengthEmptyIcon;
@@ -177,6 +190,10 @@ public:
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void PlayWinConditionAnimation();
+    
+public:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void PlayBlackoutAnimation();
     
 private:
     UFUNCTION(BlueprintCallable)

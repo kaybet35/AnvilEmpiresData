@@ -7,6 +7,7 @@
 
 class UArrowComponent;
 class UDecalComponent;
+class UDecayDataComponent;
 class UGrassRemovalVolumeComponent;
 class UHealthDataComponent;
 class UNiagaraSystem;
@@ -51,6 +52,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UScorchDataComponent* ScorchDataComponent;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UDecayDataComponent* DecayDataComponent;
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UArrowComponent* ArrowComponent;
@@ -60,9 +64,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UGrassRemovalVolumeComponent* GrassRemovalVolume;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 GeneratedScorchEffects;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UNiagaraSystem*> ScorchEffectAssets;

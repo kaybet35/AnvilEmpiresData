@@ -45,6 +45,9 @@ private:
     void OnFamilyCenterDeployButtonClicked();
     
     UFUNCTION(BlueprintCallable)
+    bool IsFamilyCenterDeployButtonEnabled();
+    
+    UFUNCTION(BlueprintCallable)
     ESlateVisibility GetFamilyCenterDeployWidgetVisibility();
     
     UFUNCTION(BlueprintCallable)

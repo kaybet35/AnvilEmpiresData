@@ -5,6 +5,7 @@
 #include "AdminPlayerListItemWidget.generated.h"
 
 class UAnvilButtonWidget;
+class UTextBlock;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UAdminPlayerListItemWidget : public UUserWidget, public IUserObjectListEntry {
@@ -25,6 +26,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAnvilButtonWidget* BanButton;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* SilverAllowanceText;
     
 public:
     UAdminPlayerListItemWidget();

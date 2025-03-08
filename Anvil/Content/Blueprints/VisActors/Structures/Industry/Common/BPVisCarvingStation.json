@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisCarvingStation_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.15"
       }
     },
     "SuperStruct": {
@@ -65,11 +65,11 @@
     "Properties": {
       "HitConverterDataComponent": {
         "ObjectName": "HitConverterDataComponent'Default__BPVisCarvingStation_C:HitConverterDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.8"
       },
       "ConvertedItemMeshComponent": {
         "ObjectName": "StaticMeshComponent'Default__BPVisCarvingStation_C:ConvertedItemMeshComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.17"
       },
       "ItemMeshInfoMap": [
         {
@@ -102,13 +102,18 @@
                 "ObjectName": "MaterialInstanceConstant'LDGrid04'",
                 "ObjectPath": "Anvil/Content/Materials/Engine/LDGrid04.0"
               }
-            ]
+            ],
+            "Offset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            }
           }
         }
       ],
       "HitVFXLocation": {
         "ObjectName": "SceneComponent'Default__BPVisCarvingStation_C:HitVFXLocation'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.10"
       },
       "HitSuccessVFX": {
         "ObjectName": "NiagaraSystem'SawdustBurst03'",
@@ -120,7 +125,7 @@
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisCarvingStation_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.21"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'TempIcon'",
@@ -130,23 +135,27 @@
       "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisCarvingStation_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.20"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisCarvingStation_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.7"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisCarvingStation_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.19"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisCarvingStation_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.18"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisCarvingStation_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.11"
+      },
+      "DecayDataComponent": {
+        "ObjectName": "DecayDataComponent'Default__BPVisCarvingStation_C:DecayDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.5"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisCarvingStation_C:ArrowComponent'",
@@ -158,7 +167,7 @@
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisCarvingStation_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.6"
       },
       "UseWindowType": "EHUDWindowType::HitConversion",
       "bUseForceCameraZoom": true,
@@ -216,6 +225,12 @@
     }
   },
   {
+    "Type": "DecayDataComponent",
+    "Name": "DecayDataComponent",
+    "Outer": "Default__BPVisCarvingStation_C",
+    "Class": "UScriptClass'DecayDataComponent'"
+  },
+  {
     "Type": "GrassRemovalVolumeComponent",
     "Name": "GrassRemovalVolume",
     "Outer": "Default__BPVisCarvingStation_C",
@@ -223,7 +238,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisCarvingStation_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.16"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisCarvingStation_C:ArrowComponent'",
@@ -284,7 +299,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisCarvingStation_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.9"
       },
       "VariableGuid": "D82C2CC7-4AB252F5-8E1ED9A8-F54408F4",
       "InternalVariableName": "DefaultSceneRoot"
@@ -302,14 +317,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisCarvingStation_C:CarvingStationMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.22"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisCarvingStation_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.14"
         }
       ],
       "VariableGuid": "078D6C4F-4D0617D7-5AAE87BF-CC443993",
@@ -343,22 +358,22 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisCarvingStation_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.13"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisCarvingStation_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.13"
         },
         {
           "ObjectName": "SCS_Node'BPVisCarvingStation_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.14"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisCarvingStation_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Common/BPVisCarvingStation.12"
       }
     }
   },

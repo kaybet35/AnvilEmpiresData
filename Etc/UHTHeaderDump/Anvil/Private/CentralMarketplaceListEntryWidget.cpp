@@ -2,10 +2,13 @@
 
 UCentralMarketplaceListEntryWidget::UCentralMarketplaceListEntryWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->CancelButton = NULL;
+    this->ItemImageSizeBox = NULL;
     this->ItemImage = NULL;
+    this->SubItemImage = NULL;
     this->QualityIconImage = NULL;
     this->ItemNameTextBlock = NULL;
     this->BuyerSellerTextBlock = NULL;
+    this->QuantityCrateSizeBox = NULL;
     this->QuantityTextBlock = NULL;
     this->PriceTextBlock = NULL;
     this->BuyFulfillButton = NULL;

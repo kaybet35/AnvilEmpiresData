@@ -10,13 +10,6 @@
 ---@field VisStaticMesh6 UVisStaticMeshComponent
 ---@field Decal UDecalComponent
 ---@field VisStaticMesh UVisStaticMeshComponent
----@field ScorchEffect9 UScorchEffectComponent
----@field ScorchEffect6 UScorchEffectComponent
----@field ScorchEffect5 UScorchEffectComponent
----@field ScorchEffect2 UScorchEffectComponent
----@field ScorchEffect1 UScorchEffectComponent
----@field ScorchEffect4 UScorchEffectComponent
----@field Fire USceneComponent
 ---@field Populated USceneComponent
 ABPVisHouseT1_C = {}
 

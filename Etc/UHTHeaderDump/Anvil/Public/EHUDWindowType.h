@@ -32,6 +32,7 @@ enum class EHUDWindowType : uint8 {
     CentralMarket,
     Combustion,
     SignPost,
+    GrainMill,
     Count,
 };
 

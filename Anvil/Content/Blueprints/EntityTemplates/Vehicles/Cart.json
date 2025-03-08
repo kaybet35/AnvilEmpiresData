@@ -129,6 +129,14 @@
         {
           "ObjectName": "FamilyLockProxyComponent'Default__Cart_C:FamilyLockProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.7"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__Cart_C:VehicleSeatProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.13"
+        },
+        {
+          "ObjectName": "VehicleSeatProxyComponent'Default__Cart_C:VehicleSeatProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Cart.14"
         }
       ],
       "VisActorClass": {
@@ -194,7 +202,7 @@
     "Outer": "Default__Cart_C",
     "Class": "UScriptClass'HealthProxyComponent'",
     "Properties": {
-      "MaxHealth": 80.0,
+      "MaxHealth": 120.0,
       "TargetType": "EAnvilDamageTargetType::Vehicle"
     }
   },
@@ -288,6 +296,54 @@
       "FallingDamageRange": {
         "Min": 10.0,
         "Max": 80.0
+      }
+    }
+  },
+  {
+    "Type": "VehicleSeatProxyComponent",
+    "Name": "VehicleSeatProxyComponent_0",
+    "Outer": "Default__Cart_C",
+    "Class": "UScriptClass'VehicleSeatProxyComponent'",
+    "Properties": {
+      "MountedStance": "EAnvilCharacterStance::Sitting",
+      "PlayerOffset": {
+        "X": -475.0,
+        "Y": -45.0,
+        "Z": 250.0
+      },
+      "PlayerRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "PlayerExitOffset": {
+        "X": -600.0,
+        "Y": -45.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "VehicleSeatProxyComponent",
+    "Name": "VehicleSeatProxyComponent_1",
+    "Outer": "Default__Cart_C",
+    "Class": "UScriptClass'VehicleSeatProxyComponent'",
+    "Properties": {
+      "MountedStance": "EAnvilCharacterStance::Sitting",
+      "PlayerOffset": {
+        "X": -475.0,
+        "Y": 45.0,
+        "Z": 250.0
+      },
+      "PlayerRotation": {
+        "Pitch": 0.0,
+        "Yaw": 270.0,
+        "Roll": 0.0
+      },
+      "PlayerExitOffset": {
+        "X": -600.0,
+        "Y": 45.0,
+        "Z": 0.0
       }
     }
   }

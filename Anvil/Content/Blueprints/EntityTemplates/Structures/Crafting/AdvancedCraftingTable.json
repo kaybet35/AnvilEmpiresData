@@ -179,7 +179,8 @@
             "EAnvilItemTag::WeaponStorage",
             "EAnvilItemTag::Head",
             "EAnvilItemTag::Body",
-            "EAnvilItemTag::StorableFoodT1"
+            "EAnvilItemTag::StorableFoodT1",
+            "EAnvilItemTag::ShieldStorage"
           ],
           "DedicatedItemType": null,
           "DedicatedUnderlyingItemType": null,
@@ -206,7 +207,7 @@
           "HeldItem": null,
           "bIsHeldItemPublic": true,
           "Count": 0,
-          "StackLimit": 100,
+          "StackLimit": 10,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
           "AcceptedTags": [],
@@ -284,11 +285,19 @@
             },
             {
               "CodeName": {
-                "ObjectName": "BlueprintGeneratedClass'Nails_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Nails.0"
+                "ObjectName": "BlueprintGeneratedClass'ProcessedFlax_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedFlax.0"
               },
               "CodeNameVisVar": 0,
-              "Count": 2
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedResin_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedResin.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
@@ -381,6 +390,58 @@
               },
               "CodeNameVisVar": 0,
               "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedResin_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedResin.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Mace_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Mace.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeAxe_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeAxe.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedResin_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedResin.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLead_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLead.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 30.0,
@@ -460,15 +521,23 @@
             },
             {
               "CodeName": {
-                "ObjectName": "BlueprintGeneratedClass'ProcessedWoodHard_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWoodHard.0"
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLead_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLead.0"
               },
               "CodeNameVisVar": 0,
               "Count": 1
             }
           ],
           "ProductionTime": 30.0,
-          "OutputCount": 3,
+          "OutputCount": 5,
           "bRequiresResearch": false
         },
         {
@@ -596,11 +665,19 @@
             },
             {
               "CodeName": {
-                "ObjectName": "BlueprintGeneratedClass'ResourceFlint_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFlint.0"
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLead_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLead.0"
               },
               "CodeNameVisVar": 0,
-              "Count": 3
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedResin_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedResin.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 45.0,
@@ -657,6 +734,14 @@
               },
               "CodeNameVisVar": 0,
               "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedFlax_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedFlax.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
             }
           ],
           "ProductionTime": 15.0,
@@ -680,16 +765,16 @@
             },
             {
               "CodeName": {
-                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+                "ObjectName": "BlueprintGeneratedClass'Crate_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Crate.0"
               },
               "CodeNameVisVar": 0,
               "Count": 1
             },
             {
               "CodeName": {
-                "ObjectName": "BlueprintGeneratedClass'Crate_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Crate.0"
+                "ObjectName": "BlueprintGeneratedClass'ProcessedFlax_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedFlax.0"
               },
               "CodeNameVisVar": 0,
               "Count": 1
@@ -718,6 +803,14 @@
               "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'Nails_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Nails.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLead_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLead.0"
               },
               "CodeNameVisVar": 0,
               "Count": 1
@@ -808,8 +901,8 @@
             },
             {
               "CodeName": {
-                "ObjectName": "BlueprintGeneratedClass'ProcessedResin_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedResin.0"
+                "ObjectName": "BlueprintGeneratedClass'ResourceLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceLeather.0"
               },
               "CodeNameVisVar": 0,
               "Count": 1
@@ -907,8 +1000,44 @@
               "Count": 4
             }
           ],
-          "ProductionTime": 45.0,
+          "ProductionTime": 15.0,
           "OutputCount": 1,
+          "bRequiresResearch": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'BurningOil_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/BurningOil.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'AnimalFat_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalFat.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedFlax_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedFlax.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 3,
           "bRequiresResearch": false
         }
       ]

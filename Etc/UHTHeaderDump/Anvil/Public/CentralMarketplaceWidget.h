@@ -9,6 +9,7 @@
 class UAnvilButtonWidget;
 class UCentralMarketplaceListEntryWidget;
 class UCentralMarketplaceOrderGridPanelWidget;
+class UCheckBox;
 class UComboBoxString;
 class UEditableTextBox;
 class UHeaderContainer;
@@ -71,6 +72,15 @@ private:
     UImage* SelectedOrderItemImage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UImage* SelectedOrderCrateImage;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCheckBox* SelectedOrderCrateCheckBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* OrderCratesTextBlock;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEditableTextBox* SelectedOrderItemQuantityEditableTextBox;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -89,6 +99,9 @@ public:
     UCentralMarketplaceWidget();
 
 private:
+    UFUNCTION(BlueprintCallable)
+    void OnSelectedOrderCrateCheckBoxStateChanged(const bool bIsChecked);
+    
     UFUNCTION(BlueprintCallable)
     void OnSelectedItemPlaceOrderButtonClicked();
     
@@ -109,6 +122,9 @@ private:
     
     UFUNCTION(BlueprintCallable)
     bool IsSelectedOrderItemMinQualityComboBoxEnabled();
+    
+    UFUNCTION(BlueprintCallable)
+    bool IsSelectedOrderCrateCheckBoxEnabled();
     
     UFUNCTION(BlueprintCallable)
     bool IsSelectedItemPlaceOrderButtonEnabled();

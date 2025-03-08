@@ -252,8 +252,9 @@ EHUDWindowType = {
     CentralMarket = 25,
     Combustion = 26,
     SignPost = 27,
-    Count = 28,
-    EHUDWindowType_MAX = 29,
+    GrainMill = 28,
+    Count = 29,
+    EHUDWindowType_MAX = 30,
 }
 
 ---@enum EIncomingAttackDirection
@@ -365,7 +366,8 @@ ESimpleTooltip = {
     AnimalHealth = 10,
     DeploymentFood = 11,
     Reinforced = 12,
-    ESimpleTooltip_MAX = 13,
+    Avatars = 13,
+    ESimpleTooltip_MAX = 14,
 }
 
 ---@enum ETemperatureChangeType

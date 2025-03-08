@@ -14,12 +14,11 @@ class ABPVisFamilyCenterKeystoneT1_C : public AVisFamilyCenter
     class USceneComponent* Scene;                                                     // 0x0570 (size: 0x8)
     class UMeshVisibilityDataComponent* MeshVisibilityData;                           // 0x0578 (size: 0x8)
     class UGrassRemovalVolumeComponent* GrassRemovalFamilyArea;                       // 0x0580 (size: 0x8)
-    class UAudioComponent* Audio;                                                     // 0x0588 (size: 0x8)
-    bool RangeMarkerVisibility;                                                       // 0x0590 (size: 0x1)
+    bool RangeMarkerVisibility;                                                       // 0x0588 (size: 0x1)
 
     void ReceiveBeginPlay();
     void ReceiveTick(float DeltaSeconds);
     void ExecuteUbergraph_BPVisFamilyCenterKeystoneT1(int32 EntryPoint);
-}; // Size: 0x591
+}; // Size: 0x589
 
 #endif

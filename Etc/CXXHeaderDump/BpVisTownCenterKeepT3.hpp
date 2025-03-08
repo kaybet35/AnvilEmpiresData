@@ -23,17 +23,10 @@ class ABpVisTownCenterKeepT3_C : public AVisTownCenter
     class UVisStaticMeshComponent* Skirt;                                             // 0x05B8 (size: 0x8)
     class UVisStaticMeshComponent* FF;                                                // 0x05C0 (size: 0x8)
     class UMeshVisibilityDataComponent* MeshVisibilityData;                           // 0x05C8 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect6;                                      // 0x05D0 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect1;                                      // 0x05D8 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect7;                                      // 0x05E0 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect4;                                      // 0x05E8 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect5;                                      // 0x05F0 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect2;                                      // 0x05F8 (size: 0x8)
-    class USceneComponent* Fire;                                                      // 0x0600 (size: 0x8)
-    class UStaticMeshComponent* DebugSphere;                                          // 0x0608 (size: 0x8)
+    class UStaticMeshComponent* DebugSphere;                                          // 0x05D0 (size: 0x8)
 
     void ReceiveTick(float DeltaSeconds);
     void ExecuteUbergraph_BpVisTownCenterKeepT3(int32 EntryPoint);
-}; // Size: 0x610
+}; // Size: 0x5D8
 
 #endif

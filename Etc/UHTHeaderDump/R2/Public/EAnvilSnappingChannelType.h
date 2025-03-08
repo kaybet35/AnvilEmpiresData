@@ -21,6 +21,7 @@ enum class EAnvilSnappingChannelType : uint8 {
     PowerEnd,
     PowerRopeStart,
     PowerRopeEnd,
+    PowerRopeIgnore,
     PowerConvertedAnvilStart,
     PowerConvertedAnvilEnd,
     PowerConvertedHeatStart,
@@ -32,5 +33,7 @@ enum class EAnvilSnappingChannelType : uint8 {
     PowerConvertedWoodChoppingStationEnd,
     PowerConvertedSmashingPlateStart,
     PowerConvertedSmashingPlateEnd,
+    PowerConvertedHandCrankStart,
+    PowerConvertedHandCrankEnd,
 };
 

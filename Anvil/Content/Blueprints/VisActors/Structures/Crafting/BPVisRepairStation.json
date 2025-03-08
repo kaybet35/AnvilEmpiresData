@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisRepairStation_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.12"
       }
     },
     "SuperStruct": {
@@ -54,36 +54,40 @@
     "Properties": {
       "RefineResourceDataComponent": {
         "ObjectName": "RefineResourceDataComponent'Default__BPVisRepairStation_C:RefineResourceDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.7"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisRepairStation_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.17"
       },
       "StructureIcon": {
-        "ObjectName": "Texture2D'IconRepairMaterials'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Items/IconRepairMaterials.0"
+        "ObjectName": "Texture2D'IconRepairbench'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconRepairbench.0"
       },
       "BuildSiteOrder": 8,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisRepairStation_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.16"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisRepairStation_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.6"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisRepairStation_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.15"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisRepairStation_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.14"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisRepairStation_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.9"
+      },
+      "DecayDataComponent": {
+        "ObjectName": "DecayDataComponent'Default__BPVisRepairStation_C:DecayDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.4"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisRepairStation_C:ArrowComponent'",
@@ -95,19 +99,19 @@
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisRepairStation_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.5"
       },
       "MapIconProperty": {
         "Icon": {
-          "ObjectName": "Texture2D'IconWeaponFactory'",
-          "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconWeaponFactory.0"
+          "ObjectName": "Texture2D'IconRepairbench'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconRepairbench.0"
         },
         "MapActorType": "EMapIconType::MinorStructure"
       },
       "UseWindowType": "EHUDWindowType::RepairStation",
       "InteractionIcon": {
-        "ObjectName": "Texture2D'IconRepairMaterials'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Items/IconRepairMaterials.0"
+        "ObjectName": "Texture2D'IconRepairbench'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconRepairbench.0"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -151,6 +155,12 @@
     }
   },
   {
+    "Type": "DecayDataComponent",
+    "Name": "DecayDataComponent",
+    "Outer": "Default__BPVisRepairStation_C",
+    "Class": "UScriptClass'DecayDataComponent'"
+  },
+  {
     "Type": "GrassRemovalVolumeComponent",
     "Name": "GrassRemovalVolume",
     "Outer": "Default__BPVisRepairStation_C",
@@ -158,7 +168,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisRepairStation_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.13"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisRepairStation_C:ArrowComponent'",
@@ -202,7 +212,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisRepairStation_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.8"
       },
       "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -220,7 +230,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisRepairStation_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.18"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -237,18 +247,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisRepairStation_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.11"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisRepairStation_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.11"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisRepairStation_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Crafting/BPVisRepairStation.10"
       }
     }
   },

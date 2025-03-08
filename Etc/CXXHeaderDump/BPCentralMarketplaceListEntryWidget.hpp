@@ -3,8 +3,9 @@
 
 class UBPCentralMarketplaceListEntryWidget_C : public UCentralMarketplaceListEntryWidget
 {
-    class UImage* SilverIcon;                                                         // 0x0308 (size: 0x8)
+    class UImage* QuantityCrateImage;                                                 // 0x0320 (size: 0x8)
+    class UImage* SilverIcon;                                                         // 0x0328 (size: 0x8)
 
-}; // Size: 0x310
+}; // Size: 0x330
 
 #endif

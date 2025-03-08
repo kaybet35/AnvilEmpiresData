@@ -6,14 +6,6 @@
 ---@field Niagara1 UNiagaraComponent
 ---@field VisStaticMesh2 UVisStaticMeshComponent
 ---@field MillSmall2 UVisStaticMeshComponent
----@field ScorchEffect9 UScorchEffectComponent
----@field ScorchEffect4 UScorchEffectComponent
----@field ScorchEffect1 UScorchEffectComponent
----@field ScorchEffect7 UScorchEffectComponent
----@field ScorchEffect5 UScorchEffectComponent
----@field ScorchEffect8 UScorchEffectComponent
----@field ScorchEffect6 UScorchEffectComponent
----@field Fire USceneComponent
 ---@field RotateSpeed double
 ABPVisFoodRefineryT2_C = {}
 

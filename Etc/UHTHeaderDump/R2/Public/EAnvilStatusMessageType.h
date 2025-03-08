@@ -91,7 +91,6 @@ enum class EAnvilStatusMessageType : uint8 {
     BedAlreadyClaimed,
     BedMustHaveHouseAtTown,
     BedClaimCleared,
-    BedNotEnclosed,
     HorseNotHungry,
     NoItemsForPacking,
     TooManyOrFewItemsForPacking,
@@ -132,6 +131,7 @@ enum class EAnvilStatusMessageType : uint8 {
     NotValidSupportToReinforce,
     OccupantMustbeMounted,
     RopeDetachFailed_HandsFull,
+    AvatarSubmitted,
     NumTypes,
 };
 

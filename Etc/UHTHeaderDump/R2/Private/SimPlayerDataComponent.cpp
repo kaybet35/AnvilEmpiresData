@@ -19,6 +19,7 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->SecondaryHeldUnderlyingCodeName = 0;
     this->UnarmedPrimaryHeldItemCodeName = 0;
     this->UnarmedSecondaryHeldItemCodeName = 0;
+    this->CurrentMountedSeatRotation = 0.00f;
     this->PlayerUniqueID = 0;
     this->NobleVoteId = 0;
     this->TrappedTimer = 0.00f;
@@ -37,12 +38,13 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->bIsReinforcing = false;
     this->bIsFalling = false;
     this->bBasedMovement = false;
-    this->SecondsUntilFullDecay = 0.00f;
     this->HeldItemLightSourceRadius = 0.00f;
     this->FoodTypesOnCooldownBits = 0;
     this->AimYaw = 0.00f;
     this->AimPitch = 0.00f;
     this->LastIncomingAttackAngle = 0.00f;
+    this->Avatar = EAnvilAvatarType::Default;
+    this->AvatarXP = 0.00f;
 }
 
 

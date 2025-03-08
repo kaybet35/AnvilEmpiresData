@@ -3,6 +3,8 @@
 
 class UBPAdminPlayerListItem_C : public UAdminPlayerListItemWidget
 {
-}; // Size: 0x2C8
+    class UImage* Image_65;                                                           // 0x02D0 (size: 0x8)
+
+}; // Size: 0x2D8
 
 #endif

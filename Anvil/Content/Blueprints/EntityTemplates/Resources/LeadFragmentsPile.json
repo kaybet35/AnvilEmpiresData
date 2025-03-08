@@ -1,0 +1,98 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "LeadFragmentsPile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "LeadFragmentsPile_C'Default__LeadFragmentsPile_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/LeadFragmentsPile.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__LeadFragmentsPile_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "Extents": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 75.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Stone",
+      "CollisionMask": 8210
+    }
+  },
+  {
+    "Type": "LeadFragmentsPile_C",
+    "Name": "Default__LeadFragmentsPile_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Resources/LeadFragmentsPile.LeadFragmentsPile_C'",
+    "Properties": {
+      "CodeNameString": "LeadFragmentsPile",
+      "CodeName": -1344764940,
+      "Components": [
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__LeadFragmentsPile_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/LeadFragmentsPile.1"
+        },
+        {
+          "ObjectName": "ResourceProxyComponent'Default__LeadFragmentsPile_C:ResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/LeadFragmentsPile.4"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__LeadFragmentsPile_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/LeadFragmentsPile.3"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisLeadFragmentsPile_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisLeadFragmentsPile.1"
+      }
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__LeadFragmentsPile_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Properties": {
+      "ResetIfObserved": true,
+      "LifeSpan": 120.0
+    }
+  },
+  {
+    "Type": "ResourceProxyComponent",
+    "Name": "ResourceProxyComponent_0",
+    "Outer": "Default__LeadFragmentsPile_C",
+    "Class": "UScriptClass'ResourceProxyComponent'",
+    "Properties": {
+      "HitPoints": 15,
+      "RequiredTool": "EAnvilToolType::PickaxeT2",
+      "bInventoryTransferToPlayer": false,
+      "DroppedResourceAmount": 1,
+      "DroppedResourceEntity": {
+        "ObjectName": "BlueprintGeneratedClass'LeadFragmentsPickup_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/LeadFragmentsPickup.0"
+      }
+    }
+  }
+]

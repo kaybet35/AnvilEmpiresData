@@ -19,5 +19,8 @@ FBuildSiteCostData::FBuildSiteCostData() {
     this->ProcessedSteel = 0;
     this->ResourceFibreHeavy = 0;
     this->ProcessedBronze = 0;
+    this->ProcessedFlax = 0;
+    this->ProcessedLead = 0;
+    this->ProcessedResin = 0;
 }
 

@@ -3,9 +3,10 @@
 
 class UBPPlayerInventoryWidget_C : public UPlayerInventoryWidget
 {
-    class UBPAnvilPanel_C* BPAnvilPanel;                                              // 0x0288 (size: 0x8)
-    class UBPMainAreaContainer_C* BPMainAreaContainer;                                // 0x0290 (size: 0x8)
+    class UBPAnvilPanel_C* BPAnvilPanel;                                              // 0x02D0 (size: 0x8)
+    class UBPMainAreaContainer_C* BPMainAreaContainer;                                // 0x02D8 (size: 0x8)
+    class UBPMainAreaContainer_C* BPMainAreaContainer_1;                              // 0x02E0 (size: 0x8)
 
-}; // Size: 0x298
+}; // Size: 0x2E8
 
 #endif

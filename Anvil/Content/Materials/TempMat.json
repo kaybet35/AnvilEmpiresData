@@ -6,12 +6,38 @@
     "Properties": {
       "bUsedWithSkeletalMesh": true,
       "bCanMaskedBeAssumedOpaque": true,
-      "StateId": "4FF1302A-48EA9BCE-92BCF3AE-872DC876"
+      "StateId": "31C0CEEF-4B4097D7-06D41498-B07B610E"
     },
     "LoadedMaterialResources": [],
     "CachedExpressionData": {
       "RuntimeEntries": {
-        "ParameterInfoSet": []
+        "ParameterInfoSet": [
+          {
+            "Name": "Roughness",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Metallic",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Specular",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Tiling Amount",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Grunge Opacity",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          }
+        ]
       },
       "RuntimeEntries[1]": {
         "ParameterInfoSet": [
@@ -39,12 +65,24 @@
       "RuntimeEntries[5]": {
         "ParameterInfoSet": []
       },
-      "ScalarPrimitiveDataIndexValues": [],
+      "ScalarPrimitiveDataIndexValues": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
       "VectorPrimitiveDataIndexValues": [
         -1,
         -1
       ],
-      "ScalarValues": [],
+      "ScalarValues": [
+        0.5,
+        0.0,
+        0.3,
+        1.0,
+        1.0
+      ],
       "VectorValues": [
         {
           "R": 0.489583,
@@ -66,8 +104,39 @@
       "FontValues": [],
       "FontPageValues": [],
       "RuntimeVirtualTextureValues": [],
-      "ReferencedTextures": [],
-      "FunctionInfos": [],
+      "ReferencedTextures": [
+        {
+          "ObjectName": "Texture2D'HeatmapGradient'",
+          "ObjectPath": "Engine/Content/EngineDebugMaterials/HeatmapGradient.0"
+        },
+        {
+          "ObjectName": "Texture2D'GrungeMask01M'",
+          "ObjectPath": "Anvil/Content/FX/Textures/NoiseMasks/GrungeMask01M.0"
+        }
+      ],
+      "FunctionInfos": [
+        {
+          "StateId": "8189A4A8-40E739E1-E4FFE09C-1092124E",
+          "Function": {
+            "ObjectName": "MaterialFunction'AddComponents'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Math/AddComponents.0"
+          }
+        },
+        {
+          "StateId": "5B938C50-440B6892-955AD79F-CD1A8337",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat3Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.0"
+          }
+        },
+        {
+          "StateId": "AF43BE08-49B7B2F7-71B5AE9D-078FA348",
+          "Function": {
+            "ObjectName": "MaterialFunction'CheapContrast_RGB'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast_RGB.0"
+          }
+        }
+      ],
       "ParameterCollectionInfos": [],
       "GrassTypes": [],
       "MaterialLayers": {
@@ -87,7 +156,17 @@
       "bHasPerInstanceCustomData": false,
       "bHasPerInstanceRandom": false,
       "bHasVertexInterpolator": false,
-      "PropertyConnectedBitmask": 33
-    }
+      "PropertyConnectedBitmask": 481
+    },
+    "ReferencedTextures": [
+      {
+        "ObjectName": "Texture2D'HeatmapGradient'",
+        "ObjectPath": "Engine/Content/EngineDebugMaterials/HeatmapGradient.0"
+      },
+      {
+        "ObjectName": "Texture2D'GrungeMask01M'",
+        "ObjectPath": "Anvil/Content/FX/Textures/NoiseMasks/GrungeMask01M.0"
+      }
+    ]
   }
 ]

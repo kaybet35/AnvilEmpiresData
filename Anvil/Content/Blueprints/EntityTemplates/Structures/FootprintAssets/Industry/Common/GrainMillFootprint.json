@@ -48,13 +48,13 @@
     "Properties": {
       "bShowMesh": true,
       "Position": {
-        "X": 0.0,
-        "Y": 0.2273941,
+        "X": -6.877842,
+        "Y": -7.5,
         "Z": 102.25983
       },
       "Extents": {
-        "X": 91.245316,
-        "Y": 179.7736,
+        "X": 98.12316,
+        "Y": 172.501,
         "Z": 102.25983
       },
       "StructureTiers": [
@@ -79,12 +79,30 @@
         },
         {
           "Comp": {
-            "ObjectName": "VehicleSeatProxyComponent'Default__GrainMillFootprint_C:VehicleSeatProxyComponent_0'",
+            "ObjectName": "SnapPointProxyComponent'Default__GrainMillFootprint_C:SnapPointProxyComponent_1'",
             "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/GrainMillFootprint.6"
           },
           "bHighlight": false,
           "bHide": false,
           "bNoCopyToBuildSite": false
+        },
+        {
+          "Comp": {
+            "ObjectName": "VehicleSeatProxyComponent'Default__GrainMillFootprint_C:VehicleSeatProxyComponent_0'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/GrainMillFootprint.7"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": true
+        },
+        {
+          "Comp": {
+            "ObjectName": "VehicleSeatProxyComponent'Default__GrainMillFootprint_C:VehicleSeatProxyComponent_1'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Industry/Common/GrainMillFootprint.8"
+          },
+          "bHighlight": true,
+          "bHide": false,
+          "bNoCopyToBuildSite": true
         }
       ]
     }
@@ -148,6 +166,11 @@
         "Y": 150.0,
         "Z": 100.0
       },
+      "Rotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
       "Extents": {
         "X": 50.0,
         "Y": 50.0,
@@ -158,23 +181,70 @@
     }
   },
   {
+    "Type": "SnapPointProxyComponent",
+    "Name": "SnapPointProxyComponent_1",
+    "Outer": "Default__GrainMillFootprint_C",
+    "Class": "UScriptClass'SnapPointProxyComponent'",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 150.0,
+        "Z": 65.0
+      },
+      "Rotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "Extents": {
+        "X": 30.0,
+        "Y": 30.0,
+        "Z": 30.0
+      },
+      "SnappingChannel": "EAnvilSnappingChannelType::PowerRopeIgnore"
+    }
+  },
+  {
     "Type": "VehicleSeatProxyComponent",
     "Name": "VehicleSeatProxyComponent_0",
     "Outer": "Default__GrainMillFootprint_C",
     "Class": "UScriptClass'VehicleSeatProxyComponent'",
     "Properties": {
-      "MountedStance": "EAnvilCharacterStance::OnWindMill",
+      "MountedStance": "EAnvilCharacterStance::OnHandCrank",
       "PlayerOffset": {
-        "X": -50.0,
-        "Y": 150.0,
+        "X": -75.0,
+        "Y": 135.0,
         "Z": 100.0
       },
       "PlayerExitOffset": {
         "X": -100.0,
         "Y": 150.0,
         "Z": 100.0
+      }
+    }
+  },
+  {
+    "Type": "VehicleSeatProxyComponent",
+    "Name": "VehicleSeatProxyComponent_1",
+    "Outer": "Default__GrainMillFootprint_C",
+    "Class": "UScriptClass'VehicleSeatProxyComponent'",
+    "Properties": {
+      "MountedStance": "EAnvilCharacterStance::OnCoarsenessKnob",
+      "PlayerOffset": {
+        "X": 40.0,
+        "Y": -150.0,
+        "Z": 100.0
       },
-      "bMustNearExitToMount": true
+      "PlayerRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      },
+      "PlayerExitOffset": {
+        "X": 40.0,
+        "Y": -210.0,
+        "Z": 100.0
+      }
     }
   }
 ]

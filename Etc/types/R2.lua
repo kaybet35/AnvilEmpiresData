@@ -67,13 +67,6 @@ AVisActorBase = {}
 
 
 
----@class FAcceptedFood
----@field Item TSubclassOf<UItemTemplate>
----@field ConversionRate int32
-FAcceptedFood = {}
-
-
-
 ---@class FAnvilOutput
 ---@field OutputCodeName TSubclassOf<UItemTemplate>
 ---@field OutputCodeNameVisVar int32
@@ -140,15 +133,30 @@ FBuildAreaInfo = {}
 
 
 ---@class FBuildRuleInfo
----@field RequiresEnclosure boolean
 ---@field bBuildableOverRoads boolean
 ---@field bBuildableNearSpawnPoint boolean
 ---@field bBuildableInEnemyArea boolean
 ---@field bBuildableNearEnemies boolean
+---@field bBuildableInWildernessWithoutPledge boolean
+---@field LimitTouchingGroupCount boolean
+---@field RequiredAgeSeconds float
 ---@field NearbyPlayersRequired int32
 ---@field TierPrerequisite uint8
----@field bBuildableInWildernessWithoutPledge boolean
 FBuildRuleInfo = {}
+
+
+
+---@class FBuildSitePlacementInfo
+---@field InRichSoil boolean
+---@field BeaconTowerLink boolean
+---@field BeaconTowerTownHallLink boolean
+---@field InFamilyArea boolean
+---@field ProximityToRoad boolean
+---@field FamilyAreaExtent float
+---@field BeaconTowerAltitudePercent float
+---@field NumBeaconTowerNeighbours uint8
+---@field DistanceToTown int32
+FBuildSitePlacementInfo = {}
 
 
 
@@ -179,7 +187,7 @@ FCentralMarketplaceUserData = {}
 
 
 ---@class FCompHandleData
----@field ID int64
+---@field Target FEntityHandle
 ---@field Index int32
 FCompHandleData = {}
 
@@ -322,6 +330,15 @@ FFootprintSharedCompEntry = {}
 ---@field NormalizedTemperature float
 ---@field AshGenerated int32
 FFuelType = {}
+
+
+
+---@class FGrainMillRecipe
+---@field InputItems TArray<FBasicItemCount>
+---@field OutputItem FBasicItemCount
+---@field ProductionDuration float
+---@field TargetCoarseness float
+FGrainMillRecipe = {}
 
 
 
@@ -490,12 +507,17 @@ FProducableItem = {}
 
 
 
+---@class FR2ConfigArea
+---@field SmallFamilyCenterExtent float
+---@field BigFamilyCenterExtent float
+---@field TownAreaRadius float
+FR2ConfigArea = {}
+
+
+
 ---@class FR2ConfigBuildSite
 ---@field BuildSiteDistanceRules TArray<FR2ConfigBuildSiteDistanceRule>
 ---@field FamilyStructureWorldEntranceAvoidDist float
----@field FamilyCenterRadiusDistanceFactor float
----@field MinFamilyCenterRadius float
----@field MaxFamilyCenterRadius float
 FR2ConfigBuildSite = {}
 
 
@@ -524,6 +546,12 @@ FR2ConfigCombustion = {}
 ---@field LifeTimeChangeByUpvote float
 ---@field LifeTimeChangeByDownvote float
 FR2ConfigSignPost = {}
+
+
+
+---@class FR2ConfigTradeResources
+---@field TradeResources TArray<TSubclassOf<UEntityTemplate>>
+FR2ConfigTradeResources = {}
 
 
 
@@ -632,10 +660,14 @@ FStatusMessage = {}
 ---@field DamageTargetType EAnvilDamageTargetType
 ---@field TeamId uint8
 ---@field TownHallId int32
+---@field TownTradeResource TSubclassOf<UEntityTemplate>
+---@field TownTradeResourceVisVar int32
 ---@field MarkerFamilyId int32
 ---@field StructureFamilyId int32
+---@field PledgedPlayerId int64
+---@field RemainingTimeUntilCollapse_Sec float
 ---@field bShouldDecay boolean
----@field bCanDecayBePrevented boolean
+---@field bDecaying boolean
 ---@field TimeUntilDecaySec float
 ---@field DecayDamagePerHour float
 ---@field bCanBeScorched boolean
@@ -644,7 +676,6 @@ FStatusMessage = {}
 ---@field ScorchState EAnvilScorchState
 ---@field HousedLivestockCount uint8
 ---@field MaxLivestockCount uint8
----@field PledgedPlayerId int64
 ---@field FarmWaterDuration float
 ---@field FarmWaterDurationMax float
 ---@field CookWaterDurationRemainingSec float
@@ -652,7 +683,10 @@ FStatusMessage = {}
 ---@field WorldEntranceDestinationMapId uint8
 ---@field WorldEntranceId int32
 ---@field ModuleEdgeList TArray<EAnvilUnderworldModuleEdgeType>
----@field RemainingTimeUntilCollapse_Sec float
+---@field bIsGrainMill boolean
+---@field CurrentCoarseness float
+---@field ProductionSpeed float
+---@field ProductionTime float
 FStructureStats = {}
 
 
@@ -663,10 +697,6 @@ FStructureStats = {}
 ---@field Duration float
 FTavernBuffConfig = {}
 
-
-
----@class FTechItem
-FTechItem = {}
 
 
 ---@class FTestStruct
@@ -689,6 +719,20 @@ FUnderworldModuleDebugInfo = {}
 ---@field NumRotations uint8
 ---@field SpawnedPrefabCodeName int32
 FUnderworldModuleDebugInfoEntry = {}
+
+
+
+---@class FVictoryInfo
+---@field VictorTeamId uint8
+---@field VictoryUnixTimeStamp int64
+FVictoryInfo = {}
+
+
+
+---@class FVictoryInfoUpdate
+---@field Type EAnvilVictoryType
+---@field Info FVictoryInfo
+FVictoryInfoUpdate = {}
 
 
 
@@ -796,6 +840,7 @@ UAIStimulusProxyComponent = {}
 ---@field bShowStructureStats boolean
 ---@field bShowWeatherStats boolean
 ---@field bDebugHud boolean
+---@field StructureStatsList TArray<FStructureStats>
 UAdminEnvDataComponent = {}
 
 
@@ -808,7 +853,7 @@ UAdminEnvProxyComponent = {}
 ---@field bBlockSnapping boolean
 ---@field bDisableMinSnapWhenNotSnapping boolean
 ---@field bNoOverlap boolean
----@field bOverrideAngleOverlapMin boolean
+---@field OverridedAngleOverlapPriority uint8
 ---@field OverridedAngleOverlapMin float
 ---@field NumSnappingRequired uint8
 ---@field MaxOverlapDistOverride float
@@ -1031,8 +1076,7 @@ UBoxCollisionProxyComponent = {}
 ---@class UBuildSiteDataComponent : UDataComponent
 ---@field MaterialSubmissions TArray<int32>
 ---@field BuildGhostPlacementErrors TArray<FContextfulPlacementStatus>
----@field PlacementInfoFlags int32
----@field PlacementInfoPayload int32
+---@field PlacementInfo FBuildSitePlacementInfo
 ---@field VisualGuideMinDistance float
 UBuildSiteDataComponent = {}
 
@@ -1197,6 +1241,14 @@ UCustomNavmeshVolumeComponent = {}
 UDataComponent = {}
 
 
+---@class UDecayDataComponent : UDataComponent
+---@field bDecaying boolean
+---@field bDecayingDueToNotEnclosed boolean
+---@field SecondsUntilFullDecay float
+UDecayDataComponent = {}
+
+
+
 ---@class UDecayProxyComponent : UProxyComponent
 ---@field bEnabled boolean
 ---@field StartDelayHours float
@@ -1308,7 +1360,7 @@ UExplorationSpawnerProxyComponent = {}
 
 
 ---@class UFamilyCenterDataComponent : UDataComponent
----@field FamilyAreaRadius float
+---@field FamilyAreaExtent float
 ---@field AllowPublicPledging boolean
 ---@field bHasMembers boolean
 UFamilyCenterDataComponent = {}
@@ -1389,6 +1441,32 @@ UGateDataComponent = {}
 ---@field AutoCloseTime float
 ---@field BreachProbCurve UCurveFloat
 UGateProxyComponent = {}
+
+
+
+---@class UGrainMillDataComponent : UDataComponent
+---@field CurrentRecipeIndex int32
+---@field SmoothedCoarseness float
+---@field NextReadyRecipeIndex int32
+---@field Power float
+---@field InputInventory FCompHandleData
+---@field OutputInventory FCompHandleData
+---@field CurrentCoarsenessKnobSeatTransform FTransform
+---@field CrankPlayer FCompHandleData
+UGrainMillDataComponent = {}
+
+
+
+---@class UGrainMillProxyComponent : UProxyComponent
+---@field RecipeList TArray<FGrainMillRecipe>
+---@field CoarsenessKnobRotationRange float
+---@field CoarsenessKnobSmoothSpeed float
+---@field CoarsenessKnobPushSpeed float
+---@field CoarsenessDriftSpeed float
+---@field CoarsenessEfficiencyImpact FR2FloatRange
+---@field CoarsenessQualityMapRange FR2FloatRange
+---@field MinActivationPower float
+UGrainMillProxyComponent = {}
 
 
 
@@ -1583,6 +1661,8 @@ UInventoryProxyComponent = {}
 ---@field VariableDamageMinModifier float
 ---@field GuardMeterReductionMultiplier float
 ---@field ShieldDurabilityLossMultiplier float
+---@field ArmourDamageMultiplier float
+---@field SecondaryArmourDamageMultiplier float
 ---@field GuardMeterCostPerHit float
 ---@field ArmorMitigation uint8
 ---@field StabilityDamage float
@@ -1977,8 +2057,10 @@ UQuenchingProxyComponent = {}
 
 ---@class UR2ConfigProxyComponent : UProxyComponent
 ---@field BuildSite FR2ConfigBuildSite
+---@field Area FR2ConfigArea
 ---@field Combustion FR2ConfigCombustion
 ---@field SignPost FR2ConfigSignPost
+---@field TradeResourcesConfig FR2ConfigTradeResources
 UR2ConfigProxyComponent = {}
 
 
@@ -2054,6 +2136,7 @@ UResourceDataComponent = {}
 ---@field DroppedSecondaryResourceEntity TSubclassOf<UEntityTemplate>
 ---@field HuskEntity TSubclassOf<UEntityTemplate>
 ---@field bSnapHuskEntityToGround boolean
+---@field SilverDropMultiplier float
 ---@field DestructionEffect TSubclassOf<UEntityTemplate>
 ---@field LootTable TArray<FLootTableItem>
 UResourceProxyComponent = {}
@@ -2165,6 +2248,7 @@ USignPostProxyComponent = {}
 
 ---@class USimPlayerDataComponent : UDataComponent
 ---@field Velocity FVector
+---@field BaseRelativeTransform FTransform
 ---@field GuardStrength uint8
 ---@field TeamId uint8
 ---@field CurrentMovementMode EAnvilMovementMode
@@ -2185,7 +2269,9 @@ USignPostProxyComponent = {}
 ---@field UnarmedPrimaryHeldItemCodeName int32
 ---@field UnarmedSecondaryHeldItemCodeName int32
 ---@field CurrentMountedEntity FEntityHandle
+---@field CurrentMovementBase FEntityHandle
 ---@field CurrentMountedSeatOffset FVector
+---@field CurrentMountedSeatRotation float
 ---@field PlayerName FString
 ---@field PlayerUniqueID int64
 ---@field NobleVoteId int64
@@ -2205,13 +2291,14 @@ USignPostProxyComponent = {}
 ---@field bIsReinforcing boolean
 ---@field bIsFalling boolean
 ---@field bBasedMovement boolean
----@field SecondsUntilFullDecay float
 ---@field HeldItemLightSourceRadius float
 ---@field LightSourceData TArray<FNightShroudLightSource>
 ---@field FoodTypesOnCooldownBits uint8
 ---@field AimYaw float
 ---@field AimPitch float
 ---@field LastIncomingAttackAngle float
+---@field Avatar EAnvilAvatarType
+---@field AvatarXP float
 USimPlayerDataComponent = {}
 
 
@@ -2426,6 +2513,10 @@ UTemplateComponent = {}
 
 
 
+---@class UTempleProxyComponent : UProxyComponent
+UTempleProxyComponent = {}
+
+
 ---@class UTownHallDataComponent : UDataComponent
 ---@field Tier uint8
 ---@field bIsSmallCamp boolean
@@ -2435,10 +2526,8 @@ UTemplateComponent = {}
 ---@field NumUnclaimedHouses int32
 ---@field NumTotalTents int32
 ---@field NumUnclaimedTents int32
----@field NumMarketplaces int32
 ---@field TownNameId uint8
 ---@field TownNameOrdinal uint8
----@field CurrentBuildRadius float
 UTownHallDataComponent = {}
 
 
@@ -2448,6 +2537,7 @@ UTownHallDataComponent = {}
 ---@field bIsSmallCamp boolean
 ---@field bLocalReinforcementOnly boolean
 ---@field AbandonedStartTime float
+---@field OriginalOwnerTeamId uint8
 UTownHallProxyComponent = {}
 
 
@@ -2569,6 +2659,7 @@ UVehicleMovementProxyComponent = {}
 ---@class UVehicleSeatProxyComponent : UProxyComponent
 ---@field MountedStance EAnvilCharacterStance
 ---@field PlayerOffset FVector
+---@field PlayerRotation FRotator
 ---@field PlayerExitOffset FVector
 ---@field DismountMaxDelta float
 ---@field bIsDriver boolean

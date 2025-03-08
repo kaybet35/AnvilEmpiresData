@@ -14,17 +14,51 @@
           "Name": "AnvilPanelSlot0",
           "Content": {
             "ObjectName": "BPHeaderContainer_C'BPPlayerInventoryWidget_C:WidgetTree.Header'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.1"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.2"
           }
         },
         {
           "Name": "AnvilPanelSlot1",
           "Content": {
             "ObjectName": "BPMainAreaContainer_C'BPPlayerInventoryWidget_C:WidgetTree.BPMainAreaContainer'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.2"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.3"
+          }
+        },
+        {
+          "Name": "AnvilPanelSlot2",
+          "Content": {
+            "ObjectName": "BPHeaderContainer_C'BPPlayerInventoryWidget_C:WidgetTree.AvatarHeader'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.1"
+          }
+        },
+        {
+          "Name": "AnvilPanelSlot3",
+          "Content": {
+            "ObjectName": "BPMainAreaContainer_C'BPPlayerInventoryWidget_C:WidgetTree.BPMainAreaContainer_1'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.4"
           }
         }
       ]
+    }
+  },
+  {
+    "Type": "BPHeaderContainer_C",
+    "Name": "AvatarHeader",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPHeaderContainer.BPHeaderContainer_C'",
+    "Template": {
+      "ObjectName": "BPHeaderContainer_C'Default__BPHeaderContainer_C'",
+      "ObjectPath": "Anvil/Content/UI/BPHeaderContainer.2"
+    },
+    "Properties": {
+      "HeaderText": {
+        "Namespace": "",
+        "Key": "818A4CE8438B94EA232A17A23B8FFEAE",
+        "SourceString": "Avatar",
+        "LocalizedString": "Avatar"
+      },
+      "bHeaderWidthOverride": false,
+      "HeaderWidth": 257.0
     }
   },
   {
@@ -69,7 +103,32 @@
           "Name": "MainAreaSlot0",
           "Content": {
             "ObjectName": "ScrollBox'BPPlayerInventoryWidget_C:WidgetTree.ScrollBox_35'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.5"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.19"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BPMainAreaContainer_C",
+    "Name": "BPMainAreaContainer_1",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPMainAreaContainer.BPMainAreaContainer_C'",
+    "Template": {
+      "ObjectName": "BPMainAreaContainer_C'Default__BPMainAreaContainer_C'",
+      "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.2"
+    },
+    "Properties": {
+      "WidthOverride": 257.0,
+      "HeightOverride": 425.0,
+      "MinDesiredWidth": 269.0,
+      "bOverride_MinDesiredWidth": true,
+      "NamedSlotBindings": [
+        {
+          "Name": "MainAreaSlot0",
+          "Content": {
+            "ObjectName": "HorizontalBox'BPPlayerInventoryWidget_C:WidgetTree.HorizontalBox_176'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.7"
           }
         }
       ]
@@ -82,6 +141,201 @@
     "Properties": {
       "bHasScriptImplementedTick": false,
       "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "SubmitAvatarButton",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Button'",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 134.0,
+            "Y": 50.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.7,
+              "G": 0.7,
+              "B": 0.7,
+              "A": 1.0,
+              "Hex": "DADADA"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'PrimaryActionButton_SubmitAvatar'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/PrimaryActionButton_SubmitAvatar.0"
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 134.0,
+            "Y": 50.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 1.0,
+              "Hex": "FFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'PrimaryActionButton_SubmitAvatar'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/PrimaryActionButton_SubmitAvatar.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 134.0,
+            "Y": 50.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.333333,
+              "G": 0.333333,
+              "B": 0.333333,
+              "A": 1.0,
+              "Hex": "9C9C9C"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'PrimaryActionButton_SubmitAvatar'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/PrimaryActionButton_SubmitAvatar.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::Box",
+          "ImageType": "ESlateBrushImageType::FullColor",
+          "ImageSize": {
+            "X": 134.0,
+            "Y": 50.0
+          },
+          "Margin": {
+            "Left": 0.25,
+            "Top": 0.25,
+            "Right": 0.25,
+            "Bottom": 0.25
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.1,
+              "G": 0.1,
+              "B": 0.1,
+              "A": 1.0,
+              "Hex": "595959"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'PrimaryActionButton_SubmitAvatar'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/PrimaryActionButton_SubmitAvatar.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'BPPlayerInventoryWidget_C:WidgetTree.Overlay_0.OverlaySlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.15"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_176",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPlayerInventoryWidget_C:WidgetTree.HorizontalBox_176.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.8"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPlayerInventoryWidget_C:WidgetTree.HorizontalBox_176.HorizontalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_176",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPlayerInventoryWidget_C:WidgetTree.HorizontalBox_176'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.7"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'BPPlayerInventoryWidget_C:WidgetTree.AvatarBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.25"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Outer": "HorizontalBox_176",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0,
+        "Top": 3.0,
+        "Right": 3.0,
+        "Bottom": 3.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPlayerInventoryWidget_C:WidgetTree.HorizontalBox_176'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.7"
+      },
+      "Content": {
+        "ObjectName": "Overlay'BPPlayerInventoryWidget_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.13"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "AvatarImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 80.0,
+          "Y": 80.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'BPPlayerInventoryWidget_C:WidgetTree.Overlay_1.OverlaySlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.17"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "AvatarQualityImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'ItemQualityHigh'",
+          "ObjectPath": "Anvil/Content/Textures/UI/ItemQualityHigh.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPPlayerInventoryWidget_C:WidgetTree.SizeBox_2.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.22"
+      }
     }
   },
   {
@@ -103,7 +357,123 @@
       },
       "Slot": {
         "ObjectName": "ScrollBoxSlot'BPPlayerInventoryWidget_C:WidgetTree.ScrollBox_35.ScrollBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.20"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'BPPlayerInventoryWidget_C:WidgetTree.Overlay_0.OverlaySlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.15"
+        },
+        {
+          "ObjectName": "OverlaySlot'BPPlayerInventoryWidget_C:WidgetTree.Overlay_0.OverlaySlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPlayerInventoryWidget_C:WidgetTree.HorizontalBox_176.HorizontalBoxSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.9"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'BPPlayerInventoryWidget_C:WidgetTree.Overlay_1.OverlaySlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.17"
+        },
+        {
+          "ObjectName": "OverlaySlot'BPPlayerInventoryWidget_C:WidgetTree.Overlay_1.OverlaySlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.18"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPPlayerInventoryWidget_C:WidgetTree.AvatarBox.VerticalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.26"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "Overlay_0",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'BPPlayerInventoryWidget_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.13"
+      },
+      "Content": {
+        "ObjectName": "Button'BPPlayerInventoryWidget_C:WidgetTree.SubmitAvatarButton'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.6"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Outer": "Overlay_0",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'BPPlayerInventoryWidget_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.13"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPPlayerInventoryWidget_C:WidgetTree.AvatarDescriptionText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.23"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "Overlay_1",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'BPPlayerInventoryWidget_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.14"
+      },
+      "Content": {
+        "ObjectName": "Image'BPPlayerInventoryWidget_C:WidgetTree.AvatarImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.10"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_1",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Padding": {
+        "Left": -4.0,
+        "Top": 3.0
+      },
+      "Parent": {
+        "ObjectName": "Overlay'BPPlayerInventoryWidget_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.14"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPPlayerInventoryWidget_C:WidgetTree.SizeBox_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.21"
       }
     }
   },
@@ -140,7 +510,7 @@
       "Slots": [
         {
           "ObjectName": "ScrollBoxSlot'BPPlayerInventoryWidget_C:WidgetTree.ScrollBox_35.ScrollBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.6"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.20"
         }
       ]
     }
@@ -155,11 +525,185 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "ScrollBox'BPPlayerInventoryWidget_C:WidgetTree.ScrollBox_35'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.5"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.19"
       },
       "Content": {
         "ObjectName": "InventoryWidget'BPPlayerInventoryWidget_C:WidgetTree.PlayerInventory'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.4"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.12"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_2",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "WidthOverride": 32.0,
+      "HeightOverride": 32.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPPlayerInventoryWidget_C:WidgetTree.SizeBox_2.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.22"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'BPPlayerInventoryWidget_C:WidgetTree.Overlay_1.OverlaySlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.18"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_2",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPPlayerInventoryWidget_C:WidgetTree.SizeBox_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.21"
+      },
+      "Content": {
+        "ObjectName": "Image'BPPlayerInventoryWidget_C:WidgetTree.AvatarQualityImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.11"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "AvatarDescriptionText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "6213D0C841538926A345AF965FE4F990",
+        "SourceString": "An apprentice that can be trained into a Soldier.",
+        "LocalizedString": "An apprentice that can be trained into a Soldier."
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.708376,
+          "G": 0.64448,
+          "B": 0.552011,
+          "A": 1.0,
+          "Hex": "DBD2C4"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 12
+      },
+      "Justification": "ETextJustify::Center",
+      "AutoWrapText": true,
+      "WrapTextAt": 145.0,
+      "Slot": {
+        "ObjectName": "OverlaySlot'BPPlayerInventoryWidget_C:WidgetTree.Overlay_0.OverlaySlot_4'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.16"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "AvatarNameText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "D2E3EAC140462C59676CA98B66D3D262",
+        "SourceString": "Apprentice",
+        "LocalizedString": "Apprentice"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.708376,
+          "G": 0.64448,
+          "B": 0.552011,
+          "A": 1.0,
+          "Hex": "DBD2C4"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 12
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPPlayerInventoryWidget_C:WidgetTree.AvatarBox.VerticalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.27"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "AvatarBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'BPPlayerInventoryWidget_C:WidgetTree.AvatarBox.VerticalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.26"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPPlayerInventoryWidget_C:WidgetTree.AvatarBox.VerticalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.27"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPlayerInventoryWidget_C:WidgetTree.HorizontalBox_176.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "AvatarBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPPlayerInventoryWidget_C:WidgetTree.AvatarBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.25"
+      },
+      "Content": {
+        "ObjectName": "Overlay'BPPlayerInventoryWidget_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.14"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Outer": "AvatarBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 5.0,
+        "Top": 5.0,
+        "Right": 5.0,
+        "Bottom": 5.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPPlayerInventoryWidget_C:WidgetTree.AvatarBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.25"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPPlayerInventoryWidget_C:WidgetTree.AvatarNameText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.24"
       }
     }
   },
@@ -170,7 +714,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPPlayerInventoryWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.8"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.29"
       },
       "bClassRequiresNativeTick": true
     },
@@ -200,6 +744,17 @@
           "ObjectName": "WidgetBlueprintGeneratedClass'BPMainAreaContainer_C'",
           "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.20"
         }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPMainAreaContainer_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPMainAreaContainer_C'",
+          "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.20"
+        }
       }
     ],
     "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
@@ -211,7 +766,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPPlayerInventoryWidget_C'Default__BPPlayerInventoryWidget_C'",
-      "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.3"
+      "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.5"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"

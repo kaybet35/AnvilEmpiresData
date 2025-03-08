@@ -46,7 +46,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisSmallBoat_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.23"
       }
     },
     "SuperStruct": {
@@ -54,6 +54,39 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ResourceFishR3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'InstancedStaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ResourceFishR1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'InstancedStaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ResourceFishR2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'InstancedStaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "WaterStatic",
@@ -73,17 +106,6 @@
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
           "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ResourceFishR1",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'InstancedStaticMeshComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -143,7 +165,7 @@
     "Properties": {
       "VehicleMovementDataComponent": {
         "ObjectName": "VehicleMovementDataComponent'Default__BPVisSmallBoat_C:VehicleMovementDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.26"
       },
       "EntityAttachableDataComponent": {
         "ObjectName": "EntityAttachableDataComponent'Default__BPVisSmallBoat_C:EntityAttachableDataComponent'",
@@ -155,7 +177,7 @@
       },
       "MoveLoopParticleSystem": {
         "ObjectName": "NiagaraComponent'Default__BPVisSmallBoat_C:MovementParticleSystem'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.12"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisSmallBoat_C:HealthDataComponent'",
@@ -203,6 +225,7 @@
     "Outer": "BPVisSmallBoat_C",
     "Class": "UScriptClass'InstancedStaticMeshComponent'",
     "Properties": {
+      "InstancingRandomSeed": 1,
       "StaticMesh": {
         "ObjectName": "StaticMesh'Trout'",
         "ObjectPath": "Anvil/Content/Meshes/Animals/Trout.2"
@@ -214,16 +237,21 @@
         "Y": 4.6E-05,
         "Z": 0.0
       },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
       "bHiddenInGame": true
     },
     "PerInstanceSMData": [
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.2863327,
-            "Y": 0.70818275,
-            "Z": 0.40893722,
-            "W": -0.4958612,
+            "X": 0.32016784,
+            "Y": 0.67798644,
+            "Z": 0.4572601,
+            "W": -0.47471818,
             "IsNormalized": true,
             "Size": 0.99830717,
             "SizeSquared": 0.99661726
@@ -234,9 +262,9 @@
             "Z": 19.938427
           },
           "Scale3D": {
-            "X": 0.99994344,
-            "Y": 0.99999654,
-            "Z": 0.9999449
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -244,13 +272,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.5802882,
-            "Y": 0.23677786,
-            "Z": 0.5934921,
-            "W": 0.50158364,
+            "X": -0.5802855,
+            "Y": 0.2367812,
+            "Z": 0.5934908,
+            "W": 0.50158685,
             "IsNormalized": true,
-            "Size": 0.9983071,
-            "SizeSquared": 0.99661714
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
           },
           "Translation": {
             "X": -142.33676,
@@ -258,9 +286,9 @@
             "Z": 34.969894
           },
           "Scale3D": {
-            "X": 0.9999649,
-            "Y": 0.99999034,
-            "Z": 0.9999664
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -268,13 +296,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.4769224,
-            "Y": 0.5204359,
-            "Z": 0.4769224,
-            "W": 0.5204361,
+            "X": -0.47692508,
+            "Y": 0.5204336,
+            "Z": 0.476925,
+            "W": 0.5204336,
             "IsNormalized": true,
             "Size": 0.99830717,
-            "SizeSquared": 0.9966172
+            "SizeSquared": 0.99661726
           },
           "Translation": {
             "X": -111.87777,
@@ -282,9 +310,9 @@
             "Z": 23.737305
           },
           "Scale3D": {
-            "X": 0.9999696,
-            "Y": 0.99999875,
-            "Z": 0.9999692
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -294,7 +322,7 @@
           "Rotation": {
             "X": 0.38238546,
             "Y": -0.66229504,
-            "Z": 0.32084703,
+            "Z": 0.32084697,
             "W": 0.5557167,
             "IsNormalized": true,
             "Size": 0.99830717,
@@ -306,9 +334,9 @@
             "Z": 32.913086
           },
           "Scale3D": {
-            "X": 0.999973,
-            "Y": 0.9999967,
-            "Z": 0.99997234
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -316,10 +344,10 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.40482378,
-            "Y": -0.57829595,
-            "Z": -0.40482372,
-            "W": 0.57829624,
+            "X": -0.4048216,
+            "Y": -0.57829756,
+            "Z": -0.40482143,
+            "W": 0.57829773,
             "IsNormalized": true,
             "Size": 0.9983072,
             "SizeSquared": 0.9966173
@@ -330,9 +358,9 @@
             "Z": 12.125305
           },
           "Scale3D": {
-            "X": 0.99997395,
-            "Y": 0.99999803,
-            "Z": 0.9999737
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -340,13 +368,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.24522738,
-            "Y": 0.59291804,
-            "Z": 0.16524531,
-            "W": 0.7467414,
+            "X": -0.2452184,
+            "Y": 0.5929201,
+            "Z": 0.16523817,
+            "W": 0.74674445,
             "IsNormalized": true,
-            "Size": 0.99830705,
-            "SizeSquared": 0.996617
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
           },
           "Translation": {
             "X": -48.575417,
@@ -354,9 +382,9 @@
             "Z": 31.277233
           },
           "Scale3D": {
-            "X": 0.9999493,
-            "Y": 0.99999785,
-            "Z": 0.9999494
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -364,13 +392,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.6029953,
-            "Y": -0.38674808,
-            "Z": -0.5525426,
-            "W": -0.4220622,
+            "X": 0.6029967,
+            "Y": -0.38674605,
+            "Z": -0.5525439,
+            "W": -0.42206007,
             "IsNormalized": true,
-            "Size": 0.99830717,
-            "SizeSquared": 0.9966172
+            "Size": 0.99830705,
+            "SizeSquared": 0.99661696
           },
           "Translation": {
             "X": -6.545042,
@@ -378,9 +406,9 @@
             "Z": 23.91413
           },
           "Scale3D": {
-            "X": 0.99997616,
-            "Y": 0.9999975,
-            "Z": 0.99997544
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -388,10 +416,10 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.6732378,
-            "Y": 0.21227211,
-            "Z": 0.67323786,
-            "W": -0.21227211,
+            "X": 0.6732381,
+            "Y": 0.21227127,
+            "Z": 0.67323804,
+            "W": -0.2122713,
             "IsNormalized": true,
             "Size": 0.99830717,
             "SizeSquared": 0.9966172
@@ -402,9 +430,9 @@
             "Z": 29.096708
           },
           "Scale3D": {
-            "X": 0.9999645,
-            "Y": 0.9999703,
-            "Z": 0.99996525
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -412,13 +440,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.3398554,
-            "Y": -0.31142,
+            "X": 0.33985543,
+            "Y": -0.31141996,
             "Z": 0.6528659,
             "W": 0.5982468,
             "IsNormalized": true,
             "Size": 0.99830717,
-            "SizeSquared": 0.9966172
+            "SizeSquared": 0.99661726
           },
           "Translation": {
             "X": 86.70118,
@@ -426,9 +454,9 @@
             "Z": 17.43554
           },
           "Scale3D": {
-            "X": 0.9999688,
-            "Y": 0.9999907,
-            "Z": 0.9999721
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -436,13 +464,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.50909954,
-            "Y": 0.6067254,
+            "X": -0.5090996,
+            "Y": 0.60672545,
             "Z": 0.3906279,
-            "W": 0.46554145,
+            "W": 0.4655415,
             "IsNormalized": true,
-            "Size": 0.99830705,
-            "SizeSquared": 0.99661696
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
           },
           "Translation": {
             "X": 78.34209,
@@ -450,9 +478,9 @@
             "Z": 12.60971
           },
           "Scale3D": {
-            "X": 0.9999535,
-            "Y": 0.9999916,
-            "Z": 0.99995404
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -460,13 +488,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.40977272,
-            "Y": 0.4846201,
-            "Z": -0.4182187,
-            "W": 0.64725584,
+            "X": 0.40976706,
+            "Y": 0.48462376,
+            "Z": -0.4182144,
+            "W": 0.64725924,
             "IsNormalized": true,
-            "Size": 0.9983072,
-            "SizeSquared": 0.9966174
+            "Size": 0.99830705,
+            "SizeSquared": 0.99661696
           },
           "Translation": {
             "X": 153.3623,
@@ -474,9 +502,9 @@
             "Z": 29.659582
           },
           "Scale3D": {
-            "X": 0.99995583,
-            "Y": 0.9999935,
-            "Z": 0.9999552
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -484,13 +512,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.4481689,
-            "Y": -0.53491884,
-            "Z": 0.58409774,
-            "W": 0.41043082,
+            "X": 0.44817016,
+            "Y": -0.5349171,
+            "Z": 0.58409935,
+            "W": 0.41042957,
             "IsNormalized": true,
-            "Size": 0.99830717,
-            "SizeSquared": 0.9966172
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
           },
           "Translation": {
             "X": 183.24301,
@@ -498,9 +526,9 @@
             "Z": 16.591583
           },
           "Scale3D": {
-            "X": 0.99992245,
-            "Y": 0.99999326,
-            "Z": 0.9999247
+            "X": 0.70000005,
+            "Y": 0.7,
+            "Z": 0.70000005
           },
           "IsRotationNormalized": true
         }
@@ -508,10 +536,10 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.37124127,
-            "Y": -0.5876768,
-            "Z": -0.43707693,
-            "W": 0.56780005,
+            "X": -0.3712502,
+            "Y": -0.5876699,
+            "Z": -0.4370862,
+            "W": 0.56779414,
             "IsNormalized": true,
             "Size": 0.99830717,
             "SizeSquared": 0.9966172
@@ -522,9 +550,9 @@
             "Z": 35.434494
           },
           "Scale3D": {
-            "X": 0.7263648,
-            "Y": 0.7264414,
-            "Z": 0.726364
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -532,13 +560,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.00020513349,
+            "X": -0.0002983248,
             "Y": -0.736036,
-            "Z": -0.00022472074,
-            "W": 0.67443895,
+            "Z": -0.00032642327,
+            "W": 0.6744391,
             "IsNormalized": true,
-            "Size": 0.99830705,
-            "SizeSquared": 0.996617
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
           },
           "Translation": {
             "X": 149.28694,
@@ -546,9 +574,9 @@
             "Z": 48.056572
           },
           "Scale3D": {
-            "X": 0.9998769,
-            "Y": 0.69257754,
-            "Z": 0.99987763
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -556,37 +584,37 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.37907547,
+            "X": -0.37907553,
             "Y": -0.37951034,
-            "Z": -0.5950116,
+            "Z": -0.59501165,
             "W": 0.5956946,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": 103.8188,
+            "Y": -44.36581,
+            "Z": 37.333466
+          },
+          "Scale3D": {
+            "X": 0.70000005,
+            "Y": 0.7,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.70288575,
+            "Y": -0.4603365,
+            "Z": 0.39906868,
+            "W": 0.36249596,
             "IsNormalized": true,
             "Size": 0.99830717,
             "SizeSquared": 0.9966172
-          },
-          "Translation": {
-            "X": 103.83304,
-            "Y": -56.791008,
-            "Z": 31.539902
-          },
-          "Scale3D": {
-            "X": 0.99988973,
-            "Y": 0.99999666,
-            "Z": 0.99989086
-          },
-          "IsRotationNormalized": true
-        }
-      },
-      {
-        "TransformData": {
-          "Rotation": {
-            "X": 0.70288014,
-            "Y": -0.46034274,
-            "Z": 0.39906144,
-            "W": 0.36250696,
-            "IsNormalized": true,
-            "Size": 0.99830717,
-            "SizeSquared": 0.99661726
           },
           "Translation": {
             "X": 45.193375,
@@ -594,9 +622,9 @@
             "Z": 35.226475
           },
           "Scale3D": {
-            "X": 0.9998824,
-            "Y": 0.99998367,
-            "Z": 0.99988127
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -604,13 +632,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.41670942,
-            "Y": 0.36436972,
-            "Z": -0.58268905,
-            "W": 0.5921813,
+            "X": 0.41670373,
+            "Y": 0.36437556,
+            "Z": -0.5826854,
+            "W": 0.59218526,
             "IsNormalized": true,
-            "Size": 0.9983072,
-            "SizeSquared": 0.9966173
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
           },
           "Translation": {
             "X": 57.92287,
@@ -618,9 +646,9 @@
             "Z": 18.320034
           },
           "Scale3D": {
-            "X": 0.7280068,
-            "Y": 0.7280917,
-            "Z": 0.72800833
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
           },
           "IsRotationNormalized": true
         }
@@ -628,13 +656,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.67375815,
-            "Y": -0.01920068,
-            "Z": 0.7353641,
-            "W": -0.039220173,
+            "X": 0.6737571,
+            "Y": -0.019180624,
+            "Z": 0.73536456,
+            "W": -0.03923855,
             "IsNormalized": true,
             "Size": 0.99830717,
-            "SizeSquared": 0.99661726
+            "SizeSquared": 0.9966172
           },
           "Translation": {
             "X": 17.952934,
@@ -642,9 +670,9 @@
             "Z": 38.654034
           },
           "Scale3D": {
-            "X": 0.99990755,
-            "Y": 1.0000128,
-            "Z": 0.99990326
+            "X": 0.8,
+            "Y": 0.79999995,
+            "Z": 0.8
           },
           "IsRotationNormalized": true
         }
@@ -652,13 +680,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.3259685,
-            "Y": -0.6261414,
-            "Z": 0.32596853,
-            "W": 0.6261415,
+            "X": 0.3259525,
+            "Y": -0.6261498,
+            "Z": 0.32595244,
+            "W": 0.6261499,
             "IsNormalized": true,
             "Size": 0.99830717,
-            "SizeSquared": 0.9966172
+            "SizeSquared": 0.99661726
           },
           "Translation": {
             "X": -36.999725,
@@ -666,9 +694,9 @@
             "Z": 45.376945
           },
           "Scale3D": {
-            "X": 0.9998878,
-            "Y": 0.9999976,
-            "Z": 0.9998885
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -676,13 +704,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.36178336,
-            "Y": -0.39601427,
+            "X": -0.3617834,
+            "Y": -0.3960143,
             "Z": -0.5678848,
-            "W": 0.62161845,
+            "W": 0.6216185,
             "IsNormalized": true,
-            "Size": 0.9983071,
-            "SizeSquared": 0.9966171
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
           },
           "Translation": {
             "X": -82.058075,
@@ -690,9 +718,9 @@
             "Z": 28.049166
           },
           "Scale3D": {
-            "X": 0.9998865,
-            "Y": 0.99999243,
-            "Z": 0.99988854
+            "X": 0.70000005,
+            "Y": 0.70000005,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -700,10 +728,10 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.53560275,
-            "Y": 0.44730017,
-            "Z": 0.5845384,
-            "W": -0.40985897,
+            "X": 0.5356066,
+            "Y": 0.44729462,
+            "Z": 0.5845426,
+            "W": -0.40985394,
             "IsNormalized": true,
             "Size": 0.99830717,
             "SizeSquared": 0.99661726
@@ -714,9 +742,9 @@
             "Z": 31.742218
           },
           "Scale3D": {
-            "X": 0.99986655,
-            "Y": 0.9999627,
-            "Z": 0.99988735
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -738,9 +766,9 @@
             "Z": 33.762646
           },
           "Scale3D": {
-            "X": 0.8601469,
-            "Y": 0.86022925,
-            "Z": 0.86014956
+            "X": 0.79999995,
+            "Y": 0.8,
+            "Z": 0.8
           },
           "IsRotationNormalized": true
         }
@@ -748,13 +776,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.65225345,
-            "Y": 0.2699509,
-            "Z": 0.47705367,
+            "X": -0.6522535,
+            "Y": 0.26995096,
+            "Z": 0.47705373,
             "W": 0.5203161,
             "IsNormalized": true,
-            "Size": 0.9983071,
-            "SizeSquared": 0.9966171
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
           },
           "Translation": {
             "X": -152.85384,
@@ -762,9 +790,9 @@
             "Z": 50.73627
           },
           "Scale3D": {
-            "X": 0.9998843,
-            "Y": 0.99997336,
-            "Z": 0.9998804
+            "X": 0.70000005,
+            "Y": 0.7,
+            "Z": 0.70000005
           },
           "IsRotationNormalized": true
         }
@@ -786,9 +814,9 @@
             "Z": 41.60814
           },
           "Scale3D": {
-            "X": 0.999896,
-            "Y": 0.9999968,
-            "Z": 0.9998962
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
           },
           "IsRotationNormalized": true
         }
@@ -796,10 +824,10 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.54409087,
-            "Y": -0.5245981,
-            "Z": -0.30035254,
-            "W": 0.5789366,
+            "X": -0.5441025,
+            "Y": -0.5245921,
+            "Z": -0.30036306,
+            "W": 0.5789256,
             "IsNormalized": true,
             "Size": 0.99830717,
             "SizeSquared": 0.9966172
@@ -810,9 +838,9 @@
             "Z": 29.497606
           },
           "Scale3D": {
-            "X": 0.9998871,
-            "Y": 0.9999926,
-            "Z": 0.99988747
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -820,13 +848,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.3901948,
-            "Y": -0.60712904,
-            "Z": 0.4650587,
-            "W": 0.5093917,
+            "X": 0.39018676,
+            "Y": -0.6071363,
+            "Z": 0.4650492,
+            "W": 0.50939786,
             "IsNormalized": true,
-            "Size": 0.99830717,
-            "SizeSquared": 0.99661726
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
           },
           "Translation": {
             "X": -199.54164,
@@ -834,9 +862,9 @@
             "Z": 42.93276
           },
           "Scale3D": {
-            "X": 0.99986285,
-            "Y": 0.9999887,
-            "Z": 0.9998644
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -868,13 +896,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.3522427,
-            "Y": -0.44024956,
-            "Z": -0.5719782,
-            "W": 0.5929279,
+            "X": -0.3522488,
+            "Y": -0.44024378,
+            "Z": -0.57198274,
+            "W": 0.5929243,
             "IsNormalized": true,
-            "Size": 0.9983071,
-            "SizeSquared": 0.99661714
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
           },
           "Translation": {
             "X": -100.45902,
@@ -882,9 +910,9 @@
             "Z": 40.296124
           },
           "Scale3D": {
-            "X": 0.99987894,
-            "Y": 0.9999718,
-            "Z": 0.99988115
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -892,10 +920,10 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.5983232,
-            "Y": -0.30970427,
-            "Z": -0.5367058,
-            "W": 0.50463504,
+            "X": -0.59831566,
+            "Y": -0.30971232,
+            "Z": -0.5367012,
+            "W": 0.504644,
             "IsNormalized": true,
             "Size": 0.9983071,
             "SizeSquared": 0.9966171
@@ -906,9 +934,9 @@
             "Z": 59.521305
           },
           "Scale3D": {
-            "X": 0.99990284,
-            "Y": 1.0000011,
-            "Z": 0.9998998
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.79999995
           },
           "IsRotationNormalized": true
         }
@@ -916,13 +944,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.00027005732,
+            "X": 0.00027004682,
             "Y": -0.70590967,
-            "Z": -0.061256956,
-            "W": 0.70324683,
+            "Z": -0.061256975,
+            "W": 0.7032469,
             "IsNormalized": true,
             "Size": 0.9983071,
-            "SizeSquared": 0.9966171
+            "SizeSquared": 0.99661714
           },
           "Translation": {
             "X": -107.25879,
@@ -930,9 +958,9 @@
             "Z": 59.865192
           },
           "Scale3D": {
-            "X": 0.99988586,
-            "Y": 0.9999863,
-            "Z": 0.99988693
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
           },
           "IsRotationNormalized": true
         }
@@ -940,13 +968,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.5846202,
-            "Y": 0.6024737,
-            "Z": 0.3378405,
-            "W": 0.42157507,
+            "X": -0.58462405,
+            "Y": 0.60247064,
+            "Z": 0.33784613,
+            "W": 0.42156968,
             "IsNormalized": true,
-            "Size": 0.9983071,
-            "SizeSquared": 0.9966171
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
           },
           "Translation": {
             "X": 99.568474,
@@ -954,9 +982,9 @@
             "Z": 47.488277
           },
           "Scale3D": {
-            "X": 0.9998846,
-            "Y": 0.99998003,
-            "Z": 0.9998869
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.70000005
           },
           "IsRotationNormalized": true
         }
@@ -964,13 +992,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.7472893,
-            "Y": -0.47506833,
-            "Z": -0.38916668,
-            "W": -0.24705309,
+            "X": 0.74734837,
+            "Y": -0.47497538,
+            "Z": -0.3892803,
+            "W": -0.24687439,
             "IsNormalized": true,
-            "Size": 0.9983071,
-            "SizeSquared": 0.9966171
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
           },
           "Translation": {
             "X": 203.96924,
@@ -978,9 +1006,9 @@
             "Z": 42.75331
           },
           "Scale3D": {
-            "X": 0.6558307,
-            "Y": 0.6558874,
-            "Z": 0.9998709
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -988,13 +1016,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.5750348,
-            "Y": -0.4851623,
-            "Z": 0.50459516,
-            "W": 0.41946816,
+            "X": 0.5750338,
+            "Y": -0.4851635,
+            "Z": 0.5045939,
+            "W": 0.41946962,
             "IsNormalized": true,
-            "Size": 0.9983072,
-            "SizeSquared": 0.9966173
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
           },
           "Translation": {
             "X": 87.81968,
@@ -1002,9 +1030,9 @@
             "Z": 26.625309
           },
           "Scale3D": {
-            "X": 0.62065244,
-            "Y": 0.62071216,
-            "Z": 0.6206539
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -1012,10 +1040,10 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.32699308,
-            "Y": -0.51963454,
-            "Z": 0.47779423,
-            "W": 0.62560797,
+            "X": 0.3270038,
+            "Y": -0.5196265,
+            "Z": 0.4778031,
+            "W": 0.6256023,
             "IsNormalized": true,
             "Size": 0.99830717,
             "SizeSquared": 0.9966172
@@ -1026,9 +1054,9 @@
             "Z": 29.722795
           },
           "Scale3D": {
-            "X": 0.99989015,
-            "Y": 0.9999983,
-            "Z": 0.9998917
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -1036,13 +1064,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.5995705,
-            "Y": 0.6221283,
-            "Z": 0.3646371,
-            "W": -0.34224036,
+            "X": 0.5995689,
+            "Y": 0.6221301,
+            "Z": 0.3646342,
+            "W": -0.34224325,
             "IsNormalized": true,
-            "Size": 0.9983071,
-            "SizeSquared": 0.9966171
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
           },
           "Translation": {
             "X": 177.98206,
@@ -1050,9 +1078,9 @@
             "Z": 36.081837
           },
           "Scale3D": {
-            "X": 0.9998837,
-            "Y": 0.9999924,
-            "Z": 0.99988276
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.70000005
           },
           "IsRotationNormalized": true
         }
@@ -1060,13 +1088,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.41048846,
-            "Y": -0.345266,
+            "X": -0.4104884,
+            "Y": -0.34526607,
             "Z": -0.6443454,
-            "W": 0.5419657,
+            "W": 0.5419658,
             "IsNormalized": true,
-            "Size": 0.99830717,
-            "SizeSquared": 0.9966172
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
           },
           "Translation": {
             "X": 222.91475,
@@ -1074,9 +1102,9 @@
             "Z": 35.837837
           },
           "Scale3D": {
-            "X": 0.91520536,
-            "Y": 0.91530454,
-            "Z": 0.9152081
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -1084,13 +1112,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.5031472,
-            "Y": 0.61261666,
-            "Z": 0.39952338,
-            "W": -0.45666406,
+            "X": 0.5031448,
+            "Y": 0.61261874,
+            "Z": 0.39952016,
+            "W": -0.45666674,
             "IsNormalized": true,
             "Size": 0.99830717,
-            "SizeSquared": 0.9966172
+            "SizeSquared": 0.99661726
           },
           "Translation": {
             "X": 131.48064,
@@ -1098,9 +1126,9 @@
             "Z": 17.72556
           },
           "Scale3D": {
-            "X": 0.7370074,
-            "Y": 0.73707557,
-            "Z": 0.73700756
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
           },
           "IsRotationNormalized": true
         }
@@ -1108,13 +1136,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.6403107,
-            "Y": 0.29726797,
-            "Z": 0.667251,
-            "W": -0.23027661,
+            "X": 0.64033526,
+            "Y": 0.29719666,
+            "Z": 0.66728276,
+            "W": -0.23020817,
             "IsNormalized": true,
             "Size": 0.99830717,
-            "SizeSquared": 0.99661726
+            "SizeSquared": 0.9966172
           },
           "Translation": {
             "X": 244.6747,
@@ -1122,9 +1150,9 @@
             "Z": 49.90297
           },
           "Scale3D": {
-            "X": 0.7793117,
-            "Y": 0.6314838,
-            "Z": 0.7793179
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -1132,13 +1160,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.6116233,
-            "Y": 0.63712144,
-            "Z": 0.28549927,
-            "W": 0.36756033,
+            "X": -0.61162627,
+            "Y": 0.63711905,
+            "Z": 0.2855045,
+            "W": 0.3675554,
             "IsNormalized": true,
-            "Size": 0.99830717,
-            "SizeSquared": 0.9966172
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
           },
           "Translation": {
             "X": 57.848522,
@@ -1146,9 +1174,9 @@
             "Z": 36.487465
           },
           "Scale3D": {
-            "X": 0.8047049,
-            "Y": 0.8047937,
-            "Z": 0.8047062
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -1156,13 +1184,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.6361104,
-            "Y": -0.082976095,
-            "Z": 0.7582867,
-            "W": -0.10048383,
+            "X": 0.6361085,
+            "Y": -0.082961135,
+            "Z": 0.7582883,
+            "W": -0.10049639,
             "IsNormalized": true,
-            "Size": 0.99830717,
-            "SizeSquared": 0.99661726
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
           },
           "Translation": {
             "X": 80.25817,
@@ -1170,9 +1198,9 @@
             "Z": 46.842636
           },
           "Scale3D": {
-            "X": 0.79977244,
-            "Y": 0.79984885,
-            "Z": 0.7997812
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.70000005
           },
           "IsRotationNormalized": true
         }
@@ -1180,13 +1208,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.10803512,
-            "Y": 0.18711357,
-            "Z": -0.55898404,
-            "W": 0.7984178,
+            "X": 0.10803636,
+            "Y": 0.18711267,
+            "Z": -0.5589842,
+            "W": 0.7984177,
             "IsNormalized": true,
             "Size": 0.99830717,
-            "SizeSquared": 0.99661726
+            "SizeSquared": 0.9966172
           },
           "Translation": {
             "X": 245.94487,
@@ -1194,9 +1222,9 @@
             "Z": 36.3265
           },
           "Scale3D": {
-            "X": 0.72072476,
-            "Y": 0.7207815,
-            "Z": 0.720726
+            "X": 0.70000005,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -1204,10 +1232,10 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.15252621,
-            "Y": 0.68923444,
-            "Z": 0.15252613,
-            "W": 0.6892349,
+            "X": -0.15251239,
+            "Y": 0.68923753,
+            "Z": 0.1525123,
+            "W": 0.6892379,
             "IsNormalized": true,
             "Size": 0.9983072,
             "SizeSquared": 0.9966173
@@ -1218,9 +1246,9 @@
             "Z": 50.16942
           },
           "Scale3D": {
-            "X": 0.999892,
-            "Y": 0.9999984,
-            "Z": 0.9998934
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -1228,13 +1256,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.0,
-            "Y": 0.67444664,
+            "X": -0.0,
+            "Y": 0.6744466,
             "Z": 0.0,
-            "W": 0.7360292,
+            "W": 0.7360291,
             "IsNormalized": true,
-            "Size": 0.99830717,
-            "SizeSquared": 0.99661726
+            "Size": 0.99830705,
+            "SizeSquared": 0.99661696
           },
           "Translation": {
             "X": 51.784546,
@@ -1242,9 +1270,9 @@
             "Z": 52.583214
           },
           "Scale3D": {
-            "X": 0.9998389,
-            "Y": 0.999999,
-            "Z": 0.99984014
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -1252,13 +1280,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.4992945,
-            "Y": -0.49901265,
-            "Z": 0.49929407,
-            "W": 0.49901307,
+            "X": 0.49929282,
+            "Y": -0.49901426,
+            "Z": 0.49929246,
+            "W": 0.49901468,
             "IsNormalized": true,
-            "Size": 0.99830717,
-            "SizeSquared": 0.9966172
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
           },
           "Translation": {
             "X": 87.20737,
@@ -1266,9 +1294,9 @@
             "Z": 62.970142
           },
           "Scale3D": {
-            "X": 0.9998319,
-            "Y": 0.9999915,
-            "Z": 0.9998298
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -1276,13 +1304,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.06748208,
-            "Y": 0.76188195,
-            "Z": -0.05495374,
-            "W": 0.6392021,
+            "X": -0.06751027,
+            "Y": 0.76188433,
+            "Z": -0.054920167,
+            "W": 0.63919914,
             "IsNormalized": true,
-            "Size": 0.99830717,
-            "SizeSquared": 0.99661726
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
           },
           "Translation": {
             "X": -60.73564,
@@ -1290,9 +1318,9 @@
             "Z": 68.681496
           },
           "Scale3D": {
-            "X": 0.99982053,
-            "Y": 0.9999981,
-            "Z": 0.9998217
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.70000005
           },
           "IsRotationNormalized": true
         }
@@ -1300,13 +1328,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.8147382,
-            "Y": -0.06585732,
-            "Z": -0.5704681,
-            "W": -0.055206507,
+            "X": 0.81473845,
+            "Y": -0.06585542,
+            "Z": -0.57046825,
+            "W": -0.0552038,
             "IsNormalized": true,
-            "Size": 0.9983071,
-            "SizeSquared": 0.99661714
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
           },
           "Translation": {
             "X": -151.39485,
@@ -1314,9 +1342,9 @@
             "Z": 56.255272
           },
           "Scale3D": {
-            "X": 0.9998336,
-            "Y": 0.99998474,
-            "Z": 0.99983215
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
           },
           "IsRotationNormalized": true
         }
@@ -1324,13 +1352,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": -0.3042726,
-            "Y": -0.3956902,
-            "Z": -0.5270139,
-            "W": 0.685362,
+            "X": -0.30427268,
+            "Y": -0.39569023,
+            "Z": -0.527014,
+            "W": 0.68536186,
             "IsNormalized": true,
-            "Size": 0.99830717,
-            "SizeSquared": 0.9966172
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
           },
           "Translation": {
             "X": -201.5346,
@@ -1338,9 +1366,9 @@
             "Z": 36.771446
           },
           "Scale3D": {
-            "X": 0.9998323,
-            "Y": 0.99999154,
-            "Z": 0.99983454
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -1348,13 +1376,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.62581414,
-            "Y": 0.46017045,
-            "Z": -0.55871147,
-            "W": 0.284708,
+            "X": 0.6258038,
+            "Y": 0.46019047,
+            "Z": -0.558695,
+            "W": 0.28473046,
             "IsNormalized": true,
-            "Size": 0.9983072,
-            "SizeSquared": 0.9966173
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
           },
           "Translation": {
             "X": -242.97157,
@@ -1362,9 +1390,9 @@
             "Z": 54.69806
           },
           "Scale3D": {
-            "X": 0.65591854,
-            "Y": 0.6560156,
-            "Z": 0.6559174
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -1372,13 +1400,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.5995412,
-            "Y": 0.59110886,
-            "Z": -0.34274733,
-            "W": 0.41265252,
+            "X": 0.59954745,
+            "Y": 0.5911035,
+            "Z": -0.34275663,
+            "W": 0.41264316,
             "IsNormalized": true,
-            "Size": 0.99830717,
-            "SizeSquared": 0.9966172
+            "Size": 0.99830705,
+            "SizeSquared": 0.996617
           },
           "Translation": {
             "X": 82.47254,
@@ -1386,9 +1414,9 @@
             "Z": 57.46532
           },
           "Scale3D": {
-            "X": 0.9998218,
-            "Y": 0.99998045,
-            "Z": 0.99982643
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
           },
           "IsRotationNormalized": true
         }
@@ -1396,13 +1424,13 @@
       {
         "TransformData": {
           "Rotation": {
-            "X": 0.6036557,
-            "Y": 0.50120175,
-            "Z": -0.4957445,
-            "W": 0.36776522,
+            "X": 0.5986316,
+            "Y": 0.50785404,
+            "Z": -0.48892742,
+            "W": 0.37588772,
             "IsNormalized": true,
-            "Size": 0.99830717,
-            "SizeSquared": 0.9966172
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
           },
           "Translation": {
             "X": -270.50192,
@@ -1410,9 +1438,2477 @@
             "Z": 54.288013
           },
           "Scale3D": {
-            "X": 0.7641831,
-            "Y": 0.7643009,
-            "Z": 0.76418287
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      }
+    ]
+  },
+  {
+    "Type": "InstancedStaticMeshComponent",
+    "Name": "ResourceFishR2_GEN_VARIABLE",
+    "Outer": "BPVisSmallBoat_C",
+    "Class": "UScriptClass'InstancedStaticMeshComponent'",
+    "Properties": {
+      "InstancingRandomSeed": 1,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Trout'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Trout.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'TroutR2'",
+          "ObjectPath": "Anvil/Content/Materials/Animals/TroutR2.0"
+        }
+      ],
+      "bReceivesDecals": false,
+      "bHasPerInstanceHitProxies": true,
+      "RelativeLocation": {
+        "X": 4.093094,
+        "Y": 4.6E-05,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "bHiddenInGame": true
+    },
+    "PerInstanceSMData": [
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.32016784,
+            "Y": 0.67798644,
+            "Z": 0.4572601,
+            "W": -0.47471818,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -221.98068,
+            "Y": 18.085117,
+            "Z": 19.938427
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.5802855,
+            "Y": 0.2367812,
+            "Z": 0.5934908,
+            "W": 0.50158685,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -142.33676,
+            "Y": 17.127821,
+            "Z": 34.969894
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.47692508,
+            "Y": 0.5204336,
+            "Z": 0.476925,
+            "W": 0.5204336,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -111.87777,
+            "Y": 5.623305,
+            "Z": 23.737305
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.38238546,
+            "Y": -0.66229504,
+            "Z": 0.32084697,
+            "W": 0.5557167,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": -83.70854,
+            "Y": 8.99563,
+            "Z": 32.913086
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.4048216,
+            "Y": -0.57829756,
+            "Z": -0.40482143,
+            "W": 0.57829773,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": -82.51457,
+            "Y": -27.811914,
+            "Z": 12.125305
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.2452184,
+            "Y": 0.5929201,
+            "Z": 0.16523817,
+            "W": 0.74674445,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -48.575417,
+            "Y": 5.322877,
+            "Z": 31.277233
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.6029967,
+            "Y": -0.38674605,
+            "Z": -0.5525439,
+            "W": -0.42206007,
+            "IsNormalized": true,
+            "Size": 0.99830705,
+            "SizeSquared": 0.99661696
+          },
+          "Translation": {
+            "X": -6.545042,
+            "Y": -34.44222,
+            "Z": 23.91413
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.6732381,
+            "Y": 0.21227127,
+            "Z": 0.67323804,
+            "W": -0.2122713,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": -0.20077954,
+            "Y": 5.622395,
+            "Z": 29.096708
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.33985543,
+            "Y": -0.31141996,
+            "Z": 0.6528659,
+            "W": 0.5982468,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": 86.70118,
+            "Y": -52.95214,
+            "Z": 17.43554
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.5090996,
+            "Y": 0.60672545,
+            "Z": 0.3906279,
+            "W": 0.4655415,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 78.34209,
+            "Y": 7.5560284,
+            "Z": 12.60971
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.40976706,
+            "Y": 0.48462376,
+            "Z": -0.4182144,
+            "W": 0.64725924,
+            "IsNormalized": true,
+            "Size": 0.99830705,
+            "SizeSquared": 0.99661696
+          },
+          "Translation": {
+            "X": 153.3623,
+            "Y": 1.8553582,
+            "Z": 29.659582
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.44817016,
+            "Y": -0.5349171,
+            "Z": 0.58409935,
+            "W": 0.41042957,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": 183.24301,
+            "Y": 5.62239,
+            "Z": 16.591583
+          },
+          "Scale3D": {
+            "X": 0.70000005,
+            "Y": 0.7,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.3712502,
+            "Y": -0.5876699,
+            "Z": -0.4370862,
+            "W": 0.56779414,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 250.49454,
+            "Y": -8.124745,
+            "Z": 35.434494
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.0002983248,
+            "Y": -0.736036,
+            "Z": -0.00032642327,
+            "W": 0.6744391,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 149.28694,
+            "Y": 5.622419,
+            "Z": 48.056572
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.37907553,
+            "Y": -0.37951034,
+            "Z": -0.59501165,
+            "W": 0.5956946,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": 103.8188,
+            "Y": -44.36581,
+            "Z": 37.333466
+          },
+          "Scale3D": {
+            "X": 0.70000005,
+            "Y": 0.7,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.70288575,
+            "Y": -0.4603365,
+            "Z": 0.39906868,
+            "W": 0.36249596,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 45.193375,
+            "Y": -47.58898,
+            "Z": 35.226475
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.41670373,
+            "Y": 0.36437556,
+            "Z": -0.5826854,
+            "W": 0.59218526,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": 57.92287,
+            "Y": 30.866873,
+            "Z": 18.320034
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.6737571,
+            "Y": -0.019180624,
+            "Z": 0.73536456,
+            "W": -0.03923855,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 17.952934,
+            "Y": 5.1165395,
+            "Z": 38.654034
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.79999995,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.3259525,
+            "Y": -0.6261498,
+            "Z": 0.32595244,
+            "W": 0.6261499,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -36.999725,
+            "Y": 5.6236434,
+            "Z": 45.376945
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.3617834,
+            "Y": -0.3960143,
+            "Z": -0.5678848,
+            "W": 0.6216185,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -82.058075,
+            "Y": 69.41111,
+            "Z": 28.049166
+          },
+          "Scale3D": {
+            "X": 0.70000005,
+            "Y": 0.70000005,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.5356066,
+            "Y": 0.44729462,
+            "Z": 0.5845426,
+            "W": -0.40985394,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -20.505486,
+            "Y": 38.30913,
+            "Z": 31.742218
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.5408445,
+            "Y": -0.4536438,
+            "Z": 0.6398496,
+            "W": 0.29816818,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -110.75808,
+            "Y": -12.676906,
+            "Z": 33.762646
+          },
+          "Scale3D": {
+            "X": 0.79999995,
+            "Y": 0.8,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.6522535,
+            "Y": 0.26995096,
+            "Z": 0.47705373,
+            "W": 0.5203161,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": -152.85384,
+            "Y": 5.6223683,
+            "Z": 50.73627
+          },
+          "Scale3D": {
+            "X": 0.70000005,
+            "Y": 0.7,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.49155718,
+            "Y": -0.41248634,
+            "Z": 0.5858212,
+            "W": 0.49158648,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": -215.41412,
+            "Y": -8.31128,
+            "Z": 41.60814
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.5441025,
+            "Y": -0.5245921,
+            "Z": -0.30036306,
+            "W": 0.5789256,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": -251.8763,
+            "Y": 17.355833,
+            "Z": 29.497606
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.39018676,
+            "Y": -0.6071363,
+            "Z": 0.4650492,
+            "W": 0.50939786,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
+          },
+          "Translation": {
+            "X": -199.54164,
+            "Y": -41.22108,
+            "Z": 42.93276
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.3883085,
+            "Y": 0.3695636,
+            "Z": -0.6241852,
+            "W": 0.56537527,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.9966171
+          },
+          "Translation": {
+            "X": -103.3171,
+            "Y": -58.24025,
+            "Z": 36.21363
+          },
+          "Scale3D": {
+            "X": 0.9998737,
+            "Y": 0.999975,
+            "Z": 0.9998786
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.3522488,
+            "Y": -0.44024378,
+            "Z": -0.57198274,
+            "W": 0.5929243,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -100.45902,
+            "Y": 57.867825,
+            "Z": 40.296124
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.59831566,
+            "Y": -0.30971232,
+            "Z": -0.5367012,
+            "W": 0.504644,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.9966171
+          },
+          "Translation": {
+            "X": -58.2181,
+            "Y": -56.700176,
+            "Z": 59.521305
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.79999995
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.00027004682,
+            "Y": -0.70590967,
+            "Z": -0.061256975,
+            "W": 0.7032469,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
+          },
+          "Translation": {
+            "X": -107.25879,
+            "Y": 5.6404366,
+            "Z": 59.865192
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.58462405,
+            "Y": 0.60247064,
+            "Z": 0.33784613,
+            "W": 0.42156968,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 99.568474,
+            "Y": 61.63115,
+            "Z": 47.488277
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.74734837,
+            "Y": -0.47497538,
+            "Z": -0.3892803,
+            "W": -0.24687439,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": 203.96924,
+            "Y": -28.56945,
+            "Z": 42.75331
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.5750338,
+            "Y": -0.4851635,
+            "Z": 0.5045939,
+            "W": 0.41946962,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": 87.81968,
+            "Y": -23.108566,
+            "Z": 26.625309
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.3270038,
+            "Y": -0.5196265,
+            "Z": 0.4778031,
+            "W": 0.6256023,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 124.10615,
+            "Y": 37.073227,
+            "Z": 29.722795
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.5995689,
+            "Y": 0.6221301,
+            "Z": 0.3646342,
+            "W": -0.34224325,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": 177.98206,
+            "Y": 44.03878,
+            "Z": 36.081837
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.4104884,
+            "Y": -0.34526607,
+            "Z": -0.6443454,
+            "W": 0.5419658,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": 222.91475,
+            "Y": 24.137512,
+            "Z": 35.837837
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.5031448,
+            "Y": 0.61261874,
+            "Z": 0.39952016,
+            "W": -0.45666674,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": 131.48064,
+            "Y": -28.685165,
+            "Z": 17.72556
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.64033526,
+            "Y": 0.29719666,
+            "Z": 0.66728276,
+            "W": -0.23020817,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 244.6747,
+            "Y": 23.70595,
+            "Z": 49.90297
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.61162627,
+            "Y": 0.63711905,
+            "Z": 0.2855045,
+            "W": 0.3675554,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
+          },
+          "Translation": {
+            "X": 57.848522,
+            "Y": 61.79143,
+            "Z": 36.487465
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.6361085,
+            "Y": -0.082961135,
+            "Z": 0.7582883,
+            "W": -0.10049639,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": 80.25817,
+            "Y": 8.028823,
+            "Z": 46.842636
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.10803636,
+            "Y": 0.18711267,
+            "Z": -0.5589842,
+            "W": 0.7984177,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 245.94487,
+            "Y": -32.004993,
+            "Z": 36.3265
+          },
+          "Scale3D": {
+            "X": 0.70000005,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.15251239,
+            "Y": 0.68923753,
+            "Z": 0.1525123,
+            "W": 0.6892379,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": 121.99186,
+            "Y": 5.622372,
+            "Z": 50.16942
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.0,
+            "Y": 0.6744466,
+            "Z": 0.0,
+            "W": 0.7360291,
+            "IsNormalized": true,
+            "Size": 0.99830705,
+            "SizeSquared": 0.99661696
+          },
+          "Translation": {
+            "X": 51.784546,
+            "Y": 5.622372,
+            "Z": 52.583214
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.49929282,
+            "Y": -0.49901426,
+            "Z": 0.49929246,
+            "W": 0.49901468,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
+          },
+          "Translation": {
+            "X": 87.20737,
+            "Y": 5.5341134,
+            "Z": 62.970142
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.06751027,
+            "Y": 0.76188433,
+            "Z": -0.054920167,
+            "W": 0.63919914,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
+          },
+          "Translation": {
+            "X": -60.73564,
+            "Y": 5.6224184,
+            "Z": 68.681496
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.81473845,
+            "Y": -0.06585542,
+            "Z": -0.57046825,
+            "W": -0.0552038,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": -151.39485,
+            "Y": 12.867349,
+            "Z": 56.255272
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.30427268,
+            "Y": -0.39569023,
+            "Z": -0.527014,
+            "W": 0.68536186,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": -201.5346,
+            "Y": 42.815258,
+            "Z": 36.771446
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.6258038,
+            "Y": 0.46019047,
+            "Z": -0.558695,
+            "W": 0.28473046,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -242.97157,
+            "Y": -37.512417,
+            "Z": 54.69806
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.59954745,
+            "Y": 0.5911035,
+            "Z": -0.34275663,
+            "W": 0.41264316,
+            "IsNormalized": true,
+            "Size": 0.99830705,
+            "SizeSquared": 0.996617
+          },
+          "Translation": {
+            "X": 82.47254,
+            "Y": -55.810944,
+            "Z": 57.46532
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.5986316,
+            "Y": 0.50785404,
+            "Z": -0.48892742,
+            "W": 0.37588772,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
+          },
+          "Translation": {
+            "X": -270.50192,
+            "Y": -15.983717,
+            "Z": 54.288013
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      }
+    ]
+  },
+  {
+    "Type": "InstancedStaticMeshComponent",
+    "Name": "ResourceFishR3_GEN_VARIABLE",
+    "Outer": "BPVisSmallBoat_C",
+    "Class": "UScriptClass'InstancedStaticMeshComponent'",
+    "Properties": {
+      "InstancingRandomSeed": 1,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Trout'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Trout.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'TroutR3'",
+          "ObjectPath": "Anvil/Content/Materials/Animals/TroutR3.0"
+        }
+      ],
+      "bReceivesDecals": false,
+      "bHasPerInstanceHitProxies": true,
+      "RelativeLocation": {
+        "X": 4.093094,
+        "Y": 4.6E-05,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "bHiddenInGame": true
+    },
+    "PerInstanceSMData": [
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.32016784,
+            "Y": 0.67798644,
+            "Z": 0.4572601,
+            "W": -0.47471818,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -221.98068,
+            "Y": 18.085117,
+            "Z": 19.938427
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.5802855,
+            "Y": 0.2367812,
+            "Z": 0.5934908,
+            "W": 0.50158685,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -142.33676,
+            "Y": 17.127821,
+            "Z": 34.969894
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.47692508,
+            "Y": 0.5204336,
+            "Z": 0.476925,
+            "W": 0.5204336,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -111.87777,
+            "Y": 5.623305,
+            "Z": 23.737305
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.38238546,
+            "Y": -0.66229504,
+            "Z": 0.32084697,
+            "W": 0.5557167,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": -83.70854,
+            "Y": 8.99563,
+            "Z": 32.913086
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.4048216,
+            "Y": -0.57829756,
+            "Z": -0.40482143,
+            "W": 0.57829773,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": -82.51457,
+            "Y": -27.811914,
+            "Z": 12.125305
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.2452184,
+            "Y": 0.5929201,
+            "Z": 0.16523817,
+            "W": 0.74674445,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -48.575417,
+            "Y": 5.322877,
+            "Z": 31.277233
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.6029967,
+            "Y": -0.38674605,
+            "Z": -0.5525439,
+            "W": -0.42206007,
+            "IsNormalized": true,
+            "Size": 0.99830705,
+            "SizeSquared": 0.99661696
+          },
+          "Translation": {
+            "X": -6.545042,
+            "Y": -34.44222,
+            "Z": 23.91413
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.6732381,
+            "Y": 0.21227127,
+            "Z": 0.67323804,
+            "W": -0.2122713,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": -0.20077954,
+            "Y": 5.622395,
+            "Z": 29.096708
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.33985543,
+            "Y": -0.31141996,
+            "Z": 0.6528659,
+            "W": 0.5982468,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": 86.70118,
+            "Y": -52.95214,
+            "Z": 17.43554
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.5090996,
+            "Y": 0.60672545,
+            "Z": 0.3906279,
+            "W": 0.4655415,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 78.34209,
+            "Y": 7.5560284,
+            "Z": 12.60971
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.40976706,
+            "Y": 0.48462376,
+            "Z": -0.4182144,
+            "W": 0.64725924,
+            "IsNormalized": true,
+            "Size": 0.99830705,
+            "SizeSquared": 0.99661696
+          },
+          "Translation": {
+            "X": 153.3623,
+            "Y": 1.8553582,
+            "Z": 29.659582
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.44817016,
+            "Y": -0.5349171,
+            "Z": 0.58409935,
+            "W": 0.41042957,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": 183.24301,
+            "Y": 5.62239,
+            "Z": 16.591583
+          },
+          "Scale3D": {
+            "X": 0.70000005,
+            "Y": 0.7,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.3712502,
+            "Y": -0.5876699,
+            "Z": -0.4370862,
+            "W": 0.56779414,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 250.49454,
+            "Y": -8.124745,
+            "Z": 35.434494
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.0002983248,
+            "Y": -0.736036,
+            "Z": -0.00032642327,
+            "W": 0.6744391,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 149.28694,
+            "Y": 5.622419,
+            "Z": 48.056572
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.37907553,
+            "Y": -0.37951034,
+            "Z": -0.59501165,
+            "W": 0.5956946,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": 103.8188,
+            "Y": -44.36581,
+            "Z": 37.333466
+          },
+          "Scale3D": {
+            "X": 0.70000005,
+            "Y": 0.7,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.70288575,
+            "Y": -0.4603365,
+            "Z": 0.39906868,
+            "W": 0.36249596,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 45.193375,
+            "Y": -47.58898,
+            "Z": 35.226475
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.41670373,
+            "Y": 0.36437556,
+            "Z": -0.5826854,
+            "W": 0.59218526,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": 57.92287,
+            "Y": 30.866873,
+            "Z": 18.320034
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.6737571,
+            "Y": -0.019180624,
+            "Z": 0.73536456,
+            "W": -0.03923855,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 17.952934,
+            "Y": 5.1165395,
+            "Z": 38.654034
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.79999995,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.3259525,
+            "Y": -0.6261498,
+            "Z": 0.32595244,
+            "W": 0.6261499,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -36.999725,
+            "Y": 5.6236434,
+            "Z": 45.376945
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.3617834,
+            "Y": -0.3960143,
+            "Z": -0.5678848,
+            "W": 0.6216185,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -82.058075,
+            "Y": 69.41111,
+            "Z": 28.049166
+          },
+          "Scale3D": {
+            "X": 0.70000005,
+            "Y": 0.70000005,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.5356066,
+            "Y": 0.44729462,
+            "Z": 0.5845426,
+            "W": -0.40985394,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -20.505486,
+            "Y": 38.30913,
+            "Z": 31.742218
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.5408445,
+            "Y": -0.4536438,
+            "Z": 0.6398496,
+            "W": 0.29816818,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -110.75808,
+            "Y": -12.676906,
+            "Z": 33.762646
+          },
+          "Scale3D": {
+            "X": 0.79999995,
+            "Y": 0.8,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.6522535,
+            "Y": 0.26995096,
+            "Z": 0.47705373,
+            "W": 0.5203161,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": -152.85384,
+            "Y": 5.6223683,
+            "Z": 50.73627
+          },
+          "Scale3D": {
+            "X": 0.70000005,
+            "Y": 0.7,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.49155718,
+            "Y": -0.41248634,
+            "Z": 0.5858212,
+            "W": 0.49158648,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": -215.41412,
+            "Y": -8.31128,
+            "Z": 41.60814
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.5441025,
+            "Y": -0.5245921,
+            "Z": -0.30036306,
+            "W": 0.5789256,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": -251.8763,
+            "Y": 17.355833,
+            "Z": 29.497606
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.39018676,
+            "Y": -0.6071363,
+            "Z": 0.4650492,
+            "W": 0.50939786,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
+          },
+          "Translation": {
+            "X": -199.54164,
+            "Y": -41.22108,
+            "Z": 42.93276
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.3883085,
+            "Y": 0.3695636,
+            "Z": -0.6241852,
+            "W": 0.56537527,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.9966171
+          },
+          "Translation": {
+            "X": -103.3171,
+            "Y": -58.24025,
+            "Z": 36.21363
+          },
+          "Scale3D": {
+            "X": 0.9998737,
+            "Y": 0.999975,
+            "Z": 0.9998786
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.3522488,
+            "Y": -0.44024378,
+            "Z": -0.57198274,
+            "W": 0.5929243,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -100.45902,
+            "Y": 57.867825,
+            "Z": 40.296124
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.59831566,
+            "Y": -0.30971232,
+            "Z": -0.5367012,
+            "W": 0.504644,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.9966171
+          },
+          "Translation": {
+            "X": -58.2181,
+            "Y": -56.700176,
+            "Z": 59.521305
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.79999995
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.00027004682,
+            "Y": -0.70590967,
+            "Z": -0.061256975,
+            "W": 0.7032469,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
+          },
+          "Translation": {
+            "X": -107.25879,
+            "Y": 5.6404366,
+            "Z": 59.865192
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.58462405,
+            "Y": 0.60247064,
+            "Z": 0.33784613,
+            "W": 0.42156968,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 99.568474,
+            "Y": 61.63115,
+            "Z": 47.488277
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.74734837,
+            "Y": -0.47497538,
+            "Z": -0.3892803,
+            "W": -0.24687439,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": 203.96924,
+            "Y": -28.56945,
+            "Z": 42.75331
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.5750338,
+            "Y": -0.4851635,
+            "Z": 0.5045939,
+            "W": 0.41946962,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": 87.81968,
+            "Y": -23.108566,
+            "Z": 26.625309
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.3270038,
+            "Y": -0.5196265,
+            "Z": 0.4778031,
+            "W": 0.6256023,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 124.10615,
+            "Y": 37.073227,
+            "Z": 29.722795
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.5995689,
+            "Y": 0.6221301,
+            "Z": 0.3646342,
+            "W": -0.34224325,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": 177.98206,
+            "Y": 44.03878,
+            "Z": 36.081837
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.4104884,
+            "Y": -0.34526607,
+            "Z": -0.6443454,
+            "W": 0.5419658,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": 222.91475,
+            "Y": 24.137512,
+            "Z": 35.837837
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.5031448,
+            "Y": 0.61261874,
+            "Z": 0.39952016,
+            "W": -0.45666674,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": 131.48064,
+            "Y": -28.685165,
+            "Z": 17.72556
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.64033526,
+            "Y": 0.29719666,
+            "Z": 0.66728276,
+            "W": -0.23020817,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 244.6747,
+            "Y": 23.70595,
+            "Z": 49.90297
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.61162627,
+            "Y": 0.63711905,
+            "Z": 0.2855045,
+            "W": 0.3675554,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
+          },
+          "Translation": {
+            "X": 57.848522,
+            "Y": 61.79143,
+            "Z": 36.487465
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.6361085,
+            "Y": -0.082961135,
+            "Z": 0.7582883,
+            "W": -0.10049639,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": 80.25817,
+            "Y": 8.028823,
+            "Z": 46.842636
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.10803636,
+            "Y": 0.18711267,
+            "Z": -0.5589842,
+            "W": 0.7984177,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": 245.94487,
+            "Y": -32.004993,
+            "Z": 36.3265
+          },
+          "Scale3D": {
+            "X": 0.70000005,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.15251239,
+            "Y": 0.68923753,
+            "Z": 0.1525123,
+            "W": 0.6892379,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": 121.99186,
+            "Y": 5.622372,
+            "Z": 50.16942
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.0,
+            "Y": 0.6744466,
+            "Z": 0.0,
+            "W": 0.7360291,
+            "IsNormalized": true,
+            "Size": 0.99830705,
+            "SizeSquared": 0.99661696
+          },
+          "Translation": {
+            "X": 51.784546,
+            "Y": 5.622372,
+            "Z": 52.583214
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.49929282,
+            "Y": -0.49901426,
+            "Z": 0.49929246,
+            "W": 0.49901468,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
+          },
+          "Translation": {
+            "X": 87.20737,
+            "Y": 5.5341134,
+            "Z": 62.970142
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.06751027,
+            "Y": 0.76188433,
+            "Z": -0.054920167,
+            "W": 0.63919914,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
+          },
+          "Translation": {
+            "X": -60.73564,
+            "Y": 5.6224184,
+            "Z": 68.681496
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.70000005
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.81473845,
+            "Y": -0.06585542,
+            "Z": -0.57046825,
+            "W": -0.0552038,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.9966172
+          },
+          "Translation": {
+            "X": -151.39485,
+            "Y": 12.867349,
+            "Z": 56.255272
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": -0.30427268,
+            "Y": -0.39569023,
+            "Z": -0.527014,
+            "W": 0.68536186,
+            "IsNormalized": true,
+            "Size": 0.9983072,
+            "SizeSquared": 0.9966173
+          },
+          "Translation": {
+            "X": -201.5346,
+            "Y": 42.815258,
+            "Z": 36.771446
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.6258038,
+            "Y": 0.46019047,
+            "Z": -0.558695,
+            "W": 0.28473046,
+            "IsNormalized": true,
+            "Size": 0.99830717,
+            "SizeSquared": 0.99661726
+          },
+          "Translation": {
+            "X": -242.97157,
+            "Y": -37.512417,
+            "Z": 54.69806
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.70000005,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.59954745,
+            "Y": 0.5911035,
+            "Z": -0.34275663,
+            "W": 0.41264316,
+            "IsNormalized": true,
+            "Size": 0.99830705,
+            "SizeSquared": 0.996617
+          },
+          "Translation": {
+            "X": 82.47254,
+            "Y": -55.810944,
+            "Z": 57.46532
+          },
+          "Scale3D": {
+            "X": 0.7,
+            "Y": 0.7,
+            "Z": 0.7
+          },
+          "IsRotationNormalized": true
+        }
+      },
+      {
+        "TransformData": {
+          "Rotation": {
+            "X": 0.5986316,
+            "Y": 0.50785404,
+            "Z": -0.48892742,
+            "W": 0.37588772,
+            "IsNormalized": true,
+            "Size": 0.9983071,
+            "SizeSquared": 0.99661714
+          },
+          "Translation": {
+            "X": -270.50192,
+            "Y": -15.983717,
+            "Z": 54.288013
+          },
+          "Scale3D": {
+            "X": 0.8,
+            "Y": 0.8,
+            "Z": 0.8
           },
           "IsRotationNormalized": true
         }
@@ -1431,9 +3927,9 @@
       },
       "OverrideParameters": {},
       "RelativeLocation": {
-        "X": -1.5119346E-07,
-        "Y": 2.0459925E-07,
-        "Z": 52.0
+        "X": 0.0,
+        "Y": 1.0814047E-06,
+        "Z": 34.549404
       },
       "ComponentTags": [
         "IdleWater"
@@ -1486,7 +3982,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisSmallBoat_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.13"
       },
       "VariableGuid": "690B95D8-416343C9-7F4AE48C-9E824020",
       "InternalVariableName": "DefaultSceneRoot"
@@ -1529,11 +4025,11 @@
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.17"
         }
       ],
       "VariableGuid": "2FEB4BB8-460E61C6-A39CB281-84749DB1",
@@ -1552,20 +4048,28 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisSmallBoat_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.24"
       },
       "ChildNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.18"
         },
         {
-          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.16"
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.19"
         },
         {
-          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.17"
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.22"
         }
       ],
       "VariableGuid": "1F604717-4FA9A0F3-7D6A6694-B64C675A",
@@ -1584,7 +4088,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisSmallBoat_C:CullVolume_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.25"
       },
       "VariableGuid": "C786FF73-4D803441-0A7FD6B5-A1D936DA",
       "InternalVariableName": "CullVolume"
@@ -1602,10 +4106,28 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisSmallBoat_C:WaterStatic_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.11"
       },
       "VariableGuid": "D325D4D8-45AC5C06-5E9CBEB9-924B73A0",
       "InternalVariableName": "WaterStatic"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'InstancedStaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "InstancedStaticMeshComponent'BPVisSmallBoat_C:ResourceFishR2_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.9"
+      },
+      "VariableGuid": "C7F51BC9-45A6CCB6-0A0AAB9F-C91B906A",
+      "InternalVariableName": "ResourceFishR2"
     }
   },
   {
@@ -1627,6 +4149,24 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'InstancedStaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "InstancedStaticMeshComponent'BPVisSmallBoat_C:ResourceFishR3_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.10"
+      },
+      "VariableGuid": "3CF54768-4401102E-BC28968F-58D9AB55",
+      "InternalVariableName": "ResourceFishR3"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPVisSmallBoat_C",
@@ -1635,38 +4175,46 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.16"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.14"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.13"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.15"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.18"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.16"
         },
         {
-          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.22"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisSmallBoat_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.14"
       }
     }
   },
@@ -1687,7 +4235,8 @@
       "SkinnedAsset": {
         "ObjectName": "SkeletalMesh'BoatSmall_SK'",
         "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK.0"
-      }
+      },
+      "bReceivesDecals": false
     }
   },
   {

@@ -11,6 +11,7 @@ class UMapIcon;
 class UMapPostContainerWidget;
 class UTextBlock;
 class UTexture2D;
+class UWinConditionWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UMapWidget : public UMapWidgetBase {
@@ -46,12 +47,24 @@ protected:
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UWinConditionWidget* WinConditionWidget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UMapIcon*> DisplayedBeaconTowerPlayerInfos;
     
 public:
     UMapWidget();
 
 private:
+    UFUNCTION(BlueprintCallable)
+    FText GetTimeOfDayText();
+    
+    UFUNCTION(BlueprintCallable)
+    ESlateVisibility GetSeasonTextVisibility();
+    
+    UFUNCTION(BlueprintCallable)
+    FText GetSeasonText();
+    
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetObjectiveBorderVisibility();
     

@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisCampPlatform_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.12"
       }
     },
     "SuperStruct": {
@@ -41,15 +41,15 @@
     "Properties": {
       "SplineComponent": {
         "ObjectName": "VisSplineComponent'Default__BPVisCampPlatform_C:SplineComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.20"
       },
       "SplineScaffoldingComponent": {
         "ObjectName": "VisSplineComponent'Default__BPVisCampPlatform_C:SplineScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.21"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisCampPlatform_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.19"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconCampPlatform'",
@@ -58,23 +58,27 @@
       "BuildSiteVisibility": "EBuildSiteVisibility::Never",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisCampPlatform_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.18"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisCampPlatform_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.8"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisCampPlatform_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.17"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisCampPlatform_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.16"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisCampPlatform_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.10"
+      },
+      "DecayDataComponent": {
+        "ObjectName": "DecayDataComponent'Default__BPVisCampPlatform_C:DecayDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.6"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisCampPlatform_C:ArrowComponent'",
@@ -86,9 +90,8 @@
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisCampPlatform_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.7"
       },
-      "GeneratedScorchEffects": 6,
       "UseWindowType": "EHUDWindowType::GenericStructure",
       "InteractionIcon": {
         "ObjectName": "Texture2D'IconCampPlatform'",
@@ -166,6 +169,12 @@
     }
   },
   {
+    "Type": "DecayDataComponent",
+    "Name": "DecayDataComponent",
+    "Outer": "Default__BPVisCampPlatform_C",
+    "Class": "UScriptClass'DecayDataComponent'"
+  },
+  {
     "Type": "GrassRemovalVolumeComponent",
     "Name": "GrassRemovalVolume",
     "Outer": "Default__BPVisCampPlatform_C",
@@ -173,7 +182,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisCampPlatform_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.13"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisCampPlatform_C:ArrowComponent'",
@@ -211,7 +220,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisCampPlatform_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.9"
       },
       "VariableGuid": "06A332CD-4612A126-03E22587-993EFF9D",
       "InternalVariableName": "DefaultSceneRoot"
@@ -225,7 +234,7 @@
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisCampPlatform_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.11"
       }
     }
   },
@@ -382,7 +391,7 @@
       ],
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisCampPlatform_C:SplineComponent.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.14"
       },
       "MidPieces": [
         null,
@@ -411,7 +420,7 @@
       },
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisCampPlatform_C:SplineScaffoldingComponent.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisCampPlatform.15"
       },
       "EndPieces": [
         null,

@@ -6,6 +6,7 @@ UAdminPlayerListItemWidget::UAdminPlayerListItemWidget() : UUserWidget(FObjectIn
     this->SteamIdBox = NULL;
     this->TeleportToButton = NULL;
     this->BanButton = NULL;
+    this->SilverAllowanceText = NULL;
 }
 
 void UAdminPlayerListItemWidget::OnTeleportToClicked() {

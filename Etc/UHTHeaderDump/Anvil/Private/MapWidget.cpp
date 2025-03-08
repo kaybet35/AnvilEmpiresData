@@ -9,6 +9,19 @@ UMapWidget::UMapWidget() {
     this->SeasonText = NULL;
     this->TimeOfDayText = NULL;
     this->MapPostContainerWidget = NULL;
+    this->WinConditionWidget = NULL;
+}
+
+FText UMapWidget::GetTimeOfDayText() {
+    return FText::GetEmpty();
+}
+
+ESlateVisibility UMapWidget::GetSeasonTextVisibility() {
+    return ESlateVisibility::Visible;
+}
+
+FText UMapWidget::GetSeasonText() {
+    return FText::GetEmpty();
 }
 
 ESlateVisibility UMapWidget::GetObjectiveBorderVisibility() {

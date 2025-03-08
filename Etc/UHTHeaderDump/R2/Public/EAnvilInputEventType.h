@@ -62,5 +62,6 @@ enum class EAnvilInputEventType : uint8 {
     ReinforceStructure,
     SwitchSeat,
     StartCooking,
+    SubmitAvatar,
 };
 

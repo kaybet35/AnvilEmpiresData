@@ -13,5 +13,6 @@ enum class EAnvilPlayerVisEventType : uint8 {
     RequestToJoinFamily,
     InviteToJoinFamily,
     CreateDebugMapPost,
+    VictoryInfoUpdate,
 };
 

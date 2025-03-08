@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "DataComponent.h"
+#include "StructureStats.h"
 #include "AdminEnvDataComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -24,6 +25,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bDebugHud;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FStructureStats> StructureStatsList;
     
     UAdminEnvDataComponent(const FObjectInitializer& ObjectInitializer);
 

@@ -237,7 +237,7 @@
               "StateName": "movement",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 31,
+                  "CanTakeDelegateIndex": 33,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 0,
                   "bDesiredTransitionReturnValue": true,
@@ -246,7 +246,7 @@
                   "PoseEvaluatorLinks": []
                 },
                 {
-                  "CanTakeDelegateIndex": 32,
+                  "CanTakeDelegateIndex": 34,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 1,
                   "bDesiredTransitionReturnValue": true,
@@ -271,7 +271,7 @@
               "StateName": "Attack",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 31,
+                  "CanTakeDelegateIndex": 33,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 2,
                   "bDesiredTransitionReturnValue": true,
@@ -280,7 +280,7 @@
                   "PoseEvaluatorLinks": []
                 },
                 {
-                  "CanTakeDelegateIndex": 33,
+                  "CanTakeDelegateIndex": 35,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 3,
                   "bDesiredTransitionReturnValue": true,
@@ -302,10 +302,10 @@
               "bAlwaysResetOnEntry": false
             },
             {
-              "StateName": "PosturingEnter",
+              "StateName": "PosturingWaitTimer",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 32,
+                  "CanTakeDelegateIndex": 34,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 4,
                   "bDesiredTransitionReturnValue": true,
@@ -314,7 +314,7 @@
                   "PoseEvaluatorLinks": []
                 },
                 {
-                  "CanTakeDelegateIndex": 34,
+                  "CanTakeDelegateIndex": 36,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 5,
                   "bDesiredTransitionReturnValue": true,
@@ -323,7 +323,7 @@
                   "PoseEvaluatorLinks": []
                 },
                 {
-                  "CanTakeDelegateIndex": 35,
+                  "CanTakeDelegateIndex": 37,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 6,
                   "bDesiredTransitionReturnValue": true,
@@ -334,7 +334,7 @@
               ],
               "StateRootNodeIndex": 24,
               "StartNotify": -1,
-              "EndNotify": -1,
+              "EndNotify": 0,
               "FullyBlendedNotify": -1,
               "bIsAConduit": false,
               "EntryRuleNodeIndex": -1,
@@ -348,7 +348,7 @@
               "StateName": "PosturingLoop",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 35,
+                  "CanTakeDelegateIndex": 38,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 7,
                   "bDesiredTransitionReturnValue": true,
@@ -373,7 +373,7 @@
               "StateName": "PosturingExit",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 36,
+                  "CanTakeDelegateIndex": 39,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 8,
                   "bDesiredTransitionReturnValue": true,
@@ -382,7 +382,7 @@
                   "PoseEvaluatorLinks": []
                 },
                 {
-                  "CanTakeDelegateIndex": 32,
+                  "CanTakeDelegateIndex": 34,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 9,
                   "bDesiredTransitionReturnValue": true,
@@ -407,7 +407,7 @@
               "StateName": "ExitPosturing_conduit",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 37,
+                  "CanTakeDelegateIndex": 40,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 10,
                   "bDesiredTransitionReturnValue": true,
@@ -416,7 +416,7 @@
                   "PoseEvaluatorLinks": []
                 },
                 {
-                  "CanTakeDelegateIndex": 38,
+                  "CanTakeDelegateIndex": 41,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 11,
                   "bDesiredTransitionReturnValue": true,
@@ -434,6 +434,40 @@
               "PlayerNodeIndices": [],
               "LayerNodeIndices": [],
               "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "PosturingEnter",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 42,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 12,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 37,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 13,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 31,
+              "StartNotify": -1,
+              "EndNotify": 1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                32
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
             }
           ],
           "Transitions": [
@@ -441,8 +475,8 @@
               "PreviousState": 0,
               "NextState": 2,
               "CrossfadeDuration": 0.2,
-              "StartNotify": -1,
-              "EndNotify": 0,
+              "StartNotify": 2,
+              "EndNotify": -1,
               "InterruptNotify": -1,
               "BlendMode": "EAlphaBlendOption::HermiteCubic",
               "CustomCurve": null,
@@ -467,8 +501,8 @@
               "PreviousState": 1,
               "NextState": 2,
               "CrossfadeDuration": 0.2,
-              "StartNotify": -1,
-              "EndNotify": 0,
+              "StartNotify": 2,
+              "EndNotify": -1,
               "InterruptNotify": -1,
               "BlendMode": "EAlphaBlendOption::HermiteCubic",
               "CustomCurve": null,
@@ -504,8 +538,8 @@
             },
             {
               "PreviousState": 2,
-              "NextState": 3,
-              "CrossfadeDuration": 0.05,
+              "NextState": 6,
+              "CrossfadeDuration": 0.03,
               "StartNotify": -1,
               "EndNotify": -1,
               "InterruptNotify": -1,
@@ -517,9 +551,9 @@
             },
             {
               "PreviousState": 2,
-              "NextState": 4,
-              "CrossfadeDuration": 0.05,
-              "StartNotify": 1,
+              "NextState": 5,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
               "EndNotify": -1,
               "InterruptNotify": -1,
               "BlendMode": "EAlphaBlendOption::HermiteCubic",
@@ -532,7 +566,7 @@
               "PreviousState": 3,
               "NextState": 4,
               "CrossfadeDuration": 0.05,
-              "StartNotify": 1,
+              "StartNotify": 3,
               "EndNotify": -1,
               "InterruptNotify": -1,
               "BlendMode": "EAlphaBlendOption::HermiteCubic",
@@ -592,6 +626,32 @@
               "BlendProfile": null,
               "LogicType": "ETransitionLogicType::TLT_StandardBlend",
               "StateName": "None"
+            },
+            {
+              "PreviousState": 6,
+              "NextState": 3,
+              "CrossfadeDuration": 0.05,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 6,
+              "NextState": 5,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
             }
           ]
         }
@@ -605,7 +665,81 @@
           "TriggerTimeOffset": 0.0,
           "EndTriggerTimeOffset": 0.0,
           "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "DoneWaiting",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": -1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": null
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
           "NotifyName": "EnterPosturingEvent",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": -1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": null
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "StartedPosturing",
           "Notify": null,
           "NotifyStateClass": null,
           "Duration": 0.0,
@@ -683,12 +817,12 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
             0,
-            24
+            26
           ],
           "NodeIndex": 0,
           "Flags": "EAnimNodeDataFlags::None"
@@ -699,9 +833,9 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295
           ],
           "NodeIndex": 1,
@@ -713,9 +847,9 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295
           ],
           "NodeIndex": 2,
@@ -727,9 +861,9 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295
           ],
           "NodeIndex": 3,
@@ -741,9 +875,9 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295
           ],
           "NodeIndex": 4,
@@ -755,9 +889,9 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295
           ],
           "NodeIndex": 5,
@@ -769,9 +903,9 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295
           ],
           "NodeIndex": 6,
@@ -783,9 +917,9 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295
           ],
           "NodeIndex": 7,
@@ -797,9 +931,9 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295
           ],
           "NodeIndex": 8,
@@ -811,9 +945,9 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295
           ],
           "NodeIndex": 9,
@@ -825,26 +959,10 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            24,
-            21,
-            20,
-            19,
-            4294967295,
-            9,
-            9,
-            17,
-            4294967295,
-            16,
-            19,
-            19
+            29,
+            29,
+            29,
+            4294967295
           ],
           "NodeIndex": 10,
           "Flags": "EAnimNodeDataFlags::None"
@@ -855,13 +973,26 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            26,
+            23,
+            22,
+            21,
+            4294967295,
+            11,
             1,
-            24,
-            2
+            19,
+            4294967295,
+            18,
+            21,
+            21
           ],
           "NodeIndex": 11,
           "Flags": "EAnimNodeDataFlags::None"
@@ -872,26 +1003,13 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            24,
-            21,
-            20,
-            19,
-            4294967295,
-            9,
-            9,
-            17,
-            4294967295,
-            16,
-            15,
-            19
+            2,
+            26,
+            3
           ],
           "NodeIndex": 12,
           "Flags": "EAnimNodeDataFlags::None"
@@ -902,13 +1020,10 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
-            4294967295,
-            3,
-            24,
-            4
+            29,
+            29,
+            29,
+            4294967295
           ],
           "NodeIndex": 13,
           "Flags": "EAnimNodeDataFlags::None"
@@ -919,26 +1034,26 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
-            24,
+            26,
+            23,
+            22,
             21,
-            20,
+            4294967295,
+            11,
+            11,
             19,
             4294967295,
-            9,
-            5,
-            17,
-            4294967295,
-            16,
-            19,
-            19
+            18,
+            21,
+            21
           ],
           "NodeIndex": 14,
           "Flags": "EAnimNodeDataFlags::None"
@@ -949,13 +1064,13 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
-            6,
-            24,
-            14
+            4,
+            26,
+            5
           ],
           "NodeIndex": 15,
           "Flags": "EAnimNodeDataFlags::None"
@@ -966,26 +1081,26 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
-            24,
+            26,
+            23,
+            22,
             21,
-            20,
+            4294967295,
+            11,
+            11,
             19,
             4294967295,
-            9,
-            9,
+            18,
             17,
-            4294967295,
-            16,
-            15,
-            19
+            21
           ],
           "NodeIndex": 16,
           "Flags": "EAnimNodeDataFlags::None"
@@ -996,13 +1111,13 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
-            7,
-            24,
-            23
+            6,
+            26,
+            7
           ],
           "NodeIndex": 17,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1013,25 +1128,26 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
-            24,
+            26,
+            23,
+            22,
             21,
-            20,
+            4294967295,
+            11,
+            11,
             19,
-            2147483648,
-            16,
-            9,
-            15,
-            15,
-            16,
-            4294967295
+            4294967295,
+            18,
+            17,
+            21
           ],
           "NodeIndex": 18,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1042,13 +1158,13 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
             8,
-            24,
-            26
+            26,
+            16
           ],
           "NodeIndex": 19,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1059,16 +1175,26 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
+            26,
+            23,
+            22,
+            21,
             4294967295,
-            4294967295
+            11,
+            11,
+            19,
+            4294967295,
+            18,
+            17,
+            21
           ],
           "NodeIndex": 20,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1079,12 +1205,13 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
-            4294967295,
-            4294967295
+            9,
+            26,
+            25
           ],
           "NodeIndex": 21,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1095,18 +1222,24 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
+            26,
+            23,
+            22,
+            21,
+            2147483648,
+            18,
+            11,
+            17,
+            17,
+            18,
             4294967295
           ],
           "NodeIndex": 22,
@@ -1118,10 +1251,13 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
-            4294967295
+            29,
+            29,
+            29,
+            4294967295,
+            10,
+            26,
+            28
           ],
           "NodeIndex": 23,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1132,9 +1268,15 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
             4294967295
           ],
           "NodeIndex": 24,
@@ -1146,26 +1288,12 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
             4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            24,
-            21,
-            20,
-            19,
-            4294967295,
-            9,
-            9,
-            17,
-            4294967295,
-            16,
-            19,
-            19
+            4294967295
           ],
           "NodeIndex": 25,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1176,13 +1304,19 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
-            10,
-            24,
-            23
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
           ],
           "NodeIndex": 26,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1193,13 +1327,10 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
-            4294967295,
-            11,
-            24,
-            26
+            29,
+            29,
+            29,
+            4294967295
           ],
           "NodeIndex": 27,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1210,15 +1341,9 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
+            29,
+            29,
+            29,
             4294967295
           ],
           "NodeIndex": 28,
@@ -1230,19 +1355,26 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
+            26,
+            23,
+            22,
+            21,
             4294967295,
+            11,
+            11,
+            19,
             4294967295,
-            4294967295,
-            4294967295,
-            4294967295
+            18,
+            21,
+            21
           ],
           "NodeIndex": 29,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1253,10 +1385,13 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
-            4294967295
+            29,
+            29,
+            29,
+            4294967295,
+            12,
+            26,
+            25
           ],
           "NodeIndex": 30,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1267,10 +1402,13 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
-            4294967295
+            29,
+            29,
+            29,
+            4294967295,
+            13,
+            26,
+            28
           ],
           "NodeIndex": 31,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1281,9 +1419,15 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
             4294967295
           ],
           "NodeIndex": 32,
@@ -1295,9 +1439,18 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
             4294967295
           ],
           "NodeIndex": 33,
@@ -1309,26 +1462,10 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            24,
-            21,
-            20,
-            19,
-            4294967295,
-            12,
-            2147483649,
-            17,
-            4294967295,
-            16,
-            15,
-            19
+            29,
+            29,
+            29,
+            4294967295
           ],
           "NodeIndex": 34,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1339,13 +1476,10 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
-            4294967295,
-            13,
-            24,
-            14
+            29,
+            29,
+            29,
+            4294967295
           ],
           "NodeIndex": 35,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1356,26 +1490,10 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            24,
-            21,
-            20,
-            19,
-            4294967295,
-            18,
-            2147483650,
-            17,
-            4294967295,
-            16,
-            15,
-            19
+            29,
+            29,
+            29,
+            4294967295
           ],
           "NodeIndex": 36,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1386,13 +1504,10 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
-            4294967295,
-            22,
-            24,
-            23
+            29,
+            29,
+            29,
+            4294967295
           ],
           "NodeIndex": 37,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1403,13 +1518,26 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
-            27,
-            27,
-            27,
+            29,
+            29,
+            29,
             4294967295,
-            25,
-            24,
-            26
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            26,
+            23,
+            22,
+            21,
+            4294967295,
+            14,
+            2147483649,
+            19,
+            4294967295,
+            18,
+            17,
+            21
           ],
           "NodeIndex": 38,
           "Flags": "EAnimNodeDataFlags::None"
@@ -1420,9 +1548,90 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
           },
           "Entries": [
+            29,
+            29,
+            29,
+            4294967295,
+            15,
+            26,
+            16
+          ],
+          "NodeIndex": 39,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            29,
+            29,
+            29,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            26,
+            23,
+            22,
+            21,
+            4294967295,
+            20,
+            2147483650,
+            19,
+            4294967295,
+            18,
+            17,
+            21
+          ],
+          "NodeIndex": 40,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            29,
+            29,
+            29,
+            4294967295,
+            24,
+            26,
+            25
+          ],
+          "NodeIndex": 41,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            29,
+            29,
+            29,
+            4294967295,
             27,
-            27,
-            27,
+            26,
+            28
+          ],
+          "NodeIndex": 42,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'Bear_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.0"
+          },
+          "Entries": [
+            29,
+            29,
+            29,
             4294967295,
             4294967295,
             4294967295,
@@ -1431,7 +1640,7 @@
             4294967295,
             4294967295
           ],
-          "NodeIndex": 39,
+          "NodeIndex": 43,
           "Flags": "EAnimNodeDataFlags::None"
         }
       ],
@@ -1999,7 +2208,7 @@
       ],
       "UberGraphFunction": {
         "ObjectName": "Function'Bear_ABP_C:ExecuteUbergraph_Bear_ABP'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.22"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.26"
       }
     },
     "SuperStruct": {
@@ -2013,83 +2222,99 @@
       },
       {
         "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_SequencePlayer_00E597E243CA36A367D5C0895C40D856'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.7"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_SequencePlayer_7F90BDBF476EBB3E181A51BFB0BD0067'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.8"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_9A3816C54772E6FB560339BE25D2C6A8'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.17"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0F805E57442B8A422E5B75902685168D'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.10"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_4BDC01DA4B3E36A3FE611384FEEC7D78'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.14"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_733F9F06451B3F7BFBD7AA9150E026A3'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.15"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_C17F80D4458AC3267AC27B9E4B69AB3C'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.18"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_325243A244EDF7369EB46DAA59F2C4E6'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.11"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_FCC1FA1C41745D31127F59BDFA86E609'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.21"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_DECED4A542C3AEDDDBD8699293067182'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.20"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D87DB6174C8D2C654975AF80590CB60E'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.19"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_76D1A75B46990B1AD7B65C9DD90F5933'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.16"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_34E7121A4222F50393F45F99432CC2F7'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.12"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_350F5B9F4D7A597EB4BA67ABFFEEE65D'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.13"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0A689E4845CE320B820228A778E7F877'",
         "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.9"
       },
       {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_SequencePlayer_7F90BDBF476EBB3E181A51BFB0BD0067'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.10"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_F2E95C6C41BA67BA14023988824DBF6F'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.23"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0F805E57442B8A422E5B75902685168D'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.12"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_9A3816C54772E6FB560339BE25D2C6A8'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.18"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_4BDC01DA4B3E36A3FE611384FEEC7D78'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.15"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_733F9F06451B3F7BFBD7AA9150E026A3'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.16"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_FCC1FA1C41745D31127F59BDFA86E609'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.25"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_C17F80D4458AC3267AC27B9E4B69AB3C'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.19"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_325243A244EDF7369EB46DAA59F2C4E6'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.13"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_DECED4A542C3AEDDDBD8699293067182'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.22"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_76D1A75B46990B1AD7B65C9DD90F5933'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.17"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D87DB6174C8D2C654975AF80590CB60E'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.21"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_34E7121A4222F50393F45F99432CC2F7'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.14"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_F8A480F84452C1E111AADAA57A6523F6'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.24"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0A689E4845CE320B820228A778E7F877'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.11"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D58281DB481364EC4015FA907554ACEF'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.20"
+      },
+      {
         "ObjectName": "Function'Bear_ABP_C:BlueprintUpdateAnimation'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.6"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.8"
       },
       {
         "ObjectName": "Function'Bear_ABP_C:BlueprintInitializeAnimation'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.5"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.7"
       },
       {
         "ObjectName": "Function'Bear_ABP_C:AnimNotify_EnterPosturingEvent'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.3"
-      },
-      {
-        "ObjectName": "Function'Bear_ABP_C:AnimNotify_ExitPosturingEvent'",
         "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.4"
       },
       {
+        "ObjectName": "Function'Bear_ABP_C:AnimNotify_ExitPosturingEvent'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.5"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:AnimNotify_DoneWaiting'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.3"
+      },
+      {
+        "ObjectName": "Function'Bear_ABP_C:AnimNotify_StartedPosturing'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.6"
+      },
+      {
         "ObjectName": "Function'Bear_ABP_C:ExecuteUbergraph_Bear_ABP'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.22"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.26"
       }
     ],
     "ChildProperties": [
@@ -2111,7 +2336,7 @@
         "ElementSize": 16,
         "Struct": {
           "ObjectName": "ScriptStruct'Bear_ABP_C:AnimBlueprintGeneratedMutableData'",
-          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.24"
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.28"
         }
       },
       {
@@ -2141,6 +2366,26 @@
         "ElementSize": 184,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_16",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_15",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -2222,6 +2467,26 @@
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
           "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_10",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
         }
       },
       {
@@ -2566,88 +2831,118 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "posturingTimerLength",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "posturingTimerCurrent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
       }
     ],
     "FuncMap": {
       "ExecuteUbergraph_Bear_ABP": {
         "ObjectName": "Function'Bear_ABP_C:ExecuteUbergraph_Bear_ABP'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.22"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.26"
+      },
+      "AnimNotify_StartedPosturing": {
+        "ObjectName": "Function'Bear_ABP_C:AnimNotify_StartedPosturing'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.6"
+      },
+      "AnimNotify_DoneWaiting": {
+        "ObjectName": "Function'Bear_ABP_C:AnimNotify_DoneWaiting'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.3"
       },
       "AnimNotify_ExitPosturingEvent": {
         "ObjectName": "Function'Bear_ABP_C:AnimNotify_ExitPosturingEvent'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.4"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.5"
       },
       "AnimNotify_EnterPosturingEvent": {
         "ObjectName": "Function'Bear_ABP_C:AnimNotify_EnterPosturingEvent'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.3"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.4"
       },
       "BlueprintInitializeAnimation": {
         "ObjectName": "Function'Bear_ABP_C:BlueprintInitializeAnimation'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.5"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.7"
       },
       "BlueprintUpdateAnimation": {
         "ObjectName": "Function'Bear_ABP_C:BlueprintUpdateAnimation'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.6"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.8"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D58281DB481364EC4015FA907554ACEF": {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D58281DB481364EC4015FA907554ACEF'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.20"
       },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0A689E4845CE320B820228A778E7F877": {
         "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0A689E4845CE320B820228A778E7F877'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.9"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.11"
       },
-      "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_350F5B9F4D7A597EB4BA67ABFFEEE65D": {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_350F5B9F4D7A597EB4BA67ABFFEEE65D'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.13"
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_F8A480F84452C1E111AADAA57A6523F6": {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_F8A480F84452C1E111AADAA57A6523F6'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.24"
       },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_34E7121A4222F50393F45F99432CC2F7": {
         "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_34E7121A4222F50393F45F99432CC2F7'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.12"
-      },
-      "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_76D1A75B46990B1AD7B65C9DD90F5933": {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_76D1A75B46990B1AD7B65C9DD90F5933'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.16"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.14"
       },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D87DB6174C8D2C654975AF80590CB60E": {
         "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D87DB6174C8D2C654975AF80590CB60E'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.19"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.21"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_76D1A75B46990B1AD7B65C9DD90F5933": {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_76D1A75B46990B1AD7B65C9DD90F5933'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.17"
       },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_DECED4A542C3AEDDDBD8699293067182": {
         "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_DECED4A542C3AEDDDBD8699293067182'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.20"
-      },
-      "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_FCC1FA1C41745D31127F59BDFA86E609": {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_FCC1FA1C41745D31127F59BDFA86E609'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.21"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.22"
       },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_325243A244EDF7369EB46DAA59F2C4E6": {
         "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_325243A244EDF7369EB46DAA59F2C4E6'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.11"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.13"
       },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_C17F80D4458AC3267AC27B9E4B69AB3C": {
         "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_C17F80D4458AC3267AC27B9E4B69AB3C'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.18"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.19"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_FCC1FA1C41745D31127F59BDFA86E609": {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_FCC1FA1C41745D31127F59BDFA86E609'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.25"
       },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_733F9F06451B3F7BFBD7AA9150E026A3": {
         "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_733F9F06451B3F7BFBD7AA9150E026A3'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.15"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.16"
       },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_4BDC01DA4B3E36A3FE611384FEEC7D78": {
         "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_4BDC01DA4B3E36A3FE611384FEEC7D78'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.14"
-      },
-      "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0F805E57442B8A422E5B75902685168D": {
-        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0F805E57442B8A422E5B75902685168D'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.10"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.15"
       },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_9A3816C54772E6FB560339BE25D2C6A8": {
         "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_9A3816C54772E6FB560339BE25D2C6A8'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.17"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.18"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0F805E57442B8A422E5B75902685168D": {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0F805E57442B8A422E5B75902685168D'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.12"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_F2E95C6C41BA67BA14023988824DBF6F": {
+        "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_F2E95C6C41BA67BA14023988824DBF6F'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.23"
       },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_SequencePlayer_7F90BDBF476EBB3E181A51BFB0BD0067": {
         "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_SequencePlayer_7F90BDBF476EBB3E181A51BFB0BD0067'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.8"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.10"
       },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_SequencePlayer_00E597E243CA36A367D5C0895C40D856": {
         "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_SequencePlayer_00E597E243CA36A367D5C0895C40D856'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.7"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.9"
       },
       "AnimGraph": {
         "ObjectName": "Function'Bear_ABP_C:AnimGraph'",
@@ -2684,65 +2979,40 @@
       "AnimBlueprintExtension_Base[3]": {},
       "AnimGraphNode_Root[4]": {
         "Result": {
-          "LinkID": 29
+          "LinkID": 33
         }
       },
-      "AnimGraphNode_TransitionResult_14[5]": {
+      "AnimGraphNode_TransitionResult_16[5]": {
         "bCanEnterTransition": false
       },
-      "AnimGraphNode_TransitionResult_13[6]": {
+      "AnimGraphNode_TransitionResult_15[6]": {
         "bCanEnterTransition": false
       },
-      "AnimGraphNode_TransitionResult_12[7]": {
+      "AnimGraphNode_TransitionResult_14[7]": {
         "bCanEnterTransition": false
       },
-      "AnimGraphNode_TransitionResult_11[8]": {
+      "AnimGraphNode_TransitionResult_13[8]": {
         "bCanEnterTransition": false
       },
-      "AnimGraphNode_TransitionResult_10[9]": {
+      "AnimGraphNode_TransitionResult_12[9]": {
         "bCanEnterTransition": false
       },
-      "AnimGraphNode_TransitionResult_9[10]": {
+      "AnimGraphNode_TransitionResult_11[10]": {
         "bCanEnterTransition": false
       },
-      "AnimGraphNode_TransitionResult_8[11]": {
+      "AnimGraphNode_TransitionResult_10[11]": {
         "bCanEnterTransition": false
       },
-      "AnimGraphNode_TransitionResult_7[12]": {
+      "AnimGraphNode_TransitionResult_9[12]": {
         "bCanEnterTransition": false
       },
-      "AnimGraphNode_TransitionResult_6[13]": {
-        "bCanEnterTransition": true
+      "AnimGraphNode_TransitionResult_8[13]": {
+        "bCanEnterTransition": false
       },
-      "AnimGraphNode_SequencePlayer_6[14]": {
-        "Sequence": {
-          "ObjectName": "AnimSequence'bear_posturing_exit'",
-          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/bear_posturing_exit.0"
-        },
-        "PlayRateScaleBiasClampState": {},
-        "BlendWeight": 0.0,
-        "InternalTimeAccumulator": 0.0
+      "AnimGraphNode_TransitionResult_7[14]": {
+        "bCanEnterTransition": false
       },
-      "AnimGraphNode_StateResult_9[15]": {
-        "Result": {
-          "LinkID": 10
-        }
-      },
-      "AnimGraphNode_SequencePlayer_5[16]": {
-        "Sequence": {
-          "ObjectName": "AnimSequence'bear_posturing_loop'",
-          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/bear_posturing_loop.2"
-        },
-        "PlayRateScaleBiasClampState": {},
-        "BlendWeight": 0.0,
-        "InternalTimeAccumulator": 0.0
-      },
-      "AnimGraphNode_StateResult_8[17]": {
-        "Result": {
-          "LinkID": 12
-        }
-      },
-      "AnimGraphNode_SequencePlayer_4[18]": {
+      "AnimGraphNode_SequencePlayer_7[15]": {
         "Sequence": {
           "ObjectName": "AnimSequence'bear_posturing_enter'",
           "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/bear_posturing_enter.0"
@@ -2751,12 +3021,57 @@
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
       },
-      "AnimGraphNode_StateResult_7[19]": {
+      "AnimGraphNode_StateResult_10[16]": {
+        "Result": {
+          "LinkID": 11
+        }
+      },
+      "AnimGraphNode_TransitionResult_6[17]": {
+        "bCanEnterTransition": true
+      },
+      "AnimGraphNode_SequencePlayer_6[18]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'bear_posturing_exit'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/bear_posturing_exit.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_9[19]": {
         "Result": {
           "LinkID": 14
         }
       },
-      "AnimGraphNode_SequencePlayer_3[20]": {
+      "AnimGraphNode_SequencePlayer_5[20]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'bear_posturing_loop'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/bear_posturing_loop.2"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_8[21]": {
+        "Result": {
+          "LinkID": 16
+        }
+      },
+      "AnimGraphNode_SequencePlayer_4[22]": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'bear_idle'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/bear_idle.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_7[23]": {
+        "Result": {
+          "LinkID": 18
+        }
+      },
+      "AnimGraphNode_SequencePlayer_3[24]": {
         "Sequence": {
           "ObjectName": "AnimSequence'bear_attack'",
           "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/bear_attack.1"
@@ -2765,12 +3080,12 @@
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
       },
-      "AnimGraphNode_StateResult_6[21]": {
+      "AnimGraphNode_StateResult_6[25]": {
         "Result": {
-          "LinkID": 16
+          "LinkID": 20
         }
       },
-      "AnimGraphNode_BlendSpacePlayer[22]": {
+      "AnimGraphNode_BlendSpacePlayer[26]": {
         "BlendSpace": {
           "ObjectName": "BlendSpace1D'Bear_movement_BS'",
           "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_movement_BS.0"
@@ -2779,12 +3094,12 @@
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
       },
-      "AnimGraphNode_StateResult_5[23]": {
+      "AnimGraphNode_StateResult_5[27]": {
         "Result": {
-          "LinkID": 18
+          "LinkID": 22
         }
       },
-      "AnimGraphNode_StateMachine_2[24]": {
+      "AnimGraphNode_StateMachine_2[28]": {
         "StateMachineIndexInClass": 2,
         "MaxTransitionsPerFrame": 3,
         "MaxTransitionsRequests": 32,
@@ -2793,19 +3108,19 @@
         "bCreateNotifyMetaData": true,
         "bAllowConduitEntryStates": false
       },
-      "AnimGraphNode_Slot[25]": {
+      "AnimGraphNode_Slot[29]": {
         "Source": {
-          "LinkID": 20
+          "LinkID": 24
         },
         "SlotName": "DefaultSlot",
         "bAlwaysUpdateSourcePose": false
       },
-      "AnimGraphNode_ApplyMeshSpaceAdditive_1[26]": {
+      "AnimGraphNode_ApplyMeshSpaceAdditive_1[30]": {
         "Base": {
-          "LinkID": 21
+          "LinkID": 25
         },
         "Additive": {
-          "LinkID": 28
+          "LinkID": 32
         },
         "AlphaInputType": "EAnimAlphaInputType::Float",
         "Alpha": 1.0,
@@ -2848,13 +3163,13 @@
         },
         "LODThreshold": -1
       },
-      "AnimGraphNode_TransitionResult_5[27]": {
+      "AnimGraphNode_TransitionResult_5[31]": {
         "bCanEnterTransition": false
       },
-      "AnimGraphNode_TransitionResult_4[28]": {
+      "AnimGraphNode_TransitionResult_4[32]": {
         "bCanEnterTransition": false
       },
-      "AnimGraphNode_SequencePlayer_2[29]": {
+      "AnimGraphNode_SequencePlayer_2[33]": {
         "Sequence": {
           "ObjectName": "AnimSequence'bear_HitEffect'",
           "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/bear_HitEffect.0"
@@ -2863,17 +3178,17 @@
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
       },
-      "AnimGraphNode_StateResult_4[30]": {
+      "AnimGraphNode_StateResult_4[34]": {
         "Result": {
-          "LinkID": 25
+          "LinkID": 29
         }
       },
-      "AnimGraphNode_StateResult_3[31]": {
+      "AnimGraphNode_StateResult_3[35]": {
         "Result": {
           "LinkID": -1
         }
       },
-      "AnimGraphNode_StateMachine_1[32]": {
+      "AnimGraphNode_StateMachine_1[36]": {
         "StateMachineIndexInClass": 1,
         "MaxTransitionsPerFrame": 3,
         "MaxTransitionsRequests": 32,
@@ -2882,12 +3197,12 @@
         "bCreateNotifyMetaData": true,
         "bAllowConduitEntryStates": false
       },
-      "AnimGraphNode_ApplyMeshSpaceAdditive[33]": {
+      "AnimGraphNode_ApplyMeshSpaceAdditive[37]": {
         "Base": {
-          "LinkID": 22
+          "LinkID": 26
         },
         "Additive": {
-          "LinkID": 39
+          "LinkID": 43
         },
         "AlphaInputType": "EAnimAlphaInputType::Float",
         "Alpha": 1.0,
@@ -2930,19 +3245,19 @@
         },
         "LODThreshold": -1
       },
-      "AnimGraphNode_TransitionResult_3[34]": {
+      "AnimGraphNode_TransitionResult_3[38]": {
         "bCanEnterTransition": false
       },
-      "AnimGraphNode_TransitionResult_2[35]": {
+      "AnimGraphNode_TransitionResult_2[39]": {
         "bCanEnterTransition": false
       },
-      "AnimGraphNode_TransitionResult_1[36]": {
+      "AnimGraphNode_TransitionResult_1[40]": {
         "bCanEnterTransition": false
       },
-      "AnimGraphNode_TransitionResult[37]": {
+      "AnimGraphNode_TransitionResult[41]": {
         "bCanEnterTransition": false
       },
-      "AnimGraphNode_SequencePlayer_1[38]": {
+      "AnimGraphNode_SequencePlayer_1[42]": {
         "Sequence": {
           "ObjectName": "AnimSequence'bear_turnInPlace_Stand_right'",
           "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/bear_turnInPlace_Stand_right.0"
@@ -2951,12 +3266,12 @@
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
       },
-      "AnimGraphNode_StateResult_2[39]": {
+      "AnimGraphNode_StateResult_2[43]": {
         "Result": {
-          "LinkID": 34
+          "LinkID": 38
         }
       },
-      "AnimGraphNode_SequencePlayer[40]": {
+      "AnimGraphNode_SequencePlayer[44]": {
         "Sequence": {
           "ObjectName": "AnimSequence'bear_turnInPlace_Stand_left'",
           "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/bear_turnInPlace_Stand_left.0"
@@ -2965,17 +3280,17 @@
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
       },
-      "AnimGraphNode_StateResult_1[41]": {
+      "AnimGraphNode_StateResult_1[45]": {
         "Result": {
-          "LinkID": 36
+          "LinkID": 40
         }
       },
-      "AnimGraphNode_StateResult[42]": {
+      "AnimGraphNode_StateResult[46]": {
         "Result": {
           "LinkID": -1
         }
       },
-      "AnimGraphNode_StateMachine[43]": {
+      "AnimGraphNode_StateMachine[47]": {
         "StateMachineIndexInClass": 0,
         "MaxTransitionsPerFrame": 3,
         "MaxTransitionsRequests": 32,
@@ -2983,28 +3298,31 @@
         "bReinitializeOnBecomingRelevant": true,
         "bCreateNotifyMetaData": true,
         "bAllowConduitEntryStates": false
-      }
+      },
+      "posturingTimerLength[51]": 1.5
     },
     "SerializedSparseClassDataStruct": "ScriptStruct'Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.Bear_ABP_C:AnimBlueprintGeneratedConstantData'",
     "SerializedSparseClassData": {
-      "__NameProperty_200": "AnimGraph",
-      "__NameProperty_201[1]": "PosturingExit",
-      "__IntProperty_202[2]": 4,
-      "__NameProperty_203[3]": "PosturingLoop",
-      "__IntProperty_204[4]": 3,
-      "__FloatProperty_205[5]": 0.7,
-      "__NameProperty_206[6]": "PosturingEnter",
-      "__NameProperty_207[7]": "Attack",
-      "__NameProperty_208[8]": "movement",
-      "__FloatProperty_209[9]": 1.0,
-      "__NameProperty_210[10]": "HitEffect",
-      "__NameProperty_211[11]": "entry",
-      "__FloatProperty_212[12]": 90.0,
-      "__NameProperty_213[13]": "turn Right Standing",
-      "__IntProperty_214[14]": 2,
-      "__BoolProperty_215[15]": true,
-      "__FloatProperty_216[16]": 0.0,
-      "__StructProperty_217[17]": {
+      "__NameProperty_223": "AnimGraph",
+      "__FloatProperty_224[1]": 0.7,
+      "__NameProperty_225[2]": "PosturingEnter",
+      "__IntProperty_226[3]": 6,
+      "__NameProperty_227[4]": "PosturingExit",
+      "__IntProperty_228[5]": 4,
+      "__NameProperty_229[6]": "PosturingLoop",
+      "__IntProperty_230[7]": 3,
+      "__NameProperty_231[8]": "PosturingWaitTimer",
+      "__NameProperty_232[9]": "Attack",
+      "__NameProperty_233[10]": "movement",
+      "__FloatProperty_234[11]": 1.0,
+      "__NameProperty_235[12]": "HitEffect",
+      "__NameProperty_236[13]": "entry",
+      "__FloatProperty_237[14]": 90.0,
+      "__NameProperty_238[15]": "turn Right Standing",
+      "__IntProperty_239[16]": 2,
+      "__BoolProperty_240[17]": true,
+      "__FloatProperty_241[18]": 0.0,
+      "__StructProperty_242[19]": {
         "bMapRange": false,
         "bClampResult": false,
         "bInterpResult": false,
@@ -3023,20 +3341,20 @@
         "InterpSpeedIncreasing": 10.0,
         "InterpSpeedDecreasing": 10.0
       },
-      "__FloatProperty_218[18]": -90.0,
-      "__BoolProperty_219[19]": false,
-      "__EnumProperty_220[20]": "EAnimSyncMethod::DoNotSync",
-      "__ByteProperty_221[21]": "EAnimGroupRole::CanBeLeader",
-      "__NameProperty_222[22]": "turn Left Standing",
-      "__IntProperty_223[23]": 1,
-      "__NameProperty_224[24]": "None",
-      "__NameProperty_225[25]": "neutral",
-      "__IntProperty_226[26]": 0,
-      "__StructProperty_227[27]": {
+      "__FloatProperty_243[20]": -90.0,
+      "__BoolProperty_244[21]": false,
+      "__EnumProperty_245[22]": "EAnimSyncMethod::DoNotSync",
+      "__ByteProperty_246[23]": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_247[24]": "turn Left Standing",
+      "__IntProperty_248[25]": 1,
+      "__NameProperty_249[26]": "None",
+      "__NameProperty_250[27]": "neutral",
+      "__IntProperty_251[28]": 0,
+      "__StructProperty_252[29]": {
         "ClassName": "None",
         "FunctionName": "None"
       },
-      "AnimBlueprintExtension_PropertyAccess[28]": {
+      "AnimBlueprintExtension_PropertyAccess[30]": {
         "Library": {
           "PathSegments": [
             {
@@ -3110,7 +3428,7 @@
               "Name": "__AnimBlueprintMutables",
               "Struct": {
                 "ObjectName": "ScriptStruct'Bear_ABP_C:AnimBlueprintGeneratedMutableData'",
-                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.24"
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.28"
               },
               "Property": {
                 "Path": [
@@ -3134,7 +3452,7 @@
                 ],
                 "ResolvedOwner": {
                   "ObjectName": "ScriptStruct'Bear_ABP_C:AnimBlueprintGeneratedMutableData'",
-                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.24"
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.28"
                 }
               },
               "Function": null,
@@ -3182,7 +3500,7 @@
           ]
         }
       },
-      "AnimBlueprintExtension_Base[29]": {
+      "AnimBlueprintExtension_Base[31]": {
         "ExposedValueHandlers": [
           {
             "CopyRecords": [],
@@ -3192,8 +3510,16 @@
           {
             "CopyRecords": [],
             "Function": {
+              "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_F2E95C6C41BA67BA14023988824DBF6F'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.23"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_F2E95C6C41BA67BA14023988824DBF6F"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
               "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0F805E57442B8A422E5B75902685168D'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.10"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.12"
             },
             "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0F805E57442B8A422E5B75902685168D"
           },
@@ -3201,7 +3527,7 @@
             "CopyRecords": [],
             "Function": {
               "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_FCC1FA1C41745D31127F59BDFA86E609'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.21"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.25"
             },
             "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_FCC1FA1C41745D31127F59BDFA86E609"
           },
@@ -3209,7 +3535,7 @@
             "CopyRecords": [],
             "Function": {
               "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_76D1A75B46990B1AD7B65C9DD90F5933'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.16"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.17"
             },
             "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_76D1A75B46990B1AD7B65C9DD90F5933"
           },
@@ -3217,23 +3543,31 @@
             "CopyRecords": [],
             "Function": {
               "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0A689E4845CE320B820228A778E7F877'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.9"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.11"
             },
             "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_0A689E4845CE320B820228A778E7F877"
           },
           {
             "CopyRecords": [],
             "Function": {
-              "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_350F5B9F4D7A597EB4BA67ABFFEEE65D'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.13"
+              "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D58281DB481364EC4015FA907554ACEF'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.20"
             },
-            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_350F5B9F4D7A597EB4BA67ABFFEEE65D"
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D58281DB481364EC4015FA907554ACEF"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_F8A480F84452C1E111AADAA57A6523F6'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.24"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_F8A480F84452C1E111AADAA57A6523F6"
           },
           {
             "CopyRecords": [],
             "Function": {
               "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_34E7121A4222F50393F45F99432CC2F7'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.12"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.14"
             },
             "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_34E7121A4222F50393F45F99432CC2F7"
           },
@@ -3241,7 +3575,7 @@
             "CopyRecords": [],
             "Function": {
               "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D87DB6174C8D2C654975AF80590CB60E'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.19"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.21"
             },
             "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D87DB6174C8D2C654975AF80590CB60E"
           },
@@ -3249,9 +3583,19 @@
             "CopyRecords": [],
             "Function": {
               "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_DECED4A542C3AEDDDBD8699293067182'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.20"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.22"
             },
             "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_DECED4A542C3AEDDDBD8699293067182"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
           },
           {
             "CopyRecords": [],
@@ -3332,7 +3676,7 @@
             "CopyRecords": [],
             "Function": {
               "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_325243A244EDF7369EB46DAA59F2C4E6'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.11"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.13"
             },
             "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_325243A244EDF7369EB46DAA59F2C4E6"
           },
@@ -3375,7 +3719,7 @@
             "CopyRecords": [],
             "Function": {
               "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_C17F80D4458AC3267AC27B9E4B69AB3C'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.18"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.19"
             },
             "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_C17F80D4458AC3267AC27B9E4B69AB3C"
           },
@@ -3383,7 +3727,7 @@
             "CopyRecords": [],
             "Function": {
               "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_733F9F06451B3F7BFBD7AA9150E026A3'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.15"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.16"
             },
             "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_733F9F06451B3F7BFBD7AA9150E026A3"
           },
@@ -3391,7 +3735,7 @@
             "CopyRecords": [],
             "Function": {
               "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_4BDC01DA4B3E36A3FE611384FEEC7D78'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.14"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.15"
             },
             "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_4BDC01DA4B3E36A3FE611384FEEC7D78"
           },
@@ -3399,7 +3743,7 @@
             "CopyRecords": [],
             "Function": {
               "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_9A3816C54772E6FB560339BE25D2C6A8'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.17"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.18"
             },
             "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_9A3816C54772E6FB560339BE25D2C6A8"
           },
@@ -3407,7 +3751,7 @@
             "CopyRecords": [],
             "Function": {
               "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_SequencePlayer_00E597E243CA36A367D5C0895C40D856'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.7"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.9"
             },
             "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_SequencePlayer_00E597E243CA36A367D5C0895C40D856"
           },
@@ -3420,7 +3764,7 @@
             "CopyRecords": [],
             "Function": {
               "ObjectName": "Function'Bear_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_SequencePlayer_7F90BDBF476EBB3E181A51BFB0BD0067'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.8"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Bear/Bear_ABP.10"
             },
             "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_SequencePlayer_7F90BDBF476EBB3E181A51BFB0BD0067"
           },
@@ -3465,6 +3809,13 @@
   },
   {
     "Type": "Function",
+    "Name": "AnimNotify_DoneWaiting",
+    "Outer": "Bear_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
     "Name": "AnimNotify_EnterPosturingEvent",
     "Outer": "Bear_ABP_C",
     "Class": "UScriptClass'Function'",
@@ -3473,6 +3824,13 @@
   {
     "Type": "Function",
     "Name": "AnimNotify_ExitPosturingEvent",
+    "Outer": "Bear_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_StartedPosturing",
     "Outer": "Bear_ABP_C",
     "Class": "UScriptClass'Function'",
     "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
@@ -3552,13 +3910,6 @@
   },
   {
     "Type": "Function",
-    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_350F5B9F4D7A597EB4BA67ABFFEEE65D",
-    "Outer": "Bear_ABP_C",
-    "Class": "UScriptClass'Function'",
-    "FunctionFlags": "FUNC_BlueprintEvent"
-  },
-  {
-    "Type": "Function",
     "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_4BDC01DA4B3E36A3FE611384FEEC7D78",
     "Outer": "Bear_ABP_C",
     "Class": "UScriptClass'Function'",
@@ -3594,6 +3945,13 @@
   },
   {
     "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D58281DB481364EC4015FA907554ACEF",
+    "Outer": "Bear_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
     "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_D87DB6174C8D2C654975AF80590CB60E",
     "Outer": "Bear_ABP_C",
     "Class": "UScriptClass'Function'",
@@ -3602,6 +3960,20 @@
   {
     "Type": "Function",
     "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_DECED4A542C3AEDDDBD8699293067182",
+    "Outer": "Bear_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_F2E95C6C41BA67BA14023988824DBF6F",
+    "Outer": "Bear_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_Bear_ABP_AnimGraphNode_TransitionResult_F8A480F84452C1E111AADAA57A6523F6",
     "Outer": "Bear_ABP_C",
     "Class": "UScriptClass'Function'",
     "FunctionFlags": "FUNC_BlueprintEvent"
@@ -3634,6 +4006,18 @@
       },
       {
         "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
         "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 1,
@@ -3647,6 +4031,18 @@
       {
         "Type": "BoolProperty",
         "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -3682,18 +4078,6 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_2",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
         "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue_1",
         "Flags": "RF_Public",
         "ElementSize": 1,
@@ -3706,7 +4090,55 @@
       },
       {
         "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
         "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -3735,24 +4167,6 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_2",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
         "Type": "BoolProperty",
         "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue_3",
         "Flags": "RF_Public",
@@ -3766,7 +4180,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue_4",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -3779,18 +4193,6 @@
       {
         "Type": "BoolProperty",
         "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_2",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_GreaterEqual_DoubleDouble_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -3826,31 +4228,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_BooleanOR_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue_1",
+        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue_2",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -3942,7 +4320,97 @@
       },
       {
         "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
         "Name": "CallFunc_LessEqual_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_A_ImplicitCast",
         "Flags": "RF_Public",
         "ElementSize": 8
       },
@@ -3954,19 +4422,13 @@
       },
       {
         "Type": "DoubleProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_A_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
         "Name": "CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_2",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_3",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Greater_DoubleDouble_A_ImplicitCast",
         "Flags": "RF_Public",
         "ElementSize": 8
       },
@@ -3984,7 +4446,25 @@
       },
       {
         "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
         "Name": "K2Node_VariableSet_Local_Yaw_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_A_ImplicitCast_4",
         "Flags": "RF_Public",
         "ElementSize": 8
       }
@@ -4003,208 +4483,16 @@
     "ChildProperties": [
       {
         "Type": "NameProperty",
-        "Name": "__NameProperty_200",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 12,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "__NameProperty_201",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 12,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "__IntProperty_202",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "__NameProperty_203",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 12,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "__IntProperty_204",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "__FloatProperty_205",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "__NameProperty_206",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 12,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "__NameProperty_207",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 12,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "__NameProperty_208",
+        "Name": "__NameProperty_223",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 12,
         "PropertyFlags": "BlueprintVisible"
       },
       {
         "Type": "FloatProperty",
-        "Name": "__FloatProperty_209",
+        "Name": "__FloatProperty_224",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "__NameProperty_210",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 12,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "__NameProperty_211",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 12,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "__FloatProperty_212",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "__NameProperty_213",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 12,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "__IntProperty_214",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "__BoolProperty_215",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 1,
-        "PropertyFlags": "BlueprintVisible",
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "__FloatProperty_216",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "__StructProperty_217",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 44,
-        "PropertyFlags": "BlueprintVisible",
-        "Struct": {
-          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "__FloatProperty_218",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "__BoolProperty_219",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 1,
-        "PropertyFlags": "BlueprintVisible",
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "EnumProperty",
-        "Name": "__EnumProperty_220",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 1,
-        "PropertyFlags": "BlueprintVisible",
-        "Enum": {
-          "ObjectName": "Enum'EAnimSyncMethod'",
-          "ObjectPath": "/Script/Engine"
-        },
-        "UnderlyingProp": {
-          "Type": "ByteProperty",
-          "Name": "UnderlyingType",
-          "Flags": "RF_Public",
-          "ElementSize": 1,
-          "Enum": null
-        }
-      },
-      {
-        "Type": "ByteProperty",
-        "Name": "__ByteProperty_221",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 1,
-        "PropertyFlags": "BlueprintVisible",
-        "Enum": {
-          "ObjectName": "Enum'EAnimGroupRole'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "__NameProperty_222",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 12,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "__IntProperty_223",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "__NameProperty_224",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 12,
         "PropertyFlags": "BlueprintVisible"
       },
       {
@@ -4222,8 +4510,214 @@
         "PropertyFlags": "BlueprintVisible"
       },
       {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_227",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_228",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_229",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_230",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_231",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_232",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_233",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_234",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_235",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_236",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_237",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_238",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_239",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_240",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_241",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
         "Type": "StructProperty",
-        "Name": "__StructProperty_227",
+        "Name": "__StructProperty_242",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_243",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_244",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_245",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_246",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_247",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_248",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_249",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_250",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_251",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_252",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 40,
         "PropertyFlags": "BlueprintVisible",

@@ -13,7 +13,7 @@
           "Key": "AnimGraph",
           "Value": {
             "PlayerNodeIndices": [
-              0
+              1
             ]
           }
         }
@@ -25,12 +25,25 @@
             "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.0"
           },
           "Entries": [
-            1,
-            1,
-            1,
+            6,
+            6,
+            6,
             4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            7,
+            5,
+            4,
+            3,
+            2147483648,
+            2,
+            1,
             0,
-            8
+            0,
+            2,
+            4294967295
           ],
           "NodeIndex": 0,
           "Flags": "EAnimNodeDataFlags::None"
@@ -41,26 +54,12 @@
             "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.0"
           },
           "Entries": [
-            1,
-            1,
-            1,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
+            6,
+            6,
+            6,
             4294967295,
             8,
-            7,
-            6,
-            5,
-            4294967295,
-            2147483649,
-            2147483648,
-            4,
-            4294967295,
-            3,
-            2,
-            5
+            7
           ],
           "NodeIndex": 1,
           "Flags": "EAnimNodeDataFlags::None"
@@ -68,7 +67,59 @@
       ],
       "NodeTypeMap": [
         {
-          "Key": "ScriptStruct'/Script/Engine.AnimNode_SequencePlayer'",
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_Root'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Result",
+                "Value": 3
+              },
+              {
+                "Key": "Name",
+                "Value": 4
+              },
+              {
+                "Key": "Group",
+                "Value": 5
+              }
+            ],
+            "NumProperties": 6
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_Base'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendSpacePlayer'",
           "Value": {
             "NameToIndexMap": [
               {
@@ -100,7 +151,7 @@
                 "Value": 6
               },
               {
-                "Key": "PlayRateScaleBiasClampState",
+                "Key": "PreviousBlendSpace",
                 "Value": 7
               },
               {
@@ -120,11 +171,11 @@
                 "Value": 11
               },
               {
-                "Key": "Sequence",
+                "Key": "X",
                 "Value": 12
               },
               {
-                "Key": "PlayRateBasis",
+                "Key": "Y",
                 "Value": 13
               },
               {
@@ -132,11 +183,11 @@
                 "Value": 14
               },
               {
-                "Key": "PlayRateScaleBiasClampConstants",
+                "Key": "bLoop",
                 "Value": 15
               },
               {
-                "Key": "PlayRateScaleBiasClamp",
+                "Key": "bResetPlayTimeWhenBlendSpaceChanges",
                 "Value": 16
               },
               {
@@ -144,19 +195,15 @@
                 "Value": 17
               },
               {
-                "Key": "bLoopAnimation",
+                "Key": "BlendSpace",
                 "Value": 18
-              },
-              {
-                "Key": "bStartFromMatchingPose",
-                "Value": 19
               }
             ],
-            "NumProperties": 20
+            "NumProperties": 19
           }
         },
         {
-          "Key": "ScriptStruct'/Script/Engine.AnimNode_SequencePlayerBase'",
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendSpacePlayerBase'",
           "Value": {
             "NameToIndexMap": [
               {
@@ -188,7 +235,7 @@
                 "Value": 6
               },
               {
-                "Key": "PlayRateScaleBiasClampState",
+                "Key": "PreviousBlendSpace",
                 "Value": 7
               }
             ],
@@ -250,63 +297,11 @@
             ],
             "NumProperties": 3
           }
-        },
-        {
-          "Key": "ScriptStruct'/Script/Engine.AnimNode_Base'",
-          "Value": {
-            "NameToIndexMap": [
-              {
-                "Key": "InitialUpdateFunction",
-                "Value": 0
-              },
-              {
-                "Key": "BecomeRelevantFunction",
-                "Value": 1
-              },
-              {
-                "Key": "UpdateFunction",
-                "Value": 2
-              }
-            ],
-            "NumProperties": 3
-          }
-        },
-        {
-          "Key": "ScriptStruct'/Script/Engine.AnimNode_Root'",
-          "Value": {
-            "NameToIndexMap": [
-              {
-                "Key": "InitialUpdateFunction",
-                "Value": 0
-              },
-              {
-                "Key": "BecomeRelevantFunction",
-                "Value": 1
-              },
-              {
-                "Key": "UpdateFunction",
-                "Value": 2
-              },
-              {
-                "Key": "Result",
-                "Value": 3
-              },
-              {
-                "Key": "Name",
-                "Value": 4
-              },
-              {
-                "Key": "Group",
-                "Value": 5
-              }
-            ],
-            "NumProperties": 6
-          }
         }
       ],
       "UberGraphFunction": {
         "ObjectName": "Function'IndustryHandCrank_ABP_C:ExecuteUbergraph_IndustryHandCrank_ABP'",
-        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.3"
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.2"
       }
     },
     "SuperStruct": {
@@ -319,12 +314,8 @@
         "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.1"
       },
       {
-        "ObjectName": "Function'IndustryHandCrank_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_IndustryHandCrank_ABP_AnimGraphNode_SequencePlayer_2CD460FA47850EBF984FE1904FF6E77C'",
-        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.2"
-      },
-      {
         "ObjectName": "Function'IndustryHandCrank_ABP_C:ExecuteUbergraph_IndustryHandCrank_ABP'",
-        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.3"
+        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.2"
       }
     ],
     "ChildProperties": [
@@ -343,10 +334,10 @@
         "Type": "StructProperty",
         "Name": "__AnimBlueprintMutables",
         "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 12,
+        "ElementSize": 8,
         "Struct": {
           "ObjectName": "ScriptStruct'IndustryHandCrank_ABP_C:AnimBlueprintGeneratedMutableData'",
-          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.6"
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.5"
         }
       },
       {
@@ -371,6 +362,16 @@
       },
       {
         "Type": "StructProperty",
+        "Name": "AnimGraphNode_BlendSpacePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 280,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
         "Name": "AnimGraphNode_Root",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 184,
@@ -380,30 +381,16 @@
         }
       },
       {
-        "Type": "StructProperty",
-        "Name": "AnimGraphNode_SequencePlayer",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 328,
-        "Struct": {
-          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
         "Type": "DoubleProperty",
         "Name": "Anim Slow Amount",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
-        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+        "PropertyFlags": "Edit | BlueprintVisible"
       }
     ],
     "FuncMap": {
       "ExecuteUbergraph_IndustryHandCrank_ABP": {
         "ObjectName": "Function'IndustryHandCrank_ABP_C:ExecuteUbergraph_IndustryHandCrank_ABP'",
-        "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.3"
-      },
-      "EvaluateGraphExposedInputs_ExecuteUbergraph_IndustryHandCrank_ABP_AnimGraphNode_SequencePlayer_2CD460FA47850EBF984FE1904FF6E77C": {
-        "ObjectName": "Function'IndustryHandCrank_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_IndustryHandCrank_ABP_AnimGraphNode_SequencePlayer_2CD460FA47850EBF984FE1904FF6E77C'",
         "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.2"
       },
       "AnimGraph": {
@@ -420,7 +407,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "IndustryHandCrank_ABP_C'Default__IndustryHandCrank_ABP_C'",
-      "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.4"
+      "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.3"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -448,13 +435,6 @@
   },
   {
     "Type": "Function",
-    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_IndustryHandCrank_ABP_AnimGraphNode_SequencePlayer_2CD460FA47850EBF984FE1904FF6E77C",
-    "Outer": "IndustryHandCrank_ABP_C",
-    "Class": "UScriptClass'Function'",
-    "FunctionFlags": "FUNC_BlueprintEvent"
-  },
-  {
-    "Type": "Function",
     "Name": "ExecuteUbergraph_IndustryHandCrank_ABP",
     "Outer": "IndustryHandCrank_ABP_C",
     "Class": "UScriptClass'Function'",
@@ -465,30 +445,6 @@
         "Flags": "RF_Public",
         "ElementSize": 4,
         "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Abs_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Abs_A_ImplicitCast",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "K2Node_StructMemberSet___FloatProperty_0_ImplicitCast",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "K2Node_StructMemberSet___FloatProperty_ImplicitCast",
-        "Flags": "RF_Public",
-        "ElementSize": 4
       }
     ],
     "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
@@ -500,72 +456,52 @@
     "Properties": {
       "UberGraphFrame": {},
       "__AnimBlueprintMutables[1]": {
-        "__FloatProperty": 1.0,
-        "__FloatProperty_0[1]": 1.0
+        "__FloatProperty": 0.0
       },
       "AnimBlueprintExtension_PropertyAccess[2]": {},
       "AnimBlueprintExtension_Base[3]": {},
-      "AnimGraphNode_Root[4]": {
-        "Result": {
-          "LinkID": 1
-        }
-      },
-      "AnimGraphNode_SequencePlayer[5]": {
-        "Sequence": {
-          "ObjectName": "AnimSequence'IndustryHandcrank_Operate_734_Anim'",
-          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandcrank_Operate_734_Anim.0"
+      "AnimGraphNode_BlendSpacePlayer[4]": {
+        "BlendSpace": {
+          "ObjectName": "BlendSpace'IndustryHandcrank_winding_BS'",
+          "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandcrank_winding_BS.0"
         },
-        "PlayRateScaleBiasClampState": {},
+        "PreviousBlendSpace": null,
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
       },
-      "Anim Slow Amount[6]": 1.0
+      "AnimGraphNode_Root[5]": {
+        "Result": {
+          "LinkID": 0
+        }
+      }
     },
     "SerializedSparseClassDataStruct": "ScriptStruct'Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.IndustryHandCrank_ABP_C:AnimBlueprintGeneratedConstantData'",
     "SerializedSparseClassData": {
-      "__NameProperty_6": "AnimGraph",
-      "__StructProperty_7[1]": {
+      "__BoolProperty_7": true,
+      "__FloatProperty_8[1]": 1.0,
+      "__FloatProperty_9[2]": 0.0,
+      "__BoolProperty_10[3]": false,
+      "__EnumProperty_11[4]": "EAnimSyncMethod::DoNotSync",
+      "__ByteProperty_12[5]": "EAnimGroupRole::CanBeLeader",
+      "__StructProperty_13[6]": {
         "ClassName": "None",
         "FunctionName": "None"
       },
-      "__BoolProperty_8[2]": true,
-      "__FloatProperty_9[3]": 0.0,
-      "__StructProperty_10[4]": {
-        "bMapRange": false,
-        "bClampResult": false,
-        "bInterpResult": false,
-        "InRange": {
-          "Min": 0.0,
-          "Max": 1.0
-        },
-        "OutRange": {
-          "Min": 0.0,
-          "Max": 1.0
-        },
-        "Scale": 1.0,
-        "Bias": 0.0,
-        "ClampMin": 0.0,
-        "ClampMax": 1.0,
-        "InterpSpeedIncreasing": 10.0,
-        "InterpSpeedDecreasing": 10.0
-      },
-      "__BoolProperty_11[5]": false,
-      "__EnumProperty_12[6]": "EAnimSyncMethod::DoNotSync",
-      "__ByteProperty_13[7]": "EAnimGroupRole::CanBeLeader",
-      "__NameProperty_14[8]": "None",
+      "__NameProperty_14[7]": "None",
+      "__NameProperty_15[8]": "AnimGraph",
       "AnimBlueprintExtension_PropertyAccess[9]": {
         "Library": {
           "PathSegments": [
             {
-              "Name": "Anim Slow Amount",
+              "Name": "InputValue",
               "Struct": null,
               "Property": {
                 "Path": [
-                  "Anim Slow Amount"
+                  "InputValue"
                 ],
                 "ResolvedOwner": {
-                  "ObjectName": "AnimBlueprintGeneratedClass'IndustryHandCrank_ABP_C'",
-                  "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.0"
+                  "ObjectName": "Class'VisPowerUnitAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
                 }
               },
               "Function": null,
@@ -576,7 +512,7 @@
               "Name": "__AnimBlueprintMutables",
               "Struct": {
                 "ObjectName": "ScriptStruct'IndustryHandCrank_ABP_C:AnimBlueprintGeneratedMutableData'",
-                "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.6"
+                "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.5"
               },
               "Property": {
                 "Path": [
@@ -592,15 +528,15 @@
               "Flags": 1
             },
             {
-              "Name": "__FloatProperty_0",
+              "Name": "__FloatProperty",
               "Struct": null,
               "Property": {
                 "Path": [
-                  "__FloatProperty_0"
+                  "__FloatProperty"
                 ],
                 "ResolvedOwner": {
                   "ObjectName": "ScriptStruct'IndustryHandCrank_ABP_C:AnimBlueprintGeneratedMutableData'",
-                  "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.6"
+                  "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.5"
                 }
               },
               "Function": null,
@@ -627,7 +563,7 @@
                   "AccessIndex": 0,
                   "DestAccessStartIndex": 0,
                   "DestAccessEndIndex": 1,
-                  "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
+                  "Type": "EPropertyAccessCopyType::Plain"
                 }
               ]
             }
@@ -637,22 +573,19 @@
       "AnimBlueprintExtension_Base[10]": {
         "ExposedValueHandlers": [
           {
-            "CopyRecords": [],
-            "Function": null,
-            "BoundFunction": "None"
-          },
-          {
             "CopyRecords": [
               {
                 "CopyIndex": 0,
                 "PostCopyOperation": "EPostCopyOperation::None"
               }
             ],
-            "Function": {
-              "ObjectName": "Function'IndustryHandCrank_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_IndustryHandCrank_ABP_AnimGraphNode_SequencePlayer_2CD460FA47850EBF984FE1904FF6E77C'",
-              "ObjectPath": "Anvil/Content/Animations/Structures/Industry/IndustryHandCrank_ABP.2"
-            },
-            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_IndustryHandCrank_ABP_AnimGraphNode_SequencePlayer_2CD460FA47850EBF984FE1904FF6E77C"
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
           }
         ]
       }
@@ -669,26 +602,8 @@
     },
     "ChildProperties": [
       {
-        "Type": "NameProperty",
-        "Name": "__NameProperty_6",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 12,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "__StructProperty_7",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 40,
-        "PropertyFlags": "BlueprintVisible",
-        "Struct": {
-          "ObjectName": "ScriptStruct'AnimNodeFunctionRef'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
         "Type": "BoolProperty",
-        "Name": "__BoolProperty_8",
+        "Name": "__BoolProperty_7",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1,
         "PropertyFlags": "BlueprintVisible",
@@ -701,25 +616,21 @@
       },
       {
         "Type": "FloatProperty",
+        "Name": "__FloatProperty_8",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
         "Name": "__FloatProperty_9",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 4,
         "PropertyFlags": "BlueprintVisible"
       },
       {
-        "Type": "StructProperty",
-        "Name": "__StructProperty_10",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 44,
-        "PropertyFlags": "BlueprintVisible",
-        "Struct": {
-          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
         "Type": "BoolProperty",
-        "Name": "__BoolProperty_11",
+        "Name": "__BoolProperty_10",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1,
         "PropertyFlags": "BlueprintVisible",
@@ -732,7 +643,7 @@
       },
       {
         "Type": "EnumProperty",
-        "Name": "__EnumProperty_12",
+        "Name": "__EnumProperty_11",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1,
         "PropertyFlags": "BlueprintVisible",
@@ -750,7 +661,7 @@
       },
       {
         "Type": "ByteProperty",
-        "Name": "__ByteProperty_13",
+        "Name": "__ByteProperty_12",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1,
         "PropertyFlags": "BlueprintVisible",
@@ -760,8 +671,26 @@
         }
       },
       {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_13",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNodeFunctionRef'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
         "Type": "NameProperty",
         "Name": "__NameProperty_14",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_15",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 12,
         "PropertyFlags": "BlueprintVisible"
@@ -801,13 +730,6 @@
       {
         "Type": "FloatProperty",
         "Name": "__FloatProperty",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "__FloatProperty_0",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 4,
         "PropertyFlags": "BlueprintVisible"

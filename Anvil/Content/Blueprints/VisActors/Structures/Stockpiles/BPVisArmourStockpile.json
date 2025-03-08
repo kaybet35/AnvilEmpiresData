@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisArmourStockpile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.14"
       }
     },
     "SuperStruct": {
@@ -87,7 +87,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisArmourStockpile_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.19"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconArmourRack'",
@@ -96,23 +96,27 @@
       "BuildSiteCategory": "EBuildSiteCategory::Defenses",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisArmourStockpile_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.18"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisArmourStockpile_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.6"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisArmourStockpile_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.17"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisArmourStockpile_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.16"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisArmourStockpile_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.8"
+      },
+      "DecayDataComponent": {
+        "ObjectName": "DecayDataComponent'Default__BPVisArmourStockpile_C:DecayDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.4"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisArmourStockpile_C:ArrowComponent'",
@@ -124,9 +128,8 @@
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisArmourStockpile_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.5"
       },
-      "GeneratedScorchEffects": 5,
       "UseWindowType": "EHUDWindowType::InventoryStructure",
       "InteractionIcon": {
         "ObjectName": "Texture2D'IconArmourRack'",
@@ -163,6 +166,12 @@
     }
   },
   {
+    "Type": "DecayDataComponent",
+    "Name": "DecayDataComponent",
+    "Outer": "Default__BPVisArmourStockpile_C",
+    "Class": "UScriptClass'DecayDataComponent'"
+  },
+  {
     "Type": "GrassRemovalVolumeComponent",
     "Name": "GrassRemovalVolume",
     "Outer": "Default__BPVisArmourStockpile_C",
@@ -170,7 +179,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisArmourStockpile_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.15"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisArmourStockpile_C:ArrowComponent'",
@@ -208,7 +217,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisArmourStockpile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.7"
       },
       "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -226,22 +235,22 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisArmourStockpile_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.23"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisArmourStockpile_C:SimpleConstructionScript_0.SCS_Node_21'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.10"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisArmourStockpile_C:SimpleConstructionScript_0.SCS_Node_22'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.11"
         },
         {
-          "ObjectName": "SCS_Node'BPVisArmourStockpile_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectName": "SCS_Node'BPVisArmourStockpile_C:SimpleConstructionScript_0.SCS_Node_22'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisArmourStockpile_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.13"
         }
       ],
       "VariableGuid": "3CC88775-4C43A525-527B08A7-3EA65DD5",
@@ -260,7 +269,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisSingleItemStockpileComponent'BPVisArmourStockpile_C:VisSingleItemStockpileHead_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.21"
       },
       "VariableGuid": "9EC6FBFD-43693FEE-6A833F9B-017512A6",
       "InternalVariableName": "VisSingleItemStockpileHead"
@@ -278,7 +287,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisSingleItemStockpileComponent'BPVisArmourStockpile_C:VisSingleItemStockpileBody_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.20"
       },
       "VariableGuid": "5E86906D-47042A96-4EDAD48E-7ADD4AC5",
       "InternalVariableName": "VisSingleItemStockpileBody"
@@ -296,7 +305,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisSingleItemStockpileComponent'BPVisArmourStockpile_C:VisSingleItemStockpileShield_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.22"
       },
       "VariableGuid": "B7C4EF40-497EC3D4-5724FBB1-B71A6F71",
       "InternalVariableName": "VisSingleItemStockpileShield"
@@ -311,30 +320,30 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisArmourStockpile_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.10"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisArmourStockpile_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.9"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisArmourStockpile_C:SimpleConstructionScript_0.SCS_Node_21'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.10"
         },
         {
-          "ObjectName": "SCS_Node'BPVisArmourStockpile_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectName": "SCS_Node'BPVisArmourStockpile_C:SimpleConstructionScript_0.SCS_Node_21'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.11"
         },
         {
-          "ObjectName": "SCS_Node'BPVisArmourStockpile_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectName": "SCS_Node'BPVisArmourStockpile_C:SimpleConstructionScript_0.SCS_Node_22'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisArmourStockpile_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.13"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisArmourStockpile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Stockpiles/BPVisArmourStockpile.9"
       }
     }
   },

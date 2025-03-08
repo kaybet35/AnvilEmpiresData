@@ -1,6 +1,7 @@
 #include "VisStructure.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ArrowComponent -FallbackName=ArrowComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DecalComponent -FallbackName=DecalComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=DecayDataComponent -FallbackName=DecayDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=HealthDataComponent -FallbackName=HealthDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=ScorchDataComponent -FallbackName=ScorchDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=StructureDataComponent -FallbackName=StructureDataComponent
@@ -21,10 +22,10 @@ AVisStructure::AVisStructure(const FObjectInitializer& ObjectInitializer) : Supe
     this->TeamDataComponent = CreateDefaultSubobject<UTeamDataComponent>(TEXT("TeamDataComponent"));
     this->StructureDataComponent = CreateDefaultSubobject<UStructureDataComponent>(TEXT("StructureDataComponent"));
     this->ScorchDataComponent = CreateDefaultSubobject<UScorchDataComponent>(TEXT("ScorchDataComponent"));
+    this->DecayDataComponent = CreateDefaultSubobject<UDecayDataComponent>(TEXT("DecayDataComponent"));
     this->ArrowComponent = (UArrowComponent*)RootComponent;
     this->UseVolumeDecalComponent = CreateDefaultSubobject<UDecalComponent>(TEXT("UseVolumeDecalComponent"));
     this->GrassRemovalVolume = CreateDefaultSubobject<UGrassRemovalVolumeComponent>(TEXT("GrassRemovalVolume"));
-    this->GeneratedScorchEffects = 0;
     this->ScaffoldingComponent->SetupAttachment(RootComponent);
     this->UseVolumeDecalComponent->SetupAttachment(RootComponent);
     this->GrassRemovalVolume->SetupAttachment(RootComponent);

@@ -26,12 +26,12 @@
             "ObjectPath": "Anvil/Content/Animations/Structures/Industry/GrainMill_ABP.0"
           },
           "Entries": [
-            2,
-            2,
-            2,
+            3,
+            3,
+            3,
             4294967295,
             0,
-            9
+            10
           ],
           "NodeIndex": 0,
           "Flags": "EAnimNodeDataFlags::None"
@@ -42,26 +42,26 @@
             "ObjectPath": "Anvil/Content/Animations/Structures/Industry/GrainMill_ABP.0"
           },
           "Entries": [
-            2,
-            2,
-            2,
+            3,
+            3,
+            3,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
+            10,
             9,
             8,
             7,
-            6,
             4294967295,
-            4,
+            2,
             2147483648,
             1,
             4294967295,
-            5,
-            3,
-            6
+            6,
+            4,
+            7
           ],
           "NodeIndex": 1,
           "Flags": "EAnimNodeDataFlags::None"
@@ -72,9 +72,9 @@
             "ObjectPath": "Anvil/Content/Animations/Structures/Industry/GrainMill_ABP.0"
           },
           "Entries": [
-            2,
-            2,
-            2,
+            3,
+            3,
+            3,
             4294967295,
             4294967295,
             4294967295,
@@ -99,24 +99,24 @@
             "ObjectPath": "Anvil/Content/Animations/Structures/Industry/GrainMill_ABP.0"
           },
           "Entries": [
-            2,
-            2,
-            2,
+            3,
+            3,
+            3,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
+            10,
             9,
             8,
             7,
-            6,
             2147483649,
+            6,
             5,
             4,
-            3,
-            3,
-            5,
+            4,
+            6,
             4294967295
           ],
           "NodeIndex": 3,
@@ -567,7 +567,7 @@
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisPowerUnitAnimInstance'",
+      "ObjectName": "Class'VisGrainMillAnimInstance'",
       "ObjectPath": "/Script/Anvil"
     },
     "Children": [
@@ -661,13 +661,6 @@
           "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
           "ObjectPath": "/Script/AnimGraphRuntime"
         }
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "QualityAdjustment",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
       }
     ],
     "FuncMap": {
@@ -840,12 +833,13 @@
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
       },
-      "QualityAdjustment[8]": 0.5
+      "CurrentCoarseness": 1.383866,
+      "Power": 0.0
     },
     "SerializedSparseClassDataStruct": "ScriptStruct'Anvil/Content/Animations/Structures/Industry/GrainMill_ABP.GrainMill_ABP_C:AnimBlueprintGeneratedConstantData'",
     "SerializedSparseClassData": {
-      "__NameProperty_21": "AnimGraph",
-      "__StructProperty_22[1]": {
+      "__NameProperty_20": "AnimGraph",
+      "__StructProperty_21[1]": {
         "bMapRange": false,
         "bClampResult": false,
         "bInterpResult": false,
@@ -864,30 +858,31 @@
         "InterpSpeedIncreasing": 10.0,
         "InterpSpeedDecreasing": 10.0
       },
-      "__StructProperty_23[2]": {
+      "__FloatProperty_22[2]": 5.0,
+      "__StructProperty_23[3]": {
         "ClassName": "None",
         "FunctionName": "None"
       },
-      "__BoolProperty_24[3]": true,
-      "__FloatProperty_25[4]": 1.0,
-      "__FloatProperty_26[5]": 0.0,
-      "__BoolProperty_27[6]": false,
-      "__EnumProperty_28[7]": "EAnimSyncMethod::DoNotSync",
-      "__ByteProperty_29[8]": "EAnimGroupRole::CanBeLeader",
-      "__NameProperty_30[9]": "None",
-      "AnimBlueprintExtension_PropertyAccess[10]": {
+      "__BoolProperty_24[4]": true,
+      "__FloatProperty_25[5]": 1.0,
+      "__FloatProperty_26[6]": 0.0,
+      "__BoolProperty_27[7]": false,
+      "__EnumProperty_28[8]": "EAnimSyncMethod::DoNotSync",
+      "__ByteProperty_29[9]": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_30[10]": "None",
+      "AnimBlueprintExtension_PropertyAccess[11]": {
         "Library": {
           "PathSegments": [
             {
-              "Name": "QualityAdjustment",
+              "Name": "CurrentCoarseness",
               "Struct": null,
               "Property": {
                 "Path": [
-                  "QualityAdjustment"
+                  "CurrentCoarseness"
                 ],
                 "ResolvedOwner": {
-                  "ObjectName": "AnimBlueprintGeneratedClass'GrainMill_ABP_C'",
-                  "ObjectPath": "Anvil/Content/Animations/Structures/Industry/GrainMill_ABP.0"
+                  "ObjectName": "Class'VisGrainMillAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
                 }
               },
               "Function": null,
@@ -930,14 +925,14 @@
               "Flags": 2
             },
             {
-              "Name": "PercentageCurrent",
+              "Name": "Power",
               "Struct": null,
               "Property": {
                 "Path": [
-                  "PercentageCurrent"
+                  "Power"
                 ],
                 "ResolvedOwner": {
-                  "ObjectName": "Class'VisPowerUnitAnimInstance'",
+                  "ObjectName": "Class'VisGrainMillAnimInstance'",
                   "ObjectPath": "/Script/Anvil"
                 }
               },
@@ -1008,7 +1003,7 @@
                   "AccessIndex": 0,
                   "DestAccessStartIndex": 0,
                   "DestAccessEndIndex": 1,
-                  "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
+                  "Type": "EPropertyAccessCopyType::Plain"
                 },
                 {
                   "AccessIndex": 1,
@@ -1021,7 +1016,7 @@
           ]
         }
       },
-      "AnimBlueprintExtension_Base[11]": {
+      "AnimBlueprintExtension_Base[12]": {
         "ExposedValueHandlers": [
           {
             "CopyRecords": [],
@@ -1069,14 +1064,14 @@
     "ChildProperties": [
       {
         "Type": "NameProperty",
-        "Name": "__NameProperty_21",
+        "Name": "__NameProperty_20",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 12,
         "PropertyFlags": "BlueprintVisible"
       },
       {
         "Type": "StructProperty",
-        "Name": "__StructProperty_22",
+        "Name": "__StructProperty_21",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 44,
         "PropertyFlags": "BlueprintVisible",
@@ -1084,6 +1079,13 @@
           "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
           "ObjectPath": "/Script/Engine"
         }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_22",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
       },
       {
         "Type": "StructProperty",

@@ -25,7 +25,6 @@ enum class EAnvilPlacementStatus : uint8 {
     TooFarFromPlayer,
     NotAtCorrectBuildLocationType,
     RequiresDeployable,
-    RequiresFamilyArea,
     RequiresFamily,
     OnlyOneFamilyCenterPerTown,
     TooCloseTogether,
@@ -50,5 +49,7 @@ enum class EAnvilPlacementStatus : uint8 {
     MustBeUniquePerTown,
     RequiresTerritoryOwnership,
     RequiresPledgeToBuildInWilderness,
+    LimitTouchingGroupCountReached,
+    RequiresAgeTime,
 };
 

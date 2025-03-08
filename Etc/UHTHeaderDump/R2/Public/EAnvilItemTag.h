@@ -34,6 +34,7 @@ enum class EAnvilItemTag : uint8 {
     MountedWeapon,
     HeavyTool,
     ShieldStorage,
+    Avatar,
     NumTypes,
 };
 

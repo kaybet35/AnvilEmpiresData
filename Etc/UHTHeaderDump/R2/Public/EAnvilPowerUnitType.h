@@ -7,6 +7,5 @@ enum class EAnvilPowerUnitType : uint8 {
     Pipe,
     Source,
     Sink,
-    Extern,
 };
 

@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "BuildSitePlacementInfo.h"
 #include "ContextfulPlacementStatus.h"
 #include "DataComponent.h"
 #include "BuildSiteDataComponent.generated.h"
@@ -15,10 +16,7 @@ public:
     TArray<FContextfulPlacementStatus> BuildGhostPlacementErrors;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 PlacementInfoFlags;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 PlacementInfoPayload;
+    FBuildSitePlacementInfo PlacementInfo;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VisualGuideMinDistance;

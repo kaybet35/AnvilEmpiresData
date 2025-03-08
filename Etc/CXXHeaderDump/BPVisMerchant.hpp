@@ -21,17 +21,8 @@ class ABPVisMerchant_C : public AVisRefinery
     class UVisStaticMeshComponent* VisStaticMesh7;                                    // 0x05A0 (size: 0x8)
     class UVisStaticMeshComponent* VisStaticMesh6;                                    // 0x05A8 (size: 0x8)
     class UDecalComponent* Decal;                                                     // 0x05B0 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect1;                                      // 0x05B8 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect9;                                      // 0x05C0 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect7;                                      // 0x05C8 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect8;                                      // 0x05D0 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect6;                                      // 0x05D8 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect5;                                      // 0x05E0 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect3;                                      // 0x05E8 (size: 0x8)
-    class UScorchEffectComponent* ScorchEffect4;                                      // 0x05F0 (size: 0x8)
-    class USceneComponent* Fire;                                                      // 0x05F8 (size: 0x8)
-    class USceneComponent* Refining;                                                  // 0x0600 (size: 0x8)
+    class USceneComponent* Refining;                                                  // 0x05B8 (size: 0x8)
 
-}; // Size: 0x608
+}; // Size: 0x5C0
 
 #endif

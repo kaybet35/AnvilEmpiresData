@@ -27,23 +27,28 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->GuardStrengthRightIcon = NULL;
     this->PlayerStatusText = NULL;
     this->WinConditionCanvas = NULL;
-    this->WinConditionText = NULL;
     this->WinConditionLogo = NULL;
+    this->VictoryTypeLogo = NULL;
     this->PlayerVitality = NULL;
     this->HorseVitality = NULL;
     this->InventoryHUD = NULL;
     this->DisclaimerCanvas = NULL;
     this->DisclaimerText = NULL;
+    this->BuildSiteCanvas = NULL;
     this->PlacementStatusWidget = NULL;
+    this->BuildSiteWidget = NULL;
     this->AranicLogo = NULL;
     this->MirrishLogo = NULL;
     this->NovanLogo = NULL;
+    this->MilitaryVictoryLogo = NULL;
+    this->CultureVictoryLogo = NULL;
     this->InteractionProgressBar1 = NULL;
     this->InteractionProgressBar2 = NULL;
     this->WeatherStatsText = NULL;
     this->BorderRegionIndicatorText = NULL;
     this->ReinforcementStatus = NULL;
 }
+
 
 
 ESlateVisibility UHUDWidget::GetWeatherStatsTextVisibility() {

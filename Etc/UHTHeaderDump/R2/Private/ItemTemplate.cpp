@@ -2,7 +2,7 @@
 
 UItemTemplate::UItemTemplate() {
     this->CodeName = 0;
-    this->ItemDurabilityType = EAnvilItemDurabilityType::None;
+    this->ItemDurabilityType = EAnvilItemDurabilityType::Default;
     this->ItemPayloadType = EAnvilItemPayloadType::None;
     this->PickupEntity = NULL;
     this->ItemDestroyedEffect = NULL;
@@ -57,6 +57,8 @@ UItemTemplate::UItemTemplate() {
     this->VariableDamageMinModifier = 0.75f;
     this->GuardMeterReductionMultiplier = 1.00f;
     this->ShieldDurabilityLossMultiplier = 1.00f;
+    this->ArmourDamageMultiplier = 1.00f;
+    this->SecondaryArmourDamageMultiplier = 1.00f;
     this->GuardMeterCostPerHit = 0.00f;
     this->ArmorMitigation = 0;
     this->StabilityDamage = 0.05f;

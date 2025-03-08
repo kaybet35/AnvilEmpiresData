@@ -40,14 +40,7 @@
 ---@field VisStaticMesh6 UVisStaticMeshComponent
 ---@field BigBoxes UVisStaticMeshComponent
 ---@field BPVisFamilyMeshComponent UBPVisFamilyMeshComponent_C
----@field Fire USceneComponent
 ---@field Structure UVisStaticMeshComponent
----@field ScorchEffect5 UScorchEffectComponent
----@field ScorchEffect4 UScorchEffectComponent
----@field ScorchEffect1 UScorchEffectComponent
----@field ScorchEffect7 UScorchEffectComponent
----@field ScorchEffect8 UScorchEffectComponent
----@field ScorchEffect6 UScorchEffectComponent
 ABPVisCentralMarketplace_C = {}
 
 
