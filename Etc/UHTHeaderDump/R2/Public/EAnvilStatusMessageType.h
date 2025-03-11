@@ -28,7 +28,7 @@ enum class EAnvilStatusMessageType : uint8 {
     ItemTransfer_WithdrawalRestricted,
     ItemTransfer_NotPublic,
     ItemTransfer_HeavyToolFull,
-    ItemTransfer_CannotRemoveFood,
+    ItemTransfer_CannotRemoveAvatarDefault,
     Blocked,
     Vehicle_ExitBlocked,
     InvalidDetachLocation,
