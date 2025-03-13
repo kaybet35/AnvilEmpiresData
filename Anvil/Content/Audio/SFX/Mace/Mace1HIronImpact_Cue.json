@@ -1,0 +1,121 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Mace1HIronImpact_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'Mace1HIronImpact_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Mace/Mace1HIronImpact_Cue.1"
+      },
+      "VolumeMultiplier": 1.5,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Impact'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.3"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'FoleyConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/FoleyConcurrency.0"
+        }
+      ],
+      "Duration": 0.893,
+      "MaxDistance": 9300.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Mace1HIronImpact_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'Mace1HIronImpact_Cue:SoundNodeRandom_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Mace/Mace1HIronImpact_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "Mace1HIronImpact_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Mace1HIronImpact_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Mace/Mace1HIronImpact_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Mace1HIronImpact_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Mace/Mace1HIronImpact_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Mace1HIronImpact_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Mace/Mace1HIronImpact_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Mace1HIronImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Mace/Mace1HIronImpact03.Mace1HIronImpact03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Mace1HIronImpact03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Mace/Mace1HIronImpact03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "Mace1HIronImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Mace/Mace1HIronImpact02.Mace1HIronImpact02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Mace1HIronImpact02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Mace/Mace1HIronImpact02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "Mace1HIronImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Mace/Mace1HIronImpact01.Mace1HIronImpact01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Mace1HIronImpact01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Mace/Mace1HIronImpact01.0"
+    }
+  }
+]

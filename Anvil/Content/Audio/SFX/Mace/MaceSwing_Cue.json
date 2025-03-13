@@ -1,0 +1,119 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "MaceSwing_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'MaceSwing_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Mace/MaceSwing_Cue.1"
+      },
+      "VolumeMultiplier": 0.5,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Weapons'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.7"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'FoleyConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/FoleyConcurrency.0"
+        }
+      ],
+      "Duration": 0.893,
+      "MaxDistance": 9300.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "MaceSwing_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'MaceSwing_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Mace/MaceSwing_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "MaceSwing_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MaceSwing_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Mace/MaceSwing_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MaceSwing_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Mace/MaceSwing_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MaceSwing_Cue:SoundNodeWavePlayer_5'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Mace/MaceSwing_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "MaceSwing_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Mace/Mace1HSwipe01.Mace1HSwipe01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Mace1HSwipe01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Mace/Mace1HSwipe01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "MaceSwing_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Mace/Mace1HSwipe02.Mace1HSwipe02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Mace1HSwipe02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Mace/Mace1HSwipe02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "MaceSwing_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Mace/Mace1HSwipe03.Mace1HSwipe03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Mace1HSwipe03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Mace/Mace1HSwipe03.0"
+    }
+  }
+]

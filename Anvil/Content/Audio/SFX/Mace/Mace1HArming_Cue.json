@@ -1,0 +1,62 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Mace1HArming_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'Mace1HArming_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Mace/Mace1HArming_Cue.1"
+      },
+      "VolumeMultiplier": 2.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Impact'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.3"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'FoleyConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/FoleyConcurrency.0"
+        }
+      ],
+      "Duration": 0.893,
+      "MaxDistance": 9300.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Mace1HArming_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Mace1HArming_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Mace/Mace1HArming_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Mace1HArming_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Mace/Mace1HArming.Mace1HArming",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Mace1HArming'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Mace/Mace1HArming.0"
+    }
+  }
+]

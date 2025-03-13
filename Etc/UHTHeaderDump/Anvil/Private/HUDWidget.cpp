@@ -42,6 +42,7 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->NovanLogo = NULL;
     this->MilitaryVictoryLogo = NULL;
     this->CultureVictoryLogo = NULL;
+    this->VictorySoundCue = NULL;
     this->InteractionProgressBar1 = NULL;
     this->InteractionProgressBar2 = NULL;
     this->WeatherStatsText = NULL;

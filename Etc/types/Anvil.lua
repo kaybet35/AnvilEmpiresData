@@ -1054,6 +1054,12 @@ FFoodData = {}
 
 
 
+---@class FGetIsAdminResponse
+---@field bIsAdmin boolean
+FGetIsAdminResponse = {}
+
+
+
 ---@class FGetMapPostsResponse
 ---@field MapPostList TArray<FMapPost>
 ---@field bOriginalOperationSuccess boolean
@@ -2241,6 +2247,7 @@ UHUDStatsWidget = {}
 ---@field CultureVictoryLogo UTexture2D
 ---@field GuardStrengthEmptyIcon FSlateBrush
 ---@field GuardStrengthFillIcon FSlateBrush
+---@field VictorySoundCue USoundCue
 ---@field InteractionProgressBar1 UProgressBar
 ---@field InteractionProgressBar2 UProgressBar
 ---@field WeatherStatsText UTextBlock

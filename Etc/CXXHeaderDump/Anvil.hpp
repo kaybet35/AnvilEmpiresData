@@ -247,6 +247,12 @@ struct FFoodData : public FTableRowBase
 
 }; // Size: 0x18
 
+struct FGetIsAdminResponse
+{
+    bool bIsAdmin;                                                                    // 0x0000 (size: 0x1)
+
+}; // Size: 0x1
+
 struct FGetMapPostsResponse
 {
     TArray<FMapPost> MapPostList;                                                     // 0x0000 (size: 0x10)
@@ -2126,19 +2132,20 @@ class UHUDWidget : public UUserWidget
     class UTexture2D* CultureVictoryLogo;                                             // 0x0408 (size: 0x8)
     FSlateBrush GuardStrengthEmptyIcon;                                               // 0x0410 (size: 0xD0)
     FSlateBrush GuardStrengthFillIcon;                                                // 0x04E0 (size: 0xD0)
-    class UProgressBar* InteractionProgressBar1;                                      // 0x05B0 (size: 0x8)
-    class UProgressBar* InteractionProgressBar2;                                      // 0x05B8 (size: 0x8)
-    class UTextBlock* WeatherStatsText;                                               // 0x05C0 (size: 0x8)
-    class UTextBlock* BorderRegionIndicatorText;                                      // 0x05C8 (size: 0x8)
-    class UWidget* ReinforcementStatus;                                               // 0x05D0 (size: 0x8)
-    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05E0 (size: 0x10)
+    class USoundCue* VictorySoundCue;                                                 // 0x05B0 (size: 0x8)
+    class UProgressBar* InteractionProgressBar1;                                      // 0x05B8 (size: 0x8)
+    class UProgressBar* InteractionProgressBar2;                                      // 0x05C0 (size: 0x8)
+    class UTextBlock* WeatherStatsText;                                               // 0x05C8 (size: 0x8)
+    class UTextBlock* BorderRegionIndicatorText;                                      // 0x05D0 (size: 0x8)
+    class UWidget* ReinforcementStatus;                                               // 0x05D8 (size: 0x8)
+    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05E8 (size: 0x10)
 
     void PlayWinConditionAnimation();
     void PlayBlackoutAnimation();
     ESlateVisibility GetWeatherStatsTextVisibility();
     FText GetWeatherStatsText();
     ESlateVisibility GetHUDWidgetVisibility();
-}; // Size: 0x600
+}; // Size: 0x610
 
 class UHUDWindow : public UUserWidget
 {

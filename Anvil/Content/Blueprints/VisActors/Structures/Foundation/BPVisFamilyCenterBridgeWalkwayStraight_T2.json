@@ -12,7 +12,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.20"
       }
     },
     "SuperStruct": {
@@ -20,6 +20,50 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pillar2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pillar1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pillar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pillar3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "StaticMesh3",
@@ -87,7 +131,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisFamilyCenterBridgeWalkwayStraight_T2_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.31"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'FamilyCenterWalkwayIcon'",
@@ -97,7 +141,7 @@
       "BuildSiteOrder": 98,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisFamilyCenterBridgeWalkwayStraight_T2_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.30"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisFamilyCenterBridgeWalkwayStraight_T2_C:HealthDataComponent'",
@@ -105,11 +149,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisFamilyCenterBridgeWalkwayStraight_T2_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.29"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisFamilyCenterBridgeWalkwayStraight_T2_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.28"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisFamilyCenterBridgeWalkwayStraight_T2_C:ScorchDataComponent'",
@@ -192,7 +236,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisFamilyCenterBridgeWalkwayStraight_T2_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.21"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyCenterBridgeWalkwayStraight_T2_C:ArrowComponent'",
@@ -250,6 +294,24 @@
   },
   {
     "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:Pillar2_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.23"
+      },
+      "VariableGuid": "FDA98321-46AB15D8-299557BA-8FEA7375",
+      "InternalVariableName": "Pillar2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
     "Name": "SCS_Node_15",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -267,11 +329,11 @@
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.18"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.14"
         }
       ],
       "VariableGuid": "7542435A-4C473082-9984149F-7F28DC93",
@@ -290,7 +352,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:StaticMesh3_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.27"
       },
       "VariableGuid": "0F657834-4BD2C282-637D2DB3-28F41B06",
       "InternalVariableName": "StaticMesh3"
@@ -316,6 +378,42 @@
   },
   {
     "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:Pillar3_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.24"
+      },
+      "VariableGuid": "CFE516CB-474A3336-8C57F9BD-F3CC6506",
+      "InternalVariableName": "Pillar3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:Pillar_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.25"
+      },
+      "VariableGuid": "7147D560-4AB6E3BF-88107396-5CBB1BED",
+      "InternalVariableName": "Pillar"
+    }
+  },
+  {
+    "Type": "SCS_Node",
     "Name": "SCS_Node_6",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -326,10 +424,46 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:StaticMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.26"
       },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.12"
+        }
+      ],
       "VariableGuid": "7CDBC122-4877DB2E-82E53C9E-3EAE636E",
       "InternalVariableName": "StaticMesh1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:Pillar1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.22"
+      },
+      "VariableGuid": "C9EB6676-495A2E22-EB786294-4053C8AB",
+      "InternalVariableName": "Pillar1"
     }
   },
   {
@@ -341,29 +475,45 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.13"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.15"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.13"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.18"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisFamilyCenterBridgeWalkwayStraight_T2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterBridgeWalkwayStraight_T2.12"
         }
       ],
       "DefaultSceneRootNode": {
@@ -377,6 +527,74 @@
     "Name": "SplineDataComponent",
     "Outer": "GrassRemovalVolume",
     "Class": "UScriptClass'SplineDataComponent'"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Pillar1_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterBridgeWalkwayStraight_T2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryFoundation_Pillar'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/IndustryFoundation_Pillar.2"
+      },
+      "RelativeLocation": {
+        "X": 100.0,
+        "Y": -115.0,
+        "Z": 490.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Pillar2_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterBridgeWalkwayStraight_T2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryFoundation_Pillar'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/IndustryFoundation_Pillar.2"
+      },
+      "RelativeLocation": {
+        "X": -100.0,
+        "Y": 115.0,
+        "Z": 490.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Pillar3_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterBridgeWalkwayStraight_T2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryFoundation_Pillar'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/IndustryFoundation_Pillar.2"
+      },
+      "RelativeLocation": {
+        "X": 100.0,
+        "Y": 115.0,
+        "Z": 490.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Pillar_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterBridgeWalkwayStraight_T2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryFoundation_Pillar'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/IndustryFoundation_Pillar.2"
+      },
+      "RelativeLocation": {
+        "X": -100.0,
+        "Y": -115.0,
+        "Z": 490.0
+      }
+    }
   },
   {
     "Type": "StaticMeshComponent",

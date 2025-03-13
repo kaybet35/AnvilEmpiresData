@@ -18,5 +18,6 @@ enum class ESimpleTooltip : uint8 {
     DeploymentFood,
     Reinforced,
     Avatars,
+    SubmitAvatar,
 };
 

@@ -341,7 +341,8 @@ enum class ESimpleTooltip {
     DeploymentFood = 11,
     Reinforced = 12,
     Avatars = 13,
-    ESimpleTooltip_MAX = 14,
+    SubmitAvatar = 14,
+    ESimpleTooltip_MAX = 15,
 };
 
 enum class ETemperatureChangeType {

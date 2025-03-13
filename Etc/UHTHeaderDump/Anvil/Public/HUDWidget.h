@@ -23,6 +23,7 @@ class UInventoryItemHUDWidget;
 class UPanelWidget;
 class UProgressBar;
 class USlider;
+class USoundCue;
 class UTextBlock;
 class UTexture2D;
 class UVitalityStatusWidget;
@@ -164,6 +165,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSlateBrush GuardStrengthFillIcon;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USoundCue* VictorySoundCue;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UProgressBar* InteractionProgressBar1;
