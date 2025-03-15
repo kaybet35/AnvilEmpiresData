@@ -3,13 +3,15 @@
     "Type": "DistributionFloatConstant",
     "Name": "RequiredDistributionSpawnRate",
     "Outer": "ParticleModuleRequired_0",
-    "Class": "UScriptClass'DistributionFloatConstant'"
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "DistributionFloatConstant",
     "Name": "BurstScaleDistribution",
     "Outer": "ParticleModuleSpawn_0",
     "Class": "UScriptClass'DistributionFloatConstant'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Constant": 1.0
     }
@@ -18,13 +20,15 @@
     "Type": "DistributionVectorUniform",
     "Name": "DistributionDirection",
     "Outer": "ParticleModuleLocationDirect_0",
-    "Class": "UScriptClass'DistributionVectorUniform'"
+    "Class": "UScriptClass'DistributionVectorUniform'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "ParticleLODLevel",
     "Name": "ParticleLODLevel_0",
     "Outer": "ParticleSpriteEmitter_0",
     "Class": "UScriptClass'ParticleLODLevel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "RequiredModule": {
         "ObjectName": "ParticleModuleRequired'DiseasedFlies:ParticleModuleRequired_0'",
@@ -76,6 +80,7 @@
     "Name": "ParticleModuleColor_0",
     "Outer": "DiseasedFlies",
     "Class": "UScriptClass'ParticleModuleColor'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "StartColor": {
         "MinValue": 1.0,
@@ -123,6 +128,7 @@
     "Name": "ParticleModuleLifetime_0",
     "Outer": "DiseasedFlies",
     "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Lifetime": {
         "MinValue": 20.0,
@@ -147,6 +153,7 @@
     "Name": "ParticleModuleLocationDirect_0",
     "Outer": "DiseasedFlies",
     "Class": "UScriptClass'ParticleModuleLocationDirect'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Location": {
         "MinValue": -43.913815,
@@ -623,6 +630,7 @@
     "Name": "ParticleModuleLocationPrimitiveSphere_0",
     "Outer": "DiseasedFlies",
     "Class": "UScriptClass'ParticleModuleLocationPrimitiveSphere'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "StartRadius": {
         "MinValue": 20.0,
@@ -675,6 +683,7 @@
     "Name": "ParticleModuleOrbit_0",
     "Outer": "DiseasedFlies",
     "Class": "UScriptClass'ParticleModuleOrbit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "OffsetAmount": {
         "MinValue": -50.0,
@@ -771,6 +780,7 @@
     "Name": "ParticleModuleRequired_0",
     "Outer": "DiseasedFlies",
     "Class": "UScriptClass'ParticleModuleRequired'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Material": {
         "ObjectName": "MaterialInstanceConstant'Flies'",
@@ -793,6 +803,7 @@
     "Name": "ParticleModuleSize_0",
     "Outer": "DiseasedFlies",
     "Class": "UScriptClass'ParticleModuleSize'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "StartSize": {
         "MinValue": 0.5,
@@ -831,6 +842,7 @@
     "Name": "ParticleModuleSizeMultiplyLife_0",
     "Outer": "DiseasedFlies",
     "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "LifeMultiplier": {
         "MaxValue": 1.0,
@@ -1241,6 +1253,7 @@
     "Name": "ParticleModuleSpawn_0",
     "Outer": "DiseasedFlies",
     "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Rate": {
         "MinValue": 1.5,
@@ -1284,6 +1297,7 @@
     "Name": "ParticleModuleTypeDataMesh_0",
     "Outer": "DiseasedFlies",
     "Class": "UScriptClass'ParticleModuleTypeDataMesh'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Mesh": {
         "ObjectName": "StaticMesh'Bee'",
@@ -1311,6 +1325,7 @@
     "Name": "ParticleSpriteEmitter_0",
     "Outer": "DiseasedFlies",
     "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "EmitterName": "bfly",
       "bUseLegacySpawningBehavior": true,
@@ -1327,6 +1342,7 @@
     "Type": "ParticleSystem",
     "Name": "DiseasedFlies",
     "Class": "UScriptClass'ParticleSystem'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Emitters": [
         {

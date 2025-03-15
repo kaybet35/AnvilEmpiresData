@@ -3,6 +3,7 @@
     "Type": "PhysicsAsset",
     "Name": "SK_LargeAnimalTrap_PhysicsAsset",
     "Class": "UScriptClass'PhysicsAsset'",
+    "Flags": "RF_Public | RF_Standalone | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "BoundsBodies": [
         0,
@@ -38,13 +39,43 @@
         "bUseLinearJointSolver": false
       },
       "ThumbnailInfo": null
-    }
+    },
+    "CollisionDisableTable": [
+      {
+        "Key": {
+          "Indices": [
+            0,
+            1
+          ]
+        },
+        "Value": false
+      },
+      {
+        "Key": {
+          "Indices": [
+            0,
+            2
+          ]
+        },
+        "Value": false
+      },
+      {
+        "Key": {
+          "Indices": [
+            1,
+            2
+          ]
+        },
+        "Value": false
+      }
+    ]
   },
   {
     "Type": "PhysicsConstraintTemplate",
     "Name": "PhysicsConstraintTemplate_0",
     "Outer": "SK_LargeAnimalTrap_PhysicsAsset",
     "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "DefaultInstance": {
         "JointName": "Teeth",
@@ -82,6 +113,7 @@
     "Name": "PhysicsConstraintTemplate_1",
     "Outer": "SK_LargeAnimalTrap_PhysicsAsset",
     "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "DefaultInstance": {
         "JointName": "Trigger",
@@ -119,6 +151,7 @@
     "Name": "SkeletalBodySetup_0",
     "Outer": "SK_LargeAnimalTrap_PhysicsAsset",
     "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "AggGeom": {
         "SphylElems": [
@@ -152,6 +185,7 @@
     "Name": "SkeletalBodySetup_1",
     "Outer": "SK_LargeAnimalTrap_PhysicsAsset",
     "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "AggGeom": {
         "SphylElems": [
@@ -185,6 +219,7 @@
     "Name": "SkeletalBodySetup_2",
     "Outer": "SK_LargeAnimalTrap_PhysicsAsset",
     "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "AggGeom": {
         "SphylElems": [

@@ -718,6 +718,7 @@ FUnderworldModuleDebugInfo = {}
 ---@field PositionY float
 ---@field NumRotations uint8
 ---@field SpawnedPrefabCodeName int32
+---@field SequenceNumber int32
 FUnderworldModuleDebugInfoEntry = {}
 
 

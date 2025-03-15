@@ -4,6 +4,7 @@
     "Name": "BodySetup_1",
     "Outer": "ModelComponent_4",
     "Class": "UScriptClass'BodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "bDoubleSidedGeometry": true,
       "bGenerateMirroredCollision": false,
@@ -24,6 +25,7 @@
     "Name": "BodySetup_2",
     "Outer": "ModelComponent_5",
     "Class": "UScriptClass'BodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "bDoubleSidedGeometry": true,
       "bGenerateMirroredCollision": false,
@@ -44,6 +46,7 @@
     "Name": "BodySetup_3",
     "Outer": "ModelComponent_6",
     "Class": "UScriptClass'BodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "bDoubleSidedGeometry": true,
       "bGenerateMirroredCollision": false,
@@ -64,6 +67,7 @@
     "Name": "BodySetup_4",
     "Outer": "ModelComponent_7",
     "Class": "UScriptClass'BodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "bDoubleSidedGeometry": true,
       "bGenerateMirroredCollision": false,
@@ -84,6 +88,7 @@
     "Name": "CollisionCapsule",
     "Outer": "PlayerStart0",
     "Class": "UScriptClass'CapsuleComponent'",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CapsuleHalfHeight": 40.0,
       "AreaClassOverride": {
@@ -103,6 +108,7 @@
     "Name": "InstancedFoliageActor_2",
     "Outer": "PersistentLevel",
     "Class": "UScriptClass'InstancedFoliageActor'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "RootComponent": {
         "ObjectName": "SceneComponent'Entry:PersistentLevel.InstancedFoliageActor_2.RootComponent0'",
@@ -115,6 +121,7 @@
     "Name": "PersistentLevel",
     "Outer": "Entry",
     "Class": "UScriptClass'Level'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Model": {
         "ObjectName": "Model'Model2'",
@@ -430,6 +437,7 @@
     "Type": "Model",
     "Name": "Model2",
     "Class": "UScriptClass'Model'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Bounds": {
       "Origin": {
         "X": 0.0,
@@ -1511,6 +1519,7 @@
     "Name": "ModelComponent_4",
     "Outer": "PersistentLevel",
     "Class": "UScriptClass'ModelComponent'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ModelBodySetup": {
         "ObjectName": "BodySetup'Entry:PersistentLevel.ModelComponent_4.BodySetup_1'",
@@ -1524,6 +1533,7 @@
     "Name": "ModelComponent_5",
     "Outer": "PersistentLevel",
     "Class": "UScriptClass'ModelComponent'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ModelBodySetup": {
         "ObjectName": "BodySetup'Entry:PersistentLevel.ModelComponent_5.BodySetup_2'",
@@ -1537,6 +1547,7 @@
     "Name": "ModelComponent_6",
     "Outer": "PersistentLevel",
     "Class": "UScriptClass'ModelComponent'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ModelBodySetup": {
         "ObjectName": "BodySetup'Entry:PersistentLevel.ModelComponent_6.BodySetup_3'",
@@ -1550,6 +1561,7 @@
     "Name": "ModelComponent_7",
     "Outer": "PersistentLevel",
     "Class": "UScriptClass'ModelComponent'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ModelBodySetup": {
         "ObjectName": "BodySetup'Entry:PersistentLevel.ModelComponent_7.BodySetup_4'",
@@ -1563,6 +1575,7 @@
     "Name": "NavigationSystemConfig_0",
     "Outer": "WorldInfo_1",
     "Class": "UScriptClass'NavigationSystemConfig'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "NavigationSystemClass": {
         "AssetPathName": "/Script/NavigationSystem.NavigationSystemV1",
@@ -1575,6 +1588,7 @@
     "Name": "PlayerStart0",
     "Outer": "PersistentLevel",
     "Class": "UScriptClass'PlayerStart'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CapsuleComponent": {
         "ObjectName": "CapsuleComponent'Entry:PersistentLevel.PlayerStart0.CollisionCapsule'",
@@ -1592,12 +1606,14 @@
     "Type": "SceneComponent",
     "Name": "RootComponent0",
     "Outer": "InstancedFoliageActor_2",
-    "Class": "UScriptClass'SceneComponent'"
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "World",
     "Name": "Entry",
     "Class": "UScriptClass'World'",
+    "Flags": "RF_Public | RF_Standalone | RF_WasLoaded | RF_LoadCompleted",
     "PersistentLevel": {
       "ObjectName": "Level'Entry:PersistentLevel'",
       "ObjectPath": "Engine/Content/Maps/Entry.6"
@@ -1610,6 +1626,7 @@
     "Name": "WorldInfo_1",
     "Outer": "PersistentLevel",
     "Class": "UScriptClass'WorldSettings'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "bEnableNavigationSystem": false,
       "NavigationSystemConfig": {

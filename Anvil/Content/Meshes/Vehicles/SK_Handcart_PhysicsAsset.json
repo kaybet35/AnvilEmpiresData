@@ -3,6 +3,7 @@
     "Type": "PhysicsAsset",
     "Name": "SK_Handcart_PhysicsAsset",
     "Class": "UScriptClass'PhysicsAsset'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "BoundsBodies": [
         0,
@@ -29,13 +30,25 @@
         "bUseLinearJointSolver": false
       },
       "ThumbnailInfo": null
-    }
+    },
+    "CollisionDisableTable": [
+      {
+        "Key": {
+          "Indices": [
+            0,
+            1
+          ]
+        },
+        "Value": false
+      }
+    ]
   },
   {
     "Type": "PhysicsConstraintTemplate",
     "Name": "PhysicsConstraintTemplate_0",
     "Outer": "SK_Handcart_PhysicsAsset",
     "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "DefaultInstance": {
         "JointName": "Body",
@@ -68,6 +81,7 @@
     "Name": "SkeletalBodySetup_0",
     "Outer": "SK_Handcart_PhysicsAsset",
     "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "AggGeom": {
         "SphylElems": [
@@ -101,6 +115,7 @@
     "Name": "SkeletalBodySetup_1",
     "Outer": "SK_Handcart_PhysicsAsset",
     "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "AggGeom": {
         "BoxElems": [

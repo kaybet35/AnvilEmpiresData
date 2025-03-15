@@ -331,7 +331,8 @@ EAnvilInputEventType = {
     SwitchSeat = 56,
     StartCooking = 57,
     SubmitAvatar = 58,
-    EAnvilInputEventType_MAX = 59,
+    RequestUnderworldMap = 59,
+    EAnvilInputEventType_MAX = 60,
 }
 
 ---@enum EAnvilInputResponseType
@@ -606,7 +607,8 @@ EAnvilPlayerVisEventType = {
     InviteToJoinFamily = 7,
     CreateDebugMapPost = 8,
     VictoryInfoUpdate = 9,
-    EAnvilPlayerVisEventType_MAX = 10,
+    UnderworldDebugInfoTargetSequence = 10,
+    EAnvilPlayerVisEventType_MAX = 11,
 }
 
 ---@enum EAnvilPledgedPlayerStatus

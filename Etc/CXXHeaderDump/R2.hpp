@@ -655,6 +655,7 @@ struct FUnderworldModuleDebugInfoEntry
     float PositionY;                                                                  // 0x0010 (size: 0x4)
     uint8 NumRotations;                                                               // 0x0014 (size: 0x1)
     int32 SpawnedPrefabCodeName;                                                      // 0x0018 (size: 0x4)
+    int32 SequenceNumber;                                                             // 0x001C (size: 0x4)
 
 }; // Size: 0x20
 

@@ -3,6 +3,7 @@
     "Type": "MaterialFunction",
     "Name": "TextureVariation",
     "Class": "UScriptClass'MaterialFunction'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Description": "Gives Texture UV variation that can be used to break up tiling of repetitive textures. It is designed to use displacement maps to create an intersection based on height, and then does a temporal dither. This avoids needing to pass in every texture to be randomized as a texture object and instead the \"Shifted UVs\" output can be used for regular texture samples. Make sure to set texture samples to MipValueMode: Derivative. Additional Parameters such as Dithering and Scale Variance can be adjusted by creating a material instance of this material.",
       "bExposeToLibrary": true,
