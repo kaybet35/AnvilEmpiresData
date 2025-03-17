@@ -19,6 +19,7 @@ enum class EAnvilPlacementStatus : uint8 {
     TooShort,
     TooHigh,
     TooLow,
+    TooSteep,
     TooCloseToEnemy,
     TooCloseToCave,
     TooCloseToWorldRoad,

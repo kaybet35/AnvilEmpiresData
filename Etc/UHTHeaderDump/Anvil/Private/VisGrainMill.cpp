@@ -8,8 +8,8 @@ AVisGrainMill::AVisGrainMill(const FObjectInitializer& ObjectInitializer) : Supe
     this->GrainMillMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("GrainMillMesh"));
     this->CrankHandleAnimInst = NULL;
     this->GrainMillAnimInst = NULL;
-    this->GrainMillMesh->SetupAttachment(RootComponent);
     this->CrankHandleMesh->SetupAttachment(RootComponent);
+    this->GrainMillMesh->SetupAttachment(RootComponent);
 }
 
 
