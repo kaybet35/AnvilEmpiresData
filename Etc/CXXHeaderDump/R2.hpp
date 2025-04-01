@@ -2645,6 +2645,7 @@ class UVehicleMovementProxyComponent : public UProxyComponent
     bool bAllowSwitchSeat;                                                            // 0x0053 (size: 0x1)
     bool bUsePitch;                                                                   // 0x0054 (size: 0x1)
     bool bCanBeMovementBase;                                                          // 0x0055 (size: 0x1)
+    bool bRammingForceKillPlayer;                                                     // 0x0056 (size: 0x1)
     TSubclassOf<class UEntityTemplate> CollisionEffect;                               // 0x0058 (size: 0x8)
     float RammingDamage;                                                              // 0x0060 (size: 0x4)
     float RammingVelocityFactor;                                                      // 0x0064 (size: 0x4)

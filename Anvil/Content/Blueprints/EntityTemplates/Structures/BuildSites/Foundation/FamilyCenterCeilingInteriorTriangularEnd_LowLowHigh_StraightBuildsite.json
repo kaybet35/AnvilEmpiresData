@@ -100,7 +100,14 @@
         "HomesteadArea": true,
         "WildernessArea": false
       },
-      "RequiredTool": "EAnvilToolType::Hands"
+      "RequiredTool": "EAnvilToolType::Hands",
+      "bBuildsInstantly": true,
+      "MaterialRequirements": [
+        {
+          "CodeName": 1175186297,
+          "Count": 1
+        }
+      ]
     }
   },
   {
@@ -122,7 +129,7 @@
       "ObjectName": "BPBaseFoundationModularBuildSiteEntity_C'Default__BPBaseFoundationModularBuildSiteEntity_C'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationModularBuildSiteEntity.3"
     },
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "BuildSiteComp": {
         "ObjectName": "BuildSiteProxyComponent'Default__FamilyCenterCeilingInteriorTriangularEnd_LowLowHigh_StraightBuildsite_C:BuildSiteProxyComponent_0'",
@@ -201,10 +208,7 @@
       "ObjectName": "HealthProxyComponent'Default__BPBaseFoundationModularBuildSiteEntity_C:HealthProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationModularBuildSiteEntity.7"
     },
-    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "MaxHealth": 100.0
-    }
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "StructureProxyComponent",

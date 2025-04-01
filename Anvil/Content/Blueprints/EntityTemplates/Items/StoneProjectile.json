@@ -30,20 +30,16 @@
     "Class": "UScriptClass'ProjectileMovementProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "PickupEntity": {
-        "ObjectName": "BlueprintGeneratedClass'StonePickup_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/ItemPickups/StonePickup.0"
-      },
-      "PickupSpawnRate": 0.1,
       "HitEffect": {
         "ObjectName": "BlueprintGeneratedClass'HitEffectStoneProjectile_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectStoneProjectile.0"
       },
-      "Speed": 200.0,
-      "MaxRange": 1000.0,
+      "Speed": 450.0,
+      "MaxRange": 500.0,
       "DamageAmount": 150,
-      "DamageType": "EAnvilDamageType::Missile",
-      "Radius": 50.0,
+      "DamageType": "EAnvilDamageType::Crushing",
+      "SplashDamageRadius": 200.0,
+      "Radius": 10.0,
       "HeadingTolerance": 45.0,
       "NozzleYawDelta": 80.0,
       "DislodgeRate": 0.5
@@ -53,7 +49,7 @@
     "Type": "StoneProjectile_C",
     "Name": "Default__StoneProjectile_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Items/StoneProjectile.StoneProjectile_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CodeNameString": "StoneProjectile",
       "CodeName": -175780192,

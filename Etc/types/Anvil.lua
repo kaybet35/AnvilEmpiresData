@@ -901,6 +901,7 @@ FAutoMoveState = {}
 ---@field ProcessedFlax int16
 ---@field ProcessedLead int16
 ---@field ProcessedResin int16
+---@field ProcessedThickLeather int16
 FBuildSiteCostData = {}
 
 

@@ -86,6 +86,8 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
     this->CurrentUEUsableActor = NULL;
+    this->BreathFogVFXComponent->SetupAttachment(Mesh);
+    this->RainLowAudioComponent->SetupAttachment(SpringArm);
     this->RainMidAudioComponent->SetupAttachment(SpringArm);
     this->RainHighAudioComponent->SetupAttachment(SpringArm);
     this->SnowLowAudioComponent->SetupAttachment(SpringArm);
@@ -115,8 +117,6 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->TorchAudioComponent->SetupAttachment(Mesh);
     this->RainVFXComponent->SetupAttachment(SpringArm);
     this->SnowVFXComponent->SetupAttachment(SpringArm);
-    this->BreathFogVFXComponent->SetupAttachment(Mesh);
-    this->RainLowAudioComponent->SetupAttachment(SpringArm);
     this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 

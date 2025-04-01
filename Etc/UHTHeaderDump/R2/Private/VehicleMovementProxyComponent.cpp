@@ -20,6 +20,7 @@ UVehicleMovementProxyComponent::UVehicleMovementProxyComponent() {
     this->bAllowSwitchSeat = false;
     this->bUsePitch = true;
     this->bCanBeMovementBase = false;
+    this->bRammingForceKillPlayer = false;
     this->CollisionEffect = NULL;
     this->RammingDamage = 480.00f;
     this->RammingVelocityFactor = 0.00f;

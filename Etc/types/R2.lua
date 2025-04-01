@@ -2644,6 +2644,7 @@ UVehicleMovementDataComponent = {}
 ---@field bAllowSwitchSeat boolean
 ---@field bUsePitch boolean
 ---@field bCanBeMovementBase boolean
+---@field bRammingForceKillPlayer boolean
 ---@field CollisionEffect TSubclassOf<UEntityTemplate>
 ---@field RammingDamage float
 ---@field RammingVelocityFactor float

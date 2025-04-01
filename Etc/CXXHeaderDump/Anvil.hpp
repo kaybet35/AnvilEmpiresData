@@ -95,6 +95,7 @@ struct FBuildSiteCostData : public FTableRowBase
     int16 ProcessedFlax;                                                              // 0x002C (size: 0x2)
     int16 ProcessedLead;                                                              // 0x002E (size: 0x2)
     int16 ProcessedResin;                                                             // 0x0030 (size: 0x2)
+    int16 ProcessedThickLeather;                                                      // 0x0032 (size: 0x2)
 
 }; // Size: 0x38
 
