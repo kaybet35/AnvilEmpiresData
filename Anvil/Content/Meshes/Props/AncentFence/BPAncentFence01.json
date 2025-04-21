@@ -132,7 +132,10 @@
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPAncentFence01_C",
     "Class": "UScriptClass'SceneComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mobility": "EComponentMobility::Stationary"
+    }
   },
   {
     "Type": "SCS_Node",
@@ -280,7 +283,12 @@
       "StaticMesh": {
         "ObjectName": "StaticMesh'AncentFence'",
         "ObjectPath": "Anvil/Content/Meshes/Props/AncentFence/AncentFence.2"
-      }
+      },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   }
 ]

@@ -101,7 +101,7 @@
     "Type": "ChickenWild_C",
     "Name": "Default__ChickenWild_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.ChickenWild_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CodeNameString": "ChickenWild",
       "CodeName": -2145352453,
@@ -121,7 +121,7 @@
         },
         {
           "ObjectName": "ResourceProxyComponent'Default__ChickenWild_C:ResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.9"
         },
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__ChickenWild_C:BoxCollisionProxyComponent_0'",
@@ -134,6 +134,10 @@
         {
           "ObjectName": "AIStimulusProxyComponent'Default__ChickenWild_C:AIStimulusProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.0"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__ChickenWild_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/ChickenWild.8"
         }
       ],
       "VisActorClass": {
@@ -155,6 +159,17 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
       },
       "TargetType": "EAnvilDamageTargetType::Infantry"
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__ChickenWild_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ResetIfObserved": true,
+      "LifeSpan": 240.0
     }
   },
   {

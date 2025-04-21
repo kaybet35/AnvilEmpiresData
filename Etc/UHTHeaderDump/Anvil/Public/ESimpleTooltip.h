@@ -19,5 +19,7 @@ enum class ESimpleTooltip : uint8 {
     Reinforced,
     Avatars,
     SubmitAvatar,
+    StorehousePublicButton,
+    StorehousePrivateButton,
 };
 

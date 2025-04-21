@@ -7,10 +7,6 @@ USimPlayerProxyComponent::USimPlayerProxyComponent() {
     this->GuardAngleToleranceYawAlt = 120.00f;
     this->GuardAngleTolerancePitchMinAlt = -60.00f;
     this->GuardAngleTolerancePitchMaxAlt = 60.00f;
-    this->GuardMeterRegenCD = 3.00f;
-    this->GuardMeterEmptyRegenCD = 6.00f;
-    this->GuardMeterRegenSpeed = 10.00f;
-    this->GuardMeterDecaySpeed = 20.00f;
     this->StaggerDuration = 3.50f;
     this->StaggerAmount = 0.50f;
     this->StabilityRegenCD = 3.00f;

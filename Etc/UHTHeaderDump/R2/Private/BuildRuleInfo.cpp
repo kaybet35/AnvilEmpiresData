@@ -7,6 +7,7 @@ FBuildRuleInfo::FBuildRuleInfo() {
     this->bBuildableNearEnemies = false;
     this->bBuildableInWildernessWithoutPledge = false;
     this->LimitTouchingGroupCount = false;
+    this->bAllowCrossingHomesteadAreaBorder = false;
     this->RequiredAgeSeconds = 0.00f;
     this->NearbyPlayersRequired = 0;
     this->TierPrerequisite = 0;

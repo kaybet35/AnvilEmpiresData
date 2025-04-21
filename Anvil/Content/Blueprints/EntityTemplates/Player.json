@@ -82,10 +82,10 @@
             "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/Spawners/BranchSpawner.0"
           },
           "SpawnedEntityVisVar": 0,
-          "MinDistFromFamilyArea": 5000.0,
+          "MinDistFromFamilyArea": 1000.0,
           "ChanceToSpawnPerMin": 20.0,
-          "MinDistanceBetweenSpawns": 5000.0,
-          "MaxNumInRadius": 1,
+          "MinDistanceBetweenSpawns": 2000.0,
+          "MaxNumInRadius": 2,
           "bRequiresNavmesh": true,
           "bConsiderAllFamilyAreas": false,
           "bDontSpawnInSettlements": true,
@@ -99,7 +99,7 @@
                 "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/BranchPile.0"
               },
               "EntityTypeToAvoidVisVar": 0,
-              "Distance": 7500.0
+              "Distance": 3000.0
             }
           ]
         },
@@ -327,7 +327,7 @@
             "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Wolf.2"
           },
           "SpawnedEntityVisVar": 0,
-          "MinDistFromFamilyArea": 20000.0,
+          "MinDistFromFamilyArea": 10000.0,
           "ChanceToSpawnPerMin": 2.5,
           "MinDistanceBetweenSpawns": 0.0,
           "MaxNumInRadius": 6,
@@ -920,8 +920,12 @@
       "SerializationType": "EEntitySerializationType::SerializationTypePlayer",
       "Components": [
         {
+          "ObjectName": "PlayerMountProxyComponent'Default__Player_C:PlayerMountProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.14"
+        },
+        {
           "ObjectName": "SimPlayerProxyComponent'Default__Player_C:SimPlayerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.16"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.17"
         },
         {
           "ObjectName": "HealthProxyComponent'Default__Player_C:HealthProxyComponent_0'",
@@ -953,7 +957,7 @@
         },
         {
           "ObjectName": "PlayerUnstuckProxyComponent'Default__Player_C:PlayerUnstuckProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.15"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.16"
         },
         {
           "ObjectName": "HungerProxyComponent'Default__Player_C:HungerProxyComponent_0'",
@@ -961,7 +965,7 @@
         },
         {
           "ObjectName": "StaminaProxyComponent'Default__Player_C:StaminaProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.17"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.18"
         },
         {
           "ObjectName": "AnimalRopeSlotProxyComponent'Default__Player_C:AnimalRopeSlotProxyComponent_0'",
@@ -969,7 +973,7 @@
         },
         {
           "ObjectName": "TemperatureProxyComponent'Default__Player_C:TemperatureProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.18"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.19"
         },
         {
           "ObjectName": "AdminEnvProxyComponent'Default__Player_C:AdminEnvProxyComponent_0'",
@@ -985,7 +989,7 @@
         },
         {
           "ObjectName": "PlayerStatusProxyComponent'Default__Player_C:PlayerStatusProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.14"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.15"
         }
       ],
       "VisActorClass": {
@@ -1005,6 +1009,13 @@
       "CameraPanMaxDistance": 3000.0,
       "CameraPanLerpAlphaPerSecond": 0.95
     }
+  },
+  {
+    "Type": "PlayerMountProxyComponent",
+    "Name": "PlayerMountProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'PlayerMountProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "PlayerStatusProxyComponent",

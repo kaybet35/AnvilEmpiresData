@@ -3,6 +3,6 @@
 
 class UHalberd_C : public UItemTemplate
 {
-}; // Size: 0x378
+}; // Size: 0x370
 
 #endif

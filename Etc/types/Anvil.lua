@@ -373,7 +373,7 @@ AVisEntityPrefab = {}
 
 
 
----@class AVisFamilyCenter : AVisFamilyMarkerArea
+---@class AVisFamilyCenter : AVisStructure
 ---@field FamilyCenterDataComponent UFamilyCenterDataComponent
 ---@field TownAreaMarkerDecal UVisTownAreaMarkerDecalComponent
 AVisFamilyCenter = {}
@@ -382,10 +382,6 @@ AVisFamilyCenter = {}
 
 ---@class AVisFamilyInventory : AVisStructure
 AVisFamilyInventory = {}
-
-
----@class AVisFamilyMarkerArea : AVisStructure
-AVisFamilyMarkerArea = {}
 
 
 ---@class AVisFarm : AVisStructure
@@ -553,6 +549,7 @@ AVisPickupItem = {}
 ---@class AVisPlayer : AVisActor
 ---@field SpringArm UVisSpringArmComponent
 ---@field SimPlayerDataComponent USimPlayerDataComponent
+---@field PlayerMountDataComponent UPlayerMountDataComponent
 ---@field PlayerInputDataComponent UPlayerInputDataComponent
 ---@field HealthDataComponent UHealthDataComponent
 ---@field HungerDataComponent UHungerDataComponent
@@ -706,12 +703,19 @@ AVisStaticTorch = {}
 
 
 
+---@class AVisStorehouse : AVisStructure
+---@field StorehouseDataComponent UStorehouseDataComponent
+AVisStorehouse = {}
+
+
+
 ---@class AVisStructure : AVisActor
 ---@field ScaffoldingComponent UVisScaffoldingComponent
 ---@field StructureIcon UTexture2D
 ---@field BuildSiteCategory EBuildSiteCategory
 ---@field BuildSiteOrder int32
 ---@field BuildSiteVisibility EBuildSiteVisibility
+---@field SupportedVisualComponents uint32
 ---@field UpgradeDataComponent UUpgradeDataComponent
 ---@field HealthDataComponent UHealthDataComponent
 ---@field TeamDataComponent UTeamDataComponent
@@ -722,6 +726,7 @@ AVisStaticTorch = {}
 ---@field UseVolumeDecalComponent UDecalComponent
 ---@field GrassRemovalVolume UGrassRemovalVolumeComponent
 ---@field ScorchEffectAssets TArray<UNiagaraSystem>
+---@field GeneratedScorchEffecftInfos TArray<FGeneratedScorchEffectInfo>
 AVisStructure = {}
 
 ---@param Tag FName
@@ -879,6 +884,12 @@ FAudioVolumeClass = {}
 FAutoMoveState = {}
 
 
+---@class FBoolResponse
+---@field bValue boolean
+FBoolResponse = {}
+
+
+
 ---@class FBuildSiteCostData : FTableRowBase
 ---@field RoadMaterial int16
 ---@field ResourceBranches int16
@@ -1019,7 +1030,6 @@ FDeploymentFoodItem = {}
 ---@field DamageRadius float
 ---@field VariableDamageMaxModifier float
 ---@field VariableDamageMinModifier float
----@field GuardMeterReductionMultiplier float
 ---@field ShieldDurabilityLossMultiplier float
 ---@field GuardMeterCostPerHit float
 ---@field ArmorMitigation uint8
@@ -1053,6 +1063,10 @@ FFactionLockResponse = {}
 ---@field StaminaLimitRestored float
 FFoodData = {}
 
+
+
+---@class FGeneratedScorchEffectInfo
+FGeneratedScorchEffectInfo = {}
 
 
 ---@class FGetIsAdminResponse
@@ -1251,6 +1265,12 @@ FServerRegion = {}
 ---@field Announcement FString
 ---@field NextTestUnixTimestamp FString
 FShardConfig = {}
+
+
+
+---@class FShardStatusResponse
+---@field AtCapacityFactionBits uint8
+FShardStatusResponse = {}
 
 
 
@@ -1610,8 +1630,13 @@ function UAnvilWindow:OnCurrentSelectedOutputIndexChanged(Old, New) end
 ---@class UBeaconTowerPlayerInfoMapIcon : UMapIcon
 ---@field FriendlyColour FSlateColor
 ---@field EnemyColour FSlateColor
+---@field LocationText UTextBlock
 UBeaconTowerPlayerInfoMapIcon = {}
 
+---@return ESlateVisibility
+function UBeaconTowerPlayerInfoMapIcon:GetLocationTextVisibility() end
+---@return FText
+function UBeaconTowerPlayerInfoMapIcon:GetLocationText() end
 
 
 ---@class UBuildMenuStructureButton : UGridItemWidget
@@ -1927,26 +1952,32 @@ UEntityActorRootComponent = {}
 
 ---@class UFactionSelectScreen : UAnvilScreen
 ---@field FactionAranicButton UButton
+---@field AranicAtCapacityText UTextBlock
 ---@field FactionMirrishButton UButton
+---@field MirrishAtCapacityText UTextBlock
 ---@field FactionNovanButton UButton
+---@field NovanAtCapacityText UTextBlock
 ---@field DeleteProfileButton UAnvilButtonWidget
 ---@field DownloadingThrobber UThrobber
 ---@field ServerBrowserCheckBox UCheckBox
 ---@field ServerBrowserHorizontalBox UHorizontalBox
 ---@field EditorSpawnCheckBox UCheckBox
 ---@field EditorSpawnHorizontalBox UHorizontalBox
+---@field FactionAtCapacityColour FLinearColor
+---@field FactionSelectSwitcher UWidgetSwitcher
+---@field FactionLockedSwitcher UWidgetSwitcher
+---@field FactionLockedAranicButton UButton
+---@field FactionLockedMirrishButton UButton
+---@field FactionLockedNovanButton UButton
 UFactionSelectScreen = {}
 
+function UFactionSelectScreen:OnSelectedFactionButtonClicked() end
 function UFactionSelectScreen:OnFactionNovanButtonClicked() end
 function UFactionSelectScreen:OnFactionMirrishButtonClicked() end
 function UFactionSelectScreen:OnFactionAranicButtonClicked() end
 function UFactionSelectScreen:OnDeleteProfileButtonClicked() end
 ---@return boolean
-function UFactionSelectScreen:IsFactionNovanButtonEnabled() end
----@return boolean
-function UFactionSelectScreen:IsFactionMirrishButtonEnabled() end
----@return boolean
-function UFactionSelectScreen:IsFactionAranicButtonEnabled() end
+function UFactionSelectScreen:IsSelectedFactionButtonEnabled() end
 ---@return boolean
 function UFactionSelectScreen:IsDeleteProfileButtonEnabled() end
 ---@return ESlateVisibility
@@ -1985,10 +2016,6 @@ function UFamilyAreaMarkerWindow:GetFamilyAreaSetAllianceVisibility() end
 function UFamilyAreaMarkerWindow:GetFamilyAreaRestrictedVisibility() end
 ---@return ECheckBoxState
 function UFamilyAreaMarkerWindow:GetFamilyAreaRestrictedCheckedState() end
-
-
----@class UFamilyHouseWindow : UStructureWindow
-UFamilyHouseWindow = {}
 
 
 ---@class UFamilyInviteDialogPlayerListEntryWidget : UUserWidget
@@ -2231,6 +2258,7 @@ UHUDStatsWidget = {}
 ---@field GuardStrengthRightIcon UImage
 ---@field PlayerStatusText UTextBlock
 ---@field WinConditionCanvas UCanvasPanel
+---@field WinConditionBackground UImage
 ---@field WinConditionLogo UImage
 ---@field VictoryTypeLogo UImage
 ---@field PlayerVitality UVitalityStatusWidget
@@ -2241,6 +2269,9 @@ UHUDStatsWidget = {}
 ---@field BuildSiteCanvas UCanvasPanel
 ---@field PlacementStatusWidget UHUDPlacementStatusWidget
 ---@field BuildSiteWidget UHUDBuildSiteWidget
+---@field VictoryBackground UTexture2D
+---@field AgeEndingBackground UTexture2D
+---@field PostAgeEndingBackground UTexture2D
 ---@field AranicLogo UTexture2D
 ---@field MirrishLogo UTexture2D
 ---@field NovanLogo UTexture2D
@@ -2249,11 +2280,13 @@ UHUDStatsWidget = {}
 ---@field GuardStrengthEmptyIcon FSlateBrush
 ---@field GuardStrengthFillIcon FSlateBrush
 ---@field VictorySoundCue USoundCue
+---@field AgeEndingSoundCue USoundCue
 ---@field InteractionProgressBar1 UProgressBar
 ---@field InteractionProgressBar2 UProgressBar
 ---@field WeatherStatsText UTextBlock
 ---@field BorderRegionIndicatorText UTextBlock
 ---@field ReinforcementStatus UWidget
+---@field BackoutImage UImage
 ---@field NewLocalMessages TArray<UChatMessage>
 UHUDWidget = {}
 
@@ -2310,16 +2343,7 @@ function UHelpScreen:OnHelpImageButtonClicked() end
 
 
 ---@class UHitConversionWindow : UStructureWindow
----@field CurrentSelectedOutputImage UImage
----@field OutputPreviousButton UButton
----@field OutputNextButton UButton
 UHitConversionWindow = {}
-
-function UHitConversionWindow:OutputPreviousButtonClicked() end
-function UHitConversionWindow:OutputNextButtonClicked() end
----@param Old uint8
----@param New uint8
-function UHitConversionWindow:OnCurrentSelectedOutputIndexChanged(Old, New) end
 
 
 ---@class UHousePlayerInventoryListItem : UUserWidget
@@ -2384,7 +2408,6 @@ UInventoryItemHUDWidget = {}
 ---@field ItemSlotBackgroundMap TMap<EAnvilItemSlotBackgroundType, UTexture2D>
 ---@field ItemQuantityText UTextBlock
 ---@field DurabilityBar UProgressBar
----@field SubtypeIconRelic UImage
 ---@field OverEncumberedImage UImage
 ---@field PublicIconImage UImage
 ---@field HitConversionProgressBar UProgressBar
@@ -2543,24 +2566,13 @@ function UMapPostWidget:GetNetVoteCountText() end
 ---@field EnemyIconColour FSlateColor
 ---@field FogOfWarMask UTexture2D
 ---@field FogOfWarRadius int32
----@field ObjectiveBorder UBorder
 ---@field CentralMarketplaceWidgetBorder UBorder
 ---@field CentralMarketplaceWidget UCentralMarketplaceWidget
----@field SeasonText UTextBlock
----@field TimeOfDayText UTextBlock
 ---@field MapPostContainerWidget UMapPostContainerWidget
 ---@field WinConditionWidget UWinConditionWidget
 ---@field DisplayedBeaconTowerPlayerInfos TArray<UMapIcon>
 UMapWidget = {}
 
----@return FText
-function UMapWidget:GetTimeOfDayText() end
----@return ESlateVisibility
-function UMapWidget:GetSeasonTextVisibility() end
----@return FText
-function UMapWidget:GetSeasonText() end
----@return ESlateVisibility
-function UMapWidget:GetObjectiveBorderVisibility() end
 
 
 ---@class UMapWidgetBase : UUserWidget
@@ -2904,6 +2916,17 @@ UStatusWidget = {}
 
 
 
+---@class UStorehouseWindow : UStructureWindow
+---@field PublicButton UButton
+---@field PrivateButton UButton
+---@field StorehouseExpireTimeText UTextBlock
+---@field StorehouseExpireTimePanel UPanelWidget
+UStorehouseWindow = {}
+
+function UStorehouseWindow:OnPublicButtonClicked() end
+function UStorehouseWindow:OnPrivateButtonClicked() end
+
+
 ---@class UStructureWindow : UHUDWindow
 ---@field HealthStatus UStatusWidget
 ---@field HeartStatus UStatusWidget
@@ -2936,6 +2959,21 @@ UTemperatureStatusWidget = {}
 
 ---@return ESlateVisibility
 function UTemperatureStatusWidget:GetIconVisibility() end
+
+
+---@class UTimeSeasonWidget : UUserWidget
+---@field TimeSeasonPanel UCanvasPanel
+---@field AgeTimeSeconds float
+---@field CurrentTimeHours int32
+---@field CurrentTimeMinutes int32
+---@field CurrentTimeSeconds int32
+---@field Season float
+---@field RainIntensity float
+---@field SnowIntensity float
+UTimeSeasonWidget = {}
+
+---@return ESlateVisibility
+function UTimeSeasonWidget:GetCurrentVisibility() end
 
 
 ---@class UTooltipWidget : UUserWidget
@@ -2981,9 +3019,6 @@ function UTownCenterMapIcon:GetNumPledgedText() end
 ---@field UpkeepBox UHorizontalBox
 ---@field UpkeepIcon UImage
 ---@field UpkeepTextBlock UTextBlock
----@field TownNames1 TArray<FText>
----@field TownNames2 TArray<FText>
----@field TownNames3 TArray<FText>
 UTownCenterWindow = {}
 
 function UTownCenterWindow:OnIncreaseTownStatusButtonClicked() end

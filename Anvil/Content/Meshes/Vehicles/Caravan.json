@@ -11,19 +11,19 @@
         "CollisionProfileName": "BlockAll"
       }
     },
-    "BodySetupGuid": "11B70BBD48F22DE576F7D1B1958ADECD",
+    "BodySetupGuid": "9E946AFE47208155FEF651B4F7961EF3",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 28,
         "SizeOnDisk": 28,
-        "OffsetInFile": "0x7AE60"
+        "OffsetInFile": "0xE4AA6"
       }
     }
   },
   {
     "Type": "NavCollision",
-    "Name": "NavCollision_4",
+    "Name": "NavCollision_22",
     "Outer": "Caravan",
     "Class": "UScriptClass'NavCollision'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
@@ -32,7 +32,7 @@
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
-        "OffsetInFile": "0x7AEBE"
+        "OffsetInFile": "0xE4B04"
       }
     }
   },
@@ -40,40 +40,88 @@
     "Type": "StaticMesh",
     "Name": "Caravan",
     "Class": "UScriptClass'StaticMesh'",
-    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Standalone | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant'Caravan'",
-            "ObjectPath": "Anvil/Content/Materials/Vehicles/Caravan.0"
+            "ObjectName": "MaterialInstanceConstant'PlanksA'",
+            "ObjectPath": "Anvil/Content/Textures/Props/PlanksA.0"
           },
-          "MaterialSlotName": "Caravan",
-          "ImportedMaterialSlotName": "Caravan",
+          "MaterialSlotName": "PlanksA",
+          "ImportedMaterialSlotName": "PlanksA",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 769.5991,
+            "LocalUVDensities": 321.3113,
+            "LocalUVDensities[1]": 0.0,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'FabricCanvasA'",
+            "ObjectPath": "Anvil/Content/Textures/Props/FabricCanvasA.0"
+          },
+          "MaterialSlotName": "FabricCanvasA",
+          "ImportedMaterialSlotName": "FabricCanvasA",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 433.52045,
+            "LocalUVDensities[1]": 0.0,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MetalTrim01'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/MetalTrim01.0"
+          },
+          "MaterialSlotName": "MetalTrim01",
+          "ImportedMaterialSlotName": "MetalTrim01",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 163.59569,
+            "LocalUVDensities[1]": 0.0,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'UnlitBlack'",
+            "ObjectPath": "Anvil/Content/Materials/UnlitBlack.0"
+          },
+          "MaterialSlotName": "UnlitBlack",
+          "ImportedMaterialSlotName": "UnlitBlack",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 172.57207,
             "LocalUVDensities[1]": 0.0,
             "LocalUVDensities[2]": 0.0,
             "LocalUVDensities[3]": 0.0
           }
         }
       ],
-      "LightmapUVDensity": 769.5991,
+      "LightmapUVDensity": 319.14963,
       "LightMapResolution": 64,
       "ExtendedBounds": {
         "Origin": {
-          "X": 0.0,
-          "Y": -206.43936,
-          "Z": 197.65369
+          "X": 1.9401855,
+          "Y": -131.87701,
+          "Z": 195.83133
         },
         "BoxExtent": {
-          "X": 116.040245,
-          "Y": 331.0048,
-          "Z": 196.01428
+          "X": 118.44888,
+          "Y": 335.97223,
+          "Z": 198.68536
         },
-        "SphereRadius": 378.9790344238281
+        "SphereRadius": 379.1448735114043
       }
     },
     "BodySetup": {
@@ -81,10 +129,10 @@
       "ObjectPath": "Anvil/Content/Meshes/Vehicles/Caravan.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision'Caravan:NavCollision_4'",
+      "ObjectName": "NavCollision'Caravan:NavCollision_22'",
       "ObjectPath": "Anvil/Content/Meshes/Vehicles/Caravan.1"
     },
-    "LightingGuid": "6AFB9BA9-4D012E33-FBEA36B7-8D98E46D",
+    "LightingGuid": "DF6F96F0-4111A6D3-99D4108A-3C98DF64",
     "RenderData": {
       "LODs": [
         {
@@ -92,9 +140,42 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 9412,
+              "NumTriangles": 9283,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 9201,
+              "MaxVertexIndex": 11204,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 27849,
+              "NumTriangles": 1737,
+              "MinVertexIndex": 11205,
+              "MaxVertexIndex": 12316,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 2,
+              "FirstIndex": 33060,
+              "NumTriangles": 4120,
+              "MinVertexIndex": 12317,
+              "MaxVertexIndex": 19666,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 3,
+              "FirstIndex": 45420,
+              "NumTriangles": 20,
+              "MinVertexIndex": 19667,
+              "MaxVertexIndex": 19705,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -104,30 +185,30 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 9202
+            "NumVertices": 19706
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 9202,
+            "NumVertices": 19706,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
             "Stride": 4,
-            "NumVertices": 9202
+            "NumVertices": 19706
           },
           "CardRepresentationData": {
             "Bounds": {
               "Min": {
-                "X": -121.77658,
-                "Y": -543.6982,
-                "Z": -4.4518757
+                "X": -122.343346,
+                "Y": -474.18213,
+                "Z": -9.014693
               },
               "Max": {
-                "X": 121.77658,
-                "Y": 130.81947,
-                "Z": 399.75925
+                "X": 126.22372,
+                "Y": 210.4281,
+                "Z": 400.67734
               },
               "IsValid": 1
             },
@@ -152,14 +233,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": -60.61862,
-                    "Y": -206.43936,
-                    "Z": 197.65369
+                    "X": -6.3678894,
+                    "Y": -131.87701,
+                    "Z": 195.83133
                   },
                   "Extent": {
-                    "X": 337.25882,
-                    "Y": 200.24744,
-                    "Z": 71.15797
+                    "X": 342.3051,
+                    "Y": 203.24367,
+                    "Z": 125.975464
                   }
                 },
                 "LODLevel": 0,
@@ -183,14 +264,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": 60.61862,
-                    "Y": -206.43936,
-                    "Z": 197.65369
+                    "X": 10.2482605,
+                    "Y": -131.87701,
+                    "Z": 195.83133
                   },
                   "Extent": {
-                    "X": 337.25882,
-                    "Y": 200.24744,
-                    "Z": 71.15797
+                    "X": 342.3051,
+                    "Y": 203.24367,
+                    "Z": 125.975464
                   }
                 },
                 "LODLevel": 0,
@@ -214,14 +295,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": 0.0,
-                    "Y": -395.8778,
-                    "Z": 197.65369
+                    "X": 1.9401855,
+                    "Y": -281.287,
+                    "Z": 195.83133
                   },
                   "Extent": {
-                    "X": 121.77659,
-                    "Y": 200.24744,
-                    "Z": 157.8204
+                    "X": 124.28354,
+                    "Y": 203.24367,
+                    "Z": 202.89514
                   }
                 },
                 "LODLevel": 0,
@@ -245,14 +326,14 @@
                     "Z": 0.0
                   },
                   "Origin": {
-                    "X": 0.0,
-                    "Y": -132.93365,
-                    "Z": 197.65369
+                    "X": 1.9401855,
+                    "Y": -121.5285,
+                    "Z": 195.83133
                   },
                   "Extent": {
-                    "X": 121.77659,
-                    "Y": 200.24744,
-                    "Z": 273.75314
+                    "X": 124.28354,
+                    "Y": 203.24367,
+                    "Z": 341.9566
                   }
                 },
                 "LODLevel": 0,
@@ -276,14 +357,14 @@
                     "Z": -1.0
                   },
                   "Origin": {
-                    "X": 0.0,
-                    "Y": -206.43936,
-                    "Z": 176.57501
+                    "X": 1.9401855,
+                    "Y": -131.87701,
+                    "Z": 195.83133
                   },
                   "Extent": {
-                    "X": 121.77659,
-                    "Y": 337.25882,
-                    "Z": 189.7081
+                    "X": 124.28354,
+                    "Y": 342.3051,
+                    "Z": 213.94069
                   }
                 },
                 "LODLevel": 0,
@@ -307,14 +388,14 @@
                     "Z": 1.0
                   },
                   "Origin": {
-                    "X": 0.0,
-                    "Y": -206.43936,
-                    "Z": 229.2717
+                    "X": 1.9401855,
+                    "Y": -131.87701,
+                    "Z": 227.92245
                   },
                   "Extent": {
-                    "X": 121.77659,
-                    "Y": 337.25882,
-                    "Z": 179.16876
+                    "X": 124.28354,
+                    "Y": 342.3051,
+                    "Z": 181.84958
                   }
                 },
                 "LODLevel": 0,
@@ -330,7 +411,7 @@
           "BulkDataFlags": "BULKDATA_None",
           "ElementCount": 0,
           "SizeOnDisk": 0,
-          "OffsetInFile": "0xF1140"
+          "OffsetInFile": "0x1C463C"
         },
         "ImposterAtlas": [],
         "HierarchyNodes": [],
@@ -352,16 +433,16 @@
       },
       "Bounds": {
         "Origin": {
-          "X": 0.0,
-          "Y": -206.43936,
-          "Z": 197.65369
+          "X": 1.9401855,
+          "Y": -131.87701,
+          "Z": 195.83133
         },
         "BoxExtent": {
-          "X": 116.040245,
-          "Y": 331.0048,
-          "Z": 196.01428
+          "X": 118.44888,
+          "Y": 335.97223,
+          "Z": 198.68536
         },
-        "SphereRadius": 378.97903
+        "SphereRadius": 379.1449
       },
       "bLODsShareStaticLighting": true,
       "ScreenSize": [

@@ -3,7 +3,7 @@
     "Type": "BPBeaconTowerPlayerInfo_C",
     "Name": "Default__BPBeaconTowerPlayerInfo_C",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.BPBeaconTowerPlayerInfo_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "FriendlyColour": {
         "SpecifiedColor": {
@@ -80,6 +80,10 @@
           "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.3"
         }
       ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPBeaconTowerPlayerInfo_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.8"
+      },
       "RenderTransformPivot": {
         "X": 0.0,
         "Y": 0.0
@@ -104,6 +108,130 @@
     }
   },
   {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPBeaconTowerPlayerInfo_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.5"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPBeaconTowerPlayerInfo_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.9"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_1",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPBeaconTowerPlayerInfo_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.4"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPBeaconTowerPlayerInfo_C:WidgetTree.LocationText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.6"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "LocationText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "5AB20D4E4D254767634D0C8E4F6019ED",
+        "SourceString": "Coords",
+        "LocalizedString": "Coords"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default"
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPBeaconTowerPlayerInfo_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.5"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'BPBeaconTowerPlayerInfo_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.9"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPBeaconTowerPlayerInfo_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPBeaconTowerPlayerInfo_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.7"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox'BPBeaconTowerPlayerInfo_C:WidgetTree.ScaleBox_42'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.2"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPBeaconTowerPlayerInfo_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.7"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'BPBeaconTowerPlayerInfo_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.4"
+      }
+    }
+  },
+  {
     "Type": "WidgetBlueprintGeneratedClass",
     "Name": "BPBeaconTowerPlayerInfo_C",
     "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
@@ -111,7 +239,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPBeaconTowerPlayerInfo_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.5"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.11"
       },
       "bClassRequiresNativeTick": true
     },
@@ -142,8 +270,8 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "RootWidget": {
-        "ObjectName": "ScaleBox'BPBeaconTowerPlayerInfo_C:WidgetTree.ScaleBox_42'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.2"
+        "ObjectName": "VerticalBox'BPBeaconTowerPlayerInfo_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPBeaconTowerPlayerInfo.7"
       }
     }
   }

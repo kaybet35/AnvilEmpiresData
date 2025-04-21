@@ -8,5 +8,6 @@ enum class EAlertType : uint8 {
     QueueStatus,
     Reinforcement,
     ClearReinforcement,
+    TimeUntilAgeEndAlert,
 };
 

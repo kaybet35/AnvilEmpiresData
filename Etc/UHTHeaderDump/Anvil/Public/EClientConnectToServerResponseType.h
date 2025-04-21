@@ -12,5 +12,6 @@ enum class EClientConnectToServerResponseType : uint8 {
     PromptToJoinAdminQueue,
     VersionMismatch,
     InvalidParams,
+    InvalidAgePhaseToConnect,
 };
 

@@ -1,0 +1,121 @@
+[
+  {
+    "Type": "AnimMontage",
+    "Name": "Rabbit_trapped_montage",
+    "Class": "UScriptClass'AnimMontage'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CompositeSections": [
+        {
+          "SectionName": "Default",
+          "NextSectionName": "Default",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Rabbit_trapped_montage'",
+            "ObjectPath": "Anvil/Content/Animations/Animals/Rabbit/Rabbit_trapped_montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Rabbit_Eat_Anim'",
+            "ObjectPath": "Anvil/Content/Animations/Animals/Rabbit/Rabbit_Eat_Anim.0"
+          }
+        }
+      ],
+      "SlotAnimTracks": [
+        {
+          "SlotName": "DefaultSlot",
+          "AnimTrack": {
+            "AnimSegments": [
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'Rabbit_Eat_Anim'",
+                  "ObjectPath": "Anvil/Content/Animations/Animals/Rabbit/Rabbit_Eat_Anim.0"
+                },
+                "StartPos": 0.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 1.0,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              }
+            ]
+          }
+        }
+      ],
+      "Notifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'Rabbit_trapped_montage:AnimNotify_PlaySound_0'",
+            "ObjectPath": "Anvil/Content/Animations/Animals/Rabbit/Rabbit_trapped_montage.1"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Rabbit_trapped_montage'",
+            "ObjectPath": "Anvil/Content/Animations/Animals/Rabbit/Rabbit_trapped_montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.064363465,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Rabbit_Eat_Anim'",
+            "ObjectPath": "Anvil/Content/Animations/Animals/Rabbit/Rabbit_Eat_Anim.0"
+          }
+        }
+      ],
+      "SequenceLength": 1.0,
+      "Skeleton": {
+        "ObjectName": "Skeleton'Rabbit_SK_Skeleton'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_Skeleton.0"
+      }
+    },
+    "SkeletonGuid": "6BEBA43A-49E34683-993ECFBC-36D8E4FF"
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_0",
+    "Outer": "Rabbit_trapped_montage",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'RabbitTrapped_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Animal/Rabbit/RabbitTrapped_Cue.0"
+      },
+      "bFollow": true,
+      "AttachName": "Head"
+    }
+  }
+]

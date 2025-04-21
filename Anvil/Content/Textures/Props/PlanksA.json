@@ -17,7 +17,7 @@
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 0.012,
+          "ParameterValue": 0.3,
           "ExpressionGUID": "5B327864-44C6EEE9-150F3787-00563AF3"
         },
         {
@@ -28,6 +28,24 @@
           },
           "ParameterValue": 1.0,
           "ExpressionGUID": "9438DF01-432A2E29-2EB49B8E-3D18364A"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Detail Normal Tiling",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "42B0FB57-499018B8-0EE8219F-39AA3D5C"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "DetailNormal Power",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "13128B30-4D051077-8FBFB3A8-3FD38AEA"
         },
         {
           "ParameterInfo": {
@@ -85,6 +103,24 @@
         },
         {
           "ParameterInfo": {
+            "Name": "Metallic Constant Add",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "F0ED5D53-4600CF56-2B5580B3-2A83B5FD"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Roughness Constant Multiply",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.8,
+          "ExpressionGUID": "794CA99D-4515A91D-82FAAAB6-3769E4A5"
+        },
+        {
+          "ParameterInfo": {
             "Name": "RefractionDepthBias",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
@@ -123,6 +159,21 @@
             "Hex": "00FF00"
           },
           "ExpressionGUID": "7F30F180-47613DD3-9E63B084-AC8E1645"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "VB Multiply Colour?",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.5,
+            "G": 0.473408,
+            "B": 0.337286,
+            "A": 0.0,
+            "Hex": "BCB79D"
+          },
+          "ExpressionGUID": "E4CF98EA-4E9FA613-E7BD5181-5399CA40"
         }
       ],
       "TextureParameterValues": [
@@ -145,8 +196,8 @@
             "Index": -1
           },
           "ParameterValue": {
-            "ObjectName": "Texture2D'WoodGrainDetail02N'",
-            "ObjectPath": "Anvil/Content/Textures/Props/WoodGrainDetail02N.0"
+            "ObjectName": "Texture2D'WoodGrainDetail04N'",
+            "ObjectPath": "Anvil/Content/Textures/Props/WoodGrainDetail04N.0"
           },
           "ExpressionGUID": "F47E79A7-4077141C-6718A79F-05AC0832"
         },
@@ -157,8 +208,8 @@
             "Index": -1
           },
           "ParameterValue": {
-            "ObjectName": "Texture2D'MediumBoatPropsM'",
-            "ObjectPath": "Anvil/Content/Textures/Vehicles/MediumBoatPropsM.0"
+            "ObjectName": "Texture2D'PlanksNewM'",
+            "ObjectPath": "Anvil/Content/Textures/Props/PlanksNewM.0"
           },
           "ExpressionGUID": "494FD19F-472F885F-A7E24E99-BD6F3CAB"
         },
@@ -228,10 +279,7 @@
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": {
-            "ObjectName": "Texture2D'PlanksOldA2_A'",
-            "ObjectPath": "Anvil/Content/Textures/Props/PlanksOldA2_A.0"
-          },
+          "ParameterValue": null,
           "ExpressionGUID": "BB6F852D-436274E3-A46C8A83-E964250D"
         },
         {
@@ -258,6 +306,16 @@
           "TextureName": "PlanksNewA_A"
         },
         {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "PlanksNewA_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "PlanksNewM"
+        },
+        {
           "SamplingScale": 2.0,
           "UVChannelIndex": 0,
           "TextureName": "RainDropMap"
@@ -278,9 +336,9 @@
           "TextureName": "Snow_N"
         },
         {
-          "SamplingScale": 12.0,
+          "SamplingScale": 6.0,
           "UVChannelIndex": 0,
-          "TextureName": "WoodGrainDetail02N"
+          "TextureName": "WoodGrainDetail04N"
         }
       ]
     },

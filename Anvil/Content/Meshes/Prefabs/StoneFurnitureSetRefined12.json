@@ -76,7 +76,10 @@
     "Name": "Scene_GEN_VARIABLE",
     "Outer": "StoneFurnitureSetRefined12_C",
     "Class": "UScriptClass'SceneComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mobility": "EComponentMobility::Stationary"
+    }
   },
   {
     "Type": "SCS_Node",
@@ -209,6 +212,10 @@
         "ObjectPath": "Anvil/Content/Meshes/Props/Town/StoneFurnitureSets/StoneFurnitureBenchRefined04.2"
       },
       "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
       "RelativeLocation": {
         "X": -4.997467,
         "Y": 104.840866,
@@ -218,7 +225,8 @@
         "Pitch": 8.021422E-14,
         "Yaw": 1.8238847,
         "Roll": 4.061581E-14
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -233,6 +241,10 @@
         "ObjectPath": "Anvil/Content/Meshes/Props/Town/StoneFurnitureSets/StoneFurnitureBenchRefined03.2"
       },
       "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
       "RelativeLocation": {
         "X": 5.4167523,
         "Y": -120.4548,
@@ -242,7 +254,8 @@
         "Pitch": 8.322691E-14,
         "Yaw": -5.0,
         "Roll": 3.8068984E-14
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {

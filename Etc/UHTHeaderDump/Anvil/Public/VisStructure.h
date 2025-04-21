@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBuildSiteCategory.h"
 #include "EBuildSiteVisibility.h"
+#include "GeneratedScorchEffectInfo.h"
 #include "VisActor.h"
 #include "VisStructure.generated.h"
 
@@ -37,6 +38,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EBuildSiteVisibility BuildSiteVisibility;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint32 SupportedVisualComponents;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UUpgradeDataComponent* UpgradeDataComponent;
     
@@ -67,6 +71,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UNiagaraSystem*> ScorchEffectAssets;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FGeneratedScorchEffectInfo> GeneratedScorchEffecftInfos;
     
 public:
     AVisStructure(const FObjectInitializer& ObjectInitializer);

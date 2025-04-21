@@ -27,7 +27,6 @@ enum class EActionButtonType : uint8 {
     ClaimFamilyArea,
     StartPowerMill,
     StopPowerMill,
-    ClaimFamilyInventory,
     PledgeToTown,
     ReinforceStructure,
     FamilyRequestToJoin,
@@ -39,5 +38,8 @@ enum class EActionButtonType : uint8 {
     Downvote,
     Downvoted,
     EditSignPost,
+    RentStorehouse,
+    ReleaseStorehouse,
+    ExtendStorehouse,
 };
 

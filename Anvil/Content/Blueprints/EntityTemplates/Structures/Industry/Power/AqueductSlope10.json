@@ -11,27 +11,27 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__AqueductSlope10_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.12"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__AqueductSlope10_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.7"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__AqueductSlope10_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.9"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__AqueductSlope10_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.11"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__AqueductSlope10_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.5"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__AqueductSlope10_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.6"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__AqueductSlope10_C:BoxCollisionProxyComponent_0'",
@@ -39,11 +39,11 @@
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__AqueductSlope10_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.4"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__AqueductSlope10_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.10"
       },
       "CodeNameString": "AqueductSlope10",
       "CodeName": 129644336,
@@ -52,7 +52,11 @@
       "Components": [
         {
           "ObjectName": "PowerUnitProxyComponent'Default__AqueductSlope10_C:PowerUnitProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.8"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__AqueductSlope10_C:BoxCollisionProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Industry/Power/AqueductSlope10.3"
         }
       ],
       "VisActorClass": {
@@ -101,6 +105,27 @@
     "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_1",
+    "Outer": "Default__AqueductSlope10_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1500.0
+      },
+      "Extents": {
+        "X": 150.00105,
+        "Y": 600.001,
+        "Z": 500.001
+      },
+      "CollisionMask": 2,
+      "bVaultable": false
+    }
+  },
+  {
     "Type": "DecayProxyComponent",
     "Name": "DecayProxyComponent_0",
     "Outer": "Default__AqueductSlope10_C",
@@ -111,7 +136,7 @@
     },
     "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "DecayTimeHours": 72.0
+      "DecayTimeHours": 96.0
     }
   },
   {

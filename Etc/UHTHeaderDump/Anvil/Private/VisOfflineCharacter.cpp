@@ -18,8 +18,8 @@ AVisOfflineCharacter::AVisOfflineCharacter(const FObjectInitializer& ObjectIniti
     this->HealthDataComponent = CreateDefaultSubobject<UHealthDataComponent>(TEXT("HealthDataComponent"));
     this->TeamDataComponent = CreateDefaultSubobject<UTeamDataComponent>(TEXT("TeamDataComponent"));
     this->ArmourDataComponent = CreateDefaultSubobject<UArmorDataComponent>(TEXT("ArmourDataComponent"));
-    this->Head->SetupAttachment(Mesh);
     this->Mesh->SetupAttachment(RootComponent);
+    this->Head->SetupAttachment(Mesh);
 }
 
 

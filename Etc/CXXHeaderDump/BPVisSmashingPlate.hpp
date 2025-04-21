@@ -3,9 +3,9 @@
 
 class ABPVisSmashingPlate_C : public AVisHitConverterStructure
 {
-    class UBPVisFamilyMeshComponent_C* BPVisFamilyMeshComponent;                      // 0x05B0 (size: 0x8)
-    class UVisStaticMeshComponent* WoodChoppingStationMesh;                           // 0x05B8 (size: 0x8)
+    class UBPVisFamilyMeshComponent_C* BPVisFamilyMeshComponent;                      // 0x05C8 (size: 0x8)
+    class UVisStaticMeshComponent* WoodChoppingStationMesh;                           // 0x05D0 (size: 0x8)
 
-}; // Size: 0x5C0
+}; // Size: 0x5D8
 
 #endif

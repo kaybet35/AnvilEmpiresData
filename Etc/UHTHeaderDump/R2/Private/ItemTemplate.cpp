@@ -55,7 +55,6 @@ UItemTemplate::UItemTemplate() {
     this->DamageRadius = 0.00f;
     this->VariableDamageMaxModifier = 1.25f;
     this->VariableDamageMinModifier = 0.75f;
-    this->GuardMeterReductionMultiplier = 1.00f;
     this->ShieldDurabilityLossMultiplier = 1.00f;
     this->ArmourDamageMultiplier = 1.00f;
     this->SecondaryArmourDamageMultiplier = 1.00f;

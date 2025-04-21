@@ -2,14 +2,25 @@
 
 UFactionSelectScreen::UFactionSelectScreen() {
     this->FactionAranicButton = NULL;
+    this->AranicAtCapacityText = NULL;
     this->FactionMirrishButton = NULL;
+    this->MirrishAtCapacityText = NULL;
     this->FactionNovanButton = NULL;
+    this->NovanAtCapacityText = NULL;
     this->DeleteProfileButton = NULL;
     this->DownloadingThrobber = NULL;
     this->ServerBrowserCheckBox = NULL;
     this->ServerBrowserHorizontalBox = NULL;
     this->EditorSpawnCheckBox = NULL;
     this->EditorSpawnHorizontalBox = NULL;
+    this->FactionSelectSwitcher = NULL;
+    this->FactionLockedSwitcher = NULL;
+    this->FactionLockedAranicButton = NULL;
+    this->FactionLockedMirrishButton = NULL;
+    this->FactionLockedNovanButton = NULL;
+}
+
+void UFactionSelectScreen::OnSelectedFactionButtonClicked() {
 }
 
 void UFactionSelectScreen::OnFactionNovanButtonClicked() {
@@ -24,15 +35,7 @@ void UFactionSelectScreen::OnFactionAranicButtonClicked() {
 void UFactionSelectScreen::OnDeleteProfileButtonClicked() {
 }
 
-bool UFactionSelectScreen::IsFactionNovanButtonEnabled() {
-    return false;
-}
-
-bool UFactionSelectScreen::IsFactionMirrishButtonEnabled() {
-    return false;
-}
-
-bool UFactionSelectScreen::IsFactionAranicButtonEnabled() {
+bool UFactionSelectScreen::IsSelectedFactionButtonEnabled() {
     return false;
 }
 

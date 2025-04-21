@@ -1,0 +1,80 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "MountedMace_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "MountedMace_C'Default__MountedMace_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/MountedMace.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "MountedMace_C",
+    "Name": "Default__MountedMace_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/MountedMace.MountedMace_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CodeNameString": "MountedMace",
+      "CodeName": -1347550697,
+      "ItemTags": [
+        "EAnvilItemTag::PrimaryTool",
+        "EAnvilItemTag::NotAllowedInMarket",
+        "EAnvilItemTag::Tool"
+      ],
+      "ItemPayloadType": "EAnvilItemPayloadType::Quality",
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "ItemHitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectMaceImpact_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectMaceImpact.0"
+      },
+      "DamageOffset": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": -50.0
+      },
+      "FireOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -50.0
+      },
+      "bStaggersWielder": true,
+      "DamageType": "EAnvilDamageType::Slashing",
+      "bDoesNotArmWithHeavyItem": true,
+      "RequiredStance": "EAnvilCharacterStance::OnHorse",
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 0.4,
+        "Duration": 1.1,
+        "RotationSpeedModifier": 4.0,
+        "StaminaCost": 10.0
+      },
+      "RangedActivity": {
+        "bRepeatable": false
+      },
+      "bAllowCameraPan": false,
+      "Damage": 35,
+      "DurabilityLossPerUse": 2.0,
+      "DamageRadius": 125.0,
+      "AimMovementSpeedModifier": 0.45,
+      "AimRotationSpeedModifier": 4.0
+    }
+  }
+]

@@ -3,11 +3,11 @@
 
 class ABpVisPlayer_C : public AVisPlayer
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0860 (size: 0x8)
-    class UCameraComponent* Camera;                                                   // 0x0868 (size: 0x8)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0868 (size: 0x8)
+    class UCameraComponent* Camera;                                                   // 0x0870 (size: 0x8)
 
     void BP_UpdateNightShroudMaterials();
     void ExecuteUbergraph_BpVisPlayer(int32 EntryPoint);
-}; // Size: 0x870
+}; // Size: 0x878
 
 #endif

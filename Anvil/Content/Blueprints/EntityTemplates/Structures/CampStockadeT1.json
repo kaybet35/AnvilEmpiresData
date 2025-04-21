@@ -21,7 +21,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "CampStockadeT1_C'Default__CampStockadeT1_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.2"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.3"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -42,6 +42,26 @@
     }
   },
   {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_1",
+    "Outer": "Default__CampStockadeT1_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Position": {
+        "X": 8.838943,
+        "Y": 0.0,
+        "Z": 30.0
+      },
+      "Extents": {
+        "X": 175.5244,
+        "Y": 92.87697,
+        "Z": 109.13719
+      },
+      "CollisionMask": 1048576
+    }
+  },
+  {
     "Type": "CampStockadeT1_C",
     "Name": "Default__CampStockadeT1_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.CampStockadeT1_C'",
@@ -53,31 +73,31 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__CampStockadeT1_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__CampStockadeT1_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.7"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__CampStockadeT1_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__CampStockadeT1_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__CampStockadeT1_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.5"
       },
       "MeshCollisionComp": {
         "ObjectName": "MeshCollisionProxyComponent'Default__CampStockadeT1_C:MeshCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.8"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__CampStockadeT1_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.6"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__CampStockadeT1_C:BoxCollisionProxyComponent_0'",
@@ -85,18 +105,22 @@
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__CampStockadeT1_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.4"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__CampStockadeT1_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.11"
       },
       "CodeNameString": "CampStockadeT1",
       "CodeName": 195837626,
       "Components": [
         {
           "ObjectName": "PassiveDamageProxyComponent'Default__CampStockadeT1_C:PassiveDamageProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.9"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__CampStockadeT1_C:BoxCollisionProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/CampStockadeT1.2"
         }
       ],
       "VisActorClass": {
@@ -181,16 +205,6 @@
     "Class": "UScriptClass'PassiveDamageProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "Position": {
-        "X": 8.838943,
-        "Y": -0.957962,
-        "Z": 30.0
-      },
-      "Extents": {
-        "X": 175.5244,
-        "Y": 92.87697,
-        "Z": 109.13719
-      },
       "Damage": 20.0,
       "Frequency": 0.5,
       "DamageType": "EAnvilDamageType::Piercing"

@@ -40,7 +40,7 @@
     "Type": "BPBasalt07_C",
     "Name": "Default__BPBasalt07_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/Environment/BPBasalt07.BPBasalt07_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPBasalt07_C:ArrowComponent'",
@@ -106,10 +106,15 @@
         "ObjectName": "StaticMesh'rock_03'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/Cliffs/rock_03.2"
       },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPBasalt07_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/Environment/BPBasalt07.0"
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   }
 ]

@@ -27,24 +27,6 @@
         "ObjectName": "MovieScene'Donkey_Anim_run450:MovieScene_0'",
         "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.3"
       },
-      "BindingReferences": {
-        "BindingIdToReferences": [
-          {
-            "Key": "40238B75-490210FE-1FE9F198-F8023905",
-            "Value": {
-              "References": [
-                {
-                  "ExternalObjectPath": {
-                    "AssetPathName": "/Game/Maps/AnimMap.AnimMap",
-                    "SubPathString": "PersistentLevel.SkeletalMeshActor_1"
-                  },
-                  "ObjectPath": ""
-                }
-              ]
-            }
-          }
-        ]
-      },
       "AssetUserData": [
         {
           "ObjectName": "LevelSequenceAnimSequenceLink'Donkey_Anim_run450:LevelSequenceAnimSequenceLink_0'",
@@ -53,9 +35,9 @@
       ],
       "CompiledData": {
         "ObjectName": "MovieSceneCompiledData'Donkey_Anim_run450:CompiledData'",
-        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.10"
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.12"
       },
-      "Signature": "9B219101-4C59772C-474F18A9-907483A8"
+      "Signature": "9614E79F-4AECA976-1536F0B9-EEBD3EFF"
     }
   },
   {
@@ -91,22 +73,47 @@
     "Class": "UScriptClass'MovieScene'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "Possessables": [
+      "Spawnables": [
         {
+          "SpawnTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
           "Tags": [],
-          "Guid": "40238B75-490210FE-1FE9F198-F8023905",
+          "bContinuouslyRespawn": false,
+          "bNetAddressableName": false,
+          "bEvaluateTracksWhenNotSpawned": false,
+          "Guid": "6831C924-4BDB3673-B87DA498-07952C35",
           "Name": "Donkey_CTRLrig",
-          "ParentGuid": "00000000-00000000-00000000-00000000",
-          "SpawnableObjectBindingID": {
-            "Guid": "00000000-00000000-00000000-00000000",
-            "SequenceID": 0,
-            "ResolveParentIndex": -1
-          }
+          "ObjectTemplate": {
+            "ObjectName": "SkeletalMeshActor'Donkey_Anim_run450:MovieScene_0.SkeletalMeshActor_0'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.18"
+          },
+          "ChildPossessables": [],
+          "Ownership": "ESpawnOwnership::InnerSequence",
+          "LevelName": "None"
         }
       ],
       "ObjectBindings": [
         {
-          "ObjectGuid": "40238B75-490210FE-1FE9F198-F8023905",
+          "ObjectGuid": "6831C924-4BDB3673-B87DA498-07952C35",
           "BindingName": "Donkey_CTRLrig",
           "Tracks": [
             {
@@ -115,11 +122,15 @@
             },
             {
               "ObjectName": "MovieSceneSkeletalAnimationTrack'Donkey_Anim_run450:MovieScene_0.MovieSceneSkeletalAnimationTrack_0'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.13"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.15"
             },
             {
               "ObjectName": "MovieSceneControlRigParameterTrack'Donkey_Anim_run450:MovieScene_0.MovieSceneControlRigParameterTrack_0'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.12"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.14"
+            },
+            {
+              "ObjectName": "MovieSceneSpawnTrack'Donkey_Anim_run450:MovieScene_0.MovieSceneSpawnTrack_0'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.17"
             }
           ]
         }
@@ -146,7 +157,7 @@
       "DisplayRate": {
         "Numerator": 30
       },
-      "Signature": "47ABFAD6-45999A68-9F9B218E-6D12A688"
+      "Signature": "22658512-4F0F6309-5C3AE9BC-8DEF1648"
     }
   },
   {
@@ -324,7 +335,7 @@
           "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.4"
         }
       ],
-      "EvaluationFieldGuid": "9B3A415A-4B1CD756-930C7EA5-8D44EA5C",
+      "EvaluationFieldGuid": "64B32129-4BF301B7-61C14494-64807B8A",
       "EvaluationField": {
         "Entries": [
           {
@@ -354,7 +365,7 @@
           }
         ]
       },
-      "Signature": "9B3A415A-4B1CD756-930C7EA5-8D44EA5C"
+      "Signature": "64B32129-4BF301B7-61C14494-64807B8A"
     }
   },
   {
@@ -386,6 +397,20 @@
     "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneSpawnSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneSpawnSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
     "Type": "MovieSceneCompiledData",
     "Name": "CompiledData",
     "Outer": "Donkey_Anim_run450",
@@ -399,12 +424,12 @@
               "Value": 0
             },
             "Value": {
-              "ObjectBindingID": "40238B75-490210FE-1FE9F198-F8023905",
+              "ObjectBindingID": "6831C924-4BDB3673-B87DA498-07952C35",
               "EvaluationPriority": 1000,
               "EvaluationMethod": "EEvaluationMethod::Static",
               "SourceTrack": {
                 "ObjectName": "MovieSceneSkeletalAnimationTrack'Donkey_Anim_run450:MovieScene_0.MovieSceneSkeletalAnimationTrack_0'",
-                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.13"
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.15"
               },
               "ChildTemplates": [],
               "TrackTemplate": {
@@ -422,12 +447,12 @@
               "Value": 1
             },
             "Value": {
-              "ObjectBindingID": "40238B75-490210FE-1FE9F198-F8023905",
+              "ObjectBindingID": "6831C924-4BDB3673-B87DA498-07952C35",
               "EvaluationPriority": 1000,
               "EvaluationMethod": "EEvaluationMethod::Static",
               "SourceTrack": {
                 "ObjectName": "MovieSceneControlRigParameterTrack'Donkey_Anim_run450:MovieScene_0.MovieSceneControlRigParameterTrack_0'",
-                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.12"
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.14"
               },
               "ChildTemplates": [
                 {
@@ -24768,7 +24793,7 @@
                     "CompletionMode": "EMovieSceneCompletionMode::RestoreState",
                     "SourceSectionPtr": {
                       "ObjectName": "MovieSceneControlRigParameterSection'Donkey_Anim_run450:MovieScene_0.MovieSceneControlRigParameterTrack_0.MovieSceneControlRigParameterSection_0'",
-                      "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.11"
+                      "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.13"
                     }
                   }
                 }
@@ -24790,13 +24815,13 @@
           },
           "TrackSignatureToTrackIdentifier": [
             {
-              "Key": "7983D87A-4EDBEFFF-6B0C7C89-553EA8B8",
+              "Key": "4A69DAFC-4DDA25EB-7599C4B2-2A749401",
               "Value": {
                 "Value": 0
               }
             },
             {
-              "Key": "8F0B5D8D-4CDF64C5-DD8187AB-1B587F19",
+              "Key": "218D45B4-4100F533-0CFAC6A7-75AABF49",
               "Value": {
                 "Value": 1
               }
@@ -24811,13 +24836,17 @@
               "Entries": [
                 {
                   "StartIndex": 0,
-                  "Size": 1,
-                  "Capacity": 1
+                  "Size": 2,
+                  "Capacity": 2
                 }
               ],
               "Items": [
                 {
                   "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
                   "MetaDataIndex": -1
                 }
               ]
@@ -24866,11 +24895,24 @@
               "EntityId": 0
             },
             "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneSpawnSection'Donkey_Anim_run450:MovieScene_0.MovieSceneSpawnTrack_0.MovieSceneSpawnSection_0'",
+                "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.16"
+              },
+              "EntityId": 0
+            },
+            "SharedMetaDataIndex": 1
           }
         ],
         "SharedMetaData": [
           {
-            "ObjectBindingID": "40238B75-490210FE-1FE9F198-F8023905"
+            "ObjectBindingID": "6831C924-4BDB3673-B87DA498-07952C35"
+          },
+          {
+            "ObjectBindingID": "6831C924-4BDB3673-B87DA498-07952C35"
           }
         ]
       },
@@ -24950,7 +24992,7 @@
           }
         ]
       },
-      "CompiledSignature": "9B219101-4C59772C-474F18A9-907483A8",
+      "CompiledSignature": "9614E79F-4AECA976-1536F0B9-EEBD3EFF",
       "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
       "AccumulatedMask": {
         "bEvaluationTemplate": true,
@@ -49975,7 +50017,7 @@
       "BlendType": {
         "bIsValid": true
       },
-      "Signature": "F742807E-4A04349A-3C35748D-03E786D9"
+      "Signature": "43FB8E9D-43F5CA08-DB0E50A2-88EB8C45"
     }
   },
   {
@@ -49992,17 +50034,17 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneControlRigParameterSection'Donkey_Anim_run450:MovieScene_0.MovieSceneControlRigParameterTrack_0.MovieSceneControlRigParameterSection_0'",
-          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.11"
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.13"
         }
       ],
       "TrackName": "Donkey_CTRLrig",
-      "EvaluationFieldGuid": "8F0B5D8D-4CDF64C5-DD8187AB-1B587F19",
+      "EvaluationFieldGuid": "218D45B4-4100F533-0CFAC6A7-75AABF49",
       "EvaluationField": {
         "Entries": [
           {
             "Section": {
               "ObjectName": "MovieSceneControlRigParameterSection'Donkey_Anim_run450:MovieScene_0.MovieSceneControlRigParameterTrack_0.MovieSceneControlRigParameterSection_0'",
-              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.11"
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.13"
             },
             "Range": {
               "LowerBound": {
@@ -50026,7 +50068,7 @@
           }
         ]
       },
-      "Signature": "8F0B5D8D-4CDF64C5-DD8187AB-1B587F19"
+      "Signature": "218D45B4-4100F533-0CFAC6A7-75AABF49"
     }
   },
   {
@@ -50036,8 +50078,118 @@
     "Class": "UScriptClass'MovieSceneSkeletalAnimationTrack'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "EvaluationFieldGuid": "7983D87A-4EDBEFFF-6B0C7C89-553EA8B8",
-      "Signature": "7983D87A-4EDBEFFF-6B0C7C89-553EA8B8"
+      "EvaluationFieldGuid": "4A69DAFC-4DDA25EB-7599C4B2-2A749401",
+      "Signature": "4A69DAFC-4DDA25EB-7599C4B2-2A749401"
+    }
+  },
+  {
+    "Type": "MovieSceneSpawnSection",
+    "Name": "MovieSceneSpawnSection_0",
+    "Outer": "MovieSceneSpawnTrack_0",
+    "Class": "UScriptClass'MovieSceneSpawnSection'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'Donkey_Anim_run450:MovieScene_0.MovieSceneSpawnTrack_0.MovieSceneSpawnSection_0.EaseInFunction'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.10"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'Donkey_Anim_run450:MovieScene_0.MovieSceneSpawnTrack_0.MovieSceneSpawnSection_0.EaseOutFunction'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.11"
+        }
+      },
+      "Signature": "EE7439D7-48F8BE5B-2FB698B0-8DDEE277"
+    }
+  },
+  {
+    "Type": "MovieSceneSpawnTrack",
+    "Name": "MovieSceneSpawnTrack_0",
+    "Outer": "MovieScene_0",
+    "Class": "UScriptClass'MovieSceneSpawnTrack'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneSpawnSection'Donkey_Anim_run450:MovieScene_0.MovieSceneSpawnTrack_0.MovieSceneSpawnSection_0'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.16"
+        }
+      ],
+      "ObjectGuid": "6831C924-4BDB3673-B87DA498-07952C35",
+      "EvaluationFieldGuid": "D7978E29-49DAA63E-A0E58292-044591F3",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneSpawnSection'Donkey_Anim_run450:MovieScene_0.MovieSceneSpawnTrack_0.MovieSceneSpawnSection_0'",
+              "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.16"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "D7978E29-49DAA63E-A0E58292-044591F3"
+    }
+  },
+  {
+    "Type": "SkeletalMeshActor",
+    "Name": "SkeletalMeshActor_0",
+    "Outer": "MovieScene_0",
+    "Class": "UScriptClass'SkeletalMeshActor'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkeletalMeshComponent": {
+        "ObjectName": "SkeletalMeshComponent'Donkey_Anim_run450:MovieScene_0.SkeletalMeshActor_0.SkeletalMeshComponent0'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.19"
+      },
+      "RootComponent": {
+        "ObjectName": "SkeletalMeshComponent'Donkey_Anim_run450:MovieScene_0.SkeletalMeshActor_0.SkeletalMeshComponent0'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Donkey/Donkey_Anim_run450.19"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMeshComponent0",
+    "Outer": "SkeletalMeshActor_0",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AnimationMode": "EAnimationMode::AnimationCustomMode",
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Donkey_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Donkey_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Donkey_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Donkey_SK.0"
+      },
+      "RelativeLocation": {
+        "X": -0.47355548,
+        "Y": -717.36554,
+        "Z": -0.49997205
+      },
+      "PrimaryComponentTick": {
+        "EndTickGroup": "ETickingGroup::TG_PostPhysics"
+      }
     }
   }
 ]

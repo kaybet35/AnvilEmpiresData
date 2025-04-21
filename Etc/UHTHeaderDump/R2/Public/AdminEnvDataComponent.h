@@ -27,6 +27,9 @@ public:
     bool bDebugHud;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bShowLocateCoords;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FStructureStats> StructureStatsList;
     
     UAdminEnvDataComponent(const FObjectInitializer& ObjectInitializer);

@@ -139,6 +139,7 @@ FBuildAreaInfo = {}
 ---@field bBuildableNearEnemies boolean
 ---@field bBuildableInWildernessWithoutPledge boolean
 ---@field LimitTouchingGroupCount boolean
+---@field bAllowCrossingHomesteadAreaBorder boolean
 ---@field RequiredAgeSeconds float
 ---@field NearbyPlayersRequired int32
 ---@field TierPrerequisite uint8
@@ -183,6 +184,15 @@ FCentralMarketplaceOrderItem = {}
 ---@field SaleListings TArray<FCentralMarketplaceListing>
 ---@field OrderListings TArray<FCentralMarketplaceListing>
 FCentralMarketplaceUserData = {}
+
+
+
+---@class FClientChatMessage
+---@field TeamId uint8
+---@field SenderId int64
+---@field SenderName FString
+---@field Text FString
+FClientChatMessage = {}
 
 
 
@@ -841,6 +851,7 @@ UAIStimulusProxyComponent = {}
 ---@field bShowStructureStats boolean
 ---@field bShowWeatherStats boolean
 ---@field bDebugHud boolean
+---@field bShowLocateCoords boolean
 ---@field StructureStatsList TArray<FStructureStats>
 UAdminEnvDataComponent = {}
 
@@ -1245,6 +1256,7 @@ UDataComponent = {}
 ---@class UDecayDataComponent : UDataComponent
 ---@field bDecaying boolean
 ---@field bDecayingDueToNotEnclosed boolean
+---@field bDecayingDueToNoWater boolean
 ---@field SecondsUntilFullDecay float
 UDecayDataComponent = {}
 
@@ -1374,10 +1386,6 @@ UFamilyCenterProxyComponent = {}
 
 
 
----@class UFamilyInventoryProxyComponent : UProxyComponent
-UFamilyInventoryProxyComponent = {}
-
-
 ---@class UFamilyListProxyComponent : UProxyComponent
 UFamilyListProxyComponent = {}
 
@@ -1466,6 +1474,7 @@ UGrainMillDataComponent = {}
 ---@field CoarsenessDriftSpeed float
 ---@field CoarsenessEfficiencyImpact FR2FloatRange
 ---@field CoarsenessQualityMapRange FR2FloatRange
+---@field PlayerCrankPower float
 ---@field MinActivationPower float
 UGrainMillProxyComponent = {}
 
@@ -1524,7 +1533,6 @@ UHeatingProxyComponent = {}
 
 
 ---@class UHitConverterDataComponent : UDataComponent
----@field CurrentSelectedOutputIndex uint8
 ---@field OutputList TArray<FHitConverterOutput>
 ---@field HitCounter float
 UHitConverterDataComponent = {}
@@ -1590,6 +1598,7 @@ UImpactSurfaceProxyComponent = {}
 ---@field LifespanWhenEmpty float
 ---@field bAllowWithdrawal boolean
 ---@field bAllowSubmission boolean
+---@field bIsPublicInventory boolean
 UInventoryProxyComponent = {}
 
 
@@ -1660,7 +1669,6 @@ UInventoryProxyComponent = {}
 ---@field DamageRadius float
 ---@field VariableDamageMaxModifier float
 ---@field VariableDamageMinModifier float
----@field GuardMeterReductionMultiplier float
 ---@field ShieldDurabilityLossMultiplier float
 ---@field ArmourDamageMultiplier float
 ---@field SecondaryArmourDamageMultiplier float
@@ -1836,9 +1844,6 @@ UPackingProxyComponent = {}
 
 
 ---@class UPassiveDamageProxyComponent : UProxyComponent
----@field Position FVector
----@field Rotation FRotator
----@field Extents FVector
 ---@field Damage float
 ---@field Frequency float
 ---@field DamageType EAnvilDamageType
@@ -1934,6 +1939,17 @@ UPlayerInputProxyComponent = {}
 
 
 
+---@class UPlayerMountDataComponent : UDataComponent
+---@field CurrentMountedEntity FEntityHandle
+---@field CurrentVehicleSeat FCompHandleData
+UPlayerMountDataComponent = {}
+
+
+
+---@class UPlayerMountProxyComponent : UProxyComponent
+UPlayerMountProxyComponent = {}
+
+
 ---@class UPlayerSpawnerDataComponent : UDataComponent
 ---@field Type EAnvilSpawnType
 ---@field Faction EAnvilFactionId
@@ -2022,6 +2038,7 @@ UPowerUnitProxyComponent = {}
 ---@field DamageAmount int32
 ---@field DamageType EAnvilDamageType
 ---@field SplashDamageRadius float
+---@field StabilityDamage float
 ---@field Radius float
 ---@field HeadingTolerance float
 ---@field NozzleYawDelta float
@@ -2032,6 +2049,7 @@ UPowerUnitProxyComponent = {}
 ---@field DislodgeRate float
 ---@field Lifetime float
 ---@field RandomRadius float
+---@field bForceKillPlayers boolean
 UProjectileMovementProxyComponent = {}
 
 
@@ -2137,6 +2155,7 @@ UResourceDataComponent = {}
 ---@field DroppedSecondaryResourceEntity TSubclassOf<UEntityTemplate>
 ---@field HuskEntity TSubclassOf<UEntityTemplate>
 ---@field bSnapHuskEntityToGround boolean
+---@field bNotifyPlayerIfNoSilverDropped boolean
 ---@field SilverDropMultiplier float
 ---@field DestructionEffect TSubclassOf<UEntityTemplate>
 ---@field LootTable TArray<FLootTableItem>
@@ -2253,7 +2272,6 @@ USignPostProxyComponent = {}
 ---@field GuardStrength uint8
 ---@field TeamId uint8
 ---@field CurrentMovementMode EAnvilMovementMode
----@field GuardMeter float
 ---@field Stability float
 ---@field StabilityTarget float
 ---@field StabilityGuardThreshold float
@@ -2269,10 +2287,7 @@ USignPostProxyComponent = {}
 ---@field SecondaryHeldUnderlyingCodeName int32
 ---@field UnarmedPrimaryHeldItemCodeName int32
 ---@field UnarmedSecondaryHeldItemCodeName int32
----@field CurrentMountedEntity FEntityHandle
 ---@field CurrentMovementBase FEntityHandle
----@field CurrentMountedSeatOffset FVector
----@field CurrentMountedSeatRotation float
 ---@field PlayerName FString
 ---@field PlayerUniqueID int64
 ---@field NobleVoteId int64
@@ -2311,10 +2326,6 @@ USimPlayerDataComponent = {}
 ---@field GuardAngleToleranceYawAlt float
 ---@field GuardAngleTolerancePitchMinAlt float
 ---@field GuardAngleTolerancePitchMaxAlt float
----@field GuardMeterRegenCD float
----@field GuardMeterEmptyRegenCD float
----@field GuardMeterRegenSpeed float
----@field GuardMeterDecaySpeed float
 ---@field StaggerDuration float
 ---@field StaggerAmount float
 ---@field StabilityRegenCD float
@@ -2409,6 +2420,27 @@ UStaminaProxyComponent = {}
 ---@class UStaticTorchProxyComponent : UProxyComponent
 ---@field NightShroudRadius float
 UStaticTorchProxyComponent = {}
+
+
+
+---@class UStorehouseDataComponent : UDataComponent
+---@field PublicInventory FCompHandleData
+---@field ViewerRentExpireTime int32
+---@field ViewerCanRent boolean
+---@field ViewerCanRelease boolean
+---@field ViewerInventory FCompHandleData
+UStorehouseDataComponent = {}
+
+
+
+---@class UStorehouseProxyComponent : UProxyComponent
+---@field NumSlotsPerInv uint8
+---@field StackSize int32
+---@field RentPrice int32
+---@field RentDuration int32
+---@field ExtendPrice int32
+---@field ExtendDuration int32
+UStorehouseProxyComponent = {}
 
 
 
@@ -2542,6 +2574,10 @@ UTownHallDataComponent = {}
 ---@field OriginalOwnerTeamId uint8
 UTownHallProxyComponent = {}
 
+
+
+---@class UTownSiteProxyComponent : UProxyComponent
+UTownSiteProxyComponent = {}
 
 
 ---@class UTrapDataComponent : UDataComponent

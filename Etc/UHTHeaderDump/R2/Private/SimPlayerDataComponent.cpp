@@ -4,7 +4,6 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->GuardStrength = 0;
     this->TeamId = 0;
     this->CurrentMovementMode = EAnvilMovementMode::Walking;
-    this->GuardMeter = 0.00f;
     this->Stability = 0.00f;
     this->StabilityTarget = 0.00f;
     this->StabilityGuardThreshold = 0.00f;
@@ -19,7 +18,6 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->SecondaryHeldUnderlyingCodeName = 0;
     this->UnarmedPrimaryHeldItemCodeName = 0;
     this->UnarmedSecondaryHeldItemCodeName = 0;
-    this->CurrentMountedSeatRotation = 0.00f;
     this->PlayerUniqueID = 0;
     this->NobleVoteId = 0;
     this->TrappedTimer = 0.00f;

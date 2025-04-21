@@ -149,7 +149,10 @@
     "Name": "Scene_GEN_VARIABLE",
     "Outer": "StoneCarving05_C",
     "Class": "UScriptClass'SceneComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mobility": "EComponentMobility::Stationary"
+    }
   },
   {
     "Type": "SceneComponent",
@@ -162,7 +165,8 @@
         "Pitch": 0.0,
         "Yaw": -180.0,
         "Roll": 0.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -360,12 +364,12 @@
         "ObjectName": "StaticMesh'Relic_Headstone04'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/Relic_Headstone04.2"
       },
-      "bUseDefaultCollision": true,
       "bGenerateOverlapEvents": false,
       "BodyInstance": {
         "ObjectType": "ECollisionChannel::ECC_WorldStatic",
         "CollisionProfileName": "BlockAll"
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {

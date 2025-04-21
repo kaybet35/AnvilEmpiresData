@@ -121,7 +121,10 @@
     "Name": "Scene_GEN_VARIABLE",
     "Outer": "TownStairsWood01_C",
     "Class": "UScriptClass'SceneComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mobility": "EComponentMobility::Stationary"
+    }
   },
   {
     "Type": "SceneComponent",
@@ -139,7 +142,8 @@
         "Pitch": 0.0,
         "Yaw": -180.0,
         "Roll": 0.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -337,12 +341,12 @@
         "ObjectName": "StaticMesh'TownStairsWood_250_01'",
         "ObjectPath": "Anvil/Content/Meshes/Props/Town/TownStairsWood_250_01.2"
       },
-      "bUseDefaultCollision": true,
       "bGenerateOverlapEvents": false,
       "BodyInstance": {
         "ObjectType": "ECollisionChannel::ECC_WorldStatic",
         "CollisionProfileName": "BlockAll"
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -356,7 +360,6 @@
         "ObjectName": "StaticMesh'TownLandingWood_250_01'",
         "ObjectPath": "Anvil/Content/Meshes/Props/Town/TownLandingWood_250_01.2"
       },
-      "bUseDefaultCollision": true,
       "bGenerateOverlapEvents": false,
       "BodyInstance": {
         "ObjectType": "ECollisionChannel::ECC_WorldStatic",
@@ -366,7 +369,8 @@
         "X": 18.19587,
         "Y": 5.052763E-13,
         "Z": 4.165163E-07
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {

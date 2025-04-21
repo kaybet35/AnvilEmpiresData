@@ -22,19 +22,21 @@ enum class EActionButtonType {
     ClaimFamilyArea = 20,
     StartPowerMill = 21,
     StopPowerMill = 22,
-    ClaimFamilyInventory = 23,
-    PledgeToTown = 24,
-    ReinforceStructure = 25,
-    FamilyRequestToJoin = 26,
-    FamilyInviteToJoin = 27,
-    FamilyLock = 28,
-    FamilyUnlock = 29,
-    Upvote = 30,
-    Upvoted = 31,
-    Downvote = 32,
-    Downvoted = 33,
-    EditSignPost = 34,
-    EActionButtonType_MAX = 35,
+    PledgeToTown = 23,
+    ReinforceStructure = 24,
+    FamilyRequestToJoin = 25,
+    FamilyInviteToJoin = 26,
+    FamilyLock = 27,
+    FamilyUnlock = 28,
+    Upvote = 29,
+    Upvoted = 30,
+    Downvote = 31,
+    Downvoted = 32,
+    EditSignPost = 33,
+    RentStorehouse = 34,
+    ReleaseStorehouse = 35,
+    ExtendStorehouse = 36,
+    EActionButtonType_MAX = 37,
 };
 
 enum class EAlertType {
@@ -42,7 +44,8 @@ enum class EAlertType {
     QueueStatus = 1,
     Reinforcement = 2,
     ClearReinforcement = 3,
-    EAlertType_MAX = 4,
+    TimeUntilAgeEndAlert = 4,
+    EAlertType_MAX = 5,
 };
 
 enum class EAnvilScreenType {
@@ -120,7 +123,8 @@ enum class EClientConnectToServerResponseType {
     PromptToJoinAdminQueue = 5,
     VersionMismatch = 6,
     InvalidParams = 7,
-    EClientConnectToServerResponseType_MAX = 8,
+    InvalidAgePhaseToConnect = 8,
+    EClientConnectToServerResponseType_MAX = 9,
 };
 
 enum class EConnectionFailedReason {
@@ -131,7 +135,8 @@ enum class EConnectionFailedReason {
     R2ServerNotConnected = 4,
     AnvilServiceVersionMismatch = 5,
     AnvilServiceLoginInvalidParams = 6,
-    EConnectionFailedReason_MAX = 7,
+    AnvilServiceInvalidAgePhaseToConnect = 7,
+    EConnectionFailedReason_MAX = 8,
 };
 
 enum class EDeploymentPointTooltipType {
@@ -231,12 +236,12 @@ enum class EHUDWindowType {
     Packing = 20,
     Anvil = 21,
     FamilyAreaMarker = 22,
-    FamilyHouse = 23,
-    Lore = 24,
-    CentralMarket = 25,
-    Combustion = 26,
-    SignPost = 27,
-    GrainMill = 28,
+    Lore = 23,
+    CentralMarket = 24,
+    Combustion = 25,
+    SignPost = 26,
+    GrainMill = 27,
+    Storehouse = 28,
     Count = 29,
     EHUDWindowType_MAX = 30,
 };
@@ -342,7 +347,9 @@ enum class ESimpleTooltip {
     Reinforced = 12,
     Avatars = 13,
     SubmitAvatar = 14,
-    ESimpleTooltip_MAX = 15,
+    StorehousePublicButton = 15,
+    StorehousePrivateButton = 16,
+    ESimpleTooltip_MAX = 17,
 };
 
 enum class ETemperatureChangeType {
@@ -371,6 +378,15 @@ enum class EVisItemCategory {
     ResourceProcessed = 6,
     NumTypes = 7,
     EVisItemCategory_MAX = 8,
+};
+
+enum class EVisualComponentFlags {
+    Populated = 0,
+    Refining = 1,
+    Active1 = 2,
+    Active2 = 4,
+    Collapsed = 8,
+    EVisualComponentFlags_MAX = 9,
 };
 
 enum class EVoiceChannelType {

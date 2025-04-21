@@ -12,6 +12,7 @@ UProjectileMovementProxyComponent::UProjectileMovementProxyComponent() {
     this->DamageAmount = 0;
     this->DamageType = EAnvilDamageType::Default;
     this->SplashDamageRadius = 0.00f;
+    this->StabilityDamage = 0.00f;
     this->Radius = 0.00f;
     this->HeadingTolerance = 0.00f;
     this->NozzleYawDelta = 45.00f;
@@ -22,6 +23,7 @@ UProjectileMovementProxyComponent::UProjectileMovementProxyComponent() {
     this->DislodgeRate = 0.00f;
     this->Lifetime = 3.50f;
     this->RandomRadius = 0.00f;
+    this->bForceKillPlayers = false;
 }
 
 

@@ -31,6 +31,9 @@ public:
     FR2FloatRange CoarsenessQualityMapRange;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float PlayerCrankPower;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinActivationPower;
     
     UGrainMillProxyComponent();

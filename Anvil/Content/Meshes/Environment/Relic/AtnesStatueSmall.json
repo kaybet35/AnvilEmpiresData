@@ -13,7 +13,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'AtnesStatueSmall_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.5"
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.10"
       }
     },
     "SuperStruct": {
@@ -23,6 +23,17 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
+        "Name": "Decal4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "Platform",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -30,6 +41,28 @@
         "PropertyClass": {
           "ObjectName": "Class'VisStaticMeshComponent'",
           "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Decal3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LoreAtnesPlinth",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
         }
       },
       {
@@ -60,11 +93,70 @@
     }
   },
   {
+    "Type": "DecalComponent",
+    "Name": "Decal3_GEN_VARIABLE",
+    "Outer": "AtnesStatueSmall_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'DecalDirtStrong'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/DecalDirtStrong.0"
+      },
+      "DecalSize": {
+        "X": 32.0,
+        "Y": 64.0,
+        "Z": 64.0
+      },
+      "RelativeLocation": {
+        "X": 6.413904E-07,
+        "Y": -5.684342E-14,
+        "Z": 27.573433
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal4_GEN_VARIABLE",
+    "Outer": "AtnesStatueSmall_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'DecalDirtStrong'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/DecalDirtStrong.0"
+      },
+      "DecalSize": {
+        "X": 32.0,
+        "Y": 128.0,
+        "Z": 128.0
+      },
+      "RelativeLocation": {
+        "X": 6.4138817E-07,
+        "Y": 1.2503983E-06,
+        "Z": -21.723974
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 90.0
+      }
+    }
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "AtnesStatueSmall_C",
     "Class": "UScriptClass'SceneComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mobility": "EComponentMobility::Stationary"
+    }
   },
   {
     "Type": "SCS_Node",
@@ -79,12 +171,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'AtnesStatueSmall_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.2"
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.4"
       },
       "ChildNodes": [
         {
-          "ObjectName": "SCS_Node'AtnesStatueSmall_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.4"
+          "ObjectName": "SCS_Node'AtnesStatueSmall_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.7"
         }
       ],
       "VariableGuid": "9B74F3BE-44DBBC20-7BB7179E-D9DCCAEE",
@@ -104,10 +196,81 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'AtnesStatueSmall_C:Platform_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.6"
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.12"
       },
       "VariableGuid": "0213FDFC-4D23A3D9-DC86459B-8C1CE214",
       "InternalVariableName": "Platform"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'AtnesStatueSmall_C:LoreAtnesPlinth_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.11"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'AtnesStatueSmall_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.8"
+        },
+        {
+          "ObjectName": "SCS_Node'AtnesStatueSmall_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.6"
+        },
+        {
+          "ObjectName": "SCS_Node'AtnesStatueSmall_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.9"
+        }
+      ],
+      "VariableGuid": "4AC419AE-42317A10-A7D80BBA-D34C93D8",
+      "InternalVariableName": "LoreAtnesPlinth"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'AtnesStatueSmall_C:Decal3_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.2"
+      },
+      "VariableGuid": "F44966EA-41A8AABB-D90C3789-01AD06BF",
+      "InternalVariableName": "Decal3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'AtnesStatueSmall_C:Decal4_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.3"
+      },
+      "VariableGuid": "D1F03533-49529721-921FC19D-57835693",
+      "InternalVariableName": "Decal4"
     }
   },
   {
@@ -120,23 +283,61 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'AtnesStatueSmall_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.3"
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.5"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'AtnesStatueSmall_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.3"
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.5"
+        },
+        {
+          "ObjectName": "SCS_Node'AtnesStatueSmall_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.7"
+        },
+        {
+          "ObjectName": "SCS_Node'AtnesStatueSmall_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.8"
         },
         {
           "ObjectName": "SCS_Node'AtnesStatueSmall_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.4"
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.6"
+        },
+        {
+          "ObjectName": "SCS_Node'AtnesStatueSmall_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.9"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'AtnesStatueSmall_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.3"
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/AtnesStatueSmall.5"
       }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "LoreAtnesPlinth_GEN_VARIABLE",
+    "Outer": "AtnesStatueSmall_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'LorePlinthSmall'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/LorePlinthSmall.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -1.7379928E-06,
+        "Z": -11.702501
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -148,13 +349,18 @@
     "Properties": {
       "VisMeshProfile": "EVisMeshProfile::StructureCollision",
       "StaticMesh": {
-        "ObjectName": "StaticMesh'LoreAtnesStatueSmall'",
-        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/LoreAtnesStatueSmall.2"
+        "ObjectName": "StaticMesh'LoreAtnesStatueSmall01'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/LoreAtnesStatueSmall01.2"
       },
       "OverrideMaterials": [
         null
       ],
-      "bReceivesDecals": true,
+      "RelativeLocation": {
+        "X": 6.3149E-08,
+        "Y": 0.0,
+        "Z": 47.782158
+      },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "Structure",
         "Collision"

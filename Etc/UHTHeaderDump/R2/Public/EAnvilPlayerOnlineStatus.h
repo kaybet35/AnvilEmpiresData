@@ -7,6 +7,6 @@ enum class EAnvilPlayerOnlineStatus : uint8 {
     Online,
     Offline,
     Deployed,
-    Num,
+    NumTypes,
 };
 

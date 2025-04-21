@@ -40,7 +40,7 @@
     "Type": "BPBasalt08_C",
     "Name": "Default__BPBasalt08_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/Environment/BPBasalt08.BPBasalt08_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPBasalt08_C:ArrowComponent'",
@@ -106,10 +106,15 @@
         "ObjectName": "StaticMesh'split_cliff_01'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/Cliffs/split_cliff_01.2"
       },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPBasalt08_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/Environment/BPBasalt08.0"
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   }
 ]

@@ -18,7 +18,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_93.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.32"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.48"
       },
       "bIsVariable": false
     }
@@ -29,6 +29,13 @@
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPFactionSelectScreen.BPFactionSelectScreen_C'",
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "FactionAtCapacityColour": {
+        "R": 0.552941,
+        "G": 0.078431,
+        "B": 0.078431,
+        "A": 0.797,
+        "Hex": "CCC44F4F"
+      },
       "bHasScriptImplementedTick": false,
       "bHasScriptImplementedPaint": false
     }
@@ -115,7 +122,265 @@
       },
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_148.CanvasPanelSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.15"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.17"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "FactionLockedAranicButton",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Button'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 403.0,
+            "Y": 565.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'AranicFactionIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/AranicFactionIcon.0"
+          }
+        },
+        "Hovered": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 403.0,
+            "Y": 565.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.6,
+              "G": 0.6,
+              "B": 0.6,
+              "A": 1.0,
+              "Hex": "CCCCCC"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'AranicFactionIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/AranicFactionIcon.0"
+          }
+        },
+        "Pressed": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 403.0,
+            "Y": 565.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.8,
+              "G": 0.8,
+              "B": 0.8,
+              "A": 0.33,
+              "Hex": "54E8E8E8"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'AranicFactionIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/AranicFactionIcon.0"
+          }
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 403.0,
+            "Y": 565.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.1,
+              "G": 0.1,
+              "B": 0.1,
+              "A": 1.0,
+              "Hex": "595959"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'AranicFactionIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/AranicFactionIcon.0"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox1.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.34"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "FactionLockedMirrishButton",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Button'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 403.0,
+            "Y": 565.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'MirrishFactionIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MirrishFactionIcon.0"
+          }
+        },
+        "Hovered": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 403.0,
+            "Y": 565.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.6,
+              "G": 0.6,
+              "B": 0.6,
+              "A": 1.0,
+              "Hex": "CCCCCC"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'MirrishFactionIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MirrishFactionIcon.0"
+          }
+        },
+        "Pressed": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 403.0,
+            "Y": 565.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.8,
+              "G": 0.8,
+              "B": 0.8,
+              "A": 1.0,
+              "Hex": "E8E8E8"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'MirrishFactionIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MirrishFactionIcon.0"
+          }
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 403.0,
+            "Y": 565.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.1,
+              "G": 0.1,
+              "B": 0.1,
+              "A": 1.0,
+              "Hex": "595959"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'MirrishFactionIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MirrishFactionIcon.0"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox2.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.37"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "FactionLockedNovanButton",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Button'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 403.0,
+            "Y": 565.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'NovanFactionIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/NovanFactionIcon.0"
+          }
+        },
+        "Hovered": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 403.0,
+            "Y": 565.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.6,
+              "G": 0.6,
+              "B": 0.6,
+              "A": 1.0,
+              "Hex": "CCCCCC"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'NovanFactionIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/NovanFactionIcon.0"
+          }
+        },
+        "Pressed": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 403.0,
+            "Y": 565.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.8,
+              "G": 0.8,
+              "B": 0.8,
+              "A": 1.0,
+              "Hex": "E8E8E8"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'NovanFactionIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/NovanFactionIcon.0"
+          }
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 403.0,
+            "Y": 565.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.1,
+              "G": 0.1,
+              "B": 0.1,
+              "A": 1.0,
+              "Hex": "595959"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'NovanFactionIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/NovanFactionIcon.0"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox3.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.40"
       }
     }
   },
@@ -201,7 +466,7 @@
       },
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_286.CanvasPanelSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.16"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.19"
       }
     }
   },
@@ -287,7 +552,7 @@
       },
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_411.CanvasPanelSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.17"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.21"
       }
     }
   },
@@ -301,27 +566,19 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.11"
-        },
-        {
-          "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_7'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.14"
-        },
-        {
-          "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
           "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.12"
         },
         {
-          "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_10'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.10"
+          "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_7'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.15"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_5'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.13"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.14"
         },
         {
-          "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.9"
+          "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.13"
         }
       ]
     }
@@ -336,12 +593,16 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_148.CanvasPanelSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.15"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.17"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_148.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.16"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.64"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.114"
       }
     }
   },
@@ -355,12 +616,16 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_286.CanvasPanelSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.16"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.19"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_286.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.18"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.69"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.119"
       }
     }
   },
@@ -374,81 +639,16 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_411.CanvasPanelSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.17"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.21"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_411.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.20"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.74"
-      }
-    }
-  },
-  {
-    "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_0",
-    "Outer": "CanvasPanel_0",
-    "Class": "UScriptClass'CanvasPanelSlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "LayoutData": {
-        "Offsets": {
-          "Top": 95.64855
-        },
-        "Anchors": {
-          "Minimum": {
-            "X": 0.5,
-            "Y": 0.0
-          },
-          "Maximum": {
-            "X": 0.5,
-            "Y": 0.0
-          }
-        },
-        "Alignment": {
-          "X": 0.5,
-          "Y": 1.0
-        }
-      },
-      "Parent": {
-        "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.5"
-      },
-      "Content": {
-        "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.FactionAranicAtCapacityText_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.50"
-      }
-    }
-  },
-  {
-    "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_10",
-    "Outer": "CanvasPanel_0",
-    "Class": "UScriptClass'CanvasPanelSlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "LayoutData": {
-        "Offsets": {
-          "Left": -30.0,
-          "Top": 379.45947
-        },
-        "Anchors": {
-          "Minimum": {
-            "X": 0.5,
-            "Y": 0.5
-          },
-          "Maximum": {
-            "X": 0.5,
-            "Y": 0.5
-          }
-        }
-      },
-      "Parent": {
-        "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.5"
-      },
-      "Content": {
-        "ObjectName": "Throbber'BPFactionSelectScreen_C:WidgetTree.DownloadingThrobber'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.57"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.124"
       }
     }
   },
@@ -473,45 +673,48 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.5"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.8"
       },
       "Content": {
         "ObjectName": "Image'BPFactionSelectScreen_C:WidgetTree.BlackBG'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.37"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.53"
       }
     }
   },
   {
     "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_4",
+    "Name": "CanvasPanelSlot_3",
     "Outer": "CanvasPanel_0",
     "Class": "UScriptClass'CanvasPanelSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "LayoutData": {
+        "Offsets": {
+          "Top": -54.274944
+        },
         "Anchors": {
           "Minimum": {
             "X": 0.5,
-            "Y": 0.0
+            "Y": 0.5
           },
           "Maximum": {
             "X": 0.5,
-            "Y": 0.0
+            "Y": 0.5
           }
         },
         "Alignment": {
           "X": 0.5,
-          "Y": 0.0
+          "Y": 0.5
         }
       },
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.5"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.8"
       },
       "Content": {
-        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.21"
+        "ObjectName": "WidgetSwitcher'BPFactionSelectScreen_C:WidgetTree.FactionSelectSwitcher'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.134"
       }
     }
   },
@@ -544,11 +747,11 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.5"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.8"
       },
       "Content": {
         "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_93'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.22"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.29"
       }
     }
   },
@@ -573,11 +776,44 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.5"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.8"
       },
       "Content": {
         "ObjectName": "ScaleBox'BPFactionSelectScreen_C:WidgetTree.ScaleBox_92'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.38"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.54"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_148",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_148'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.9"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.AranicAtCapacityText'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.72"
       }
     }
   },
@@ -597,11 +833,44 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_148'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.6"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.9"
       },
       "Content": {
         "ObjectName": "Button'BPFactionSelectScreen_C:WidgetTree.FactionAranicButton'",
         "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.2"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_286",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_286'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.10"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.MirrishAtCapacityText'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.77"
       }
     }
   },
@@ -621,11 +890,44 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_286'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.7"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.10"
       },
       "Content": {
         "ObjectName": "Button'BPFactionSelectScreen_C:WidgetTree.FactionMirrishButton'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.3"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_411",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_411'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.11"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.NovanAtCapacityText'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.79"
       }
     }
   },
@@ -645,11 +947,11 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_411'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.8"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.11"
       },
       "Content": {
         "ObjectName": "Button'BPFactionSelectScreen_C:WidgetTree.FactionNovanButton'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.4"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.7"
       }
     }
   },
@@ -667,7 +969,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.EditorSpawnHorizontalBox.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.25"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.32"
       }
     }
   },
@@ -685,7 +987,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.ServerBrowserHorizontalBox.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.35"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.51"
       }
     }
   },
@@ -699,61 +1001,132 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.EditorSpawnHorizontalBox.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.24"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.31"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.EditorSpawnHorizontalBox.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.25"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.32"
         }
       ],
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_93.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.31"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.47"
       }
     }
   },
   {
     "Type": "HorizontalBox",
-    "Name": "HorizontalBox_43",
+    "Name": "FactionAlreadySelectedBox1",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'HorizontalBox'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.26"
+          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox1.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.34"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43.HorizontalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.29"
+          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox1.HorizontalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.35"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.27"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43.HorizontalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.30"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43.HorizontalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.28"
+          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox1.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.33"
         }
       ],
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.12"
-      },
-      "RenderTransform": {
-        "Translation": {
-          "X": 0.0,
-          "Y": 50.0
+        "ObjectName": "WidgetSwitcherSlot'BPFactionSelectScreen_C:WidgetTree.FactionLockedSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.135"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "FactionAlreadySelectedBox2",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox2.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.37"
         },
-        "Scale": {
-          "X": 0.8,
-          "Y": 0.8
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox2.HorizontalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.38"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox2.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.36"
         }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'BPFactionSelectScreen_C:WidgetTree.FactionLockedSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.136"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "FactionAlreadySelectedBox3",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox3.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.40"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox3.HorizontalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.41"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox3.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.39"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'BPFactionSelectScreen_C:WidgetTree.FactionLockedSwitcher.WidgetSwitcherSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.137"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "FactionNotSelectedBoxInner",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.42"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner.HorizontalBoxSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.46"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.43"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner.HorizontalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.45"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.44"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotLockedBox.VerticalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.102"
       }
     }
   },
@@ -767,20 +1140,20 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_93.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.32"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.48"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_93.HorizontalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.33"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.49"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_93.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.31"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.47"
         }
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.13"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.14"
       }
     }
   },
@@ -794,16 +1167,16 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.ServerBrowserHorizontalBox.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.34"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.50"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.ServerBrowserHorizontalBox.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.35"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.51"
         }
       ],
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_93.HorizontalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.33"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.49"
       }
     }
   },
@@ -816,11 +1189,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.EditorSpawnHorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.20"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.24"
       },
       "Content": {
         "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.EditorSpawnText'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.49"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.74"
       }
     }
   },
@@ -836,96 +1209,255 @@
       },
       "Parent": {
         "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.EditorSpawnHorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.20"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.24"
       },
       "Content": {
         "ObjectName": "CheckBox'BPFactionSelectScreen_C:WidgetTree.EditorSpawnCheckBox'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.18"
-      }
-    }
-  },
-  {
-    "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_0",
-    "Outer": "HorizontalBox_43",
-    "Class": "UScriptClass'HorizontalBoxSlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "Parent": {
-        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.21"
-      },
-      "Content": {
-        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.58"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.22"
       }
     }
   },
   {
     "Type": "HorizontalBoxSlot",
     "Name": "HorizontalBoxSlot_1",
-    "Outer": "HorizontalBox_43",
+    "Outer": "FactionAlreadySelectedBox1",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
-        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.21"
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox1'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.25"
       },
       "Content": {
-        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.59"
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.95"
       }
     }
   },
   {
     "Type": "HorizontalBoxSlot",
     "Name": "HorizontalBoxSlot_2",
-    "Outer": "HorizontalBox_43",
+    "Outer": "FactionAlreadySelectedBox1",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Parent": {
-        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.21"
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox1'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.25"
       },
       "Content": {
-        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.60"
+        "ObjectName": "Button'BPFactionSelectScreen_C:WidgetTree.FactionLockedAranicButton'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.3"
       }
     }
   },
   {
     "Type": "HorizontalBoxSlot",
     "Name": "HorizontalBoxSlot_3",
-    "Outer": "HorizontalBox_43",
+    "Outer": "FactionAlreadySelectedBox1",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Parent": {
-        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.21"
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox1'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.25"
       },
       "Content": {
         "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_59'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.46"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.66"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "FactionAlreadySelectedBox2",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox2'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.26"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.99"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "FactionAlreadySelectedBox2",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox2'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.26"
+      },
+      "Content": {
+        "ObjectName": "Button'BPFactionSelectScreen_C:WidgetTree.FactionLockedMirrishButton'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.4"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "FactionAlreadySelectedBox2",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox2'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.26"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_7'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.68"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "FactionAlreadySelectedBox3",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.27"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_4'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.100"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "FactionAlreadySelectedBox3",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.27"
+      },
+      "Content": {
+        "ObjectName": "Button'BPFactionSelectScreen_C:WidgetTree.FactionLockedNovanButton'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.5"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "FactionAlreadySelectedBox3",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.27"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_9'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.70"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "FactionNotSelectedBoxInner",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.28"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.96"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "FactionNotSelectedBoxInner",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.28"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.97"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "FactionNotSelectedBoxInner",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.28"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.98"
       }
     }
   },
   {
     "Type": "HorizontalBoxSlot",
     "Name": "HorizontalBoxSlot_4",
-    "Outer": "HorizontalBox_43",
+    "Outer": "FactionNotSelectedBoxInner",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Parent": {
-        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.21"
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.28"
       },
       "Content": {
         "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_99'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.47"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.71"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Outer": "FactionNotSelectedBoxInner",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.28"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_10'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.58"
       }
     }
   },
@@ -942,11 +1474,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_93'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.22"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.29"
       },
       "Content": {
         "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.EditorSpawnHorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.20"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.24"
       }
     }
   },
@@ -959,7 +1491,7 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_93'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.22"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.29"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPFactionSelectScreen_C:WidgetTree.DeleteProfileButton'",
@@ -980,11 +1512,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_93'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.22"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.29"
       },
       "Content": {
         "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.ServerBrowserHorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.23"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.30"
       }
     }
   },
@@ -997,11 +1529,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.ServerBrowserHorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.23"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.30"
       },
       "Content": {
         "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.TextBlock_134'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.55"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.89"
       }
     }
   },
@@ -1017,11 +1549,11 @@
       },
       "Parent": {
         "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.ServerBrowserHorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.23"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.30"
       },
       "Content": {
         "ObjectName": "CheckBox'BPFactionSelectScreen_C:WidgetTree.ServerBrowserCheckBox'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.19"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.23"
       }
     }
   },
@@ -1044,7 +1576,7 @@
       },
       "Slot": {
         "ObjectName": "ScaleBoxSlot'BPFactionSelectScreen_C:WidgetTree.ScaleBox_92.ScaleBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.39"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.55"
       }
     }
   },
@@ -1070,7 +1602,7 @@
       },
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.11"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.12"
       }
     }
   },
@@ -1084,12 +1616,12 @@
       "Slots": [
         {
           "ObjectName": "ScaleBoxSlot'BPFactionSelectScreen_C:WidgetTree.ScaleBox_92.ScaleBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.39"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.55"
         }
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_7'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.14"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.15"
       }
     }
   },
@@ -1102,11 +1634,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "ScaleBox'BPFactionSelectScreen_C:WidgetTree.ScaleBox_92'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.38"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.54"
       },
       "Content": {
         "ObjectName": "Image'BPFactionSelectScreen_C:WidgetTree.BackgroundImage'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.36"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.52"
       }
     }
   },
@@ -1123,7 +1655,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.67"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.117"
       }
     }
   },
@@ -1140,7 +1672,24 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.71"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.121"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_10",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "X": 50.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner.HorizontalBoxSlot_5'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.46"
       }
     }
   },
@@ -1157,7 +1706,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.62"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.112"
       }
     }
   },
@@ -1174,7 +1723,41 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.63"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.113"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_234",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 15.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.LoadingBox.VerticalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.107"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_289",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 50.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotLockedBox.VerticalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.104"
       }
     }
   },
@@ -1191,7 +1774,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.68"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.118"
       }
     }
   },
@@ -1208,7 +1791,24 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.73"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.123"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_5",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 10.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_3.VerticalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.127"
       }
     }
   },
@@ -1224,8 +1824,76 @@
         "Y": 1.0
       },
       "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43.HorizontalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.29"
+        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox1.HorizontalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.35"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_6",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 10.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox.VerticalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.109"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_7",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "X": 50.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox2.HorizontalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.38"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_8",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 10.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_4.VerticalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.130"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_9",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "X": 50.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox3.HorizontalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.41"
       }
     }
   },
@@ -1241,8 +1909,36 @@
         "Y": 1.0
       },
       "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43.HorizontalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.30"
+        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner.HorizontalBoxSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.45"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "AranicAtCapacityText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "E236D118437991A431D07BA146E7E860",
+        "SourceString": "AT CAPACITY",
+        "LocalizedString": "AT CAPACITY"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 32
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_148.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.16"
       }
     }
   },
@@ -1280,7 +1976,7 @@
       "WrapTextAt": 480.31653,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_6'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.65"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.115"
       }
     }
   },
@@ -1307,13 +2003,13 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.EditorSpawnHorizontalBox.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.24"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.31"
       }
     }
   },
   {
     "Type": "TextBlock",
-    "Name": "FactionAranicAtCapacityText_1",
+    "Name": "InstructionsText",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'TextBlock'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
@@ -1330,10 +2026,70 @@
       },
       "Justification": "ETextJustify::Center",
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.9"
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotLockedBox.VerticalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.103"
       },
       "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "LoadingText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "EC1BB566444AEB83BACD4B993A5ABB3E",
+        "SourceString": "LOADING",
+        "LocalizedString": "LOADING"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 32
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.LoadingBox.VerticalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.106"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "MirrishAtCapacityText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "E236D118437991A431D07BA146E7E860",
+        "SourceString": "AT CAPACITY",
+        "LocalizedString": "AT CAPACITY"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 32
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_286.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.18"
+      }
     }
   },
   {
@@ -1346,8 +2102,8 @@
       "Text": {
         "Namespace": "",
         "Key": "4DF6AB834B77D1432F2F03B60EF66376",
-        "SourceString": "The bones of our forefathers shaped the lands of Calligo; pray to your gods and hope they hear you, for if you dare set foot on our soil, every stone, every tree, and even the storms will come to our aid. We are the Mirrish of Calligo, blood of the ancients.\r\n\r\n\r\n ",
-        "LocalizedString": "The bones of our forefathers shaped the lands of Calligo; pray to your gods and hope they hear you, for if you dare set foot on our soil, every stone, every tree, and even the storms will come to our aid. We are the Mirrish of Calligo, blood of the ancients.\r\n\r\n\r\n "
+        "SourceString": "The bones of our forefathers shaped the lands of Calligo; pray to your gods and hope they hear you, for if you dare set foot on our soil, every stone, every tree, and even the storms will come to our aid. We are the Mirrish of Calligo, blood of the ancients.",
+        "LocalizedString": "The bones of our forefathers shaped the lands of Calligo; pray to your gods and hope they hear you, for if you dare set foot on our soil, every stone, every tree, and even the storms will come to our aid. We are the Mirrish of Calligo, blood of the ancients."
       },
       "ColorAndOpacity": {
         "SpecifiedColor": {
@@ -1370,7 +2126,35 @@
       "WrapTextAt": 480.31653,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.70"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.120"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "NovanAtCapacityText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "E236D118437991A431D07BA146E7E860",
+        "SourceString": "AT CAPACITY",
+        "LocalizedString": "AT CAPACITY"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 32
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_411.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.20"
       }
     }
   },
@@ -1408,7 +2192,217 @@
       "WrapTextAt": 480.31653,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.75"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.125"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "SelectedFactionDescriptionText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "A618E3D541B71332C2A721BB041CBA57",
+        "SourceString": "Forged in the frigid southern waters of the Wayward Sea, we’ve tempered our souls within its shining jewels, our Aranic isles. Still, the gods demand new lands with rich soil fed with the lifeblood of our enemies. So, north we sailed. We will claim this new land, this Calligo, in their honour.\r\n\r\n",
+        "LocalizedString": "Forged in the frigid southern waters of the Wayward Sea, we’ve tempered our souls within its shining jewels, our Aranic isles. Still, the gods demand new lands with rich soil fed with the lifeblood of our enemies. So, north we sailed. We will claim this new land, this Calligo, in their honour.\r\n\r\n"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.864583,
+          "G": 0.818549,
+          "B": 0.761013,
+          "A": 1.0,
+          "Hex": "F0EAE2"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'IMFellDWPica-Regular_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/IMFellDWPica-Regular_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 20
+      },
+      "Justification": "ETextJustify::Center",
+      "WrapTextAt": 480.31653,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox.VerticalBoxSlot_6'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.110"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "SelectedFactionDescriptionText_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "370E13E94044B04281267B9273C8E84E",
+        "SourceString": "The bones of our forefathers shaped the lands of Calligo; pray to your gods and hope they hear you, for if you dare set foot on our soil, every stone, every tree, and even the storms will come to our aid. We are the Mirrish of Calligo, blood of the ancients.",
+        "LocalizedString": "The bones of our forefathers shaped the lands of Calligo; pray to your gods and hope they hear you, for if you dare set foot on our soil, every stone, every tree, and even the storms will come to our aid. We are the Mirrish of Calligo, blood of the ancients."
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.864583,
+          "G": 0.818549,
+          "B": 0.761013,
+          "A": 1.0,
+          "Hex": "F0EAE2"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'IMFellDWPica-Regular_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/IMFellDWPica-Regular_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 20
+      },
+      "Justification": "ETextJustify::Center",
+      "WrapTextAt": 480.31653,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_3.VerticalBoxSlot_6'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.128"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "SelectedFactionDescriptionText_2",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "97FA62B341E3FC15BE493DAAD2A9F99E",
+        "SourceString": "For a myriad, the vast Novan kingdom has endured. With our cities in ruin, our empire routed, we now look to survival. Calligo is a sacred boon, a fertile, verdant land of potential. Do not linger, for we are the Remnant. Let us reclaim that which has been taken from us.",
+        "LocalizedString": "For a myriad, the vast Novan kingdom has endured. With our cities in ruin, our empire routed, we now look to survival. Calligo is a sacred boon, a fertile, verdant land of potential. Do not linger, for we are the Remnant. Let us reclaim that which has been taken from us."
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.864583,
+          "G": 0.818549,
+          "B": 0.761013,
+          "A": 1.0,
+          "Hex": "F0EAE2"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'IMFellDWPica-Regular_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/IMFellDWPica-Regular_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 20
+      },
+      "Justification": "ETextJustify::Center",
+      "WrapTextAt": 480.31653,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_4.VerticalBoxSlot_6'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.131"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "SelectedFactionNameText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "0FEF353B43B1DD927EAB12BA5A62809C",
+        "SourceString": "THE PAGANS",
+        "LocalizedString": "THE PAGANS"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'IMFellDWPica-Regular_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/IMFellDWPica-Regular_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 32
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox.VerticalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.108"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "SelectedFactionNameText_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "862AA06D489F0E6C524A2C9EF7D68BB8",
+        "SourceString": "THE ANCIENTS",
+        "LocalizedString": "THE ANCIENTS"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'IMFellDWPica-Regular_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/IMFellDWPica-Regular_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 32
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_3.VerticalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.126"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "SelectedFactionNameText_2",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "EFD14D6C4A39B52D146831A605FF49FD",
+        "SourceString": "THE REMNANT",
+        "LocalizedString": "THE REMNANT"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'IMFellDWPica-Regular_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/IMFellDWPica-Regular_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 32
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_4.VerticalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.129"
       }
     }
   },
@@ -1440,7 +2434,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.66"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.116"
       }
     }
   },
@@ -1472,7 +2466,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.72"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.122"
       }
     }
   },
@@ -1499,7 +2493,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.ServerBrowserHorizontalBox.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.34"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.50"
       }
     }
   },
@@ -1531,7 +2525,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.61"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.111"
       }
     }
   },
@@ -1542,9 +2536,119 @@
     "Class": "UScriptClass'Throbber'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "Image": {
+        "ImageSize": {
+          "X": 24.0,
+          "Y": 24.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'GuardBolsterFill'",
+          "ObjectPath": "Anvil/Content/Textures/UI/HUD/GuardBolsterFill.0"
+        }
+      },
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_10'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.10"
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.LoadingBox.VerticalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.105"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "FactionLockedBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionLockedBox.VerticalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.101"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'BPFactionSelectScreen_C:WidgetTree.FactionSelectSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.138"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "FactionNotLockedBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotLockedBox.VerticalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.103"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotLockedBox.VerticalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.104"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotLockedBox.VerticalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.102"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'BPFactionSelectScreen_C:WidgetTree.FactionSelectSwitcher.WidgetSwitcherSlot_7'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.140"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "LoadingBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.LoadingBox.VerticalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.106"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.LoadingBox.VerticalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.107"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.LoadingBox.VerticalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.105"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'BPFactionSelectScreen_C:WidgetTree.FactionSelectSwitcher.WidgetSwitcherSlot_6'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.139"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox.VerticalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.108"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox.VerticalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.109"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox.VerticalBoxSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.110"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox1.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.33"
       }
     }
   },
@@ -1558,28 +2662,28 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.64"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.114"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.62"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.112"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.61"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.111"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.63"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.113"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_6'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.65"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.115"
         }
       ],
       "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.26"
+        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.42"
       }
     }
   },
@@ -1593,28 +2697,28 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.69"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.119"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.67"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.117"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.66"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.116"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.68"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.118"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_5'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.70"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.120"
         }
       ],
       "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.27"
+        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.43"
       }
     }
   },
@@ -1628,28 +2732,260 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.74"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.124"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.71"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.121"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.72"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.122"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.73"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.123"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_5'",
-          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.75"
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.125"
         }
       ],
       "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.HorizontalBox_43.HorizontalBoxSlot_2'",
+        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.44"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_3",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_3.VerticalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.126"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_3.VerticalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.127"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_3.VerticalBoxSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.128"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox2.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.36"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_4",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_4.VerticalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.129"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_4.VerticalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.130"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.VerticalBox_4.VerticalBoxSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.131"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox3.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.39"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "FactionLockedBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.FactionLockedBox'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.92"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'BPFactionSelectScreen_C:WidgetTree.FactionLockedSwitcher'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.133"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "FactionNotLockedBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.FactionNotLockedBox'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.93"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionNotSelectedBoxInner'",
         "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.28"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "FactionNotLockedBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.FactionNotLockedBox'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.93"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.InstructionsText'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.75"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Outer": "FactionNotLockedBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.FactionNotLockedBox'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.93"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_289'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.62"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "LoadingBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.LoadingBox'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.94"
+      },
+      "Content": {
+        "ObjectName": "Throbber'BPFactionSelectScreen_C:WidgetTree.DownloadingThrobber'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.91"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "LoadingBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.LoadingBox'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.94"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.LoadingText'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.76"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Outer": "LoadingBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.LoadingBox'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.94"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_234'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.61"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.95"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.SelectedFactionNameText'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.84"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "VerticalBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.95"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_6'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.67"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_6",
+    "Outer": "VerticalBox",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.95"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.SelectedFactionDescriptionText'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.81"
       }
     }
   },
@@ -1663,11 +2999,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.58"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.96"
       },
       "Content": {
         "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.TextBlock_82'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.56"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.90"
       }
     }
   },
@@ -1680,11 +3016,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.58"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.96"
       },
       "Content": {
         "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_150'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.42"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.59"
       }
     }
   },
@@ -1697,11 +3033,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.58"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.96"
       },
       "Content": {
         "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_2'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.43"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.60"
       }
     }
   },
@@ -1714,11 +3050,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.58"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.96"
       },
       "Content": {
         "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_148'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.6"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.9"
       }
     }
   },
@@ -1733,14 +3069,14 @@
         "SizeRule": "ESlateSizeRule::Fill"
       },
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
-      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.58"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.96"
       },
       "Content": {
         "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.AranicFactionDescription'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.48"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.73"
       }
     }
   },
@@ -1754,11 +3090,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.59"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.97"
       },
       "Content": {
         "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.TextBlock'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.53"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.87"
       }
     }
   },
@@ -1771,11 +3107,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.59"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.97"
       },
       "Content": {
         "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.40"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.56"
       }
     }
   },
@@ -1788,11 +3124,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.59"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.97"
       },
       "Content": {
         "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_3'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.44"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.63"
       }
     }
   },
@@ -1805,11 +3141,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.59"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.97"
       },
       "Content": {
         "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_286'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.7"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.10"
       }
     }
   },
@@ -1824,14 +3160,14 @@
         "SizeRule": "ESlateSizeRule::Fill"
       },
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
-      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.59"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.97"
       },
       "Content": {
         "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.MirrishFactionText'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.51"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.78"
       }
     }
   },
@@ -1844,11 +3180,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.60"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.98"
       },
       "Content": {
         "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.41"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.57"
       }
     }
   },
@@ -1862,11 +3198,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.60"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.98"
       },
       "Content": {
         "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.TextBlock_1'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.54"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.88"
       }
     }
   },
@@ -1879,11 +3215,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.60"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.98"
       },
       "Content": {
         "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_4'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.45"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.64"
       }
     }
   },
@@ -1896,11 +3232,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.60"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.98"
       },
       "Content": {
         "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_411'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.8"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.11"
       }
     }
   },
@@ -1912,13 +3248,128 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_2'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.60"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.98"
       },
       "Content": {
         "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.NovanFactionText'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.52"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.80"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_3",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.99"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.SelectedFactionNameText_1'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.85"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "VerticalBox_3",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.99"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_5'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.65"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_6",
+    "Outer": "VerticalBox_3",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.99"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.SelectedFactionDescriptionText_1'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.82"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_4",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_4'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.100"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.SelectedFactionNameText_2'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.86"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "VerticalBox_4",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_4'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.100"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPFactionSelectScreen_C:WidgetTree.Spacer_8'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.69"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_6",
+    "Outer": "VerticalBox_4",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.VerticalBox_4'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.100"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPFactionSelectScreen_C:WidgetTree.SelectedFactionDescriptionText_2'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.83"
       }
     }
   },
@@ -1930,7 +3381,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPFactionSelectScreen_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.77"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.141"
       },
       "bClassRequiresNativeTick": true
     },
@@ -1963,7 +3414,7 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "FactionAranicAtCapacityText_1",
+        "Name": "InstructionsText",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
@@ -1989,6 +3440,168 @@
     }
   },
   {
+    "Type": "WidgetSwitcher",
+    "Name": "FactionLockedSwitcher",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'BPFactionSelectScreen_C:WidgetTree.FactionLockedSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.135"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'BPFactionSelectScreen_C:WidgetTree.FactionLockedSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.136"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'BPFactionSelectScreen_C:WidgetTree.FactionLockedSwitcher.WidgetSwitcherSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.137"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPFactionSelectScreen_C:WidgetTree.FactionLockedBox.VerticalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.101"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "FactionSelectSwitcher",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'BPFactionSelectScreen_C:WidgetTree.FactionSelectSwitcher.WidgetSwitcherSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.139"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'BPFactionSelectScreen_C:WidgetTree.FactionSelectSwitcher.WidgetSwitcherSlot_7'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.140"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'BPFactionSelectScreen_C:WidgetTree.FactionSelectSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.138"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.13"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.8,
+          "Y": 0.8
+        }
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Outer": "FactionLockedSwitcher",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'BPFactionSelectScreen_C:WidgetTree.FactionLockedSwitcher'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.133"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox1'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.25"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Outer": "FactionLockedSwitcher",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'BPFactionSelectScreen_C:WidgetTree.FactionLockedSwitcher'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.133"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox2'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.26"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_2",
+    "Outer": "FactionLockedSwitcher",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'BPFactionSelectScreen_C:WidgetTree.FactionLockedSwitcher'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.133"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPFactionSelectScreen_C:WidgetTree.FactionAlreadySelectedBox3'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.27"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Outer": "FactionSelectSwitcher",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'BPFactionSelectScreen_C:WidgetTree.FactionSelectSwitcher'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.134"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.FactionLockedBox'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.92"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_6",
+    "Outer": "FactionSelectSwitcher",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'BPFactionSelectScreen_C:WidgetTree.FactionSelectSwitcher'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.134"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.LoadingBox'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.94"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_7",
+    "Outer": "FactionSelectSwitcher",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'BPFactionSelectScreen_C:WidgetTree.FactionSelectSwitcher'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.134"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'BPFactionSelectScreen_C:WidgetTree.FactionNotLockedBox'",
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.93"
+      }
+    }
+  },
+  {
     "Type": "WidgetTree",
     "Name": "WidgetTree",
     "Outer": "BPFactionSelectScreen_C",
@@ -1997,7 +3610,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "CanvasPanel'BPFactionSelectScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.5"
+        "ObjectPath": "Anvil/Content/UI/BPFactionSelectScreen.8"
       }
     }
   }

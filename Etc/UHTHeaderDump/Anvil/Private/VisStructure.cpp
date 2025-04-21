@@ -17,6 +17,7 @@ AVisStructure::AVisStructure(const FObjectInitializer& ObjectInitializer) : Supe
     this->BuildSiteCategory = EBuildSiteCategory::General;
     this->BuildSiteOrder = 0;
     this->BuildSiteVisibility = EBuildSiteVisibility::AlwaysVisible;
+    this->SupportedVisualComponents = 0;
     this->UpgradeDataComponent = CreateDefaultSubobject<UUpgradeDataComponent>(TEXT("UpgradeDataComponent"));
     this->HealthDataComponent = CreateDefaultSubobject<UHealthDataComponent>(TEXT("HealthDataComponent"));
     this->TeamDataComponent = CreateDefaultSubobject<UTeamDataComponent>(TEXT("TeamDataComponent"));

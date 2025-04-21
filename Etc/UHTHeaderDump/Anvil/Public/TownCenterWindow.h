@@ -45,15 +45,6 @@ protected:
     UTextBlock* UpkeepTextBlock;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FText> TownNames1;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FText> TownNames2;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FText> TownNames3;
-    
     UTownCenterWindow();
 
 private:

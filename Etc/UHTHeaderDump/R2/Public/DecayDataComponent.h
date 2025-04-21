@@ -14,6 +14,9 @@ public:
     bool bDecayingDueToNotEnclosed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bDecayingDueToNoWater;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SecondsUntilFullDecay;
     
     UDecayDataComponent(const FObjectInitializer& ObjectInitializer);

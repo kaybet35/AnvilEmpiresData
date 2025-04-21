@@ -14,6 +14,7 @@ UResourceProxyComponent::UResourceProxyComponent() {
     this->DroppedSecondaryResourceEntity = NULL;
     this->HuskEntity = NULL;
     this->bSnapHuskEntityToGround = true;
+    this->bNotifyPlayerIfNoSilverDropped = false;
     this->SilverDropMultiplier = 0.00f;
     this->DestructionEffect = NULL;
 }

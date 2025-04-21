@@ -24,6 +24,7 @@ class UMaterialInstanceDynamic;
 class UMaterialParameterCollection;
 class UNiagaraComponent;
 class UPlayerInputDataComponent;
+class UPlayerMountDataComponent;
 class UPlayerStatusDataComponent;
 class UPointLightComponent;
 class UPostProcessComponent;
@@ -46,6 +47,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USimPlayerDataComponent* SimPlayerDataComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPlayerMountDataComponent* PlayerMountDataComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPlayerInputDataComponent* PlayerInputDataComponent;

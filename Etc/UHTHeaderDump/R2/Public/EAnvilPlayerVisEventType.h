@@ -14,6 +14,7 @@ enum class EAnvilPlayerVisEventType : uint8 {
     InviteToJoinFamily,
     CreateDebugMapPost,
     VictoryInfoUpdate,
+    AgeEndingMessage,
     UnderworldDebugInfoTargetSequence,
 };
 

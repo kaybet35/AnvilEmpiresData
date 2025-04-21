@@ -112,7 +112,7 @@
         },
         {
           "ObjectName": "ResourceProxyComponent'Default__Foal_C:ResourceProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.9"
         },
         {
           "ObjectName": "AnimalAIProxyComponent'Default__Foal_C:AnimalAIProxyComponent_0'",
@@ -133,6 +133,10 @@
         {
           "ObjectName": "EntityAttachableProxyComponent'Default__Foal_C:EntityAttachableProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.5"
+        },
+        {
+          "ObjectName": "LifetimeProxyComponent'Default__Foal_C:LifetimeProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Foal.8"
         }
       ],
       "VisActorClass": {
@@ -154,6 +158,17 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectPlayer.0"
       },
       "TargetType": "EAnvilDamageTargetType::Infantry"
+    }
+  },
+  {
+    "Type": "LifetimeProxyComponent",
+    "Name": "LifetimeProxyComponent_0",
+    "Outer": "Default__Foal_C",
+    "Class": "UScriptClass'LifetimeProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ResetIfObserved": true,
+      "LifeSpan": 240.0
     }
   },
   {

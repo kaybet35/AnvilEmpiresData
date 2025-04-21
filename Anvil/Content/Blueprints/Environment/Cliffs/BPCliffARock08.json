@@ -1,0 +1,123 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPCliffARock08_C",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPCliffARock08_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPCliffARock08_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/Cliffs/BPCliffARock08.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AnvilRockActor'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPCliffARock08_C'Default__BPCliffARock08_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/Environment/Cliffs/BPCliffARock08.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPCliffARock08_C",
+    "Name": "Default__BPCliffARock08_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/Environment/Cliffs/BPCliffARock08.BPCliffARock08_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPCliffARock08_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/Cliffs/BPCliffARock08.0"
+      },
+      "RockMeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BPCliffARock08_C:RockMeshComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/Cliffs/BPCliffARock08.6"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPCliffARock08_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/Cliffs/BPCliffARock08.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPCliffARock08_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPCliffARock08_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/Cliffs/BPCliffARock08.3"
+      },
+      "VariableGuid": "E3E09E61-48069849-3F67B896-EAA7991D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPCliffARock08_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPCliffARock08_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/Cliffs/BPCliffARock08.4"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "RockMeshComponent",
+    "Outer": "Default__BPCliffARock08_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'CliffA_8'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Cliffs/CliffA_8.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPCliffARock08_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/Cliffs/BPCliffARock08.0"
+      },
+      "Mobility": "EComponentMobility::Stationary"
+    }
+  }
+]

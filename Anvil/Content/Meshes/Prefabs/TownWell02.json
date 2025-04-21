@@ -177,14 +177,20 @@
     "Name": "Scene_GEN_VARIABLE",
     "Outer": "TownWell02_C",
     "Class": "UScriptClass'SceneComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mobility": "EComponentMobility::Stationary"
+    }
   },
   {
     "Type": "SceneComponent",
     "Name": "SharedRoot_GEN_VARIABLE",
     "Outer": "TownWell02_C",
     "Class": "UScriptClass'SceneComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mobility": "EComponentMobility::Stationary"
+    }
   },
   {
     "Type": "SCS_Node",
@@ -462,7 +468,6 @@
         "ObjectName": "StaticMesh'TownPlanks_01'",
         "ObjectPath": "Anvil/Content/Meshes/Props/Town/Planks/TownPlanks_01.2"
       },
-      "bUseDefaultCollision": true,
       "bGenerateOverlapEvents": false,
       "bReceivesDecals": false,
       "BodyInstance": {
@@ -478,7 +483,8 @@
         "X": 0.7,
         "Y": 0.7,
         "Z": 0.7
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -492,7 +498,6 @@
         "ObjectName": "StaticMesh'TownPlanks_02'",
         "ObjectPath": "Anvil/Content/Meshes/Props/Town/Planks/TownPlanks_02.2"
       },
-      "bUseDefaultCollision": true,
       "bGenerateOverlapEvents": false,
       "bReceivesDecals": false,
       "BodyInstance": {
@@ -508,7 +513,8 @@
         "X": 0.7,
         "Y": 0.7,
         "Z": 0.7
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -522,7 +528,6 @@
         "ObjectName": "StaticMesh'TownPlanks_07'",
         "ObjectPath": "Anvil/Content/Meshes/Props/Town/Planks/TownPlanks_07.2"
       },
-      "bUseDefaultCollision": true,
       "bGenerateOverlapEvents": false,
       "bReceivesDecals": false,
       "BodyInstance": {
@@ -538,7 +543,8 @@
         "X": 0.7,
         "Y": 0.7,
         "Z": 0.7
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -552,13 +558,13 @@
         "ObjectName": "StaticMesh'AncentWell01'",
         "ObjectPath": "Anvil/Content/Meshes/Props/AncentWell01.2"
       },
-      "bUseDefaultCollision": true,
       "bGenerateOverlapEvents": false,
       "bReceivesDecals": false,
       "BodyInstance": {
         "ObjectType": "ECollisionChannel::ECC_WorldStatic",
         "CollisionProfileName": "BlockAll"
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {

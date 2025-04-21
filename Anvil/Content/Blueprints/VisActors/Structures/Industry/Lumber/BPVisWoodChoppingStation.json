@@ -82,7 +82,7 @@
     "Type": "BPVisWoodChoppingStation_C",
     "Name": "Default__BPVisWoodChoppingStation_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Industry/Lumber/BPVisWoodChoppingStation.BPVisWoodChoppingStation_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "HitConverterDataComponent": {
         "ObjectName": "HitConverterDataComponent'Default__BPVisWoodChoppingStation_C:HitConverterDataComponent'",
@@ -194,15 +194,20 @@
           "Value": {
             "Meshes": [
               {
-                "ObjectName": "StaticMesh'ResourceStockpileProcessedWood'",
-                "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileProcessedWood.2"
+                "ObjectName": "StaticMesh'ProcessedChoppingSaw'",
+                "ObjectPath": "Anvil/Content/Meshes/Resources/ProcessedChoppingSaw.2"
               }
             ],
-            "MaterialOverrides": [],
+            "MaterialOverrides": [
+              {
+                "ObjectName": "MaterialInstanceConstant'WoodInterior'",
+                "ObjectPath": "Anvil/Content/Materials/Resources/WoodInterior.0"
+              }
+            ],
             "Offset": {
               "X": 0.0,
               "Y": 0.0,
-              "Z": 105.0
+              "Z": 85.0
             }
           }
         },
@@ -219,7 +224,7 @@
             "Offset": {
               "X": 0.0,
               "Y": 0.0,
-              "Z": 105.0
+              "Z": 85.0
             }
           }
         },
@@ -242,19 +247,22 @@
             ],
             "MaterialOverrides": [
               {
-                "ObjectName": "MaterialInstanceConstant'DeadTreeBark'",
-                "ObjectPath": "Anvil/Content/Materials/Resources/DeadTreeBark.0"
-              },
-              {
                 "ObjectName": "MaterialInstanceConstant'WoodEndHard'",
                 "ObjectPath": "Anvil/Content/Materials/Resources/WoodEndHard.0"
               },
-              null
+              {
+                "ObjectName": "MaterialInstanceConstant'WoodInteriorHard'",
+                "ObjectPath": "Anvil/Content/Materials/Resources/WoodInteriorHard.0"
+              },
+              {
+                "ObjectName": "MaterialInstanceConstant'DeadTreeBark'",
+                "ObjectPath": "Anvil/Content/Materials/Resources/DeadTreeBark.0"
+              }
             ],
             "Offset": {
               "X": 0.0,
               "Y": 0.0,
-              "Z": 105.0
+              "Z": 85.0
             }
           }
         },
@@ -263,15 +271,15 @@
           "Value": {
             "Meshes": [
               {
-                "ObjectName": "StaticMesh'ResourceStockpileProcessedWoodHard'",
-                "ObjectPath": "Anvil/Content/Meshes/Resources/ResourceStockpileProcessedWoodHard.2"
+                "ObjectName": "StaticMesh'ProcessedChoppingSaw'",
+                "ObjectPath": "Anvil/Content/Meshes/Resources/ProcessedChoppingSaw.2"
               }
             ],
             "MaterialOverrides": [],
             "Offset": {
               "X": 0.0,
               "Y": 0.0,
-              "Z": 105.0
+              "Z": 85.0
             }
           }
         }

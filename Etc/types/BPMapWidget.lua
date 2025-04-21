@@ -3,8 +3,8 @@
 ---@class UBPMapWidget_C : UMapWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field Background UImage
+---@field BPTimeSeasonWidget UBPTimeSeasonWidget_C
 ---@field Frame UImage
----@field ObjectiveHeaderText UTextBlock
 ---@field DynamicMaterialInstance UMaterialInstanceDynamic
 UBPMapWidget_C = {}
 

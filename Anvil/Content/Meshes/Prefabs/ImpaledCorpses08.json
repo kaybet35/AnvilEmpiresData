@@ -82,14 +82,20 @@
     "Name": "Scene_GEN_VARIABLE",
     "Outer": "ImpaledCorpses08_C",
     "Class": "UScriptClass'SceneComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mobility": "EComponentMobility::Stationary"
+    }
   },
   {
     "Type": "SceneComponent",
     "Name": "SharedRoot_GEN_VARIABLE",
     "Outer": "ImpaledCorpses08_C",
     "Class": "UScriptClass'SceneComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mobility": "EComponentMobility::Stationary"
+    }
   },
   {
     "Type": "SCS_Node",
@@ -223,7 +229,6 @@
         "ObjectName": "StaticMesh'CorpseImpaled05'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/CorpseImpaled05.2"
       },
-      "bUseDefaultCollision": true,
       "bGenerateOverlapEvents": false,
       "BodyInstance": {
         "ObjectType": "ECollisionChannel::ECC_WorldStatic",
@@ -233,7 +238,8 @@
         "X": 3.4920913E-07,
         "Y": 0.0,
         "Z": -11.445309
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   }
 ]

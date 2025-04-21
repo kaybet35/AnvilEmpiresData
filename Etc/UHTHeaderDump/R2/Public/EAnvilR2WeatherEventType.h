@@ -6,5 +6,6 @@ UENUM(BlueprintType)
 enum class EAnvilR2WeatherEventType : uint8 {
     Rain,
     Snow,
+    NumTypes,
 };
 

@@ -52,5 +52,6 @@ enum class EAnvilPlacementStatus : uint8 {
     RequiresPledgeToBuildInWilderness,
     LimitTouchingGroupCountReached,
     RequiresAgeTime,
+    AqueductNotConnectedToWaterSource,
 };
 

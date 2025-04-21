@@ -27,6 +27,7 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->GuardStrengthRightIcon = NULL;
     this->PlayerStatusText = NULL;
     this->WinConditionCanvas = NULL;
+    this->WinConditionBackground = NULL;
     this->WinConditionLogo = NULL;
     this->VictoryTypeLogo = NULL;
     this->PlayerVitality = NULL;
@@ -37,17 +38,22 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->BuildSiteCanvas = NULL;
     this->PlacementStatusWidget = NULL;
     this->BuildSiteWidget = NULL;
+    this->VictoryBackground = NULL;
+    this->AgeEndingBackground = NULL;
+    this->PostAgeEndingBackground = NULL;
     this->AranicLogo = NULL;
     this->MirrishLogo = NULL;
     this->NovanLogo = NULL;
     this->MilitaryVictoryLogo = NULL;
     this->CultureVictoryLogo = NULL;
     this->VictorySoundCue = NULL;
+    this->AgeEndingSoundCue = NULL;
     this->InteractionProgressBar1 = NULL;
     this->InteractionProgressBar2 = NULL;
     this->WeatherStatsText = NULL;
     this->BorderRegionIndicatorText = NULL;
     this->ReinforcementStatus = NULL;
+    this->BackoutImage = NULL;
 }
 
 

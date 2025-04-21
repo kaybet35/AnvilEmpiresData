@@ -10,6 +10,7 @@ UInventoryProxyComponent::UInventoryProxyComponent() {
     this->LifespanWhenEmpty = 0.00f;
     this->bAllowWithdrawal = true;
     this->bAllowSubmission = true;
+    this->bIsPublicInventory = false;
 }
 
 

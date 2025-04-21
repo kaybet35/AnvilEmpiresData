@@ -4,7 +4,6 @@
 ---@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field flatstones1 UVisStaticMeshComponent
 ---@field EntranceVisualizer UBoxComponent
----@field rockmed4 UVisStaticMeshComponent
 ---@field rockmed3 UVisStaticMeshComponent
 ---@field rock3 UVisStaticMeshComponent
 ---@field rock5 UVisStaticMeshComponent

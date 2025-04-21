@@ -3,6 +3,6 @@
 
 class ABPVisGateT3_C : public AVisGate
 {
-}; // Size: 0x530
+}; // Size: 0x548
 
 #endif

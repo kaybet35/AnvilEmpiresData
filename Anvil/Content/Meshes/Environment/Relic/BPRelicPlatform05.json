@@ -190,7 +190,7 @@
     "Class": "UScriptClass'SceneComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "Mobility": "EComponentMobility::Static"
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -394,6 +394,10 @@
         "ObjectName": "StaticMesh'RuinsStoneDias02'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/RuinsStoneDias02.2"
       },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
       "RelativeLocation": {
         "X": -7.4966547E-06,
         "Y": -2.4371652E-06,
@@ -403,7 +407,8 @@
         "Pitch": 0.0,
         "Yaw": -120.0,
         "Roll": 0.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -423,7 +428,7 @@
         "ObjectType": "ECollisionChannel::ECC_WorldStatic",
         "CollisionProfileName": "BlockAll"
       },
-      "Mobility": "EComponentMobility::Static",
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "Structure",
         "Collision"

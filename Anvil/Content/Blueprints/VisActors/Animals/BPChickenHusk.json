@@ -251,27 +251,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_2",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'SkeletalMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "SkeletalMeshComponent'BPChickenHusk_C:Fur_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.14"
-      },
-      "ParentComponentOrVariableName": "Mesh",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "D3E56261-4EB9F83C-7CA64DAD-A2321E4E",
-      "InternalVariableName": "Fur"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_3",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -292,6 +271,27 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPChickenHusk_C:Fur_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.14"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "617B620C-4A0E8D4F-BD93149B-F0944D47",
+      "InternalVariableName": "Fur"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPChickenHusk_C",
@@ -305,11 +305,11 @@
         },
         {
           "ObjectName": "SCS_Node'BPChickenHusk_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.11"
         },
         {
-          "ObjectName": "SCS_Node'BPChickenHusk_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.11"
+          "ObjectName": "SCS_Node'BPChickenHusk_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.12"
         }
       ],
       "AllNodes": [
@@ -319,11 +319,11 @@
         },
         {
           "ObjectName": "SCS_Node'BPChickenHusk_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.11"
         },
         {
-          "ObjectName": "SCS_Node'BPChickenHusk_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.11"
+          "ObjectName": "SCS_Node'BPChickenHusk_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPChickenHusk.12"
         }
       ],
       "DefaultSceneRootNode": {
@@ -341,21 +341,31 @@
     "Properties": {
       "AnimationData": {
         "AnimToPlay": {
-          "ObjectName": "AnimSequence'Anim_ChickenDeath'",
-          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Chicken/Anim_ChickenDeath.0"
+          "ObjectName": "AnimSequence'Chicken_Death_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Animals/Chicken/Chicken_Death_Anim.0"
         },
         "bSavedLooping": false
       },
       "AnimationMode": "EAnimationMode::AnimationSingleNode",
       "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'SK_ChickenFur'",
-        "ObjectPath": "Anvil/Content/Meshes/Animals/SK_ChickenFur.0"
+        "ObjectName": "SkeletalMesh'Chicken_NeckFeathers_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Chicken_NeckFeathers_SK.0"
       },
       "SkinnedAsset": {
-        "ObjectName": "SkeletalMesh'SK_ChickenFur'",
-        "ObjectPath": "Anvil/Content/Meshes/Animals/SK_ChickenFur.0"
+        "ObjectName": "SkeletalMesh'Chicken_NeckFeathers_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Chicken_NeckFeathers_SK.0"
       },
-      "bReceivesDecals": false
+      "bReceivesDecals": false,
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": -0.273321
+      },
+      "RelativeScale3D": {
+        "X": 1.1764705,
+        "Y": 1.1764705,
+        "Z": 1.1764705
+      }
     }
   },
   {
@@ -371,19 +381,19 @@
       },
       "AnimationData": {
         "AnimToPlay": {
-          "ObjectName": "AnimSequence'Anim_ChickenDeath'",
-          "ObjectPath": "Anvil/Content/Animations/Prototype/Animals/Chicken/Anim_ChickenDeath.0"
+          "ObjectName": "AnimSequence'Chicken_Death_Anim'",
+          "ObjectPath": "Anvil/Content/Animations/Animals/Chicken/Chicken_Death_Anim.0"
         },
         "bSavedLooping": false
       },
       "AnimationMode": "EAnimationMode::AnimationSingleNode",
       "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'SK_Chicken'",
-        "ObjectPath": "Anvil/Content/Meshes/Animals/SK_Chicken.0"
+        "ObjectName": "SkeletalMesh'Chicken_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Chicken_SK.0"
       },
       "SkinnedAsset": {
-        "ObjectName": "SkeletalMesh'SK_Chicken'",
-        "ObjectPath": "Anvil/Content/Meshes/Animals/SK_Chicken.0"
+        "ObjectName": "SkeletalMesh'Chicken_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Animals/Chicken_SK.0"
       },
       "bReceivesDecals": false,
       "AttachParent": {

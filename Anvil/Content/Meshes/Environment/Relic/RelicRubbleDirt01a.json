@@ -149,7 +149,10 @@
     "Name": "SharedRoot_GEN_VARIABLE",
     "Outer": "RelicRubbleDirt01a_C",
     "Class": "UScriptClass'SceneComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mobility": "EComponentMobility::Stationary"
+    }
   },
   {
     "Type": "SCS_Node",
@@ -308,7 +311,6 @@
         "ObjectName": "StaticMesh'RelicRubble01'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Relic/RelicRubble01.2"
       },
-      "bUseDefaultCollision": true,
       "bGenerateOverlapEvents": false,
       "BodyInstance": {
         "ObjectType": "ECollisionChannel::ECC_WorldStatic",
@@ -318,7 +320,8 @@
         "X": -43.492832,
         "Y": -65.94722,
         "Z": -24.82748
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   }
 ]

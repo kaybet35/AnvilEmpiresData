@@ -21,19 +21,6 @@
       "ObjectName": "Class'AnvilRockActor'",
       "ObjectPath": "/Script/R2"
     },
-    "ChildProperties": [
-      {
-        "Type": "ObjectProperty",
-        "Name": "StaticMesh",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      }
-    ],
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -53,7 +40,7 @@
     "Type": "BPBasalt06_C",
     "Name": "Default__BPBasalt06_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/Environment/BPBasalt06.BPBasalt06_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPBasalt06_C:ArrowComponent'",
@@ -119,10 +106,15 @@
         "ObjectName": "StaticMesh'rock_02'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/Cliffs/rock_02.2"
       },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPBasalt06_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/Environment/BPBasalt06.0"
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   }
 ]

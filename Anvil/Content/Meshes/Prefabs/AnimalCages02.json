@@ -111,14 +111,20 @@
     "Name": "Scene1_GEN_VARIABLE",
     "Outer": "AnimalCages02_C",
     "Class": "UScriptClass'SceneComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mobility": "EComponentMobility::Stationary"
+    }
   },
   {
     "Type": "SceneComponent",
     "Name": "Scene_GEN_VARIABLE",
     "Outer": "AnimalCages02_C",
     "Class": "UScriptClass'SceneComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mobility": "EComponentMobility::Stationary"
+    }
   },
   {
     "Type": "SCS_Node",
@@ -287,7 +293,12 @@
       "StaticMesh": {
         "ObjectName": "StaticMesh'AnimalCage01'",
         "ObjectPath": "Anvil/Content/Meshes/Props/Town/AnimalCage01.2"
-      }
+      },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   }
 ]

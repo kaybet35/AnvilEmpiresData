@@ -4,7 +4,6 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field BackoutAnimation UWidgetAnimation
 ---@field WinConditionAnimation UWidgetAnimation
----@field BackoutImage UImage
 ---@field BPFoodCooldownWidget_1 UBPFoodCooldownWidget_C
 ---@field BPHUDHintWidget UBPHUDHintWidget_C
 ---@field BPRestedStatusWidget UBPRestedStatusWidget_C
@@ -12,7 +11,6 @@
 ---@field GuardThresholdIndicator UImage
 ---@field Image UImage
 ---@field PreAlphaBadge UImage
----@field WinConditionBackground UImage
 UBPHUDWidget_C = {}
 
 function UBPHUDWidget_C:PlayWinConditionAnimation() end

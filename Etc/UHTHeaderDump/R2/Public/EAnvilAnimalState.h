@@ -12,5 +12,6 @@ enum class EAnvilAnimalState : uint8 {
     ChasingTarget,
     Attacking,
     Trapped,
+    NumTypes,
 };
 
