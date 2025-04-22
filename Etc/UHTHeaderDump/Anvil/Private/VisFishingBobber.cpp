@@ -16,8 +16,8 @@ AVisFishingBobber::AVisFishingBobber(const FObjectInitializer& ObjectInitializer
     this->SlackLineLengthFactor = 0.00f;
     this->TightLineLengthFactor = 0.00f;
     this->Caster = NULL;
-    this->MeshComponent->SetupAttachment(RootComponent);
     this->LineComponent->SetupAttachment(MeshComponent);
+    this->MeshComponent->SetupAttachment(RootComponent);
 }
 
 
