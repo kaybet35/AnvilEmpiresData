@@ -2,7 +2,7 @@
 
 UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->InteractionIcon = NULL;
-    this->HUDCanvas = NULL;
+    this->HUDSubCanvas = NULL;
     this->NameCanvas = NULL;
     this->SignPostMessageCanvas = NULL;
     this->StatsCanvas = NULL;
@@ -66,7 +66,11 @@ FText UHUDWidget::GetWeatherStatsText() {
     return FText::GetEmpty();
 }
 
-ESlateVisibility UHUDWidget::GetHUDWidgetVisibility() {
+ESlateVisibility UHUDWidget::GetNameCanvasVisibility() {
+    return ESlateVisibility::Visible;
+}
+
+ESlateVisibility UHUDWidget::GetHUDSubCanvasVisibility() {
     return ESlateVisibility::Visible;
 }
 

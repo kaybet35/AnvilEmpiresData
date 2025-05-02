@@ -1,6 +1,7 @@
 #include "VisPlayer.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AudioComponent -FallbackName=AudioComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BillboardComponent -FallbackName=BillboardComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CameraComponent -FallbackName=CameraComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=CapsuleComponent -FallbackName=CapsuleComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PointLightComponent -FallbackName=PointLightComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PostProcessComponent -FallbackName=PostProcessComponent
@@ -27,6 +28,7 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->RootComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
     this->SpringArm = CreateDefaultSubobject<UVisSpringArmComponent>(TEXT("SpringArm"));
     const FProperty* p_Mesh_Parent = GetClass()->FindPropertyByName("Mesh");
+    this->Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
     this->SimPlayerDataComponent = CreateDefaultSubobject<USimPlayerDataComponent>(TEXT("SimPlayerDataComponent"));
     this->PlayerMountDataComponent = CreateDefaultSubobject<UPlayerMountDataComponent>(TEXT("PlayerMountDataComponent"));
     this->PlayerInputDataComponent = CreateDefaultSubobject<UPlayerInputDataComponent>(TEXT("PlayerInputDataComponent"));
@@ -88,9 +90,6 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
     this->CurrentUEUsableActor = NULL;
-    this->RainLowAudioComponent->SetupAttachment(SpringArm);
-    this->RainMidAudioComponent->SetupAttachment(SpringArm);
-    this->RainHighAudioComponent->SetupAttachment(SpringArm);
     this->SnowLowAudioComponent->SetupAttachment(SpringArm);
     this->SnowMidAudioComponent->SetupAttachment(SpringArm);
     this->SnowHighAudioComponent->SetupAttachment(SpringArm);
@@ -101,8 +100,6 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->EnterSwimmingVFXComponent->SetupAttachment(Mesh);
     this->SwimmingLoopVFXComponent->SetupAttachment(Mesh);
     this->SwimmingLoopAudioComponent->SetupAttachment(Mesh);
-    this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->ItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->Mesh->SetupAttachment(RootComponent);
@@ -119,7 +116,13 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->RainVFXComponent->SetupAttachment(SpringArm);
     this->SnowVFXComponent->SetupAttachment(SpringArm);
     this->BreathFogVFXComponent->SetupAttachment(Mesh);
+    this->RainLowAudioComponent->SetupAttachment(SpringArm);
+    this->RainMidAudioComponent->SetupAttachment(SpringArm);
+    this->RainHighAudioComponent->SetupAttachment(SpringArm);
     this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->Camera->SetupAttachment(SpringArm);
+    this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->ItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 FString AVisPlayer::GetPlayerName() const {

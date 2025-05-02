@@ -2614,6 +2614,7 @@ UTreeFallProxyComponent = {}
 ---@field TownMapDisableSize uint8
 ---@field UpkeepCostReinforced float
 ---@field bClientsUseVisActorPool boolean
+---@field bSiegeDemoActive boolean
 UTweakableDataComponent = {}
 
 

@@ -38,7 +38,7 @@ public:
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UCanvasPanel* HUDCanvas;
+    UCanvasPanel* HUDSubCanvas;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCanvasPanel* NameCanvas;
@@ -225,7 +225,10 @@ private:
     FText GetWeatherStatsText();
     
     UFUNCTION(BlueprintCallable)
-    ESlateVisibility GetHUDWidgetVisibility();
+    ESlateVisibility GetNameCanvasVisibility();
+    
+    UFUNCTION(BlueprintCallable)
+    ESlateVisibility GetHUDSubCanvasVisibility();
     
 };
 

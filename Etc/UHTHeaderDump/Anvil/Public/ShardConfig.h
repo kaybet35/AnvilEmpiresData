@@ -24,6 +24,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString NextTestUnixTimestamp;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsSiegeDemoActive;
+    
     ANVIL_API FShardConfig();
 };
 

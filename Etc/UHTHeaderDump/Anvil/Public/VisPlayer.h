@@ -16,6 +16,7 @@ class UAnimMontage;
 class UArmorDataComponent;
 class UAudioComponent;
 class UBillboardComponent;
+class UCameraComponent;
 class UCapsuleComponent;
 class UHealthDataComponent;
 class UHungerDataComponent;
@@ -44,6 +45,9 @@ class ANVIL_API AVisPlayer : public AVisActor {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UVisSpringArmComponent* SpringArm;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCameraComponent* Camera;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USimPlayerDataComponent* SimPlayerDataComponent;

@@ -2615,8 +2615,9 @@ class UTweakableDataComponent : public UDataComponent
     uint8 TownMapDisableSize;                                                         // 0x0148 (size: 0x1)
     float UpkeepCostReinforced;                                                       // 0x0168 (size: 0x4)
     bool bClientsUseVisActorPool;                                                     // 0x0188 (size: 0x1)
+    bool bSiegeDemoActive;                                                            // 0x01A8 (size: 0x1)
 
-}; // Size: 0x1A8
+}; // Size: 0x1C8
 
 class UTweakableProxyComponent : public UProxyComponent
 {

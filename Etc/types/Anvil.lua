@@ -548,6 +548,7 @@ AVisPickupItem = {}
 
 ---@class AVisPlayer : AVisActor
 ---@field SpringArm UVisSpringArmComponent
+---@field Camera UCameraComponent
 ---@field SimPlayerDataComponent USimPlayerDataComponent
 ---@field PlayerMountDataComponent UPlayerMountDataComponent
 ---@field PlayerInputDataComponent UPlayerInputDataComponent
@@ -1264,6 +1265,7 @@ FServerRegion = {}
 ---@field AnvilServiceHttpUrl FString
 ---@field Announcement FString
 ---@field NextTestUnixTimestamp FString
+---@field bIsSiegeDemoActive boolean
 FShardConfig = {}
 
 
@@ -2232,7 +2234,7 @@ UHUDStatsWidget = {}
 
 ---@class UHUDWidget : UUserWidget
 ---@field InteractionIcon UInteractionIconWidget
----@field HUDCanvas UCanvasPanel
+---@field HUDSubCanvas UCanvasPanel
 ---@field NameCanvas UCanvasPanel
 ---@field SignPostMessageCanvas UCanvasPanel
 ---@field StatsCanvas UCanvasPanel
@@ -2297,7 +2299,9 @@ function UHUDWidget:GetWeatherStatsTextVisibility() end
 ---@return FText
 function UHUDWidget:GetWeatherStatsText() end
 ---@return ESlateVisibility
-function UHUDWidget:GetHUDWidgetVisibility() end
+function UHUDWidget:GetNameCanvasVisibility() end
+---@return ESlateVisibility
+function UHUDWidget:GetHUDSubCanvasVisibility() end
 
 
 ---@class UHUDWindow : UUserWidget

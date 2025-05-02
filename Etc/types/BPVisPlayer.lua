@@ -2,7 +2,6 @@
 
 ---@class ABpVisPlayer_C : AVisPlayer
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field Camera UCameraComponent
 ABpVisPlayer_C = {}
 
 function ABpVisPlayer_C:BP_UpdateNightShroudMaterials() end

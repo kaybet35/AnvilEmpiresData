@@ -31,6 +31,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bClientsUseVisActorPool;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bSiegeDemoActive;
+    
     UTweakableDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };
