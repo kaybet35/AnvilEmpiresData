@@ -1,0 +1,68 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "DemoSpawnerHorse_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DemoSpawnerHorse_C'Default__DemoSpawnerHorse_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Spawner/DemoSpawnerHorse.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "DemoSpawnerHorse_C",
+    "Name": "Default__DemoSpawnerHorse_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Animals/Spawner/DemoSpawnerHorse.DemoSpawnerHorse_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CodeNameString": "DemoSpawnerHorse",
+      "CodeName": 785190230,
+      "bGenerateMeshCollisionVaultable": false,
+      "Components": [
+        {
+          "ObjectName": "ResourceSpawnerProxyComponent'Default__DemoSpawnerHorse_C:ResourceSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Animals/Spawner/DemoSpawnerHorse.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ResourceSpawnerProxyComponent",
+    "Name": "ResourceSpawnerProxyComponent_0",
+    "Outer": "Default__DemoSpawnerHorse_C",
+    "Class": "UScriptClass'ResourceSpawnerProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SpawnedResource": {
+        "ObjectName": "BlueprintGeneratedClass'Horse_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.3"
+      },
+      "SpawnOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 200.0
+      },
+      "SpawnRadius": 500.0,
+      "SpawnInterval": 5.0,
+      "SpawnQuantity": 1,
+      "MaxSpawn": 10,
+      "ResourceReserveInitial": -1,
+      "MinDistanceBetweenSpawns": 200.0,
+      "bRequiresNavmesh": true
+    }
+  }
+]

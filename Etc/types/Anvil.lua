@@ -1981,6 +1981,8 @@ function UFactionSelectScreen:OnDeleteProfileButtonClicked() end
 ---@return boolean
 function UFactionSelectScreen:IsSelectedFactionButtonEnabled() end
 ---@return boolean
+function UFactionSelectScreen:IsFactionAranicButtonEnabled() end
+---@return boolean
 function UFactionSelectScreen:IsDeleteProfileButtonEnabled() end
 ---@return ESlateVisibility
 function UFactionSelectScreen:GetThrobberVisibility() end
@@ -2289,6 +2291,7 @@ UHUDStatsWidget = {}
 ---@field BorderRegionIndicatorText UTextBlock
 ---@field ReinforcementStatus UWidget
 ---@field BackoutImage UImage
+---@field HUDHintWidget UHUDHintWidget
 ---@field NewLocalMessages TArray<UChatMessage>
 UHUDWidget = {}
 
@@ -2302,6 +2305,8 @@ function UHUDWidget:GetWeatherStatsText() end
 function UHUDWidget:GetNameCanvasVisibility() end
 ---@return ESlateVisibility
 function UHUDWidget:GetHUDSubCanvasVisibility() end
+---@return ESlateVisibility
+function UHUDWidget:GetHUDHintVisibility() end
 
 
 ---@class UHUDWindow : UUserWidget

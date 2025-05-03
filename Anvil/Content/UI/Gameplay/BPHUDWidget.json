@@ -400,7 +400,7 @@
   },
   {
     "Type": "BPHUDHintWidget_C",
-    "Name": "BPHUDHintWidget",
+    "Name": "HUDHintWidget",
     "Outer": "WidgetTree",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPHUDHintWidget.BPHUDHintWidget_C'",
     "Template": {
@@ -1099,11 +1099,11 @@
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "CanvasPanelSlot'BPHUDWidget_C:WidgetTree.HUDCanvas.CanvasPanelSlot_0'",
+          "ObjectName": "CanvasPanelSlot'BPHUDWidget_C:WidgetTree.HUDCanvas.CanvasPanelSlot_1'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDWidget.68"
         },
         {
-          "ObjectName": "CanvasPanelSlot'BPHUDWidget_C:WidgetTree.HUDCanvas.CanvasPanelSlot_1'",
+          "ObjectName": "CanvasPanelSlot'BPHUDWidget_C:WidgetTree.HUDCanvas.CanvasPanelSlot_2'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDWidget.69"
         }
       ]
@@ -1179,8 +1179,8 @@
         }
       ],
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPHUDWidget_C:WidgetTree.HUDCanvas.CanvasPanelSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDWidget.68"
+        "ObjectName": "CanvasPanelSlot'BPHUDWidget_C:WidgetTree.HUDCanvas.CanvasPanelSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDWidget.69"
       }
     }
   },
@@ -1217,7 +1217,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPHUDWidget_C:WidgetTree.HUDCanvas.CanvasPanelSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDWidget.69"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDWidget.68"
       }
     }
   },
@@ -1567,35 +1567,6 @@
   },
   {
     "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_0",
-    "Outer": "HUDCanvas",
-    "Class": "UScriptClass'CanvasPanelSlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "LayoutData": {
-        "Offsets": {
-          "Right": 0.0,
-          "Bottom": 0.0
-        },
-        "Anchors": {
-          "Maximum": {
-            "X": 1.0,
-            "Y": 1.0
-          }
-        }
-      },
-      "Parent": {
-        "ObjectName": "CanvasPanel'BPHUDWidget_C:WidgetTree.HUDCanvas'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDWidget.52"
-      },
-      "Content": {
-        "ObjectName": "CanvasPanel'BPHUDWidget_C:WidgetTree.HUDSubCanvas'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDWidget.53"
-      }
-    }
-  },
-  {
-    "Type": "CanvasPanelSlot",
     "Name": "CanvasPanelSlot_1",
     "Outer": "HUDCanvas",
     "Class": "UScriptClass'CanvasPanelSlot'",
@@ -1620,6 +1591,35 @@
       "Content": {
         "ObjectName": "CanvasPanel'BPHUDWidget_C:WidgetTree.NameCanvas'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDWidget.55"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Outer": "HUDCanvas",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPHUDWidget_C:WidgetTree.HUDCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDWidget.52"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'BPHUDWidget_C:WidgetTree.HUDSubCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDWidget.53"
       }
     }
   },
@@ -2093,7 +2093,7 @@
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDWidget.53"
       },
       "Content": {
-        "ObjectName": "BPHUDHintWidget_C'BPHUDWidget_C:WidgetTree.BPHUDHintWidget'",
+        "ObjectName": "BPHUDHintWidget_C'BPHUDWidget_C:WidgetTree.HUDHintWidget'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDWidget.23"
       }
     }
@@ -5517,17 +5517,6 @@
         "PropertyClass": {
           "ObjectName": "WidgetBlueprintGeneratedClass'BPFoodCooldownWidget_C'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPFoodCooldownWidget.8"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "BPHUDHintWidget",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
-        "PropertyClass": {
-          "ObjectName": "WidgetBlueprintGeneratedClass'BPHUDHintWidget_C'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPHUDHintWidget.28"
         }
       },
       {

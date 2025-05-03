@@ -11,6 +11,7 @@ class UCanvasPanel;
 class UChatMessage;
 class UDismantleButtonWidget;
 class UHUDBuildSiteWidget;
+class UHUDHintWidget;
 class UHUDNameWidget;
 class UHUDPlacementStatusWidget;
 class UHUDSignPostWidget;
@@ -202,6 +203,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UImage* BackoutImage;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UHUDHintWidget* HUDHintWidget;
+    
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UChatMessage*> NewLocalMessages;
@@ -229,6 +233,9 @@ private:
     
     UFUNCTION(BlueprintCallable)
     ESlateVisibility GetHUDSubCanvasVisibility();
+    
+    UFUNCTION(BlueprintCallable)
+    ESlateVisibility GetHUDHintVisibility();
     
 };
 

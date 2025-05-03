@@ -21,7 +21,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "TownTentMulti_C'Default__TownTentMulti_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.16"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.20"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -75,8 +75,8 @@
     "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Box": {
-        "ObjectName": "BlueprintGeneratedClass'TownTent_C'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownTent.0"
+        "ObjectName": "BlueprintGeneratedClass'TownTentMulti_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownTentMulti.0"
       }
     }
   },
@@ -101,7 +101,7 @@
     "Class": "UScriptClass'HousingProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "PlayerCapacity": 4,
+      "PlayerCapacity": 8,
       "bIsTownTent": true
     }
   },
@@ -114,7 +114,127 @@
     "Properties": {
       "Slots": [
         {
-          "ProxyRepeat": 6,
+          "ProxyRepeat": 4,
+          "bOr": false,
+          "HeldItem": null,
+          "bIsHeldItemPublic": true,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "bCheckDedicatedUnderlyingItem": true,
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__TownTentMulti_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 4,
+          "bOr": false,
+          "HeldItem": null,
+          "bIsHeldItemPublic": true,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "bCheckDedicatedUnderlyingItem": true,
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_2",
+    "Outer": "Default__TownTentMulti_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 4,
+          "bOr": false,
+          "HeldItem": null,
+          "bIsHeldItemPublic": true,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "bCheckDedicatedUnderlyingItem": true,
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_3",
+    "Outer": "Default__TownTentMulti_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 4,
+          "bOr": false,
+          "HeldItem": null,
+          "bIsHeldItemPublic": true,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "bCheckDedicatedUnderlyingItem": true,
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_4",
+    "Outer": "Default__TownTentMulti_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 4,
           "bOr": false,
           "HeldItem": null,
           "bIsHeldItemPublic": true,
@@ -144,7 +264,7 @@
     "Properties": {
       "Slots": [
         {
-          "ProxyRepeat": 6,
+          "ProxyRepeat": 4,
           "bOr": false,
           "HeldItem": null,
           "bIsHeldItemPublic": true,
@@ -174,7 +294,7 @@
     "Properties": {
       "Slots": [
         {
-          "ProxyRepeat": 6,
+          "ProxyRepeat": 4,
           "bOr": false,
           "HeldItem": null,
           "bIsHeldItemPublic": true,
@@ -204,7 +324,7 @@
     "Properties": {
       "Slots": [
         {
-          "ProxyRepeat": 6,
+          "ProxyRepeat": 4,
           "bOr": false,
           "HeldItem": null,
           "bIsHeldItemPublic": true,
@@ -234,7 +354,7 @@
     "Properties": {
       "Type": "EAnvilSpawnType::Tent",
       "SpawnOffset": {
-        "X": 0.0,
+        "X": 100.0,
         "Y": 0.0,
         "Z": 125.0
       },
@@ -309,7 +429,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__TownTentMulti_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.15"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.19"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__TownTentMulti_C:HealthComp'",
@@ -317,11 +437,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__TownTentMulti_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.16"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__TownTentMulti_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.14"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.18"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__TownTentMulti_C:DestroyableComp'",
@@ -341,7 +461,7 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__TownTentMulti_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.17"
       },
       "CodeNameString": "TownTentMulti",
       "CodeName": 932168455,
@@ -349,7 +469,7 @@
       "Components": [
         {
           "ObjectName": "PlayerSpawnerProxyComponent'Default__TownTentMulti_C:PlayerSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.11"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.15"
         },
         {
           "ObjectName": "HousingProxyComponent'Default__TownTentMulti_C:HousingProxyComponent_0'",
@@ -357,19 +477,35 @@
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__TownTentMulti_C:InventoryProxyComponent_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.12"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__TownTentMulti_C:InventoryProxyComponent_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.13"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__TownTentMulti_C:InventoryProxyComponent_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.10"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.14"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__TownTentMulti_C:InventoryProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.7"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__TownTentMulti_C:InventoryProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.8"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__TownTentMulti_C:InventoryProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.9"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__TownTentMulti_C:InventoryProxyComponent_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.11"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__TownTentMulti_C:InventoryProxyComponent_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/TownTentMulti.10"
         }
       ],
       "VisActorClass": {

@@ -34,6 +34,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bSiegeDemoActive;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 ForcedTimeOfDayNormalized;
+    
     UTweakableDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };

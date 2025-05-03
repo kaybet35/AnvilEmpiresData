@@ -95,6 +95,9 @@ protected:
     bool IsSelectedFactionButtonEnabled();
     
     UFUNCTION(BlueprintCallable)
+    bool IsFactionAranicButtonEnabled();
+    
+    UFUNCTION(BlueprintCallable)
     bool IsDeleteProfileButtonEnabled();
     
     UFUNCTION(BlueprintCallable)

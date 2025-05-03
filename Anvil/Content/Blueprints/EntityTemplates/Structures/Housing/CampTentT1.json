@@ -50,7 +50,7 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__CampTentT1_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/CampTentT1.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/CampTentT1.16"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__CampTentT1_C:HealthComp'",
@@ -58,11 +58,11 @@
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__CampTentT1_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/CampTentT1.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/CampTentT1.13"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__CampTentT1_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/CampTentT1.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/CampTentT1.15"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__CampTentT1_C:DestroyableComp'",
@@ -82,7 +82,7 @@
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__CampTentT1_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/CampTentT1.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/CampTentT1.14"
       },
       "CodeNameString": "CampTentT1",
       "CodeName": -1138821490,
@@ -97,8 +97,20 @@
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/CampTentT1.8"
         },
         {
-          "ObjectName": "PlayerSpawnerProxyComponent'Default__CampTentT1_C:PlayerSpawnerProxyComponent_0'",
+          "ObjectName": "InventoryProxyComponent'Default__CampTentT1_C:InventoryProxyComponent_1'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/CampTentT1.9"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__CampTentT1_C:InventoryProxyComponent_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/CampTentT1.10"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__CampTentT1_C:InventoryProxyComponent_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/CampTentT1.11"
+        },
+        {
+          "ObjectName": "PlayerSpawnerProxyComponent'Default__CampTentT1_C:PlayerSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Housing/CampTentT1.12"
         }
       ],
       "VisActorClass": {
@@ -167,12 +179,102 @@
     "Class": "UScriptClass'HousingProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "PlayerCapacity": 1
+      "PlayerCapacity": 4
     }
   },
   {
     "Type": "InventoryProxyComponent",
     "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__CampTentT1_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 6,
+          "bOr": false,
+          "HeldItem": null,
+          "bIsHeldItemPublic": true,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "bCheckDedicatedUnderlyingItem": true,
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_1",
+    "Outer": "Default__CampTentT1_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 6,
+          "bOr": false,
+          "HeldItem": null,
+          "bIsHeldItemPublic": true,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "bCheckDedicatedUnderlyingItem": true,
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_2",
+    "Outer": "Default__CampTentT1_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 6,
+          "bOr": false,
+          "HeldItem": null,
+          "bIsHeldItemPublic": true,
+          "Count": 0,
+          "StackLimit": 30,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "AcceptedTags": [],
+          "RequiredTags": [],
+          "ProhibitedTags": [],
+          "DedicatedItemType": null,
+          "DedicatedUnderlyingItemType": null,
+          "bCheckDedicatedUnderlyingItem": true,
+          "RequiredEnablingItem": null,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_3",
     "Outer": "Default__CampTentT1_C",
     "Class": "UScriptClass'InventoryProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",

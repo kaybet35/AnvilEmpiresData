@@ -57,7 +57,20 @@
       "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
     },
-    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ExtendFootprint": false,
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 600.0
+      },
+      "Extents": {
+        "X": 1500.0,
+        "Y": 1500.0,
+        "Z": 1000.0
+      }
+    }
   },
   {
     "Type": "DecayProxyComponent",
@@ -127,7 +140,7 @@
           "HeldItem": null,
           "bIsHeldItemPublic": true,
           "Count": 0,
-          "StackLimit": 100,
+          "StackLimit": 2000,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
           "AcceptedTags": [
@@ -167,12 +180,12 @@
           "CustomStackLimits": []
         },
         {
-          "ProxyRepeat": 24,
+          "ProxyRepeat": 36,
           "bOr": false,
           "HeldItem": null,
           "bIsHeldItemPublic": true,
           "Count": 0,
-          "StackLimit": 1000,
+          "StackLimit": 10000,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
           "AcceptedTags": [
@@ -182,11 +195,12 @@
             "EAnvilItemTag::Body",
             "EAnvilItemTag::WeaponStorage",
             "EAnvilItemTag::Resource",
-            "EAnvilItemTag::IngredientsStorage"
+            "EAnvilItemTag::IngredientsStorage",
+            "EAnvilItemTag::AnimalFeed",
+            "EAnvilItemTag::AnimalEquipment"
           ],
           "RequiredTags": [],
           "ProhibitedTags": [
-            "EAnvilItemTag::AnimalFeed",
             "EAnvilItemTag::Seed"
           ],
           "DedicatedItemType": null,
@@ -270,7 +284,7 @@
       "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
     },
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__TownCenterKeepT3_C:TeamComp'",

@@ -49,10 +49,31 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "Player_C'Default__Player_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.12"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.13"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Position": {
+        "X": 48.0,
+        "Y": 0.0,
+        "Z": 96.0
+      },
+      "Extents": {
+        "X": 64.0,
+        "Y": 50.0,
+        "Z": 24.0
+      },
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Shield",
+      "CollisionMask": 8192
     }
   },
   {
@@ -921,23 +942,23 @@
       "Components": [
         {
           "ObjectName": "PlayerMountProxyComponent'Default__Player_C:PlayerMountProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.14"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.15"
         },
         {
           "ObjectName": "SimPlayerProxyComponent'Default__Player_C:SimPlayerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.17"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.18"
         },
         {
           "ObjectName": "HealthProxyComponent'Default__Player_C:HealthProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.10"
         },
         {
           "ObjectName": "HandsProxyComponent'Default__Player_C:HandsProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.9"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__Player_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.11"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.12"
         },
         {
           "ObjectName": "ArmorProxyComponent'Default__Player_C:ArmorProxyComponent_0'",
@@ -945,11 +966,11 @@
         },
         {
           "ObjectName": "CapsuleCollisionProxyComponent'Default__Player_C:CapsuleCollisionProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.5"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.6"
         },
         {
           "ObjectName": "PlayerInputProxyComponent'Default__Player_C:PlayerInputProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.13"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.14"
         },
         {
           "ObjectName": "AIStimulusProxyComponent'Default__Player_C:AIStimulusProxyComponent_0'",
@@ -957,15 +978,15 @@
         },
         {
           "ObjectName": "PlayerUnstuckProxyComponent'Default__Player_C:PlayerUnstuckProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.16"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.17"
         },
         {
           "ObjectName": "HungerProxyComponent'Default__Player_C:HungerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.10"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.11"
         },
         {
           "ObjectName": "StaminaProxyComponent'Default__Player_C:StaminaProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.18"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.19"
         },
         {
           "ObjectName": "AnimalRopeSlotProxyComponent'Default__Player_C:AnimalRopeSlotProxyComponent_0'",
@@ -973,7 +994,7 @@
         },
         {
           "ObjectName": "TemperatureProxyComponent'Default__Player_C:TemperatureProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.19"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.20"
         },
         {
           "ObjectName": "AdminEnvProxyComponent'Default__Player_C:AdminEnvProxyComponent_0'",
@@ -981,15 +1002,19 @@
         },
         {
           "ObjectName": "FamilyUserProxyComponent'Default__Player_C:FamilyUserProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.8"
         },
         {
           "ObjectName": "ExplorationSpawnerProxyComponent'Default__Player_C:ExplorationSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.6"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.7"
         },
         {
           "ObjectName": "PlayerStatusProxyComponent'Default__Player_C:PlayerStatusProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.15"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.16"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__Player_C:BoxCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.5"
         }
       ],
       "VisActorClass": {
@@ -1041,7 +1066,7 @@
       "GuardAngleTolerancePitchMin": -45.0,
       "GuardAngleTolerancePitchMax": 135.0,
       "GuardAngleTolerancePitchMinAlt": -180.0,
-      "GuardAngleTolerancePitchMaxAlt": -45.0,
+      "GuardAngleTolerancePitchMaxAlt": -30.0,
       "StaggerDuration": 5.5,
       "StaggerAmount": 0.35,
       "CrouchedHalfHeight": 40.0,

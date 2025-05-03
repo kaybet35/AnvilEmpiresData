@@ -10,6 +10,7 @@ UTweakableDataComponent::UTweakableDataComponent(const FObjectInitializer& Objec
     this->UpkeepCostReinforced = 0.00f;
     this->bClientsUseVisActorPool = false;
     this->bSiegeDemoActive = false;
+    this->ForcedTimeOfDayNormalized = 0;
 }
 
 

@@ -1892,6 +1892,7 @@ class UFactionSelectScreen : public UAnvilScreen
     void OnFactionAranicButtonClicked();
     void OnDeleteProfileButtonClicked();
     bool IsSelectedFactionButtonEnabled();
+    bool IsFactionAranicButtonEnabled();
     bool IsDeleteProfileButtonEnabled();
     ESlateVisibility GetThrobberVisibility();
     ESlateVisibility GetDevModeWidgetVisibility();
@@ -2174,7 +2175,8 @@ class UHUDWidget : public UUserWidget
     class UTextBlock* BorderRegionIndicatorText;                                      // 0x05F8 (size: 0x8)
     class UWidget* ReinforcementStatus;                                               // 0x0600 (size: 0x8)
     class UImage* BackoutImage;                                                       // 0x0608 (size: 0x8)
-    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x0618 (size: 0x10)
+    class UHUDHintWidget* HUDHintWidget;                                              // 0x0610 (size: 0x8)
+    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x0620 (size: 0x10)
 
     void PlayWinConditionAnimation();
     void PlayBlackoutAnimation();
@@ -2182,6 +2184,7 @@ class UHUDWidget : public UUserWidget
     FText GetWeatherStatsText();
     ESlateVisibility GetNameCanvasVisibility();
     ESlateVisibility GetHUDSubCanvasVisibility();
+    ESlateVisibility GetHUDHintVisibility();
 }; // Size: 0x640
 
 class UHUDWindow : public UUserWidget

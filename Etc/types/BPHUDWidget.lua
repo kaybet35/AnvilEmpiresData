@@ -5,7 +5,6 @@
 ---@field BackoutAnimation UWidgetAnimation
 ---@field WinConditionAnimation UWidgetAnimation
 ---@field BPFoodCooldownWidget_1 UBPFoodCooldownWidget_C
----@field BPHUDHintWidget UBPHUDHintWidget_C
 ---@field BPRestedStatusWidget UBPRestedStatusWidget_C
 ---@field BPTemperatureStatusWidget UBPTemperatureStatusWidget_C
 ---@field GuardThresholdIndicator UImage

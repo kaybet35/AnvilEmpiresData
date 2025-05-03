@@ -1,6 +1,32 @@
 [
   {
     "Type": "Border",
+    "Name": "bg_border",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPAdminPlayerListItem_C:WidgetTree.bg_border.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.3"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.VerticalBox_55.VerticalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.42"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Border",
     "Name": "Border_0",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'Border'",
@@ -16,11 +42,70 @@
       "Slots": [
         {
           "ObjectName": "BorderSlot'BPAdminPlayerListItem_C:WidgetTree.Border_0.BorderSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.1"
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.4"
         }
       ],
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_13'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.21"
+      }
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_80",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.249,
+            "G": 0.023153,
+            "B": 0.019382,
+            "A": 1.0,
+            "Hex": "892A26"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPAdminPlayerListItem_C:WidgetTree.Border_80.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.5"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_11'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.20"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "bg_border",
+    "Class": "UScriptClass'BorderSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border'BPAdminPlayerListItem_C:WidgetTree.bg_border'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.0"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
         "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
       }
     }
@@ -34,11 +119,34 @@
     "Properties": {
       "Parent": {
         "ObjectName": "Border'BPAdminPlayerListItem_C:WidgetTree.Border_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.0"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.1"
       },
       "Content": {
-        "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.8"
+        "ObjectName": "SizeBox'BPAdminPlayerListItem_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.31"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_80",
+    "Class": "UScriptClass'BorderSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border'BPAdminPlayerListItem_C:WidgetTree.Border_80'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.2"
+      },
+      "Content": {
+        "ObjectName": "BPAnvilButtonWidget_C'BPAdminPlayerListItem_C:WidgetTree.BanButton'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.7"
       }
     }
   },
@@ -48,7 +156,7 @@
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPAdminPlayerListItem.BPAdminPlayerListItem_C'",
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "bHasScriptImplementedTick": false,
+      "UberGraphFrame": {},
       "bHasScriptImplementedPaint": false
     }
   },
@@ -71,10 +179,10 @@
       },
       "LabelFontSize": 14,
       "ButtonWidth": 120.0,
-      "ButtonHeight": 26.0,
+      "ButtonHeight": 28.0,
       "Slot": {
-        "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_11'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.14"
+        "ObjectName": "BorderSlot'BPAdminPlayerListItem_C:WidgetTree.Border_80.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.5"
       }
     }
   },
@@ -100,7 +208,7 @@
       "ButtonHeight": 26.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.12"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.18"
       }
     }
   },
@@ -125,7 +233,7 @@
       "ButtonHeight": 26.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.16"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.23"
       }
     }
   },
@@ -151,7 +259,7 @@
       "ButtonHeight": 26.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.13"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.19"
       }
     }
   },
@@ -177,9 +285,86 @@
       "ButtonHeight": 26.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_7'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.20"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.27"
       }
     }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPAdminPlayerListItem",
+    "Outer": "BPAdminPlayerListItem_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsHovered_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Tick",
+    "Outer": "BPAdminPlayerListItem_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'UserWidget:Tick'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
   },
   {
     "Type": "HorizontalBox",
@@ -191,16 +376,16 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.10"
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.16"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.11"
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.17"
         }
       ],
       "Slot": {
-        "ObjectName": "BorderSlot'BPAdminPlayerListItem_C:WidgetTree.Border_0.BorderSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.1"
+        "ObjectName": "SizeBoxSlot'BPAdminPlayerListItem_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.32"
       }
     }
   },
@@ -214,52 +399,56 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.12"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_5'",
           "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.18"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.13"
+          "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.25"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_6'",
+          "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_1'",
           "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.19"
         },
         {
+          "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.26"
+        },
+        {
           "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.16"
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.23"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.17"
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.24"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_7'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.20"
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.27"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_8'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.21"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_11'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.14"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_9'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.22"
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.28"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_13'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.21"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_9'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.29"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_11'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.20"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.22"
         }
       ],
       "Slot": {
-        "ObjectName": "VerticalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.VerticalBox_55.VerticalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.32"
+        "ObjectName": "BorderSlot'BPAdminPlayerListItem_C:WidgetTree.bg_border.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.3"
       }
     }
   },
@@ -272,11 +461,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.8"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.14"
       },
       "Content": {
         "ObjectName": "Image'BPAdminPlayerListItem_C:WidgetTree.Image_65'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.23"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.30"
       }
     }
   },
@@ -293,11 +482,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.8"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.14"
       },
       "Content": {
         "ObjectName": "TextBlock'BPAdminPlayerListItem_C:WidgetTree.SilverAllowanceText'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.30"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.40"
       }
     }
   },
@@ -310,11 +499,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.9"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPAdminPlayerListItem_C:WidgetTree.NameBox'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.4"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.8"
       }
     }
   },
@@ -327,11 +516,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.9"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPAdminPlayerListItem_C:WidgetTree.TeamBox'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.6"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.10"
       }
     }
   },
@@ -342,13 +531,17 @@
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "Padding": {
+        "Top": 2.0,
+        "Bottom": 2.0
+      },
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.9"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
       },
       "Content": {
-        "ObjectName": "BPAnvilButtonWidget_C'BPAdminPlayerListItem_C:WidgetTree.BanButton'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.3"
+        "ObjectName": "Border'BPAdminPlayerListItem_C:WidgetTree.Border_80'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.2"
       }
     }
   },
@@ -365,15 +558,32 @@
         "Right": 4.0,
         "Bottom": 2.0
       },
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.9"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
       },
       "Content": {
         "ObjectName": "Border'BPAdminPlayerListItem_C:WidgetTree.Border_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.0"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.1"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_65",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPAdminPlayerListItem_C:WidgetTree.Spacer_165'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.35"
       }
     }
   },
@@ -386,11 +596,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.9"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPAdminPlayerListItem_C:WidgetTree.SteamIdBox'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.5"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.9"
       }
     }
   },
@@ -403,11 +613,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.9"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
       },
       "Content": {
         "ObjectName": "Spacer'BPAdminPlayerListItem_C:WidgetTree.Spacer_2'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.26"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.36"
       }
     }
   },
@@ -420,11 +630,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.9"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
       },
       "Content": {
         "ObjectName": "Spacer'BPAdminPlayerListItem_C:WidgetTree.Spacer'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.24"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.33"
       }
     }
   },
@@ -437,11 +647,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.9"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
       },
       "Content": {
         "ObjectName": "Spacer'BPAdminPlayerListItem_C:WidgetTree.Spacer_1'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.25"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.34"
       }
     }
   },
@@ -454,11 +664,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.9"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPAdminPlayerListItem_C:WidgetTree.TeleportToButton'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.7"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.11"
       }
     }
   },
@@ -471,11 +681,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.9"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
       },
       "Content": {
         "ObjectName": "Spacer'BPAdminPlayerListItem_C:WidgetTree.Spacer_3'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.27"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.37"
       }
     }
   },
@@ -488,11 +698,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.9"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
       },
       "Content": {
         "ObjectName": "Spacer'BPAdminPlayerListItem_C:WidgetTree.Spacer_4'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.28"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.38"
       }
     }
   },
@@ -515,7 +725,45 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.10"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.16"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidthOverride": 175.0,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPAdminPlayerListItem_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.32"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot'BPAdminPlayerListItem_C:WidgetTree.Border_0.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.4"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPAdminPlayerListItem_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.31"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.14"
       }
     }
   },
@@ -532,7 +780,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.18"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.25"
       }
     }
   },
@@ -549,7 +797,24 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_6'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.19"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.26"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_165",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "X": 5.0,
+        "Y": 5.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.22"
       }
     }
   },
@@ -566,7 +831,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.17"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.24"
       }
     }
   },
@@ -583,7 +848,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_8'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.21"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.28"
       }
     }
   },
@@ -595,12 +860,12 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Size": {
-        "X": 5.0,
+        "X": 15.0,
         "Y": 5.0
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_9'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.22"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.29"
       }
     }
   },
@@ -617,7 +882,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.VerticalBox_55.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.33"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.43"
       }
     }
   },
@@ -654,7 +919,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.11"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.17"
       },
       "bIsVariable": true
     }
@@ -669,11 +934,11 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.VerticalBox_55.VerticalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.32"
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.42"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.VerticalBox_55.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.33"
+          "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.43"
         }
       ]
     }
@@ -687,11 +952,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPAdminPlayerListItem_C:WidgetTree.VerticalBox_55'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.31"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.41"
       },
       "Content": {
-        "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.9"
+        "ObjectName": "Border'BPAdminPlayerListItem_C:WidgetTree.bg_border'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.0"
       }
     }
   },
@@ -704,11 +969,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPAdminPlayerListItem_C:WidgetTree.VerticalBox_55'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.31"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.41"
       },
       "Content": {
         "ObjectName": "Spacer'BPAdminPlayerListItem_C:WidgetTree.Spacer_60'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.29"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.39"
       }
     }
   },
@@ -720,15 +985,51 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPAdminPlayerListItem_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.35"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.45"
       },
-      "bClassRequiresNativeTick": true
+      "bClassRequiresNativeTick": true,
+      "UberGraphFunction": {
+        "ObjectName": "Function'BPAdminPlayerListItem_C:ExecuteUbergraph_BPAdminPlayerListItem'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.12"
+      }
     },
     "SuperStruct": {
       "ObjectName": "Class'AdminPlayerListItemWidget'",
       "ObjectPath": "/Script/Anvil"
     },
+    "Children": [
+      {
+        "ObjectName": "Function'BPAdminPlayerListItem_C:Tick'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.13"
+      },
+      {
+        "ObjectName": "Function'BPAdminPlayerListItem_C:ExecuteUbergraph_BPAdminPlayerListItem'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.12"
+      }
+    ],
     "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "bg_border",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Border'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "Image_65",
@@ -741,6 +1042,16 @@
         }
       }
     ],
+    "FuncMap": {
+      "ExecuteUbergraph_BPAdminPlayerListItem": {
+        "ObjectName": "Function'BPAdminPlayerListItem_C:ExecuteUbergraph_BPAdminPlayerListItem'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.12"
+      },
+      "Tick": {
+        "ObjectName": "Function'BPAdminPlayerListItem_C:Tick'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.13"
+      }
+    },
     "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -750,7 +1061,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPAdminPlayerListItem_C'Default__BPAdminPlayerListItem_C'",
-      "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.2"
+      "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.6"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -765,7 +1076,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "VerticalBox'BPAdminPlayerListItem_C:WidgetTree.VerticalBox_55'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.31"
+        "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.41"
       }
     }
   }

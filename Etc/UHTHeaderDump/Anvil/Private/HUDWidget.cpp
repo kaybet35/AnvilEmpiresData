@@ -54,6 +54,7 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->BorderRegionIndicatorText = NULL;
     this->ReinforcementStatus = NULL;
     this->BackoutImage = NULL;
+    this->HUDHintWidget = NULL;
 }
 
 
@@ -71,6 +72,10 @@ ESlateVisibility UHUDWidget::GetNameCanvasVisibility() {
 }
 
 ESlateVisibility UHUDWidget::GetHUDSubCanvasVisibility() {
+    return ESlateVisibility::Visible;
+}
+
+ESlateVisibility UHUDWidget::GetHUDHintVisibility() {
     return ESlateVisibility::Visible;
 }
 

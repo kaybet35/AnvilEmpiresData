@@ -2615,6 +2615,7 @@ UTreeFallProxyComponent = {}
 ---@field UpkeepCostReinforced float
 ---@field bClientsUseVisActorPool boolean
 ---@field bSiegeDemoActive boolean
+---@field ForcedTimeOfDayNormalized uint8
 UTweakableDataComponent = {}
 
 

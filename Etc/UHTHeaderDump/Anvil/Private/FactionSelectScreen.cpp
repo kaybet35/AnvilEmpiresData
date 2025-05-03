@@ -39,6 +39,10 @@ bool UFactionSelectScreen::IsSelectedFactionButtonEnabled() {
     return false;
 }
 
+bool UFactionSelectScreen::IsFactionAranicButtonEnabled() {
+    return false;
+}
+
 bool UFactionSelectScreen::IsDeleteProfileButtonEnabled() {
     return false;
 }
