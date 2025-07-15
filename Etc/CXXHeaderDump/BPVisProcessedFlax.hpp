@@ -3,6 +3,6 @@
 
 class UBPVisProcessedFlax_C : public UVisItem
 {
-}; // Size: 0x250
+}; // Size: 0x2C0
 
 #endif

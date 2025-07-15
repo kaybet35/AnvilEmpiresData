@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisFamilyBed_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.17"
       }
     },
     "SuperStruct": {
@@ -82,45 +82,50 @@
     "Properties": {
       "HousingDataComponent": {
         "ObjectName": "HousingDataComponent'Default__BPVisFamilyBed_C:HousingDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.9"
       },
       "PlayerSpawnerDataComponent": {
         "ObjectName": "PlayerSpawnerDataComponent'Default__BPVisFamilyBed_C:PlayerSpawnerDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.10"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisFamilyBed_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.22"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconFoundationBed'",
         "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconFoundationBed.0"
       },
+      "BuildSiteCategory": "EBuildSiteCategory::Family",
       "BuildSiteOrder": 4,
       "SupportedVisualComponents": 1,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisFamilyBed_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.21"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisFamilyBed_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.8"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisFamilyBed_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.20"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisFamilyBed_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.19"
+      },
+      "CollapsibleDataComponent": {
+        "ObjectName": "CollapsibleDataComponent'Default__BPVisFamilyBed_C:CollapsibleDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.3"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisFamilyBed_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.12"
       },
       "DecayDataComponent": {
         "ObjectName": "DecayDataComponent'Default__BPVisFamilyBed_C:DecayDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.6"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyBed_C:ArrowComponent'",
@@ -128,11 +133,11 @@
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisFamilyBed_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.5"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisFamilyBed_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.7"
       },
       "UseWindowType": "EHUDWindowType::Housing",
       "bUseInteractionOutline": true,
@@ -157,6 +162,13 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.0"
       }
     }
+  },
+  {
+    "Type": "CollapsibleDataComponent",
+    "Name": "CollapsibleDataComponent",
+    "Outer": "Default__BPVisFamilyBed_C",
+    "Class": "UScriptClass'CollapsibleDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "DecalComponent",
@@ -221,7 +233,7 @@
       "bDeferGrassUpdate": true,
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisFamilyBed_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.18"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisFamilyBed_C:ArrowComponent'",
@@ -277,7 +289,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisFamilyBed_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.11"
       },
       "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -296,7 +308,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFamilyBed_C:Occupied Mesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.23"
       },
       "VariableGuid": "A5220AF4-43448B56-03760DA1-DA589A46",
       "InternalVariableName": "Occupied Mesh"
@@ -315,7 +327,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPVisFamilyBed_C:Decal_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.4"
       },
       "VariableGuid": "550F4E99-4EDB4833-B0A21AA1-A1AC1260",
       "InternalVariableName": "Decal"
@@ -334,18 +346,18 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisFamilyBed_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.24"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyBed_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyBed_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.14"
         }
       ],
       "VariableGuid": "5D70801B-4949F7F2-438C9591-083A3D96",
@@ -362,26 +374,26 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyBed_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.16"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFamilyBed_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.16"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyBed_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.14"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyBed_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.13"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.14"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisFamilyBed_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisFamilyBed.13"
       }
     }
   },

@@ -557,7 +557,7 @@ class ULandscapeSplinesComponent : public UPrimitiveComponent
 
 class ULandscapeSubsystem : public UTickableWorldSubsystem
 {
-}; // Size: 0x50
+}; // Size: 0x80
 
 class ULandscapeWeightmapUsage : public UObject
 {

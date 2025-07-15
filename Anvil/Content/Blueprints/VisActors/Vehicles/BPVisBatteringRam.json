@@ -13,9 +13,18 @@
     "Class": "UScriptClass'AudioComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'RamMove_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Ram/RamMove_Cue.0"
+      },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisBatteringRam_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisBatteringRam.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 112.0
       }
     }
   },
@@ -109,7 +118,6 @@
         "SourceString": "Built exclusively in camps. Used to damage and destroy enemy gates. Requires 4 people to operate.",
         "LocalizedString": "Built exclusively in camps. Used to damage and destroy enemy gates. Requires 4 people to operate."
       },
-      "PositionSmoothSpeed": 4.0,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisBatteringRam_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisBatteringRam.0"
@@ -240,6 +248,14 @@
         "ObjectPath": "Anvil/Content/Meshes/Vehicles/BatteringRam_SK.0"
       },
       "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": []
+        }
+      },
       "RelativeRotation": {
         "Pitch": 0.0,
         "Yaw": -90.0,

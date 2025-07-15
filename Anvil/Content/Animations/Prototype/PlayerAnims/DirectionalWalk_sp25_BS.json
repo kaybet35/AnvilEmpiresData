@@ -1,0 +1,125 @@
+[
+  {
+    "Type": "BlendSpace",
+    "Name": "DirectionalWalk_sp25_BS",
+    "Class": "UScriptClass'BlendSpace'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InterpolationParam": {
+        "InterpolationTime": 0.2,
+        "InterpolationType": "EFilterInterpolationType::BSIT_Linear"
+      },
+      "AnimLength": 4.0,
+      "SampleData": [
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'noweapon_movement_front_speed25_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/noweapon_movement_front_speed25_anim.0"
+          },
+          "SampleValue": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'noweapon_movement_left_speed25_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/noweapon_movement_left_speed25_anim.0"
+          },
+          "SampleValue": {
+            "X": -90.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'noweapon_movement_right_speed25_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/noweapon_movement_right_speed25_anim.0"
+          },
+          "SampleValue": {
+            "X": 90.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'noweapon_movement_back_speed25_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/noweapon_movement_back_speed25_anim.0"
+          },
+          "SampleValue": {
+            "X": -180.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        },
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'noweapon_movement_back_speed25_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/noweapon_movement_back_speed25_anim.0"
+          },
+          "SampleValue": {
+            "X": 180.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        }
+      ],
+      "BlendSpaceData": {
+        "Segments": [
+          {
+            "SampleIndices": 3,
+            "SampleIndices[1]": 1,
+            "Vertices": 0.0,
+            "Vertices[1]": 0.25
+          },
+          {
+            "SampleIndices": 1,
+            "SampleIndices[1]": 0,
+            "Vertices": 0.25,
+            "Vertices[1]": 0.5
+          },
+          {
+            "SampleIndices": 0,
+            "SampleIndices[1]": 2,
+            "Vertices": 0.5,
+            "Vertices[1]": 0.75
+          },
+          {
+            "SampleIndices": 2,
+            "SampleIndices[1]": 4,
+            "Vertices": 0.75,
+            "Vertices[1]": 1.0
+          }
+        ]
+      },
+      "BlendParameters": {
+        "DisplayName": "Direction",
+        "Min": -180.0,
+        "Max": 180.0,
+        "GridNum": 8,
+        "bSnapToGrid": true,
+        "bWrapInput": true
+      },
+      "BlendParameters[1]": {
+        "GridNum": 1,
+        "bSnapToGrid": true
+      },
+      "DimensionIndices": [
+        0
+      ],
+      "Skeleton": {
+        "ObjectName": "Skeleton'PrototypeChar_Skeleton'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/PrototypeChar_Skeleton.8"
+      }
+    },
+    "SkeletonGuid": "F597442D-46D412D3-CA2395A2-A90680CA"
+  }
+]

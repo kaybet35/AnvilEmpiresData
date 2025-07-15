@@ -45,11 +45,100 @@
         "ObjectName": "BlueprintGeneratedClass'EffectMaceImpact_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectMaceImpact.0"
       },
+      "bHasAlt": true,
       "DamageOffset": {
-        "X": 100.0,
-        "Y": 100.0,
-        "Z": -50.0
+        "X": -17.1,
+        "Y": 102.3,
+        "Z": -29.7608
       },
+      "AdditionalDamageOffsets": [
+        {
+          "X": 53.8,
+          "Y": 86.5,
+          "Z": -35.14585
+        },
+        {
+          "X": 117.3,
+          "Y": 61.8,
+          "Z": -14.351495
+        },
+        {
+          "X": 96.8,
+          "Y": 61.8,
+          "Z": -12.173711
+        },
+        {
+          "X": 39.7,
+          "Y": 86.5,
+          "Z": -29.680677
+        },
+        {
+          "X": -23.0,
+          "Y": 98.8,
+          "Z": -13.6
+        },
+        {
+          "X": -17.1,
+          "Y": 102.3,
+          "Z": -29.7608
+        },
+        {
+          "X": 53.8,
+          "Y": 86.5,
+          "Z": -35.14585
+        },
+        {
+          "X": 117.3,
+          "Y": 61.8,
+          "Z": -14.351495
+        },
+        {
+          "X": -17.1,
+          "Y": -102.3,
+          "Z": -29.7608
+        },
+        {
+          "X": 53.8,
+          "Y": -86.5,
+          "Z": -35.14585
+        },
+        {
+          "X": 117.3,
+          "Y": -61.8,
+          "Z": -14.351495
+        },
+        {
+          "X": 96.8,
+          "Y": -61.8,
+          "Z": -12.173711
+        },
+        {
+          "X": 39.7,
+          "Y": -86.5,
+          "Z": -29.680677
+        },
+        {
+          "X": -23.0,
+          "Y": -98.8,
+          "Z": -13.6
+        },
+        {
+          "X": -17.1,
+          "Y": -102.3,
+          "Z": -29.7608
+        },
+        {
+          "X": 53.8,
+          "Y": -86.5,
+          "Z": -35.14585
+        },
+        {
+          "X": 117.3,
+          "Y": -61.8,
+          "Z": -14.351495
+        }
+      ],
+      "DamageOffsetCount": 3,
       "FireOffset": {
         "X": 0.0,
         "Y": 0.0,
@@ -61,19 +150,48 @@
       "RequiredStance": "EAnvilCharacterStance::OnHorse",
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
-        "Delay": 0.4,
-        "Duration": 1.1,
-        "RotationSpeedModifier": 4.0,
+        "bChainable": true,
+        "Delay": 0.05,
+        "AdditionalDelays": 0.1,
+        "AdditionalDelays[1]": 0.15,
+        "AttackChainDelays": 0.04,
+        "AttackChainDelays[1]": 0.07,
+        "AttackChainDelays[2]": 0.12,
+        "AttackChainDelays[3]": 0.05,
+        "AttackChainDelays[4]": 0.1,
+        "AttackChainDelays[5]": 0.15,
+        "Duration": 0.75,
+        "AttackChainDurations": 0.75,
+        "AttackChainDurations[1]": 0.75,
+        "StaminaCost": 10.0
+      },
+      "AltActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "bChainable": true,
+        "Delay": 0.05,
+        "AdditionalDelays": 0.1,
+        "AdditionalDelays[1]": 0.15,
+        "AttackChainDelays": 0.04,
+        "AttackChainDelays[1]": 0.07,
+        "AttackChainDelays[2]": 0.12,
+        "AttackChainDelays[3]": 0.05,
+        "AttackChainDelays[4]": 0.1,
+        "AttackChainDelays[5]": 0.15,
+        "Duration": 0.75,
+        "AttackChainDurations": 0.75,
+        "AttackChainDurations[1]": 0.75,
         "StaminaCost": 10.0
       },
       "RangedActivity": {
         "bRepeatable": false
       },
       "bAllowCameraPan": false,
-      "Damage": 35,
+      "Damage": 25,
       "DurabilityLossPerUse": 2.0,
-      "DamageRadius": 125.0,
-      "AimMovementSpeedModifier": 0.45,
+      "DamageRadius": 120.0,
+      "StabilityDamage": 0.15,
+      "SecondaryStabilityDamage": 0.5,
+      "AimMovementSpeedModifier": 0.3,
       "AimRotationSpeedModifier": 4.0
     }
   }

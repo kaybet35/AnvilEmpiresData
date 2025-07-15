@@ -1,0 +1,194 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "FortBannerStandingBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseBuildSiteEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.0"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseBuildSiteEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FortBannerStandingBuildSite_C'Default__FortBannerStandingBuildSite_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Fort/FortBannerStandingBuildSite.5"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__FortBannerStandingBuildSite_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseBuildSiteEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.1"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BuildSiteProxyComponent",
+    "Name": "BuildSiteProxyComponent_0",
+    "Outer": "Default__FortBannerStandingBuildSite_C",
+    "Class": "UScriptClass'BuildSiteProxyComponent'",
+    "Template": {
+      "ObjectName": "BuildSiteProxyComponent'Default__BPBaseBuildSiteEntity_C:BuildSiteProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.3"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuiltStructureEntity": {
+        "ObjectName": "BlueprintGeneratedClass'FortBannerStanding_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Fort/FortBannerStanding.0"
+      },
+      "BuildLocation": 1,
+      "BuildArea": {
+        "TownArea": true,
+        "FortressArea": true,
+        "WildernessArea": false
+      },
+      "BuildRules": {
+        "TierPrerequisite": 2
+      },
+      "RequiredTool": "EAnvilToolType::Hands",
+      "bAllowRapidBuild": true,
+      "MaterialRequirements": [
+        {
+          "CodeName": -667807241,
+          "Count": 30
+        },
+        {
+          "CodeName": -1913469277,
+          "Count": 5
+        }
+      ]
+    }
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__FortBannerStandingBuildSite_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseBuildSiteEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.4"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__FortBannerStandingBuildSite_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseBuildSiteEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.5"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'FortBannerStandingFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Fort/FortBannerStandingFootprint.0"
+      }
+    }
+  },
+  {
+    "Type": "FortBannerStandingBuildSite_C",
+    "Name": "Default__FortBannerStandingBuildSite_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Fort/FortBannerStandingBuildSite.FortBannerStandingBuildSite_C'",
+    "Template": {
+      "ObjectName": "BPBaseBuildSiteEntity_C'Default__BPBaseBuildSiteEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuildSiteComp": {
+        "ObjectName": "BuildSiteProxyComponent'Default__FortBannerStandingBuildSite_C:BuildSiteProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Fort/FortBannerStandingBuildSite.2"
+      },
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__FortBannerStandingBuildSite_C:TeamProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Fort/FortBannerStandingBuildSite.8"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__FortBannerStandingBuildSite_C:HealthProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Fort/FortBannerStandingBuildSite.6"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__FortBannerStandingBuildSite_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Fort/FortBannerStandingBuildSite.4"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__FortBannerStandingBuildSite_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Fort/FortBannerStandingBuildSite.1"
+      },
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__FortBannerStandingBuildSite_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Fort/FortBannerStandingBuildSite.3"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__FortBannerStandingBuildSite_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/Fort/FortBannerStandingBuildSite.7"
+      },
+      "CodeNameString": "FortBannerStandingBuildSite",
+      "CodeName": -774244917,
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "VisActorClass": {
+        "ObjectName": "Class'VisBuildSite'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "VisActorTemplateClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortBannerStanding_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Fort/BPFortBannerStanding.1"
+      }
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthProxyComponent_0",
+    "Outer": "Default__FortBannerStandingBuildSite_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseBuildSiteEntity_C:HealthProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.6"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxHealth": 100.0
+    }
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__FortBannerStandingBuildSite_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseBuildSiteEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.7"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamProxyComponent_0",
+    "Outer": "Default__FortBannerStandingBuildSite_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseBuildSiteEntity_C:TeamProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.8"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  }
+]

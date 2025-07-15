@@ -3,7 +3,7 @@
     "Type": "BatteringRam_C",
     "Name": "Default__BatteringRam_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Vehicles/BatteringRam.BatteringRam_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CodeNameString": "BatteringRam",
       "CodeName": 220397918,
@@ -114,7 +114,8 @@
         "Z": 150.0
       },
       "SurfaceType": "EAnvilPhysicalSurfaceType::Wood",
-      "CollisionMask": 16793664
+      "CollisionMask": 151011392,
+      "bVaultable": false
     }
   },
   {
@@ -197,7 +198,7 @@
     "Class": "UScriptClass'HealthProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "MaxHealth": 425.0,
+      "MaxHealth": 530.0,
       "TargetType": "EAnvilDamageTargetType::Vehicle"
     }
   },
@@ -244,6 +245,7 @@
       "bGroupVehicle": true,
       "bYawInPlace": true,
       "bRammingForceKillPlayer": true,
+      "MovementPlayerInteraction": "EAnvilVehicleMovementPlayerInteractionType::BlockIfMaxGuard",
       "CollisionEffect": {
         "ObjectName": "BlueprintGeneratedClass'HitEffectRam_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectRam.0"

@@ -1,0 +1,178 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Male01Damage_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'Male01Damage_Cue:SoundNodeModulator_1'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/Male01Damage_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Voice'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/Voice.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'VoiceConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/VoiceConcurrency.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 128,
+        "VolumeScale": 0.5
+      },
+      "Duration": 1.2423333,
+      "MaxDistance": 8100.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Voice'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Voice.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "Male01Damage_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VolumeMin": 0.85,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'Male01Damage_Cue:SoundNodeRandom_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/Male01Damage_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "Male01Damage_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Weights": [
+        0.025,
+        0.025,
+        0.025,
+        0.025,
+        0.025,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Male01Damage_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/Male01Damage_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Male01Damage_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/Male01Damage_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Male01Damage_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/Male01Damage_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Male01Damage_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/Male01Damage_Cue.6"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Male01Damage_Cue:SoundNodeWavePlayer_5'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/Male01Damage_Cue.7"
+        },
+        null
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Male01Damage_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vocals/Male/MaleDamage01.MaleDamage01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'MaleDamage01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/MaleDamage01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "Male01Damage_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vocals/Male/MaleDamage02.MaleDamage02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'MaleDamage02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/MaleDamage02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "Male01Damage_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vocals/Male/MaleDamage03.MaleDamage03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'MaleDamage03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/MaleDamage03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "Male01Damage_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vocals/Male/MaleDamage04.MaleDamage04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'MaleDamage04'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/MaleDamage04.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "Male01Damage_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vocals/Male/MaleDamage05.MaleDamage05",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'MaleDamage05'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/MaleDamage05.0"
+    }
+  }
+]

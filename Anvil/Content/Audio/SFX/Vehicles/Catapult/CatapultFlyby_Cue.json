@@ -1,0 +1,63 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "CatapultFlyby_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'CatapultFlyby_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Catapult/CatapultFlyby_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Weapons'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.7"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'ConcurrencyDefault'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/ConcurrencyDefault.0"
+        }
+      ],
+      "Duration": 0.5385,
+      "MaxDistance": 6000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'ProjectileFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/ProjectileFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "CatapultFlyby_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'CatapultFlyby_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Catapult/CatapultFlyby_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "CatapultFlyby_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/Catapult/CatapultFlyby01.CatapultFlyby01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'CatapultFlyby01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Catapult/CatapultFlyby01.0"
+    }
+  }
+]

@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "ProxyComponent.h"
 #include "PlayerInputProxyComponent.generated.h"
 
@@ -18,6 +19,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CameraMousePositionNormalizedEdgePanThreshold;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FVector RangedAimStartOffset;
     
     UPlayerInputProxyComponent();
 

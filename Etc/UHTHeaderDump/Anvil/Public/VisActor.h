@@ -8,6 +8,7 @@
 #include "MapIconInstanceProperty.h"
 #include "VisActor.generated.h"
 
+class UDataComponent;
 class UMeshVisibilityDataComponent;
 class USceneComponent;
 class UTexture2D;
@@ -78,6 +79,9 @@ protected:
     FText FoundationVariantName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UDataComponent*> DataComponentCache;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMeshVisibilityDataComponent* MeshVisibilityDataComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -87,6 +91,9 @@ protected:
     float RotationSmoothSpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float PositionSmoothSpeedDistance;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ClientMovementSmoothingDistance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -94,6 +101,14 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseDepthStencilForInteractionHighlight;
+    
+public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bClientSideDestruction;
+    
+protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float ClientSideLifeSpan;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<USceneComponent*> ToggleVisibilityComponents;

@@ -1,0 +1,165 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__VisHitEffectSiegeTower_C",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AudioComponent",
+    "Outer": "Default__VisHitEffectSiegeTower_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'BatteringRamImpact_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Ram/BatteringRamImpact_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectSiegeTower_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectSiegeTower.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "VisHitEffectSiegeTower_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'VisHitEffectSiegeTower_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectSiegeTower.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisEffect'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "VisHitEffectSiegeTower_C'Default__VisHitEffectSiegeTower_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectSiegeTower.9"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "LifetimeDataComponent",
+    "Name": "LifetimeDataComponent",
+    "Outer": "Default__VisHitEffectSiegeTower_C",
+    "Class": "UScriptClass'LifetimeDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraComponent",
+    "Outer": "Default__VisHitEffectSiegeTower_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SiegeTower03Impact'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SiegeTower03Impact.27"
+      },
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectSiegeTower_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectSiegeTower.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "VisHitEffectSiegeTower_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'VisHitEffectSiegeTower_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectSiegeTower.5"
+      },
+      "VariableGuid": "6BA79487-490A9049-4044F78B-58DE27DE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "VisHitEffectSiegeTower_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'VisHitEffectSiegeTower_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectSiegeTower.6"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__VisHitEffectSiegeTower_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectSiegeTower_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectSiegeTower.0"
+      }
+    }
+  },
+  {
+    "Type": "VisHitEffectSiegeTower_C",
+    "Name": "Default__VisHitEffectSiegeTower_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/FX/VisHitEffectSiegeTower.VisHitEffectSiegeTower_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectSiegeTower_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectSiegeTower.0"
+      },
+      "AudioComponent": {
+        "ObjectName": "AudioComponent'Default__VisHitEffectSiegeTower_C:AudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectSiegeTower.1"
+      },
+      "NiagaraComponent": {
+        "ObjectName": "NiagaraComponent'Default__VisHitEffectSiegeTower_C:NiagaraComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectSiegeTower.4"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__VisHitEffectSiegeTower_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectSiegeTower.8"
+      },
+      "LifetimeDataComponent": {
+        "ObjectName": "LifetimeDataComponent'Default__VisHitEffectSiegeTower_C:LifetimeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectSiegeTower.3"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectSiegeTower_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectSiegeTower.0"
+      }
+    }
+  }
+]

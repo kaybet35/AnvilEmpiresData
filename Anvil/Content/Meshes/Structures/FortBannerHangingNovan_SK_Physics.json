@@ -1,0 +1,150 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "FortBannerHangingNovan_SK_Physics",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'FortBannerHangingNovan_SK_Physics:SkeletalBodySetup_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingNovan_SK_Physics.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'FortBannerHangingNovan_SK_Physics:SkeletalBodySetup_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingNovan_SK_Physics.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'FortBannerHangingNovan_SK_Physics:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingNovan_SK_Physics.1"
+        }
+      ],
+      "ThumbnailInfo": null
+    },
+    "CollisionDisableTable": [
+      {
+        "Key": {
+          "Indices": [
+            0,
+            1
+          ]
+        },
+        "Value": false
+      }
+    ]
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "FortBannerHangingNovan_SK_Physics",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "Bottom",
+        "ConstraintBone1": "Bottom",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -36.32796
+        },
+        "PriAxis2": {
+          "X": 5.9604645E-08,
+          "Y": 0.0,
+          "Z": 1.0
+        },
+        "SecAxis2": {
+          "X": 1.0,
+          "Y": 0.0,
+          "Z": -5.9604645E-08
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "FortBannerHangingNovan_SK_Physics",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": -0.0,
+              "Yaw": -90.0,
+              "Roll": 0.0
+            },
+            "X": 1.01,
+            "Y": 1.01,
+            "Z": 1.01,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "10D3E132494CEC87D9D534A22F7B8809"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "FortBannerHangingNovan_SK_Physics",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": -165.74252,
+              "Y": -9.75472,
+              "Z": 3.3305025
+            },
+            "Rotation": {
+              "Pitch": -0.027352387,
+              "Yaw": -90.0,
+              "Roll": 1.1537652
+            },
+            "X": 18.48908,
+            "Y": 354.5786,
+            "Z": 184.17593,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "Bottom",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "3C690A85403BE2E815AAD388CBD3064E"
+  }
+]

@@ -54,19 +54,28 @@ struct FBasicItemCount
 
 }; // Size: 0x10
 
+struct FBoundingBox
+{
+    FVector Position;                                                                 // 0x0000 (size: 0x18)
+    FRotator Rotation;                                                                // 0x0018 (size: 0x18)
+    FVector Extents;                                                                  // 0x0030 (size: 0x18)
+
+}; // Size: 0x48
+
 struct FBuildAreaInfo
 {
     bool TownArea;                                                                    // 0x0000 (size: 0x1)
-    bool TownAreaPledgeRequired;                                                      // 0x0001 (size: 0x1)
-    bool SmallCampArea;                                                               // 0x0002 (size: 0x1)
-    bool LargeCampArea;                                                               // 0x0003 (size: 0x1)
-    bool HomesteadArea;                                                               // 0x0004 (size: 0x1)
-    bool HomesteadAreaPledgeRequired;                                                 // 0x0005 (size: 0x1)
-    bool UndergroundArea;                                                             // 0x0006 (size: 0x1)
-    bool WildernessArea;                                                              // 0x0007 (size: 0x1)
-    bool WildernessAreaFriendlyRequired;                                              // 0x0008 (size: 0x1)
+    bool FortressArea;                                                                // 0x0001 (size: 0x1)
+    bool TownAreaPledgeRequired;                                                      // 0x0002 (size: 0x1)
+    bool SmallCampArea;                                                               // 0x0003 (size: 0x1)
+    bool LargeCampArea;                                                               // 0x0004 (size: 0x1)
+    bool HomesteadArea;                                                               // 0x0005 (size: 0x1)
+    bool HomesteadAreaPledgeRequired;                                                 // 0x0006 (size: 0x1)
+    bool UndergroundArea;                                                             // 0x0007 (size: 0x1)
+    bool WildernessArea;                                                              // 0x0008 (size: 0x1)
+    bool WildernessAreaFriendlyRequired;                                              // 0x0009 (size: 0x1)
 
-}; // Size: 0x9
+}; // Size: 0xA
 
 struct FBuildRuleInfo
 {
@@ -100,12 +109,12 @@ struct FBuildSitePlacementInfo
 struct FCentralMarketplaceListing
 {
     int32 ListingId;                                                                  // 0x0000 (size: 0x4)
-    FItemCount Item;                                                                  // 0x0008 (size: 0x28)
-    int32 PricePerItem;                                                               // 0x0030 (size: 0x4)
-    int64 ListingOwnerOnlineId;                                                       // 0x0038 (size: 0x8)
-    int32 NumItemsFulfilled;                                                          // 0x0040 (size: 0x4)
+    FItemCount Item;                                                                  // 0x0008 (size: 0x48)
+    int32 PricePerItem;                                                               // 0x0050 (size: 0x4)
+    int64 ListingOwnerOnlineId;                                                       // 0x0058 (size: 0x8)
+    int32 NumItemsFulfilled;                                                          // 0x0060 (size: 0x4)
 
-}; // Size: 0x48
+}; // Size: 0x68
 
 struct FCentralMarketplaceOrderItem
 {
@@ -187,8 +196,9 @@ struct FCraftingRecipe
 
 struct FCustomStackLimit
 {
-    TSubclassOf<class UItemTemplate> Item;                                            // 0x0000 (size: 0x8)
-    uint16 StackLimit;                                                                // 0x0008 (size: 0x2)
+    TSubclassOf<class UItemTemplate> CodeName;                                        // 0x0000 (size: 0x8)
+    int32 CodeNameVisVar;                                                             // 0x0008 (size: 0x4)
+    int32 StackLimit;                                                                 // 0x000C (size: 0x4)
 
 }; // Size: 0x10
 
@@ -266,6 +276,7 @@ struct FFootprintSharedCompEntry
     uint8 bHighlight;                                                                 // 0x0008 (size: 0x1)
     uint8 bHide;                                                                      // 0x0008 (size: 0x1)
     uint8 bNoCopyToBuildSite;                                                         // 0x0008 (size: 0x1)
+    uint8 bInsertToStartOfComponentArray;                                             // 0x0008 (size: 0x1)
 
 }; // Size: 0x10
 
@@ -334,21 +345,41 @@ struct FHousePledgedPlayerArray
 
 }; // Size: 0x10
 
-struct FInventoryItem
+struct FInventorySlot
 {
-    FGridItem Base;                                                                   // 0x0000 (size: 0xC)
-    FGridItem DedicatedItem;                                                          // 0x000C (size: 0xC)
-    int32 Count;                                                                      // 0x0018 (size: 0x4)
-    int64 AcceptedTags;                                                               // 0x0020 (size: 0x8)
-    float Durability;                                                                 // 0x0028 (size: 0x4)
-    uint8 ItemFlags;                                                                  // 0x002C (size: 0x1)
-    uint8 Payload;                                                                    // 0x002D (size: 0x1)
-    int32 StackLimit;                                                                 // 0x0030 (size: 0x4)
-    bool bIsDisabled;                                                                 // 0x0034 (size: 0x1)
-    bool bCantArmDueToHeavyItem;                                                      // 0x0035 (size: 0x1)
-    EAnvilItemSlotBackgroundType BackgroundType;                                      // 0x0038 (size: 0x1)
+    int32 ProxyRepeat;                                                                // 0x0000 (size: 0x4)
+    FItemCount Base;                                                                  // 0x0008 (size: 0x48)
+    int32 StackLimit;                                                                 // 0x0050 (size: 0x4)
+    bool bOr;                                                                         // 0x0054 (size: 0x1)
+    bool bAllowWithdrawal;                                                            // 0x0055 (size: 0x1)
+    bool bIsPlayerEquipmentSlot;                                                      // 0x0056 (size: 0x1)
+    bool bCheckDedicatedUnderlyingItem;                                               // 0x0057 (size: 0x1)
+    TArray<EAnvilItemTag> AcceptedTags;                                               // 0x0058 (size: 0x10)
+    int64 AcceptedTagsVisVar;                                                         // 0x0068 (size: 0x8)
+    TArray<EAnvilItemTag> RequiredTags;                                               // 0x0070 (size: 0x10)
+    int64 RequiredTagsVisVar;                                                         // 0x0080 (size: 0x8)
+    TArray<EAnvilItemTag> ProhibitedTags;                                             // 0x0088 (size: 0x10)
+    int64 ProhibitedTagsVisVar;                                                       // 0x0098 (size: 0x8)
+    TSubclassOf<class UItemTemplate> DedicatedItemType;                               // 0x00A0 (size: 0x8)
+    int32 DedicatedItemTypeVisVar;                                                    // 0x00A8 (size: 0x4)
+    TSubclassOf<class UItemTemplate> DedicatedUnderlyingItem;                         // 0x00B0 (size: 0x8)
+    int32 DedicatedUnderlyingItemVisVar;                                              // 0x00B8 (size: 0x4)
+    TSubclassOf<class UItemTemplate> RequiredEnablingItem;                            // 0x00C0 (size: 0x8)
+    int32 RequiredEnablingItemVisVar;                                                 // 0x00C8 (size: 0x4)
+    EAnvilItemSlotBackgroundType BackgroundType;                                      // 0x00CC (size: 0x1)
+    TArray<FCustomStackLimit> CustomStackLimits;                                      // 0x00D0 (size: 0x10)
 
-}; // Size: 0x40
+}; // Size: 0xE0
+
+struct FInventorySlotData
+{
+    FInventorySlot Slot;                                                              // 0x0000 (size: 0xE0)
+    bool bHidden;                                                                     // 0x00E0 (size: 0x1)
+    bool bIsDisabled;                                                                 // 0x00E1 (size: 0x1)
+    bool bCantArmDueToHeavyItem;                                                      // 0x00E2 (size: 0x1)
+    uint8 PriorityGroup;                                                              // 0x00E3 (size: 0x1)
+
+}; // Size: 0xE8
 
 struct FItemCount
 {
@@ -358,41 +389,20 @@ struct FItemCount
     int32 UnderlyingCodeNameVisVar;                                                   // 0x0018 (size: 0x4)
     float Durability;                                                                 // 0x001C (size: 0x4)
     int32 Count;                                                                      // 0x0020 (size: 0x4)
-    uint8 ItemFlags;                                                                  // 0x0024 (size: 0x1)
-    uint8 Payload;                                                                    // 0x0025 (size: 0x1)
+    TArray<EAnvilItemFlag> ItemFlags;                                                 // 0x0028 (size: 0x10)
+    int64 ItemFlagsVisVar;                                                            // 0x0038 (size: 0x8)
+    uint8 Payload;                                                                    // 0x0040 (size: 0x1)
 
-}; // Size: 0x28
-
-struct FItemSlot
-{
-    int32 ProxyRepeat;                                                                // 0x0000 (size: 0x4)
-    bool bOr;                                                                         // 0x0004 (size: 0x1)
-    TSubclassOf<class UItemTemplate> HeldItem;                                        // 0x0008 (size: 0x8)
-    bool bIsHeldItemPublic;                                                           // 0x0010 (size: 0x1)
-    int32 Count;                                                                      // 0x0014 (size: 0x4)
-    int32 StackLimit;                                                                 // 0x0018 (size: 0x4)
-    bool bAllowWithdrawal;                                                            // 0x001C (size: 0x1)
-    bool bIsPlayerEquipmentSlot;                                                      // 0x001D (size: 0x1)
-    TArray<EAnvilItemTag> AcceptedTags;                                               // 0x0020 (size: 0x10)
-    TArray<EAnvilItemTag> RequiredTags;                                               // 0x0030 (size: 0x10)
-    TArray<EAnvilItemTag> ProhibitedTags;                                             // 0x0040 (size: 0x10)
-    TSubclassOf<class UItemTemplate> DedicatedItemType;                               // 0x0050 (size: 0x8)
-    TSubclassOf<class UItemTemplate> DedicatedUnderlyingItemType;                     // 0x0058 (size: 0x8)
-    bool bCheckDedicatedUnderlyingItem;                                               // 0x0060 (size: 0x1)
-    TSubclassOf<class UItemTemplate> RequiredEnablingItem;                            // 0x0068 (size: 0x8)
-    EAnvilItemSlotBackgroundType BackgroundType;                                      // 0x0070 (size: 0x1)
-    TArray<FCustomStackLimit> CustomStackLimits;                                      // 0x0078 (size: 0x10)
-
-}; // Size: 0x88
+}; // Size: 0x48
 
 struct FLootTableItem
 {
-    FItemCount ItemToDrop;                                                            // 0x0000 (size: 0x28)
-    float NormalizedChanceToDrop;                                                     // 0x0028 (size: 0x4)
-    float MinDurability;                                                              // 0x002C (size: 0x4)
-    float MaxDurability;                                                              // 0x0030 (size: 0x4)
+    FItemCount ItemToDrop;                                                            // 0x0000 (size: 0x48)
+    float NormalizedChanceToDrop;                                                     // 0x0048 (size: 0x4)
+    float MinDurability;                                                              // 0x004C (size: 0x4)
+    float MaxDurability;                                                              // 0x0050 (size: 0x4)
 
-}; // Size: 0x38
+}; // Size: 0x58
 
 struct FMineChunk
 {
@@ -458,8 +468,10 @@ struct FR2ConfigArea
     float SmallFamilyCenterExtent;                                                    // 0x0000 (size: 0x4)
     float BigFamilyCenterExtent;                                                      // 0x0004 (size: 0x4)
     float TownAreaRadius;                                                             // 0x0008 (size: 0x4)
+    float FortressAreaRadius;                                                         // 0x000C (size: 0x4)
+    float FortressToTownPaddingDist;                                                  // 0x0010 (size: 0x4)
 
-}; // Size: 0xC
+}; // Size: 0x14
 
 struct FR2ConfigBuildSite
 {
@@ -483,6 +495,12 @@ struct FR2ConfigBuildSiteDistanceRule
 struct FR2ConfigCombustion
 {
     TArray<FFuelType> FuelList;                                                       // 0x0000 (size: 0x10)
+
+}; // Size: 0x10
+
+struct FR2ConfigItem
+{
+    TArray<EAnvilItemTag> CrateAcceptedTags;                                          // 0x0000 (size: 0x10)
 
 }; // Size: 0x10
 
@@ -668,6 +686,15 @@ struct FUnderworldModuleDebugInfoEntry
     int32 SequenceNumber;                                                             // 0x001C (size: 0x4)
 
 }; // Size: 0x20
+
+struct FVersionInfo
+{
+    int32 Major;                                                                      // 0x0000 (size: 0x4)
+    int32 Minor;                                                                      // 0x0004 (size: 0x4)
+    int32 Patch;                                                                      // 0x0008 (size: 0x4)
+    int32 ChangeList;                                                                 // 0x000C (size: 0x4)
+
+}; // Size: 0x10
 
 struct FVictoryInfo
 {
@@ -856,9 +883,10 @@ class UAdminEnvDataComponent : public UDataComponent
     bool bShowWeatherStats;                                                           // 0x0128 (size: 0x1)
     bool bDebugHud;                                                                   // 0x0148 (size: 0x1)
     bool bShowLocateCoords;                                                           // 0x0168 (size: 0x1)
-    TArray<FStructureStats> StructureStatsList;                                       // 0x0188 (size: 0x10)
+    bool bDebugCrowdIndentifier;                                                      // 0x0188 (size: 0x1)
+    TArray<FStructureStats> StructureStatsList;                                       // 0x01A8 (size: 0x10)
 
-}; // Size: 0x1B0
+}; // Size: 0x1D0
 
 class UAdminEnvProxyComponent : public UProxyComponent
 {
@@ -869,12 +897,13 @@ class UAdvancedSnappingProxyComponent : public UProxyComponent
     bool bBlockSnapping;                                                              // 0x0028 (size: 0x1)
     bool bDisableMinSnapWhenNotSnapping;                                              // 0x0029 (size: 0x1)
     bool bNoOverlap;                                                                  // 0x002A (size: 0x1)
-    uint8 OverridedAngleOverlapPriority;                                              // 0x002B (size: 0x1)
-    float OverridedAngleOverlapMin;                                                   // 0x002C (size: 0x4)
-    uint8 NumSnappingRequired;                                                        // 0x0030 (size: 0x1)
-    float MaxOverlapDistOverride;                                                     // 0x0034 (size: 0x4)
+    bool bNoFoundationCheckWhenSnapped;                                               // 0x002B (size: 0x1)
+    uint8 OverridedAngleOverlapPriority;                                              // 0x002C (size: 0x1)
+    float OverridedAngleOverlapMin;                                                   // 0x0030 (size: 0x4)
+    uint8 NumSnappingRequired;                                                        // 0x0034 (size: 0x1)
+    float MaxOverlapDistOverride;                                                     // 0x0038 (size: 0x4)
 
-}; // Size: 0x38
+}; // Size: 0x40
 
 class UAnimalAIDataComponent : public UDataComponent
 {
@@ -1027,33 +1056,33 @@ class UBarnProxyComponent : public UProxyComponent
 
 class UBaseBuildSiteEntity : public UEntityTemplate
 {
-    class UBuildSiteProxyComponent* BuildSiteComp;                                    // 0x0080 (size: 0x8)
-    class UTeamProxyComponent* TeamComp;                                              // 0x0088 (size: 0x8)
-    class UHealthProxyComponent* HealthComp;                                          // 0x0090 (size: 0x8)
-    class UMeshCollisionProxyComponent* MeshCollisionComp;                            // 0x0098 (size: 0x8)
-    class UFootprintCollisionProxyComponent* FootprintComp;                           // 0x00A0 (size: 0x8)
-    class UBoxCollisionProxyComponent* UseBoxComp;                                    // 0x00A8 (size: 0x8)
-    class UBoxCollisionProxyComponent* ActionBoxComp;                                 // 0x00B0 (size: 0x8)
-    class UDecayProxyComponent* DecayComp;                                            // 0x00B8 (size: 0x8)
-    class UStructureProxyComponent* StructureComp;                                    // 0x00C0 (size: 0x8)
+    class UBuildSiteProxyComponent* BuildSiteComp;                                    // 0x0088 (size: 0x8)
+    class UTeamProxyComponent* TeamComp;                                              // 0x0090 (size: 0x8)
+    class UHealthProxyComponent* HealthComp;                                          // 0x0098 (size: 0x8)
+    class UMeshCollisionProxyComponent* MeshCollisionComp;                            // 0x00A0 (size: 0x8)
+    class UFootprintCollisionProxyComponent* FootprintComp;                           // 0x00A8 (size: 0x8)
+    class UBoxCollisionProxyComponent* UseBoxComp;                                    // 0x00B0 (size: 0x8)
+    class UBoxCollisionProxyComponent* ActionBoxComp;                                 // 0x00B8 (size: 0x8)
+    class UDecayProxyComponent* DecayComp;                                            // 0x00C0 (size: 0x8)
+    class UStructureProxyComponent* StructureComp;                                    // 0x00C8 (size: 0x8)
 
-}; // Size: 0xC8
+}; // Size: 0xD0
 
 class UBaseStructureEntity : public UEntityTemplate
 {
-    class UTeamProxyComponent* TeamComp;                                              // 0x0080 (size: 0x8)
-    class UHealthProxyComponent* HealthComp;                                          // 0x0088 (size: 0x8)
-    class URepairProxyComponent* RepairComp;                                          // 0x0090 (size: 0x8)
-    class UStructureProxyComponent* StructureComp;                                    // 0x0098 (size: 0x8)
-    class UDestroyableProxyComponent* DestroyableComp;                                // 0x00A0 (size: 0x8)
-    class UMeshCollisionProxyComponent* MeshCollisionComp;                            // 0x00A8 (size: 0x8)
-    class UFootprintCollisionProxyComponent* FootprintComp;                           // 0x00B0 (size: 0x8)
-    class UBoxCollisionProxyComponent* UseBoxComp;                                    // 0x00B8 (size: 0x8)
-    class UBoxCollisionProxyComponent* ActionBoxComp;                                 // 0x00C0 (size: 0x8)
-    class UDecayProxyComponent* DecayComp;                                            // 0x00C8 (size: 0x8)
-    class UScorchProxyComponent* ScorchComp;                                          // 0x00D0 (size: 0x8)
+    class UTeamProxyComponent* TeamComp;                                              // 0x0088 (size: 0x8)
+    class UHealthProxyComponent* HealthComp;                                          // 0x0090 (size: 0x8)
+    class URepairProxyComponent* RepairComp;                                          // 0x0098 (size: 0x8)
+    class UStructureProxyComponent* StructureComp;                                    // 0x00A0 (size: 0x8)
+    class UDestroyableProxyComponent* DestroyableComp;                                // 0x00A8 (size: 0x8)
+    class UMeshCollisionProxyComponent* MeshCollisionComp;                            // 0x00B0 (size: 0x8)
+    class UFootprintCollisionProxyComponent* FootprintComp;                           // 0x00B8 (size: 0x8)
+    class UBoxCollisionProxyComponent* UseBoxComp;                                    // 0x00C0 (size: 0x8)
+    class UBoxCollisionProxyComponent* ActionBoxComp;                                 // 0x00C8 (size: 0x8)
+    class UDecayProxyComponent* DecayComp;                                            // 0x00D0 (size: 0x8)
+    class UScorchProxyComponent* ScorchComp;                                          // 0x00D8 (size: 0x8)
 
-}; // Size: 0xD8
+}; // Size: 0xE0
 
 class UBeaconTowerDataComponent : public UDataComponent
 {
@@ -1101,7 +1130,7 @@ class UBuildSiteProxyComponent : public UProxyComponent
 {
     TSubclassOf<class UEntityTemplate> BuiltStructureEntity;                          // 0x0028 (size: 0x8)
     int32 BuildLocation;                                                              // 0x0030 (size: 0x4)
-    FBuildAreaInfo BuildArea;                                                         // 0x0034 (size: 0x9)
+    FBuildAreaInfo BuildArea;                                                         // 0x0034 (size: 0xA)
     FBuildRuleInfo BuildRules;                                                        // 0x0040 (size: 0x14)
     int32 CompatibleSurfaceTypes;                                                     // 0x0054 (size: 0x4)
     EAnvilToolType RequiredTool;                                                      // 0x0058 (size: 0x1)
@@ -1150,6 +1179,18 @@ class UCentralMarketplaceProxyComponent : public UProxyComponent
 class UChatMessage : public UObject
 {
 }; // Size: 0x60
+
+class UCollapsibleDataComponent : public UDataComponent
+{
+    bool bIsCollapsed;                                                                // 0x00A8 (size: 0x1)
+
+}; // Size: 0xC8
+
+class UCollapsibleProxyComponent : public UProxyComponent
+{
+    bool bUseSeparateCollapsedCollisions;                                             // 0x0028 (size: 0x1)
+
+}; // Size: 0x30
 
 class UCollisionProxyComponent : public UProxyComponent
 {
@@ -1276,9 +1317,8 @@ class UDecayProxyComponent : public UProxyComponent
 
 class UDeployProxyComponent : public UProxyComponent
 {
-    bool bRequireMounted;                                                             // 0x0028 (size: 0x1)
-    bool bCopyHealthPercentage;                                                       // 0x0029 (size: 0x1)
-    bool bForceShowBuildMenu;                                                         // 0x002A (size: 0x1)
+    bool bCopyHealthPercentage;                                                       // 0x0028 (size: 0x1)
+    bool bForceShowBuildMenu;                                                         // 0x0029 (size: 0x1)
     TArray<class TSubclassOf<UEntityTemplate>> DeployableBuildSites;                  // 0x0030 (size: 0x10)
 
 }; // Size: 0x40
@@ -1288,6 +1328,12 @@ class UDestroyableProxyComponent : public UProxyComponent
     TSubclassOf<class UEntityTemplate> DestructionEffectEntity;                       // 0x0028 (size: 0x8)
 
 }; // Size: 0x30
+
+class UDryingRackDataComponent : public UDataComponent
+{
+    float ReplicatedCurrentItemDryingProgress;                                        // 0x00A8 (size: 0x4)
+
+}; // Size: 0xC8
 
 class UDryingRackProxyComponent : public UProxyComponent
 {
@@ -1357,10 +1403,11 @@ class UEntityTemplate : public UObject
     TArray<class UProxyComponent*> Components;                                        // 0x0058 (size: 0x10)
     TSubclassOf<class AVisActorBase> VisActorClass;                                   // 0x0068 (size: 0x8)
     TSubclassOf<class AVisActorBase> VisActorTemplateClass;                           // 0x0070 (size: 0x8)
-    class AVisActorBase* VisActorDefaultObject;                                       // 0x0078 (size: 0x8)
+    bool bIgnoreErrorNoInteractionMask;                                               // 0x0078 (size: 0x1)
+    class AVisActorBase* VisActorDefaultObject;                                       // 0x0080 (size: 0x8)
 
     class UProxyComponent* GetProxyComponent(UClass* EntityType, UClass* ComponentType);
-}; // Size: 0x80
+}; // Size: 0x88
 
 class UEquipmentProxyComponent : public UProxyComponent
 {
@@ -1492,7 +1539,7 @@ class UGroundCheckBoxProxyComponent : public UProxyComponent
 
 class UHandsProxyComponent : public UProxyComponent
 {
-    TArray<FItemSlot> HandSlots;                                                      // 0x0028 (size: 0x10)
+    TArray<FInventorySlot> HandSlots;                                                 // 0x0028 (size: 0x10)
 
 }; // Size: 0x38
 
@@ -1580,8 +1627,9 @@ class UHungerProxyComponent : public UProxyComponent
 class UImpactSurfaceDataComponent : public UDataComponent
 {
     EAnvilPhysicalSurfaceType HitSurface;                                             // 0x00A8 (size: 0x1)
+    FEntityHandle HitTarget;                                                          // 0x00C8 (size: 0x10)
 
-}; // Size: 0xC8
+}; // Size: 0xF0
 
 class UImpactSurfaceProxyComponent : public UProxyComponent
 {
@@ -1589,7 +1637,7 @@ class UImpactSurfaceProxyComponent : public UProxyComponent
 
 class UInventoryProxyComponent : public UProxyComponent
 {
-    TArray<FItemSlot> Slots;                                                          // 0x0028 (size: 0x10)
+    TArray<FInventorySlot> Slots;                                                     // 0x0028 (size: 0x10)
     bool bUnpackCrates;                                                               // 0x0038 (size: 0x1)
     bool bEnforceWithdrawalStamina;                                                   // 0x0039 (size: 0x1)
     bool bOnlyAllowMaxDurabilityItems;                                                // 0x003A (size: 0x1)
@@ -1620,8 +1668,9 @@ class UItemTemplate : public UObject
     TSubclassOf<class UItemTemplate> HeatedItem;                                      // 0x0080 (size: 0x8)
     TSubclassOf<class UItemTemplate> CooledItem;                                      // 0x0088 (size: 0x8)
     bool bRanged;                                                                     // 0x0090 (size: 0x1)
-    bool bHasAlt;                                                                     // 0x0091 (size: 0x1)
-    bool bAltIsRanged;                                                                // 0x0092 (size: 0x1)
+    bool bUsesAccuracy;                                                               // 0x0091 (size: 0x1)
+    bool bHasAlt;                                                                     // 0x0092 (size: 0x1)
+    bool bAltIsRanged;                                                                // 0x0093 (size: 0x1)
     FVector DamageOffset;                                                             // 0x0098 (size: 0x18)
     TArray<FVector> AdditionalDamageOffsets;                                          // 0x00B0 (size: 0x10)
     uint32 DamageOffsetCount;                                                         // 0x00C0 (size: 0x4)
@@ -1655,38 +1704,48 @@ class UItemTemplate : public UObject
     TSubclassOf<class UEntityTemplate> DeployedBuildSite;                             // 0x02E8 (size: 0x8)
     float NightShroudLightRadius;                                                     // 0x02F0 (size: 0x4)
     bool bAllowCameraPan;                                                             // 0x02F4 (size: 0x1)
+    bool bAltAllowCameraPan;                                                          // 0x02F5 (size: 0x1)
     float StunChance;                                                                 // 0x02F8 (size: 0x4)
     float StunDuration;                                                               // 0x02FC (size: 0x4)
     float StunThrowDistance;                                                          // 0x0300 (size: 0x4)
-    uint8 Damage;                                                                     // 0x0304 (size: 0x1)
-    float DurabilityLossPerSec;                                                       // 0x0308 (size: 0x4)
-    float StockPileWithdrawalValue;                                                   // 0x030C (size: 0x4)
-    uint16 QuantityPerCrate;                                                          // 0x0310 (size: 0x2)
-    float RegenPerSec;                                                                // 0x0314 (size: 0x4)
-    float HungerRestored;                                                             // 0x0318 (size: 0x4)
-    float HealthLimitRestored;                                                        // 0x031C (size: 0x4)
-    float StaminaLimitRestored;                                                       // 0x0320 (size: 0x4)
-    float DurabilityLossPerUse;                                                       // 0x0324 (size: 0x4)
-    float DamageRadius;                                                               // 0x0328 (size: 0x4)
-    float VariableDamageMaxModifier;                                                  // 0x032C (size: 0x4)
-    float VariableDamageMinModifier;                                                  // 0x0330 (size: 0x4)
-    float ShieldDurabilityLossMultiplier;                                             // 0x0334 (size: 0x4)
-    float ArmourDamageMultiplier;                                                     // 0x0338 (size: 0x4)
-    float SecondaryArmourDamageMultiplier;                                            // 0x033C (size: 0x4)
-    float GuardMeterCostPerHit;                                                       // 0x0340 (size: 0x4)
-    uint8 ArmorMitigation;                                                            // 0x0344 (size: 0x1)
-    float StabilityDamage;                                                            // 0x0348 (size: 0x4)
-    float SecondaryStabilityDamage;                                                   // 0x034C (size: 0x4)
-    uint8 StabilityMitigationPercent;                                                 // 0x0350 (size: 0x1)
-    float ToolEffectiveness;                                                          // 0x0354 (size: 0x4)
-    float AimMovementSpeedModifier;                                                   // 0x0358 (size: 0x4)
-    float AimRotationSpeedModifier;                                                   // 0x035C (size: 0x4)
-    float PrimaryMovementSpeedModifier;                                               // 0x0360 (size: 0x4)
-    float SecondaryMovementSpeedModifier;                                             // 0x0364 (size: 0x4)
-    float PrimaryChanceToPenetrateGuard;                                              // 0x0368 (size: 0x4)
-    float SecondaryChanceToPenetrateGuard;                                            // 0x036C (size: 0x4)
+    float AccuracyGainPerSec;                                                         // 0x0304 (size: 0x4)
+    uint8 Damage;                                                                     // 0x0308 (size: 0x1)
+    float DurabilityLossPerSec;                                                       // 0x030C (size: 0x4)
+    float StockPileWithdrawalValue;                                                   // 0x0310 (size: 0x4)
+    uint16 QuantityPerCrate;                                                          // 0x0314 (size: 0x2)
+    float RegenPerSec;                                                                // 0x0318 (size: 0x4)
+    float HungerRestored;                                                             // 0x031C (size: 0x4)
+    float HealthLimitRestored;                                                        // 0x0320 (size: 0x4)
+    float StaminaLimitRestored;                                                       // 0x0324 (size: 0x4)
+    float DurabilityLossPerUse;                                                       // 0x0328 (size: 0x4)
+    float DamageRadius;                                                               // 0x032C (size: 0x4)
+    float AltDamageRadius;                                                            // 0x0330 (size: 0x4)
+    float MinRangedDistance;                                                          // 0x0334 (size: 0x4)
+    float VariableDamageMaxModifier;                                                  // 0x0338 (size: 0x4)
+    float VariableDamageMinModifier;                                                  // 0x033C (size: 0x4)
+    float ShieldDurabilityLossMultiplier;                                             // 0x0340 (size: 0x4)
+    float ArmourDamageMultiplier;                                                     // 0x0344 (size: 0x4)
+    float SecondaryArmourDamageMultiplier;                                            // 0x0348 (size: 0x4)
+    float GuardMeterCostPerHit;                                                       // 0x034C (size: 0x4)
+    uint8 ArmorMitigation;                                                            // 0x0350 (size: 0x1)
+    float StabilityDamage;                                                            // 0x0354 (size: 0x4)
+    float SecondaryStabilityDamage;                                                   // 0x0358 (size: 0x4)
+    uint8 StabilityMitigationPercent;                                                 // 0x035C (size: 0x1)
+    float ToolEffectiveness;                                                          // 0x0360 (size: 0x4)
+    float AimMovementSpeedModifier;                                                   // 0x0364 (size: 0x4)
+    float AimRotationSpeedModifier;                                                   // 0x0368 (size: 0x4)
+    float PrimaryMovementSpeedModifier;                                               // 0x036C (size: 0x4)
+    float SecondaryMovementSpeedModifier;                                             // 0x0370 (size: 0x4)
+    float PrimaryChanceToPenetrateGuard;                                              // 0x0374 (size: 0x4)
+    float SecondaryChanceToPenetrateGuard;                                            // 0x0378 (size: 0x4)
 
-}; // Size: 0x370
+}; // Size: 0x380
+
+class ULadderDataComponent : public UDataComponent
+{
+    float CurrentHalfLength;                                                          // 0x00A8 (size: 0x4)
+
+}; // Size: 0xC8
 
 class ULadderProxyComponent : public UProxyComponent
 {
@@ -1700,8 +1759,9 @@ class ULadderProxyComponent : public UProxyComponent
     float Acceleration;                                                               // 0x0044 (size: 0x4)
     float PlayerFallDamage;                                                           // 0x0048 (size: 0x4)
     float LadderFallDamage;                                                           // 0x004C (size: 0x4)
+    TArray<float> ValidHalfLengths;                                                   // 0x0050 (size: 0x10)
 
-}; // Size: 0x50
+}; // Size: 0x60
 
 class ULatticeMineDataComponent : public UDataComponent
 {
@@ -1864,15 +1924,15 @@ class UPhysMovementProxyComponent : public UProxyComponent
 
 class UPickupDataComponent : public UDataComponent
 {
-    FItemCount Item;                                                                  // 0x00A8 (size: 0x28)
+    FItemCount Item;                                                                  // 0x00A8 (size: 0x48)
 
-}; // Size: 0xE8
+}; // Size: 0x108
 
 class UPickupProxyComponent : public UProxyComponent
 {
-    FItemCount Item;                                                                  // 0x0028 (size: 0x28)
+    FItemCount Item;                                                                  // 0x0028 (size: 0x48)
 
-}; // Size: 0x50
+}; // Size: 0x70
 
 class UPlantGrowthDataComponent : public UDataComponent
 {
@@ -1909,26 +1969,29 @@ class UPlayerControllerProxyComponent : public UProxyComponent
 
 class UPlayerInputDataComponent : public UDataComponent
 {
-    FVector ClientAimLocation;                                                        // 0x00A8 (size: 0x18)
-    FVector ClientAimArcEndGroundLocation;                                            // 0x00D8 (size: 0x18)
-    FVector ClickHeading;                                                             // 0x0108 (size: 0x18)
-    EAnvilPlayerInputMode InputMode;                                                  // 0x0138 (size: 0x1)
-    EAnvilPlayerAimMeshType AimMeshType;                                              // 0x0158 (size: 0x1)
-    FVector ClientAimMeshLocation;                                                    // 0x0178 (size: 0x18)
-    float AimArcRotation;                                                             // 0x01A8 (size: 0x4)
-    float AimArcA;                                                                    // 0x01C8 (size: 0x4)
-    float AimArcX0;                                                                   // 0x01E8 (size: 0x4)
-    float AimArcGroundHitDistance;                                                    // 0x0208 (size: 0x4)
-    float AimArcCollisionDistance;                                                    // 0x0228 (size: 0x4)
-    int64 CurrentUsableEntityId;                                                      // 0x0248 (size: 0x8)
-    int64 CurrentMountableEntityId;                                                   // 0x0268 (size: 0x8)
-    int32 CurrentCollectableResourceType;                                             // 0x0288 (size: 0x4)
-    FStatusMessage PrimaryUsePromptMessage;                                           // 0x02A8 (size: 0x20)
-    int32 UsePrompt;                                                                  // 0x02E0 (size: 0x4)
-    EAnvilVehicleInputState VehicleInput;                                             // 0x0300 (size: 0x1)
-    FVector CameraCurrentPosition;                                                    // 0x0320 (size: 0x18)
+    FVector RangedAimStartOffset;                                                     // 0x00A8 (size: 0x18)
+    FVector ClientAimLocation;                                                        // 0x00D8 (size: 0x18)
+    FVector ClientAimArcEndGroundLocation;                                            // 0x0108 (size: 0x18)
+    FVector ClickHeading;                                                             // 0x0138 (size: 0x18)
+    EAnvilPlayerInputMode InputMode;                                                  // 0x0168 (size: 0x1)
+    EAnvilPlayerAimMeshType AimMeshType;                                              // 0x0188 (size: 0x1)
+    FVector ClientAimMeshLocation;                                                    // 0x01A8 (size: 0x18)
+    float AimArcRotation;                                                             // 0x01D8 (size: 0x4)
+    float AimArcA;                                                                    // 0x01F8 (size: 0x4)
+    float AimArcX0;                                                                   // 0x0218 (size: 0x4)
+    float AimArcGroundHitDistance;                                                    // 0x0238 (size: 0x4)
+    float AimArcCollisionDistance;                                                    // 0x0258 (size: 0x4)
+    float MinRangedDistance;                                                          // 0x0278 (size: 0x4)
+    FEntityHandle CurrentUsableEntity;                                                // 0x0298 (size: 0x10)
+    FEntityHandle CurrentMountableEntity;                                             // 0x02C0 (size: 0x10)
+    FEntityHandle CurrentSelectedPlayer;                                              // 0x02E8 (size: 0x10)
+    int32 CurrentCollectableResourceType;                                             // 0x0310 (size: 0x4)
+    FStatusMessage PrimaryUsePromptMessage;                                           // 0x0330 (size: 0x20)
+    int32 UsePrompt;                                                                  // 0x0368 (size: 0x4)
+    EAnvilVehicleInputState VehicleInput;                                             // 0x0388 (size: 0x1)
+    FVector CameraCurrentPosition;                                                    // 0x03A8 (size: 0x18)
 
-}; // Size: 0x350
+}; // Size: 0x3D8
 
 class UPlayerInputProxyComponent : public UProxyComponent
 {
@@ -1936,8 +1999,9 @@ class UPlayerInputProxyComponent : public UProxyComponent
     float CameraPanMaxDistance;                                                       // 0x002C (size: 0x4)
     float CameraPanLerpAlphaPerSecond;                                                // 0x0030 (size: 0x4)
     float CameraMousePositionNormalizedEdgePanThreshold;                              // 0x0034 (size: 0x4)
+    FVector RangedAimStartOffset;                                                     // 0x0038 (size: 0x18)
 
-}; // Size: 0x38
+}; // Size: 0x50
 
 class UPlayerMountDataComponent : public UDataComponent
 {
@@ -2026,6 +2090,12 @@ class UPowerUnitProxyComponent : public UProxyComponent
 
 }; // Size: 0x48
 
+class UProjectileMovementDataComponent : public UDataComponent
+{
+    bool bHidden;                                                                     // 0x00A8 (size: 0x1)
+
+}; // Size: 0xC8
+
 class UProjectileMovementProxyComponent : public UProxyComponent
 {
     TSubclassOf<class UEntityTemplate> PickupEntity;                                  // 0x0028 (size: 0x8)
@@ -2050,9 +2120,13 @@ class UProjectileMovementProxyComponent : public UProxyComponent
     float DislodgeRate;                                                               // 0x0084 (size: 0x4)
     float Lifetime;                                                                   // 0x0088 (size: 0x4)
     float RandomRadius;                                                               // 0x008C (size: 0x4)
-    bool bForceKillPlayers;                                                           // 0x0090 (size: 0x1)
+    float RandomRadiusMin;                                                            // 0x0090 (size: 0x4)
+    float AccuracyAtFurthestDist;                                                     // 0x0094 (size: 0x4)
+    bool bDistanceBasedAccuracy;                                                      // 0x0098 (size: 0x1)
+    bool bForceKillPlayers;                                                           // 0x0099 (size: 0x1)
+    bool bHitEffectNoPitch;                                                           // 0x009A (size: 0x1)
 
-}; // Size: 0x98
+}; // Size: 0xA0
 
 class UProxyComponent : public UObject
 {
@@ -2064,9 +2138,12 @@ class UProxyEntityProxyComponent : public UProxyComponent
 
 class UProxyEntitySpawnerProxyComponent : public UProxyComponent
 {
-    TSubclassOf<class UEntityTemplate> SpawnedEntity;                                 // 0x0028 (size: 0x8)
+    bool bSpawnOnInit;                                                                // 0x0028 (size: 0x1)
+    TSubclassOf<class UEntityTemplate> SpawnedEntity;                                 // 0x0030 (size: 0x8)
+    FVector Position;                                                                 // 0x0038 (size: 0x18)
+    FRotator Rotation;                                                                // 0x0050 (size: 0x18)
 
-}; // Size: 0x30
+}; // Size: 0x68
 
 class UQuenchingProxyComponent : public UProxyComponent
 {
@@ -2077,12 +2154,13 @@ class UQuenchingProxyComponent : public UProxyComponent
 class UR2ConfigProxyComponent : public UProxyComponent
 {
     FR2ConfigBuildSite BuildSite;                                                     // 0x0028 (size: 0x18)
-    FR2ConfigArea Area;                                                               // 0x0040 (size: 0xC)
-    FR2ConfigCombustion Combustion;                                                   // 0x0050 (size: 0x10)
-    FR2ConfigSignPost SignPost;                                                       // 0x0060 (size: 0x10)
-    FR2ConfigTradeResources TradeResourcesConfig;                                     // 0x0070 (size: 0x10)
+    FR2ConfigArea Area;                                                               // 0x0040 (size: 0x14)
+    FR2ConfigCombustion Combustion;                                                   // 0x0058 (size: 0x10)
+    FR2ConfigSignPost SignPost;                                                       // 0x0068 (size: 0x10)
+    FR2ConfigTradeResources TradeResourcesConfig;                                     // 0x0078 (size: 0x10)
+    FR2ConfigItem Item;                                                               // 0x0088 (size: 0x10)
 
-}; // Size: 0x80
+}; // Size: 0x98
 
 class URareResourceAreaMarkerProxyComponent : public UProxyComponent
 {
@@ -2170,24 +2248,26 @@ class UResourceSpawnerProxyComponent : public UProxyComponent
     float SpawnRadius;                                                                // 0x0048 (size: 0x4)
     float MinimumSpawnRadius;                                                         // 0x004C (size: 0x4)
     float SpawnInterval;                                                              // 0x0050 (size: 0x4)
-    int32 SpawnQuantity;                                                              // 0x0054 (size: 0x4)
-    float SpawnWaveCountMultiplier;                                                   // 0x0058 (size: 0x4)
-    int32 MaxSpawn;                                                                   // 0x005C (size: 0x4)
-    int32 GlobalMaxSpawn;                                                             // 0x0060 (size: 0x4)
-    int32 ResourceReserveInitial;                                                     // 0x0064 (size: 0x4)
-    int32 ReserveReplenishTimeSecs;                                                   // 0x0068 (size: 0x4)
-    float SpawnDelayAfterResourceDepleted;                                            // 0x006C (size: 0x4)
-    float MinDistanceBetweenSpawns;                                                   // 0x0070 (size: 0x4)
-    bool bWaterOnly;                                                                  // 0x0074 (size: 0x1)
-    bool bRequiresNavmesh;                                                            // 0x0075 (size: 0x1)
-    bool bRequiresPathBackOnNavmesh;                                                  // 0x0076 (size: 0x1)
-    bool bTrackSpawnedEntity;                                                         // 0x0077 (size: 0x1)
-    bool bDontSpawnInSettlements;                                                     // 0x0078 (size: 0x1)
-    bool bIsRare;                                                                     // 0x0079 (size: 0x1)
-    bool bDontSpawnNearPlayers;                                                       // 0x007A (size: 0x1)
-    bool bAvoidSlopes;                                                                // 0x007B (size: 0x1)
-    bool bWalkBackToSpawner;                                                          // 0x007C (size: 0x1)
-    int32 CompatibleSurfaceTypes;                                                     // 0x0080 (size: 0x4)
+    float InitialSpawnDelay;                                                          // 0x0054 (size: 0x4)
+    int32 SpawnQuantity;                                                              // 0x0058 (size: 0x4)
+    float SpawnWaveCountMultiplier;                                                   // 0x005C (size: 0x4)
+    int32 MaxSpawn;                                                                   // 0x0060 (size: 0x4)
+    int32 GlobalMaxSpawn;                                                             // 0x0064 (size: 0x4)
+    int32 ResourceReserveInitial;                                                     // 0x0068 (size: 0x4)
+    int32 ReserveReplenishTimeSecs;                                                   // 0x006C (size: 0x4)
+    float SpawnDelayAfterResourceDepleted;                                            // 0x0070 (size: 0x4)
+    float MinDistanceBetweenSpawns;                                                   // 0x0074 (size: 0x4)
+    bool bWaterOnly;                                                                  // 0x0078 (size: 0x1)
+    bool bDisableRandomRotation;                                                      // 0x0079 (size: 0x1)
+    bool bRequiresNavmesh;                                                            // 0x007A (size: 0x1)
+    bool bRequiresPathBackOnNavmesh;                                                  // 0x007B (size: 0x1)
+    bool bTrackSpawnedEntity;                                                         // 0x007C (size: 0x1)
+    bool bDontSpawnInSettlements;                                                     // 0x007D (size: 0x1)
+    bool bIsRare;                                                                     // 0x007E (size: 0x1)
+    bool bDontSpawnNearPlayers;                                                       // 0x007F (size: 0x1)
+    bool bAvoidSlopes;                                                                // 0x0080 (size: 0x1)
+    bool bWalkBackToSpawner;                                                          // 0x0081 (size: 0x1)
+    int32 CompatibleSurfaceTypes;                                                     // 0x0084 (size: 0x4)
     TArray<class TSubclassOf<UEntityTemplate>> OtherResourcesToAvoid;                 // 0x0088 (size: 0x10)
     TArray<class TSubclassOf<UEntityTemplate>> OtherResourcesToCountForSpawnLimit;    // 0x0098 (size: 0x10)
 
@@ -2252,6 +2332,24 @@ class UShipMovementProxyComponent : public UProxyComponent
 
 }; // Size: 0x90
 
+class USiegeTowerDataComponent : public UDataComponent
+{
+    EAnvilSiegeTowerState RampState;                                                  // 0x00A8 (size: 0x1)
+    EAnvilSiegeTowerState LadderState;                                                // 0x00C8 (size: 0x1)
+    float CurrentRampAngle;                                                           // 0x00E8 (size: 0x4)
+
+}; // Size: 0x108
+
+class USiegeTowerProxyComponent : public UProxyComponent
+{
+    float LadderChangeTime;                                                           // 0x0028 (size: 0x4)
+    float CloseRampAngle;                                                             // 0x002C (size: 0x4)
+    float RampOpenSpeed;                                                              // 0x0030 (size: 0x4)
+    FR2FloatRange ValidRampAngleRange;                                                // 0x0034 (size: 0x8)
+    FBoundingBox RampOperationBox;                                                    // 0x0040 (size: 0x48)
+
+}; // Size: 0x88
+
 class USignPostDataComponent : public UDataComponent
 {
     FString Message;                                                                  // 0x00A8 (size: 0x10)
@@ -2289,35 +2387,38 @@ class USimPlayerDataComponent : public UDataComponent
     int32 UnarmedPrimaryHeldItemCodeName;                                             // 0x0368 (size: 0x4)
     int32 UnarmedSecondaryHeldItemCodeName;                                           // 0x0388 (size: 0x4)
     FEntityHandle CurrentMovementBase;                                                // 0x03A8 (size: 0x10)
-    FString PlayerName;                                                               // 0x03D0 (size: 0x10)
-    int64 PlayerUniqueID;                                                             // 0x03F8 (size: 0x8)
-    int64 NobleVoteId;                                                                // 0x0418 (size: 0x8)
-    float TrappedTimer;                                                               // 0x0438 (size: 0x4)
-    float StaggerTimer;                                                               // 0x0458 (size: 0x4)
-    bool bStaggered;                                                                  // 0x0478 (size: 0x1)
-    bool bIsAiming;                                                                   // 0x0498 (size: 0x1)
-    bool bIsGuarding;                                                                 // 0x04B8 (size: 0x1)
-    bool bIsAdmin;                                                                    // 0x04D8 (size: 0x1)
-    bool bPriming;                                                                    // 0x04F8 (size: 0x1)
-    bool bInTravelZone;                                                               // 0x0518 (size: 0x1)
-    bool bAltAttackMode;                                                              // 0x0538 (size: 0x1)
-    bool bAltShieldMode;                                                              // 0x0558 (size: 0x1)
-    bool bIsPushing;                                                                  // 0x0578 (size: 0x1)
-    bool bIsMeshHidden;                                                               // 0x0598 (size: 0x1)
-    bool bMouseSelectCeiling;                                                         // 0x05B8 (size: 0x1)
-    bool bIsReinforcing;                                                              // 0x05D8 (size: 0x1)
-    bool bIsFalling;                                                                  // 0x05F8 (size: 0x1)
-    bool bBasedMovement;                                                              // 0x0618 (size: 0x1)
-    float HeldItemLightSourceRadius;                                                  // 0x0638 (size: 0x4)
-    TArray<FNightShroudLightSource> LightSourceData;                                  // 0x0658 (size: 0x10)
-    uint8 FoodTypesOnCooldownBits;                                                    // 0x0680 (size: 0x1)
-    float AimYaw;                                                                     // 0x06A0 (size: 0x4)
-    float AimPitch;                                                                   // 0x06C0 (size: 0x4)
-    float LastIncomingAttackAngle;                                                    // 0x06E0 (size: 0x4)
-    EAnvilAvatarType Avatar;                                                          // 0x0700 (size: 0x1)
-    float AvatarXP;                                                                   // 0x0720 (size: 0x4)
+    bool bIsMovementCorrection;                                                       // 0x03D0 (size: 0x1)
+    FString PlayerName;                                                               // 0x03F0 (size: 0x10)
+    int64 PlayerUniqueID;                                                             // 0x0418 (size: 0x8)
+    int64 NobleVoteId;                                                                // 0x0438 (size: 0x8)
+    float TrappedTimer;                                                               // 0x0458 (size: 0x4)
+    float StaggerTimer;                                                               // 0x0478 (size: 0x4)
+    bool bStaggered;                                                                  // 0x0498 (size: 0x1)
+    bool bIsAiming;                                                                   // 0x04B8 (size: 0x1)
+    bool bIsGuarding;                                                                 // 0x04D8 (size: 0x1)
+    bool bIsMarchMode;                                                                // 0x04F8 (size: 0x1)
+    float Accuracy;                                                                   // 0x0518 (size: 0x4)
+    bool bIsAdmin;                                                                    // 0x0538 (size: 0x1)
+    bool bPriming;                                                                    // 0x0558 (size: 0x1)
+    bool bInTravelZone;                                                               // 0x0578 (size: 0x1)
+    bool bAltAttackMode;                                                              // 0x0598 (size: 0x1)
+    bool bAltShieldMode;                                                              // 0x05B8 (size: 0x1)
+    bool bIsPushing;                                                                  // 0x05D8 (size: 0x1)
+    bool bIsMeshHidden;                                                               // 0x05F8 (size: 0x1)
+    bool bMouseSelectCeiling;                                                         // 0x0618 (size: 0x1)
+    bool bIsReinforcing;                                                              // 0x0638 (size: 0x1)
+    bool bIsFalling;                                                                  // 0x0658 (size: 0x1)
+    bool bBasedMovement;                                                              // 0x0678 (size: 0x1)
+    float HeldItemLightSourceRadius;                                                  // 0x0698 (size: 0x4)
+    TArray<FNightShroudLightSource> LightSourceData;                                  // 0x06B8 (size: 0x10)
+    uint8 FoodTypesOnCooldownBits;                                                    // 0x06E0 (size: 0x1)
+    float AimYaw;                                                                     // 0x0700 (size: 0x4)
+    float AimPitch;                                                                   // 0x0720 (size: 0x4)
+    float LastIncomingAttackAngle;                                                    // 0x0740 (size: 0x4)
+    EAnvilAvatarType Avatar;                                                          // 0x0760 (size: 0x1)
+    float AvatarXP;                                                                   // 0x0780 (size: 0x4)
 
-}; // Size: 0x740
+}; // Size: 0x7A0
 
 class USimPlayerProxyComponent : public UProxyComponent
 {
@@ -2448,21 +2549,20 @@ class UStructureDataComponent : public UDataComponent
 {
     bool bRestrictedMode;                                                             // 0x00A8 (size: 0x1)
     bool bOnFoundation;                                                               // 0x00C8 (size: 0x1)
-    bool bIsCollapsed;                                                                // 0x00E8 (size: 0x1)
-    bool bIsFamilyDestroyed;                                                          // 0x0108 (size: 0x1)
-    bool bIsTownDestroyed;                                                            // 0x0128 (size: 0x1)
-    bool bCanOverrideFamilyAccessLevel;                                               // 0x0148 (size: 0x1)
-    bool bCanBeReinforced;                                                            // 0x0168 (size: 0x1)
-    bool bReinforcing;                                                                // 0x0188 (size: 0x1)
-    bool bReinforced;                                                                 // 0x01A8 (size: 0x1)
-    int32 ReinforcingFinishTime;                                                      // 0x01C8 (size: 0x4)
-    int32 ReinforcingTime;                                                            // 0x01E8 (size: 0x4)
-    EAnvilBuildStructureType StructureType;                                           // 0x0208 (size: 0x1)
-    int64 BuilderId;                                                                  // 0x0228 (size: 0x8)
-    int32 TownFamilyAreaId;                                                           // 0x0248 (size: 0x4)
-    EAnvilR2FamilyRoleType FamilyAccessLevel;                                         // 0x0268 (size: 0x1)
+    bool bIsFamilyDestroyed;                                                          // 0x00E8 (size: 0x1)
+    bool bIsTownDestroyed;                                                            // 0x0108 (size: 0x1)
+    bool bCanOverrideFamilyAccessLevel;                                               // 0x0128 (size: 0x1)
+    bool bCanBeReinforced;                                                            // 0x0148 (size: 0x1)
+    bool bReinforcing;                                                                // 0x0168 (size: 0x1)
+    bool bReinforced;                                                                 // 0x0188 (size: 0x1)
+    int32 ReinforcingFinishTime;                                                      // 0x01A8 (size: 0x4)
+    int32 ReinforcingTime;                                                            // 0x01C8 (size: 0x4)
+    EAnvilBuildStructureType StructureType;                                           // 0x01E8 (size: 0x1)
+    int64 BuilderId;                                                                  // 0x0208 (size: 0x8)
+    int32 TownFamilyAreaId;                                                           // 0x0228 (size: 0x4)
+    EAnvilR2FamilyRoleType FamilyAccessLevel;                                         // 0x0248 (size: 0x1)
 
-}; // Size: 0x288
+}; // Size: 0x268
 
 class UStructureProtectionProxyComponent : public UProxyComponent
 {
@@ -2474,12 +2574,11 @@ class UStructureProxyComponent : public UProxyComponent
 {
     bool bCannotBeDismantled;                                                         // 0x0028 (size: 0x1)
     bool bRequireSupport;                                                             // 0x0029 (size: 0x1)
-    bool bCanCollapse;                                                                // 0x002A (size: 0x1)
-    bool bEnemyCanConvert;                                                            // 0x002B (size: 0x1)
-    bool bIsAlwaysEnclosed;                                                           // 0x002C (size: 0x1)
-    bool IgnoreMeshVisbilityChanges;                                                  // 0x002D (size: 0x1)
-    bool bCanOverrideFamilyAccessLevel;                                               // 0x002E (size: 0x1)
-    bool bCanBeReinforced;                                                            // 0x002F (size: 0x1)
+    bool bEnemyCanConvert;                                                            // 0x002A (size: 0x1)
+    bool bIsAlwaysEnclosed;                                                           // 0x002B (size: 0x1)
+    bool IgnoreMeshVisbilityChanges;                                                  // 0x002C (size: 0x1)
+    bool bCanOverrideFamilyAccessLevel;                                               // 0x002D (size: 0x1)
+    bool bCanBeReinforced;                                                            // 0x002E (size: 0x1)
     int32 ReinforcingTime;                                                            // 0x0030 (size: 0x4)
     uint8 CrenellationLevel;                                                          // 0x0034 (size: 0x1)
     EAnvilBuildStructureType StructureType;                                           // 0x0035 (size: 0x1)
@@ -2571,6 +2670,7 @@ class UTownHallProxyComponent : public UProxyComponent
     uint8 Tier;                                                                       // 0x0028 (size: 0x1)
     bool bIsSmallCamp;                                                                // 0x0029 (size: 0x1)
     bool bLocalReinforcementOnly;                                                     // 0x002A (size: 0x1)
+    EAnvilTownSubType SubType;                                                        // 0x002B (size: 0x1)
     float AbandonedStartTime;                                                         // 0x002C (size: 0x4)
     uint8 OriginalOwnerTeamId;                                                        // 0x0030 (size: 0x1)
 
@@ -2615,7 +2715,7 @@ class UTweakableDataComponent : public UDataComponent
     uint8 TownMapDisableSize;                                                         // 0x0148 (size: 0x1)
     float UpkeepCostReinforced;                                                       // 0x0168 (size: 0x4)
     bool bClientsUseVisActorPool;                                                     // 0x0188 (size: 0x1)
-    bool bSiegeDemoActive;                                                            // 0x01A8 (size: 0x1)
+    float bGlobalMaxVelocity;                                                         // 0x01A8 (size: 0x4)
     uint8 ForcedTimeOfDayNormalized;                                                  // 0x01C8 (size: 0x1)
 
 }; // Size: 0x1E8
@@ -2684,6 +2784,7 @@ class UVehicleMovementProxyComponent : public UProxyComponent
     bool bUsePitch;                                                                   // 0x0054 (size: 0x1)
     bool bCanBeMovementBase;                                                          // 0x0055 (size: 0x1)
     bool bRammingForceKillPlayer;                                                     // 0x0056 (size: 0x1)
+    EAnvilVehicleMovementPlayerInteractionType MovementPlayerInteraction;             // 0x0057 (size: 0x1)
     TSubclassOf<class UEntityTemplate> CollisionEffect;                               // 0x0058 (size: 0x8)
     float RammingDamage;                                                              // 0x0060 (size: 0x4)
     float RammingVelocityFactor;                                                      // 0x0064 (size: 0x4)
@@ -2693,10 +2794,11 @@ class UVehicleMovementProxyComponent : public UProxyComponent
     float RammingStabilitySplashDamageRadius;                                         // 0x0074 (size: 0x4)
     FVector FrontAxleOffset;                                                          // 0x0078 (size: 0x18)
     FVector RearAxleOffset;                                                           // 0x0090 (size: 0x18)
-    FR2FloatRange FallingDistRange;                                                   // 0x00A8 (size: 0x8)
-    FR2FloatRange FallingDamageRange;                                                 // 0x00B0 (size: 0x8)
+    float MaxSubmersionDepth;                                                         // 0x00A8 (size: 0x4)
+    FR2FloatRange FallingDistRange;                                                   // 0x00AC (size: 0x8)
+    FR2FloatRange FallingDamageRange;                                                 // 0x00B4 (size: 0x8)
 
-}; // Size: 0xB8
+}; // Size: 0xC0
 
 class UVehicleSeatProxyComponent : public UProxyComponent
 {

@@ -1,13 +1,16 @@
 ---@meta
 
 ---@class FAnimBlueprintGeneratedConstantData : FAnimBlueprintConstantData
----@field __NameProperty_112 FName
+---@field __NameProperty_109 FName
+---@field __NameProperty_110 FName
+---@field __IntProperty_111 int32
+---@field __FloatProperty_112 float
 ---@field __NameProperty_113 FName
 ---@field __IntProperty_114 int32
 ---@field __FloatProperty_115 float
----@field __NameProperty_116 FName
----@field __IntProperty_117 int32
----@field __FloatProperty_118 float
+---@field __EnumProperty_116 EAnimSyncMethod
+---@field __ByteProperty_117 EAnimGroupRole::Type
+---@field __NameProperty_118 FName
 ---@field __NameProperty_119 FName
 ---@field __IntProperty_120 int32
 ---@field __NameProperty_121 FName

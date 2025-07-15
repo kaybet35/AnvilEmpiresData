@@ -3,6 +3,6 @@
 
 class UTree03Stump_C : public UEntityTemplate
 {
-}; // Size: 0x80
+}; // Size: 0x88
 
 #endif

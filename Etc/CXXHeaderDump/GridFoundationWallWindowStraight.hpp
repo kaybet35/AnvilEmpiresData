@@ -3,6 +3,6 @@
 
 class UGridFoundationWallWindowStraight_C : public UBPBaseFoundationModularEntity_C
 {
-}; // Size: 0xD8
+}; // Size: 0xE0
 
 #endif

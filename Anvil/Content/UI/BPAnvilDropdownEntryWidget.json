@@ -90,8 +90,14 @@
             "Normal": {
               "DrawAs": "ESlateBrushDrawType::Image",
               "ImageSize": {
-                "X": 64.0,
-                "Y": 64.0
+                "X": 1920.0,
+                "Y": 1080.0
+              },
+              "Margin": {
+                "Left": 0.1,
+                "Top": 0.1,
+                "Right": 0.1,
+                "Bottom": 0.1
               },
               "TintColor": {
                 "SpecifiedColor": {
@@ -103,35 +109,47 @@
                 }
               },
               "ResourceObject": {
-                "ObjectName": "Texture2D'FlatBG'",
-                "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+                "ObjectName": "Texture2D'DialogTint'",
+                "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogTint.0"
               }
             },
             "Hovered": {
               "DrawAs": "ESlateBrushDrawType::Image",
               "ImageSize": {
-                "X": 64.0,
-                "Y": 64.0
+                "X": 1920.0,
+                "Y": 1080.0
+              },
+              "Margin": {
+                "Left": 0.1,
+                "Top": 0.1,
+                "Right": 0.1,
+                "Bottom": 0.1
               },
               "TintColor": {
                 "SpecifiedColor": {
-                  "R": 0.730461,
-                  "G": 0.491021,
-                  "B": 0.124772,
+                  "R": 0.854993,
+                  "G": 0.597202,
+                  "B": 0.300544,
                   "A": 1.0,
-                  "Hex": "DEBA63"
+                  "Hex": "EECB95"
                 }
               },
               "ResourceObject": {
-                "ObjectName": "Texture2D'FlatBG'",
-                "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+                "ObjectName": "Texture2D'DialogTint'",
+                "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogTint.0"
               }
             },
             "Pressed": {
               "DrawAs": "ESlateBrushDrawType::Image",
               "ImageSize": {
-                "X": 64.0,
-                "Y": 64.0
+                "X": 1920.0,
+                "Y": 1080.0
+              },
+              "Margin": {
+                "Left": 0.1,
+                "Top": 0.1,
+                "Right": 0.1,
+                "Bottom": 0.1
               },
               "TintColor": {
                 "SpecifiedColor": {
@@ -143,12 +161,35 @@
                 }
               },
               "ResourceObject": {
-                "ObjectName": "Texture2D'FlatBG'",
-                "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+                "ObjectName": "Texture2D'DialogTint'",
+                "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogTint.0"
               }
             },
             "Disabled": {
-              "DrawAs": "ESlateBrushDrawType::Image"
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "ImageSize": {
+                "X": 1920.0,
+                "Y": 1080.0
+              },
+              "Margin": {
+                "Left": 0.1,
+                "Top": 0.1,
+                "Right": 0.1,
+                "Bottom": 0.1
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 1.0,
+                  "G": 1.0,
+                  "B": 1.0,
+                  "A": 0.3,
+                  "Hex": "4CFFFFFF"
+                }
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'DialogTint'",
+                "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogTint.0"
+              }
             }
           },
           "MenuBorderBrush": {
@@ -177,6 +218,12 @@
             "Bottom": 0.0
           }
         },
+        "PressedSlateSound": {
+          "ResourceObject": {
+            "ObjectName": "SoundCue'Accept_Cue'",
+            "ObjectPath": "Anvil/Content/Audio/SFX/UI/Accept_Cue.0"
+          }
+        },
         "ContentPadding": {
           "Left": 0.0,
           "Top": 0.0,
@@ -186,28 +233,42 @@
       },
       "ItemStyle": {
         "SelectorFocusedBrush": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 1920.0,
+            "Y": 1080.0
+          },
+          "Margin": {
+            "Left": 0.1,
+            "Top": 0.1,
+            "Right": 0.1,
+            "Bottom": 0.1
+          },
           "TintColor": {
             "SpecifiedColor": {
               "R": 0.533277,
               "G": 0.417885,
               "B": 0.242281,
-              "A": 1.0,
-              "Hex": "C1AD87"
+              "A": 0.8,
+              "Hex": "CCC1AD87"
             }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'DialogTint'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogTint.0"
           }
         },
         "ActiveHoveredBrush": {
-          "TintColor": {
-            "SpecifiedColor": {
-              "R": 0.533277,
-              "G": 0.417885,
-              "B": 0.242281,
-              "A": 1.0,
-              "Hex": "C1AD87"
-            }
-          }
-        },
-        "ActiveBrush": {
+          "ImageSize": {
+            "X": 1920.0,
+            "Y": 1080.0
+          },
+          "Margin": {
+            "Left": 0.1,
+            "Top": 0.1,
+            "Right": 0.1,
+            "Bottom": 0.1
+          },
           "TintColor": {
             "SpecifiedColor": {
               "R": 0.730461,
@@ -216,24 +277,81 @@
               "A": 1.0,
               "Hex": "DEBA63"
             }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'DialogTint'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogTint.0"
+          }
+        },
+        "ActiveBrush": {
+          "ImageSize": {
+            "X": 1920.0,
+            "Y": 1080.0
+          },
+          "Margin": {
+            "Left": 0.1,
+            "Top": 0.1,
+            "Right": 0.1,
+            "Bottom": 0.1
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.730461,
+              "G": 0.491021,
+              "B": 0.124772,
+              "A": 1.0,
+              "Hex": "DEBA63"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'DialogTint'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogTint.0"
+          }
+        },
+        "InactiveHoveredBrush": {
+          "ImageSize": {
+            "X": 1920.0,
+            "Y": 1080.0
+          },
+          "Margin": {
+            "Left": 0.1,
+            "Top": 0.1,
+            "Right": 0.1,
+            "Bottom": 0.1
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'DialogTint'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogTint.0"
+          }
+        },
+        "InactiveBrush": {
+          "ImageSize": {
+            "X": 1920.0,
+            "Y": 1080.0
+          },
+          "Margin": {
+            "Left": 0.1,
+            "Top": 0.1,
+            "Right": 0.1,
+            "Bottom": 0.1
           }
         },
         "TextColor": {
           "SpecifiedColor": {
-            "R": 1.0,
-            "G": 1.0,
-            "B": 1.0,
+            "R": 0.730461,
+            "G": 0.658375,
+            "B": 0.564712,
             "A": 1.0,
-            "Hex": "FFFFFF"
+            "Hex": "DED4C6"
           }
         },
         "SelectedTextColor": {
           "SpecifiedColor": {
-            "R": 0.0,
-            "G": 0.0,
-            "B": 0.0,
+            "R": 0.009721,
+            "G": 0.006995,
+            "B": 0.004777,
             "A": 1.0,
-            "Hex": "000000"
+            "Hex": "19140F"
           }
         },
         "DropIndicator_Above": {
@@ -282,6 +400,15 @@
           "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
         },
         "TypefaceFontName": "Default"
+      },
+      "ForegroundColor": {
+        "SpecifiedColor": {
+          "R": 0.730461,
+          "G": 0.658375,
+          "B": 0.564712,
+          "A": 1.0,
+          "Hex": "DED4C6"
+        }
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAnvilDropdownEntryWidget_C:WidgetTree.ComboHorizontalBox.HorizontalBoxSlot_4'",

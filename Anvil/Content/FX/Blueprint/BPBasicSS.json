@@ -1,0 +1,123 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPBasicSS_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BPBasicSS_C:ExecuteUbergraph_BPBasicSS'",
+        "ObjectPath": "Anvil/Content/FX/Blueprint/BPBasicSS.2"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SceneComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BPBasicSS_C:ReceiveBeginPlay'",
+        "ObjectPath": "Anvil/Content/FX/Blueprint/BPBasicSS.3"
+      },
+      {
+        "ObjectName": "Function'BPBasicSS_C:ExecuteUbergraph_BPBasicSS'",
+        "ObjectPath": "Anvil/Content/FX/Blueprint/BPBasicSS.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BPBasicSS": {
+        "ObjectName": "Function'BPBasicSS_C:ExecuteUbergraph_BPBasicSS'",
+        "ObjectPath": "Anvil/Content/FX/Blueprint/BPBasicSS.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BPBasicSS_C:ReceiveBeginPlay'",
+        "ObjectPath": "Anvil/Content/FX/Blueprint/BPBasicSS.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPBasicSS_C'Default__BPBasicSS_C'",
+      "ObjectPath": "Anvil/Content/FX/Blueprint/BPBasicSS.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPBasicSS_C",
+    "Name": "Default__BPBasicSS_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/FX/Blueprint/BPBasicSS.BPBasicSS_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPBasicSS",
+    "Outer": "BPBasicSS_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCameraManager_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCameraManager'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BPBasicSS_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'ActorComponent:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  }
+]

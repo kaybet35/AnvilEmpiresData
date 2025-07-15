@@ -13,5 +13,15 @@ FUpgradeCostData::FUpgradeCostData() {
     this->Mortar = 0;
     this->Gravel = 0;
     this->ResourceFibre = 0;
+    this->ResourceStoneFragments = 0;
+    this->ProcessedWoodHard = 0;
+    this->Nails = 0;
+    this->ProcessedSteel = 0;
+    this->ResourceFibreHeavy = 0;
+    this->ProcessedBronze = 0;
+    this->ProcessedFlax = 0;
+    this->ProcessedLead = 0;
+    this->ProcessedResin = 0;
+    this->ProcessedThickLeather = 0;
 }
 

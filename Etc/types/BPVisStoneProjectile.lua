@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABPVisStoneProjectile_C : AVisPickupItem
+---@class ABPVisStoneProjectile_C : AVisProjectile
 ---@field Audio UAudioComponent
 ABPVisStoneProjectile_C = {}
 

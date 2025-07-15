@@ -12,6 +12,8 @@ enum class EAnvilSnappingChannelType : uint8 {
     Foundation,
     RampSpiralTop,
     RampSpiralBottom,
+    Shipyard,
+    ShipyardBoat,
     WaterStart,
     WaterEnd,
     CanalStart,

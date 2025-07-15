@@ -14,6 +14,7 @@ UItemTemplate::UItemTemplate() {
     this->HeatedItem = NULL;
     this->CooledItem = NULL;
     this->bRanged = false;
+    this->bUsesAccuracy = false;
     this->bHasAlt = false;
     this->bAltIsRanged = false;
     this->DamageOffsetCount = 1;
@@ -40,9 +41,11 @@ UItemTemplate::UItemTemplate() {
     this->DeployedBuildSite = NULL;
     this->NightShroudLightRadius = 0.00f;
     this->bAllowCameraPan = true;
+    this->bAltAllowCameraPan = false;
     this->StunChance = 0.00f;
     this->StunDuration = 0.00f;
     this->StunThrowDistance = 0.00f;
+    this->AccuracyGainPerSec = 1.00f;
     this->Damage = 0;
     this->DurabilityLossPerSec = 0.00f;
     this->StockPileWithdrawalValue = 1.00f;
@@ -53,6 +56,8 @@ UItemTemplate::UItemTemplate() {
     this->StaminaLimitRestored = 0.00f;
     this->DurabilityLossPerUse = 0.00f;
     this->DamageRadius = 0.00f;
+    this->AltDamageRadius = 0.00f;
+    this->MinRangedDistance = 0.00f;
     this->VariableDamageMaxModifier = 1.25f;
     this->VariableDamageMinModifier = 0.75f;
     this->ShieldDurabilityLossMultiplier = 1.00f;

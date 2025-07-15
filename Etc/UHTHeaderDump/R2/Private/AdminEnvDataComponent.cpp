@@ -8,6 +8,7 @@ UAdminEnvDataComponent::UAdminEnvDataComponent(const FObjectInitializer& ObjectI
     this->bShowWeatherStats = false;
     this->bDebugHud = false;
     this->bShowLocateCoords = false;
+    this->bDebugCrowdIndentifier = false;
 }
 
 

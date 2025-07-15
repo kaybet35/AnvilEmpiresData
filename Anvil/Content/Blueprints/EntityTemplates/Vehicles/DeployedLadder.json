@@ -97,7 +97,6 @@
       },
       "CodeNameString": "DeployedLadder",
       "CodeName": -1619705739,
-      "bGenerateMeshCollisionsFromVisActor": true,
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisDeployedLadder_C'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.1"
@@ -130,7 +129,8 @@
         "ObjectName": "BlueprintGeneratedClass'DeployedLadderFootprint_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/FootprintAssets/DeployedLadderFootprint.0"
       },
-      "bAddToNavMesh": false
+      "bAddToNavMesh": false,
+      "CollisionMask": 16785666
     }
   },
   {
@@ -142,7 +142,10 @@
       "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
     },
-    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxHealth": 400.0
+    }
   },
   {
     "Type": "RepairProxyComponent",

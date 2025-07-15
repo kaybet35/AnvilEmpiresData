@@ -94,6 +94,10 @@ AGameplayGameMode = {}
 
 ---@class AGameplayPlayerController : AAnvilPlayerController
 ---@field CallForReinforcementsCue USoundCue
+---@field LandscapeCullRVTVolumeClass TSubclassOf<ARuntimeVirtualTextureVolume>
+---@field LandscapeCullRVTVolume ARuntimeVirtualTextureVolume
+---@field FoliageCullRVTVolumeClass TSubclassOf<ARuntimeVirtualTextureVolume>
+---@field FoliageCullRVTVolume ARuntimeVirtualTextureVolume
 AGameplayPlayerController = {}
 
 
@@ -162,12 +166,15 @@ function AProxyPawn:OnRotateCameraStop() end
 function AProxyPawn:OnRotateCameraStart() end
 function AProxyPawn:OnPanCameraStop() end
 function AProxyPawn:OnPanCameraStart() end
+function AProxyPawn:OnKeyRotateCameraRightStop() end
+function AProxyPawn:OnKeyRotateCameraRightStart() end
+function AProxyPawn:OnKeyRotateCameraLeftStop() end
+function AProxyPawn:OnKeyRotateCameraLeftStart() end
 ---@param BuildSiteCodeName uint32
 ---@param ContextID uint64
 function AProxyPawn:EnterBuildMode(BuildSiteCodeName, ContextID) end
 ---@param Radius float
 function AProxyPawn:DrawSphere(Radius) end
-function AProxyPawn:ClearFogOfWar() end
 ---@param Adjust float
 function AProxyPawn:ChangeHeight(Adjust) end
 function AProxyPawn:AutoMoveOff() end
@@ -198,6 +205,7 @@ AServerPartition = {}
 ---@field BuildSiteVisualGuideValidColour FLinearColor
 ---@field BuildSiteVisualGuideInvalidColour FLinearColor
 ---@field BuildSiteVisualGuideObstructedColour FLinearColor
+---@field AcceptUISoundCue USoundCue
 AUIGlobals = {}
 
 
@@ -227,12 +235,16 @@ AUnderworldModuleDynamicPrefab = {}
 ---@field FoundationShapeName FText
 ---@field FoundationGroupName FText
 ---@field FoundationVariantName FText
+---@field DataComponentCache TArray<UDataComponent>
 ---@field MeshVisibilityDataComponent UMeshVisibilityDataComponent
 ---@field PositionSmoothSpeed float
 ---@field RotationSmoothSpeed float
+---@field PositionSmoothSpeedDistance float
 ---@field ClientMovementSmoothingDistance float
 ---@field bHasLandscapeCollisions boolean
 ---@field bUseDepthStencilForInteractionHighlight boolean
+---@field bClientSideDestruction boolean
+---@field ClientSideLifeSpan float
 ---@field ToggleVisibilityComponents TArray<USceneComponent>
 AVisActor = {}
 
@@ -300,8 +312,8 @@ AVisBoat = {}
 ---@field Category EBuildSiteCategory
 ---@field Order int32
 ---@field BuildSiteVisibility EBuildSiteVisibility
----@field ArrowComponent UArrowComponent
 ---@field Mesh UStaticMeshComponent
+---@field ArrowComponent UArrowComponent
 ---@field BuildCollisionDecalComponent UDecalComponent
 ---@field BuildSiteMaterial UMaterialInterface
 ---@field VisualGuideMeshComponent UPoseableMeshComponent
@@ -350,12 +362,14 @@ AVisCraftingStructure = {}
 ---@field BaseMesh UStaticMeshComponent
 ---@field DryingItemMesh UStaticMeshComponent
 ---@field DryingRackProxy UDryingRackProxyComponent
+---@field DryingRackDataComponent UDryingRackDataComponent
 ---@field DryingItemMeshMaterial UMaterialInstanceDynamic
 AVisDryingRack = {}
 
 
 
 ---@class AVisEffect : AVisActor
+---@field AttachTarget AActor
 ---@field ArrowComponent UArrowComponent
 ---@field AudioComponent UAudioComponent
 ---@field NiagaraComponent UNiagaraComponent
@@ -470,6 +484,8 @@ AVisHouse = {}
 
 ---@class AVisImpactEffect : AVisActor
 ---@field HitEffectActors TSubclassOf<AActor>
+---@field VisualLifeTime float
+---@field bAttachToHitTarget boolean
 ---@field ArrowComponent UArrowComponent
 ---@field ImpactSurfaceDataComponent UImpactSurfaceDataComponent
 AVisImpactEffect = {}
@@ -481,6 +497,15 @@ AVisImpactEffect = {}
 ---@field LootMarkerVFXComponent UNiagaraComponent
 AVisItemStash = {}
 
+
+
+---@class AVisLadderBuildSite : AVisBuildSite
+---@field LadderClass TSubclassOf<AvisLadder>
+---@field LadderDataComponent ULadderDataComponent
+AVisLadderBuildSite = {}
+
+---@param HalfLength float
+function AVisLadderBuildSite:UpdateLadderMesh(HalfLength) end
 
 
 ---@class AVisLatticeMine : AVisActor
@@ -562,8 +587,8 @@ AVisPickupItem = {}
 ---@field ItemSecondaryMeshComponent USkeletalMeshComponent
 ---@field UnarmedItemMeshComponent USkeletalMeshComponent
 ---@field UnarmedItemSecondaryMeshComponent USkeletalMeshComponent
+---@field RangedWeaponAmmoMeshComponent UStaticMeshComponent
 ---@field PostProcessComponent UPostProcessComponent
----@field LandscapeCullVirtualTextureVolumeClass TSubclassOf<ARuntimeVirtualTextureVolume>
 ---@field RotationAmount float
 ---@field CameraRotationLerpSpeed float
 ---@field AimMeshLength float
@@ -576,6 +601,7 @@ AVisPickupItem = {}
 ---@field AimMeshMaterial UMaterialInstanceDynamic
 ---@field MeleeAimMeshComponent UStaticMeshComponent
 ---@field MeleeAimMeshTargetComponent UStaticMeshComponent
+---@field CrowdIdentifierMeshComponent UStaticMeshComponent
 ---@field FishingAimMeshClass TSubclassOf<AVisFishingIndicator>
 ---@field FishingBobberClass TSubclassOf<AVisFishingBobber>
 ---@field PlayerVisualsComponent UVisPlayerVisualsComponent
@@ -637,6 +663,17 @@ AVisPowerMill = {}
 
 
 
+---@class AVisProjectile : AVisActor
+---@field Mesh UStaticMeshComponent
+---@field ArrowComponent UArrowComponent
+---@field ProjectileMovementDataComponent UProjectileMovementDataComponent
+AVisProjectile = {}
+
+---@param OldHidden boolean
+---@param NewHidden boolean
+function AVisProjectile:OnHiddenChanged(OldHidden, NewHidden) end
+
+
 ---@class AVisRefinery : AVisStructure
 ---@field RefineResourceDataComponent URefineResourceDataComponent
 AVisRefinery = {}
@@ -667,6 +704,10 @@ AVisResource = {}
 ---@field RichSoilDataComponent URichSoilDataComponent
 AVisRichSoil = {}
 
+
+
+---@class AVisSiegeTower : AVisVehicle
+AVisSiegeTower = {}
 
 
 ---@class AVisSignPost : AVisStructure
@@ -721,6 +762,7 @@ AVisStorehouse = {}
 ---@field HealthDataComponent UHealthDataComponent
 ---@field TeamDataComponent UTeamDataComponent
 ---@field StructureDataComponent UStructureDataComponent
+---@field CollapsibleDataComponent UCollapsibleDataComponent
 ---@field ScorchDataComponent UScorchDataComponent
 ---@field DecayDataComponent UDecayDataComponent
 ---@field ArrowComponent UArrowComponent
@@ -812,8 +854,16 @@ AVisualGlobals = {}
 
 
 
----@class AvisLadder : AVisStructure
+---@class AvisLadder : AVisActor
+---@field TeamDataComponent UTeamDataComponent
+---@field LadderDataComponent ULadderDataComponent
+---@field HalfLengthToLadderMeshes TMap<float, UStaticMesh>
+---@field ArrowComponent UArrowComponent
+---@field LadderMesh UStaticMeshComponent
 AvisLadder = {}
+
+---@param HalfLength float
+function AvisLadder:UpdateLadderMesh(HalfLength) end
 
 
 ---@class FAlert
@@ -865,6 +915,10 @@ FAnvilOptionsManager = {}
 
 ---@class FAnvilPropertyUtil
 FAnvilPropertyUtil = {}
+
+
+---@class FAnvilServiceHelper
+FAnvilServiceHelper = {}
 
 
 ---@class FArmourTypeMeshes
@@ -1029,6 +1083,8 @@ FDeploymentFoodItem = {}
 ---@class FEquipmentData : FTableRowBase
 ---@field DurabilityLossPerUse float
 ---@field DamageRadius float
+---@field AltDamageRadius float
+---@field MinRangedDistance float
 ---@field VariableDamageMaxModifier float
 ---@field VariableDamageMinModifier float
 ---@field ShieldDurabilityLossMultiplier float
@@ -1070,6 +1126,30 @@ FFoodData = {}
 FGeneratedScorchEffectInfo = {}
 
 
+---@class FGetBatchedDataForClientRequest
+---@field RequestTypes TArray<uint8>
+---@field OnlineId FJsonSafeUint64
+---@field ClientWorldEntityPoolVersionVersion uint32
+---@field ClientWinConditionStateVersion uint32
+FGetBatchedDataForClientRequest = {}
+
+
+
+---@class FGetBatchedDataForClientResponse
+---@field RequestTypes TArray<uint8>
+---@field bCanJoinShard boolean
+---@field ProfileInfoResponse FProfileInfoResponse
+---@field bHasServerList boolean
+---@field ServerList FServerListResponse
+---@field ShardStatus FShardStatusResponse
+---@field bHasWinConditionState boolean
+---@field WinConditionState FWinConditionStateResponse
+---@field bHasFamily boolean
+---@field PlayerFamily FR2Family
+FGetBatchedDataForClientResponse = {}
+
+
+
 ---@class FGetIsAdminResponse
 ---@field bIsAdmin boolean
 FGetIsAdminResponse = {}
@@ -1085,6 +1165,7 @@ FGetMapPostsResponse = {}
 
 ---@class FGlobalShardConfig
 ---@field DiscordRoleServerUrl FString
+---@field DefaultShardIds TArray<int32>
 FGlobalShardConfig = {}
 
 
@@ -1260,12 +1341,19 @@ FServerRegion = {}
 
 ---@class FShardConfig
 ---@field ShardId int32
----@field ShardName FString
 ---@field bEnabled boolean
+---@field ShardName FString
+---@field ShardDescription FString
+---@field Population EShardPopulationType
 ---@field AnvilServiceHttpUrl FString
 ---@field Announcement FString
 ---@field NextTestUnixTimestamp FString
 ---@field bIsSiegeDemoActive boolean
+---@field WarningPopupBodyText FString
+---@field WarningPopupHeaderText FString
+---@field WarningPopupUrl FString
+---@field WarningPopupUrlButtonText FString
+---@field AnvilServiceRequestCooldownSec int32
 FShardConfig = {}
 
 
@@ -1289,6 +1377,16 @@ FShardStatusResponse = {}
 ---@field Mortar int16
 ---@field Gravel int16
 ---@field ResourceFibre int16
+---@field ResourceStoneFragments int16
+---@field ProcessedWoodHard int16
+---@field Nails int16
+---@field ProcessedSteel int16
+---@field ResourceFibreHeavy int16
+---@field ProcessedBronze int16
+---@field ProcessedFlax int16
+---@field ProcessedLead int16
+---@field ProcessedResin int16
+---@field ProcessedThickLeather int16
 FUpgradeCostData = {}
 
 
@@ -1433,7 +1531,6 @@ function UAnvilButtonWidget:ContextfulOnClicked() end
 
 
 ---@class UAnvilCharacterSave : USaveGame
----@field FogOfWarData TArray<uint8>
 ---@field CompletedGameplayHints int32
 UAnvilCharacterSave = {}
 
@@ -1562,6 +1659,7 @@ UAnvilMovieCharacterNameWidget = {}
 
 ---@class UAnvilOptionsSave : USaveGame
 ---@field VolumeSettings TMap<FString, float>
+---@field bVoiceChatEnabled boolean
 ---@field SavedVoiceOutputDeviceName FString
 ---@field SavedVoiceInputDeviceName FString
 ---@field bShowPlayerName boolean
@@ -1863,6 +1961,19 @@ UDeathMarketMapIcon = {}
 function UDeathMarketMapIcon:OnLastDeathLocationChanged(OldVal, NewVal) end
 
 
+---@class UDemoWidget : UUserWidget
+---@field NextTestText UTextBlock
+---@field CountdownHeaderText UTextBlock
+---@field CountdownText UTextBlock
+---@field ConfirmButton UAnvilButtonWidget
+---@field DiscordButton UButton
+UDemoWidget = {}
+
+function UDemoWidget:UpdateText() end
+function UDemoWidget:OnDiscordButtonClicked() end
+function UDemoWidget:OnConfirmButtonClicked() end
+
+
 ---@class UDeploymentFoodItemGridWidget : UGridPanelWidget
 UDeploymentFoodItemGridWidget = {}
 
@@ -2101,8 +2212,23 @@ UFooterContainer = {}
 ---@field SecondaryNotificationText UTextBlock
 ---@field PrimaryPromptText UTextBlock
 ---@field SecondaryPromptText UTextBlock
+---@field VictoryBackground UTexture2D
+---@field AgeEndingBackground UTexture2D
+---@field PostAgeEndingBackground UTexture2D
+---@field AranicLogo UTexture2D
+---@field MirrishLogo UTexture2D
+---@field NovanLogo UTexture2D
+---@field MilitaryVictoryLogo UTexture2D
+---@field CultureVictoryLogo UTexture2D
+---@field VictorySoundCue USoundCue
+---@field AgeEndingSoundCue USoundCue
+---@field WinConditionCanvas UCanvasPanel
+---@field WinConditionBackground UImage
+---@field WinConditionLogo UImage
+---@field VictoryTypeLogo UImage
 UGameplayOverlay = {}
 
+function UGameplayOverlay:PlayWinConditionAnimation() end
 ---@return ESlateVisibility
 function UGameplayOverlay:GetHUDWidgetVisibility() end
 
@@ -2129,6 +2255,8 @@ UGrainMillWindow = {}
 ---@class UGrassRemovalVolumeComponent : USceneComponent
 ---@field Extents FVector
 ---@field bDeferGrassUpdate boolean
+---@field bSetByUseVolume boolean
+---@field bSetBySpline boolean
 ---@field SplineDataComponent USplineDataComponent
 UGrassRemovalVolumeComponent = {}
 
@@ -2167,6 +2295,17 @@ UGridPanelWidget = {}
 ---@field ResourcesContainer UVerticalBox
 UHUDBuildSiteWidget = {}
 
+
+
+---@class UHUDDemoHintWidget : UUserWidget
+---@field HelpButton UAnvilButtonWidget
+---@field HintMaximizeButton UButton
+---@field HintMinimizeButton UButton
+UHUDDemoHintWidget = {}
+
+function UHUDDemoHintWidget:OnHintMinimizeClicked() end
+function UHUDDemoHintWidget:OnHintMaximizeClicked() end
+function UHUDDemoHintWidget:OnHelpButtonClicked() end
 
 
 ---@class UHUDEntityBillboardWidget : UUserWidget
@@ -2261,10 +2400,6 @@ UHUDStatsWidget = {}
 ---@field GuardStrengthCenterIcon UImage
 ---@field GuardStrengthRightIcon UImage
 ---@field PlayerStatusText UTextBlock
----@field WinConditionCanvas UCanvasPanel
----@field WinConditionBackground UImage
----@field WinConditionLogo UImage
----@field VictoryTypeLogo UImage
 ---@field PlayerVitality UVitalityStatusWidget
 ---@field HorseVitality UVitalityStatusWidget
 ---@field InventoryHUD UInventoryHUDWidget
@@ -2273,18 +2408,8 @@ UHUDStatsWidget = {}
 ---@field BuildSiteCanvas UCanvasPanel
 ---@field PlacementStatusWidget UHUDPlacementStatusWidget
 ---@field BuildSiteWidget UHUDBuildSiteWidget
----@field VictoryBackground UTexture2D
----@field AgeEndingBackground UTexture2D
----@field PostAgeEndingBackground UTexture2D
----@field AranicLogo UTexture2D
----@field MirrishLogo UTexture2D
----@field NovanLogo UTexture2D
----@field MilitaryVictoryLogo UTexture2D
----@field CultureVictoryLogo UTexture2D
 ---@field GuardStrengthEmptyIcon FSlateBrush
 ---@field GuardStrengthFillIcon FSlateBrush
----@field VictorySoundCue USoundCue
----@field AgeEndingSoundCue USoundCue
 ---@field InteractionProgressBar1 UProgressBar
 ---@field InteractionProgressBar2 UProgressBar
 ---@field WeatherStatsText UTextBlock
@@ -2293,6 +2418,11 @@ UHUDStatsWidget = {}
 ---@field BackoutImage UImage
 ---@field HUDHintWidget UHUDHintWidget
 ---@field NewLocalMessages TArray<UChatMessage>
+---@field CrossHairBrush FSlateBrush
+---@field AccuracyBar UImage
+---@field AccuracyBarColor FLinearColor
+---@field AccuracyBarFullColor FLinearColor
+---@field AimingTooCloseColour FLinearColor
 UHUDWidget = {}
 
 function UHUDWidget:PlayWinConditionAnimation() end
@@ -2573,8 +2703,6 @@ function UMapPostWidget:GetNetVoteCountText() end
 
 ---@class UMapWidget : UMapWidgetBase
 ---@field EnemyIconColour FSlateColor
----@field FogOfWarMask UTexture2D
----@field FogOfWarRadius int32
 ---@field CentralMarketplaceWidgetBorder UBorder
 ---@field CentralMarketplaceWidget UCentralMarketplaceWidget
 ---@field MapPostContainerWidget UMapPostContainerWidget
@@ -2625,11 +2753,13 @@ function UNextTestWidget:OnDiscordButtonClicked() end
 ---@field AnnouncementText UTextBlock
 ---@field DiscordRoleButton UButton
 ---@field DevModeButton UButton
----@field ShardDropdown UAnvilDropdownEntryWidget
+---@field SelectedShardText UTextBlock
+---@field ShardSelectorButton UAnvilButtonWidget
 UOpeningScreen = {}
 
 function UOpeningScreen:UpdateVersionText() end
 function UOpeningScreen:ReenableDiscordRoleButton() end
+function UOpeningScreen:OnShardSelectorButtonClicked() end
 function UOpeningScreen:OnPlayButtonClicked() end
 function UOpeningScreen:OnOptionsButtonClicked() end
 function UOpeningScreen:OnExitButtonClicked() end
@@ -2637,8 +2767,8 @@ function UOpeningScreen:OnDiscordRoleButtonClicked() end
 function UOpeningScreen:OnDevModeButtonClicked() end
 ---@return boolean
 function UOpeningScreen:IsDiscordRoleButtonEnabled() end
----@return ESlateVisibility
-function UOpeningScreen:GetShardDropDownVisibility() end
+---@return FText
+function UOpeningScreen:GetSelectedShardText() end
 ---@return FText
 function UOpeningScreen:GetAnnouncementText() end
 
@@ -2646,6 +2776,7 @@ function UOpeningScreen:GetAnnouncementText() end
 ---@class UOptionsMenuAudioWidget : UUserWidget
 ---@field MasterVolumeSlider UAnvilSliderWidget
 ---@field SFXVolumeSlider UAnvilSliderWidget
+---@field VoiceChatEnabledDropdown UAnvilDropdownEntryWidget
 ---@field VoiceInputVolumeSlider UAnvilSliderWidget
 ---@field VoiceOutputVolumeSlider UAnvilSliderWidget
 ---@field VoiceInDropdown UAnvilDropdownEntryWidget
@@ -2897,6 +3028,32 @@ function UServerSelectScreen:IsRefreshButtonEnabled() end
 function UServerSelectScreen:GetThrobberVisibility() end
 
 
+---@class UShardSelectorListEntryView : UObject
+---@field ShardConfig FShardConfig
+UShardSelectorListEntryView = {}
+
+
+
+---@class UShardSelectorListEntryWidget : UUserWidget
+---@field ShardListEntryButton UButton
+---@field ShardNameText UTextBlock
+---@field ShardDescriptionText UTextBlock
+---@field PopulationText UTextBlock
+UShardSelectorListEntryWidget = {}
+
+function UShardSelectorListEntryWidget:OnShardEntryClicked() end
+
+
+---@class UShardSelectorScreen : UAnvilScreen
+---@field ShardList UListView
+---@field RefreshButton UAnvilButtonWidget
+---@field BackButton UAnvilButtonWidget
+UShardSelectorScreen = {}
+
+function UShardSelectorScreen:OnRefreshButtonClicked() end
+function UShardSelectorScreen:OnBackButtonClicked() end
+
+
 ---@class USignPostMessageWidget : UUserWidget
 ---@field MessageBox UTextBlock
 ---@field LifetimeBox UTextBlock
@@ -3065,6 +3222,17 @@ UVisBalljointComponent = {}
 
 
 
+---@class UVisBowAnimInstance : UAnimInstance
+---@field NativePlayerAccuracy float
+---@field NativeCharacterIsAiming boolean
+---@field NativeCharacterSecondaryMode boolean
+---@field NativeActivityState EAnvilSimActivityState
+---@field NativeCurrentActivityChainIndex uint8
+---@field NativeCurrentMontagePosition float
+UVisBowAnimInstance = {}
+
+
+
 ---@class UVisBuildGhostComponent : UActorComponent
 ---@field BuildSiteDataComponent UBuildSiteDataComponent
 ---@field ValidPlacementColour FLinearColor
@@ -3097,6 +3265,13 @@ UVisCartAnimInstance = {}
 ---@class UVisDynamicInstancedMeshGroupComponent : USceneComponent
 ---@field InstancedMeshes TMap<UStaticMesh, UInstancedStaticMeshComponent>
 UVisDynamicInstancedMeshGroupComponent = {}
+
+
+
+---@class UVisDynamicMeshTemplateReferenceComponent : USceneComponent
+---@field TemplateClass TSubclassOf<AActor>
+---@field MeshVisualizers TArray<UStaticMeshComponent>
+UVisDynamicMeshTemplateReferenceComponent = {}
 
 
 
@@ -3181,6 +3356,8 @@ UVisInstancedStockpileComponent = {}
 ---@field SecondaryLaunchingProjectileOverride UAnimMontage
 ---@field TransferSoundCue USoundCue
 ---@field ArmingSoundCue USoundCue
+---@field AmmoMesh UStaticMesh
+---@field AmmoMeshTransform FTransform
 UVisItem = {}
 
 
@@ -3223,12 +3400,14 @@ UVisMultiItemStockpileComponent = {}
 ---@field bNativeIsAttacking boolean
 ---@field NativeDir float
 ---@field NativeSpeed float
+---@field NativeSpeedAbs float
 ---@field GripType EEquippedItemGripType
 ---@field PrimaryGripType EEquippedItemGripType
 ---@field SecondaryGripType EEquippedItemGripType
 ---@field NativeStance EAnvilCharacterStance
 ---@field VehicleInputState EAnvilVehicleInputState
 ---@field IncomingAttackDirection EIncomingAttackDirection
+---@field bNativeStanceOnHorse boolean
 ---@field NativePoseIndex int32
 ---@field NativeIsAiming boolean
 ---@field NativeIsCrouching boolean
@@ -3242,8 +3421,43 @@ UVisMultiItemStockpileComponent = {}
 ---@field bCombatMode boolean
 ---@field bWantsToPush boolean
 ---@field bIsPushing boolean
+---@field IsPushingBlendWeight float
 ---@field bIsSwimming boolean
 ---@field bNativeIsFalling boolean
+---@field NativeAccuracy float
+---@field NativeLadderClimbSpeed float
+---@field bNativeVehicleInputStatePush boolean
+---@field bNativeVehicleInputStatePull boolean
+---@field bNativeVehicleInputStateCharge boolean
+---@field bNativeVehicleInputStateStrafeLeft boolean
+---@field bNativeVehicleInputStateStrafeRight boolean
+---@field bNativePrimaryGripTypeIsPike boolean
+---@field bNativeCombatModeIsStanding boolean
+---@field bNativeSecondaryGripIsShieldScondaryShieldOff boolean
+---@field bNativeIncomingAttack boolean
+---@field bNativeIncomingAttackDirectionFront boolean
+---@field bNativeIncomingAttackDirectionBack boolean
+---@field bNativeIncomingAttackDirectionLeft boolean
+---@field bNativeIncomingAttackDirectionRight boolean
+---@field bNativeAbsSpeedOver25 boolean
+---@field bNativeAimingStanceNotScorpion boolean
+---@field bNativeAimingNotGuarding boolean
+---@field NativeRangedClampedBowAccuracy float
+---@field NativeUpperBodySpeedReference float
+---@field bNativeUpperBodySpeedReferenceOver25 boolean
+---@field bNativeUpperBodySpeedReferenceOver250 boolean
+---@field bNativeNotAimingUpperBodySpeedBelow25 boolean
+---@field bNativeNotAimingUpperBodySpeedAbove25 boolean
+---@field bNativeIsAimingUpperBodySpeedBelow25 boolean
+---@field bNativeIsAimingUpperBodySpeedAbove25 boolean
+---@field NativeLegBlendspacePlayrate float
+---@field bNativeSpeedOver10 boolean
+---@field bNativeSpeedOver25 boolean
+---@field bNativeSpeedOver95 boolean
+---@field bNativeSpeedOver150 boolean
+---@field bNativeSpeedOver250 boolean
+---@field bNativeSpeedOver350 boolean
+---@field bNativeSpeedOver600 boolean
 UVisPlayerAnimInstance = {}
 
 
@@ -3296,6 +3510,14 @@ UVisScaffoldingComponent = {}
 
 
 
+---@class UVisSiegeTowerAnimInstance : UVisVehicleAnimInstance
+---@field LadderState EAnvilSiegeTowerState
+---@field RampState EAnvilSiegeTowerState
+---@field CurrentRampAngle float
+UVisSiegeTowerAnimInstance = {}
+
+
+
 ---@class UVisSingleItemStockpileComponent : UStaticMeshComponent
 ---@field InventorySlotIndex int32
 ---@field DefaultItemMesh UStaticMesh
@@ -3305,6 +3527,7 @@ UVisSingleItemStockpileComponent = {}
 
 
 ---@class UVisSplineComponent : USceneComponent
+---@field OnShapeUpdated FVisSplineComponentOnShapeUpdated
 ---@field GroundDecalComponent UDecalComponent
 ---@field PreviewPieceLength float
 ---@field PreviewEndLocation FVector
@@ -3341,6 +3564,12 @@ UVisStockpileComponent = {}
 ---@field TeamMeshMirrish UStaticMesh
 ---@field TeamMeshNovan UStaticMesh
 UVisTeamMeshComponent = {}
+
+
+
+---@class UVisTeamSkeletalMeshComponent : USkeletalMeshComponent
+---@field TeamMeshes TMap<EAnvilFactionId, USkeletalMesh>
+UVisTeamSkeletalMeshComponent = {}
 
 
 
@@ -3486,6 +3715,10 @@ UWorldFamilySpawnMapIcon = {}
 UWorldMarketShopMapIcon = {}
 
 function UWorldMarketShopMapIcon:OnIconClicked() end
+
+
+---@class UWorldTempleMapIcon : UWorldEntityMapIcon
+UWorldTempleMapIcon = {}
 
 
 ---@class UWorldTownCenterMapIcon : UDeploymentPointMapIcon

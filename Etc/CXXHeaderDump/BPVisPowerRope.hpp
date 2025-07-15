@@ -3,6 +3,6 @@
 
 class ABPVisPowerRope_C : public AVisSpline
 {
-}; // Size: 0x548
+}; // Size: 0x568
 
 #endif

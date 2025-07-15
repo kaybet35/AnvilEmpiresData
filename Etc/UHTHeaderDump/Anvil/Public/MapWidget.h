@@ -8,7 +8,6 @@ class UBorder;
 class UCentralMarketplaceWidget;
 class UMapIcon;
 class UMapPostContainerWidget;
-class UTexture2D;
 class UWinConditionWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -19,12 +18,6 @@ public:
     FSlateColor EnemyIconColour;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UTexture2D* FogOfWarMask;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 FogOfWarRadius;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBorder* CentralMarketplaceWidgetBorder;
     

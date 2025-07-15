@@ -1,0 +1,4434 @@
+[
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Drawbridge",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Closed",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Opening",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": 0,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Closing",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": 1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Open",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 15,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 6,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 7,
+              "StartNotify": 2,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                8
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.05,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 3,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 3,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 2,
+              "CrossfadeDuration": 0.01,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.05,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SiegeTower_Sk_Skeleton'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/SiegeTower_Sk_Skeleton.4"
+      },
+      "AnimNotifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "RampStartedOpening",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": -1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": null
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "RampStartedClosing",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": -1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": null
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "rampIsOpen",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": -1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": null
+        }
+      ],
+      "GraphAssetPlayerInformation": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "PlayerNodeIndices": [
+              16,
+              17,
+              19,
+              20,
+              22,
+              23,
+              26
+            ]
+          }
+        }
+      ],
+      "AnimNodeData": [
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            0,
+            21
+          ],
+          "NodeIndex": 0,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            21,
+            20,
+            19,
+            18,
+            4294967295,
+            1,
+            2147483648,
+            6,
+            4294967295,
+            16,
+            15,
+            18
+          ],
+          "NodeIndex": 1,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 2,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            2147483649,
+            5,
+            4,
+            18,
+            3,
+            2,
+            2147483650
+          ],
+          "NodeIndex": 3,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            21,
+            20,
+            19,
+            18,
+            4294967295,
+            7,
+            7,
+            6,
+            4294967295,
+            16,
+            18,
+            18
+          ],
+          "NodeIndex": 4,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            21,
+            20,
+            19,
+            18,
+            4294967295,
+            7,
+            7,
+            6,
+            4294967295,
+            16,
+            18,
+            18
+          ],
+          "NodeIndex": 5,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            2147483651,
+            5,
+            4,
+            18,
+            3,
+            2,
+            2147483652
+          ],
+          "NodeIndex": 6,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            21,
+            20,
+            19,
+            18,
+            4294967295,
+            7,
+            7,
+            6,
+            4294967295,
+            16,
+            18,
+            18
+          ],
+          "NodeIndex": 7,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            21,
+            20,
+            19,
+            18,
+            4294967295,
+            7,
+            7,
+            6,
+            4294967295,
+            16,
+            18,
+            18
+          ],
+          "NodeIndex": 8,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            2147483653,
+            5,
+            4,
+            18,
+            3,
+            2,
+            2147483654
+          ],
+          "NodeIndex": 9,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            21,
+            20,
+            19,
+            18,
+            4294967295,
+            7,
+            7,
+            6,
+            4294967295,
+            16,
+            18,
+            18
+          ],
+          "NodeIndex": 10,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            21,
+            20,
+            19,
+            18,
+            4294967295,
+            7,
+            7,
+            6,
+            4294967295,
+            16,
+            18,
+            18
+          ],
+          "NodeIndex": 11,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295
+          ],
+          "NodeIndex": 12,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295
+          ],
+          "NodeIndex": 13,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295
+          ],
+          "NodeIndex": 14,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295
+          ],
+          "NodeIndex": 15,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295
+          ],
+          "NodeIndex": 16,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295
+          ],
+          "NodeIndex": 17,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295
+          ],
+          "NodeIndex": 18,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            21,
+            20,
+            19,
+            18,
+            17,
+            2147483655,
+            15,
+            15,
+            14,
+            16
+          ],
+          "NodeIndex": 19,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            8,
+            21,
+            9
+          ],
+          "NodeIndex": 20,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            21,
+            20,
+            19,
+            18,
+            17,
+            2147483656,
+            15,
+            15,
+            14,
+            16
+          ],
+          "NodeIndex": 21,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            10,
+            21,
+            11
+          ],
+          "NodeIndex": 22,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            21,
+            20,
+            19,
+            18,
+            17,
+            2147483657,
+            15,
+            15,
+            14,
+            16
+          ],
+          "NodeIndex": 23,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            12,
+            21,
+            13
+          ],
+          "NodeIndex": 24,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            21,
+            20,
+            19,
+            18,
+            17,
+            16,
+            15,
+            15,
+            14,
+            16
+          ],
+          "NodeIndex": 25,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            22,
+            21,
+            23
+          ],
+          "NodeIndex": 26,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+          },
+          "Entries": [
+            24,
+            24,
+            24,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 27,
+          "Flags": "EAnimNodeDataFlags::None"
+        }
+      ],
+      "NodeTypeMap": [
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_StateMachine'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "StateMachineIndexInClass",
+                "Value": 3
+              },
+              {
+                "Key": "MaxTransitionsPerFrame",
+                "Value": 4
+              },
+              {
+                "Key": "MaxTransitionsRequests",
+                "Value": 5
+              },
+              {
+                "Key": "bSkipFirstUpdateTransition",
+                "Value": 6
+              },
+              {
+                "Key": "bReinitializeOnBecomingRelevant",
+                "Value": 7
+              },
+              {
+                "Key": "bCreateNotifyMetaData",
+                "Value": 8
+              },
+              {
+                "Key": "bAllowConduitEntryStates",
+                "Value": 9
+              }
+            ],
+            "NumProperties": 10
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_Base'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_StateResult'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Result",
+                "Value": 3
+              },
+              {
+                "Key": "Name",
+                "Value": 4
+              },
+              {
+                "Key": "Group",
+                "Value": 5
+              },
+              {
+                "Key": "StateIndex",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_Root'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Result",
+                "Value": 3
+              },
+              {
+                "Key": "Name",
+                "Value": 4
+              },
+              {
+                "Key": "Group",
+                "Value": 5
+              }
+            ],
+            "NumProperties": 6
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_SequenceEvaluator'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              },
+              {
+                "Key": "GroupName",
+                "Value": 7
+              },
+              {
+                "Key": "GroupRole",
+                "Value": 8
+              },
+              {
+                "Key": "Method",
+                "Value": 9
+              },
+              {
+                "Key": "bIgnoreForRelevancyTest",
+                "Value": 10
+              },
+              {
+                "Key": "Sequence",
+                "Value": 11
+              },
+              {
+                "Key": "ExplicitTime",
+                "Value": 12
+              },
+              {
+                "Key": "bShouldLoop",
+                "Value": 13
+              },
+              {
+                "Key": "bTeleportToExplicitTime",
+                "Value": 14
+              },
+              {
+                "Key": "ReinitializationBehavior",
+                "Value": 15
+              },
+              {
+                "Key": "StartPosition",
+                "Value": 16
+              }
+            ],
+            "NumProperties": 17
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_SequenceEvaluatorBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerRelevancyBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_TransitionResult'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "bCanEnterTransition",
+                "Value": 3
+              }
+            ],
+            "NumProperties": 4
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_SequencePlayer'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              },
+              {
+                "Key": "PlayRateScaleBiasClampState",
+                "Value": 7
+              },
+              {
+                "Key": "GroupName",
+                "Value": 8
+              },
+              {
+                "Key": "GroupRole",
+                "Value": 9
+              },
+              {
+                "Key": "Method",
+                "Value": 10
+              },
+              {
+                "Key": "bIgnoreForRelevancyTest",
+                "Value": 11
+              },
+              {
+                "Key": "Sequence",
+                "Value": 12
+              },
+              {
+                "Key": "PlayRateBasis",
+                "Value": 13
+              },
+              {
+                "Key": "PlayRate",
+                "Value": 14
+              },
+              {
+                "Key": "PlayRateScaleBiasClampConstants",
+                "Value": 15
+              },
+              {
+                "Key": "PlayRateScaleBiasClamp",
+                "Value": 16
+              },
+              {
+                "Key": "StartPosition",
+                "Value": 17
+              },
+              {
+                "Key": "bLoopAnimation",
+                "Value": 18
+              },
+              {
+                "Key": "bStartFromMatchingPose",
+                "Value": 19
+              }
+            ],
+            "NumProperties": 20
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_SequencePlayerBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              },
+              {
+                "Key": "PlayRateScaleBiasClampState",
+                "Value": 7
+              }
+            ],
+            "NumProperties": 8
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendListByBool'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "BlendPose",
+                "Value": 3
+              },
+              {
+                "Key": "BlendTime",
+                "Value": 4
+              },
+              {
+                "Key": "TransitionType",
+                "Value": 5
+              },
+              {
+                "Key": "BlendType",
+                "Value": 6
+              },
+              {
+                "Key": "bResetChildOnActivation",
+                "Value": 7
+              },
+              {
+                "Key": "CustomBlendCurve",
+                "Value": 8
+              },
+              {
+                "Key": "BlendProfile",
+                "Value": 9
+              },
+              {
+                "Key": "bActiveValue",
+                "Value": 10
+              }
+            ],
+            "NumProperties": 11
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendListBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "BlendPose",
+                "Value": 3
+              },
+              {
+                "Key": "BlendTime",
+                "Value": 4
+              },
+              {
+                "Key": "TransitionType",
+                "Value": 5
+              },
+              {
+                "Key": "BlendType",
+                "Value": 6
+              },
+              {
+                "Key": "bResetChildOnActivation",
+                "Value": 7
+              },
+              {
+                "Key": "CustomBlendCurve",
+                "Value": 8
+              },
+              {
+                "Key": "BlendProfile",
+                "Value": 9
+              }
+            ],
+            "NumProperties": 10
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_LayeredBoneBlend'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "BasePose",
+                "Value": 3
+              },
+              {
+                "Key": "BlendPoses",
+                "Value": 4
+              },
+              {
+                "Key": "BlendMode",
+                "Value": 5
+              },
+              {
+                "Key": "BlendMasks",
+                "Value": 6
+              },
+              {
+                "Key": "LayerSetup",
+                "Value": 7
+              },
+              {
+                "Key": "BlendWeights",
+                "Value": 8
+              },
+              {
+                "Key": "bMeshSpaceRotationBlend",
+                "Value": 9
+              },
+              {
+                "Key": "bMeshSpaceScaleBlend",
+                "Value": 10
+              },
+              {
+                "Key": "CurveBlendOption",
+                "Value": 11
+              },
+              {
+                "Key": "bBlendRootMotionBasedOnRootBone",
+                "Value": 12
+              },
+              {
+                "Key": "LODThreshold",
+                "Value": 13
+              },
+              {
+                "Key": "PerBoneBlendWeights",
+                "Value": 14
+              },
+              {
+                "Key": "SkeletonGuid",
+                "Value": 15
+              },
+              {
+                "Key": "VirtualBoneGuid",
+                "Value": 16
+              }
+            ],
+            "NumProperties": 17
+          }
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'SiegeTower_ABP_C:ExecuteUbergraph_SiegeTower_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.20"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisSiegeTowerAnimInstance'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:AnimGraph'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.1"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_A5D0A0684D1932DD06BF05871D4FBEC8'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.11"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_FD82915448DA5590649090A449937A2C'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.9"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_84B2CC574A423856A0DC0EB6538F146C'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.7"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_D969EA3C4D3F841F96E49898CE10422D'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.8"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_9380EF8D4558FF5FFA5324ABBA0C6520'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.10"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_AD59AC75400C7EA83EEA70AEB19613C2'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.12"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_D4B6566A4370B457AE243699969142B9'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.19"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_91419659450F13C26E318193F6B7DAC0'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.15"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_56E816074860F65E10881E9E34DB7E75'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.14"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_9563798B40D10FE25F9A389113957EBC'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.16"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_CA6E8F5E47B556F004AC1A86B1961895'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.18"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_A770CC294102533930841C9EA425E242'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.17"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_17619D514B55F2D794CA82909AF7E7DF'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.13"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:BlueprintUpdateAnimation'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.6"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:AnimNotify_rampIsOpen'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.2"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:BlueprintBeginPlay'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.5"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:AnimNotify_RampStartedOpening'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.4"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:AnimNotify_RampStartedClosing'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.3"
+      },
+      {
+        "ObjectName": "Function'SiegeTower_ABP_C:ExecuteUbergraph_SiegeTower_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.20"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__AnimBlueprintMutables",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_LayeredBoneBlend",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 352,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_BlendListByBool_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 240,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_BlendListByBool_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 240,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_BlendListByBool",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 240,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequenceEvaluator_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 232,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequenceEvaluator'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequenceEvaluator_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 232,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequenceEvaluator'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequenceEvaluator_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 232,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequenceEvaluator'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequenceEvaluator",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 232,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequenceEvaluator'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "DeployTimeRange",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "DeployTimeRange_L",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "DeployTimeRange_R",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CurrentLadderState",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Enum": {
+          "ObjectName": "Enum'EAnvilSiegeTowerState'",
+          "ObjectPath": "/Script/R2"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "niagaraImpactSystemName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara drawbridge impact",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara Ladder Impact R",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara Ladder Impact L",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara Ladder Impact M",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara Ladder Movement Audio",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara Drawbridge Movement Audio",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_SiegeTower_ABP": {
+        "ObjectName": "Function'SiegeTower_ABP_C:ExecuteUbergraph_SiegeTower_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.20"
+      },
+      "AnimNotify_RampStartedClosing": {
+        "ObjectName": "Function'SiegeTower_ABP_C:AnimNotify_RampStartedClosing'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.3"
+      },
+      "AnimNotify_RampStartedOpening": {
+        "ObjectName": "Function'SiegeTower_ABP_C:AnimNotify_RampStartedOpening'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.4"
+      },
+      "BlueprintBeginPlay": {
+        "ObjectName": "Function'SiegeTower_ABP_C:BlueprintBeginPlay'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.5"
+      },
+      "AnimNotify_rampIsOpen": {
+        "ObjectName": "Function'SiegeTower_ABP_C:AnimNotify_rampIsOpen'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.2"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function'SiegeTower_ABP_C:BlueprintUpdateAnimation'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.6"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_17619D514B55F2D794CA82909AF7E7DF": {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_17619D514B55F2D794CA82909AF7E7DF'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.13"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_A770CC294102533930841C9EA425E242": {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_A770CC294102533930841C9EA425E242'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.17"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_CA6E8F5E47B556F004AC1A86B1961895": {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_CA6E8F5E47B556F004AC1A86B1961895'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.18"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_9563798B40D10FE25F9A389113957EBC": {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_9563798B40D10FE25F9A389113957EBC'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.16"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_56E816074860F65E10881E9E34DB7E75": {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_56E816074860F65E10881E9E34DB7E75'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.14"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_91419659450F13C26E318193F6B7DAC0": {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_91419659450F13C26E318193F6B7DAC0'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.15"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_D4B6566A4370B457AE243699969142B9": {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_D4B6566A4370B457AE243699969142B9'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.19"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_AD59AC75400C7EA83EEA70AEB19613C2": {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_AD59AC75400C7EA83EEA70AEB19613C2'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.12"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_9380EF8D4558FF5FFA5324ABBA0C6520": {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_9380EF8D4558FF5FFA5324ABBA0C6520'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.10"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_D969EA3C4D3F841F96E49898CE10422D": {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_D969EA3C4D3F841F96E49898CE10422D'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.8"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_84B2CC574A423856A0DC0EB6538F146C": {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_84B2CC574A423856A0DC0EB6538F146C'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.7"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_FD82915448DA5590649090A449937A2C": {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_FD82915448DA5590649090A449937A2C'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.9"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_A5D0A0684D1932DD06BF05871D4FBEC8": {
+        "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_A5D0A0684D1932DD06BF05871D4FBEC8'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.11"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'SiegeTower_ABP_C:AnimGraph'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.1"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SiegeTower_ABP_C'Default__SiegeTower_ABP_C'",
+      "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.23"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraph",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PoseLink'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_rampIsOpen",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_RampStartedClosing",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_RampStartedOpening",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintBeginPlay",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'AnimInstance:BlueprintBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'AnimInstance:BlueprintUpdateAnimation'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaTimeX",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_84B2CC574A423856A0DC0EB6538F146C",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_D969EA3C4D3F841F96E49898CE10422D",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_FD82915448DA5590649090A449937A2C",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_9380EF8D4558FF5FFA5324ABBA0C6520",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_A5D0A0684D1932DD06BF05871D4FBEC8",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_AD59AC75400C7EA83EEA70AEB19613C2",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_17619D514B55F2D794CA82909AF7E7DF",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_56E816074860F65E10881E9E34DB7E75",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_91419659450F13C26E318193F6B7DAC0",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_9563798B40D10FE25F9A389113957EBC",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_A770CC294102533930841C9EA425E242",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_CA6E8F5E47B556F004AC1A86B1961895",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_D4B6566A4370B457AE243699969142B9",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_SiegeTower_ABP",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_MapRangeClamped_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_MapRangeClamped_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_MapRangeClamped_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_8",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaTimeX",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_9",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_10",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsVis_Siege_Tower",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'VisSiegeTower'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_K2_GetComponentsByClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_K2_GetComponentsByClass_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'NiagaraComponent'",
+            "ObjectPath": "/Script/Niagara"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetObjectName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchString_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_11",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_12",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_MapRangeClamped_Value_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_StructMemberSet___FloatProperty_6_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_MapRangeClamped_Value_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_StructMemberSet___FloatProperty_7_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_MapRangeClamped_Value_ImplicitCast_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_StructMemberSet___FloatProperty_8_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Array_Set_Item_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Array_Set_Item_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Array_Set_Item_ImplicitCast_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Array_Set_Item_ImplicitCast_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Array_Set_Item_ImplicitCast_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Array_Set_Item_ImplicitCast_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Delay_Duration_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Delay_Duration_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Delay_Duration_ImplicitCast_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedConstantData",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'ScriptStruct'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintConstantData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_193",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_194",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "__BlendProfile_195",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'BlendProfile'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "__CurveFloat_196",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'CurveFloat'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_197",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAlphaBlendOption'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_198",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EBlendListTransitionType'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_199",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_200",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_201",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_202",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_203",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_204",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_205",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_206",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_207",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'ESequenceEvalReinit'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_208",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_209",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "__AnimSequenceBase_210",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimSequenceBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_211",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_212",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_213",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_214",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_215",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_216",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_217",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNodeFunctionRef'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_Base'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ]
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedMutableData",
+    "Outer": "SiegeTower_ABP_C",
+    "Class": "UScriptClass'ScriptStruct'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintMutableData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "__ArrayProperty_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | EditFixedSize",
+        "Inner": {
+          "Type": "FloatProperty",
+          "Name": "__ArrayProperty_0",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "__ArrayProperty_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | EditFixedSize",
+        "Inner": {
+          "Type": "FloatProperty",
+          "Name": "__ArrayProperty_2",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "__ArrayProperty_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | EditFixedSize",
+        "Inner": {
+          "Type": "FloatProperty",
+          "Name": "__ArrayProperty_4",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_8",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      }
+    ]
+  },
+  {
+    "Type": "SiegeTower_ABP_C",
+    "Name": "Default__SiegeTower_ABP_C",
+    "Class": "AnimBlueprintGeneratedClass'Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.SiegeTower_ABP_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "__AnimBlueprintMutables": {
+        "__FloatProperty": 1.0,
+        "__ArrayProperty_0": [
+          0.1,
+          0.1
+        ],
+        "__BoolProperty_1": false,
+        "__ArrayProperty_2": [
+          0.1,
+          0.1
+        ],
+        "__BoolProperty_3": false,
+        "__ArrayProperty_4": [
+          0.1,
+          0.1
+        ],
+        "__BoolProperty_5": false,
+        "__FloatProperty_6": 0.0,
+        "__FloatProperty_7": 0.0,
+        "__FloatProperty_8": 0.0
+      },
+      "AnimBlueprintExtension_PropertyAccess": {},
+      "AnimBlueprintExtension_Base": {},
+      "AnimGraphNode_Root": {
+        "Result": {
+          "LinkID": 2
+        }
+      },
+      "AnimGraphNode_SequencePlayer_6": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'SiegeTower_Wheel_546_anim'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_Wheel_546_anim.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend": {
+        "BasePose": {
+          "LinkID": 27
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 1
+          },
+          {
+            "LinkID": 6
+          },
+          {
+            "LinkID": 9
+          },
+          {
+            "LinkID": 3
+          }
+        ],
+        "BlendMode": "ELayeredBoneBlendMode::BranchFilter",
+        "BlendMasks": [],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "WheelBack_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "WheelBack_R",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "WheelFront_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "WheelFront_R",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "WheelMiddle_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "WheelMiddle_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "LadderDeploy",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "LadderDeploy_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "LadderDeploy_R",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::Override",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "8E37D33C-41B7FB6A-CDA0C4A5-4315C0E9",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendListByBool_2": {
+        "BlendPose": [
+          {
+            "LinkID": 5
+          },
+          {
+            "LinkID": 4
+          }
+        ]
+      },
+      "AnimGraphNode_SequencePlayer_5": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'SiegeTower_DeployedClosed_POSE'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_DeployedClosed_POSE.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_4": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'SiegeTower_DeployedOpen_POSE'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_DeployedOpen_POSE.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool_1": {
+        "BlendPose": [
+          {
+            "LinkID": 8
+          },
+          {
+            "LinkID": 7
+          }
+        ]
+      },
+      "AnimGraphNode_SequencePlayer_3": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'SiegeTower_DeployedClosed_POSE'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_DeployedClosed_POSE.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_2": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'SiegeTower_DeployedOpen_POSE'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_DeployedOpen_POSE.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool": {
+        "BlendPose": [
+          {
+            "LinkID": 11
+          },
+          {
+            "LinkID": 10
+          }
+        ]
+      },
+      "AnimGraphNode_SequencePlayer_1": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'SiegeTower_DeployedClosed_POSE'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_DeployedClosed_POSE.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'SiegeTower_DeployedOpen_POSE'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_DeployedOpen_POSE.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_6": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_5": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_4": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_3": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_2": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequenceEvaluator_3": {
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3": {
+        "Result": {
+          "LinkID": 19
+        }
+      },
+      "AnimGraphNode_SequenceEvaluator_2": {
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2": {
+        "Result": {
+          "LinkID": 21
+        }
+      },
+      "AnimGraphNode_SequenceEvaluator_1": {
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1": {
+        "Result": {
+          "LinkID": 23
+        }
+      },
+      "AnimGraphNode_SequenceEvaluator": {
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult": {
+        "Result": {
+          "LinkID": 25
+        }
+      },
+      "AnimGraphNode_StateMachine": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "DeployTimeRange": 3.195120096206665,
+      "DeployTimeRange_L": 3.188283920288086,
+      "DeployTimeRange_R": 2.7032227516174316,
+      "niagaraImpactSystemName": "NiagaraDrawbridgeImpact",
+      "NativeSpeed": 100.0
+    },
+    "SerializedSparseClassDataStruct": "ScriptStruct'Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.SiegeTower_ABP_C:AnimBlueprintGeneratedConstantData'",
+    "SerializedSparseClassData": {
+      "__NameProperty_193": "AnimGraph",
+      "__FloatProperty_194": 560.0,
+      "__BlendProfile_195": null,
+      "__CurveFloat_196": {
+        "ObjectName": "CurveFloat'DeployCurve'",
+        "ObjectPath": "Anvil/Content/Blueprints/Data/Curves/DeployCurve.0"
+      },
+      "__EnumProperty_197": "EAlphaBlendOption::Custom",
+      "__EnumProperty_198": "EBlendListTransitionType::StandardBlend",
+      "__StructProperty_199": {
+        "bMapRange": false,
+        "bClampResult": false,
+        "bInterpResult": false,
+        "InRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "OutRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "Scale": 1.0,
+        "Bias": 0.0,
+        "ClampMin": 0.0,
+        "ClampMax": 1.0,
+        "InterpSpeedIncreasing": 10.0,
+        "InterpSpeedDecreasing": 10.0
+      },
+      "__FloatProperty_200": 1.0,
+      "__NameProperty_201": "Open",
+      "__IntProperty_202": 3,
+      "__NameProperty_203": "Closing",
+      "__IntProperty_204": 2,
+      "__NameProperty_205": "Opening",
+      "__IntProperty_206": 1,
+      "__ByteProperty_207": "ESequenceEvalReinit::ExplicitTime",
+      "__BoolProperty_208": true,
+      "__FloatProperty_209": 0.0,
+      "__AnimSequenceBase_210": {
+        "ObjectName": "AnimSequence'SiegeTower_DrawBridgeOpen_anim'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_DrawBridgeOpen_anim.2"
+      },
+      "__BoolProperty_211": false,
+      "__EnumProperty_212": "EAnimSyncMethod::DoNotSync",
+      "__ByteProperty_213": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_214": "None",
+      "__NameProperty_215": "Closed",
+      "__IntProperty_216": 0,
+      "__StructProperty_217": {
+        "ClassName": "None",
+        "FunctionName": "None"
+      },
+      "AnimBlueprintExtension_PropertyAccess": {
+        "Library": {
+          "PathSegments": [
+            {
+              "Name": "DeployTimeRange_L",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "DeployTimeRange_L"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__ArrayProperty_4",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__ArrayProperty_4"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": 0,
+              "Flags": 6
+            },
+            {
+              "Name": "DeployTimeRange_L",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "DeployTimeRange_L"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__ArrayProperty_4",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__ArrayProperty_4"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": 1,
+              "Flags": 6
+            },
+            {
+              "Name": "DeployTimeRange",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "DeployTimeRange"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__ArrayProperty_2",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__ArrayProperty_2"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": 0,
+              "Flags": 6
+            },
+            {
+              "Name": "DeployTimeRange",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "DeployTimeRange"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__ArrayProperty_2",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__ArrayProperty_2"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": 1,
+              "Flags": 6
+            },
+            {
+              "Name": "DeployTimeRange_R",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "DeployTimeRange_R"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__ArrayProperty_0",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__ArrayProperty_0"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": 0,
+              "Flags": 6
+            },
+            {
+              "Name": "DeployTimeRange_R",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "DeployTimeRange_R"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__ArrayProperty_0",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__ArrayProperty_0"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": 1,
+              "Flags": 6
+            },
+            {
+              "Name": "NativeSpeed",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "NativeSpeed"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisVehicleAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'SiegeTower_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.22"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            }
+          ],
+          "SrcPaths": [
+            {
+              "PathSegmentStartIndex": 0,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 3,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 6,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 9,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 12,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 15,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 18,
+              "PathSegmentCount": 1
+            }
+          ],
+          "DestPaths": [
+            {
+              "PathSegmentStartIndex": 1,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 4,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 7,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 10,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 13,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 16,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 19,
+              "PathSegmentCount": 2
+            }
+          ],
+          "CopyBatchArray": [
+            {
+              "Copies": [
+                {
+                  "AccessIndex": 0,
+                  "DestAccessStartIndex": 0,
+                  "DestAccessEndIndex": 1,
+                  "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
+                },
+                {
+                  "AccessIndex": 1,
+                  "DestAccessStartIndex": 1,
+                  "DestAccessEndIndex": 2,
+                  "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
+                },
+                {
+                  "AccessIndex": 2,
+                  "DestAccessStartIndex": 2,
+                  "DestAccessEndIndex": 3,
+                  "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
+                },
+                {
+                  "AccessIndex": 3,
+                  "DestAccessStartIndex": 3,
+                  "DestAccessEndIndex": 4,
+                  "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
+                },
+                {
+                  "AccessIndex": 4,
+                  "DestAccessStartIndex": 4,
+                  "DestAccessEndIndex": 5,
+                  "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
+                },
+                {
+                  "AccessIndex": 5,
+                  "DestAccessStartIndex": 5,
+                  "DestAccessEndIndex": 6,
+                  "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
+                },
+                {
+                  "AccessIndex": 6,
+                  "DestAccessStartIndex": 6,
+                  "DestAccessEndIndex": 7,
+                  "Type": "EPropertyAccessCopyType::Plain"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "AnimBlueprintExtension_Base": {
+        "ExposedValueHandlers": [
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 6,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 4,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              },
+              {
+                "CopyIndex": 5,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": {
+              "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_FD82915448DA5590649090A449937A2C'",
+              "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.9"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_FD82915448DA5590649090A449937A2C"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 2,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              },
+              {
+                "CopyIndex": 3,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": {
+              "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_84B2CC574A423856A0DC0EB6538F146C'",
+              "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.7"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_84B2CC574A423856A0DC0EB6538F146C"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 0,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              },
+              {
+                "CopyIndex": 1,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": {
+              "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_D969EA3C4D3F841F96E49898CE10422D'",
+              "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.8"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_BlendListByBool_D969EA3C4D3F841F96E49898CE10422D"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_17619D514B55F2D794CA82909AF7E7DF'",
+              "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.13"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_17619D514B55F2D794CA82909AF7E7DF"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_A770CC294102533930841C9EA425E242'",
+              "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.17"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_A770CC294102533930841C9EA425E242"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_CA6E8F5E47B556F004AC1A86B1961895'",
+              "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.18"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_CA6E8F5E47B556F004AC1A86B1961895"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_9563798B40D10FE25F9A389113957EBC'",
+              "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.16"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_9563798B40D10FE25F9A389113957EBC"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_56E816074860F65E10881E9E34DB7E75'",
+              "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.14"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_56E816074860F65E10881E9E34DB7E75"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_91419659450F13C26E318193F6B7DAC0'",
+              "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.15"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_91419659450F13C26E318193F6B7DAC0"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_D4B6566A4370B457AE243699969142B9'",
+              "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.19"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_TransitionResult_D4B6566A4370B457AE243699969142B9"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_AD59AC75400C7EA83EEA70AEB19613C2'",
+              "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.12"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_AD59AC75400C7EA83EEA70AEB19613C2"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_9380EF8D4558FF5FFA5324ABBA0C6520'",
+              "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.10"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_9380EF8D4558FF5FFA5324ABBA0C6520"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": {
+              "ObjectName": "Function'SiegeTower_ABP_C:EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_A5D0A0684D1932DD06BF05871D4FBEC8'",
+              "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.11"
+            },
+            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeTower_ABP_AnimGraphNode_SequenceEvaluator_A5D0A0684D1932DD06BF05871D4FBEC8"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          }
+        ]
+      }
+    }
+  }
+]

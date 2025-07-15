@@ -3,6 +3,8 @@
 
 class UBPDeploymentFoodWidget_C : public UDeploymentFoodWidget
 {
-}; // Size: 0x2B0
+    class UImage* Background;                                                         // 0x02B0 (size: 0x8)
+
+}; // Size: 0x2B8
 
 #endif

@@ -169,7 +169,6 @@
         "SourceString": "A horse and cart used to transport large heavy items",
         "LocalizedString": "A horse and cart used to transport large heavy items"
       },
-      "PositionSmoothSpeed": 4.0,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisCart_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCart.0"
@@ -524,7 +523,15 @@
         "ObjectName": "SkeletalMesh'Cart_SK'",
         "ObjectPath": "Anvil/Content/Meshes/Props/Cart_SK.0"
       },
-      "bReceivesDecals": false
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": []
+        }
+      }
     }
   },
   {

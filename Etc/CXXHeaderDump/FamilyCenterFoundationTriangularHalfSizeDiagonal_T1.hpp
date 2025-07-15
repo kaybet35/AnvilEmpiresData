@@ -3,6 +3,6 @@
 
 class UFamilyCenterFoundationTriangularHalfSizeDiagonal_T1_C : public UBPBaseFoundationEntity_C
 {
-}; // Size: 0xD8
+}; // Size: 0xE0
 
 #endif

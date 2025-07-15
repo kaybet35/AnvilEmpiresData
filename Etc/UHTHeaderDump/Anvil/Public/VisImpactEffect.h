@@ -13,7 +13,13 @@ class ANVIL_API AVisImpactEffect : public AVisActor {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<AActor> HitEffectActors[17];
+    TSubclassOf<AActor> HitEffectActors[18];
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float VisualLifeTime;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bAttachToHitTarget;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

@@ -3,19 +3,19 @@
 
 class ABPVisGridFoundationFloorSquareDiagonal_T2_C : public AVisStructure
 {
-    class UPoseableMeshComponent* PoseableMesh;                                       // 0x0538 (size: 0x8)
-    class UStaticMeshComponent* FloorPlanking3;                                       // 0x0540 (size: 0x8)
-    class UStaticMeshComponent* FloorPlanking1;                                       // 0x0548 (size: 0x8)
-    class UStaticMeshComponent* FloorPlanking2;                                       // 0x0550 (size: 0x8)
-    class UStaticMeshComponent* FloorPlanking;                                        // 0x0558 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh1;                                    // 0x0560 (size: 0x8)
-    class UVisFoundationEdgeMeshDecorComponent* VisFoundationEdgeMeshDecor5;          // 0x0568 (size: 0x8)
-    class UVisFoundationEdgeMeshDecorComponent* VisFoundationEdgeMeshDecor4;          // 0x0570 (size: 0x8)
-    class UVisFoundationEdgeMeshDecorComponent* VisFoundationEdgeMeshDecor3;          // 0x0578 (size: 0x8)
-    class UVisFoundationEdgeMeshDecorComponent* VisFoundationEdgeMeshDecor6;          // 0x0580 (size: 0x8)
-    class USceneComponent* Scene;                                                     // 0x0588 (size: 0x8)
-    class UMeshVisibilityDataComponent* MeshVisibilityData;                           // 0x0590 (size: 0x8)
+    class UPoseableMeshComponent* PoseableMesh;                                       // 0x0558 (size: 0x8)
+    class UStaticMeshComponent* FloorPlanking3;                                       // 0x0560 (size: 0x8)
+    class UStaticMeshComponent* FloorPlanking1;                                       // 0x0568 (size: 0x8)
+    class UStaticMeshComponent* FloorPlanking2;                                       // 0x0570 (size: 0x8)
+    class UStaticMeshComponent* FloorPlanking;                                        // 0x0578 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh1;                                    // 0x0580 (size: 0x8)
+    class UVisFoundationEdgeMeshDecorComponent* VisFoundationEdgeMeshDecor5;          // 0x0588 (size: 0x8)
+    class UVisFoundationEdgeMeshDecorComponent* VisFoundationEdgeMeshDecor4;          // 0x0590 (size: 0x8)
+    class UVisFoundationEdgeMeshDecorComponent* VisFoundationEdgeMeshDecor3;          // 0x0598 (size: 0x8)
+    class UVisFoundationEdgeMeshDecorComponent* VisFoundationEdgeMeshDecor6;          // 0x05A0 (size: 0x8)
+    class USceneComponent* Scene;                                                     // 0x05A8 (size: 0x8)
+    class UMeshVisibilityDataComponent* MeshVisibilityData;                           // 0x05B0 (size: 0x8)
 
-}; // Size: 0x598
+}; // Size: 0x5B8
 
 #endif

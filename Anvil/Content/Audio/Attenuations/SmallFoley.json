@@ -7,17 +7,19 @@
     "Properties": {
       "Attenuation": {
         "bAttenuateWithLPF": true,
+        "bEnableLogFrequencyScaling": true,
         "OmniRadius": 100.0,
-        "LPFRadiusMin": 800.0,
-        "LPFRadiusMax": 5000.0,
-        "LPFFrequencyAtMax": 1136.4374,
-        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "LPFRadiusMin": 0.0,
+        "LPFRadiusMax": 7000.0,
+        "LPFFrequencyAtMin": 15000.0,
+        "LPFFrequencyAtMax": 500.0,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
         "AttenuationShapeExtents": {
-          "X": 500.0,
+          "X": 100.0,
           "Y": 0.0,
           "Z": 0.0
         },
-        "FalloffDistance": 3000.0
+        "FalloffDistance": 6500.0
       }
     }
   }

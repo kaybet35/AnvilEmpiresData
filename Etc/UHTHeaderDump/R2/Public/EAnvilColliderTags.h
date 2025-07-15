@@ -6,6 +6,11 @@ UENUM(BlueprintType)
 enum class EAnvilColliderTags : uint8 {
     MeshVisibilityGroup2,
     Tree,
+    SiegeTowerRamp,
+    MeshFootprint,
+    NoBlockAttackLOS,
+    Collapsed,
+    UnCollapsed,
     NumTypes,
 };
 

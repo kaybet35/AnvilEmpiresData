@@ -72,7 +72,8 @@
         "Z": 150.0
       },
       "SurfaceType": "EAnvilPhysicalSurfaceType::Flesh",
-      "CollisionMask": 16801856
+      "CollisionMask": 151019584,
+      "bVaultable": false
     }
   },
   {
@@ -240,77 +241,119 @@
       "Slots": [
         {
           "ProxyRepeat": 1,
-          "bOr": true,
-          "HeldItem": null,
-          "bIsHeldItemPublic": true,
-          "Count": 0,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
           "StackLimit": 1,
+          "bOr": true,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
           "AcceptedTags": [
             "EAnvilItemTag::AnimalEquipment"
           ],
+          "AcceptedTagsVisVar": 0,
           "RequiredTags": [
             "EAnvilItemTag::AnimalEquipment"
           ],
+          "RequiredTagsVisVar": 0,
           "ProhibitedTags": [],
+          "ProhibitedTagsVisVar": 0,
           "DedicatedItemType": {
             "ObjectName": "BlueprintGeneratedClass'SaddleBasic_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/AnimalEquipment/SaddleBasic.0"
           },
-          "DedicatedUnderlyingItemType": null,
-          "bCheckDedicatedUnderlyingItem": true,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
           "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
           "BackgroundType": "EAnvilItemSlotBackgroundType::AnimalEquipment",
           "CustomStackLimits": []
         },
         {
           "ProxyRepeat": 1,
-          "bOr": false,
-          "HeldItem": null,
-          "bIsHeldItemPublic": true,
-          "Count": 0,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
           "StackLimit": 1,
+          "bOr": false,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
           "AcceptedTags": [
             "EAnvilItemTag::AnimalEquipment"
           ],
+          "AcceptedTagsVisVar": 0,
           "RequiredTags": [
             "EAnvilItemTag::AnimalEquipment"
           ],
+          "RequiredTagsVisVar": 0,
           "ProhibitedTags": [],
+          "ProhibitedTagsVisVar": 0,
           "DedicatedItemType": {
             "ObjectName": "BlueprintGeneratedClass'SaddleMill_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/AnimalEquipment/SaddleMill.0"
           },
-          "DedicatedUnderlyingItemType": null,
-          "bCheckDedicatedUnderlyingItem": true,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
           "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
           "BackgroundType": "EAnvilItemSlotBackgroundType::AnimalEquipment",
           "CustomStackLimits": []
         },
         {
           "ProxyRepeat": 3,
-          "bOr": false,
-          "HeldItem": null,
-          "bIsHeldItemPublic": true,
-          "Count": 0,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
           "StackLimit": 30,
+          "bOr": false,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
           "AcceptedTags": [],
+          "AcceptedTagsVisVar": 0,
           "RequiredTags": [],
+          "RequiredTagsVisVar": 0,
           "ProhibitedTags": [
             "EAnvilItemTag::Large"
           ],
+          "ProhibitedTagsVisVar": 0,
           "DedicatedItemType": null,
-          "DedicatedUnderlyingItemType": null,
-          "bCheckDedicatedUnderlyingItem": true,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
           "RequiredEnablingItem": {
             "ObjectName": "BlueprintGeneratedClass'SaddleBasic_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/AnimalEquipment/SaddleBasic.0"
           },
+          "RequiredEnablingItemVisVar": 0,
           "BackgroundType": "EAnvilItemSlotBackgroundType::AnimalEquipment",
           "CustomStackLimits": []
         }
@@ -338,6 +381,7 @@
       "SprintRotationalSpeedFactor": 0.5,
       "SprintStaminaDrain": 5.0,
       "RoadFactor": 1.3,
+      "MovementPlayerInteraction": "EAnvilVehicleMovementPlayerInteractionType::BlockIfMaxGuard",
       "CollisionEffect": {
         "ObjectName": "BlueprintGeneratedClass'HitEffectLeatherArmourGlancing_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectLeatherArmourGlancing.0"

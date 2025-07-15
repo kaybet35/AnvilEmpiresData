@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class UBPAnvilDialogBox_C : UAnvilDialogBox
----@field Background UImage
+---@field BlackBG UImage
 UBPAnvilDialogBox_C = {}
 
 

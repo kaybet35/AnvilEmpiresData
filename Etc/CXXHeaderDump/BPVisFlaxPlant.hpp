@@ -3,6 +3,6 @@
 
 class ABPVisFlaxPlant_C : public AVisResource
 {
-}; // Size: 0x4F8
+}; // Size: 0x510
 
 #endif

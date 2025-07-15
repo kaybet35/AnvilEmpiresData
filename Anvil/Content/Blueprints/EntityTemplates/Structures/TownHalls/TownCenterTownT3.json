@@ -1,0 +1,401 @@
+[
+  {
+    "Type": "BeaconTowerProxyComponent",
+    "Name": "BeaconTowerProxyComponent_0",
+    "Outer": "Default__TownCenterTownT3_C",
+    "Class": "UScriptClass'BeaconTowerProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LinkRangeMinMax": {
+        "Min": 23000.0,
+        "Max": 70000.0
+      },
+      "DetectionRangeMinMax": {
+        "Min": 12000.0,
+        "Max": 36000.0
+      },
+      "AltitudeDeltaMinMax": {
+        "Max": 1000.0
+      },
+      "AltitudeCheckRadius": 2250.0
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "TownCenterTownT3_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "TownCenterTownT3_C'Default__TownCenterTownT3_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterTownT3.13"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__TownCenterTownT3_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "BoxCollisionProxyComponent'Default__BPBaseStructureEntity_C:BoxCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ExtendFootprint": false,
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 600.0
+      },
+      "Extents": {
+        "X": 1500.0,
+        "Y": 1500.0,
+        "Z": 1000.0
+      }
+    }
+  },
+  {
+    "Type": "CollapsibleProxyComponent",
+    "Name": "CollapsibleProxyComponent_0",
+    "Outer": "Default__TownCenterTownT3_C",
+    "Class": "UScriptClass'CollapsibleProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_0",
+    "Outer": "Default__TownCenterTownT3_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Template": {
+      "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "DestroyableProxyComponent",
+    "Name": "DestroyableComp",
+    "Outer": "Default__TownCenterTownT3_C",
+    "Class": "UScriptClass'DestroyableProxyComponent'",
+    "Template": {
+      "ObjectName": "DestroyableProxyComponent'Default__BPBaseStructureEntity_C:DestroyableComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.4"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FootprintCollisionProxyComponent",
+    "Name": "FootprintCollisionProxyComponent_0",
+    "Outer": "Default__TownCenterTownT3_C",
+    "Class": "UScriptClass'FootprintCollisionProxyComponent'",
+    "Template": {
+      "ObjectName": "FootprintCollisionProxyComponent'Default__BPBaseStructureEntity_C:FootprintCollisionProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.5"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Box": {
+        "ObjectName": "BlueprintGeneratedClass'TownCenterTownFootprint_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownCenterTownFootprint.0"
+      },
+      "CollisionMask": 0
+    }
+  },
+  {
+    "Type": "HealthProxyComponent",
+    "Name": "HealthComp",
+    "Outer": "Default__TownCenterTownT3_C",
+    "Class": "UScriptClass'HealthProxyComponent'",
+    "Template": {
+      "ObjectName": "HealthProxyComponent'Default__BPBaseStructureEntity_C:HealthComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.6"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxHealth": 2880.0
+    }
+  },
+  {
+    "Type": "InventoryProxyComponent",
+    "Name": "InventoryProxyComponent_0",
+    "Outer": "Default__TownCenterTownT3_C",
+    "Class": "UScriptClass'InventoryProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ProxyRepeat": 5,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
+          "StackLimit": 100,
+          "bOr": false,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
+          "AcceptedTags": [
+            "EAnvilItemTag::Avatar"
+          ],
+          "AcceptedTagsVisVar": 0,
+          "RequiredTags": [],
+          "RequiredTagsVisVar": 0,
+          "ProhibitedTags": [],
+          "ProhibitedTagsVisVar": 0,
+          "DedicatedItemType": null,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
+          "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::Avatar",
+          "CustomStackLimits": []
+        },
+        {
+          "ProxyRepeat": 1,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
+          "StackLimit": 30000,
+          "bOr": false,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
+          "AcceptedTags": [
+            "EAnvilItemTag::Silver"
+          ],
+          "AcceptedTagsVisVar": 0,
+          "RequiredTags": [],
+          "RequiredTagsVisVar": 0,
+          "ProhibitedTags": [],
+          "ProhibitedTagsVisVar": 0,
+          "DedicatedItemType": {
+            "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+          },
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
+          "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
+        },
+        {
+          "ProxyRepeat": 24,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
+          "StackLimit": 1000,
+          "bOr": false,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
+          "AcceptedTags": [
+            "EAnvilItemTag::PrimaryTool",
+            "EAnvilItemTag::SecondaryTool",
+            "EAnvilItemTag::Head",
+            "EAnvilItemTag::Body",
+            "EAnvilItemTag::WeaponStorage",
+            "EAnvilItemTag::Resource",
+            "EAnvilItemTag::IngredientsStorage"
+          ],
+          "AcceptedTagsVisVar": 0,
+          "RequiredTags": [],
+          "RequiredTagsVisVar": 0,
+          "ProhibitedTags": [
+            "EAnvilItemTag::AnimalFeed",
+            "EAnvilItemTag::Seed"
+          ],
+          "ProhibitedTagsVisVar": 0,
+          "DedicatedItemType": null,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
+          "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::None",
+          "CustomStackLimits": []
+        }
+      ],
+      "bUnpackCrates": true,
+      "bEnforceWithdrawalStamina": true,
+      "bOnlyAllowMaxDurabilityItems": true,
+      "StackRule": "EAnvilInventoryStackRule::ForceStackAllItems",
+      "bIsPublicInventory": true
+    }
+  },
+  {
+    "Type": "RepairProxyComponent",
+    "Name": "RepairComp",
+    "Outer": "Default__TownCenterTownT3_C",
+    "Class": "UScriptClass'RepairProxyComponent'",
+    "Template": {
+      "ObjectName": "RepairProxyComponent'Default__BPBaseStructureEntity_C:RepairComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.7"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "ScorchProxyComponent",
+    "Name": "ScorchProxyComponent_0",
+    "Outer": "Default__TownCenterTownT3_C",
+    "Class": "UScriptClass'ScorchProxyComponent'",
+    "Template": {
+      "ObjectName": "ScorchProxyComponent'Default__BPBaseStructureEntity_C:ScorchProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.8"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "StructureProxyComponent",
+    "Name": "StructureProxyComponent_0",
+    "Outer": "Default__TownCenterTownT3_C",
+    "Class": "UScriptClass'StructureProxyComponent'",
+    "Template": {
+      "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bCannotBeDismantled": true
+    }
+  },
+  {
+    "Type": "TeamProxyComponent",
+    "Name": "TeamComp",
+    "Outer": "Default__TownCenterTownT3_C",
+    "Class": "UScriptClass'TeamProxyComponent'",
+    "Template": {
+      "ObjectName": "TeamProxyComponent'Default__BPBaseStructureEntity_C:TeamComp'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.10"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Accessibility": "EAnvilAccessibilityType::FriendlyOnly"
+    }
+  },
+  {
+    "Type": "TownCenterTownT3_C",
+    "Name": "Default__TownCenterTownT3_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterTownT3.TownCenterTownT3_C'",
+    "Template": {
+      "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TeamComp": {
+        "ObjectName": "TeamProxyComponent'Default__TownCenterTownT3_C:TeamComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterTownT3.12"
+      },
+      "HealthComp": {
+        "ObjectName": "HealthProxyComponent'Default__TownCenterTownT3_C:HealthComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterTownT3.7"
+      },
+      "RepairComp": {
+        "ObjectName": "RepairProxyComponent'Default__TownCenterTownT3_C:RepairComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterTownT3.9"
+      },
+      "StructureComp": {
+        "ObjectName": "StructureProxyComponent'Default__TownCenterTownT3_C:StructureProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterTownT3.11"
+      },
+      "DestroyableComp": {
+        "ObjectName": "DestroyableProxyComponent'Default__TownCenterTownT3_C:DestroyableComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterTownT3.5"
+      },
+      "FootprintComp": {
+        "ObjectName": "FootprintCollisionProxyComponent'Default__TownCenterTownT3_C:FootprintCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterTownT3.6"
+      },
+      "UseBoxComp": {
+        "ObjectName": "BoxCollisionProxyComponent'Default__TownCenterTownT3_C:BoxCollisionProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterTownT3.2"
+      },
+      "DecayComp": null,
+      "ScorchComp": null,
+      "CodeNameString": "TownCenterTownT3",
+      "CodeName": -979840121,
+      "RelevancyDistSqr": 900000000.0,
+      "bShowOnMap": true,
+      "bGenerateMeshCollisionsFromVisActor": true,
+      "GenerateMeshCollisionMask": 18882560,
+      "GenerateMeshCollisionStepAngle": 65.0,
+      "Components": [
+        {
+          "ObjectName": "TownHallProxyComponent'Default__TownCenterTownT3_C:TownHallProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterTownT3.14"
+        },
+        {
+          "ObjectName": "InventoryProxyComponent'Default__TownCenterTownT3_C:InventoryProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterTownT3.8"
+        },
+        {
+          "ObjectName": "BeaconTowerProxyComponent'Default__TownCenterTownT3_C:BeaconTowerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterTownT3.0"
+        },
+        {
+          "ObjectName": "CollapsibleProxyComponent'Default__TownCenterTownT3_C:CollapsibleProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterTownT3.3"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BpVisTownCenterTownT3_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.1"
+      }
+    }
+  },
+  {
+    "Type": "TownHallProxyComponent",
+    "Name": "TownHallProxyComponent_0",
+    "Outer": "Default__TownCenterTownT3_C",
+    "Class": "UScriptClass'TownHallProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Tier": 3,
+      "SubType": "EAnvilTownSubType::Town"
+    }
+  }
+]

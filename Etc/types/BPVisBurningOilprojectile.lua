@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABPVisBurningOilprojectile_C : AVisPickupItem
+---@class ABPVisBurningOilprojectile_C : AVisProjectile
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field Decal UDecalComponent
 ---@field Audio UAudioComponent

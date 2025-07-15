@@ -1,0 +1,1782 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BpVisTownCenterTownT3_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.36"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BpVisTownCenterTownT3_C:ExecuteUbergraph_BpVisTownCenterTownT3'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisTownCenter'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BpVisTownCenterTownT3_C:ReceiveTick'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.9"
+      },
+      {
+        "ObjectName": "Function'BpVisTownCenterTownT3_C:ExecuteUbergraph_BpVisTownCenterTownT3'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.8"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisTeamSkeletalMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisTeamSkeletalMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisTeamSkeletalMesh3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisTeamSkeletalMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisTeamSkeletalMesh2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisTeamSkeletalMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisTeamSkeletalMesh1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisTeamSkeletalMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FF",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DebugSphere",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Roof",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SF",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Skirt",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CollapsedMeshSF",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CollapsedMeshFF",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CollapsedMeshRoof",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisRandomMeshDecor25",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisRandomMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisRandomMeshDecor23",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisRandomMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ChildActor35",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisRandomMeshDecor24",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisRandomMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ChildActor34",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisRandomMeshDecor26",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisRandomMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Stairs",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MeshVisibilityData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MeshVisibilityDataComponent'",
+          "ObjectPath": "/Script/R2"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BpVisTownCenterTownT3": {
+        "ObjectName": "Function'BpVisTownCenterTownT3_C:ExecuteUbergraph_BpVisTownCenterTownT3'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.8"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BpVisTownCenterTownT3_C:ReceiveTick'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.9"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BpVisTownCenterTownT3_C'Default__BpVisTownCenterTownT3_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BpVisTownCenterTownT3_C",
+    "Name": "Default__BpVisTownCenterTownT3_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.BpVisTownCenterTownT3_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "TownHallDataComponent": {
+        "ObjectName": "TownHallDataComponent'Default__BpVisTownCenterTownT3_C:TownHallDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.41"
+      },
+      "TownAreaMarkerDecal": {
+        "ObjectName": "VisTownAreaMarkerDecalComponent'Default__BpVisTownCenterTownT3_C:TownAreaMarkerDecal'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.60"
+      },
+      "ScaffoldingComponent": {
+        "ObjectName": "VisScaffoldingComponent'Default__BpVisTownCenterTownT3_C:ScaffoldingComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.47"
+      },
+      "StructureIcon": {
+        "ObjectName": "Texture2D'IconTownhall'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconTownhall.0"
+      },
+      "BuildSiteCategory": "EBuildSiteCategory::Settlement",
+      "BuildSiteOrder": -1,
+      "BuildSiteVisibility": "EBuildSiteVisibility::AdminOnly",
+      "SupportedVisualComponents": 256,
+      "UpgradeDataComponent": {
+        "ObjectName": "UpgradeDataComponent'Default__BpVisTownCenterTownT3_C:UpgradeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.42"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BpVisTownCenterTownT3_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.11"
+      },
+      "TeamDataComponent": {
+        "ObjectName": "TeamDataComponent'Default__BpVisTownCenterTownT3_C:TeamDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.40"
+      },
+      "StructureDataComponent": {
+        "ObjectName": "StructureDataComponent'Default__BpVisTownCenterTownT3_C:StructureDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.39"
+      },
+      "CollapsibleDataComponent": {
+        "ObjectName": "CollapsibleDataComponent'Default__BpVisTownCenterTownT3_C:CollapsibleDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.5"
+      },
+      "ScorchDataComponent": {
+        "ObjectName": "ScorchDataComponent'Default__BpVisTownCenterTownT3_C:ScorchDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.14"
+      },
+      "DecayDataComponent": {
+        "ObjectName": "DecayDataComponent'Default__BpVisTownCenterTownT3_C:DecayDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.7"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BpVisTownCenterTownT3_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.0"
+      },
+      "UseVolumeDecalComponent": {
+        "ObjectName": "DecalComponent'Default__BpVisTownCenterTownT3_C:UseVolumeDecalComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.6"
+      },
+      "GrassRemovalVolume": {
+        "ObjectName": "GrassRemovalVolumeComponent'Default__BpVisTownCenterTownT3_C:GrassRemovalVolume'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.10"
+      },
+      "MapIconProperty": {
+        "Icon": {
+          "ObjectName": "Texture2D'MapIconTownHall'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Map/MapIconTownHall.0"
+        },
+        "AltIcons": [
+          {
+            "ObjectName": "Texture2D'Aranic03MapIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Map/Aranic03MapIcon.0"
+          },
+          {
+            "ObjectName": "Texture2D'Mirrish03MapIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Map/Mirrish03MapIcon.0"
+          },
+          {
+            "ObjectName": "Texture2D'Novan03MapIcon'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Map/Novan03MapIcon.0"
+          }
+        ],
+        "MapModeIconOverrides": [
+          {
+            "Key": "EMapMode::Spawn",
+            "Value": {
+              "ObjectName": "Texture2D'DeploymentIcon'",
+              "ObjectPath": "Anvil/Content/Textures/UI/Map/DeploymentIcon.0"
+            }
+          },
+          {
+            "Key": "EMapMode::MilitiaDeployment",
+            "Value": {
+              "ObjectName": "Texture2D'DeploymentMilitiaIcon'",
+              "ObjectPath": "Anvil/Content/Textures/UI/Map/DeploymentMilitiaIcon.0"
+            }
+          }
+        ],
+        "MapActorType": "EMapIconType::TownCenter"
+      },
+      "UseWindowType": "EHUDWindowType::TownCenter",
+      "bNoCheckOnCeilVisibility": true,
+      "InteractionIcon": {
+        "ObjectName": "Texture2D'IconTownhall'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconTownhall.0"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "C82CEDEE4CDE6B79D8BB449B1817CA5F",
+        "SourceString": "Town Center",
+        "LocalizedString": "Town Center"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "58BC83BF4B404B058D4DA2B115B98F6C",
+        "SourceString": "The central structure in a Town that is required for further development. Players can deploy here as reinforcements to defend the Town. Weapons and other consumables can be stockpiled as well.",
+        "LocalizedString": "The central structure in a Town that is required for further development. Players can deploy here as reinforcements to defend the Town. Weapons and other consumables can be stockpiled as well."
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BpVisTownCenterTownT3_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.0"
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "ChildActor34_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 127.0,
+        "Y": 630.0,
+        "Z": -276.0
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "ChildActor35_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -127.0,
+        "Y": 630.0,
+        "Z": -276.0
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "CollapsibleDataComponent",
+    "Name": "CollapsibleDataComponent",
+    "Outer": "Default__BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'CollapsibleDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "UseVolumeDecalComponent",
+    "Outer": "Default__BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BpVisTownCenterTownT3_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.0"
+      }
+    }
+  },
+  {
+    "Type": "DecayDataComponent",
+    "Name": "DecayDataComponent",
+    "Outer": "Default__BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'DecayDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BpVisTownCenterTownT3",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GrassRemovalVolumeComponent",
+    "Name": "GrassRemovalVolume",
+    "Outer": "Default__BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'GrassRemovalVolumeComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'Default__BpVisTownCenterTownT3_C:GrassRemovalVolume.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.37"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BpVisTownCenterTownT3_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.0"
+      }
+    }
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'HealthDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MeshVisibilityDataComponent",
+    "Name": "MeshVisibilityData_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'MeshVisibilityDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "ScorchDataComponent",
+    "Name": "ScorchDataComponent",
+    "Outer": "Default__BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'ScorchDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BpVisTownCenterTownT3_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.13"
+      },
+      "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BpVisTownCenterTownT3_C:Stairs_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.55"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.35"
+        }
+      ],
+      "VariableGuid": "09B19C9E-4D7E7E59-A32ECCB4-31EA7B3F",
+      "InternalVariableName": "Stairs"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BpVisTownCenterTownT3_C:CollapsedMeshRoof_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.49"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "82BBD4A5-41631DB2-9C91908A-10601950",
+      "InternalVariableName": "CollapsedMeshRoof"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BpVisTownCenterTownT3_C:CollapsedMeshFF_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.48"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "402309AF-41ECB68D-C34C82B2-2CE8C450",
+      "InternalVariableName": "CollapsedMeshFF"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BpVisTownCenterTownT3_C:CollapsedMeshSF_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.50"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "4EAB3D96-49EBAA6F-52C9E4AA-3D0205EB",
+      "InternalVariableName": "CollapsedMeshSF"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_14",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BpVisTownCenterTownT3_C:Skirt_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.54"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "62DE1FDF-4345E958-EC677F95-610D2BB4",
+      "InternalVariableName": "Skirt"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_15",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BpVisTownCenterTownT3_C:SF_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.53"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "1843044A-48274103-DD3637A4-D4712FAA",
+      "InternalVariableName": "SF"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_16",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BpVisTownCenterTownT3_C:Roof_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.52"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.28"
+        }
+      ],
+      "VariableGuid": "59466DEF-4D6DCE6D-38D8C0BA-8D2AA141",
+      "InternalVariableName": "Roof"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_17",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisTeamSkeletalMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisTeamSkeletalMeshComponent'BpVisTownCenterTownT3_C:VisTeamSkeletalMesh1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.56"
+      },
+      "VariableGuid": "41281FC8-46EFB476-E50D038E-3293E91A",
+      "InternalVariableName": "VisTeamSkeletalMesh1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_18",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BpVisTownCenterTownT3_C:DebugSphere_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.38"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "AB393512-40DF2344-3363B9A3-634D69DB",
+      "InternalVariableName": "DebugSphere"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_19",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisTeamSkeletalMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisTeamSkeletalMeshComponent'BpVisTownCenterTownT3_C:VisTeamSkeletalMesh2_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.57"
+      },
+      "VariableGuid": "8B10B193-43E59216-507A249B-ABEF8A51",
+      "InternalVariableName": "VisTeamSkeletalMesh2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MeshVisibilityDataComponent'",
+        "ObjectPath": "/Script/R2"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MeshVisibilityDataComponent'BpVisTownCenterTownT3_C:MeshVisibilityData_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.12"
+      },
+      "VariableGuid": "0865EB0C-40279364-EEB997A6-4E2B4B84",
+      "InternalVariableName": "MeshVisibilityData"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_20",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisTeamSkeletalMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisTeamSkeletalMeshComponent'BpVisTownCenterTownT3_C:VisTeamSkeletalMesh3_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.58"
+      },
+      "VariableGuid": "956C4627-4D592090-3C11FCAD-6156802D",
+      "InternalVariableName": "VisTeamSkeletalMesh3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_21",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisTeamSkeletalMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisTeamSkeletalMeshComponent'BpVisTownCenterTownT3_C:VisTeamSkeletalMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.59"
+      },
+      "VariableGuid": "2E8C4DF5-40D7E7D9-D25B3C93-0E799161",
+      "InternalVariableName": "VisTeamSkeletalMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_22",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BpVisTownCenterTownT3_C:FF_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.51"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "D89DDD12-43B43380-980389A1-9A51D62E",
+      "InternalVariableName": "FF"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisRandomMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisRandomMeshDecorComponent'BpVisTownCenterTownT3_C:VisRandomMeshDecor26_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.46"
+      },
+      "VariableGuid": "E71BB0C0-46B2A5AB-D9CABFA9-5B3EDAC6",
+      "InternalVariableName": "VisRandomMeshDecor26"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BpVisTownCenterTownT3_C:ChildActor34_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.3"
+      },
+      "VariableGuid": "81195F28-4A23FBA4-E9B012BC-8D5D579D",
+      "InternalVariableName": "ChildActor34"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisRandomMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisRandomMeshDecorComponent'BpVisTownCenterTownT3_C:VisRandomMeshDecor24_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.44"
+      },
+      "VariableGuid": "7522D4E1-4DBF4BA8-67248E8F-4FFE9AA5",
+      "InternalVariableName": "VisRandomMeshDecor24"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BpVisTownCenterTownT3_C:ChildActor35_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.4"
+      },
+      "VariableGuid": "6CDD65C0-4ECACA92-D44FC9AE-10A7B535",
+      "InternalVariableName": "ChildActor35"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisRandomMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisRandomMeshDecorComponent'BpVisTownCenterTownT3_C:VisRandomMeshDecor23_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.43"
+      },
+      "VariableGuid": "83CF50CC-472E8AA0-D46579BA-2F2DF29A",
+      "InternalVariableName": "VisRandomMeshDecor23"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisRandomMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisRandomMeshDecorComponent'BpVisTownCenterTownT3_C:VisRandomMeshDecor25_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.45"
+      },
+      "VariableGuid": "5A62D004-4B89AD9F-85855390-F46C0BAE",
+      "InternalVariableName": "VisRandomMeshDecor25"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.29"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.28"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.15"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "GrassRemovalVolume",
+    "Class": "UScriptClass'SplineDataComponent'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "DebugSphere_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Sphere'",
+        "ObjectPath": "Engine/Content/BasicShapes/Sphere.2"
+      },
+      "WireframeColorOverride": {
+        "B": 0,
+        "G": 255,
+        "R": 113,
+        "A": 255,
+        "Hex": "71FF00"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'WireframeMaterialAranic'",
+          "ObjectPath": "Anvil/Content/Materials/WireframeMaterialAranic.0"
+        }
+      ],
+      "bGenerateOverlapEvents": false,
+      "bVisibleInReflectionCaptures": false,
+      "bVisibleInRealTimeSkyCaptures": false,
+      "bVisibleInRayTracing": false,
+      "bRenderInDepthPass": false,
+      "bReceivesDecals": false,
+      "CastShadow": false,
+      "CanCharacterStepUpOn": "ECanBeCharacterBase::ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeScale3D": {
+        "X": 240.0,
+        "Y": 240.0,
+        "Z": 100.0
+      },
+      "bHiddenInGame": true
+    }
+  },
+  {
+    "Type": "StructureDataComponent",
+    "Name": "StructureDataComponent",
+    "Outer": "Default__BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'StructureDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "TeamDataComponent",
+    "Name": "TeamDataComponent",
+    "Outer": "Default__BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'TeamDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "TownHallDataComponent",
+    "Name": "TownHallDataComponent",
+    "Outer": "Default__BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'TownHallDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "UpgradeDataComponent",
+    "Name": "UpgradeDataComponent",
+    "Outer": "Default__BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'UpgradeDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "VisRandomMeshDecorComponent",
+    "Name": "VisRandomMeshDecor23_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisRandomMeshDecorComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisibilityChance": 0.4,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFace_14'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFace_14.2"
+      },
+      "RelativeLocation": {
+        "X": -127.0,
+        "Y": 560.0,
+        "Z": -106.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "VisRandomMeshDecorComponent",
+    "Name": "VisRandomMeshDecor24_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisRandomMeshDecorComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisibilityChance": 0.4,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFace_06'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFace_06.2"
+      },
+      "RelativeLocation": {
+        "X": -127.0,
+        "Y": 647.0,
+        "Z": -187.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "VisRandomMeshDecorComponent",
+    "Name": "VisRandomMeshDecor25_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisRandomMeshDecorComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisibilityChance": 0.4,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFace_14'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFace_14.2"
+      },
+      "RelativeLocation": {
+        "X": 128.0,
+        "Y": 560.0,
+        "Z": -125.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 270.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "VisRandomMeshDecorComponent",
+    "Name": "VisRandomMeshDecor26_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisRandomMeshDecorComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisibilityChance": 0.4,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundationDecoration_bricksFace_06'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/Decorations/GridFoundationDecoration_bricksFace_06.2"
+      },
+      "RelativeLocation": {
+        "X": 128.0,
+        "Y": 647.0,
+        "Z": -206.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 270.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "VisScaffoldingComponent",
+    "Name": "ScaffoldingComponent",
+    "Outer": "Default__BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisScaffoldingComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BpVisTownCenterTownT3_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.0"
+      }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "CollapsedMeshFF_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'T3KeepFirstFloor'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T3KeepFirstFloor.2"
+      },
+      "OverrideMaterials": [
+        null,
+        null,
+        null
+      ],
+      "ComponentTags": [
+        "Collapsed",
+        "Structure",
+        "ExcludeFromVisActorTemplate",
+        "UseBurntVisualsForCollapsedState"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "CollapsedMeshRoof_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "bMeshVisibilityGroup2": true,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'T3KeepRoof'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T3KeepRoof.2"
+      },
+      "OverrideMaterials": [
+        null,
+        null,
+        null
+      ],
+      "ComponentTags": [
+        "Collapsed",
+        "Structure",
+        "ExcludeFromVisActorTemplate",
+        "UseBurntVisualsForCollapsedState",
+        "ToggleVisibilityGroup2"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "CollapsedMeshSF_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "bMeshVisibility": true,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'T3KeepSecondFloor'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T3KeepSecondFloor.2"
+      },
+      "OverrideMaterials": [
+        null,
+        null,
+        null
+      ],
+      "ComponentTags": [
+        "Collapsed",
+        "Structure",
+        "ExcludeFromVisActorTemplate",
+        "UseBurntVisualsForCollapsedState",
+        "ToggleVisibility"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "FF_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'T3KeepFirstFloor'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T3KeepFirstFloor.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "UnCollapsed"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "Roof_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "bMeshVisibilityGroup2": true,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'T3KeepRoof'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T3KeepRoof.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "ToggleVisibilityGroup2",
+        "UnCollapsed"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "SF_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "bMeshVisibility": true,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'T3KeepSecondFloor'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T3KeepSecondFloor.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "ToggleVisibility",
+        "UnCollapsed"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "Skirt_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'T3KeepSkirt'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T3KeepSkirt.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "Stairs_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'T3KeepStairs'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T3KeepStairs.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision"
+      ]
+    }
+  },
+  {
+    "Type": "VisTeamSkeletalMeshComponent",
+    "Name": "VisTeamSkeletalMesh1_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisTeamSkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TeamMeshes": [
+        {
+          "Key": "EAnvilFactionId::Mirrish",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FortBannerHangingMirrish_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingMirrish_SK.3"
+          }
+        },
+        {
+          "Key": "EAnvilFactionId::Aranic",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FortBannerHangingAranic_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingAranic_SK.3"
+          }
+        },
+        {
+          "Key": "EAnvilFactionId::Novan",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FortBannerHangingNovan_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingNovan_SK.3"
+          }
+        }
+      ],
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_FortBanner_C'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Foundations/ABP_FortBanner.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'FortBannerHangingAranic_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingAranic_SK.3"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'FortBannerHangingAranic_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingAranic_SK.3"
+      },
+      "RelativeLocation": {
+        "X": -333.0,
+        "Y": -475.7901,
+        "Z": 1117.0465
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "VisTeamSkeletalMeshComponent",
+    "Name": "VisTeamSkeletalMesh2_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisTeamSkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TeamMeshes": [
+        {
+          "Key": "EAnvilFactionId::Mirrish",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FortBannerHangingMirrish_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingMirrish_SK.3"
+          }
+        },
+        {
+          "Key": "EAnvilFactionId::Aranic",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FortBannerHangingAranic_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingAranic_SK.3"
+          }
+        },
+        {
+          "Key": "EAnvilFactionId::Novan",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FortBannerHangingNovan_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingNovan_SK.3"
+          }
+        }
+      ],
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_FortBanner_C'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Foundations/ABP_FortBanner.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'FortBannerHangingAranic_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingAranic_SK.3"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'FortBannerHangingAranic_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingAranic_SK.3"
+      },
+      "RelativeLocation": {
+        "X": 337.0,
+        "Y": -475.7901,
+        "Z": 1117.0465
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "VisTeamSkeletalMeshComponent",
+    "Name": "VisTeamSkeletalMesh3_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisTeamSkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TeamMeshes": [
+        {
+          "Key": "EAnvilFactionId::Mirrish",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FortBannerHangingMirrish_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingMirrish_SK.3"
+          }
+        },
+        {
+          "Key": "EAnvilFactionId::Aranic",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FortBannerHangingAranic_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingAranic_SK.3"
+          }
+        },
+        {
+          "Key": "EAnvilFactionId::Novan",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FortBannerHangingNovan_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingNovan_SK.3"
+          }
+        }
+      ],
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_FortBanner_C'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Foundations/ABP_FortBanner.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'FortBannerHangingAranic_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingAranic_SK.3"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'FortBannerHangingAranic_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingAranic_SK.3"
+      },
+      "RelativeLocation": {
+        "X": -337.0,
+        "Y": 477.58804,
+        "Z": 1117.0465
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "VisTeamSkeletalMeshComponent",
+    "Name": "VisTeamSkeletalMesh_GEN_VARIABLE",
+    "Outer": "BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisTeamSkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TeamMeshes": [
+        {
+          "Key": "EAnvilFactionId::Mirrish",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FortBannerHangingMirrish_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingMirrish_SK.3"
+          }
+        },
+        {
+          "Key": "EAnvilFactionId::Aranic",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FortBannerHangingAranic_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingAranic_SK.3"
+          }
+        },
+        {
+          "Key": "EAnvilFactionId::Novan",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FortBannerHangingNovan_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingNovan_SK.3"
+          }
+        }
+      ],
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_FortBanner_C'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/Foundations/ABP_FortBanner.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'FortBannerHangingAranic_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingAranic_SK.3"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'FortBannerHangingAranic_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/FortBannerHangingAranic_SK.3"
+      },
+      "RelativeLocation": {
+        "X": 332.0,
+        "Y": 477.58804,
+        "Z": 1117.0465
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "VisTownAreaMarkerDecalComponent",
+    "Name": "TownAreaMarkerDecal",
+    "Outer": "Default__BpVisTownCenterTownT3_C",
+    "Class": "UScriptClass'VisTownAreaMarkerDecalComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BpVisTownCenterTownT3_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.0"
+      }
+    }
+  }
+]

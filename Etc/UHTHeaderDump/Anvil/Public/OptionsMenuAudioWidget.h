@@ -20,6 +20,9 @@ protected:
     UAnvilSliderWidget* SFXVolumeSlider;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAnvilDropdownEntryWidget* VoiceChatEnabledDropdown;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAnvilSliderWidget* VoiceInputVolumeSlider;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ItemSlot.h"
+#include "InventorySlot.h"
 #include "ProxyComponent.h"
 #include "HandsProxyComponent.generated.h"
 
@@ -9,7 +9,7 @@ class R2_API UHandsProxyComponent : public UProxyComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FItemSlot> HandSlots;
+    TArray<FInventorySlot> HandSlots;
     
     UHandsProxyComponent();
 

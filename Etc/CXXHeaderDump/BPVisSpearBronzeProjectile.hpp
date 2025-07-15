@@ -1,10 +1,10 @@
 #ifndef UE4SS_SDK_BPVisSpearBronzeProjectile_HPP
 #define UE4SS_SDK_BPVisSpearBronzeProjectile_HPP
 
-class ABPVisSpearBronzeProjectile_C : public AVisPickupItem
+class ABPVisSpearBronzeProjectile_C : public AVisProjectile
 {
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x04C8 (size: 0x8)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x04D8 (size: 0x8)
 
-}; // Size: 0x4D0
+}; // Size: 0x4E0
 
 #endif

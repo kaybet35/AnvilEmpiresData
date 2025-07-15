@@ -16,5 +16,6 @@ enum class EAnvilScreenType : uint8 {
     FactionSelect,
     ServerSelect,
     DeploymentMap,
+    ShardSelector,
 };
 

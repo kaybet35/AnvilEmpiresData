@@ -3,6 +3,6 @@
 
 class ABPVisCampPlatformBuildSite_C : public AVisSplineBuildSite
 {
-}; // Size: 0x528
+}; // Size: 0x540
 
 #endif

@@ -87,6 +87,7 @@ enum class EAnvilStatusMessageType : uint8 {
     UnstuckAttemptFailed,
     LadderTooManyPlayers,
     LadderNoSpaceToRetract,
+    DrowningNotification,
     BedClaimed,
     BedAlreadyClaimed,
     BedMustHaveHouseAtTown,
@@ -94,6 +95,7 @@ enum class EAnvilStatusMessageType : uint8 {
     HorseNotHungry,
     NoItemsForPacking,
     TooManyOrFewItemsForPacking,
+    ItemCannotBePacked,
     NoContainerForPacking,
     NotAllowedInBorderZone,
     SlotOccupied,
@@ -121,6 +123,7 @@ enum class EAnvilStatusMessageType : uint8 {
     PledgedToTown,
     VehicleCannotWorldEntranceTravel,
     MustBeResetBeforeFiring,
+    MustBeResetBeforeLoading,
     NoProjectileLoaded,
     CantArmDueToHeavyTool,
     ItemDisarmedDueToHeavyTool,
@@ -133,6 +136,9 @@ enum class EAnvilStatusMessageType : uint8 {
     OccupantMustbeMounted,
     RopeDetachFailed_HandsFull,
     AvatarSubmitted,
+    CantDeployWhileMoving,
+    CannotUseWhileSwimming,
+    TargetTooClose,
     NumTypes,
 };
 

@@ -23,6 +23,10 @@ enum class EAnvilEntityActionType : uint8 {
     ReinforceStructure,
     RestrictedModeOn,
     RestrictedModeOff,
+    OpenSiegeTowerRamp,
+    CloseSiegeTowerRamp,
+    OpenSiegeTowerLadder,
+    CloseSiegeTowerLadder,
     NumTypes,
 };
 

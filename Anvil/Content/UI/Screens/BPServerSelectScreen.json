@@ -13,14 +13,20 @@
         "Bottom": 0.0
       },
       "Background": {
-        "TintColor": {
-          "SpecifiedColor": {
-            "R": 0.012983,
-            "G": 0.011612,
-            "B": 0.011612,
-            "A": 0.8,
-            "Hex": "CC1E1C1C"
-          }
+        "DrawAs": "ESlateBrushDrawType::Box",
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'DialogNoBorder'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogNoBorder.0"
         }
       },
       "Slots": [
@@ -75,6 +81,8 @@
         "SourceString": "Refresh",
         "LocalizedString": "Refresh"
       },
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPServerSelectScreen_C:WidgetTree.HorizontalBox_34.HorizontalBoxSlot_0'",
         "ObjectPath": "Anvil/Content/UI/Screens/BPServerSelectScreen.13"
@@ -320,6 +328,9 @@
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "Padding": {
+        "Bottom": 10.0
+      },
       "Parent": {
         "ObjectName": "HorizontalBox'BPServerSelectScreen_C:WidgetTree.HorizontalBox_34'",
         "ObjectPath": "Anvil/Content/UI/Screens/BPServerSelectScreen.8"
@@ -847,7 +858,7 @@
           "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
         },
         "TypefaceFontName": "Default",
-        "Size": 20
+        "Size": 16
       },
       "Slot": {
         "ObjectName": "SizeBoxSlot'BPServerSelectScreen_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",

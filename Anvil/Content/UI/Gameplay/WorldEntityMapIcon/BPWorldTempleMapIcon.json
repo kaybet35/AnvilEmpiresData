@@ -1,0 +1,116 @@
+[
+  {
+    "Type": "BPWorldTempleMapIcon_C",
+    "Name": "Default__BPWorldTempleMapIcon_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTempleMapIcon.BPWorldTempleMapIcon_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "MapItemImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 100.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'IconTemple'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconTemple.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPWorldTempleMapIcon_C:WidgetTree.IconSizeBox.SizeBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTempleMapIcon.3"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "IconSizeBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidthOverride": 75.0,
+      "HeightOverride": 75.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPWorldTempleMapIcon_C:WidgetTree.IconSizeBox.SizeBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTempleMapIcon.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Outer": "IconSizeBox",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPWorldTempleMapIcon_C:WidgetTree.IconSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTempleMapIcon.2"
+      },
+      "Content": {
+        "ObjectName": "Image'BPWorldTempleMapIcon_C:WidgetTree.MapItemImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTempleMapIcon.1"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPWorldTempleMapIcon_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPWorldTempleMapIcon_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTempleMapIcon.5"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WorldTempleMapIcon'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPWorldTempleMapIcon_C'Default__BPWorldTempleMapIcon_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTempleMapIcon.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPWorldTempleMapIcon_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox'BPWorldTempleMapIcon_C:WidgetTree.IconSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTempleMapIcon.2"
+      }
+    }
+  }
+]

@@ -6,32 +6,12 @@
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "BlendIn": {
-        "BlendTime": 0.1
+        "BlendTime": 0.0
       },
       "BlendOut": {
-        "BlendTime": 0.2
+        "BlendTime": 0.1
       },
       "CompositeSections": [
-        {
-          "SectionName": "Default",
-          "NextSectionName": "loop",
-          "MetaData": [],
-          "LinkedMontage": {
-            "ObjectName": "AnimMontage'Bow_release'",
-            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_release.0"
-          },
-          "SlotIndex": 0,
-          "SegmentIndex": 0,
-          "LinkMethod": "EAnimLinkMethod::Absolute",
-          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
-          "SegmentBeginTime": 0.0,
-          "SegmentLength": 0.46666667,
-          "LinkValue": 0.0,
-          "LinkedSequence": {
-            "ObjectName": "AnimSequence'Bow_attack_shoot'",
-            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_attack_shoot.0"
-          }
-        },
         {
           "SectionName": "end",
           "NextSectionName": "None",
@@ -45,11 +25,31 @@
           "LinkMethod": "EAnimLinkMethod::Absolute",
           "CachedLinkMethod": "EAnimLinkMethod::Absolute",
           "SegmentBeginTime": 0.0,
-          "SegmentLength": 0.46666667,
+          "SegmentLength": 1.1666666,
           "LinkValue": 0.0,
           "LinkedSequence": {
-            "ObjectName": "AnimSequence'Bow_attack_shoot'",
-            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_attack_shoot.0"
+            "ObjectName": "AnimSequence'bow_release_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/bow_release_anim.0"
+          }
+        },
+        {
+          "SectionName": "Default",
+          "NextSectionName": "loop",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Bow_release'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_release.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.1666666,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'bow_release_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/bow_release_anim.0"
           }
         }
       ],
@@ -60,12 +60,12 @@
             "AnimSegments": [
               {
                 "AnimReference": {
-                  "ObjectName": "AnimSequence'Bow_attack_shoot'",
-                  "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_attack_shoot.0"
+                  "ObjectName": "AnimSequence'bow_release_anim'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/bow_release_anim.0"
                 },
                 "StartPos": 0.0,
                 "AnimStartTime": 0.0,
-                "AnimEndTime": 0.46666667,
+                "AnimEndTime": 1.1666666,
                 "AnimPlayRate": 1.0,
                 "LoopingCount": 1
               }
@@ -76,7 +76,7 @@
       "Notifies": [
         {
           "TriggerTimeOffset": 0.0,
-          "EndTriggerTimeOffset": 0.0001,
+          "EndTriggerTimeOffset": 0.0,
           "TriggerWeightThreshold": 1E-05,
           "NotifyName": "PlaySound",
           "Notify": {
@@ -93,50 +93,7 @@
             "CachedLinkMethod": "EAnimLinkMethod::Absolute",
             "SegmentBeginTime": 0.0,
             "SegmentLength": 0.0,
-            "LinkValue": 0.0,
-            "LinkedSequence": null
-          },
-          "bConvertedFromBranchingPoint": false,
-          "MontageTickType": "EMontageNotifyTickType::Queued",
-          "NotifyTriggerChance": 1.0,
-          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
-          "NotifyFilterLOD": 0,
-          "bTriggerOnDedicatedServer": true,
-          "bTriggerOnFollower": false,
-          "TrackIndex": 1,
-          "LinkedMontage": {
-            "ObjectName": "AnimMontage'Bow_release'",
-            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_release.0"
-          },
-          "SlotIndex": 0,
-          "SegmentIndex": 0,
-          "LinkMethod": "EAnimLinkMethod::Absolute",
-          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
-          "SegmentBeginTime": 0.0,
-          "SegmentLength": 0.46666667,
-          "LinkValue": 0.02457058,
-          "LinkedSequence": {
-            "ObjectName": "AnimSequence'Bow_attack_shoot'",
-            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_attack_shoot.0"
-          }
-        },
-        {
-          "TriggerTimeOffset": 0.0,
-          "EndTriggerTimeOffset": 0.0,
-          "TriggerWeightThreshold": 1E-05,
-          "NotifyName": "ProjectileRelease",
-          "Notify": null,
-          "NotifyStateClass": null,
-          "Duration": 0.0,
-          "EndLink": {
-            "LinkedMontage": null,
-            "SlotIndex": 0,
-            "SegmentIndex": -1,
-            "LinkMethod": "EAnimLinkMethod::Absolute",
-            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
-            "SegmentBeginTime": 0.0,
-            "SegmentLength": 0.0,
-            "LinkValue": 0.17166679,
+            "LinkValue": 0.011518618,
             "LinkedSequence": null
           },
           "bConvertedFromBranchingPoint": false,
@@ -156,15 +113,58 @@
           "LinkMethod": "EAnimLinkMethod::Absolute",
           "CachedLinkMethod": "EAnimLinkMethod::Absolute",
           "SegmentBeginTime": 0.0,
-          "SegmentLength": 0.46666667,
-          "LinkValue": 0.033456758,
+          "SegmentLength": 1.1666666,
+          "LinkValue": 0.011518618,
           "LinkedSequence": {
-            "ObjectName": "AnimSequence'Bow_attack_shoot'",
-            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_attack_shoot.0"
+            "ObjectName": "AnimSequence'bow_release_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/bow_release_anim.0"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "ProjectileRelease",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.011518618,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Bow_release'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_release.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.1666666,
+          "LinkValue": 0.011518618,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'bow_release_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/bow_release_anim.0"
           }
         }
       ],
-      "SequenceLength": 0.46666667,
+      "SequenceLength": 1.1666666,
       "Skeleton": {
         "ObjectName": "Skeleton'PrototypeChar_Skeleton'",
         "ObjectPath": "Anvil/Content/Animations/Prototype/PrototypeChar_Skeleton.8"

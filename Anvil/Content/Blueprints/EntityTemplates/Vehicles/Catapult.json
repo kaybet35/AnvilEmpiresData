@@ -41,7 +41,7 @@
         "Z": 200.0
       },
       "SurfaceType": "EAnvilPhysicalSurfaceType::Wood",
-      "CollisionMask": 16793664,
+      "CollisionMask": 151011392,
       "bVaultable": false
     }
   },
@@ -203,7 +203,7 @@
     "Class": "UScriptClass'HealthProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "MaxHealth": 250.0,
+      "MaxHealth": 315.0,
       "TargetType": "EAnvilDamageTargetType::Vehicle"
     }
   },
@@ -217,23 +217,37 @@
       "Slots": [
         {
           "ProxyRepeat": 1,
-          "bOr": false,
-          "HeldItem": null,
-          "bIsHeldItemPublic": true,
-          "Count": 0,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
           "StackLimit": 1,
+          "bOr": false,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
           "AcceptedTags": [],
+          "AcceptedTagsVisVar": 0,
           "RequiredTags": [],
+          "RequiredTagsVisVar": 0,
           "ProhibitedTags": [],
+          "ProhibitedTagsVisVar": 0,
           "DedicatedItemType": {
             "ObjectName": "BlueprintGeneratedClass'CatapultAmmo_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/CatapultAmmo.0"
           },
-          "DedicatedUnderlyingItemType": null,
-          "bCheckDedicatedUnderlyingItem": true,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
           "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
           "BackgroundType": "EAnvilItemSlotBackgroundType::None",
           "CustomStackLimits": []
         }
@@ -252,7 +266,6 @@
         "Y": 0.0,
         "Z": 500.0
       },
-      "bHighArc": true,
       "bFixedAim": true,
       "bRequirePrimedLoad": true,
       "bShowAimMesh": false,

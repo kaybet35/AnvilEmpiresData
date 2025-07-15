@@ -30,10 +30,13 @@ class UBPOptionsMenuKeybindWidget_C : public UOptionsMenuKeybindWidget
     class UBPAnvilKeyEntryWidget_C* PushtoTalk;                                       // 0x0360 (size: 0x8)
     class UBPAnvilKeyEntryWidget_C* Reload;                                           // 0x0368 (size: 0x8)
     class UBPAnvilKeyEntryWidget_C* RotateCamera;                                     // 0x0370 (size: 0x8)
-    class UBPAnvilKeyEntryWidget_C* RotateStructure;                                  // 0x0378 (size: 0x8)
-    class UBPAnvilKeyEntryWidget_C* Upgrade;                                          // 0x0380 (size: 0x8)
-    class UBPAnvilKeyEntryWidget_C* UseInteract;                                      // 0x0388 (size: 0x8)
+    class UBPAnvilKeyEntryWidget_C* RotateCameraLeft;                                 // 0x0378 (size: 0x8)
+    class UBPAnvilKeyEntryWidget_C* RotateCameraRight;                                // 0x0380 (size: 0x8)
+    class UBPAnvilKeyEntryWidget_C* RotateStructure;                                  // 0x0388 (size: 0x8)
+    class UBPAnvilKeyEntryWidget_C* ToggleVoiceChat;                                  // 0x0390 (size: 0x8)
+    class UBPAnvilKeyEntryWidget_C* Upgrade;                                          // 0x0398 (size: 0x8)
+    class UBPAnvilKeyEntryWidget_C* UseInteract;                                      // 0x03A0 (size: 0x8)
 
-}; // Size: 0x390
+}; // Size: 0x3A8
 
 #endif

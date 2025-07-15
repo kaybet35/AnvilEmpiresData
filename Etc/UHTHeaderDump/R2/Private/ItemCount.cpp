@@ -7,7 +7,7 @@ FItemCount::FItemCount() {
     this->UnderlyingCodeNameVisVar = 0;
     this->Durability = 0.00f;
     this->Count = 0;
-    this->ItemFlags = 0;
+    this->ItemFlagsVisVar = 0;
     this->Payload = 0;
 }
 

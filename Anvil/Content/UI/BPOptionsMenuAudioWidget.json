@@ -6,12 +6,37 @@
     "Class": "UScriptClass'Border'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "BrushColor": {
-        "R": 0.045186,
-        "G": 0.033105,
-        "B": 0.023153,
-        "A": 1.0,
-        "Hex": "3C332A"
+      "Padding": {
+        "Left": 8.0,
+        "Top": 8.0,
+        "Right": 8.0,
+        "Bottom": 8.0
+      },
+      "Background": {
+        "DrawAs": "ESlateBrushDrawType::Border",
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.8,
+            "Hex": "CCFFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Dialog'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/Dialog.0"
+        }
       },
       "Slots": [
         {
@@ -21,7 +46,7 @@
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPOptionsMenuAudioWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.12"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.13"
       }
     }
   },
@@ -32,13 +57,19 @@
     "Class": "UScriptClass'BorderSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "Padding": {
+        "Left": 8.0,
+        "Top": 8.0,
+        "Right": 8.0,
+        "Bottom": 8.0
+      },
       "Parent": {
         "ObjectName": "Border'BPOptionsMenuAudioWidget_C:WidgetTree.Border_21'",
         "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.0"
       },
       "Content": {
         "ObjectName": "ScrollBox'BPOptionsMenuAudioWidget_C:WidgetTree.ScrollBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.15"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.16"
       }
     }
   },
@@ -56,13 +87,15 @@
       "LabelText": {
         "Namespace": "",
         "Key": "B56F61784AB54BC6D594359840BA6CA3",
-        "SourceString": "APPLY",
-        "LocalizedString": "APPLY"
+        "SourceString": "Apply",
+        "LocalizedString": "Apply"
       },
       "LabelFontSize": 16,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPOptionsMenuAudioWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.14"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.15"
       }
     }
   },
@@ -80,13 +113,38 @@
       "LabelText": {
         "Namespace": "",
         "Key": "A46D4BC84904C5D71AAAB59518D4AE32",
-        "SourceString": "RECONNECT",
-        "LocalizedString": "RECONNECT"
+        "SourceString": "Reconnect",
+        "LocalizedString": "Reconnect"
       },
       "LabelFontSize": 16,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPOptionsMenuAudioWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.13"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.14"
+      }
+    }
+  },
+  {
+    "Type": "BPAnvilDropdownEntryWidget_C",
+    "Name": "VoiceChatEnabledDropdown",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPAnvilDropdownEntryWidget.BPAnvilDropdownEntryWidget_C'",
+    "Template": {
+      "ObjectName": "BPAnvilDropdownEntryWidget_C'Default__BPAnvilDropdownEntryWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/BPAnvilDropdownEntryWidget.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LabelText": {
+        "Namespace": "",
+        "Key": "F716A0B44D7D3B4E9146CAB74CB4EE6E",
+        "SourceString": "Voice Chat",
+        "LocalizedString": "Voice Chat"
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.22"
       }
     }
   },
@@ -109,7 +167,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_13'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.19"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.20"
       }
     }
   },
@@ -132,7 +190,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_14'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.20"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.21"
       }
     }
   },
@@ -156,7 +214,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.21"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.23"
       }
     }
   },
@@ -180,7 +238,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.22"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.24"
       }
     }
   },
@@ -204,7 +262,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.23"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.25"
       }
     }
   },
@@ -228,7 +286,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.18"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.19"
       }
     }
   },
@@ -252,15 +310,15 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPOptionsMenuAudioWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.12"
+          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.13"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPOptionsMenuAudioWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_5'",
-          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.14"
+          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.15"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPOptionsMenuAudioWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.13"
+          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.14"
         }
       ]
     }
@@ -274,13 +332,13 @@
     "Properties": {
       "LayoutData": {
         "Offsets": {
-          "Right": 500.0,
+          "Right": 600.0,
           "Bottom": 300.0
         }
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPOptionsMenuAudioWidget_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.11"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.12"
       },
       "Content": {
         "ObjectName": "Border'BPOptionsMenuAudioWidget_C:WidgetTree.Border_21'",
@@ -297,14 +355,15 @@
     "Properties": {
       "LayoutData": {
         "Offsets": {
+          "Left": 50.0,
           "Top": 320.0,
-          "Right": 135.0
+          "Right": 150.0
         }
       },
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPOptionsMenuAudioWidget_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.11"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.12"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPOptionsMenuAudioWidget_C:WidgetTree.ReconnectButton'",
@@ -321,7 +380,7 @@
     "Properties": {
       "LayoutData": {
         "Offsets": {
-          "Left": 200.0,
+          "Left": 350.0,
           "Top": 320.0,
           "Right": 135.0
         }
@@ -329,7 +388,7 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPOptionsMenuAudioWidget_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.11"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.12"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPOptionsMenuAudioWidget_C:WidgetTree.AudioApplyBt'",
@@ -364,7 +423,7 @@
       "Slots": [
         {
           "ObjectName": "ScrollBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.ScrollBox_0.ScrollBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.16"
+          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.17"
         }
       ],
       "Slot": {
@@ -382,11 +441,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "ScrollBox'BPOptionsMenuAudioWidget_C:WidgetTree.ScrollBox_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.15"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.16"
       },
       "Content": {
         "ObjectName": "VerticalBox'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.17"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.18"
       }
     }
   },
@@ -400,32 +459,36 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.21"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.22"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_5'",
           "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.23"
         },
         {
-          "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.18"
+          "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.24"
         },
         {
-          "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_13'",
+          "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.25"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_1'",
           "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.19"
         },
         {
-          "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_14'",
+          "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.22"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_13'",
           "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.20"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25.VerticalBoxSlot_14'",
+          "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.21"
         }
       ],
       "Slot": {
         "ObjectName": "ScrollBoxSlot'BPOptionsMenuAudioWidget_C:WidgetTree.ScrollBox_0.ScrollBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.16"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.17"
       }
     }
   },
@@ -439,11 +502,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.17"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.18"
       },
       "Content": {
         "ObjectName": "BPAnvilSliderWidget_C'BPOptionsMenuAudioWidget_C:WidgetTree.VoiceOutputVolumeSlider'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.9"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.10"
       }
     }
   },
@@ -457,11 +520,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.17"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.18"
       },
       "Content": {
         "ObjectName": "BPAnvilDropdownEntryWidget_C'BPOptionsMenuAudioWidget_C:WidgetTree.VoiceInDropdown'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.4"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.5"
       }
     }
   },
@@ -475,11 +538,29 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.17"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.18"
       },
       "Content": {
         "ObjectName": "BPAnvilDropdownEntryWidget_C'BPOptionsMenuAudioWidget_C:WidgetTree.VoiceOutDropdown'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.5"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.6"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Outer": "VerticalBox_25",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25'",
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.18"
+      },
+      "Content": {
+        "ObjectName": "BPAnvilDropdownEntryWidget_C'BPOptionsMenuAudioWidget_C:WidgetTree.VoiceChatEnabledDropdown'",
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.4"
       }
     }
   },
@@ -493,11 +574,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.17"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.18"
       },
       "Content": {
         "ObjectName": "BPAnvilSliderWidget_C'BPOptionsMenuAudioWidget_C:WidgetTree.MasterVolumeSlider'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.6"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.7"
       }
     }
   },
@@ -511,11 +592,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.17"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.18"
       },
       "Content": {
         "ObjectName": "BPAnvilSliderWidget_C'BPOptionsMenuAudioWidget_C:WidgetTree.SFXVolumeSlider'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.7"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.8"
       }
     }
   },
@@ -529,11 +610,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPOptionsMenuAudioWidget_C:WidgetTree.VerticalBox_25'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.17"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.18"
       },
       "Content": {
         "ObjectName": "BPAnvilSliderWidget_C'BPOptionsMenuAudioWidget_C:WidgetTree.VoiceInputVolumeSlider'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.8"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.9"
       }
     }
   },
@@ -545,7 +626,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPOptionsMenuAudioWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.25"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.27"
       },
       "bClassRequiresNativeTick": true
     },
@@ -575,7 +656,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPOptionsMenuAudioWidget_C'Default__BPOptionsMenuAudioWidget_C'",
-      "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.10"
+      "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.11"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -590,7 +671,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "CanvasPanel'BPOptionsMenuAudioWidget_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.11"
+        "ObjectPath": "Anvil/Content/UI/BPOptionsMenuAudioWidget.12"
       }
     }
   }

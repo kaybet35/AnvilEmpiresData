@@ -3,6 +3,6 @@
 
 class USheetIron_C : public UItemTemplate
 {
-}; // Size: 0x370
+}; // Size: 0x380
 
 #endif

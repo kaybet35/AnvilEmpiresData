@@ -64,11 +64,11 @@
       },
       "TreeTop": {
         "ObjectName": "StaticMeshComponent'Default__BPVisTree02Fall_C:TreeTop'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree02Fall.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree02Fall.9"
       },
       "TreeFallDataComponent": {
         "ObjectName": "TreeFallDataComponent'Default__BPVisTree02Fall_C:TreeFallDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree02Fall.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree02Fall.10"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisTree02Fall_C:CreateDefaultSubobject'",
@@ -91,7 +91,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "StaticMeshComponent'BPVisTree02Fall_C:Stump_GEN_VARIABLE'",
-            "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree02Fall.7"
+            "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree02Fall.8"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -100,6 +100,28 @@
             },
             "SCSVariableName": "Stump",
             "AssociatedGuid": "6FFFCBC3-47BF83E0-0E94258E-FADCBFA4"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BPVisTree02Fall_C:ShadowProxyMesh_GEN_VARIABLE'",
+            "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree02Fall.7"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPTreeFall_C'",
+              "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.1"
+            },
+            "SCSVariableName": "ShadowProxyMesh",
+            "AssociatedGuid": "5D00C2DD-440C3984-F0381C91-81A992B5"
           },
           "CookedComponentInstancingData": {
             "ChangedPropertyList": [],
@@ -150,12 +172,39 @@
   },
   {
     "Type": "StaticMeshComponent",
+    "Name": "ShadowProxyMesh_GEN_VARIABLE",
+    "Outer": "BPVisTree02Fall_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BPTreeFall_C:ShadowProxyMesh_GEN_VARIABLE'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.10"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Spruce01Stage02Top'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Trees/Spruce01Stage02Top.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'TreeShadowProxy'",
+          "ObjectPath": "Anvil/Content/Materials/Environment/TreeShadowProxy.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'TreeShadowProxyMaskedSpruce'",
+          "ObjectPath": "Anvil/Content/Materials/Environment/TreeShadowProxyMaskedSpruce.0"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
     "Name": "Stump_GEN_VARIABLE",
     "Outer": "BPVisTree02Fall_C",
     "Class": "UScriptClass'StaticMeshComponent'",
     "Template": {
       "ObjectName": "StaticMeshComponent'BPTreeFall_C:Stump_GEN_VARIABLE'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.9"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.11"
     },
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
     "Properties": {
@@ -183,7 +232,7 @@
     "Class": "UScriptClass'StaticMeshComponent'",
     "Template": {
       "ObjectName": "StaticMeshComponent'Default__BPTreeFall_C:TreeTop'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.10"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.12"
     },
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
@@ -209,7 +258,7 @@
     "Class": "UScriptClass'TreeFallDataComponent'",
     "Template": {
       "ObjectName": "TreeFallDataComponent'Default__BPTreeFall_C:TreeFallDataComponent'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.11"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.13"
     },
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   }

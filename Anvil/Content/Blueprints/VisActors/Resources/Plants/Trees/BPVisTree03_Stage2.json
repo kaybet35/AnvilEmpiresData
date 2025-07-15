@@ -14,7 +14,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisTree03_Stage2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2.8"
       }
     },
     "SuperStruct": {
@@ -24,12 +24,12 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "Decal",
+        "Name": "ShadowProxyMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
-          "ObjectName": "Class'DecalComponent'",
+          "ObjectName": "Class'StaticMeshComponent'",
           "ObjectPath": "/Script/Engine"
         }
       }
@@ -69,7 +69,7 @@
       },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisTree03_Stage2_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2.10"
       },
       "ShakeCurve": {
         "ObjectName": "CurveVector'HorizontalShakeAnimCurve'",
@@ -122,16 +122,84 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisTree03_Stage2_C:ShadowProxyMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2.9"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "018E1CF9-4D2ABB61-852E049D-F58FCD03",
+      "InternalVariableName": "ShadowProxyMesh"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPVisTree03_Stage2_C",
     "Class": "UScriptClass'SimpleConstructionScript'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisTree03_Stage2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisTree03_Stage2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2.7"
+        }
+      ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisTree03_Stage2_C:SimpleConstructionScript_0.SCS_Node_0'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2.6"
       }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "ShadowProxyMesh_GEN_VARIABLE",
+    "Outer": "BPVisTree03_Stage2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Pine01Stage01'",
+        "ObjectPath": "Anvil/Content/Meshes/Environment/Trees/Pine01Stage01.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'TreeShadowProxy'",
+          "ObjectPath": "Anvil/Content/Materials/Environment/TreeShadowProxy.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'TreeShadowProxyMaskedPine'",
+          "ObjectPath": "Anvil/Content/Materials/Environment/TreeShadowProxyMaskedPine.0"
+        }
+      ],
+      "bVisibleInReflectionCaptures": false,
+      "bVisibleInRealTimeSkyCaptures": false,
+      "bVisibleInRayTracing": false,
+      "bRenderInMainPass": false,
+      "bRenderInDepthPass": false,
+      "bReceivesDecals": false,
+      "bUseAsOccluder": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -145,6 +213,7 @@
         "ObjectName": "StaticMesh'Pine01Stage01'",
         "ObjectPath": "Anvil/Content/Meshes/Environment/Trees/Pine01Stage01.2"
       },
+      "CastShadow": false,
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisTree03_Stage2_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPVisTree03_Stage2.0"

@@ -1,0 +1,170 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisTreeClearing_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisTreeClearing_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisTreeClearing.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisActor'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "GrassRemovalVolume",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'GrassRemovalVolumeComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisTreeClearing_C'Default__BPVisTreeClearing_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisTreeClearing.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisTreeClearing_C",
+    "Name": "Default__BPVisTreeClearing_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/BPVisTreeClearing.BPVisTreeClearing_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bNightVisibility": true
+    }
+  },
+  {
+    "Type": "GrassRemovalVolumeComponent",
+    "Name": "GrassRemovalVolume_GEN_VARIABLE",
+    "Outer": "BPVisTreeClearing_C",
+    "Class": "UScriptClass'GrassRemovalVolumeComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Extents": {
+        "X": 3000.0,
+        "Y": 3000.0,
+        "Z": 3000.0
+      },
+      "SplineDataComponent": {
+        "ObjectName": "SplineDataComponent'BPVisTreeClearing_C:GrassRemovalVolume_GEN_VARIABLE.SplineDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisTreeClearing.7"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisTreeClearing_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisTreeClearing_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisTreeClearing.3"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisTreeClearing_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisTreeClearing.5"
+        }
+      ],
+      "VariableGuid": "5A6B3909-415B9E80-DD8416B3-31C11E22",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'GrassRemovalVolumeComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GrassRemovalVolumeComponent'BPVisTreeClearing_C:GrassRemovalVolume_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisTreeClearing.2"
+      },
+      "VariableGuid": "BD84B041-41B8BEB5-A49A349C-D131E841",
+      "InternalVariableName": "GrassRemovalVolume"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisTreeClearing_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisTreeClearing_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisTreeClearing.4"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisTreeClearing_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisTreeClearing.4"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTreeClearing_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisTreeClearing.5"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisTreeClearing_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisTreeClearing.4"
+      }
+    }
+  },
+  {
+    "Type": "SplineDataComponent",
+    "Name": "SplineDataComponent",
+    "Outer": "GrassRemovalVolume_GEN_VARIABLE",
+    "Class": "UScriptClass'SplineDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  }
+]

@@ -3,6 +3,6 @@
 
 class ABPVisTree03Fall_C : public ABPTreeFall_C
 {
-}; // Size: 0x4E0
+}; // Size: 0x500
 
 #endif

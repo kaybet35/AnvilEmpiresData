@@ -1,19 +1,26 @@
 ---@meta
 
 ---@class ABPVisGridFoundationHalfSquareStraight_C : AVisStructure
----@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
+---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
+---@field Rubble UVisRandomMeshDecorComponent
+---@field TopMeshCollapsed UVisStaticMeshComponentBase
+---@field VisDynamicMeshTemplateReference5 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference6 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference7 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference4 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference1 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference2 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference3 UVisDynamicMeshTemplateReferenceComponent
+---@field BottomMesh UVisFoundationBottomMeshDecorComponent
 ---@field VerticalEdge08 UVisFoundationEdgeMeshDecorComponent
 ---@field VisRandomMeshDecor3 UVisRandomMeshDecorComponent
 ---@field VerticalEdge05 UVisFoundationEdgeMeshDecorComponent
 ---@field VisRandomMeshDecor4 UVisRandomMeshDecorComponent
----@field ChildActor8 UChildActorComponent
----@field ChildActor7 UChildActorComponent
 ---@field VerticalEdge06 UVisFoundationEdgeMeshDecorComponent
----@field ChildActor6 UChildActorComponent
 ---@field VisRandomMeshDecor1 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor2 UVisRandomMeshDecorComponent
 ---@field VerticalEdge09 UVisFoundationEdgeMeshDecorComponent
----@field ChildActor5 UChildActorComponent
 ---@field VisFoundationEdgeMeshDecor5 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor4 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor7 UVisFoundationEdgeMeshDecorComponent
@@ -30,14 +37,10 @@
 ---@field VisRandomMeshDecor12 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor UVisRandomMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor3 UVisFoundationEdgeMeshDecorComponent
----@field ChildActor4 UChildActorComponent
----@field StaticMesh UStaticMeshComponent
+---@field TopMesh UStaticMeshComponent
 ---@field VisFoundationEdgeMeshDecor2 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor UVisFoundationEdgeMeshDecorComponent
----@field ChildActor3 UChildActorComponent
----@field ChildActor1 UChildActorComponent
----@field ChildActor UChildActorComponent
 ---@field Scene USceneComponent
 ABPVisGridFoundationHalfSquareStraight_C = {}
 

@@ -1,8 +1,9 @@
 ---@meta
 
 ---@class ABPVisTownCraftingTable_C : AVisRefinery
+---@field CraftingTableCollapsed UVisStaticMeshComponent
 ---@field VisStaticMesh4 UVisStaticMeshComponent
----@field VisStaticMesh UVisStaticMeshComponent
+---@field CraftingTableUnCollapsed UVisStaticMeshComponent
 ---@field WorkshopFire UNiagaraComponent
 ---@field VisStaticMesh2 UVisStaticMeshComponent
 ---@field Niagara UNiagaraComponent

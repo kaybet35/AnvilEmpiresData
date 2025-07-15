@@ -2,7 +2,7 @@
 
 ---@class UBPOptionsScreen_C : UOptionsScreen
 ---@field AudioButton UBPAnvilButtonWidget_C
----@field BlackBG UImage
+---@field BackgroundImage UImage
 ---@field GameplayButtom UBPAnvilButtonWidget_C
 ---@field Image_50 UImage
 ---@field KeybindsButton UBPAnvilButtonWidget_C

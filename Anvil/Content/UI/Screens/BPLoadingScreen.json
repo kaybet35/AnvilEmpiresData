@@ -49,6 +49,10 @@
           "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.4"
         },
         {
+          "ObjectName": "CanvasPanelSlot'BPLoadingScreen_C:WidgetTree.RootCanvas.CanvasPanelSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.5"
+        },
+        {
           "ObjectName": "CanvasPanelSlot'BPLoadingScreen_C:WidgetTree.RootCanvas.CanvasPanelSlot_0'",
           "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.3"
         }
@@ -110,7 +114,44 @@
       },
       "Content": {
         "ObjectName": "ScaleBox'BPLoadingScreen_C:WidgetTree.ScaleBox_92'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.6"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Outer": "RootCanvas",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 990.0,
+          "Bottom": 453.75
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPLoadingScreen_C:WidgetTree.RootCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.2"
+      },
+      "Content": {
+        "ObjectName": "Image'BPLoadingScreen_C:WidgetTree.Image_140'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.7"
       }
     }
   },
@@ -123,17 +164,49 @@
     "Properties": {
       "Brush": {
         "ImageSize": {
-          "X": 2560.0,
-          "Y": 1440.0
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.21875,
+            "G": 0.21875,
+            "B": 0.21875,
+            "A": 1.0,
+            "Hex": "818181"
+          }
         },
         "ResourceObject": {
-          "ObjectName": "Texture2D'AnvilLoadingScreen'",
-          "ObjectPath": "Anvil/Content/Textures/UI/AnvilLoadingScreen.0"
+          "ObjectName": "Texture2D'MainMenuBG'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/MainMenuBG.0"
         }
       },
       "Slot": {
         "ObjectName": "ScaleBoxSlot'BPLoadingScreen_C:WidgetTree.ScaleBox_92.ScaleBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.7"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.9"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_140",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 3000.0,
+          "Y": 1375.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'AnvilLogoLight'",
+          "ObjectPath": "Anvil/Content/Textures/UI/AnvilLogoLight.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPLoadingScreen_C:WidgetTree.RootCanvas.CanvasPanelSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.5"
       }
     }
   },
@@ -147,7 +220,7 @@
       "Slots": [
         {
           "ObjectName": "ScaleBoxSlot'BPLoadingScreen_C:WidgetTree.ScaleBox_92.ScaleBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.7"
+          "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.9"
         }
       ],
       "Slot": {
@@ -165,11 +238,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "ScaleBox'BPLoadingScreen_C:WidgetTree.ScaleBox_92'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.6"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.8"
       },
       "Content": {
         "ObjectName": "Image'BPLoadingScreen_C:WidgetTree.BackgroundImage'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.5"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.6"
       }
     }
   },
@@ -181,7 +254,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPLoadingScreen_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.9"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPLoadingScreen.11"
       }
     },
     "SuperStruct": {
@@ -192,6 +265,17 @@
       {
         "Type": "ObjectProperty",
         "Name": "BackgroundImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_140",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",

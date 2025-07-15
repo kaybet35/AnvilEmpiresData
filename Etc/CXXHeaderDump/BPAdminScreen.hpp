@@ -3,8 +3,9 @@
 
 class UBPAdminScreen_C : public UAdminScreen
 {
-    class UBPAdminPlayerListItem_C* BPAdminPlayerListItem;                            // 0x02C8 (size: 0x8)
+    class UImage* BlackBG;                                                            // 0x02C8 (size: 0x8)
+    class UBPAdminPlayerListItem_C* BPAdminPlayerListItem;                            // 0x02D0 (size: 0x8)
 
-}; // Size: 0x2D0
+}; // Size: 0x2D8
 
 #endif

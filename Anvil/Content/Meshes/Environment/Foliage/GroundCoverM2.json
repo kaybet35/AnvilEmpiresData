@@ -32,7 +32,7 @@
           "MinLOD": 0,
           "Scaling": "EGrassScaling::LockXY",
           "ScaleX": {
-            "Min": 0.3,
+            "Min": 1.0,
             "Max": 2.0
           },
           "ScaleY": {
@@ -59,14 +59,14 @@
         },
         {
           "GrassMesh": {
-            "ObjectName": "StaticMesh'ShrubMirabelle_04'",
-            "ObjectPath": "Anvil/Content/Meshes/Environment/Foliage/Shrubs/ShrubMirabelle_04.2"
+            "ObjectName": "StaticMesh'PlantMoss02'",
+            "ObjectPath": "Anvil/Content/Meshes/Environment/Underworld/Foliage/PlantMoss02.2"
           },
           "OverrideMaterials": [],
           "GrassDensity": {
             "bCooked": true,
-            "Default": 1.0,
-            "Value": 1.0
+            "Default": 3.0,
+            "Value": 3.0
           },
           "bUseGrid": false,
           "PlacementJitter": 1.0,
@@ -83,7 +83,7 @@
           "MinLOD": 0,
           "Scaling": "EGrassScaling::Uniform",
           "ScaleX": {
-            "Min": 0.6,
+            "Min": 0.3,
             "Max": 1.0
           },
           "ScaleY": {
@@ -95,7 +95,7 @@
             "Max": 1.0
           },
           "RandomRotation": true,
-          "AlignToSurface": false,
+          "AlignToSurface": true,
           "bUseLandscapeLightmap": false,
           "LightingChannels": {
             "bChannel0": true,
@@ -134,8 +134,8 @@
           "MinLOD": -1,
           "Scaling": "EGrassScaling::LockXY",
           "ScaleX": {
-            "Min": 0.3,
-            "Max": 3.0
+            "Min": 1.0,
+            "Max": 2.0
           },
           "ScaleY": {
             "Min": 1.0,
@@ -143,7 +143,7 @@
           },
           "ScaleZ": {
             "Min": 0.93,
-            "Max": 2.0
+            "Max": 1.0
           },
           "RandomRotation": true,
           "AlignToSurface": true,
@@ -161,14 +161,14 @@
         },
         {
           "GrassMesh": {
-            "ObjectName": "StaticMesh'RockAScatterFlat03'",
-            "ObjectPath": "Anvil/Content/Meshes/Environment/Rocks/Scatter/RockAScatterFlat03.2"
+            "ObjectName": "StaticMesh'GrassPlantRoots_04'",
+            "ObjectPath": "Anvil/Content/Meshes/Environment/Foliage/GroundCover/GrassPlantRoots_04.2"
           },
           "OverrideMaterials": [],
           "GrassDensity": {
             "bCooked": true,
-            "Default": 1.0,
-            "Value": 1.0
+            "Default": 0.1,
+            "Value": 0.1
           },
           "bUseGrid": false,
           "PlacementJitter": 1.0,
@@ -183,18 +183,69 @@
             "Value": 10000
           },
           "MinLOD": -1,
-          "Scaling": "EGrassScaling::LockXY",
+          "Scaling": "EGrassScaling::Uniform",
           "ScaleX": {
-            "Min": 0.47,
-            "Max": 0.78
+            "Min": 1.0,
+            "Max": 2.0
           },
           "ScaleY": {
             "Min": 1.0,
             "Max": 1.0
           },
           "ScaleZ": {
-            "Min": 0.5,
-            "Max": 0.5
+            "Min": 1.0,
+            "Max": 1.0
+          },
+          "RandomRotation": true,
+          "AlignToSurface": true,
+          "bUseLandscapeLightmap": false,
+          "LightingChannels": {
+            "bChannel0": true,
+            "bChannel1": false,
+            "bChannel2": false
+          },
+          "bReceivesDecals": true,
+          "bCastDynamicShadow": true,
+          "bCastContactShadow": true,
+          "bKeepInstanceBufferCPUCopy": false,
+          "InstanceWorldPositionOffsetDisableDistance": 0
+        },
+        {
+          "GrassMesh": {
+            "ObjectName": "StaticMesh'GrassDryA_03'",
+            "ObjectPath": "Anvil/Content/Meshes/Environment/Foliage/Grass/GrassDryA_03.2"
+          },
+          "OverrideMaterials": [],
+          "GrassDensity": {
+            "bCooked": true,
+            "Default": 3.0,
+            "Value": 3.0
+          },
+          "bUseGrid": true,
+          "PlacementJitter": 1.0,
+          "StartCullDistance": {
+            "bCooked": true,
+            "Default": 10000,
+            "Value": 10000
+          },
+          "EndCullDistance": {
+            "bCooked": true,
+            "Default": 10000,
+            "Value": 10000
+          },
+          "MinLOD": -1,
+          "Scaling": "EGrassScaling::LockXY",
+          "ScaleX": {
+            "Min": 0.67,
+            "Max": 2.0
+          },
+          "ScaleY": {
+            "Min": 1.0,
+            "Max": 1.0
+          },
+          "ScaleZ": {
+            "Min": 0.56,
+            "Max": 1.0
           },
           "RandomRotation": true,
           "AlignToSurface": true,

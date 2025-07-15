@@ -3,6 +3,6 @@
 
 class UHeatingVatBuildSite_C : public UBPBaseBuildSiteEntity_C
 {
-}; // Size: 0xC8
+}; // Size: 0xD0
 
 #endif

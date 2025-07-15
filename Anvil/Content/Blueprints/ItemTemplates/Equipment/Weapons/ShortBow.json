@@ -27,7 +27,7 @@
     "Type": "ShortBow_C",
     "Name": "Default__ShortBow_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/ShortBow.ShortBow_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CodeNameString": "ShortBow",
       "CodeName": -121955119,
@@ -43,6 +43,7 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
       },
       "bRanged": true,
+      "bUsesAccuracy": true,
       "bHasAlt": true,
       "DamageOffset": {
         "X": 50.0,
@@ -81,19 +82,29 @@
         "Delay": 0.7,
         "Duration": 1.1
       },
+      "AltActivity": {
+        "bRequireAim": true
+      },
       "RangedActivity": {
         "State": "EAnvilSimActivityState::LaunchingProjectile",
-        "Delay": 0.1,
-        "Duration": 1.5,
+        "Delay": 0.0001,
+        "Duration": 1.17,
         "bRepeatable": false,
-        "StaminaCost": 10.0,
-        "AimedStaminaCost": 5.0
+        "bRequireAim": true,
+        "StaminaCost": 8.0,
+        "AimedStaminaCost": 4.0
       },
       "BuildActivity": {
         "bRepeatable": false
       },
+      "bAltAllowCameraPan": true,
+      "AccuracyGainPerSec": 0.6,
       "Damage": 15,
       "DurabilityLossPerUse": 1.2,
+      "MinRangedDistance": 300.0,
+      "VariableDamageMaxModifier": 1.15,
+      "VariableDamageMinModifier": 0.85,
+      "StabilityDamage": 0.0,
       "AimMovementSpeedModifier": 0.5,
       "AimRotationSpeedModifier": 2.5,
       "PrimaryMovementSpeedModifier": 0.8,

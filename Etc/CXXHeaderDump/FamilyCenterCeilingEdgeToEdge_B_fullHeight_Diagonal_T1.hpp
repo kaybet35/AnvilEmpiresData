@@ -3,6 +3,6 @@
 
 class UFamilyCenterCeilingEdgeToEdge_B_fullHeight_Diagonal_T1_C : public UBPBaseFoundationModularEntity_C
 {
-}; // Size: 0xD8
+}; // Size: 0xE0
 
 #endif

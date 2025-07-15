@@ -18,6 +18,7 @@ UEntityTemplate::UEntityTemplate() {
     this->GenerateMeshCollisionSurfaceType = EAnvilPhysicalSurfaceType::Default;
     this->VisActorClass = NULL;
     this->VisActorTemplateClass = NULL;
+    this->bIgnoreErrorNoInteractionMask = false;
     this->VisActorDefaultObject = NULL;
 }
 

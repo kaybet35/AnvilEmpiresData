@@ -5,6 +5,7 @@
 UENUM(BlueprintType)
 enum class EAnvilBuildAreaType : uint8 {
     TownArea,
+    FortressArea,
     SmallCampArea,
     LargeCampArea,
     HomesteadArea,

@@ -12,6 +12,16 @@
         "Right": 0.0,
         "Bottom": 0.0
       },
+      "Background": {
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 48.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'MainMenuBar'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/MainMenuBar.0"
+        }
+      },
       "Slots": [
         {
           "ObjectName": "BorderSlot'BPAdminPlayerListItem_C:WidgetTree.bg_border.BorderSlot_0'",
@@ -32,12 +42,15 @@
     "Class": "UScriptClass'Border'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "BrushColor": {
-        "R": 0.026042,
-        "G": 0.026042,
-        "B": 0.026042,
-        "A": 1.0,
-        "Hex": "2C2C2C"
+      "Background": {
+        "ImageSize": {
+          "X": 600.0,
+          "Y": 140.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'ButtonBG'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/ButtonBG.0"
+        }
       },
       "Slots": [
         {
@@ -65,6 +78,16 @@
         "Bottom": 0.0
       },
       "Background": {
+        "ImageSize": {
+          "X": 600.0,
+          "Y": 140.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
         "TintColor": {
           "SpecifiedColor": {
             "R": 0.249,
@@ -73,6 +96,10 @@
             "A": 1.0,
             "Hex": "892A26"
           }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'ButtonHover'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/ButtonHover.0"
         }
       },
       "Slots": [
@@ -178,8 +205,8 @@
         "LocalizedString": "Ban"
       },
       "LabelFontSize": 14,
-      "ButtonWidth": 120.0,
-      "ButtonHeight": 28.0,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "BorderSlot'BPAdminPlayerListItem_C:WidgetTree.Border_80.BorderSlot_0'",
         "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.5"
@@ -204,8 +231,8 @@
         "LocalizedString": "Name"
       },
       "LabelFontSize": 14,
-      "ButtonWidth": 300.0,
-      "ButtonHeight": 26.0,
+      "ButtonWidth": 240.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_0'",
         "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.18"
@@ -230,7 +257,8 @@
         "LocalizedString": "SteamId"
       },
       "LabelFontSize": 14,
-      "ButtonHeight": 26.0,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_3'",
         "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.23"
@@ -255,8 +283,8 @@
         "LocalizedString": "Team"
       },
       "LabelFontSize": 14,
-      "ButtonWidth": 100.0,
-      "ButtonHeight": 26.0,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_1'",
         "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.19"
@@ -281,8 +309,8 @@
         "LocalizedString": "Teleport To"
       },
       "LabelFontSize": 14,
-      "ButtonWidth": 120.0,
-      "ButtonHeight": 26.0,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65.HorizontalBoxSlot_7'",
         "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.27"
@@ -459,6 +487,11 @@
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "Padding": {
+        "Left": 14.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_0'",
         "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.14"
@@ -477,7 +510,7 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Padding": {
-        "Left": 3.0
+        "Left": 15.0
       },
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
@@ -497,6 +530,7 @@
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
         "ObjectPath": "Anvil/Content/UI/BPAdminPlayerListItem.15"
@@ -558,7 +592,7 @@
         "Right": 4.0,
         "Bottom": 2.0
       },
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminPlayerListItem_C:WidgetTree.HorizontalBox_65'",
@@ -736,8 +770,10 @@
     "Class": "UScriptClass'SizeBox'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "WidthOverride": 175.0,
+      "WidthOverride": 180.0,
+      "HeightOverride": 45.0,
       "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'BPAdminPlayerListItem_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
@@ -860,7 +896,7 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Size": {
-        "X": 15.0,
+        "X": 150.0,
         "Y": 5.0
       },
       "Slot": {

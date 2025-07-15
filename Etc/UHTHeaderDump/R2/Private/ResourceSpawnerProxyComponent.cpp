@@ -5,6 +5,7 @@ UResourceSpawnerProxyComponent::UResourceSpawnerProxyComponent() {
     this->SpawnRadius = 0.00f;
     this->MinimumSpawnRadius = 0.00f;
     this->SpawnInterval = 60.00f;
+    this->InitialSpawnDelay = 0.00f;
     this->SpawnQuantity = 0;
     this->SpawnWaveCountMultiplier = 1.00f;
     this->MaxSpawn = 0;
@@ -14,6 +15,7 @@ UResourceSpawnerProxyComponent::UResourceSpawnerProxyComponent() {
     this->SpawnDelayAfterResourceDepleted = 0.00f;
     this->MinDistanceBetweenSpawns = 0.00f;
     this->bWaterOnly = false;
+    this->bDisableRandomRotation = false;
     this->bRequiresNavmesh = false;
     this->bRequiresPathBackOnNavmesh = false;
     this->bTrackSpawnedEntity = false;

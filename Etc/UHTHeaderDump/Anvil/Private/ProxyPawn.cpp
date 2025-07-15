@@ -38,13 +38,22 @@ void AProxyPawn::OnPanCameraStop() {
 void AProxyPawn::OnPanCameraStart() {
 }
 
+void AProxyPawn::OnKeyRotateCameraRightStop() {
+}
+
+void AProxyPawn::OnKeyRotateCameraRightStart() {
+}
+
+void AProxyPawn::OnKeyRotateCameraLeftStop() {
+}
+
+void AProxyPawn::OnKeyRotateCameraLeftStart() {
+}
+
 void AProxyPawn::EnterBuildMode(const uint32 BuildSiteCodeName, const uint64 ContextID) {
 }
 
 void AProxyPawn::DrawSphere(float Radius) {
-}
-
-void AProxyPawn::ClearFogOfWar() {
 }
 
 void AProxyPawn::ChangeHeight(float Adjust) {

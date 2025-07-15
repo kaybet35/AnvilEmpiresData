@@ -52,10 +52,23 @@
       "bHasAlt": true,
       "bAltIsRanged": true,
       "DamageOffset": {
-        "X": 80.0,
-        "Y": 0.0,
-        "Z": 75.0
+        "X": 180.0,
+        "Y": 20.0,
+        "Z": -55.2
       },
+      "AdditionalDamageOffsets": [
+        {
+          "X": 245.0,
+          "Y": 16.5,
+          "Z": -62.7
+        },
+        {
+          "X": 310.0,
+          "Y": 13.0,
+          "Z": -70.0
+        }
+      ],
+      "DamageOffsetCount": 3,
       "FireOffset": {
         "X": 50.0,
         "Y": 0.0,
@@ -71,17 +84,20 @@
       },
       "DamageType": "EAnvilDamageType::Piercing",
       "bDoesNotArmWithHeavyArmour": true,
+      "AltTransitionTime": 0.65,
       "RequiredStance": "EAnvilCharacterStance::OnHorse",
       "DefaultActivity": {
         "State": "EAnvilSimActivityState::Attacking",
-        "Delay": 0.5,
-        "Duration": 1.1,
+        "Delay": 0.02,
+        "AdditionalDelays": 0.08,
+        "AdditionalDelays[1]": 0.14,
+        "Duration": 1.0,
         "RotationSpeedModifier": 3.5,
         "StaminaCost": 10.0
       },
       "AltActivity": {
         "State": "EAnvilSimActivityState::LaunchingProjectile",
-        "Delay": 0.7,
+        "Delay": 0.1,
         "Duration": 1.1,
         "bRepeatable": false,
         "StaminaCost": 10.0
@@ -89,13 +105,14 @@
       "BuildActivity": {
         "bRepeatable": false
       },
+      "bAllowCameraPan": false,
+      "bAltAllowCameraPan": true,
       "Damage": 15,
       "DurabilityLossPerUse": 2.0,
-      "DamageRadius": 128.0,
+      "DamageRadius": 120.0,
+      "StabilityDamage": 0.0,
       "AimMovementSpeedModifier": 0.5,
       "AimRotationSpeedModifier": 3.5,
-      "PrimaryMovementSpeedModifier": 0.75,
-      "SecondaryMovementSpeedModifier": 0.75,
       "PrimaryChanceToPenetrateGuard": 0.15,
       "SecondaryChanceToPenetrateGuard": 0.25
     }

@@ -3,6 +3,6 @@
 
 class ABPVisTree02Buildsite_C : public AVisBuildSite
 {
-}; // Size: 0x520
+}; // Size: 0x538
 
 #endif

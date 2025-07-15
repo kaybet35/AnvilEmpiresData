@@ -14,7 +14,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPTreeFall_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.9"
       }
     },
     "SuperStruct": {
@@ -22,6 +22,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ShadowProxyMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "Stump",
@@ -72,7 +83,7 @@
       },
       "TreeTop": {
         "ObjectName": "StaticMeshComponent'Default__BPTreeFall_C:TreeTop'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.12"
       },
       "FallCurve": {
         "ObjectName": "CurveFloat'TreeFallCurve'",
@@ -80,7 +91,7 @@
       },
       "TreeFallDataComponent": {
         "ObjectName": "TreeFallDataComponent'Default__BPTreeFall_C:TreeFallDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.13"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPTreeFall_C:CreateDefaultSubobject'",
@@ -144,6 +155,27 @@
   },
   {
     "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPTreeFall_C:ShadowProxyMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.10"
+      },
+      "ParentComponentOrVariableName": "TreeTop",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "5D00C2DD-440C3984-F0381C91-81A992B5",
+      "InternalVariableName": "ShadowProxyMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
     "Name": "SCS_Node_3",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -176,7 +208,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPTreeFall_C:Stump_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.11"
       },
       "ParentComponentOrVariableName": "CreateDefaultSubobject",
       "bIsParentComponentNative": true,
@@ -194,27 +226,51 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.6"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.7"
         },
         {
           "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.6"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.6"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.7"
         },
         {
           "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.6"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPTreeFall_C:SimpleConstructionScript_0.SCS_Node_0'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.5"
       }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "ShadowProxyMesh_GEN_VARIABLE",
+    "Outer": "BPTreeFall_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bVisibleInReflectionCaptures": false,
+      "bVisibleInRealTimeSkyCaptures": false,
+      "bVisibleInRayTracing": false,
+      "bRenderInMainPass": false,
+      "bRenderInDepthPass": false,
+      "bReceivesDecals": false,
+      "bUseAsOccluder": false
     }
   },
   {
@@ -238,6 +294,7 @@
     "Class": "UScriptClass'StaticMeshComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "CastShadow": false,
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPTreeFall_C:CreateDefaultSubobject'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/Plants/Trees/BPTreeFall.0"

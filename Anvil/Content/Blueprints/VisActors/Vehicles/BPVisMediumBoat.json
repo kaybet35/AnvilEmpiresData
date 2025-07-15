@@ -221,7 +221,6 @@
         "SourceString": "This vessel is used to transport personnel, equipment, and vehicles to distant provinces across seas.",
         "LocalizedString": "This vessel is used to transport personnel, equipment, and vehicles to distant provinces across seas."
       },
-      "PositionSmoothSpeed": 4.0,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisMediumBoat_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.1"
@@ -600,7 +599,15 @@
         "ObjectPath": "Anvil/Content/Meshes/Vehicles/MediumBoat_Hull_SK.0"
       },
       "bReceivesDecals": false,
-      "bAffectDistanceFieldLighting": false
+      "bAffectDistanceFieldLighting": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": []
+        }
+      }
     }
   },
   {

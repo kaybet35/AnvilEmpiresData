@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisFarmGate_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.13"
       }
     },
     "SuperStruct": {
@@ -60,15 +60,15 @@
     "Properties": {
       "GateDataComponent": {
         "ObjectName": "GateDataComponent'Default__BPVisFarmGate_C:GateDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.6"
       },
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPVisFarmGate_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.14"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisFarmGate_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.20"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconFarmGate'",
@@ -76,27 +76,31 @@
       },
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisFarmGate_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.19"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisFarmGate_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.8"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisFarmGate_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.18"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisFarmGate_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.17"
+      },
+      "CollapsibleDataComponent": {
+        "ObjectName": "CollapsibleDataComponent'Default__BPVisFarmGate_C:CollapsibleDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.3"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisFarmGate_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.10"
       },
       "DecayDataComponent": {
         "ObjectName": "DecayDataComponent'Default__BPVisFarmGate_C:DecayDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.5"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisFarmGate_C:ArrowComponent'",
@@ -104,11 +108,11 @@
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisFarmGate_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.4"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisFarmGate_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.7"
       },
       "UseWindowType": "EHUDWindowType::GenericStructure",
       "InteractionIcon": {
@@ -126,6 +130,13 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.0"
       }
     }
+  },
+  {
+    "Type": "CollapsibleDataComponent",
+    "Name": "CollapsibleDataComponent",
+    "Outer": "Default__BPVisFarmGate_C",
+    "Class": "UScriptClass'CollapsibleDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "DecalComponent",
@@ -171,10 +182,9 @@
     "Class": "UScriptClass'GrassRemovalVolumeComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "bDeferGrassUpdate": true,
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisFarmGate_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.15"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisFarmGate_C:ArrowComponent'",
@@ -216,7 +226,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisFarmGate_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.9"
       },
       "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -235,7 +245,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisFarmGate_C:Scaffolding_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.16"
       },
       "ParentComponentOrVariableName": "ScaffoldingComponent",
       "bIsParentComponentNative": true,
@@ -253,18 +263,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFarmGate_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.12"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisFarmGate_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.12"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisFarmGate_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/BPVisFarmGate.11"
       }
     }
   },

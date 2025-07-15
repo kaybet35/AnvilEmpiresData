@@ -27,7 +27,7 @@
     "Type": "LongBow_C",
     "Name": "Default__LongBow_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/LongBow.LongBow_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CodeNameString": "LongBow",
       "CodeName": 911279597,
@@ -43,6 +43,7 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
       },
       "bRanged": true,
+      "bUsesAccuracy": true,
       "bHasAlt": true,
       "DamageOffset": {
         "X": 50.0,
@@ -81,19 +82,27 @@
         "Delay": 0.7,
         "Duration": 1.1
       },
+      "AltActivity": {
+        "bRequireAim": true
+      },
       "RangedActivity": {
         "State": "EAnvilSimActivityState::LaunchingProjectile",
-        "Delay": 0.1,
+        "Delay": 0.0001,
         "Duration": 2.5,
         "bRepeatable": false,
+        "bRequireAim": true,
         "StaminaCost": 10.0,
         "AimedStaminaCost": 5.0
       },
       "BuildActivity": {
         "bRepeatable": false
       },
-      "Damage": 25,
+      "bAltAllowCameraPan": true,
+      "AccuracyGainPerSec": 0.18,
+      "Damage": 30,
       "DurabilityLossPerUse": 1.2,
+      "VariableDamageMaxModifier": 1.3,
+      "StabilityDamage": 0.0,
       "AimMovementSpeedModifier": 0.5,
       "AimRotationSpeedModifier": 2.5,
       "PrimaryMovementSpeedModifier": 0.4,

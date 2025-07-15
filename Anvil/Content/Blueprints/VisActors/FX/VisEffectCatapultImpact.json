@@ -31,13 +31,26 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'VisEffectCatapultImpact_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.9"
       }
     },
     "SuperStruct": {
       "ObjectName": "Class'VisEffect'",
       "ObjectPath": "/Script/Anvil"
     },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Decal",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -47,10 +60,40 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "VisEffectCatapultImpact_C'Default__VisEffectCatapultImpact_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.9"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.11"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Outer": "VisEffectCatapultImpact_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'CatapultImpactDecal'",
+        "ObjectPath": "Anvil/Content/FX/Materials/CatapultImpactDecal.0"
+      },
+      "FadeStartDelay": 4.0,
+      "FadeDuration": 10.0,
+      "DecalSize": {
+        "X": 256.0,
+        "Y": 256.0,
+        "Z": 256.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.114928,
+        "Y": 0.699305,
+        "Z": 0.699305
+      }
     }
   },
   {
@@ -69,7 +112,7 @@
     "Properties": {
       "Asset": {
         "ObjectName": "NiagaraSystem'CatapultImpact'",
-        "ObjectPath": "Anvil/Content/FX/Niagara/CatapultImpact.25"
+        "ObjectPath": "Anvil/Content/FX/Niagara/CatapultImpact.46"
       },
       "OverrideParameters": {},
       "AttachParent": {
@@ -98,10 +141,31 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'VisEffectCatapultImpact_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.6"
       },
       "VariableGuid": "5EEC22D5-406E075B-120AD687-05040E77",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'VisEffectCatapultImpact_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.3"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "0B6D010F-4D3957F4-0FD5B8A9-FB38685A",
+      "InternalVariableName": "Decal"
     }
   },
   {
@@ -111,9 +175,21 @@
     "Class": "UScriptClass'SimpleConstructionScript'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'VisEffectCatapultImpact_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'VisEffectCatapultImpact_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.8"
+        }
+      ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'VisEffectCatapultImpact_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.7"
       }
     }
   },
@@ -134,7 +210,7 @@
     "Type": "VisEffectCatapultImpact_C",
     "Name": "Default__VisEffectCatapultImpact_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.VisEffectCatapultImpact_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__VisEffectCatapultImpact_C:ArrowComponent'",
@@ -146,15 +222,15 @@
       },
       "NiagaraComponent": {
         "ObjectName": "NiagaraComponent'Default__VisEffectCatapultImpact_C:NiagaraComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.5"
       },
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__VisEffectCatapultImpact_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.10"
       },
       "LifetimeDataComponent": {
         "ObjectName": "LifetimeDataComponent'Default__VisEffectCatapultImpact_C:LifetimeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisEffectCatapultImpact.4"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__VisEffectCatapultImpact_C:ArrowComponent'",

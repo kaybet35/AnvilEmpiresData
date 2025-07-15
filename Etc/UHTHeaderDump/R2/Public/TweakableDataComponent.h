@@ -32,7 +32,7 @@ public:
     bool bClientsUseVisActorPool;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bSiegeDemoActive;
+    float bGlobalMaxVelocity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 ForcedTimeOfDayNormalized;

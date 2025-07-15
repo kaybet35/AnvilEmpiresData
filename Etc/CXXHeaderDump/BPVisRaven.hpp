@@ -3,9 +3,9 @@
 
 class ABPVisRaven_C : public AVisAnimal
 {
-    class USkeletalMeshComponent* Fur;                                                // 0x0520 (size: 0x8)
+    class USkeletalMeshComponent* Fur;                                                // 0x0538 (size: 0x8)
 
     void UserConstructionScript();
-}; // Size: 0x528
+}; // Size: 0x540
 
 #endif

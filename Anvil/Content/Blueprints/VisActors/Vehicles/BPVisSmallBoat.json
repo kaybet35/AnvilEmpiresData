@@ -206,7 +206,6 @@
         "SourceString": "Built in water and used to traverse lakes and rivers",
         "LocalizedString": "Built in water and used to traverse lakes and rivers"
       },
-      "PositionSmoothSpeed": 4.0,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisSmallBoat_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.1"
@@ -4262,7 +4261,15 @@
         "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatSmall_SK.0"
       },
       "bReceivesDecals": false,
-      "bAffectDistanceFieldLighting": false
+      "bAffectDistanceFieldLighting": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": []
+        }
+      }
     }
   },
   {

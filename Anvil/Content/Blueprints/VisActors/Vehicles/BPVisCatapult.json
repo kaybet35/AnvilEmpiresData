@@ -13,6 +13,10 @@
     "Class": "UScriptClass'AudioComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'RamMove_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Ram/RamMove_Cue.0"
+      },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisCatapult_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.0"
@@ -179,7 +183,6 @@
         "SourceString": "Built exclusively in camps\r\nUses Catapult Boulders",
         "LocalizedString": "Built exclusively in camps\r\nUses Catapult Boulders"
       },
-      "PositionSmoothSpeed": 4.0,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisCatapult_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCatapult.0"
@@ -442,6 +445,14 @@
         "ObjectPath": "Anvil/Content/Meshes/Vehicles/Catapult_SK.0"
       },
       "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": []
+        }
+      },
       "RelativeLocation": {
         "X": -215.0,
         "Y": 0.0,

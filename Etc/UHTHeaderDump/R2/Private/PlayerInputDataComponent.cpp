@@ -8,8 +8,7 @@ UPlayerInputDataComponent::UPlayerInputDataComponent(const FObjectInitializer& O
     this->AimArcX0 = 0.00f;
     this->AimArcGroundHitDistance = 0.00f;
     this->AimArcCollisionDistance = 0.00f;
-    this->CurrentUsableEntityId = 0;
-    this->CurrentMountableEntityId = 0;
+    this->MinRangedDistance = 0.00f;
     this->CurrentCollectableResourceType = 0;
     this->UsePrompt = 0;
     this->VehicleInput = EAnvilVehicleInputState::Idle;

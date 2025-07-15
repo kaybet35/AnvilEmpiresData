@@ -3,6 +3,7 @@
 #include "VisStructure.h"
 #include "VisDryingRack.generated.h"
 
+class UDryingRackDataComponent;
 class UDryingRackProxyComponent;
 class UMaterialInstanceDynamic;
 class UStaticMeshComponent;
@@ -20,6 +21,9 @@ public:
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDryingRackProxyComponent* DryingRackProxy;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UDryingRackDataComponent* DryingRackDataComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInstanceDynamic* DryingItemMeshMaterial;

@@ -14,11 +14,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisOilFlaskProjectile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.9"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisPickupItem'",
+      "ObjectName": "Class'VisProjectile'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
@@ -41,17 +41,6 @@
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
           "ObjectName": "Class'SkeletalMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "DefaultSceneRoot",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'SceneComponent'",
           "ObjectPath": "/Script/Engine"
         }
       }
@@ -77,20 +66,16 @@
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.BPVisOilFlaskProjectile_C'",
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "PickupDataComponent": {
-        "ObjectName": "PickupDataComponent'Default__BPVisOilFlaskProjectile_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.5"
-      },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisOilFlaskProjectile_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.11"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisOilFlaskProjectile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.0"
       },
-      "LootMarkerVFXComponent": {
-        "ObjectName": "NiagaraComponent'Default__BPVisOilFlaskProjectile_C:LootMarkerVFX'",
+      "ProjectileMovementDataComponent": {
+        "ObjectName": "ProjectileMovementDataComponent'Default__BPVisOilFlaskProjectile_C:ProjectileMovementDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.4"
       },
       "VisDisplayName": {
@@ -130,24 +115,10 @@
     }
   },
   {
-    "Type": "NiagaraComponent",
-    "Name": "LootMarkerVFX",
+    "Type": "ProjectileMovementDataComponent",
+    "Name": "ProjectileMovementDataComponent",
     "Outer": "Default__BPVisOilFlaskProjectile_C",
-    "Class": "UScriptClass'NiagaraComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "OverrideParameters": {},
-      "AttachParent": {
-        "ObjectName": "ArrowComponent'Default__BPVisOilFlaskProjectile_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.0"
-      }
-    }
-  },
-  {
-    "Type": "PickupDataComponent",
-    "Name": "PickupDataComponent",
-    "Outer": "Default__BPVisOilFlaskProjectile_C",
-    "Class": "UScriptClass'PickupDataComponent'",
+    "Class": "UScriptClass'ProjectileMovementDataComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
@@ -170,7 +141,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisOilFlaskProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.5"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -209,14 +180,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisOilFlaskProjectile_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.10"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisOilFlaskProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.8"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.7"
         }
       ],
       "VariableGuid": "16DA5995-4497C063-7031CD88-BB8CA241",
@@ -233,22 +204,22 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisOilFlaskProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.8"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisOilFlaskProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.9"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.8"
         },
         {
           "ObjectName": "SCS_Node'BPVisOilFlaskProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.8"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.7"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisOilFlaskProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisOilFlaskProjectile.6"
       }
     }
   },

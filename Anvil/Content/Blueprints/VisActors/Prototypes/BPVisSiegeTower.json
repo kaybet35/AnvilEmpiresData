@@ -1,0 +1,1494 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisSiegeTower_C",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "MovementAudioComponent",
+    "Outer": "Default__BPVisSiegeTower_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'SiegeTowerMove_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/SiegeTower/SiegeTowerMove_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSiegeTower_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisSiegeTower_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.47"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisSiegeTower'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "NiagaraLaddersAudioPosition",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NiagaraDrawbridgeAudioPosition",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NiagaraLadderImpact_Right",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NiagaraLadderImpact_Left",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NiagaraLadderImpact_Mid",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NiagaraDrawbridgeImpact",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Winch",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SiegeTowerMidFloor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Decal",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Decal1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SiegeTowerTopFloor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Decal2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DrawBridge",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MeshVisibilityData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MeshVisibilityDataComponent'",
+          "ObjectPath": "/Script/R2"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SkeletalMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisSiegeTower_C'Default__BPVisSiegeTower_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisSiegeTower_C",
+    "Name": "Default__BPVisSiegeTower_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.BPVisSiegeTower_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VehicleMovementDataComponent": {
+        "ObjectName": "VehicleMovementDataComponent'Default__BPVisSiegeTower_C:VehicleMovementDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.53"
+      },
+      "EntityAttachableDataComponent": {
+        "ObjectName": "EntityAttachableDataComponent'Default__BPVisSiegeTower_C:EntityAttachableDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.7"
+      },
+      "MoveLoopAudioComponent": {
+        "ObjectName": "AudioComponent'Default__BPVisSiegeTower_C:MovementAudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.1"
+      },
+      "MoveLoopParticleSystem": {
+        "ObjectName": "NiagaraComponent'Default__BPVisSiegeTower_C:MovementParticleSystem'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.22"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisSiegeTower_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.8"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSiegeTower_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.0"
+      },
+      "UseWindowType": "EHUDWindowType::GenericStructure",
+      "bNightVisibility": false,
+      "InteractionIcon": {
+        "ObjectName": "Texture2D'SiegeTowerIcon'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Vehicles/SiegeTowerIcon.0"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "06D1D082401DC2F1B3DC4688EA08CF16",
+        "SourceString": "Siege Tower",
+        "LocalizedString": "Siege Tower"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "F3C2C9404C08A2F3BCD5E4A32A64EA89",
+        "SourceString": "A large mobile platform used to breach the enemy forts. The tower can carry soldiers to the walls of an enemy fort and a ramp can be deployed onto it, allowing attackers to cross over.",
+        "LocalizedString": "A large mobile platform used to breach the enemy forts. The tower can carry soldiers to the walls of an enemy fort and a ramp can be deployed onto it, allowing attackers to cross over."
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSiegeTower_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.0"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal1_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'DecalDirtStrong5Square'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/DecalDirtStrong5Square.0"
+      },
+      "DecalSize": {
+        "X": 5.0,
+        "Y": 161.51,
+        "Z": 281.8935
+      },
+      "RelativeLocation": {
+        "X": 97.0124,
+        "Y": -3.271351E-07,
+        "Z": 1242.6804
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal2_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'DecalDirtStrong5Square'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/DecalDirtStrong5Square.0"
+      },
+      "DecalSize": {
+        "X": 10.0,
+        "Y": 161.51,
+        "Z": 281.8935
+      },
+      "RelativeLocation": {
+        "X": 380.91977,
+        "Y": -3.2275615E-08,
+        "Z": 1229.9662
+      },
+      "RelativeRotation": {
+        "Pitch": 4.485655,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 0.7095026,
+        "Z": 0.83725697
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'DecalDirtStrong5Square'",
+        "ObjectPath": "Anvil/Content/Materials/Decals/DecalDirtStrong5Square.0"
+      },
+      "DecalSize": {
+        "X": 5.0,
+        "Y": 137.9045,
+        "Z": 407.5
+      },
+      "RelativeLocation": {
+        "X": -18.999336,
+        "Y": -9.111203E-08,
+        "Z": 993.34375
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "EntityAttachableDataComponent",
+    "Name": "EntityAttachableDataComponent",
+    "Outer": "Default__BPVisSiegeTower_C",
+    "Class": "UScriptClass'EntityAttachableDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisSiegeTower_C",
+    "Class": "UScriptClass'HealthDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MeshVisibilityDataComponent",
+    "Name": "MeshVisibilityData_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'MeshVisibilityDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara1_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SiegeTower01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SiegeTower01.12"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": -415.0,
+        "Y": -161.0,
+        "Z": 17.0
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara2_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SiegeTower01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SiegeTower01.12"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": -415.0,
+        "Y": 164.0,
+        "Z": 17.0
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara3_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SiegeTower01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SiegeTower01.12"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": 415.0,
+        "Y": -154.0,
+        "Z": 13.0
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara4_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SiegeTower01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SiegeTower01.12"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": -6.0,
+        "Y": 146.0,
+        "Z": 13.0
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara5_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SiegeTower01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SiegeTower01.12"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": -8.0,
+        "Y": -154.0,
+        "Z": 13.0
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SiegeTower01'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SiegeTower01.12"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": 415.0,
+        "Y": 146.0,
+        "Z": 13.0
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraDrawbridgeAudioPosition_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SiegeTowerRamp'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SiegeTowerRamp.26"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": 37.501095,
+        "Y": 1.364242E-12,
+        "Z": 1338.0204
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraDrawbridgeImpact_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SiegeTower03Impact'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SiegeTower03Impact.27"
+      },
+      "OverrideParameters": {},
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraLadderImpact_Left_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SiegeTower03'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SiegeTower03.12"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": -560.0,
+        "Y": -100.0,
+        "Z": 45.0
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraLadderImpact_Mid_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SiegeTower03'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SiegeTower03.12"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": -560.0,
+        "Y": 0.0,
+        "Z": 45.0
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraLadderImpact_Right_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SiegeTower03'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SiegeTower03.12"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": -560.0,
+        "Y": 100.0,
+        "Z": 45.0
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraLaddersAudioPosition_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'SiegeTowerLadderDeploy'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/SiegeTowerLadderDeploy.6"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": -523.07935,
+        "Y": 7.870227E-08,
+        "Z": 660.9836
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "MovementParticleSystem",
+    "Outer": "Default__BPVisSiegeTower_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisSiegeTower_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.0"
+      },
+      "RelativeLocation": {
+        "X": 477.0,
+        "Y": -153.0,
+        "Z": 29.0
+      },
+      "bAutoActivate": true
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisSiegeTower_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.23"
+      },
+      "VariableGuid": "D82AE2A8-4A510B7D-C2FEF0B1-49C05F96",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisSiegeTower_C:SkeletalMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.49"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.38"
+        }
+      ],
+      "VariableGuid": "CCFAEB4B-428069DF-1DB160AA-175C147B",
+      "InternalVariableName": "SkeletalMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisSiegeTower_C:SiegeTowerMidFloor_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.51"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.41"
+        }
+      ],
+      "VariableGuid": "3E8CBF2B-4345CA89-448A82AA-C49C62EF",
+      "InternalVariableName": "SiegeTowerMidFloor"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisSiegeTower_C:Niagara1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.10"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F677A86E-4C0979E4-B1570BA8-6019CC3E",
+      "InternalVariableName": "Niagara1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisSiegeTower_C:Niagara2_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.11"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F913B983-42957BA5-6781A8BF-92D20097",
+      "InternalVariableName": "Niagara2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisSiegeTower_C:Niagara3_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.12"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "978BD3C1-4F00982D-DEFE1B93-D1CD4E99",
+      "InternalVariableName": "Niagara3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_14",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisSiegeTower_C:Niagara4_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.13"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "ED95E679-4A9AD48E-950398B2-B60E4B41",
+      "InternalVariableName": "Niagara4"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_15",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisSiegeTower_C:Niagara5_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.14"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "4E858EB7-44522B5B-742645A9-4862D5ED",
+      "InternalVariableName": "Niagara5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_16",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisSiegeTower_C:NiagaraDrawbridgeImpact_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.17"
+      },
+      "AttachToName": "S_DrawBridgeTip",
+      "MetaDataArray": [
+        {
+          "DataKey": "tooltip",
+          "DataValue": "drawbridge impact"
+        }
+      ],
+      "VariableGuid": "D75FE464-44AFEA8C-F669B397-F5CD02E1",
+      "InternalVariableName": "NiagaraDrawbridgeImpact"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_17",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisSiegeTower_C:NiagaraLadderImpact_Mid_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.19"
+      },
+      "VariableGuid": "F9F6E002-46703B86-EF7E77A1-9A3148D4",
+      "InternalVariableName": "NiagaraLadderImpact_Mid"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_18",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisSiegeTower_C:NiagaraLadderImpact_Left_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.18"
+      },
+      "VariableGuid": "922B8903-4B958ED5-DAD8778F-B4A9C3A7",
+      "InternalVariableName": "NiagaraLadderImpact_Left"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_19",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisSiegeTower_C:NiagaraLadderImpact_Right_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.20"
+      },
+      "VariableGuid": "B8E0EF64-4915DC4C-DE962797-CCB0BDAA",
+      "InternalVariableName": "NiagaraLadderImpact_Right"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisSiegeTower_C:Winch_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.50"
+      },
+      "VariableGuid": "CAD1F89D-4E9FD323-EA8890BE-45020CA5",
+      "InternalVariableName": "Winch"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_20",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisSiegeTower_C:NiagaraDrawbridgeAudioPosition_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.16"
+      },
+      "VariableGuid": "A85B5740-4620CDC2-EA6CCDBF-60A5FB9D",
+      "InternalVariableName": "NiagaraDrawbridgeAudioPosition"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_21",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisSiegeTower_C:NiagaraLaddersAudioPosition_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.21"
+      },
+      "VariableGuid": "15895B18-45CA88C2-66D187A3-88CB0531",
+      "InternalVariableName": "NiagaraLaddersAudioPosition"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BPVisSiegeTower_C:Niagara_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.15"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "8775A200-47488508-5CD499A8-7B18794D",
+      "InternalVariableName": "Niagara"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MeshVisibilityDataComponent'",
+        "ObjectPath": "/Script/R2"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MeshVisibilityDataComponent'BPVisSiegeTower_C:MeshVisibilityData_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.9"
+      },
+      "VariableGuid": "AE6F9347-4CA6DB9D-1E941DBB-922A82AB",
+      "InternalVariableName": "MeshVisibilityData"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPVisSiegeTower_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.6"
+      },
+      "VariableGuid": "92589833-4F969D0E-641E16B7-3D17F779",
+      "InternalVariableName": "Decal"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPVisSiegeTower_C:Decal1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.4"
+      },
+      "VariableGuid": "58E7461E-4D8C86D8-8B66BD9E-75EC6DDD",
+      "InternalVariableName": "Decal1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisSiegeTower_C:DrawBridge_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.48"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.44"
+        }
+      ],
+      "VariableGuid": "EF32FB58-41A182FA-C2A0FD81-44638CAC",
+      "InternalVariableName": "DrawBridge"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPVisSiegeTower_C:Decal2_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.5"
+      },
+      "VariableGuid": "99D511DC-4F5F946F-C2EBE0BE-3102C6A1",
+      "InternalVariableName": "Decal2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisSiegeTower_C:SiegeTowerTopFloor_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.52"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.42"
+        }
+      ],
+      "VariableGuid": "30017709-4CAAAFE6-87593797-356BCBDB",
+      "InternalVariableName": "SiegeTowerTopFloor"
+    }
+  },
+  {
+    "Type": "SiegeTowerDataComponent",
+    "Name": "SiegeTowerDataComponent",
+    "Outer": "Default__BPVisSiegeTower_C",
+    "Class": "UScriptClass'SiegeTowerDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.31"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.38"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisSiegeTower_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Prototypes/BPVisSiegeTower.24"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "DrawBridge_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+      },
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SiegeTowerDrawBridge_Sk'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/SiegeTowerDrawBridge_Sk.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SiegeTowerDrawBridge_Sk'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/SiegeTowerDrawBridge_Sk.0"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": []
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMesh_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+      },
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'SiegeTower_DeployedOpen_POSE'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_DeployedOpen_POSE.0"
+        }
+      },
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SiegeTower_Sk'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/SiegeTower_Sk.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SiegeTower_Sk'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/SiegeTower_Sk.0"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": []
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Winch_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'SiegeTower_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/SiegeTower/SiegeTower_ABP.0"
+      },
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SiegeTowerWinch_Sk'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/SiegeTowerWinch_Sk.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SiegeTowerWinch_Sk'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/SiegeTowerWinch_Sk.0"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": []
+        }
+      },
+      "ComponentTags": [
+        "ToggleVisibility"
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SiegeTowerMidFloor_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SiegeTowerMidFloor'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/SiegeTowerMidFloor.2"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SiegeTowerTopFloor_GEN_VARIABLE",
+    "Outer": "BPVisSiegeTower_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SiegeTowerTopFloor'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/SiegeTowerTopFloor.2"
+      },
+      "ComponentTags": [
+        "ToggleVisibility"
+      ]
+    }
+  },
+  {
+    "Type": "VehicleMovementDataComponent",
+    "Name": "VehicleMovementDataComponent",
+    "Outer": "Default__BPVisSiegeTower_C",
+    "Class": "UScriptClass'VehicleMovementDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  }
+]

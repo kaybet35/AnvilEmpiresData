@@ -35,7 +35,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisTownCraftingTable_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.35"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.37"
       }
     },
     "SuperStruct": {
@@ -43,6 +43,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CraftingTableCollapsed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "VisStaticMesh4",
@@ -56,7 +67,7 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "VisStaticMesh",
+        "Name": "CraftingTableUnCollapsed",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -287,41 +298,46 @@
     "Properties": {
       "RefineResourceDataComponent": {
         "ObjectName": "RefineResourceDataComponent'Default__BPVisTownCraftingTable_C:RefineResourceDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.12"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisTownCraftingTable_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.41"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.43"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconCraftingStation'",
         "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconCraftingStation.0"
       },
       "BuildSiteCategory": "EBuildSiteCategory::Settlement",
-      "SupportedVisualComponents": 2,
+      "BuildSiteVisibility": "EBuildSiteVisibility::AdminOnly",
+      "SupportedVisualComponents": 258,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisTownCraftingTable_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.40"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.42"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisTownCraftingTable_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.8"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisTownCraftingTable_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.39"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.41"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisTownCraftingTable_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.38"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.40"
+      },
+      "CollapsibleDataComponent": {
+        "ObjectName": "CollapsibleDataComponent'Default__BPVisTownCraftingTable_C:CollapsibleDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.4"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisTownCraftingTable_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.14"
       },
       "DecayDataComponent": {
         "ObjectName": "DecayDataComponent'Default__BPVisTownCraftingTable_C:DecayDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.6"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisTownCraftingTable_C:ArrowComponent'",
@@ -329,11 +345,11 @@
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisTownCraftingTable_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.5"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisTownCraftingTable_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.7"
       },
       "MapIconProperty": {
         "Icon": {
@@ -366,6 +382,13 @@
     }
   },
   {
+    "Type": "CollapsibleDataComponent",
+    "Name": "CollapsibleDataComponent",
+    "Outer": "Default__BPVisTownCraftingTable_C",
+    "Class": "UScriptClass'CollapsibleDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
     "Type": "DecalComponent",
     "Name": "UseVolumeDecalComponent",
     "Outer": "Default__BPVisTownCraftingTable_C",
@@ -394,7 +417,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisTownCraftingTable_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.36"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.38"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisTownCraftingTable_C:ArrowComponent'",
@@ -671,7 +694,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisTownCraftingTable_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.13"
       },
       "VariableGuid": "474011EA-441ED950-EC1510B2-F76774BE",
       "InternalVariableName": "DefaultSceneRoot"
@@ -690,34 +713,34 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.47"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.51"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.18"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.19"
         },
         {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.29"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.30"
         },
         {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.32"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.33"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_8'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.34"
         },
         {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.36"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.16"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.17"
         }
       ],
       "VariableGuid": "F4AF7379-4915C2C3-1B9F54A7-2A8AA321",
@@ -737,7 +760,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh7_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.53"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.57"
       },
       "VariableGuid": "D0151302-463922FB-B49FCAAF-20AF75B9",
       "InternalVariableName": "VisStaticMesh7"
@@ -756,14 +779,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh5_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.51"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.55"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_20'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.19"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.20"
         }
       ],
       "VariableGuid": "0127C43F-45B49D5A-C1E7DABA-C65A6CAA",
@@ -783,7 +806,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh8_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.54"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.58"
       },
       "VariableGuid": "0FD4DC06-47184671-4B205684-F6E70B3E",
       "InternalVariableName": "VisStaticMesh8"
@@ -802,7 +825,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisTownCraftingTable_C:WaterPlane1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.37"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.39"
       },
       "VariableGuid": "7CF5C950-46DFFC92-AE8BD58A-7CD4A69B",
       "InternalVariableName": "WaterPlane1"
@@ -821,7 +844,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh15_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.46"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.50"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -842,14 +865,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh3_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.49"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.53"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_23'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.22"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.23"
         }
       ],
       "VariableGuid": "51494852-4906B4C3-3391E783-E2DB9193",
@@ -869,7 +892,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisTownCraftingTable_C:SmokeStack_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.10"
       },
       "VariableGuid": "2BAFB3A5-4F482388-EF9FF3B4-5EE7C6F1",
       "InternalVariableName": "SmokeStack"
@@ -909,18 +932,18 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh12_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.44"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.48"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.25"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.26"
         },
         {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_27'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.26"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.27"
         }
       ],
       "VariableGuid": "716F4C72-4DA38D4D-B97E83A4-A0E20C2D",
@@ -940,7 +963,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh13_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.45"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.49"
       },
       "VariableGuid": "FF7DA4CF-4F54B89B-19D5C4AD-616F23B5",
       "InternalVariableName": "VisStaticMesh13"
@@ -959,7 +982,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisTownCraftingTable_C:Niagara_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.9"
       },
       "VariableGuid": "9B335F4D-4AF07E7F-24E6E3B5-32F187F5",
       "InternalVariableName": "Niagara"
@@ -978,14 +1001,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.48"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.52"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_29'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.28"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.29"
         }
       ],
       "VariableGuid": "9844309A-4A0FAA10-7E4118BC-02BD15EA",
@@ -1005,7 +1028,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BPVisTownCraftingTable_C:WorkshopFire_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.11"
       },
       "VariableGuid": "BFAEE53E-486E9C77-1A18E3A8-993CE0E6",
       "InternalVariableName": "WorkshopFire"
@@ -1024,7 +1047,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh9_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.55"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.59"
       },
       "VariableGuid": "0E14C83F-4EF6E728-A18B2EB1-3A3756F2",
       "InternalVariableName": "VisStaticMesh9"
@@ -1042,13 +1065,13 @@
         "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.56"
+        "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:CraftingTableUnCollapsed_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.45"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "8019719E-407A2229-EE782594-20889FD3",
-      "InternalVariableName": "VisStaticMesh"
+      "InternalVariableName": "CraftingTableUnCollapsed"
     }
   },
   {
@@ -1064,12 +1087,33 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh4_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.50"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.54"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "754D8D59-4A8C9A6D-673A879A-A683ACD3",
       "InternalVariableName": "VisStaticMesh4"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:CraftingTableCollapsed_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.44"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "BEF9B47F-44498AB2-607784A2-81CBFA6B",
+      "InternalVariableName": "CraftingTableCollapsed"
     }
   },
   {
@@ -1085,7 +1129,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh10_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.42"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.46"
       },
       "VariableGuid": "497990C4-4867ED9D-B4FFF0BE-07FCA85D",
       "InternalVariableName": "VisStaticMesh10"
@@ -1104,7 +1148,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh11_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.43"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.47"
       },
       "VariableGuid": "E9D544A9-449FD536-4A16E7BE-EAAE13B3",
       "InternalVariableName": "VisStaticMesh11"
@@ -1123,7 +1167,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownCraftingTable_C:VisStaticMesh6_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.52"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.56"
       },
       "VariableGuid": "35802C6F-4A447D85-23D6F8BC-AD16E679",
       "InternalVariableName": "VisStaticMesh6"
@@ -1139,126 +1183,134 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.16"
         },
         {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.17"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.18"
         },
         {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_21'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_22'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.21"
         },
         {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_24'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.23"
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.22"
         },
         {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_24'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.24"
         },
         {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.25"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_28'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.27"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.28"
         },
         {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_30'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.30"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.31"
         },
         {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_31'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.31"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.33"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.15"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.18"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.29"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.32"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.33"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.34"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.16"
         },
         {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.17"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.19"
         },
         {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_21'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_22'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.21"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_23'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.22"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_24'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_25'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_27'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_28'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_29'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.28"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_30'",
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.30"
         },
         {
-          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_31'",
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_24'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_27'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_28'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_29'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_30'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_31'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.33"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisTownCraftingTable_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.15"
       }
     }
   },
@@ -1335,6 +1387,48 @@
         "ObjectName": "ArrowComponent'Default__BPVisTownCraftingTable_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownCraftingTable.0"
       }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "CraftingTableCollapsed_GEN_VARIABLE",
+    "Outer": "BPVisTownCraftingTable_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'WorkshopT2'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/WorkshopT2.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "ProjectToLandscape",
+        "Collapsed",
+        "ExcludeFromVisActorTemplate",
+        "UseBurntVisualsForCollapsedState"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "CraftingTableUnCollapsed_GEN_VARIABLE",
+    "Outer": "BPVisTownCraftingTable_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'WorkshopT2'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/WorkshopT2.2"
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "ProjectToLandscape",
+        "UnCollapsed"
+      ]
     }
   },
   {
@@ -1746,25 +1840,6 @@
       "ComponentTags": [
         "Refining",
         "Structure"
-      ]
-    }
-  },
-  {
-    "Type": "VisStaticMeshComponent",
-    "Name": "VisStaticMesh_GEN_VARIABLE",
-    "Outer": "BPVisTownCraftingTable_C",
-    "Class": "UScriptClass'VisStaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'WorkshopT2'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/WorkshopT2.2"
-      },
-      "ComponentTags": [
-        "Structure",
-        "Collision",
-        "ProjectToLandscape"
       ]
     }
   }

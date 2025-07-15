@@ -8,12 +8,27 @@
       "MaterialDomain": "EMaterialDomain::MD_DeferredDecal",
       "BlendMode": "EBlendMode::BLEND_Translucent",
       "bCanMaskedBeAssumedOpaque": true,
-      "StateId": "C6839E21-54218E56-9BED93E5-2B18FE98"
+      "StateId": "FB94D277-46DFCE9D-692CA9B2-8D3516D1"
     },
     "LoadedMaterialResources": [],
     "CachedExpressionData": {
       "RuntimeEntries": {
         "ParameterInfoSet": [
+          {
+            "Name": "Metallic",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Spec",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Roughness",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
           {
             "Name": "Noise Levels",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
@@ -30,21 +45,6 @@
             "Index": -1
           },
           {
-            "Name": "Roughness",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          {
-            "Name": "Metallic",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          {
-            "Name": "Spec",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          {
             "Name": "OilTextureTiling",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
@@ -57,6 +57,11 @@
             "Name": "Colour",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
+          },
+          {
+            "Name": "Shape Mask Channel",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
           }
         ]
       },
@@ -67,6 +72,11 @@
         "ParameterInfoSet": [
           {
             "Name": "OilTexture",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Opacity Shape",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           }
@@ -88,15 +98,16 @@
         -1
       ],
       "VectorPrimitiveDataIndexValues": [
+        -1,
         -1
       ],
       "ScalarValues": [
+        0.0,
+        0.3,
+        1.0,
         1.336971,
         615.04047,
         3.458552,
-        1.0,
-        0.0,
-        0.3,
         615.04047
       ],
       "VectorValues": [
@@ -106,12 +117,23 @@
           "B": 0.0,
           "A": 1.0,
           "Hex": "000000"
+        },
+        {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 0.0,
+          "Hex": "00FF00"
         }
       ],
       "DoubleVectorValues": [],
       "TextureValues": [
         {
           "AssetPathName": "/Game/FX/Textures/NoiseMasks/NoiseMask.NoiseMask",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Textures/Masks/Decal512.Decal512",
           "SubPathString": ""
         }
       ],
@@ -128,16 +150,16 @@
           "ObjectPath": "Anvil/Content/Textures/Masks/TilingNoise2048.0"
         },
         {
-          "ObjectName": "Texture2D'Decal512'",
-          "ObjectPath": "Anvil/Content/Textures/Masks/Decal512.0"
-        },
-        {
           "ObjectName": "Texture2D'DefaultDiffuse'",
           "ObjectPath": "Engine/Content/EngineMaterials/DefaultDiffuse.0"
         },
         {
           "ObjectName": "Texture2D'NoiseMask'",
           "ObjectPath": "Anvil/Content/FX/Textures/NoiseMasks/NoiseMask.0"
+        },
+        {
+          "ObjectName": "Texture2D'Decal512'",
+          "ObjectPath": "Anvil/Content/Textures/Masks/Decal512.0"
         }
       ],
       "FunctionInfos": [

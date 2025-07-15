@@ -5,6 +5,7 @@
 UENUM(BlueprintType)
 enum class EBuildSiteCategory : uint8 {
     General,
+    Family,
     Housing,
     Cooking,
     Defenses,

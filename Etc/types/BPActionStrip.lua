@@ -5,6 +5,8 @@
 ---@field ClaimBed UBPBaseActionButton_C
 ---@field ClaimFamilyArea UBPBaseActionButton_C
 ---@field ClaimHouse UBPBaseActionButton_C
+---@field CloseSiegeTowerLadder UBPBaseActionButton_C
+---@field CloseSiegeTowerRamp UBPBaseActionButton_C
 ---@field DeployAsMilitia UBPBaseActionButton_C
 ---@field DeployCamp UBPBaseActionButton_C
 ---@field DeployLadder UBPBaseActionButton_C
@@ -19,6 +21,8 @@
 ---@field FamilyRequestJoin UBPBaseActionButton_C
 ---@field FamilyUnlock UBPBaseActionButton_C
 ---@field GotoSleep UBPBaseActionButton_C
+---@field OpenSiegeTowerLadder UBPBaseActionButton_C
+---@field OpenSiegeTowerRamp UBPBaseActionButton_C
 ---@field PledgeToTown UBPBaseActionButton_C
 ---@field PushLadder UBPBaseActionButton_C
 ---@field ReinforceStructure UBPBaseActionButton_C

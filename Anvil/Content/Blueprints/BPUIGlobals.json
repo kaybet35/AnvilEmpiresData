@@ -902,8 +902,8 @@
             "bRotationFixed": true,
             "bPositionFixed": false,
             "bHasWorldEntityMapIcon": false,
-            "BaseSize": 5.0,
-            "BaseSizeZoomFactor": 1.0,
+            "BaseSize": 4.0,
+            "BaseSizeZoomFactor": 0.5,
             "FontSize": 20.0,
             "FontSizeZoomFactor": 1.0,
             "ZOrder": 99,
@@ -995,6 +995,26 @@
               "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPGenericIcon.4"
             }
           }
+        },
+        {
+          "Key": "EMapIconType::Temple",
+          "Value": {
+            "bRotationFixed": true,
+            "bPositionFixed": false,
+            "bHasWorldEntityMapIcon": false,
+            "BaseSize": 50.0,
+            "BaseSizeZoomFactor": 0.5,
+            "FontSize": 20.0,
+            "FontSizeZoomFactor": 1.0,
+            "ZOrder": 10,
+            "MinDisplayScale": 1.0,
+            "MaxDisplayScale": 10.0,
+            "UpdateRange": 0.0,
+            "IconClass": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'BPGenericIcon_C'",
+              "ObjectPath": "Anvil/Content/UI/Gameplay/MapIcons/BPGenericIcon.4"
+            }
+          }
         }
       ],
       "WorldEntityIconClasses": [
@@ -1045,6 +1065,20 @@
           "Value": {
             "ObjectName": "WidgetBlueprintGeneratedClass'BPFamilySpawnPointMapIcon_C'",
             "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPFamilySpawnPointMapIcon.6"
+          }
+        },
+        {
+          "Key": "EAnvilWorldEntityType::Temple",
+          "Value": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'BPWorldTempleMapIcon_C'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTempleMapIcon.4"
+          }
+        },
+        {
+          "Key": "EAnvilWorldEntityType::Fortress",
+          "Value": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'BPWorldTownCenterMapIcon_C'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldTownCenterMapIcon.30"
           }
         }
       ],
@@ -1166,6 +1200,10 @@
           }
         }
       ],
+      "AcceptUISoundCue": {
+        "ObjectName": "SoundCue'Accept_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/UI/Accept_Cue.0"
+      },
       "RootComponent": null
     }
   },

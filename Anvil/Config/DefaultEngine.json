@@ -46,6 +46,7 @@ r.MinScreenRadiusForLights=0.010000
 r.GenerateMeshDistanceFields=True
 r.AOGlobalDistanceField.NumClipmaps=1
 r.AOGlobalDFClipmapDistanceExponent=1
+r.VirtualTextures=True
 
 [/Script/LuminRuntimeSettings.LuminRuntimeSettings]
 IconModelPath=(Path="")
@@ -95,6 +96,7 @@ PhysXTreeRebuildRate=10
 +PhysicalSurfaces=(Type=SurfaceType14,Name="Rare")
 +PhysicalSurfaces=(Type=SurfaceType15,Name="Road")
 +PhysicalSurfaces=(Type=SurfaceType16,Name="Sand")
++PhysicalSurfaces=(Type=SurfaceType17,Name="PlayerFlesh")
 DefaultBroadphaseSettings=(bUseMBPOnClient=False,bUseMBPOnServer=False,bUseMBPOuterBounds=False,MBPBounds=(Min=(X=0.000000,Y=0.000000,Z=0.000000),Max=(X=0.000000,Y=0.000000,Z=0.000000),IsValid=0),MBPOuterBounds=(Min=(X=0.000000,Y=0.000000,Z=0.000000),Max=(X=0.000000,Y=0.000000,Z=0.000000),IsValid=0),MBPNumSubdivs=2)
 MinDeltaVelocityForHitEvents=0.000000
 ChaosSettings=(DefaultThreadingModel=TaskGraph,DedicatedThreadTickMode=VariableCappedWithTarget,DedicatedThreadBufferMode=Double)
@@ -130,7 +132,7 @@ DefaultRenderRiverSplineDepthsMaterial=/Landmass/Landscape/BlueprintBrushes/Mate
 
 [/Script/Engine.UserInterfaceSettings]
 RenderFocusRule=NavigationOnly
-HardwareCursors=((Default, (CursorPath="Slate/MouseCursor")),(Crosshairs, (CursorPath="Slate/MouseCursorAiming",HotSpot=(X=0.500000,Y=0.500000))))
+HardwareCursors=((Default, (CursorPath="Slate/MouseCursor")),(Crosshairs, (CursorPath="Slate/AimReticleCenter",HotSpot=(X=0.500000,Y=0.500000))))
 SoftwareCursors=()
 ApplicationScale=1.000000
 UIScaleRule=ShortestSide
@@ -222,4 +224,7 @@ bAutoCreateNavigationData=False
 [CrashReportClient]
 CrashReportClientVersion=1.0
 DataRouterUrl="https://o461815.ingest.sentry.io/api/4505710377435136/unreal/ddd20c00af07e90f3394447cc5d71075/"
+
+[/Script/WindowsTargetPlatform.WindowsTargetSettings]
+DefaultGraphicsRHI=DefaultGraphicsRHI_DX12
 

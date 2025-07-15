@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "FactionBanner_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FactionBanner_C'Default__FactionBanner_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/FactionBanner.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "FactionBanner_C",
+    "Name": "Default__FactionBanner_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/FactionBanner.FactionBanner_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CodeNameString": "FactionBanner",
+      "CodeName": -700447056,
+      "ItemTags": [
+        "EAnvilItemTag::PrimaryTool",
+        "EAnvilItemTag::Tool",
+        "EAnvilItemTag::WeaponStorage"
+      ],
+      "ItemDestroyedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'EffectToolBreak_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/EffectToolBreak.0"
+      },
+      "DamageOffset": {
+        "X": 75.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "AdditionalDamageOffsets": [
+        {
+          "X": 75.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        {
+          "X": 75.0,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      ],
+      "ToolType": "EAnvilToolType::Scythe",
+      "StanceOverride": [
+        {
+          "Key": "EAnvilCharacterStance::OnHorse",
+          "Value": {
+            "ObjectName": "BlueprintGeneratedClass'mountedFactionBanner_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/mountedFactionBanner.0"
+          }
+        }
+      ],
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "bChainable": true,
+        "Delay": 0.8,
+        "AdditionalDelays": 0.8,
+        "AdditionalDelays[1]": 0.8,
+        "Duration": 3.2,
+        "AttackChainDurations": 3.2,
+        "AttackChainDurations[1]": 3.2,
+        "MovementSpeedModifier": 0.5,
+        "StaminaCost": 2.0,
+        "AimedStaminaCost": 2.0
+      },
+      "DurabilityLossPerUse": 0.5,
+      "StabilityDamage": 0.0
+    }
+  }
+]

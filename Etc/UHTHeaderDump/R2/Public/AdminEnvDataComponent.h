@@ -30,6 +30,9 @@ public:
     bool bShowLocateCoords;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bDebugCrowdIndentifier;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FStructureStats> StructureStatsList;
     
     UAdminEnvDataComponent(const FObjectInitializer& ObjectInitializer);

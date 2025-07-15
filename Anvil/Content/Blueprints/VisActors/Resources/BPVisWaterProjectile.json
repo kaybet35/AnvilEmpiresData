@@ -32,11 +32,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisWaterProjectile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.12"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisPickupItem'",
+      "ObjectName": "Class'VisProjectile'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
@@ -95,21 +95,17 @@
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.BPVisWaterProjectile_C'",
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "PickupDataComponent": {
-        "ObjectName": "PickupDataComponent'Default__BPVisWaterProjectile_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.7"
-      },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisWaterProjectile_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.13"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisWaterProjectile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.0"
       },
-      "LootMarkerVFXComponent": {
-        "ObjectName": "NiagaraComponent'Default__BPVisWaterProjectile_C:LootMarkerVFX'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.4"
+      "ProjectileMovementDataComponent": {
+        "ObjectName": "ProjectileMovementDataComponent'Default__BPVisWaterProjectile_C:ProjectileMovementDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.6"
       },
       "VisDisplayName": {
         "Namespace": "",
@@ -118,20 +114,6 @@
         "LocalizedString": "Bucket of Water"
       },
       "RootComponent": {
-        "ObjectName": "ArrowComponent'Default__BPVisWaterProjectile_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.0"
-      }
-    }
-  },
-  {
-    "Type": "NiagaraComponent",
-    "Name": "LootMarkerVFX",
-    "Outer": "Default__BPVisWaterProjectile_C",
-    "Class": "UScriptClass'NiagaraComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "OverrideParameters": {},
-      "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisWaterProjectile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.0"
       }
@@ -190,10 +172,10 @@
     }
   },
   {
-    "Type": "PickupDataComponent",
-    "Name": "PickupDataComponent",
+    "Type": "ProjectileMovementDataComponent",
+    "Name": "ProjectileMovementDataComponent",
     "Outer": "Default__BPVisWaterProjectile_C",
-    "Class": "UScriptClass'PickupDataComponent'",
+    "Class": "UScriptClass'ProjectileMovementDataComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
@@ -216,7 +198,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisWaterProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.7"
       },
       "VariableGuid": "4B342544-4EA92D18-4AA0DC97-5DF196EC",
       "InternalVariableName": "DefaultSceneRoot"
@@ -235,7 +217,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ParticleSystemComponent'BPVisWaterProjectile_C:Trail_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.5"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -256,7 +238,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ParticleSystemComponent'BPVisWaterProjectile_C:ParticleSystem_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.4"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -295,34 +277,34 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWaterProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.9"
         },
         {
           "ObjectName": "SCS_Node'BPVisWaterProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.10"
         },
         {
           "ObjectName": "SCS_Node'BPVisWaterProjectile_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.11"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisWaterProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.9"
         },
         {
           "ObjectName": "SCS_Node'BPVisWaterProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.10"
         },
         {
           "ObjectName": "SCS_Node'BPVisWaterProjectile_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.11"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisWaterProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Resources/BPVisWaterProjectile.8"
       }
     }
   },

@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class UBPFamilyInviteDialogWidget_C : UFamilyInviteDialogWidget
----@field Background UImage
+---@field BlackBG UImage
 ---@field BPFamilyInviteDialogPlayerListEntryWidget UBPFamilyInviteDialogPlayerListEntryWidget_C
 ---@field BPFamilyInviteDialogPlayerListEntryWidget_1 UBPFamilyInviteDialogPlayerListEntryWidget_C
 ---@field BPFamilyInviteDialogPlayerListEntryWidget_2 UBPFamilyInviteDialogPlayerListEntryWidget_C

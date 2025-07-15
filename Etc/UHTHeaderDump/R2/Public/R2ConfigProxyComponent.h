@@ -4,6 +4,7 @@
 #include "R2ConfigArea.h"
 #include "R2ConfigBuildSite.h"
 #include "R2ConfigCombustion.h"
+#include "R2ConfigItem.h"
 #include "R2ConfigSignPost.h"
 #include "R2ConfigTradeResources.h"
 #include "R2ConfigProxyComponent.generated.h"
@@ -26,6 +27,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FR2ConfigTradeResources TradeResourcesConfig;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FR2ConfigItem Item;
     
     UR2ConfigProxyComponent();
 

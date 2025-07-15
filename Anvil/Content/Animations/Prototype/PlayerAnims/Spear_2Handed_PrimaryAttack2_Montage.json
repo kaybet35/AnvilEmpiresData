@@ -108,6 +108,52 @@
       "Notifies": [
         {
           "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0001,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'Spear_2Handed_PrimaryAttack2_Montage:AnimNotify_PlaySound_2'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Spear_2Handed_PrimaryAttack2_Montage.2"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Spear_2Handed_PrimaryAttack2_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Spear_2Handed_PrimaryAttack2_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.6377557,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Spear_2Handed_primary_attack02'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Spear_2Handed_primary_attack02.0"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
           "EndTriggerTimeOffset": 0.0,
           "TriggerWeightThreshold": 1E-05,
           "NotifyName": "PlaySound",
@@ -174,6 +220,21 @@
       },
       "bFollow": true,
       "AttachName": "hand_r"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_2",
+    "Outer": "Spear_2Handed_PrimaryAttack2_Montage",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Male01Attack_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/Male01Attack_Cue.0"
+      },
+      "bFollow": true,
+      "AttachName": "head"
     }
   }
 ]

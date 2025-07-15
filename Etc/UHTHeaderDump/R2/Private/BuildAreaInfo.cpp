@@ -2,6 +2,7 @@
 
 FBuildAreaInfo::FBuildAreaInfo() {
     this->TownArea = false;
+    this->FortressArea = false;
     this->TownAreaPledgeRequired = false;
     this->SmallCampArea = false;
     this->LargeCampArea = false;

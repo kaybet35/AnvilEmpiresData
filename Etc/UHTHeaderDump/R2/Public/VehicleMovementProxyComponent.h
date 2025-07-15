@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "EAnvilDamageType.h"
+#include "EAnvilVehicleMovementPlayerInteractionType.h"
 #include "ProxyComponent.h"
 #include "R2FloatRange.h"
 #include "Templates/SubclassOf.h"
@@ -74,6 +75,9 @@ public:
     bool bRammingForceKillPlayer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EAnvilVehicleMovementPlayerInteractionType MovementPlayerInteraction;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEntityTemplate> CollisionEffect;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -99,6 +103,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector RearAxleOffset;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float MaxSubmersionDepth;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FR2FloatRange FallingDistRange;

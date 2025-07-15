@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EAnvilInventoryStackRule.h"
-#include "ItemSlot.h"
+#include "InventorySlot.h"
 #include "ProxyComponent.h"
 #include "InventoryProxyComponent.generated.h"
 
@@ -10,7 +10,7 @@ class R2_API UInventoryProxyComponent : public UProxyComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FItemSlot> Slots;
+    TArray<FInventorySlot> Slots;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUnpackCrates;

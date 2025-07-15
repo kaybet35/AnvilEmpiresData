@@ -37,7 +37,11 @@ EActionButtonType = {
     RentStorehouse = 34,
     ReleaseStorehouse = 35,
     ExtendStorehouse = 36,
-    EActionButtonType_MAX = 37,
+    OpenSiegeTowerRamp = 37,
+    CloseSiegeTowerRamp = 38,
+    OpenSiegeTowerLadder = 39,
+    CloseSiegeTowerLadder = 40,
+    EActionButtonType_MAX = 41,
 }
 
 ---@enum EAlertType
@@ -64,7 +68,8 @@ EAnvilScreenType = {
     FactionSelect = 9,
     ServerSelect = 10,
     DeploymentMap = 11,
-    EAnvilScreenType_MAX = 12,
+    ShardSelector = 12,
+    EAnvilScreenType_MAX = 13,
 }
 
 ---@enum EAnvilSpringArmMode
@@ -75,33 +80,46 @@ EAnvilSpringArmMode = {
     EAnvilSpringArmMode_MAX = 3,
 }
 
+---@enum EBatchedDataRequestType
+EBatchedDataRequestType = {
+    CanPlayerJoinShard = 0,
+    GetProfileInfo = 1,
+    GetServerList = 2,
+    GetShardStatus = 3,
+    GetWinConditionState = 4,
+    GetPlayerFamily = 5,
+    EBatchedDataRequestType_MAX = 6,
+}
+
 ---@enum EBuildSiteCategory
 EBuildSiteCategory = {
     General = 0,
-    Housing = 1,
-    Cooking = 2,
-    Defenses = 3,
-    Vehicles = 4,
-    Lumber = 5,
-    Smithing = 6,
-    Stone = 7,
-    Farming = 8,
-    Water = 9,
-    Industry = 10,
-    Settlement = 11,
-    Foundations = 12,
-    Camp = 13,
-    NumTypes = 14,
-    EBuildSiteCategory_MAX = 15,
+    Family = 1,
+    Housing = 2,
+    Cooking = 3,
+    Defenses = 4,
+    Vehicles = 5,
+    Lumber = 6,
+    Smithing = 7,
+    Stone = 8,
+    Farming = 9,
+    Water = 10,
+    Industry = 11,
+    Settlement = 12,
+    Foundations = 13,
+    Camp = 14,
+    NumTypes = 15,
+    EBuildSiteCategory_MAX = 16,
 }
 
 ---@enum EBuildSiteVisibility
 EBuildSiteVisibility = {
     AlwaysVisible = 0,
-    PlayInEditorOnly = 1,
-    Never = 2,
-    NumTypes = 3,
-    EBuildSiteVisibility_MAX = 4,
+    AdminOnly = 1,
+    PlayInEditorOnly = 2,
+    Never = 3,
+    NumTypes = 4,
+    EBuildSiteVisibility_MAX = 5,
 }
 
 ---@enum EClientConfigDownloadTaskState
@@ -146,7 +164,8 @@ EConnectionFailedReason = {
     AnvilServiceVersionMismatch = 5,
     AnvilServiceLoginInvalidParams = 6,
     AnvilServiceInvalidAgePhaseToConnect = 7,
-    EConnectionFailedReason_MAX = 8,
+    TooSoonToConnect = 8,
+    EConnectionFailedReason_MAX = 9,
 }
 
 ---@enum EDeploymentPointTooltipType
@@ -154,13 +173,15 @@ EDeploymentPointTooltipType = {
     None = 0,
     Wild = 1,
     TownCenterMilitia = 2,
-    CampMilitia = 3,
-    SmallCampMilitia = 4,
-    TownCenter = 5,
-    FamilyCenter = 6,
-    Camp = 7,
-    SmallCamp = 8,
-    EDeploymentPointTooltipType_MAX = 9,
+    FortressMilitia = 3,
+    CampMilitia = 4,
+    SmallCampMilitia = 5,
+    TownCenter = 6,
+    Fortress = 7,
+    FamilyCenter = 8,
+    Camp = 9,
+    SmallCamp = 10,
+    EDeploymentPointTooltipType_MAX = 11,
 }
 
 ---@enum EEquippedItemGripType
@@ -182,7 +203,8 @@ EEquippedItemGripType = {
     Axe = 14,
     LargeArrow = 15,
     Pike = 16,
-    EEquippedItemGripType_MAX = 17,
+    VerticalBanner = 17,
+    EEquippedItemGripType_MAX = 18,
 }
 
 ---@enum EFishingBobberState
@@ -302,7 +324,8 @@ EMapIconType = {
     FamilyMarker = 17,
     FamilyCenter = 18,
     WorldEntrance = 19,
-    EMapIconType_MAX = 20,
+    Temple = 20,
+    EMapIconType_MAX = 21,
 }
 
 ---@enum EMapMode
@@ -354,6 +377,15 @@ EQueueType = {
     Admin = 3,
     NumTypes = 4,
     EQueueType_MAX = 5,
+}
+
+---@enum EShardPopulationType
+EShardPopulationType = {
+    Low = 0,
+    Medium = 1,
+    High = 2,
+    Full = 3,
+    EShardPopulationType_MAX = 4,
 }
 
 ---@enum ESimpleTooltip

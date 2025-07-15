@@ -1,8 +1,8 @@
 ---@meta
 
 ---@class ABPVisGridFoundationWallFlatStraight_T2_C : AVisStructure
----@field ChildActor1 UChildActorComponent
----@field ChildActor2 UChildActorComponent
+---@field VisDynamicMeshTemplateReference1 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference UVisDynamicMeshTemplateReferenceComponent
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor2 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor UVisFoundationEdgeMeshDecorComponent

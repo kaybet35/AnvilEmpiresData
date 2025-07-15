@@ -6,6 +6,7 @@
     "Class": "UScriptClass'Border'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "Padding": {
         "Left": 0.0,
         "Top": 0.0,
@@ -13,14 +14,20 @@
         "Bottom": 0.0
       },
       "Background": {
-        "TintColor": {
-          "SpecifiedColor": {
-            "R": 0.011765,
-            "G": 0.011765,
-            "B": 0.007843,
-            "A": 0.6,
-            "Hex": "991C1C15"
-          }
+        "DrawAs": "ESlateBrushDrawType::Border",
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Dialog'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/Dialog.0"
         }
       },
       "Slots": [
@@ -48,6 +55,7 @@
         "Right": 0.0,
         "Bottom": 0.0
       },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "Parent": {
         "ObjectName": "Border'BPConnectScreen_C:WidgetTree.Border_96'",
         "ObjectPath": "Anvil/Content/UI/BPConnectScreen.0"
@@ -76,8 +84,8 @@
         "LocalizedString": "BACK"
       },
       "LabelFontSize": 16,
-      "ButtonWidth": 120.0,
-      "ButtonHeight": 40.0,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPConnectScreen_C:WidgetTree.HorizontalBox_310.HorizontalBoxSlot_2'",
         "ObjectPath": "Anvil/Content/UI/BPConnectScreen.15"
@@ -102,8 +110,8 @@
         "LocalizedString": "CONNECT"
       },
       "LabelFontSize": 16,
-      "ButtonWidth": 120.0,
-      "ButtonHeight": 40.0,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPConnectScreen_C:WidgetTree.HorizontalBox_310.HorizontalBoxSlot_4'",
         "ObjectPath": "Anvil/Content/UI/BPConnectScreen.16"
@@ -128,8 +136,8 @@
         "LocalizedString": "REFRESH"
       },
       "LabelFontSize": 16,
-      "ButtonWidth": 120.0,
-      "ButtonHeight": 40.0,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPConnectScreen_C:WidgetTree.HorizontalBox_310.HorizontalBoxSlot_5'",
         "ObjectPath": "Anvil/Content/UI/BPConnectScreen.17"
@@ -234,9 +242,7 @@
     "Properties": {
       "LayoutData": {
         "Offsets": {
-          "Top": 58.64466,
-          "Right": 460.0,
-          "Bottom": 160.0
+          "Top": 60.0
         },
         "Anchors": {
           "Minimum": {
@@ -582,7 +588,7 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Size": {
-        "X": 30.0,
+        "X": 15.0,
         "Y": 1.0
       },
       "Slot": {
@@ -599,7 +605,7 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Size": {
-        "X": 30.0,
+        "X": 15.0,
         "Y": 1.0
       },
       "Slot": {

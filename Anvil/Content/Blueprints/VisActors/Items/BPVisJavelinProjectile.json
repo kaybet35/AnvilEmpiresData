@@ -14,11 +14,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisJavelinProjectile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.7"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisPickupItem'",
+      "ObjectName": "Class'VisProjectile'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
@@ -55,20 +55,16 @@
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.BPVisJavelinProjectile_C'",
     "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "PickupDataComponent": {
-        "ObjectName": "PickupDataComponent'Default__BPVisJavelinProjectile_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.4"
-      },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisJavelinProjectile_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.9"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisJavelinProjectile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.0"
       },
-      "LootMarkerVFXComponent": {
-        "ObjectName": "NiagaraComponent'Default__BPVisJavelinProjectile_C:LootMarkerVFX'",
+      "ProjectileMovementDataComponent": {
+        "ObjectName": "ProjectileMovementDataComponent'Default__BPVisJavelinProjectile_C:ProjectileMovementDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.3"
       },
       "bUseInteractionOutline": true,
@@ -83,24 +79,10 @@
     }
   },
   {
-    "Type": "NiagaraComponent",
-    "Name": "LootMarkerVFX",
+    "Type": "ProjectileMovementDataComponent",
+    "Name": "ProjectileMovementDataComponent",
     "Outer": "Default__BPVisJavelinProjectile_C",
-    "Class": "UScriptClass'NiagaraComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "OverrideParameters": {},
-      "AttachParent": {
-        "ObjectName": "ArrowComponent'Default__BPVisJavelinProjectile_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.0"
-      }
-    }
-  },
-  {
-    "Type": "PickupDataComponent",
-    "Name": "PickupDataComponent",
-    "Outer": "Default__BPVisJavelinProjectile_C",
-    "Class": "UScriptClass'PickupDataComponent'",
+    "Class": "UScriptClass'ProjectileMovementDataComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
@@ -123,7 +105,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisJavelinProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.4"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -142,7 +124,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisJavelinProjectile_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.8"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -160,18 +142,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisJavelinProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.6"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisJavelinProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.6"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisJavelinProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisJavelinProjectile.5"
       }
     }
   },

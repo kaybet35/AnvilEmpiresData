@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABPVisTorchProjectile_C : AVisPickupItem
+---@class ABPVisTorchProjectile_C : AVisProjectile
 ---@field Audio UAudioComponent
 ---@field TorchFire2 UNiagaraComponent
 ---@field SkeletalMesh USkeletalMeshComponent

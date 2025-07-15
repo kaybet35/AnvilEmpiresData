@@ -1,6 +1,14 @@
 ---@meta
 
 ---@class ABPVisGridFoundationSideRampDiagonal_T2_C : AVisStructure
+---@field VisDynamicMeshTemplateReference4 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference3 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference2 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference7 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference5 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference6 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference1 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference UVisDynamicMeshTemplateReferenceComponent
 ---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field VisFoundationEdgeMeshDecor7 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor6 UVisFoundationEdgeMeshDecorComponent
@@ -49,18 +57,8 @@
 ---@field VisRandomMeshDecor45 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor41 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor40 UVisRandomMeshDecorComponent
----@field ChildActor5 UChildActorComponent
----@field ChildActor11 UChildActorComponent
----@field ChildActor12 UChildActorComponent
 ---@field VisRandomMeshDecor3 UVisRandomMeshDecorComponent
----@field ChildActor10 UChildActorComponent
----@field ChildActor6 UChildActorComponent
----@field ChildActor8 UChildActorComponent
 ---@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
----@field ChildActor13 UChildActorComponent
----@field ChildActor16 UChildActorComponent
----@field ChildActor7 UChildActorComponent
----@field ChildActor14 UChildActorComponent
 ---@field VisFoundationBottomMeshDecor1 UVisFoundationBottomMeshDecorComponent
 ---@field VisRandomMeshDecor97 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor98 UVisRandomMeshDecorComponent
@@ -131,8 +129,6 @@
 ---@field VisRandomMeshDecor20 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor25 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor16 UVisRandomMeshDecorComponent
----@field ChildActor1 UChildActorComponent
----@field ChildActor UChildActorComponent
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor3 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor2 UVisFoundationEdgeMeshDecorComponent

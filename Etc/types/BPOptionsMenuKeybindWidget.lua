@@ -28,7 +28,10 @@
 ---@field PushtoTalk UBPAnvilKeyEntryWidget_C
 ---@field Reload UBPAnvilKeyEntryWidget_C
 ---@field RotateCamera UBPAnvilKeyEntryWidget_C
+---@field RotateCameraLeft UBPAnvilKeyEntryWidget_C
+---@field RotateCameraRight UBPAnvilKeyEntryWidget_C
 ---@field RotateStructure UBPAnvilKeyEntryWidget_C
+---@field ToggleVoiceChat UBPAnvilKeyEntryWidget_C
 ---@field Upgrade UBPAnvilKeyEntryWidget_C
 ---@field UseInteract UBPAnvilKeyEntryWidget_C
 UBPOptionsMenuKeybindWidget_C = {}

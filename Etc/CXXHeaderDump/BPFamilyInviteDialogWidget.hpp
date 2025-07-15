@@ -3,7 +3,7 @@
 
 class UBPFamilyInviteDialogWidget_C : public UFamilyInviteDialogWidget
 {
-    class UImage* Background;                                                         // 0x0290 (size: 0x8)
+    class UImage* BlackBG;                                                            // 0x0290 (size: 0x8)
     class UBPFamilyInviteDialogPlayerListEntryWidget_C* BPFamilyInviteDialogPlayerListEntryWidget; // 0x0298 (size: 0x8)
     class UBPFamilyInviteDialogPlayerListEntryWidget_C* BPFamilyInviteDialogPlayerListEntryWidget_1; // 0x02A0 (size: 0x8)
     class UBPFamilyInviteDialogPlayerListEntryWidget_C* BPFamilyInviteDialogPlayerListEntryWidget_2; // 0x02A8 (size: 0x8)

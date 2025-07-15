@@ -21,6 +21,7 @@ UVehicleMovementProxyComponent::UVehicleMovementProxyComponent() {
     this->bUsePitch = true;
     this->bCanBeMovementBase = false;
     this->bRammingForceKillPlayer = false;
+    this->MovementPlayerInteraction = EAnvilVehicleMovementPlayerInteractionType::Ignore;
     this->CollisionEffect = NULL;
     this->RammingDamage = 480.00f;
     this->RammingVelocityFactor = 0.00f;
@@ -28,6 +29,7 @@ UVehicleMovementProxyComponent::UVehicleMovementProxyComponent() {
     this->RammingStabilityDamage = 0.00f;
     this->RammingStabilitySplashDamage = 0.00f;
     this->RammingStabilitySplashDamageRadius = 0.00f;
+    this->MaxSubmersionDepth = 0.80f;
 }
 
 

@@ -26,69 +26,69 @@
     "Properties": {
       "WidgetStyle": {
         "Normal": {
-          "DrawAs": "ESlateBrushDrawType::Image",
+          "DrawAs": "ESlateBrushDrawType::Border",
           "ImageSize": {
-            "X": 173.0,
-            "Y": 48.0
+            "X": 600.0,
+            "Y": 140.0
           },
           "Margin": {
-            "Left": 0.2,
-            "Top": 0.2,
-            "Right": 0.2,
-            "Bottom": 0.2
+            "Left": 0.5,
+            "Top": 0.5,
+            "Right": 0.5,
+            "Bottom": 0.5
           },
           "TintColor": {
             "SpecifiedColor": {
               "R": 1.0,
               "G": 1.0,
               "B": 1.0,
-              "A": 1.0,
-              "Hex": "FFFFFF"
+              "A": 0.6,
+              "Hex": "99FFFFFF"
             }
           },
           "ResourceObject": {
-            "ObjectName": "Texture2D'MarketplaceTabButtonBG'",
-            "ObjectPath": "Anvil/Content/Textures/UI/Marketplace/MarketplaceTabButtonBG.0"
+            "ObjectName": "Texture2D'ButtonBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/ButtonBG.0"
           }
         },
         "Hovered": {
           "DrawAs": "ESlateBrushDrawType::Image",
           "ImageSize": {
-            "X": 173.0,
-            "Y": 48.0
+            "X": 600.0,
+            "Y": 140.0
           },
           "Margin": {
-            "Left": 0.2,
-            "Top": 0.2,
-            "Right": 0.2,
-            "Bottom": 0.2
+            "Left": 0.5,
+            "Top": 0.5,
+            "Right": 0.5,
+            "Bottom": 0.5
           },
           "TintColor": {
             "SpecifiedColor": {
               "R": 1.0,
               "G": 1.0,
               "B": 1.0,
-              "A": 1.0,
-              "Hex": "FFFFFF"
+              "A": 0.95,
+              "Hex": "F3FFFFFF"
             }
           },
           "ResourceObject": {
-            "ObjectName": "Texture2D'MarketplaceTabButtonBGHover'",
-            "ObjectPath": "Anvil/Content/Textures/UI/Marketplace/MarketplaceTabButtonBGHover.0"
+            "ObjectName": "Texture2D'ButtonHover'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/ButtonHover.0"
           },
           "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
         },
         "Pressed": {
           "DrawAs": "ESlateBrushDrawType::Image",
           "ImageSize": {
-            "X": 173.0,
-            "Y": 48.0
+            "X": 600.0,
+            "Y": 140.0
           },
           "Margin": {
-            "Left": 0.2,
-            "Top": 0.2,
-            "Right": 0.2,
-            "Bottom": 0.2
+            "Left": 0.5,
+            "Top": 0.5,
+            "Right": 0.5,
+            "Bottom": 0.5
           },
           "TintColor": {
             "SpecifiedColor": {
@@ -100,23 +100,23 @@
             }
           },
           "ResourceObject": {
-            "ObjectName": "Texture2D'MarketplaceTabButtonBG'",
-            "ObjectPath": "Anvil/Content/Textures/UI/Marketplace/MarketplaceTabButtonBG.0"
+            "ObjectName": "Texture2D'ButtonHover'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/ButtonHover.0"
           },
           "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
         },
         "Disabled": {
-          "DrawAs": "ESlateBrushDrawType::Image",
+          "DrawAs": "ESlateBrushDrawType::Border",
           "ImageType": "ESlateBrushImageType::FullColor",
           "ImageSize": {
-            "X": 173.0,
-            "Y": 48.0
+            "X": 600.0,
+            "Y": 140.0
           },
           "Margin": {
-            "Left": 0.2,
-            "Top": 0.2,
-            "Right": 0.2,
-            "Bottom": 0.2
+            "Left": 0.5,
+            "Top": 0.5,
+            "Right": 0.5,
+            "Bottom": 0.5
           },
           "TintColor": {
             "SpecifiedColor": {
@@ -128,10 +128,16 @@
             }
           },
           "ResourceObject": {
-            "ObjectName": "Texture2D'MarketplaceTabButtonBG'",
-            "ObjectPath": "Anvil/Content/Textures/UI/Marketplace/MarketplaceTabButtonBG.0"
+            "ObjectName": "Texture2D'ButtonBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/ButtonBG.0"
           },
           "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "PressedSlateSound": {
+          "ResourceObject": {
+            "ObjectName": "SoundCue'Accept_Cue'",
+            "ObjectPath": "Anvil/Content/Audio/SFX/UI/Accept_Cue.0"
+          }
         }
       },
       "Slots": [
@@ -288,9 +294,10 @@
     "Class": "UScriptClass'SizeBox'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "WidthOverride": 200.0,
-      "HeightOverride": 50.0,
+      "WidthOverride": 600.0,
+      "HeightOverride": 140.0,
       "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'BPAnvilButtonWidget_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
@@ -359,7 +366,8 @@
           "ObjectName": "Font'Renner-Book_Font'",
           "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
         },
-        "TypefaceFontName": "Default"
+        "TypefaceFontName": "Default",
+        "Size": 14
       },
       "Justification": "ETextJustify::Center",
       "Slot": {

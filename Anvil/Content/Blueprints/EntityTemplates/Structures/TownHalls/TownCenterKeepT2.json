@@ -42,7 +42,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "TownCenterKeepT2_C'Default__TownCenterKeepT2_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.14"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.15"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -71,6 +71,13 @@
         "Z": 1000.0
       }
     }
+  },
+  {
+    "Type": "CollapsibleProxyComponent",
+    "Name": "CollapsibleProxyComponent_0",
+    "Outer": "Default__TownCenterKeepT2_C",
+    "Class": "UScriptClass'CollapsibleProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "DecayProxyComponent",
@@ -136,76 +143,117 @@
       "Slots": [
         {
           "ProxyRepeat": 5,
-          "bOr": false,
-          "HeldItem": null,
-          "bIsHeldItemPublic": true,
-          "Count": 0,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
           "StackLimit": 100,
+          "bOr": false,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
           "AcceptedTags": [
             "EAnvilItemTag::Avatar"
           ],
+          "AcceptedTagsVisVar": 0,
           "RequiredTags": [],
+          "RequiredTagsVisVar": 0,
           "ProhibitedTags": [],
+          "ProhibitedTagsVisVar": 0,
           "DedicatedItemType": null,
-          "DedicatedUnderlyingItemType": null,
-          "bCheckDedicatedUnderlyingItem": true,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
           "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
           "BackgroundType": "EAnvilItemSlotBackgroundType::Avatar",
           "CustomStackLimits": []
         },
         {
           "ProxyRepeat": 1,
-          "bOr": false,
-          "HeldItem": null,
-          "bIsHeldItemPublic": true,
-          "Count": 0,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
           "StackLimit": 30000,
+          "bOr": false,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
           "AcceptedTags": [
             "EAnvilItemTag::Silver"
           ],
+          "AcceptedTagsVisVar": 0,
           "RequiredTags": [],
+          "RequiredTagsVisVar": 0,
           "ProhibitedTags": [],
+          "ProhibitedTagsVisVar": 0,
           "DedicatedItemType": {
             "ObjectName": "BlueprintGeneratedClass'Silver_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
           },
-          "DedicatedUnderlyingItemType": null,
-          "bCheckDedicatedUnderlyingItem": true,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
           "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
           "BackgroundType": "EAnvilItemSlotBackgroundType::None",
           "CustomStackLimits": []
         },
         {
           "ProxyRepeat": 24,
-          "bOr": false,
-          "HeldItem": null,
-          "bIsHeldItemPublic": true,
-          "Count": 0,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
           "StackLimit": 1000,
+          "bOr": false,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
           "AcceptedTags": [
             "EAnvilItemTag::PrimaryTool",
             "EAnvilItemTag::SecondaryTool",
             "EAnvilItemTag::Head",
             "EAnvilItemTag::Body",
             "EAnvilItemTag::WeaponStorage",
-            "EAnvilItemTag::Resource",
             "EAnvilItemTag::IngredientsStorage"
           ],
+          "AcceptedTagsVisVar": 0,
           "RequiredTags": [],
+          "RequiredTagsVisVar": 0,
           "ProhibitedTags": [
             "EAnvilItemTag::AnimalFeed",
             "EAnvilItemTag::Seed"
           ],
+          "ProhibitedTagsVisVar": 0,
           "DedicatedItemType": null,
-          "DedicatedUnderlyingItemType": null,
-          "bCheckDedicatedUnderlyingItem": true,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
           "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
           "BackgroundType": "EAnvilItemSlotBackgroundType::None",
           "CustomStackLimits": []
         }
@@ -273,8 +321,7 @@
     },
     "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "bCannotBeDismantled": true,
-      "bCanCollapse": true
+      "bCannotBeDismantled": true
     }
   },
   {
@@ -299,31 +346,31 @@
       "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
     },
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__TownCenterKeepT2_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.14"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__TownCenterKeepT2_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.7"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__TownCenterKeepT2_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.11"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__TownCenterKeepT2_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.13"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__TownCenterKeepT2_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.5"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__TownCenterKeepT2_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.6"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__TownCenterKeepT2_C:BoxCollisionProxyComponent_0'",
@@ -333,7 +380,7 @@
       "ScorchComp": null,
       "CodeNameString": "TownCenterKeepT2",
       "CodeName": 1602690178,
-      "RelevancyDistSqr": 900000000.0,
+      "RelevancyDistSqr": 225000000.0,
       "bShowOnMap": true,
       "bGenerateMeshCollisionsFromVisActor": true,
       "GenerateMeshCollisionMask": 18882560,
@@ -341,15 +388,15 @@
       "Components": [
         {
           "ObjectName": "TownHallProxyComponent'Default__TownCenterKeepT2_C:TownHallProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.15"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.16"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__TownCenterKeepT2_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.8"
         },
         {
           "ObjectName": "UpgradeProxyComponent'Default__TownCenterKeepT2_C:UpgradeProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.16"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.17"
         },
         {
           "ObjectName": "BeaconTowerProxyComponent'Default__TownCenterKeepT2_C:BeaconTowerProxyComponent_0'",
@@ -357,11 +404,15 @@
         },
         {
           "ObjectName": "PlayerSpawnerProxyComponent'Default__TownCenterKeepT2_C:PlayerSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.10"
         },
         {
           "ObjectName": "MeshVisibilityProxyComponent'Default__TownCenterKeepT2_C:MeshVisibilityProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.9"
+        },
+        {
+          "ObjectName": "CollapsibleProxyComponent'Default__TownCenterKeepT2_C:CollapsibleProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT2.3"
         }
       ],
       "VisActorClass": {
@@ -377,7 +428,8 @@
     "Class": "UScriptClass'TownHallProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "Tier": 2
+      "Tier": 2,
+      "SubType": "EAnvilTownSubType::Fortress"
     }
   },
   {

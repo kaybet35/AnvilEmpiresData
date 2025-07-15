@@ -6,12 +6,37 @@
     "Class": "UScriptClass'Border'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "BrushColor": {
-        "R": 0.045186,
-        "G": 0.033105,
-        "B": 0.023153,
-        "A": 1.0,
-        "Hex": "3C332A"
+      "Padding": {
+        "Left": 8.0,
+        "Top": 8.0,
+        "Right": 8.0,
+        "Bottom": 8.0
+      },
+      "Background": {
+        "DrawAs": "ESlateBrushDrawType::Border",
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.8,
+            "Hex": "CCFFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Dialog'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/Dialog.0"
+        }
       },
       "Slots": [
         {
@@ -32,6 +57,12 @@
     "Class": "UScriptClass'BorderSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "Padding": {
+        "Left": 8.0,
+        "Top": 8.0,
+        "Right": 8.0,
+        "Bottom": 8.0
+      },
       "Parent": {
         "ObjectName": "Border'BPOptionsMenuVideoWidget_C:WidgetTree.Border_21'",
         "ObjectPath": "Anvil/Content/UI/BPOptionsMenuVideoWidget.0"
@@ -191,7 +222,7 @@
     "Properties": {
       "LayoutData": {
         "Offsets": {
-          "Right": 500.0,
+          "Right": 600.0,
           "Bottom": 300.0
         }
       },

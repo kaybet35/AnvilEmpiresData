@@ -27,11 +27,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisLongBowArrowProjectile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.8"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisPickupItem'",
+      "ObjectName": "Class'VisProjectile'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
@@ -68,20 +68,16 @@
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.BPVisLongBowArrowProjectile_C'",
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "PickupDataComponent": {
-        "ObjectName": "PickupDataComponent'Default__BPVisLongBowArrowProjectile_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.5"
-      },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisLongBowArrowProjectile_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.9"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisLongBowArrowProjectile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.0"
       },
-      "LootMarkerVFXComponent": {
-        "ObjectName": "NiagaraComponent'Default__BPVisLongBowArrowProjectile_C:LootMarkerVFX'",
+      "ProjectileMovementDataComponent": {
+        "ObjectName": "ProjectileMovementDataComponent'Default__BPVisLongBowArrowProjectile_C:ProjectileMovementDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.4"
       },
       "VisDisplayName": {
@@ -97,24 +93,10 @@
     }
   },
   {
-    "Type": "NiagaraComponent",
-    "Name": "LootMarkerVFX",
+    "Type": "ProjectileMovementDataComponent",
+    "Name": "ProjectileMovementDataComponent",
     "Outer": "Default__BPVisLongBowArrowProjectile_C",
-    "Class": "UScriptClass'NiagaraComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "OverrideParameters": {},
-      "AttachParent": {
-        "ObjectName": "ArrowComponent'Default__BPVisLongBowArrowProjectile_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.0"
-      }
-    }
-  },
-  {
-    "Type": "PickupDataComponent",
-    "Name": "PickupDataComponent",
-    "Outer": "Default__BPVisLongBowArrowProjectile_C",
-    "Class": "UScriptClass'PickupDataComponent'",
+    "Class": "UScriptClass'ProjectileMovementDataComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
@@ -137,7 +119,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisLongBowArrowProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.5"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -174,18 +156,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisLongBowArrowProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.8"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.7"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisLongBowArrowProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.8"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.7"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisLongBowArrowProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisLongBowArrowProjectile.6"
       }
     }
   },

@@ -10,10 +10,13 @@ struct FCustomStackLimit {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<UItemTemplate> Item;
+    TSubclassOf<UItemTemplate> CodeName;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint16 StackLimit;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 CodeNameVisVar;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 StackLimit;
     
     R2_API FCustomStackLimit();
 };

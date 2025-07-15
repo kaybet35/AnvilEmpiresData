@@ -3,6 +3,11 @@
 
 class UBPGameplayOverlay_C : public UGameplayOverlay
 {
-}; // Size: 0x2C8
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0338 (size: 0x8)
+    class UWidgetAnimation* WinConditionAnimation;                                    // 0x0340 (size: 0x8)
+
+    void PlayWinConditionAnimation();
+    void ExecuteUbergraph_BPGameplayOverlay(int32 EntryPoint);
+}; // Size: 0x348
 
 #endif

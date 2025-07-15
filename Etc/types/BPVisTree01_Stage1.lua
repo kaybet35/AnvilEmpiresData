@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ABPVisTree01_Stage1_C : AVisResource
----@field Decal UDecalComponent
+---@field ShadowProxyMesh UStaticMeshComponent
 ABPVisTree01_Stage1_C = {}
 
 

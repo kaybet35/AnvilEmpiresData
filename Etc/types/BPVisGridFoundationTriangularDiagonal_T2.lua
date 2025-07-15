@@ -1,28 +1,27 @@
 ---@meta
 
 ---@class ABPVisGridFoundationTriangularDiagonal_T2_C : AVisStructure
+---@field Rubble UVisStaticMeshComponentBase
+---@field TopMeshCollapsed UVisStaticMeshComponentBase
+---@field VisDynamicMeshTemplateReference8 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference7 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference9 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference1 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference2 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference3 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference UVisDynamicMeshTemplateReferenceComponent
 ---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field FloorPlanking2 UStaticMeshComponent
 ---@field FloorPlanking3 UStaticMeshComponent
 ---@field FloorPlanking UStaticMeshComponent
----@field ChildActor2 UChildActorComponent
----@field ChildActor5 UChildActorComponent
----@field ChildActor6 UChildActorComponent
----@field ChildActor11 UChildActorComponent
----@field ChildActor9 UChildActorComponent
----@field ChildActor7 UChildActorComponent
----@field ChildActor8 UChildActorComponent
----@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
+---@field BottomMesh UVisFoundationBottomMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor UVisFoundationEdgeMeshDecorComponent
----@field StaticMesh1 UStaticMeshComponent
+---@field TopMesh UStaticMeshComponent
 ---@field VisFoundationEdgeMeshDecor4 UVisFoundationEdgeMeshDecorComponent
----@field ChildActor3 UChildActorComponent
 ---@field VisFoundationEdgeMeshDecor6 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor5 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor3 UVisFoundationEdgeMeshDecorComponent
----@field ChildActor UChildActorComponent
----@field ChildActor1 UChildActorComponent
 ---@field Scene USceneComponent
 ABPVisGridFoundationTriangularDiagonal_T2_C = {}
 

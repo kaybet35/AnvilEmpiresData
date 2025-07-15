@@ -3,7 +3,7 @@
 
 class UBPDisclaimerWidget_C : public UDisclaimerWidget
 {
-    class UImage* Background;                                                         // 0x02B0 (size: 0x8)
+    class UImage* BlackBG;                                                            // 0x02B0 (size: 0x8)
     class UImage* PreAlphaBadgeImage;                                                 // 0x02B8 (size: 0x8)
 
 }; // Size: 0x2C0

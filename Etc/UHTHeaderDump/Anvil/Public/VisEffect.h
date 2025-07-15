@@ -3,6 +3,7 @@
 #include "VisActor.h"
 #include "VisEffect.generated.h"
 
+class AActor;
 class UArrowComponent;
 class UAudioComponent;
 class ULifetimeDataComponent;
@@ -13,6 +14,9 @@ UCLASS(Blueprintable)
 class ANVIL_API AVisEffect : public AVisActor {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    AActor* AttachTarget;
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UArrowComponent* ArrowComponent;

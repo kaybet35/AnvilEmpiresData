@@ -14,7 +14,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.96"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.91"
       }
     },
     "SuperStruct": {
@@ -22,6 +22,72 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Rubble",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisRandomMeshDecorComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TopMeshCollapsed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponentBase'",
+          "ObjectPath": "/Script/R2"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisDynamicMeshTemplateReference2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisDynamicMeshTemplateReferenceComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisDynamicMeshTemplateReference3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisDynamicMeshTemplateReferenceComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisDynamicMeshTemplateReference",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisDynamicMeshTemplateReferenceComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VisDynamicMeshTemplateReference1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisDynamicMeshTemplateReferenceComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "VisDynamicInstancedMeshGroup",
@@ -35,7 +101,7 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "VisFoundationBottomMeshDecor",
+        "Name": "BottomMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -68,17 +134,6 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "ChildActor6",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'ChildActorComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "VisRandomMeshDecor60",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -97,28 +152,6 @@
         "PropertyClass": {
           "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
           "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ChildActor11",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'ChildActorComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ChildActor5",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'ChildActorComponent'",
-          "ObjectPath": "/Script/Engine"
         }
       },
       {
@@ -152,17 +185,6 @@
         "PropertyClass": {
           "ObjectName": "Class'VisRandomMeshDecorComponent'",
           "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ChildActor8",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'ChildActorComponent'",
-          "ObjectPath": "/Script/Engine"
         }
       },
       {
@@ -343,7 +365,7 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "StaticMesh",
+        "Name": "TopMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -361,28 +383,6 @@
         "PropertyClass": {
           "ObjectName": "Class'VisFoundationEdgeMeshDecorComponent'",
           "ObjectPath": "/Script/Anvil"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ChildActor3",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'ChildActorComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ChildActor1",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'ChildActorComponent'",
-          "ObjectPath": "/Script/Engine"
         }
       },
       {
@@ -924,29 +924,34 @@
       "BuildSiteCategory": "EBuildSiteCategory::Foundations",
       "BuildSiteOrder": 3,
       "BuildSiteVisibility": "EBuildSiteVisibility::Never",
+      "SupportedVisualComponents": 256,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisGridFoundationRoundDiagonal_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.111"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.106"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisGridFoundationRoundDiagonal_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.7"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisGridFoundationRoundDiagonal_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.110"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.105"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisGridFoundationRoundDiagonal_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.109"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.104"
+      },
+      "CollapsibleDataComponent": {
+        "ObjectName": "CollapsibleDataComponent'Default__BPVisGridFoundationRoundDiagonal_C:CollapsibleDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.3"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisGridFoundationRoundDiagonal_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.10"
       },
       "DecayDataComponent": {
         "ObjectName": "DecayDataComponent'Default__BPVisGridFoundationRoundDiagonal_C:DecayDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.5"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationRoundDiagonal_C:ArrowComponent'",
@@ -954,11 +959,11 @@
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisGridFoundationRoundDiagonal_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.4"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisGridFoundationRoundDiagonal_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.6"
       },
       "UseWindowType": "EHUDWindowType::GenericStructure",
       "bUseVicActorPool": true,
@@ -992,118 +997,11 @@
     }
   },
   {
-    "Type": "ChildActorComponent",
-    "Name": "ChildActor11_GEN_VARIABLE",
-    "Outer": "BPVisGridFoundationRoundDiagonal_C",
-    "Class": "UScriptClass'ChildActorComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "RelativeLocation": {
-        "X": -240.05899,
-        "Y": 77.25827,
-        "Z": 125.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 90.0,
-        "Roll": -0.0
-      }
-    }
-  },
-  {
-    "Type": "ChildActorComponent",
-    "Name": "ChildActor1_GEN_VARIABLE",
-    "Outer": "BPVisGridFoundationRoundDiagonal_C",
-    "Class": "UScriptClass'ChildActorComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "RelativeLocation": {
-        "X": -227.13203,
-        "Y": 2.5637248E-13,
-        "Z": 1121.5908
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 90.0,
-        "Roll": -0.0
-      }
-    }
-  },
-  {
-    "Type": "ChildActorComponent",
-    "Name": "ChildActor3_GEN_VARIABLE",
-    "Outer": "BPVisGridFoundationRoundDiagonal_C",
-    "Class": "UScriptClass'ChildActorComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "RelativeLocation": {
-        "X": -6.4917974,
-        "Y": -227.13203,
-        "Z": 1119.3215
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 180.0,
-        "Roll": -0.0
-      }
-    }
-  },
-  {
-    "Type": "ChildActorComponent",
-    "Name": "ChildActor5_GEN_VARIABLE",
-    "Outer": "BPVisGridFoundationRoundDiagonal_C",
-    "Class": "UScriptClass'ChildActorComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "RelativeLocation": {
-        "X": 40.532997,
-        "Y": -240.0,
-        "Z": 125.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 180.0,
-        "Roll": -0.0
-      }
-    }
-  },
-  {
-    "Type": "ChildActorComponent",
-    "Name": "ChildActor6_GEN_VARIABLE",
-    "Outer": "BPVisGridFoundationRoundDiagonal_C",
-    "Class": "UScriptClass'ChildActorComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "RelativeLocation": {
-        "X": -86.90633,
-        "Y": -240.0,
-        "Z": 125.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 180.0,
-        "Roll": -0.0
-      }
-    }
-  },
-  {
-    "Type": "ChildActorComponent",
-    "Name": "ChildActor8_GEN_VARIABLE",
-    "Outer": "BPVisGridFoundationRoundDiagonal_C",
-    "Class": "UScriptClass'ChildActorComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "RelativeLocation": {
-        "X": -240.05899,
-        "Y": -70.02802,
-        "Z": 125.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 90.0,
-        "Roll": -0.0
-      }
-    }
+    "Type": "CollapsibleDataComponent",
+    "Name": "CollapsibleDataComponent",
+    "Outer": "Default__BPVisGridFoundationRoundDiagonal_C",
+    "Class": "UScriptClass'CollapsibleDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "DecalComponent",
@@ -1138,7 +1036,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisGridFoundationRoundDiagonal_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.97"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.92"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationRoundDiagonal_C:ArrowComponent'",
@@ -1187,7 +1085,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisGridFoundationRoundDiagonal_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.8"
       },
       "VariableGuid": "4AE59C32-4E7C4C48-88CE61B9-68337C23",
       "InternalVariableName": "DefaultSceneRoot"
@@ -1572,175 +1470,175 @@
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_45'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.56"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_28'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.37"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_24'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.33"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_22'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.31"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_23'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.32"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_30'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.40"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_29'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.38"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_32'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.42"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_31'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.41"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_21'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.30"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_20'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.29"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.18"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.35"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_41'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.52"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_46'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.57"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_25'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.34"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_44'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.55"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_43'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.54"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_42'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.53"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_40'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.51"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_34'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.44"
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_28'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.32"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_39'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.49"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_38'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.48"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_37'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.47"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_36'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.46"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_35'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.45"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.17"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.21"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.91"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.95"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_24'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.28"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.19"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.61"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.50"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.22"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_22'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.26"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_30'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_29'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_32'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_31'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_20'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.24"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.83"
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_41'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.47"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_46'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_44'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_43'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_42'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_40'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.46"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_34'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_39'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_38'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_37'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_36'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_35'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.86"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.90"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_17'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.20"
         },
         {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.78"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.15"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.72"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.67"
         }
       ],
       "VariableGuid": "BEFB3C0B-451FBB18-A6DD7197-22798D49",
@@ -1797,11 +1695,11 @@
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisGridFoundationRoundDiagonal_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.98"
+        "ObjectName": "StaticMeshComponent'BPVisGridFoundationRoundDiagonal_C:TopMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.94"
       },
       "VariableGuid": "596D0A2D-458A060B-2554BEB2-CC3D9D8C",
-      "InternalVariableName": "StaticMesh"
+      "InternalVariableName": "TopMesh"
     }
   },
   {
@@ -1874,58 +1772,62 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisGridFoundationRoundDiagonal_C:Scene_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.9"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_47'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.58"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.53"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_48'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.59"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_50'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.62"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_51'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.63"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.54"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_52'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.64"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.59"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.39"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.34"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_53'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.65"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_54'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.66"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_49'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.60"
         },
         {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_54'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.61"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_49'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.55"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_55'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.67"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.62"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_27'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.36"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.31"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_68'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.81"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.76"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_78'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.84"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_75'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.83"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_50'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.57"
         }
       ],
       "VariableGuid": "8095295C-4977C51D-8907128B-620F4001",
@@ -2211,7 +2113,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationRoundDiagonal_C:VisFoundationEdgeMeshDecor1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.117"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.116"
       },
       "VariableGuid": "06537BBF-46B5CCEC-B9CABD99-5278DD43",
       "InternalVariableName": "VisFoundationEdgeMeshDecor1"
@@ -2230,7 +2132,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationRoundDiagonal_C:VisFoundationEdgeMeshDecor2_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.118"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.117"
       },
       "VariableGuid": "2B096DF4-4D890D12-FB29D497-93BEF8CF",
       "InternalVariableName": "VisFoundationEdgeMeshDecor2"
@@ -2249,7 +2151,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationRoundDiagonal_C:VisFoundationEdgeMeshDecor4_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.119"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.118"
       },
       "VariableGuid": "0F46E875-4991CB9B-8ACBA99C-3C6D44C1",
       "InternalVariableName": "VisFoundationEdgeMeshDecor4"
@@ -2282,15 +2184,21 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'ChildActorComponent'",
-        "ObjectPath": "/Script/Engine"
+        "ObjectName": "Class'VisStaticMeshComponentBase'",
+        "ObjectPath": "/Script/R2"
       },
       "ComponentTemplate": {
-        "ObjectName": "ChildActorComponent'BPVisGridFoundationRoundDiagonal_C:ChildActor1_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.4"
+        "ObjectName": "VisStaticMeshComponentBase'BPVisGridFoundationRoundDiagonal_C:TopMeshCollapsed_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.184"
       },
-      "VariableGuid": "78606AA3-49E03C8C-64C68CB7-52239928",
-      "InternalVariableName": "ChildActor1"
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_51'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.58"
+        }
+      ],
+      "VariableGuid": "69D03D5F-4ADF2718-88D5F88B-865B733A",
+      "InternalVariableName": "TopMeshCollapsed"
     }
   },
   {
@@ -2301,15 +2209,15 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'ChildActorComponent'",
-        "ObjectPath": "/Script/Engine"
+        "ObjectName": "Class'VisRandomMeshDecorComponent'",
+        "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "ChildActorComponent'BPVisGridFoundationRoundDiagonal_C:ChildActor3_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.5"
+        "ObjectName": "VisRandomMeshDecorComponent'BPVisGridFoundationRoundDiagonal_C:Rubble_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.122"
       },
-      "VariableGuid": "C97AAD44-41AC1B4A-DCB001A8-3E2DD701",
-      "InternalVariableName": "ChildActor3"
+      "VariableGuid": "34B72E48-4A3BC7EA-D40C12A1-232D7E54",
+      "InternalVariableName": "Rubble"
     }
   },
   {
@@ -2325,7 +2233,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationRoundDiagonal_C:VisFoundationEdgeMeshDecor_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.122"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.121"
       },
       "VariableGuid": "1862D6BA-41099AE5-0CEE0F86-BCB0A858",
       "InternalVariableName": "VisFoundationEdgeMeshDecor"
@@ -2344,7 +2252,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationRoundDiagonal_C:VisFoundationEdgeMeshDecor6_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.121"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.120"
       },
       "VariableGuid": "9AB16A7C-45207925-78CBCCB4-C585950A",
       "InternalVariableName": "VisFoundationEdgeMeshDecor6"
@@ -2363,7 +2271,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationRoundDiagonal_C:VisFoundationEdgeMeshDecor5_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.120"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.119"
       },
       "VariableGuid": "7BFCC03E-4D96C6A9-2D2BC6B6-D1C59AC8",
       "InternalVariableName": "VisFoundationEdgeMeshDecor5"
@@ -2387,51 +2295,51 @@
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_56'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.68"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.63"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_57'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.69"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.64"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_58'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.70"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.65"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_59'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.71"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.66"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_60'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.73"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.68"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_61'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.74"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.69"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_62'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.75"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.70"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_63'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.76"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.71"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_64'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.77"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.72"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_65'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.78"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.73"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_66'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.79"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.74"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_67'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.80"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.75"
         }
       ],
       "VariableGuid": "116A1B3E-40AD8795-932A4895-8F43C133",
@@ -2697,53 +2605,45 @@
         "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "VisFoundationBottomMeshDecorComponent'BPVisGridFoundationRoundDiagonal_C:VisFoundationBottomMeshDecor_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.113"
+        "ObjectName": "VisFoundationBottomMeshDecorComponent'BPVisGridFoundationRoundDiagonal_C:BottomMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.112"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_69'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.82"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_70'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.84"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.77"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_71'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.85"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.79"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_72'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.86"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.80"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_74'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.88"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_76'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.89"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_77'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.90"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.82"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_81'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.92"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.88"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_82'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.93"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.89"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_83'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.94"
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_80'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.87"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_79'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.85"
         }
       ],
       "VariableGuid": "01331EAC-4EABE49F-0BB864BB-723B76E8",
-      "InternalVariableName": "VisFoundationBottomMeshDecor"
+      "InternalVariableName": "BottomMesh"
     }
   },
   {
@@ -2786,25 +2686,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_70",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'ChildActorComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "ChildActorComponent'BPVisGridFoundationRoundDiagonal_C:ChildActor8_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.8"
-      },
-      "VariableGuid": "65DA0077-408F7158-EEAE9482-A79B0774",
-      "InternalVariableName": "ChildActor8"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_71",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -2835,7 +2716,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationRoundDiagonal_C:VerticalEdge09_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.116"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.115"
       },
       "VariableGuid": "BD851F85-46476EF2-157BB1A6-7EC25ADD",
       "InternalVariableName": "VerticalEdge09"
@@ -2854,7 +2735,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisDynamicInstancedMeshGroupComponent'BPVisGridFoundationRoundDiagonal_C:VisDynamicInstancedMeshGroup_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.112"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.107"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -2875,7 +2756,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationRoundDiagonal_C:VerticalEdge05_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.114"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.113"
       },
       "VariableGuid": "BEFB76BD-42E40D58-FE24C3A9-BEAE80AD",
       "InternalVariableName": "VerticalEdge05"
@@ -2883,40 +2764,59 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_76",
+    "Name": "SCS_Node_75",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'ChildActorComponent'",
-        "ObjectPath": "/Script/Engine"
+        "ObjectName": "Class'VisDynamicMeshTemplateReferenceComponent'",
+        "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "ChildActorComponent'BPVisGridFoundationRoundDiagonal_C:ChildActor5_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.6"
+        "ObjectName": "VisDynamicMeshTemplateReferenceComponent'BPVisGridFoundationRoundDiagonal_C:VisDynamicMeshTemplateReference_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.111"
       },
-      "VariableGuid": "B0EA305D-474DF882-5D84CBAE-B06E6343",
-      "InternalVariableName": "ChildActor5"
+      "VariableGuid": "17176B2F-455678D7-0982BABC-49FF15D6",
+      "InternalVariableName": "VisDynamicMeshTemplateReference"
     }
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_77",
+    "Name": "SCS_Node_78",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'ChildActorComponent'",
-        "ObjectPath": "/Script/Engine"
+        "ObjectName": "Class'VisDynamicMeshTemplateReferenceComponent'",
+        "ObjectPath": "/Script/Anvil"
       },
       "ComponentTemplate": {
-        "ObjectName": "ChildActorComponent'BPVisGridFoundationRoundDiagonal_C:ChildActor11_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.3"
+        "ObjectName": "VisDynamicMeshTemplateReferenceComponent'BPVisGridFoundationRoundDiagonal_C:VisDynamicMeshTemplateReference1_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.108"
       },
-      "VariableGuid": "2C4D115D-4B434EC5-0AFB3A93-01FE724D",
-      "InternalVariableName": "ChildActor11"
+      "VariableGuid": "9E926771-456F2A04-E50FDD88-40D58A65",
+      "InternalVariableName": "VisDynamicMeshTemplateReference1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_79",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisDynamicMeshTemplateReferenceComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisDynamicMeshTemplateReferenceComponent'BPVisGridFoundationRoundDiagonal_C:VisDynamicMeshTemplateReference2_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.109"
+      },
+      "VariableGuid": "F6DB178C-47513035-208B0580-A4AD681C",
+      "InternalVariableName": "VisDynamicMeshTemplateReference2"
     }
   },
   {
@@ -2940,6 +2840,25 @@
   },
   {
     "Type": "SCS_Node",
+    "Name": "SCS_Node_80",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisDynamicMeshTemplateReferenceComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisDynamicMeshTemplateReferenceComponent'BPVisGridFoundationRoundDiagonal_C:VisDynamicMeshTemplateReference3_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.110"
+      },
+      "VariableGuid": "663E2A65-45EAE0F3-550A7987-2988B146",
+      "InternalVariableName": "VisDynamicMeshTemplateReference3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
     "Name": "SCS_Node_81",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -2951,7 +2870,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFoundationEdgeMeshDecorComponent'BPVisGridFoundationRoundDiagonal_C:VerticalEdge08_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.115"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.114"
       },
       "VariableGuid": "AD0B69C0-403BEBAB-45C0A98B-C03D80A1",
       "InternalVariableName": "VerticalEdge08"
@@ -2974,25 +2893,6 @@
       },
       "VariableGuid": "E4C631E8-48F44A7E-55F2EFA7-454D1665",
       "InternalVariableName": "VisRandomMeshDecor60"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_83",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'ChildActorComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "ChildActorComponent'BPVisGridFoundationRoundDiagonal_C:ChildActor6_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.7"
-      },
-      "VariableGuid": "C86CF56E-4AF3C193-3E6FEDAB-4B93B8D4",
-      "InternalVariableName": "ChildActor6"
     }
   },
   {
@@ -3024,334 +2924,334 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_33'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.43"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.38"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_73'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.87"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.81"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_45'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.56"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_28'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.37"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_24'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.33"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_22'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.31"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_23'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.32"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_30'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.40"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_29'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.38"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_32'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.42"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_31'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.41"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_21'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.30"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_20'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.29"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.18"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.35"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_41'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.52"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_46'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.57"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_25'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.34"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_44'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.55"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_43'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.54"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_42'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.53"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_40'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.51"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_34'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.44"
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_28'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.32"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_39'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.49"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_38'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.48"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_37'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.47"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_36'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.46"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_35'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.45"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.17"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.21"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.91"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.95"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_24'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.28"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.19"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.61"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.50"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.22"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_22'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.26"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.24"
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.27"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.83"
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_30'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.35"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.20"
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_29'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.33"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.72"
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_32'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.37"
         },
         {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_33'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.43"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_47'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.58"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_48'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.59"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_50'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.62"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_51'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.63"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_52'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.64"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.39"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_53'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.65"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_54'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.66"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_49'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.60"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_56'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.68"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_57'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.69"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_58'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.70"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_59'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.71"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_60'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.73"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_61'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.74"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_62'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.75"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_63'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.76"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_64'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.77"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_65'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.78"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_66'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.79"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_67'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.80"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_69'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.82"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_70'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.84"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_71'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.85"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_72'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.86"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_74'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.88"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_76'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.89"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_77'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.90"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_81'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.92"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_82'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.93"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_83'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.94"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_55'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.67"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_27'",
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_31'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.36"
         },
         {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_41'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.47"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_46'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_44'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_43'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_42'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_40'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.46"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_34'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_39'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_38'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_37'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_36'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_35'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.86"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.90"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.78"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.67"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_33'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.38"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_47'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_48'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.54"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_52'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.59"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_53'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.60"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_54'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.61"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_49'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.55"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_56'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.63"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_57'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.64"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_58'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.65"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_59'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.66"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_60'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.68"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_61'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.69"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_62'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.70"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_63'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.71"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_64'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.72"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_65'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.73"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_66'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.74"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_67'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.75"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_69'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.77"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_71'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.79"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_72'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.80"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_74'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.82"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_81'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.88"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_82'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.89"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_55'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.62"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_27'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.31"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_68'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.81"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.76"
         },
         {
           "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_73'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.81"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_78'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.84"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_75'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.83"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_80'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.87"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_79'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.85"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_50'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_51'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.58"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisGridFoundationRoundDiagonal_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.11"
       }
     }
   },
@@ -3364,7 +3264,25 @@
   },
   {
     "Type": "StaticMeshComponent",
-    "Name": "StaticMesh_GEN_VARIABLE",
+    "Name": "BottomMeshComp",
+    "Outer": "BottomMesh_GEN_VARIABLE",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundation_roundbottom_diagonal'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/GridFoundation_roundbottom_diagonal.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 200.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "TopMesh_GEN_VARIABLE",
     "Outer": "BPVisGridFoundationRoundDiagonal_C",
     "Class": "UScriptClass'StaticMeshComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
@@ -3379,7 +3297,8 @@
       "bReceivesDecals": false,
       "ComponentTags": [
         "Structure",
-        "Collision"
+        "Collision",
+        "UnCollapsed"
       ]
     }
   },
@@ -3449,24 +3368,6 @@
         "Pitch": 0.0,
         "Yaw": 45.0,
         "Roll": 0.0
-      }
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "BottomMeshComp",
-    "Outer": "VisFoundationBottomMeshDecor_GEN_VARIABLE",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'GridFoundation_roundbottom_diagonal'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/GridFoundation_roundbottom_diagonal.2"
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 200.0
       }
     }
   },
@@ -3614,11 +3515,108 @@
     "Name": "VisDynamicInstancedMeshGroup_GEN_VARIABLE",
     "Outer": "BPVisGridFoundationRoundDiagonal_C",
     "Class": "UScriptClass'VisDynamicInstancedMeshGroupComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentTags": [
+        "UnCollapsed"
+      ]
+    }
+  },
+  {
+    "Type": "VisDynamicMeshTemplateReferenceComponent",
+    "Name": "VisDynamicMeshTemplateReference1_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationRoundDiagonal_C",
+    "Class": "UScriptClass'VisDynamicMeshTemplateReferenceComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateClass": {
+        "ObjectName": "BlueprintGeneratedClass'FaceBrickTemplate1200_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/FaceBrickTemplate1200.0"
+      },
+      "RelativeLocation": {
+        "X": -6.4917974,
+        "Y": -227.13203,
+        "Z": 1119.3215
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "VisDynamicMeshTemplateReferenceComponent",
+    "Name": "VisDynamicMeshTemplateReference2_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationRoundDiagonal_C",
+    "Class": "UScriptClass'VisDynamicMeshTemplateReferenceComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateClass": {
+        "ObjectName": "BlueprintGeneratedClass'FaceBrickTemplate1200BaseDiagonal_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/FaceBrickTemplate1200BaseDiagonal.0"
+      },
+      "RelativeLocation": {
+        "X": -242.0,
+        "Y": 9.0,
+        "Z": 125.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "VisDynamicMeshTemplateReferenceComponent",
+    "Name": "VisDynamicMeshTemplateReference3_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationRoundDiagonal_C",
+    "Class": "UScriptClass'VisDynamicMeshTemplateReferenceComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateClass": {
+        "ObjectName": "BlueprintGeneratedClass'FaceBrickTemplate1200BaseDiagonal_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/FaceBrickTemplate1200BaseDiagonal.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -242.0,
+        "Z": 125.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "VisDynamicMeshTemplateReferenceComponent",
+    "Name": "VisDynamicMeshTemplateReference_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationRoundDiagonal_C",
+    "Class": "UScriptClass'VisDynamicMeshTemplateReferenceComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateClass": {
+        "ObjectName": "BlueprintGeneratedClass'FaceBrickTemplate1200_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/FaceBrickTemplate1200.0"
+      },
+      "RelativeLocation": {
+        "X": -227.13203,
+        "Y": 2.5637248E-13,
+        "Z": 1121.5908
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": -0.0
+      }
+    }
   },
   {
     "Type": "VisFoundationBottomMeshDecorComponent",
-    "Name": "VisFoundationBottomMeshDecor_GEN_VARIABLE",
+    "Name": "BottomMesh_GEN_VARIABLE",
     "Outer": "BPVisGridFoundationRoundDiagonal_C",
     "Class": "UScriptClass'VisFoundationBottomMeshDecorComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
@@ -3633,14 +3631,18 @@
         "Z": 200.0
       },
       "BottomMeshComp": {
-        "ObjectName": "StaticMeshComponent'BPVisGridFoundationRoundDiagonal_C:VisFoundationBottomMeshDecor_GEN_VARIABLE.BottomMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.102"
+        "ObjectName": "StaticMeshComponent'BPVisGridFoundationRoundDiagonal_C:BottomMesh_GEN_VARIABLE.BottomMeshComp'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.93"
       },
       "RelativeLocation": {
         "X": 0.0,
         "Y": 8E-06,
         "Z": 800.0
-      }
+      },
+      "ComponentTags": [
+        "ExcludeFromVisActorTemplate",
+        "UnCollapsed"
+      ]
     }
   },
   {
@@ -3666,7 +3668,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationRoundDiagonal_C:VerticalEdge05_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.99"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.95"
       },
       "RelativeLocation": {
         "X": 227.13,
@@ -3703,7 +3705,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationRoundDiagonal_C:VerticalEdge08_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.100"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.96"
       },
       "RelativeLocation": {
         "X": -227.0,
@@ -3740,7 +3742,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationRoundDiagonal_C:VerticalEdge09_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.101"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.97"
       },
       "RelativeLocation": {
         "X": -227.0,
@@ -3777,7 +3779,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationRoundDiagonal_C:VisFoundationEdgeMeshDecor1_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.103"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.98"
       },
       "RelativeLocation": {
         "X": -227.13203,
@@ -3788,7 +3790,12 @@
         "Pitch": 0.0,
         "Yaw": 45.0,
         "Roll": 0.0
-      }
+      },
+      "ComponentTags": [
+        "ToggleVisibility",
+        "ExcludeFromVisActorTemplate",
+        "UnCollapsed"
+      ]
     }
   },
   {
@@ -3809,7 +3816,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationRoundDiagonal_C:VisFoundationEdgeMeshDecor2_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.104"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.99"
       },
       "RelativeLocation": {
         "X": 227.13203,
@@ -3820,7 +3827,12 @@
         "Pitch": 0.0,
         "Yaw": 135.0,
         "Roll": -0.0
-      }
+      },
+      "ComponentTags": [
+        "ToggleVisibility",
+        "ExcludeFromVisActorTemplate",
+        "UnCollapsed"
+      ]
     }
   },
   {
@@ -3841,7 +3853,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationRoundDiagonal_C:VisFoundationEdgeMeshDecor4_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.105"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.100"
       },
       "RelativeLocation": {
         "X": 0.0,
@@ -3852,7 +3864,12 @@
         "Pitch": -45.0,
         "Yaw": 90.0,
         "Roll": -90.0
-      }
+      },
+      "ComponentTags": [
+        "ToggleVisibility",
+        "ExcludeFromVisActorTemplate",
+        "UnCollapsed"
+      ]
     }
   },
   {
@@ -3873,7 +3890,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationRoundDiagonal_C:VisFoundationEdgeMeshDecor5_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.106"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.101"
       },
       "RelativeLocation": {
         "X": 93.324,
@@ -3884,7 +3901,12 @@
         "Pitch": -45.0,
         "Yaw": 180.0,
         "Roll": -90.0
-      }
+      },
+      "ComponentTags": [
+        "ToggleVisibility",
+        "ExcludeFromVisActorTemplate",
+        "UnCollapsed"
+      ]
     }
   },
   {
@@ -3905,7 +3927,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationRoundDiagonal_C:VisFoundationEdgeMeshDecor6_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.107"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.102"
       },
       "RelativeLocation": {
         "X": -232.0,
@@ -3916,7 +3938,12 @@
         "Pitch": -45.0,
         "Yaw": -1.7991934E-14,
         "Roll": -90.0
-      }
+      },
+      "ComponentTags": [
+        "ToggleVisibility",
+        "ExcludeFromVisActorTemplate",
+        "UnCollapsed"
+      ]
     }
   },
   {
@@ -3942,7 +3969,7 @@
       },
       "EdgeMeshComp": {
         "ObjectName": "StaticMeshComponent'BPVisGridFoundationRoundDiagonal_C:VisFoundationEdgeMeshDecor_GEN_VARIABLE.EdgeMeshComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.108"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.103"
       },
       "RelativeLocation": {
         "X": -227.13203,
@@ -3953,6 +3980,24 @@
         "Pitch": 0.0,
         "Yaw": -45.0,
         "Roll": -0.0
+      },
+      "ComponentTags": [
+        "ToggleVisibility",
+        "ExcludeFromVisActorTemplate",
+        "UnCollapsed"
+      ]
+    }
+  },
+  {
+    "Type": "VisRandomMeshDecorComponent",
+    "Name": "Rubble_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationRoundDiagonal_C",
+    "Class": "UScriptClass'VisRandomMeshDecorComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundationRoundDiagonal_RubbleHusk'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/GridFoundationRoundDiagonal_RubbleHusk.2"
       }
     }
   },
@@ -5406,6 +5451,27 @@
         "ObjectName": "ArrowComponent'Default__BPVisGridFoundationRoundDiagonal_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisGridFoundationRoundDiagonal.0"
       }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponentBase",
+    "Name": "TopMeshCollapsed_GEN_VARIABLE",
+    "Outer": "BPVisGridFoundationRoundDiagonal_C",
+    "Class": "UScriptClass'VisStaticMeshComponentBase'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::StructureCollisionLandscape",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GridFoundationRoundDiagonal_Husk'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/GridFoundationRoundDiagonal_Husk.2"
+      },
+      "ComponentTags": [
+        "Collapsed",
+        "ExcludeFromVisActorTemplate",
+        "Structure",
+        "Collision",
+        "ProjectToLandscape"
+      ]
     }
   }
 ]

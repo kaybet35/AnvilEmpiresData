@@ -40,7 +40,8 @@
         "Y": 75.0,
         "Z": 110.0
       },
-      "CollisionMask": 16801856
+      "CollisionMask": 151019584,
+      "bVaultable": false
     }
   },
   {
@@ -104,7 +105,7 @@
     "Type": "Handcart_C",
     "Name": "Default__Handcart_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Vehicles/Handcart.Handcart_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CodeNameString": "Handcart",
       "CodeName": -632486419,
@@ -168,7 +169,7 @@
     "Class": "UScriptClass'HealthProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "MaxHealth": 15.0,
+      "MaxHealth": 80.0,
       "TargetType": "EAnvilDamageTargetType::Vehicle"
     }
   },
@@ -182,50 +183,78 @@
       "Slots": [
         {
           "ProxyRepeat": 9,
-          "bOr": false,
-          "HeldItem": null,
-          "bIsHeldItemPublic": true,
-          "Count": 0,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
           "StackLimit": 4,
+          "bOr": false,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
           "AcceptedTags": [
             "EAnvilItemTag::Resource",
             "EAnvilItemTag::Crate",
             "EAnvilItemTag::LiquidStorage",
             "EAnvilItemTag::MeatIngredientsStorage"
           ],
+          "AcceptedTagsVisVar": 0,
           "RequiredTags": [],
+          "RequiredTagsVisVar": 0,
           "ProhibitedTags": [
             "EAnvilItemTag::WeaponStorage",
             "EAnvilItemTag::StorableFoodT1"
           ],
+          "ProhibitedTagsVisVar": 0,
           "DedicatedItemType": null,
-          "DedicatedUnderlyingItemType": null,
-          "bCheckDedicatedUnderlyingItem": true,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
           "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
           "BackgroundType": "EAnvilItemSlotBackgroundType::None",
           "CustomStackLimits": []
         },
         {
           "ProxyRepeat": 1,
-          "bOr": false,
-          "HeldItem": null,
-          "bIsHeldItemPublic": true,
-          "Count": 0,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
           "StackLimit": 1,
+          "bOr": false,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
           "AcceptedTags": [],
+          "AcceptedTagsVisVar": 0,
           "RequiredTags": [],
+          "RequiredTagsVisVar": 0,
           "ProhibitedTags": [],
+          "ProhibitedTagsVisVar": 0,
           "DedicatedItemType": {
             "ObjectName": "BlueprintGeneratedClass'Torch_C'",
             "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Torch.0"
           },
-          "DedicatedUnderlyingItemType": null,
-          "bCheckDedicatedUnderlyingItem": true,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
           "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
           "BackgroundType": "EAnvilItemSlotBackgroundType::None",
           "CustomStackLimits": []
         }
@@ -257,6 +286,7 @@
       "bYawInPlace": true,
       "bCanWorldEntranceTravel": true,
       "bDoAxleRaycasts": false,
+      "MovementPlayerInteraction": "EAnvilVehicleMovementPlayerInteractionType::Block",
       "RammingDamage": 0.0,
       "FallingDistRange": {
         "Min": 1000.0,

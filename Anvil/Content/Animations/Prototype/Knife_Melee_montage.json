@@ -96,7 +96,53 @@
         },
         {
           "TriggerTimeOffset": 0.0,
-          "EndTriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0001,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'Knife_Melee_montage:AnimNotify_PlaySound_2'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Knife_Melee_montage.3"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Knife_Melee_montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Knife_Melee_montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.35922328,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Knife_HorizontalSlash_B'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/Knife_HorizontalSlash_B.0"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0001,
           "TriggerWeightThreshold": 1E-05,
           "NotifyName": "PlaySound",
           "Notify": {
@@ -177,6 +223,21 @@
       },
       "bFollow": true,
       "AttachName": "hand_r"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_2",
+    "Outer": "Knife_Melee_montage",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Male01Attack_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/Male01Attack_Cue.0"
+      },
+      "bFollow": true,
+      "AttachName": "head"
     }
   }
 ]

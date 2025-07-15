@@ -41,7 +41,8 @@
         "Z": 197.0
       },
       "SurfaceType": "EAnvilPhysicalSurfaceType::Wood",
-      "CollisionMask": 16384
+      "CollisionMask": 134234112,
+      "bVaultable": false
     }
   },
   {
@@ -158,6 +159,10 @@
         {
           "ObjectName": "BlueprintGeneratedClass'CampTownCenterBuildSite_C'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/CampTownCenterBuildSite.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'TownCenterKeepBuildSite_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/TownCenterKeepBuildSite.0"
         }
       ]
     }
@@ -224,7 +229,7 @@
     "Class": "UScriptClass'HealthProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "MaxHealth": 33.0,
+      "MaxHealth": 128.0,
       "TargetType": "EAnvilDamageTargetType::Vehicle"
     }
   },
@@ -238,41 +243,69 @@
       "Slots": [
         {
           "ProxyRepeat": 6,
-          "bOr": false,
-          "HeldItem": null,
-          "bIsHeldItemPublic": true,
-          "Count": 0,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
           "StackLimit": 10,
+          "bOr": false,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
           "AcceptedTags": [
             "EAnvilItemTag::Avatar"
           ],
+          "AcceptedTagsVisVar": 0,
           "RequiredTags": [],
+          "RequiredTagsVisVar": 0,
           "ProhibitedTags": [],
+          "ProhibitedTagsVisVar": 0,
           "DedicatedItemType": null,
-          "DedicatedUnderlyingItemType": null,
-          "bCheckDedicatedUnderlyingItem": true,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
           "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
           "BackgroundType": "EAnvilItemSlotBackgroundType::Avatar",
           "CustomStackLimits": []
         },
         {
           "ProxyRepeat": 9,
-          "bOr": false,
-          "HeldItem": null,
-          "bIsHeldItemPublic": true,
-          "Count": 0,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
           "StackLimit": 10,
+          "bOr": false,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
-          "AcceptedTags": [],
-          "RequiredTags": [],
-          "ProhibitedTags": [],
-          "DedicatedItemType": null,
-          "DedicatedUnderlyingItemType": null,
           "bCheckDedicatedUnderlyingItem": true,
+          "AcceptedTags": [],
+          "AcceptedTagsVisVar": 0,
+          "RequiredTags": [],
+          "RequiredTagsVisVar": 0,
+          "ProhibitedTags": [],
+          "ProhibitedTagsVisVar": 0,
+          "DedicatedItemType": null,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
           "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
           "BackgroundType": "EAnvilItemSlotBackgroundType::None",
           "CustomStackLimits": []
         }
@@ -300,6 +333,7 @@
       "RotationalSpeed": 50.0,
       "SprintFactor": 1.5,
       "RoadFactor": 1.2,
+      "MovementPlayerInteraction": "EAnvilVehicleMovementPlayerInteractionType::BlockIfMaxGuard",
       "RearAxleOffset": {
         "X": -450.0,
         "Y": 0.0,

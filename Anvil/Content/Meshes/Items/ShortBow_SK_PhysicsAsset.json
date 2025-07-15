@@ -1,0 +1,227 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "ShortBow_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Flags": "RF_Public | RF_Standalone | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'ShortBow_SK_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Items/ShortBow_SK_PhysicsAsset.3"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'ShortBow_SK_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Items/ShortBow_SK_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'ShortBow_SK_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "Anvil/Content/Meshes/Items/ShortBow_SK_PhysicsAsset.5"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'ShortBow_SK_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "Anvil/Content/Meshes/Items/ShortBow_SK_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'ShortBow_SK_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "Anvil/Content/Meshes/Items/ShortBow_SK_PhysicsAsset.2"
+        }
+      ],
+      "ThumbnailInfo": null
+    },
+    "CollisionDisableTable": [
+      {
+        "Key": {
+          "Indices": [
+            0,
+            1
+          ]
+        },
+        "Value": false
+      },
+      {
+        "Key": {
+          "Indices": [
+            0,
+            2
+          ]
+        },
+        "Value": false
+      },
+      {
+        "Key": {
+          "Indices": [
+            1,
+            2
+          ]
+        },
+        "Value": false
+      }
+    ]
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "ShortBow_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "bowTop_archSpine_01",
+        "ConstraintBone1": "bowTop_archSpine_01",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": -1.5306445E-13,
+          "Y": -1.6531982,
+          "Z": 33.504726
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "ShortBow_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "bowBottom_archSpine_01",
+        "ConstraintBone1": "bowBottom_archSpine_01",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": -1.5306445E-13,
+          "Y": -1.6531982,
+          "Z": -33.504997
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "ShortBow_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 3.6991855E-06,
+              "Y": -15.40259,
+              "Z": -2.4322494E-06
+            },
+            "Rotation": {
+              "Pitch": 1.5535394E-06,
+              "Yaw": -90.0,
+              "Roll": -8.057725E-06
+            },
+            "Radius": 16.847866,
+            "Length": 29.793226,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "9D49F3564FCC8B8E16662488F24996A3"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "ShortBow_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.004558858,
+              "Y": -15.28302,
+              "Z": 27.620016
+            },
+            "Rotation": {
+              "Pitch": -44.15325,
+              "Yaw": -90.0,
+              "Roll": 0.021451501
+            },
+            "Radius": 4.765014,
+            "Length": 24.063652,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "bowTop_archSpine_01",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "0D6EA5DC41EEDE1E440614B6A45ED2C1"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "ShortBow_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.003315467,
+              "Y": -15.2423935,
+              "Z": -27.64857
+            },
+            "Rotation": {
+              "Pitch": 43.853344,
+              "Yaw": -90.0,
+              "Roll": -0.015679788
+            },
+            "Radius": 4.694581,
+            "Length": 24.0684,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "bowBottom_archSpine_01",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "F62C496B42177C58B8701AA0CB3AC8A4"
+  }
+]

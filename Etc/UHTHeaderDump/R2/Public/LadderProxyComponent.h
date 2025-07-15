@@ -37,6 +37,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LadderFallDamage;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<float> ValidHalfLengths;
+    
     ULadderProxyComponent();
 
 };

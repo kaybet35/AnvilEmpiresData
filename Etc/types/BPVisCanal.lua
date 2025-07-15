@@ -2,9 +2,12 @@
 
 ---@class ABPVisCanal_C : AVisSpline
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field LandscapeCullBalljointMid UStaticMeshComponent
----@field LandscapeCullBalljointEnd UStaticMeshComponent
----@field LandscapeCullBalljointStart UStaticMeshComponent
+---@field FoliageCullBalljointStart UBPFoliageCullStaticMeshComponent_C
+---@field FoliageCullBalljointEnd UBPFoliageCullStaticMeshComponent_C
+---@field FoliageCullBalljointMid UBPFoliageCullStaticMeshComponent_C
+---@field LandscapeCullBalljointEnd UBPLandscapeCullStaticMeshComponent_C
+---@field LandscapeCullBalljointStart UBPLandscapeCullStaticMeshComponent_C
+---@field LandscapeCullBalljointMid UBPLandscapeCullStaticMeshComponent_C
 ---@field BalljointTrimEnd UStaticMeshComponent
 ---@field BalljointBaseEnd UStaticMeshComponent
 ---@field AdapterEnd UStaticMeshComponent
@@ -29,8 +32,9 @@
 ---@field EndMesh UStaticMeshComponent
 ABPVisCanal_C = {}
 
----@param DeltaSeconds float
-function ABPVisCanal_C:ReceiveTick(DeltaSeconds) end
+function ABPVisCanal_C:ReceiveBeginPlay() end
+---@param SplineDataComponent USplineDataComponent
+function ABPVisCanal_C:OnShapeUpdated_Event(SplineDataComponent) end
 ---@param EntryPoint int32
 function ABPVisCanal_C:ExecuteUbergraph_BPVisCanal(EntryPoint) end
 

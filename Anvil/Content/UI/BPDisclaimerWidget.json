@@ -13,14 +13,29 @@
         "Bottom": 0.0
       },
       "Background": {
+        "DrawAs": "ESlateBrushDrawType::Box",
+        "ImageSize": {
+          "X": 2880.0,
+          "Y": 1620.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
         "TintColor": {
           "SpecifiedColor": {
-            "R": 0.015,
-            "G": 0.01237,
-            "B": 0.008715,
-            "A": 1.0,
-            "Hex": "201D17"
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.8,
+            "Hex": "CCFFFFFF"
           }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Dialog'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/Dialog.0"
         }
       },
       "Slots": [
@@ -54,7 +69,7 @@
       },
       "Content": {
         "ObjectName": "VerticalBox'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.35"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.36"
       }
     }
   },
@@ -76,8 +91,8 @@
         "LocalizedString": "CANCEL"
       },
       "LabelFontSize": 12,
-      "ButtonWidth": 150.0,
-      "ButtonHeight": 30.0,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPDisclaimerWidget_C:WidgetTree.HorizontalBox_534.HorizontalBoxSlot_0'",
         "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.22"
@@ -102,8 +117,8 @@
         "LocalizedString": "CONFIRM"
       },
       "LabelFontSize": 12,
-      "ButtonWidth": 150.0,
-      "ButtonHeight": 30.0,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPDisclaimerWidget_C:WidgetTree.HorizontalBox_534.HorizontalBoxSlot_1'",
         "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.23"
@@ -135,7 +150,7 @@
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'BPDisclaimerWidget_C:WidgetTree.DialogOverlay.OverlaySlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.27"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.28"
       }
     }
   },
@@ -237,6 +252,25 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "WidgetStyle": {
+        "BackgroundImageNormal": {
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 64.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.693872,
+              "G": 0.693872,
+              "B": 0.693872,
+              "A": 1.0,
+              "Hex": "D9D9D9"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'FlatBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+          }
+        },
         "TextStyle": {
           "Font": {
             "FontObject": {
@@ -268,7 +302,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411.VerticalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.39"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.40"
       }
     }
   },
@@ -412,7 +446,7 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPDisclaimerWidget_C:WidgetTree.DisclaimerText1'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.31"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.32"
       }
     }
   },
@@ -439,7 +473,7 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPDisclaimerWidget_C:WidgetTree.DisclaimerText3'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.33"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.34"
       }
     }
   },
@@ -466,7 +500,7 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPDisclaimerWidget_C:WidgetTree.DisclaimerText4'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.34"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.35"
       }
     }
   },
@@ -493,7 +527,7 @@
       },
       "Content": {
         "ObjectName": "TextBlock'BPDisclaimerWidget_C:WidgetTree.DisclaimerText2'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.32"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.33"
       }
     }
   },
@@ -510,13 +544,17 @@
           "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.22"
         },
         {
+          "ObjectName": "HorizontalBoxSlot'BPDisclaimerWidget_C:WidgetTree.HorizontalBox_534.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.24"
+        },
+        {
           "ObjectName": "HorizontalBoxSlot'BPDisclaimerWidget_C:WidgetTree.HorizontalBox_534.HorizontalBoxSlot_1'",
           "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.23"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411.VerticalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.38"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.39"
       }
     }
   },
@@ -555,26 +593,56 @@
     }
   },
   {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_534",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPDisclaimerWidget_C:WidgetTree.HorizontalBox_534'",
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.21"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPDisclaimerWidget_C:WidgetTree.Spacer_80'",
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.30"
+      }
+    }
+  },
+  {
     "Type": "Image",
-    "Name": "Background",
+    "Name": "BlackBG",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'Image'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Brush": {
-        "TintColor": {
-          "SpecifiedColor": {
-            "R": 0.0,
-            "G": 0.0,
-            "B": 0.0,
-            "A": 0.8,
-            "Hex": "CC000000"
-          }
+        "DrawAs": "ESlateBrushDrawType::Border",
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'DialogNoBorder'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogNoBorder.0"
         }
       },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.5,
+        "Hex": "7FFFFFFF"
+      },
       "Slot": {
-        "ObjectName": "OverlaySlot'BPDisclaimerWidget_C:WidgetTree.DialogOverlay.OverlaySlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.28"
+        "ObjectName": "OverlaySlot'BPDisclaimerWidget_C:WidgetTree.DialogOverlay.OverlaySlot_1'",
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.29"
       }
     }
   },
@@ -597,7 +665,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.37"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.38"
       }
     }
   },
@@ -610,12 +678,12 @@
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "OverlaySlot'BPDisclaimerWidget_C:WidgetTree.DialogOverlay.OverlaySlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.28"
+          "ObjectName": "OverlaySlot'BPDisclaimerWidget_C:WidgetTree.DialogOverlay.OverlaySlot_1'",
+          "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.29"
         },
         {
           "ObjectName": "OverlaySlot'BPDisclaimerWidget_C:WidgetTree.DialogOverlay.OverlaySlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.27"
+          "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.28"
         }
       ]
     }
@@ -631,7 +699,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'BPDisclaimerWidget_C:WidgetTree.DialogOverlay'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.26"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.27"
       },
       "Content": {
         "ObjectName": "CanvasPanel'BPDisclaimerWidget_C:WidgetTree.DialogCanvas'",
@@ -641,7 +709,7 @@
   },
   {
     "Type": "OverlaySlot",
-    "Name": "OverlaySlot_2",
+    "Name": "OverlaySlot_1",
     "Outer": "DialogOverlay",
     "Class": "UScriptClass'OverlaySlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
@@ -650,28 +718,28 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'BPDisclaimerWidget_C:WidgetTree.DialogOverlay'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.26"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.27"
       },
       "Content": {
-        "ObjectName": "Image'BPDisclaimerWidget_C:WidgetTree.Background'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.24"
+        "ObjectName": "Image'BPDisclaimerWidget_C:WidgetTree.BlackBG'",
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.25"
       }
     }
   },
   {
     "Type": "Spacer",
-    "Name": "Spacer_352",
+    "Name": "Spacer_80",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'Spacer'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Size": {
-        "X": 1.0,
-        "Y": 30.0
+        "X": 45.0,
+        "Y": 1.0
       },
       "Slot": {
-        "ObjectName": "VerticalBoxSlot'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411.VerticalBoxSlot_7'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.41"
+        "ObjectName": "HorizontalBoxSlot'BPDisclaimerWidget_C:WidgetTree.HorizontalBox_534.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.24"
       }
     }
   },
@@ -824,23 +892,19 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.37"
+          "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.38"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411.VerticalBoxSlot_5'",
-          "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.40"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411.VerticalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.39"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411.VerticalBoxSlot_7'",
           "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.41"
         },
         {
+          "ObjectName": "VerticalBoxSlot'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411.VerticalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.40"
+        },
+        {
           "ObjectName": "VerticalBoxSlot'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411.VerticalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.38"
+          "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.39"
         }
       ],
       "Slot": {
@@ -868,7 +932,7 @@
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411.VerticalBoxSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.40"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.41"
       }
     }
   },
@@ -889,11 +953,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.35"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.36"
       },
       "Content": {
         "ObjectName": "Image'BPDisclaimerWidget_C:WidgetTree.PreAlphaBadgeImage'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.25"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.26"
       }
     }
   },
@@ -914,7 +978,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.35"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.36"
       },
       "Content": {
         "ObjectName": "HorizontalBox'BPDisclaimerWidget_C:WidgetTree.HorizontalBox_534'",
@@ -929,11 +993,14 @@
     "Class": "UScriptClass'VerticalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "Padding": {
+        "Top": 10.0
+      },
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.35"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.36"
       },
       "Content": {
         "ObjectName": "EditableTextBox'BPDisclaimerWidget_C:WidgetTree.AcceptTextBox'",
@@ -950,28 +1017,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.35"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.36"
       },
       "Content": {
         "ObjectName": "VerticalBox'BPDisclaimerWidget_C:WidgetTree.VerticalBox_464'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.36"
-      }
-    }
-  },
-  {
-    "Type": "VerticalBoxSlot",
-    "Name": "VerticalBoxSlot_7",
-    "Outer": "VerticalBox_411",
-    "Class": "UScriptClass'VerticalBoxSlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "Parent": {
-        "ObjectName": "VerticalBox'BPDisclaimerWidget_C:WidgetTree.VerticalBox_411'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.35"
-      },
-      "Content": {
-        "ObjectName": "Spacer'BPDisclaimerWidget_C:WidgetTree.Spacer_352'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.29"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.37"
       }
     }
   },
@@ -990,7 +1040,7 @@
       },
       "Parent": {
         "ObjectName": "VerticalBox'BPDisclaimerWidget_C:WidgetTree.VerticalBox_464'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.36"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.37"
       },
       "Content": {
         "ObjectName": "GridPanel'BPDisclaimerWidget_C:WidgetTree.GridPanel_64'",
@@ -1012,11 +1062,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPDisclaimerWidget_C:WidgetTree.VerticalBox_464'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.36"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.37"
       },
       "Content": {
         "ObjectName": "TextBlock'BPDisclaimerWidget_C:WidgetTree.BodyText'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.30"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.31"
       }
     }
   },
@@ -1039,7 +1089,7 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "Background",
+        "Name": "BlackBG",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
@@ -1084,7 +1134,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "Overlay'BPDisclaimerWidget_C:WidgetTree.DialogOverlay'",
-        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.26"
+        "ObjectPath": "Anvil/Content/UI/BPDisclaimerWidget.27"
       }
     }
   }

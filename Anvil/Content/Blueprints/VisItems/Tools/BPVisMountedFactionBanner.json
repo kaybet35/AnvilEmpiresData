@@ -1,0 +1,113 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisMountedFactionBanner_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'VisItem'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisMountedFactionBanner_C'Default__BPVisMountedFactionBanner_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisItems/Tools/BPVisMountedFactionBanner.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisMountedFactionBanner_C",
+    "Name": "Default__BPVisMountedFactionBanner_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisItems/Tools/BPVisMountedFactionBanner.BPVisMountedFactionBanner_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CodeNameString": "MountedFactionBanner",
+      "CodeName": 1050209743,
+      "NameText": {
+        "Namespace": "",
+        "Key": "614AC0454FA91C333C067889441B878F",
+        "SourceString": "Alliance Banner",
+        "LocalizedString": "Alliance Banner"
+      },
+      "DescriptionText": {
+        "Namespace": "",
+        "Key": "81C1B1A945028501315C1BA1590E9C67",
+        "SourceString": "A flag used to lead troops into battle.",
+        "LocalizedString": "A flag used to lead troops into battle."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'IconFactionBanner'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Items/IconFactionBanner.0"
+      },
+      "Category": "EVisItemCategory::Tools",
+      "Mesh": {
+        "ObjectName": "SkeletalMesh'FactionBanner_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/FactionBanner_SK.5"
+      },
+      "StockpileMesh": {
+        "ObjectName": "StaticMesh'FactionBannerStockpile_SM'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/FactionBannerStockpile_SM.2"
+      },
+      "FactionMeshOverrides": [
+        {
+          "Key": "EAnvilFactionId::Aranic",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FactionBannerAranic_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/FactionBannerAranic_SK.5"
+          }
+        },
+        {
+          "Key": "EAnvilFactionId::Mirrish",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FactionBannerAncient_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/FactionBannerAncient_SK.3"
+          }
+        },
+        {
+          "Key": "EAnvilFactionId::Novan",
+          "Value": {
+            "ObjectName": "SkeletalMesh'FactionBannerRemnant_SK'",
+            "ObjectPath": "Anvil/Content/Meshes/Items/FactionBannerRemnant_SK.3"
+          }
+        }
+      ],
+      "GripType": "EEquippedItemGripType::VerticalBanner",
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'FactionBanner_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Structures/FactionBanner_ABP.0"
+      },
+      "MeshRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": -90.0
+      },
+      "ActivityStateMontageMap": [
+        {
+          "Key": "EAnvilSimActivityState::Attacking",
+          "Value": {
+            "ObjectName": "AnimMontage'carriedBanner_flagWaving_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/carriedBanner_flagWaving_Montage.0"
+          }
+        }
+      ],
+      "AttackChainMontages": [
+        {
+          "ObjectName": "AnimMontage'carriedBanner_flagWaving_Montage'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/carriedBanner_flagWaving_Montage.0"
+        },
+        {
+          "ObjectName": "AnimMontage'carriedBanner_flagWaving_Montage'",
+          "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/carriedBanner_flagWaving_Montage.0"
+        }
+      ]
+    }
+  }
+]

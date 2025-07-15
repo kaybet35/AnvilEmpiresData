@@ -3,6 +3,8 @@
 
 UGrassRemovalVolumeComponent::UGrassRemovalVolumeComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bDeferGrassUpdate = false;
+    this->bSetByUseVolume = true;
+    this->bSetBySpline = true;
     this->SplineDataComponent = CreateDefaultSubobject<USplineDataComponent>(TEXT("SplineDataComponent"));
 }
 

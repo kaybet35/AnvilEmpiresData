@@ -1,0 +1,70 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "RamMove_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'RamMove_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Ram/RamMove_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.2"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'ReloadConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/ReloadConcurrency.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 128,
+        "VolumeScale": 0.5
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 7900.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Foley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/Foley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "RamMove_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VolumeMin": 1.0,
+      "VolumeMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'RamMove_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Ram/RamMove_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "RamMove_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/Ram/RamImpactDriveLoop.RamImpactDriveLoop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'RamImpactDriveLoop'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/Ram/RamImpactDriveLoop.0"
+    }
+  }
+]

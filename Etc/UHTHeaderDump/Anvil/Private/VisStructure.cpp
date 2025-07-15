@@ -1,6 +1,7 @@
 #include "VisStructure.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ArrowComponent -FallbackName=ArrowComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DecalComponent -FallbackName=DecalComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=CollapsibleDataComponent -FallbackName=CollapsibleDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=DecayDataComponent -FallbackName=DecayDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=HealthDataComponent -FallbackName=HealthDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=ScorchDataComponent -FallbackName=ScorchDataComponent
@@ -22,6 +23,7 @@ AVisStructure::AVisStructure(const FObjectInitializer& ObjectInitializer) : Supe
     this->HealthDataComponent = CreateDefaultSubobject<UHealthDataComponent>(TEXT("HealthDataComponent"));
     this->TeamDataComponent = CreateDefaultSubobject<UTeamDataComponent>(TEXT("TeamDataComponent"));
     this->StructureDataComponent = CreateDefaultSubobject<UStructureDataComponent>(TEXT("StructureDataComponent"));
+    this->CollapsibleDataComponent = CreateDefaultSubobject<UCollapsibleDataComponent>(TEXT("CollapsibleDataComponent"));
     this->ScorchDataComponent = CreateDefaultSubobject<UScorchDataComponent>(TEXT("ScorchDataComponent"));
     this->DecayDataComponent = CreateDefaultSubobject<UDecayDataComponent>(TEXT("DecayDataComponent"));
     this->ArrowComponent = (UArrowComponent*)RootComponent;

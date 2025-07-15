@@ -42,8 +42,8 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->ItemSecondaryMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ItemSecondaryMesh"));
     this->UnarmedItemMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("UnarmedItemMesh"));
     this->UnarmedItemSecondaryMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("UnarmedItemSecondaryMesh"));
+    this->RangedWeaponAmmoMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("RangedWeaponAmmoMesh"));
     this->PostProcessComponent = CreateDefaultSubobject<UPostProcessComponent>(TEXT("PostProcessComponent"));
-    this->LandscapeCullVirtualTextureVolumeClass = NULL;
     this->RotationAmount = 1.00f;
     this->CameraRotationLerpSpeed = 1.00f;
     this->AimMeshLength = 100.00f;
@@ -56,6 +56,7 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->AimMeshMaterial = NULL;
     this->MeleeAimMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeleeAimMesh"));
     this->MeleeAimMeshTargetComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeleeAimMeshTarget"));
+    this->CrowdIdentifierMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CrowdIdentifierMeshComponent"));
     this->FishingAimMeshClass = NULL;
     this->FishingBobberClass = NULL;
     this->PlayerVisualsComponent = CreateDefaultSubobject<UVisPlayerVisualsComponent>(TEXT("PlayerVisualsComponent"));
@@ -98,6 +99,7 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->AimMeshComponent->SetupAttachment(RootComponent);
     this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
     this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
+    this->CrowdIdentifierMeshComponent->SetupAttachment(RootComponent);
     this->VoiceIndicator->SetupAttachment(RootComponent);
     this->TorchVFXComponent->SetupAttachment(Mesh);
     this->TorchVFX2Component->SetupAttachment(Mesh);
@@ -123,6 +125,7 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->ItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->RangedWeaponAmmoMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 FString AVisPlayer::GetPlayerName() const {

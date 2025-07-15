@@ -137,7 +137,6 @@
         "SourceString": "Requires 2 players to move",
         "LocalizedString": "Requires 2 players to move"
       },
-      "PositionSmoothSpeed": 4.0,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisLadderVehicle_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.1"
@@ -298,7 +297,15 @@
         "ObjectName": "SkeletalMesh'SK_SiegeLadder'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/SK_SiegeLadder.0"
       },
-      "bReceivesDecals": false
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": []
+        }
+      }
     }
   },
   {

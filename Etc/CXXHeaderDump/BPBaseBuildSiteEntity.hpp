@@ -3,6 +3,6 @@
 
 class UBPBaseBuildSiteEntity_C : public UBaseBuildSiteEntity
 {
-}; // Size: 0xC8
+}; // Size: 0xD0
 
 #endif

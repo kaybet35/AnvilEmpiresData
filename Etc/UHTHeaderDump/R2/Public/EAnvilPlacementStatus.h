@@ -10,6 +10,7 @@ enum class EAnvilPlacementStatus : uint8 {
     InvalidFoundation,
     InvalidSurface,
     TooCloseToTownHall,
+    TooCloseToFortress,
     TooCloseToFamilyCenter,
     TooCloseToCamp,
     TooFarFromTownHall,

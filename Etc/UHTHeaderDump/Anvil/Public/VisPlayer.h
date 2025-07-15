@@ -8,7 +8,6 @@
 #include "VisPlayer.generated.h"
 
 class AActor;
-class ARuntimeVirtualTextureVolume;
 class AVisFishingBobber;
 class AVisFishingIndicator;
 class UAdminEnvDataComponent;
@@ -89,10 +88,10 @@ public:
     USkeletalMeshComponent* UnarmedItemSecondaryMeshComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UPostProcessComponent* PostProcessComponent;
+    UStaticMeshComponent* RangedWeaponAmmoMeshComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSubclassOf<ARuntimeVirtualTextureVolume> LandscapeCullVirtualTextureVolumeClass;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPostProcessComponent* PostProcessComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RotationAmount;
@@ -131,6 +130,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStaticMeshComponent* MeleeAimMeshTargetComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UStaticMeshComponent* CrowdIdentifierMeshComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AVisFishingIndicator> FishingAimMeshClass;

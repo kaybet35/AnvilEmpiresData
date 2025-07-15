@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
+#include "OnVisSplineShapeUpdatedDelegate.h"
 #include "VisSplineComponent.generated.h"
 
 class UDecalComponent;
@@ -15,6 +16,9 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ANVIL_API UVisSplineComponent : public USceneComponent {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FOnVisSplineShapeUpdated OnShapeUpdated;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDecalComponent* GroundDecalComponent;
     

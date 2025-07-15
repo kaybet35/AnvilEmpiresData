@@ -41,5 +41,9 @@ enum class EActionButtonType : uint8 {
     RentStorehouse,
     ReleaseStorehouse,
     ExtendStorehouse,
+    OpenSiegeTowerRamp,
+    CloseSiegeTowerRamp,
+    OpenSiegeTowerLadder,
+    CloseSiegeTowerLadder,
 };
 

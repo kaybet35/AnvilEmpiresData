@@ -1,6 +1,16 @@
 ---@meta
 
 ---@class ABPVisGridFoundationGateStraight_C : AVisGate
+---@field Rubble UVisRandomMeshDecorComponent
+---@field TopMeshCollapsed UVisStaticMeshComponentBase
+---@field VisDynamicMeshTemplateReference11 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference10 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference9 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference8 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference5 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference4 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference7 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference6 UVisDynamicMeshTemplateReferenceComponent
 ---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field VisFoundationEdgeMeshDecor10 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor11 UVisFoundationEdgeMeshDecorComponent
@@ -10,29 +20,21 @@
 ---@field VisFoundationEdgeMeshDecor5 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor8 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor9 UVisFoundationEdgeMeshDecorComponent
----@field VisFoundationBottomMeshDecor1 UVisFoundationBottomMeshDecorComponent
+---@field BottomMesh1 UVisFoundationBottomMeshDecorComponent
 ---@field VerticalEdge012 UVisFoundationEdgeMeshDecorComponent
 ---@field VerticalEdge011 UVisFoundationEdgeMeshDecorComponent
----@field ChildActor12 UChildActorComponent
----@field ChildActor11 UChildActorComponent
 ---@field VisRandomMeshDecor93 UVisRandomMeshDecorComponent
----@field ChildActor10 UChildActorComponent
----@field ChildActor9 UChildActorComponent
 ---@field VerticalEdge07 UVisFoundationEdgeMeshDecorComponent
 ---@field VisRandomMeshDecor92 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor91 UVisRandomMeshDecorComponent
 ---@field VerticalEdge010 UVisFoundationEdgeMeshDecorComponent
 ---@field VisRandomMeshDecor90 UVisRandomMeshDecorComponent
----@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
+---@field BottomMesh2 UVisFoundationBottomMeshDecorComponent
 ---@field VisRandomMeshDecor89 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor2 UVisRandomMeshDecorComponent
----@field ChildActor6 UChildActorComponent
 ---@field VerticalEdge06 UVisFoundationEdgeMeshDecorComponent
 ---@field VerticalEdge09 UVisFoundationEdgeMeshDecorComponent
----@field ChildActor5 UChildActorComponent
----@field ChildActor7 UChildActorComponent
 ---@field VisRandomMeshDecor4 UVisRandomMeshDecorComponent
----@field ChildActor8 UChildActorComponent
 ---@field VerticalEdge08 UVisFoundationEdgeMeshDecorComponent
 ---@field VisRandomMeshDecor3 UVisRandomMeshDecorComponent
 ---@field VerticalEdge05 UVisFoundationEdgeMeshDecorComponent
@@ -62,7 +64,7 @@
 ---@field VisRandomMeshDecor UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor70 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor40 UVisRandomMeshDecorComponent
----@field StaticMesh UStaticMeshComponent
+---@field TopMesh UStaticMeshComponent
 ---@field VisFoundationEdgeMeshDecor UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor2 UVisFoundationEdgeMeshDecorComponent

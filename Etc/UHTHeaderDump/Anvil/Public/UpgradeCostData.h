@@ -43,6 +43,36 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int16 ResourceFibre;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ResourceStoneFragments;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ProcessedWoodHard;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 Nails;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ProcessedSteel;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ResourceFibreHeavy;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ProcessedBronze;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ProcessedFlax;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ProcessedLead;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ProcessedResin;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 ProcessedThickLeather;
+    
     ANVIL_API FUpgradeCostData();
 };
 

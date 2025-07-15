@@ -3,6 +3,6 @@
 
 class AVisHitEffectIronArmourGlancing_C : public AVisEffect
 {
-}; // Size: 0x4D8
+}; // Size: 0x500
 
 #endif

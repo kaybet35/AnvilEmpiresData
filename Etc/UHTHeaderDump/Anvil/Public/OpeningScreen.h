@@ -1,11 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
 #include "AnvilScreen.h"
 #include "OpeningScreen.generated.h"
 
 class UAnvilButtonWidget;
-class UAnvilDropdownEntryWidget;
 class UButton;
 class UDisclaimerWidget;
 class UNextTestWidget;
@@ -45,9 +43,14 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UButton* DevModeButton;
     
+private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UAnvilDropdownEntryWidget* ShardDropdown;
+    UTextBlock* SelectedShardText;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAnvilButtonWidget* ShardSelectorButton;
+    
+public:
     UOpeningScreen();
 
 protected:
@@ -56,6 +59,9 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void ReenableDiscordRoleButton();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnShardSelectorButtonClicked();
     
     UFUNCTION(BlueprintCallable)
     void OnPlayButtonClicked();
@@ -76,7 +82,7 @@ protected:
     bool IsDiscordRoleButtonEnabled();
     
     UFUNCTION(BlueprintCallable)
-    ESlateVisibility GetShardDropDownVisibility();
+    FText GetSelectedShardText();
     
     UFUNCTION(BlueprintCallable)
     FText GetAnnouncementText();

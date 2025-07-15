@@ -6,38 +6,11 @@
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Parent": {
-        "ObjectName": "MaterialInstanceConstant'BirchBranchCull'",
-        "ObjectPath": "Anvil/Content/Materials/Resources/BirchBranchCull.0"
+        "ObjectName": "Material'FoliageMasterNew'",
+        "ObjectPath": "Anvil/Content/Materials/Environment/Foliage/FoliageMasterNew.0"
       },
       "bHasStaticPermutationResource": true,
       "ScalarParameterValues": [
-        {
-          "ParameterInfo": {
-            "Name": "RoughnessHigh",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 0.8,
-          "ExpressionGUID": "6A533557-485BFE71-0F9C0A9A-54BAAFDF"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "RoughnessLow",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 0.6,
-          "ExpressionGUID": "9BDBB78F-47732EFF-885AE198-B86DABBA"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "WindPower",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 0.5,
-          "ExpressionGUID": "8AB4BE6F-40DDB6D2-4807D3BA-03E99FE6"
-        },
         {
           "ParameterInfo": {
             "Name": "RefractionDepthBias",
@@ -59,7 +32,7 @@
             "ObjectName": "Texture2D'BirchBranchA'",
             "ObjectPath": "Anvil/Content/Textures/Resources/BirchBranchA.0"
           },
-          "ExpressionGUID": "57394823-4EF8D16C-B0B4BCB9-064EC292"
+          "ExpressionGUID": "994EC049-4C91519F-2F9A1C96-91D2A972"
         },
         {
           "ParameterInfo": {
@@ -71,35 +44,15 @@
             "ObjectName": "Texture2D'BirchBranchN'",
             "ObjectPath": "Anvil/Content/Textures/Resources/BirchBranchN.0"
           },
-          "ExpressionGUID": "13D9CECF-44A6F3B5-BE21ADA0-2F477547"
+          "ExpressionGUID": "B26D1580-4C31C2F3-4ECDA28F-2E28595F"
         }
       ],
       "BasePropertyOverrides": {
         "TwoSided": true,
-        "DitheredLODTransition": true,
         "BlendMode": "EBlendMode::BLEND_Masked",
+        "ShadingModel": "EMaterialShadingModel::MSM_TwoSidedFoliage",
         "OpacityMaskClipValue": 0.3333
-      },
-      "LightmassSettings": {
-        "bCastShadowAsMasked": true
-      },
-      "TextureStreamingData": [
-        {
-          "SamplingScale": 1.0,
-          "UVChannelIndex": 0,
-          "TextureName": "Grunge_Mask"
-        },
-        {
-          "SamplingScale": 1.0,
-          "UVChannelIndex": 0,
-          "TextureName": "RainDropMap"
-        },
-        {
-          "SamplingScale": 1.0,
-          "UVChannelIndex": 0,
-          "TextureName": "Snow_N"
-        }
-      ]
+      }
     },
     "LoadedMaterialResources": [],
     "CachedData": {

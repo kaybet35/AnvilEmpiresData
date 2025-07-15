@@ -7,7 +7,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'GridFoundationTriangularStraightFootprint_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationTriangularStraightFootprint.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationTriangularStraightFootprint.6"
       }
     },
     "SuperStruct": {
@@ -46,7 +46,7 @@
     "Type": "GridFoundationTriangularStraightFootprint_C",
     "Name": "Default__GridFoundationTriangularStraightFootprint_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationTriangularStraightFootprint.GridFoundationTriangularStraightFootprint_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "bShowMesh": true,
       "Position": {
@@ -81,7 +81,18 @@
           },
           "bHighlight": false,
           "bHide": false,
-          "bNoCopyToBuildSite": false
+          "bNoCopyToBuildSite": false,
+          "bInsertToStartOfComponentArray": false
+        },
+        {
+          "Comp": {
+            "ObjectName": "MeshCollisionProxyComponent'Default__GridFoundationTriangularStraightFootprint_C:MeshCollisionProxyComponent_0'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationTriangularStraightFootprint.3"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": false,
+          "bInsertToStartOfComponentArray": false
         }
       ]
     }
@@ -159,6 +170,21 @@
     }
   },
   {
+    "Type": "MeshCollisionProxyComponent",
+    "Name": "MeshCollisionProxyComponent_0",
+    "Outer": "Default__GridFoundationTriangularStraightFootprint_C",
+    "Class": "UScriptClass'MeshCollisionProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PhysicsAssetName": {
+        "ObjectName": "StaticMesh'GridFoundation_triangular_straight'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/GridFoundation_triangular_straight.2"
+      },
+      "CollisionMask": 256,
+      "Tags": 8
+    }
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "GridFoundationTriangularStraightFootprint_C",
@@ -178,7 +204,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'GridFoundationTriangularStraightFootprint_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationTriangularStraightFootprint.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationTriangularStraightFootprint.4"
       },
       "VariableGuid": "718B1823-4575C5B4-4725C2A5-6173B08F",
       "InternalVariableName": "DefaultSceneRoot"
@@ -194,18 +220,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'GridFoundationTriangularStraightFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationTriangularStraightFootprint.4"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationTriangularStraightFootprint.5"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'GridFoundationTriangularStraightFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationTriangularStraightFootprint.4"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationTriangularStraightFootprint.5"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'GridFoundationTriangularStraightFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationTriangularStraightFootprint.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/Foundation/GridFoundationTriangularStraightFootprint.5"
       }
     }
   }

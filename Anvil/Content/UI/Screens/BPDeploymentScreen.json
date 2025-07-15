@@ -40,14 +40,13 @@
     "Properties": {
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Background": {
-        "TintColor": {
-          "SpecifiedColor": {
-            "R": 0.0,
-            "G": 0.0,
-            "B": 0.0,
-            "A": 0.8,
-            "Hex": "CC000000"
-          }
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 48.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'MainMenuBar'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/MainMenuBar.0"
         }
       },
       "Slots": [
@@ -163,6 +162,8 @@
         "SourceString": "Logout",
         "LocalizedString": "Logout"
       },
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPDeploymentScreen_C:WidgetTree.VerticalBox_38.VerticalBoxSlot_4'",
         "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.31"
@@ -181,8 +182,8 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.15"
+        "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.16"
       }
     }
   },
@@ -301,19 +302,19 @@
         },
         {
           "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_7'",
-          "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.17"
-        },
-        {
-          "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.15"
-        },
-        {
-          "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_8'",
           "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.18"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.15"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
           "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.16"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.17"
         }
       ]
     }
@@ -351,8 +352,8 @@
         }
       ],
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_8'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.18"
+        "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_5'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.17"
       }
     }
   },
@@ -387,39 +388,6 @@
   },
   {
     "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_2",
-    "Outer": "CanvasPanel_0",
-    "Class": "UScriptClass'CanvasPanelSlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "LayoutData": {
-        "Anchors": {
-          "Minimum": {
-            "X": 0.5,
-            "Y": 0.5
-          },
-          "Maximum": {
-            "X": 0.5,
-            "Y": 0.5
-          }
-        },
-        "Alignment": {
-          "X": 0.5,
-          "Y": 0.5
-        }
-      },
-      "Parent": {
-        "ObjectName": "CanvasPanel'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.11"
-      },
-      "Content": {
-        "ObjectName": "BPDeploymentFoodWidget_C'BPDeploymentScreen_C:WidgetTree.DeploymentFoodWidget'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.7"
-      }
-    }
-  },
-  {
-    "Type": "CanvasPanelSlot",
     "Name": "CanvasPanelSlot_3",
     "Outer": "CanvasPanel_0",
     "Class": "UScriptClass'CanvasPanelSlot'",
@@ -439,6 +407,69 @@
       "Content": {
         "ObjectName": "VerticalBox'BPDeploymentScreen_C:WidgetTree.FamilyCenterDeployWidget'",
         "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.27"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Outer": "CanvasPanel_0",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.11"
+      },
+      "Content": {
+        "ObjectName": "BPDeploymentFoodWidget_C'BPDeploymentScreen_C:WidgetTree.DeploymentFoodWidget'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.7"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Outer": "CanvasPanel_0",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.11"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'BPDeploymentScreen_C:WidgetTree.DeploymentTextCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.13"
       }
     }
   },
@@ -476,36 +507,6 @@
       "Content": {
         "ObjectName": "VerticalBox'BPDeploymentScreen_C:WidgetTree.VerticalBox_38'",
         "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.28"
-      }
-    }
-  },
-  {
-    "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_8",
-    "Outer": "CanvasPanel_0",
-    "Class": "UScriptClass'CanvasPanelSlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "LayoutData": {
-        "Offsets": {
-          "Right": 0.0,
-          "Bottom": 0.0
-        },
-        "Anchors": {
-          "Maximum": {
-            "X": 1.0,
-            "Y": 0.0
-          }
-        }
-      },
-      "bAutoSize": true,
-      "Parent": {
-        "ObjectName": "CanvasPanel'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.11"
-      },
-      "Content": {
-        "ObjectName": "CanvasPanel'BPDeploymentScreen_C:WidgetTree.DeploymentTextCanvas'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.13"
       }
     }
   },
@@ -762,7 +763,7 @@
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.16"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.15"
       }
     }
   },
@@ -781,7 +782,7 @@
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPDeploymentScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_7'",
-        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.17"
+        "ObjectPath": "Anvil/Content/UI/Screens/BPDeploymentScreen.18"
       }
     }
   },

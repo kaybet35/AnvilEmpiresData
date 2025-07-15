@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABPVisSpearFlintProjectile_C : AVisPickupItem
+---@class ABPVisSpearFlintProjectile_C : AVisProjectile
 ---@field SkeletalMesh USkeletalMeshComponent
 ABPVisSpearFlintProjectile_C = {}
 

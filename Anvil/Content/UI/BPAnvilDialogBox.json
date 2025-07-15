@@ -7,20 +7,28 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Padding": {
-        "Left": 0.0,
+        "Left": 6.0,
         "Top": 0.0,
-        "Right": 0.0,
+        "Right": 6.0,
         "Bottom": 0.0
       },
       "Background": {
+        "ImageSize": {
+          "X": 480.0,
+          "Y": 68.0
+        },
         "TintColor": {
           "SpecifiedColor": {
-            "R": 0.005182,
-            "G": 0.004391,
-            "B": 0.003677,
+            "R": 0.02,
+            "G": 0.013816,
+            "B": 0.007484,
             "A": 1.0,
-            "Hex": "100E0C"
+            "Hex": "261F15"
           }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'DialogTint'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogTint.0"
         }
       },
       "Slots": [
@@ -49,14 +57,29 @@
         "Bottom": 0.0
       },
       "Background": {
+        "DrawAs": "ESlateBrushDrawType::Border",
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
         "TintColor": {
           "SpecifiedColor": {
-            "R": 0.015,
-            "G": 0.01237,
-            "B": 0.008715,
-            "A": 0.9,
-            "Hex": "E6201D17"
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.8,
+            "Hex": "CCFFFFFF"
           }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Dialog'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/Dialog.0"
         }
       },
       "Slots": [
@@ -79,9 +102,9 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Padding": {
-        "Left": 0.0,
+        "Left": 6.0,
         "Top": 0.0,
-        "Right": 0.0,
+        "Right": 6.0,
         "Bottom": 0.0
       },
       "Parent": {
@@ -135,8 +158,8 @@
         "LocalizedString": "Left Button"
       },
       "LabelFontSize": 12,
-      "ButtonWidth": 150.0,
-      "ButtonHeight": 30.0,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAnvilDialogBox_C:WidgetTree.HorizontalBox_115.HorizontalBoxSlot_0'",
         "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.20"
@@ -161,8 +184,8 @@
         "LocalizedString": "Right Button"
       },
       "LabelFontSize": 12,
-      "ButtonWidth": 150.0,
-      "ButtonHeight": 30.0,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAnvilDialogBox_C:WidgetTree.HorizontalBox_115.HorizontalBoxSlot_1'",
         "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.21"
@@ -232,7 +255,7 @@
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'BPAnvilDialogBox_C:WidgetTree.DialogOverlay.OverlaySlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.28"
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.29"
       }
     }
   },
@@ -434,6 +457,18 @@
             }
           }
         },
+        "PressedSlateSound": {
+          "ResourceObject": {
+            "ObjectName": "SoundCue'Accept_Cue'",
+            "ObjectPath": "Anvil/Content/Audio/SFX/UI/Accept_Cue.0"
+          }
+        },
+        "SelectionChangeSlateSound": {
+          "ResourceObject": {
+            "ObjectName": "SoundCue'Accept_Cue'",
+            "ObjectPath": "Anvil/Content/Audio/SFX/UI/Accept_Cue.0"
+          }
+        },
         "MenuRowPadding": {
           "Left": 4.0
         }
@@ -453,8 +488,8 @@
         "ActiveHoveredBrush": {
           "DrawAs": "ESlateBrushDrawType::Box",
           "ImageSize": {
-            "X": 64.0,
-            "Y": 64.0
+            "X": 600.0,
+            "Y": 140.0
           },
           "TintColor": {
             "SpecifiedColor": {
@@ -464,13 +499,13 @@
               "A": 1.0,
               "Hex": "C1AD87"
             }
-          },
-          "ResourceObject": {
-            "ObjectName": "Texture2D'FlatBG'",
-            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
           }
         },
         "ActiveBrush": {
+          "ImageSize": {
+            "X": 600.0,
+            "Y": 140.0
+          },
           "TintColor": {
             "SpecifiedColor": {
               "R": 0.730461,
@@ -478,6 +513,36 @@
               "B": 0.124772,
               "A": 1.0,
               "Hex": "DEBA63"
+            }
+          }
+        },
+        "InactiveHoveredBrush": {
+          "ImageSize": {
+            "X": 600.0,
+            "Y": 140.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 1.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "InactiveBrush": {
+          "ImageSize": {
+            "X": 600.0,
+            "Y": 140.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 1.0,
+              "Hex": "FFFFFF"
             }
           }
         },
@@ -871,25 +936,38 @@
   },
   {
     "Type": "Image",
-    "Name": "Background",
+    "Name": "BlackBG",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'Image'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Brush": {
-        "TintColor": {
-          "SpecifiedColor": {
-            "R": 0.0,
-            "G": 0.0,
-            "B": 0.0,
-            "A": 0.5,
-            "Hex": "7F000000"
-          }
+        "DrawAs": "ESlateBrushDrawType::Box",
+        "ImageSize": {
+          "X": 2880.0,
+          "Y": 1620.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'DialogNoBorder'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogNoBorder.0"
         }
       },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.5,
+        "Hex": "7FFFFFFF"
+      },
       "Slot": {
-        "ObjectName": "OverlaySlot'BPAnvilDialogBox_C:WidgetTree.DialogOverlay.OverlaySlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.29"
+        "ObjectName": "OverlaySlot'BPAnvilDialogBox_C:WidgetTree.DialogOverlay.OverlaySlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.28"
       }
     }
   },
@@ -941,14 +1019,33 @@
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "OverlaySlot'BPAnvilDialogBox_C:WidgetTree.DialogOverlay.OverlaySlot_2'",
-          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.29"
+          "ObjectName": "OverlaySlot'BPAnvilDialogBox_C:WidgetTree.DialogOverlay.OverlaySlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.28"
         },
         {
           "ObjectName": "OverlaySlot'BPAnvilDialogBox_C:WidgetTree.DialogOverlay.OverlaySlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.28"
+          "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.29"
         }
       ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "DialogOverlay",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'BPAnvilDialogBox_C:WidgetTree.DialogOverlay'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.27"
+      },
+      "Content": {
+        "ObjectName": "Image'BPAnvilDialogBox_C:WidgetTree.BlackBG'",
+        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.25"
+      }
     }
   },
   {
@@ -967,25 +1064,6 @@
       "Content": {
         "ObjectName": "CanvasPanel'BPAnvilDialogBox_C:WidgetTree.DialogCanvas'",
         "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.9"
-      }
-    }
-  },
-  {
-    "Type": "OverlaySlot",
-    "Name": "OverlaySlot_2",
-    "Outer": "DialogOverlay",
-    "Class": "UScriptClass'OverlaySlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
-      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
-      "Parent": {
-        "ObjectName": "Overlay'BPAnvilDialogBox_C:WidgetTree.DialogOverlay'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.27"
-      },
-      "Content": {
-        "ObjectName": "Image'BPAnvilDialogBox_C:WidgetTree.Background'",
-        "ObjectPath": "Anvil/Content/UI/BPAnvilDialogBox.25"
       }
     }
   },
@@ -1160,7 +1238,30 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "WidgetStyle": {
+        "NormalBarImage": {
+          "ImageSize": {
+            "X": 512.0,
+            "Y": 8.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.693872,
+              "G": 0.693872,
+              "B": 0.693872,
+              "A": 1.0,
+              "Hex": "D9D9D9"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'SliderBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/SliderBG.0"
+          }
+        },
         "HoveredBarImage": {
+          "ImageSize": {
+            "X": 512.0,
+            "Y": 8.0
+          },
           "TintColor": {
             "SpecifiedColor": {
               "R": 0.730461,
@@ -1169,9 +1270,17 @@
               "A": 1.0,
               "Hex": "DEBA63"
             }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'SliderBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/SliderBG.0"
           }
         },
         "DisabledBarImage": {
+          "ImageSize": {
+            "X": 512.0,
+            "Y": 8.0
+          },
           "TintColor": {
             "SpecifiedColor": {
               "R": 0.046665,
@@ -1180,22 +1289,26 @@
               "A": 1.0,
               "Hex": "3D3A35"
             }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'SliderBG'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/SliderBG.0"
           }
         },
         "NormalThumbImage": {
           "ImageSize": {
-            "X": 4.0,
-            "Y": 20.0
+            "X": 16.0,
+            "Y": 16.0
           },
           "ResourceObject": {
-            "ObjectName": "Texture2D'FlatBG'",
-            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+            "ObjectName": "Texture2D'SliderHandle'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/SliderHandle.0"
           }
         },
         "HoveredThumbImage": {
           "ImageSize": {
-            "X": 4.0,
-            "Y": 20.0
+            "X": 16.0,
+            "Y": 16.0
           },
           "TintColor": {
             "SpecifiedColor": {
@@ -1207,14 +1320,14 @@
             }
           },
           "ResourceObject": {
-            "ObjectName": "Texture2D'FlatBG'",
-            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+            "ObjectName": "Texture2D'SliderHandle'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/SliderHandle.0"
           }
         },
         "DisabledThumbImage": {
           "ImageSize": {
-            "X": 4.0,
-            "Y": 20.0
+            "X": 16.0,
+            "Y": 16.0
           },
           "TintColor": {
             "SpecifiedColor": {
@@ -1226,8 +1339,8 @@
             }
           },
           "ResourceObject": {
-            "ObjectName": "Texture2D'FlatBG'",
-            "ObjectPath": "Anvil/Content/Textures/UI/HUD/FlatBG.0"
+            "ObjectName": "Texture2D'SliderHandle'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/SliderHandle.0"
           },
           "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
         }
@@ -1366,6 +1479,15 @@
         "SourceString": "999",
         "LocalizedString": "999"
       },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.693872,
+          "G": 0.693872,
+          "B": 0.693872,
+          "A": 1.0,
+          "Hex": "D9D9D9"
+        }
+      },
       "Font": {
         "FontObject": {
           "ObjectName": "Font'Renner-Book_Font'",
@@ -1393,6 +1515,15 @@
         "SourceString": "999",
         "LocalizedString": "999"
       },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.693872,
+          "G": 0.693872,
+          "B": 0.693872,
+          "A": 1.0,
+          "Hex": "D9D9D9"
+        }
+      },
       "Font": {
         "FontObject": {
           "ObjectName": "Font'Renner-Book_Font'",
@@ -1419,6 +1550,15 @@
         "Key": "8887832D43DB65B01C7A949877CFE553",
         "SourceString": "999",
         "LocalizedString": "999"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.693872,
+          "G": 0.693872,
+          "B": 0.693872,
+          "A": 1.0,
+          "Hex": "D9D9D9"
+        }
       },
       "Font": {
         "FontObject": {
@@ -1768,7 +1908,7 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "Background",
+        "Name": "BlackBG",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",

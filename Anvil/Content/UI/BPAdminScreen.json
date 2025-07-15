@@ -1,28 +1,60 @@
 [
   {
     "Type": "Border",
-    "Name": "BG",
+    "Name": "Border_0",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'Border'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ContentColorAndOpacity": {
-        "R": 0.0,
-        "G": 0.0,
-        "B": 0.0,
-        "A": 1.0,
-        "Hex": "000000"
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
       },
-      "BrushColor": {
-        "R": 0.0,
-        "G": 0.0,
-        "B": 0.0,
-        "A": 0.5,
-        "Hex": "7F000000"
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.0,
+            "Hex": "FFFFFF"
+          }
+        }
       },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'BPAdminScreen_C:WidgetTree.Border_0.BorderSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.1"
+        }
+      ],
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPAdminScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_8'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.8"
+        "ObjectName": "VerticalBoxSlot'BPAdminScreen_C:WidgetTree.VerticalBox_86.VerticalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.29"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_0",
+    "Class": "UScriptClass'BorderSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border'BPAdminScreen_C:WidgetTree.Border_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.0"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'BPAdminScreen_C:WidgetTree.HorizontalBox_104'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.11"
       }
     }
   },
@@ -39,7 +71,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPAdminScreen_C:WidgetTree.VerticalBox_86.VerticalBoxSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.29"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.31"
       },
       "Visibility": "ESlateVisibility::Collapsed"
     }
@@ -71,10 +103,12 @@
         "SourceString": "Reload",
         "LocalizedString": "Reload"
       },
-      "ButtonWidth": 150.0,
+      "LabelFontSize": 14,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.14"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.15"
       }
     }
   },
@@ -95,10 +129,12 @@
         "SourceString": "Sort By Distance",
         "LocalizedString": "Sort By Distance"
       },
-      "ButtonWidth": 300.0,
+      "LabelFontSize": 14,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.12"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.13"
       }
     }
   },
@@ -119,10 +155,12 @@
         "SourceString": "Sort By Name",
         "LocalizedString": "Sort By Name"
       },
-      "ButtonWidth": 300.0,
+      "LabelFontSize": 14,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.11"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.12"
       }
     }
   },
@@ -135,12 +173,12 @@
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "CanvasPanelSlot'BPAdminScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_8'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.8"
+          "ObjectName": "CanvasPanelSlot'BPAdminScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.9"
         },
         {
           "ObjectName": "CanvasPanelSlot'BPAdminScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_10'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.7"
+          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.8"
         }
       ]
     }
@@ -167,47 +205,42 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPAdminScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.6"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.7"
       },
       "Content": {
         "ObjectName": "VerticalBox'BPAdminScreen_C:WidgetTree.VerticalBox_86'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.24"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.26"
       }
     }
   },
   {
     "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_8",
+    "Name": "CanvasPanelSlot_3",
     "Outer": "CanvasPanel_0",
     "Class": "UScriptClass'CanvasPanelSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "LayoutData": {
         "Offsets": {
-          "Left": -1520.9609,
-          "Top": -772.5405,
-          "Right": 3127.207,
-          "Bottom": 1731.6516
+          "Right": 0.0,
+          "Bottom": 0.0
         },
         "Anchors": {
-          "Minimum": {
-            "X": 0.5,
-            "Y": 0.5
-          },
           "Maximum": {
-            "X": 0.5,
-            "Y": 0.5
+            "X": 1.0,
+            "Y": 1.0
           }
         }
       },
+      "bAutoSize": true,
       "ZOrder": -5,
       "Parent": {
         "ObjectName": "CanvasPanel'BPAdminScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.6"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.7"
       },
       "Content": {
-        "ObjectName": "Border'BPAdminScreen_C:WidgetTree.BG'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.0"
+        "ObjectName": "Image'BPAdminScreen_C:WidgetTree.BlackBG'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.19"
       }
     }
   },
@@ -220,17 +253,29 @@
     "Properties": {
       "WidgetStyle": {
         "BackgroundImageNormal": {
+          "ImageSize": {
+            "X": 1920.0,
+            "Y": 48.0
+          },
           "TintColor": {
             "SpecifiedColor": {
-              "R": 0.046665,
-              "G": 0.042311,
-              "B": 0.035601,
-              "A": 1.0,
-              "Hex": "3D3A35"
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.4,
+              "Hex": "66FFFFFF"
             }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'MainMenuBar'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/MainMenuBar.0"
           }
         },
         "BackgroundImageHovered": {
+          "ImageSize": {
+            "X": 1920.0,
+            "Y": 48.0
+          },
           "TintColor": {
             "SpecifiedColor": {
               "R": 0.046665,
@@ -240,9 +285,17 @@
               "Hex": "3D3A35"
             }
           },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'MainMenuBar'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/MainMenuBar.0"
+          },
           "ResourceName": "../../../Engine/Content/Slate/Common/TextBox.png"
         },
         "BackgroundImageFocused": {
+          "ImageSize": {
+            "X": 1920.0,
+            "Y": 48.0
+          },
           "TintColor": {
             "SpecifiedColor": {
               "R": 0.140625,
@@ -252,11 +305,29 @@
               "Hex": "69645C"
             }
           },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'MainMenuBar'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/MainMenuBar.0"
+          },
           "ResourceName": "../../../Engine/Content/Slate/Common/TextBox.png"
+        },
+        "BackgroundImageReadOnly": {
+          "ImageSize": {
+            "X": 1920.0,
+            "Y": 48.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'MainMenuBar'",
+            "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/MainMenuBar.0"
+          }
         },
         "TextStyle": {
           "Font": {
-            "FontObject": null,
+            "FontObject": {
+              "ObjectName": "Font'Renner-Book_Font'",
+              "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+            },
+            "TypefaceFontName": "Default",
             "Size": 16
           }
         },
@@ -311,7 +382,7 @@
       "AllowContextMenu": false,
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.15"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.16"
       }
     }
   },
@@ -325,36 +396,36 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.15"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_5'",
           "ObjectPath": "Anvil/Content/UI/BPAdminScreen.16"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.11"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_10'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.13"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.12"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_9'",
+          "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_5'",
           "ObjectPath": "Anvil/Content/UI/BPAdminScreen.17"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_2'",
+          "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.12"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_10'",
           "ObjectPath": "Anvil/Content/UI/BPAdminScreen.14"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.13"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_9'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.18"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.15"
         }
       ],
       "Slot": {
-        "ObjectName": "VerticalBoxSlot'BPAdminScreen_C:WidgetTree.VerticalBox_86.VerticalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.27"
+        "ObjectName": "BorderSlot'BPAdminScreen_C:WidgetTree.Border_0.BorderSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.1"
       }
     }
   },
@@ -367,11 +438,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminScreen_C:WidgetTree.HorizontalBox_104'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.10"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.11"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPAdminScreen_C:WidgetTree.SortByNameButton'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.5"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.6"
       }
     }
   },
@@ -384,11 +455,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminScreen_C:WidgetTree.HorizontalBox_104'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.10"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.11"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPAdminScreen_C:WidgetTree.SortByDistanceButton'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.4"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.5"
       }
     }
   },
@@ -401,11 +472,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminScreen_C:WidgetTree.HorizontalBox_104'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.10"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.11"
       },
       "Content": {
         "ObjectName": "Spacer'BPAdminScreen_C:WidgetTree.Spacer'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.19"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.21"
       }
     }
   },
@@ -418,11 +489,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminScreen_C:WidgetTree.HorizontalBox_104'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.10"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.11"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPAdminScreen_C:WidgetTree.ReloadButton'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.3"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.4"
       }
     }
   },
@@ -434,16 +505,16 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Size": {
-        "Value": 0.3,
+        "Value": 0.6,
         "SizeRule": "ESlateSizeRule::Fill"
       },
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminScreen_C:WidgetTree.HorizontalBox_104'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.10"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.11"
       },
       "Content": {
         "ObjectName": "EditableTextBox'BPAdminScreen_C:WidgetTree.SearchBox'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.9"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.10"
       }
     }
   },
@@ -456,11 +527,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminScreen_C:WidgetTree.HorizontalBox_104'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.10"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.11"
       },
       "Content": {
         "ObjectName": "Spacer'BPAdminScreen_C:WidgetTree.Spacer_157'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.21"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.23"
       }
     }
   },
@@ -473,11 +544,48 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPAdminScreen_C:WidgetTree.HorizontalBox_104'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.10"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.11"
       },
       "Content": {
         "ObjectName": "Spacer'BPAdminScreen_C:WidgetTree.Spacer_1'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.20"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.22"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "BlackBG",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Brush": {
+        "DrawAs": "ESlateBrushDrawType::Box",
+        "ImageSize": {
+          "X": 2880.0,
+          "Y": 1620.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'DialogNoBorder'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogNoBorder.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.5,
+        "Hex": "7FFFFFFF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPAdminScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.9"
       }
     }
   },
@@ -494,7 +602,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPAdminScreen_C:WidgetTree.VerticalBox_86.VerticalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.25"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.27"
       }
     }
   },
@@ -506,12 +614,12 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Size": {
-        "X": 50.0,
+        "X": 25.0,
         "Y": 1.0
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_10'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.13"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.14"
       }
     }
   },
@@ -523,12 +631,12 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Size": {
-        "X": 50.0,
+        "X": 25.0,
         "Y": 1.0
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_9'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.17"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.18"
       }
     }
   },
@@ -540,12 +648,12 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Size": {
-        "X": 200.0,
+        "X": 15.0,
         "Y": 1.0
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPAdminScreen_C:WidgetTree.HorizontalBox_104.HorizontalBoxSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.16"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.17"
       }
     }
   },
@@ -562,7 +670,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPAdminScreen_C:WidgetTree.VerticalBox_86.VerticalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.28"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.30"
       }
     }
   },
@@ -589,7 +697,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPAdminScreen_C:WidgetTree.VerticalBox_86.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.26"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.28"
       }
     }
   },
@@ -603,28 +711,28 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPAdminScreen_C:WidgetTree.VerticalBox_86.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.26"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPAdminScreen_C:WidgetTree.VerticalBox_86.VerticalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.27"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPAdminScreen_C:WidgetTree.VerticalBox_86.VerticalBoxSlot_5'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.29"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPAdminScreen_C:WidgetTree.VerticalBox_86.VerticalBoxSlot_4'",
           "ObjectPath": "Anvil/Content/UI/BPAdminScreen.28"
         },
         {
+          "ObjectName": "VerticalBoxSlot'BPAdminScreen_C:WidgetTree.VerticalBox_86.VerticalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.29"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPAdminScreen_C:WidgetTree.VerticalBox_86.VerticalBoxSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.31"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPAdminScreen_C:WidgetTree.VerticalBox_86.VerticalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.30"
+        },
+        {
           "ObjectName": "VerticalBoxSlot'BPAdminScreen_C:WidgetTree.VerticalBox_86.VerticalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.25"
+          "ObjectPath": "Anvil/Content/UI/BPAdminScreen.27"
         }
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPAdminScreen_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_10'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.7"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.8"
       }
     }
   },
@@ -641,11 +749,11 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPAdminScreen_C:WidgetTree.VerticalBox_86'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.24"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.26"
       },
       "Content": {
         "ObjectName": "ListView'BPAdminScreen_C:WidgetTree.PlayerListView'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.18"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.20"
       }
     }
   },
@@ -660,11 +768,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'BPAdminScreen_C:WidgetTree.VerticalBox_86'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.24"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.26"
       },
       "Content": {
         "ObjectName": "TextBlock'BPAdminScreen_C:WidgetTree.PlayerListHeader'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.23"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.25"
       }
     }
   },
@@ -676,18 +784,18 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Padding": {
-        "Left": 30.0,
-        "Top": 30.0,
-        "Right": 30.0,
-        "Bottom": 30.0
+        "Left": 300.0,
+        "Top": 15.0,
+        "Right": 300.0,
+        "Bottom": 15.0
       },
       "Parent": {
         "ObjectName": "VerticalBox'BPAdminScreen_C:WidgetTree.VerticalBox_86'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.24"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.26"
       },
       "Content": {
-        "ObjectName": "HorizontalBox'BPAdminScreen_C:WidgetTree.HorizontalBox_104'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.10"
+        "ObjectName": "Border'BPAdminScreen_C:WidgetTree.Border_0'",
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.0"
       }
     }
   },
@@ -700,11 +808,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPAdminScreen_C:WidgetTree.VerticalBox_86'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.24"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.26"
       },
       "Content": {
         "ObjectName": "Spacer'BPAdminScreen_C:WidgetTree.Spacer_65'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.22"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.24"
       }
     }
   },
@@ -719,11 +827,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPAdminScreen_C:WidgetTree.VerticalBox_86'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.24"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.26"
       },
       "Content": {
         "ObjectName": "BPAdminPlayerListItem_C'BPAdminScreen_C:WidgetTree.BPAdminPlayerListItem'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.1"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.2"
       }
     }
   },
@@ -735,7 +843,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPAdminScreen_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.31"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.33"
       },
       "bClassRequiresNativeTick": true
     },
@@ -744,6 +852,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BlackBG",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "BPAdminPlayerListItem",
@@ -765,7 +884,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPAdminScreen_C'Default__BPAdminScreen_C'",
-      "ObjectPath": "Anvil/Content/UI/BPAdminScreen.2"
+      "ObjectPath": "Anvil/Content/UI/BPAdminScreen.3"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -780,7 +899,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "CanvasPanel'BPAdminScreen_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.6"
+        "ObjectPath": "Anvil/Content/UI/BPAdminScreen.7"
       }
     }
   }

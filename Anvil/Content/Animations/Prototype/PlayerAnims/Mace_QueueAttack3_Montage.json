@@ -126,11 +126,11 @@
           "LinkMethod": "EAnimLinkMethod::Absolute",
           "CachedLinkMethod": "EAnimLinkMethod::Absolute",
           "SegmentBeginTime": 3.1999998,
-          "SegmentLength": 0.033333335,
+          "SegmentLength": 0.083333336,
           "LinkValue": 3.2,
           "LinkedSequence": {
-            "ObjectName": "AnimSequence'onehanded_mace_secondaryAiming_POSE'",
-            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/onehanded_mace_secondaryAiming_POSE.0"
+            "ObjectName": "AnimSequence'onehanded_mace_secondaryAttack01_exitPOSE'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/onehanded_mace_secondaryAttack01_exitPOSE.0"
           }
         },
         {
@@ -142,13 +142,16 @@
             "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Mace_QueueAttack3_Montage.0"
           },
           "SlotIndex": 0,
-          "SegmentIndex": -1,
+          "SegmentIndex": 4,
           "LinkMethod": "EAnimLinkMethod::Absolute",
           "CachedLinkMethod": "EAnimLinkMethod::Absolute",
-          "SegmentBeginTime": -1.0,
-          "SegmentLength": -1.0,
+          "SegmentBeginTime": 3.1999998,
+          "SegmentLength": 0.083333336,
           "LinkValue": 3.2333336,
-          "LinkedSequence": null
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'onehanded_mace_secondaryAttack01_exitPOSE'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/onehanded_mace_secondaryAttack01_exitPOSE.0"
+          }
         }
       ],
       "SlotAnimTracks": [
@@ -202,13 +205,13 @@
               },
               {
                 "AnimReference": {
-                  "ObjectName": "AnimSequence'onehanded_mace_secondaryAiming_POSE'",
-                  "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/onehanded_mace_secondaryAiming_POSE.0"
+                  "ObjectName": "AnimSequence'onehanded_mace_secondaryAttack01_exitPOSE'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/onehanded_mace_secondaryAttack01_exitPOSE.0"
                 },
                 "StartPos": 3.1999998,
                 "AnimStartTime": 0.0,
                 "AnimEndTime": 0.033333335,
-                "AnimPlayRate": 1.0,
+                "AnimPlayRate": 0.4,
                 "LoopingCount": 1
               }
             ]
@@ -216,6 +219,52 @@
         }
       ],
       "Notifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0001,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'Mace_QueueAttack3_Montage:AnimNotify_PlaySound_2'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Mace_QueueAttack3_Montage.3"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.10586603,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Mace_QueueAttack3_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Mace_QueueAttack3_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.10586603,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'onehanded_mace_primaryAttack03_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/onehanded_mace_primaryAttack03_anim.0"
+          }
+        },
         {
           "TriggerTimeOffset": 0.0,
           "EndTriggerTimeOffset": 0.0,
@@ -260,6 +309,52 @@
           "LinkedSequence": {
             "ObjectName": "AnimSequence'onehanded_mace_primaryAttack03_anim'",
             "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/onehanded_mace_primaryAttack03_anim.0"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0001,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'Mace_QueueAttack3_Montage:AnimNotify_PlaySound_3'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Mace_QueueAttack3_Montage.4"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 1.8180958,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Mace_QueueAttack3_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Mace_QueueAttack3_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 3,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 1.5333333,
+          "SegmentLength": 1.6666666,
+          "LinkValue": 1.8180958,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'onehanded_mace_secondaryAttack01_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/onehanded_mace_secondaryAttack01_anim.0"
           }
         },
         {
@@ -309,7 +404,7 @@
           }
         }
       ],
-      "SequenceLength": 3.233333,
+      "SequenceLength": 3.283333,
       "Skeleton": {
         "ObjectName": "Skeleton'PrototypeChar_Skeleton'",
         "ObjectPath": "Anvil/Content/Animations/Prototype/PrototypeChar_Skeleton.8"
@@ -345,6 +440,36 @@
       },
       "bFollow": true,
       "AttachName": "hand_r"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_2",
+    "Outer": "Mace_QueueAttack3_Montage",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Male01Attack_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/Male01Attack_Cue.0"
+      },
+      "bFollow": true,
+      "AttachName": "head"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_3",
+    "Outer": "Mace_QueueAttack3_Montage",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Male01Attack_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/Male01Attack_Cue.0"
+      },
+      "bFollow": true,
+      "AttachName": "head"
     }
   }
 ]

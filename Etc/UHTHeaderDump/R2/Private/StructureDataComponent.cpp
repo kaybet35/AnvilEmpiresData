@@ -3,7 +3,6 @@
 UStructureDataComponent::UStructureDataComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bRestrictedMode = false;
     this->bOnFoundation = false;
-    this->bIsCollapsed = false;
     this->bIsFamilyDestroyed = false;
     this->bIsTownDestroyed = false;
     this->bCanOverrideFamilyAccessLevel = false;

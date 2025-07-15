@@ -6,21 +6,30 @@
     "Class": "UScriptClass'Border'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "Padding": {
-        "Left": 20.0,
-        "Top": 20.0,
-        "Right": 20.0,
-        "Bottom": 20.0
-      },
       "Background": {
+        "DrawAs": "ESlateBrushDrawType::Border",
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
         "TintColor": {
           "SpecifiedColor": {
-            "R": 0.015,
-            "G": 0.01237,
-            "B": 0.008715,
-            "A": 0.9,
-            "Hex": "E6201D17"
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.8,
+            "Hex": "CCFFFFFF"
           }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Dialog'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/Dialog.0"
         }
       },
       "Slots": [
@@ -30,8 +39,8 @@
         }
       ],
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPDeploymentFoodWidget_C:WidgetTree.CanvasPanel_26.CanvasPanelSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.5"
+        "ObjectName": "CanvasPanelSlot'BPDeploymentFoodWidget_C:WidgetTree.CanvasPanel_26.CanvasPanelSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.6"
       }
     }
   },
@@ -42,19 +51,13 @@
     "Class": "UScriptClass'BorderSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "Padding": {
-        "Left": 20.0,
-        "Top": 20.0,
-        "Right": 20.0,
-        "Bottom": 20.0
-      },
       "Parent": {
         "ObjectName": "Border'BPDeploymentFoodWidget_C:WidgetTree.Border_35'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.0"
       },
       "Content": {
         "ObjectName": "VerticalBox'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.12"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.14"
       }
     }
   },
@@ -75,9 +78,12 @@
         "SourceString": "Cancel",
         "LocalizedString": "Cancel"
       },
+      "LabelFontSize": 14,
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33.VerticalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.15"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.17"
       }
     }
   },
@@ -100,24 +106,53 @@
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "CanvasPanelSlot'BPDeploymentFoodWidget_C:WidgetTree.CanvasPanel_26.CanvasPanelSlot_0'",
+          "ObjectName": "CanvasPanelSlot'BPDeploymentFoodWidget_C:WidgetTree.CanvasPanel_26.CanvasPanelSlot_3'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.5"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPDeploymentFoodWidget_C:WidgetTree.CanvasPanel_26.CanvasPanelSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.6"
         }
       ]
     }
   },
   {
     "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_0",
+    "Name": "CanvasPanelSlot_3",
     "Outer": "CanvasPanel_26",
     "Class": "UScriptClass'CanvasPanelSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "LayoutData": {
         "Offsets": {
-          "Right": 500.0,
-          "Bottom": 300.0
+          "Right": 0.0,
+          "Bottom": 0.0
         },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPDeploymentFoodWidget_C:WidgetTree.CanvasPanel_26'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.4"
+      },
+      "Content": {
+        "ObjectName": "Image'BPDeploymentFoodWidget_C:WidgetTree.Background'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Outer": "CanvasPanel_26",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LayoutData": {
         "Anchors": {
           "Minimum": {
             "X": 0.5,
@@ -161,7 +196,27 @@
       },
       "Slot": {
         "ObjectName": "SizeBoxSlot'BPDeploymentFoodWidget_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.11"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Background",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.75,
+        "Hex": "BF000000"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPDeploymentFoodWidget_C:WidgetTree.CanvasPanel_26.CanvasPanelSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.5"
       }
     }
   },
@@ -184,7 +239,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33.VerticalBoxSlot_6'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.17"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.19"
       }
     }
   },
@@ -198,12 +253,12 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'BPDeploymentFoodWidget_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.9"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.11"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.14"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.16"
       }
     }
   },
@@ -216,11 +271,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "SizeBox'BPDeploymentFoodWidget_C:WidgetTree.SizeBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.8"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.10"
       },
       "Content": {
         "ObjectName": "DeploymentFoodItemGridWidget'BPDeploymentFoodWidget_C:WidgetTree.DeploymentFoodItemGridWidget'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.6"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.7"
       }
     }
   },
@@ -257,7 +312,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33.VerticalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.16"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.18"
       }
     }
   },
@@ -293,7 +348,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33.VerticalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.13"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.15"
       }
     }
   },
@@ -307,23 +362,23 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33.VerticalBoxSlot_6'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.17"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.19"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33.VerticalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.13"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.15"
         },
         {
           "ObjectName": "VerticalBoxSlot'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.14"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33.VerticalBoxSlot_4'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.16"
         },
         {
+          "ObjectName": "VerticalBoxSlot'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33.VerticalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.18"
+        },
+        {
           "ObjectName": "VerticalBoxSlot'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33.VerticalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.15"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.17"
         }
       ],
       "Slot": {
@@ -344,11 +399,11 @@
       },
       "Parent": {
         "ObjectName": "VerticalBox'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.12"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.14"
       },
       "Content": {
         "ObjectName": "TextBlock'BPDeploymentFoodWidget_C:WidgetTree.HeaderText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.11"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.13"
       }
     }
   },
@@ -368,11 +423,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.12"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.14"
       },
       "Content": {
         "ObjectName": "SizeBox'BPDeploymentFoodWidget_C:WidgetTree.SizeBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.8"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.10"
       }
     }
   },
@@ -389,7 +444,7 @@
       },
       "Parent": {
         "ObjectName": "VerticalBox'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.12"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.14"
       },
       "Content": {
         "ObjectName": "BPAnvilButtonWidget_C'BPDeploymentFoodWidget_C:WidgetTree.CancelButton'",
@@ -410,11 +465,11 @@
       },
       "Parent": {
         "ObjectName": "VerticalBox'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.12"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.14"
       },
       "Content": {
         "ObjectName": "TextBlock'BPDeploymentFoodWidget_C:WidgetTree.DeploymentUnavailableText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.10"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.12"
       }
     }
   },
@@ -425,15 +480,19 @@
     "Class": "UScriptClass'VerticalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "Padding": {
+        "Top": 6.0,
+        "Right": 6.0
+      },
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPDeploymentFoodWidget_C:WidgetTree.VerticalBox_33'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.12"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.14"
       },
       "Content": {
         "ObjectName": "Image'BPDeploymentFoodWidget_C:WidgetTree.TooltipImage'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.7"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.9"
       }
     }
   },
@@ -445,7 +504,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPDeploymentFoodWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.19"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentFoodWidget.21"
       },
       "bClassRequiresNativeTick": true
     },
@@ -453,6 +512,19 @@
       "ObjectName": "Class'DeploymentFoodWidget'",
       "ObjectPath": "/Script/Anvil"
     },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
     "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",

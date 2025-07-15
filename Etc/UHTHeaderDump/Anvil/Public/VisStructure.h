@@ -7,6 +7,7 @@
 #include "VisStructure.generated.h"
 
 class UArrowComponent;
+class UCollapsibleDataComponent;
 class UDecalComponent;
 class UDecayDataComponent;
 class UGrassRemovalVolumeComponent;
@@ -52,6 +53,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStructureDataComponent* StructureDataComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UCollapsibleDataComponent* CollapsibleDataComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UScorchDataComponent* ScorchDataComponent;

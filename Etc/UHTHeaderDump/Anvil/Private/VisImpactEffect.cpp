@@ -21,6 +21,9 @@ AVisImpactEffect::AVisImpactEffect(const FObjectInitializer& ObjectInitializer) 
     this->HitEffectActors[14] = NULL;
     this->HitEffectActors[15] = NULL;
     this->HitEffectActors[16] = NULL;
+    this->HitEffectActors[17] = NULL;
+    this->VisualLifeTime = 10.00f;
+    this->bAttachToHitTarget = false;
     this->ArrowComponent = (UArrowComponent*)RootComponent;
     this->ImpactSurfaceDataComponent = CreateDefaultSubobject<UImpactSurfaceDataComponent>(TEXT("ImpactSurfaceData"));
 }

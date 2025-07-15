@@ -23,7 +23,11 @@ UProjectileMovementProxyComponent::UProjectileMovementProxyComponent() {
     this->DislodgeRate = 0.00f;
     this->Lifetime = 3.50f;
     this->RandomRadius = 0.00f;
+    this->RandomRadiusMin = 0.00f;
+    this->AccuracyAtFurthestDist = 0.00f;
+    this->bDistanceBasedAccuracy = false;
     this->bForceKillPlayers = false;
+    this->bHitEffectNoPitch = true;
 }
 
 

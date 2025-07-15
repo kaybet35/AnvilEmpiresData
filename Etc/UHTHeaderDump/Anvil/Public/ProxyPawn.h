@@ -54,14 +54,23 @@ public:
     UFUNCTION(BlueprintCallable)
     void OnPanCameraStart();
     
+    UFUNCTION(BlueprintCallable)
+    void OnKeyRotateCameraRightStop();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnKeyRotateCameraRightStart();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnKeyRotateCameraLeftStop();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnKeyRotateCameraLeftStart();
+    
     UFUNCTION()
     void EnterBuildMode(const uint32 BuildSiteCodeName, const uint64 ContextID);
     
     UFUNCTION(BlueprintCallable, Exec)
     void DrawSphere(float Radius);
-    
-    UFUNCTION(BlueprintCallable, Exec)
-    void ClearFogOfWar();
     
     UFUNCTION(BlueprintCallable)
     void ChangeHeight(float Adjust);

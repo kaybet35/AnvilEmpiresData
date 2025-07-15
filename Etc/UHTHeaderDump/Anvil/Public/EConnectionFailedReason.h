@@ -12,5 +12,6 @@ enum class EConnectionFailedReason : uint8 {
     AnvilServiceVersionMismatch,
     AnvilServiceLoginInvalidParams,
     AnvilServiceInvalidAgePhaseToConnect,
+    TooSoonToConnect,
 };
 

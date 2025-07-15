@@ -3,6 +3,6 @@
 
 class UBPBaseStructureEntity_C : public UBaseStructureEntity
 {
-}; // Size: 0xD8
+}; // Size: 0xE0
 
 #endif

@@ -11,6 +11,7 @@
 #include "Templates/SubclassOf.h"
 #include "UIGlobals.generated.h"
 
+class USoundCue;
 class UTexture2D;
 class UUserWidget;
 class UWorldEntityMapIcon;
@@ -57,6 +58,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor BuildSiteVisualGuideObstructedColour;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USoundCue* AcceptUISoundCue;
     
     AUIGlobals(const FObjectInitializer& ObjectInitializer);
 

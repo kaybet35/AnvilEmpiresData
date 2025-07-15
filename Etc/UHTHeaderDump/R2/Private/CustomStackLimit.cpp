@@ -1,7 +1,8 @@
 #include "CustomStackLimit.h"
 
 FCustomStackLimit::FCustomStackLimit() {
-    this->Item = NULL;
+    this->CodeName = NULL;
+    this->CodeNameVisVar = 0;
     this->StackLimit = 0;
 }
 

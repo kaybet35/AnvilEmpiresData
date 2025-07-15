@@ -13,14 +13,29 @@
         "Bottom": 0.0
       },
       "Background": {
+        "DrawAs": "ESlateBrushDrawType::Border",
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
         "TintColor": {
           "SpecifiedColor": {
-            "R": 0.015,
-            "G": 0.01237,
-            "B": 0.008715,
-            "A": 0.9,
-            "Hex": "E6201D17"
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.8,
+            "Hex": "CCFFFFFF"
           }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Dialog'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/Dialog.0"
         }
       },
       "Slots": [
@@ -75,6 +90,8 @@
         "SourceString": "Cancel",
         "LocalizedString": "Cancel"
       },
+      "ButtonWidth": 180.0,
+      "ButtonHeight": 45.0,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPFamilyInviteDialogWidget_C:WidgetTree.VerticalBox_464.VerticalBoxSlot_1'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPFamilyInviteDialogWidget.35"
@@ -343,24 +360,37 @@
   },
   {
     "Type": "Image",
-    "Name": "Background",
+    "Name": "BlackBG",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'Image'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Brush": {
-        "TintColor": {
-          "SpecifiedColor": {
-            "R": 0.0,
-            "G": 0.0,
-            "B": 0.0,
-            "A": 0.5,
-            "Hex": "7F000000"
-          }
+        "DrawAs": "ESlateBrushDrawType::Border",
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'DialogNoBorder'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogNoBorder.0"
         }
       },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.5,
+        "Hex": "7FFFFFFF"
+      },
       "Slot": {
-        "ObjectName": "OverlaySlot'BPFamilyInviteDialogWidget_C:WidgetTree.DialogOverlay.OverlaySlot_2'",
+        "ObjectName": "OverlaySlot'BPFamilyInviteDialogWidget_C:WidgetTree.DialogOverlay.OverlaySlot_4'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPFamilyInviteDialogWidget.19"
       }
     }
@@ -374,7 +404,7 @@
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "OverlaySlot'BPFamilyInviteDialogWidget_C:WidgetTree.DialogOverlay.OverlaySlot_2'",
+          "ObjectName": "OverlaySlot'BPFamilyInviteDialogWidget_C:WidgetTree.DialogOverlay.OverlaySlot_4'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPFamilyInviteDialogWidget.19"
         },
         {
@@ -405,7 +435,7 @@
   },
   {
     "Type": "OverlaySlot",
-    "Name": "OverlaySlot_2",
+    "Name": "OverlaySlot_4",
     "Outer": "DialogOverlay",
     "Class": "UScriptClass'OverlaySlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
@@ -417,7 +447,7 @@
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPFamilyInviteDialogWidget.17"
       },
       "Content": {
-        "ObjectName": "Image'BPFamilyInviteDialogWidget_C:WidgetTree.Background'",
+        "ObjectName": "Image'BPFamilyInviteDialogWidget_C:WidgetTree.BlackBG'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPFamilyInviteDialogWidget.16"
       }
     }
@@ -775,6 +805,10 @@
     "Class": "UScriptClass'VerticalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "Padding": {
+        "Top": 4.0,
+        "Bottom": 4.0
+      },
       "Parent": {
         "ObjectName": "VerticalBox'BPFamilyInviteDialogWidget_C:WidgetTree.VerticalBox_464'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/BPFamilyInviteDialogWidget.33"
@@ -848,7 +882,7 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "Background",
+        "Name": "BlackBG",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",

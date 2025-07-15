@@ -6,5 +6,6 @@ UENUM(BlueprintType)
 enum class EAnvilItemFlag : uint8 {
     Relic,
     Public,
+    NumTypes,
 };
 

@@ -21,5 +21,6 @@ enum class EEquippedItemGripType : uint8 {
     Axe,
     LargeArrow,
     Pike,
+    VerticalBanner,
 };
 

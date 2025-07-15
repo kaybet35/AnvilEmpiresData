@@ -1,0 +1,224 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__Vis2HAxeImpactFleshPlayer_C",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AudioComponent",
+    "Outer": "Default__Vis2HAxeImpactFleshPlayer_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Axe2HFleshImpact_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Axe2H/Axe2HFleshImpact_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__Vis2HAxeImpactFleshPlayer_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.0"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Vocals_GEN_VARIABLE",
+    "Outer": "Vis2HAxeImpactFleshPlayer_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Male01Damage_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vocals/Male/Male01Damage_Cue.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Vis2HAxeImpactFleshPlayer_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'Vis2HAxeImpactFleshPlayer_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisEffect'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Vocals",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Vis2HAxeImpactFleshPlayer_C'Default__Vis2HAxeImpactFleshPlayer_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.11"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "LifetimeDataComponent",
+    "Name": "LifetimeDataComponent",
+    "Outer": "Default__Vis2HAxeImpactFleshPlayer_C",
+    "Class": "UScriptClass'LifetimeDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraComponent",
+    "Outer": "Default__Vis2HAxeImpactFleshPlayer_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'CombatBlood2HAxe02'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/CombatBlood2HAxe02.32"
+      },
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__Vis2HAxeImpactFleshPlayer_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Vis2HAxeImpactFleshPlayer_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'Vis2HAxeImpactFleshPlayer_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.6"
+      },
+      "VariableGuid": "C4FDCDE5-4ADE44EE-E85C76AF-FE4BA41B",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'Vis2HAxeImpactFleshPlayer_C:Vocals_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.2"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FA992F32-4B13A1BA-8167149A-3AE6C6AC",
+      "InternalVariableName": "Vocals"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Vis2HAxeImpactFleshPlayer_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'Vis2HAxeImpactFleshPlayer_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'Vis2HAxeImpactFleshPlayer_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.8"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'Vis2HAxeImpactFleshPlayer_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.7"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__Vis2HAxeImpactFleshPlayer_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__Vis2HAxeImpactFleshPlayer_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.0"
+      }
+    }
+  },
+  {
+    "Type": "Vis2HAxeImpactFleshPlayer_C",
+    "Name": "Default__Vis2HAxeImpactFleshPlayer_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.Vis2HAxeImpactFleshPlayer_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__Vis2HAxeImpactFleshPlayer_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.0"
+      },
+      "AudioComponent": {
+        "ObjectName": "AudioComponent'Default__Vis2HAxeImpactFleshPlayer_C:AudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.1"
+      },
+      "NiagaraComponent": {
+        "ObjectName": "NiagaraComponent'Default__Vis2HAxeImpactFleshPlayer_C:NiagaraComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.5"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__Vis2HAxeImpactFleshPlayer_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.10"
+      },
+      "LifetimeDataComponent": {
+        "ObjectName": "LifetimeDataComponent'Default__Vis2HAxeImpactFleshPlayer_C:LifetimeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.4"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__Vis2HAxeImpactFleshPlayer_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/ImpactTables/VisImpactActors/2HAxe/Vis2HAxeImpactFleshPlayer.0"
+      }
+    }
+  }
+]

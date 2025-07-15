@@ -14,11 +14,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisSpearFlintProjectile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.8"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.7"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisPickupItem'",
+      "ObjectName": "Class'VisProjectile'",
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
@@ -55,20 +55,16 @@
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.BPVisSpearFlintProjectile_C'",
     "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "PickupDataComponent": {
-        "ObjectName": "PickupDataComponent'Default__BPVisSpearFlintProjectile_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.4"
-      },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisSpearFlintProjectile_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.9"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisSpearFlintProjectile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.0"
       },
-      "LootMarkerVFXComponent": {
-        "ObjectName": "NiagaraComponent'Default__BPVisSpearFlintProjectile_C:LootMarkerVFX'",
+      "ProjectileMovementDataComponent": {
+        "ObjectName": "ProjectileMovementDataComponent'Default__BPVisSpearFlintProjectile_C:ProjectileMovementDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.3"
       },
       "bUseInteractionOutline": true,
@@ -89,24 +85,10 @@
     }
   },
   {
-    "Type": "NiagaraComponent",
-    "Name": "LootMarkerVFX",
+    "Type": "ProjectileMovementDataComponent",
+    "Name": "ProjectileMovementDataComponent",
     "Outer": "Default__BPVisSpearFlintProjectile_C",
-    "Class": "UScriptClass'NiagaraComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "OverrideParameters": {},
-      "AttachParent": {
-        "ObjectName": "ArrowComponent'Default__BPVisSpearFlintProjectile_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.0"
-      }
-    }
-  },
-  {
-    "Type": "PickupDataComponent",
-    "Name": "PickupDataComponent",
-    "Outer": "Default__BPVisSpearFlintProjectile_C",
-    "Class": "UScriptClass'PickupDataComponent'",
+    "Class": "UScriptClass'ProjectileMovementDataComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
@@ -129,7 +111,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisSpearFlintProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.4"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -148,7 +130,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisSpearFlintProjectile_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.8"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -166,18 +148,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisSpearFlintProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.6"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisSpearFlintProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.7"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.6"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisSpearFlintProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisSpearFlintProjectile.5"
       }
     }
   },

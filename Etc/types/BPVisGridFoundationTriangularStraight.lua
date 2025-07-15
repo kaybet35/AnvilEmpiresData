@@ -1,21 +1,27 @@
 ---@meta
 
 ---@class ABPVisGridFoundationTriangularStraight_C : AVisStructure
+---@field Rubble UVisRandomMeshDecorComponent
+---@field TopMeshCollapsed UVisStaticMeshComponentBase
+---@field VisDynamicMeshTemplateReference5 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference7 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference4 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference6 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference3 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference2 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference1 UVisDynamicMeshTemplateReferenceComponent
 ---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field VisFoundationEdgeMeshDecor8 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor9 UVisFoundationEdgeMeshDecorComponent
----@field ChildActor8 UChildActorComponent
 ---@field VerticalEdge010 UVisFoundationEdgeMeshDecorComponent
 ---@field VerticalEdge06 UVisFoundationEdgeMeshDecorComponent
----@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
+---@field BottomMesh UVisFoundationBottomMeshDecorComponent
 ---@field VerticalEdge08 UVisFoundationEdgeMeshDecorComponent
 ---@field VisRandomMeshDecor3 UVisRandomMeshDecorComponent
 ---@field VerticalEdge05 UVisFoundationEdgeMeshDecorComponent
 ---@field VisRandomMeshDecor4 UVisRandomMeshDecorComponent
 ---@field VerticalEdge09 UVisFoundationEdgeMeshDecorComponent
----@field ChildActor7 UChildActorComponent
----@field ChildActor4 UChildActorComponent
----@field ChildActor5 UChildActorComponent
 ---@field VisRandomMeshDecor2 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor17 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor13 UVisRandomMeshDecorComponent
@@ -34,10 +40,7 @@
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor3 UVisFoundationEdgeMeshDecorComponent
----@field ChildActor UChildActorComponent
----@field ChildActor1 UChildActorComponent
----@field ChildActor3 UChildActorComponent
----@field StaticMesh UStaticMeshComponent
+---@field TopMesh UStaticMeshComponent
 ---@field Scene USceneComponent
 ABPVisGridFoundationTriangularStraight_C = {}
 

@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EAnvilItemFlag.h"
 #include "Templates/SubclassOf.h"
 #include "ItemCount.generated.h"
 
@@ -28,7 +29,10 @@ public:
     int32 Count;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 ItemFlags;
+    TArray<EAnvilItemFlag> ItemFlags;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int64 ItemFlagsVisVar;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 Payload;

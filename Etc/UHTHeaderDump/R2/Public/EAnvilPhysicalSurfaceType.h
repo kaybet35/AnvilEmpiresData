@@ -21,6 +21,7 @@ enum class EAnvilPhysicalSurfaceType : uint8 {
     Rare,
     Road,
     Sand,
+    PlayerFlesh,
     NumTypes,
 };
 

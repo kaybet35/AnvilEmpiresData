@@ -18,6 +18,7 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->SecondaryHeldUnderlyingCodeName = 0;
     this->UnarmedPrimaryHeldItemCodeName = 0;
     this->UnarmedSecondaryHeldItemCodeName = 0;
+    this->bIsMovementCorrection = false;
     this->PlayerUniqueID = 0;
     this->NobleVoteId = 0;
     this->TrappedTimer = 0.00f;
@@ -25,6 +26,8 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->bStaggered = false;
     this->bIsAiming = false;
     this->bIsGuarding = false;
+    this->bIsMarchMode = false;
+    this->Accuracy = 0.00f;
     this->bIsAdmin = false;
     this->bPriming = false;
     this->bInTravelZone = false;

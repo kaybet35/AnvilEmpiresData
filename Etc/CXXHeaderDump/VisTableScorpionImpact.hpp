@@ -3,6 +3,6 @@
 
 class AVisTableScorpionImpact_C : public AVisImpactEffect
 {
-}; // Size: 0x548
+}; // Size: 0x570
 
 #endif

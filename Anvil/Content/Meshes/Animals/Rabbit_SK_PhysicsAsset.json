@@ -3,7 +3,7 @@
     "Type": "PhysicsAsset",
     "Name": "Rabbit_SK_PhysicsAsset",
     "Class": "UScriptClass'PhysicsAsset'",
-    "Flags": "RF_Public | RF_Standalone | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "BoundsBodies": [
         0,
@@ -13,19 +13,16 @@
         4,
         5,
         6,
-        7
+        7,
+        8
       ],
       "SkeletalBodySetups": [
         {
           "ObjectName": "SkeletalBodySetup'Rabbit_SK_PhysicsAsset:SkeletalBodySetup_0'",
-          "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_PhysicsAsset.8"
-        },
-        {
-          "ObjectName": "SkeletalBodySetup'Rabbit_SK_PhysicsAsset:SkeletalBodySetup_1'",
           "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_PhysicsAsset.9"
         },
         {
-          "ObjectName": "SkeletalBodySetup'Rabbit_SK_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectName": "SkeletalBodySetup'Rabbit_SK_PhysicsAsset:SkeletalBodySetup_1'",
           "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_PhysicsAsset.10"
         },
         {
@@ -47,6 +44,14 @@
         {
           "ObjectName": "SkeletalBodySetup'Rabbit_SK_PhysicsAsset:SkeletalBodySetup_7'",
           "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_PhysicsAsset.15"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Rabbit_SK_PhysicsAsset:SkeletalBodySetup_8'",
+          "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_PhysicsAsset.16"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Rabbit_SK_PhysicsAsset:SkeletalBodySetup_9'",
+          "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_PhysicsAsset.17"
         }
       ],
       "ConstraintSetup": [
@@ -55,28 +60,32 @@
           "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_PhysicsAsset.1"
         },
         {
-          "ObjectName": "PhysicsConstraintTemplate'Rabbit_SK_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectName": "PhysicsConstraintTemplate'Rabbit_SK_PhysicsAsset:PhysicsConstraintTemplate_2'",
           "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_PhysicsAsset.2"
         },
         {
-          "ObjectName": "PhysicsConstraintTemplate'Rabbit_SK_PhysicsAsset:PhysicsConstraintTemplate_2'",
+          "ObjectName": "PhysicsConstraintTemplate'Rabbit_SK_PhysicsAsset:PhysicsConstraintTemplate_3'",
           "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_PhysicsAsset.3"
         },
         {
-          "ObjectName": "PhysicsConstraintTemplate'Rabbit_SK_PhysicsAsset:PhysicsConstraintTemplate_3'",
+          "ObjectName": "PhysicsConstraintTemplate'Rabbit_SK_PhysicsAsset:PhysicsConstraintTemplate_4'",
           "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_PhysicsAsset.4"
         },
         {
-          "ObjectName": "PhysicsConstraintTemplate'Rabbit_SK_PhysicsAsset:PhysicsConstraintTemplate_4'",
+          "ObjectName": "PhysicsConstraintTemplate'Rabbit_SK_PhysicsAsset:PhysicsConstraintTemplate_5'",
           "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_PhysicsAsset.5"
         },
         {
-          "ObjectName": "PhysicsConstraintTemplate'Rabbit_SK_PhysicsAsset:PhysicsConstraintTemplate_5'",
+          "ObjectName": "PhysicsConstraintTemplate'Rabbit_SK_PhysicsAsset:PhysicsConstraintTemplate_6'",
           "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_PhysicsAsset.6"
         },
         {
-          "ObjectName": "PhysicsConstraintTemplate'Rabbit_SK_PhysicsAsset:PhysicsConstraintTemplate_6'",
+          "ObjectName": "PhysicsConstraintTemplate'Rabbit_SK_PhysicsAsset:PhysicsConstraintTemplate_7'",
           "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_PhysicsAsset.7"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Rabbit_SK_PhysicsAsset:PhysicsConstraintTemplate_8'",
+          "ObjectPath": "Anvil/Content/Meshes/Animals/Rabbit_SK_PhysicsAsset.8"
         }
       ],
       "ThumbnailInfo": null
@@ -333,6 +342,78 @@
           ]
         },
         "Value": false
+      },
+      {
+        "Key": {
+          "Indices": [
+            0,
+            8
+          ]
+        },
+        "Value": false
+      },
+      {
+        "Key": {
+          "Indices": [
+            1,
+            8
+          ]
+        },
+        "Value": false
+      },
+      {
+        "Key": {
+          "Indices": [
+            2,
+            8
+          ]
+        },
+        "Value": false
+      },
+      {
+        "Key": {
+          "Indices": [
+            3,
+            8
+          ]
+        },
+        "Value": false
+      },
+      {
+        "Key": {
+          "Indices": [
+            4,
+            8
+          ]
+        },
+        "Value": false
+      },
+      {
+        "Key": {
+          "Indices": [
+            5,
+            8
+          ]
+        },
+        "Value": false
+      },
+      {
+        "Key": {
+          "Indices": [
+            6,
+            8
+          ]
+        },
+        "Value": false
+      },
+      {
+        "Key": {
+          "Indices": [
+            7,
+            8
+          ]
+        },
+        "Value": false
       }
     ]
   },
@@ -347,65 +428,45 @@
         "JointName": "Spine01",
         "ConstraintBone1": "Spine01",
         "ConstraintBone2": "Pelvis",
+        "Pos1": {
+          "X": -0.35673437,
+          "Y": -6.059576,
+          "Z": 2.0952134E-06
+        },
+        "PriAxis1": {
+          "X": 1.0,
+          "Y": -2.0816682E-16,
+          "Z": 6.938894E-17
+        },
+        "SecAxis1": {
+          "X": 2.0816682E-16,
+          "Y": 1.0,
+          "Z": -1.07552856E-16
+        },
         "Pos2": {
-          "X": 1.000021,
-          "Y": -5.0017775E-06,
-          "Z": 4.9289355E-07
+          "X": -5.130789,
+          "Y": -11.179883,
+          "Z": 1.8376232E-06
         },
         "PriAxis2": {
-          "X": 0.024944695,
-          "Y": -0.9996888,
-          "Z": 2.9678218E-09
+          "X": -0.84690493,
+          "Y": -0.5317443,
+          "Z": -6.339787E-07
         },
         "SecAxis2": {
-          "X": 0.9996888,
-          "Y": 0.024944695,
-          "Z": 9.5046806E-07
+          "X": 0.5317443,
+          "Y": -0.84690493,
+          "Z": 1.0012917E-06
         },
         "ProfileInstance": {
           "ConeLimit": {
+            "Swing1LimitDegrees": 20.0,
+            "Swing2LimitDegrees": 15.0,
             "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
             "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
           },
           "TwistLimit": {
-            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
-          }
-        }
-      }
-    }
-  },
-  {
-    "Type": "PhysicsConstraintTemplate",
-    "Name": "PhysicsConstraintTemplate_1",
-    "Outer": "Rabbit_SK_PhysicsAsset",
-    "Class": "UScriptClass'PhysicsConstraintTemplate'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "DefaultInstance": {
-        "JointName": "Spine03",
-        "ConstraintBone1": "Spine03",
-        "ConstraintBone2": "Spine01",
-        "Pos2": {
-          "X": 23.108946,
-          "Y": -7.8849006,
-          "Z": -2.396518E-06
-        },
-        "PriAxis2": {
-          "X": 0.45913798,
-          "Y": -0.888365,
-          "Z": -3.7233545E-07
-        },
-        "SecAxis2": {
-          "X": 0.888365,
-          "Y": 0.45913798,
-          "Z": -1.661934E-07
-        },
-        "ProfileInstance": {
-          "ConeLimit": {
-            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
-            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
-          },
-          "TwistLimit": {
+            "TwistLimitDegrees": 10.0,
             "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
           }
         }
@@ -422,28 +483,46 @@
       "DefaultInstance": {
         "JointName": "Clavicle_L",
         "ConstraintBone1": "Clavicle_L",
-        "ConstraintBone2": "Spine03",
+        "ConstraintBone2": "Spine01",
+        "Pos1": {
+          "X": 14.40492,
+          "Y": -10.751057,
+          "Z": -5.378524
+        },
+        "PriAxis1": {
+          "X": 1.0,
+          "Y": -9.992007E-16,
+          "Z": -5.551115E-17
+        },
+        "SecAxis1": {
+          "X": 9.992007E-16,
+          "Y": 1.0,
+          "Z": -3.330669E-16
+        },
         "Pos2": {
-          "X": 14.230532,
-          "Y": 0.00018838937,
-          "Z": 5.0000067
+          "X": 14.466716,
+          "Y": -14.733596,
+          "Z": 4.9999866
         },
         "PriAxis2": {
-          "X": 0.27743265,
-          "Y": -0.8970141,
-          "Z": 0.3440884
+          "X": 0.22434309,
+          "Y": -0.9117418,
+          "Z": 0.34408873
         },
         "SecAxis2": {
-          "X": 0.9562493,
-          "Y": 0.2924242,
-          "Z": -0.008678432
+          "X": 0.97175455,
+          "Y": 0.2358343,
+          "Z": -0.008679215
         },
         "ProfileInstance": {
           "ConeLimit": {
+            "Swing1LimitDegrees": 25.0,
+            "Swing2LimitDegrees": 20.0,
             "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
             "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
           },
           "TwistLimit": {
+            "TwistLimitDegrees": 10.0,
             "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
           }
         }
@@ -460,28 +539,41 @@
       "DefaultInstance": {
         "JointName": "Clavicle_R",
         "ConstraintBone1": "Clavicle_R",
-        "ConstraintBone2": "Spine03",
+        "ConstraintBone2": "Spine01",
+        "Pos1": {
+          "X": 14.404835,
+          "Y": 10.751053,
+          "Z": -5.378769
+        },
+        "PriAxis1": {
+          "X": 1.0,
+          "Y": 0.0,
+          "Z": 5.551115E-17
+        },
         "Pos2": {
-          "X": 14.23054,
-          "Y": 0.00019425877,
-          "Z": -4.9999757
+          "X": 14.46672,
+          "Y": -14.733605,
+          "Z": -4.9999914
         },
         "PriAxis2": {
-          "X": 0.27743092,
-          "Y": -0.8970084,
-          "Z": -0.34410462
+          "X": 0.22434129,
+          "Y": -0.91173637,
+          "Z": -0.34410435
         },
         "SecAxis2": {
-          "X": -0.9562495,
-          "Y": -0.29242373,
-          "Z": -0.008679383
+          "X": -0.9717546,
+          "Y": -0.2358339,
+          "Z": -0.00867858
         },
         "ProfileInstance": {
           "ConeLimit": {
+            "Swing1LimitDegrees": 25.0,
+            "Swing2LimitDegrees": 20.0,
             "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
             "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
           },
           "TwistLimit": {
+            "TwistLimitDegrees": 10.0,
             "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
           }
         }
@@ -498,28 +590,46 @@
       "DefaultInstance": {
         "JointName": "Head",
         "ConstraintBone1": "Head",
-        "ConstraintBone2": "Spine03",
+        "ConstraintBone2": "Spine01",
+        "Pos1": {
+          "X": -3.6832166,
+          "Y": 9.289552E-07,
+          "Z": -1.8567374E-12
+        },
+        "PriAxis1": {
+          "X": 0.9715079,
+          "Y": -0.23700707,
+          "Z": -8.049041E-08
+        },
+        "SecAxis1": {
+          "X": 0.23700707,
+          "Y": 0.9715079,
+          "Z": 1.7787632E-06
+        },
         "Pos2": {
-          "X": 21.6474,
-          "Y": 1.5758443,
-          "Z": 7.906549E-06
+          "X": 25.413979,
+          "Y": 2.3983953,
+          "Z": -2.0952883E-05
         },
         "PriAxis2": {
-          "X": 0.89005274,
-          "Y": 0.45585752,
-          "Z": 6.7249306E-07
+          "X": 0.984663,
+          "Y": 0.17446712,
+          "Z": -7.453893E-08
         },
         "SecAxis2": {
-          "X": -0.45585752,
-          "Y": 0.89005274,
-          "Z": -1.559503E-07
+          "X": -0.17446712,
+          "Y": 0.984663,
+          "Z": 1.3223278E-06
         },
         "ProfileInstance": {
           "ConeLimit": {
+            "Swing1LimitDegrees": 30.0,
+            "Swing2LimitDegrees": 30.0,
             "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
             "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
           },
           "TwistLimit": {
+            "TwistLimitDegrees": 25.0,
             "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
           }
         }
@@ -537,9 +647,24 @@
         "JointName": "LowerLeg_L",
         "ConstraintBone1": "LowerLeg_L",
         "ConstraintBone2": "Pelvis",
+        "Pos1": {
+          "X": 0.809478,
+          "Y": -0.09143093,
+          "Z": 0.032626577
+        },
+        "PriAxis1": {
+          "X": 1.0,
+          "Y": 1.3877788E-15,
+          "Z": -8.881784E-16
+        },
+        "SecAxis1": {
+          "X": -1.3877788E-15,
+          "Y": 1.0,
+          "Z": -6.661338E-16
+        },
         "Pos2": {
-          "X": -12.947433,
-          "Y": -7.699528,
+          "X": -12.907364,
+          "Y": -6.885236,
           "Z": 6.4204
         },
         "PriAxis2": {
@@ -554,10 +679,13 @@
         },
         "ProfileInstance": {
           "ConeLimit": {
+            "Swing1LimitDegrees": 25.0,
+            "Swing2LimitDegrees": 10.0,
             "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
             "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
           },
           "TwistLimit": {
+            "TwistLimitDegrees": 15.0,
             "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
           }
         }
@@ -575,9 +703,24 @@
         "JointName": "LowerLeg_R",
         "ConstraintBone1": "LowerLeg_R",
         "ConstraintBone2": "Pelvis",
+        "Pos1": {
+          "X": 0.80947727,
+          "Y": 0.09143064,
+          "Z": 0.032625917
+        },
+        "PriAxis1": {
+          "X": 1.0,
+          "Y": -5.551115E-16,
+          "Z": -1.2212453E-15
+        },
+        "SecAxis1": {
+          "X": 5.551115E-16,
+          "Y": 1.0,
+          "Z": -4.440892E-16
+        },
         "Pos2": {
-          "X": -12.947413,
-          "Y": -7.6995196,
+          "X": -12.907344,
+          "Y": -6.8852277,
           "Z": -6.420404
         },
         "PriAxis2": {
@@ -592,11 +735,94 @@
         },
         "ProfileInstance": {
           "ConeLimit": {
+            "Swing1LimitDegrees": 25.0,
+            "Swing2LimitDegrees": 10.0,
             "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
             "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
           },
           "TwistLimit": {
+            "TwistLimitDegrees": 15.0,
             "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_7",
+    "Outer": "Rabbit_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "Ear_R",
+        "ConstraintBone1": "Ear_R",
+        "ConstraintBone2": "Head",
+        "Pos2": {
+          "X": 5.6262217,
+          "Y": 8.458826,
+          "Z": -3.1648679
+        },
+        "PriAxis2": {
+          "X": -0.18669789,
+          "Y": 0.97854364,
+          "Z": -0.08715619
+        },
+        "SecAxis2": {
+          "X": -0.98228157,
+          "Y": -0.18741103,
+          "Z": 1.8386683E-07
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 15.0,
+            "Swing2LimitDegrees": 15.0,
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Locked"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_8",
+    "Outer": "Rabbit_SK_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "UserConstraint",
+        "ConstraintBone1": "Ear_L",
+        "ConstraintBone2": "Head",
+        "Pos2": {
+          "X": 5.626218,
+          "Y": 8.458818,
+          "Z": 3.1690776
+        },
+        "PriAxis2": {
+          "X": -0.18669759,
+          "Y": 0.9785438,
+          "Z": 0.08715515
+        },
+        "SecAxis2": {
+          "X": -0.9822816,
+          "Y": -0.1874107,
+          "Z": -3.6081985E-07
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 15.0,
+            "Swing2LimitDegrees": 15.0,
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Locked"
           }
         }
       }
@@ -613,17 +839,17 @@
         "SphylElems": [
           {
             "Center": {
-              "X": -1.9632744,
-              "Y": -6.044728,
-              "Z": 3.2798293E-06
+              "X": -5.268215,
+              "Y": -8.220055,
+              "Z": 8.285625E-07
             },
             "Rotation": {
-              "Pitch": 0.0,
-              "Yaw": 126.43154,
-              "Roll": -89.999985
+              "Pitch": -1.6421705E-05,
+              "Yaw": 151.02905,
+              "Roll": -90.00001
             },
-            "Radius": 11.364482,
-            "Length": 15.249296,
+            "Radius": 10.364482,
+            "Length": 3.2492962,
             "RestOffset": 0.0,
             "Name": "None",
             "bContributeToMass": true,
@@ -634,7 +860,7 @@
       "BoneName": "Pelvis",
       "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
     },
-    "BodySetupGuid": "164D27AA49311B2B4FD40DA1506ABA2D"
+    "BodySetupGuid": "E7CE806C4CC21516A962ACA93A013AF9"
   },
   {
     "Type": "SkeletalBodySetup",
@@ -647,19 +873,37 @@
         "SphylElems": [
           {
             "Center": {
-              "X": 16.319914,
-              "Y": -11.452753,
-              "Z": -0.05026488
+              "X": 14.3828745,
+              "Y": -2.2910595,
+              "Z": -3.551305E-07
             },
             "Rotation": {
-              "Pitch": 88.3839,
-              "Yaw": 50.27443,
-              "Roll": 140.28563
+              "Pitch": -90.0,
+              "Yaw": 90.0,
+              "Roll": -82.4224
             },
             "Radius": 8.745004,
             "Length": 10.40894,
             "RestOffset": 0.0,
             "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          },
+          {
+            "Center": {
+              "X": 16.21104,
+              "Y": -7.1658554,
+              "Z": 2.4814926E-06
+            },
+            "Rotation": {
+              "Pitch": 82.4301,
+              "Yaw": -68.038345,
+              "Roll": -89.999985
+            },
+            "Radius": 8.0,
+            "Length": 8.0,
+            "RestOffset": 0.0,
+            "Name": "Spine01_capsule",
             "bContributeToMass": true,
             "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
           }
@@ -668,41 +912,7 @@
       "BoneName": "Spine01",
       "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
     },
-    "BodySetupGuid": "EACFA4D143339A31CE79C6BFBC8702F9"
-  },
-  {
-    "Type": "SkeletalBodySetup",
-    "Name": "SkeletalBodySetup_2",
-    "Outer": "Rabbit_SK_PhysicsAsset",
-    "Class": "UScriptClass'SkeletalBodySetup'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "AggGeom": {
-        "SphylElems": [
-          {
-            "Center": {
-              "X": 17.100496,
-              "Y": -6.5186806,
-              "Z": 1.9983423E-05
-            },
-            "Rotation": {
-              "Pitch": -7.951387E-16,
-              "Yaw": -171.12666,
-              "Roll": -89.999985
-            },
-            "Radius": 11.648999,
-            "Length": 11.670254,
-            "RestOffset": 0.0,
-            "Name": "None",
-            "bContributeToMass": true,
-            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
-          }
-        ]
-      },
-      "BoneName": "Spine03",
-      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
-    },
-    "BodySetupGuid": "50D430E74AE075AC3EFCDB90E21986EB"
+    "BodySetupGuid": "E0E01EA94F8A26430A5510B9699D80A5"
   },
   {
     "Type": "SkeletalBodySetup",
@@ -715,16 +925,16 @@
         "SphylElems": [
           {
             "Center": {
-              "X": 16.413412,
-              "Y": -4.6194353,
-              "Z": -6.5394387
+              "X": 20.766209,
+              "Y": -7.0905647,
+              "Z": -8.1575
             },
             "Rotation": {
-              "Pitch": -3.1805547E-15,
-              "Yaw": -81.16726,
-              "Roll": -60.51282
+              "Pitch": -3.9146209,
+              "Yaw": -70.006836,
+              "Roll": -61.625164
             },
-            "Radius": 7.9631095,
+            "Radius": 2.9631095,
             "Length": 14.610374,
             "RestOffset": 0.0,
             "Name": "None",
@@ -736,7 +946,7 @@
       "BoneName": "Clavicle_L",
       "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
     },
-    "BodySetupGuid": "AF85344C4E34B89FC1B7B3A63785C82E"
+    "BodySetupGuid": "750B449B4EEA60B883C8B29F032A1750"
   },
   {
     "Type": "SkeletalBodySetup",
@@ -749,16 +959,16 @@
         "SphylElems": [
           {
             "Center": {
-              "X": 16.413298,
-              "Y": 4.6194296,
-              "Z": -6.5397453
+              "X": 20.766068,
+              "Y": 7.0905576,
+              "Z": -8.157883
             },
             "Rotation": {
-              "Pitch": -1.5902774E-14,
-              "Yaw": -98.83285,
-              "Roll": -60.51185
+              "Pitch": 3.9147635,
+              "Yaw": -109.99322,
+              "Roll": -61.62433
             },
-            "Radius": 7.9631085,
+            "Radius": 2.9631085,
             "Length": 14.610374,
             "RestOffset": 0.0,
             "Name": "None",
@@ -770,7 +980,7 @@
       "BoneName": "Clavicle_R",
       "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
     },
-    "BodySetupGuid": "8284A35B45B35B028D148DA79AB6B790"
+    "BodySetupGuid": "E94EC90C4FAB5D655C4D169EDA04B7E9"
   },
   {
     "Type": "SkeletalBodySetup",
@@ -783,17 +993,17 @@
         "SphylElems": [
           {
             "Center": {
-              "X": 4.7159185,
-              "Y": 8.440118,
-              "Z": 2.8547114E-05
+              "X": 6.4591603,
+              "Y": 0.34636077,
+              "Z": 1.9814335E-05
             },
             "Rotation": {
-              "Pitch": -1.5902774E-15,
-              "Yaw": 22.334482,
-              "Roll": -90.0
+              "Pitch": -5.92682E-05,
+              "Yaw": -76.95226,
+              "Roll": -90.00003
             },
-            "Radius": 8.45363,
-            "Length": 17.709423,
+            "Radius": 7.4536304,
+            "Length": 6.709423,
             "RestOffset": 0.0,
             "Name": "None",
             "bContributeToMass": true,
@@ -804,7 +1014,7 @@
       "BoneName": "Head",
       "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
     },
-    "BodySetupGuid": "C2E3746948F941B2D5E4509FCA3C90A1"
+    "BodySetupGuid": "5346B1F349BCACDCA549D6B7CC9268D3"
   },
   {
     "Type": "SkeletalBodySetup",
@@ -817,16 +1027,16 @@
         "SphylElems": [
           {
             "Center": {
-              "X": 9.737971,
-              "Y": 0.4355093,
-              "Z": -0.3736086
+              "X": 11.888775,
+              "Y": 0.2010616,
+              "Z": -0.28994736
             },
             "Rotation": {
-              "Pitch": -3.1805547E-15,
-              "Yaw": -45.589787,
-              "Roll": -71.66256
+              "Pitch": 5.6941686,
+              "Yaw": -85.79747,
+              "Roll": -84.22973
             },
-            "Radius": 8.990861,
+            "Radius": 2.990861,
             "Length": 11.009242,
             "RestOffset": 0.0,
             "Name": "None",
@@ -838,7 +1048,7 @@
       "BoneName": "LowerLeg_L",
       "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
     },
-    "BodySetupGuid": "D2ECB5D7453BF4DA3228BDABEA7EC6DF"
+    "BodySetupGuid": "1578F918483296DDE0F8B089052F0311"
   },
   {
     "Type": "SkeletalBodySetup",
@@ -851,16 +1061,16 @@
         "SphylElems": [
           {
             "Center": {
-              "X": 9.737952,
-              "Y": -0.43552098,
-              "Z": -0.37360892
+              "X": 11.888756,
+              "Y": -0.2010741,
+              "Z": -0.28994945
             },
             "Rotation": {
-              "Pitch": -3.1805547E-15,
-              "Yaw": -134.41014,
-              "Roll": -71.66254
+              "Pitch": -5.6941657,
+              "Yaw": -94.20246,
+              "Roll": -84.22971
             },
-            "Radius": 8.990851,
+            "Radius": 2.9908514,
             "Length": 11.00924,
             "RestOffset": 0.0,
             "Name": "None",
@@ -872,6 +1082,76 @@
       "BoneName": "LowerLeg_R",
       "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
     },
-    "BodySetupGuid": "DDD446F34C5F3B4262525AB164233BEF"
+    "BodySetupGuid": "B9EAB9C1401B061DE5F8BA8FED3C1D7F"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_8",
+    "Outer": "Rabbit_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 7.5908537,
+              "Y": 0.13399033,
+              "Z": 0.06470784
+            },
+            "Rotation": {
+              "Pitch": 9.924607E-05,
+              "Yaw": 4.4041144E-06,
+              "Roll": -27.476192
+            },
+            "X": 19.5,
+            "Y": 5.5,
+            "Z": 3.5,
+            "RestOffset": 0.0,
+            "Name": "Ear_L_box",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "Ear_L",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "F39F0C8B4F06CA4A413C27AE23C8227C"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_9",
+    "Outer": "Rabbit_SK_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 7.590854,
+              "Y": 0.13399,
+              "Z": 0.064708
+            },
+            "Rotation": {
+              "Pitch": 9.9E-05,
+              "Yaw": 4E-06,
+              "Roll": 27.476192
+            },
+            "X": 19.5,
+            "Y": 5.5,
+            "Z": 3.5,
+            "RestOffset": 0.0,
+            "Name": "Ear_L_box",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "Ear_R",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "6AF91E8143C15AF03AE7BC8FCB353F67"
   }
 ]

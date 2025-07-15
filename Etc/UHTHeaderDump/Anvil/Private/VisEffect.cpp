@@ -7,6 +7,8 @@
 
 AVisEffect::AVisEffect(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RootComponent = CreateDefaultSubobject<UArrowComponent>(TEXT("ArrowComponent"));
+    this->bClientSideDestruction = true;
+    this->AttachTarget = NULL;
     this->ArrowComponent = (UArrowComponent*)RootComponent;
     this->AudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("AudioComponent"));
     this->NiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));

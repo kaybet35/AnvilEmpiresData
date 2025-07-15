@@ -1,19 +1,23 @@
 ---@meta
 
 ---@class ABPVisGridFoundationRoundStraight_T2_C : AVisStructure
+---@field Rubble UVisStaticMeshComponentBase
+---@field TopMeshCollapsed UVisStaticMeshComponentBase
+---@field VisDynamicMeshTemplateReference2 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference3 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference1 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference UVisDynamicMeshTemplateReferenceComponent
 ---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field FloorPlanking2 UStaticMeshComponent
 ---@field FloorPlanking UStaticMeshComponent
 ---@field VisFoundationEdgeMeshDecor UVisFoundationEdgeMeshDecorComponent
----@field ChildActor1 UChildActorComponent
----@field ChildActor3 UChildActorComponent
 ---@field VisFoundationEdgeMeshDecor6 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor2 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor5 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor4 UVisFoundationEdgeMeshDecorComponent
----@field StaticMesh UStaticMeshComponent
----@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
+---@field TopMesh UStaticMeshComponent
+---@field BottomMesh UVisFoundationBottomMeshDecorComponent
 ---@field VisRandomMeshDecor UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor13 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor33 UVisRandomMeshDecorComponent
@@ -45,8 +49,6 @@
 ---@field VisRandomMeshDecor20 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor30 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor28 UVisRandomMeshDecorComponent
----@field ChildActor5 UChildActorComponent
----@field ChildActor4 UChildActorComponent
 ---@field Scene USceneComponent
 ABPVisGridFoundationRoundStraight_T2_C = {}
 

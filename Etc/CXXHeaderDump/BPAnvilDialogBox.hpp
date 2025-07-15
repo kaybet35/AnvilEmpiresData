@@ -3,7 +3,7 @@
 
 class UBPAnvilDialogBox_C : public UAnvilDialogBox
 {
-    class UImage* Background;                                                         // 0x0330 (size: 0x8)
+    class UImage* BlackBG;                                                            // 0x0330 (size: 0x8)
 
 }; // Size: 0x338
 

@@ -1,0 +1,115 @@
+[
+  {
+    "Type": "AnimMontage",
+    "Name": "carriedBanner_flagWaving_Montage",
+    "Class": "UScriptClass'AnimMontage'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlendIn": {
+        "BlendTime": 0.2
+      },
+      "BlendOut": {
+        "BlendTime": 0.5
+      },
+      "CompositeSections": [
+        {
+          "SectionName": "Default",
+          "NextSectionName": "idleToEnd",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'carriedBanner_flagWaving_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/carriedBanner_flagWaving_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 3.3333333,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'carriedBanner_flagWaveWithStops_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/carriedBanner_flagWaveWithStops_anim.0"
+          }
+        },
+        {
+          "SectionName": "loop",
+          "NextSectionName": "loop",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'carriedBanner_flagWaving_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/carriedBanner_flagWaving_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 3.3333333,
+          "LinkValue": 3.2,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'carriedBanner_flagWaveWithStops_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/carriedBanner_flagWaveWithStops_anim.0"
+          }
+        },
+        {
+          "SectionName": "endToIdle",
+          "NextSectionName": "None",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'carriedBanner_flagWaving_Montage'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/carriedBanner_flagWaving_Montage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 3.3333333,
+          "SegmentLength": 0.5,
+          "LinkValue": 3.3333333,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'carriedBanner_transition_idleToWalk_anim'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/carriedBanner_transition_idleToWalk_anim.0"
+          }
+        }
+      ],
+      "SlotAnimTracks": [
+        {
+          "SlotName": "UpperBodySlot",
+          "AnimTrack": {
+            "AnimSegments": [
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'carriedBanner_flagWaveWithStops_anim'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/carriedBanner_flagWaveWithStops_anim.0"
+                },
+                "StartPos": 0.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 3.3333333,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'carriedBanner_transition_idleToWalk_anim'",
+                  "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/carriedBanner_transition_idleToWalk_anim.0"
+                },
+                "StartPos": 3.3333333,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 0.5,
+                "AnimPlayRate": -1.0,
+                "LoopingCount": 1
+              }
+            ]
+          }
+        }
+      ],
+      "SequenceLength": 3.8333333,
+      "Skeleton": {
+        "ObjectName": "Skeleton'PrototypeChar_Skeleton'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/PrototypeChar_Skeleton.8"
+      }
+    },
+    "SkeletonGuid": "F597442D-46D412D3-CA2395A2-A90680CA"
+  }
+]

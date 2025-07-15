@@ -14,11 +14,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisCanal_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.44"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.55"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BPVisCanal_C:ExecuteUbergraph_BPVisCanal'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.14"
       }
     },
     "SuperStruct": {
@@ -27,12 +27,16 @@
     },
     "Children": [
       {
-        "ObjectName": "Function'BPVisCanal_C:ReceiveTick'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.8"
+        "ObjectName": "Function'BPVisCanal_C:ReceiveBeginPlay'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.16"
+      },
+      {
+        "ObjectName": "Function'BPVisCanal_C:OnShapeUpdated_Event'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.15"
       },
       {
         "ObjectName": "Function'BPVisCanal_C:ExecuteUbergraph_BPVisCanal'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.14"
       }
     ],
     "ChildProperties": [
@@ -49,13 +53,35 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "LandscapeCullBalljointMid",
+        "Name": "FoliageCullBalljointStart",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
+          "ObjectName": "BlueprintGeneratedClass'BPFoliageCullStaticMeshComponent_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/Environment/BPFoliageCullStaticMeshComponent.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FoliageCullBalljointEnd",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BPFoliageCullStaticMeshComponent_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/Environment/BPFoliageCullStaticMeshComponent.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FoliageCullBalljointMid",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BPFoliageCullStaticMeshComponent_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/Environment/BPFoliageCullStaticMeshComponent.0"
         }
       },
       {
@@ -65,8 +91,8 @@
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
+          "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/Environment/BPLandscapeCullStaticMeshComponent.0"
         }
       },
       {
@@ -76,8 +102,19 @@
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
+          "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/Environment/BPLandscapeCullStaticMeshComponent.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LandscapeCullBalljointMid",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/Environment/BPLandscapeCullStaticMeshComponent.0"
         }
       },
       {
@@ -326,11 +363,15 @@
     "FuncMap": {
       "ExecuteUbergraph_BPVisCanal": {
         "ObjectName": "Function'BPVisCanal_C:ExecuteUbergraph_BPVisCanal'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.14"
       },
-      "ReceiveTick": {
-        "ObjectName": "Function'BPVisCanal_C:ReceiveTick'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.8"
+      "OnShapeUpdated_Event": {
+        "ObjectName": "Function'BPVisCanal_C:OnShapeUpdated_Event'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.15"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BPVisCanal_C:ReceiveBeginPlay'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.16"
       }
     },
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -342,30 +383,177 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPVisCanal_C'Default__BPVisCanal_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.2"
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.8"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
     }
   },
   {
+    "Type": "BPFoliageCullStaticMeshComponent_C",
+    "Name": "FoliageCullBalljointEnd_GEN_VARIABLE",
+    "Outer": "BPVisCanal_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/Environment/BPFoliageCullStaticMeshComponent.BPFoliageCullStaticMeshComponent_C'",
+    "Template": {
+      "ObjectName": "BPFoliageCullStaticMeshComponent_C'Default__BPFoliageCullStaticMeshComponent_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/Environment/BPFoliageCullStaticMeshComponent.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_Balljoint_End'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Balljoint_End.2"
+      },
+      "RelativeLocation": {
+        "X": -4.2632564E-14,
+        "Y": -4.897707E-08,
+        "Z": 80.0
+      },
+      "RelativeScale3D": {
+        "X": 2.35,
+        "Y": 2.35,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "BPFoliageCullStaticMeshComponent_C",
+    "Name": "FoliageCullBalljointMid_GEN_VARIABLE",
+    "Outer": "BPVisCanal_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/Environment/BPFoliageCullStaticMeshComponent.BPFoliageCullStaticMeshComponent_C'",
+    "Template": {
+      "ObjectName": "BPFoliageCullStaticMeshComponent_C'Default__BPFoliageCullStaticMeshComponent_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/Environment/BPFoliageCullStaticMeshComponent.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_Balljoint_Mid'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Balljoint_Mid.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 1.1578666E-06,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 4.0,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "BPFoliageCullStaticMeshComponent_C",
+    "Name": "FoliageCullBalljointStart_GEN_VARIABLE",
+    "Outer": "BPVisCanal_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/Environment/BPFoliageCullStaticMeshComponent.BPFoliageCullStaticMeshComponent_C'",
+    "Template": {
+      "ObjectName": "BPFoliageCullStaticMeshComponent_C'Default__BPFoliageCullStaticMeshComponent_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/Environment/BPFoliageCullStaticMeshComponent.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_Balljoint_End'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Balljoint_End.2"
+      },
+      "RelativeLocation": {
+        "X": -0.0,
+        "Y": -0.0,
+        "Z": 155.0
+      },
+      "RelativeScale3D": {
+        "X": 2.35,
+        "Y": 2.35,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "BPLandscapeCullStaticMeshComponent_C",
+    "Name": "LandscapeCullBalljointEnd_GEN_VARIABLE",
+    "Outer": "BPVisCanal_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/Environment/BPLandscapeCullStaticMeshComponent.BPLandscapeCullStaticMeshComponent_C'",
+    "Template": {
+      "ObjectName": "BPLandscapeCullStaticMeshComponent_C'Default__BPLandscapeCullStaticMeshComponent_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/Environment/BPLandscapeCullStaticMeshComponent.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_Balljoint_End'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Balljoint_End.2"
+      },
+      "RelativeLocation": {
+        "X": -4.2632564E-14,
+        "Y": -4.897707E-08,
+        "Z": 80.0
+      }
+    }
+  },
+  {
+    "Type": "BPLandscapeCullStaticMeshComponent_C",
+    "Name": "LandscapeCullBalljointMid_GEN_VARIABLE",
+    "Outer": "BPVisCanal_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/Environment/BPLandscapeCullStaticMeshComponent.BPLandscapeCullStaticMeshComponent_C'",
+    "Template": {
+      "ObjectName": "BPLandscapeCullStaticMeshComponent_C'Default__BPLandscapeCullStaticMeshComponent_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/Environment/BPLandscapeCullStaticMeshComponent.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_Balljoint_Mid'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Balljoint_Mid.2"
+      },
+      "RelativeScale3D": {
+        "X": 1.2,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "BPLandscapeCullStaticMeshComponent_C",
+    "Name": "LandscapeCullBalljointStart_GEN_VARIABLE",
+    "Outer": "BPVisCanal_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/Environment/BPLandscapeCullStaticMeshComponent.BPLandscapeCullStaticMeshComponent_C'",
+    "Template": {
+      "ObjectName": "BPLandscapeCullStaticMeshComponent_C'Default__BPLandscapeCullStaticMeshComponent_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/Environment/BPLandscapeCullStaticMeshComponent.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IndustryCanal_Balljoint_End'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Balljoint_End.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 1.1578666E-06,
+        "Z": 155.0
+      }
+    }
+  },
+  {
     "Type": "BPVisCanal_C",
     "Name": "Default__BPVisCanal_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.BPVisCanal_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "UberGraphFrame": {},
       "SplineComponent": {
         "ObjectName": "VisSplineComponent'Default__BPVisCanal_C:SplineComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.76"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.84"
       },
       "SplineScaffoldingComponent": {
         "ObjectName": "VisSplineComponent'Default__BPVisCanal_C:SplineScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.77"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.85"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisCanal_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.75"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.83"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconIndustryCanal100Straight'",
@@ -375,27 +563,31 @@
       "BuildSiteVisibility": "EBuildSiteVisibility::PlayInEditorOnly",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisCanal_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.71"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.79"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisCanal_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.18"
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisCanal_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.70"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.78"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisCanal_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.69"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.77"
+      },
+      "CollapsibleDataComponent": {
+        "ObjectName": "CollapsibleDataComponent'Default__BPVisCanal_C:CollapsibleDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.9"
       },
       "ScorchDataComponent": {
         "ObjectName": "ScorchDataComponent'Default__BPVisCanal_C:ScorchDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.25"
       },
       "DecayDataComponent": {
         "ObjectName": "DecayDataComponent'Default__BPVisCanal_C:DecayDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.6"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.13"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisCanal_C:ArrowComponent'",
@@ -403,11 +595,11 @@
       },
       "UseVolumeDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisCanal_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.5"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.12"
       },
       "GrassRemovalVolume": {
         "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisCanal_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.17"
       },
       "UseWindowType": "EHUDWindowType::GenericStructure",
       "InteractionIcon": {
@@ -437,6 +629,13 @@
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.0"
       }
     }
+  },
+  {
+    "Type": "CollapsibleDataComponent",
+    "Name": "CollapsibleDataComponent",
+    "Outer": "Default__BPVisCanal_C",
+    "Class": "UScriptClass'CollapsibleDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "DecalComponent",
@@ -517,13 +716,109 @@
       },
       {
         "Type": "StructProperty",
-        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 24,
         "Struct": {
           "ObjectName": "ScriptStruct'Vector'",
           "ObjectPath": "/Script/CoreUObject"
         }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnVisSplineShapeUpdated__DelegateSignature'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_SplineDataComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SplineDataComponent'",
+          "ObjectPath": "/Script/R2"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
       },
       {
         "Type": "StructProperty",
@@ -537,7 +832,7 @@
       },
       {
         "Type": "StructProperty",
-        "Name": "CallFunc_Add_VectorVector_ReturnValue_1",
+        "Name": "CallFunc_Multiply_VectorVector_ReturnValue_1",
         "Flags": "RF_Public",
         "ElementSize": 24,
         "Struct": {
@@ -546,31 +841,62 @@
         }
       },
       {
-        "Type": "StructProperty",
-        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult",
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_3",
         "Flags": "RF_Public",
-        "ElementSize": 240,
-        "PropertyFlags": "ContainsInstancedReference",
-        "Struct": {
-          "ObjectName": "ScriptStruct'HitResult'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "K2Node_Event_DeltaSeconds",
-        "Flags": "RF_Public",
-        "ElementSize": 4
+        "ElementSize": 8
       },
       {
         "Type": "DoubleProperty",
-        "Name": "CallFunc_Vector_Distance_ReturnValue",
+        "Name": "CallFunc_BreakVector_Y_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_VSize_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_VSize_ReturnValue_1",
         "Flags": "RF_Public",
         "ElementSize": 8
       },
       {
         "Type": "DoubleProperty",
         "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_1",
         "Flags": "RF_Public",
         "ElementSize": 8
       },
@@ -583,30 +909,287 @@
           "ObjectName": "ScriptStruct'Vector'",
           "ObjectPath": "/Script/CoreUObject"
         }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetTransform_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FMax_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_InverseTransformLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeTransform_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 240,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_8",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_8",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_8",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FMax_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_InverseTransformLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_9",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_9",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_9",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeTransform_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeTransform_SweepHitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 240,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
       }
     ],
     "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
   },
   {
     "Type": "Function",
-    "Name": "ReceiveTick",
+    "Name": "OnShapeUpdated_Event",
+    "Outer": "BPVisCanal_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SplineDataComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SplineDataComponent'",
+          "ObjectPath": "/Script/R2"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
     "Outer": "BPVisCanal_C",
     "Class": "UScriptClass'Function'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "SuperStruct": {
-      "ObjectName": "Function'Actor:ReceiveTick'",
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
       "ObjectPath": "/Script/Engine"
     },
-    "ChildProperties": [
-      {
-        "Type": "FloatProperty",
-        "Name": "DeltaSeconds",
-        "Flags": "RF_Public",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
-      }
-    ],
-    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
   },
   {
     "Type": "GrassRemovalVolumeComponent",
@@ -615,9 +1198,11 @@
     "Class": "UScriptClass'GrassRemovalVolumeComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "bSetByUseVolume": false,
+      "bSetBySpline": false,
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisCanal_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.46"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.57"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisCanal_C:ArrowComponent'",
@@ -706,7 +1291,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisCanal_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.22"
       },
       "VariableGuid": "E03622A1-42CB797C-EAE5D1A1-A2EFE37C",
       "InternalVariableName": "DefaultSceneRoot"
@@ -725,7 +1310,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:StartStraightMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.68"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.76"
       },
       "VariableGuid": "5C1EC61C-4E7A610B-98F9DDA0-F03E4A9F",
       "InternalVariableName": "StartStraightMesh"
@@ -744,7 +1329,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:BalljointTrimStart_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.60"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.71"
       },
       "VariableGuid": "07AE1239-4020B4EE-CD418BB6-C421C6F2",
       "InternalVariableName": "BalljointTrimStart"
@@ -763,7 +1348,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:AngleBaseStart_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.52"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.63"
       },
       "VariableGuid": "8A533A38-4AB33E43-EF95B987-82F025F8",
       "InternalVariableName": "AngleBaseStart"
@@ -782,7 +1367,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:AngleTrimLeftStart_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.54"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.65"
       },
       "VariableGuid": "6099ED4B-40300C7F-3754E79D-B63ABB78",
       "InternalVariableName": "AngleTrimLeftStart"
@@ -801,7 +1386,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:AngleTrimRightStart_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.56"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.67"
       },
       "VariableGuid": "6A6B49E2-425BC0D9-2927B6BF-55541CDA",
       "InternalVariableName": "AngleTrimRightStart"
@@ -820,10 +1405,31 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:AdapterStart_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.50"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.61"
       },
       "VariableGuid": "A3BB0D12-4C199978-D0FC7C93-A1822CDC",
       "InternalVariableName": "AdapterStart"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_15",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/BPLandscapeCullStaticMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPLandscapeCullStaticMeshComponent_C'BPVisCanal_C:LandscapeCullBalljointMid_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.6"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "78DD66B6-442E701E-718D5E96-76C6DE56",
+      "InternalVariableName": "LandscapeCullBalljointMid"
     }
   },
   {
@@ -839,18 +1445,22 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisBalljointComponent'BPVisCanal_C:VisBalljointEnd_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.72"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.80"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_23'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.33"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_24'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.43"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_27'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.35"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.46"
         }
       ],
       "VariableGuid": "0292D06F-4D86C76A-30BD1299-75C0BECD",
@@ -870,7 +1480,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:BalljointTrimEnd_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.59"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.70"
       },
       "VariableGuid": "9DA7C00A-49B9FA31-64DBC5B2-0CCD4293",
       "InternalVariableName": "BalljointTrimEnd"
@@ -889,7 +1499,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:AngleBaseEnd_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.51"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.62"
       },
       "VariableGuid": "956C242A-48F97D61-D9B60080-F2E9423B",
       "InternalVariableName": "AngleBaseEnd"
@@ -908,7 +1518,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:AngleTrimLeftEnd_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.53"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.64"
       },
       "VariableGuid": "1BAA9F6E-48D6BA11-EA0E33B8-BEB8D978",
       "InternalVariableName": "AngleTrimLeftEnd"
@@ -927,38 +1537,42 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisBalljointComponent'BPVisCanal_C:VisBalljointStart_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.73"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.81"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.37"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.48"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.20"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.28"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.21"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.29"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.22"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.30"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.23"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.31"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.24"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.32"
         },
         {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.34"
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_28'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.47"
         }
       ],
       "VariableGuid": "83C397EB-44AAA9CB-A2F2A88E-8FC064DC",
@@ -978,7 +1592,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:AngleTrimRightEnd_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.55"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.66"
       },
       "VariableGuid": "D2AD4FA1-45A07B94-D2DDD5A4-600C982F",
       "InternalVariableName": "AngleTrimRightEnd"
@@ -997,7 +1611,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:AdapterEnd_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.49"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.60"
       },
       "VariableGuid": "41F2B9E2-43EB72CA-69EEB983-227FD892",
       "InternalVariableName": "AdapterEnd"
@@ -1016,7 +1630,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:BalljointBaseEnd_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.57"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.68"
       },
       "VariableGuid": "052FD620-418D6496-E731CEAF-B384F155",
       "InternalVariableName": "BalljointBaseEnd"
@@ -1035,36 +1649,74 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisCanal_C:OffsetBase_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.16"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.24"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_18'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.27"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.36"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.28"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.37"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_20'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.30"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.39"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_21'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.31"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.40"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_22'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.32"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.41"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.26"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.35"
         }
       ],
       "VariableGuid": "DC99298F-42F57967-DBB9AD8C-DA16A663",
       "InternalVariableName": "OffsetBase"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_24",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/BPLandscapeCullStaticMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPLandscapeCullStaticMeshComponent_C'BPVisCanal_C:LandscapeCullBalljointEnd_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.5"
+      },
+      "VariableGuid": "7D5158E8-4CE1300D-028A3E93-16B7CE55",
+      "InternalVariableName": "LandscapeCullBalljointEnd"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_25",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/BPLandscapeCullStaticMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPLandscapeCullStaticMeshComponent_C'BPVisCanal_C:LandscapeCullBalljointStart_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.7"
+      },
+      "VariableGuid": "E1685EBF-4EB1C23A-01459C8D-F5F58759",
+      "InternalVariableName": "LandscapeCullBalljointStart"
     }
   },
   {
@@ -1075,15 +1727,17 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
+        "ObjectName": "BlueprintGeneratedClass'BPFoliageCullStaticMeshComponent_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/BPFoliageCullStaticMeshComponent.0"
       },
       "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisCanal_C:LandscapeCullBalljointStart_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.65"
+        "ObjectName": "BPFoliageCullStaticMeshComponent_C'BPVisCanal_C:FoliageCullBalljointMid_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.3"
       },
-      "VariableGuid": "B96424F4-4CC695B1-8D86A5AF-E81EB797",
-      "InternalVariableName": "LandscapeCullBalljointStart"
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "206018C5-46BB53D5-A32E50A0-0D63E34B",
+      "InternalVariableName": "FoliageCullBalljointMid"
     }
   },
   {
@@ -1094,15 +1748,15 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
+        "ObjectName": "BlueprintGeneratedClass'BPFoliageCullStaticMeshComponent_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/BPFoliageCullStaticMeshComponent.0"
       },
       "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisCanal_C:LandscapeCullBalljointEnd_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.63"
+        "ObjectName": "BPFoliageCullStaticMeshComponent_C'BPVisCanal_C:FoliageCullBalljointEnd_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.2"
       },
-      "VariableGuid": "31F746E1-45BC2A46-FA1D6088-1707A628",
-      "InternalVariableName": "LandscapeCullBalljointEnd"
+      "VariableGuid": "72E1BAA6-4EBE5562-E8EF9C9A-595ECA32",
+      "InternalVariableName": "FoliageCullBalljointEnd"
     }
   },
   {
@@ -1113,17 +1767,15 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
+        "ObjectName": "BlueprintGeneratedClass'BPFoliageCullStaticMeshComponent_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/Environment/BPFoliageCullStaticMeshComponent.0"
       },
       "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisCanal_C:LandscapeCullBalljointMid_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.64"
+        "ObjectName": "BPFoliageCullStaticMeshComponent_C'BPVisCanal_C:FoliageCullBalljointStart_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.4"
       },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "169E1694-4DAF0F0D-2F7A41B5-2078084F",
-      "InternalVariableName": "LandscapeCullBalljointMid"
+      "VariableGuid": "C407BECC-4475B234-E6F29586-0C3E8AE3",
+      "InternalVariableName": "FoliageCullBalljointStart"
     }
   },
   {
@@ -1139,7 +1791,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:BalljointBaseStart_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.58"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.69"
       },
       "VariableGuid": "ADDFBFD3-46B22AFC-5B3BD384-CCAC4EFC",
       "InternalVariableName": "BalljointBaseStart"
@@ -1158,7 +1810,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:StartMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.67"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.75"
       },
       "VariableGuid": "A32BAABB-48DBDCE5-74D613AF-0CBB9EA7",
       "InternalVariableName": "StartMesh"
@@ -1177,7 +1829,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:EndMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.61"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.72"
       },
       "VariableGuid": "C900BA1B-47D3D008-C5FC30AB-D741F30E",
       "InternalVariableName": "EndMesh"
@@ -1196,16 +1848,16 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisCanal_C:EndNodeBase_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.15"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.23"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.39"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.50"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.43"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.54"
         }
       ],
       "VariableGuid": "0EEA82C5-40D53285-B3EC0DAB-F78A74C3",
@@ -1225,26 +1877,26 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisCanalWaterControllerComponent'BPVisCanal_C:VisCanalWaterController_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.74"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.82"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.38"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.49"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.40"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.51"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.42"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.53"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.19"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.27"
         }
       ],
       "VariableGuid": "F796E288-4A664C14-479CEFB7-94FBCFFE",
@@ -1264,7 +1916,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:MidMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.66"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.74"
       },
       "VariableGuid": "32ADA8FA-45B8D599-3C888F83-B8EBC066",
       "InternalVariableName": "MidMesh"
@@ -1283,7 +1935,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisCanal_C:EndStraightMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.62"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.73"
       },
       "VariableGuid": "79C66215-48BDE623-3499B6AF-DBDF966B",
       "InternalVariableName": "EndStraightMesh"
@@ -1299,126 +1951,142 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.41"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.52"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.29"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.38"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.25"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.34"
         },
         {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_28'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.36"
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.45"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.39"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.50"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.41"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.52"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.38"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.49"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.40"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.51"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.42"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.53"
         },
         {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.19"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.43"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.29"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.37"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.21"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.22"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_23'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.33"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_18'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.27"
         },
         {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.54"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.38"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.28"
         },
         {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.30"
         },
         {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_13'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.31"
         },
         {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_14'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.32"
         },
         {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_16'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.34"
         },
         {
-          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_27'",
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_17'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.35"
         },
         {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_24'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_27'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.46"
+        },
+        {
           "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_28'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.36"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.47"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisCanal_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.26"
       }
     }
   },
@@ -1846,155 +2514,6 @@
   },
   {
     "Type": "StaticMeshComponent",
-    "Name": "LandscapeCullBalljointEnd_GEN_VARIABLE",
-    "Outer": "BPVisCanal_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'Cylinder'",
-        "ObjectPath": "Engine/Content/BasicShapes/Cylinder.2"
-      },
-      "OverrideMaterials": [
-        {
-          "ObjectName": "Material'RVT_LandscapeCullMaterial'",
-          "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCullMaterial.0"
-        }
-      ],
-      "bGenerateOverlapEvents": false,
-      "bVisibleInReflectionCaptures": false,
-      "bVisibleInRealTimeSkyCaptures": false,
-      "bVisibleInRayTracing": false,
-      "bReceivesDecals": false,
-      "bUseAsOccluder": false,
-      "bRenderCustomDepth": true,
-      "RuntimeVirtualTextures": [
-        {
-          "ObjectName": "RuntimeVirtualTexture'RVT_LandscapeCull'",
-          "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCull.0"
-        }
-      ],
-      "BodyInstance": {
-        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
-        "CollisionEnabled": "ECollisionEnabled::NoCollision",
-        "CollisionProfileName": "NoCollision",
-        "CollisionResponses": {
-          "ResponseArray": [
-            {
-              "Channel": "Visibility",
-              "Response": "ECollisionResponse::ECR_Ignore"
-            },
-            {
-              "Channel": "Camera",
-              "Response": "ECollisionResponse::ECR_Ignore"
-            }
-          ]
-        }
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -75.0
-      },
-      "RelativeScale3D": {
-        "X": 2.5,
-        "Y": 2.5,
-        "Z": 2.5
-      }
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "LandscapeCullBalljointMid_GEN_VARIABLE",
-    "Outer": "BPVisCanal_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'Cube'",
-        "ObjectPath": "Engine/Content/BasicShapes/Cube.2"
-      },
-      "OverrideMaterials": [
-        {
-          "ObjectName": "Material'RVT_LandscapeCullMaterial'",
-          "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCullMaterial.0"
-        }
-      ],
-      "bVisibleInReflectionCaptures": false,
-      "bVisibleInRealTimeSkyCaptures": false,
-      "bVisibleInRayTracing": false,
-      "bReceivesDecals": false,
-      "bUseAsOccluder": false,
-      "bRenderCustomDepth": true,
-      "RuntimeVirtualTextures": [
-        {
-          "ObjectName": "RuntimeVirtualTexture'RVT_LandscapeCull'",
-          "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCull.0"
-        }
-      ],
-      "RelativeScale3D": {
-        "X": 2.0,
-        "Y": 2.0,
-        "Z": 2.0
-      }
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "LandscapeCullBalljointStart_GEN_VARIABLE",
-    "Outer": "BPVisCanal_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'Cylinder'",
-        "ObjectPath": "Engine/Content/BasicShapes/Cylinder.2"
-      },
-      "OverrideMaterials": [
-        {
-          "ObjectName": "Material'RVT_LandscapeCullMaterial'",
-          "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCullMaterial.0"
-        }
-      ],
-      "bGenerateOverlapEvents": false,
-      "bVisibleInReflectionCaptures": false,
-      "bVisibleInRealTimeSkyCaptures": false,
-      "bVisibleInRayTracing": false,
-      "bReceivesDecals": false,
-      "bUseAsOccluder": false,
-      "bRenderCustomDepth": true,
-      "RuntimeVirtualTextures": [
-        {
-          "ObjectName": "RuntimeVirtualTexture'RVT_LandscapeCull'",
-          "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCull.0"
-        }
-      ],
-      "BodyInstance": {
-        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
-        "CollisionEnabled": "ECollisionEnabled::NoCollision",
-        "CollisionProfileName": "NoCollision",
-        "CollisionResponses": {
-          "ResponseArray": [
-            {
-              "Channel": "Visibility",
-              "Response": "ECollisionResponse::ECR_Ignore"
-            },
-            {
-              "Channel": "Camera",
-              "Response": "ECollisionResponse::ECR_Ignore"
-            }
-          ]
-        }
-      },
-      "RelativeScale3D": {
-        "X": 2.5,
-        "Y": 2.5,
-        "Z": 2.5
-      }
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
     "Name": "MidMesh_GEN_VARIABLE",
     "Outer": "BPVisCanal_C",
     "Class": "UScriptClass'StaticMeshComponent'",
@@ -2080,7 +2599,7 @@
     "Properties": {
       "PowerUnitDataComponent": {
         "ObjectName": "PowerUnitDataComponent'BPVisCanal_C:VisBalljointEnd_GEN_VARIABLE.PowerUnitDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.19"
       },
       "ComponentTags": [
         "VisSplineEnd"
@@ -2097,7 +2616,7 @@
       "bIsStart": true,
       "PowerUnitDataComponent": {
         "ObjectName": "PowerUnitDataComponent'BPVisCanal_C:VisBalljointStart_GEN_VARIABLE.PowerUnitDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.20"
       },
       "RelativeLocation": {
         "X": 0.0,
@@ -2116,15 +2635,15 @@
       "ShiftDelta": 45.0,
       "PowerUnitDataComponent": {
         "ObjectName": "PowerUnitDataComponent'BPVisCanal_C:VisCanalWaterController_GEN_VARIABLE.PowerUnitDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.21"
       },
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'BPVisCanal_C:VisCanalWaterController_GEN_VARIABLE.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.45"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.56"
       },
       "WellDataComponent": {
         "ObjectName": "WellDataComponent'BPVisCanal_C:VisCanalWaterController_GEN_VARIABLE.WellDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.78"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.86"
       },
       "RelativeLocation": {
         "X": 0.0,
@@ -2155,7 +2674,7 @@
     "Properties": {
       "GroundDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisCanal_C:SplineComponent.GroundDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.3"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.10"
       },
       "PreviewPieceLength": 100.0,
       "PreviewEndLocation": {
@@ -2180,7 +2699,7 @@
       ],
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisCanal_C:SplineComponent.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.47"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.58"
       },
       "MidPieces": [
         null,
@@ -2208,7 +2727,7 @@
     "Properties": {
       "GroundDecalComponent": {
         "ObjectName": "DecalComponent'Default__BPVisCanal_C:SplineScaffoldingComponent.GroundDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.4"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.11"
       },
       "EndPieceMesh": {
         "ObjectName": "StaticMesh'PillarT1BuildSite'",
@@ -2222,7 +2741,7 @@
       ],
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisCanal_C:SplineScaffoldingComponent.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.48"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Industry/Power/BPVisCanal.59"
       },
       "EndPieces": [
         null,

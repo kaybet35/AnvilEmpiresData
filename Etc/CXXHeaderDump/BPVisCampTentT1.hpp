@@ -3,10 +3,10 @@
 
 class ABPVisCampTentT1_C : public AVisHouse
 {
-    class UStaticMeshComponent* OwnerFlagMesh;                                        // 0x0548 (size: 0x8)
-    class UVisTeamMeshComponent* VisTeamMesh;                                         // 0x0550 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0558 (size: 0x8)
+    class UStaticMeshComponent* OwnerFlagMesh;                                        // 0x0568 (size: 0x8)
+    class UVisTeamMeshComponent* VisTeamMesh;                                         // 0x0570 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0578 (size: 0x8)
 
-}; // Size: 0x560
+}; // Size: 0x580
 
 #endif

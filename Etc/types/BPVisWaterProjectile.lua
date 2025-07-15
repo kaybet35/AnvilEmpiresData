@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABPVisWaterProjectile_C : AVisPickupItem
+---@class ABPVisWaterProjectile_C : AVisProjectile
 ---@field Audio UAudioComponent
 ---@field ParticleSystem UParticleSystemComponent
 ---@field Trail UParticleSystemComponent

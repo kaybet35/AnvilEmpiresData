@@ -2,6 +2,10 @@
 
 ---@class ABpVisTownCenterKeepT1_C : AVisTownCenter
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field VisTeamSkeletalMesh2 UVisTeamSkeletalMeshComponent
+---@field VisTeamSkeletalMesh3 UVisTeamSkeletalMeshComponent
+---@field VisTeamSkeletalMesh1 UVisTeamSkeletalMeshComponent
+---@field VisTeamSkeletalMesh UVisTeamSkeletalMeshComponent
 ---@field CollapsedMeshRoof UVisStaticMeshComponent
 ---@field CollapsedMeshFF UVisStaticMeshComponent
 ---@field CollapsedMeshSF UVisStaticMeshComponent
@@ -21,15 +25,11 @@
 ---@field StaticMesh2 UStaticMeshComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
----@field VisTeamMesh5 UVisTeamMeshComponent
----@field VisTeamMesh4 UVisTeamMeshComponent
----@field VisTeamMesh3 UVisTeamMeshComponent
----@field VisTeamMesh2 UVisTeamMeshComponent
 ---@field VisStaticMesh1 UVisStaticMeshComponent
 ---@field VisStaticMesh31 UVisStaticMeshComponent
----@field VisStaticMesh30 UVisStaticMeshComponent
+---@field VisStaticMeshSFBase UVisStaticMeshComponent
 ---@field VisStaticMesh_floor UVisStaticMeshComponent
----@field VisStaticMesh UVisStaticMeshComponent
+---@field VisStaticMeshFFBase UVisStaticMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent
 ---@field DebugSphere UStaticMeshComponent
 ABpVisTownCenterKeepT1_C = {}

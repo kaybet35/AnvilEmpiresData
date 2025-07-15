@@ -54,6 +54,54 @@
           }
         }
       ],
+      "Notifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlaySound",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'Shield_enterSecondary:AnimNotify_PlaySound_2'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Shield_enterSecondary.1"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'Shield_enterSecondary'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/Shield_enterSecondary.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.5333333,
+          "LinkValue": 0.40469956,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'LeftArm_Shield_EnterShieldSecondary'",
+            "ObjectPath": "Anvil/Content/Animations/Prototype/PlayerAnims/LeftArm_Shield_EnterShieldSecondary.0"
+          }
+        }
+      ],
       "SequenceLength": 1.5333333,
       "Skeleton": {
         "ObjectName": "Skeleton'PrototypeChar_Skeleton'",
@@ -61,5 +109,20 @@
       }
     },
     "SkeletonGuid": "F597442D-46D412D3-CA2395A2-A90680CA"
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_2",
+    "Outer": "Shield_enterSecondary",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'ShieldArming_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Shield/New/ShieldArming_Cue.0"
+      },
+      "bFollow": true,
+      "AttachName": "head"
+    }
   }
 ]

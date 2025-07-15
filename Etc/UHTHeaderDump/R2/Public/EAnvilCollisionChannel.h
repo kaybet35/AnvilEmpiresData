@@ -14,7 +14,7 @@ enum class EAnvilCollisionChannel : uint8 {
     RoadVolume,
     BuildVolume,
     GateVolume,
-    SpecialBuildVolume,
+    RangedAimBlocking,
     WorldBorder,
     Landscape,
     Projectile,
@@ -31,8 +31,9 @@ enum class EAnvilCollisionChannel : uint8 {
     MouseInteraction,
     Industry,
     BorderRegion,
-    REMOVED,
+    VehicleBlocking,
     House,
     AnvilCollisionFoliage,
+    NumTypes,
 };
 

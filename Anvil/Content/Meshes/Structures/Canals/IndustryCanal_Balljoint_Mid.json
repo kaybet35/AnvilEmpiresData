@@ -1,0 +1,213 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Outer": "IndustryCanal_Balljoint_Mid",
+    "Class": "UScriptClass'BodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      }
+    },
+    "BodySetupGuid": "D5E4347C49DD270DADB17B8C6503A5CE",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 28,
+        "SizeOnDisk": 28,
+        "OffsetInFile": "0x1371"
+      }
+    }
+  },
+  {
+    "Type": "NavCollision",
+    "Name": "NavCollision_2",
+    "Outer": "IndustryCanal_Balljoint_Mid",
+    "Class": "UScriptClass'NavCollision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "CookedFormatData": {
+      "NavCollision_Chaos": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 21,
+        "SizeOnDisk": 21,
+        "OffsetInFile": "0x13CF"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "IndustryCanal_Balljoint_Mid",
+    "Class": "UScriptClass'StaticMesh'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "Material'RVT_LandscapeCullMaterial'",
+            "ObjectPath": "Anvil/Content/Materials/RVT_LandscapeCullMaterial.0"
+          },
+          "MaterialSlotName": "WorldGridMaterial",
+          "ImportedMaterialSlotName": "WorldGridMaterial",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 100.0,
+            "LocalUVDensities[1]": 101.66373,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 101.66373,
+      "LightMapResolution": 64,
+      "LightMapCoordinateIndex": 1,
+      "ExtendedBounds": {
+        "BoxExtent": {
+          "X": 50.000008,
+          "Y": 50.000008,
+          "Z": 0.0
+        },
+        "SphereRadius": 70.71067811865558
+      }
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'IndustryCanal_Balljoint_Mid:BodySetup_0'",
+      "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Balljoint_Mid.0"
+    },
+    "NavCollision": {
+      "ObjectName": "NavCollision'IndustryCanal_Balljoint_Mid:NavCollision_2'",
+      "ObjectPath": "Anvil/Content/Meshes/Structures/Canals/IndustryCanal_Balljoint_Mid.1"
+    },
+    "LightingGuid": "5B5F6D3A-4282DBD3-9135109A-627B5490",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 2,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 3,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 4
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 4,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -51.000008,
+                "Y": -51.000008,
+                "Z": -2.0
+              },
+              "Max": {
+                "X": 51.000008,
+                "Y": 51.000008,
+                "Z": 2.0
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Extent": {
+                    "X": 50.0,
+                    "Y": 50.0,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              }
+            ]
+          }
+        }
+      ],
+      "NaniteResources": {
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0x1601"
+        },
+        "AssemblyTransforms": [],
+        "MeshBounds": null,
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": "NONE"
+      },
+      "Bounds": {
+        "Origin": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "BoxExtent": {
+          "X": 50.000008,
+          "Y": 50.000008,
+          "Z": 0.0
+        },
+        "SphereRadius": 70.71068
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

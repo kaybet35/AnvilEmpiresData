@@ -14,7 +14,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisDeployedLadder_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.11"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.6"
       }
     },
     "SuperStruct": {
@@ -55,49 +55,44 @@
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.BPVisDeployedLadder_C'",
     "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ScaffoldingComponent": {
-        "ObjectName": "VisScaffoldingComponent'Default__BPVisDeployedLadder_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.16"
-      },
-      "StructureIcon": {
-        "ObjectName": "Texture2D'IconSiegeLadder'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconSiegeLadder.0"
-      },
-      "UpgradeDataComponent": {
-        "ObjectName": "UpgradeDataComponent'Default__BPVisDeployedLadder_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.15"
-      },
-      "HealthDataComponent": {
-        "ObjectName": "HealthDataComponent'Default__BPVisDeployedLadder_C:HealthDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.6"
-      },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisDeployedLadder_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.14"
-      },
-      "StructureDataComponent": {
-        "ObjectName": "StructureDataComponent'Default__BPVisDeployedLadder_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.13"
-      },
-      "ScorchDataComponent": {
-        "ObjectName": "ScorchDataComponent'Default__BPVisDeployedLadder_C:ScorchDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.8"
       },
-      "DecayDataComponent": {
-        "ObjectName": "DecayDataComponent'Default__BPVisDeployedLadder_C:DecayDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.4"
+      "LadderDataComponent": {
+        "ObjectName": "LadderDataComponent'Default__BPVisDeployedLadder_C:LadderDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.3"
       },
+      "HalfLengthToLadderMeshes": [
+        {
+          "Key": "350",
+          "Value": {
+            "ObjectName": "StaticMesh'SiegeLadder700'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/SiegeLadder700.2"
+          }
+        },
+        {
+          "Key": "500",
+          "Value": {
+            "ObjectName": "StaticMesh'SiegeLadder1000'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/SiegeLadder1000.2"
+          }
+        },
+        {
+          "Key": "650",
+          "Value": {
+            "ObjectName": "StaticMesh'SiegeLadder1300'",
+            "ObjectPath": "Anvil/Content/Meshes/Structures/SiegeLadder1300.2"
+          }
+        }
+      ],
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisDeployedLadder_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.0"
       },
-      "UseVolumeDecalComponent": {
-        "ObjectName": "DecalComponent'Default__BPVisDeployedLadder_C:UseVolumeDecalComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.3"
-      },
-      "GrassRemovalVolume": {
-        "ObjectName": "GrassRemovalVolumeComponent'Default__BPVisDeployedLadder_C:GrassRemovalVolume'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.5"
+      "LadderMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisDeployedLadder_C:ConvertedItemMeshComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.7"
       },
       "UseWindowType": "EHUDWindowType::GenericStructure",
       "InteractionIcon": {
@@ -117,48 +112,10 @@
     }
   },
   {
-    "Type": "DecalComponent",
-    "Name": "UseVolumeDecalComponent",
+    "Type": "LadderDataComponent",
+    "Name": "LadderDataComponent",
     "Outer": "Default__BPVisDeployedLadder_C",
-    "Class": "UScriptClass'DecalComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "AttachParent": {
-        "ObjectName": "ArrowComponent'Default__BPVisDeployedLadder_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.0"
-      },
-      "bHiddenInGame": true
-    }
-  },
-  {
-    "Type": "DecayDataComponent",
-    "Name": "DecayDataComponent",
-    "Outer": "Default__BPVisDeployedLadder_C",
-    "Class": "UScriptClass'DecayDataComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
-  },
-  {
-    "Type": "GrassRemovalVolumeComponent",
-    "Name": "GrassRemovalVolume",
-    "Outer": "Default__BPVisDeployedLadder_C",
-    "Class": "UScriptClass'GrassRemovalVolumeComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "SplineDataComponent": {
-        "ObjectName": "SplineDataComponent'Default__BPVisDeployedLadder_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.12"
-      },
-      "AttachParent": {
-        "ObjectName": "ArrowComponent'Default__BPVisDeployedLadder_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.0"
-      }
-    }
-  },
-  {
-    "Type": "HealthDataComponent",
-    "Name": "HealthDataComponent",
-    "Outer": "Default__BPVisDeployedLadder_C",
-    "Class": "UScriptClass'HealthDataComponent'",
+    "Class": "UScriptClass'LadderDataComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
@@ -167,13 +124,6 @@
     "Outer": "BPVisDeployedLadder_C",
     "Class": "UScriptClass'SceneComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
-  },
-  {
-    "Type": "ScorchDataComponent",
-    "Name": "ScorchDataComponent",
-    "Outer": "Default__BPVisDeployedLadder_C",
-    "Class": "UScriptClass'ScorchDataComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "SCS_Node",
@@ -188,31 +138,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisDeployedLadder_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.7"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.4"
       },
       "VariableGuid": "B715B3D7-418E6B89-2C30E7A7-0CB4F914",
       "InternalVariableName": "DefaultSceneRoot"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'VisStaticMeshComponent'",
-        "ObjectPath": "/Script/Anvil"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "VisStaticMeshComponent'BPVisDeployedLadder_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.17"
-      },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "2FDBD54A-40B6E6C7-66DCAB8E-8614C2BD",
-      "InternalVariableName": "VisStaticMesh"
     }
   },
   {
@@ -222,59 +151,23 @@
     "Class": "UScriptClass'SimpleConstructionScript'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "RootNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisDeployedLadder_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.10"
-        }
-      ],
-      "AllNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisDeployedLadder_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.10"
-        }
-      ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisDeployedLadder_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.5"
       }
     }
   },
   {
-    "Type": "SplineDataComponent",
-    "Name": "SplineDataComponent",
-    "Outer": "GrassRemovalVolume",
-    "Class": "UScriptClass'SplineDataComponent'",
-    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
-  },
-  {
-    "Type": "StructureDataComponent",
-    "Name": "StructureDataComponent",
+    "Type": "StaticMeshComponent",
+    "Name": "ConvertedItemMeshComponent",
     "Outer": "Default__BPVisDeployedLadder_C",
-    "Class": "UScriptClass'StructureDataComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
-  },
-  {
-    "Type": "TeamDataComponent",
-    "Name": "TeamDataComponent",
-    "Outer": "Default__BPVisDeployedLadder_C",
-    "Class": "UScriptClass'TeamDataComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
-  },
-  {
-    "Type": "UpgradeDataComponent",
-    "Name": "UpgradeDataComponent",
-    "Outer": "Default__BPVisDeployedLadder_C",
-    "Class": "UScriptClass'UpgradeDataComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
-  },
-  {
-    "Type": "VisScaffoldingComponent",
-    "Name": "ScaffoldingComponent",
-    "Outer": "Default__BPVisDeployedLadder_C",
-    "Class": "UScriptClass'VisScaffoldingComponent'",
+    "Class": "UScriptClass'StaticMeshComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SiegeLadder700'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/SiegeLadder700.2"
+      },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisDeployedLadder_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisDeployedLadder.0"
@@ -282,26 +175,10 @@
     }
   },
   {
-    "Type": "VisStaticMeshComponent",
-    "Name": "VisStaticMesh_GEN_VARIABLE",
-    "Outer": "BPVisDeployedLadder_C",
-    "Class": "UScriptClass'VisStaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'SiegeLadder'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/SiegeLadder.2"
-      },
-      "RelativeLocation": {
-        "X": -10.0,
-        "Y": 0.0,
-        "Z": 380.0
-      },
-      "ComponentTags": [
-        "Structure",
-        "Collision"
-      ]
-    }
+    "Type": "TeamDataComponent",
+    "Name": "TeamDataComponent",
+    "Outer": "Default__BPVisDeployedLadder_C",
+    "Class": "UScriptClass'TeamDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   }
 ]

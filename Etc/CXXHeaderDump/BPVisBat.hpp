@@ -3,6 +3,6 @@
 
 class ABPVisBat_C : public AVisAnimal
 {
-}; // Size: 0x520
+}; // Size: 0x538
 
 #endif

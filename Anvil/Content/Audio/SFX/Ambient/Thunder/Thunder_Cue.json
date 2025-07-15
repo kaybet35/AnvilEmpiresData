@@ -1,0 +1,151 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Thunder_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'Thunder_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Thunder/Thunder_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'A-B'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX_Master/A-B.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'AmbientConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/AmbientConcurrency.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 3
+      },
+      "Duration": 8.075031,
+      "MaxDistance": 11500.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'AmbientXLarge1'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/AmbientXLarge1.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Thunder_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'Thunder_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Thunder/Thunder_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "Thunder_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Thunder_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Thunder/Thunder_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Thunder_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Thunder/Thunder_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Thunder_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Thunder/Thunder_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Thunder_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Thunder/Thunder_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Thunder_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Ambient/Thunder/Thunder01.Thunder01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Thunder01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Thunder/Thunder01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "Thunder_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Ambient/Thunder/Thunder02.Thunder02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Thunder02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Thunder/Thunder02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "Thunder_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Ambient/Thunder/Thunder03.Thunder03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Thunder03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Thunder/Thunder03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "Thunder_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Ambient/Thunder/Thunder04.Thunder04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Thunder04'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Ambient/Thunder/Thunder04.0"
+    }
+  }
+]

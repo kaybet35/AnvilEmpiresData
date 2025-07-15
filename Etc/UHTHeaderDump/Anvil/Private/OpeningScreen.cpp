@@ -11,13 +11,17 @@ UOpeningScreen::UOpeningScreen() {
     this->AnnouncementText = NULL;
     this->DiscordRoleButton = NULL;
     this->DevModeButton = NULL;
-    this->ShardDropdown = NULL;
+    this->SelectedShardText = NULL;
+    this->ShardSelectorButton = NULL;
 }
 
 void UOpeningScreen::UpdateVersionText() {
 }
 
 void UOpeningScreen::ReenableDiscordRoleButton() {
+}
+
+void UOpeningScreen::OnShardSelectorButtonClicked() {
 }
 
 void UOpeningScreen::OnPlayButtonClicked() {
@@ -39,8 +43,8 @@ bool UOpeningScreen::IsDiscordRoleButtonEnabled() {
     return false;
 }
 
-ESlateVisibility UOpeningScreen::GetShardDropDownVisibility() {
-    return ESlateVisibility::Visible;
+FText UOpeningScreen::GetSelectedShardText() {
+    return FText::GetEmpty();
 }
 
 FText UOpeningScreen::GetAnnouncementText() {

@@ -1,27 +1,29 @@
 ---@meta
 
 ---@class ABPVisGridFoundationSquareStraight_T2_C : AVisStructure
+---@field Rubble UVisStaticMeshComponentBase
+---@field TopMeshCollapsed UVisStaticMeshComponentBase
+---@field VisDynamicMeshTemplateReference3 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference2 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference1 UVisDynamicMeshTemplateReferenceComponent
+---@field ['Wall Bricks Template 3'] UVisDynamicMeshTemplateReferenceComponent
+---@field ['Wall Bricks Template 2'] UVisDynamicMeshTemplateReferenceComponent
+---@field ['Wall Bricks Template 1'] UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference UVisDynamicMeshTemplateReferenceComponent
+---@field ['Wall Bricks Template '] UVisDynamicMeshTemplateReferenceComponent
 ---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field FloorPlanking2 UStaticMeshComponent
 ---@field FloorPlanking1 UStaticMeshComponent
 ---@field FloorPlanking3 UStaticMeshComponent
 ---@field FloorPlanking UStaticMeshComponent
 ---@field ChildActor2 UChildActorComponent
----@field ChildActor8 UChildActorComponent
----@field ChildActor3 UChildActorComponent
----@field ChildActor UChildActorComponent
 ---@field VerticalEdge01 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor4 UVisFoundationEdgeMeshDecorComponent
----@field StaticMesh UStaticMeshComponent
+---@field TopMesh UStaticMeshComponent
 ---@field VisFoundationEdgeMeshDecor6 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor7 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor5 UVisFoundationEdgeMeshDecorComponent
----@field ChildActor4 UChildActorComponent
----@field ChildActor7 UChildActorComponent
----@field ChildActor5 UChildActorComponent
----@field ChildActor6 UChildActorComponent
----@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
----@field ChildActor1 UChildActorComponent
+---@field BottomMesh UVisFoundationBottomMeshDecorComponent
 ---@field VerticalEdge03 UVisFoundationEdgeMeshDecorComponent
 ---@field VerticalEdge02 UVisFoundationEdgeMeshDecorComponent
 ---@field VerticalEdge04 UVisFoundationEdgeMeshDecorComponent

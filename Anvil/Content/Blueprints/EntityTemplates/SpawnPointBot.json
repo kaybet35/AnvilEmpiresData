@@ -1,0 +1,64 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SpawnPointBot_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'EntityTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SpawnPointBot_C'Default__SpawnPointBot_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/SpawnPointBot.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "PlayerSpawnerProxyComponent",
+    "Name": "PlayerSpawnerProxyComponent_0",
+    "Outer": "Default__SpawnPointBot_C",
+    "Class": "UScriptClass'PlayerSpawnerProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Type": "EAnvilSpawnType::Bot",
+      "SpawnOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 250.0
+      },
+      "SpawnRadius": 5000.0,
+      "Faction": "EAnvilFactionId::Novan"
+    }
+  },
+  {
+    "Type": "SpawnPointBot_C",
+    "Name": "Default__SpawnPointBot_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/SpawnPointBot.SpawnPointBot_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CodeNameString": "SpawnPointBot",
+      "CodeName": 1246091161,
+      "RelevancyPolicy": "EEntityRelevancyPolicy::AlwaysRelevant",
+      "Components": [
+        {
+          "ObjectName": "PlayerSpawnerProxyComponent'Default__SpawnPointBot_C:PlayerSpawnerProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/SpawnPointBot.1"
+        }
+      ],
+      "VisActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPVisSpawnPointBot_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/BPVisSpawnPointBot.1"
+      }
+    }
+  }
+]

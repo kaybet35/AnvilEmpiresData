@@ -1,19 +1,21 @@
 ---@meta
 
 ---@class ABPVisGridFoundationRoundDiagonal_C : AVisStructure
+---@field Rubble UVisRandomMeshDecorComponent
+---@field TopMeshCollapsed UVisStaticMeshComponentBase
+---@field VisDynamicMeshTemplateReference2 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference3 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference1 UVisDynamicMeshTemplateReferenceComponent
 ---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
----@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
+---@field BottomMesh UVisFoundationBottomMeshDecorComponent
 ---@field VisRandomMeshDecor31 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor47 UVisRandomMeshDecorComponent
----@field ChildActor6 UChildActorComponent
 ---@field VisRandomMeshDecor60 UVisRandomMeshDecorComponent
 ---@field VerticalEdge08 UVisFoundationEdgeMeshDecorComponent
----@field ChildActor11 UChildActorComponent
----@field ChildActor5 UChildActorComponent
 ---@field VerticalEdge05 UVisFoundationEdgeMeshDecorComponent
 ---@field VerticalEdge09 UVisFoundationEdgeMeshDecorComponent
 ---@field VisRandomMeshDecor3 UVisRandomMeshDecorComponent
----@field ChildActor8 UChildActorComponent
 ---@field VisRandomMeshDecor4 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor58 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor57 UVisRandomMeshDecorComponent
@@ -30,10 +32,8 @@
 ---@field VisFoundationEdgeMeshDecor4 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor5 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor6 UVisFoundationEdgeMeshDecorComponent
----@field StaticMesh UStaticMeshComponent
+---@field TopMesh UStaticMeshComponent
 ---@field VisFoundationEdgeMeshDecor UVisFoundationEdgeMeshDecorComponent
----@field ChildActor3 UChildActorComponent
----@field ChildActor1 UChildActorComponent
 ---@field VisFoundationEdgeMeshDecor2 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field Scene USceneComponent

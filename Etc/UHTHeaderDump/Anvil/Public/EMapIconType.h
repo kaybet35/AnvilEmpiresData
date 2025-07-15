@@ -24,5 +24,6 @@ enum class EMapIconType : uint8 {
     FamilyMarker,
     FamilyCenter,
     WorldEntrance,
+    Temple,
 };
 

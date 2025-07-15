@@ -3,8 +3,8 @@
 
 class ABPVisCosmeticStructDivider_C : public AVisRefinery
 {
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0540 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0560 (size: 0x8)
 
-}; // Size: 0x548
+}; // Size: 0x568
 
 #endif

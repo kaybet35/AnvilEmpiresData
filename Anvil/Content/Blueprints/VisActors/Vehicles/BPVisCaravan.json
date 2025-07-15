@@ -125,7 +125,6 @@
         "SourceString": "Carries equipment needed to establish a Camp or Keep. Camps are used as a forward operating position for armies while Keeps form the basis of new Towns.",
         "LocalizedString": "Carries equipment needed to establish a Camp or Keep. Camps are used as a forward operating position for armies while Keeps form the basis of new Towns."
       },
-      "PositionSmoothSpeed": 4.0,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisCaravan_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.0"
@@ -285,7 +284,15 @@
         "ObjectName": "SkeletalMesh'Caravan_SK'",
         "ObjectPath": "Anvil/Content/Meshes/Props/Caravan_SK.0"
       },
-      "bReceivesDecals": false
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": []
+        }
+      }
     }
   },
   {

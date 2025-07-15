@@ -1,28 +1,33 @@
 ---@meta
 
 ---@class ABPVisGridFoundationTriangularStraight_T2_C : AVisStructure
+---@field Rubble UVisStaticMeshComponentBase
+---@field TopMeshCollapsed UVisStaticMeshComponentBase
+---@field VerticalEdge08 UVisFoundationEdgeMeshDecorComponent
+---@field VerticalEdge05 UVisFoundationEdgeMeshDecorComponent
+---@field VerticalEdge09 UVisFoundationEdgeMeshDecorComponent
+---@field VisDynamicMeshTemplateReference7 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference6 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference5 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference4 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference2 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference1 UVisDynamicMeshTemplateReferenceComponent
+---@field VisDynamicMeshTemplateReference3 UVisDynamicMeshTemplateReferenceComponent
 ---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field FloorPlanking2 UStaticMeshComponent
 ---@field FloorPlanking3 UStaticMeshComponent
 ---@field FloorPlanking UStaticMeshComponent
----@field ChildActor9 UChildActorComponent
 ---@field VisFoundationEdgeMeshDecor8 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor9 UVisFoundationEdgeMeshDecorComponent
----@field ChildActor8 UChildActorComponent
----@field ChildActor4 UChildActorComponent
----@field ChildActor7 UChildActorComponent
----@field ChildActor5 UChildActorComponent
----@field VisFoundationBottomMeshDecor UVisFoundationBottomMeshDecorComponent
+---@field BottomMesh UVisFoundationBottomMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor1 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor4 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor6 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor5 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor3 UVisFoundationEdgeMeshDecorComponent
----@field StaticMesh UStaticMeshComponent
----@field ChildActor UChildActorComponent
----@field ChildActor3 UChildActorComponent
----@field ChildActor1 UChildActorComponent
+---@field TopMesh UStaticMeshComponent
 ---@field Scene USceneComponent
 ABPVisGridFoundationTriangularStraight_T2_C = {}
 

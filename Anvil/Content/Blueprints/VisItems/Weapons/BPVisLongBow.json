@@ -27,7 +27,7 @@
     "Type": "BPVisLongBow_C",
     "Name": "Default__BPVisLongBow_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisItems/Weapons/BPVisLongBow.BPVisLongBow_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CodeNameString": "LongBow",
       "CodeName": 911279597,
@@ -63,6 +63,10 @@
         "ObjectPath": "Anvil/Content/Meshes/Items/LongBow_SM.2"
       },
       "GripType": "EEquippedItemGripType::BowAndArrow",
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'LongBow_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Items/LongBow/LongBow_ABP.0"
+      },
       "MeshRotation": {
         "Pitch": 90.0,
         "Yaw": 90.0,
@@ -103,6 +107,10 @@
           }
         }
       ],
+      "SecondaryLaunchingProjectileOverride": {
+        "ObjectName": "AnimMontage'Bow_Secondary_release'",
+        "ObjectPath": "Anvil/Content/Animations/Prototype/Bow_Secondary_release.0"
+      },
       "TransferSoundCue": {
         "ObjectName": "SoundCue'UITransferBow02_Cue'",
         "ObjectPath": "Anvil/Content/Audio/SFX/UI/Transfer/UITransferBow02_Cue.0"
@@ -110,6 +118,31 @@
       "ArmingSoundCue": {
         "ObjectName": "SoundCue'BowArming_Cue'",
         "ObjectPath": "Anvil/Content/Audio/SFX/BowArrow/BowArming_Cue.0"
+      },
+      "AmmoMesh": {
+        "ObjectName": "StaticMesh'LongBowArrow_SM'",
+        "ObjectPath": "Anvil/Content/Meshes/Items/LongBowArrow_SM.2"
+      },
+      "AmmoMeshTransform": {
+        "Rotation": {
+          "X": 0.70710677,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 0.70710677,
+          "IsNormalized": true,
+          "Size": 0.99999994,
+          "SizeSquared": 0.99999994
+        },
+        "Translation": {
+          "X": 0.0,
+          "Y": 35.0,
+          "Z": 0.0
+        },
+        "Scale3D": {
+          "X": 0.7,
+          "Y": 0.7,
+          "Z": 0.7
+        }
       }
     }
   }

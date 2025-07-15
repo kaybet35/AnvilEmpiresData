@@ -12,6 +12,22 @@
         "Right": 5.0,
         "Bottom": 5.0
       },
+      "Background": {
+        "ImageSize": {
+          "X": 480.0,
+          "Y": 68.0
+        },
+        "Margin": {
+          "Left": 0.1,
+          "Top": 0.1,
+          "Right": 0.1,
+          "Bottom": 0.1
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'DialogTint'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogTint.0"
+        }
+      },
       "BrushColor": {
         "R": 0.046665,
         "G": 0.042311,
@@ -38,12 +54,31 @@
     "Class": "UScriptClass'Border'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "BrushColor": {
-        "R": 0.027321,
-        "G": 0.027321,
-        "B": 0.019382,
-        "A": 1.0,
-        "Hex": "2E2E26"
+      "Background": {
+        "DrawAs": "ESlateBrushDrawType::Border",
+        "ImageSize": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Margin": {
+          "Left": 0.25,
+          "Top": 0.25,
+          "Right": 0.25,
+          "Bottom": 0.25
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.015996,
+            "G": 0.011612,
+            "B": 0.007499,
+            "A": 0.8,
+            "Hex": "CC221C15"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'DialogLargeTint'",
+          "ObjectPath": "Anvil/Content/Textures/UI/MainMenu/DialogLargeTint.0"
+        }
       },
       "Slots": [
         {

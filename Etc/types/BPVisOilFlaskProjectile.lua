@@ -1,9 +1,8 @@
 ---@meta
 
----@class ABPVisOilFlaskProjectile_C : AVisPickupItem
+---@class ABPVisOilFlaskProjectile_C : AVisProjectile
 ---@field Niagara UNiagaraComponent
 ---@field SkeletalMesh USkeletalMeshComponent
----@field DefaultSceneRoot USceneComponent
 ABPVisOilFlaskProjectile_C = {}
 
 

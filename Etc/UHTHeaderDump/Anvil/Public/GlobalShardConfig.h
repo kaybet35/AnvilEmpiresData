@@ -9,6 +9,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString DiscordRoleServerUrl;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<int32> DefaultShardIds;
+    
     ANVIL_API FGlobalShardConfig();
 };
 

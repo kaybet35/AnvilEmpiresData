@@ -27,7 +27,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisBurningOilprojectile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.12"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BPVisBurningOilprojectile_C:ExecuteUbergraph_BPVisBurningOilprojectile'",
@@ -35,7 +35,7 @@
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'VisPickupItem'",
+      "ObjectName": "Class'VisProjectile'",
       "ObjectPath": "/Script/Anvil"
     },
     "Children": [
@@ -115,20 +115,16 @@
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "UberGraphFrame": {},
-      "PickupDataComponent": {
-        "ObjectName": "PickupDataComponent'Default__BPVisBurningOilprojectile_C:PickupDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.8"
-      },
       "Mesh": {
         "ObjectName": "StaticMeshComponent'Default__BPVisBurningOilprojectile_C:Mesh'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.13"
       },
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPVisBurningOilprojectile_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.0"
       },
-      "LootMarkerVFXComponent": {
-        "ObjectName": "NiagaraComponent'Default__BPVisBurningOilprojectile_C:LootMarkerVFX'",
+      "ProjectileMovementDataComponent": {
+        "ObjectName": "ProjectileMovementDataComponent'Default__BPVisBurningOilprojectile_C:ProjectileMovementDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.7"
       },
       "RootComponent": {
@@ -210,24 +206,10 @@
     "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
   },
   {
-    "Type": "NiagaraComponent",
-    "Name": "LootMarkerVFX",
+    "Type": "ProjectileMovementDataComponent",
+    "Name": "ProjectileMovementDataComponent",
     "Outer": "Default__BPVisBurningOilprojectile_C",
-    "Class": "UScriptClass'NiagaraComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "OverrideParameters": {},
-      "AttachParent": {
-        "ObjectName": "ArrowComponent'Default__BPVisBurningOilprojectile_C:ArrowComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.0"
-      }
-    }
-  },
-  {
-    "Type": "PickupDataComponent",
-    "Name": "PickupDataComponent",
-    "Outer": "Default__BPVisBurningOilprojectile_C",
-    "Class": "UScriptClass'PickupDataComponent'",
+    "Class": "UScriptClass'ProjectileMovementDataComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
@@ -250,7 +232,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPVisBurningOilprojectile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.9"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.8"
       },
       "VariableGuid": "C9B00E0B-4529B247-C1C23B9D-EF4E04F1",
       "InternalVariableName": "DefaultSceneRoot"
@@ -308,26 +290,26 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisBurningOilprojectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.10"
         },
         {
           "ObjectName": "SCS_Node'BPVisBurningOilprojectile_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.11"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisBurningOilprojectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.10"
         },
         {
           "ObjectName": "SCS_Node'BPVisBurningOilprojectile_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.12"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.11"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPVisBurningOilprojectile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.10"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Items/BPVisBurningOilprojectile.9"
       }
     }
   },

@@ -4,7 +4,7 @@
 class UBPOptionsScreen_C : public UOptionsScreen
 {
     class UBPAnvilButtonWidget_C* AudioButton;                                        // 0x02A8 (size: 0x8)
-    class UImage* BlackBG;                                                            // 0x02B0 (size: 0x8)
+    class UImage* BackgroundImage;                                                    // 0x02B0 (size: 0x8)
     class UBPAnvilButtonWidget_C* GameplayButtom;                                     // 0x02B8 (size: 0x8)
     class UImage* Image_50;                                                           // 0x02C0 (size: 0x8)
     class UBPAnvilButtonWidget_C* KeybindsButton;                                     // 0x02C8 (size: 0x8)

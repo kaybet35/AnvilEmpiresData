@@ -3,8 +3,8 @@
 
 class ABPVisTree01_Stage2_C : public AVisResource
 {
-    class UDecalComponent* Decal;                                                     // 0x04F8 (size: 0x8)
+    class UStaticMeshComponent* ShadowProxyMesh;                                      // 0x0510 (size: 0x8)
 
-}; // Size: 0x500
+}; // Size: 0x518
 
 #endif

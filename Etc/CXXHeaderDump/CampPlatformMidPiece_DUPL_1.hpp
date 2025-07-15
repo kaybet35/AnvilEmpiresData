@@ -1,8 +1,10 @@
 #ifndef UE4SS_SDK_CampPlatformMidPiece_DUPL_1_HPP
 #define UE4SS_SDK_CampPlatformMidPiece_DUPL_1_HPP
 
-class UCampPlatformMidPiece_C : public UEntityTemplate
+class ACampPlatformMidPiece_C : public AFootprint
 {
-}; // Size: 0x80
+    class USceneComponent* DefaultSceneRoot;                                          // 0x0368 (size: 0x8)
+
+}; // Size: 0x370
 
 #endif

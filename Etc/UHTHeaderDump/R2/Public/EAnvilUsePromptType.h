@@ -14,6 +14,7 @@ enum class EAnvilUsePromptType : uint8 {
     Feed,
     Gathering,
     SwitchSeat,
+    SiegeTowerRamp,
     NumTypes,
 };
 

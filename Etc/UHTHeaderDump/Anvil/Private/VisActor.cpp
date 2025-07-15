@@ -13,9 +13,12 @@ AVisActor::AVisActor(const FObjectInitializer& ObjectInitializer) : Super(Object
     this->MeshVisibilityDataComponent = NULL;
     this->PositionSmoothSpeed = 0.00f;
     this->RotationSmoothSpeed = 0.00f;
+    this->PositionSmoothSpeedDistance = 0.00f;
     this->ClientMovementSmoothingDistance = 5.00f;
     this->bHasLandscapeCollisions = false;
     this->bUseDepthStencilForInteractionHighlight = false;
+    this->bClientSideDestruction = false;
+    this->ClientSideLifeSpan = 15.00f;
 }
 
 

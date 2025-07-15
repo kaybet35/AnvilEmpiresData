@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EAnvilTownSubType.h"
 #include "ProxyComponent.h"
 #include "TownHallProxyComponent.generated.h"
 
@@ -15,6 +16,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bLocalReinforcementOnly;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EAnvilTownSubType SubType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AbandonedStartTime;
