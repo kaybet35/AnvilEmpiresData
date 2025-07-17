@@ -27,7 +27,7 @@
     "Type": "Torch_C",
     "Name": "Default__Torch_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Torch.Torch_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CodeNameString": "Torch",
       "CodeName": -941991092,
@@ -65,6 +65,7 @@
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Items/TorchProjectile.0"
       },
       "bStaggersWielder": true,
+      "DamageType": "EAnvilDamageType::Slashing",
       "StanceOverride": [
         {
           "Key": "EAnvilCharacterStance::OnHorse",
@@ -94,6 +95,7 @@
       "NightShroudLightRadius": 2000.0,
       "Damage": 1,
       "DamageRadius": 64.0,
+      "MinRangedDistance": 125.0,
       "StabilityDamage": 0.0
     }
   }

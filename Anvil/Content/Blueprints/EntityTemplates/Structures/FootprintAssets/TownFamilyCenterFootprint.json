@@ -7,7 +7,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'TownFamilyCenterFootprint_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.6"
       }
     },
     "SuperStruct": {
@@ -36,11 +36,59 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "TownFamilyCenterFootprint_C'Default__TownFamilyCenterFootprint_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.4"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.7"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
     }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_0",
+    "Outer": "Default__TownFamilyCenterFootprint_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": 41.0,
+        "Z": 0.0
+      },
+      "Extents": {
+        "X": 325.0,
+        "Y": 586.11957,
+        "Z": 280.0
+      },
+      "CollisionMask": 32768
+    }
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_1",
+    "Outer": "Default__TownFamilyCenterFootprint_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Position": {
+        "X": 0.0,
+        "Y": -24.911865,
+        "Z": 435.0
+      },
+      "Extents": {
+        "X": 330.0,
+        "Y": 375.0,
+        "Z": 150.0
+      },
+      "CollisionMask": 32768,
+      "Tags": 1
+    }
+  },
+  {
+    "Type": "MeshVisibilityProxyComponent",
+    "Name": "MeshVisibilityProxyComponent_0",
+    "Outer": "Default__TownFamilyCenterFootprint_C",
+    "Class": "UScriptClass'MeshVisibilityProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "SceneComponent",
@@ -62,7 +110,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'TownFamilyCenterFootprint_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.1"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.4"
       },
       "VariableGuid": "9BA6F4B9-42CC2BE1-F29117AF-38DDA6E5",
       "InternalVariableName": "DefaultSceneRoot"
@@ -78,18 +126,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'TownFamilyCenterFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.2"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.5"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'TownFamilyCenterFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.2"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.5"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'TownFamilyCenterFootprint_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.5"
       }
     }
   },
@@ -101,23 +149,59 @@
     "Properties": {
       "bShowMesh": true,
       "Position": {
-        "X": -1.0458221,
-        "Y": 143.11284,
-        "Z": 271.78394
+        "X": 2.2623901,
+        "Y": 131.62166,
+        "Z": 445.88992
       },
       "Extents": {
-        "X": 237.04706,
-        "Y": 515.83466,
-        "Z": 271.78394
+        "X": 389.47232,
+        "Y": 527.3258,
+        "Z": 445.88992
       },
       "StructureTiers": [
         {
           "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/TownFamilyCenterBuildSite.TownFamilyCenterBuildSite_C'",
-          "Value": true
+          "Value": false
         },
         {
-          "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenter.TownFamilyCenter_C'",
+          "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.TownFamilyCenterT1_C'",
+          "Value": false
+        },
+        {
+          "Key": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT2.TownFamilyCenterT2_C'",
           "Value": true
+        }
+      ],
+      "FootprintSharedComponents": [
+        {
+          "Comp": {
+            "ObjectName": "MeshVisibilityProxyComponent'Default__TownFamilyCenterFootprint_C:MeshVisibilityProxyComponent_0'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.3"
+          },
+          "bHighlight": false,
+          "bHide": false,
+          "bNoCopyToBuildSite": true,
+          "bInsertToStartOfComponentArray": false
+        },
+        {
+          "Comp": {
+            "ObjectName": "BoxCollisionProxyComponent'Default__TownFamilyCenterFootprint_C:BoxCollisionProxyComponent_0'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.1"
+          },
+          "bHighlight": true,
+          "bHide": false,
+          "bNoCopyToBuildSite": true,
+          "bInsertToStartOfComponentArray": false
+        },
+        {
+          "Comp": {
+            "ObjectName": "BoxCollisionProxyComponent'Default__TownFamilyCenterFootprint_C:BoxCollisionProxyComponent_1'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/FootprintAssets/TownFamilyCenterFootprint.2"
+          },
+          "bHighlight": true,
+          "bHide": false,
+          "bNoCopyToBuildSite": true,
+          "bInsertToStartOfComponentArray": false
         }
       ]
     }

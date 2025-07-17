@@ -379,6 +379,7 @@ struct FMapIconTypeProperty
     bool bRotationFixed;                                                              // 0x0000 (size: 0x1)
     bool bPositionFixed;                                                              // 0x0001 (size: 0x1)
     bool bHasWorldEntityMapIcon;                                                      // 0x0002 (size: 0x1)
+    bool bHideInGameIcon;                                                             // 0x0003 (size: 0x1)
     float BaseSize;                                                                   // 0x0004 (size: 0x4)
     float BaseSizeZoomFactor;                                                         // 0x0008 (size: 0x4)
     float FontSize;                                                                   // 0x000C (size: 0x4)

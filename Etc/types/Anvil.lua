@@ -1241,6 +1241,7 @@ FMapIconInstanceProperty = {}
 ---@field bRotationFixed boolean
 ---@field bPositionFixed boolean
 ---@field bHasWorldEntityMapIcon boolean
+---@field bHideInGameIcon boolean
 ---@field BaseSize float
 ---@field BaseSizeZoomFactor float
 ---@field FontSize float

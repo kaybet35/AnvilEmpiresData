@@ -2654,16 +2654,17 @@ class UTownHallDataComponent : public UDataComponent
     uint8 Tier;                                                                       // 0x00A8 (size: 0x1)
     bool bIsSmallCamp;                                                                // 0x00C8 (size: 0x1)
     int32 TownHallId;                                                                 // 0x00E8 (size: 0x4)
-    float Range;                                                                      // 0x0108 (size: 0x4)
-    int32 PledgedPlayersArrayCount;                                                   // 0x0128 (size: 0x4)
-    int32 NumTotalHouses;                                                             // 0x0148 (size: 0x4)
-    int32 NumUnclaimedHouses;                                                         // 0x0168 (size: 0x4)
-    int32 NumTotalTents;                                                              // 0x0188 (size: 0x4)
-    int32 NumUnclaimedTents;                                                          // 0x01A8 (size: 0x4)
-    uint8 TownNameId;                                                                 // 0x01C8 (size: 0x1)
-    uint8 TownNameOrdinal;                                                            // 0x01E8 (size: 0x1)
+    EAnvilTownSubType SubType;                                                        // 0x0108 (size: 0x1)
+    float Range;                                                                      // 0x0128 (size: 0x4)
+    int32 PledgedPlayersArrayCount;                                                   // 0x0148 (size: 0x4)
+    int32 NumTotalHouses;                                                             // 0x0168 (size: 0x4)
+    int32 NumUnclaimedHouses;                                                         // 0x0188 (size: 0x4)
+    int32 NumTotalTents;                                                              // 0x01A8 (size: 0x4)
+    int32 NumUnclaimedTents;                                                          // 0x01C8 (size: 0x4)
+    uint8 TownNameId;                                                                 // 0x01E8 (size: 0x1)
+    uint8 TownNameOrdinal;                                                            // 0x0208 (size: 0x1)
 
-}; // Size: 0x208
+}; // Size: 0x228
 
 class UTownHallProxyComponent : public UProxyComponent
 {

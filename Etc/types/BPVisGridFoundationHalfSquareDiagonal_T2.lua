@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisGridFoundationHalfSquareDiagonal_T2_C : AVisStructure
+---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
 ---@field Rubble UVisRandomMeshDecorComponent
 ---@field TopMeshCollapsed UVisStaticMeshComponentBase
 ---@field VisDynamicMeshTemplateReference5 UVisDynamicMeshTemplateReferenceComponent

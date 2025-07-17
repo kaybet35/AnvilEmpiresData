@@ -2653,6 +2653,7 @@ UTempleProxyComponent = {}
 ---@field Tier uint8
 ---@field bIsSmallCamp boolean
 ---@field TownHallId int32
+---@field SubType EAnvilTownSubType
 ---@field Range float
 ---@field PledgedPlayersArrayCount int32
 ---@field NumTotalHouses int32
