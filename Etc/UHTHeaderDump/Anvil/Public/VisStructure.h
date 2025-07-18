@@ -84,7 +84,7 @@ public:
 
 private:
     UFUNCTION(BlueprintCallable)
-    void UpdateVisualComponentsByTag(const FName Tag, const bool bIsVisible);
+    void UpdateVisualComponentsByTag(const FName Tag, const bool bIsVisible, const bool bUpdateMaterials);
     
 };
 

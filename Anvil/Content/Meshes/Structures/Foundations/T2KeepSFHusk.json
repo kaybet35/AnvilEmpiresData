@@ -1,7 +1,7 @@
 [
   {
     "Type": "BodySetup",
-    "Name": "BodySetup_0",
+    "Name": "BodySetup_1",
     "Outer": "T2KeepSFHusk",
     "Class": "UScriptClass'BodySetup'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
@@ -10358,19 +10358,19 @@
         "CollisionProfileName": "BlockAll"
       }
     },
-    "BodySetupGuid": "3223661244A6D152796B68865D8D9EC2",
+    "BodySetupGuid": "7A9149E040F11F764F398B8FC9D492FE",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 77172,
         "SizeOnDisk": 77172,
-        "OffsetInFile": "0x2844D8E"
+        "OffsetInFile": "0x26081F0"
       }
     }
   },
   {
     "Type": "NavCollision",
-    "Name": "NavCollision_0",
+    "Name": "NavCollision_2",
     "Outer": "T2KeepSFHusk",
     "Class": "UScriptClass'NavCollision'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
@@ -10379,7 +10379,7 @@
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 31873,
         "SizeOnDisk": 31873,
-        "OffsetInFile": "0x2857B44"
+        "OffsetInFile": "0x261AFA6"
       }
     }
   },
@@ -10387,7 +10387,7 @@
     "Type": "StaticMesh",
     "Name": "T2KeepSFHusk",
     "Class": "UScriptClass'StaticMesh'",
-    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Standalone | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "StaticMaterials": [
         {
@@ -10416,7 +10416,7 @@
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 217.73228,
+            "LocalUVDensities": 316.6001,
             "LocalUVDensities[1]": 0.0,
             "LocalUVDensities[2]": 0.0,
             "LocalUVDensities[3]": 0.0
@@ -10448,7 +10448,7 @@
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 252.06392,
+            "LocalUVDensities": 238.00555,
             "LocalUVDensities[1]": 0.0,
             "LocalUVDensities[2]": 0.0,
             "LocalUVDensities[3]": 0.0
@@ -10466,6 +10466,38 @@
             "bOverrideDensities": false,
             "LocalUVDensities": 367.55942,
             "LocalUVDensities[1]": 733.09406,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'FortFoundationWoodPlanksT2'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/FortFoundationWoodPlanksT2.0"
+          },
+          "MaterialSlotName": "T2 Floor tilling plank",
+          "ImportedMaterialSlotName": "T2 Floor tilling plank",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 172.79716,
+            "LocalUVDensities[1]": 0.0,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'FortFoundationBricksTilingT2Bricks02'",
+            "ObjectPath": "Anvil/Content/Materials/Structures/FortFoundationBricksTilingT2Bricks02.0"
+          },
+          "MaterialSlotName": "T2 Foundation Brick 02 tile",
+          "ImportedMaterialSlotName": "T2 Foundation Brick 02 tile",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 149.99286,
+            "LocalUVDensities[1]": 0.0,
             "LocalUVDensities[2]": 0.0,
             "LocalUVDensities[3]": 0.0
           }
@@ -10488,14 +10520,14 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup'T2KeepSFHusk:BodySetup_0'",
+      "ObjectName": "BodySetup'T2KeepSFHusk:BodySetup_1'",
       "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T2KeepSFHusk.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision'T2KeepSFHusk:NavCollision_0'",
+      "ObjectName": "NavCollision'T2KeepSFHusk:NavCollision_2'",
       "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T2KeepSFHusk.1"
     },
-    "LightingGuid": "D7CDFCA6-40B1BBA7-E1119981-CD28EF6F",
+    "LightingGuid": "02ACF4D5-4D0C622E-B6C95D88-58FA9075",
     "RenderData": {
       "LODs": [
         {
@@ -10505,7 +10537,18 @@
               "FirstIndex": 0,
               "NumTriangles": 7486,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 524179,
+              "MaxVertexIndex": 476055,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 5,
+              "FirstIndex": 22458,
+              "NumTriangles": 2174,
+              "MinVertexIndex": 2579,
+              "MaxVertexIndex": 485600,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -10513,10 +10556,10 @@
             },
             {
               "MaterialIndex": 1,
-              "FirstIndex": 22458,
-              "NumTriangles": 6908,
-              "MinVertexIndex": 2578,
-              "MaxVertexIndex": 12773,
+              "FirstIndex": 28980,
+              "NumTriangles": 2044,
+              "MinVertexIndex": 3345,
+              "MaxVertexIndex": 484176,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -10524,10 +10567,10 @@
             },
             {
               "MaterialIndex": 2,
-              "FirstIndex": 43182,
+              "FirstIndex": 35112,
               "NumTriangles": 269365,
-              "MinVertexIndex": 12774,
-              "MaxVertexIndex": 199108,
+              "MinVertexIndex": 4587,
+              "MaxVertexIndex": 190922,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -10535,10 +10578,21 @@
             },
             {
               "MaterialIndex": 3,
-              "FirstIndex": 851277,
-              "NumTriangles": 234146,
-              "MinVertexIndex": 199109,
-              "MaxVertexIndex": 510828,
+              "FirstIndex": 843207,
+              "NumTriangles": 213183,
+              "MinVertexIndex": 190923,
+              "MaxVertexIndex": 485536,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 6,
+              "FirstIndex": 1482756,
+              "NumTriangles": 734,
+              "MinVertexIndex": 196125,
+              "MaxVertexIndex": 485715,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -10546,10 +10600,10 @@
             },
             {
               "MaterialIndex": 4,
-              "FirstIndex": 1553715,
+              "FirstIndex": 1484958,
               "NumTriangles": 6735,
-              "MinVertexIndex": 511622,
-              "MaxVertexIndex": 524657,
+              "MinVertexIndex": 463498,
+              "MaxVertexIndex": 476533,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -10559,11 +10613,11 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 524658
+            "NumVertices": 485716
           },
           "VertexBuffer": {
             "NumTexCoords": 3,
-            "NumVertices": 524658,
+            "NumVertices": 485716,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
@@ -10784,7 +10838,7 @@
           "BulkDataFlags": "BULKDATA_None",
           "ElementCount": 0,
           "SizeOnDisk": 0,
-          "OffsetInFile": "0x5066AE4"
+          "OffsetInFile": "0x4BED2DA"
         },
         "AssemblyTransforms": [],
         "MeshBounds": null,

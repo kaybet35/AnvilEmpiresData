@@ -34,7 +34,7 @@ AVisStructure::AVisStructure(const FObjectInitializer& ObjectInitializer) : Supe
     this->ScaffoldingComponent->SetupAttachment(RootComponent);
 }
 
-void AVisStructure::UpdateVisualComponentsByTag(const FName Tag, const bool bIsVisible) {
+void AVisStructure::UpdateVisualComponentsByTag(const FName Tag, const bool bIsVisible, const bool bUpdateMaterials) {
 }
 
 

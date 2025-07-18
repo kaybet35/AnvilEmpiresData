@@ -1323,7 +1323,7 @@ class AVisStructure : public AVisActor
     TArray<class UNiagaraSystem*> ScorchEffectAssets;                                 // 0x0530 (size: 0x10)
     TArray<FGeneratedScorchEffectInfo> GeneratedScorchEffecftInfos;                   // 0x0540 (size: 0x10)
 
-    void UpdateVisualComponentsByTag(const FName Tag, const bool bIsVisible);
+    void UpdateVisualComponentsByTag(const FName Tag, const bool bIsVisible, const bool bUpdateMaterials);
 }; // Size: 0x558
 
 class AVisTownCenter : public AVisStructure

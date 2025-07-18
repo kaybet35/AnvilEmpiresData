@@ -8,7 +8,6 @@
 ---@field VisTeamSkeletalMesh1 UVisTeamSkeletalMeshComponent
 ---@field CollapsedMeshSF UVisStaticMeshComponent
 ---@field CollapsedMeshRoof UVisStaticMeshComponent
----@field CollapsedMeshFF UVisStaticMeshComponent
 ---@field VisRandomMeshDecor26 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor25 UVisRandomMeshDecorComponent
 ---@field VisRandomMeshDecor24 UVisRandomMeshDecorComponent

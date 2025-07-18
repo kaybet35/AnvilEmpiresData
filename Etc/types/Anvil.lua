@@ -774,7 +774,8 @@ AVisStructure = {}
 
 ---@param Tag FName
 ---@param bIsVisible boolean
-function AVisStructure:UpdateVisualComponentsByTag(Tag, bIsVisible) end
+---@param bUpdateMaterials boolean
+function AVisStructure:UpdateVisualComponentsByTag(Tag, bIsVisible, bUpdateMaterials) end
 
 
 ---@class AVisTownCenter : AVisStructure
