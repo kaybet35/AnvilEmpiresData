@@ -6,6 +6,7 @@
 class AVisTownCenter;
 class UBorder;
 class UButton;
+class USizeBox;
 class UStatusWidget;
 class UTextBlock;
 
@@ -17,6 +18,9 @@ public:
     AVisTownCenter* TownCenter;
     
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    USizeBox* IconSizeBox;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UButton* IconButton;
     

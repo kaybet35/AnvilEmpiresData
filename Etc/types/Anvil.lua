@@ -969,6 +969,7 @@ FBoolResponse = {}
 ---@field ProcessedLead int16
 ---@field ProcessedResin int16
 ---@field ProcessedThickLeather int16
+---@field AnimalRope int16
 FBuildSiteCostData = {}
 
 
@@ -3159,6 +3160,7 @@ UTooltipWidget = {}
 
 ---@class UTownCenterMapIcon : UMapIcon
 ---@field TownCenter AVisTownCenter
+---@field IconSizeBox USizeBox
 ---@field IconButton UButton
 ---@field TownName UTextBlock
 ---@field TownNameBorder UBorder

@@ -88,7 +88,10 @@
       "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
     },
-    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DecayTimeHours": 72.0
+    }
   },
   {
     "Type": "DestroyableProxyComponent",
@@ -305,7 +308,8 @@
     },
     "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "bCannotBeDismantled": true
+      "bCannotBeDismantled": true,
+      "bIsAlwaysEnclosed": true
     }
   },
   {
@@ -330,7 +334,7 @@
       "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
     },
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__TownCenterKeepT3_C:TeamComp'",
@@ -360,7 +364,10 @@
         "ObjectName": "BoxCollisionProxyComponent'Default__TownCenterKeepT3_C:BoxCollisionProxyComponent_0'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT3.2"
       },
-      "DecayComp": null,
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__TownCenterKeepT3_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT3.4"
+      },
       "ScorchComp": null,
       "CodeNameString": "TownCenterKeepT3",
       "CodeName": -749068178,

@@ -11,6 +11,8 @@ enum class EAnvilColliderTags : uint8 {
     NoBlockAttackLOS,
     Collapsed,
     UnCollapsed,
+    FoundationSolidBox,
+    FoundationDisallowCeiling,
     NumTypes,
 };
 

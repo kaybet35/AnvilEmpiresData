@@ -21,7 +21,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "TownFamilyCenterT1_C'Default__TownFamilyCenterT1_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.14"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.15"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -55,6 +55,16 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
     },
     "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "DecayProxyComponent",
+    "Name": "DecayProxyComponent_1",
+    "Outer": "Default__TownFamilyCenterT1_C",
+    "Class": "UScriptClass'DecayProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DecayTimeHours": 12.0
+    }
   },
   {
     "Type": "DestroyableProxyComponent",
@@ -341,36 +351,39 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__TownFamilyCenterT1_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.14"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__TownFamilyCenterT1_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.8"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__TownFamilyCenterT1_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.11"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__TownFamilyCenterT1_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.13"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__TownFamilyCenterT1_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.5"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__TownFamilyCenterT1_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.7"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__TownFamilyCenterT1_C:BoxCollisionProxyComponent_0'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.1"
       },
-      "DecayComp": null,
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__TownFamilyCenterT1_C:DecayProxyComponent_1'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.4"
+      },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__TownFamilyCenterT1_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.12"
       },
       "CodeNameString": "TownFamilyCenterT1",
       "CodeName": 1552240909,
@@ -381,15 +394,15 @@
       "Components": [
         {
           "ObjectName": "FamilyCenterProxyComponent'Default__TownFamilyCenterT1_C:FamilyCenterProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.5"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.6"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__TownFamilyCenterT1_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.9"
         },
         {
           "ObjectName": "PlayerSpawnerProxyComponent'Default__TownFamilyCenterT1_C:PlayerSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.10"
         },
         {
           "ObjectName": "CollapsibleProxyComponent'Default__TownFamilyCenterT1_C:CollapsibleProxyComponent_0'",
@@ -397,7 +410,7 @@
         },
         {
           "ObjectName": "UpgradeProxyComponent'Default__TownFamilyCenterT1_C:UpgradeProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.15"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TownFamilyCenterT1.16"
         }
       ],
       "VisActorClass": {
@@ -420,15 +433,15 @@
       "MaterialRequirements": [
         {
           "CodeName": -667807241,
-          "Count": 12
+          "Count": 10
         },
         {
           "CodeName": -34612789,
-          "Count": 5
+          "Count": 3
         },
         {
           "CodeName": 979967872,
-          "Count": 10
+          "Count": 5
         }
       ]
     }

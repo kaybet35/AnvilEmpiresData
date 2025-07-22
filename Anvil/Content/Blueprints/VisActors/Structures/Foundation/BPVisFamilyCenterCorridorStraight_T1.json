@@ -24,6 +24,17 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
+        "Name": "VisStaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "MeshVisibilityData",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -31,17 +42,6 @@
         "PropertyClass": {
           "ObjectName": "Class'MeshVisibilityDataComponent'",
           "ObjectPath": "/Script/R2"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "StaticMesh3",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
         }
       },
       {
@@ -101,7 +101,7 @@
     "Properties": {
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisFamilyCenterCorridorStraight_T1_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.26"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.25"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'FamilyCenterCorridorIcon'",
@@ -111,7 +111,7 @@
       "BuildSiteOrder": 29,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisFamilyCenterCorridorStraight_T1_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.25"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.24"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisFamilyCenterCorridorStraight_T1_C:HealthDataComponent'",
@@ -119,11 +119,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisFamilyCenterCorridorStraight_T1_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.23"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisFamilyCenterCorridorStraight_T1_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.22"
       },
       "CollapsibleDataComponent": {
         "ObjectName": "CollapsibleDataComponent'Default__BPVisFamilyCenterCorridorStraight_T1_C:CollapsibleDataComponent'",
@@ -328,31 +328,12 @@
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterCorridorStraight_T1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.15"
+          "ObjectName": "SCS_Node'BPVisFamilyCenterCorridorStraight_T1_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.16"
         }
       ],
       "VariableGuid": "7542435A-4C473082-9984149F-7F28DC93",
       "InternalVariableName": "Scene"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_2",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisFamilyCenterCorridorStraight_T1_C:StaticMesh3_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.22"
-      },
-      "VariableGuid": "9BC92C4D-4EB8A4EA-74ADF79E-B37FE7F7",
-      "InternalVariableName": "StaticMesh3"
     }
   },
   {
@@ -372,6 +353,25 @@
       },
       "VariableGuid": "41D39DF2-4924B455-076F8CB0-5B25E96F",
       "InternalVariableName": "MeshVisibilityData"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisFamilyCenterCorridorStraight_T1_C:VisStaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.26"
+      },
+      "VariableGuid": "06846459-420CCE54-60733EB5-A46A3474",
+      "InternalVariableName": "VisStaticMesh"
     }
   },
   {
@@ -407,7 +407,7 @@
         },
         {
           "ObjectName": "SCS_Node'BPVisFamilyCenterCorridorStraight_T1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.16"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.15"
         }
       ],
       "AllNodes": [
@@ -424,11 +424,11 @@
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.13"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterCorridorStraight_T1_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectName": "SCS_Node'BPVisFamilyCenterCorridorStraight_T1_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.15"
         },
         {
-          "ObjectName": "SCS_Node'BPVisFamilyCenterCorridorStraight_T1_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectName": "SCS_Node'BPVisFamilyCenterCorridorStraight_T1_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.16"
         }
       ],
@@ -498,33 +498,6 @@
     }
   },
   {
-    "Type": "StaticMeshComponent",
-    "Name": "StaticMesh3_GEN_VARIABLE",
-    "Outer": "BPVisFamilyCenterCorridorStraight_T1_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'HomesteadModule_corridor_straight_top'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_corridor_straight_top.2"
-      },
-      "OverrideMaterials": [
-        null
-      ],
-      "bReceivesDecals": false,
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 600.0
-      },
-      "ComponentTags": [
-        "Structure",
-        "Collision",
-        "ToggleVisibility"
-      ]
-    }
-  },
-  {
     "Type": "StructureDataComponent",
     "Name": "StructureDataComponent",
     "Outer": "Default__BPVisFamilyCenterCorridorStraight_T1_C",
@@ -556,6 +529,32 @@
         "ObjectName": "ArrowComponent'Default__BPVisFamilyCenterCorridorStraight_T1_C:ArrowComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Foundation/BPVisFamilyCenterCorridorStraight_T1.0"
       }
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "VisStaticMesh_GEN_VARIABLE",
+    "Outer": "BPVisFamilyCenterCorridorStraight_T1_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "GeneratedCollisionTags": 256,
+      "VisMeshProfile": "EVisMeshProfile::StructureCollision",
+      "bMeshVisibility": true,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'HomesteadModule_corridor_straight_top'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Homestead/HomesteadModule_corridor_straight_top.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 600.0
+      },
+      "ComponentTags": [
+        "Structure",
+        "Collision",
+        "ToggleVisibility"
+      ]
     }
   }
 ]

@@ -23,5 +23,6 @@ FBuildSiteCostData::FBuildSiteCostData() {
     this->ProcessedLead = 0;
     this->ProcessedResin = 0;
     this->ProcessedThickLeather = 0;
+    this->AnimalRope = 0;
 }
 

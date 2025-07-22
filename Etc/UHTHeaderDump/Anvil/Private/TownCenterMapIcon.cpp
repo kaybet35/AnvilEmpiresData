@@ -2,6 +2,7 @@
 
 UTownCenterMapIcon::UTownCenterMapIcon() {
     this->TownCenter = NULL;
+    this->IconSizeBox = NULL;
     this->IconButton = NULL;
     this->TownName = NULL;
     this->TownNameBorder = NULL;

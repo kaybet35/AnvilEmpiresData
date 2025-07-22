@@ -4,6 +4,7 @@ UVisStaticMeshComponentBase::UVisStaticMeshComponentBase(const FObjectInitialize
     this->bReceivesDecals = false;
     this->bUseCustomGeneratedCollisionMask = false;
     this->CustomGeneratedCollisionMask = 0;
+    this->GeneratedCollisionTags = 0;
     this->VisMeshProfile = EVisMeshProfile::Undefined;
     this->bMeshVisibility = false;
     this->bMeshVisibilityGroup2 = false;

@@ -144,8 +144,10 @@ EAnvilColliderTags = {
     NoBlockAttackLOS = 4,
     Collapsed = 5,
     UnCollapsed = 6,
-    NumTypes = 7,
-    EAnvilColliderTags_MAX = 8,
+    FoundationSolidBox = 7,
+    FoundationDisallowCeiling = 8,
+    NumTypes = 9,
+    EAnvilColliderTags_MAX = 10,
 }
 
 ---@enum EAnvilCollisionChannel

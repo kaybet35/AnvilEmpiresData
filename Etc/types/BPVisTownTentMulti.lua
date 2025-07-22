@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisTownTentMulti_C : AVisHouse
+---@field ReferenceMesh UVisStaticMeshComponent
 ---@field HouseMesh2 UVisStaticMeshComponent
 ---@field OccupiedMesh2 UVisStaticMeshComponent
 ---@field Decal UDecalComponent

@@ -106,6 +106,7 @@ struct FBuildSiteCostData : public FTableRowBase
     int16 ProcessedLead;                                                              // 0x002E (size: 0x2)
     int16 ProcessedResin;                                                             // 0x0030 (size: 0x2)
     int16 ProcessedThickLeather;                                                      // 0x0032 (size: 0x2)
+    int16 AnimalRope;                                                                 // 0x0034 (size: 0x2)
 
 }; // Size: 0x38
 
@@ -2994,19 +2995,20 @@ class UTooltipWidget : public UUserWidget
 class UTownCenterMapIcon : public UMapIcon
 {
     class AVisTownCenter* TownCenter;                                                 // 0x0398 (size: 0x8)
-    class UButton* IconButton;                                                        // 0x03A0 (size: 0x8)
-    class UTextBlock* TownName;                                                       // 0x03A8 (size: 0x8)
-    class UBorder* TownNameBorder;                                                    // 0x03B0 (size: 0x8)
-    class UBorder* TownStatusBorder;                                                  // 0x03B8 (size: 0x8)
-    class UStatusWidget* NumPledgedStatus;                                            // 0x03C0 (size: 0x8)
-    class UStatusWidget* NumTentsStatus;                                              // 0x03C8 (size: 0x8)
-    class UStatusWidget* NumReinforcementSuppliesStatus;                              // 0x03D0 (size: 0x8)
+    class USizeBox* IconSizeBox;                                                      // 0x03A0 (size: 0x8)
+    class UButton* IconButton;                                                        // 0x03A8 (size: 0x8)
+    class UTextBlock* TownName;                                                       // 0x03B0 (size: 0x8)
+    class UBorder* TownNameBorder;                                                    // 0x03B8 (size: 0x8)
+    class UBorder* TownStatusBorder;                                                  // 0x03C0 (size: 0x8)
+    class UStatusWidget* NumPledgedStatus;                                            // 0x03C8 (size: 0x8)
+    class UStatusWidget* NumTentsStatus;                                              // 0x03D0 (size: 0x8)
+    class UStatusWidget* NumReinforcementSuppliesStatus;                              // 0x03D8 (size: 0x8)
 
     void UpdateName();
     FText GetNumTentsText();
     FText GetNumReinforcementSuppliesText();
     FText GetNumPledgedText();
-}; // Size: 0x3D8
+}; // Size: 0x3E0
 
 class UTownCenterWindow : public UStructureWindow
 {

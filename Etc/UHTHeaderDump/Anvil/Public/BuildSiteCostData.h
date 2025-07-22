@@ -73,6 +73,9 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int16 ProcessedThickLeather;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int16 AnimalRope;
+    
     ANVIL_API FBuildSiteCostData();
 };
 

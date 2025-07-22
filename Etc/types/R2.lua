@@ -2825,6 +2825,7 @@ UVehicleSeatProxyComponent = {}
 ---@class UVisStaticMeshComponentBase : UStaticMeshComponent
 ---@field bUseCustomGeneratedCollisionMask boolean
 ---@field CustomGeneratedCollisionMask int32
+---@field GeneratedCollisionTags int32
 ---@field VisMeshProfile EVisMeshProfile
 ---@field bMeshVisibility boolean
 ---@field bMeshVisibilityGroup2 boolean

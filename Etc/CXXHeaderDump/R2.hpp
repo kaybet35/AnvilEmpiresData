@@ -2826,9 +2826,10 @@ class UVisStaticMeshComponentBase : public UStaticMeshComponent
 {
     bool bUseCustomGeneratedCollisionMask;                                            // 0x05F0 (size: 0x1)
     int32 CustomGeneratedCollisionMask;                                               // 0x05F4 (size: 0x4)
-    EVisMeshProfile VisMeshProfile;                                                   // 0x05F8 (size: 0x1)
-    bool bMeshVisibility;                                                             // 0x05F9 (size: 0x1)
-    bool bMeshVisibilityGroup2;                                                       // 0x05FA (size: 0x1)
+    int32 GeneratedCollisionTags;                                                     // 0x05F8 (size: 0x4)
+    EVisMeshProfile VisMeshProfile;                                                   // 0x05FC (size: 0x1)
+    bool bMeshVisibility;                                                             // 0x05FD (size: 0x1)
+    bool bMeshVisibilityGroup2;                                                       // 0x05FE (size: 0x1)
 
 }; // Size: 0x600
 

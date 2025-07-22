@@ -42,7 +42,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "TownCenterKeepT1_C'Default__TownCenterKeepT1_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.15"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.14"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -73,13 +73,6 @@
     }
   },
   {
-    "Type": "CollapsibleProxyComponent",
-    "Name": "CollapsibleProxyComponent_0",
-    "Outer": "Default__TownCenterKeepT1_C",
-    "Class": "UScriptClass'CollapsibleProxyComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
-  },
-  {
     "Type": "DecayProxyComponent",
     "Name": "DecayProxyComponent_0",
     "Outer": "Default__TownCenterKeepT1_C",
@@ -88,7 +81,10 @@
       "ObjectName": "DecayProxyComponent'Default__BPBaseStructureEntity_C:DecayProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.3"
     },
-    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DecayTimeHours": 8.0
+    }
   },
   {
     "Type": "DestroyableProxyComponent",
@@ -321,7 +317,8 @@
     },
     "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "bCannotBeDismantled": true
+      "bCannotBeDismantled": true,
+      "bIsAlwaysEnclosed": true
     }
   },
   {
@@ -350,33 +347,36 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__TownCenterKeepT1_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.14"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.13"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__TownCenterKeepT1_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.6"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__TownCenterKeepT1_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.10"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__TownCenterKeepT1_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.12"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__TownCenterKeepT1_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.4"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__TownCenterKeepT1_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.5"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__TownCenterKeepT1_C:BoxCollisionProxyComponent_0'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.2"
       },
-      "DecayComp": null,
+      "DecayComp": {
+        "ObjectName": "DecayProxyComponent'Default__TownCenterKeepT1_C:DecayProxyComponent_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.3"
+      },
       "ScorchComp": null,
       "CodeNameString": "TownCenterKeepT1",
       "CodeName": 1987259545,
@@ -388,15 +388,15 @@
       "Components": [
         {
           "ObjectName": "TownHallProxyComponent'Default__TownCenterKeepT1_C:TownHallProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.16"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.15"
         },
         {
           "ObjectName": "UpgradeProxyComponent'Default__TownCenterKeepT1_C:UpgradeProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.17"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.16"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__TownCenterKeepT1_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.7"
         },
         {
           "ObjectName": "BeaconTowerProxyComponent'Default__TownCenterKeepT1_C:BeaconTowerProxyComponent_0'",
@@ -404,15 +404,11 @@
         },
         {
           "ObjectName": "PlayerSpawnerProxyComponent'Default__TownCenterKeepT1_C:PlayerSpawnerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.10"
-        },
-        {
-          "ObjectName": "MeshVisibilityProxyComponent'Default__TownCenterKeepT1_C:MeshVisibilityProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.9"
         },
         {
-          "ObjectName": "CollapsibleProxyComponent'Default__TownCenterKeepT1_C:CollapsibleProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.3"
+          "ObjectName": "MeshVisibilityProxyComponent'Default__TownCenterKeepT1_C:MeshVisibilityProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/TownHalls/TownCenterKeepT1.8"
         }
       ],
       "VisActorClass": {
