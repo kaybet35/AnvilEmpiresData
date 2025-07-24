@@ -14,7 +14,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisTownFamilyCenterT2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.25"
       }
     },
     "SuperStruct": {
@@ -22,6 +22,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "OwnerVisFamilyMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisFamilyMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "VisibilityToggleDebugBox2",
@@ -181,17 +192,18 @@
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.BPVisTownFamilyCenterT2_C'",
     "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "ForceShowInBuildMenuDistance": 1000.0,
       "FamilyCenterDataComponent": {
         "ObjectName": "FamilyCenterDataComponent'Default__BPVisTownFamilyCenterT2_C:FamilyCenterDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.8"
       },
       "TownAreaMarkerDecal": {
         "ObjectName": "VisTownAreaMarkerDecalComponent'Default__BPVisTownFamilyCenterT2_C:TownAreaMarkerDecal'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.36"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.38"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisTownFamilyCenterT2_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.30"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.32"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconHouse'",
@@ -203,7 +215,7 @@
       "SupportedVisualComponents": 256,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisTownFamilyCenterT2_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.28"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.29"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisTownFamilyCenterT2_C:HealthDataComponent'",
@@ -211,11 +223,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisTownFamilyCenterT2_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.27"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.28"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisTownFamilyCenterT2_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.26"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.27"
       },
       "CollapsibleDataComponent": {
         "ObjectName": "CollapsibleDataComponent'Default__BPVisTownFamilyCenterT2_C:CollapsibleDataComponent'",
@@ -328,7 +340,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisTownFamilyCenterT2_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.25"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.26"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisTownFamilyCenterT2_C:ArrowComponent'",
@@ -417,7 +429,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownFamilyCenterT2_C:RoofMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.33"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.35"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -438,7 +450,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownFamilyCenterT2_C:StairsMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.35"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.37"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -459,7 +471,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisFamilyMeshComponent'BPVisTownFamilyCenterT2_C:VisFamilyMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.29"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.31"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -480,7 +492,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownFamilyCenterT2_C:RoofMeshCollapsed_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.34"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.36"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -501,7 +513,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownFamilyCenterT2_C:FamilyCenterMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.31"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.33"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -541,7 +553,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisTownFamilyCenterT2_C:FamilyCenterSecondFloor_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.32"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.34"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -568,6 +580,27 @@
       "bIsParentComponentNative": true,
       "VariableGuid": "9BB25E2F-43860566-D6D847B2-091F384D",
       "InternalVariableName": "VisibilityToggleDebugBox2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisFamilyMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisFamilyMeshComponent'BPVisTownFamilyCenterT2_C:OwnerVisFamilyMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.30"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "075007B9-470E62C9-7D54A786-FF41C8B7",
+      "InternalVariableName": "OwnerVisFamilyMesh"
     }
   },
   {
@@ -613,6 +646,10 @@
         {
           "ObjectName": "SCS_Node'BPVisTownFamilyCenterT2_C:SimpleConstructionScript_0.SCS_Node_8'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownFamilyCenterT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.24"
         }
       ],
       "AllNodes": [
@@ -651,6 +688,10 @@
         {
           "ObjectName": "SCS_Node'BPVisTownFamilyCenterT2_C:SimpleConstructionScript_0.SCS_Node_8'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTownFamilyCenterT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BPVisTownFamilyCenterT2.24"
         }
       ],
       "DefaultSceneRootNode": {
@@ -689,11 +730,174 @@
   },
   {
     "Type": "VisFamilyMeshComponent",
+    "Name": "OwnerVisFamilyMesh_GEN_VARIABLE",
+    "Outer": "BPVisTownFamilyCenterT2_C",
+    "Class": "UScriptClass'VisFamilyMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FamilyVisualsMaterialIndex": 1,
+      "bOnlyShowForFamilyMembers": true,
+      "ColourTable": [
+        {
+          "R": 0.0,
+          "G": 0.019608,
+          "B": 0.019608,
+          "A": 1.0,
+          "Hex": "002626"
+        },
+        {
+          "R": 0.015686,
+          "G": 0.019608,
+          "B": 0.011765,
+          "A": 1.0,
+          "Hex": "21261C"
+        },
+        {
+          "R": 0.019608,
+          "G": 0.015686,
+          "B": 0.003922,
+          "A": 1.0,
+          "Hex": "26210C"
+        },
+        {
+          "R": 0.007843,
+          "G": 0.019608,
+          "B": 0.035294,
+          "A": 1.0,
+          "Hex": "152634"
+        },
+        {
+          "R": 0.019608,
+          "G": 0.007843,
+          "B": 0.015686,
+          "A": 1.0,
+          "Hex": "261521"
+        },
+        {
+          "R": 0.019608,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "260000"
+        },
+        {
+          "R": 0.011765,
+          "G": 0.003922,
+          "B": 0.019608,
+          "A": 1.0,
+          "Hex": "1C0C26"
+        },
+        {
+          "R": 0.015686,
+          "G": 0.019608,
+          "B": 0.019608,
+          "A": 1.0,
+          "Hex": "212626"
+        },
+        {
+          "R": 0.031373,
+          "G": 0.019608,
+          "B": 0.011765,
+          "A": 1.0,
+          "Hex": "31261C"
+        },
+        {
+          "R": 0.007843,
+          "G": 0.011765,
+          "B": 0.031373,
+          "A": 1.0,
+          "Hex": "151C31"
+        },
+        {
+          "R": 0.003922,
+          "G": 0.003922,
+          "B": 0.003922,
+          "A": 1.0,
+          "Hex": "0C0C0C"
+        },
+        {
+          "R": 0.019608,
+          "G": 0.047059,
+          "B": 0.058824,
+          "A": 1.0,
+          "Hex": "263D44"
+        },
+        {
+          "R": 0.058824,
+          "G": 0.035294,
+          "B": 0.058824,
+          "A": 1.0,
+          "Hex": "443444"
+        },
+        {
+          "R": 0.058824,
+          "G": 0.023529,
+          "B": 0.031373,
+          "A": 1.0,
+          "Hex": "442A31"
+        },
+        {
+          "R": 0.05098,
+          "G": 0.035294,
+          "B": 0.011765,
+          "A": 1.0,
+          "Hex": "40341C"
+        },
+        {
+          "R": 0.035294,
+          "G": 0.05098,
+          "B": 0.023529,
+          "A": 1.0,
+          "Hex": "34402A"
+        },
+        {
+          "R": 0.031373,
+          "G": 0.023529,
+          "B": 0.05098,
+          "A": 1.0,
+          "Hex": "312A40"
+        },
+        {
+          "R": 0.031373,
+          "G": 0.007843,
+          "B": 0.003922,
+          "A": 1.0,
+          "Hex": "31150C"
+        },
+        {
+          "R": 0.0,
+          "G": 0.019608,
+          "B": 0.031373,
+          "A": 1.0,
+          "Hex": "002631"
+        },
+        {
+          "R": 0.007843,
+          "G": 0.011765,
+          "B": 0.003922,
+          "A": 1.0,
+          "Hex": "151C0C"
+        }
+      ],
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FlagTwoTone'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/FlagTwoTone.2"
+      },
+      "RelativeLocation": {
+        "X": -351.4357,
+        "Y": 348.69022,
+        "Z": 248.47223
+      }
+    }
+  },
+  {
+    "Type": "VisFamilyMeshComponent",
     "Name": "VisFamilyMesh_GEN_VARIABLE",
     "Outer": "BPVisTownFamilyCenterT2_C",
     "Class": "UScriptClass'VisFamilyMeshComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "FamilyVisualsMaterialIndex": 1,
       "ColourTable": [
         {
           "R": 0.0,
@@ -842,12 +1046,9 @@
       },
       "RelativeLocation": {
         "X": 9.986703,
-        "Y": 359.05908,
+        "Y": 348.69022,
         "Z": 248.47224
-      },
-      "ComponentTags": [
-        "UnCollapsed"
-      ]
+      }
     }
   },
   {

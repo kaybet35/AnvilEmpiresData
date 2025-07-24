@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisTownFamilyCenterT1_C : AVisFamilyCenter
+---@field OwnerVisFamilyMesh UVisFamilyMeshComponent
 ---@field RoofMeshCollapsed UVisStaticMeshComponent
 ---@field VisFamilyMesh UVisFamilyMeshComponent
 ---@field StairsMesh UVisStaticMeshComponent

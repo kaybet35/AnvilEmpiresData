@@ -388,6 +388,7 @@ AVisEntityPrefab = {}
 
 
 ---@class AVisFamilyCenter : AVisStructure
+---@field ForceShowInBuildMenuDistance float
 ---@field FamilyCenterDataComponent UFamilyCenterDataComponent
 ---@field TownAreaMarkerDecal UVisTownAreaMarkerDecalComponent
 AVisFamilyCenter = {}
@@ -3281,6 +3282,7 @@ UVisDynamicMeshTemplateReferenceComponent = {}
 
 ---@class UVisFamilyMeshComponent : UStaticMeshComponent
 ---@field FamilyVisualsMaterialIndex int32
+---@field bOnlyShowForFamilyMembers boolean
 ---@field ColourTable TArray<FLinearColor>
 UVisFamilyMeshComponent = {}
 

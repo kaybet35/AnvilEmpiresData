@@ -3,7 +3,7 @@
 
 class ABPVisTownTentMulti_C : public AVisHouse
 {
-    class UVisStaticMeshComponent* ReferenceMesh;                                     // 0x0568 (size: 0x8)
+    class UVisStaticMeshComponent* referenceMesh;                                     // 0x0568 (size: 0x8)
     class UVisStaticMeshComponent* HouseMesh2;                                        // 0x0570 (size: 0x8)
     class UVisStaticMeshComponent* OccupiedMesh2;                                     // 0x0578 (size: 0x8)
     class UDecalComponent* Decal;                                                     // 0x0580 (size: 0x8)

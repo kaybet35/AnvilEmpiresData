@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisHouseBed_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.17"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.18"
       }
     },
     "SuperStruct": {
@@ -25,6 +25,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "referenceMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "Occupied Mesh",
@@ -90,7 +101,7 @@
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisHouseBed_C:ScaffoldingComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.23"
       },
       "StructureIcon": {
         "ObjectName": "Texture2D'IconHouseBed'",
@@ -102,7 +113,7 @@
       "SupportedVisualComponents": 1,
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisHouseBed_C:UpgradeDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.22"
       },
       "HealthDataComponent": {
         "ObjectName": "HealthDataComponent'Default__BPVisHouseBed_C:HealthDataComponent'",
@@ -110,11 +121,11 @@
       },
       "TeamDataComponent": {
         "ObjectName": "TeamDataComponent'Default__BPVisHouseBed_C:TeamDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.21"
       },
       "StructureDataComponent": {
         "ObjectName": "StructureDataComponent'Default__BPVisHouseBed_C:StructureDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.20"
       },
       "CollapsibleDataComponent": {
         "ObjectName": "CollapsibleDataComponent'Default__BPVisHouseBed_C:CollapsibleDataComponent'",
@@ -239,7 +250,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisHouseBed_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.19"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisHouseBed_C:ArrowComponent'",
@@ -314,7 +325,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisHouseBed_C:Occupied Mesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.24"
       },
       "VariableGuid": "A5220AF4-43448B56-03760DA1-DA589A46",
       "InternalVariableName": "Occupied Mesh"
@@ -341,6 +352,27 @@
   },
   {
     "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VisStaticMeshComponent'",
+        "ObjectPath": "/Script/Anvil"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VisStaticMeshComponent'BPVisHouseBed_C:referenceMesh_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.25"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "CE96B12F-438F0E84-9C8BD8BA-0C6D2FDE",
+      "InternalVariableName": "referenceMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
     "Name": "SCS_Node_9",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -352,7 +384,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisHouseBed_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.26"
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
@@ -380,13 +412,17 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHouseBed_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHouseBed_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.16"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisHouseBed_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.16"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.17"
         },
         {
           "ObjectName": "SCS_Node'BPVisHouseBed_C:SimpleConstructionScript_0.SCS_Node_2'",
@@ -395,6 +431,10 @@
         {
           "ObjectName": "SCS_Node'BPVisHouseBed_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHouseBed_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Housing/BPVisHouseBed.16"
         }
       ],
       "DefaultSceneRootNode": {
@@ -466,6 +506,30 @@
       ],
       "ComponentTags": [
         "Populated",
+        "Structure"
+      ]
+    }
+  },
+  {
+    "Type": "VisStaticMeshComponent",
+    "Name": "referenceMesh_GEN_VARIABLE",
+    "Outer": "BPVisHouseBed_C",
+    "Class": "UScriptClass'VisStaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VisMeshProfile": "EVisMeshProfile::Structure",
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'referenceMesh_300x300_SM'",
+        "ObjectPath": "Anvil/Content/Meshes/Blockin/referenceMesh_300x300_SM.2"
+      },
+      "RelativeLocation": {
+        "X": 75.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "bVisible": false,
+      "ComponentTags": [
+        "SetVisibleForBuildSite",
         "Structure"
       ]
     }

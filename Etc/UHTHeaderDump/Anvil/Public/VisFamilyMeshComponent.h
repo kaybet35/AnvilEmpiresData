@@ -13,6 +13,9 @@ protected:
     int32 FamilyVisualsMaterialIndex;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bOnlyShowForFamilyMembers;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FLinearColor> ColourTable;
     
 public:

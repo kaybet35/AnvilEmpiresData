@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPVisTownFamilyCenterT2_C : AVisFamilyCenter
+---@field OwnerVisFamilyMesh UVisFamilyMeshComponent
 ---@field VisibilityToggleDebugBox2 UBoxComponent
 ---@field RoofMeshCollapsed UVisStaticMeshComponent
 ---@field RoofMesh UVisStaticMeshComponent

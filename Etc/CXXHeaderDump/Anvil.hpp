@@ -951,10 +951,11 @@ class AVisEntityPrefab : public AVisActor
 
 class AVisFamilyCenter : public AVisStructure
 {
-    class UFamilyCenterDataComponent* FamilyCenterDataComponent;                      // 0x0558 (size: 0x8)
-    class UVisTownAreaMarkerDecalComponent* TownAreaMarkerDecal;                      // 0x0560 (size: 0x8)
+    float ForceShowInBuildMenuDistance;                                               // 0x0558 (size: 0x4)
+    class UFamilyCenterDataComponent* FamilyCenterDataComponent;                      // 0x0560 (size: 0x8)
+    class UVisTownAreaMarkerDecalComponent* TownAreaMarkerDecal;                      // 0x0568 (size: 0x8)
 
-}; // Size: 0x568
+}; // Size: 0x570
 
 class AVisFamilyInventory : public AVisStructure
 {
@@ -3113,6 +3114,7 @@ class UVisDynamicMeshTemplateReferenceComponent : public USceneComponent
 class UVisFamilyMeshComponent : public UStaticMeshComponent
 {
     int32 FamilyVisualsMaterialIndex;                                                 // 0x05F0 (size: 0x4)
+    bool bOnlyShowForFamilyMembers;                                                   // 0x05F4 (size: 0x1)
     TArray<FLinearColor> ColourTable;                                                 // 0x05F8 (size: 0x10)
 
 }; // Size: 0x610
