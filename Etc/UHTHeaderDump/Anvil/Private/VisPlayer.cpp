@@ -91,8 +91,6 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
     this->CurrentUEUsableActor = NULL;
-    this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
-    this->CrowdIdentifierMeshComponent->SetupAttachment(RootComponent);
     this->VoiceIndicator->SetupAttachment(RootComponent);
     this->TorchVFXComponent->SetupAttachment(Mesh);
     this->TorchVFX2Component->SetupAttachment(Mesh);
@@ -126,6 +124,8 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->Head->SetupAttachment(Mesh);
     this->AimMeshComponent->SetupAttachment(RootComponent);
     this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
+    this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
+    this->CrowdIdentifierMeshComponent->SetupAttachment(RootComponent);
 }
 
 FString AVisPlayer::GetPlayerName() const {
