@@ -152,7 +152,42 @@
     "Properties": {
       "Slots": [
         {
-          "ProxyRepeat": 12,
+          "ProxyRepeat": 4,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
+          "StackLimit": 100,
+          "bOr": false,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
+          "AcceptedTags": [
+            "EAnvilItemTag::Avatar"
+          ],
+          "AcceptedTagsVisVar": 0,
+          "RequiredTags": [],
+          "RequiredTagsVisVar": 0,
+          "ProhibitedTags": [],
+          "ProhibitedTagsVisVar": 0,
+          "DedicatedItemType": null,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
+          "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::Avatar",
+          "CustomStackLimits": []
+        },
+        {
+          "ProxyRepeat": 8,
           "Base": {
             "CodeName": null,
             "CodeNameVisVar": 0,
@@ -217,12 +252,13 @@
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
               "CodeNameVisVar": 0,
-              "Count": 30
+              "Count": 10
             }
           ],
-          "ProductionTime": 5.0,
+          "ProductionTime": 1.0,
           "OutputCount": 1,
-          "bRequiresResearch": false
+          "bRequiresResearch": false,
+          "bMakePublic": false
         },
         {
           "ProducedItem": {
@@ -237,12 +273,13 @@
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
               "CodeNameVisVar": 0,
-              "Count": 45
+              "Count": 15
             }
           ],
-          "ProductionTime": 5.0,
+          "ProductionTime": 1.0,
           "OutputCount": 1,
-          "bRequiresResearch": false
+          "bRequiresResearch": false,
+          "bMakePublic": false
         },
         {
           "ProducedItem": {
@@ -257,12 +294,76 @@
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
               "CodeNameVisVar": 0,
-              "Count": 15
+              "Count": 5
             }
           ],
-          "ProductionTime": 5.0,
+          "ProductionTime": 1.0,
           "OutputCount": 1,
-          "bRequiresResearch": false
+          "bRequiresResearch": false,
+          "bMakePublic": false
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'BPAvatarSupportSwordsman_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Avatars/BPAvatarSupportSwordsman.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 1.0,
+          "OutputCount": 3,
+          "bRequiresResearch": false,
+          "bMakePublic": true
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'BPAvatarSupportBowman_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Avatars/BPAvatarSupportBowman.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 1.0,
+          "OutputCount": 3,
+          "bRequiresResearch": false,
+          "bMakePublic": true
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'BPAvatarSupportSpearman_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Avatars/BPAvatarSupportSpearman.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Silver_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 1.0,
+          "OutputCount": 3,
+          "bRequiresResearch": false,
+          "bMakePublic": true
         }
       ]
     }
@@ -337,7 +438,7 @@
       "ObjectName": "BPBaseStructureEntity_C'Default__BPBaseStructureEntity_C'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.2"
     },
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__TavernT2_C:TeamComp'",

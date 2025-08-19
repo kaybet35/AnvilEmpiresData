@@ -16,5 +16,6 @@ enum class EAnvilItemSlotBackgroundType : uint8 {
     HeavyTool,
     Shield,
     Avatar,
+    Resource,
 };
 

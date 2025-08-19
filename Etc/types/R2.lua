@@ -523,6 +523,7 @@ FPledgedPlayer = {}
 ---@field ProductionTime float
 ---@field OutputCount uint8
 ---@field bRequiresResearch boolean
+---@field bMakePublic boolean
 FProducableItem = {}
 
 
@@ -2299,6 +2300,7 @@ UScorchDataComponent = {}
 
 ---@class UScorchProxyComponent : UProxyComponent
 ---@field BurnRate float
+---@field ScorchDamagePerSecond float
 UScorchProxyComponent = {}
 
 
@@ -2788,6 +2790,7 @@ UVehicleMovementDataComponent = {}
 ---@field CollisionEffect TSubclassOf<UEntityTemplate>
 ---@field RammingDamage float
 ---@field RammingVelocityFactor float
+---@field RammingVelocityTime float
 ---@field RammingDamageType EAnvilDamageType
 ---@field RammingStabilityDamage float
 ---@field RammingStabilitySplashDamage float

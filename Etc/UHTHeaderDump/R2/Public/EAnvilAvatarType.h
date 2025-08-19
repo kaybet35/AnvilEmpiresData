@@ -6,6 +6,9 @@ UENUM(BlueprintType)
 enum class EAnvilAvatarType : uint8 {
     Default,
     Soldier,
+    SupportSwordsman,
+    SupportBowman,
+    SupportSpearman,
     NumTypes,
 };
 

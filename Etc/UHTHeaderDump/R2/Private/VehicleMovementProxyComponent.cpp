@@ -25,6 +25,7 @@ UVehicleMovementProxyComponent::UVehicleMovementProxyComponent() {
     this->CollisionEffect = NULL;
     this->RammingDamage = 480.00f;
     this->RammingVelocityFactor = 0.00f;
+    this->RammingVelocityTime = 0.00f;
     this->RammingDamageType = EAnvilDamageType::Default;
     this->RammingStabilityDamage = 0.00f;
     this->RammingStabilitySplashDamage = 0.00f;

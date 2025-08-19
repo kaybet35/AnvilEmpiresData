@@ -6,5 +6,6 @@ FProducableItem::FProducableItem() {
     this->ProductionTime = 0.00f;
     this->OutputCount = 0;
     this->bRequiresResearch = false;
+    this->bMakePublic = false;
 }
 

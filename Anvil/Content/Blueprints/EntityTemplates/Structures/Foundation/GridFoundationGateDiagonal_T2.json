@@ -21,7 +21,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "GridFoundationGateDiagonal_T2_C'Default__GridFoundationGateDiagonal_T2_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.8"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.9"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -37,6 +37,22 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseFoundationEntity.1"
     },
     "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BoxCollisionProxyComponent",
+    "Name": "BoxCollisionProxyComponent_1",
+    "Outer": "Default__GridFoundationGateDiagonal_T2_C",
+    "Class": "UScriptClass'BoxCollisionProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Extents": {
+        "X": 300.0,
+        "Y": 1500.0,
+        "Z": 600.0
+      },
+      "CollisionMask": 256,
+      "bVaultable": false
+    }
   },
   {
     "Type": "BoxCollisionProxyComponent",
@@ -127,27 +143,27 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__GridFoundationGateDiagonal_T2_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.13"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.14"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__GridFoundationGateDiagonal_T2_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.9"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.10"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__GridFoundationGateDiagonal_T2_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.11"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__GridFoundationGateDiagonal_T2_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.13"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__GridFoundationGateDiagonal_T2_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.6"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__GridFoundationGateDiagonal_T2_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.6"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.7"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__GridFoundationGateDiagonal_T2_C:BoxCollisionProxyComponent_0'",
@@ -155,11 +171,11 @@
       },
       "ActionBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__GridFoundationGateDiagonal_T2_C:BoxCollisionProxyComponent_2'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.3"
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__GridFoundationGateDiagonal_T2_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.5"
       },
       "ScorchComp": null,
       "CodeNameString": "GridFoundationGateDiagonalT2",
@@ -168,15 +184,19 @@
       "Components": [
         {
           "ObjectName": "GateProxyComponent'Default__GridFoundationGateDiagonal_T2_C:GateProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.8"
         },
         {
           "ObjectName": "UpgradeProxyComponent'Default__GridFoundationGateDiagonal_T2_C:UpgradeProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.14"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.15"
         },
         {
           "ObjectName": "CollapsibleProxyComponent'Default__GridFoundationGateDiagonal_T2_C:CollapsibleProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.3"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.4"
+        },
+        {
+          "ObjectName": "BoxCollisionProxyComponent'Default__GridFoundationGateDiagonal_T2_C:BoxCollisionProxyComponent_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Foundation/GridFoundationGateDiagonal_T2.2"
         }
       ],
       "VisActorClass": {

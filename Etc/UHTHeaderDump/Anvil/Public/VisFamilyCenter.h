@@ -4,6 +4,7 @@
 #include "VisFamilyCenter.generated.h"
 
 class UFamilyCenterDataComponent;
+class UStaticMeshComponent;
 class UVisTownAreaMarkerDecalComponent;
 
 UCLASS(Blueprintable)
@@ -19,6 +20,9 @@ public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UVisTownAreaMarkerDecalComponent* TownAreaMarkerDecal;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UStaticMeshComponent* MyFamilyFlagMesh;
     
 public:
     AVisFamilyCenter(const FObjectInitializer& ObjectInitializer);

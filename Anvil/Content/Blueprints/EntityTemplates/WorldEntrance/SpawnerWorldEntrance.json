@@ -41,14 +41,24 @@
       "MinDistanceBetweenSpawns": 25000.0,
       "bDontSpawnInSettlements": true,
       "bAvoidSlopes": true,
-      "CompatibleSurfaceTypes": 82436
+      "CompatibleSurfaceTypes": 82436,
+      "OtherResourcesToAvoid": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'TempleBuildSite_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/BuildSites/TempleBuildSite.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'TempleT3_C'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Civic/TempleT3.0"
+        }
+      ]
     }
   },
   {
     "Type": "SpawnerWorldEntrance_C",
     "Name": "Default__SpawnerWorldEntrance_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/WorldEntrance/SpawnerWorldEntrance.SpawnerWorldEntrance_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CodeNameString": "SpawnerWorldEntrance",
       "CodeName": 725176304,

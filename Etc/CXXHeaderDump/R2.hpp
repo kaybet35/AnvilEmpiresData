@@ -460,6 +460,7 @@ struct FProducableItem
     float ProductionTime;                                                             // 0x0020 (size: 0x4)
     uint8 OutputCount;                                                                // 0x0024 (size: 0x1)
     bool bRequiresResearch;                                                           // 0x0025 (size: 0x1)
+    bool bMakePublic;                                                                 // 0x0026 (size: 0x1)
 
 }; // Size: 0x28
 
@@ -2300,6 +2301,7 @@ class UScorchDataComponent : public UDataComponent
 class UScorchProxyComponent : public UProxyComponent
 {
     float BurnRate;                                                                   // 0x0028 (size: 0x4)
+    float ScorchDamagePerSecond;                                                      // 0x002C (size: 0x4)
 
 }; // Size: 0x30
 
@@ -2789,17 +2791,18 @@ class UVehicleMovementProxyComponent : public UProxyComponent
     TSubclassOf<class UEntityTemplate> CollisionEffect;                               // 0x0058 (size: 0x8)
     float RammingDamage;                                                              // 0x0060 (size: 0x4)
     float RammingVelocityFactor;                                                      // 0x0064 (size: 0x4)
-    EAnvilDamageType RammingDamageType;                                               // 0x0068 (size: 0x1)
-    float RammingStabilityDamage;                                                     // 0x006C (size: 0x4)
-    float RammingStabilitySplashDamage;                                               // 0x0070 (size: 0x4)
-    float RammingStabilitySplashDamageRadius;                                         // 0x0074 (size: 0x4)
-    FVector FrontAxleOffset;                                                          // 0x0078 (size: 0x18)
-    FVector RearAxleOffset;                                                           // 0x0090 (size: 0x18)
-    float MaxSubmersionDepth;                                                         // 0x00A8 (size: 0x4)
-    FR2FloatRange FallingDistRange;                                                   // 0x00AC (size: 0x8)
-    FR2FloatRange FallingDamageRange;                                                 // 0x00B4 (size: 0x8)
+    float RammingVelocityTime;                                                        // 0x0068 (size: 0x4)
+    EAnvilDamageType RammingDamageType;                                               // 0x006C (size: 0x1)
+    float RammingStabilityDamage;                                                     // 0x0070 (size: 0x4)
+    float RammingStabilitySplashDamage;                                               // 0x0074 (size: 0x4)
+    float RammingStabilitySplashDamageRadius;                                         // 0x0078 (size: 0x4)
+    FVector FrontAxleOffset;                                                          // 0x0080 (size: 0x18)
+    FVector RearAxleOffset;                                                           // 0x0098 (size: 0x18)
+    float MaxSubmersionDepth;                                                         // 0x00B0 (size: 0x4)
+    FR2FloatRange FallingDistRange;                                                   // 0x00B4 (size: 0x8)
+    FR2FloatRange FallingDamageRange;                                                 // 0x00BC (size: 0x8)
 
-}; // Size: 0xC0
+}; // Size: 0xC8
 
 class UVehicleSeatProxyComponent : public UProxyComponent
 {

@@ -29,6 +29,9 @@ enum class EAnvilStatusMessageType : uint8 {
     ItemTransfer_NotPublic,
     ItemTransfer_HeavyToolFull,
     ItemTransfer_CannotRemoveAvatarDefault,
+    ItemTransfer_CannotChangeFromSupportAvatar,
+    ItemTransfer_CannotChangeToSupportAvatar,
+    ItemTransfer_CannotSubmitSupportAvatar,
     Blocked,
     Vehicle_ExitBlocked,
     InvalidDetachLocation,
@@ -139,6 +142,7 @@ enum class EAnvilStatusMessageType : uint8 {
     CantDeployWhileMoving,
     CannotUseWhileSwimming,
     TargetTooClose,
+    NotEnoughPlayersToCapture,
     NumTypes,
 };
 
