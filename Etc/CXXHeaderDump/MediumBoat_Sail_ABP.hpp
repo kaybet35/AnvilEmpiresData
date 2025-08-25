@@ -23,7 +23,7 @@ struct FAnimBlueprintGeneratedMutableData : public FAnimBlueprintMutableData
 
 }; // Size: 0x8
 
-class UMediumBoat_Sail_ABP_C : public UVisWeatherIndicatorAnimInstance
+class UMediumBoat_Sail_ABP_C : public UVisBoatSailAnimInstance
 {
     FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0380 (size: 0x8)
     FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                       // 0x0388 (size: 0x8)

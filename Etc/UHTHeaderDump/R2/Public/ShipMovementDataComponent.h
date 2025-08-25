@@ -8,7 +8,13 @@ class R2_API UShipMovementDataComponent : public UDataComponent {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float RudderAngle;
+    bool bIsSailOpen;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsGangplankLeftOpen;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsGangplankRightOpen;
     
     UShipMovementDataComponent(const FObjectInitializer& ObjectInitializer);
 

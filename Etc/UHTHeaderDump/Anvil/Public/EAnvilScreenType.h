@@ -10,6 +10,7 @@ enum class EAnvilScreenType : uint8 {
     Gameplay,
     Pause,
     Options,
+    Credits,
     Count,
     Admin,
     Help,

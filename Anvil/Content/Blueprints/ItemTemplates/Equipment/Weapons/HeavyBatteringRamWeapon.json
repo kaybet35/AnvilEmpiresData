@@ -1,0 +1,73 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "HeavyBatteringRamWeapon_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'ItemTemplate'",
+      "ObjectPath": "/Script/R2"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HeavyBatteringRamWeapon_C'Default__HeavyBatteringRamWeapon_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/HeavyBatteringRamWeapon.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "HeavyBatteringRamWeapon_C",
+    "Name": "Default__HeavyBatteringRamWeapon_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/HeavyBatteringRamWeapon.HeavyBatteringRamWeapon_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CodeNameString": "HeavyBatteringRamWeapon",
+      "CodeName": -617641149,
+      "ItemTags": [
+        "EAnvilItemTag::PrimaryTool",
+        "EAnvilItemTag::Large",
+        "EAnvilItemTag::MountedWeapon",
+        "EAnvilItemTag::NotAllowedInMarket"
+      ],
+      "ItemHitEffect": {
+        "ObjectName": "BlueprintGeneratedClass'HitEffectHeavyRam_C'",
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectHeavyRam.0"
+      },
+      "DamageOffset": {
+        "X": 800.0,
+        "Y": 80.0,
+        "Z": 220.0
+      },
+      "DamageType": "EAnvilDamageType::Siege",
+      "RequiredStance": "EAnvilCharacterStance::OnBatteringRam",
+      "DefaultActivity": {
+        "State": "EAnvilSimActivityState::Attacking",
+        "Delay": 0.7,
+        "Duration": 1.1,
+        "StaminaCost": 10.0
+      },
+      "RangedActivity": {
+        "Delay": 0.7,
+        "Duration": 1.1,
+        "bRepeatable": false,
+        "StaminaCost": 10.0,
+        "AimedStaminaCost": 5.0
+      },
+      "BuildActivity": {
+        "bRepeatable": false
+      },
+      "bAllowCameraPan": false,
+      "Damage": 200,
+      "DamageRadius": 200.0,
+      "StabilityDamage": 0.0
+    }
+  }
+]

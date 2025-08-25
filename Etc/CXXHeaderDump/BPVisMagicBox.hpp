@@ -3,8 +3,8 @@
 
 class ABPVisMagicBox_C : public AVisStructure
 {
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0558 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0560 (size: 0x8)
 
-}; // Size: 0x560
+}; // Size: 0x568
 
 #endif

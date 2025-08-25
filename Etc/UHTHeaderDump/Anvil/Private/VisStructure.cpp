@@ -29,12 +29,13 @@ AVisStructure::AVisStructure(const FObjectInitializer& ObjectInitializer) : Supe
     this->ArrowComponent = (UArrowComponent*)RootComponent;
     this->UseVolumeDecalComponent = CreateDefaultSubobject<UDecalComponent>(TEXT("UseVolumeDecalComponent"));
     this->GrassRemovalVolume = CreateDefaultSubobject<UGrassRemovalVolumeComponent>(TEXT("GrassRemovalVolume"));
-    this->ScaffoldingComponent->SetupAttachment(RootComponent);
+    this->bSupportsHealthMaterialUpdates = false;
     this->UseVolumeDecalComponent->SetupAttachment(RootComponent);
     this->GrassRemovalVolume->SetupAttachment(RootComponent);
+    this->ScaffoldingComponent->SetupAttachment(RootComponent);
 }
 
-void AVisStructure::UpdateVisualComponentsByTag(const FName Tag, const bool bIsVisible, const bool bUpdateMaterials) {
+void AVisStructure::UpdateVisualComponentsByTag(const FName Tag, const bool bIsVisible) {
 }
 
 

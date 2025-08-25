@@ -22,7 +22,7 @@ FAnimBlueprintGeneratedMutableData = {}
 
 
 
----@class UMediumBoat_Sail_ABP_C : UVisWeatherIndicatorAnimInstance
+---@class UMediumBoat_Sail_ABP_C : UVisBoatSailAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field __AnimBlueprintMutables FAnimBlueprintGeneratedMutableData
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance

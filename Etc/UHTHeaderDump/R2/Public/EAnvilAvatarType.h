@@ -9,6 +9,7 @@ enum class EAnvilAvatarType : uint8 {
     SupportSwordsman,
     SupportBowman,
     SupportSpearman,
+    Custom,
     NumTypes,
 };
 

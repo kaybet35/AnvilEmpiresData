@@ -1,10 +1,8 @@
 #ifndef UE4SS_SDK_FarmWallMidPiece_DUPL_1_HPP
 #define UE4SS_SDK_FarmWallMidPiece_DUPL_1_HPP
 
-class AFarmWallMidPiece_C : public AFootprint
+class UFarmWallMidPiece_C : public UEntityTemplate
 {
-    class USceneComponent* DefaultSceneRoot;                                          // 0x0368 (size: 0x8)
-
-}; // Size: 0x370
+}; // Size: 0x88
 
 #endif

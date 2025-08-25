@@ -61,7 +61,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisMediumBoat_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.20"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.21"
       }
     },
     "SuperStruct": {
@@ -180,13 +180,21 @@
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "IsInWaterCheckRange": 500.0,
+      "ShipMovementDataComponent": {
+        "ObjectName": "ShipMovementDataComponent'Default__BPVisMediumBoat_C:ShipMovementDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.20"
+      },
       "VehicleMovementDataComponent": {
         "ObjectName": "VehicleMovementDataComponent'Default__BPVisMediumBoat_C:VehicleMovementDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.25"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.26"
       },
       "EntityAttachableDataComponent": {
         "ObjectName": "EntityAttachableDataComponent'Default__BPVisMediumBoat_C:EntityAttachableDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.6"
+      },
+      "VehicleSeatDataComponent": {
+        "ObjectName": "VehicleSeatDataComponent'Default__BPVisMediumBoat_C:VehicleSeatDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.27"
       },
       "MoveLoopAudioComponent": {
         "ObjectName": "AudioComponent'Default__BPVisMediumBoat_C:MovementAudioComponent'",
@@ -206,7 +214,7 @@
       },
       "UseWindowType": "EHUDWindowType::InventoryStructure",
       "AdditionalActionButtons": [
-        "EActionButtonType::DetachVehicle"
+        "EAnvilEntityActionType::DetachVehicle"
       ],
       "bNightVisibility": false,
       "VisDisplayName": {
@@ -385,7 +393,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisMediumBoat_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.23"
       },
       "ChildNodes": [
         {
@@ -422,7 +430,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisMediumBoat_C:CullVolume_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.25"
       },
       "VariableGuid": "C786FF73-4D803441-0A7FD6B5-A1D936DA",
       "InternalVariableName": "CullVolume"
@@ -460,7 +468,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisMediumBoat_C:Sail_Mesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.21"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.22"
       },
       "VariableGuid": "D7A3C966-4489EF3E-52EF20B6-4CA228B1",
       "InternalVariableName": "Sail_Mesh"
@@ -479,7 +487,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisStaticMeshComponent'BPVisMediumBoat_C:VisStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.26"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.28"
       },
       "VariableGuid": "B3ECF834-45EAF292-BDAC009C-37A8394E",
       "InternalVariableName": "VisStaticMesh"
@@ -498,11 +506,18 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisMediumBoat_C:WindDirectionIndicator_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisMediumBoat.24"
       },
       "VariableGuid": "11E2384C-49E60EDA-5CA033AC-B0972788",
       "InternalVariableName": "WindDirectionIndicator"
     }
+  },
+  {
+    "Type": "ShipMovementDataComponent",
+    "Name": "ShipMovementDataComponent",
+    "Outer": "Default__BPVisMediumBoat_C",
+    "Class": "UScriptClass'ShipMovementDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "SimpleConstructionScript",
@@ -686,6 +701,13 @@
     "Name": "VehicleMovementDataComponent",
     "Outer": "Default__BPVisMediumBoat_C",
     "Class": "UScriptClass'VehicleMovementDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "VehicleSeatDataComponent",
+    "Name": "VehicleSeatDataComponent",
+    "Outer": "Default__BPVisMediumBoat_C",
+    "Class": "UScriptClass'VehicleSeatDataComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {

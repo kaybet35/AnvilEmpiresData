@@ -19,19 +19,19 @@ struct FAnimBlueprintGeneratedConstantData : public FAnimBlueprintConstantData
 
 class USiegeLadder_ABP_C : public UVisLadderVehicleAnimInstance
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0350 (size: 0x8)
-    FAnimSubsystemInstance AnimBlueprintExtension_PropertyAccess;                     // 0x0358 (size: 0x8)
-    FAnimSubsystemInstance AnimBlueprintExtension_Base;                               // 0x0360 (size: 0x8)
-    FAnimNode_Root AnimGraphNode_Root;                                                // 0x0368 (size: 0x20)
-    FAnimNode_MultiWayBlend AnimGraphNode_MultiWayBlend;                              // 0x0388 (size: 0x50)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_3;                          // 0x03D8 (size: 0x48)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_2;                          // 0x0420 (size: 0x48)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_1;                          // 0x0468 (size: 0x48)
-    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer;                            // 0x04B0 (size: 0x48)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0360 (size: 0x8)
+    FAnimSubsystemInstance AnimBlueprintExtension_PropertyAccess;                     // 0x0368 (size: 0x8)
+    FAnimSubsystemInstance AnimBlueprintExtension_Base;                               // 0x0370 (size: 0x8)
+    FAnimNode_Root AnimGraphNode_Root;                                                // 0x0378 (size: 0x20)
+    FAnimNode_MultiWayBlend AnimGraphNode_MultiWayBlend;                              // 0x0398 (size: 0x50)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_3;                          // 0x03E8 (size: 0x48)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_2;                          // 0x0430 (size: 0x48)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_1;                          // 0x0478 (size: 0x48)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer;                            // 0x04C0 (size: 0x48)
 
     void AnimGraph(FPoseLink& AnimGraph);
     void EvaluateGraphExposedInputs_ExecuteUbergraph_SiegeLadder_ABP_AnimGraphNode_MultiWayBlend_02230C8F4D9E397BA53D878C7A06D38A();
     void ExecuteUbergraph_SiegeLadder_ABP(int32 EntryPoint);
-}; // Size: 0x4F8
+}; // Size: 0x508
 
 #endif

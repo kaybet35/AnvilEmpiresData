@@ -1,0 +1,126 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "HeavyBatteringRamImpact_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'HeavyBatteringRamImpact_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/HeavyRam/HeavyBatteringRamImpact_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Impact'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.3"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'ExplosionConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/ExplosionConcurrency.0"
+        }
+      ],
+      "Duration": 1.380125,
+      "MaxDistance": 10000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "HeavyBatteringRamImpact_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'HeavyBatteringRamImpact_Cue:SoundNodeRandom_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/HeavyRam/HeavyBatteringRamImpact_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "HeavyBatteringRamImpact_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        0.5
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'HeavyBatteringRamImpact_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/HeavyRam/HeavyBatteringRamImpact_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'HeavyBatteringRamImpact_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/HeavyRam/HeavyBatteringRamImpact_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'HeavyBatteringRamImpact_Cue:SoundNodeWavePlayer_5'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/HeavyRam/HeavyBatteringRamImpact_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "HeavyBatteringRamImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/HeavyRam/HeavyRamImpact01.HeavyRamImpact01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'HeavyRamImpact01'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/HeavyRam/HeavyRamImpact01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "HeavyBatteringRamImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/HeavyRam/HeavyRamImpact02.HeavyRamImpact02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'HeavyRamImpact02'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/HeavyRam/HeavyRamImpact02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "HeavyBatteringRamImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/HeavyRam/HeavyRamImpact03.HeavyRamImpact03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'HeavyRamImpact03'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/HeavyRam/HeavyRamImpact03.0"
+    }
+  }
+]

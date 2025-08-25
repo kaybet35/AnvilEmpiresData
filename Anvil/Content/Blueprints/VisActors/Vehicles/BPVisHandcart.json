@@ -142,6 +142,10 @@
         "ObjectName": "EntityAttachableDataComponent'Default__BPVisHandcart_C:EntityAttachableDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.6"
       },
+      "VehicleSeatDataComponent": {
+        "ObjectName": "VehicleSeatDataComponent'Default__BPVisHandcart_C:VehicleSeatDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.22"
+      },
       "MoveLoopAudioComponent": {
         "ObjectName": "AudioComponent'Default__BPVisHandcart_C:MovementAudioComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.2"
@@ -160,8 +164,8 @@
       },
       "UseWindowType": "EHUDWindowType::InventoryStructure",
       "AdditionalActionButtons": [
-        "EActionButtonType::AttachVehicle",
-        "EActionButtonType::DetachVehicle"
+        "EAnvilEntityActionType::AttachVehicle",
+        "EAnvilEntityActionType::DetachVehicle"
       ],
       "InteractionIcon": {
         "ObjectName": "Texture2D'CartIcon'",
@@ -392,7 +396,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisMultiItemStockpileComponent'BPVisHandcart_C:VisMultiItemStockpile_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.22"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.23"
       },
       "AttachToName": "S_CartContainer",
       "VariableGuid": "701F7646-4CF4B3B7-1E1679AF-FE170A79",
@@ -458,7 +462,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisPointLightComponent'BPVisHandcart_C:VisPointLight_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHandcart.24"
       },
       "VariableGuid": "3612C20A-4D30D86D-E9B87D8C-426998C5",
       "InternalVariableName": "VisPointLight"
@@ -570,6 +574,13 @@
     "Name": "VehicleMovementDataComponent",
     "Outer": "Default__BPVisHandcart_C",
     "Class": "UScriptClass'VehicleMovementDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "VehicleSeatDataComponent",
+    "Name": "VehicleSeatDataComponent",
+    "Outer": "Default__BPVisHandcart_C",
+    "Class": "UScriptClass'VehicleSeatDataComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {

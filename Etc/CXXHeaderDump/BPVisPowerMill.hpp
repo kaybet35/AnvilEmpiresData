@@ -3,10 +3,10 @@
 
 class ABPVisPowerMill_C : public AVisPowerMill
 {
-    class UPowerUnitDataComponent* PowerUnitData;                                     // 0x05F0 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x05F8 (size: 0x8)
-    class UMeshVisibilityDataComponent* MeshVisibilityData;                           // 0x0600 (size: 0x8)
+    class UPowerUnitDataComponent* PowerUnitData;                                     // 0x05F8 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0600 (size: 0x8)
+    class UMeshVisibilityDataComponent* MeshVisibilityData;                           // 0x0608 (size: 0x8)
 
-}; // Size: 0x608
+}; // Size: 0x610
 
 #endif

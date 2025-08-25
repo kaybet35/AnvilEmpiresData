@@ -51,7 +51,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisSmallBoat_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.23"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.24"
       }
     },
     "SuperStruct": {
@@ -169,13 +169,21 @@
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.BPVisSmallBoat_C'",
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "ShipMovementDataComponent": {
+        "ObjectName": "ShipMovementDataComponent'Default__BPVisSmallBoat_C:ShipMovementDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.23"
+      },
       "VehicleMovementDataComponent": {
         "ObjectName": "VehicleMovementDataComponent'Default__BPVisSmallBoat_C:VehicleMovementDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.26"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.27"
       },
       "EntityAttachableDataComponent": {
         "ObjectName": "EntityAttachableDataComponent'Default__BPVisSmallBoat_C:EntityAttachableDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.6"
+      },
+      "VehicleSeatDataComponent": {
+        "ObjectName": "VehicleSeatDataComponent'Default__BPVisSmallBoat_C:VehicleSeatDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.28"
       },
       "MoveLoopAudioComponent": {
         "ObjectName": "AudioComponent'Default__BPVisSmallBoat_C:MovementAudioComponent'",
@@ -4065,7 +4073,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisSmallBoat_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.25"
       },
       "ChildNodes": [
         {
@@ -4106,7 +4114,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPVisSmallBoat_C:CullVolume_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.25"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisSmallBoat.26"
       },
       "VariableGuid": "C786FF73-4D803441-0A7FD6B5-A1D936DA",
       "InternalVariableName": "CullVolume"
@@ -4187,6 +4195,13 @@
       "VariableGuid": "3CF54768-4401102E-BC28968F-58D9AB55",
       "InternalVariableName": "ResourceFishR3"
     }
+  },
+  {
+    "Type": "ShipMovementDataComponent",
+    "Name": "ShipMovementDataComponent",
+    "Outer": "Default__BPVisSmallBoat_C",
+    "Class": "UScriptClass'ShipMovementDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "SimpleConstructionScript",
@@ -4305,6 +4320,13 @@
     "Name": "VehicleMovementDataComponent",
     "Outer": "Default__BPVisSmallBoat_C",
     "Class": "UScriptClass'VehicleMovementDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "VehicleSeatDataComponent",
+    "Name": "VehicleSeatDataComponent",
+    "Outer": "Default__BPVisSmallBoat_C",
+    "Class": "UScriptClass'VehicleSeatDataComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   }
 ]

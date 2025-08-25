@@ -3,6 +3,6 @@
 
 class ABPVisSignPost_C : public AVisSignPost
 {
-}; // Size: 0x610
+}; // Size: 0x618
 
 #endif

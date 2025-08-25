@@ -6,6 +6,7 @@ UPlayerInventoryWidget::UPlayerInventoryWidget() : UUserWidget(FObjectInitialize
     this->bShowAvatarSubmitButton = false;
     this->SubmitAvatarButton = NULL;
     this->AvatarHeader = NULL;
+    this->AvatarContainer = NULL;
     this->AvatarImage = NULL;
     this->AvatarQualityImage = NULL;
     this->AvatarNameText = NULL;

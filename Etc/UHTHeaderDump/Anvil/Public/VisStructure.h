@@ -74,6 +74,9 @@ protected:
     UGrassRemovalVolumeComponent* GrassRemovalVolume;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bSupportsHealthMaterialUpdates;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UNiagaraSystem*> ScorchEffectAssets;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -84,7 +87,7 @@ public:
 
 private:
     UFUNCTION(BlueprintCallable)
-    void UpdateVisualComponentsByTag(const FName Tag, const bool bIsVisible, const bool bUpdateMaterials);
+    void UpdateVisualComponentsByTag(const FName Tag, const bool bIsVisible);
     
 };
 

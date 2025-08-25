@@ -46,6 +46,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AimedStaminaCost;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bUsableWithLowStamina;
+    
     R2_API FAnvilSimActivity();
 };
 

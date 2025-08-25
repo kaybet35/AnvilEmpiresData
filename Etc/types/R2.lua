@@ -90,7 +90,30 @@ FAnvilOutput = {}
 ---@field bRequireAim boolean
 ---@field StaminaCost float
 ---@field AimedStaminaCost float
+---@field bUsableWithLowStamina boolean
 FAnvilSimActivity = {}
+
+
+
+---@class FAvatarProfile
+---@field AvatarId int32
+---@field Type EAnvilAvatarType
+---@field StackSize int32
+---@field Attributes TArray<float>
+FAvatarProfile = {}
+
+
+
+---@class FAvatarProfilesRequestData
+---@field Profiles TArray<FAvatarProfile>
+FAvatarProfilesRequestData = {}
+
+
+
+---@class FBasedEntityEntry
+---@field Handle FEntityHandle
+---@field RelativeTransform FTransform
+FBasedEntityEntry = {}
 
 
 
@@ -300,6 +323,13 @@ FEntityHandle = {}
 
 
 
+---@class FEntityIdAndMapHash
+---@field EntityId int64
+---@field MapHash int32
+FEntityIdAndMapHash = {}
+
+
+
 ---@class FExplorationSpawnedEntityAvoidInfo
 ---@field EntityTypeToAvoid TSubclassOf<UEntityTemplate>
 ---@field EntityTypeToAvoidVisVar int32
@@ -339,7 +369,6 @@ FFamilyHouseInfoType = {}
 ---@field bHighlight boolean
 ---@field bHide boolean
 ---@field bNoCopyToBuildSite boolean
----@field bInsertToStartOfComponentArray boolean
 FFootprintSharedCompEntry = {}
 
 
@@ -666,6 +695,15 @@ FRefineQueueItem = {}
 
 
 
+---@class FRepairMessage
+---@field TargetName TSubclassOf<UEntityTemplate>
+---@field TargetNameVisVar int32
+---@field NormalizedHealth float
+---@field TargetArea EAnvilTargetAreaType
+FRepairMessage = {}
+
+
+
 ---@class FReplicatedRefineQueueItem
 ---@field Index uint8
 ---@field ItemQuality uint8
@@ -841,11 +879,19 @@ FWorldEntityFamilyCenterData = {}
 
 
 
+---@class FWorldEntityInventoryUserData
+---@field EntityInfo FEntityIdAndMapHash
+---@field Items TArray<FBasicItemCount>
+FWorldEntityInventoryUserData = {}
+
+
+
 ---@class FWorldEntityTownHallData
 ---@field TownHallId int32
 ---@field TownNameOrdinal uint8
 ---@field TownNameId uint8
 ---@field Tier uint8
+---@field bIsSmallCamp boolean
 ---@field NumTotalHouses int32
 ---@field NumUnclaimedHouses int32
 ---@field NumTotalTents int32
@@ -898,6 +944,7 @@ UAdminEnvProxyComponent = {}
 ---@field OverridedAngleOverlapPriority uint8
 ---@field OverridedAngleOverlapMin float
 ---@field NumSnappingRequired uint8
+---@field NotEnoughSnappingErrorMessage EAnvilPlacementStatus
 ---@field MaxOverlapDistOverride float
 UAdvancedSnappingProxyComponent = {}
 
@@ -1042,6 +1089,10 @@ UArmorDataComponent = {}
 UArmorProxyComponent = {}
 
 
+---@class UAvatarGroupProxyComponent : UProxyComponent
+UAvatarGroupProxyComponent = {}
+
+
 ---@class UBarnProxyComponent : UProxyComponent
 ---@field ParentType TSubclassOf<UEntityTemplate>
 ---@field ChildType TSubclassOf<UEntityTemplate>
@@ -1107,6 +1158,7 @@ UBeaconTowerProxyComponent = {}
 ---@field Rotation FRotator
 ---@field Extents FVector
 ---@field SurfaceType EAnvilPhysicalSurfaceType
+---@field TargetArea EAnvilTargetAreaType
 ---@field CollisionMask int32
 ---@field Tags int32
 ---@field StepAngle float
@@ -1156,6 +1208,7 @@ UCannonProxyComponent = {}
 ---@field Radius float
 ---@field HalfHeight float
 ---@field SurfaceType EAnvilPhysicalSurfaceType
+---@field TargetArea EAnvilTargetAreaType
 ---@field CollisionMask int32
 ---@field Tags int32
 ---@field StepAngle float
@@ -1192,6 +1245,7 @@ UCollapsibleProxyComponent = {}
 
 ---@class UCollisionProxyComponent : UProxyComponent
 ---@field SurfaceType EAnvilPhysicalSurfaceType
+---@field TargetArea EAnvilTargetAreaType
 ---@field CollisionMask int32
 ---@field Tags int32
 ---@field StepAngle float
@@ -1232,6 +1286,7 @@ UCombustionProxyComponent = {}
 ---@field Position FVector
 ---@field Rotation FRotator
 ---@field SurfaceType EAnvilPhysicalSurfaceType
+---@field TargetArea EAnvilTargetAreaType
 ---@field CollisionMask int32
 ---@field Tags int32
 ---@field StepAngle float
@@ -1292,7 +1347,9 @@ UCustomNavmeshVolumeComponent = {}
 
 
 ---@class UDataComponent : UActorComponent
+---@field ComponentIndex int32
 UDataComponent = {}
+
 
 
 ---@class UDecayDataComponent : UDataComponent
@@ -1328,6 +1385,7 @@ UDestroyableProxyComponent = {}
 
 
 ---@class UDryingRackDataComponent : UDataComponent
+---@field Recipes TArray<FDryingRackRecipe>
 ---@field ReplicatedCurrentItemDryingProgress float
 UDryingRackDataComponent = {}
 
@@ -1479,6 +1537,7 @@ UFishResourceProxyComponent = {}
 ---@field bAddToNavMesh boolean
 ---@field bUseMeshAsFootprint boolean
 ---@field SurfaceType EAnvilPhysicalSurfaceType
+---@field TargetArea EAnvilTargetAreaType
 ---@field CollisionMask int32
 ---@field Tags int32
 ---@field StepAngle float
@@ -1560,6 +1619,7 @@ UHealthDataComponent = {}
 ---@field AutoRegenStartDelay float
 ---@field HitEffect TSubclassOf<UEntityTemplate>
 ---@field TargetType EAnvilDamageTargetType
+---@field TargetArea EAnvilTargetAreaType
 ---@field VisualBloodAmountRecoveryRate float
 ---@field AttackerVisualBloodAmountRatio float
 ---@field AttackerVisualBloodAmountMax float
@@ -1777,6 +1837,7 @@ ULatticeMineDataComponent = {}
 ---@field GridDimensions FVector
 ---@field ChunkTypes TMap<TSubclassOf<UEntityTemplate>, float>
 ---@field SurfaceType EAnvilPhysicalSurfaceType
+---@field TargetArea EAnvilTargetAreaType
 ---@field CollisionMask int32
 ---@field Tags int32
 ---@field StepAngle float
@@ -1832,6 +1893,7 @@ UMapPostProxyComponent = {}
 ---@field Rotation FRotator
 ---@field ProjectToLandscape uint8
 ---@field SurfaceType EAnvilPhysicalSurfaceType
+---@field TargetArea EAnvilTargetAreaType
 ---@field CollisionMask int32
 ---@field Tags int32
 ---@field StepAngle float
@@ -1919,6 +1981,7 @@ UPassiveDamageProxyComponent = {}
 ---@field CuboidTensorExtents FVector
 ---@field EngineForce float
 ---@field EngineForcePosition FVector
+---@field SeatThrustForce float
 UPhysMovementProxyComponent = {}
 
 
@@ -2130,7 +2193,9 @@ UProjectileMovementProxyComponent = {}
 
 
 ---@class UProxyComponent : UObject
+---@field Order int32
 UProxyComponent = {}
+
 
 
 ---@class UProxyEntityProxyComponent : UProxyComponent
@@ -2310,7 +2375,9 @@ USeekerProxyComponent = {}
 
 
 ---@class UShipMovementDataComponent : UDataComponent
----@field RudderAngle float
+---@field bIsSailOpen boolean
+---@field bIsGangplankLeftOpen boolean
+---@field bIsGangplankRightOpen boolean
 UShipMovementDataComponent = {}
 
 
@@ -2330,20 +2397,20 @@ UShipMovementDataComponent = {}
 ---@field GammaMax float
 ---@field Rudder FControlSurface
 ---@field ThrustVectoringPercent float
+---@field NoSailInputFactor float
+---@field SailInputCurve UCurveFloat
 UShipMovementProxyComponent = {}
 
 
 
 ---@class USiegeTowerDataComponent : UDataComponent
 ---@field RampState EAnvilSiegeTowerState
----@field LadderState EAnvilSiegeTowerState
 ---@field CurrentRampAngle float
 USiegeTowerDataComponent = {}
 
 
 
 ---@class USiegeTowerProxyComponent : UProxyComponent
----@field LadderChangeTime float
 ---@field CloseRampAngle float
 ---@field RampOpenSpeed float
 ---@field ValidRampAngleRange FR2FloatRange
@@ -2418,6 +2485,7 @@ USignPostProxyComponent = {}
 ---@field LastIncomingAttackAngle float
 ---@field Avatar EAnvilAvatarType
 ---@field AvatarXP float
+---@field ControlledAvatarProfile FAvatarProfile
 USimPlayerDataComponent = {}
 
 
@@ -2466,6 +2534,7 @@ USimPlayerProxyComponent = {}
 ---@field SnappingChannel EAnvilSnappingChannelType
 ---@field bPointOnLine boolean
 ---@field SurfaceType EAnvilPhysicalSurfaceType
+---@field TargetArea EAnvilTargetAreaType
 ---@field CollisionMask int32
 ---@field Tags int32
 ---@field StepAngle float
@@ -2498,6 +2567,7 @@ USplineDataComponent = {}
 ---@field EndPiece TSubclassOf<UEntityTemplate>
 ---@field SnappingChannel EAnvilSnappingChannelType
 ---@field SurfaceType EAnvilPhysicalSurfaceType
+---@field TargetArea EAnvilTargetAreaType
 ---@field CollisionMask int32
 ---@field Tags int32
 ---@field StepAngle float
@@ -2760,7 +2830,7 @@ UUpgradeProxyComponent = {}
 ---@class UVehicleMovementDataComponent : UDataComponent
 ---@field FrontAxleCastHit FVector
 ---@field RearAxleCastHit FVector
----@field SeatOccupancyBits uint8
+---@field BasedEntities TArray<FBasedEntityEntry>
 UVehicleMovementDataComponent = {}
 
 
@@ -2774,7 +2844,6 @@ UVehicleMovementDataComponent = {}
 ---@field SprintStaminaDrain float
 ---@field WalkStaminaDrain float
 ---@field RoadFactor float
----@field WindFactor float
 ---@field bGroupVehicle boolean
 ---@field bYawInPlace boolean
 ---@field bLadderMovement boolean
@@ -2804,14 +2873,24 @@ UVehicleMovementProxyComponent = {}
 
 
 
+---@class UVehicleSeatDataComponent : UDataComponent
+---@field Occupant FCompHandleData
+UVehicleSeatDataComponent = {}
+
+
+
 ---@class UVehicleSeatProxyComponent : UProxyComponent
 ---@field MountedStance EAnvilCharacterStance
+---@field TargetArea EAnvilTargetAreaType
 ---@field PlayerOffset FVector
 ---@field PlayerRotation FRotator
 ---@field PlayerExitOffset FVector
 ---@field DismountMaxDelta float
 ---@field bIsDriver boolean
 ---@field bIsLeft boolean
+---@field bSeatThrustInput boolean
+---@field bEngineThrustInput boolean
+---@field bRudderRotationInput boolean
 ---@field bUseMountedWeapon boolean
 ---@field bPrimeMountedWeapon boolean
 ---@field bUseDeployable boolean
@@ -2829,6 +2908,8 @@ UVehicleSeatProxyComponent = {}
 ---@field bUseCustomGeneratedCollisionMask boolean
 ---@field CustomGeneratedCollisionMask int32
 ---@field GeneratedCollisionTags int32
+---@field GeneratedTargetArea EAnvilTargetAreaType
+---@field GeneratedOrder int32
 ---@field VisMeshProfile EVisMeshProfile
 ---@field bMeshVisibility boolean
 ---@field bMeshVisibilityGroup2 boolean

@@ -20,9 +20,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bNoCopyToBuildSite: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 bInsertToStartOfComponentArray: 1;
-    
     R2_API FFootprintSharedCompEntry();
 };
 

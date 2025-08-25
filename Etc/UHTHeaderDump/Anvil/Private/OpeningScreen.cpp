@@ -4,6 +4,7 @@ UOpeningScreen::UOpeningScreen() {
     this->PlayButton = NULL;
     this->ExitButton = NULL;
     this->OptionsButton = NULL;
+    this->CreditsButton = NULL;
     this->VersionText = NULL;
     this->CLText = NULL;
     this->NextTestWidget = NULL;
@@ -37,6 +38,9 @@ void UOpeningScreen::OnDiscordRoleButtonClicked() {
 }
 
 void UOpeningScreen::OnDevModeButtonClicked() {
+}
+
+void UOpeningScreen::OnCreditsButtonClicked() {
 }
 
 bool UOpeningScreen::IsDiscordRoleButtonEnabled() {

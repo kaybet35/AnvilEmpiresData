@@ -3,6 +3,6 @@
 
 class ABPVisBridgeT1_C : public AVisSpline
 {
-}; // Size: 0x568
+}; // Size: 0x570
 
 #endif

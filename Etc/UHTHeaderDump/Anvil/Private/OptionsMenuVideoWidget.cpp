@@ -6,6 +6,11 @@ UOptionsMenuVideoWidget::UOptionsMenuVideoWidget() : UUserWidget(FObjectInitiali
     this->QualityDropdown = NULL;
     this->ShadowQualityDropdown = NULL;
     this->VSyncDropdown = NULL;
+    this->RendererDropdown = NULL;
+    this->RestartRequiredBanner = NULL;
+}
+
+void UOptionsMenuVideoWidget::SetRenderer(const FString& Input) {
 }
 
 void UOptionsMenuVideoWidget::SetFullscreen(const FString& Input) {

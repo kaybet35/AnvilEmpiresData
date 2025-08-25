@@ -1,7 +1,24 @@
 [
   {
+    "Type": "BPPlayerAvatarWidget_C",
+    "Name": "PlayerAvatarWidget",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.BPPlayerAvatarWidget_C'",
+    "Template": {
+      "ObjectName": "BPPlayerAvatarWidget_C'Default__BPPlayerAvatarWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPlayerInventoryWindow_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.7"
+      }
+    }
+  },
+  {
     "Type": "BPPlayerInventoryWidget_C",
-    "Name": "PlayerInventoryPanel",
+    "Name": "PlayerInventoryWidget",
     "Outer": "WidgetTree",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.BPPlayerInventoryWidget_C'",
     "Template": {
@@ -11,8 +28,8 @@
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Slot": {
-        "ObjectName": "CanvasPanelSlot'BPPlayerInventoryWindow_C:WidgetTree.CanvasPanel_32.CanvasPanelSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.3"
+        "ObjectName": "HorizontalBoxSlot'BPPlayerInventoryWindow_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.6"
       }
     }
   },
@@ -36,7 +53,7 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPPlayerInventoryWindow_C:WidgetTree.CanvasPanel_32.CanvasPanelSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.3"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.4"
         }
       ]
     }
@@ -70,11 +87,106 @@
       "bAutoSize": true,
       "Parent": {
         "ObjectName": "CanvasPanel'BPPlayerInventoryWindow_C:WidgetTree.CanvasPanel_32'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.2"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.3"
       },
       "Content": {
-        "ObjectName": "BPPlayerInventoryWidget_C'BPPlayerInventoryWindow_C:WidgetTree.PlayerInventoryPanel'",
+        "ObjectName": "HorizontalBox'BPPlayerInventoryWindow_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.5"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPlayerInventoryWindow_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.6"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPlayerInventoryWindow_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.8"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPlayerInventoryWindow_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPPlayerInventoryWindow_C:WidgetTree.CanvasPanel_32.CanvasPanelSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.4"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_0",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPlayerInventoryWindow_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.5"
+      },
+      "Content": {
+        "ObjectName": "BPPlayerInventoryWidget_C'BPPlayerInventoryWindow_C:WidgetTree.PlayerInventoryWidget'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.1"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_0",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPlayerInventoryWindow_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.5"
+      },
+      "Content": {
+        "ObjectName": "BPPlayerAvatarWidget_C'BPPlayerInventoryWindow_C:WidgetTree.PlayerAvatarWidget'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.0"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "HorizontalBox_0",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPlayerInventoryWindow_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.5"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPPlayerInventoryWindow_C:WidgetTree.Spacer_53'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.9"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_53",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "X": 20.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPlayerInventoryWindow_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.8"
       }
     }
   },
@@ -86,12 +198,12 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPPlayerInventoryWindow_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.5"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.11"
       },
       "bClassRequiresNativeTick": true
     },
     "SuperStruct": {
-      "ObjectName": "Class'HUDWindow'",
+      "ObjectName": "Class'PlayerInventoryWindow'",
       "ObjectPath": "/Script/Anvil"
     },
     "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
@@ -103,7 +215,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPPlayerInventoryWindow_C'Default__BPPlayerInventoryWindow_C'",
-      "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.1"
+      "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.2"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -118,7 +230,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "CanvasPanel'BPPlayerInventoryWindow_C:WidgetTree.CanvasPanel_32'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.2"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWindow.3"
       }
     }
   }

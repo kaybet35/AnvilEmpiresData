@@ -1,0 +1,165 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__VisHitEffectHeavyRam_C",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AudioComponent",
+    "Outer": "Default__VisHitEffectHeavyRam_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'HeavyBatteringRamImpact_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/HeavyRam/HeavyBatteringRamImpact_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectHeavyRam_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectHeavyRam.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "VisHitEffectHeavyRam_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'VisHitEffectHeavyRam_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectHeavyRam.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisEffect'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "VisHitEffectHeavyRam_C'Default__VisHitEffectHeavyRam_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectHeavyRam.9"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "LifetimeDataComponent",
+    "Name": "LifetimeDataComponent",
+    "Outer": "Default__VisHitEffectHeavyRam_C",
+    "Class": "UScriptClass'LifetimeDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraComponent",
+    "Outer": "Default__VisHitEffectHeavyRam_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'BatteringRamImpact'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/BatteringRamImpact.41"
+      },
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectHeavyRam_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectHeavyRam.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "VisHitEffectHeavyRam_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'VisHitEffectHeavyRam_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectHeavyRam.5"
+      },
+      "VariableGuid": "6BA79487-490A9049-4044F78B-58DE27DE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "VisHitEffectHeavyRam_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'VisHitEffectHeavyRam_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectHeavyRam.6"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__VisHitEffectHeavyRam_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectHeavyRam_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectHeavyRam.0"
+      }
+    }
+  },
+  {
+    "Type": "VisHitEffectHeavyRam_C",
+    "Name": "Default__VisHitEffectHeavyRam_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/FX/VisHitEffectHeavyRam.VisHitEffectHeavyRam_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectHeavyRam_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectHeavyRam.0"
+      },
+      "AudioComponent": {
+        "ObjectName": "AudioComponent'Default__VisHitEffectHeavyRam_C:AudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectHeavyRam.1"
+      },
+      "NiagaraComponent": {
+        "ObjectName": "NiagaraComponent'Default__VisHitEffectHeavyRam_C:NiagaraComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectHeavyRam.4"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__VisHitEffectHeavyRam_C:Mesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectHeavyRam.8"
+      },
+      "LifetimeDataComponent": {
+        "ObjectName": "LifetimeDataComponent'Default__VisHitEffectHeavyRam_C:LifetimeDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectHeavyRam.3"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__VisHitEffectHeavyRam_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/FX/VisHitEffectHeavyRam.0"
+      }
+    }
+  }
+]

@@ -3,10 +3,10 @@
 
 class ABPFortBannerHanging_C : public AVisStructure
 {
-    class UVisTeamSkeletalMeshComponent* VisTeamSkeletalMesh;                         // 0x0558 (size: 0x8)
-    class UStaticMeshComponent* WallRef;                                              // 0x0560 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0568 (size: 0x8)
+    class UVisTeamSkeletalMeshComponent* VisTeamSkeletalMesh;                         // 0x0560 (size: 0x8)
+    class UStaticMeshComponent* WallRef;                                              // 0x0568 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0570 (size: 0x8)
 
-}; // Size: 0x570
+}; // Size: 0x578
 
 #endif

@@ -2,13 +2,13 @@
 
 ---@class ABpVisTownCenterTownT3_C : AVisTownCenter
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field Roof UVisStaticMeshComponent
 ---@field VisTeamSkeletalMesh UVisTeamSkeletalMeshComponent
 ---@field VisTeamSkeletalMesh3 UVisTeamSkeletalMeshComponent
 ---@field VisTeamSkeletalMesh2 UVisTeamSkeletalMeshComponent
 ---@field VisTeamSkeletalMesh1 UVisTeamSkeletalMeshComponent
 ---@field FF UVisStaticMeshComponent
 ---@field DebugSphere UStaticMeshComponent
----@field Roof UVisStaticMeshComponent
 ---@field SF UVisStaticMeshComponent
 ---@field Skirt UVisStaticMeshComponent
 ---@field CollapsedMeshSF UVisStaticMeshComponent

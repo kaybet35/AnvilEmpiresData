@@ -1,0 +1,63 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "HeavyRamRelease_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'HeavyRamRelease_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/HeavyRam/HeavyRamRelease_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Impact'",
+        "ObjectPath": "Anvil/Content/Audio/SoundClasses/SFX.3"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'ExplosionConcurrency'",
+          "ObjectPath": "Anvil/Content/Audio/Concurrency/ExplosionConcurrency.0"
+        }
+      ],
+      "Duration": 1.6203854,
+      "MaxDistance": 10000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "Anvil/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "HeavyRamRelease_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'HeavyRamRelease_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/HeavyRam/HeavyRamRelease_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "HeavyRamRelease_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/HeavyRam/HeavyRamRelease.HeavyRamRelease",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'HeavyRamRelease'",
+      "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/HeavyRam/HeavyRamRelease.0"
+    }
+  }
+]

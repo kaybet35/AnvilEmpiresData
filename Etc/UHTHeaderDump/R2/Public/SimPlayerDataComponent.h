@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Transform -FallbackName=Transform
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "AvatarProfile.h"
 #include "DataComponent.h"
 #include "EAnvilAvatarType.h"
 #include "EAnvilCharacterStance.h"
@@ -167,6 +168,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AvatarXP;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FAvatarProfile ControlledAvatarProfile;
     
     USimPlayerDataComponent(const FObjectInitializer& ObjectInitializer);
 

@@ -4,6 +4,7 @@
 #include "ProxyComponent.h"
 #include "ShipMovementProxyComponent.generated.h"
 
+class UCurveFloat;
 class UStaticMesh;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -51,6 +52,12 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ThrustVectoringPercent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float NoSailInputFactor;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UCurveFloat* SailInputCurve;
     
     UShipMovementProxyComponent();
 

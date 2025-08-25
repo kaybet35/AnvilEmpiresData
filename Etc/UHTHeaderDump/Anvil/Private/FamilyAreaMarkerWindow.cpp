@@ -9,6 +9,8 @@ UFamilyAreaMarkerWindow::UFamilyAreaMarkerWindow() {
     this->FamilyAreaRestrictedCheckBox = NULL;
     this->FamilyAreaAllianceButton = NULL;
     this->FamilyInviteDialogWidget = NULL;
+    this->AvatarGroupHeader = NULL;
+    this->AvatarGroupWidget = NULL;
 }
 
 void UFamilyAreaMarkerWindow::OnRemoveAlliedFamilyClicked(const uint64 AlliedFamilyFounderOnlineId) {

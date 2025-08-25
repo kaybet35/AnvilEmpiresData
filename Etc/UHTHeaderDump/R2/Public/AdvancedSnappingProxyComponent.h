@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EAnvilPlacementStatus.h"
 #include "ProxyComponent.h"
 #include "AdvancedSnappingProxyComponent.generated.h"
 
@@ -27,6 +28,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 NumSnappingRequired;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EAnvilPlacementStatus NotEnoughSnappingErrorMessage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxOverlapDistOverride;

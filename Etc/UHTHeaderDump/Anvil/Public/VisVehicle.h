@@ -9,6 +9,7 @@ class UEntityAttachableDataComponent;
 class UHealthDataComponent;
 class UNiagaraComponent;
 class UVehicleMovementDataComponent;
+class UVehicleSeatDataComponent;
 
 UCLASS(Blueprintable)
 class ANVIL_API AVisVehicle : public AVisActor {
@@ -19,6 +20,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEntityAttachableDataComponent* EntityAttachableDataComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UVehicleSeatDataComponent* VehicleSeatDataComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAudioComponent* MoveLoopAudioComponent;

@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
 #include "DeploymentPointMapIcon.h"
+#include "Templates/SubclassOf.h"
 #include "WorldTownCenterMapIcon.generated.h"
 
 class UBorder;
@@ -9,6 +10,7 @@ class UImage;
 class UPanelWidget;
 class UStatusWidget;
 class UTextBlock;
+class UUserWidget;
 class UVerticalBox;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -45,6 +47,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UImage* DetectionRangeCircle;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UUserWidget> WorldEntityInventoryTooltipClass;
     
 public:
     UWorldTownCenterMapIcon();

@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EAnvilPhysicalSurfaceType.h"
+#include "EAnvilTargetAreaType.h"
 #include "ProxyComponent.h"
 #include "CollisionProxyComponent.generated.h"
 
@@ -10,6 +11,9 @@ class R2_API UCollisionProxyComponent : public UProxyComponent {
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilPhysicalSurfaceType SurfaceType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EAnvilTargetAreaType TargetArea;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CollisionMask;

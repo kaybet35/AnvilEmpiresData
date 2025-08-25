@@ -1,0 +1,482 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Outer": "Default__BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "MovementAudioComponent",
+    "Outer": "Default__BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'HeavyRamMove_Cue'",
+        "ObjectPath": "Anvil/Content/Audio/SFX/Vehicles/HeavyRam/HeavyRamMove_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHeavyBatteringRam_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 112.0
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPVisHeavyBatteringRam_C:SimpleConstructionScript_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.16"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisVehicle'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "MountedWeaponData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MountedWeaponDataComponent'",
+          "ObjectPath": "/Script/R2"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HeavyBatteringRam_Bottom_SK",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HeavyBatteringRam_Top_SK",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HeavyBatteringRam_SM",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MeshVisibilityData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MeshVisibilityDataComponent'",
+          "ObjectPath": "/Script/R2"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPVisHeavyBatteringRam_C'Default__BPVisHeavyBatteringRam_C'",
+      "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BPVisHeavyBatteringRam_C",
+    "Name": "Default__BPVisHeavyBatteringRam_C",
+    "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.BPVisHeavyBatteringRam_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VehicleMovementDataComponent": {
+        "ObjectName": "VehicleMovementDataComponent'Default__BPVisHeavyBatteringRam_C:VehicleMovementDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.20"
+      },
+      "EntityAttachableDataComponent": {
+        "ObjectName": "EntityAttachableDataComponent'Default__BPVisHeavyBatteringRam_C:EntityAttachableDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.4"
+      },
+      "VehicleSeatDataComponent": {
+        "ObjectName": "VehicleSeatDataComponent'Default__BPVisHeavyBatteringRam_C:VehicleSeatDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.21"
+      },
+      "MoveLoopAudioComponent": {
+        "ObjectName": "AudioComponent'Default__BPVisHeavyBatteringRam_C:MovementAudioComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.1"
+      },
+      "MoveLoopParticleSystem": {
+        "ObjectName": "NiagaraComponent'Default__BPVisHeavyBatteringRam_C:MovementParticleSystem'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.8"
+      },
+      "HealthDataComponent": {
+        "ObjectName": "HealthDataComponent'Default__BPVisHeavyBatteringRam_C:HealthDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.5"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHeavyBatteringRam_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.0"
+      },
+      "UseWindowType": "EHUDWindowType::GenericStructure",
+      "InteractionIcon": {
+        "ObjectName": "Texture2D'HeavyBatteringRamIcon'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Vehicles/HeavyBatteringRamIcon.0"
+      },
+      "VisDisplayName": {
+        "Namespace": "",
+        "Key": "ED7B104A481960989E8350A2DEBB3BDF",
+        "SourceString": "Heavy Battering Ram",
+        "LocalizedString": "Heavy Battering Ram"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "62325F9F4281B88888E8BA91D0374974",
+        "SourceString": "A siege engine used to damage and destroy enemy gates. Those pushing the ram are provided with cover. Requires 6 people to operate.",
+        "LocalizedString": "A siege engine used to damage and destroy enemy gates. Those pushing the ram are provided with cover. Requires 6 people to operate."
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHeavyBatteringRam_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.0"
+      }
+    }
+  },
+  {
+    "Type": "EntityAttachableDataComponent",
+    "Name": "EntityAttachableDataComponent",
+    "Outer": "Default__BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'EntityAttachableDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "HealthDataComponent",
+    "Name": "HealthDataComponent",
+    "Outer": "Default__BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'HealthDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MeshVisibilityDataComponent",
+    "Name": "MeshVisibilityData_GEN_VARIABLE",
+    "Outer": "BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'MeshVisibilityDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MountedWeaponDataComponent",
+    "Name": "MountedWeaponData_GEN_VARIABLE",
+    "Outer": "BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'MountedWeaponDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "MovementParticleSystem",
+    "Outer": "Default__BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'HeavyRamMove'",
+        "ObjectPath": "Anvil/Content/FX/Niagara/HeavyRamMove.12"
+      },
+      "OverrideParameters": {},
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisHeavyBatteringRam_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPVisHeavyBatteringRam_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.9"
+      },
+      "VariableGuid": "D82AE2A8-4A510B7D-C2FEF0B1-49C05F96",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MountedWeaponDataComponent'",
+        "ObjectPath": "/Script/R2"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MountedWeaponDataComponent'BPVisHeavyBatteringRam_C:MountedWeaponData_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.7"
+      },
+      "VariableGuid": "A494FD9B-4A06E9B8-CF5A3982-886F69A8",
+      "InternalVariableName": "MountedWeaponData"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisHeavyBatteringRam_C:HeavyBatteringRam_Bottom_SK_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.17"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisHeavyBatteringRam_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.13"
+        }
+      ],
+      "VariableGuid": "9F9CD754-490891D8-0CD8749B-DA37A09E",
+      "InternalVariableName": "HeavyBatteringRam_Bottom_SK"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPVisHeavyBatteringRam_C:HeavyBatteringRam_Top_SK_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.18"
+      },
+      "VariableGuid": "F7CC0015-4649351D-B3960DA8-A9085D16",
+      "InternalVariableName": "HeavyBatteringRam_Top_SK"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MeshVisibilityDataComponent'",
+        "ObjectPath": "/Script/R2"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MeshVisibilityDataComponent'BPVisHeavyBatteringRam_C:MeshVisibilityData_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.6"
+      },
+      "VariableGuid": "741BC242-44EC7804-378AF196-68C3E42F",
+      "InternalVariableName": "MeshVisibilityData"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPVisHeavyBatteringRam_C:HeavyBatteringRam_SM_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.19"
+      },
+      "ParentComponentOrVariableName": "ArrowComponent",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisHeavyBatteringRam_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.12"
+        }
+      ],
+      "VariableGuid": "45C7FDDB-471D9A49-66C1ADB8-7A3ECE4E",
+      "InternalVariableName": "HeavyBatteringRam_SM"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisHeavyBatteringRam_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHeavyBatteringRam_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHeavyBatteringRam_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPVisHeavyBatteringRam_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHeavyBatteringRam_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHeavyBatteringRam_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHeavyBatteringRam_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisHeavyBatteringRam_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPVisHeavyBatteringRam_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisHeavyBatteringRam.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "HeavyBatteringRam_Bottom_SK_GEN_VARIABLE",
+    "Outer": "BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'HeavyBatteringRam_ABP_C'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/HeavyBatteringRam/HeavyBatteringRam_ABP.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'HeavyBatteringRam_Bottom_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/HeavyBatteringRam_Bottom_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'HeavyBatteringRam_Bottom_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/HeavyBatteringRam_Bottom_SK.0"
+      },
+      "bReceivesDecals": false
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "HeavyBatteringRam_Top_SK_GEN_VARIABLE",
+    "Outer": "BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'HeavyBatteringRam_Top_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/HeavyBatteringRam_Top_SK.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'HeavyBatteringRam_Top_SK'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/HeavyBatteringRam_Top_SK.0"
+      },
+      "bReceivesDecals": false,
+      "RelativeLocation": {
+        "X": 0.060640596,
+        "Y": 0.0,
+        "Z": 2.3054099E-08
+      },
+      "ComponentTags": [
+        "ToggleVisibility"
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "HeavyBatteringRam_SM_GEN_VARIABLE",
+    "Outer": "BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'HeavyBatteringRam_SM'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/HeavyBatteringRam_SM.2"
+      },
+      "bReceivesDecals": false,
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "VehicleMovementDataComponent",
+    "Name": "VehicleMovementDataComponent",
+    "Outer": "Default__BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'VehicleMovementDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "VehicleSeatDataComponent",
+    "Name": "VehicleSeatDataComponent",
+    "Outer": "Default__BPVisHeavyBatteringRam_C",
+    "Class": "UScriptClass'VehicleSeatDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  }
+]

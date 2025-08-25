@@ -131,7 +131,7 @@
           },
           "SpawnedEntityVisVar": 0,
           "MinDistFromFamilyArea": 1000.0,
-          "ChanceToSpawnPerMin": 6.0,
+          "ChanceToSpawnPerMin": 3.0,
           "MinDistanceBetweenSpawns": 3000.0,
           "MaxNumInRadius": 1,
           "bRequiresNavmesh": true,
@@ -158,7 +158,7 @@
           },
           "SpawnedEntityVisVar": 0,
           "MinDistFromFamilyArea": 1000.0,
-          "ChanceToSpawnPerMin": 6.0,
+          "ChanceToSpawnPerMin": 3.0,
           "MinDistanceBetweenSpawns": 3000.0,
           "MaxNumInRadius": 2,
           "bRequiresNavmesh": true,
@@ -1045,7 +1045,46 @@
           "CustomStackLimits": []
         },
         {
-          "ProxyRepeat": 10,
+          "ProxyRepeat": 1,
+          "Base": {
+            "CodeName": null,
+            "CodeNameVisVar": 0,
+            "UnderlyingCodeName": null,
+            "UnderlyingCodeNameVisVar": 0,
+            "Durability": 100.0,
+            "Count": 0,
+            "ItemFlags": [],
+            "ItemFlagsVisVar": 0,
+            "Payload": 0
+          },
+          "StackLimit": 1,
+          "bOr": false,
+          "bAllowWithdrawal": true,
+          "bIsPlayerEquipmentSlot": false,
+          "bCheckDedicatedUnderlyingItem": true,
+          "AcceptedTags": [
+            "EAnvilItemTag::WeaponStorage"
+          ],
+          "AcceptedTagsVisVar": 0,
+          "RequiredTags": [],
+          "RequiredTagsVisVar": 0,
+          "ProhibitedTags": [
+            "EAnvilItemTag::Large",
+            "EAnvilItemTag::Ammunition",
+            "EAnvilItemTag::HeavyTool"
+          ],
+          "ProhibitedTagsVisVar": 0,
+          "DedicatedItemType": null,
+          "DedicatedItemTypeVisVar": 0,
+          "DedicatedUnderlyingItem": null,
+          "DedicatedUnderlyingItemVisVar": 0,
+          "RequiredEnablingItem": null,
+          "RequiredEnablingItemVisVar": 0,
+          "BackgroundType": "EAnvilItemSlotBackgroundType::Belt",
+          "CustomStackLimits": []
+        },
+        {
+          "ProxyRepeat": 9,
           "Base": {
             "CodeName": null,
             "CodeNameVisVar": 0,
@@ -1241,7 +1280,7 @@
       "SwimMovementAcceleration": 2000.0,
       "SwimStaminaDrain": 7.5,
       "FallingDistRange": {
-        "Min": 1000.0,
+        "Min": 750.0,
         "Max": 2000.0
       },
       "FallingDamageRange": {

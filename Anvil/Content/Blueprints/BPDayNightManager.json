@@ -20,6 +20,10 @@
     },
     "Children": [
       {
+        "ObjectName": "Function'BPDayNightManager_C:LoadKeyFrames'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPDayNightManager.3"
+      },
+      {
         "ObjectName": "Function'BPDayNightManager_C:SetKeyFrame'",
         "ObjectPath": "Anvil/Content/Blueprints/BPDayNightManager.5"
       },
@@ -30,10 +34,6 @@
       {
         "ObjectName": "Function'BPDayNightManager_C:UserConstructionScript'",
         "ObjectPath": "Anvil/Content/Blueprints/BPDayNightManager.7"
-      },
-      {
-        "ObjectName": "Function'BPDayNightManager_C:ReceiveBeginPlay'",
-        "ObjectPath": "Anvil/Content/Blueprints/BPDayNightManager.3"
       },
       {
         "ObjectName": "Function'BPDayNightManager_C:ReceiveTick'",
@@ -80,17 +80,6 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "MoonLight",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
-        "PropertyClass": {
-          "ObjectName": "Class'DirectionalLight'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "AtmosphericLight",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -123,47 +112,11 @@
         }
       },
       {
-        "Type": "StructProperty",
-        "Name": "InitialLightRotation",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 24,
-        "PropertyFlags": "Edit | BlueprintVisible",
-        "Struct": {
-          "ObjectName": "ScriptStruct'Rotator'",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "InitialMoonLightRotation",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 24,
-        "PropertyFlags": "Edit | BlueprintVisible",
-        "Struct": {
-          "ObjectName": "ScriptStruct'Rotator'",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
         "Type": "DoubleProperty",
         "Name": "DebugTimeOfDayOffset",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "Edit | BlueprintVisible"
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "NightStart",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 4,
-        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "NightEnd",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 4,
-        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
       },
       {
         "Type": "IntProperty",
@@ -188,23 +141,6 @@
         }
       },
       {
-        "Type": "ArrayProperty",
-        "Name": "KeyFrames",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 16,
-        "PropertyFlags": "Edit | BlueprintVisible",
-        "Inner": {
-          "Type": "StructProperty",
-          "Name": "KeyFrames",
-          "Flags": "RF_Public",
-          "ElementSize": 112,
-          "Struct": {
-            "ObjectName": "ScriptStruct'DayNightKeyFrame'",
-            "ObjectPath": "/Script/Anvil"
-          }
-        }
-      },
-      {
         "Type": "IntProperty",
         "Name": "KeyFrameIndex",
         "Flags": "RF_Public | RF_LoadCompleted",
@@ -224,6 +160,23 @@
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "KeyFrames",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "KeyFrames",
+          "Flags": "RF_Public",
+          "ElementSize": 120,
+          "Struct": {
+            "ObjectName": "ScriptStruct'DayNightKeyFrame'",
+            "ObjectPath": "/Script/Anvil"
+          }
+        }
       }
     ],
     "FuncMap": {
@@ -234,10 +187,6 @@
       "ReceiveTick": {
         "ObjectName": "Function'BPDayNightManager_C:ReceiveTick'",
         "ObjectPath": "Anvil/Content/Blueprints/BPDayNightManager.4"
-      },
-      "ReceiveBeginPlay": {
-        "ObjectName": "Function'BPDayNightManager_C:ReceiveBeginPlay'",
-        "ObjectPath": "Anvil/Content/Blueprints/BPDayNightManager.3"
       },
       "UserConstructionScript": {
         "ObjectName": "Function'BPDayNightManager_C:UserConstructionScript'",
@@ -250,6 +199,10 @@
       "SetKeyFrame": {
         "ObjectName": "Function'BPDayNightManager_C:SetKeyFrame'",
         "ObjectPath": "Anvil/Content/Blueprints/BPDayNightManager.5"
+      },
+      "LoadKeyFrames": {
+        "ObjectName": "Function'BPDayNightManager_C:LoadKeyFrames'",
+        "ObjectPath": "Anvil/Content/Blueprints/BPDayNightManager.3"
       }
     },
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -274,22 +227,410 @@
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "UberGraphFrame": {},
-      "InitialLightRotation": {
-        "Pitch": 0.0,
-        "Yaw": 0.0,
-        "Roll": 0.0
-      },
-      "InitialMoonLightRotation": {
-        "Pitch": 0.0,
-        "Yaw": 0.0,
-        "Roll": 0.0
-      },
       "DayLength": 86400,
       "MapInfo": {
         "ObjectName": "BlueprintGeneratedClass'MapInfo_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/MapInfo.0"
       },
-      "KeyFrameIndex": -1
+      "KeyFrameIndex": -1,
+      "KeyFrames": [
+        {
+          "Label": "Noon",
+          "NormalizedPosition": 0.0,
+          "SunLightRotation": {
+            "Pitch": -90.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "AtmosphericLightIntensity": 0.0,
+          "AtmosphericLightColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.0,
+            "Hex": "000000"
+          },
+          "SunLightIntensity": 9.0,
+          "SunLightColor": {
+            "R": 0.992157,
+            "G": 1.0,
+            "B": 0.894118,
+            "A": 0.0,
+            "Hex": "FFFFF3"
+          },
+          "SunLightShadowBias": 0.5,
+          "SunLightShadowSlopeBias": 0.5,
+          "AtmosphereRayleighScatteringColor": {
+            "R": 0.175287,
+            "G": 0.409607,
+            "B": 1.0,
+            "A": 30.21148,
+            "Hex": "74ACFF"
+          },
+          "WhiteBalanceTemp": 6500.0,
+          "WhiteBalanceTint": 0.0
+        },
+        {
+          "Label": "Noon Transition",
+          "NormalizedPosition": 0.3,
+          "SunLightRotation": {
+            "Pitch": -90.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "AtmosphericLightIntensity": 0.0,
+          "AtmosphericLightColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.0,
+            "Hex": "000000"
+          },
+          "SunLightIntensity": 11.0,
+          "SunLightColor": {
+            "R": 0.992157,
+            "G": 1.0,
+            "B": 0.894118,
+            "A": 0.0,
+            "Hex": "FFFFF3"
+          },
+          "SunLightShadowBias": 0.6,
+          "SunLightShadowSlopeBias": 0.6,
+          "AtmosphereRayleighScatteringColor": {
+            "R": 0.175287,
+            "G": 0.409607,
+            "B": 1.0,
+            "A": 30.21148,
+            "Hex": "74ACFF"
+          },
+          "WhiteBalanceTemp": 6500.0,
+          "WhiteBalanceTint": 0.0
+        },
+        {
+          "Label": "Sunset",
+          "NormalizedPosition": 0.355,
+          "SunLightRotation": {
+            "Pitch": -90.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "AtmosphericLightIntensity": 0.0,
+          "AtmosphericLightColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.0,
+            "Hex": "000000"
+          },
+          "SunLightIntensity": 15.0,
+          "SunLightColor": {
+            "R": 1.0,
+            "G": 0.934777,
+            "B": 0.901042,
+            "A": 0.0,
+            "Hex": "FFF8F4"
+          },
+          "SunLightShadowBias": 0.8,
+          "SunLightShadowSlopeBias": 0.7,
+          "AtmosphereRayleighScatteringColor": {
+            "R": 0.239088,
+            "G": 0.310232,
+            "B": 0.791667,
+            "A": 1.0,
+            "Hex": "8697E6"
+          },
+          "WhiteBalanceTemp": 6000.0,
+          "WhiteBalanceTint": 0.0
+        },
+        {
+          "Label": "Sunset Transition",
+          "NormalizedPosition": 0.3749,
+          "SunLightRotation": {
+            "Pitch": -90.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "AtmosphericLightIntensity": 10.0,
+          "AtmosphericLightColor": {
+            "R": 0.129732,
+            "G": 0.08625,
+            "B": 0.25875,
+            "A": 0.0,
+            "Hex": "65538B"
+          },
+          "SunLightIntensity": 0.0,
+          "SunLightColor": {
+            "R": 1.0,
+            "G": 0.549527,
+            "B": 0.408814,
+            "A": 0.0,
+            "Hex": "FFC4AB"
+          },
+          "SunLightShadowBias": 1.0,
+          "SunLightShadowSlopeBias": 1.0,
+          "AtmosphereRayleighScatteringColor": {
+            "R": 0.055718,
+            "G": 0.058836,
+            "B": 0.135417,
+            "A": 1.0,
+            "Hex": "434467"
+          },
+          "WhiteBalanceTemp": 6000.0,
+          "WhiteBalanceTint": 0.0
+        },
+        {
+          "Label": "Night",
+          "NormalizedPosition": 0.38,
+          "SunLightRotation": {
+            "Pitch": -90.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "AtmosphericLightIntensity": 6.0,
+          "AtmosphericLightColor": {
+            "R": 0.174561,
+            "G": 0.184561,
+            "B": 0.515625,
+            "A": 0.0,
+            "Hex": "7477BE"
+          },
+          "SunLightIntensity": 8.0,
+          "SunLightColor": {
+            "R": 1.0,
+            "G": 0.545098,
+            "B": 0.309804,
+            "A": 0.0,
+            "Hex": "FFC397"
+          },
+          "SunLightShadowBias": 0.7,
+          "SunLightShadowSlopeBias": 0.7,
+          "AtmosphereRayleighScatteringColor": {
+            "R": 0.1,
+            "G": 0.080624,
+            "B": 0.09798,
+            "A": 1.0,
+            "Hex": "595058"
+          },
+          "WhiteBalanceTemp": 5600.0,
+          "WhiteBalanceTint": 0.0
+        },
+        {
+          "Label": "Night",
+          "NormalizedPosition": 0.4,
+          "SunLightRotation": {
+            "Pitch": -90.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "AtmosphericLightIntensity": 4.0,
+          "AtmosphericLightColor": {
+            "R": 0.163303,
+            "G": 0.224395,
+            "B": 0.447917,
+            "A": 0.0,
+            "Hex": "7082B3"
+          },
+          "SunLightIntensity": 8.0,
+          "SunLightColor": {
+            "R": 1.0,
+            "G": 0.545098,
+            "B": 0.309804,
+            "A": 0.0,
+            "Hex": "FFC397"
+          },
+          "SunLightShadowBias": 0.7,
+          "SunLightShadowSlopeBias": 0.7,
+          "AtmosphereRayleighScatteringColor": {
+            "R": 0.1,
+            "G": 0.080624,
+            "B": 0.09798,
+            "A": 1.0,
+            "Hex": "595058"
+          },
+          "WhiteBalanceTemp": 5600.0,
+          "WhiteBalanceTint": 0.0
+        },
+        {
+          "Label": "Night Transition",
+          "NormalizedPosition": 0.59,
+          "SunLightRotation": {
+            "Pitch": -90.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "AtmosphericLightIntensity": 1.0,
+          "AtmosphericLightColor": {
+            "R": 0.197026,
+            "G": 0.193604,
+            "B": 0.317708,
+            "A": 0.0,
+            "Hex": "7B7A99"
+          },
+          "SunLightIntensity": 8.0,
+          "SunLightColor": {
+            "R": 0.984314,
+            "G": 1.0,
+            "B": 0.776471,
+            "A": 0.0,
+            "Hex": "FEFFE4"
+          },
+          "SunLightShadowBias": 0.5,
+          "SunLightShadowSlopeBias": 0.5,
+          "AtmosphereRayleighScatteringColor": {
+            "R": 0.1,
+            "G": 0.080624,
+            "B": 0.09798,
+            "A": 1.0,
+            "Hex": "595058"
+          },
+          "WhiteBalanceTemp": 5600.0,
+          "WhiteBalanceTint": 0.0
+        },
+        {
+          "Label": "Dawn",
+          "NormalizedPosition": 0.625,
+          "SunLightRotation": {
+            "Pitch": -90.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "AtmosphericLightIntensity": 4.0,
+          "AtmosphericLightColor": {
+            "R": 0.152081,
+            "G": 0.251155,
+            "B": 1.0,
+            "A": 0.0,
+            "Hex": "6D89FF"
+          },
+          "SunLightIntensity": 30.0,
+          "SunLightColor": {
+            "R": 0.984314,
+            "G": 1.0,
+            "B": 0.776471,
+            "A": 0.0,
+            "Hex": "FEFFE4"
+          },
+          "SunLightShadowBias": 1.0,
+          "SunLightShadowSlopeBias": 1.0,
+          "AtmosphereRayleighScatteringColor": {
+            "R": 0.227,
+            "G": 0.132819,
+            "B": 0.217341,
+            "A": 1.0,
+            "Hex": "836680"
+          },
+          "WhiteBalanceTemp": 6000.0,
+          "WhiteBalanceTint": 0.0
+        },
+        {
+          "Label": "Dawn Transition",
+          "NormalizedPosition": 0.65,
+          "SunLightRotation": {
+            "Pitch": -90.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "AtmosphericLightIntensity": 3.0,
+          "AtmosphericLightColor": {
+            "R": 0.355209,
+            "G": 0.273141,
+            "B": 0.546875,
+            "A": 0.0,
+            "Hex": "A18FC3"
+          },
+          "SunLightIntensity": 35.0,
+          "SunLightColor": {
+            "R": 1.0,
+            "G": 0.594815,
+            "B": 0.433272,
+            "A": 0.0,
+            "Hex": "FFCBB0"
+          },
+          "SunLightShadowBias": 0.8,
+          "SunLightShadowSlopeBias": 0.8,
+          "AtmosphereRayleighScatteringColor": {
+            "R": 0.086471,
+            "G": 0.077751,
+            "B": 0.3,
+            "A": 1.0,
+            "Hex": "534F95"
+          },
+          "WhiteBalanceTemp": 6500.0,
+          "WhiteBalanceTint": 0.0
+        },
+        {
+          "Label": "Morning",
+          "NormalizedPosition": 0.81,
+          "SunLightRotation": {
+            "Pitch": -90.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "AtmosphericLightIntensity": 0.0,
+          "AtmosphericLightColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.0,
+            "Hex": "000000"
+          },
+          "SunLightIntensity": 13.0,
+          "SunLightColor": {
+            "R": 0.984314,
+            "G": 1.0,
+            "B": 0.776471,
+            "A": 0.0,
+            "Hex": "FEFFE4"
+          },
+          "SunLightShadowBias": 0.7,
+          "SunLightShadowSlopeBias": 0.7,
+          "AtmosphereRayleighScatteringColor": {
+            "R": 0.266587,
+            "G": 0.611197,
+            "B": 0.885,
+            "A": 1.0,
+            "Hex": "8DCDF2"
+          },
+          "WhiteBalanceTemp": 6800.0,
+          "WhiteBalanceTint": 0.0
+        },
+        {
+          "Label": "Morning Transition",
+          "NormalizedPosition": 0.85,
+          "SunLightRotation": {
+            "Pitch": -90.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "AtmosphericLightIntensity": 0.0,
+          "AtmosphericLightColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.0,
+            "Hex": "000000"
+          },
+          "SunLightIntensity": 11.0,
+          "SunLightColor": {
+            "R": 0.984314,
+            "G": 1.0,
+            "B": 0.776471,
+            "A": 0.0,
+            "Hex": "FEFFE4"
+          },
+          "SunLightShadowBias": 0.5,
+          "SunLightShadowSlopeBias": 0.5,
+          "AtmosphereRayleighScatteringColor": {
+            "R": 0.172549,
+            "G": 0.407843,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "73ABFF"
+          },
+          "WhiteBalanceTemp": 6600.0,
+          "WhiteBalanceTint": 0.0
+        }
+      ]
     }
   },
   {
@@ -383,15 +724,11 @@
   },
   {
     "Type": "Function",
-    "Name": "ReceiveBeginPlay",
+    "Name": "LoadKeyFrames",
     "Outer": "BPDayNightManager_C",
     "Class": "UScriptClass'Function'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "SuperStruct": {
-      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
-      "ObjectPath": "/Script/Engine"
-    },
-    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
   },
   {
     "Type": "Function",
@@ -436,6 +773,13 @@
         "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
       },
       {
+        "Type": "DoubleProperty",
+        "Name": "KeyFrameAlpha",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
         "Type": "BoolProperty",
         "Name": "Temp_bool_Variable",
         "Flags": "RF_Public",
@@ -472,6 +816,12 @@
         "ElementSize": 4
       },
       {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
         "Type": "IntProperty",
         "Name": "CallFunc_Percent_IntInt_ReturnValue",
         "Flags": "RF_Public",
@@ -479,15 +829,25 @@
       },
       {
         "Type": "DoubleProperty",
-        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue",
+        "Name": "CallFunc_Lerp_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 8
       },
       {
         "Type": "DoubleProperty",
-        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue_1",
+        "Name": "CallFunc_Lerp_ReturnValue_1",
         "Flags": "RF_Public",
         "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_LinearColorLerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "ScriptStruct'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
       },
       {
         "Type": "DoubleProperty",
@@ -497,19 +857,7 @@
       },
       {
         "Type": "DoubleProperty",
-        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue_2",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue_1",
+        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue_1",
         "Flags": "RF_Public",
         "ElementSize": 8
       },
@@ -524,6 +872,78 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_LinearColorLerp_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "ScriptStruct'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_LinearColorLerp_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "ScriptStruct'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_RLerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
       },
       {
         "Type": "BoolProperty",
@@ -545,13 +965,13 @@
       },
       {
         "Type": "DoubleProperty",
-        "Name": "K2Node_Select_Default",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue_2",
         "Flags": "RF_Public",
         "ElementSize": 8
       },
       {
         "Type": "DoubleProperty",
-        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue_2",
+        "Name": "K2Node_Select_Default",
         "Flags": "RF_Public",
         "ElementSize": 8
       },
@@ -574,85 +994,14 @@
         "ElementSize": 8
       },
       {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Lerp_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Lerp_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Lerp_ReturnValue_2",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
         "Type": "StructProperty",
-        "Name": "CallFunc_LinearColorLerp_ReturnValue",
+        "Name": "CallFunc_K2_SetWorldRotation_SweepHitResult",
         "Flags": "RF_Public",
-        "ElementSize": 16,
+        "ElementSize": 240,
+        "PropertyFlags": "ContainsInstancedReference",
         "Struct": {
-          "ObjectName": "ScriptStruct'LinearColor'",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_LinearColorLerp_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 16,
-        "Struct": {
-          "ObjectName": "ScriptStruct'LinearColor'",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Lerp_ReturnValue_3",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Lerp_ReturnValue_4",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Lerp_ReturnValue_5",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_LinearColorLerp_ReturnValue_2",
-        "Flags": "RF_Public",
-        "ElementSize": 16,
-        "Struct": {
-          "ObjectName": "ScriptStruct'LinearColor'",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Lerp_ReturnValue_6",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_LinearColorLerp_ReturnValue_3",
-        "Flags": "RF_Public",
-        "ElementSize": 16,
-        "Struct": {
-          "ObjectName": "ScriptStruct'LinearColor'",
-          "ObjectPath": "/Script/CoreUObject"
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
         }
       },
       {
@@ -728,10 +1077,10 @@
         "ElementSize": 8
       },
       {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Lerp_A_ImplicitCast_6",
+        "Type": "FloatProperty",
+        "Name": "CallFunc_LinearColorLerp_Alpha_ImplicitCast",
         "Flags": "RF_Public",
-        "ElementSize": 8
+        "ElementSize": 4
       },
       {
         "Type": "DoubleProperty",
@@ -788,42 +1137,6 @@
         "ElementSize": 8
       },
       {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Lerp_B_ImplicitCast_6",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_LinearColorLerp_Alpha_ImplicitCast",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_LinearColorLerp_Alpha_ImplicitCast_1",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_LinearColorLerp_Alpha_ImplicitCast_2",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_LinearColorLerp_Alpha_ImplicitCast_3",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_SetIntensity_NewIntensity_ImplicitCast",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
         "Type": "FloatProperty",
         "Name": "K2Node_SetFieldsInStruct_WhiteTint_ImplicitCast",
         "Flags": "RF_Public",
@@ -837,7 +1150,7 @@
       },
       {
         "Type": "FloatProperty",
-        "Name": "CallFunc_SetIntensity_NewIntensity_ImplicitCast_1",
+        "Name": "CallFunc_LinearColorLerp_Alpha_ImplicitCast_1",
         "Flags": "RF_Public",
         "ElementSize": 4
       },
@@ -855,12 +1168,30 @@
       },
       {
         "Type": "FloatProperty",
-        "Name": "CallFunc_SetIntensity_NewIntensity_ImplicitCast_2",
+        "Name": "CallFunc_LinearColorLerp_Alpha_ImplicitCast_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetIntensity_NewIntensity_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_RLerp_Alpha_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetIntensity_NewIntensity_ImplicitCast_1",
         "Flags": "RF_Public",
         "ElementSize": 4
       }
     ],
-    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
   },
   {
     "Type": "Function",
@@ -891,19 +1222,7 @@
       },
       {
         "Type": "IntProperty",
-        "Name": "CallFunc_FTrunc_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
         "Name": "CallFunc_Subtract_IntInt_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_FTrunc_ReturnValue_1",
         "Flags": "RF_Public",
         "ElementSize": 4
       },
@@ -914,28 +1233,32 @@
         "ElementSize": 4
       },
       {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_Conv_IntToFloat_ReturnValue_1",
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 4
       },
       {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue",
+        "Type": "IntProperty",
+        "Name": "CallFunc_Subtract_IntInt_ReturnValue_1",
         "Flags": "RF_Public",
-        "ElementSize": 8
+        "ElementSize": 4
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Less_DoubleDouble_ReturnValue",
+        "Type": "StructProperty",
+        "Name": "CallFunc_Array_Get_Item",
         "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
+        "ElementSize": 120,
+        "Struct": {
+          "ObjectName": "ScriptStruct'DayNightKeyFrame'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
       },
       {
         "Type": "BoolProperty",
@@ -951,155 +1274,7 @@
       },
       {
         "Type": "IntProperty",
-        "Name": "CallFunc_Subtract_IntInt_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Subtract_IntInt_ReturnValue_2",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Not_PreBool_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Divide_IntInt_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_Conv_IntToFloat_ReturnValue_2",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_Conv_IntToFloat_ReturnValue_3",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue_2",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "Temp_bool_Variable",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Loop_Counter_Variable",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "K2Node_Select_Default",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_2",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Add_IntInt_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_MakeRotator_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 24,
-        "Struct": {
-          "ObjectName": "ScriptStruct'Rotator'",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_Conv_IntToFloat_ReturnValue_4",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue_2",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Subtract_IntInt_ReturnValue_3",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_Conv_IntToFloat_ReturnValue_5",
+        "Name": "CallFunc_Array_Length_ReturnValue_2",
         "Flags": "RF_Public",
         "ElementSize": 4
       },
@@ -1116,20 +1291,8 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue_3",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_3",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
         "Type": "BoolProperty",
-        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -1141,59 +1304,15 @@
       },
       {
         "Type": "DoubleProperty",
-        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue_3",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 8
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_BooleanAND_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_MakeRotator_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 24,
-        "Struct": {
-          "ObjectName": "ScriptStruct'Rotator'",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_Array_Get_Item",
-        "Flags": "RF_Public",
-        "ElementSize": 112,
-        "Struct": {
-          "ObjectName": "ScriptStruct'DayNightKeyFrame'",
-          "ObjectPath": "/Script/Anvil"
-        }
       },
       {
         "Type": "IntProperty",
-        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Name": "Temp_int_Loop_Counter_Variable",
         "Flags": "RF_Public",
         "ElementSize": 4
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
       },
       {
         "Type": "BoolProperty",
@@ -1209,7 +1328,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_BooleanAND_ReturnValue_1",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -1221,19 +1340,13 @@
       },
       {
         "Type": "IntProperty",
-        "Name": "CallFunc_Array_Length_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Array_Length_ReturnValue_2",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 4
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_Greater_IntInt_ReturnValue_1",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -1242,156 +1355,12 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Subtract_IntInt_ReturnValue_4",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_ComposeRotators_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 24,
-        "Struct": {
-          "ObjectName": "ScriptStruct'Rotator'",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_K2_SetRelativeRotation_SweepHitResult",
-        "Flags": "RF_Public",
-        "ElementSize": 240,
-        "PropertyFlags": "ContainsInstancedReference",
-        "Struct": {
-          "ObjectName": "ScriptStruct'HitResult'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_IsVisible_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Not_PreBool_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_ComposeRotators_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 24,
-        "Struct": {
-          "ObjectName": "ScriptStruct'Rotator'",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_IsVisible_ReturnValue_1",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Not_PreBool_ReturnValue_2",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_K2_SetRelativeRotation_SweepHitResult_1",
-        "Flags": "RF_Public",
-        "ElementSize": 240,
-        "PropertyFlags": "ContainsInstancedReference",
-        "Struct": {
-          "ObjectName": "ScriptStruct'HitResult'",
-          "ObjectPath": "/Script/Engine"
-        }
       },
       {
         "Type": "DoubleProperty",
         "Name": "CallFunc_Divide_DoubleDouble_B_ImplicitCast",
         "Flags": "RF_Public",
         "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Less_DoubleDouble_B_ImplicitCast",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Divide_DoubleDouble_B_ImplicitCast_1",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Divide_DoubleDouble_B_ImplicitCast_2",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Subtract_DoubleDouble_B_ImplicitCast",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_MakeRotator_Pitch_ImplicitCast",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Subtract_DoubleDouble_B_ImplicitCast_1",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Divide_DoubleDouble_B_ImplicitCast_3",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_MakeRotator_Pitch_ImplicitCast_1",
-        "Flags": "RF_Public",
-        "ElementSize": 4
       },
       {
         "Type": "DoubleProperty",

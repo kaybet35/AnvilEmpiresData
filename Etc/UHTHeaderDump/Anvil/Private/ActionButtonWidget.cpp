@@ -1,8 +1,7 @@
 #include "ActionButtonWidget.h"
 
 UActionButtonWidget::UActionButtonWidget() : UUserWidget(FObjectInitializer::Get()) {
-    this->ActionButtonType = EActionButtonType::None;
-    this->EntityActionType = EAnvilEntityActionType::None;
+    this->ActionButtonType = EAnvilEntityActionType::None;
     this->ButtonImageOverride = NULL;
     this->ActionButton = NULL;
     this->CallForReinforcementsCue = NULL;

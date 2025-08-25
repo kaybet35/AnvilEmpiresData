@@ -35,7 +35,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisTorchStaticT1_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.18"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.17"
       }
     },
     "SuperStruct": {
@@ -75,17 +75,6 @@
           "ObjectName": "Class'NiagaraComponent'",
           "ObjectPath": "/Script/Niagara"
         }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Mesh",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'StaticMeshComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -107,12 +96,21 @@
     "Type": "BPVisTorchStaticT1_C",
     "Name": "Default__BPVisTorchStaticT1_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.BPVisTorchStaticT1_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CombustionDataComponent": {
         "ObjectName": "CombustionDataComponent'Default__BPVisTorchStaticT1_C:CombustionDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.5"
       },
+      "VisibleMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisTorchStaticT1_C:VisibleMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.20"
+      },
+      "ShadowMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPVisTorchStaticT1_C:ShadowMesh'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.19"
+      },
+      "ShadowMeshVerticalScale": 0.7,
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisTorchStaticT1_C:ScaffoldingComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.25"
@@ -239,7 +237,7 @@
     "Properties": {
       "SplineDataComponent": {
         "ObjectName": "SplineDataComponent'Default__BPVisTorchStaticT1_C:GrassRemovalVolume.SplineDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.19"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.18"
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPVisTorchStaticT1_C:ArrowComponent'",
@@ -361,33 +359,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPVisTorchStaticT1_C:Mesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.20"
-      },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPVisTorchStaticT1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.15"
-        }
-      ],
-      "VariableGuid": "71B933C3-4CB192D3-777CD185-D8E75C2A",
-      "InternalVariableName": "Mesh"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_2",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -401,6 +372,8 @@
         "ObjectName": "VisPointLightComponent'BPVisTorchStaticT1_C:VisPointLight_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.24"
       },
+      "ParentComponentOrVariableName": "VisibleMesh",
+      "bIsParentComponentNative": true,
       "VariableGuid": "68DE1DFA-4BD5AE7B-696EBBB0-ADA7B7E2",
       "InternalVariableName": "VisPointLight"
     }
@@ -456,34 +429,30 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisTorchStaticT1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.14"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisTorchStaticT1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.16"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisTorchStaticT1_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.17"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisTorchStaticT1_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.14"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPVisTorchStaticT1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.14"
-        },
-        {
           "ObjectName": "SCS_Node'BPVisTorchStaticT1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.16"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.15"
         },
         {
           "ObjectName": "SCS_Node'BPVisTorchStaticT1_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.17"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.16"
         },
         {
           "ObjectName": "SCS_Node'BPVisTorchStaticT1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.15"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.14"
         }
       ],
       "DefaultSceneRootNode": {
@@ -501,22 +470,55 @@
   },
   {
     "Type": "StaticMeshComponent",
-    "Name": "Mesh_GEN_VARIABLE",
-    "Outer": "BPVisTorchStaticT1_C",
+    "Name": "ShadowMesh",
+    "Outer": "Default__BPVisTorchStaticT1_C",
     "Class": "UScriptClass'StaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "StaticMesh": {
         "ObjectName": "StaticMesh'TorchStatic'",
         "ObjectPath": "Anvil/Content/Meshes/Structures/TorchStatic.2"
       },
-      "bUseDefaultCollision": true,
       "OverrideMaterials": [
-        null
+        {
+          "ObjectName": "Material'M_ShadowMesh'",
+          "ObjectPath": "Anvil/Content/Materials/M_ShadowMesh.0"
+        },
+        {
+          "ObjectName": "Material'M_ShadowMesh'",
+          "ObjectPath": "Anvil/Content/Materials/M_ShadowMesh.0"
+        },
+        {
+          "ObjectName": "Material'M_ShadowMesh'",
+          "ObjectPath": "Anvil/Content/Materials/M_ShadowMesh.0"
+        },
+        {
+          "ObjectName": "Material'M_ShadowMesh'",
+          "ObjectPath": "Anvil/Content/Materials/M_ShadowMesh.0"
+        }
       ],
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisTorchStaticT1_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.0"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "VisibleMesh",
+    "Outer": "Default__BPVisTorchStaticT1_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'TorchStatic'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/TorchStatic.2"
+      },
       "bReceivesDecals": false,
-      "BodyInstance": {
-        "ObjectType": "ECollisionChannel::ECC_WorldStatic"
+      "CastShadow": false,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPVisTorchStaticT1_C:ArrowComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Misc/BPVisTorchStaticT1.0"
       }
     }
   },
@@ -559,9 +561,9 @@
       "Intensity": 130.0,
       "VolumetricScatteringIntensity": 0.0,
       "RelativeLocation": {
-        "X": -1E-06,
+        "X": 0.0,
         "Y": 0.0,
-        "Z": 455.86786
+        "Z": 450.0
       },
       "ComponentTags": [
         "Refining"
@@ -573,9 +575,9 @@
       "Roll": 0.0
     },
     "RelativeLocation": {
-      "X": -1E-06,
+      "X": 0.0,
       "Y": 0.0,
-      "Z": 455.86786
+      "Z": 450.0
     },
     "IntensityNits": 258.62677001953125,
     "bUseInverseSquaredFalloff": true

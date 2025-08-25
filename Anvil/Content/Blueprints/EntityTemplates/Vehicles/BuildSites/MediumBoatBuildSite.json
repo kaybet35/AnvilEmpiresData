@@ -1,5 +1,17 @@
 [
   {
+    "Type": "AdvancedSnappingProxyComponent",
+    "Name": "AdvancedSnappingProxyComponent_0",
+    "Outer": "Default__MediumBoatBuildSite_C",
+    "Class": "UScriptClass'AdvancedSnappingProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bNoFoundationCheckWhenSnapped": true,
+      "NumSnappingRequired": 1,
+      "NotEnoughSnappingErrorMessage": "EAnvilPlacementStatus::RequiresSnapppingToShipyard"
+    }
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "MediumBoatBuildSite_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
@@ -21,7 +33,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "MediumBoatBuildSite_C'Default__MediumBoatBuildSite_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.6"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.7"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -53,7 +65,6 @@
         "ObjectName": "BlueprintGeneratedClass'MediumBoat_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.0"
       },
-      "BuildLocation": 136,
       "BuildArea": {
         "TownArea": true,
         "SmallCampArea": true,
@@ -142,43 +153,69 @@
       "ObjectName": "BPBaseBuildSiteEntity_C'Default__BPBaseBuildSiteEntity_C'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseBuildSiteEntity.2"
     },
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "BuildSiteComp": {
         "ObjectName": "BuildSiteProxyComponent'Default__MediumBoatBuildSite_C:BuildSiteProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.3"
       },
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__MediumBoatBuildSite_C:TeamProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.8"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.10"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__MediumBoatBuildSite_C:HealthProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.6"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__MediumBoatBuildSite_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.5"
       },
       "UseBoxComp": {
         "ObjectName": "BoxCollisionProxyComponent'Default__MediumBoatBuildSite_C:BoxCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.1"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.2"
       },
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__MediumBoatBuildSite_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.4"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__MediumBoatBuildSite_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.7"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.9"
       },
       "CodeNameString": "MediumBoatBuildSite",
       "CodeName": 695024013,
       "GenerateMeshCollisionMask": 16785410,
+      "Components": [
+        {
+          "ObjectName": "SnapPointProxyComponent'Default__MediumBoatBuildSite_C:SnapPointProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.8"
+        },
+        {
+          "ObjectName": "AdvancedSnappingProxyComponent'Default__MediumBoatBuildSite_C:AdvancedSnappingProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/BuildSites/MediumBoatBuildSite.0"
+        }
+      ],
       "VisActorClass": {
         "ObjectName": "BlueprintGeneratedClass'BPVisMediumBoatBuildSite_C'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BuildSites/BPVisMediumBoatBuildSite.1"
       }
+    }
+  },
+  {
+    "Type": "SnapPointProxyComponent",
+    "Name": "SnapPointProxyComponent_0",
+    "Outer": "Default__MediumBoatBuildSite_C",
+    "Class": "UScriptClass'SnapPointProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Extents": {
+        "X": 30.0,
+        "Y": 30.0,
+        "Z": 300.0
+      },
+      "SnappingChannel": "EAnvilSnappingChannelType::ShipyardBoat",
+      "bPointOnLine": true
     }
   },
   {

@@ -160,6 +160,10 @@
         "ObjectName": "EntityAttachableDataComponent'Default__BPVisDonkey_C:EntityAttachableDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.9"
       },
+      "VehicleSeatDataComponent": {
+        "ObjectName": "VehicleSeatDataComponent'Default__BPVisDonkey_C:VehicleSeatDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.24"
+      },
       "MoveLoopAudioComponent": {
         "ObjectName": "AudioComponent'Default__BPVisDonkey_C:MovementAudioComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.5"
@@ -178,8 +182,8 @@
       },
       "UseWindowType": "EHUDWindowType::InventoryStructure",
       "AdditionalActionButtons": [
-        "EActionButtonType::AttachVehicle",
-        "EActionButtonType::DetachVehicle"
+        "EAnvilEntityActionType::AttachVehicle",
+        "EAnvilEntityActionType::DetachVehicle"
       ],
       "VisDisplayName": {
         "Namespace": "",
@@ -226,7 +230,7 @@
       "bGenerateOverlapEvents": false,
       "AttachParent": {
         "ObjectName": "VisRopeComponent'BPVisDonkey_C:VisRope_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.25"
       },
       "bVisible": true,
       "bCanEverAffectNavigation": false
@@ -327,7 +331,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisRopeComponent'BPVisDonkey_C:VisRope_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.24"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Animals/BPVisDonkey.25"
       },
       "AttachToName": "S_Rope",
       "ParentComponentOrVariableName": "Mesh",
@@ -473,6 +477,13 @@
     "Name": "VehicleMovementDataComponent",
     "Outer": "Default__BPVisDonkey_C",
     "Class": "UScriptClass'VehicleMovementDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "VehicleSeatDataComponent",
+    "Name": "VehicleSeatDataComponent",
+    "Outer": "Default__BPVisDonkey_C",
+    "Class": "UScriptClass'VehicleSeatDataComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {

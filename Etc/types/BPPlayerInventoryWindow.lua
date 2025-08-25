@@ -1,6 +1,6 @@
 ---@meta
 
----@class UBPPlayerInventoryWindow_C : UHUDWindow
+---@class UBPPlayerInventoryWindow_C : UPlayerInventoryWindow
 UBPPlayerInventoryWindow_C = {}
 
 

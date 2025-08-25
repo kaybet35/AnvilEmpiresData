@@ -3,9 +3,9 @@
 
 class ABPVisDonkey_C : public AVisAnimalVehicle
 {
-    class UAudioComponent* idle;                                                      // 0x0548 (size: 0x8)
-    class UVisRopeComponent* VisRope;                                                 // 0x0550 (size: 0x8)
+    class UAudioComponent* Idle;                                                      // 0x0550 (size: 0x8)
+    class UVisRopeComponent* VisRope;                                                 // 0x0558 (size: 0x8)
 
-}; // Size: 0x558
+}; // Size: 0x560
 
 #endif

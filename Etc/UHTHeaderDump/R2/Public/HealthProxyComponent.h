@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EAnvilDamageTargetType.h"
+#include "EAnvilTargetAreaType.h"
 #include "ProxyComponent.h"
 #include "Templates/SubclassOf.h"
 #include "HealthProxyComponent.generated.h"
@@ -28,6 +29,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilDamageTargetType TargetType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    EAnvilTargetAreaType TargetArea;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VisualBloodAmountRecoveryRate;

@@ -196,6 +196,7 @@ AServerPartition = {}
 ---@field TownNames1 TArray<FText>
 ---@field TownNames2 TArray<FText>
 ---@field TownNames3 TArray<FText>
+---@field TargerAreaNameMap TMap<EAnvilTargetAreaType, FText>
 ---@field IconTemplates TMap<EMapIconType, FMapIconTypeProperty>
 ---@field WorldEntityIconClasses TMap<EAnvilWorldEntityType, TSubclassOf<UWorldEntityMapIcon>>
 ---@field QualityIconTextures TMap<EAnvilItemQualityType, UTexture2D>
@@ -219,7 +220,7 @@ AUnderworldModuleDynamicPrefab = {}
 ---@field UseWindowType EHUDWindowType
 ---@field UseDisclaimerText FText
 ---@field bUseForceCameraZoom boolean
----@field AdditionalActionButtons TArray<EActionButtonType>
+---@field AdditionalActionButtons TArray<EAnvilEntityActionType>
 ---@field bNightVisibility boolean
 ---@field bNoCheckOnCeilVisibility boolean
 ---@field bUseInteractionOutline boolean
@@ -299,6 +300,9 @@ AVisBeaconTower = {}
 
 ---@class AVisBoat : AVisVehicle
 ---@field IsInWaterCheckRange float
+---@field ShipMovementDataComponent UShipMovementDataComponent
+---@field GangplankLeftMesh UStaticMeshComponent
+---@field GangplankRightMesh UStaticMeshComponent
 ---@field Slots TMap<UEntityAttachableProxyComponent, UEntityAttachableDataComponent>
 AVisBoat = {}
 
@@ -359,13 +363,16 @@ AVisCraftingStructure = {}
 
 
 ---@class AVisDryingRack : AVisStructure
----@field BaseMesh UStaticMeshComponent
----@field DryingItemMesh UStaticMeshComponent
+---@field BaseMeshComponent UStaticMeshComponent
+---@field DryingItemMeshComponent UStaticMeshComponent
 ---@field DryingRackProxy UDryingRackProxyComponent
 ---@field DryingRackDataComponent UDryingRackDataComponent
 ---@field DryingItemMeshMaterial UMaterialInstanceDynamic
+---@field DryingRackAssetTable UDataTable
+---@field CurrentItemStaticMesh TSoftObjectPtr<UStaticMesh>
 AVisDryingRack = {}
 
+function AVisDryingRack:OnItemAssetLoaded() end
 
 
 ---@class AVisEffect : AVisActor
@@ -743,6 +750,14 @@ AVisSplineBuildSite = {}
 
 ---@class AVisStaticTorch : AVisStructure
 ---@field CombustionDataComponent UCombustionDataComponent
+---@field VisibleMesh UStaticMeshComponent
+---@field ShadowMesh UStaticMeshComponent
+---@field ShadowMeshVerticalScale float
+---@field OnFoundationLightIntensity float
+---@field OnFoundationVerticalOffset float
+---@field bOnFoundationUseInverseSquaredFalloff boolean
+---@field OnFoundationLightFalloffExponent float
+---@field OnFoundationShadowMeshVerticalScale float
 AVisStaticTorch = {}
 
 
@@ -770,14 +785,14 @@ AVisStorehouse = {}
 ---@field ArrowComponent UArrowComponent
 ---@field UseVolumeDecalComponent UDecalComponent
 ---@field GrassRemovalVolume UGrassRemovalVolumeComponent
+---@field bSupportsHealthMaterialUpdates boolean
 ---@field ScorchEffectAssets TArray<UNiagaraSystem>
 ---@field GeneratedScorchEffecftInfos TArray<FGeneratedScorchEffectInfo>
 AVisStructure = {}
 
 ---@param Tag FName
 ---@param bIsVisible boolean
----@param bUpdateMaterials boolean
-function AVisStructure:UpdateVisualComponentsByTag(Tag, bIsVisible, bUpdateMaterials) end
+function AVisStructure:UpdateVisualComponentsByTag(Tag, bIsVisible) end
 
 
 ---@class AVisTownCenter : AVisStructure
@@ -822,6 +837,7 @@ AVisUnderworldModuleDynamic = {}
 ---@class AVisVehicle : AVisActor
 ---@field VehicleMovementDataComponent UVehicleMovementDataComponent
 ---@field EntityAttachableDataComponent UEntityAttachableDataComponent
+---@field VehicleSeatDataComponent UVehicleSeatDataComponent
 ---@field MoveLoopAudioComponent UAudioComponent
 ---@field MoveLoopParticleSystem UNiagaraComponent
 ---@field HealthDataComponent UHealthDataComponent
@@ -948,6 +964,15 @@ FBoolResponse = {}
 
 
 
+---@class FBuildMenuTabButtonData : FTableRowBase
+---@field Category EBuildSiteCategory
+---@field TooltipHeader FText
+---@field TooltipDescription FText
+---@field Icon UTexture2D
+FBuildMenuTabButtonData = {}
+
+
+
 ---@class FBuildSiteCostData : FTableRowBase
 ---@field RoadMaterial int16
 ---@field ResourceBranches int16
@@ -1040,14 +1065,13 @@ FCreateMapPostRequest = {}
 ---@class FDayNightKeyFrame
 ---@field Label FString
 ---@field NormalizedPosition float
+---@field SunLightRotation FRotator
 ---@field AtmosphericLightIntensity float
 ---@field AtmosphericLightColor FLinearColor
 ---@field SunLightIntensity float
 ---@field SunLightColor FLinearColor
 ---@field SunLightShadowBias float
 ---@field SunLightShadowSlopeBias float
----@field MoonLightIntensity float
----@field MoonLightColor FLinearColor
 ---@field AtmosphereRayleighScatteringColor FLinearColor
 ---@field WhiteBalanceTemp float
 ---@field WhiteBalanceTint float
@@ -1081,6 +1105,20 @@ FDeleteProfileResponse = {}
 ---@field Count int32
 ---@field bIsWildSpawn boolean
 FDeploymentFoodItem = {}
+
+
+
+---@class FDryingRackMeshInfo
+---@field Meshes TArray<TSoftObjectPtr<UStaticMesh>>
+---@field MaterialOverrides TArray<UMaterialInterface>
+FDryingRackMeshInfo = {}
+
+
+
+---@class FDryingRackRow : FTableRowBase
+---@field ItemTemplateClass TSubclassOf<UItemTemplate>
+---@field StaticMesh TSoftObjectPtr<UStaticMesh>
+FDryingRackRow = {}
 
 
 
@@ -1442,9 +1480,12 @@ FWinConditionStateResponse = {}
 
 
 
+---@class FWorldEntityInventoryUserDataManager
+FWorldEntityInventoryUserDataManager = {}
+
+
 ---@class UActionButtonWidget : UUserWidget
----@field ActionButtonType EActionButtonType
----@field EntityActionType EAnvilEntityActionType
+---@field ActionButtonType EAnvilEntityActionType
 ---@field ButtonImageOverride UTexture2D
 ---@field ActionButton UButton
 ---@field CallForReinforcementsCue USoundCue
@@ -1554,6 +1595,15 @@ function UAnvilClientVoiceClient:SetOutputVolume(Volume) end
 ---@param Volume float
 function UAnvilClientVoiceClient:SetInputVolume(Volume) end
 function UAnvilClientVoiceClient:Reconnect() end
+
+
+---@class UAnvilCreditsScreen : UAnvilScreen
+---@field CreditsScrollBox UScrollBox
+---@field BackButton UAnvilButtonWidget
+---@field ScrollSpeed float
+UAnvilCreditsScreen = {}
+
+function UAnvilCreditsScreen:OnBackButtonClicked() end
 
 
 ---@class UAnvilDialogBox : UUserWidget
@@ -1669,6 +1719,8 @@ UAnvilMovieCharacterNameWidget = {}
 ---@field SavedVoiceInputDeviceName FString
 ---@field bShowPlayerName boolean
 ---@field bInteractCameraZoom boolean
+---@field bHideCrowdNames boolean
+---@field bAutoArmEquippedItems boolean
 ---@field AcceptedDisclaimerVersion int32
 ---@field LastShardId int32
 UAnvilOptionsSave = {}
@@ -1732,6 +1784,20 @@ function UAnvilWindow:OutputNextButtonClicked() end
 function UAnvilWindow:OnCurrentSelectedOutputIndexChanged(Old, New) end
 
 
+---@class UAvatarGroupWidget : UUserWidget
+---@field AvatarProfileGridPanel UUniformGridPanel
+UAvatarGroupWidget = {}
+
+
+
+---@class UAvatarProfileWidget : UUserWidget
+---@field ProfileImage UImage
+---@field NameText UTextBlock
+---@field StackSizeText UTextBlock
+UAvatarProfileWidget = {}
+
+
+
 ---@class UBeaconTowerPlayerInfoMapIcon : UMapIcon
 ---@field FriendlyColour FSlateColor
 ---@field EnemyColour FSlateColor
@@ -1761,7 +1827,7 @@ UBuildMenuTabButton = {}
 ---@field TabButtonPanel UPanelWidget
 ---@field StructureButtonGrid UGridPanelWidget
 ---@field TabButtonClass TSubclassOf<UBuildMenuTabButton>
----@field TabButtonIcons TMap<EBuildSiteCategory, UTexture2D>
+---@field BuildMenuTabButtonDataTable UDataTable
 UBuildMenuWindow = {}
 
 
@@ -2117,6 +2183,8 @@ function UFactionSelectScreen:GetDeleteProfileButtonVisibility() end
 ---@field FamilyAreaRestrictedCheckBox UCheckBox
 ---@field FamilyAreaAllianceButton UButton
 ---@field FamilyInviteDialogWidget UFamilyInviteDialogWidget
+---@field AvatarGroupHeader UHeaderContainer
+---@field AvatarGroupWidget UAvatarGroupWidget
 UFamilyAreaMarkerWindow = {}
 
 ---@param AlliedFamilyFounderOnlineId uint64
@@ -2751,6 +2819,7 @@ function UNextTestWidget:OnDiscordButtonClicked() end
 ---@field PlayButton UAnvilButtonWidget
 ---@field ExitButton UAnvilButtonWidget
 ---@field OptionsButton UAnvilButtonWidget
+---@field CreditsButton UAnvilButtonWidget
 ---@field VersionText UTextBlock
 ---@field CLText UTextBlock
 ---@field NextTestWidget UNextTestWidget
@@ -2770,6 +2839,7 @@ function UOpeningScreen:OnOptionsButtonClicked() end
 function UOpeningScreen:OnExitButtonClicked() end
 function UOpeningScreen:OnDiscordRoleButtonClicked() end
 function UOpeningScreen:OnDevModeButtonClicked() end
+function UOpeningScreen:OnCreditsButtonClicked() end
 ---@return boolean
 function UOpeningScreen:IsDiscordRoleButtonEnabled() end
 ---@return FText
@@ -2799,6 +2869,8 @@ function UOptionsMenuAudioWidget:GetReconnectButtonVisibility() end
 ---@class UOptionsMenuGameplayWidget : UUserWidget
 ---@field ShowPlayerNameDropDown UAnvilDropdownEntryWidget
 ---@field InteractCameraZoomDropDown UAnvilDropdownEntryWidget
+---@field HideCrowdNamesDropDown UAnvilDropdownEntryWidget
+---@field AutoArmEquippedItemsDropDown UAnvilDropdownEntryWidget
 UOptionsMenuGameplayWidget = {}
 
 
@@ -2817,8 +2889,12 @@ function UOptionsMenuKeybindWidget:OnResetKeyBinds() end
 ---@field QualityDropdown UAnvilDropdownEntryWidget
 ---@field ShadowQualityDropdown UAnvilDropdownEntryWidget
 ---@field VSyncDropdown UAnvilDropdownEntryWidget
+---@field RendererDropdown UAnvilDropdownEntryWidget
+---@field RestartRequiredBanner UUserWidget
 UOptionsMenuVideoWidget = {}
 
+---@param Input FString
+function UOptionsMenuVideoWidget:SetRenderer(Input) end
 ---@param Input FString
 function UOptionsMenuVideoWidget:SetFullscreen(Input) end
 
@@ -2857,12 +2933,27 @@ function UPauseScreen:OnContinueButtonClicked() end
 function UPauseScreen:OnCodeOfConductButtonClicked() end
 
 
+---@class UPlayerAvatarWidget : UUserWidget
+---@field AvatarImage UImage
+---@field VitalityStatus UVitalityStatusWidget
+---@field NameText UTextBlock
+---@field FitnessNumberText UTextBlock
+---@field CombatNumberText UTextBlock
+---@field SmithingNumberText UTextBlock
+---@field LumberjackingNumberText UTextBlock
+---@field MiningNumberText UTextBlock
+---@field FarmingNumberText UTextBlock
+UPlayerAvatarWidget = {}
+
+
+
 ---@class UPlayerInventoryWidget : UUserWidget
 ---@field PlayerInventory UInventoryWidget
 ---@field Header UHeaderContainer
 ---@field bShowAvatarSubmitButton boolean
 ---@field SubmitAvatarButton UButton
 ---@field AvatarHeader UHeaderContainer
+---@field AvatarContainer UMainAreaContainer
 ---@field AvatarImage UImage
 ---@field AvatarQualityImage UImage
 ---@field AvatarNameText UTextBlock
@@ -2872,6 +2963,13 @@ UPlayerInventoryWidget = {}
 function UPlayerInventoryWidget:OnSubmitAvatarClicked() end
 ---@return boolean
 function UPlayerInventoryWidget:IsSubmitAvatarButtonEnabled() end
+
+
+---@class UPlayerInventoryWindow : UStructureWindow
+---@field PlayerInventoryWidget UPlayerInventoryWidget
+---@field PlayerAvatarWidget UPlayerAvatarWidget
+UPlayerInventoryWindow = {}
+
 
 
 ---@class UPledgedPlayerBox : UScrollBox
@@ -3228,6 +3326,12 @@ UVisBalljointComponent = {}
 
 
 
+---@class UVisBoatSailAnimInstance : UVisWeatherIndicatorAnimInstance
+---@field bIsSailOpen boolean
+UVisBoatSailAnimInstance = {}
+
+
+
 ---@class UVisBowAnimInstance : UAnimInstance
 ---@field NativePlayerAccuracy float
 ---@field NativeCharacterIsAiming boolean
@@ -3372,6 +3476,7 @@ UVisItem = {}
 ---@field NativeSpeed float
 ---@field bIsFrontSeatOccupied boolean
 ---@field bIsRearSeatOccupied boolean
+---@field SecondVehicleSeatDataComponent UVehicleSeatDataComponent
 UVisLadderVehicleAnimInstance = {}
 
 
@@ -3407,6 +3512,7 @@ UVisMultiItemStockpileComponent = {}
 ---@field NativeDir float
 ---@field NativeSpeed float
 ---@field NativeSpeedAbs float
+---@field NativeVelocity FVector
 ---@field GripType EEquippedItemGripType
 ---@field PrimaryGripType EEquippedItemGripType
 ---@field SecondaryGripType EEquippedItemGripType
@@ -3692,6 +3798,23 @@ UWorldEntityHandle = {}
 
 
 
+---@class UWorldEntityInventoryGridItem : UUserWidget
+---@field ItemIcon UImage
+---@field QuantityText UTextBlock
+UWorldEntityInventoryGridItem = {}
+
+
+
+---@class UWorldEntityInventoryTooltip : UUserWidget
+---@field HeaderContainer UHeaderContainer
+---@field GridPanel UUniformGridPanel
+---@field LoadingThrobber UThrobber
+---@field WorldEntityInventoryGridItemClass TSubclassOf<UWorldEntityInventoryGridItem>
+---@field NumColumns int32
+UWorldEntityInventoryTooltip = {}
+
+
+
 ---@class UWorldEntityMapIcon : UMapIconBase
 ---@field EntityHandle UWorldEntityHandle
 ---@field IconSizeBox USizeBox
@@ -3738,6 +3861,7 @@ UWorldTempleMapIcon = {}
 ---@field NumReinforcementSuppliesStatus UStatusWidget
 ---@field TownWarningText UTextBlock
 ---@field DetectionRangeCircle UImage
+---@field WorldEntityInventoryTooltipClass TSubclassOf<UUserWidget>
 UWorldTownCenterMapIcon = {}
 
 ---@return ESlateVisibility

@@ -3,6 +3,6 @@
 
 class UBladeTool_C : public UItemTemplate
 {
-}; // Size: 0x380
+}; // Size: 0x390
 
 #endif

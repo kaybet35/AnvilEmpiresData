@@ -1,14 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EBuildSiteCategory.h"
 #include "HUDWindow.h"
 #include "Templates/SubclassOf.h"
 #include "BuildMenuWindow.generated.h"
 
 class UBuildMenuTabButton;
+class UDataTable;
 class UGridPanelWidget;
 class UPanelWidget;
-class UTexture2D;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UBuildMenuWindow : public UHUDWindow {
@@ -25,7 +24,7 @@ protected:
     TSubclassOf<UBuildMenuTabButton> TabButtonClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<EBuildSiteCategory, UTexture2D*> TabButtonIcons;
+    UDataTable* BuildMenuTabButtonDataTable;
     
 public:
     UBuildMenuWindow();

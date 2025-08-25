@@ -42,17 +42,21 @@
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisDryingRack.BPVisDryingRack_C'",
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "BaseMesh": {
+      "BaseMeshComponent": {
         "ObjectName": "StaticMeshComponent'Default__BPVisDryingRack_C:BaseMesh'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisDryingRack.14"
       },
-      "DryingItemMesh": {
+      "DryingItemMeshComponent": {
         "ObjectName": "StaticMeshComponent'Default__BPVisDryingRack_C:DryingItemMesh'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisDryingRack.15"
       },
       "DryingRackDataComponent": {
         "ObjectName": "DryingRackDataComponent'Default__BPVisDryingRack_C:DryingRackDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisDryingRack.6"
+      },
+      "DryingRackAssetTable": {
+        "ObjectName": "DataTable'DTDryingRackAssets'",
+        "ObjectPath": "Anvil/Content/Blueprints/Data/DataTables/DTDryingRackAssets.0"
       },
       "ScaffoldingComponent": {
         "ObjectName": "VisScaffoldingComponent'Default__BPVisDryingRack_C:ScaffoldingComponent'",
@@ -62,7 +66,7 @@
         "ObjectName": "Texture2D'IconTannery'",
         "ObjectPath": "Anvil/Content/Textures/UI/Structures/IconTannery.0"
       },
-      "BuildSiteCategory": "EBuildSiteCategory::Farming",
+      "BuildSiteCategory": "EBuildSiteCategory::Industry",
       "UpgradeDataComponent": {
         "ObjectName": "UpgradeDataComponent'Default__BPVisDryingRack_C:UpgradeDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisDryingRack.18"
@@ -279,14 +283,6 @@
     "Class": "UScriptClass'StaticMeshComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'LeatherRefineryActive'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/LeatherRefineryActive.2"
-      },
-      "OverrideMaterials": [
-        null,
-        null
-      ],
       "AttachParent": {
         "ObjectName": "StaticMeshComponent'Default__BPVisDryingRack_C:BaseMesh'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Refineries/BPVisDryingRack.14"

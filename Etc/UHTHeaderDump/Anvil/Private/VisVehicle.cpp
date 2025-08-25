@@ -5,12 +5,14 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EntityAttachableDataComponent -FallbackName=EntityAttachableDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=HealthDataComponent -FallbackName=HealthDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=VehicleMovementDataComponent -FallbackName=VehicleMovementDataComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=VehicleSeatDataComponent -FallbackName=VehicleSeatDataComponent
 
 AVisVehicle::AVisVehicle(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RootComponent = CreateDefaultSubobject<UArrowComponent>(TEXT("ArrowComponent"));
     this->bNightVisibility = true;
     this->VehicleMovementDataComponent = CreateDefaultSubobject<UVehicleMovementDataComponent>(TEXT("VehicleMovementDataComponent"));
     this->EntityAttachableDataComponent = CreateDefaultSubobject<UEntityAttachableDataComponent>(TEXT("EntityAttachableDataComponent"));
+    this->VehicleSeatDataComponent = CreateDefaultSubobject<UVehicleSeatDataComponent>(TEXT("VehicleSeatDataComponent"));
     this->MoveLoopAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("MovementAudioComponent"));
     this->MoveLoopParticleSystem = CreateDefaultSubobject<UNiagaraComponent>(TEXT("MovementParticleSystem"));
     this->HealthDataComponent = CreateDefaultSubobject<UHealthDataComponent>(TEXT("HealthDataComponent"));

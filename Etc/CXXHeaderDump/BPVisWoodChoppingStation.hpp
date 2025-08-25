@@ -3,9 +3,9 @@
 
 class ABPVisWoodChoppingStation_C : public AVisHitConverterStructure
 {
-    class UBPVisFamilyMeshComponent_C* BPVisFamilyMeshComponent;                      // 0x05E8 (size: 0x8)
-    class UVisStaticMeshComponent* WoodChoppingStationMesh;                           // 0x05F0 (size: 0x8)
+    class UBPVisFamilyMeshComponent_C* BPVisFamilyMeshComponent;                      // 0x05F0 (size: 0x8)
+    class UVisStaticMeshComponent* WoodChoppingStationMesh;                           // 0x05F8 (size: 0x8)
 
-}; // Size: 0x5F8
+}; // Size: 0x600
 
 #endif

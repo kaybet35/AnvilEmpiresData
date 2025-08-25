@@ -1,12 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "DataComponent.h"
+#include "DryingRackRecipe.h"
 #include "DryingRackDataComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class R2_API UDryingRackDataComponent : public UDataComponent {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FDryingRackRecipe> Recipes;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReplicatedCurrentItemDryingProgress;
     

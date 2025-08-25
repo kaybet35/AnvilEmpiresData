@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ABPVisSiegeTower_C : AVisSiegeTower
+---@field Decal1 UDecalComponent
+---@field SiegeTowerTopFloor UVisStaticMeshComponent
 ---@field NiagaraLaddersAudioPosition UNiagaraComponent
 ---@field NiagaraDrawbridgeAudioPosition UNiagaraComponent
 ---@field NiagaraLadderImpact_Right UNiagaraComponent
@@ -16,8 +18,6 @@
 ---@field Winch USkeletalMeshComponent
 ---@field SiegeTowerMidFloor UStaticMeshComponent
 ---@field Decal UDecalComponent
----@field Decal1 UDecalComponent
----@field SiegeTowerTopFloor UStaticMeshComponent
 ---@field Decal2 UDecalComponent
 ---@field DrawBridge USkeletalMeshComponent
 ---@field MeshVisibilityData UMeshVisibilityDataComponent

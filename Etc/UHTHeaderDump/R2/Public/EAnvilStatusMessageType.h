@@ -40,7 +40,7 @@ enum class EAnvilStatusMessageType : uint8 {
     RepairOtherTeam,
     RepairMaterialsRequired,
     RepairOnFire,
-    Repairing,
+    CanRepair,
     NotEnoughStamina,
     WrongStance,
     MissingResource,
@@ -71,6 +71,7 @@ enum class EAnvilStatusMessageType : uint8 {
     AccessDeniedClaimedByFamily,
     AccessDeniedAlliedFamilyNotAllowed,
     AccessDeniedStructureCollapsed,
+    AccessDeniedStructureFamilyCollapsed,
     AccessDeniedTooFarToInteract,
     AccessDeniedFamilyDestroyed,
     AccessDeniedTownDestroyed,
@@ -142,7 +143,9 @@ enum class EAnvilStatusMessageType : uint8 {
     CantDeployWhileMoving,
     CannotUseWhileSwimming,
     TargetTooClose,
+    ReducedDamageFromLowStamina,
     NotEnoughPlayersToCapture,
+    CannotOpenBothSailAndPlank,
     NumTypes,
 };
 

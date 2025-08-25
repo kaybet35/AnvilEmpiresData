@@ -6,10 +6,12 @@
 #include "Templates/SubclassOf.h"
 #include "FamilyAreaMarkerWindow.generated.h"
 
+class UAvatarGroupWidget;
 class UButton;
 class UCheckBox;
 class UFamilyInviteDialogWidget;
 class UFamilyMemberListItemWidget;
+class UHeaderContainer;
 class UImage;
 class UScrollBox;
 class UTextBlock;
@@ -42,6 +44,12 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UFamilyInviteDialogWidget* FamilyInviteDialogWidget;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UHeaderContainer* AvatarGroupHeader;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAvatarGroupWidget* AvatarGroupWidget;
     
 public:
     UFamilyAreaMarkerWindow();

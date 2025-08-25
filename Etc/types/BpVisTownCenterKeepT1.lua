@@ -7,7 +7,6 @@
 ---@field VisTeamSkeletalMesh1 UVisTeamSkeletalMeshComponent
 ---@field VisTeamSkeletalMesh UVisTeamSkeletalMeshComponent
 ---@field CollapsedMeshRoof UVisStaticMeshComponent
----@field CollapsedMeshFF UVisStaticMeshComponent
 ---@field CollapsedMeshSF UVisStaticMeshComponent
 ---@field StaticMesh15 UStaticMeshComponent
 ---@field StaticMesh14 UStaticMeshComponent
@@ -26,7 +25,7 @@
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field VisStaticMesh1 UVisStaticMeshComponent
----@field VisStaticMesh31 UVisStaticMeshComponent
+---@field SF UVisStaticMeshComponent
 ---@field VisStaticMeshSFBase UVisStaticMeshComponent
 ---@field VisStaticMesh_floor UVisStaticMeshComponent
 ---@field VisStaticMeshFFBase UVisStaticMeshComponent

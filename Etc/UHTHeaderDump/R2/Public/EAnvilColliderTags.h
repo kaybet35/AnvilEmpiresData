@@ -14,6 +14,8 @@ enum class EAnvilColliderTags : uint8 {
     FoundationSolidBox,
     FoundationDisallowCeiling,
     StructureCheckOnlyVolume,
+    GangplankLeft,
+    GangplankRight,
     NumTypes,
 };
 

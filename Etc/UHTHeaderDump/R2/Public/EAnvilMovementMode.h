@@ -7,5 +7,6 @@ enum class EAnvilMovementMode : uint8 {
     Walking,
     Flying,
     Swimming,
+    NumTypes,
 };
 

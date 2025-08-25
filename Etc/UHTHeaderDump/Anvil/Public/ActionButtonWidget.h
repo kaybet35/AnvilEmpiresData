@@ -3,7 +3,6 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilEntityActionType -FallbackName=EAnvilEntityActionType
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=ESlateVisibility -FallbackName=ESlateVisibility
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
-#include "EActionButtonType.h"
 #include "ActionButtonWidget.generated.h"
 
 class UButton;
@@ -16,10 +15,7 @@ class ANVIL_API UActionButtonWidget : public UUserWidget {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EActionButtonType ActionButtonType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EAnvilEntityActionType EntityActionType;
+    EAnvilEntityActionType ActionButtonType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* ButtonImageOverride;

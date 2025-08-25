@@ -18,6 +18,10 @@ enum class EAnvilCharacterStance : uint8 {
     OnHandcart,
     OnHandCrank,
     OnCoarsenessKnob,
+    OnBoatHelm,
+    OnOneOarRight,
+    OnOneOarLeft,
+    OnTwoOars,
     NumTypes,
 };
 

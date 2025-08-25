@@ -7,6 +7,7 @@ class UButton;
 class UHeaderContainer;
 class UImage;
 class UInventoryWidget;
+class UMainAreaContainer;
 class UTextBlock;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -29,6 +30,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UHeaderContainer* AvatarHeader;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UMainAreaContainer* AvatarContainer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UImage* AvatarImage;

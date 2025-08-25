@@ -5,7 +5,7 @@
 ---@field referenceMesh UStaticMeshComponent
 ---@field ReferenceMesh4 UStaticMeshComponent
 ---@field ReferenceMesh1 UStaticMeshComponent
----@field ReferenceMesh2 UStaticMeshComponent
+---@field referenceMesh2 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABPVisSpawnerTree_C = {}
 

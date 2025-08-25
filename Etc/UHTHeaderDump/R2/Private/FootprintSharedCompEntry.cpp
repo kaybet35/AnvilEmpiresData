@@ -5,6 +5,5 @@ FFootprintSharedCompEntry::FFootprintSharedCompEntry() {
     this->bHighlight = false;
     this->bHide = false;
     this->bNoCopyToBuildSite = false;
-    this->bInsertToStartOfComponentArray = false;
 }
 

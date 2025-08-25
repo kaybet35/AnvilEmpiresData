@@ -3,15 +3,15 @@
 
 class ABPVisFamilyCenterBridgeWalkwayStraight_T2_C : public AVisStructure
 {
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0558 (size: 0x8)
-    class UStaticMeshComponent* Pillar2;                                              // 0x0560 (size: 0x8)
-    class UStaticMeshComponent* Pillar1;                                              // 0x0568 (size: 0x8)
-    class UStaticMeshComponent* Pillar;                                               // 0x0570 (size: 0x8)
-    class UStaticMeshComponent* Pillar3;                                              // 0x0578 (size: 0x8)
-    class UMeshVisibilityDataComponent* MeshVisibilityData;                           // 0x0580 (size: 0x8)
-    class UStaticMeshComponent* StaticMesh1;                                          // 0x0588 (size: 0x8)
-    class USceneComponent* Scene;                                                     // 0x0590 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0560 (size: 0x8)
+    class UStaticMeshComponent* Pillar2;                                              // 0x0568 (size: 0x8)
+    class UStaticMeshComponent* Pillar1;                                              // 0x0570 (size: 0x8)
+    class UStaticMeshComponent* Pillar;                                               // 0x0578 (size: 0x8)
+    class UStaticMeshComponent* Pillar3;                                              // 0x0580 (size: 0x8)
+    class UMeshVisibilityDataComponent* MeshVisibilityData;                           // 0x0588 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh1;                                          // 0x0590 (size: 0x8)
+    class USceneComponent* Scene;                                                     // 0x0598 (size: 0x8)
 
-}; // Size: 0x598
+}; // Size: 0x5A0
 
 #endif

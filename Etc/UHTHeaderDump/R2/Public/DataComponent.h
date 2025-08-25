@@ -7,6 +7,9 @@ UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableCompo
 class R2_API UDataComponent : public UActorComponent {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 ComponentIndex;
+    
     UDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };

@@ -4,6 +4,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Info -FallbackName=Info
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilItemQualityType -FallbackName=EAnvilItemQualityType
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilPlayerOnlineStatus -FallbackName=EAnvilPlayerOnlineStatus
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilTargetAreaType -FallbackName=EAnvilTargetAreaType
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilWorldEntityType -FallbackName=EAnvilWorldEntityType
 //CROSS-MODULE INCLUDE V2: -ModuleName=SlateCore -ObjectName=SlateColor -FallbackName=SlateColor
 #include "EMapIconType.h"
@@ -31,6 +32,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FText> TownNames3;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<EAnvilTargetAreaType, FText> TargerAreaNameMap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EMapIconType, FMapIconTypeProperty> IconTemplates;

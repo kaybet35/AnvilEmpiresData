@@ -25,10 +25,19 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAnvilDropdownEntryWidget* VSyncDropdown;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAnvilDropdownEntryWidget* RendererDropdown;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UUserWidget* RestartRequiredBanner;
+    
 public:
     UOptionsMenuVideoWidget();
 
 private:
+    UFUNCTION(BlueprintCallable)
+    void SetRenderer(const FString& Input);
+    
     UFUNCTION(BlueprintCallable)
     void SetFullscreen(const FString& Input);
     

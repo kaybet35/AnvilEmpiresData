@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimInstance -FallbackName=AnimInstance
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilCharacterStance -FallbackName=EAnvilCharacterStance
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilVehicleInputState -FallbackName=EAnvilVehicleInputState
@@ -22,6 +23,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float NativeSpeedAbs;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
+    FVector NativeVelocity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EEquippedItemGripType GripType;

@@ -7,6 +7,9 @@ UCLASS(Abstract, Blueprintable, EditInlineNew)
 class R2_API UProxyComponent : public UObject {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 Order;
+    
     UProxyComponent();
 
 };

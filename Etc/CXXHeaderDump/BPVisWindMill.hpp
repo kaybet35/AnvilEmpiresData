@@ -3,10 +3,10 @@
 
 class ABPVisWindMill_C : public AVisWindMill
 {
-    class UAudioComponent* Windmill Cue;                                              // 0x05C0 (size: 0x8)
-    class USkeletalMeshComponent* Windvane;                                           // 0x05C8 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x05D0 (size: 0x8)
+    class UAudioComponent* Windmill Cue;                                              // 0x05C8 (size: 0x8)
+    class USkeletalMeshComponent* Windvane;                                           // 0x05D0 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x05D8 (size: 0x8)
 
-}; // Size: 0x5D8
+}; // Size: 0x5E0
 
 #endif

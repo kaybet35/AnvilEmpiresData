@@ -21,5 +21,6 @@ FAnvilSimActivity::FAnvilSimActivity() {
     this->bRequireAim = false;
     this->StaminaCost = 0.00f;
     this->AimedStaminaCost = 0.00f;
+    this->bUsableWithLowStamina = false;
 }
 

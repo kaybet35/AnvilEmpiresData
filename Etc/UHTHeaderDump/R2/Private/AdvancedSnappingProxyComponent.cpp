@@ -8,6 +8,7 @@ UAdvancedSnappingProxyComponent::UAdvancedSnappingProxyComponent() {
     this->OverridedAngleOverlapPriority = 10;
     this->OverridedAngleOverlapMin = 0.00f;
     this->NumSnappingRequired = 0;
+    this->NotEnoughSnappingErrorMessage = EAnvilPlacementStatus::RequiresSnappping;
     this->MaxOverlapDistOverride = 0.00f;
 }
 

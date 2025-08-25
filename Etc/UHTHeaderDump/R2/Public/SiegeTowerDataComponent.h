@@ -12,9 +12,6 @@ public:
     EAnvilSiegeTowerState RampState;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EAnvilSiegeTowerState LadderState;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CurrentRampAngle;
     
     USiegeTowerDataComponent(const FObjectInitializer& ObjectInitializer);

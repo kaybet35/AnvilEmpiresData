@@ -47,5 +47,6 @@ enum class EAnvilInputEventType : uint8 {
     SubmitAvatar,
     RequestUnderworldMap,
     ToggleMarchMode,
+    SetAutoArmEquippedItems,
 };
 

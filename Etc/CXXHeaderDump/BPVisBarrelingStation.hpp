@@ -3,9 +3,9 @@
 
 class ABPVisBarrelingStation_C : public AVisStructure
 {
-    class UStaticMeshComponent* WaterPlane;                                           // 0x0558 (size: 0x8)
-    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0560 (size: 0x8)
+    class UStaticMeshComponent* WaterPlane;                                           // 0x0560 (size: 0x8)
+    class UVisStaticMeshComponent* VisStaticMesh;                                     // 0x0568 (size: 0x8)
 
-}; // Size: 0x568
+}; // Size: 0x570
 
 #endif

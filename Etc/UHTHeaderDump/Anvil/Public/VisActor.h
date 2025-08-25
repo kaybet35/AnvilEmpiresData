@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilEntityActionType -FallbackName=EAnvilEntityActionType
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=VisActorBase -FallbackName=VisActorBase
-#include "EActionButtonType.h"
 #include "EHUDWindowType.h"
 #include "MapIconInstanceProperty.h"
 #include "VisActor.generated.h"
@@ -30,7 +30,7 @@ public:
     bool bUseForceCameraZoom;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<EActionButtonType> AdditionalActionButtons;
+    TArray<EAnvilEntityActionType> AdditionalActionButtons;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bNightVisibility: 1;

@@ -34,7 +34,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPVisLadderVehicle_C:SimpleConstructionScript_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.12"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.13"
       }
     },
     "SuperStruct": {
@@ -42,6 +42,17 @@
       "ObjectPath": "/Script/Anvil"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SecondVehicleSeatData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VehicleSeatDataComponent'",
+          "ObjectPath": "/Script/R2"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "VisSkeletalMesh",
@@ -88,11 +99,15 @@
     "Properties": {
       "VehicleMovementDataComponent": {
         "ObjectName": "VehicleMovementDataComponent'Default__BPVisLadderVehicle_C:VehicleMovementDataComponent'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.14"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.15"
       },
       "EntityAttachableDataComponent": {
         "ObjectName": "EntityAttachableDataComponent'Default__BPVisLadderVehicle_C:EntityAttachableDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.5"
+      },
+      "VehicleSeatDataComponent": {
+        "ObjectName": "VehicleSeatDataComponent'Default__BPVisLadderVehicle_C:VehicleSeatDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.17"
       },
       "MoveLoopAudioComponent": {
         "ObjectName": "AudioComponent'Default__BPVisLadderVehicle_C:MovementAudioComponent'",
@@ -112,7 +127,7 @@
       },
       "UseWindowType": "EHUDWindowType::GenericStructure",
       "AdditionalActionButtons": [
-        "EActionButtonType::DeployLadder"
+        "EAnvilEntityActionType::DeployLadder"
       ],
       "bUseInteractionOutline": true,
       "InteractionIcon": {
@@ -199,6 +214,25 @@
   },
   {
     "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VehicleSeatDataComponent'",
+        "ObjectPath": "/Script/R2"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VehicleSeatDataComponent'BPVisLadderVehicle_C:SecondVehicleSeatData_GEN_VARIABLE'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.16"
+      },
+      "VariableGuid": "F7F0C039-4D61AC1A-A8A345A6-113AADFC",
+      "InternalVariableName": "SecondVehicleSeatData"
+    }
+  },
+  {
+    "Type": "SCS_Node",
     "Name": "SCS_Node_2",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -217,7 +251,7 @@
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPVisLadderVehicle_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.12"
         }
       ],
       "VariableGuid": "1B8B0355-45521EA2-0C2CF8BD-98B1F283",
@@ -237,7 +271,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPVisLadderVehicle_C:VisSkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.13"
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.14"
       },
       "VariableGuid": "0BB60CB0-4CEA4A61-31EDF4BC-45D2B885",
       "InternalVariableName": "VisSkeletalMesh"
@@ -253,17 +287,25 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPVisLadderVehicle_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisLadderVehicle_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.10"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPVisLadderVehicle_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.10"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.11"
         },
         {
           "ObjectName": "SCS_Node'BPVisLadderVehicle_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.11"
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPVisLadderVehicle_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisLadderVehicle.10"
         }
       ],
       "DefaultSceneRootNode": {
@@ -313,6 +355,23 @@
     "Name": "VehicleMovementDataComponent",
     "Outer": "Default__BPVisLadderVehicle_C",
     "Class": "UScriptClass'VehicleMovementDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "VehicleSeatDataComponent",
+    "Name": "SecondVehicleSeatData_GEN_VARIABLE",
+    "Outer": "BPVisLadderVehicle_C",
+    "Class": "UScriptClass'VehicleSeatDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentIndex": 1
+    }
+  },
+  {
+    "Type": "VehicleSeatDataComponent",
+    "Name": "VehicleSeatDataComponent",
+    "Outer": "Default__BPVisLadderVehicle_C",
+    "Class": "UScriptClass'VehicleSeatDataComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   }
 ]

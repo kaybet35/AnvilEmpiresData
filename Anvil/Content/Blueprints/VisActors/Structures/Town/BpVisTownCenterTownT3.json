@@ -49,6 +49,17 @@
       },
       {
         "Type": "ObjectProperty",
+        "Name": "Roof",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'VisStaticMeshComponent'",
+          "ObjectPath": "/Script/Anvil"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "VisTeamSkeletalMesh",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -111,17 +122,6 @@
         "PropertyClass": {
           "ObjectName": "Class'StaticMeshComponent'",
           "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Roof",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'VisStaticMeshComponent'",
-          "ObjectPath": "/Script/Anvil"
         }
       },
       {
@@ -360,6 +360,7 @@
         "ObjectName": "GrassRemovalVolumeComponent'Default__BpVisTownCenterTownT3_C:GrassRemovalVolume'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.10"
       },
+      "bSupportsHealthMaterialUpdates": true,
       "MapIconProperty": {
         "Icon": {
           "ObjectName": "Texture2D'MapIconTownHall'",
@@ -658,6 +659,12 @@
       },
       "ParentComponentOrVariableName": "ArrowComponent",
       "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.22"
+        }
+      ],
       "VariableGuid": "82BBD4A5-41631DB2-9C91908A-10601950",
       "InternalVariableName": "CollapsedMeshRoof"
     }
@@ -761,8 +768,6 @@
         "ObjectName": "VisStaticMeshComponent'BpVisTownCenterTownT3_C:Roof_GEN_VARIABLE'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.52"
       },
-      "ParentComponentOrVariableName": "ArrowComponent",
-      "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_17'",
@@ -1073,10 +1078,6 @@
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.21"
         },
         {
-          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.22"
-        },
-        {
           "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_18'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.24"
         },
@@ -1139,10 +1140,6 @@
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.21"
         },
         {
-          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.22"
-        },
-        {
           "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_18'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.24"
         },
@@ -1165,6 +1162,10 @@
         {
           "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_21'",
           "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BpVisTownCenterTownT3_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "Anvil/Content/Blueprints/VisActors/Structures/Town/BpVisTownCenterTownT3.22"
         }
       ],
       "DefaultSceneRootNode": {
@@ -1409,8 +1410,8 @@
       "VisMeshProfile": "EVisMeshProfile::Structure",
       "bMeshVisibilityGroup2": true,
       "StaticMesh": {
-        "ObjectName": "StaticMesh'T3KeepRoof'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T3KeepRoof.2"
+        "ObjectName": "StaticMesh'T3KeepRoofHusk'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T3KeepRoofHusk.2"
       },
       "OverrideMaterials": [
         null,
@@ -1436,8 +1437,8 @@
       "VisMeshProfile": "EVisMeshProfile::Structure",
       "bMeshVisibility": true,
       "StaticMesh": {
-        "ObjectName": "StaticMesh'T3KeepSecondFloor'",
-        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T3KeepSecondFloor.2"
+        "ObjectName": "StaticMesh'T3KeepSecondFloorHusk'",
+        "ObjectPath": "Anvil/Content/Meshes/Structures/Foundations/T3KeepSecondFloorHusk.2"
       },
       "OverrideMaterials": [
         null,

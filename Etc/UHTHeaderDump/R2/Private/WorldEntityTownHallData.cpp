@@ -5,6 +5,7 @@ FWorldEntityTownHallData::FWorldEntityTownHallData() {
     this->TownNameOrdinal = 0;
     this->TownNameId = 0;
     this->Tier = 0;
+    this->bIsSmallCamp = false;
     this->NumTotalHouses = 0;
     this->NumUnclaimedHouses = 0;
     this->NumTotalTents = 0;

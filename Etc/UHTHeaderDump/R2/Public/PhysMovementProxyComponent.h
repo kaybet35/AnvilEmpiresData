@@ -26,6 +26,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector EngineForcePosition;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float SeatThrustForce;
+    
     UPhysMovementProxyComponent();
 
 };

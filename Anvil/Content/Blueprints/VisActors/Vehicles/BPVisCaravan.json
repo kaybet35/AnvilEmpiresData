@@ -87,6 +87,10 @@
         "ObjectName": "EntityAttachableDataComponent'Default__BPVisCaravan_C:EntityAttachableDataComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.5"
       },
+      "VehicleSeatDataComponent": {
+        "ObjectName": "VehicleSeatDataComponent'Default__BPVisCaravan_C:VehicleSeatDataComponent'",
+        "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.15"
+      },
       "MoveLoopAudioComponent": {
         "ObjectName": "AudioComponent'Default__BPVisCaravan_C:MovementAudioComponent'",
         "ObjectPath": "Anvil/Content/Blueprints/VisActors/Vehicles/BPVisCaravan.1"
@@ -105,9 +109,9 @@
       },
       "UseWindowType": "EHUDWindowType::InventoryStructure",
       "AdditionalActionButtons": [
-        "EActionButtonType::DeployCamp",
-        "EActionButtonType::DetachVehicle",
-        "EActionButtonType::AttachVehicle"
+        "EAnvilEntityActionType::DeployCamp",
+        "EAnvilEntityActionType::DetachVehicle",
+        "EAnvilEntityActionType::AttachVehicle"
       ],
       "InteractionIcon": {
         "ObjectName": "Texture2D'CaravanIcon'",
@@ -300,6 +304,13 @@
     "Name": "VehicleMovementDataComponent",
     "Outer": "Default__BPVisCaravan_C",
     "Class": "UScriptClass'VehicleMovementDataComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "VehicleSeatDataComponent",
+    "Name": "VehicleSeatDataComponent",
+    "Outer": "Default__BPVisCaravan_C",
+    "Class": "UScriptClass'VehicleSeatDataComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   }
 ]

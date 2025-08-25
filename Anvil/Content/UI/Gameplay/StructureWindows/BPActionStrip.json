@@ -20,14 +20,13 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "EntityActionType": "EAnvilEntityActionType::AttachVehicle",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtonsAttachVehicle'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtonsAttachVehicle.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_53'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.69"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.77"
       }
     }
   },
@@ -42,14 +41,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::ClaimBed",
+      "ActionButtonType": "EAnvilEntityActionType::ClaimBed",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_Pledge'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Pledge.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_43'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.58"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.66"
       }
     }
   },
@@ -64,14 +63,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::ClaimFamilyArea",
+      "ActionButtonType": "EAnvilEntityActionType::ClaimFamilyArea",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtonsFamilyClaimAreaIcon'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtonsFamilyClaimAreaIcon.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_61'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.78"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.86"
       }
     }
   },
@@ -86,20 +85,20 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::ClaimHouse",
+      "ActionButtonType": "EAnvilEntityActionType::ClaimHouse",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_Pledge'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Pledge.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_44'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.59"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.67"
       }
     }
   },
   {
     "Type": "BPBaseActionButton_C",
-    "Name": "CloseSiegeTowerLadder",
+    "Name": "CloseGangplankLeft",
     "Outer": "WidgetTree",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/StructureWindows/BPBaseActionButton.BPBaseActionButton_C'",
     "Template": {
@@ -108,15 +107,58 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::CloseSiegeTowerLadder",
-      "EntityActionType": "EAnvilEntityActionType::CloseSiegeTowerLadder",
+      "ActionButtonType": "EAnvilEntityActionType::CloseGangplankLeft",
       "ButtonImageOverride": {
-        "ObjectName": "Texture2D'ActionButtons_SiegeTowerUndeploy'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_SiegeTowerUndeploy.0"
+        "ObjectName": "Texture2D'ActionButtons_GangplankLeftRetract'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_GangplankLeftRetract.0"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.62"
+      }
+    }
+  },
+  {
+    "Type": "BPBaseActionButton_C",
+    "Name": "CloseGangplankRight",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/StructureWindows/BPBaseActionButton.BPBaseActionButton_C'",
+    "Template": {
+      "ObjectName": "BPBaseActionButton_C'Default__BPBaseActionButton_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPBaseActionButton.0"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ActionButtonType": "EAnvilEntityActionType::CloseGangplankRight",
+      "ButtonImageOverride": {
+        "ObjectName": "Texture2D'ActionButtons_GangplankRightRetract'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_GangplankRightRetract.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_6'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.76"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.84"
+      }
+    }
+  },
+  {
+    "Type": "BPBaseActionButton_C",
+    "Name": "CloseSail",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/StructureWindows/BPBaseActionButton.BPBaseActionButton_C'",
+    "Template": {
+      "ObjectName": "BPBaseActionButton_C'Default__BPBaseActionButton_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPBaseActionButton.0"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ActionButtonType": "EAnvilEntityActionType::CloseSail",
+      "ButtonImageOverride": {
+        "ObjectName": "Texture2D'ActionButtons_Cancel'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Cancel.0"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.49"
       }
     }
   },
@@ -131,15 +173,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::CloseSiegeTowerRamp",
-      "EntityActionType": "EAnvilEntityActionType::CloseSiegeTowerRamp",
+      "ActionButtonType": "EAnvilEntityActionType::CloseSiegeTowerRamp",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_SiegeTowerBridgeUp'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_SiegeTowerBridgeUp.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_10'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.41"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.46"
       }
     }
   },
@@ -154,14 +195,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::DeployAsMilitia",
+      "ActionButtonType": "EAnvilEntityActionType::DeployAsMilitia",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_Return'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Return.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_42'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.65"
       }
     }
   },
@@ -176,14 +217,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::DeployCamp",
+      "ActionButtonType": "EAnvilEntityActionType::DeployCamp",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtonsDeployCamp'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtonsDeployCamp.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_46'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.61"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.69"
       }
     }
   },
@@ -198,14 +239,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::DeployLadder",
+      "ActionButtonType": "EAnvilEntityActionType::DeployLadder",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtonsDeployLadder'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtonsDeployLadder.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_47'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.62"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.70"
       }
     }
   },
@@ -220,15 +261,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::DetachVehicle",
-      "EntityActionType": "EAnvilEntityActionType::DetachVehicle",
+      "ActionButtonType": "EAnvilEntityActionType::DetachVehicle",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtonsDetachVehicle'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtonsDetachVehicle.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_54'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.70"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.78"
       }
     }
   },
@@ -243,14 +283,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::DismantleByOfficial",
+      "ActionButtonType": "EAnvilEntityActionType::DismantleByOfficial",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_Dismantle'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Dismantle.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_36'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.51"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.58"
       }
     }
   },
@@ -265,15 +305,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::Downvote",
-      "EntityActionType": "EAnvilEntityActionType::DownvoteSignPost",
+      "ActionButtonType": "EAnvilEntityActionType::Downvote",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_DownvoteDeactive'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_DownvoteDeactive.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_31'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.46"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.53"
       }
     }
   },
@@ -288,15 +327,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::Downvoted",
-      "EntityActionType": "EAnvilEntityActionType::CancelVoteSignPost",
+      "ActionButtonType": "EAnvilEntityActionType::Downvoted",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_DownvoteActive'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_DownvoteActive.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_32'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.47"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.54"
       }
     }
   },
@@ -311,14 +349,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::EditSignPost",
+      "ActionButtonType": "EAnvilEntityActionType::EditSignPost",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButton_Rename'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButton_Rename.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_33'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.48"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.55"
       }
     }
   },
@@ -333,15 +371,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::ExtendStorehouse",
-      "EntityActionType": "EAnvilEntityActionType::ExtendStorehouse",
+      "ActionButtonType": "EAnvilEntityActionType::ExtendStorehouse",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_StorehouseTimeAdd'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_StorehouseTimeAdd.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_35'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.50"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.57"
       }
     }
   },
@@ -356,14 +393,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::FamilyInviteToJoin",
+      "ActionButtonType": "EAnvilEntityActionType::FamilyInviteToJoin",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtonsInviteToJoinIcon'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtonsInviteToJoinIcon.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_59'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.75"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.83"
       }
     }
   },
@@ -378,15 +415,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::FamilyLock",
-      "EntityActionType": "EAnvilEntityActionType::LockToFamily",
+      "ActionButtonType": "EAnvilEntityActionType::FamilyLock",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtonsFamilyLockIcon'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtonsFamilyLockIcon.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_56'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.72"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.80"
       }
     }
   },
@@ -401,14 +437,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::FamilyRequestToJoin",
+      "ActionButtonType": "EAnvilEntityActionType::FamilyRequestToJoin",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtonsFamilyRequestToJoinIcon'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtonsFamilyRequestToJoinIcon.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_60'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.77"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.85"
       }
     }
   },
@@ -423,15 +459,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::FamilyUnlock",
-      "EntityActionType": "EAnvilEntityActionType::UnlockFamilyLock",
+      "ActionButtonType": "EAnvilEntityActionType::FamilyUnlock",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtonsFamilyUnlockIcon'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtonsFamilyUnlockIcon.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_55'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.71"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.79"
       }
     }
   },
@@ -446,21 +481,20 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::GotoSleep",
-      "EntityActionType": "EAnvilEntityActionType::GotoSleep",
+      "ActionButtonType": "EAnvilEntityActionType::GotoSleep",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_Sleep'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Sleep.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_45'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.60"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.68"
       }
     }
   },
   {
     "Type": "BPBaseActionButton_C",
-    "Name": "OpenSiegeTowerLadder",
+    "Name": "OpenGangplankLeft",
     "Outer": "WidgetTree",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/StructureWindows/BPBaseActionButton.BPBaseActionButton_C'",
     "Template": {
@@ -469,15 +503,58 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::OpenSiegeTowerLadder",
-      "EntityActionType": "EAnvilEntityActionType::OpenSiegeTowerLadder",
+      "ActionButtonType": "EAnvilEntityActionType::OpenGangplankLeft",
       "ButtonImageOverride": {
-        "ObjectName": "Texture2D'ActionButtons_SiegeTowerDeploy'",
-        "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_SiegeTowerDeploy.0"
+        "ObjectName": "Texture2D'ActionButtons_GangplankLeft'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_GangplankLeft.0"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.52"
+      }
+    }
+  },
+  {
+    "Type": "BPBaseActionButton_C",
+    "Name": "OpenGangplankRight",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/StructureWindows/BPBaseActionButton.BPBaseActionButton_C'",
+    "Template": {
+      "ObjectName": "BPBaseActionButton_C'Default__BPBaseActionButton_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPBaseActionButton.0"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ActionButtonType": "EAnvilEntityActionType::OpenGangplankRight",
+      "ButtonImageOverride": {
+        "ObjectName": "Texture2D'ActionButtons_GangplankRight'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_GangplankRight.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.65"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.73"
+      }
+    }
+  },
+  {
+    "Type": "BPBaseActionButton_C",
+    "Name": "OpenSail",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/StructureWindows/BPBaseActionButton.BPBaseActionButton_C'",
+    "Template": {
+      "ObjectName": "BPBaseActionButton_C'Default__BPBaseActionButton_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPBaseActionButton.0"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ActionButtonType": "EAnvilEntityActionType::OpenSail",
+      "ButtonImageOverride": {
+        "ObjectName": "Texture2D'ActionButtons_Accept'",
+        "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Accept.0"
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.44"
       }
     }
   },
@@ -492,15 +569,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::OpenSiegeTowerRamp",
-      "EntityActionType": "EAnvilEntityActionType::OpenSiegeTowerRamp",
+      "ActionButtonType": "EAnvilEntityActionType::OpenSiegeTowerRamp",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_SiegeTowerBridgeDown'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_SiegeTowerBridgeDown.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_9'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.79"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.87"
       }
     }
   },
@@ -515,15 +591,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::PledgeToTown",
-      "EntityActionType": "EAnvilEntityActionType::PledgeToTown",
+      "ActionButtonType": "EAnvilEntityActionType::PledgeToTown",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_Pledge'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Pledge.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_50'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.66"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.74"
       }
     }
   },
@@ -538,15 +613,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::PushLadder",
-      "EntityActionType": "EAnvilEntityActionType::RetractLadder",
+      "ActionButtonType": "EAnvilEntityActionType::PushLadder",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtonsPushLadder'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtonsPushLadder.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_51'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.67"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.75"
       }
     }
   },
@@ -561,15 +635,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::ReinforceStructure",
-      "EntityActionType": "EAnvilEntityActionType::ReinforceStructure",
+      "ActionButtonType": "EAnvilEntityActionType::ReinforceStructure",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtonsReinforce'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtonsReinforce.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_39'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.54"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.61"
       }
     }
   },
@@ -584,15 +657,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::ReleaseStorehouse",
-      "EntityActionType": "EAnvilEntityActionType::ReleaseStorehouse",
+      "ActionButtonType": "EAnvilEntityActionType::ReleaseStorehouse",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_StorehouseRelease'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_StorehouseRelease.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_34'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.49"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.56"
       }
     }
   },
@@ -607,15 +679,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::RentStorehouse",
-      "EntityActionType": "EAnvilEntityActionType::RentStorehouse",
+      "ActionButtonType": "EAnvilEntityActionType::RentStorehouse",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_StorehouseRent'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_StorehouseRent.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_11'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.42"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.47"
       }
     }
   },
@@ -630,15 +701,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::RestrictedModeOff",
-      "EntityActionType": "EAnvilEntityActionType::RestrictedModeOff",
+      "ActionButtonType": "EAnvilEntityActionType::RestrictedModeOff",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_GateClosed'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_GateClosed.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_38'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.53"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.60"
       }
     }
   },
@@ -653,15 +723,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::RestrictedModeOn",
-      "EntityActionType": "EAnvilEntityActionType::RestrictedModeOn",
+      "ActionButtonType": "EAnvilEntityActionType::RestrictedModeOn",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_GateOpen'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_GateOpen.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_37'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.52"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.59"
       }
     }
   },
@@ -676,15 +745,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::RetractLadder",
-      "EntityActionType": "EAnvilEntityActionType::RetractLadder",
+      "ActionButtonType": "EAnvilEntityActionType::RetractLadder",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtonsRetractLadder'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtonsRetractLadder.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_52'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.68"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.76"
       }
     }
   },
@@ -699,14 +767,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::ReturnToPledgedTown",
+      "ActionButtonType": "EAnvilEntityActionType::ReturnToPledgedTown",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_ReturnToPledgedTown'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_ReturnToPledgedTown.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_41'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.56"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.64"
       }
     }
   },
@@ -721,14 +789,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::SetTownName",
+      "ActionButtonType": "EAnvilEntityActionType::SetTownName",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_TownName'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_TownName.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_49'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.64"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.72"
       }
     }
   },
@@ -743,15 +811,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::StartPowerMill",
-      "EntityActionType": "EAnvilEntityActionType::StartPowerMill",
+      "ActionButtonType": "EAnvilEntityActionType::StartPowerMill",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_Start'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Start.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_58'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.74"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.82"
       }
     }
   },
@@ -766,15 +833,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::StopPowerMill",
-      "EntityActionType": "EAnvilEntityActionType::StopPowerMill",
+      "ActionButtonType": "EAnvilEntityActionType::StopPowerMill",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_Stop'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Stop.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_57'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.73"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.81"
       }
     }
   },
@@ -789,14 +855,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::Upgrade",
+      "ActionButtonType": "EAnvilEntityActionType::Upgrade",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_Upgrade'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Upgrade.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_40'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.55"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.63"
       }
     }
   },
@@ -811,15 +877,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::Upvote",
-      "EntityActionType": "EAnvilEntityActionType::UpvoteSignPost",
+      "ActionButtonType": "EAnvilEntityActionType::Upvote",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_UpvoteDeactive'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_UpvoteDeactive.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.44"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.50"
       }
     }
   },
@@ -834,15 +899,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::Upvoted",
-      "EntityActionType": "EAnvilEntityActionType::CancelVoteSignPost",
+      "ActionButtonType": "EAnvilEntityActionType::Upvoted",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_UpvoteActive'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_UpvoteActive.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_28'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.45"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.51"
       }
     }
   },
@@ -857,14 +921,14 @@
     },
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "ActionButtonType": "EActionButtonType::WithdrawSilver",
+      "ActionButtonType": "EAnvilEntityActionType::EAnvilEntityActionType_MAX",
       "ButtonImageOverride": {
         "ObjectName": "Texture2D'ActionButtons_Gold'",
         "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_Gold.0"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_48'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.63"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.71"
       }
     }
   },
@@ -878,165 +942,199 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_40'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.55"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_41'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.56"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_42'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.57"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_43'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.58"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_44'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.59"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_45'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.60"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_46'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.61"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_47'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.62"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_48'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.63"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_49'",
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_41'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.64"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_50'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.66"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_51'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.67"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_52'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.68"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_53'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.69"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_54'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.70"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_61'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.78"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_60'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.77"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_59'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.75"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_58'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.74"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_57'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.73"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_56'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.72"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_55'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.71"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_27'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.44"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_28'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.45"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_31'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.46"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_32'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.47"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_33'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.48"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_11'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.42"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_34'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.49"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_35'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.50"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_9'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.79"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_10'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.41"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_5'",
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_42'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.65"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_6'",
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_43'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.66"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_44'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.67"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_45'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.68"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_46'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.69"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_47'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.70"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_48'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.71"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_49'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.72"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_50'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.74"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_51'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.75"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_52'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.76"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_19'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_53'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.77"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_39'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.54"
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_54'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.78"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_38'",
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_61'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.86"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_60'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.85"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_59'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.83"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_58'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.82"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_57'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.81"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_56'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.80"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_55'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.79"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_27'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.50"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_28'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.51"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_31'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.53"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_37'",
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_32'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.54"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_33'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.55"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_11'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.47"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_34'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.56"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_35'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.57"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_9'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.87"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_10'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.46"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.44"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.49"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_3'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.52"
         },
         {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.62"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.73"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_6'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.84"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_19'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.48"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_39'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.61"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_38'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.60"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_37'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.59"
+        },
+        {
           "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.40"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.45"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_36'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.51"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.58"
         }
       ]
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_27",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
+      },
+      "Content": {
+        "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.OpenSail'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.25"
+      }
     }
   },
   {
@@ -1053,11 +1151,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "TextBlock'BPActionStrip_C:WidgetTree.DisMantleTimerText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.81"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.89"
       }
     }
   },
@@ -1071,11 +1169,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.CloseSiegeTowerRamp'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.6"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.8"
       }
     }
   },
@@ -1089,11 +1187,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.RentStorehouse'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.27"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.31"
       }
     }
   },
@@ -1109,11 +1207,29 @@
       },
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "Spacer'BPActionStrip_C:WidgetTree.Spacer_77'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.80"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.88"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_27",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
+      },
+      "Content": {
+        "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.CloseSail'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.7"
       }
     }
   },
@@ -1127,11 +1243,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.Upvote'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.36"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.40"
       }
     }
   },
@@ -1145,11 +1261,29 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.Upvoted'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.37"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.41"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "HorizontalBox_27",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
+      },
+      "Content": {
+        "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.OpenGangplankLeft'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.23"
       }
     }
   },
@@ -1163,11 +1297,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.DownVote'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.12"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.14"
       }
     }
   },
@@ -1181,11 +1315,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.DownVoted'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.13"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.15"
       }
     }
   },
@@ -1199,11 +1333,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.EditSignPost'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.14"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.16"
       }
     }
   },
@@ -1217,11 +1351,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.ReleaseStorehouse'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.26"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.30"
       }
     }
   },
@@ -1235,11 +1369,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.ExtendStorehouse'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.15"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.17"
       }
     }
   },
@@ -1253,11 +1387,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.Dismantle'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.11"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.13"
       }
     }
   },
@@ -1271,11 +1405,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.RestrictedModeOn'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.29"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.33"
       }
     }
   },
@@ -1289,11 +1423,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.RestrictedModeOff'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.28"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.32"
       }
     }
   },
@@ -1307,11 +1441,29 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.ReinforceStructure'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.25"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.29"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Outer": "HorizontalBox_27",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
+      },
+      "Content": {
+        "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.CloseGangplankLeft'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.5"
       }
     }
   },
@@ -1325,11 +1477,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.Upgrade'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.35"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
       }
     }
   },
@@ -1343,11 +1495,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.ReturnToPledgedTown'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.31"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.35"
       }
     }
   },
@@ -1361,11 +1513,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.DeployAsMilitia'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.7"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.9"
       }
     }
   },
@@ -1379,7 +1531,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.ClaimBed'",
@@ -1397,7 +1549,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.ClaimHouse'",
@@ -1415,11 +1567,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.GotoSleep'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.20"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.22"
       }
     }
   },
@@ -1433,11 +1585,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.DeployCamp'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.8"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.10"
       }
     }
   },
@@ -1451,11 +1603,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.DeployLadder'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.11"
       }
     }
   },
@@ -1469,11 +1621,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.WithdrawSilver'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.38"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.42"
       }
     }
   },
@@ -1487,11 +1639,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.SetTownName'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.32"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.36"
       }
     }
   },
@@ -1505,11 +1657,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
-        "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.OpenSiegeTowerLadder'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.21"
+        "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.OpenGangplankRight'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.24"
       }
     }
   },
@@ -1523,11 +1675,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.PledgeToTown'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.23"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.27"
       }
     }
   },
@@ -1541,11 +1693,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.PushLadder'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.24"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.28"
       }
     }
   },
@@ -1559,11 +1711,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.RetractLadder'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.30"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.34"
       }
     }
   },
@@ -1577,7 +1729,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.Attach'",
@@ -1595,11 +1747,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.Detach'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.10"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.12"
       }
     }
   },
@@ -1613,11 +1765,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.FamilyUnlock'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.19"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.21"
       }
     }
   },
@@ -1631,11 +1783,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.FamilyLock'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.17"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.19"
       }
     }
   },
@@ -1649,11 +1801,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.StopPowerMill'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.34"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.38"
       }
     }
   },
@@ -1667,11 +1819,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.StartPowerMill'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.33"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.37"
       }
     }
   },
@@ -1685,11 +1837,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.FamilyInviteToJoin'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.16"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.18"
       }
     }
   },
@@ -1703,11 +1855,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
-        "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.CloseSiegeTowerLadder'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.5"
+        "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.CloseGangplankRight'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.6"
       }
     }
   },
@@ -1721,11 +1873,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.FamilyRequestJoin'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.18"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.20"
       }
     }
   },
@@ -1739,7 +1891,7 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.ClaimFamilyArea'",
@@ -1757,11 +1909,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       },
       "Content": {
         "ObjectName": "BPBaseActionButton_C'BPActionStrip_C:WidgetTree.OpenSiegeTowerRamp'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.22"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.26"
       }
     }
   },
@@ -1774,7 +1926,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_19'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.48"
       }
     }
   },
@@ -1810,7 +1962,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPActionStrip_C:WidgetTree.HorizontalBox_27.HorizontalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.40"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.45"
       }
     }
   },
@@ -1822,7 +1974,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPActionStrip_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.83"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.91"
       },
       "bClassRequiresNativeTick": true
     },
@@ -1877,7 +2029,29 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "CloseSiegeTowerLadder",
+        "Name": "CloseGangplankLeft",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPBaseActionButton_C'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPBaseActionButton.4"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CloseGangplankRight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPBaseActionButton_C'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPBaseActionButton.4"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CloseSail",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
@@ -2053,7 +2227,29 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "OpenSiegeTowerLadder",
+        "Name": "OpenGangplankLeft",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPBaseActionButton_C'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPBaseActionButton.4"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OpenGangplankRight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPBaseActionButton_C'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPBaseActionButton.4"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OpenSail",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
@@ -2274,7 +2470,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "HorizontalBox'BPActionStrip_C:WidgetTree.HorizontalBox_27'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.39"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPActionStrip.43"
       }
     }
   }

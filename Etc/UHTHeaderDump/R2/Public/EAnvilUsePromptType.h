@@ -9,7 +9,6 @@ enum class EAnvilUsePromptType : uint8 {
     UseEntity,
     DropLargeItem,
     Mount,
-    Repair,
     Gate,
     Feed,
     Gathering,

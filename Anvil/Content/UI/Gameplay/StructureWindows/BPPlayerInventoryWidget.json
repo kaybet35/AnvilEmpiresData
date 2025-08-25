@@ -22,7 +22,7 @@
           "Name": "AnvilPanelSlot1",
           "Content": {
             "ObjectName": "BPMainAreaContainer_C'BPPlayerInventoryWidget_C:WidgetTree.BPMainAreaContainer'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.3"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.4"
           }
         },
         {
@@ -35,8 +35,8 @@
         {
           "Name": "AnvilPanelSlot3",
           "Content": {
-            "ObjectName": "BPMainAreaContainer_C'BPPlayerInventoryWidget_C:WidgetTree.BPMainAreaContainer_1'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.4"
+            "ObjectName": "BPMainAreaContainer_C'BPPlayerInventoryWidget_C:WidgetTree.AvatarContainer'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.3"
           }
         }
       ]
@@ -89,6 +89,32 @@
   },
   {
     "Type": "BPMainAreaContainer_C",
+    "Name": "AvatarContainer",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPMainAreaContainer.BPMainAreaContainer_C'",
+    "Template": {
+      "ObjectName": "BPMainAreaContainer_C'Default__BPMainAreaContainer_C'",
+      "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidthOverride": 269.0,
+      "HeightOverride": 425.0,
+      "MinDesiredWidth": 269.0,
+      "bOverride_WidthOverride": true,
+      "NamedSlotBindings": [
+        {
+          "Name": "MainAreaSlot0",
+          "Content": {
+            "ObjectName": "HorizontalBox'BPPlayerInventoryWidget_C:WidgetTree.HorizontalBox_176'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.7"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BPMainAreaContainer_C",
     "Name": "BPMainAreaContainer",
     "Outer": "WidgetTree",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPMainAreaContainer.BPMainAreaContainer_C'",
@@ -108,32 +134,6 @@
           "Content": {
             "ObjectName": "ScrollBox'BPPlayerInventoryWidget_C:WidgetTree.ScrollBox_35'",
             "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.19"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "Type": "BPMainAreaContainer_C",
-    "Name": "BPMainAreaContainer_1",
-    "Outer": "WidgetTree",
-    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPMainAreaContainer.BPMainAreaContainer_C'",
-    "Template": {
-      "ObjectName": "BPMainAreaContainer_C'Default__BPMainAreaContainer_C'",
-      "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.2"
-    },
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "WidthOverride": 269.0,
-      "HeightOverride": 425.0,
-      "MinDesiredWidth": 269.0,
-      "bOverride_WidthOverride": true,
-      "NamedSlotBindings": [
-        {
-          "Name": "MainAreaSlot0",
-          "Content": {
-            "ObjectName": "HorizontalBox'BPPlayerInventoryWidget_C:WidgetTree.HorizontalBox_176'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerInventoryWidget.7"
           }
         }
       ]
@@ -768,17 +768,6 @@
       {
         "Type": "ObjectProperty",
         "Name": "BPMainAreaContainer",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
-        "PropertyClass": {
-          "ObjectName": "WidgetBlueprintGeneratedClass'BPMainAreaContainer_C'",
-          "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.20"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "BPMainAreaContainer_1",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",

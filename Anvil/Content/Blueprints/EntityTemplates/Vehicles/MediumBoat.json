@@ -332,7 +332,7 @@
     "Type": "MediumBoat_C",
     "Name": "Default__MediumBoat_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.MediumBoat_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CodeNameString": "MediumBoat",
       "CodeName": 718375835,
@@ -466,7 +466,7 @@
     "Class": "UScriptClass'PhysMovementProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "Mass": 15000.0,
+      "Mass": 30000.0,
       "CuboidTensorExtents": {
         "X": 1100.0,
         "Y": 550.0,
@@ -477,7 +477,8 @@
         "X": -800.0,
         "Y": 0.0,
         "Z": 0.0
-      }
+      },
+      "SeatThrustForce": 10000.0
     }
   },
   {
@@ -502,12 +503,6 @@
       "DragReferenceSpeed": 5.0,
       "Fp": 0.3,
       "Fs": 0.3,
-      "Cpd1": 1500.0,
-      "Cpd2": 3000.0,
-      "Csd1": 1500.0,
-      "Csd2": 3000.0,
-      "SlammingPower": 2.0,
-      "GammaMax": 5.0,
       "Rudder": {
         "Pivot": {
           "X": -800.0,
@@ -518,7 +513,12 @@
         "DimensionYZ": 600.0,
         "bVertical": true
       },
-      "ThrustVectoringPercent": 0.6
+      "ThrustVectoringPercent": 0.6,
+      "NoSailInputFactor": 0.1,
+      "SailInputCurve": {
+        "ObjectName": "CurveFloat'MediumBoatSailInputCurve'",
+        "ObjectPath": "Anvil/Content/Blueprints/Data/Curves/MediumBoatSailInputCurve.0"
+      }
     }
   },
   {
@@ -534,7 +534,6 @@
       "SprintFactor": 2.0,
       "SprintRotationalSpeedFactor": 0.5,
       "SprintStaminaDrain": 4.0,
-      "WindFactor": 500.0,
       "bWaterVehicle": true,
       "bSailBoat": true,
       "bDoAxleRaycasts": false,
@@ -561,7 +560,8 @@
         "Z": 350.0
       },
       "DismountMaxDelta": 400.0,
-      "bIsDriver": true
+      "bEngineThrustInput": true,
+      "bRudderRotationInput": true
     }
   },
   {
@@ -624,7 +624,8 @@
         "Y": 190.0,
         "Z": 350.0
       },
-      "DismountMaxDelta": 400.0
+      "DismountMaxDelta": 400.0,
+      "bSeatThrustInput": true
     }
   },
   {
@@ -645,7 +646,8 @@
         "Y": -190.0,
         "Z": 350.0
       },
-      "DismountMaxDelta": 400.0
+      "DismountMaxDelta": 400.0,
+      "bSeatThrustInput": true
     }
   },
   {

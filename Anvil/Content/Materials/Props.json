@@ -12,7 +12,7 @@
       "bUsedWithSplineMeshes": true,
       "bUsedWithInstancedStaticMeshes": true,
       "bUsedWithClothing": true,
-      "StateId": "205956C0-42D3CEE0-5291C199-0DABF8DF",
+      "StateId": "FDCFA450-40F0D6CD-11F1BC9D-472E910E",
       "TextureStreamingData": [
         {
           "SamplingScale": 1.0,
@@ -171,37 +171,27 @@
             "Index": -1
           },
           {
-            "Name": "Unhappiness Texture Tiling",
+            "Name": "Damage Texture Tiling",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           {
-            "Name": "Unhappiness Mask Tiling",
+            "Name": "Damage Mask Tiling",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           {
-            "Name": "Unhappiness Mask Levels",
+            "Name": "Damage Mask Levels",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           {
-            "Name": "Unhappiness Mask Intensity",
+            "Name": "Damage Mask Intensity",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           {
-            "Name": "Unhappiness",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          {
-            "Name": "2",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          {
-            "Name": "1",
+            "Name": "Damage",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
@@ -499,6 +489,11 @@
             "Name": "Opacity",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
+          },
+          {
+            "Name": "Interior",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
           }
         ]
       },
@@ -583,6 +578,16 @@
             "Name": "Global Alpha Mask Channel 1",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
+          },
+          {
+            "Name": "Damage Mask Channel",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Damage Albedo Adjust",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
           }
         ]
       },
@@ -612,22 +617,22 @@
             "Index": -1
           },
           {
-            "Name": "Unhappiness Albedo",
+            "Name": "Damage Albedo",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           {
-            "Name": "Unhappiness Materiality",
+            "Name": "Damage Material",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           {
-            "Name": "Unhappiness Normal",
+            "Name": "Damage Normal",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           {
-            "Name": "Unhappiness Mask Texture",
+            "Name": "Damage Mask Texture",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
@@ -777,10 +782,11 @@
         -1,
         -1,
         -1,
-        -1,
         -1
       ],
       "VectorPrimitiveDataIndexValues": [
+        -1,
+        -1,
         -1,
         -1,
         -1,
@@ -823,12 +829,10 @@
         0.05,
         0.0,
         128.0,
-        270.0,
-        2.418043,
-        19.467302,
+        759.21735,
+        3.623696,
+        2.84196,
         0.0,
-        1.0,
-        0.609524,
         0.0,
         1.0,
         1.0,
@@ -887,6 +891,7 @@
         2.0,
         2.0,
         2.0,
+        0.0,
         0.0
       ],
       "VectorValues": [
@@ -1001,6 +1006,20 @@
           "B": 0.0,
           "A": 1.0,
           "Hex": "000000"
+        },
+        {
+          "R": 1.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 0.0,
+          "Hex": "FF0000"
+        },
+        {
+          "R": 0.151042,
+          "G": 0.12324098,
+          "B": 0.10777496,
+          "A": 1.0,
+          "Hex": "6C625C"
         }
       ],
       "DoubleVectorValues": [],
@@ -1022,19 +1041,19 @@
           "SubPathString": ""
         },
         {
-          "AssetPathName": "/Game/Textures/Environment/ForestGround03A.ForestGround03A",
+          "AssetPathName": "/Game/Textures/Environment/AshA.AshA",
           "SubPathString": ""
         },
         {
-          "AssetPathName": "/Game/Textures/Environment/ForestGround03M.ForestGround03M",
+          "AssetPathName": "/Game/Textures/Environment/AshM.AshM",
           "SubPathString": ""
         },
         {
-          "AssetPathName": "/Game/Textures/Environment/ForestGround03N.ForestGround03N",
+          "AssetPathName": "/Game/Textures/Environment/AshN.AshN",
           "SubPathString": ""
         },
         {
-          "AssetPathName": "/Game/FX/Textures/NoiseMasks/TilingNoises01.TilingNoises01",
+          "AssetPathName": "/Game/FX/Water/Textures/WaterPatterns.WaterPatterns",
           "SubPathString": ""
         },
         {
@@ -1103,20 +1122,20 @@
           "ObjectPath": "Engine/Content/EngineMaterials/DefaultDiffuse.0"
         },
         {
-          "ObjectName": "Texture2D'ForestGround03A'",
-          "ObjectPath": "Anvil/Content/Textures/Environment/ForestGround03A.0"
+          "ObjectName": "Texture2D'AshA'",
+          "ObjectPath": "Anvil/Content/Textures/Environment/AshA.0"
         },
         {
-          "ObjectName": "Texture2D'ForestGround03M'",
-          "ObjectPath": "Anvil/Content/Textures/Environment/ForestGround03M.0"
+          "ObjectName": "Texture2D'AshM'",
+          "ObjectPath": "Anvil/Content/Textures/Environment/AshM.0"
         },
         {
-          "ObjectName": "Texture2D'ForestGround03N'",
-          "ObjectPath": "Anvil/Content/Textures/Environment/ForestGround03N.0"
+          "ObjectName": "Texture2D'AshN'",
+          "ObjectPath": "Anvil/Content/Textures/Environment/AshN.0"
         },
         {
-          "ObjectName": "Texture2D'TilingNoises01'",
-          "ObjectPath": "Anvil/Content/FX/Textures/NoiseMasks/TilingNoises01.0"
+          "ObjectName": "Texture2D'WaterPatterns'",
+          "ObjectPath": "Anvil/Content/FX/Water/Textures/WaterPatterns.0"
         },
         {
           "ObjectName": "Texture2D'Anvil_A'",
@@ -1125,14 +1144,6 @@
         {
           "ObjectName": "Texture2D'NoiseMask'",
           "ObjectPath": "Anvil/Content/FX/Textures/NoiseMasks/NoiseMask.0"
-        },
-        {
-          "ObjectName": "Texture2D'AshA'",
-          "ObjectPath": "Anvil/Content/Textures/Environment/AshA.0"
-        },
-        {
-          "ObjectName": "Texture2D'AshM'",
-          "ObjectPath": "Anvil/Content/Textures/Environment/AshM.0"
         },
         {
           "ObjectName": "Texture2D'WoodShingleA'",
@@ -2217,16 +2228,16 @@
         "ObjectPath": "Anvil/Content/FX/Textures/NoiseMasks/NoiseMask.0"
       },
       {
-        "ObjectName": "Texture2D'TilingNoises01'",
-        "ObjectPath": "Anvil/Content/FX/Textures/NoiseMasks/TilingNoises01.0"
-      },
-      {
         "ObjectName": "Texture2D'RainDropMap'",
         "ObjectPath": "Anvil/Content/FX/Textures/RainDropMap.0"
       },
       {
         "ObjectName": "Texture2D'RippleUVs'",
         "ObjectPath": "Anvil/Content/FX/Textures/RippleUVs.0"
+      },
+      {
+        "ObjectName": "Texture2D'WaterPatterns'",
+        "ObjectPath": "Anvil/Content/FX/Water/Textures/WaterPatterns.0"
       },
       {
         "ObjectName": "Texture2D'T_CliffRock_03_N'",
@@ -2245,16 +2256,8 @@
         "ObjectPath": "Anvil/Content/Textures/Environment/AshM.0"
       },
       {
-        "ObjectName": "Texture2D'ForestGround03A'",
-        "ObjectPath": "Anvil/Content/Textures/Environment/ForestGround03A.0"
-      },
-      {
-        "ObjectName": "Texture2D'ForestGround03M'",
-        "ObjectPath": "Anvil/Content/Textures/Environment/ForestGround03M.0"
-      },
-      {
-        "ObjectName": "Texture2D'ForestGround03N'",
-        "ObjectPath": "Anvil/Content/Textures/Environment/ForestGround03N.0"
+        "ObjectName": "Texture2D'AshN'",
+        "ObjectPath": "Anvil/Content/Textures/Environment/AshN.0"
       },
       {
         "ObjectName": "Texture2D'T_moss_normal'",

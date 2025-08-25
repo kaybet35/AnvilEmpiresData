@@ -11,6 +11,7 @@ UWorldTownCenterMapIcon::UWorldTownCenterMapIcon() {
     this->NumReinforcementSuppliesStatus = NULL;
     this->TownWarningText = NULL;
     this->DetectionRangeCircle = NULL;
+    this->WorldEntityInventoryTooltipClass = NULL;
 }
 
 ESlateVisibility UWorldTownCenterMapIcon::GetTownWarningTextVisibility() {

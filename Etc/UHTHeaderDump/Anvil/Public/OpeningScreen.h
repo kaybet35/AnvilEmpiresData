@@ -23,6 +23,9 @@ public:
     UAnvilButtonWidget* OptionsButton;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAnvilButtonWidget* CreditsButton;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* VersionText;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -77,6 +80,9 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void OnDevModeButtonClicked();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnCreditsButtonClicked();
     
     UFUNCTION(BlueprintCallable)
     bool IsDiscordRoleButtonEnabled();

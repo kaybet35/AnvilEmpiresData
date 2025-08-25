@@ -9,7 +9,6 @@ UVehicleMovementProxyComponent::UVehicleMovementProxyComponent() {
     this->SprintStaminaDrain = 15.00f;
     this->WalkStaminaDrain = 0.00f;
     this->RoadFactor = 1.00f;
-    this->WindFactor = 1000.00f;
     this->bGroupVehicle = false;
     this->bYawInPlace = false;
     this->bLadderMovement = false;
