@@ -3,6 +3,6 @@
 
 class UBPWorldMarketShopMapIcon_C : public UWorldMarketShopMapIcon
 {
-}; // Size: 0x3B8
+}; // Size: 0x3C0
 
 #endif

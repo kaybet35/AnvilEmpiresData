@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_GridFoundation_VisToggle_SquareStraightBuildSite_HPP
+#define UE4SS_SDK_GridFoundation_VisToggle_SquareStraightBuildSite_HPP
+
+class UGridFoundation_VisToggle_SquareStraightBuildSite_C : public UBPBaseFoundationBuildSiteEntity_C
+{
+}; // Size: 0xD0
+
+#endif

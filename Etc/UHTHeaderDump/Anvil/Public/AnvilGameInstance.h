@@ -3,6 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=GameInstance -FallbackName=GameInstance
 #include "AnvilAssetManager.h"
 #include "AnvilOptionsManager.h"
+#include "AvatarManager.h"
 #include "ClientConfigManager.h"
 #include "MapPostManager.h"
 #include "Templates/SubclassOf.h"
@@ -60,6 +61,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMapPostManager MapPostManager;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FAvatarManager AvatarManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AUIGlobals> UIGlobalsClass;

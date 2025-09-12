@@ -35,6 +35,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FStructureStats> StructureStatsList;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 DebugHUDSpeed;
+    
     UAdminEnvDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };

@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "EAnvilCharacterStance.h"
 #include "ProxyComponent.h"
 #include "PlayerInputProxyComponent.generated.h"
 
@@ -12,10 +13,10 @@ public:
     float CameraPanDeadzoneRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float CameraPanMaxDistance;
+    float CameraPanLerpAlphaPerSecond;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float CameraPanLerpAlphaPerSecond;
+    TMap<EAnvilCharacterStance, float> StanceToCameraPanMaxDistance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CameraMousePositionNormalizedEdgePanThreshold;

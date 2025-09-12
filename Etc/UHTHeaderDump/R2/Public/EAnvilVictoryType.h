@@ -6,6 +6,7 @@ UENUM(BlueprintType)
 enum class EAnvilVictoryType : uint8 {
     Military,
     Culture,
+    Religious,
     NumTypes,
 };
 

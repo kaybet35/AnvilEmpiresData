@@ -6,5 +6,6 @@ FR2ConfigArea::FR2ConfigArea() {
     this->TownAreaRadius = 0.00f;
     this->FortressAreaRadius = 0.00f;
     this->FortressToTownPaddingDist = 0.00f;
+    this->CampToCampPaddingDist = 0.00f;
 }
 

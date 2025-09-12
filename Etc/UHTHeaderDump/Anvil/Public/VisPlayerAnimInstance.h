@@ -3,7 +3,6 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimInstance -FallbackName=AnimInstance
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilCharacterStance -FallbackName=EAnvilCharacterStance
-//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilVehicleInputState -FallbackName=EAnvilVehicleInputState
 #include "EEquippedItemGripType.h"
 #include "EIncomingAttackDirection.h"
 #include "VisPlayerAnimInstance.generated.h"
@@ -38,9 +37,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAnvilCharacterStance NativeStance;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EAnvilVehicleInputState VehicleInputState;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EIncomingAttackDirection IncomingAttackDirection;
@@ -119,6 +115,9 @@ protected:
     bool bNativeVehicleInputStateStrafeRight;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bNativeVehicleIsSailOpen;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bNativePrimaryGripTypeIsPike;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -146,7 +145,7 @@ protected:
     bool bNativeAbsSpeedOver25;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool bNativeAimingStanceNotScorpion;
+    bool bNativeAimingStanceNotScorpionNotSpotter;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bNativeAimingNotGuarding;

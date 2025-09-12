@@ -44,6 +44,8 @@ enum class EAnvilStatusMessageType : uint8 {
     NotEnoughStamina,
     WrongStance,
     MissingResource,
+    MissingStructure,
+    Crafting,
     VehicleMustBeEmpty,
     QueueIsFull,
     NotEnoughPayment,
@@ -146,6 +148,7 @@ enum class EAnvilStatusMessageType : uint8 {
     ReducedDamageFromLowStamina,
     NotEnoughPlayersToCapture,
     CannotOpenBothSailAndPlank,
+    RelicSiteClaimed,
     NumTypes,
 };
 

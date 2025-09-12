@@ -14,6 +14,7 @@ enum class EAnvilWorldEntityType : uint8 {
     FamilyCenter,
     Temple,
     Fortress,
+    RelicSite,
     NumTypes,
 };
 

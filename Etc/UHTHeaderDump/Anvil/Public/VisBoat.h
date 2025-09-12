@@ -7,6 +7,7 @@ class UEntityAttachableDataComponent;
 class UEntityAttachableProxyComponent;
 class UShipMovementDataComponent;
 class UStaticMeshComponent;
+class UVehicleSeatDataComponent;
 
 UCLASS(Blueprintable)
 class ANVIL_API AVisBoat : public AVisVehicle {
@@ -17,6 +18,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UShipMovementDataComponent* ShipMovementDataComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UVehicleSeatDataComponent* HelmsmanSeat;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStaticMeshComponent* GangplankLeftMesh;

@@ -978,45 +978,6 @@
             "ItemFlagsVisVar": 0,
             "Payload": 0
           },
-          "StackLimit": 1,
-          "bOr": false,
-          "bAllowWithdrawal": true,
-          "bIsPlayerEquipmentSlot": false,
-          "bCheckDedicatedUnderlyingItem": true,
-          "AcceptedTags": [
-            "EAnvilItemTag::WeaponStorage"
-          ],
-          "AcceptedTagsVisVar": 0,
-          "RequiredTags": [],
-          "RequiredTagsVisVar": 0,
-          "ProhibitedTags": [
-            "EAnvilItemTag::Large",
-            "EAnvilItemTag::Ammunition",
-            "EAnvilItemTag::HeavyTool"
-          ],
-          "ProhibitedTagsVisVar": 0,
-          "DedicatedItemType": null,
-          "DedicatedItemTypeVisVar": 0,
-          "DedicatedUnderlyingItem": null,
-          "DedicatedUnderlyingItemVisVar": 0,
-          "RequiredEnablingItem": null,
-          "RequiredEnablingItemVisVar": 0,
-          "BackgroundType": "EAnvilItemSlotBackgroundType::Belt",
-          "CustomStackLimits": []
-        },
-        {
-          "ProxyRepeat": 1,
-          "Base": {
-            "CodeName": null,
-            "CodeNameVisVar": 0,
-            "UnderlyingCodeName": null,
-            "UnderlyingCodeNameVisVar": 0,
-            "Durability": 100.0,
-            "Count": 0,
-            "ItemFlags": [],
-            "ItemFlagsVisVar": 0,
-            "Payload": 0
-          },
           "StackLimit": 10000,
           "bOr": false,
           "bAllowWithdrawal": true,
@@ -1045,7 +1006,7 @@
           "CustomStackLimits": []
         },
         {
-          "ProxyRepeat": 1,
+          "ProxyRepeat": 8,
           "Base": {
             "CodeName": null,
             "CodeNameVisVar": 0,
@@ -1057,21 +1018,17 @@
             "ItemFlagsVisVar": 0,
             "Payload": 0
           },
-          "StackLimit": 1,
+          "StackLimit": 30,
           "bOr": false,
           "bAllowWithdrawal": true,
           "bIsPlayerEquipmentSlot": false,
           "bCheckDedicatedUnderlyingItem": true,
-          "AcceptedTags": [
-            "EAnvilItemTag::WeaponStorage"
-          ],
+          "AcceptedTags": [],
           "AcceptedTagsVisVar": 0,
           "RequiredTags": [],
           "RequiredTagsVisVar": 0,
           "ProhibitedTags": [
-            "EAnvilItemTag::Large",
-            "EAnvilItemTag::Ammunition",
-            "EAnvilItemTag::HeavyTool"
+            "EAnvilItemTag::Large"
           ],
           "ProhibitedTagsVisVar": 0,
           "DedicatedItemType": null,
@@ -1081,10 +1038,19 @@
           "RequiredEnablingItem": null,
           "RequiredEnablingItemVisVar": 0,
           "BackgroundType": "EAnvilItemSlotBackgroundType::Belt",
-          "CustomStackLimits": []
+          "CustomStackLimits": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Arrows_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Arrows.1"
+              },
+              "CodeNameVisVar": 0,
+              "StackLimit": 5
+            }
+          ]
         },
         {
-          "ProxyRepeat": 9,
+          "ProxyRepeat": 8,
           "Base": {
             "CodeName": null,
             "CodeNameVisVar": 0,
@@ -1134,7 +1100,7 @@
     "Type": "Player_C",
     "Name": "Default__Player_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Player.Player_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CodeNameString": "Player",
       "CodeName": 50782484,
@@ -1149,7 +1115,7 @@
         },
         {
           "ObjectName": "SimPlayerProxyComponent'Default__Player_C:SimPlayerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.18"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.19"
         },
         {
           "ObjectName": "HealthProxyComponent'Default__Player_C:HealthProxyComponent_0'",
@@ -1189,7 +1155,7 @@
         },
         {
           "ObjectName": "StaminaProxyComponent'Default__Player_C:StaminaProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.19"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.20"
         },
         {
           "ObjectName": "AnimalRopeSlotProxyComponent'Default__Player_C:AnimalRopeSlotProxyComponent_0'",
@@ -1197,7 +1163,7 @@
         },
         {
           "ObjectName": "TemperatureProxyComponent'Default__Player_C:TemperatureProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.20"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.21"
         },
         {
           "ObjectName": "AdminEnvProxyComponent'Default__Player_C:AdminEnvProxyComponent_0'",
@@ -1218,6 +1184,10 @@
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__Player_C:BoxCollisionProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.5"
+        },
+        {
+          "ObjectName": "RefineResourceProxyComponent'Default__Player_C:RefineResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Player.18"
         }
       ],
       "VisActorClass": {
@@ -1234,8 +1204,17 @@
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CameraPanDeadzoneRadius": 10.0,
-      "CameraPanMaxDistance": 3000.0,
-      "CameraPanLerpAlphaPerSecond": 0.9
+      "CameraPanLerpAlphaPerSecond": 0.9,
+      "StanceToCameraPanMaxDistance": [
+        {
+          "Key": "EAnvilCharacterStance::Standing",
+          "Value": 3000.0
+        },
+        {
+          "Key": "EAnvilCharacterStance::OnBoatSpotter",
+          "Value": 20000.0
+        }
+      ]
     }
   },
   {
@@ -1258,6 +1237,1663 @@
     "Outer": "Default__Player_C",
     "Class": "UScriptClass'PlayerUnstuckProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "RefineResourceProxyComponent",
+    "Name": "RefineResourceProxyComponent_0",
+    "Outer": "Default__Player_C",
+    "Class": "UScriptClass'RefineResourceProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ProducableItemList": [
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'KnifeFlint_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/KnifeFlint.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFlint_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFlint.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 15.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": null
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'AxeFlint_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/AxeFlint.1"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 3
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFlint_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFlint.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": null
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'PickaxeFlint_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/PickaxeFlint.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 3
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFlint_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFlint.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": null
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'HammerFlint_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/HammerFlint.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFlint_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFlint.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": null
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'SpearFlint_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SpearFlint.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 3
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceStoneFragments_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceStoneFragments.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 3
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 15.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": null
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Torch_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Torch.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 10.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Hoe_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Hoe.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeTool_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTool.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Scythe_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Scythe.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeTool_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTool.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'RepairMaterial_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/RepairMaterial.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 5
+            }
+          ],
+          "ProductionTime": 5.0,
+          "OutputCount": 25,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 5.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Crate_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Crate.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 5.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'SaddleBasic_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/AnimalEquipment/SaddleBasic.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'AnimalRope_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/AnimalRope.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'ProcessedFertilizer_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedFertilizer.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceManure_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceManure.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceWoodAsh_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceWoodAsh.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 10
+            }
+          ],
+          "ProductionTime": 60.0,
+          "OutputCount": 3,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'LeatherArmour_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Armour/LeatherArmour.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 40.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'LeatherHelmet_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Armour/LeatherHelmet.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 35.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'ShieldSmall_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/ShieldSmall.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Nails_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Nails.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 35.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'SwordBronze_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SwordBronze.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeSwordBronze_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeSwordBronze.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'KnifeBronze_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/KnifeBronze.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeToolBronze_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeToolBronze.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'AxeBronze_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/AxeBronze.1"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeAxeBronze_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeAxeBronze.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'PickaxeBronze_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/PickaxeBronze.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeAxeBronze_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeAxeBronze.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'SpearBronze_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/SpearBronze.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeTipBronze_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTipBronze.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'CraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/CraftingTable.0"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'ShortBow_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/ShortBow.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWoodHard_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWoodHard.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedSinew_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedSinew.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'LongBow_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/LongBow.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWoodHard_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWoodHard.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 3
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedSinew_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedSinew.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedFlax_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedFlax.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedResin_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedResin.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Arrows_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Arrows.1"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFeathers_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFeathers.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFlint_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFlint.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 3
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 20,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Knife_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Knife.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeTool_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTool.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'CombatAxe_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/CombatAxe.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeAxe_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeAxe.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedResin_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedResin.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Mace_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Mace.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeAxe_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeAxe.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedResin_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedResin.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLead_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLead.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Sword_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Sword.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeSword_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeSword.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Spear_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Spear.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeTip_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTip.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWoodHard_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWoodHard.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Javelin_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Javelin.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeTip_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTip.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLead_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLead.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 5,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'AxeWeak_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/AxeWeak.1"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 3
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeAxe_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeAxe.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'PickaxeWeak_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/PickaxeWeak.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 3
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 5
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeAxe_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeAxe.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Hammer_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/Hammer.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'WoodBlank_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/WoodBlank.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'BladeTool_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/BladeTool.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'ScorpionArrows_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ScorpionArrows.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFeathers_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFeathers.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLead_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLead.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedResin_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedResin.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 45.0,
+          "OutputCount": 10,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'CatapultAmmo_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/CatapultAmmo.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedStone_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedStone.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Mortar_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Mortar.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 45.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'SaddleMill_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/AnimalEquipment/SaddleMill.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedFlax_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedFlax.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 15.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'SaddlePack_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/AnimalEquipment/SaddlePack.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Crate_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Crate.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedFlax_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedFlax.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'TrapItem_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/TrapItem.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'Nails_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Nails.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLead_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLead.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'IronArmour_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Armour/IronArmour.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedThickLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedThickLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 70.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'IronHelmet_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Armour/IronHelmet.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedThickLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedThickLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 60.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'Shield_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/Shield.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ReinforcedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ReinforcedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedIron_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedIron.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 20.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'FishingPole_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/FishingPole.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceBranches_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceBranches.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 3
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'AnimalFat_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalFat.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 1,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'OilFlask_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/OilFlask.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'AnimalFat_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalFat.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ResourceFibreHeavy_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibreHeavy.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 60.0,
+          "OutputCount": 2,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'BurningOil_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Weapons/BurningOil.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedLeather_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedLeather.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'AnimalFat_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalFat.1"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 2
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedFlax_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedFlax.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedResin_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedResin.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 3,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        },
+        {
+          "ProducedItem": {
+            "ObjectName": "BlueprintGeneratedClass'FactionBanner_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Equipment/Tools/FactionBanner.0"
+          },
+          "ProducedItemVisVar": 0,
+          "InputItems": [
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedWood_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedWood.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 3
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'ProcessedFlax_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ProcessedFlax.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            }
+          ],
+          "ProductionTime": 30.0,
+          "OutputCount": 3,
+          "bRequiresResearch": false,
+          "bMakePublic": false,
+          "RequiredStructure": {
+            "ObjectName": "BlueprintGeneratedClass'AdvancedCraftingTable_C'",
+            "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Crafting/AdvancedCraftingTable.1"
+          }
+        }
+      ]
+    }
   },
   {
     "Type": "SimPlayerProxyComponent",

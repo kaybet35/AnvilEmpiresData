@@ -22,6 +22,7 @@ enum class EAnvilCharacterStance : uint8 {
     OnOneOarRight,
     OnOneOarLeft,
     OnTwoOars,
+    OnBoatSpotter,
     NumTypes,
 };
 

@@ -17,7 +17,39 @@ UWinConditionWidget::UWinConditionWidget() : UUserWidget(FObjectInitializer::Get
     this->Faction0CultureTimerProgressBar = NULL;
     this->Faction1CultureTimerProgressBar = NULL;
     this->Faction2CultureTimerProgressBar = NULL;
+    this->Faction0ReligiousProgressBar = NULL;
+    this->Faction1ReligiousProgressBar = NULL;
+    this->Faction2ReligiousProgressBar = NULL;
+    this->Faction0ReligiousTextBox = NULL;
+    this->Faction1ReligiousTextBox = NULL;
+    this->Faction2ReligiousTextBox = NULL;
+    this->Faction0ReligiousInfluenceProgressBar = NULL;
+    this->Faction1ReligiousInfluenceProgressBar = NULL;
+    this->Faction2ReligiousInfluenceProgressBar = NULL;
+    this->Faction0ReligiousVerticalBox = NULL;
+    this->Faction1ReligiousVerticalBox = NULL;
+    this->Faction2ReligiousVerticalBox = NULL;
     this->CachedWinConditionTooltip = NULL;
+}
+
+FText UWinConditionWidget::GetFaction2ReligiousTooltipText() {
+    return FText::GetEmpty();
+}
+
+FText UWinConditionWidget::GetFaction2ReligiousText() {
+    return FText::GetEmpty();
+}
+
+FLinearColor UWinConditionWidget::GetFaction2ReligiousProgressBarColour() {
+    return FLinearColor{};
+}
+
+float UWinConditionWidget::GetFaction2ReligiousProgress() {
+    return 0.0f;
+}
+
+float UWinConditionWidget::GetFaction2ReligiousInfluenceProgress() {
+    return 0.0f;
 }
 
 FText UWinConditionWidget::GetFaction2MilitaryText() {
@@ -48,6 +80,26 @@ float UWinConditionWidget::GetFaction2CultureProgress() {
     return 0.0f;
 }
 
+FText UWinConditionWidget::GetFaction1ReligiousTooltipText() {
+    return FText::GetEmpty();
+}
+
+FText UWinConditionWidget::GetFaction1ReligiousText() {
+    return FText::GetEmpty();
+}
+
+FLinearColor UWinConditionWidget::GetFaction1ReligiousProgressBarColour() {
+    return FLinearColor{};
+}
+
+float UWinConditionWidget::GetFaction1ReligiousProgress() {
+    return 0.0f;
+}
+
+float UWinConditionWidget::GetFaction1ReligiousInfluenceProgress() {
+    return 0.0f;
+}
+
 FText UWinConditionWidget::GetFaction1MilitaryText() {
     return FText::GetEmpty();
 }
@@ -73,6 +125,26 @@ FLinearColor UWinConditionWidget::GetFaction1CultureProgressBarColour() {
 }
 
 float UWinConditionWidget::GetFaction1CultureProgress() {
+    return 0.0f;
+}
+
+FText UWinConditionWidget::GetFaction0ReligiousTooltipText() {
+    return FText::GetEmpty();
+}
+
+FText UWinConditionWidget::GetFaction0ReligiousText() {
+    return FText::GetEmpty();
+}
+
+FLinearColor UWinConditionWidget::GetFaction0ReligiousProgressBarColour() {
+    return FLinearColor{};
+}
+
+float UWinConditionWidget::GetFaction0ReligiousProgress() {
+    return 0.0f;
+}
+
+float UWinConditionWidget::GetFaction0ReligiousInfluenceProgress() {
     return 0.0f;
 }
 

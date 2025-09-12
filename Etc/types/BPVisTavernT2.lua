@@ -2,6 +2,8 @@
 
 ---@class ABPVisTavernT2_C : AVisRefinery
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field RoofCollapsed UVisStaticMeshComponent
+---@field HouseMeshCollapsed UVisStaticMeshComponent
 ---@field WetDecal2 UDecalComponent
 ---@field WetDecal1 UDecalComponent
 ---@field Buff4 UVisStaticMeshComponent

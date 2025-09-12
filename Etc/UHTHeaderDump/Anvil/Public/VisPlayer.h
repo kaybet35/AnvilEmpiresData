@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilCharacterStance -FallbackName=EAnvilCharacterStance
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=EAnvilSimActivityState -FallbackName=EAnvilSimActivityState
 #include "Templates/SubclassOf.h"
 #include "VisActor.h"
@@ -28,12 +29,14 @@ class UPlayerMountDataComponent;
 class UPlayerStatusDataComponent;
 class UPointLightComponent;
 class UPostProcessComponent;
+class URefineResourceDataComponent;
 class USimPlayerDataComponent;
 class USkeletalMeshComponent;
 class USoundCue;
 class UStaminaDataComponent;
 class UStaticMeshComponent;
 class UTemperatureDataComponent;
+class UVisItem;
 class UVisPlayerVisualsComponent;
 class UVisPointLightComponent;
 class UVisSpringArmComponent;
@@ -74,6 +77,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UPlayerStatusDataComponent* PlayerStatusDataComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    URefineResourceDataComponent* RefineResourceDataComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* ItemMeshComponent;
@@ -151,6 +157,12 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EAnvilSimActivityState, UAnimMontage*> ActivityStateMontageMap;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<EAnvilCharacterStance, TSubclassOf<UVisItem>> StancePrimaryItemMap;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TMap<EAnvilCharacterStance, TSubclassOf<UVisItem>> StanceSecondaryItemMap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UArmorDataComponent* ArmourDataComponent;

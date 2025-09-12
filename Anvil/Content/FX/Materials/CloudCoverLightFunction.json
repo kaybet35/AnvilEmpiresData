@@ -7,7 +7,7 @@
     "Properties": {
       "MaterialDomain": "EMaterialDomain::MD_LightFunction",
       "bCanMaskedBeAssumedOpaque": true,
-      "StateId": "FEED116F-436F52C4-19BC6EAB-AE1E06FA"
+      "StateId": "F8FE43EC-4255A711-8D8E9193-831B076E"
     },
     "LoadedMaterialResources": [],
     "CachedExpressionData": {
@@ -47,6 +47,36 @@
             "Name": "Cloud Snow Intensity",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
+          },
+          {
+            "Name": "Param",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Param_1",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Param_2",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Param_3",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Param_4",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Param_5",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
           }
         ]
       },
@@ -72,6 +102,12 @@
         -1,
         -1,
         -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
         -1
       ],
       "VectorPrimitiveDataIndexValues": [],
@@ -82,7 +118,13 @@
         0.3,
         0.3,
         4.0,
-        0.6
+        0.6,
+        20000.0,
+        7000.0,
+        -0.005,
+        0.007,
+        0.005,
+        0.0
       ],
       "VectorValues": [],
       "DoubleVectorValues": [],
@@ -94,9 +136,112 @@
         {
           "ObjectName": "Texture2D'Clouds'",
           "ObjectPath": "Anvil/Content/FX/Textures/NoiseMasks/Clouds.0"
+        },
+        {
+          "ObjectName": "Texture2D'Anvil_A'",
+          "ObjectPath": "Anvil/Content/MedievalVillage/Textures/Anvil_A.0"
         }
       ],
-      "FunctionInfos": [],
+      "FunctionInfos": [
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction'LinearGradient'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CheapContrast'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+          }
+        },
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction'LinearGradient'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CheapContrast'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+          }
+        },
+        {
+          "StateId": "127A25CC-4BE0E6F9-0A2D99BF-43C74E15",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat4Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat4Components.0"
+          }
+        },
+        {
+          "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
+          "Function": {
+            "ObjectName": "MaterialFunction'AppendMany'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
+          }
+        },
+        {
+          "StateId": "9E2400E0-4470CD19-2BCAFF85-0EAE9CB4",
+          "Function": {
+            "ObjectName": "MaterialFunction'WorldSpacePanner'",
+            "ObjectPath": "Anvil/Content/Materials/MaterialFunctions/WorldSpacePanner.0"
+          }
+        },
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction'LinearGradient'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CheapContrast'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+          }
+        },
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction'LinearGradient'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CheapContrast'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+          }
+        },
+        {
+          "StateId": "127A25CC-4BE0E6F9-0A2D99BF-43C74E15",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat4Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat4Components.0"
+          }
+        },
+        {
+          "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
+          "Function": {
+            "ObjectName": "MaterialFunction'AppendMany'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
+          }
+        },
+        {
+          "StateId": "9E2400E0-4470CD19-2BCAFF85-0EAE9CB4",
+          "Function": {
+            "ObjectName": "MaterialFunction'WorldSpacePanner'",
+            "ObjectPath": "Anvil/Content/Materials/MaterialFunctions/WorldSpacePanner.0"
+          }
+        }
+      ],
       "ParameterCollectionInfos": [
         {
           "StateId": "A4B1F05F-43810353-93E73A88-3D419755",
@@ -130,6 +275,10 @@
       {
         "ObjectName": "Texture2D'Clouds'",
         "ObjectPath": "Anvil/Content/FX/Textures/NoiseMasks/Clouds.0"
+      },
+      {
+        "ObjectName": "Texture2D'Anvil_A'",
+        "ObjectPath": "Anvil/Content/MedievalVillage/Textures/Anvil_A.0"
       }
     ]
   }

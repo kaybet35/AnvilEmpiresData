@@ -9,6 +9,7 @@ UAdminEnvDataComponent::UAdminEnvDataComponent(const FObjectInitializer& ObjectI
     this->bDebugHud = false;
     this->bShowLocateCoords = false;
     this->bDebugCrowdIndentifier = false;
+    this->DebugHUDSpeed = 0;
 }
 
 

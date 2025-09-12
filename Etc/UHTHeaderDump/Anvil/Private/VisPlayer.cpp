@@ -16,6 +16,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=PlayerInputDataComponent -FallbackName=PlayerInputDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=PlayerMountDataComponent -FallbackName=PlayerMountDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=PlayerStatusDataComponent -FallbackName=PlayerStatusDataComponent
+//CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=RefineResourceDataComponent -FallbackName=RefineResourceDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=SimPlayerDataComponent -FallbackName=SimPlayerDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=StaminaDataComponent -FallbackName=StaminaDataComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=R2 -ObjectName=TemperatureDataComponent -FallbackName=TemperatureDataComponent
@@ -38,6 +39,7 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->TemperatureDataComponent = CreateDefaultSubobject<UTemperatureDataComponent>(TEXT("TemperatureDataComponent"));
     this->AdminEnvDataComponent = CreateDefaultSubobject<UAdminEnvDataComponent>(TEXT("AdminEnvDataComponent"));
     this->PlayerStatusDataComponent = CreateDefaultSubobject<UPlayerStatusDataComponent>(TEXT("PlayerStatusDataComponent"));
+    this->RefineResourceDataComponent = CreateDefaultSubobject<URefineResourceDataComponent>(TEXT("RefineResourceDataComponent"));
     this->ItemMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ItemMesh"));
     this->ItemSecondaryMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("ItemSecondaryMesh"));
     this->UnarmedItemMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("UnarmedItemMesh"));
@@ -91,21 +93,10 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
     this->CurrentUEUsableActor = NULL;
-    this->RainMidAudioComponent->SetupAttachment(SpringArm);
-    this->RainHighAudioComponent->SetupAttachment(SpringArm);
-    this->SnowLowAudioComponent->SetupAttachment(SpringArm);
-    this->SnowMidAudioComponent->SetupAttachment(SpringArm);
-    this->SnowHighAudioComponent->SetupAttachment(SpringArm);
-    this->WindLowAudioComponent->SetupAttachment(SpringArm);
-    this->WindMidAudioComponent->SetupAttachment(SpringArm);
-    this->WindHighAudioComponent->SetupAttachment(SpringArm);
     this->UnderworldCollapseFXComponent->SetupAttachment(SpringArm);
     this->EnterSwimmingVFXComponent->SetupAttachment(Mesh);
     this->SwimmingLoopVFXComponent->SetupAttachment(Mesh);
     this->SwimmingLoopAudioComponent->SetupAttachment(Mesh);
-    this->UnarmedItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->UnarmedItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->RangedWeaponAmmoMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->Mesh->SetupAttachment(RootComponent);
     this->Head->SetupAttachment(Mesh);
     this->AimMeshComponent->SetupAttachment(RootComponent);
@@ -122,10 +113,21 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->SnowVFXComponent->SetupAttachment(SpringArm);
     this->BreathFogVFXComponent->SetupAttachment(Mesh);
     this->RainLowAudioComponent->SetupAttachment(SpringArm);
+    this->RainMidAudioComponent->SetupAttachment(SpringArm);
+    this->RainHighAudioComponent->SetupAttachment(SpringArm);
+    this->SnowLowAudioComponent->SetupAttachment(SpringArm);
+    this->SnowMidAudioComponent->SetupAttachment(SpringArm);
+    this->SnowHighAudioComponent->SetupAttachment(SpringArm);
+    this->WindLowAudioComponent->SetupAttachment(SpringArm);
+    this->WindMidAudioComponent->SetupAttachment(SpringArm);
+    this->WindHighAudioComponent->SetupAttachment(SpringArm);
     this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->Camera->SetupAttachment(SpringArm);
     this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->UnarmedItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->UnarmedItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->RangedWeaponAmmoMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 FString AVisPlayer::GetPlayerName() const {

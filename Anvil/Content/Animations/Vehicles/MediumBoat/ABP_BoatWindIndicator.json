@@ -17,7 +17,7 @@
           "LinkID": 2
         }
       },
-      "AnimGraphNode_SequencePlayer": {
+      "AnimGraphNode_SequencePlayer_1": {
         "Sequence": {
           "ObjectName": "AnimSequence'BoatWindIndicator_Flap_Anim'",
           "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatWindIndicator_Flap_Anim.0"
@@ -32,7 +32,7 @@
         },
         "BlendPoses": [
           {
-            "LinkID": 1
+            "LinkID": 4
           }
         ],
         "BlendMode": "ELayeredBoneBlendMode::BranchFilter",
@@ -128,12 +128,78 @@
         "PreviousBlendSpace": null,
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TwoWayBlend": {
+        "A": {
+          "LinkID": 5
+        },
+        "B": {
+          "LinkID": 1
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "bResetChildOnActivation": false,
+        "Alpha": 0.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 3.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        }
+      },
+      "AnimGraphNode_SequencePlayer": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'BoatWindIndicator_lowWind'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatWindIndicator_lowWind.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
       }
     },
     "SerializedSparseClassDataStruct": "ScriptStruct'Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.ABP_BoatWindIndicator_C:AnimBlueprintGeneratedConstantData'",
     "SerializedSparseClassData": {
-      "__NameProperty_20": "AnimGraph",
-      "__StructProperty_21": {
+      "__NameProperty_34": "AnimGraph",
+      "__FloatProperty_35": 0.2,
+      "__EnumProperty_36": "EAnimSyncMethod::DoNotSync",
+      "__NameProperty_37": "None",
+      "__StructProperty_38": {
+        "ClassName": "None",
+        "FunctionName": "None"
+      },
+      "__BoolProperty_39": true,
+      "__FloatProperty_40": 0.0,
+      "__StructProperty_41": {
         "bMapRange": false,
         "bClampResult": false,
         "bInterpResult": false,
@@ -152,21 +218,65 @@
         "InterpSpeedIncreasing": 10.0,
         "InterpSpeedDecreasing": 10.0
       },
-      "__FloatProperty_22": 0.2,
-      "__StructProperty_23": {
-        "ClassName": "None",
-        "FunctionName": "None"
-      },
-      "__BoolProperty_24": true,
-      "__FloatProperty_25": 1.0,
-      "__FloatProperty_26": 0.0,
-      "__BoolProperty_27": false,
-      "__EnumProperty_28": "EAnimSyncMethod::DoNotSync",
-      "__ByteProperty_29": "EAnimGroupRole::CanBeLeader",
-      "__NameProperty_30": "None",
+      "__FloatProperty_42": 1.0,
+      "__BoolProperty_43": false,
+      "__EnumProperty_44": "EAnimSyncMethod::SyncGroup",
+      "__ByteProperty_45": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_46": "FlagWind_sync",
       "AnimBlueprintExtension_PropertyAccess": {
         "Library": {
           "PathSegments": [
+            {
+              "Name": "localWindIntensity",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "localWindIntensity"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'ABP_BoatWindIndicator_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.1"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TwoWayBlend",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TwoWayBlend'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TwoWayBlend"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'ABP_BoatWindIndicator_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.1"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "Alpha",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Alpha"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TwoWayBlend'",
+                  "ObjectPath": "/Script/AnimGraphRuntime"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
             {
               "Name": "localRelativeAngle",
               "Struct": null,
@@ -187,7 +297,7 @@
               "Name": "__AnimBlueprintMutables",
               "Struct": {
                 "ObjectName": "ScriptStruct'ABP_BoatWindIndicator_C:AnimBlueprintGeneratedMutableData'",
-                "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.7"
+                "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.6"
               },
               "Property": {
                 "Path": [
@@ -211,7 +321,58 @@
                 ],
                 "ResolvedOwner": {
                   "ObjectName": "ScriptStruct'ABP_BoatWindIndicator_C:AnimBlueprintGeneratedMutableData'",
-                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.7"
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.6"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "localWindIntensity",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "localWindIntensity"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'ABP_BoatWindIndicator_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.1"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'ABP_BoatWindIndicator_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.6"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'ABP_BoatWindIndicator_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.1"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__FloatProperty",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__FloatProperty"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'ABP_BoatWindIndicator_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.6"
                 }
               },
               "Function": null,
@@ -223,11 +384,27 @@
             {
               "PathSegmentStartIndex": 0,
               "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 3,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 6,
+              "PathSegmentCount": 1
             }
           ],
           "DestPaths": [
             {
               "PathSegmentStartIndex": 1,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 4,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 7,
               "PathSegmentCount": 2
             }
           ],
@@ -238,6 +415,18 @@
                   "AccessIndex": 0,
                   "DestAccessStartIndex": 0,
                   "DestAccessEndIndex": 1,
+                  "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
+                },
+                {
+                  "AccessIndex": 1,
+                  "DestAccessStartIndex": 1,
+                  "DestAccessEndIndex": 2,
+                  "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
+                },
+                {
+                  "AccessIndex": 2,
+                  "DestAccessStartIndex": 2,
+                  "DestAccessEndIndex": 3,
                   "Type": "EPropertyAccessCopyType::DemoteDoubleToFloat"
                 }
               ]
@@ -253,15 +442,27 @@
             "BoundFunction": "None"
           },
           {
-            "CopyRecords": [],
-            "Function": {
-              "ObjectName": "Function'ABP_BoatWindIndicator_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BoatWindIndicator_AnimGraphNode_SequencePlayer_DACD792649643911F85F5D80E1A20471'",
-              "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.4"
-            },
-            "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BoatWindIndicator_AnimGraphNode_SequencePlayer_DACD792649643911F85F5D80E1A20471"
+            "CopyRecords": [
+              {
+                "CopyIndex": 2,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
           },
           {
             "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 1,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
             "Function": null,
             "BoundFunction": "None"
           },
@@ -272,6 +473,11 @@
                 "PostCopyOperation": "EPostCopyOperation::None"
               }
             ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
             "Function": null,
             "BoundFunction": "None"
           }
@@ -289,13 +495,17 @@
         "ObjectName": "Skeleton'BoatWindIndicator_SK_Skeleton'",
         "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatWindIndicator_SK_Skeleton.0"
       },
+      "SyncGroupNames": [
+        "FlagWind_sync"
+      ],
       "GraphAssetPlayerInformation": [
         {
           "Key": "AnimGraph",
           "Value": {
             "PlayerNodeIndices": [
               0,
-              2
+              2,
+              4
             ]
           }
         }
@@ -307,12 +517,12 @@
             "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.1"
           },
           "Entries": [
-            3,
-            3,
-            3,
+            4,
+            4,
+            4,
             4294967295,
             0,
-            10
+            3
           ],
           "NodeIndex": 0,
           "Flags": "EAnimNodeDataFlags::None"
@@ -323,26 +533,26 @@
             "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.1"
           },
           "Entries": [
-            3,
-            3,
-            3,
+            4,
+            4,
+            4,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
             4294967295,
+            12,
+            11,
             10,
             9,
-            8,
+            4294967295,
+            1,
+            2147483648,
             7,
             4294967295,
-            2,
-            2147483648,
-            1,
-            4294967295,
             6,
-            4,
-            7
+            5,
+            9
           ],
           "NodeIndex": 1,
           "Flags": "EAnimNodeDataFlags::None"
@@ -353,9 +563,9 @@
             "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.1"
           },
           "Entries": [
-            3,
-            3,
-            3,
+            4,
+            4,
+            4,
             4294967295,
             4294967295,
             4294967295,
@@ -380,307 +590,84 @@
             "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.1"
           },
           "Entries": [
+            4,
+            4,
+            4,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
             3,
-            3,
-            3,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            4294967295,
-            10,
+            11,
+            2,
             9,
-            8,
-            7,
             2147483649,
             6,
+            8,
             5,
-            4,
-            4,
+            5,
             6,
             4294967295
           ],
           "NodeIndex": 3,
           "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'ABP_BoatWindIndicator_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.1"
+          },
+          "Entries": [
+            4,
+            4,
+            4,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 4,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'ABP_BoatWindIndicator_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.1"
+          },
+          "Entries": [
+            4,
+            4,
+            4,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            12,
+            11,
+            10,
+            9,
+            4294967295,
+            8,
+            8,
+            7,
+            4294967295,
+            6,
+            5,
+            9
+          ],
+          "NodeIndex": 5,
+          "Flags": "EAnimNodeDataFlags::None"
         }
       ],
       "NodeTypeMap": [
-        {
-          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendSpacePlayer'",
-          "Value": {
-            "NameToIndexMap": [
-              {
-                "Key": "InitialUpdateFunction",
-                "Value": 0
-              },
-              {
-                "Key": "BecomeRelevantFunction",
-                "Value": 1
-              },
-              {
-                "Key": "UpdateFunction",
-                "Value": 2
-              },
-              {
-                "Key": "GroupIndex",
-                "Value": 3
-              },
-              {
-                "Key": "GroupScope",
-                "Value": 4
-              },
-              {
-                "Key": "BlendWeight",
-                "Value": 5
-              },
-              {
-                "Key": "InternalTimeAccumulator",
-                "Value": 6
-              },
-              {
-                "Key": "PreviousBlendSpace",
-                "Value": 7
-              },
-              {
-                "Key": "GroupName",
-                "Value": 8
-              },
-              {
-                "Key": "GroupRole",
-                "Value": 9
-              },
-              {
-                "Key": "Method",
-                "Value": 10
-              },
-              {
-                "Key": "bIgnoreForRelevancyTest",
-                "Value": 11
-              },
-              {
-                "Key": "X",
-                "Value": 12
-              },
-              {
-                "Key": "Y",
-                "Value": 13
-              },
-              {
-                "Key": "PlayRate",
-                "Value": 14
-              },
-              {
-                "Key": "bLoop",
-                "Value": 15
-              },
-              {
-                "Key": "bResetPlayTimeWhenBlendSpaceChanges",
-                "Value": 16
-              },
-              {
-                "Key": "StartPosition",
-                "Value": 17
-              },
-              {
-                "Key": "BlendSpace",
-                "Value": 18
-              }
-            ],
-            "NumProperties": 19
-          }
-        },
-        {
-          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendSpacePlayerBase'",
-          "Value": {
-            "NameToIndexMap": [
-              {
-                "Key": "InitialUpdateFunction",
-                "Value": 0
-              },
-              {
-                "Key": "BecomeRelevantFunction",
-                "Value": 1
-              },
-              {
-                "Key": "UpdateFunction",
-                "Value": 2
-              },
-              {
-                "Key": "GroupIndex",
-                "Value": 3
-              },
-              {
-                "Key": "GroupScope",
-                "Value": 4
-              },
-              {
-                "Key": "BlendWeight",
-                "Value": 5
-              },
-              {
-                "Key": "InternalTimeAccumulator",
-                "Value": 6
-              },
-              {
-                "Key": "PreviousBlendSpace",
-                "Value": 7
-              }
-            ],
-            "NumProperties": 8
-          }
-        },
-        {
-          "Key": "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerBase'",
-          "Value": {
-            "NameToIndexMap": [
-              {
-                "Key": "InitialUpdateFunction",
-                "Value": 0
-              },
-              {
-                "Key": "BecomeRelevantFunction",
-                "Value": 1
-              },
-              {
-                "Key": "UpdateFunction",
-                "Value": 2
-              },
-              {
-                "Key": "GroupIndex",
-                "Value": 3
-              },
-              {
-                "Key": "GroupScope",
-                "Value": 4
-              },
-              {
-                "Key": "BlendWeight",
-                "Value": 5
-              },
-              {
-                "Key": "InternalTimeAccumulator",
-                "Value": 6
-              }
-            ],
-            "NumProperties": 7
-          }
-        },
-        {
-          "Key": "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerRelevancyBase'",
-          "Value": {
-            "NameToIndexMap": [
-              {
-                "Key": "InitialUpdateFunction",
-                "Value": 0
-              },
-              {
-                "Key": "BecomeRelevantFunction",
-                "Value": 1
-              },
-              {
-                "Key": "UpdateFunction",
-                "Value": 2
-              }
-            ],
-            "NumProperties": 3
-          }
-        },
-        {
-          "Key": "ScriptStruct'/Script/Engine.AnimNode_Base'",
-          "Value": {
-            "NameToIndexMap": [
-              {
-                "Key": "InitialUpdateFunction",
-                "Value": 0
-              },
-              {
-                "Key": "BecomeRelevantFunction",
-                "Value": 1
-              },
-              {
-                "Key": "UpdateFunction",
-                "Value": 2
-              }
-            ],
-            "NumProperties": 3
-          }
-        },
-        {
-          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_LayeredBoneBlend'",
-          "Value": {
-            "NameToIndexMap": [
-              {
-                "Key": "InitialUpdateFunction",
-                "Value": 0
-              },
-              {
-                "Key": "BecomeRelevantFunction",
-                "Value": 1
-              },
-              {
-                "Key": "UpdateFunction",
-                "Value": 2
-              },
-              {
-                "Key": "BasePose",
-                "Value": 3
-              },
-              {
-                "Key": "BlendPoses",
-                "Value": 4
-              },
-              {
-                "Key": "BlendMode",
-                "Value": 5
-              },
-              {
-                "Key": "BlendMasks",
-                "Value": 6
-              },
-              {
-                "Key": "LayerSetup",
-                "Value": 7
-              },
-              {
-                "Key": "BlendWeights",
-                "Value": 8
-              },
-              {
-                "Key": "bMeshSpaceRotationBlend",
-                "Value": 9
-              },
-              {
-                "Key": "bMeshSpaceScaleBlend",
-                "Value": 10
-              },
-              {
-                "Key": "CurveBlendOption",
-                "Value": 11
-              },
-              {
-                "Key": "bBlendRootMotionBasedOnRootBone",
-                "Value": 12
-              },
-              {
-                "Key": "LODThreshold",
-                "Value": 13
-              },
-              {
-                "Key": "PerBoneBlendWeights",
-                "Value": 14
-              },
-              {
-                "Key": "SkeletonGuid",
-                "Value": 15
-              },
-              {
-                "Key": "VirtualBoneGuid",
-                "Value": 16
-              }
-            ],
-            "NumProperties": 17
-          }
-        },
         {
           "Key": "ScriptStruct'/Script/Engine.AnimNode_SequencePlayer'",
           "Value": {
@@ -810,6 +797,342 @@
           }
         },
         {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerRelevancyBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_Base'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_TwoWayBlend'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "A",
+                "Value": 3
+              },
+              {
+                "Key": "B",
+                "Value": 4
+              },
+              {
+                "Key": "AlphaInputType",
+                "Value": 5
+              },
+              {
+                "Key": "bAlphaBoolEnabled",
+                "Value": 6
+              },
+              {
+                "Key": "bResetChildOnActivation",
+                "Value": 7
+              },
+              {
+                "Key": "Alpha",
+                "Value": 8
+              },
+              {
+                "Key": "AlphaScaleBias",
+                "Value": 9
+              },
+              {
+                "Key": "AlphaBoolBlend",
+                "Value": 10
+              },
+              {
+                "Key": "AlphaCurveName",
+                "Value": 11
+              },
+              {
+                "Key": "AlphaScaleBiasClamp",
+                "Value": 12
+              }
+            ],
+            "NumProperties": 13
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendSpacePlayer'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              },
+              {
+                "Key": "PreviousBlendSpace",
+                "Value": 7
+              },
+              {
+                "Key": "GroupName",
+                "Value": 8
+              },
+              {
+                "Key": "GroupRole",
+                "Value": 9
+              },
+              {
+                "Key": "Method",
+                "Value": 10
+              },
+              {
+                "Key": "bIgnoreForRelevancyTest",
+                "Value": 11
+              },
+              {
+                "Key": "X",
+                "Value": 12
+              },
+              {
+                "Key": "Y",
+                "Value": 13
+              },
+              {
+                "Key": "PlayRate",
+                "Value": 14
+              },
+              {
+                "Key": "bLoop",
+                "Value": 15
+              },
+              {
+                "Key": "bResetPlayTimeWhenBlendSpaceChanges",
+                "Value": 16
+              },
+              {
+                "Key": "StartPosition",
+                "Value": 17
+              },
+              {
+                "Key": "BlendSpace",
+                "Value": 18
+              }
+            ],
+            "NumProperties": 19
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendSpacePlayerBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              },
+              {
+                "Key": "PreviousBlendSpace",
+                "Value": 7
+              }
+            ],
+            "NumProperties": 8
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_LayeredBoneBlend'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "BasePose",
+                "Value": 3
+              },
+              {
+                "Key": "BlendPoses",
+                "Value": 4
+              },
+              {
+                "Key": "BlendMode",
+                "Value": 5
+              },
+              {
+                "Key": "BlendMasks",
+                "Value": 6
+              },
+              {
+                "Key": "LayerSetup",
+                "Value": 7
+              },
+              {
+                "Key": "BlendWeights",
+                "Value": 8
+              },
+              {
+                "Key": "bMeshSpaceRotationBlend",
+                "Value": 9
+              },
+              {
+                "Key": "bMeshSpaceScaleBlend",
+                "Value": 10
+              },
+              {
+                "Key": "CurveBlendOption",
+                "Value": 11
+              },
+              {
+                "Key": "bBlendRootMotionBasedOnRootBone",
+                "Value": 12
+              },
+              {
+                "Key": "LODThreshold",
+                "Value": 13
+              },
+              {
+                "Key": "PerBoneBlendWeights",
+                "Value": 14
+              },
+              {
+                "Key": "SkeletonGuid",
+                "Value": 15
+              },
+              {
+                "Key": "VirtualBoneGuid",
+                "Value": 16
+              }
+            ],
+            "NumProperties": 17
+          }
+        },
+        {
           "Key": "ScriptStruct'/Script/Engine.AnimNode_Root'",
           "Value": {
             "NameToIndexMap": [
@@ -844,7 +1167,7 @@
       ],
       "UberGraphFunction": {
         "ObjectName": "Function'ABP_BoatWindIndicator_C:ExecuteUbergraph_ABP_BoatWindIndicator'",
-        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.5"
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.4"
       }
     },
     "SuperStruct": {
@@ -857,16 +1180,12 @@
         "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.2"
       },
       {
-        "ObjectName": "Function'ABP_BoatWindIndicator_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BoatWindIndicator_AnimGraphNode_SequencePlayer_DACD792649643911F85F5D80E1A20471'",
-        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.4"
-      },
-      {
         "ObjectName": "Function'ABP_BoatWindIndicator_C:BlueprintUpdateAnimation'",
         "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.3"
       },
       {
         "ObjectName": "Function'ABP_BoatWindIndicator_C:ExecuteUbergraph_ABP_BoatWindIndicator'",
-        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.5"
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.4"
       }
     ],
     "ChildProperties": [
@@ -888,7 +1207,7 @@
         "ElementSize": 12,
         "Struct": {
           "ObjectName": "ScriptStruct'ABP_BoatWindIndicator_C:AnimBlueprintGeneratedMutableData'",
-          "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.7"
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.6"
         }
       },
       {
@@ -923,7 +1242,7 @@
       },
       {
         "Type": "StructProperty",
-        "Name": "AnimGraphNode_SequencePlayer",
+        "Name": "AnimGraphNode_SequencePlayer_1",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 328,
         "Struct": {
@@ -952,8 +1271,35 @@
         }
       },
       {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TwoWayBlend",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TwoWayBlend'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
         "Type": "DoubleProperty",
         "Name": "localRelativeAngle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "localWindIntensity",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
@@ -962,15 +1308,11 @@
     "FuncMap": {
       "ExecuteUbergraph_ABP_BoatWindIndicator": {
         "ObjectName": "Function'ABP_BoatWindIndicator_C:ExecuteUbergraph_ABP_BoatWindIndicator'",
-        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.5"
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.4"
       },
       "BlueprintUpdateAnimation": {
         "ObjectName": "Function'ABP_BoatWindIndicator_C:BlueprintUpdateAnimation'",
         "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.3"
-      },
-      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BoatWindIndicator_AnimGraphNode_SequencePlayer_DACD792649643911F85F5D80E1A20471": {
-        "ObjectName": "Function'ABP_BoatWindIndicator_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BoatWindIndicator_AnimGraphNode_SequencePlayer_DACD792649643911F85F5D80E1A20471'",
-        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/ABP_BoatWindIndicator.4"
       },
       "AnimGraph": {
         "ObjectName": "Function'ABP_BoatWindIndicator_C:AnimGraph'",
@@ -1036,14 +1378,6 @@
   },
   {
     "Type": "Function",
-    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BoatWindIndicator_AnimGraphNode_SequencePlayer_DACD792649643911F85F5D80E1A20471",
-    "Outer": "ABP_BoatWindIndicator_C",
-    "Class": "UScriptClass'Function'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "FunctionFlags": "FUNC_BlueprintEvent"
-  },
-  {
-    "Type": "Function",
     "Name": "ExecuteUbergraph_ABP_BoatWindIndicator",
     "Outer": "ABP_BoatWindIndicator_C",
     "Class": "UScriptClass'Function'",
@@ -1055,6 +1389,12 @@
         "Flags": "RF_Public",
         "ElementSize": 4,
         "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaTimeX",
+        "Flags": "RF_Public",
+        "ElementSize": 4
       },
       {
         "Type": "ObjectProperty",
@@ -1089,18 +1429,6 @@
         "ElementSize": 4
       },
       {
-        "Type": "DoubleProperty",
-        "Name": "CallFunc_Abs_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "K2Node_Event_DeltaTimeX",
-        "Flags": "RF_Public",
-        "ElementSize": 4
-      },
-      {
         "Type": "FloatProperty",
         "Name": "CallFunc_GetYawPitchFromVector_Yaw_1",
         "Flags": "RF_Public",
@@ -1111,6 +1439,12 @@
         "Name": "CallFunc_GetYawPitchFromVector_Pitch_1",
         "Flags": "RF_Public",
         "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Abs_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
       },
       {
         "Type": "DoubleProperty",
@@ -1135,12 +1469,6 @@
         "Name": "CallFunc_Subtract_DoubleDouble_B_ImplicitCast",
         "Flags": "RF_Public",
         "ElementSize": 8
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "K2Node_StructMemberSet___FloatProperty_ImplicitCast",
-        "Flags": "RF_Public",
-        "ElementSize": 4
       },
       {
         "Type": "DoubleProperty",
@@ -1176,32 +1504,46 @@
     "ChildProperties": [
       {
         "Type": "NameProperty",
-        "Name": "__NameProperty_20",
+        "Name": "__NameProperty_34",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_35",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_36",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_37",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 12,
         "PropertyFlags": "BlueprintVisible"
       },
       {
         "Type": "StructProperty",
-        "Name": "__StructProperty_21",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 44,
-        "PropertyFlags": "BlueprintVisible",
-        "Struct": {
-          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "__FloatProperty_22",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 4,
-        "PropertyFlags": "BlueprintVisible"
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "__StructProperty_23",
+        "Name": "__StructProperty_38",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 40,
         "PropertyFlags": "BlueprintVisible",
@@ -1212,7 +1554,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "__BoolProperty_24",
+        "Name": "__BoolProperty_39",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1,
         "PropertyFlags": "BlueprintVisible",
@@ -1225,21 +1567,32 @@
       },
       {
         "Type": "FloatProperty",
-        "Name": "__FloatProperty_25",
+        "Name": "__FloatProperty_40",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 4,
         "PropertyFlags": "BlueprintVisible"
       },
       {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_41",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
         "Type": "FloatProperty",
-        "Name": "__FloatProperty_26",
+        "Name": "__FloatProperty_42",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 4,
         "PropertyFlags": "BlueprintVisible"
       },
       {
         "Type": "BoolProperty",
-        "Name": "__BoolProperty_27",
+        "Name": "__BoolProperty_43",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1,
         "PropertyFlags": "BlueprintVisible",
@@ -1252,7 +1605,7 @@
       },
       {
         "Type": "EnumProperty",
-        "Name": "__EnumProperty_28",
+        "Name": "__EnumProperty_44",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1,
         "PropertyFlags": "BlueprintVisible",
@@ -1270,7 +1623,7 @@
       },
       {
         "Type": "ByteProperty",
-        "Name": "__ByteProperty_29",
+        "Name": "__ByteProperty_45",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1,
         "PropertyFlags": "BlueprintVisible",
@@ -1281,7 +1634,7 @@
       },
       {
         "Type": "NameProperty",
-        "Name": "__NameProperty_30",
+        "Name": "__NameProperty_46",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 12,
         "PropertyFlags": "BlueprintVisible"

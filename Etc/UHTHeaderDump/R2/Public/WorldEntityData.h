@@ -4,6 +4,7 @@
 #include "WorldEntityBeaconTowerData.h"
 #include "WorldEntityCentralMarketplaceData.h"
 #include "WorldEntityFamilyCenterData.h"
+#include "WorldEntityTempleData.h"
 #include "WorldEntityTownHallData.h"
 #include "WorldEntityWildSpawnData.h"
 #include "WorldEntityData.generated.h"
@@ -29,6 +30,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FWorldEntityCentralMarketplaceData CentralMarketplaceData;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FWorldEntityTempleData TempleData;
     
     R2_API FWorldEntityData();
 };

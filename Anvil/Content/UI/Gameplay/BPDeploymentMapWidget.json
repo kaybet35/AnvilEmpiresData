@@ -1,5 +1,23 @@
 [
   {
+    "Type": "BPDeploymentAvatarWidget_C",
+    "Name": "DeploymentAvatarWidget",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPDeploymentAvatarWidget.BPDeploymentAvatarWidget_C'",
+    "Template": {
+      "ObjectName": "BPDeploymentAvatarWidget_C'Default__BPDeploymentAvatarWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentAvatarWidget.1"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.10"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
     "Type": "BPDeploymentMapWidget_C",
     "Name": "Default__BPDeploymentMapWidget_C",
     "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.BPDeploymentMapWidget_C'",
@@ -14,6 +32,23 @@
     }
   },
   {
+    "Type": "BPMapAvatarContainerWidget_C",
+    "Name": "MapAvatarContainerWidget",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPMapAvatarContainerWidget.BPMapAvatarContainerWidget_C'",
+    "Template": {
+      "ObjectName": "BPMapAvatarContainerWidget_C'Default__BPMapAvatarContainerWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapAvatarContainerWidget.0"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.MapSheet.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.12"
+      }
+    }
+  },
+  {
     "Type": "CanvasPanel",
     "Name": "CanvasPanel_15",
     "Outer": "WidgetTree",
@@ -23,19 +58,23 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.5"
-        },
-        {
-          "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.6"
-        },
-        {
-          "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_3'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.7"
         },
         {
+          "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_2'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.9"
+        },
+        {
           "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.4"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.6"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.10"
         }
       ]
     }
@@ -50,12 +89,12 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.MapImageSheet.CanvasPanelSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.8"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.11"
         }
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.7"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.9"
       }
     }
   },
@@ -66,9 +105,15 @@
     "Class": "UScriptClass'CanvasPanel'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.MapSheet.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.12"
+        }
+      ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.4"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.6"
       }
     }
   },
@@ -101,11 +146,11 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.1"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.3"
       },
       "Content": {
         "ObjectName": "CanvasPanel'BPDeploymentMapWidget_C:WidgetTree.MapSheet'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.3"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.5"
       }
     }
   },
@@ -130,11 +175,11 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.1"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.3"
       },
       "Content": {
         "ObjectName": "Image'BPDeploymentMapWidget_C:WidgetTree.MapFrame'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.10"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.14"
       }
     }
   },
@@ -160,11 +205,11 @@
       "ZOrder": -100,
       "Parent": {
         "ObjectName": "CanvasPanel'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.1"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.3"
       },
       "Content": {
         "ObjectName": "ScaleBox'BPDeploymentMapWidget_C:WidgetTree.ScaleBox_49'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.12"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.16"
       }
     }
   },
@@ -197,11 +242,45 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.1"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.3"
       },
       "Content": {
         "ObjectName": "CanvasPanel'BPDeploymentMapWidget_C:WidgetTree.MapImageSheet'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.2"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.4"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Outer": "CanvasPanel_15",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.3"
+      },
+      "Content": {
+        "ObjectName": "BPDeploymentAvatarWidget_C'BPDeploymentMapWidget_C:WidgetTree.DeploymentAvatarWidget'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.0"
       }
     }
   },
@@ -230,11 +309,49 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'BPDeploymentMapWidget_C:WidgetTree.MapImageSheet'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.2"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.4"
       },
       "Content": {
         "ObjectName": "Image'BPDeploymentMapWidget_C:WidgetTree.MapImage'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.11"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "MapSheet",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1000.0,
+          "Bottom": 1000.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 100,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPDeploymentMapWidget_C:WidgetTree.MapSheet'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.5"
+      },
+      "Content": {
+        "ObjectName": "BPMapAvatarContainerWidget_C'BPDeploymentMapWidget_C:WidgetTree.MapAvatarContainerWidget'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.2"
       }
     }
   },
@@ -257,7 +374,7 @@
       },
       "Slot": {
         "ObjectName": "ScaleBoxSlot'BPDeploymentMapWidget_C:WidgetTree.ScaleBox_49.ScaleBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.13"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.17"
       }
     }
   },
@@ -280,7 +397,7 @@
       },
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.5"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.7"
       }
     }
   },
@@ -303,7 +420,7 @@
       },
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.MapImageSheet.CanvasPanelSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.8"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.11"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -319,12 +436,12 @@
       "Slots": [
         {
           "ObjectName": "ScaleBoxSlot'BPDeploymentMapWidget_C:WidgetTree.ScaleBox_49.ScaleBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.13"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.17"
         }
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15.CanvasPanelSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.6"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.8"
       }
     }
   },
@@ -337,11 +454,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "ScaleBox'BPDeploymentMapWidget_C:WidgetTree.ScaleBox_49'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.12"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.16"
       },
       "Content": {
         "ObjectName": "Image'BPDeploymentMapWidget_C:WidgetTree.MapBackground'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.13"
       }
     }
   },
@@ -353,7 +470,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPDeploymentMapWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.15"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.19"
       },
       "bClassRequiresNativeTick": true
     },
@@ -394,7 +511,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPDeploymentMapWidget_C'Default__BPDeploymentMapWidget_C'",
-      "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.0"
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.1"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -409,7 +526,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "CanvasPanel'BPDeploymentMapWidget_C:WidgetTree.CanvasPanel_15'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.1"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentMapWidget.3"
       }
     }
   }

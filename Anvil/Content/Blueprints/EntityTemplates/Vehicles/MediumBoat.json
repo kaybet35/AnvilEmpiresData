@@ -332,7 +332,7 @@
     "Type": "MediumBoat_C",
     "Name": "Default__MediumBoat_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Vehicles/MediumBoat.MediumBoat_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CodeNameString": "MediumBoat",
       "CodeName": 718375835,
@@ -478,7 +478,7 @@
         "Y": 0.0,
         "Z": 0.0
       },
-      "SeatThrustForce": 10000.0
+      "SeatThrustForce": 15000.0
     }
   },
   {
@@ -499,13 +499,14 @@
         "ObjectName": "StaticMesh'MediumBoatHull'",
         "ObjectPath": "Anvil/Content/Meshes/Vehicles/Collisions/MediumBoatHull.2"
       },
-      "MaxRudderAngle": 45.0,
+      "MaxRudderAngle": 55.0,
+      "RudderTurnRate": 30.0,
       "DragReferenceSpeed": 5.0,
       "Fp": 0.3,
       "Fs": 0.3,
       "Rudder": {
         "Pivot": {
-          "X": -800.0,
+          "X": -900.0,
           "Y": 0.0,
           "Z": 0.0
         },
@@ -514,7 +515,8 @@
         "bVertical": true
       },
       "ThrustVectoringPercent": 0.6,
-      "NoSailInputFactor": 0.1,
+      "NoSailThrustHorizonalMultiplier": 0.6,
+      "NoSailInputFactor": 0.5,
       "SailInputCurve": {
         "ObjectName": "CurveFloat'MediumBoatSailInputCurve'",
         "ObjectPath": "Anvil/Content/Blueprints/Data/Curves/MediumBoatSailInputCurve.0"
@@ -528,17 +530,26 @@
     "Class": "UScriptClass'VehicleMovementProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "Acceleration": 20.0,
-      "MaxVelocity": 175.0,
-      "RotationalSpeed": 15.0,
-      "SprintFactor": 2.0,
+      "Acceleration": 200.0,
+      "MaxVelocity": 250.0,
+      "RotationalSpeed": 35.0,
+      "SprintFactor": 1.5,
       "SprintRotationalSpeedFactor": 0.5,
       "SprintStaminaDrain": 4.0,
       "bWaterVehicle": true,
       "bSailBoat": true,
       "bDoAxleRaycasts": false,
       "bAllowSwitchSeat": true,
-      "bCanBeMovementBase": true
+      "bCanBeMovementBase": true,
+      "RammingSpeedFactorRange": {
+        "Min": 0.9,
+        "Max": 1.0
+      },
+      "RammingDamageRange": {
+        "Min": 50.0,
+        "Max": 75.0
+      },
+      "RamCD": 3.0
     }
   },
   {
@@ -548,15 +559,20 @@
     "Class": "UScriptClass'VehicleSeatProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "MountedStance": "EAnvilCharacterStance::Sitting",
+      "MountedStance": "EAnvilCharacterStance::OnBoatHelm",
       "PlayerOffset": {
-        "X": -650.0,
-        "Y": 130.0,
+        "X": -770.0,
+        "Y": 105.0,
         "Z": 230.0
+      },
+      "PlayerRotation": {
+        "Pitch": 0.0,
+        "Yaw": 25.0,
+        "Roll": 0.0
       },
       "PlayerExitOffset": {
         "X": -650.0,
-        "Y": 130.0,
+        "Y": 115.0,
         "Z": 350.0
       },
       "DismountMaxDelta": 400.0,
@@ -574,12 +590,12 @@
       "MountedStance": "EAnvilCharacterStance::Sitting",
       "PlayerOffset": {
         "X": -650.0,
-        "Y": -130.0,
+        "Y": -95.0,
         "Z": 230.0
       },
       "PlayerExitOffset": {
         "X": -650.0,
-        "Y": -130.0,
+        "Y": -110.0,
         "Z": 350.0
       },
       "DismountMaxDelta": 400.0
@@ -594,8 +610,8 @@
     "Properties": {
       "MountedStance": "EAnvilCharacterStance::Sitting",
       "PlayerOffset": {
-        "X": 670.0,
-        "Y": 150.0,
+        "X": 675.0,
+        "Y": 100.0,
         "Z": 230.0
       },
       "PlayerExitOffset": {
@@ -613,11 +629,11 @@
     "Class": "UScriptClass'VehicleSeatProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "MountedStance": "EAnvilCharacterStance::Sitting",
+      "MountedStance": "EAnvilCharacterStance::OnOneOarRight",
       "PlayerOffset": {
-        "X": -450.0,
+        "X": -510.0,
         "Y": 190.0,
-        "Z": 230.0
+        "Z": 220.0
       },
       "PlayerExitOffset": {
         "X": -450.0,
@@ -625,6 +641,11 @@
         "Z": 350.0
       },
       "DismountMaxDelta": 400.0,
+      "SeatThrustOffset": {
+        "X": 0.0,
+        "Y": 200.0,
+        "Z": 0.0
+      },
       "bSeatThrustInput": true
     }
   },
@@ -635,11 +656,11 @@
     "Class": "UScriptClass'VehicleSeatProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "MountedStance": "EAnvilCharacterStance::Sitting",
+      "MountedStance": "EAnvilCharacterStance::OnOneOarLeft",
       "PlayerOffset": {
-        "X": -450.0,
+        "X": -510.0,
         "Y": -190.0,
-        "Z": 230.0
+        "Z": 220.0
       },
       "PlayerExitOffset": {
         "X": -450.0,
@@ -647,6 +668,11 @@
         "Z": 350.0
       },
       "DismountMaxDelta": 400.0,
+      "SeatThrustOffset": {
+        "X": 0.0,
+        "Y": -200.0,
+        "Z": 0.0
+      },
       "bSeatThrustInput": true
     }
   },
@@ -659,8 +685,8 @@
     "Properties": {
       "MountedStance": "EAnvilCharacterStance::Sitting",
       "PlayerOffset": {
-        "X": 470.0,
-        "Y": 190.0,
+        "X": 480.0,
+        "Y": 150.0,
         "Z": 230.0
       },
       "PlayerExitOffset": {
@@ -680,8 +706,8 @@
     "Properties": {
       "MountedStance": "EAnvilCharacterStance::Sitting",
       "PlayerOffset": {
-        "X": 470.0,
-        "Y": -190.0,
+        "X": 480.0,
+        "Y": -150.0,
         "Z": 230.0
       },
       "PlayerExitOffset": {
@@ -701,8 +727,8 @@
     "Properties": {
       "MountedStance": "EAnvilCharacterStance::Sitting",
       "PlayerOffset": {
-        "X": 670.0,
-        "Y": -150.0,
+        "X": 675.0,
+        "Y": -100.0,
         "Z": 230.0
       },
       "PlayerExitOffset": {

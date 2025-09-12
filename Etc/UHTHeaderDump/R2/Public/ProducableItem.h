@@ -4,6 +4,7 @@
 #include "Templates/SubclassOf.h"
 #include "ProducableItem.generated.h"
 
+class UEntityTemplate;
 class UItemTemplate;
 
 USTRUCT(BlueprintType)
@@ -30,6 +31,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bMakePublic;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UEntityTemplate> RequiredStructure;
     
     R2_API FProducableItem();
 };

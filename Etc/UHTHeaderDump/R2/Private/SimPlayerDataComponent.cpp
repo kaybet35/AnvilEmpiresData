@@ -27,7 +27,6 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->bIsAiming = false;
     this->bIsGuarding = false;
     this->bIsMarchMode = false;
-    this->Accuracy = 0.00f;
     this->bIsAdmin = false;
     this->bPriming = false;
     this->bInTravelZone = false;
@@ -41,6 +40,7 @@ USimPlayerDataComponent::USimPlayerDataComponent(const FObjectInitializer& Objec
     this->bBasedMovement = false;
     this->HeldItemLightSourceRadius = 0.00f;
     this->FoodTypesOnCooldownBits = 0;
+    this->Accuracy = 0.00f;
     this->AimYaw = 0.00f;
     this->AimPitch = 0.00f;
     this->LastIncomingAttackAngle = 0.00f;

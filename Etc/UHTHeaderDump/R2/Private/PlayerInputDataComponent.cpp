@@ -11,7 +11,6 @@ UPlayerInputDataComponent::UPlayerInputDataComponent(const FObjectInitializer& O
     this->MinRangedDistance = 0.00f;
     this->CurrentCollectableResourceType = 0;
     this->UsePrompt = 0;
-    this->VehicleInput = EAnvilVehicleInputState::Idle;
 }
 
 

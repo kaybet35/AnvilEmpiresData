@@ -38,6 +38,7 @@ enum class EAnvilSimActivityState : uint8 {
     ExitingAltShieldMode,
     Drowning,
     ChainedAttackRecovery,
+    Crafting,
     NumTypes,
 };
 

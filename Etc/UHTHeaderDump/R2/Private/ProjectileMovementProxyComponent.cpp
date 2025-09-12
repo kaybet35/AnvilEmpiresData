@@ -28,6 +28,7 @@ UProjectileMovementProxyComponent::UProjectileMovementProxyComponent() {
     this->bDistanceBasedAccuracy = false;
     this->bForceKillPlayers = false;
     this->bHitEffectNoPitch = true;
+    this->bScaleDamageWithAccuracy = false;
 }
 
 

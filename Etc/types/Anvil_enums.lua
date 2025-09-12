@@ -5,7 +5,8 @@ EAlertType = {
     Reinforcement = 2,
     ClearReinforcement = 3,
     TimeUntilAgeEndAlert = 4,
-    EAlertType_MAX = 5,
+    TempleUnderAttack = 5,
+    EAlertType_MAX = 6,
 }
 
 ---@enum EAnvilScreenType
@@ -274,7 +275,8 @@ EMapIconType = {
     FamilyCenter = 18,
     WorldEntrance = 19,
     Temple = 20,
-    EMapIconType_MAX = 21,
+    RelicSite = 21,
+    EMapIconType_MAX = 22,
 }
 
 ---@enum EMapMode
@@ -355,8 +357,10 @@ ESimpleTooltip = {
     Avatars = 13,
     SubmitAvatar = 14,
     StorehousePublicButton = 15,
-    StorehousePrivateButton = 16,
-    ESimpleTooltip_MAX = 17,
+    StorehouseFamilyButton = 16,
+    StorehousePrivateButton = 17,
+    ReligiousInfluence = 18,
+    ESimpleTooltip_MAX = 19,
 }
 
 ---@enum ETemperatureChangeType

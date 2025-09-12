@@ -1,22 +1,10 @@
 ---@meta
 
 ---@class ABPVisGridFoundationSquareStraight_T2_C : AVisStructure
+---@field VisRandomMeshBricks UVisRandomMeshComponent
 ---@field Rubble UVisStaticMeshComponentBase
 ---@field TopMeshCollapsed UVisStaticMeshComponentBase
----@field VisDynamicMeshTemplateReference3 UVisDynamicMeshTemplateReferenceComponent
----@field VisDynamicMeshTemplateReference2 UVisDynamicMeshTemplateReferenceComponent
----@field VisDynamicMeshTemplateReference1 UVisDynamicMeshTemplateReferenceComponent
----@field ['Wall Bricks Template 3'] UVisDynamicMeshTemplateReferenceComponent
----@field ['Wall Bricks Template 2'] UVisDynamicMeshTemplateReferenceComponent
----@field ['Wall Bricks Template 1'] UVisDynamicMeshTemplateReferenceComponent
----@field VisDynamicMeshTemplateReference UVisDynamicMeshTemplateReferenceComponent
----@field ['Wall Bricks Template '] UVisDynamicMeshTemplateReferenceComponent
 ---@field VisDynamicInstancedMeshGroup UVisDynamicInstancedMeshGroupComponent
----@field FloorPlanking2 UStaticMeshComponent
----@field FloorPlanking1 UStaticMeshComponent
----@field FloorPlanking3 UStaticMeshComponent
----@field FloorPlanking UStaticMeshComponent
----@field ChildActor2 UChildActorComponent
 ---@field VerticalEdge01 UVisFoundationEdgeMeshDecorComponent
 ---@field VisFoundationEdgeMeshDecor4 UVisFoundationEdgeMeshDecorComponent
 ---@field TopMesh UStaticMeshComponent

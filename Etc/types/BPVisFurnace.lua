@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABPVisFurnace_C : AVisCookingStructure
+---@class ABPVisFurnace_C : AVisFurnace
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field Niagara UNiagaraComponent
 ---@field VisStaticMesh2 UVisStaticMeshComponent

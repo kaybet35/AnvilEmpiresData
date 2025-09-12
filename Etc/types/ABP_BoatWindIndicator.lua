@@ -1,17 +1,19 @@
 ---@meta
 
 ---@class FAnimBlueprintGeneratedConstantData : FAnimBlueprintConstantData
----@field __NameProperty_20 FName
----@field __StructProperty_21 FInputScaleBiasClampConstants
----@field __FloatProperty_22 float
----@field __StructProperty_23 FAnimNodeFunctionRef
----@field __BoolProperty_24 boolean
----@field __FloatProperty_25 float
----@field __FloatProperty_26 float
----@field __BoolProperty_27 boolean
----@field __EnumProperty_28 EAnimSyncMethod
----@field __ByteProperty_29 EAnimGroupRole::Type
----@field __NameProperty_30 FName
+---@field __NameProperty_34 FName
+---@field __FloatProperty_35 float
+---@field __EnumProperty_36 EAnimSyncMethod
+---@field __NameProperty_37 FName
+---@field __StructProperty_38 FAnimNodeFunctionRef
+---@field __BoolProperty_39 boolean
+---@field __FloatProperty_40 float
+---@field __StructProperty_41 FInputScaleBiasClampConstants
+---@field __FloatProperty_42 float
+---@field __BoolProperty_43 boolean
+---@field __EnumProperty_44 EAnimSyncMethod
+---@field __ByteProperty_45 EAnimGroupRole::Type
+---@field __NameProperty_46 FName
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystem_PropertyAccess
 ---@field AnimBlueprintExtension_Base FAnimSubsystem_Base
 FAnimBlueprintGeneratedConstantData = {}
@@ -31,15 +33,17 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
 ---@field AnimBlueprintExtension_Base FAnimSubsystemInstance
 ---@field AnimGraphNode_Root FAnimNode_Root
----@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
+---@field AnimGraphNode_SequencePlayer_1 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_LayeredBoneBlend FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_BlendSpacePlayer FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_TwoWayBlend FAnimNode_TwoWayBlend
+---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
 ---@field localRelativeAngle double
+---@field localWindIntensity double
 UABP_BoatWindIndicator_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_BoatWindIndicator_C:AnimGraph(AnimGraph) end
-function UABP_BoatWindIndicator_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BoatWindIndicator_AnimGraphNode_SequencePlayer_DACD792649643911F85F5D80E1A20471() end
 ---@param DeltaTimeX float
 function UABP_BoatWindIndicator_C:BlueprintUpdateAnimation(DeltaTimeX) end
 ---@param EntryPoint int32

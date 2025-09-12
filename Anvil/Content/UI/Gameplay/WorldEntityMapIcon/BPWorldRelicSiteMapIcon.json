@@ -1,0 +1,113 @@
+[
+  {
+    "Type": "BPWorldRelicSiteMapIcon_C",
+    "Name": "Default__BPWorldRelicSiteMapIcon_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldRelicSiteMapIcon.BPWorldRelicSiteMapIcon_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "Visibility": "ESlateVisibility::Visible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "MapItemImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'MapChurchIcon'",
+          "ObjectPath": "Anvil/Content/Textures/UI/Map/MapChurchIcon.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'BPWorldRelicSiteMapIcon_C:WidgetTree.IconSizeBox.SizeBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldRelicSiteMapIcon.3"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "IconSizeBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidthOverride": 75.0,
+      "HeightOverride": 75.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'BPWorldRelicSiteMapIcon_C:WidgetTree.IconSizeBox.SizeBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldRelicSiteMapIcon.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Outer": "IconSizeBox",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'BPWorldRelicSiteMapIcon_C:WidgetTree.IconSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldRelicSiteMapIcon.2"
+      },
+      "Content": {
+        "ObjectName": "Image'BPWorldRelicSiteMapIcon_C:WidgetTree.MapItemImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldRelicSiteMapIcon.1"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPWorldRelicSiteMapIcon_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPWorldRelicSiteMapIcon_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldRelicSiteMapIcon.5"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WorldRelicSiteMapIcon'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPWorldRelicSiteMapIcon_C'Default__BPWorldRelicSiteMapIcon_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldRelicSiteMapIcon.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPWorldRelicSiteMapIcon_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox'BPWorldRelicSiteMapIcon_C:WidgetTree.IconSizeBox'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/WorldEntityMapIcon/BPWorldRelicSiteMapIcon.2"
+      }
+    }
+  }
+]

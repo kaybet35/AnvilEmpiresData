@@ -20,6 +20,8 @@ enum class ESimpleTooltip : uint8 {
     Avatars,
     SubmitAvatar,
     StorehousePublicButton,
+    StorehouseFamilyButton,
     StorehousePrivateButton,
+    ReligiousInfluence,
 };
 

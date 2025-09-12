@@ -4,8 +4,8 @@
 #include "DataComponent.h"
 #include "EAnvilPlayerAimMeshType.h"
 #include "EAnvilPlayerInputMode.h"
-#include "EAnvilVehicleInputState.h"
 #include "EntityHandle.h"
+#include "MovementInputState.h"
 #include "StatusMessage.h"
 #include "PlayerInputDataComponent.generated.h"
 
@@ -71,7 +71,7 @@ public:
     int32 UsePrompt;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EAnvilVehicleInputState VehicleInput;
+    FMovementInputState VehicleInput;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector CameraCurrentPosition;

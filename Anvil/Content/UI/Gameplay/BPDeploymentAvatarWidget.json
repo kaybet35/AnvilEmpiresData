@@ -1,0 +1,237 @@
+[
+  {
+    "Type": "BPAnvilPanel_C",
+    "Name": "BPAnvilPanel",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPAnvilPanel.BPAnvilPanel_C'",
+    "Template": {
+      "ObjectName": "BPAnvilPanel_C'Default__BPAnvilPanel_C'",
+      "ObjectPath": "Anvil/Content/UI/BPAnvilPanel.0"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NamedSlotBindings": [
+        {
+          "Name": "AnvilPanelSlot0",
+          "Content": {
+            "ObjectName": "BPHeaderContainer_C'BPDeploymentAvatarWidget_C:WidgetTree.BPHeaderContainer'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentAvatarWidget.2"
+          }
+        },
+        {
+          "Name": "AnvilPanelSlot1",
+          "Content": {
+            "ObjectName": "BPMainAreaContainer_C'BPDeploymentAvatarWidget_C:WidgetTree.BPMainAreaContainer'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentAvatarWidget.3"
+          }
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPDeploymentAvatarWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentAvatarWidget.5"
+      }
+    }
+  },
+  {
+    "Type": "BPDeploymentAvatarWidget_C",
+    "Name": "Default__BPDeploymentAvatarWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPDeploymentAvatarWidget.BPDeploymentAvatarWidget_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "BPHeaderContainer_C",
+    "Name": "BPHeaderContainer",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPHeaderContainer.BPHeaderContainer_C'",
+    "Template": {
+      "ObjectName": "BPHeaderContainer_C'Default__BPHeaderContainer_C'",
+      "ObjectPath": "Anvil/Content/UI/BPHeaderContainer.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HeaderText": {
+        "Namespace": "",
+        "Key": "68691434422D6A014017D8BEEEC36C58",
+        "SourceString": "Select Avatar",
+        "LocalizedString": "Select Avatar"
+      }
+    }
+  },
+  {
+    "Type": "BPMainAreaContainer_C",
+    "Name": "BPMainAreaContainer",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/BPMainAreaContainer.BPMainAreaContainer_C'",
+    "Template": {
+      "ObjectName": "BPMainAreaContainer_C'Default__BPMainAreaContainer_C'",
+      "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NamedSlotBindings": [
+        {
+          "Name": "MainAreaSlot0",
+          "Content": {
+            "ObjectName": "TextBlock'BPDeploymentAvatarWidget_C:WidgetTree.DebugText'",
+            "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentAvatarWidget.6"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPDeploymentAvatarWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentAvatarWidget.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_0",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPDeploymentAvatarWidget_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentAvatarWidget.4"
+      },
+      "Content": {
+        "ObjectName": "BPAnvilPanel_C'BPDeploymentAvatarWidget_C:WidgetTree.BPAnvilPanel'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentAvatarWidget.0"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "DebugText",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'TextBlock'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Text": {
+        "Namespace": "UMG",
+        "Key": "TextBlockDefaultValue",
+        "SourceString": "Text Block",
+        "LocalizedString": "Text Block"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'Renner-Book_Font'",
+          "ObjectPath": "Anvil/Content/UI/Fonts/Renner-Book_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 14
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPDeploymentAvatarWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPDeploymentAvatarWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentAvatarWidget.8"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DeploymentAvatarWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPAnvilPanel",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPAnvilPanel_C'",
+          "ObjectPath": "Anvil/Content/UI/BPAnvilPanel.37"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPHeaderContainer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPHeaderContainer_C'",
+          "ObjectPath": "Anvil/Content/UI/BPHeaderContainer.24"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPMainAreaContainer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPMainAreaContainer_C'",
+          "ObjectPath": "Anvil/Content/UI/BPMainAreaContainer.20"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPDeploymentAvatarWidget_C'Default__BPDeploymentAvatarWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentAvatarWidget.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPDeploymentAvatarWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPDeploymentAvatarWidget_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPDeploymentAvatarWidget.4"
+      }
+    }
+  }
+]

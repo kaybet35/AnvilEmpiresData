@@ -3,6 +3,6 @@
 
 class UBPWorldTempleMapIcon_C : public UWorldTempleMapIcon
 {
-}; // Size: 0x3A0
+}; // Size: 0x3A8
 
 #endif

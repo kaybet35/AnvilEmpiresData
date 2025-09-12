@@ -12,7 +12,7 @@
       "bUsedWithSplineMeshes": true,
       "bUsedWithInstancedStaticMeshes": true,
       "bUsedWithClothing": true,
-      "StateId": "FDCFA450-40F0D6CD-11F1BC9D-472E910E",
+      "StateId": "C37C9520-4ABE6BFA-2DA12AA5-572EF5DE",
       "TextureStreamingData": [
         {
           "SamplingScale": 1.0,
@@ -494,6 +494,11 @@
             "Name": "Interior",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
+          },
+          {
+            "Name": "Custom Alpha Contrast",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
           }
         ]
       },
@@ -685,6 +690,11 @@
             "Name": "Global Alpha Mask",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
+          },
+          {
+            "Name": "Custom Alpha",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
           }
         ]
       },
@@ -695,6 +705,7 @@
         "ParameterInfoSet": []
       },
       "ScalarPrimitiveDataIndexValues": [
+        -1,
         -1,
         -1,
         -1,
@@ -891,6 +902,7 @@
         2.0,
         2.0,
         2.0,
+        0.0,
         0.0,
         0.0
       ],
@@ -1090,6 +1102,10 @@
         },
         {
           "AssetPathName": "/Game/Textures/Structures/FortFoundationTilingBrickT2M.FortFoundationTilingBrickT2M",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/FX/Textures/NoiseMasks/GrungeMask01M.GrungeMask01M",
           "SubPathString": ""
         },
         {
@@ -2174,6 +2190,27 @@
           "Function": {
             "ObjectName": "MaterialFunction'WorldSpaceSmall'",
             "ObjectPath": "Anvil/Content/Materials/MaterialFunctions/WorldSpaceSmall.0"
+          }
+        },
+        {
+          "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
+          "Function": {
+            "ObjectName": "MaterialFunction'AppendMany'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
+          }
+        },
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction'LinearGradient'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CheapContrast'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
           }
         }
       ],

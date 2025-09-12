@@ -7,5 +7,6 @@ FProducableItem::FProducableItem() {
     this->OutputCount = 0;
     this->bRequiresResearch = false;
     this->bMakePublic = false;
+    this->RequiredStructure = NULL;
 }
 

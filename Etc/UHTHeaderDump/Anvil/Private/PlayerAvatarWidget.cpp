@@ -10,6 +10,10 @@ UPlayerAvatarWidget::UPlayerAvatarWidget() : UUserWidget(FObjectInitializer::Get
     this->LumberjackingNumberText = NULL;
     this->MiningNumberText = NULL;
     this->FarmingNumberText = NULL;
+    this->ChangeAvatarButton = NULL;
+}
+
+void UPlayerAvatarWidget::OnChangeAvatarButtonClicked() {
 }
 
 

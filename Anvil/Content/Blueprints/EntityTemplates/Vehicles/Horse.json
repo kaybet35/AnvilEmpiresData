@@ -17,7 +17,8 @@
     "Class": "UScriptClass'AnimalAIProxyComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "RotationSpeed": 300.0
+      "RotationSpeed": 300.0,
+      "bIsTrappable": true
     }
   },
   {
@@ -48,7 +49,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "Horse_C'Default__Horse_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.11"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.12"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -90,6 +91,19 @@
         "Z": 100.0
       },
       "CollisionMask": 8
+    }
+  },
+  {
+    "Type": "CapsuleCollisionProxyComponent",
+    "Name": "CapsuleCollisionProxyComponent_0",
+    "Outer": "Default__Horse_C",
+    "Class": "UScriptClass'CapsuleCollisionProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Radius": 30.0,
+      "HalfHeight": 72.0,
+      "SurfaceType": "EAnvilPhysicalSurfaceType::Flesh",
+      "CollisionMask": 524288
     }
   },
   {
@@ -156,19 +170,19 @@
       "Components": [
         {
           "ObjectName": "VehicleMovementProxyComponent'Default__Horse_C:VehicleMovementProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.15"
-        },
-        {
-          "ObjectName": "VehicleSeatProxyComponent'Default__Horse_C:VehicleSeatProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.16"
         },
         {
+          "ObjectName": "VehicleSeatProxyComponent'Default__Horse_C:VehicleSeatProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.17"
+        },
+        {
           "ObjectName": "InventoryProxyComponent'Default__Horse_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.13"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.14"
         },
         {
           "ObjectName": "HealthProxyComponent'Default__Horse_C:HealthProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.10"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.11"
         },
         {
           "ObjectName": "BoxCollisionProxyComponent'Default__Horse_C:BoxCollisionProxyComponent_1'",
@@ -180,11 +194,11 @@
         },
         {
           "ObjectName": "DestroyableProxyComponent'Default__Horse_C:DestroyableProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.6"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.7"
         },
         {
           "ObjectName": "FootprintCollisionProxyComponent'Default__Horse_C:FootprintCollisionProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.9"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.10"
         },
         {
           "ObjectName": "AIStimulusProxyComponent'Default__Horse_C:AIStimulusProxyComponent_0'",
@@ -192,11 +206,11 @@
         },
         {
           "ObjectName": "HungerProxyComponent'Default__Horse_C:HungerProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.12"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.13"
         },
         {
           "ObjectName": "StaminaProxyComponent'Default__Horse_C:StaminaProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.14"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.15"
         },
         {
           "ObjectName": "AnimalAIProxyComponent'Default__Horse_C:AnimalAIProxyComponent_0'",
@@ -208,11 +222,15 @@
         },
         {
           "ObjectName": "EntityAttachableProxyComponent'Default__Horse_C:EntityAttachableProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.8"
         },
         {
           "ObjectName": "FamilyLockProxyComponent'Default__Horse_C:FamilyLockProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.8"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.9"
+        },
+        {
+          "ObjectName": "CapsuleCollisionProxyComponent'Default__Horse_C:CapsuleCollisionProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Vehicles/Horse.6"
         }
       ],
       "VisActorClass": {
@@ -386,13 +404,19 @@
         "ObjectName": "BlueprintGeneratedClass'HitEffectLeatherArmourGlancing_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectLeatherArmourGlancing.0"
       },
-      "RammingDamage": 20.0,
-      "RammingVelocityFactor": 0.8,
-      "RammingVelocityTime": 2.0,
+      "RammingVelocityTime": 2.25,
       "RammingDamageType": "EAnvilDamageType::Slashing",
       "RammingStabilityDamage": 1.0,
       "RammingStabilitySplashDamage": 0.5,
       "RammingStabilitySplashDamageRadius": 100.0,
+      "RammingSpeedFactorRange": {
+        "Min": 0.55,
+        "Max": 0.75
+      },
+      "RammingDamageRange": {
+        "Min": 20.0,
+        "Max": 20.0
+      },
       "FallingDistRange": {
         "Min": 1000.0,
         "Max": 2000.0

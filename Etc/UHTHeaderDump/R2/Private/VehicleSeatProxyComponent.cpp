@@ -11,8 +11,8 @@ UVehicleSeatProxyComponent::UVehicleSeatProxyComponent() {
     this->bRudderRotationInput = false;
     this->bUseMountedWeapon = false;
     this->bPrimeMountedWeapon = false;
-    this->bUseDeployable = false;
     this->bMustNearExitToMount = false;
+    this->bMountSeatLOSCheckIgnoreVehicle = true;
     this->bRevertRequiredEquipments = false;
     this->bMirrorDetachLocation = false;
     this->AnimationIndex = 0;

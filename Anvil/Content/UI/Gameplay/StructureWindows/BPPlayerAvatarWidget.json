@@ -72,7 +72,7 @@
           "Name": "MainAreaSlot0",
           "Content": {
             "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+            "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
           }
         }
       ]
@@ -101,7 +101,97 @@
     "Properties": {
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.59"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.65"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "ChangeAvatarButton",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Button'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.7,
+              "G": 0.7,
+              "B": 0.7,
+              "A": 1.0,
+              "Hex": "DADADA"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'ActionButtons_LoadPopulation'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_LoadPopulation.0"
+          }
+        },
+        "Hovered": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 1.0,
+              "Hex": "FFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'ActionButtons_LoadPopulation'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_LoadPopulation.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "Pressed": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.333333,
+              "G": 0.333333,
+              "B": 0.333333,
+              "A": 1.0,
+              "Hex": "9C9C9C"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'ActionButtons_LoadPopulation'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_LoadPopulation.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        },
+        "Disabled": {
+          "DrawAs": "ESlateBrushDrawType::Box",
+          "ImageType": "ESlateBrushImageType::FullColor",
+          "ImageSize": {
+            "X": 32.0,
+            "Y": 32.0
+          },
+          "Margin": {
+            "Left": 0.25,
+            "Top": 0.25,
+            "Right": 0.25,
+            "Bottom": 0.25
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.1,
+              "G": 0.1,
+              "B": 0.1,
+              "A": 1.0,
+              "Hex": "595959"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'ActionButtons_LoadPopulation'",
+            "ObjectPath": "Anvil/Content/Textures/UI/Actions/ActionButtons_LoadPopulation.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.17"
       }
     }
   },
@@ -115,20 +205,47 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.11"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_4'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.13"
         },
         {
+          "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.15"
+        },
+        {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.12"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.14"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_10'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.60"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.66"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.18"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.16"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.64"
       }
     }
   },
@@ -142,20 +259,20 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.14"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.19"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.16"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.21"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.15"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.20"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_11'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.61"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.67"
       }
     }
   },
@@ -169,20 +286,20 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_2.HorizontalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.17"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.22"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_2.HorizontalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.19"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.24"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_2.HorizontalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.18"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.23"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_12'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.62"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.68"
       }
     }
   },
@@ -196,20 +313,20 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.20"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.25"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.22"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.27"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.21"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.26"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.67"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.74"
       }
     }
   },
@@ -223,20 +340,20 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_4.HorizontalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.23"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.28"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_4.HorizontalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.25"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.30"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_4.HorizontalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.24"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.29"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_8'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.73"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.79"
       }
     }
   },
@@ -250,20 +367,20 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_5.HorizontalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.26"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.31"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_5.HorizontalBoxSlot_4'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.28"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.33"
         },
         {
           "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_5.HorizontalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.27"
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.32"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_9'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.74"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.80"
       }
     }
   },
@@ -276,11 +393,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.5"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.6"
       },
       "Content": {
         "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.FitnessText_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.48"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.54"
       }
     }
   },
@@ -294,11 +411,11 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
       "Parent": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.5"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.6"
       },
       "Content": {
         "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.FitnessNumberText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.47"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.53"
       }
     }
   },
@@ -314,108 +431,106 @@
       },
       "Parent": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.5"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.6"
       },
       "Content": {
         "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.31"
-      }
-    }
-  },
-  {
-    "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_2",
-    "Outer": "HorizontalBox_1",
-    "Class": "UScriptClass'HorizontalBoxSlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "Parent": {
-        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.6"
-      },
-      "Content": {
-        "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.SmithingText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.56"
-      }
-    }
-  },
-  {
-    "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_3",
-    "Outer": "HorizontalBox_1",
-    "Class": "UScriptClass'HorizontalBoxSlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
-      "Parent": {
-        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.6"
-      },
-      "Content": {
-        "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.SmithingNumberText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.55"
-      }
-    }
-  },
-  {
-    "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_4",
-    "Outer": "HorizontalBox_1",
-    "Class": "UScriptClass'HorizontalBoxSlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "Size": {
-        "SizeRule": "ESlateSizeRule::Fill"
-      },
-      "Parent": {
-        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.6"
-      },
-      "Content": {
-        "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_2'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.36"
       }
     }
   },
   {
     "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_2",
-    "Outer": "HorizontalBox_2",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_0",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Parent": {
-        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_2'",
+        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_0'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.7"
       },
       "Content": {
-        "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.CombatText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.45"
+        "ObjectName": "Image'BPPlayerAvatarWidget_C:WidgetTree.AvatarImage'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.34"
       }
     }
   },
   {
     "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_3",
-    "Outer": "HorizontalBox_2",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_0",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
-        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_2'",
+        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_0'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.7"
       },
       "Content": {
-        "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.CombatNumberText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.44"
+        "ObjectName": "Button'BPPlayerAvatarWidget_C:WidgetTree.ChangeAvatarButton'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.5"
       }
     }
   },
   {
     "Type": "HorizontalBoxSlot",
     "Name": "HorizontalBoxSlot_4",
-    "Outer": "HorizontalBox_2",
+    "Outer": "HorizontalBox_0",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.7"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_60'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.46"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_1",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.SmithingText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.62"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "HorizontalBox_1",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_1'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.SmithingNumberText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.61"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Outer": "HorizontalBox_1",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
@@ -423,66 +538,11 @@
         "SizeRule": "ESlateSizeRule::Fill"
       },
       "Parent": {
-        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.7"
-      },
-      "Content": {
-        "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.37"
-      }
-    }
-  },
-  {
-    "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_2",
-    "Outer": "HorizontalBox_3",
-    "Class": "UScriptClass'HorizontalBoxSlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "Parent": {
-        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_3'",
+        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_1'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.8"
       },
       "Content": {
-        "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.LumberjackingText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.50"
-      }
-    }
-  },
-  {
-    "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_3",
-    "Outer": "HorizontalBox_3",
-    "Class": "UScriptClass'HorizontalBoxSlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
-      "Parent": {
-        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.8"
-      },
-      "Content": {
-        "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.LumberjackingNumberText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.49"
-      }
-    }
-  },
-  {
-    "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_4",
-    "Outer": "HorizontalBox_3",
-    "Class": "UScriptClass'HorizontalBoxSlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "Size": {
-        "SizeRule": "ESlateSizeRule::Fill"
-      },
-      "Parent": {
-        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.8"
-      },
-      "Content": {
-        "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_8'",
+        "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_2'",
         "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.42"
       }
     }
@@ -490,17 +550,127 @@
   {
     "Type": "HorizontalBoxSlot",
     "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_2",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.9"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.CombatText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.51"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "HorizontalBox_2",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.9"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.CombatNumberText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.50"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Outer": "HorizontalBox_2",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_2'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.9"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.43"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_3",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.10"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.LumberjackingText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.56"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "HorizontalBox_3",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.10"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.LumberjackingNumberText'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.55"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Outer": "HorizontalBox_3",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_3'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.10"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_8'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.48"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
     "Outer": "HorizontalBox_4",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.11"
       },
       "Content": {
         "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.MiningText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.52"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.58"
       }
     }
   },
@@ -514,11 +684,11 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
       "Parent": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.11"
       },
       "Content": {
         "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.MiningNumberText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.51"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
       }
     }
   },
@@ -534,11 +704,11 @@
       },
       "Parent": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.11"
       },
       "Content": {
         "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_9'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.43"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.49"
       }
     }
   },
@@ -551,11 +721,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_5'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.10"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.12"
       },
       "Content": {
         "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.MiningText_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.53"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.59"
       }
     }
   },
@@ -569,11 +739,11 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
       "Parent": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_5'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.10"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.12"
       },
       "Content": {
         "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.FarmingNumberText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.46"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.52"
       }
     }
   },
@@ -589,11 +759,11 @@
       },
       "Parent": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_5'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.10"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.12"
       },
       "Content": {
         "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_10'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.32"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.37"
       }
     }
   },
@@ -615,8 +785,8 @@
         }
       },
       "Slot": {
-        "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.58"
+        "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.16"
       }
     }
   },
@@ -633,7 +803,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.68"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.75"
       }
     }
   },
@@ -646,7 +816,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.13"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.15"
       }
     }
   },
@@ -663,7 +833,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_5.HorizontalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.28"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.33"
       }
     }
   },
@@ -680,7 +850,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_15'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.64"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.71"
       }
     }
   },
@@ -697,7 +867,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_17'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.65"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.72"
       }
     }
   },
@@ -714,7 +884,24 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_19'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.66"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.73"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_14",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 5.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_14'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.70"
       }
     }
   },
@@ -731,7 +918,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.16"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.21"
       }
     }
   },
@@ -744,7 +931,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_2.HorizontalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.19"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.24"
       }
     }
   },
@@ -761,7 +948,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.69"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.76"
       }
     }
   },
@@ -778,24 +965,24 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_5'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.70"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.77"
       }
     }
   },
   {
     "Type": "Spacer",
-    "Name": "Spacer_6",
+    "Name": "Spacer_60",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'Spacer'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Size": {
-        "X": 1.0,
-        "Y": 5.0
+        "X": 32.0,
+        "Y": 1.0
       },
       "Slot": {
-        "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_6'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.71"
+        "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_4'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.18"
       }
     }
   },
@@ -812,7 +999,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_7'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.72"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.78"
       }
     }
   },
@@ -829,7 +1016,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.22"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.27"
       }
     }
   },
@@ -846,7 +1033,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_4.HorizontalBoxSlot_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.25"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.30"
       }
     }
   },
@@ -883,7 +1070,7 @@
       "Justification": "ETextJustify::Right",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_2.HorizontalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.18"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.23"
       }
     }
   },
@@ -919,7 +1106,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_2.HorizontalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.17"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.22"
       }
     }
   },
@@ -956,7 +1143,7 @@
       "Justification": "ETextJustify::Right",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_5.HorizontalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.27"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.32"
       }
     }
   },
@@ -993,7 +1180,7 @@
       "Justification": "ETextJustify::Right",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.12"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.14"
       }
     }
   },
@@ -1029,7 +1216,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.11"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.13"
       }
     }
   },
@@ -1066,7 +1253,7 @@
       "Justification": "ETextJustify::Right",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.21"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.26"
       }
     }
   },
@@ -1102,7 +1289,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.20"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.25"
       }
     }
   },
@@ -1139,7 +1326,7 @@
       "Justification": "ETextJustify::Right",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_4.HorizontalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.24"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.29"
       }
     }
   },
@@ -1175,7 +1362,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_4.HorizontalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.23"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.28"
       }
     }
   },
@@ -1211,7 +1398,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_5.HorizontalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.26"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.31"
       }
     }
   },
@@ -1247,7 +1434,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_13'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.69"
       }
     }
   },
@@ -1284,7 +1471,7 @@
       "Justification": "ETextJustify::Right",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.15"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.20"
       }
     }
   },
@@ -1320,7 +1507,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.14"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.19"
       }
     }
   },
@@ -1334,71 +1521,71 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_13'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.58"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_6'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.71"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.59"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_5'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.70"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_10'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.60"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.68"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_12'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.62"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_4'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.69"
         },
         {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_11'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.61"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_15'",
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.64"
         },
         {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.67"
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_14'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.70"
         },
         {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_17'",
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.65"
         },
         {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_8'",
-          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.73"
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_5'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.77"
         },
         {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_19'",
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_10'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.66"
         },
         {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_9'",
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.75"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_12'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.68"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_4'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.76"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_11'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.67"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_15'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.71"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.74"
         },
         {
-          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_7'",
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_17'",
           "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.72"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_8'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.79"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_19'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.73"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_9'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.80"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_7'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.78"
         }
       ]
     }
@@ -1414,11 +1601,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
-        "ObjectName": "Image'BPPlayerAvatarWidget_C:WidgetTree.AvatarImage'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.29"
+        "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.7"
       }
     }
   },
@@ -1432,7 +1619,7 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "BPPlayerVitalityWidget_C'BPPlayerAvatarWidget_C:WidgetTree.VitalityStatus'",
@@ -1450,11 +1637,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.5"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.6"
       }
     }
   },
@@ -1468,11 +1655,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_1'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.6"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.8"
       }
     }
   },
@@ -1486,11 +1673,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_2'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.7"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.9"
       }
     }
   },
@@ -1504,11 +1691,28 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "TextBlock'BPPlayerAvatarWidget_C:WidgetTree.NameText'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.54"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.60"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_14",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
+      },
+      "Content": {
+        "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_14'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.41"
       }
     }
   },
@@ -1521,11 +1725,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_11'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.33"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.38"
       }
     }
   },
@@ -1538,11 +1742,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_12'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.34"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.39"
       }
     }
   },
@@ -1555,11 +1759,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_13'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.35"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.40"
       }
     }
   },
@@ -1573,11 +1777,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_3'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.8"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.10"
       }
     }
   },
@@ -1590,11 +1794,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.30"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.35"
       }
     }
   },
@@ -1607,11 +1811,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.38"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.44"
       }
     }
   },
@@ -1624,28 +1828,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_5'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.39"
-      }
-    }
-  },
-  {
-    "Type": "VerticalBoxSlot",
-    "Name": "VerticalBoxSlot_6",
-    "Outer": "VerticalBox_0",
-    "Class": "UScriptClass'VerticalBoxSlot'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "Parent": {
-        "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
-      },
-      "Content": {
-        "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_6'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.40"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.45"
       }
     }
   },
@@ -1658,11 +1845,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "Spacer'BPPlayerAvatarWidget_C:WidgetTree.Spacer_7'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.41"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.47"
       }
     }
   },
@@ -1676,11 +1863,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_4'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.9"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.11"
       }
     }
   },
@@ -1694,11 +1881,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'BPPlayerAvatarWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.57"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.63"
       },
       "Content": {
         "ObjectName": "HorizontalBox'BPPlayerAvatarWidget_C:WidgetTree.HorizontalBox_5'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.10"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.12"
       }
     }
   },
@@ -1710,7 +1897,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'BPPlayerAvatarWidget_C:WidgetTree'",
-        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.76"
+        "ObjectPath": "Anvil/Content/UI/Gameplay/StructureWindows/BPPlayerAvatarWidget.82"
       },
       "bClassRequiresNativeTick": true
     },

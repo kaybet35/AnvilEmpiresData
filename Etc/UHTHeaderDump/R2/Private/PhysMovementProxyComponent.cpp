@@ -5,6 +5,7 @@ UPhysMovementProxyComponent::UPhysMovementProxyComponent() {
     this->Mass = 0.00f;
     this->EngineForce = 0.00f;
     this->SeatThrustForce = 0.00f;
+    this->SeatSprintThrustFactor = 1.00f;
 }
 
 

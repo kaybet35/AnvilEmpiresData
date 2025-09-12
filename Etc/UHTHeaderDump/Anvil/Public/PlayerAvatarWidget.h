@@ -3,6 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=UMG -ObjectName=UserWidget -FallbackName=UserWidget
 #include "PlayerAvatarWidget.generated.h"
 
+class UButton;
 class UImage;
 class UTextBlock;
 class UVitalityStatusWidget;
@@ -39,8 +40,15 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTextBlock* FarmingNumberText;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UButton* ChangeAvatarButton;
+    
 public:
     UPlayerAvatarWidget();
 
+private:
+    UFUNCTION(BlueprintCallable)
+    void OnChangeAvatarButtonClicked();
+    
 };
 

@@ -14,6 +14,7 @@ UShipMovementProxyComponent::UShipMovementProxyComponent() {
     this->SlammingPower = 2.00f;
     this->GammaMax = 5.00f;
     this->ThrustVectoringPercent = 0.00f;
+    this->NoSailThrustHorizonalMultiplier = 0.50f;
     this->NoSailInputFactor = 1.00f;
     this->SailInputCurve = NULL;
 }

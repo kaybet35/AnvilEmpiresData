@@ -3,8 +3,8 @@
 
 class UBPWorldBeaconTowerMapIcon_C : public UWorldBeaconTowerMapIcon
 {
-    class UImage* DetectionRangeCircle;                                               // 0x03A0 (size: 0x8)
+    class UImage* DetectionRangeCircle;                                               // 0x03A8 (size: 0x8)
 
-}; // Size: 0x3A8
+}; // Size: 0x3B0
 
 #endif

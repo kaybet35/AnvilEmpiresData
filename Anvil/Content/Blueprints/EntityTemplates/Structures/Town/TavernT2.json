@@ -21,7 +21,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "TavernT2_C'Default__TavernT2_C'",
-      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.14"
+      "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.15"
     },
     "EditorTags": {
       "BlueprintType": "BPTYPE_Normal"
@@ -37,6 +37,16 @@
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.1"
     },
     "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CollapsibleProxyComponent",
+    "Name": "CollapsibleProxyComponent_0",
+    "Outer": "Default__TavernT2_C",
+    "Class": "UScriptClass'CollapsibleProxyComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseSeparateCollapsedCollisions": true
+    }
   },
   {
     "Type": "DecayProxyComponent",
@@ -258,7 +268,8 @@
           "ProductionTime": 1.0,
           "OutputCount": 1,
           "bRequiresResearch": false,
-          "bMakePublic": false
+          "bMakePublic": false,
+          "RequiredStructure": null
         },
         {
           "ProducedItem": {
@@ -279,7 +290,8 @@
           "ProductionTime": 1.0,
           "OutputCount": 1,
           "bRequiresResearch": false,
-          "bMakePublic": false
+          "bMakePublic": false,
+          "RequiredStructure": null
         },
         {
           "ProducedItem": {
@@ -300,7 +312,8 @@
           "ProductionTime": 1.0,
           "OutputCount": 1,
           "bRequiresResearch": false,
-          "bMakePublic": false
+          "bMakePublic": false,
+          "RequiredStructure": null
         },
         {
           "ProducedItem": {
@@ -315,55 +328,14 @@
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
               },
               "CodeNameVisVar": 0,
-              "Count": 2
+              "Count": 1
             }
           ],
           "ProductionTime": 1.0,
           "OutputCount": 1,
           "bRequiresResearch": false,
-          "bMakePublic": true
-        },
-        {
-          "ProducedItem": {
-            "ObjectName": "BlueprintGeneratedClass'BPAvatarSupportBowman_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Avatars/BPAvatarSupportBowman.0"
-          },
-          "ProducedItemVisVar": 0,
-          "InputItems": [
-            {
-              "CodeName": {
-                "ObjectName": "BlueprintGeneratedClass'Silver_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
-              },
-              "CodeNameVisVar": 0,
-              "Count": 2
-            }
-          ],
-          "ProductionTime": 1.0,
-          "OutputCount": 1,
-          "bRequiresResearch": false,
-          "bMakePublic": true
-        },
-        {
-          "ProducedItem": {
-            "ObjectName": "BlueprintGeneratedClass'BPAvatarSupportSpearman_C'",
-            "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Avatars/BPAvatarSupportSpearman.0"
-          },
-          "ProducedItemVisVar": 0,
-          "InputItems": [
-            {
-              "CodeName": {
-                "ObjectName": "BlueprintGeneratedClass'Silver_C'",
-                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/Silver.0"
-              },
-              "CodeNameVisVar": 0,
-              "Count": 2
-            }
-          ],
-          "ProductionTime": 1.0,
-          "OutputCount": 1,
-          "bRequiresResearch": false,
-          "bMakePublic": true
+          "bMakePublic": true,
+          "RequiredStructure": null
         }
       ]
     }
@@ -442,40 +414,39 @@
     "Properties": {
       "TeamComp": {
         "ObjectName": "TeamProxyComponent'Default__TavernT2_C:TeamComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.15"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.16"
       },
       "HealthComp": {
         "ObjectName": "HealthProxyComponent'Default__TavernT2_C:HealthComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.5"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.6"
       },
       "RepairComp": {
         "ObjectName": "RepairProxyComponent'Default__TavernT2_C:RepairComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.10"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.11"
       },
       "StructureComp": {
         "ObjectName": "StructureProxyComponent'Default__TavernT2_C:StructureProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.12"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.13"
       },
       "DestroyableComp": {
         "ObjectName": "DestroyableProxyComponent'Default__TavernT2_C:DestroyableComp'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.3"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.4"
       },
       "FootprintComp": {
         "ObjectName": "FootprintCollisionProxyComponent'Default__TavernT2_C:FootprintCollisionProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.4"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.5"
       },
       "UseBoxComp": null,
       "DecayComp": {
         "ObjectName": "DecayProxyComponent'Default__TavernT2_C:DecayProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.2"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.3"
       },
       "ScorchComp": {
         "ObjectName": "ScorchProxyComponent'Default__TavernT2_C:ScorchProxyComponent_0'",
-        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.11"
+        "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.12"
       },
       "CodeNameString": "TavernT2",
       "CodeName": -554568957,
-      "bShowOnMap": true,
       "bGenerateMeshCollisionsFromVisActor": true,
       "GenerateMeshCollisionMask": 285220866,
       "GenerateMeshCollisionStepAngle": 65.0,
@@ -483,23 +454,27 @@
       "Components": [
         {
           "ObjectName": "MeshVisibilityProxyComponent'Default__TavernT2_C:MeshVisibilityProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.8"
-        },
-        {
-          "ObjectName": "TavernProxyComponent'Default__TavernT2_C:TavernProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.13"
-        },
-        {
-          "ObjectName": "RefineResourceProxyComponent'Default__TavernT2_C:RefineResourceProxyComponent_0'",
           "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.9"
         },
         {
+          "ObjectName": "TavernProxyComponent'Default__TavernT2_C:TavernProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.14"
+        },
+        {
+          "ObjectName": "RefineResourceProxyComponent'Default__TavernT2_C:RefineResourceProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.10"
+        },
+        {
           "ObjectName": "InventoryProxyComponent'Default__TavernT2_C:InventoryProxyComponent_0'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.6"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.7"
         },
         {
           "ObjectName": "InventoryProxyComponent'Default__TavernT2_C:InventoryProxyComponent_1'",
-          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.7"
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.8"
+        },
+        {
+          "ObjectName": "CollapsibleProxyComponent'Default__TavernT2_C:CollapsibleProxyComponent_0'",
+          "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Structures/Town/TavernT2.2"
         }
       ],
       "VisActorClass": {

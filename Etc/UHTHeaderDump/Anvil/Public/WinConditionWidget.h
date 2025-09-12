@@ -8,6 +8,7 @@ class UHeaderContainer;
 class UProgressBar;
 class UTextBlock;
 class UTooltipWidget;
+class UVerticalBox;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ANVIL_API UWinConditionWidget : public UUserWidget {
@@ -62,6 +63,42 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UProgressBar* Faction2CultureTimerProgressBar;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UProgressBar* Faction0ReligiousProgressBar;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UProgressBar* Faction1ReligiousProgressBar;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UProgressBar* Faction2ReligiousProgressBar;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* Faction0ReligiousTextBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* Faction1ReligiousTextBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTextBlock* Faction2ReligiousTextBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UProgressBar* Faction0ReligiousInfluenceProgressBar;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UProgressBar* Faction1ReligiousInfluenceProgressBar;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UProgressBar* Faction2ReligiousInfluenceProgressBar;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UVerticalBox* Faction0ReligiousVerticalBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UVerticalBox* Faction1ReligiousVerticalBox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UVerticalBox* Faction2ReligiousVerticalBox;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor ProgressBarNormalColour;
     
@@ -75,6 +112,21 @@ public:
     UWinConditionWidget();
 
 private:
+    UFUNCTION(BlueprintCallable)
+    FText GetFaction2ReligiousTooltipText();
+    
+    UFUNCTION(BlueprintCallable)
+    FText GetFaction2ReligiousText();
+    
+    UFUNCTION(BlueprintCallable)
+    FLinearColor GetFaction2ReligiousProgressBarColour();
+    
+    UFUNCTION(BlueprintCallable)
+    float GetFaction2ReligiousProgress();
+    
+    UFUNCTION(BlueprintCallable)
+    float GetFaction2ReligiousInfluenceProgress();
+    
     UFUNCTION(BlueprintCallable)
     FText GetFaction2MilitaryText();
     
@@ -97,6 +149,21 @@ private:
     float GetFaction2CultureProgress();
     
     UFUNCTION(BlueprintCallable)
+    FText GetFaction1ReligiousTooltipText();
+    
+    UFUNCTION(BlueprintCallable)
+    FText GetFaction1ReligiousText();
+    
+    UFUNCTION(BlueprintCallable)
+    FLinearColor GetFaction1ReligiousProgressBarColour();
+    
+    UFUNCTION(BlueprintCallable)
+    float GetFaction1ReligiousProgress();
+    
+    UFUNCTION(BlueprintCallable)
+    float GetFaction1ReligiousInfluenceProgress();
+    
+    UFUNCTION(BlueprintCallable)
     FText GetFaction1MilitaryText();
     
     UFUNCTION(BlueprintCallable)
@@ -116,6 +183,21 @@ private:
     
     UFUNCTION(BlueprintCallable)
     float GetFaction1CultureProgress();
+    
+    UFUNCTION(BlueprintCallable)
+    FText GetFaction0ReligiousTooltipText();
+    
+    UFUNCTION(BlueprintCallable)
+    FText GetFaction0ReligiousText();
+    
+    UFUNCTION(BlueprintCallable)
+    FLinearColor GetFaction0ReligiousProgressBarColour();
+    
+    UFUNCTION(BlueprintCallable)
+    float GetFaction0ReligiousProgress();
+    
+    UFUNCTION(BlueprintCallable)
+    float GetFaction0ReligiousInfluenceProgress();
     
     UFUNCTION(BlueprintCallable)
     FText GetFaction0MilitaryText();

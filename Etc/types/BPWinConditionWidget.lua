@@ -4,8 +4,9 @@
 ---@field Image UImage
 ---@field Image_1 UImage
 ---@field Image_2 UImage
+---@field Image_3 UImage
+---@field Image_4 UImage
 ---@field Image_78 UImage
----@field Image_186 UImage
 UBPWinConditionWidget_C = {}
 
 

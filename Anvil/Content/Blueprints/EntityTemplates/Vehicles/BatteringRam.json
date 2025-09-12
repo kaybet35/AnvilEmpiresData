@@ -245,14 +245,22 @@
       "bGroupVehicle": true,
       "bYawInPlace": true,
       "bRammingForceKillPlayer": true,
+      "bRammingAllowFriendlyFire": true,
+      "bCanBreachGates": true,
       "MovementPlayerInteraction": "EAnvilVehicleMovementPlayerInteractionType::BlockIfMaxGuard",
       "CollisionEffect": {
         "ObjectName": "BlueprintGeneratedClass'HitEffectRam_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/FX/HitEffectRam.0"
       },
-      "RammingDamage": 150.0,
-      "RammingVelocityFactor": 0.6,
       "RammingDamageType": "EAnvilDamageType::Siege",
+      "RammingSpeedFactorRange": {
+        "Min": 0.6,
+        "Max": 1.0
+      },
+      "RammingDamageRange": {
+        "Min": 150.0,
+        "Max": 150.0
+      },
       "FallingDistRange": {
         "Min": 500.0,
         "Max": 1000.0

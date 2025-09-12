@@ -1,0 +1,3929 @@
+[
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "BoatHelm_ABP_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "TIller ClosedSailMovement",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Push",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 15,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Pull",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 16,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "turnRight",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 17,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 6,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 7,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                8
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "turnLeft",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 18,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 7,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 9,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                10
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 3,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 4,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 4,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "Tiller OpenSailMovement",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 27,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 28,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 21,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                22
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "turnLeft",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 29,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 23,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                24
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "turnRight",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 30,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 25,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                26
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.25,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.25,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'BoatHelm_SK_Skeleton'",
+        "ObjectPath": "Anvil/Content/Meshes/Vehicles/BoatHelm_SK_Skeleton.0"
+      },
+      "AnimNodeData": [
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            0,
+            24
+          ],
+          "NodeIndex": 0,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295
+          ],
+          "NodeIndex": 1,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295
+          ],
+          "NodeIndex": 2,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295
+          ],
+          "NodeIndex": 3,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295
+          ],
+          "NodeIndex": 4,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            24,
+            23,
+            22,
+            21,
+            20,
+            16,
+            18,
+            18,
+            17,
+            16
+          ],
+          "NodeIndex": 5,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            8,
+            24,
+            11
+          ],
+          "NodeIndex": 6,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            24,
+            23,
+            22,
+            21,
+            20,
+            13,
+            18,
+            18,
+            17,
+            16
+          ],
+          "NodeIndex": 7,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            6,
+            24,
+            15
+          ],
+          "NodeIndex": 8,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            24,
+            23,
+            22,
+            21,
+            20,
+            19,
+            18,
+            18,
+            17,
+            16
+          ],
+          "NodeIndex": 9,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            25,
+            24,
+            26
+          ],
+          "NodeIndex": 10,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 11,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            5,
+            4,
+            3,
+            21,
+            2,
+            1,
+            2147483648
+          ],
+          "NodeIndex": 12,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295
+          ],
+          "NodeIndex": 13,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295
+          ],
+          "NodeIndex": 14,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295
+          ],
+          "NodeIndex": 15,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295
+          ],
+          "NodeIndex": 16,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295
+          ],
+          "NodeIndex": 17,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295
+          ],
+          "NodeIndex": 18,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295
+          ],
+          "NodeIndex": 19,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295
+          ],
+          "NodeIndex": 20,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            24,
+            23,
+            22,
+            21,
+            4294967295,
+            13,
+            13,
+            12,
+            4294967295,
+            16,
+            18,
+            21
+          ],
+          "NodeIndex": 21,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            6,
+            24,
+            7
+          ],
+          "NodeIndex": 22,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            24,
+            23,
+            22,
+            21,
+            4294967295,
+            13,
+            13,
+            12,
+            4294967295,
+            16,
+            18,
+            21
+          ],
+          "NodeIndex": 23,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            8,
+            24,
+            9
+          ],
+          "NodeIndex": 24,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            24,
+            23,
+            22,
+            21,
+            4294967295,
+            13,
+            13,
+            12,
+            4294967295,
+            16,
+            18,
+            21
+          ],
+          "NodeIndex": 25,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            10,
+            24,
+            11
+          ],
+          "NodeIndex": 26,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            24,
+            23,
+            22,
+            21,
+            4294967295,
+            13,
+            13,
+            12,
+            4294967295,
+            16,
+            18,
+            21
+          ],
+          "NodeIndex": 27,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            14,
+            24,
+            15
+          ],
+          "NodeIndex": 28,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            24,
+            23,
+            22,
+            21,
+            20,
+            19,
+            18,
+            18,
+            17,
+            16
+          ],
+          "NodeIndex": 29,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            25,
+            24,
+            26
+          ],
+          "NodeIndex": 30,
+          "Flags": "EAnimNodeDataFlags::None"
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+            "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+          },
+          "Entries": [
+            27,
+            27,
+            27,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 31,
+          "Flags": "EAnimNodeDataFlags::None"
+        }
+      ],
+      "NodeTypeMap": [
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_StateMachine'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "StateMachineIndexInClass",
+                "Value": 3
+              },
+              {
+                "Key": "MaxTransitionsPerFrame",
+                "Value": 4
+              },
+              {
+                "Key": "MaxTransitionsRequests",
+                "Value": 5
+              },
+              {
+                "Key": "bSkipFirstUpdateTransition",
+                "Value": 6
+              },
+              {
+                "Key": "bReinitializeOnBecomingRelevant",
+                "Value": 7
+              },
+              {
+                "Key": "bCreateNotifyMetaData",
+                "Value": 8
+              },
+              {
+                "Key": "bAllowConduitEntryStates",
+                "Value": 9
+              }
+            ],
+            "NumProperties": 10
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_Base'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_StateResult'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Result",
+                "Value": 3
+              },
+              {
+                "Key": "Name",
+                "Value": 4
+              },
+              {
+                "Key": "Group",
+                "Value": 5
+              },
+              {
+                "Key": "StateIndex",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_Root'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Result",
+                "Value": 3
+              },
+              {
+                "Key": "Name",
+                "Value": 4
+              },
+              {
+                "Key": "Group",
+                "Value": 5
+              }
+            ],
+            "NumProperties": 6
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_SequenceEvaluator'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              },
+              {
+                "Key": "GroupName",
+                "Value": 7
+              },
+              {
+                "Key": "GroupRole",
+                "Value": 8
+              },
+              {
+                "Key": "Method",
+                "Value": 9
+              },
+              {
+                "Key": "bIgnoreForRelevancyTest",
+                "Value": 10
+              },
+              {
+                "Key": "Sequence",
+                "Value": 11
+              },
+              {
+                "Key": "ExplicitTime",
+                "Value": 12
+              },
+              {
+                "Key": "bShouldLoop",
+                "Value": 13
+              },
+              {
+                "Key": "bTeleportToExplicitTime",
+                "Value": 14
+              },
+              {
+                "Key": "ReinitializationBehavior",
+                "Value": 15
+              },
+              {
+                "Key": "StartPosition",
+                "Value": 16
+              }
+            ],
+            "NumProperties": 17
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_SequenceEvaluatorBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerRelevancyBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_SequencePlayer'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              },
+              {
+                "Key": "PlayRateScaleBiasClampState",
+                "Value": 7
+              },
+              {
+                "Key": "GroupName",
+                "Value": 8
+              },
+              {
+                "Key": "GroupRole",
+                "Value": 9
+              },
+              {
+                "Key": "Method",
+                "Value": 10
+              },
+              {
+                "Key": "bIgnoreForRelevancyTest",
+                "Value": 11
+              },
+              {
+                "Key": "Sequence",
+                "Value": 12
+              },
+              {
+                "Key": "PlayRateBasis",
+                "Value": 13
+              },
+              {
+                "Key": "PlayRate",
+                "Value": 14
+              },
+              {
+                "Key": "PlayRateScaleBiasClampConstants",
+                "Value": 15
+              },
+              {
+                "Key": "PlayRateScaleBiasClamp",
+                "Value": 16
+              },
+              {
+                "Key": "StartPosition",
+                "Value": 17
+              },
+              {
+                "Key": "bLoopAnimation",
+                "Value": 18
+              },
+              {
+                "Key": "bStartFromMatchingPose",
+                "Value": 19
+              }
+            ],
+            "NumProperties": 20
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_SequencePlayerBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              },
+              {
+                "Key": "PlayRateScaleBiasClampState",
+                "Value": 7
+              }
+            ],
+            "NumProperties": 8
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_TransitionResult'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "bCanEnterTransition",
+                "Value": 3
+              }
+            ],
+            "NumProperties": 4
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendListByBool'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "BlendPose",
+                "Value": 3
+              },
+              {
+                "Key": "BlendTime",
+                "Value": 4
+              },
+              {
+                "Key": "TransitionType",
+                "Value": 5
+              },
+              {
+                "Key": "BlendType",
+                "Value": 6
+              },
+              {
+                "Key": "bResetChildOnActivation",
+                "Value": 7
+              },
+              {
+                "Key": "CustomBlendCurve",
+                "Value": 8
+              },
+              {
+                "Key": "BlendProfile",
+                "Value": 9
+              },
+              {
+                "Key": "bActiveValue",
+                "Value": 10
+              }
+            ],
+            "NumProperties": 11
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_BlendListBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "BlendPose",
+                "Value": 3
+              },
+              {
+                "Key": "BlendTime",
+                "Value": 4
+              },
+              {
+                "Key": "TransitionType",
+                "Value": 5
+              },
+              {
+                "Key": "BlendType",
+                "Value": 6
+              },
+              {
+                "Key": "bResetChildOnActivation",
+                "Value": 7
+              },
+              {
+                "Key": "CustomBlendCurve",
+                "Value": 8
+              },
+              {
+                "Key": "BlendProfile",
+                "Value": 9
+              }
+            ],
+            "NumProperties": 10
+          }
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'BoatHelm_ABP_C:ExecuteUbergraph_BoatHelm_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VisBoatHelmAnimInstance'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BoatHelm_ABP_C:AnimGraph'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.2"
+      },
+      {
+        "ObjectName": "Function'BoatHelm_ABP_C:ExecuteUbergraph_BoatHelm_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__AnimBlueprintMutables",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 2,
+        "Struct": {
+          "ObjectName": "ScriptStruct'BoatHelm_ABP_C:AnimBlueprintGeneratedMutableData'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.5"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_11",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_10",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_9",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_8",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequenceEvaluator_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 232,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequenceEvaluator'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequenceEvaluator_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 232,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequenceEvaluator'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequenceEvaluator_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 232,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequenceEvaluator'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_BlendListByBool",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 240,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequenceEvaluator",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 232,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequenceEvaluator'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "boatInputDirection",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BoatHelm_ABP": {
+        "ObjectName": "Function'BoatHelm_ABP_C:ExecuteUbergraph_BoatHelm_ABP'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.3"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'BoatHelm_ABP_C:AnimGraph'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.2"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BoatHelm_ABP_C'Default__BoatHelm_ABP_C'",
+      "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoatHelm_ABP_C",
+    "Name": "Default__BoatHelm_ABP_C",
+    "Class": "AnimBlueprintGeneratedClass'Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.BoatHelm_ABP_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "__AnimBlueprintMutables": {
+        "__BoolProperty": false
+      },
+      "AnimBlueprintExtension_PropertyAccess": {},
+      "AnimBlueprintExtension_Base": {},
+      "AnimGraphNode_Root": {
+        "Result": {
+          "LinkID": 12
+        }
+      },
+      "AnimGraphNode_TransitionResult_11": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_10": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_9": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_8": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequenceEvaluator_3": {
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_7": {
+        "Result": {
+          "LinkID": 5
+        }
+      },
+      "AnimGraphNode_SequenceEvaluator_2": {
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_6": {
+        "Result": {
+          "LinkID": 7
+        }
+      },
+      "AnimGraphNode_SequenceEvaluator_1": {
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_5": {
+        "Result": {
+          "LinkID": 9
+        }
+      },
+      "AnimGraphNode_StateMachine_1": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "AnimGraphNode_BlendListByBool": {
+        "BlendPose": [
+          {
+            "LinkID": 11
+          },
+          {
+            "LinkID": 31
+          }
+        ]
+      },
+      "AnimGraphNode_TransitionResult_7": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_6": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_5": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_4": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_3": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_2": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_3": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'BoatHelm_wadling_left_anim'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_wadling_left_anim.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_4": {
+        "Result": {
+          "LinkID": 21
+        }
+      },
+      "AnimGraphNode_SequencePlayer_2": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'BoatHelm_wadling_right'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_wadling_right.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3": {
+        "Result": {
+          "LinkID": 23
+        }
+      },
+      "AnimGraphNode_SequencePlayer_1": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'BoatHelm_wadling_forward'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_wadling_forward.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2": {
+        "Result": {
+          "LinkID": 25
+        }
+      },
+      "AnimGraphNode_SequencePlayer": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'BoatHelm_wadling_backwards'",
+          "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_wadling_backwards.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1": {
+        "Result": {
+          "LinkID": 27
+        }
+      },
+      "AnimGraphNode_SequenceEvaluator": {
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult": {
+        "Result": {
+          "LinkID": 29
+        }
+      },
+      "AnimGraphNode_StateMachine": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "boatInputDirection": 0.5
+    },
+    "SerializedSparseClassDataStruct": "ScriptStruct'Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.BoatHelm_ABP_C:AnimBlueprintGeneratedConstantData'",
+    "SerializedSparseClassData": {
+      "__NameProperty_179": "AnimGraph",
+      "__BlendProfile_180": null,
+      "__CurveFloat_181": null,
+      "__EnumProperty_182": "EAlphaBlendOption::Linear",
+      "__EnumProperty_183": "EBlendListTransitionType::StandardBlend",
+      "__ArrayProperty_184": [
+        0.25,
+        0.25
+      ],
+      "__NameProperty_185": "turnLeft",
+      "__IntProperty_186": 4,
+      "__NameProperty_187": "turnRight",
+      "__IntProperty_188": 3,
+      "__NameProperty_189": "Pull",
+      "__IntProperty_190": 2,
+      "__StructProperty_191": {
+        "bMapRange": false,
+        "bClampResult": false,
+        "bInterpResult": false,
+        "InRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "OutRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "Scale": 1.0,
+        "Bias": 0.0,
+        "ClampMin": 0.0,
+        "ClampMax": 1.0,
+        "InterpSpeedIncreasing": 10.0,
+        "InterpSpeedDecreasing": 10.0
+      },
+      "__FloatProperty_192": 1.0,
+      "__NameProperty_193": "Push",
+      "__IntProperty_194": 1,
+      "__FloatProperty_195": 0.0,
+      "__ByteProperty_196": "ESequenceEvalReinit::ExplicitTime",
+      "__BoolProperty_197": true,
+      "__FloatProperty_198": 0.5,
+      "__AnimSequenceBase_199": {
+        "ObjectName": "AnimSequence'BoatHelm_direction'",
+        "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_direction.0"
+      },
+      "__BoolProperty_200": false,
+      "__EnumProperty_201": "EAnimSyncMethod::DoNotSync",
+      "__ByteProperty_202": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_203": "None",
+      "__NameProperty_204": "Idle",
+      "__IntProperty_205": 0,
+      "__StructProperty_206": {
+        "ClassName": "None",
+        "FunctionName": "None"
+      },
+      "AnimBlueprintExtension_PropertyAccess": {
+        "Library": {
+          "PathSegments": [
+            {
+              "Name": "bIsSailOpen",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bIsSailOpen"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisBoatHelmAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__AnimBlueprintMutables",
+              "Struct": {
+                "ObjectName": "ScriptStruct'BoatHelm_ABP_C:AnimBlueprintGeneratedMutableData'",
+                "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.5"
+              },
+              "Property": {
+                "Path": [
+                  "__AnimBlueprintMutables"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "__BoolProperty",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__BoolProperty"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'BoatHelm_ABP_C:AnimBlueprintGeneratedMutableData'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.5"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "HelmsmanInput",
+              "Struct": {
+                "ObjectName": "ScriptStruct'MovementInputState'",
+                "ObjectPath": "/Script/R2"
+              },
+              "Property": {
+                "Path": [
+                  "HelmsmanInput"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisBoatHelmAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "Backward",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Backward"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'MovementInputState'",
+                  "ObjectPath": "/Script/R2"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "HelmsmanInput",
+              "Struct": {
+                "ObjectName": "ScriptStruct'MovementInputState'",
+                "ObjectPath": "/Script/R2"
+              },
+              "Property": {
+                "Path": [
+                  "HelmsmanInput"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisBoatHelmAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "Right",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Right"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'MovementInputState'",
+                  "ObjectPath": "/Script/R2"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_1",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_1"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "HelmsmanInput",
+              "Struct": {
+                "ObjectName": "ScriptStruct'MovementInputState'",
+                "ObjectPath": "/Script/R2"
+              },
+              "Property": {
+                "Path": [
+                  "HelmsmanInput"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisBoatHelmAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "Left",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Left"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'MovementInputState'",
+                  "ObjectPath": "/Script/R2"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_2",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_2"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "HelmsmanInput",
+              "Struct": {
+                "ObjectName": "ScriptStruct'MovementInputState'",
+                "ObjectPath": "/Script/R2"
+              },
+              "Property": {
+                "Path": [
+                  "HelmsmanInput"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisBoatHelmAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "Forward",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Forward"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'MovementInputState'",
+                  "ObjectPath": "/Script/R2"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_3",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_3"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "HelmsmanInput",
+              "Struct": {
+                "ObjectName": "ScriptStruct'MovementInputState'",
+                "ObjectPath": "/Script/R2"
+              },
+              "Property": {
+                "Path": [
+                  "HelmsmanInput"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisBoatHelmAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "Forward",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Forward"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'MovementInputState'",
+                  "ObjectPath": "/Script/R2"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_4",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_4"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "HelmsmanInput",
+              "Struct": {
+                "ObjectName": "ScriptStruct'MovementInputState'",
+                "ObjectPath": "/Script/R2"
+              },
+              "Property": {
+                "Path": [
+                  "HelmsmanInput"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisBoatHelmAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "Backward",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Backward"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'MovementInputState'",
+                  "ObjectPath": "/Script/R2"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_5",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_5"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "HelmsmanInput",
+              "Struct": {
+                "ObjectName": "ScriptStruct'MovementInputState'",
+                "ObjectPath": "/Script/R2"
+              },
+              "Property": {
+                "Path": [
+                  "HelmsmanInput"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisBoatHelmAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "Right",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Right"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'MovementInputState'",
+                  "ObjectPath": "/Script/R2"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_6",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_6"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "HelmsmanInput",
+              "Struct": {
+                "ObjectName": "ScriptStruct'MovementInputState'",
+                "ObjectPath": "/Script/R2"
+              },
+              "Property": {
+                "Path": [
+                  "HelmsmanInput"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisBoatHelmAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "Left",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Left"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'MovementInputState'",
+                  "ObjectPath": "/Script/R2"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_7",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_7"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "HelmsmanInput",
+              "Struct": {
+                "ObjectName": "ScriptStruct'MovementInputState'",
+                "ObjectPath": "/Script/R2"
+              },
+              "Property": {
+                "Path": [
+                  "HelmsmanInput"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisBoatHelmAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "Right",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Right"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'MovementInputState'",
+                  "ObjectPath": "/Script/R2"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_8",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_8"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "HelmsmanInput",
+              "Struct": {
+                "ObjectName": "ScriptStruct'MovementInputState'",
+                "ObjectPath": "/Script/R2"
+              },
+              "Property": {
+                "Path": [
+                  "HelmsmanInput"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisBoatHelmAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "Left",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Left"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'MovementInputState'",
+                  "ObjectPath": "/Script/R2"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_9",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_9"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "HelmsmanInput",
+              "Struct": {
+                "ObjectName": "ScriptStruct'MovementInputState'",
+                "ObjectPath": "/Script/R2"
+              },
+              "Property": {
+                "Path": [
+                  "HelmsmanInput"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisBoatHelmAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "Left",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Left"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'MovementInputState'",
+                  "ObjectPath": "/Script/R2"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_10",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_10"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "HelmsmanInput",
+              "Struct": {
+                "ObjectName": "ScriptStruct'MovementInputState'",
+                "ObjectPath": "/Script/R2"
+              },
+              "Property": {
+                "Path": [
+                  "HelmsmanInput"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'VisBoatHelmAnimInstance'",
+                  "ObjectPath": "/Script/Anvil"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "Right",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "Right"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'MovementInputState'",
+                  "ObjectPath": "/Script/R2"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_11",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_11"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'BoatHelm_ABP_C'",
+                  "ObjectPath": "Anvil/Content/Animations/Vehicles/MediumBoat/BoatHelm_ABP.0"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            }
+          ],
+          "SrcPaths": [
+            {
+              "PathSegmentStartIndex": 0,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 3,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 7,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 11,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 15,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 19,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 23,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 27,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 31,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 35,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 39,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 43,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 47,
+              "PathSegmentCount": 2
+            }
+          ],
+          "DestPaths": [
+            {
+              "PathSegmentStartIndex": 1,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 5,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 9,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 13,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 17,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 21,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 25,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 29,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 33,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 37,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 41,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 45,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 49,
+              "PathSegmentCount": 2
+            }
+          ],
+          "CopyBatchArray": [
+            {
+              "Copies": [
+                {
+                  "AccessIndex": 0,
+                  "DestAccessStartIndex": 0,
+                  "DestAccessEndIndex": 1,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 1,
+                  "DestAccessStartIndex": 1,
+                  "DestAccessEndIndex": 2,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 2,
+                  "DestAccessStartIndex": 2,
+                  "DestAccessEndIndex": 3,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 3,
+                  "DestAccessStartIndex": 3,
+                  "DestAccessEndIndex": 4,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 4,
+                  "DestAccessStartIndex": 4,
+                  "DestAccessEndIndex": 5,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 5,
+                  "DestAccessStartIndex": 5,
+                  "DestAccessEndIndex": 6,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 6,
+                  "DestAccessStartIndex": 6,
+                  "DestAccessEndIndex": 7,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 7,
+                  "DestAccessStartIndex": 7,
+                  "DestAccessEndIndex": 8,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 8,
+                  "DestAccessStartIndex": 8,
+                  "DestAccessEndIndex": 9,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 9,
+                  "DestAccessStartIndex": 9,
+                  "DestAccessEndIndex": 10,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 10,
+                  "DestAccessStartIndex": 10,
+                  "DestAccessEndIndex": 11,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 11,
+                  "DestAccessStartIndex": 11,
+                  "DestAccessEndIndex": 12,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 12,
+                  "DestAccessStartIndex": 12,
+                  "DestAccessEndIndex": 13,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "AnimBlueprintExtension_Base": {
+        "ExposedValueHandlers": [
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 12,
+                "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 11,
+                "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 10,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 9,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 0,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 8,
+                "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 7,
+                "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 6,
+                "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 5,
+                "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 4,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 3,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 2,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 1,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "BoatHelm_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraph",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PoseLink'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BoatHelm_ABP",
+    "Outer": "BoatHelm_ABP_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedConstantData",
+    "Outer": "BoatHelm_ABP_C",
+    "Class": "UScriptClass'ScriptStruct'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintConstantData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_179",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "__BlendProfile_180",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'BlendProfile'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "__CurveFloat_181",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'CurveFloat'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_182",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAlphaBlendOption'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_183",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EBlendListTransitionType'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "__ArrayProperty_184",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | EditFixedSize",
+        "Inner": {
+          "Type": "FloatProperty",
+          "Name": "__ArrayProperty_184",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_185",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_186",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_187",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_188",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_189",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_190",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_191",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_192",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_193",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_194",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_195",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_196",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'ESequenceEvalReinit'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_197",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_198",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "__AnimSequenceBase_199",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimSequenceBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_200",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_201",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_202",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_203",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_204",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_205",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_206",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNodeFunctionRef'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_Base'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ]
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedMutableData",
+    "Outer": "BoatHelm_ABP_C",
+    "Class": "UScriptClass'ScriptStruct'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintMutableData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ]
+  }
+]

@@ -98,6 +98,8 @@ FAnvilSimActivity = {}
 ---@class FAvatarProfile
 ---@field AvatarId int32
 ---@field Type EAnvilAvatarType
+---@field OwnerType EAnvilAvatarOwnerType
+---@field OwnerId int64
 ---@field StackSize int32
 ---@field Attributes TArray<float>
 FAvatarProfile = {}
@@ -286,6 +288,13 @@ FCraftingRecipe = {}
 ---@field CodeNameVisVar int32
 ---@field StackLimit int32
 FCustomStackLimit = {}
+
+
+
+---@class FDeploymentAvatarUserData
+---@field EntityInfo FEntityIdAndMapHash
+---@field AvatarProfiles TArray<FAvatarProfile>
+FDeploymentAvatarUserData = {}
 
 
 
@@ -497,10 +506,29 @@ FLootTableItem = {}
 
 
 
+---@class FMapAvatarInfo
+---@field EntityId int64
+---@field PositionX float
+---@field PositionY float
+---@field NumAvatars int32
+FMapAvatarInfo = {}
+
+
+
 ---@class FMineChunk
 ---@field TypeIdx int32
 ---@field WorldPosition FVector
 FMineChunk = {}
+
+
+
+---@class FMovementInputState
+---@field Forward boolean
+---@field Backward boolean
+---@field Right boolean
+---@field Left boolean
+---@field Sprint boolean
+FMovementInputState = {}
 
 
 
@@ -553,6 +581,7 @@ FPledgedPlayer = {}
 ---@field OutputCount uint8
 ---@field bRequiresResearch boolean
 ---@field bMakePublic boolean
+---@field RequiredStructure TSubclassOf<UEntityTemplate>
 FProducableItem = {}
 
 
@@ -563,6 +592,7 @@ FProducableItem = {}
 ---@field TownAreaRadius float
 ---@field FortressAreaRadius float
 ---@field FortressToTownPaddingDist float
+---@field CampToCampPaddingDist float
 FR2ConfigArea = {}
 
 
@@ -692,6 +722,15 @@ FRayCastResult = {}
 ---@field Resources TArray<FItemCount>
 ---@field ItemQuality uint8
 FRefineQueueItem = {}
+
+
+
+---@class FRegionMapAvatarInfoLists
+---@field MapHash int32
+---@field PersonalList TArray<FMapAvatarInfo>
+---@field FamilyList TArray<FMapAvatarInfo>
+---@field PublicList TArray<FMapAvatarInfo>
+FRegionMapAvatarInfoLists = {}
 
 
 
@@ -856,6 +895,7 @@ FWorldEntityCentralMarketplaceData = {}
 ---@field BeaconTowerData FWorldEntityBeaconTowerData
 ---@field FamilyCenterData FWorldEntityFamilyCenterData
 ---@field CentralMarketplaceData FWorldEntityCentralMarketplaceData
+---@field TempleData FWorldEntityTempleData
 FWorldEntityData = {}
 
 
@@ -883,6 +923,12 @@ FWorldEntityFamilyCenterData = {}
 ---@field EntityInfo FEntityIdAndMapHash
 ---@field Items TArray<FBasicItemCount>
 FWorldEntityInventoryUserData = {}
+
+
+
+---@class FWorldEntityTempleData
+---@field bUnderAttack boolean
+FWorldEntityTempleData = {}
 
 
 
@@ -928,6 +974,7 @@ UAIStimulusProxyComponent = {}
 ---@field bShowLocateCoords boolean
 ---@field bDebugCrowdIndentifier boolean
 ---@field StructureStatsList TArray<FStructureStats>
+---@field DebugHUDSpeed int32
 UAdminEnvDataComponent = {}
 
 
@@ -1982,6 +2029,7 @@ UPassiveDamageProxyComponent = {}
 ---@field EngineForce float
 ---@field EngineForcePosition FVector
 ---@field SeatThrustForce float
+---@field SeatSprintThrustFactor float
 UPhysMovementProxyComponent = {}
 
 
@@ -2051,7 +2099,7 @@ UPlayerControllerProxyComponent = {}
 ---@field CurrentCollectableResourceType int32
 ---@field PrimaryUsePromptMessage FStatusMessage
 ---@field UsePrompt int32
----@field VehicleInput EAnvilVehicleInputState
+---@field VehicleInput FMovementInputState
 ---@field CameraCurrentPosition FVector
 UPlayerInputDataComponent = {}
 
@@ -2059,8 +2107,8 @@ UPlayerInputDataComponent = {}
 
 ---@class UPlayerInputProxyComponent : UProxyComponent
 ---@field CameraPanDeadzoneRadius float
----@field CameraPanMaxDistance float
 ---@field CameraPanLerpAlphaPerSecond float
+---@field StanceToCameraPanMaxDistance TMap<EAnvilCharacterStance, float>
 ---@field CameraMousePositionNormalizedEdgePanThreshold float
 ---@field RangedAimStartOffset FVector
 UPlayerInputProxyComponent = {}
@@ -2188,6 +2236,7 @@ UProjectileMovementDataComponent = {}
 ---@field bDistanceBasedAccuracy boolean
 ---@field bForceKillPlayers boolean
 ---@field bHitEffectNoPitch boolean
+---@field bScaleDamageWithAccuracy boolean
 UProjectileMovementProxyComponent = {}
 
 
@@ -2250,6 +2299,14 @@ URefineResourceDataComponent = {}
 ---@field ProducableItemList TArray<FProducableItem>
 URefineResourceProxyComponent = {}
 
+
+
+---@class URelicSiteProxyComponent : UProxyComponent
+URelicSiteProxyComponent = {}
+
+
+---@class URelicSiteSpawnLocationProxyComponent : UProxyComponent
+URelicSiteSpawnLocationProxyComponent = {}
 
 
 ---@class URelicTechCenterDataComponent : UDataComponent
@@ -2397,6 +2454,7 @@ UShipMovementDataComponent = {}
 ---@field GammaMax float
 ---@field Rudder FControlSurface
 ---@field ThrustVectoringPercent float
+---@field NoSailThrustHorizonalMultiplier float
 ---@field NoSailInputFactor float
 ---@field SailInputCurve UCurveFloat
 UShipMovementProxyComponent = {}
@@ -2434,7 +2492,6 @@ USignPostProxyComponent = {}
 
 
 ---@class USimPlayerDataComponent : UDataComponent
----@field Velocity FVector
 ---@field BaseRelativeTransform FTransform
 ---@field GuardStrength uint8
 ---@field TeamId uint8
@@ -2465,7 +2522,6 @@ USignPostProxyComponent = {}
 ---@field bIsAiming boolean
 ---@field bIsGuarding boolean
 ---@field bIsMarchMode boolean
----@field Accuracy float
 ---@field bIsAdmin boolean
 ---@field bPriming boolean
 ---@field bInTravelZone boolean
@@ -2480,6 +2536,7 @@ USignPostProxyComponent = {}
 ---@field HeldItemLightSourceRadius float
 ---@field LightSourceData TArray<FNightShroudLightSource>
 ---@field FoodTypesOnCooldownBits uint8
+---@field Accuracy float
 ---@field AimYaw float
 ---@field AimPitch float
 ---@field LastIncomingAttackAngle float
@@ -2597,6 +2654,7 @@ UStaticTorchProxyComponent = {}
 
 
 ---@class UStorehouseDataComponent : UDataComponent
+---@field FamilyOwnedInventories boolean
 ---@field PublicInventory FCompHandleData
 ---@field ViewerRentExpireTime int32
 ---@field ViewerCanRent boolean
@@ -2607,6 +2665,7 @@ UStorehouseDataComponent = {}
 
 
 ---@class UStorehouseProxyComponent : UProxyComponent
+---@field FamilyOwnedInventories boolean
 ---@field NumSlotsPerInv uint8
 ---@field StackSize int32
 ---@field RentPrice int32
@@ -2855,15 +2914,18 @@ UVehicleMovementDataComponent = {}
 ---@field bUsePitch boolean
 ---@field bCanBeMovementBase boolean
 ---@field bRammingForceKillPlayer boolean
+---@field bRammingAllowFriendlyFire boolean
+---@field bCanBreachGates boolean
 ---@field MovementPlayerInteraction EAnvilVehicleMovementPlayerInteractionType
 ---@field CollisionEffect TSubclassOf<UEntityTemplate>
----@field RammingDamage float
----@field RammingVelocityFactor float
 ---@field RammingVelocityTime float
 ---@field RammingDamageType EAnvilDamageType
 ---@field RammingStabilityDamage float
 ---@field RammingStabilitySplashDamage float
 ---@field RammingStabilitySplashDamageRadius float
+---@field RammingSpeedFactorRange FR2FloatRange
+---@field RammingDamageRange FR2FloatRange
+---@field RamCD float
 ---@field FrontAxleOffset FVector
 ---@field RearAxleOffset FVector
 ---@field MaxSubmersionDepth float
@@ -2886,6 +2948,7 @@ UVehicleSeatDataComponent = {}
 ---@field PlayerRotation FRotator
 ---@field PlayerExitOffset FVector
 ---@field DismountMaxDelta float
+---@field SeatThrustOffset FVector
 ---@field bIsDriver boolean
 ---@field bIsLeft boolean
 ---@field bSeatThrustInput boolean
@@ -2893,8 +2956,8 @@ UVehicleSeatDataComponent = {}
 ---@field bRudderRotationInput boolean
 ---@field bUseMountedWeapon boolean
 ---@field bPrimeMountedWeapon boolean
----@field bUseDeployable boolean
 ---@field bMustNearExitToMount boolean
+---@field bMountSeatLOSCheckIgnoreVehicle boolean
 ---@field bRevertRequiredEquipments boolean
 ---@field bMirrorDetachLocation boolean
 ---@field AnimationIndex int32

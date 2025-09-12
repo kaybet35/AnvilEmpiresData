@@ -16,7 +16,6 @@ AAnvilHUD = {}
 ---@field ItemSecondaryMeshComponent USkeletalMeshComponent
 ---@field UnarmedItemMeshComponent USkeletalMeshComponent
 ---@field UnarmedItemSecondaryMeshComponent USkeletalMeshComponent
----@field VehicleInputState EAnvilVehicleInputState
 ---@field Capsule UCapsuleComponent
 ---@field Mesh USkeletalMeshComponent
 ---@field Head USkeletalMeshComponent
@@ -206,6 +205,7 @@ AServerPartition = {}
 ---@field BuildSiteVisualGuideValidColour FLinearColor
 ---@field BuildSiteVisualGuideInvalidColour FLinearColor
 ---@field BuildSiteVisualGuideObstructedColour FLinearColor
+---@field FactionColourMap TMap<EAnvilFactionId, FLinearColor>
 ---@field AcceptUISoundCue USoundCue
 AUIGlobals = {}
 
@@ -301,6 +301,7 @@ AVisBeaconTower = {}
 ---@class AVisBoat : AVisVehicle
 ---@field IsInWaterCheckRange float
 ---@field ShipMovementDataComponent UShipMovementDataComponent
+---@field HelmsmanSeat UVehicleSeatDataComponent
 ---@field GangplankLeftMesh UStaticMeshComponent
 ---@field GangplankRightMesh UStaticMeshComponent
 ---@field Slots TMap<UEntityAttachableProxyComponent, UEntityAttachableDataComponent>
@@ -367,7 +368,6 @@ AVisCraftingStructure = {}
 ---@field DryingItemMeshComponent UStaticMeshComponent
 ---@field DryingRackProxy UDryingRackProxyComponent
 ---@field DryingRackDataComponent UDryingRackDataComponent
----@field DryingItemMeshMaterial UMaterialInstanceDynamic
 ---@field DryingRackAssetTable UDataTable
 ---@field CurrentItemStaticMesh TSoftObjectPtr<UStaticMesh>
 AVisDryingRack = {}
@@ -441,6 +441,12 @@ AVisFishingBobber = {}
 ---@field ReadyColour FLinearColor
 ---@field MeshMaterial UMaterialInstanceDynamic
 AVisFishingIndicator = {}
+
+
+
+---@class AVisFurnace : AVisCookingStructure
+---@field MaxGlowIntensity float
+AVisFurnace = {}
 
 
 
@@ -592,6 +598,7 @@ AVisPickupItem = {}
 ---@field TemperatureDataComponent UTemperatureDataComponent
 ---@field AdminEnvDataComponent UAdminEnvDataComponent
 ---@field PlayerStatusDataComponent UPlayerStatusDataComponent
+---@field RefineResourceDataComponent URefineResourceDataComponent
 ---@field ItemMeshComponent USkeletalMeshComponent
 ---@field ItemSecondaryMeshComponent USkeletalMeshComponent
 ---@field UnarmedItemMeshComponent USkeletalMeshComponent
@@ -617,6 +624,8 @@ AVisPickupItem = {}
 ---@field MapMarker UMapMarkerComponent
 ---@field FamilyMarkerMapMarker UMapMarkerComponent
 ---@field ActivityStateMontageMap TMap<EAnvilSimActivityState, UAnimMontage>
+---@field StancePrimaryItemMap TMap<EAnvilCharacterStance, TSubclassOf<UVisItem>>
+---@field StanceSecondaryItemMap TMap<EAnvilCharacterStance, TSubclassOf<UVisItem>>
 ---@field ArmourDataComponent UArmorDataComponent
 ---@field VoiceIndicator UBillboardComponent
 ---@field TorchVFXComponent UNiagaraComponent
@@ -687,6 +696,10 @@ function AVisProjectile:OnHiddenChanged(OldHidden, NewHidden) end
 ---@field RefineResourceDataComponent URefineResourceDataComponent
 AVisRefinery = {}
 
+
+
+---@class AVisRelicSite : AVisStructure
+AVisRelicSite = {}
 
 
 ---@class AVisRelicTechCenter : AVisStructure
@@ -958,6 +971,10 @@ FAudioVolumeClass = {}
 FAutoMoveState = {}
 
 
+---@class FAvatarManager
+FAvatarManager = {}
+
+
 ---@class FBoolResponse
 ---@field bValue boolean
 FBoolResponse = {}
@@ -1195,6 +1212,12 @@ FGetBatchedDataForClientResponse = {}
 ---@class FGetIsAdminResponse
 ---@field bIsAdmin boolean
 FGetIsAdminResponse = {}
+
+
+
+---@class FGetMapAvatarInfoResponse
+---@field RegionLists FString
+FGetMapAvatarInfoResponse = {}
 
 
 
@@ -1472,11 +1495,20 @@ FWeatherManager = {}
 ---@field VictoryInfoList FVictoryInfo
 ---@field FactionTotalNumCapturedKeeps uint16
 ---@field FactionTotalNumTemples uint16
+---@field FactionTotalInfluence float
+---@field FactionTotalNumRelicSites uint16
+---@field NumTotalRelicSites uint32
 ---@field FactionUnixTimestampCultureVictoryStarted int64
+---@field Tweakables FWinConditionTweakables
+FWinConditionStateResponse = {}
+
+
+
+---@class FWinConditionTweakables
 ---@field NumCapturedKeepsForMilitaryVictory uint16
 ---@field NumTemplesForCultureVictory uint16
 ---@field CultureVictoryTimeRequiredSec uint32
-FWinConditionStateResponse = {}
+FWinConditionTweakables = {}
 
 
 
@@ -1660,6 +1692,7 @@ function UAnvilDropdownEntryWidget:OnOptionSelected(SelectedItem, SelectionType)
 ---@field WeatherManager FWeatherManager
 ---@field OptionsManager FAnvilOptionsManager
 ---@field MapPostManager FMapPostManager
+---@field AvatarManager FAvatarManager
 ---@field UIGlobalsClass TSubclassOf<AUIGlobals>
 ---@field R2ConfigClass TSubclassOf<UEntityTemplate>
 ---@field DirtyLandscapeProxies TArray<ALandscapeProxy>
@@ -1801,6 +1834,7 @@ UAvatarProfileWidget = {}
 ---@class UBeaconTowerPlayerInfoMapIcon : UMapIcon
 ---@field FriendlyColour FSlateColor
 ---@field EnemyColour FSlateColor
+---@field BeaconInfoTypeIconMap TMap<EAnvilBeaconInfoType, UTexture2D>
 ---@field LocationText UTextBlock
 UBeaconTowerPlayerInfoMapIcon = {}
 
@@ -2045,6 +2079,14 @@ function UDemoWidget:OnDiscordButtonClicked() end
 function UDemoWidget:OnConfirmButtonClicked() end
 
 
+---@class UDeploymentAvatarWidget : UUserWidget
+---@field DebugText UTextBlock
+UDeploymentAvatarWidget = {}
+
+---@param UserData FDeploymentAvatarUserData
+function UDeploymentAvatarWidget:OnDataUpdated(UserData) end
+
+
 ---@class UDeploymentFoodItemGridWidget : UGridPanelWidget
 UDeploymentFoodItemGridWidget = {}
 
@@ -2068,13 +2110,14 @@ function UDeploymentFoodWidget:OnCancelButtonClicked() end
 
 
 ---@class UDeploymentMapWidget : UMapWidgetBase
+---@field MapAvatarContainerWidget UMapAvatarContainerWidget
+---@field DeploymentAvatarWidget UDeploymentAvatarWidget
 UDeploymentMapWidget = {}
+
 
 
 ---@class UDeploymentPointMapIcon : UWorldEntityMapIcon
 ---@field MapItemButton UButton
----@field FlashingFrequency float
----@field FlashingMinOpacity float
 UDeploymentPointMapIcon = {}
 
 function UDeploymentPointMapIcon:OnDeploymentPointClicked() end
@@ -2293,6 +2336,7 @@ UFooterContainer = {}
 ---@field NovanLogo UTexture2D
 ---@field MilitaryVictoryLogo UTexture2D
 ---@field CultureVictoryLogo UTexture2D
+---@field ReligiousVictoryLogo UTexture2D
 ---@field VictorySoundCue USoundCue
 ---@field AgeEndingSoundCue USoundCue
 ---@field WinConditionCanvas UCanvasPanel
@@ -2629,6 +2673,7 @@ UInventoryItemWidget = {}
 
 ---@class UInventoryWidget : UGridPanelWidget
 ---@field bIsPlayerInventory boolean
+---@field CustomItemGrid TArray<FIntPoint>
 UInventoryWidget = {}
 
 
@@ -2674,6 +2719,21 @@ ULoreWindow = {}
 ---@field bOverride_ContentPadding boolean
 UMainAreaContainer = {}
 
+
+
+---@class UMapAvatarContainerWidget : UUserWidget
+---@field MapAvatarWidgetClass TSubclassOf<UMapAvatarWidget>
+---@field MapAvatarCanvas UCanvasPanel
+UMapAvatarContainerWidget = {}
+
+
+
+---@class UMapAvatarWidget : UUserWidget
+---@field Button UButton
+---@field DebugText UTextBlock
+UMapAvatarWidget = {}
+
+function UMapAvatarWidget:OnClicked() end
 
 
 ---@class UMapIcon : UMapIconBase
@@ -2943,8 +3003,10 @@ function UPauseScreen:OnCodeOfConductButtonClicked() end
 ---@field LumberjackingNumberText UTextBlock
 ---@field MiningNumberText UTextBlock
 ---@field FarmingNumberText UTextBlock
+---@field ChangeAvatarButton UButton
 UPlayerAvatarWidget = {}
 
+function UPlayerAvatarWidget:OnChangeAvatarButtonClicked() end
 
 
 ---@class UPlayerInventoryWidget : UUserWidget
@@ -2968,6 +3030,10 @@ function UPlayerInventoryWidget:IsSubmitAvatarButtonEnabled() end
 ---@class UPlayerInventoryWindow : UStructureWindow
 ---@field PlayerInventoryWidget UPlayerInventoryWidget
 ---@field PlayerAvatarWidget UPlayerAvatarWidget
+---@field RefineryProducibleItemsList URefineryProducibleListWidget
+---@field RefineryQueue URefineryQueueWidget
+---@field QueueTotalTimeText UTextBlock
+---@field QueueTimeText UTextBlock
 UPlayerInventoryWindow = {}
 
 
@@ -3187,6 +3253,7 @@ UStatusWidget = {}
 
 ---@class UStorehouseWindow : UStructureWindow
 ---@field PublicButton UButton
+---@field FamilyButton UButton
 ---@field PrivateButton UButton
 ---@field StorehouseExpireTimeText UTextBlock
 ---@field StorehouseExpireTimePanel UPanelWidget
@@ -3228,6 +3295,10 @@ UTemperatureStatusWidget = {}
 
 ---@return ESlateVisibility
 function UTemperatureStatusWidget:GetIconVisibility() end
+
+
+---@class UTempleMapIcon : UMapIcon
+UTempleMapIcon = {}
 
 
 ---@class UTimeSeasonWidget : UUserWidget
@@ -3323,6 +3394,13 @@ UVisAnimalAnimInstance = {}
 ---@field LeftTrimMesh UStaticMeshComponent
 ---@field RightTrimMesh UStaticMeshComponent
 UVisBalljointComponent = {}
+
+
+
+---@class UVisBoatHelmAnimInstance : UAnimInstance
+---@field bIsSailOpen boolean
+---@field HelmsmanInput FMovementInputState
+UVisBoatHelmAnimInstance = {}
 
 
 
@@ -3517,7 +3595,6 @@ UVisMultiItemStockpileComponent = {}
 ---@field PrimaryGripType EEquippedItemGripType
 ---@field SecondaryGripType EEquippedItemGripType
 ---@field NativeStance EAnvilCharacterStance
----@field VehicleInputState EAnvilVehicleInputState
 ---@field IncomingAttackDirection EIncomingAttackDirection
 ---@field bNativeStanceOnHorse boolean
 ---@field NativePoseIndex int32
@@ -3543,6 +3620,7 @@ UVisMultiItemStockpileComponent = {}
 ---@field bNativeVehicleInputStateCharge boolean
 ---@field bNativeVehicleInputStateStrafeLeft boolean
 ---@field bNativeVehicleInputStateStrafeRight boolean
+---@field bNativeVehicleIsSailOpen boolean
 ---@field bNativePrimaryGripTypeIsPike boolean
 ---@field bNativeCombatModeIsStanding boolean
 ---@field bNativeSecondaryGripIsShieldScondaryShieldOff boolean
@@ -3552,7 +3630,7 @@ UVisMultiItemStockpileComponent = {}
 ---@field bNativeIncomingAttackDirectionLeft boolean
 ---@field bNativeIncomingAttackDirectionRight boolean
 ---@field bNativeAbsSpeedOver25 boolean
----@field bNativeAimingStanceNotScorpion boolean
+---@field bNativeAimingStanceNotScorpionNotSpotter boolean
 ---@field bNativeAimingNotGuarding boolean
 ---@field NativeRangedClampedBowAccuracy float
 ---@field NativeUpperBodySpeedReference float
@@ -3597,6 +3675,15 @@ UVisPowerUnitAnimInstance = {}
 ---@field VisibilityChance float
 UVisRandomDecalDecorComponent = {}
 
+
+
+---@class UVisRandomMeshComponent : UStaticMeshComponent
+---@field MeshVariations TArray<TSoftObjectPtr<UStaticMesh>>
+---@field VariationIndex int32
+---@field PreviewIndex int32
+UVisRandomMeshComponent = {}
+
+function UVisRandomMeshComponent:HandleVariationLoaded() end
 
 
 ---@class UVisRandomMeshDecorComponent : UStaticMeshComponent
@@ -3739,11 +3826,33 @@ UWildSpawnPointMapIcon = {}
 ---@field Faction0CultureTimerProgressBar UProgressBar
 ---@field Faction1CultureTimerProgressBar UProgressBar
 ---@field Faction2CultureTimerProgressBar UProgressBar
+---@field Faction0ReligiousProgressBar UProgressBar
+---@field Faction1ReligiousProgressBar UProgressBar
+---@field Faction2ReligiousProgressBar UProgressBar
+---@field Faction0ReligiousTextBox UTextBlock
+---@field Faction1ReligiousTextBox UTextBlock
+---@field Faction2ReligiousTextBox UTextBlock
+---@field Faction0ReligiousInfluenceProgressBar UProgressBar
+---@field Faction1ReligiousInfluenceProgressBar UProgressBar
+---@field Faction2ReligiousInfluenceProgressBar UProgressBar
+---@field Faction0ReligiousVerticalBox UVerticalBox
+---@field Faction1ReligiousVerticalBox UVerticalBox
+---@field Faction2ReligiousVerticalBox UVerticalBox
 ---@field ProgressBarNormalColour FLinearColor
 ---@field ProgressBarVictoryAchievedColour FLinearColor
 ---@field CachedWinConditionTooltip UTooltipWidget
 UWinConditionWidget = {}
 
+---@return FText
+function UWinConditionWidget:GetFaction2ReligiousTooltipText() end
+---@return FText
+function UWinConditionWidget:GetFaction2ReligiousText() end
+---@return FLinearColor
+function UWinConditionWidget:GetFaction2ReligiousProgressBarColour() end
+---@return float
+function UWinConditionWidget:GetFaction2ReligiousProgress() end
+---@return float
+function UWinConditionWidget:GetFaction2ReligiousInfluenceProgress() end
 ---@return FText
 function UWinConditionWidget:GetFaction2MilitaryText() end
 ---@return FLinearColor
@@ -3759,6 +3868,16 @@ function UWinConditionWidget:GetFaction2CultureProgressBarColour() end
 ---@return float
 function UWinConditionWidget:GetFaction2CultureProgress() end
 ---@return FText
+function UWinConditionWidget:GetFaction1ReligiousTooltipText() end
+---@return FText
+function UWinConditionWidget:GetFaction1ReligiousText() end
+---@return FLinearColor
+function UWinConditionWidget:GetFaction1ReligiousProgressBarColour() end
+---@return float
+function UWinConditionWidget:GetFaction1ReligiousProgress() end
+---@return float
+function UWinConditionWidget:GetFaction1ReligiousInfluenceProgress() end
+---@return FText
 function UWinConditionWidget:GetFaction1MilitaryText() end
 ---@return FLinearColor
 function UWinConditionWidget:GetFaction1MilitaryProgressBarColour() end
@@ -3772,6 +3891,16 @@ function UWinConditionWidget:GetFaction1CultureText() end
 function UWinConditionWidget:GetFaction1CultureProgressBarColour() end
 ---@return float
 function UWinConditionWidget:GetFaction1CultureProgress() end
+---@return FText
+function UWinConditionWidget:GetFaction0ReligiousTooltipText() end
+---@return FText
+function UWinConditionWidget:GetFaction0ReligiousText() end
+---@return FLinearColor
+function UWinConditionWidget:GetFaction0ReligiousProgressBarColour() end
+---@return float
+function UWinConditionWidget:GetFaction0ReligiousProgress() end
+---@return float
+function UWinConditionWidget:GetFaction0ReligiousInfluenceProgress() end
 ---@return FText
 function UWinConditionWidget:GetFaction0MilitaryText() end
 ---@return FLinearColor
@@ -3818,6 +3947,8 @@ UWorldEntityInventoryTooltip = {}
 ---@class UWorldEntityMapIcon : UMapIconBase
 ---@field EntityHandle UWorldEntityHandle
 ---@field IconSizeBox USizeBox
+---@field FlashingFrequency float
+---@field FlashingMinOpacity float
 ---@field MapItemImage UImage
 ---@field EntityTemplateCDO UEntityTemplate
 ---@field VisActorCDO AVisActor
@@ -3844,6 +3975,10 @@ UWorldFamilySpawnMapIcon = {}
 UWorldMarketShopMapIcon = {}
 
 function UWorldMarketShopMapIcon:OnIconClicked() end
+
+
+---@class UWorldRelicSiteMapIcon : UWorldEntityMapIcon
+UWorldRelicSiteMapIcon = {}
 
 
 ---@class UWorldTempleMapIcon : UWorldEntityMapIcon

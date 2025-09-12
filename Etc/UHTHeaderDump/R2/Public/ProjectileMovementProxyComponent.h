@@ -92,6 +92,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bHitEffectNoPitch;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bScaleDamageWithAccuracy;
+    
     UProjectileMovementProxyComponent();
 
 };

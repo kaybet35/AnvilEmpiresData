@@ -6,7 +6,6 @@
 class UDataTable;
 class UDryingRackDataComponent;
 class UDryingRackProxyComponent;
-class UMaterialInstanceDynamic;
 class UStaticMesh;
 class UStaticMeshComponent;
 
@@ -26,9 +25,6 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDryingRackDataComponent* DryingRackDataComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UMaterialInstanceDynamic* DryingItemMeshMaterial;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* DryingRackAssetTable;

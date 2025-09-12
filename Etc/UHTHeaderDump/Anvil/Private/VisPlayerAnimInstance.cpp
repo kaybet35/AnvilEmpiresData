@@ -9,7 +9,6 @@ UVisPlayerAnimInstance::UVisPlayerAnimInstance() {
     this->PrimaryGripType = EEquippedItemGripType::NoWeapon;
     this->SecondaryGripType = EEquippedItemGripType::NoWeapon;
     this->NativeStance = EAnvilCharacterStance::Standing;
-    this->VehicleInputState = EAnvilVehicleInputState::Idle;
     this->IncomingAttackDirection = EIncomingAttackDirection::None;
     this->bNativeStanceOnHorse = false;
     this->NativePoseIndex = 0;
@@ -35,6 +34,7 @@ UVisPlayerAnimInstance::UVisPlayerAnimInstance() {
     this->bNativeVehicleInputStateCharge = false;
     this->bNativeVehicleInputStateStrafeLeft = false;
     this->bNativeVehicleInputStateStrafeRight = false;
+    this->bNativeVehicleIsSailOpen = false;
     this->bNativePrimaryGripTypeIsPike = false;
     this->bNativeCombatModeIsStanding = false;
     this->bNativeSecondaryGripIsShieldScondaryShieldOff = false;
@@ -44,7 +44,7 @@ UVisPlayerAnimInstance::UVisPlayerAnimInstance() {
     this->bNativeIncomingAttackDirectionLeft = false;
     this->bNativeIncomingAttackDirectionRight = false;
     this->bNativeAbsSpeedOver25 = false;
-    this->bNativeAimingStanceNotScorpion = false;
+    this->bNativeAimingStanceNotScorpionNotSpotter = false;
     this->bNativeAimingNotGuarding = false;
     this->NativeRangedClampedBowAccuracy = 0.00f;
     this->NativeUpperBodySpeedReference = 0.00f;

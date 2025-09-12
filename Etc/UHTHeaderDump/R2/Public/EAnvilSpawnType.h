@@ -12,5 +12,6 @@ enum class EAnvilSpawnType : uint8 {
     Town,
     Bot,
     None,
+    NumTypes,
 };
 

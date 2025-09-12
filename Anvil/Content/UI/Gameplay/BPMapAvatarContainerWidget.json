@@ -1,0 +1,123 @@
+[
+  {
+    "Type": "BPMapAvatarContainerWidget_C",
+    "Name": "Default__BPMapAvatarContainerWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPMapAvatarContainerWidget.BPMapAvatarContainerWidget_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MapAvatarWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'BPMapAvatarWidget_C'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapAvatarWidget.10"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "BPMapAvatarWidget_C",
+    "Name": "BPMapAvatarWidget",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'Anvil/Content/UI/Gameplay/BPMapAvatarWidget.BPMapAvatarWidget_C'",
+    "Template": {
+      "ObjectName": "BPMapAvatarWidget_C'Default__BPMapAvatarWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapAvatarWidget.0"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'BPMapAvatarContainerWidget_C:WidgetTree.MapAvatarCanvas.CanvasPanelSlot_0'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapAvatarContainerWidget.3"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "MapAvatarCanvas",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'BPMapAvatarContainerWidget_C:WidgetTree.MapAvatarCanvas.CanvasPanelSlot_0'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapAvatarContainerWidget.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "MapAvatarCanvas",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "CanvasPanel'BPMapAvatarContainerWidget_C:WidgetTree.MapAvatarCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapAvatarContainerWidget.2"
+      },
+      "Content": {
+        "ObjectName": "BPMapAvatarWidget_C'BPMapAvatarContainerWidget_C:WidgetTree.BPMapAvatarWidget'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapAvatarContainerWidget.1"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPMapAvatarContainerWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'BPMapAvatarContainerWidget_C:WidgetTree'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapAvatarContainerWidget.5"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'MapAvatarContainerWidget'",
+      "ObjectPath": "/Script/Anvil"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPMapAvatarWidget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'BPMapAvatarWidget_C'",
+          "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapAvatarWidget.10"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPMapAvatarContainerWidget_C'Default__BPMapAvatarContainerWidget_C'",
+      "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapAvatarContainerWidget.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "BPMapAvatarContainerWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'BPMapAvatarContainerWidget_C:WidgetTree.MapAvatarCanvas'",
+        "ObjectPath": "Anvil/Content/UI/Gameplay/BPMapAvatarContainerWidget.2"
+      }
+    }
+  }
+]

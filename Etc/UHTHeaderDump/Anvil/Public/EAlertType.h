@@ -9,5 +9,6 @@ enum class EAlertType : uint8 {
     Reinforcement,
     ClearReinforcement,
     TimeUntilAgeEndAlert,
+    TempleUnderAttack,
 };
 

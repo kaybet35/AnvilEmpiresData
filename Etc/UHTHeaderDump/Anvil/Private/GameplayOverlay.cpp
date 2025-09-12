@@ -15,6 +15,7 @@ UGameplayOverlay::UGameplayOverlay() : UUserWidget(FObjectInitializer::Get()) {
     this->NovanLogo = NULL;
     this->MilitaryVictoryLogo = NULL;
     this->CultureVictoryLogo = NULL;
+    this->ReligiousVictoryLogo = NULL;
     this->VictorySoundCue = NULL;
     this->AgeEndingSoundCue = NULL;
     this->WinConditionCanvas = NULL;
