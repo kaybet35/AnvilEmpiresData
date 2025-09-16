@@ -2658,11 +2658,10 @@ class UStorehouseDataComponent : public UDataComponent
     bool FamilyOwnedInventories;                                                      // 0x00A8 (size: 0x1)
     FCompHandleData PublicInventory;                                                  // 0x00C8 (size: 0x18)
     int32 ViewerRentExpireTime;                                                       // 0x00F8 (size: 0x4)
-    bool ViewerCanRent;                                                               // 0x0118 (size: 0x1)
-    bool ViewerCanRelease;                                                            // 0x0138 (size: 0x1)
-    FCompHandleData ViewerInventory;                                                  // 0x0158 (size: 0x18)
+    bool ViewerCanRelease;                                                            // 0x0118 (size: 0x1)
+    FCompHandleData ViewerInventory;                                                  // 0x0138 (size: 0x18)
 
-}; // Size: 0x188
+}; // Size: 0x168
 
 class UStorehouseProxyComponent : public UProxyComponent
 {

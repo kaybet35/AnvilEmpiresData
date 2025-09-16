@@ -2657,7 +2657,6 @@ UStaticTorchProxyComponent = {}
 ---@field FamilyOwnedInventories boolean
 ---@field PublicInventory FCompHandleData
 ---@field ViewerRentExpireTime int32
----@field ViewerCanRent boolean
 ---@field ViewerCanRelease boolean
 ---@field ViewerInventory FCompHandleData
 UStorehouseDataComponent = {}

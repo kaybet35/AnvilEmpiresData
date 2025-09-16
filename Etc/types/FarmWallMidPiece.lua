@@ -1,8 +1,6 @@
 ---@meta
 
----@class AFarmWallMidPiece_C : AFootprint
----@field DefaultSceneRoot USceneComponent
-AFarmWallMidPiece_C = {}
-
+---@class UFarmWallMidPiece_C : UEntityTemplate
+UFarmWallMidPiece_C = {}
 
 

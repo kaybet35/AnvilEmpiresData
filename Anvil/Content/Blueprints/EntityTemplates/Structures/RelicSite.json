@@ -183,15 +183,13 @@
         "ObjectName": "BlueprintGeneratedClass'TreasureRelic_C'",
         "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/TreasureRelic.0"
       },
-      "SpawnRadius": 3000.0,
+      "SpawnRadius": 4000.0,
       "MinimumSpawnRadius": 400.0,
-      "SpawnQuantity": 2,
-      "MaxSpawn": 2,
-      "ResourceReserveInitial": 2,
-      "ReserveReplenishTimeSecs": 1800,
-      "MinDistanceBetweenSpawns": 250.0,
-      "bTrackSpawnedEntity": true,
-      "CompatibleSurfaceTypes": 26116
+      "SpawnInterval": 150.0,
+      "SpawnQuantity": 5,
+      "MaxSpawn": 5,
+      "ResourceReserveInitial": -1,
+      "CompatibleSurfaceTypes": 91652
     }
   },
   {
@@ -214,7 +212,10 @@
       "ObjectName": "StructureProxyComponent'Default__BPBaseStructureEntity_C:StructureProxyComponent_0'",
       "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/BPBaseStructureEntity.9"
     },
-    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bCannotBeDismantled": true
+    }
   },
   {
     "Type": "TeamProxyComponent",

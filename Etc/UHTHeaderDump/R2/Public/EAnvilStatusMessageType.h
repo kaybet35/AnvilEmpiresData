@@ -49,6 +49,7 @@ enum class EAnvilStatusMessageType : uint8 {
     VehicleMustBeEmpty,
     QueueIsFull,
     NotEnoughPayment,
+    NotEnoughPaymentSilver,
     WeaponIneffective,
     MarketInvalidItem,
     MarketPublicItemNotAllowed,
@@ -149,6 +150,7 @@ enum class EAnvilStatusMessageType : uint8 {
     NotEnoughPlayersToCapture,
     CannotOpenBothSailAndPlank,
     RelicSiteClaimed,
+    StorehouseAtCapacity,
     NumTypes,
 };
 

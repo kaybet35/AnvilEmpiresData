@@ -93,6 +93,11 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
     this->CurrentUEUsableActor = NULL;
+    this->SnowMidAudioComponent->SetupAttachment(SpringArm);
+    this->SnowHighAudioComponent->SetupAttachment(SpringArm);
+    this->WindLowAudioComponent->SetupAttachment(SpringArm);
+    this->WindMidAudioComponent->SetupAttachment(SpringArm);
+    this->WindHighAudioComponent->SetupAttachment(SpringArm);
     this->UnderworldCollapseFXComponent->SetupAttachment(SpringArm);
     this->EnterSwimmingVFXComponent->SetupAttachment(Mesh);
     this->SwimmingLoopVFXComponent->SetupAttachment(Mesh);
@@ -116,11 +121,6 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->RainMidAudioComponent->SetupAttachment(SpringArm);
     this->RainHighAudioComponent->SetupAttachment(SpringArm);
     this->SnowLowAudioComponent->SetupAttachment(SpringArm);
-    this->SnowMidAudioComponent->SetupAttachment(SpringArm);
-    this->SnowHighAudioComponent->SetupAttachment(SpringArm);
-    this->WindLowAudioComponent->SetupAttachment(SpringArm);
-    this->WindMidAudioComponent->SetupAttachment(SpringArm);
-    this->WindHighAudioComponent->SetupAttachment(SpringArm);
     this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->Camera->SetupAttachment(SpringArm);
     this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
