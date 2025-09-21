@@ -26,6 +26,7 @@ UHUDWidget::UHUDWidget() : UUserWidget(FObjectInitializer::Get()) {
     this->GuardStrengthCenterIcon = NULL;
     this->GuardStrengthRightIcon = NULL;
     this->PlayerStatusText = NULL;
+    this->AvatarImage = NULL;
     this->PlayerVitality = NULL;
     this->HorseVitality = NULL;
     this->InventoryHUD = NULL;

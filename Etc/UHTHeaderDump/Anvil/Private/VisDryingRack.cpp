@@ -8,8 +8,8 @@ AVisDryingRack::AVisDryingRack(const FObjectInitializer& ObjectInitializer) : Su
     this->DryingRackProxy = NULL;
     this->DryingRackDataComponent = CreateDefaultSubobject<UDryingRackDataComponent>(TEXT("DryingRackDataComponent"));
     this->DryingRackAssetTable = NULL;
-    this->BaseMeshComponent->SetupAttachment(RootComponent);
     this->DryingItemMeshComponent->SetupAttachment(BaseMeshComponent);
+    this->BaseMeshComponent->SetupAttachment(RootComponent);
 }
 
 void AVisDryingRack::OnItemAssetLoaded() {

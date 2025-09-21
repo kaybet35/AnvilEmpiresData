@@ -2517,6 +2517,7 @@ UHUDStatsWidget = {}
 ---@field GuardStrengthCenterIcon UImage
 ---@field GuardStrengthRightIcon UImage
 ---@field PlayerStatusText UTextBlock
+---@field AvatarImage UImage
 ---@field PlayerVitality UVitalityStatusWidget
 ---@field HorseVitality UVitalityStatusWidget
 ---@field InventoryHUD UInventoryHUDWidget

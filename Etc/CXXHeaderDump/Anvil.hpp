@@ -2396,29 +2396,30 @@ class UHUDWidget : public UUserWidget
     class UImage* GuardStrengthCenterIcon;                                            // 0x0378 (size: 0x8)
     class UImage* GuardStrengthRightIcon;                                             // 0x0380 (size: 0x8)
     class UTextBlock* PlayerStatusText;                                               // 0x0388 (size: 0x8)
-    class UVitalityStatusWidget* PlayerVitality;                                      // 0x0390 (size: 0x8)
-    class UVitalityStatusWidget* HorseVitality;                                       // 0x0398 (size: 0x8)
-    class UInventoryHUDWidget* InventoryHUD;                                          // 0x03A0 (size: 0x8)
-    class UCanvasPanel* DisclaimerCanvas;                                             // 0x03A8 (size: 0x8)
-    class UTextBlock* DisclaimerText;                                                 // 0x03B0 (size: 0x8)
-    class UCanvasPanel* BuildSiteCanvas;                                              // 0x03B8 (size: 0x8)
-    class UHUDPlacementStatusWidget* PlacementStatusWidget;                           // 0x03C0 (size: 0x8)
-    class UHUDBuildSiteWidget* BuildSiteWidget;                                       // 0x03C8 (size: 0x8)
-    FSlateBrush GuardStrengthEmptyIcon;                                               // 0x03D0 (size: 0xD0)
-    FSlateBrush GuardStrengthFillIcon;                                                // 0x04A0 (size: 0xD0)
-    class UProgressBar* InteractionProgressBar1;                                      // 0x0570 (size: 0x8)
-    class UProgressBar* InteractionProgressBar2;                                      // 0x0578 (size: 0x8)
-    class UTextBlock* WeatherStatsText;                                               // 0x0580 (size: 0x8)
-    class UTextBlock* BorderRegionIndicatorText;                                      // 0x0588 (size: 0x8)
-    class UWidget* ReinforcementStatus;                                               // 0x0590 (size: 0x8)
-    class UImage* BackoutImage;                                                       // 0x0598 (size: 0x8)
-    class UHUDHintWidget* HUDHintWidget;                                              // 0x05A0 (size: 0x8)
-    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05B0 (size: 0x10)
-    FSlateBrush CrossHairBrush;                                                       // 0x05C0 (size: 0xD0)
-    class UImage* AccuracyBar;                                                        // 0x0690 (size: 0x8)
-    FLinearColor AccuracyBarColor;                                                    // 0x0698 (size: 0x10)
-    FLinearColor AccuracyBarFullColor;                                                // 0x06A8 (size: 0x10)
-    FLinearColor AimingTooCloseColour;                                                // 0x06B8 (size: 0x10)
+    class UImage* AvatarImage;                                                        // 0x0390 (size: 0x8)
+    class UVitalityStatusWidget* PlayerVitality;                                      // 0x0398 (size: 0x8)
+    class UVitalityStatusWidget* HorseVitality;                                       // 0x03A0 (size: 0x8)
+    class UInventoryHUDWidget* InventoryHUD;                                          // 0x03A8 (size: 0x8)
+    class UCanvasPanel* DisclaimerCanvas;                                             // 0x03B0 (size: 0x8)
+    class UTextBlock* DisclaimerText;                                                 // 0x03B8 (size: 0x8)
+    class UCanvasPanel* BuildSiteCanvas;                                              // 0x03C0 (size: 0x8)
+    class UHUDPlacementStatusWidget* PlacementStatusWidget;                           // 0x03C8 (size: 0x8)
+    class UHUDBuildSiteWidget* BuildSiteWidget;                                       // 0x03D0 (size: 0x8)
+    FSlateBrush GuardStrengthEmptyIcon;                                               // 0x03E0 (size: 0xD0)
+    FSlateBrush GuardStrengthFillIcon;                                                // 0x04B0 (size: 0xD0)
+    class UProgressBar* InteractionProgressBar1;                                      // 0x0580 (size: 0x8)
+    class UProgressBar* InteractionProgressBar2;                                      // 0x0588 (size: 0x8)
+    class UTextBlock* WeatherStatsText;                                               // 0x0590 (size: 0x8)
+    class UTextBlock* BorderRegionIndicatorText;                                      // 0x0598 (size: 0x8)
+    class UWidget* ReinforcementStatus;                                               // 0x05A0 (size: 0x8)
+    class UImage* BackoutImage;                                                       // 0x05A8 (size: 0x8)
+    class UHUDHintWidget* HUDHintWidget;                                              // 0x05B0 (size: 0x8)
+    TArray<class UChatMessage*> NewLocalMessages;                                     // 0x05C0 (size: 0x10)
+    FSlateBrush CrossHairBrush;                                                       // 0x05D0 (size: 0xD0)
+    class UImage* AccuracyBar;                                                        // 0x06A0 (size: 0x8)
+    FLinearColor AccuracyBarColor;                                                    // 0x06A8 (size: 0x10)
+    FLinearColor AccuracyBarFullColor;                                                // 0x06B8 (size: 0x10)
+    FLinearColor AimingTooCloseColour;                                                // 0x06C8 (size: 0x10)
 
     void PlayWinConditionAnimation();
     void PlayBlackoutAnimation();
@@ -2427,7 +2428,7 @@ class UHUDWidget : public UUserWidget
     ESlateVisibility GetNameCanvasVisibility();
     ESlateVisibility GetHUDSubCanvasVisibility();
     ESlateVisibility GetHUDHintVisibility();
-}; // Size: 0x6E0
+}; // Size: 0x6F0
 
 class UHUDWindow : public UUserWidget
 {

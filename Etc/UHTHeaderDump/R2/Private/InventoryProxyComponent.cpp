@@ -4,6 +4,7 @@ UInventoryProxyComponent::UInventoryProxyComponent() {
     this->bUnpackCrates = false;
     this->bEnforceWithdrawalStamina = false;
     this->bOnlyAllowMaxDurabilityItems = false;
+    this->bDropItemsOnDeath = true;
     this->bIsCheatBox = 0;
     this->StackRule = EAnvilInventoryStackRule::Default;
     this->NormalizedSpoilageFactor = 1.00f;

@@ -3,6 +3,7 @@
 ---@class UBPHUDWidget_C : UHUDWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field BackoutAnimation UWidgetAnimation
+---@field AvatarImageBackground UImage
 ---@field BPFoodCooldownWidget_1 UBPFoodCooldownWidget_C
 ---@field BPRestedStatusWidget UBPRestedStatusWidget_C
 ---@field BPTemperatureStatusWidget UBPTemperatureStatusWidget_C
