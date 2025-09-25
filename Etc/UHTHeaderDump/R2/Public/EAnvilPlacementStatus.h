@@ -13,6 +13,7 @@ enum class EAnvilPlacementStatus : uint8 {
     TooCloseToFortress,
     TooCloseToFamilyCenter,
     TooCloseToCamp,
+    TooCloseToRelicSite,
     TooFarFromTownHall,
     RequiredHigherTierTH,
     RequiredHigherTierFamilyArea,

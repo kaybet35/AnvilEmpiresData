@@ -2703,6 +2703,7 @@ UStructureProtectionProxyComponent = {}
 
 ---@class UStructureProxyComponent : UProxyComponent
 ---@field bCannotBeDismantled boolean
+---@field bCannotBeDamagedInTown boolean
 ---@field bRequireSupport boolean
 ---@field bEnemyCanConvert boolean
 ---@field bIsAlwaysEnclosed boolean

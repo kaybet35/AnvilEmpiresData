@@ -2,6 +2,7 @@
 
 UStructureProxyComponent::UStructureProxyComponent() {
     this->bCannotBeDismantled = false;
+    this->bCannotBeDamagedInTown = false;
     this->bRequireSupport = false;
     this->bEnemyCanConvert = false;
     this->bIsAlwaysEnclosed = false;

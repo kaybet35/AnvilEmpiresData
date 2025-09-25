@@ -16,6 +16,7 @@ enum class EAnvilDamageType : uint8 {
     Cleaving,
     Crushing,
     Burning,
+    Falling,
     Bleed,
     Decay,
     Admin,
