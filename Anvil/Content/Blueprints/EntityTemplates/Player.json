@@ -299,8 +299,8 @@
           "SpawnedEntityVisVar": 0,
           "MinDistFromFamilyArea": 7495.0,
           "ChanceToSpawnPerMin": 1.0,
-          "MinDistanceBetweenSpawns": 2500.0,
-          "MaxNumInRadius": 0,
+          "MinDistanceBetweenSpawns": 2000.0,
+          "MaxNumInRadius": 8,
           "bRequiresNavmesh": true,
           "bConsiderAllFamilyAreas": false,
           "bDontSpawnInSettlements": true,
@@ -374,17 +374,26 @@
             "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/CopperFragmentsPile.0"
           },
           "SpawnedEntityVisVar": 0,
-          "MinDistFromFamilyArea": 10000.0,
+          "MinDistFromFamilyArea": 15000.0,
           "ChanceToSpawnPerMin": 3.0,
-          "MinDistanceBetweenSpawns": 1875.0,
-          "MaxNumInRadius": 0,
+          "MinDistanceBetweenSpawns": 1500.0,
+          "MaxNumInRadius": 6,
           "bRequiresNavmesh": true,
           "bConsiderAllFamilyAreas": false,
           "bDontSpawnInSettlements": true,
           "bDoExpensiveForbiddenSurfaceCheck": false,
           "CompatibleSurfaceTypes": 0,
           "ForbiddenSurfaceTypes": 32768,
-          "OtherResourcesToAvoidByDistance": []
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'TinFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/TinFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 1500.0
+            }
+          ]
         },
         {
           "SpawnedEntity": {
@@ -392,17 +401,26 @@
             "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/TinFragmentsPile.0"
           },
           "SpawnedEntityVisVar": 0,
-          "MinDistFromFamilyArea": 10000.0,
+          "MinDistFromFamilyArea": 15000.0,
           "ChanceToSpawnPerMin": 1.5,
-          "MinDistanceBetweenSpawns": 750.0,
-          "MaxNumInRadius": 0,
+          "MinDistanceBetweenSpawns": 1500.0,
+          "MaxNumInRadius": 6,
           "bRequiresNavmesh": true,
           "bConsiderAllFamilyAreas": false,
           "bDontSpawnInSettlements": true,
           "bDoExpensiveForbiddenSurfaceCheck": false,
           "CompatibleSurfaceTypes": 0,
           "ForbiddenSurfaceTypes": 32768,
-          "OtherResourcesToAvoidByDistance": []
+          "OtherResourcesToAvoidByDistance": [
+            {
+              "EntityTypeToAvoid": {
+                "ObjectName": "BlueprintGeneratedClass'CopperFragmentsPile_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/EntityTemplates/Resources/CopperFragmentsPile.0"
+              },
+              "EntityTypeToAvoidVisVar": 0,
+              "Distance": 1500.0
+            }
+          ]
         },
         {
           "SpawnedEntity": {
@@ -1001,7 +1019,7 @@
     "Type": "Player_C",
     "Name": "Default__Player_C",
     "Class": "BlueprintGeneratedClass'Anvil/Content/Blueprints/EntityTemplates/Player.Player_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "CodeNameString": "Player",
       "CodeName": 50782484,
@@ -1356,6 +1374,14 @@
               "CodeName": {
                 "ObjectName": "BlueprintGeneratedClass'ResourceFibre_C'",
                 "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/ResourceFibre.0"
+              },
+              "CodeNameVisVar": 0,
+              "Count": 1
+            },
+            {
+              "CodeName": {
+                "ObjectName": "BlueprintGeneratedClass'AnimalFat_C'",
+                "ObjectPath": "Anvil/Content/Blueprints/ItemTemplates/Resources/AnimalFat.1"
               },
               "CodeNameVisVar": 0,
               "Count": 1

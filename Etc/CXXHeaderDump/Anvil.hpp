@@ -3192,9 +3192,11 @@ class UTownCenterWindow : public UStructureWindow
     class UHorizontalBox* UpkeepBox;                                                  // 0x0320 (size: 0x8)
     class UImage* UpkeepIcon;                                                         // 0x0328 (size: 0x8)
     class UTextBlock* UpkeepTextBlock;                                                // 0x0330 (size: 0x8)
+    class UHorizontalBox* TownFamilyBox;                                              // 0x0338 (size: 0x8)
+    class UTextBlock* TownFamilyText;                                                 // 0x0340 (size: 0x8)
 
     void OnIncreaseTownStatusButtonClicked();
-}; // Size: 0x338
+}; // Size: 0x348
 
 class UTownStatusWidget : public UUserWidget
 {

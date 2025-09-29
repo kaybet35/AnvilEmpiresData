@@ -360,7 +360,8 @@ ESimpleTooltip = {
     StorehouseFamilyButton = 16,
     StorehousePrivateButton = 17,
     ReligiousInfluence = 18,
-    ESimpleTooltip_MAX = 19,
+    TownCenterFamilyClaimed = 19,
+    ESimpleTooltip_MAX = 20,
 }
 
 ---@enum ETemperatureChangeType

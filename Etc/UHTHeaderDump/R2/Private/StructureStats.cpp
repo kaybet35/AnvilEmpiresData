@@ -9,6 +9,7 @@ FStructureStats::FStructureStats() {
     this->DamageTargetType = EAnvilDamageTargetType::Default;
     this->TeamId = 0;
     this->TownHallId = 0;
+    this->TownFamilyId = 0;
     this->TownTradeResource = NULL;
     this->TownTradeResourceVisVar = 0;
     this->MarkerFamilyId = 0;

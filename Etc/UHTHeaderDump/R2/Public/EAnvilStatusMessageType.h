@@ -147,6 +147,7 @@ enum class EAnvilStatusMessageType : uint8 {
     CannotUseWhileSwimming,
     TargetTooClose,
     ReducedDamageFromLowStamina,
+    CaravanRequiredToCapture,
     NotEnoughPlayersToCapture,
     CannotOpenBothSailAndPlank,
     RelicSiteClaimed,

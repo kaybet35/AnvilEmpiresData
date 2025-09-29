@@ -766,6 +766,7 @@ FStatusMessage = {}
 ---@field DamageTargetType EAnvilDamageTargetType
 ---@field TeamId uint8
 ---@field TownHallId int32
+---@field TownFamilyId int32
 ---@field TownTradeResource TSubclassOf<UEntityTemplate>
 ---@field TownTradeResourceVisVar int32
 ---@field MarkerFamilyId int32
@@ -2794,6 +2795,7 @@ UTempleProxyComponent = {}
 ---@field NumUnclaimedTents int32
 ---@field TownNameId uint8
 ---@field TownNameOrdinal uint8
+---@field TownFamilyId int32
 UTownHallDataComponent = {}
 
 

@@ -1006,12 +1006,13 @@ enum class EAnvilStatusMessageType {
     CannotUseWhileSwimming = 140,
     TargetTooClose = 141,
     ReducedDamageFromLowStamina = 142,
-    NotEnoughPlayersToCapture = 143,
-    CannotOpenBothSailAndPlank = 144,
-    RelicSiteClaimed = 145,
-    StorehouseAtCapacity = 146,
-    NumTypes = 147,
-    EAnvilStatusMessageType_MAX = 148,
+    CaravanRequiredToCapture = 143,
+    NotEnoughPlayersToCapture = 144,
+    CannotOpenBothSailAndPlank = 145,
+    RelicSiteClaimed = 146,
+    StorehouseAtCapacity = 147,
+    NumTypes = 148,
+    EAnvilStatusMessageType_MAX = 149,
 };
 
 enum class EAnvilStimulusType {

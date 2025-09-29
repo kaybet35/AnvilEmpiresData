@@ -44,6 +44,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TownNameOrdinal;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 TownFamilyId;
+    
     UTownHallDataComponent(const FObjectInitializer& ObjectInitializer);
 
 };

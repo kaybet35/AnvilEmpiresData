@@ -3361,6 +3361,8 @@ function UTownCenterMapIcon:GetNumPledgedText() end
 ---@field UpkeepBox UHorizontalBox
 ---@field UpkeepIcon UImage
 ---@field UpkeepTextBlock UTextBlock
+---@field TownFamilyBox UHorizontalBox
+---@field TownFamilyText UTextBlock
 UTownCenterWindow = {}
 
 function UTownCenterWindow:OnIncreaseTownStatusButtonClicked() end

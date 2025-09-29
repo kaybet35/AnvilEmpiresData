@@ -15,9 +15,9 @@ AVisEffect::AVisEffect(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
     this->LifetimeDataComponent = CreateDefaultSubobject<ULifetimeDataComponent>(TEXT("LifetimeDataComponent"));
     this->bSeekAudioComponent = false;
+    this->AudioComponent->SetupAttachment(RootComponent);
     this->NiagaraComponent->SetupAttachment(RootComponent);
     this->Mesh->SetupAttachment(RootComponent);
-    this->AudioComponent->SetupAttachment(RootComponent);
 }
 
 

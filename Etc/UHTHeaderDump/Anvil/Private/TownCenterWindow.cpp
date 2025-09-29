@@ -10,6 +10,8 @@ UTownCenterWindow::UTownCenterWindow() {
     this->UpkeepBox = NULL;
     this->UpkeepIcon = NULL;
     this->UpkeepTextBlock = NULL;
+    this->TownFamilyBox = NULL;
+    this->TownFamilyText = NULL;
 }
 
 void UTownCenterWindow::OnIncreaseTownStatusButtonClicked() {

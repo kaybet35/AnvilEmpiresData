@@ -23,5 +23,6 @@ enum class ESimpleTooltip : uint8 {
     StorehouseFamilyButton,
     StorehousePrivateButton,
     ReligiousInfluence,
+    TownCenterFamilyClaimed,
 };
 

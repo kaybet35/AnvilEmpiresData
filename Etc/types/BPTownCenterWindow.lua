@@ -11,6 +11,7 @@
 ---@field BPMainAreaContainer_275 UBPMainAreaContainer_C
 ---@field BPSecondaryActionStrip UBPSecondaryActionStrip_C
 ---@field BPSubHeaderContainer UBPSubHeaderContainer_C
+---@field TownFamilyIcon UImage
 UBPTownCenterWindow_C = {}
 
 

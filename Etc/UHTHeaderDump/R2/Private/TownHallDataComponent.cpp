@@ -13,6 +13,7 @@ UTownHallDataComponent::UTownHallDataComponent(const FObjectInitializer& ObjectI
     this->NumUnclaimedTents = 0;
     this->TownNameId = 0;
     this->TownNameOrdinal = 0;
+    this->TownFamilyId = 0;
 }
 
 

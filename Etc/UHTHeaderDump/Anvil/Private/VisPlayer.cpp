@@ -93,15 +93,7 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->CurrentUsableVisActor = NULL;
     this->CurrentMountableVisActor = NULL;
     this->CurrentUEUsableActor = NULL;
-    this->WindMidAudioComponent->SetupAttachment(SpringArm);
-    this->WindHighAudioComponent->SetupAttachment(SpringArm);
-    this->UnderworldCollapseFXComponent->SetupAttachment(SpringArm);
-    this->EnterSwimmingVFXComponent->SetupAttachment(Mesh);
-    this->SwimmingLoopVFXComponent->SetupAttachment(Mesh);
     this->SwimmingLoopAudioComponent->SetupAttachment(Mesh);
-    this->Mesh->SetupAttachment(RootComponent);
-    this->Head->SetupAttachment(Mesh);
-    this->AimMeshComponent->SetupAttachment(RootComponent);
     this->MeleeAimMeshComponent->SetupAttachment(RootComponent);
     this->MeleeAimMeshTargetComponent->SetupAttachment(RootComponent);
     this->CrowdIdentifierMeshComponent->SetupAttachment(RootComponent);
@@ -121,6 +113,11 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->SnowMidAudioComponent->SetupAttachment(SpringArm);
     this->SnowHighAudioComponent->SetupAttachment(SpringArm);
     this->WindLowAudioComponent->SetupAttachment(SpringArm);
+    this->WindMidAudioComponent->SetupAttachment(SpringArm);
+    this->WindHighAudioComponent->SetupAttachment(SpringArm);
+    this->UnderworldCollapseFXComponent->SetupAttachment(SpringArm);
+    this->EnterSwimmingVFXComponent->SetupAttachment(Mesh);
+    this->SwimmingLoopVFXComponent->SetupAttachment(Mesh);
     this->SpringArm->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->Camera->SetupAttachment(SpringArm);
     this->ItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
@@ -128,6 +125,9 @@ AVisPlayer::AVisPlayer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->UnarmedItemMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UnarmedItemSecondaryMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->RangedWeaponAmmoMeshComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->Mesh->SetupAttachment(RootComponent);
+    this->Head->SetupAttachment(Mesh);
+    this->AimMeshComponent->SetupAttachment(RootComponent);
 }
 
 FString AVisPlayer::GetPlayerName() const {
