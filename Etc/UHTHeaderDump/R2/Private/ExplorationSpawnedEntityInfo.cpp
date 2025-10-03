@@ -6,6 +6,8 @@ FExplorationSpawnedEntityInfo::FExplorationSpawnedEntityInfo() {
     this->MinDistFromFamilyArea = 0.00f;
     this->ChanceToSpawnPerMin = 0.00f;
     this->MinDistanceBetweenSpawns = 0.00f;
+    this->SpawnSeasonStart = 0.00f;
+    this->SpawnSeasonStop = 0.00f;
     this->MaxNumInRadius = 0;
     this->bRequiresNavmesh = false;
     this->bConsiderAllFamilyAreas = false;

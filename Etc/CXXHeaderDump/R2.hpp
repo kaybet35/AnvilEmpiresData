@@ -290,16 +290,18 @@ struct FExplorationSpawnedEntityInfo
     float MinDistFromFamilyArea;                                                      // 0x000C (size: 0x4)
     float ChanceToSpawnPerMin;                                                        // 0x0010 (size: 0x4)
     float MinDistanceBetweenSpawns;                                                   // 0x0014 (size: 0x4)
-    int32 MaxNumInRadius;                                                             // 0x0018 (size: 0x4)
-    bool bRequiresNavmesh;                                                            // 0x001C (size: 0x1)
-    bool bConsiderAllFamilyAreas;                                                     // 0x001D (size: 0x1)
-    bool bDontSpawnInSettlements;                                                     // 0x001E (size: 0x1)
-    bool bDoExpensiveForbiddenSurfaceCheck;                                           // 0x001F (size: 0x1)
-    int32 CompatibleSurfaceTypes;                                                     // 0x0020 (size: 0x4)
-    int32 ForbiddenSurfaceTypes;                                                      // 0x0024 (size: 0x4)
-    TArray<FExplorationSpawnedEntityAvoidInfo> OtherResourcesToAvoidByDistance;       // 0x0028 (size: 0x10)
+    float SpawnSeasonStart;                                                           // 0x0018 (size: 0x4)
+    float SpawnSeasonStop;                                                            // 0x001C (size: 0x4)
+    int32 MaxNumInRadius;                                                             // 0x0020 (size: 0x4)
+    bool bRequiresNavmesh;                                                            // 0x0024 (size: 0x1)
+    bool bConsiderAllFamilyAreas;                                                     // 0x0025 (size: 0x1)
+    bool bDontSpawnInSettlements;                                                     // 0x0026 (size: 0x1)
+    bool bDoExpensiveForbiddenSurfaceCheck;                                           // 0x0027 (size: 0x1)
+    int32 CompatibleSurfaceTypes;                                                     // 0x0028 (size: 0x4)
+    int32 ForbiddenSurfaceTypes;                                                      // 0x002C (size: 0x4)
+    TArray<FExplorationSpawnedEntityAvoidInfo> OtherResourcesToAvoidByDistance;       // 0x0030 (size: 0x10)
 
-}; // Size: 0x38
+}; // Size: 0x40
 
 struct FFamilyHouseInfoType
 {

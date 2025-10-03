@@ -353,6 +353,8 @@ FExplorationSpawnedEntityAvoidInfo = {}
 ---@field MinDistFromFamilyArea float
 ---@field ChanceToSpawnPerMin float
 ---@field MinDistanceBetweenSpawns float
+---@field SpawnSeasonStart float
+---@field SpawnSeasonStop float
 ---@field MaxNumInRadius int32
 ---@field bRequiresNavmesh boolean
 ---@field bConsiderAllFamilyAreas boolean
